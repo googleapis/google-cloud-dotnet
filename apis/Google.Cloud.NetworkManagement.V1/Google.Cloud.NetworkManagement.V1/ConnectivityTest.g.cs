@@ -45,33 +45,44 @@ namespace Google.Cloud.NetworkManagement.V1 {
             "CgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgB",
             "OnTqQXEKMW5ldHdvcmttYW5hZ2VtZW50Lmdvb2dsZWFwaXMuY29tL0Nvbm5l",
             "Y3Rpdml0eVRlc3QSPHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMvZ2xv",
-            "YmFsL2Nvbm5lY3Rpdml0eVRlc3RzL3t0ZXN0fSLWAgoIRW5kcG9pbnQSEgoK",
+            "YmFsL2Nvbm5lY3Rpdml0eVRlc3RzL3t0ZXN0fSLtBQoIRW5kcG9pbnQSEgoK",
             "aXBfYWRkcmVzcxgBIAEoCRIMCgRwb3J0GAIgASgFEhAKCGluc3RhbmNlGAMg",
             "ASgJEhcKD2ZvcndhcmRpbmdfcnVsZRgNIAEoCRIaChJna2VfbWFzdGVyX2Ns",
-            "dXN0ZXIYByABKAkSGgoSY2xvdWRfc3FsX2luc3RhbmNlGAggASgJEg8KB25l",
-            "dHdvcmsYBCABKAkSTQoMbmV0d29ya190eXBlGAUgASgOMjcuZ29vZ2xlLmNs",
-            "b3VkLm5ldHdvcmttYW5hZ2VtZW50LnYxLkVuZHBvaW50Lk5ldHdvcmtUeXBl",
-            "EhIKCnByb2plY3RfaWQYBiABKAkiUQoLTmV0d29ya1R5cGUSHAoYTkVUV09S",
-            "S19UWVBFX1VOU1BFQ0lGSUVEEAASDwoLR0NQX05FVFdPUksQARITCg9OT05f",
-            "R0NQX05FVFdPUksQAiLVAgoTUmVhY2hhYmlsaXR5RGV0YWlscxJNCgZyZXN1",
-            "bHQYASABKA4yPS5nb29nbGUuY2xvdWQubmV0d29ya21hbmFnZW1lbnQudjEu",
-            "UmVhY2hhYmlsaXR5RGV0YWlscy5SZXN1bHQSLwoLdmVyaWZ5X3RpbWUYAiAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiEKBWVycm9yGAMgASgL",
-            "MhIuZ29vZ2xlLnJwYy5TdGF0dXMSOAoGdHJhY2VzGAUgAygLMiguZ29vZ2xl",
-            "LmNsb3VkLm5ldHdvcmttYW5hZ2VtZW50LnYxLlRyYWNlImEKBlJlc3VsdBIW",
-            "ChJSRVNVTFRfVU5TUEVDSUZJRUQQABINCglSRUFDSEFCTEUQARIPCgtVTlJF",
-            "QUNIQUJMRRACEg0KCUFNQklHVU9VUxAEEhAKDFVOREVURVJNSU5FRBAFQv0B",
-            "CiVjb20uZ29vZ2xlLmNsb3VkLm5ldHdvcmttYW5hZ2VtZW50LnYxQg5UZXN0",
-            "T3V0ZXJDbGFzc1ABWlNjbG91ZC5nb29nbGUuY29tL2dvL25ldHdvcmttYW5h",
-            "Z2VtZW50L2FwaXYxL25ldHdvcmttYW5hZ2VtZW50cGI7bmV0d29ya21hbmFn",
-            "ZW1lbnRwYqoCIUdvb2dsZS5DbG91ZC5OZXR3b3JrTWFuYWdlbWVudC5WMcoC",
-            "IUdvb2dsZVxDbG91ZFxOZXR3b3JrTWFuYWdlbWVudFxWMeoCJEdvb2dsZTo6",
-            "Q2xvdWQ6Ok5ldHdvcmtNYW5hZ2VtZW50OjpWMWIGcHJvdG8z"));
+            "dXN0ZXIYByABKAkSGgoSY2xvdWRfc3FsX2luc3RhbmNlGAggASgJElkKDmNs",
+            "b3VkX2Z1bmN0aW9uGAogASgLMkEuZ29vZ2xlLmNsb3VkLm5ldHdvcmttYW5h",
+            "Z2VtZW50LnYxLkVuZHBvaW50LkNsb3VkRnVuY3Rpb25FbmRwb2ludBJgChJh",
+            "cHBfZW5naW5lX3ZlcnNpb24YCyABKAsyRC5nb29nbGUuY2xvdWQubmV0d29y",
+            "a21hbmFnZW1lbnQudjEuRW5kcG9pbnQuQXBwRW5naW5lVmVyc2lvbkVuZHBv",
+            "aW50EmAKEmNsb3VkX3J1bl9yZXZpc2lvbhgMIAEoCzJELmdvb2dsZS5jbG91",
+            "ZC5uZXR3b3JrbWFuYWdlbWVudC52MS5FbmRwb2ludC5DbG91ZFJ1blJldmlz",
+            "aW9uRW5kcG9pbnQSDwoHbmV0d29yaxgEIAEoCRJNCgxuZXR3b3JrX3R5cGUY",
+            "BSABKA4yNy5nb29nbGUuY2xvdWQubmV0d29ya21hbmFnZW1lbnQudjEuRW5k",
+            "cG9pbnQuTmV0d29ya1R5cGUSEgoKcHJvamVjdF9pZBgGIAEoCRokChVDbG91",
+            "ZEZ1bmN0aW9uRW5kcG9pbnQSCwoDdXJpGAEgASgJGicKGEFwcEVuZ2luZVZl",
+            "cnNpb25FbmRwb2ludBILCgN1cmkYASABKAkaJwoYQ2xvdWRSdW5SZXZpc2lv",
+            "bkVuZHBvaW50EgsKA3VyaRgBIAEoCSJRCgtOZXR3b3JrVHlwZRIcChhORVRX",
+            "T1JLX1RZUEVfVU5TUEVDSUZJRUQQABIPCgtHQ1BfTkVUV09SSxABEhMKD05P",
+            "Tl9HQ1BfTkVUV09SSxACItUCChNSZWFjaGFiaWxpdHlEZXRhaWxzEk0KBnJl",
+            "c3VsdBgBIAEoDjI9Lmdvb2dsZS5jbG91ZC5uZXR3b3JrbWFuYWdlbWVudC52",
+            "MS5SZWFjaGFiaWxpdHlEZXRhaWxzLlJlc3VsdBIvCgt2ZXJpZnlfdGltZRgC",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASIQoFZXJyb3IYAyAB",
+            "KAsyEi5nb29nbGUucnBjLlN0YXR1cxI4CgZ0cmFjZXMYBSADKAsyKC5nb29n",
+            "bGUuY2xvdWQubmV0d29ya21hbmFnZW1lbnQudjEuVHJhY2UiYQoGUmVzdWx0",
+            "EhYKElJFU1VMVF9VTlNQRUNJRklFRBAAEg0KCVJFQUNIQUJMRRABEg8KC1VO",
+            "UkVBQ0hBQkxFEAISDQoJQU1CSUdVT1VTEAQSEAoMVU5ERVRFUk1JTkVEEAVC",
+            "/QEKJWNvbS5nb29nbGUuY2xvdWQubmV0d29ya21hbmFnZW1lbnQudjFCDlRl",
+            "c3RPdXRlckNsYXNzUAFaU2Nsb3VkLmdvb2dsZS5jb20vZ28vbmV0d29ya21h",
+            "bmFnZW1lbnQvYXBpdjEvbmV0d29ya21hbmFnZW1lbnRwYjtuZXR3b3JrbWFu",
+            "YWdlbWVudHBiqgIhR29vZ2xlLkNsb3VkLk5ldHdvcmtNYW5hZ2VtZW50LlYx",
+            "ygIhR29vZ2xlXENsb3VkXE5ldHdvcmtNYW5hZ2VtZW50XFYx6gIkR29vZ2xl",
+            "OjpDbG91ZDo6TmV0d29ya01hbmFnZW1lbnQ6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.NetworkManagement.V1.TraceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.ConnectivityTest), global::Google.Cloud.NetworkManagement.V1.ConnectivityTest.Parser, new[]{ "Name", "Description", "Source", "Destination", "Protocol", "RelatedProjects", "DisplayName", "Labels", "CreateTime", "UpdateTime", "ReachabilityDetails" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.Endpoint), global::Google.Cloud.NetworkManagement.V1.Endpoint.Parser, new[]{ "IpAddress", "Port", "Instance", "ForwardingRule", "GkeMasterCluster", "CloudSqlInstance", "Network", "NetworkType", "ProjectId" }, null, new[]{ typeof(global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.NetworkType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.Endpoint), global::Google.Cloud.NetworkManagement.V1.Endpoint.Parser, new[]{ "IpAddress", "Port", "Instance", "ForwardingRule", "GkeMasterCluster", "CloudSqlInstance", "CloudFunction", "AppEngineVersion", "CloudRunRevision", "Network", "NetworkType", "ProjectId" }, null, new[]{ typeof(global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.NetworkType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.CloudFunctionEndpoint), global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.CloudFunctionEndpoint.Parser, new[]{ "Uri" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.AppEngineVersionEndpoint), global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.AppEngineVersionEndpoint.Parser, new[]{ "Uri" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.CloudRunRevisionEndpoint), global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.CloudRunRevisionEndpoint.Parser, new[]{ "Uri" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.ReachabilityDetails), global::Google.Cloud.NetworkManagement.V1.ReachabilityDetails.Parser, new[]{ "Result", "VerifyTime", "Error", "Traces" }, null, new[]{ typeof(global::Google.Cloud.NetworkManagement.V1.ReachabilityDetails.Types.Result) }, null, null)
           }));
     }
@@ -141,7 +152,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
     private string name_ = "";
     /// <summary>
     /// Required. Unique name of the resource using the form:
-    ///     `projects/{project_id}/locations/global/connectivityTests/{test_id}`
+    ///     `projects/{project_id}/locations/global/connectivityTests/{test}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -783,6 +794,9 @@ namespace Google.Cloud.NetworkManagement.V1 {
       forwardingRule_ = other.forwardingRule_;
       gkeMasterCluster_ = other.gkeMasterCluster_;
       cloudSqlInstance_ = other.cloudSqlInstance_;
+      cloudFunction_ = other.cloudFunction_ != null ? other.cloudFunction_.Clone() : null;
+      appEngineVersion_ = other.appEngineVersion_ != null ? other.appEngineVersion_.Clone() : null;
+      cloudRunRevision_ = other.cloudRunRevision_ != null ? other.cloudRunRevision_.Clone() : null;
       network_ = other.network_;
       networkType_ = other.networkType_;
       projectId_ = other.projectId_;
@@ -894,6 +908,53 @@ namespace Google.Cloud.NetworkManagement.V1 {
       }
     }
 
+    /// <summary>Field number for the "cloud_function" field.</summary>
+    public const int CloudFunctionFieldNumber = 10;
+    private global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.CloudFunctionEndpoint cloudFunction_;
+    /// <summary>
+    /// A [Cloud Function](https://cloud.google.com/functions).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.CloudFunctionEndpoint CloudFunction {
+      get { return cloudFunction_; }
+      set {
+        cloudFunction_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "app_engine_version" field.</summary>
+    public const int AppEngineVersionFieldNumber = 11;
+    private global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.AppEngineVersionEndpoint appEngineVersion_;
+    /// <summary>
+    /// An [App Engine](https://cloud.google.com/appengine) [service
+    /// version](https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.AppEngineVersionEndpoint AppEngineVersion {
+      get { return appEngineVersion_; }
+      set {
+        appEngineVersion_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "cloud_run_revision" field.</summary>
+    public const int CloudRunRevisionFieldNumber = 12;
+    private global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.CloudRunRevisionEndpoint cloudRunRevision_;
+    /// <summary>
+    /// A [Cloud Run](https://cloud.google.com/run)
+    /// [revision](https://cloud.google.com/run/docs/reference/rest/v1/namespaces.revisions/get)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.CloudRunRevisionEndpoint CloudRunRevision {
+      get { return cloudRunRevision_; }
+      set {
+        cloudRunRevision_ = value;
+      }
+    }
+
     /// <summary>Field number for the "network" field.</summary>
     public const int NetworkFieldNumber = 4;
     private string network_ = "";
@@ -970,6 +1031,9 @@ namespace Google.Cloud.NetworkManagement.V1 {
       if (ForwardingRule != other.ForwardingRule) return false;
       if (GkeMasterCluster != other.GkeMasterCluster) return false;
       if (CloudSqlInstance != other.CloudSqlInstance) return false;
+      if (!object.Equals(CloudFunction, other.CloudFunction)) return false;
+      if (!object.Equals(AppEngineVersion, other.AppEngineVersion)) return false;
+      if (!object.Equals(CloudRunRevision, other.CloudRunRevision)) return false;
       if (Network != other.Network) return false;
       if (NetworkType != other.NetworkType) return false;
       if (ProjectId != other.ProjectId) return false;
@@ -986,6 +1050,9 @@ namespace Google.Cloud.NetworkManagement.V1 {
       if (ForwardingRule.Length != 0) hash ^= ForwardingRule.GetHashCode();
       if (GkeMasterCluster.Length != 0) hash ^= GkeMasterCluster.GetHashCode();
       if (CloudSqlInstance.Length != 0) hash ^= CloudSqlInstance.GetHashCode();
+      if (cloudFunction_ != null) hash ^= CloudFunction.GetHashCode();
+      if (appEngineVersion_ != null) hash ^= AppEngineVersion.GetHashCode();
+      if (cloudRunRevision_ != null) hash ^= CloudRunRevision.GetHashCode();
       if (Network.Length != 0) hash ^= Network.GetHashCode();
       if (NetworkType != global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.NetworkType.Unspecified) hash ^= NetworkType.GetHashCode();
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
@@ -1039,6 +1106,18 @@ namespace Google.Cloud.NetworkManagement.V1 {
         output.WriteRawTag(66);
         output.WriteString(CloudSqlInstance);
       }
+      if (cloudFunction_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(CloudFunction);
+      }
+      if (appEngineVersion_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(AppEngineVersion);
+      }
+      if (cloudRunRevision_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(CloudRunRevision);
+      }
       if (ForwardingRule.Length != 0) {
         output.WriteRawTag(106);
         output.WriteString(ForwardingRule);
@@ -1085,6 +1164,18 @@ namespace Google.Cloud.NetworkManagement.V1 {
         output.WriteRawTag(66);
         output.WriteString(CloudSqlInstance);
       }
+      if (cloudFunction_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(CloudFunction);
+      }
+      if (appEngineVersion_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(AppEngineVersion);
+      }
+      if (cloudRunRevision_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(CloudRunRevision);
+      }
       if (ForwardingRule.Length != 0) {
         output.WriteRawTag(106);
         output.WriteString(ForwardingRule);
@@ -1116,6 +1207,15 @@ namespace Google.Cloud.NetworkManagement.V1 {
       }
       if (CloudSqlInstance.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CloudSqlInstance);
+      }
+      if (cloudFunction_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CloudFunction);
+      }
+      if (appEngineVersion_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AppEngineVersion);
+      }
+      if (cloudRunRevision_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CloudRunRevision);
       }
       if (Network.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Network);
@@ -1155,6 +1255,24 @@ namespace Google.Cloud.NetworkManagement.V1 {
       }
       if (other.CloudSqlInstance.Length != 0) {
         CloudSqlInstance = other.CloudSqlInstance;
+      }
+      if (other.cloudFunction_ != null) {
+        if (cloudFunction_ == null) {
+          CloudFunction = new global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.CloudFunctionEndpoint();
+        }
+        CloudFunction.MergeFrom(other.CloudFunction);
+      }
+      if (other.appEngineVersion_ != null) {
+        if (appEngineVersion_ == null) {
+          AppEngineVersion = new global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.AppEngineVersionEndpoint();
+        }
+        AppEngineVersion.MergeFrom(other.AppEngineVersion);
+      }
+      if (other.cloudRunRevision_ != null) {
+        if (cloudRunRevision_ == null) {
+          CloudRunRevision = new global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.CloudRunRevisionEndpoint();
+        }
+        CloudRunRevision.MergeFrom(other.CloudRunRevision);
       }
       if (other.Network.Length != 0) {
         Network = other.Network;
@@ -1212,6 +1330,27 @@ namespace Google.Cloud.NetworkManagement.V1 {
             CloudSqlInstance = input.ReadString();
             break;
           }
+          case 82: {
+            if (cloudFunction_ == null) {
+              CloudFunction = new global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.CloudFunctionEndpoint();
+            }
+            input.ReadMessage(CloudFunction);
+            break;
+          }
+          case 90: {
+            if (appEngineVersion_ == null) {
+              AppEngineVersion = new global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.AppEngineVersionEndpoint();
+            }
+            input.ReadMessage(AppEngineVersion);
+            break;
+          }
+          case 98: {
+            if (cloudRunRevision_ == null) {
+              CloudRunRevision = new global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.CloudRunRevisionEndpoint();
+            }
+            input.ReadMessage(CloudRunRevision);
+            break;
+          }
           case 106: {
             ForwardingRule = input.ReadString();
             break;
@@ -1263,6 +1402,27 @@ namespace Google.Cloud.NetworkManagement.V1 {
             CloudSqlInstance = input.ReadString();
             break;
           }
+          case 82: {
+            if (cloudFunction_ == null) {
+              CloudFunction = new global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.CloudFunctionEndpoint();
+            }
+            input.ReadMessage(CloudFunction);
+            break;
+          }
+          case 90: {
+            if (appEngineVersion_ == null) {
+              AppEngineVersion = new global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.AppEngineVersionEndpoint();
+            }
+            input.ReadMessage(AppEngineVersion);
+            break;
+          }
+          case 98: {
+            if (cloudRunRevision_ == null) {
+              CloudRunRevision = new global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.CloudRunRevisionEndpoint();
+            }
+            input.ReadMessage(CloudRunRevision);
+            break;
+          }
           case 106: {
             ForwardingRule = input.ReadString();
             break;
@@ -1298,6 +1458,596 @@ namespace Google.Cloud.NetworkManagement.V1 {
         /// provider.
         /// </summary>
         [pbr::OriginalName("NON_GCP_NETWORK")] NonGcpNetwork = 2,
+      }
+
+      /// <summary>
+      /// Wrapper for Cloud Function attributes.
+      /// </summary>
+      public sealed partial class CloudFunctionEndpoint : pb::IMessage<CloudFunctionEndpoint>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<CloudFunctionEndpoint> _parser = new pb::MessageParser<CloudFunctionEndpoint>(() => new CloudFunctionEndpoint());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<CloudFunctionEndpoint> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.NetworkManagement.V1.Endpoint.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CloudFunctionEndpoint() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CloudFunctionEndpoint(CloudFunctionEndpoint other) : this() {
+          uri_ = other.uri_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CloudFunctionEndpoint Clone() {
+          return new CloudFunctionEndpoint(this);
+        }
+
+        /// <summary>Field number for the "uri" field.</summary>
+        public const int UriFieldNumber = 1;
+        private string uri_ = "";
+        /// <summary>
+        /// A [Cloud Function](https://cloud.google.com/functions) name.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Uri {
+          get { return uri_; }
+          set {
+            uri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as CloudFunctionEndpoint);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(CloudFunctionEndpoint other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Uri != other.Uri) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Uri.Length != 0) hash ^= Uri.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Uri.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Uri);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Uri.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Uri);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Uri.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(CloudFunctionEndpoint other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Uri.Length != 0) {
+            Uri = other.Uri;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Uri = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Uri = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Wrapper for the App Engine service version attributes.
+      /// </summary>
+      public sealed partial class AppEngineVersionEndpoint : pb::IMessage<AppEngineVersionEndpoint>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<AppEngineVersionEndpoint> _parser = new pb::MessageParser<AppEngineVersionEndpoint>(() => new AppEngineVersionEndpoint());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<AppEngineVersionEndpoint> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.NetworkManagement.V1.Endpoint.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AppEngineVersionEndpoint() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AppEngineVersionEndpoint(AppEngineVersionEndpoint other) : this() {
+          uri_ = other.uri_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AppEngineVersionEndpoint Clone() {
+          return new AppEngineVersionEndpoint(this);
+        }
+
+        /// <summary>Field number for the "uri" field.</summary>
+        public const int UriFieldNumber = 1;
+        private string uri_ = "";
+        /// <summary>
+        /// An [App Engine](https://cloud.google.com/appengine) [service
+        /// version](https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions)
+        /// name.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Uri {
+          get { return uri_; }
+          set {
+            uri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as AppEngineVersionEndpoint);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(AppEngineVersionEndpoint other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Uri != other.Uri) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Uri.Length != 0) hash ^= Uri.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Uri.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Uri);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Uri.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Uri);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Uri.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(AppEngineVersionEndpoint other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Uri.Length != 0) {
+            Uri = other.Uri;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Uri = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Uri = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Wrapper for Cloud Run revision attributes.
+      /// </summary>
+      public sealed partial class CloudRunRevisionEndpoint : pb::IMessage<CloudRunRevisionEndpoint>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<CloudRunRevisionEndpoint> _parser = new pb::MessageParser<CloudRunRevisionEndpoint>(() => new CloudRunRevisionEndpoint());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<CloudRunRevisionEndpoint> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.NetworkManagement.V1.Endpoint.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CloudRunRevisionEndpoint() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CloudRunRevisionEndpoint(CloudRunRevisionEndpoint other) : this() {
+          uri_ = other.uri_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CloudRunRevisionEndpoint Clone() {
+          return new CloudRunRevisionEndpoint(this);
+        }
+
+        /// <summary>Field number for the "uri" field.</summary>
+        public const int UriFieldNumber = 1;
+        private string uri_ = "";
+        /// <summary>
+        /// A [Cloud Run](https://cloud.google.com/run)
+        /// [revision](https://cloud.google.com/run/docs/reference/rest/v1/namespaces.revisions/get)
+        /// URI. The format is:
+        /// projects/{project}/locations/{location}/revisions/{revision}
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Uri {
+          get { return uri_; }
+          set {
+            uri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as CloudRunRevisionEndpoint);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(CloudRunRevisionEndpoint other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Uri != other.Uri) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Uri.Length != 0) hash ^= Uri.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Uri.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Uri);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Uri.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Uri);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Uri.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(CloudRunRevisionEndpoint other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Uri.Length != 0) {
+            Uri = other.Uri;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Uri = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Uri = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
       }
 
     }
