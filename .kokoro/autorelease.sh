@@ -11,7 +11,7 @@ cd $SCRIPT_DIR
 source ./populatesecrets.sh
 populate_all_secrets
 
-../tools/Google.Cloud.Tools.releasetool/publish_reporter.sh
+../tools/Google.Cloud.Tools.ReleaseTool/publish_reporter.sh
 
 # Secrets are already populated, let's not do that again
 ./release.sh --skippopulatesecrets
