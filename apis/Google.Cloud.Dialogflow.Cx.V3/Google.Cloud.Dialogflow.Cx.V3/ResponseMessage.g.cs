@@ -27,7 +27,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "CjRnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy9jeC92My9yZXNwb25zZV9tZXNz",
             "YWdlLnByb3RvEh1nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52MxofZ29v",
             "Z2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxocZ29vZ2xlL3Byb3RvYnVm",
-            "L3N0cnVjdC5wcm90byK8CwoPUmVzcG9uc2VNZXNzYWdlEkMKBHRleHQYASAB",
+            "L3N0cnVjdC5wcm90byL7DAoPUmVzcG9uc2VNZXNzYWdlEkMKBHRleHQYASAB",
             "KAsyMy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5SZXNwb25zZU1l",
             "c3NhZ2UuVGV4dEgAEioKB3BheWxvYWQYAiABKAsyFy5nb29nbGUucHJvdG9i",
             "dWYuU3RydWN0SAASYgoUY29udmVyc2F0aW9uX3N1Y2Nlc3MYCSABKAsyQi5n",
@@ -44,31 +44,35 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "MjkuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuUmVzcG9uc2VNZXNz",
             "YWdlLk1peGVkQXVkaW9CA+BBA0gAEmcKF3RlbGVwaG9ueV90cmFuc2Zlcl9j",
             "YWxsGBIgASgLMkQuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuUmVz",
-            "cG9uc2VNZXNzYWdlLlRlbGVwaG9ueVRyYW5zZmVyQ2FsbEgAEg8KB2NoYW5u",
-            "ZWwYEyABKAkaQwoEVGV4dBIRCgR0ZXh0GAEgAygJQgPgQQISKAobYWxsb3df",
-            "cGxheWJhY2tfaW50ZXJydXB0aW9uGAIgASgIQgPgQQMaPQoQTGl2ZUFnZW50",
-            "SGFuZG9mZhIpCghtZXRhZGF0YRgBIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5T",
-            "dHJ1Y3QaQAoTQ29udmVyc2F0aW9uU3VjY2VzcxIpCghtZXRhZGF0YRgBIAEo",
-            "CzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3QaZQoPT3V0cHV0QXVkaW9UZXh0",
-            "Eg4KBHRleHQYASABKAlIABIOCgRzc21sGAIgASgJSAASKAobYWxsb3dfcGxh",
-            "eWJhY2tfaW50ZXJydXB0aW9uGAMgASgIQgPgQQNCCAoGc291cmNlGhAKDkVu",
-            "ZEludGVyYWN0aW9uGk0KCVBsYXlBdWRpbxIWCglhdWRpb191cmkYASABKAlC",
-            "A+BBAhIoChthbGxvd19wbGF5YmFja19pbnRlcnJ1cHRpb24YAiABKAhCA+BB",
-            "AxrBAQoKTWl4ZWRBdWRpbxJTCghzZWdtZW50cxgBIAMoCzJBLmdvb2dsZS5j",
-            "bG91ZC5kaWFsb2dmbG93LmN4LnYzLlJlc3BvbnNlTWVzc2FnZS5NaXhlZEF1",
-            "ZGlvLlNlZ21lbnQaXgoHU2VnbWVudBIPCgVhdWRpbxgBIAEoDEgAEg0KA3Vy",
-            "aRgCIAEoCUgAEigKG2FsbG93X3BsYXliYWNrX2ludGVycnVwdGlvbhgDIAEo",
-            "CEID4EEDQgkKB2NvbnRlbnQaOwoVVGVsZXBob255VHJhbnNmZXJDYWxsEhYK",
-            "DHBob25lX251bWJlchgBIAEoCUgAQgoKCGVuZHBvaW50QgkKB21lc3NhZ2VC",
-            "ugEKIWNvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52M0IUUmVzcG9u",
-            "c2VNZXNzYWdlUHJvdG9QAVoxY2xvdWQuZ29vZ2xlLmNvbS9nby9kaWFsb2dm",
-            "bG93L2N4L2FwaXYzL2N4cGI7Y3hwYvgBAaICAkRGqgIdR29vZ2xlLkNsb3Vk",
-            "LkRpYWxvZ2Zsb3cuQ3guVjPqAiFHb29nbGU6OkNsb3VkOjpEaWFsb2dmbG93",
-            "OjpDWDo6VjNiBnByb3RvMw=="));
+            "cG9uc2VNZXNzYWdlLlRlbGVwaG9ueVRyYW5zZmVyQ2FsbEgAElIKDXJlc3Bv",
+            "bnNlX3R5cGUYBCABKA4yOy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52",
+            "My5SZXNwb25zZU1lc3NhZ2UuUmVzcG9uc2VUeXBlEg8KB2NoYW5uZWwYEyAB",
+            "KAkaQwoEVGV4dBIRCgR0ZXh0GAEgAygJQgPgQQISKAobYWxsb3dfcGxheWJh",
+            "Y2tfaW50ZXJydXB0aW9uGAIgASgIQgPgQQMaPQoQTGl2ZUFnZW50SGFuZG9m",
+            "ZhIpCghtZXRhZGF0YRgBIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3Qa",
+            "QAoTQ29udmVyc2F0aW9uU3VjY2VzcxIpCghtZXRhZGF0YRgBIAEoCzIXLmdv",
+            "b2dsZS5wcm90b2J1Zi5TdHJ1Y3QaZQoPT3V0cHV0QXVkaW9UZXh0Eg4KBHRl",
+            "eHQYASABKAlIABIOCgRzc21sGAIgASgJSAASKAobYWxsb3dfcGxheWJhY2tf",
+            "aW50ZXJydXB0aW9uGAMgASgIQgPgQQNCCAoGc291cmNlGhAKDkVuZEludGVy",
+            "YWN0aW9uGk0KCVBsYXlBdWRpbxIWCglhdWRpb191cmkYASABKAlCA+BBAhIo",
+            "ChthbGxvd19wbGF5YmFja19pbnRlcnJ1cHRpb24YAiABKAhCA+BBAxrBAQoK",
+            "TWl4ZWRBdWRpbxJTCghzZWdtZW50cxgBIAMoCzJBLmdvb2dsZS5jbG91ZC5k",
+            "aWFsb2dmbG93LmN4LnYzLlJlc3BvbnNlTWVzc2FnZS5NaXhlZEF1ZGlvLlNl",
+            "Z21lbnQaXgoHU2VnbWVudBIPCgVhdWRpbxgBIAEoDEgAEg0KA3VyaRgCIAEo",
+            "CUgAEigKG2FsbG93X3BsYXliYWNrX2ludGVycnVwdGlvbhgDIAEoCEID4EED",
+            "QgkKB2NvbnRlbnQaOwoVVGVsZXBob255VHJhbnNmZXJDYWxsEhYKDHBob25l",
+            "X251bWJlchgBIAEoCUgAQgoKCGVuZHBvaW50ImkKDFJlc3BvbnNlVHlwZRId",
+            "ChlSRVNQT05TRV9UWVBFX1VOU1BFQ0lGSUVEEAASEAoMRU5UUllfUFJPTVBU",
+            "EAESFAoQUEFSQU1FVEVSX1BST01QVBACEhIKDkhBTkRMRVJfUFJPTVBUEANC",
+            "CQoHbWVzc2FnZUK6AQohY29tLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4",
+            "LnYzQhRSZXNwb25zZU1lc3NhZ2VQcm90b1ABWjFjbG91ZC5nb29nbGUuY29t",
+            "L2dvL2RpYWxvZ2Zsb3cvY3gvYXBpdjMvY3hwYjtjeHBi+AEBogICREaqAh1H",
+            "b29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5DeC5WM+oCIUdvb2dsZTo6Q2xvdWQ6",
+            "OkRpYWxvZ2Zsb3c6OkNYOjpWM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Parser, new[]{ "Text", "Payload", "ConversationSuccess", "OutputAudioText", "LiveAgentHandoff", "EndInteraction", "PlayAudio", "MixedAudio", "TelephonyTransferCall", "Channel" }, new[]{ "Message" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.Text), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.Text.Parser, new[]{ "Text_", "AllowPlaybackInterruption" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Parser, new[]{ "Text", "Payload", "ConversationSuccess", "OutputAudioText", "LiveAgentHandoff", "EndInteraction", "PlayAudio", "MixedAudio", "TelephonyTransferCall", "ResponseType", "Channel" }, new[]{ "Message" }, new[]{ typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ResponseType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.Text), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.Text.Parser, new[]{ "Text_", "AllowPlaybackInterruption" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.LiveAgentHandoff), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.LiveAgentHandoff.Parser, new[]{ "Metadata" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ConversationSuccess), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ConversationSuccess.Parser, new[]{ "Metadata" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.OutputAudioText), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.OutputAudioText.Parser, new[]{ "Text", "Ssml", "AllowPlaybackInterruption" }, new[]{ "Source" }, null, null, null),
@@ -135,6 +139,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ResponseMessage(ResponseMessage other) : this() {
+      responseType_ = other.responseType_;
       channel_ = other.channel_;
       switch (other.MessageCase) {
         case MessageOneofCase.Text:
@@ -325,6 +330,21 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
     }
 
+    /// <summary>Field number for the "response_type" field.</summary>
+    public const int ResponseTypeFieldNumber = 4;
+    private global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ResponseType responseType_ = global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ResponseType.Unspecified;
+    /// <summary>
+    /// Response type.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ResponseType ResponseType {
+      get { return responseType_; }
+      set {
+        responseType_ = value;
+      }
+    }
+
     /// <summary>Field number for the "channel" field.</summary>
     public const int ChannelFieldNumber = 19;
     private string channel_ = "";
@@ -395,6 +415,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (!object.Equals(PlayAudio, other.PlayAudio)) return false;
       if (!object.Equals(MixedAudio, other.MixedAudio)) return false;
       if (!object.Equals(TelephonyTransferCall, other.TelephonyTransferCall)) return false;
+      if (ResponseType != other.ResponseType) return false;
       if (Channel != other.Channel) return false;
       if (MessageCase != other.MessageCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -413,6 +434,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (messageCase_ == MessageOneofCase.PlayAudio) hash ^= PlayAudio.GetHashCode();
       if (messageCase_ == MessageOneofCase.MixedAudio) hash ^= MixedAudio.GetHashCode();
       if (messageCase_ == MessageOneofCase.TelephonyTransferCall) hash ^= TelephonyTransferCall.GetHashCode();
+      if (ResponseType != global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ResponseType.Unspecified) hash ^= ResponseType.GetHashCode();
       if (Channel.Length != 0) hash ^= Channel.GetHashCode();
       hash ^= (int) messageCase_;
       if (_unknownFields != null) {
@@ -440,6 +462,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (messageCase_ == MessageOneofCase.Payload) {
         output.WriteRawTag(18);
         output.WriteMessage(Payload);
+      }
+      if (ResponseType != global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ResponseType.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) ResponseType);
       }
       if (messageCase_ == MessageOneofCase.OutputAudioText) {
         output.WriteRawTag(66);
@@ -490,6 +516,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (messageCase_ == MessageOneofCase.Payload) {
         output.WriteRawTag(18);
         output.WriteMessage(Payload);
+      }
+      if (ResponseType != global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ResponseType.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) ResponseType);
       }
       if (messageCase_ == MessageOneofCase.OutputAudioText) {
         output.WriteRawTag(66);
@@ -560,6 +590,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (messageCase_ == MessageOneofCase.TelephonyTransferCall) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(TelephonyTransferCall);
       }
+      if (ResponseType != global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ResponseType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ResponseType);
+      }
       if (Channel.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Channel);
       }
@@ -574,6 +607,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public void MergeFrom(ResponseMessage other) {
       if (other == null) {
         return;
+      }
+      if (other.ResponseType != global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ResponseType.Unspecified) {
+        ResponseType = other.ResponseType;
       }
       if (other.Channel.Length != 0) {
         Channel = other.Channel;
@@ -666,6 +702,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             }
             input.ReadMessage(subBuilder);
             Payload = subBuilder;
+            break;
+          }
+          case 32: {
+            ResponseType = (global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ResponseType) input.ReadEnum();
             break;
           }
           case 66: {
@@ -768,6 +808,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             Payload = subBuilder;
             break;
           }
+          case 32: {
+            ResponseType = (global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ResponseType) input.ReadEnum();
+            break;
+          }
           case 66: {
             global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.OutputAudioText subBuilder = new global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.OutputAudioText();
             if (messageCase_ == MessageOneofCase.OutputAudioText) {
@@ -845,6 +889,34 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      /// <summary>
+      /// Represents different response types.
+      /// </summary>
+      public enum ResponseType {
+        /// <summary>
+        /// Not specified.
+        /// </summary>
+        [pbr::OriginalName("RESPONSE_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The response is from an [entry
+        /// prompt][google.cloud.dialogflow.cx.v3.Page.entry_fulfillment] in the
+        /// page.
+        /// </summary>
+        [pbr::OriginalName("ENTRY_PROMPT")] EntryPrompt = 1,
+        /// <summary>
+        /// The response is from [form-filling
+        /// prompt][google.cloud.dialogflow.cx.v3.Form.Parameter.fill_behavior] in
+        /// the page.
+        /// </summary>
+        [pbr::OriginalName("PARAMETER_PROMPT")] ParameterPrompt = 2,
+        /// <summary>
+        /// The response is from a [transition
+        /// route][google.cloud.dialogflow.cx.v3.TransitionRoute] or an [event
+        /// handler][EventHandler] in the page or flow or transition route group.
+        /// </summary>
+        [pbr::OriginalName("HANDLER_PROMPT")] HandlerPrompt = 3,
+      }
+
       /// <summary>
       /// The text response message.
       /// </summary>

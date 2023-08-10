@@ -285,7 +285,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     ///     intent, then the first group in the ordered list takes precedence.
     ///
     /// Format:`projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
-    /// ID>/flows/&lt;Flow ID>/transitionRouteGroups/&lt;TransitionRouteGroup ID>`.
+    /// ID>/flows/&lt;Flow ID>/transitionRouteGroups/&lt;TransitionRouteGroup ID>`
+    /// or `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
+    /// ID>/transitionRouteGroups/&lt;TransitionRouteGroup ID>` for agent-level
+    /// groups.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

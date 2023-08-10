@@ -383,8 +383,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   /// Types][google.cloud.dialogflow.cx.v3.EntityType],
   /// [Flows][google.cloud.dialogflow.cx.v3.Flow],
   /// [Fulfillments][google.cloud.dialogflow.cx.v3.Fulfillment],
-  /// [Webhooks][google.cloud.dialogflow.cx.v3.Webhook], and so on to manage the
-  /// conversation flows..
+  /// [Webhooks][google.cloud.dialogflow.cx.v3.Webhook],
+  /// [TransitionRouteGroups][google.cloud.dialogflow.cx.v3.TransitionRouteGroup]
+  /// and so on to manage the conversation flows.
   /// </summary>
   public sealed partial class Agent : pb::IMessage<Agent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1565,7 +1566,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             public const int TrackingBranchFieldNumber = 3;
             private string trackingBranch_ = "";
             /// <summary>
-            /// The branch of GitHub repository tracked for this agent.
+            /// The branch of the GitHub repository tracked for this agent.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4039,7 +4040,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int CommitShaFieldNumber = 3;
     /// <summary>
     /// Commit SHA of the git push. This field is populated if
-    /// `git_destination` are specified in
+    /// `git_destination` is specified in
     /// [ExportAgentRequest][google.cloud.dialogflow.cx.v3.ExportAgentRequest].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

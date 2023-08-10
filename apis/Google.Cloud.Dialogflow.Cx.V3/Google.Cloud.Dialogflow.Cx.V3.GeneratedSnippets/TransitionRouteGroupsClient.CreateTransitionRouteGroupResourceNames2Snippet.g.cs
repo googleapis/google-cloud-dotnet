@@ -16,13 +16,12 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START dialogflow_v3_generated_TransitionRouteGroups_CreateTransitionRouteGroup_async_flattened_resourceNames]
+    // [START dialogflow_v3_generated_TransitionRouteGroups_CreateTransitionRouteGroup_sync_flattened_resourceNames2]
     using Google.Cloud.Dialogflow.Cx.V3;
-    using System.Threading.Tasks;
 
     public sealed partial class GeneratedTransitionRouteGroupsClientSnippets
     {
-        /// <summary>Snippet for CreateTransitionRouteGroupAsync</summary>
+        /// <summary>Snippet for CreateTransitionRouteGroup</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,16 +29,16 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task CreateTransitionRouteGroupResourceNamesAsync()
+        public void CreateTransitionRouteGroupResourceNames2()
         {
             // Create client
-            TransitionRouteGroupsClient transitionRouteGroupsClient = await TransitionRouteGroupsClient.CreateAsync();
+            TransitionRouteGroupsClient transitionRouteGroupsClient = TransitionRouteGroupsClient.Create();
             // Initialize request argument(s)
-            FlowName parent = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]");
+            AgentName parent = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]");
             TransitionRouteGroup transitionRouteGroup = new TransitionRouteGroup();
             // Make the request
-            TransitionRouteGroup response = await transitionRouteGroupsClient.CreateTransitionRouteGroupAsync(parent, transitionRouteGroup);
+            TransitionRouteGroup response = transitionRouteGroupsClient.CreateTransitionRouteGroup(parent, transitionRouteGroup);
         }
     }
-    // [END dialogflow_v3_generated_TransitionRouteGroups_CreateTransitionRouteGroup_async_flattened_resourceNames]
+    // [END dialogflow_v3_generated_TransitionRouteGroups_CreateTransitionRouteGroup_sync_flattened_resourceNames2]
 }

@@ -37,9 +37,18 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             /// .
             /// </summary>
             ProjectLocationAgentFlowTransitionRouteGroup = 1,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/agents/{agent}/transitionRouteGroups/{transition_route_group}</c>
+            /// .
+            /// </summary>
+            ProjectLocationAgentTransitionRouteGroup = 2,
         }
 
         private static gax::PathTemplate s_projectLocationAgentFlowTransitionRouteGroup = new gax::PathTemplate("projects/{project}/locations/{location}/agents/{agent}/flows/{flow}/transitionRouteGroups/{transition_route_group}");
+
+        private static gax::PathTemplate s_projectLocationAgentTransitionRouteGroup = new gax::PathTemplate("projects/{project}/locations/{location}/agents/{agent}/transitionRouteGroups/{transition_route_group}");
 
         /// <summary>Creates a <see cref="TransitionRouteGroupName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -68,6 +77,23 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </returns>
         public static TransitionRouteGroupName FromProjectLocationAgentFlowTransitionRouteGroup(string projectId, string locationId, string agentId, string flowId, string transitionRouteGroupId) =>
             new TransitionRouteGroupName(ResourceNameType.ProjectLocationAgentFlowTransitionRouteGroup, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), agentId: gax::GaxPreconditions.CheckNotNullOrEmpty(agentId, nameof(agentId)), flowId: gax::GaxPreconditions.CheckNotNullOrEmpty(flowId, nameof(flowId)), transitionRouteGroupId: gax::GaxPreconditions.CheckNotNullOrEmpty(transitionRouteGroupId, nameof(transitionRouteGroupId)));
+
+        /// <summary>
+        /// Creates a <see cref="TransitionRouteGroupName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/agents/{agent}/transitionRouteGroups/{transition_route_group}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="agentId">The <c>Agent</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="transitionRouteGroupId">
+        /// The <c>TransitionRouteGroup</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// A new instance of <see cref="TransitionRouteGroupName"/> constructed from the provided ids.
+        /// </returns>
+        public static TransitionRouteGroupName FromProjectLocationAgentTransitionRouteGroup(string projectId, string locationId, string agentId, string transitionRouteGroupId) =>
+            new TransitionRouteGroupName(ResourceNameType.ProjectLocationAgentTransitionRouteGroup, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), agentId: gax::GaxPreconditions.CheckNotNullOrEmpty(agentId, nameof(agentId)), transitionRouteGroupId: gax::GaxPreconditions.CheckNotNullOrEmpty(transitionRouteGroupId, nameof(transitionRouteGroupId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="TransitionRouteGroupName"/> with pattern
@@ -114,6 +140,25 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             s_projectLocationAgentFlowTransitionRouteGroup.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(agentId, nameof(agentId)), gax::GaxPreconditions.CheckNotNullOrEmpty(flowId, nameof(flowId)), gax::GaxPreconditions.CheckNotNullOrEmpty(transitionRouteGroupId, nameof(transitionRouteGroupId)));
 
         /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="TransitionRouteGroupName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/agents/{agent}/transitionRouteGroups/{transition_route_group}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="agentId">The <c>Agent</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="transitionRouteGroupId">
+        /// The <c>TransitionRouteGroup</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// The string representation of this <see cref="TransitionRouteGroupName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/agents/{agent}/transitionRouteGroups/{transition_route_group}</c>
+        /// .
+        /// </returns>
+        public static string FormatProjectLocationAgentTransitionRouteGroup(string projectId, string locationId, string agentId, string transitionRouteGroupId) =>
+            s_projectLocationAgentTransitionRouteGroup.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(agentId, nameof(agentId)), gax::GaxPreconditions.CheckNotNullOrEmpty(transitionRouteGroupId, nameof(transitionRouteGroupId)));
+
+        /// <summary>
         /// Parses the given resource name string into a new <see cref="TransitionRouteGroupName"/> instance.
         /// </summary>
         /// <remarks>
@@ -123,6 +168,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <description>
         /// <c>
         /// projects/{project}/locations/{location}/agents/{agent}/flows/{flow}/transitionRouteGroups/{transition_route_group}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/agents/{agent}/transitionRouteGroups/{transition_route_group}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -143,6 +193,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <description>
         /// <c>
         /// projects/{project}/locations/{location}/agents/{agent}/flows/{flow}/transitionRouteGroups/{transition_route_group}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/agents/{agent}/transitionRouteGroups/{transition_route_group}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -170,6 +225,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// projects/{project}/locations/{location}/agents/{agent}/flows/{flow}/transitionRouteGroups/{transition_route_group}</c>
         /// </description>
         /// </item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/agents/{agent}/transitionRouteGroups/{transition_route_group}</c>
+        /// </description>
+        /// </item>
         /// </list>
         /// </remarks>
         /// <param name="transitionRouteGroupName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -194,6 +254,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// projects/{project}/locations/{location}/agents/{agent}/flows/{flow}/transitionRouteGroups/{transition_route_group}</c>
         /// </description>
         /// </item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/agents/{agent}/transitionRouteGroups/{transition_route_group}</c>
+        /// </description>
+        /// </item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -215,6 +280,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             if (s_projectLocationAgentFlowTransitionRouteGroup.TryParseName(transitionRouteGroupName, out resourceName))
             {
                 result = FromProjectLocationAgentFlowTransitionRouteGroup(resourceName[0], resourceName[1], resourceName[2], resourceName[3], resourceName[4]);
+                return true;
+            }
+            if (s_projectLocationAgentTransitionRouteGroup.TryParseName(transitionRouteGroupName, out resourceName))
+            {
+                result = FromProjectLocationAgentTransitionRouteGroup(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
                 return true;
             }
             if (allowUnparsed)
@@ -267,28 +337,28 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         public gax::UnparsedResourceName UnparsedResource { get; }
 
         /// <summary>
-        /// The <c>Agent</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Agent</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string AgentId { get; }
 
         /// <summary>
-        /// The <c>Flow</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Flow</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string FlowId { get; }
 
         /// <summary>
-        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string LocationId { get; }
 
         /// <summary>
-        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string ProjectId { get; }
 
         /// <summary>
-        /// The <c>TransitionRouteGroup</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed
-        /// resource name.
+        /// The <c>TransitionRouteGroup</c> ID. May be <c>null</c>, depending on which resource name is contained by
+        /// this instance.
         /// </summary>
         public string TransitionRouteGroupId { get; }
 
@@ -303,6 +373,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
                 case ResourceNameType.ProjectLocationAgentFlowTransitionRouteGroup: return s_projectLocationAgentFlowTransitionRouteGroup.Expand(ProjectId, LocationId, AgentId, FlowId, TransitionRouteGroupId);
+                case ResourceNameType.ProjectLocationAgentTransitionRouteGroup: return s_projectLocationAgentTransitionRouteGroup.Expand(ProjectId, LocationId, AgentId, TransitionRouteGroupId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }
@@ -343,6 +414,37 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             get => string.IsNullOrEmpty(Parent) ? null : FlowName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
+
+        /// <summary><see cref="AgentName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public AgentName ParentAsAgentName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : AgentName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (FlowName.TryParse(Parent, out FlowName flow))
+                {
+                    return flow;
+                }
+                if (AgentName.TryParse(Parent, out AgentName agent))
+                {
+                    return agent;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
+            set => Parent = value?.ToString() ?? "";
+        }
     }
 
     public partial class GetTransitionRouteGroupRequest
@@ -363,6 +465,37 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         public FlowName ParentAsFlowName
         {
             get => string.IsNullOrEmpty(Parent) ? null : FlowName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary><see cref="AgentName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public AgentName ParentAsAgentName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : AgentName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (FlowName.TryParse(Parent, out FlowName flow))
+                {
+                    return flow;
+                }
+                if (AgentName.TryParse(Parent, out AgentName agent))
+                {
+                    return agent;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
             set => Parent = value?.ToString() ?? "";
         }
     }

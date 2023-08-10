@@ -963,6 +963,7 @@ namespace GoogleCSharpSnippets
                 ParentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
                 FlowUri = "",
                 ImportOption = ImportFlowRequest.Types.ImportOption.Unspecified,
+                FlowImportStrategy = new FlowImportStrategy(),
             };
             // Make the request
             Operation<ImportFlowResponse, Struct> response = flowsClient.ImportFlow(request);
@@ -998,6 +999,7 @@ namespace GoogleCSharpSnippets
                 ParentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
                 FlowUri = "",
                 ImportOption = ImportFlowRequest.Types.ImportOption.Unspecified,
+                FlowImportStrategy = new FlowImportStrategy(),
             };
             // Make the request
             Operation<ImportFlowResponse, Struct> response = await flowsClient.ImportFlowAsync(request);
