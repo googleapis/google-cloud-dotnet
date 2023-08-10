@@ -5395,6 +5395,9 @@ namespace Google.Cloud.StorageInsights.V1 {
   /// <summary>
   /// Message describing ReportConfig object. ReportConfig is the configuration to
   /// generate reports.
+  /// See
+  /// https://cloud.google.com/storage/docs/insights/using-inventory-reports#create-config-rest
+  /// for more details on how to set various fields.
   /// Next ID: 12
   /// </summary>
   public sealed partial class ReportConfig : pb::IMessage<ReportConfig>
