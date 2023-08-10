@@ -38,11 +38,12 @@ if(api == "start")
 {
     if (String.IsNullOrEmpty(appIdPath))
     {
+        Console.WriteLine("appid path is passed");
         await reporter.StartAsync(appId, installationId, privateKey, pr);
     }
     else
     {
-        await reporter.StartAsync(githubToken, pr);
+        await reporter.StartAsync(githubToken,pr,appId);
     }
 }
 else if (api == "finish")
@@ -51,11 +52,12 @@ else if (api == "finish")
     string publishDetails = Environment.GetEnvironmentVariable("PUBLISH_DETAILS") ?? "";
     if (String.IsNullOrEmpty(appIdPath))
     {
+        Console.WriteLine("appid path is passed");
         await reporter.FinishAsync(appId, installationId, privateKey, pr, status, publishDetails);
     }
     else
     {
-        await reporter.FinishAsync(githubToken, pr, status, publishDetails);
+        await reporter.FinishAsync(githubToken, pr, appId, status, publishDetails);
     }
 }
 else

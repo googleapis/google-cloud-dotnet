@@ -27,15 +27,16 @@ namespace Google.Cloud.Tools.ReleaseTool
                         ExpirationSeconds = 600 // 10 minutes is the maximum time allowed
                     }
                 );
+            Console.WriteLine("github JWT has been generated");
             return generator.CreateEncodedJwtToken();
         }
 
         public async Task StartAsync(string appId, string installationId, string privateKey, string pr) =>
-            await StartAsync(GetGitHubToken(appId, installationId, privateKey), pr);
+            await StartAsync(GetGitHubToken(appId, installationId, privateKey), pr, appId);
 
-        public async Task StartAsync(string githubToken, string pr)
+        public async Task StartAsync(string githubToken, string pr, string appId)
         {
-            var github = new GitHub(githubToken, pr);
+            var github = new GitHub(appId, githubToken);
             var prDetails = PRDetailsExtractor.ExtractPRDetails(pr);
             var buildUrl = Environment.GetEnvironmentVariable("CLOUD_LOGGING_URL");
 
@@ -60,11 +61,11 @@ namespace Google.Cloud.Tools.ReleaseTool
         }
 
         public async Task FinishAsync(string appId, string installationId, string privateKey, string pr, bool status, string details) =>
-            await FinishAsync(GetGitHubToken(appId, installationId, privateKey), pr, status, details);
+            await FinishAsync(GetGitHubToken(appId, installationId, privateKey), pr, appId, status, details);
 
-        public async Task FinishAsync(string githubToken, string pr, bool status, string details)
+        public async Task FinishAsync(string githubToken, string pr,string appId, bool status, string details)
         {
-            var github = new GitHub(githubToken, pr);
+            var github = new GitHub(appId, githubToken);
             var prDetails = PRDetailsExtractor.ExtractPRDetails(pr);
             string message;
             IList<string> labels = new List<string>();
