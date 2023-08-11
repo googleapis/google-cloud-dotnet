@@ -26,4 +26,4 @@ then
   exit 1
 fi
 
-echo "Fake release succeeded11"
+echo "Fake release succeeded1"
