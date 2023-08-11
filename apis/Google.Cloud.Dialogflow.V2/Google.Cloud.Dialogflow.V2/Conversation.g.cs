@@ -77,87 +77,88 @@ namespace Google.Cloud.Dialogflow.V2 {
             "ASgJQib6QSMKIWRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20vTWVzc2FnZRIU",
             "Cgxjb250ZXh0X3NpemUYBCABKAUSTgoTYXNzaXN0X3F1ZXJ5X3BhcmFtcxgF",
             "IAEoCzIxLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkFzc2lzdFF1ZXJ5",
-            "UGFyYW1ldGVycyLXAwoiU3VnZ2VzdENvbnZlcnNhdGlvblN1bW1hcnlSZXNw",
+            "UGFyYW1ldGVycyL3AwoiU3VnZ2VzdENvbnZlcnNhdGlvblN1bW1hcnlSZXNw",
             "b25zZRJXCgdzdW1tYXJ5GAEgASgLMkYuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
             "b3cudjIuU3VnZ2VzdENvbnZlcnNhdGlvblN1bW1hcnlSZXNwb25zZS5TdW1t",
             "YXJ5Ej4KDmxhdGVzdF9tZXNzYWdlGAIgASgJQib6QSMKIWRpYWxvZ2Zsb3cu",
             "Z29vZ2xlYXBpcy5jb20vTWVzc2FnZRIUCgxjb250ZXh0X3NpemUYAyABKAUa",
-            "gQIKB1N1bW1hcnkSDAoEdGV4dBgBIAEoCRJvCg10ZXh0X3NlY3Rpb25zGAQg",
+            "oQIKB1N1bW1hcnkSDAoEdGV4dBgBIAEoCRJvCg10ZXh0X3NlY3Rpb25zGAQg",
             "AygLMlguZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuU3VnZ2VzdENvbnZl",
             "cnNhdGlvblN1bW1hcnlSZXNwb25zZS5TdW1tYXJ5LlRleHRTZWN0aW9uc0Vu",
             "dHJ5EkIKDWFuc3dlcl9yZWNvcmQYAyABKAlCK/pBKAomZGlhbG9nZmxvdy5n",
-            "b29nbGVhcGlzLmNvbS9BbnN3ZXJSZWNvcmQaMwoRVGV4dFNlY3Rpb25zRW50",
-            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASLUAwofR2VuZXJh",
-            "dGVTdGF0ZWxlc3NTdW1tYXJ5UmVxdWVzdBJ0ChZzdGF0ZWxlc3NfY29udmVy",
-            "c2F0aW9uGAEgASgLMk8uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuR2Vu",
-            "ZXJhdGVTdGF0ZWxlc3NTdW1tYXJ5UmVxdWVzdC5NaW5pbWFsQ29udmVyc2F0",
-            "aW9uQgPgQQISUgoUY29udmVyc2F0aW9uX3Byb2ZpbGUYAiABKAsyLy5nb29n",
-            "bGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5Db252ZXJzYXRpb25Qcm9maWxlQgPg",
-            "QQISPgoObGF0ZXN0X21lc3NhZ2UYAyABKAlCJvpBIwohZGlhbG9nZmxvdy5n",
-            "b29nbGVhcGlzLmNvbS9NZXNzYWdlEhgKEG1heF9jb250ZXh0X3NpemUYBCAB",
-            "KAUajAEKE01pbmltYWxDb252ZXJzYXRpb24SOgoIbWVzc2FnZXMYASADKAsy",
-            "Iy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5NZXNzYWdlQgPgQQISOQoG",
-            "cGFyZW50GAIgASgJQingQQL6QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlzLmNv",
-            "bS9Mb2NhdGlvbiKNAwogR2VuZXJhdGVTdGF0ZWxlc3NTdW1tYXJ5UmVzcG9u",
-            "c2USVQoHc3VtbWFyeRgBIAEoCzJELmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93",
-            "LnYyLkdlbmVyYXRlU3RhdGVsZXNzU3VtbWFyeVJlc3BvbnNlLlN1bW1hcnkS",
-            "PgoObGF0ZXN0X21lc3NhZ2UYAiABKAlCJvpBIwohZGlhbG9nZmxvdy5nb29n",
-            "bGVhcGlzLmNvbS9NZXNzYWdlEhQKDGNvbnRleHRfc2l6ZRgDIAEoBRq7AQoH",
-            "U3VtbWFyeRIMCgR0ZXh0GAEgASgJEm0KDXRleHRfc2VjdGlvbnMYAiADKAsy",
-            "Vi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5HZW5lcmF0ZVN0YXRlbGVz",
-            "c1N1bW1hcnlSZXNwb25zZS5TdW1tYXJ5LlRleHRTZWN0aW9uc0VudHJ5GjMK",
-            "EVRleHRTZWN0aW9uc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
-            "CToCOAEytBAKDUNvbnZlcnNhdGlvbnMSjAIKEkNyZWF0ZUNvbnZlcnNhdGlv",
-            "bhI1Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkNyZWF0ZUNvbnZlcnNh",
-            "dGlvblJlcXVlc3QaKC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5Db252",
-            "ZXJzYXRpb24ilAGC0+STAngiJS92Mi97cGFyZW50PXByb2plY3RzLyp9L2Nv",
-            "bnZlcnNhdGlvbnM6DGNvbnZlcnNhdGlvblpBIjEvdjIve3BhcmVudD1wcm9q",
-            "ZWN0cy8qL2xvY2F0aW9ucy8qfS9jb252ZXJzYXRpb25zOgxjb252ZXJzYXRp",
-            "b27aQRNwYXJlbnQsY29udmVyc2F0aW9uEu0BChFMaXN0Q29udmVyc2F0aW9u",
-            "cxI0Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkxpc3RDb252ZXJzYXRp",
-            "b25zUmVxdWVzdBo1Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkxpc3RD",
-            "b252ZXJzYXRpb25zUmVzcG9uc2Uia4LT5JMCXBIlL3YyL3twYXJlbnQ9cHJv",
-            "amVjdHMvKn0vY29udmVyc2F0aW9uc1ozEjEvdjIve3BhcmVudD1wcm9qZWN0",
-            "cy8qL2xvY2F0aW9ucy8qfS9jb252ZXJzYXRpb25z2kEGcGFyZW50EtoBCg9H",
-            "ZXRDb252ZXJzYXRpb24SMi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5H",
-            "ZXRDb252ZXJzYXRpb25SZXF1ZXN0GiguZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
-            "b3cudjIuQ29udmVyc2F0aW9uImmC0+STAlwSJS92Mi97bmFtZT1wcm9qZWN0",
-            "cy8qL2NvbnZlcnNhdGlvbnMvKn1aMxIxL3YyL3tuYW1lPXByb2plY3RzLyov",
-            "bG9jYXRpb25zLyovY29udmVyc2F0aW9ucy8qfdpBBG5hbWUS/QEKFENvbXBs",
-            "ZXRlQ29udmVyc2F0aW9uEjcuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIu",
-            "Q29tcGxldGVDb252ZXJzYXRpb25SZXF1ZXN0GiguZ29vZ2xlLmNsb3VkLmRp",
-            "YWxvZ2Zsb3cudjIuQ29udmVyc2F0aW9uIoEBgtPkkwJ0Ii4vdjIve25hbWU9",
-            "cHJvamVjdHMvKi9jb252ZXJzYXRpb25zLyp9OmNvbXBsZXRlOgEqWj8iOi92",
+            "b29nbGVhcGlzLmNvbS9BbnN3ZXJSZWNvcmQSHgoWYmFzZWxpbmVfbW9kZWxf",
+            "dmVyc2lvbhgFIAEoCRozChFUZXh0U2VjdGlvbnNFbnRyeRILCgNrZXkYASAB",
+            "KAkSDQoFdmFsdWUYAiABKAk6AjgBItQDCh9HZW5lcmF0ZVN0YXRlbGVzc1N1",
+            "bW1hcnlSZXF1ZXN0EnQKFnN0YXRlbGVzc19jb252ZXJzYXRpb24YASABKAsy",
+            "Ty5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5HZW5lcmF0ZVN0YXRlbGVz",
+            "c1N1bW1hcnlSZXF1ZXN0Lk1pbmltYWxDb252ZXJzYXRpb25CA+BBAhJSChRj",
+            "b252ZXJzYXRpb25fcHJvZmlsZRgCIAEoCzIvLmdvb2dsZS5jbG91ZC5kaWFs",
+            "b2dmbG93LnYyLkNvbnZlcnNhdGlvblByb2ZpbGVCA+BBAhI+Cg5sYXRlc3Rf",
+            "bWVzc2FnZRgDIAEoCUIm+kEjCiFkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29t",
+            "L01lc3NhZ2USGAoQbWF4X2NvbnRleHRfc2l6ZRgEIAEoBRqMAQoTTWluaW1h",
+            "bENvbnZlcnNhdGlvbhI6CghtZXNzYWdlcxgBIAMoCzIjLmdvb2dsZS5jbG91",
+            "ZC5kaWFsb2dmbG93LnYyLk1lc3NhZ2VCA+BBAhI5CgZwYXJlbnQYAiABKAlC",
+            "KeBBAvpBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29tL0xvY2F0aW9uIq0D",
+            "CiBHZW5lcmF0ZVN0YXRlbGVzc1N1bW1hcnlSZXNwb25zZRJVCgdzdW1tYXJ5",
+            "GAEgASgLMkQuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuR2VuZXJhdGVT",
+            "dGF0ZWxlc3NTdW1tYXJ5UmVzcG9uc2UuU3VtbWFyeRI+Cg5sYXRlc3RfbWVz",
+            "c2FnZRgCIAEoCUIm+kEjCiFkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL01l",
+            "c3NhZ2USFAoMY29udGV4dF9zaXplGAMgASgFGtsBCgdTdW1tYXJ5EgwKBHRl",
+            "eHQYASABKAkSbQoNdGV4dF9zZWN0aW9ucxgCIAMoCzJWLmdvb2dsZS5jbG91",
+            "ZC5kaWFsb2dmbG93LnYyLkdlbmVyYXRlU3RhdGVsZXNzU3VtbWFyeVJlc3Bv",
+            "bnNlLlN1bW1hcnkuVGV4dFNlY3Rpb25zRW50cnkSHgoWYmFzZWxpbmVfbW9k",
+            "ZWxfdmVyc2lvbhgEIAEoCRozChFUZXh0U2VjdGlvbnNFbnRyeRILCgNrZXkY",
+            "ASABKAkSDQoFdmFsdWUYAiABKAk6AjgBMrQQCg1Db252ZXJzYXRpb25zEowC",
+            "ChJDcmVhdGVDb252ZXJzYXRpb24SNS5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
+            "dy52Mi5DcmVhdGVDb252ZXJzYXRpb25SZXF1ZXN0GiguZ29vZ2xlLmNsb3Vk",
+            "LmRpYWxvZ2Zsb3cudjIuQ29udmVyc2F0aW9uIpQBgtPkkwJ4IiUvdjIve3Bh",
+            "cmVudD1wcm9qZWN0cy8qfS9jb252ZXJzYXRpb25zOgxjb252ZXJzYXRpb25a",
+            "QSIxL3YyL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vY29udmVy",
+            "c2F0aW9uczoMY29udmVyc2F0aW9u2kETcGFyZW50LGNvbnZlcnNhdGlvbhLt",
+            "AQoRTGlzdENvbnZlcnNhdGlvbnMSNC5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
+            "dy52Mi5MaXN0Q29udmVyc2F0aW9uc1JlcXVlc3QaNS5nb29nbGUuY2xvdWQu",
+            "ZGlhbG9nZmxvdy52Mi5MaXN0Q29udmVyc2F0aW9uc1Jlc3BvbnNlImuC0+ST",
+            "AlwSJS92Mi97cGFyZW50PXByb2plY3RzLyp9L2NvbnZlcnNhdGlvbnNaMxIx",
+            "L3YyL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vY29udmVyc2F0",
+            "aW9uc9pBBnBhcmVudBLaAQoPR2V0Q29udmVyc2F0aW9uEjIuZ29vZ2xlLmNs",
+            "b3VkLmRpYWxvZ2Zsb3cudjIuR2V0Q29udmVyc2F0aW9uUmVxdWVzdBooLmdv",
+            "b2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkNvbnZlcnNhdGlvbiJpgtPkkwJc",
+            "EiUvdjIve25hbWU9cHJvamVjdHMvKi9jb252ZXJzYXRpb25zLyp9WjMSMS92",
             "Mi97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbnZlcnNhdGlvbnMv",
-            "Kn06Y29tcGxldGU6ASraQQRuYW1lEvUBCgxMaXN0TWVzc2FnZXMSLy5nb29n",
-            "bGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5MaXN0TWVzc2FnZXNSZXF1ZXN0GjAu",
-            "Z29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuTGlzdE1lc3NhZ2VzUmVzcG9u",
-            "c2UigQGC0+STAnISMC92Mi97cGFyZW50PXByb2plY3RzLyovY29udmVyc2F0",
-            "aW9ucy8qfS9tZXNzYWdlc1o+EjwvdjIve3BhcmVudD1wcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy8qL2NvbnZlcnNhdGlvbnMvKn0vbWVzc2FnZXPaQQZwYXJlbnQS",
-            "9AIKGlN1Z2dlc3RDb252ZXJzYXRpb25TdW1tYXJ5Ej0uZ29vZ2xlLmNsb3Vk",
-            "LmRpYWxvZ2Zsb3cudjIuU3VnZ2VzdENvbnZlcnNhdGlvblN1bW1hcnlSZXF1",
-            "ZXN0Gj4uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuU3VnZ2VzdENvbnZl",
-            "cnNhdGlvblN1bW1hcnlSZXNwb25zZSLWAYLT5JMCwAEiVC92Mi97Y29udmVy",
-            "c2F0aW9uPXByb2plY3RzLyovY29udmVyc2F0aW9ucy8qfS9zdWdnZXN0aW9u",
-            "czpzdWdnZXN0Q29udmVyc2F0aW9uU3VtbWFyeToBKlplImAvdjIve2NvbnZl",
-            "cnNhdGlvbj1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbnZlcnNhdGlvbnMv",
-            "Kn0vc3VnZ2VzdGlvbnM6c3VnZ2VzdENvbnZlcnNhdGlvblN1bW1hcnk6ASra",
-            "QQxjb252ZXJzYXRpb24S3QIKGEdlbmVyYXRlU3RhdGVsZXNzU3VtbWFyeRI7",
-            "Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkdlbmVyYXRlU3RhdGVsZXNz",
-            "U3VtbWFyeVJlcXVlc3QaPC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5H",
-            "ZW5lcmF0ZVN0YXRlbGVzc1N1bW1hcnlSZXNwb25zZSLFAYLT5JMCvgEiUy92",
-            "Mi97c3RhdGVsZXNzX2NvbnZlcnNhdGlvbi5wYXJlbnQ9cHJvamVjdHMvKn0v",
-            "c3VnZ2VzdGlvbnM6Z2VuZXJhdGVTdGF0ZWxlc3NTdW1tYXJ5OgEqWmQiXy92",
-            "Mi97c3RhdGVsZXNzX2NvbnZlcnNhdGlvbi5wYXJlbnQ9cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKn0vc3VnZ2VzdGlvbnM6Z2VuZXJhdGVTdGF0ZWxlc3NTdW1t",
-            "YXJ5OgEqGnjKQRlkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29t0kFZaHR0cHM6",
-            "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRw",
-            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2RpYWxvZ2Zsb3dCmgEKHmNv",
-            "bS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MkIRQ29udmVyc2F0aW9uUHJv",
-            "dG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9kaWFsb2dmbG93L2FwaXYyL2Rp",
-            "YWxvZ2Zsb3dwYjtkaWFsb2dmbG93cGL4AQGiAgJERqoCGkdvb2dsZS5DbG91",
-            "ZC5EaWFsb2dmbG93LlYyYgZwcm90bzM="));
+            "Kn3aQQRuYW1lEv0BChRDb21wbGV0ZUNvbnZlcnNhdGlvbhI3Lmdvb2dsZS5j",
+            "bG91ZC5kaWFsb2dmbG93LnYyLkNvbXBsZXRlQ29udmVyc2F0aW9uUmVxdWVz",
+            "dBooLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkNvbnZlcnNhdGlvbiKB",
+            "AYLT5JMCdCIuL3YyL3tuYW1lPXByb2plY3RzLyovY29udmVyc2F0aW9ucy8q",
+            "fTpjb21wbGV0ZToBKlo/IjovdjIve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKi9jb252ZXJzYXRpb25zLyp9OmNvbXBsZXRlOgEq2kEEbmFtZRL1AQoM",
+            "TGlzdE1lc3NhZ2VzEi8uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuTGlz",
+            "dE1lc3NhZ2VzUmVxdWVzdBowLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYy",
+            "Lkxpc3RNZXNzYWdlc1Jlc3BvbnNlIoEBgtPkkwJyEjAvdjIve3BhcmVudD1w",
+            "cm9qZWN0cy8qL2NvbnZlcnNhdGlvbnMvKn0vbWVzc2FnZXNaPhI8L3YyL3tw",
+            "YXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jb252ZXJzYXRpb25zLyp9",
+            "L21lc3NhZ2Vz2kEGcGFyZW50EvQCChpTdWdnZXN0Q29udmVyc2F0aW9uU3Vt",
+            "bWFyeRI9Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLlN1Z2dlc3RDb252",
+            "ZXJzYXRpb25TdW1tYXJ5UmVxdWVzdBo+Lmdvb2dsZS5jbG91ZC5kaWFsb2dm",
+            "bG93LnYyLlN1Z2dlc3RDb252ZXJzYXRpb25TdW1tYXJ5UmVzcG9uc2Ui1gGC",
+            "0+STAsABIlQvdjIve2NvbnZlcnNhdGlvbj1wcm9qZWN0cy8qL2NvbnZlcnNh",
+            "dGlvbnMvKn0vc3VnZ2VzdGlvbnM6c3VnZ2VzdENvbnZlcnNhdGlvblN1bW1h",
+            "cnk6ASpaZSJgL3YyL3tjb252ZXJzYXRpb249cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKi9jb252ZXJzYXRpb25zLyp9L3N1Z2dlc3Rpb25zOnN1Z2dlc3RDb252",
+            "ZXJzYXRpb25TdW1tYXJ5OgEq2kEMY29udmVyc2F0aW9uEt0CChhHZW5lcmF0",
+            "ZVN0YXRlbGVzc1N1bW1hcnkSOy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52",
+            "Mi5HZW5lcmF0ZVN0YXRlbGVzc1N1bW1hcnlSZXF1ZXN0GjwuZ29vZ2xlLmNs",
+            "b3VkLmRpYWxvZ2Zsb3cudjIuR2VuZXJhdGVTdGF0ZWxlc3NTdW1tYXJ5UmVz",
+            "cG9uc2UixQGC0+STAr4BIlMvdjIve3N0YXRlbGVzc19jb252ZXJzYXRpb24u",
+            "cGFyZW50PXByb2plY3RzLyp9L3N1Z2dlc3Rpb25zOmdlbmVyYXRlU3RhdGVs",
+            "ZXNzU3VtbWFyeToBKlpkIl8vdjIve3N0YXRlbGVzc19jb252ZXJzYXRpb24u",
+            "cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L3N1Z2dlc3Rpb25zOmdl",
+            "bmVyYXRlU3RhdGVsZXNzU3VtbWFyeToBKhp4ykEZZGlhbG9nZmxvdy5nb29n",
+            "bGVhcGlzLmNvbdJBWWh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgv",
+            "Y2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
+            "aC9kaWFsb2dmbG93QpoBCh5jb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cu",
+            "djJCEUNvbnZlcnNhdGlvblByb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28v",
+            "ZGlhbG9nZmxvdy9hcGl2Mi9kaWFsb2dmbG93cGI7ZGlhbG9nZmxvd3Bi+AEB",
+            "ogICREaqAhpHb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5WMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.ConversationProfileReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.ParticipantReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -171,9 +172,9 @@ namespace Google.Cloud.Dialogflow.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.ListMessagesResponse), global::Google.Cloud.Dialogflow.V2.ListMessagesResponse.Parser, new[]{ "Messages", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.ConversationPhoneNumber), global::Google.Cloud.Dialogflow.V2.ConversationPhoneNumber.Parser, new[]{ "PhoneNumber" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SuggestConversationSummaryRequest), global::Google.Cloud.Dialogflow.V2.SuggestConversationSummaryRequest.Parser, new[]{ "Conversation", "LatestMessage", "ContextSize", "AssistQueryParams" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SuggestConversationSummaryResponse), global::Google.Cloud.Dialogflow.V2.SuggestConversationSummaryResponse.Parser, new[]{ "Summary", "LatestMessage", "ContextSize" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SuggestConversationSummaryResponse.Types.Summary), global::Google.Cloud.Dialogflow.V2.SuggestConversationSummaryResponse.Types.Summary.Parser, new[]{ "Text", "TextSections", "AnswerRecord" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SuggestConversationSummaryResponse), global::Google.Cloud.Dialogflow.V2.SuggestConversationSummaryResponse.Parser, new[]{ "Summary", "LatestMessage", "ContextSize" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SuggestConversationSummaryResponse.Types.Summary), global::Google.Cloud.Dialogflow.V2.SuggestConversationSummaryResponse.Types.Summary.Parser, new[]{ "Text", "TextSections", "AnswerRecord", "BaselineModelVersion" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.GenerateStatelessSummaryRequest), global::Google.Cloud.Dialogflow.V2.GenerateStatelessSummaryRequest.Parser, new[]{ "StatelessConversation", "ConversationProfile", "LatestMessage", "MaxContextSize" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.GenerateStatelessSummaryRequest.Types.MinimalConversation), global::Google.Cloud.Dialogflow.V2.GenerateStatelessSummaryRequest.Types.MinimalConversation.Parser, new[]{ "Messages", "Parent" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.GenerateStatelessSummaryResponse), global::Google.Cloud.Dialogflow.V2.GenerateStatelessSummaryResponse.Parser, new[]{ "Summary", "LatestMessage", "ContextSize" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.GenerateStatelessSummaryResponse.Types.Summary), global::Google.Cloud.Dialogflow.V2.GenerateStatelessSummaryResponse.Types.Summary.Parser, new[]{ "Text", "TextSections" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.GenerateStatelessSummaryResponse), global::Google.Cloud.Dialogflow.V2.GenerateStatelessSummaryResponse.Parser, new[]{ "Summary", "LatestMessage", "ContextSize" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.GenerateStatelessSummaryResponse.Types.Summary), global::Google.Cloud.Dialogflow.V2.GenerateStatelessSummaryResponse.Types.Summary.Parser, new[]{ "Text", "TextSections", "BaselineModelVersion" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })})
           }));
     }
     #endregion
@@ -3386,6 +3387,7 @@ namespace Google.Cloud.Dialogflow.V2 {
           text_ = other.text_;
           textSections_ = other.textSections_.Clone();
           answerRecord_ = other.answerRecord_;
+          baselineModelVersion_ = other.baselineModelVersion_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -3442,6 +3444,22 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
         }
 
+        /// <summary>Field number for the "baseline_model_version" field.</summary>
+        public const int BaselineModelVersionFieldNumber = 5;
+        private string baselineModelVersion_ = "";
+        /// <summary>
+        /// The baseline model version used to generate this summary. It is empty if
+        /// a baseline model was not used to generate this summary.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string BaselineModelVersion {
+          get { return baselineModelVersion_; }
+          set {
+            baselineModelVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -3460,6 +3478,7 @@ namespace Google.Cloud.Dialogflow.V2 {
           if (Text != other.Text) return false;
           if (!TextSections.Equals(other.TextSections)) return false;
           if (AnswerRecord != other.AnswerRecord) return false;
+          if (BaselineModelVersion != other.BaselineModelVersion) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -3470,6 +3489,7 @@ namespace Google.Cloud.Dialogflow.V2 {
           if (Text.Length != 0) hash ^= Text.GetHashCode();
           hash ^= TextSections.GetHashCode();
           if (AnswerRecord.Length != 0) hash ^= AnswerRecord.GetHashCode();
+          if (BaselineModelVersion.Length != 0) hash ^= BaselineModelVersion.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -3497,6 +3517,10 @@ namespace Google.Cloud.Dialogflow.V2 {
             output.WriteString(AnswerRecord);
           }
           textSections_.WriteTo(output, _map_textSections_codec);
+          if (BaselineModelVersion.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(BaselineModelVersion);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -3516,6 +3540,10 @@ namespace Google.Cloud.Dialogflow.V2 {
             output.WriteString(AnswerRecord);
           }
           textSections_.WriteTo(ref output, _map_textSections_codec);
+          if (BaselineModelVersion.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(BaselineModelVersion);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -3532,6 +3560,9 @@ namespace Google.Cloud.Dialogflow.V2 {
           size += textSections_.CalculateSize(_map_textSections_codec);
           if (AnswerRecord.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(AnswerRecord);
+          }
+          if (BaselineModelVersion.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(BaselineModelVersion);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -3551,6 +3582,9 @@ namespace Google.Cloud.Dialogflow.V2 {
           textSections_.MergeFrom(other.textSections_);
           if (other.AnswerRecord.Length != 0) {
             AnswerRecord = other.AnswerRecord;
+          }
+          if (other.BaselineModelVersion.Length != 0) {
+            BaselineModelVersion = other.BaselineModelVersion;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -3579,6 +3613,10 @@ namespace Google.Cloud.Dialogflow.V2 {
                 textSections_.AddEntriesFrom(input, _map_textSections_codec);
                 break;
               }
+              case 42: {
+                BaselineModelVersion = input.ReadString();
+                break;
+              }
             }
           }
         #endif
@@ -3604,6 +3642,10 @@ namespace Google.Cloud.Dialogflow.V2 {
               }
               case 34: {
                 textSections_.AddEntriesFrom(ref input, _map_textSections_codec);
+                break;
+              }
+              case 42: {
+                BaselineModelVersion = input.ReadString();
                 break;
               }
             }
@@ -4530,6 +4572,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         public Summary(Summary other) : this() {
           text_ = other.text_;
           textSections_ = other.textSections_.Clone();
+          baselineModelVersion_ = other.baselineModelVersion_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -4570,6 +4613,22 @@ namespace Google.Cloud.Dialogflow.V2 {
           get { return textSections_; }
         }
 
+        /// <summary>Field number for the "baseline_model_version" field.</summary>
+        public const int BaselineModelVersionFieldNumber = 4;
+        private string baselineModelVersion_ = "";
+        /// <summary>
+        /// The baseline model version used to generate this summary. It is empty if
+        /// a baseline model was not used to generate this summary.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string BaselineModelVersion {
+          get { return baselineModelVersion_; }
+          set {
+            baselineModelVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -4587,6 +4646,7 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
           if (Text != other.Text) return false;
           if (!TextSections.Equals(other.TextSections)) return false;
+          if (BaselineModelVersion != other.BaselineModelVersion) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -4596,6 +4656,7 @@ namespace Google.Cloud.Dialogflow.V2 {
           int hash = 1;
           if (Text.Length != 0) hash ^= Text.GetHashCode();
           hash ^= TextSections.GetHashCode();
+          if (BaselineModelVersion.Length != 0) hash ^= BaselineModelVersion.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -4619,6 +4680,10 @@ namespace Google.Cloud.Dialogflow.V2 {
             output.WriteString(Text);
           }
           textSections_.WriteTo(output, _map_textSections_codec);
+          if (BaselineModelVersion.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(BaselineModelVersion);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -4634,6 +4699,10 @@ namespace Google.Cloud.Dialogflow.V2 {
             output.WriteString(Text);
           }
           textSections_.WriteTo(ref output, _map_textSections_codec);
+          if (BaselineModelVersion.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(BaselineModelVersion);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -4648,6 +4717,9 @@ namespace Google.Cloud.Dialogflow.V2 {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
           }
           size += textSections_.CalculateSize(_map_textSections_codec);
+          if (BaselineModelVersion.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(BaselineModelVersion);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -4664,6 +4736,9 @@ namespace Google.Cloud.Dialogflow.V2 {
             Text = other.Text;
           }
           textSections_.MergeFrom(other.textSections_);
+          if (other.BaselineModelVersion.Length != 0) {
+            BaselineModelVersion = other.BaselineModelVersion;
+          }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -4687,6 +4762,10 @@ namespace Google.Cloud.Dialogflow.V2 {
                 textSections_.AddEntriesFrom(input, _map_textSections_codec);
                 break;
               }
+              case 34: {
+                BaselineModelVersion = input.ReadString();
+                break;
+              }
             }
           }
         #endif
@@ -4708,6 +4787,10 @@ namespace Google.Cloud.Dialogflow.V2 {
               }
               case 18: {
                 textSections_.AddEntriesFrom(ref input, _map_textSections_codec);
+                break;
+              }
+              case 34: {
+                BaselineModelVersion = input.ReadString();
                 break;
               }
             }
