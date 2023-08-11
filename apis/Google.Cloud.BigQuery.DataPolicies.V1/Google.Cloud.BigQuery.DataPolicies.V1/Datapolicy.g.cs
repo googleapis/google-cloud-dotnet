@@ -62,12 +62,14 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1 {
             "SUNZEAI6depBcgosYmlncXVlcnlkYXRhcG9saWN5Lmdvb2dsZWFwaXMuY29t",
             "L0RhdGFQb2xpY3kSQnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
             "Y2F0aW9ufS9kYXRhUG9saWNpZXMve2RhdGFfcG9saWN5fUIQCg5tYXRjaGlu",
-            "Z19sYWJlbEIICgZwb2xpY3kikAIKEURhdGFNYXNraW5nUG9saWN5Em4KFXBy",
+            "Z19sYWJlbEIICgZwb2xpY3ki6gIKEURhdGFNYXNraW5nUG9saWN5Em4KFXBy",
             "ZWRlZmluZWRfZXhwcmVzc2lvbhgBIAEoDjJNLmdvb2dsZS5jbG91ZC5iaWdx",
             "dWVyeS5kYXRhcG9saWNpZXMudjEuRGF0YU1hc2tpbmdQb2xpY3kuUHJlZGVm",
-            "aW5lZEV4cHJlc3Npb25IACJ1ChRQcmVkZWZpbmVkRXhwcmVzc2lvbhIlCiFQ",
-            "UkVERUZJTkVEX0VYUFJFU1NJT05fVU5TUEVDSUZJRUQQABIKCgZTSEEyNTYQ",
-            "AxIPCgtBTFdBWVNfTlVMTBAFEhkKFURFRkFVTFRfTUFTS0lOR19WQUxVRRAH",
+            "aW5lZEV4cHJlc3Npb25IACLOAQoUUHJlZGVmaW5lZEV4cHJlc3Npb24SJQoh",
+            "UFJFREVGSU5FRF9FWFBSRVNTSU9OX1VOU1BFQ0lGSUVEEAASCgoGU0hBMjU2",
+            "EAMSDwoLQUxXQVlTX05VTEwQBRIZChVERUZBVUxUX01BU0tJTkdfVkFMVUUQ",
+            "BxIYChRMQVNUX0ZPVVJfQ0hBUkFDVEVSUxAJEhkKFUZJUlNUX0ZPVVJfQ0hB",
+            "UkFDVEVSUxAKEg4KCkVNQUlMX01BU0sQDBISCg5EQVRFX1lFQVJfTUFTSxAN",
             "QhQKEm1hc2tpbmdfZXhwcmVzc2lvbjKQDwoRRGF0YVBvbGljeVNlcnZpY2US",
             "4QEKEENyZWF0ZURhdGFQb2xpY3kSPi5nb29nbGUuY2xvdWQuYmlncXVlcnku",
             "ZGF0YXBvbGljaWVzLnYxLkNyZWF0ZURhdGFQb2xpY3lSZXF1ZXN0GjEuZ29v",
@@ -1378,9 +1380,10 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1 {
     /// are associated with. Currently filter only supports
     /// "policy&lt;span>&lt;/span>_tag" based filtering and OR based predicates. Sample
     /// filter can be "policy&lt;span>&lt;/span>_tag:
-    /// `'projects/1/locations/us/taxonomies/2/policyTags/3'`". You may use
-    /// wildcard such as "policy&lt;span>&lt;/span>_tag:
-    /// `'projects/1/locations/us/taxonomies/2/*'`".
+    /// projects/1/locations/us/taxonomies/2/policyTags/3".
+    /// You may also use wildcard such as "policy&lt;span>&lt;/span>_tag:
+    /// projects/1/locations/us/taxonomies/2*". Please note that OR predicates
+    /// cannot be used with wildcard filters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2566,10 +2569,10 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1 {
         /// * FLOAT: 0.0
         /// * NUMERIC: 0
         /// * BOOLEAN: FALSE
-        /// * TIMESTAMP: 0001-01-01 00:00:00 UTC
-        /// * DATE: 0001-01-01
+        /// * TIMESTAMP: 1970-01-01 00:00:00 UTC
+        /// * DATE: 1970-01-01
         /// * TIME: 00:00:00
-        /// * DATETIME: 0001-01-01T00:00:00
+        /// * DATETIME: 1970-01-01T00:00:00
         /// * GEOGRAPHY: POINT(0 0)
         /// * BIGNUMERIC: 0
         /// * ARRAY: []
@@ -2577,6 +2580,52 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1 {
         /// * JSON: NULL
         /// </summary>
         [pbr::OriginalName("DEFAULT_MASKING_VALUE")] DefaultMaskingValue = 7,
+        /// <summary>
+        /// Masking expression shows the last four characters of text.
+        /// The masking behavior is as follows:
+        ///
+        /// * If text length > 4 characters: Replace text with XXXXX, append last
+        /// four characters of original text.
+        /// * If text length &lt;= 4 characters: Apply SHA-256 hash.
+        /// </summary>
+        [pbr::OriginalName("LAST_FOUR_CHARACTERS")] LastFourCharacters = 9,
+        /// <summary>
+        /// Masking expression shows the first four characters of text.
+        /// The masking behavior is as follows:
+        ///
+        /// * If text length > 4 characters: Replace text with XXXXX, prepend first
+        /// four characters of original text.
+        /// * If text length &lt;= 4 characters: Apply SHA-256 hash.
+        /// </summary>
+        [pbr::OriginalName("FIRST_FOUR_CHARACTERS")] FirstFourCharacters = 10,
+        /// <summary>
+        /// Masking expression for email addresses.
+        /// The masking behavior is as follows:
+        ///
+        /// * Syntax-valid email address: Replace username with XXXXX. For example,
+        /// cloudysanfrancisco@gmail.com becomes XXXXX@gmail.com.
+        /// * Syntax-invalid email address: Apply SHA-256 hash.
+        ///
+        /// For more information, see [Email
+        /// mask](https://cloud.google.com/bigquery/docs/column-data-masking-intro#masking_options).
+        /// </summary>
+        [pbr::OriginalName("EMAIL_MASK")] EmailMask = 12,
+        /// <summary>
+        /// Masking expression to only show the year of `Date`,
+        /// `DateTime` and `TimeStamp`. For example, with the
+        /// year 2076:
+        ///
+        /// * DATE         :  2076-01-01
+        /// * DATETIME     :  2076-01-01T00:00:00
+        /// * TIMESTAMP    :  2076-01-01 00:00:00 UTC
+        ///
+        /// Truncation occurs according to the UTC time zone. To change this, adjust
+        /// the default time zone using the `time_zone` system variable.
+        /// For more information, see the &lt;a
+        /// href="https://cloud.google.com/bigquery/docs/reference/system-variables">System
+        /// variables reference&lt;/a>.
+        /// </summary>
+        [pbr::OriginalName("DATE_YEAR_MASK")] DateYearMask = 13,
       }
 
     }
