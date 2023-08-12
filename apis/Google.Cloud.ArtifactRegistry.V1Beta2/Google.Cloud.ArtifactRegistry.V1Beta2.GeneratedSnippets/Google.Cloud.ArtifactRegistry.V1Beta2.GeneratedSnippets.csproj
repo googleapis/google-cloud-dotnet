@@ -10,7 +10,7 @@
     <ProjectReference Include="..\Google.Cloud.ArtifactRegistry.V1Beta2\Google.Cloud.ArtifactRegistry.V1Beta2.csproj" />
     <ProjectReference Include="..\..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.7.0" />
-    <PackageReference Include="Moq" Version="4.20.69" />
+    <PackageReference Include="Moq" Version="4.20.2" />
     <PackageReference Include="System.Linq.Async" Version="6.0.1" />
     <PackageReference Include="Xunit.SkippableFact" Version="1.4.13" />
     <PackageReference Include="xunit" Version="2.5.0" />
