@@ -53,6 +53,7 @@ namespace Google.Cloud.OsLogin.V1Beta
             GetSshPublicKeySettings = existing.GetSshPublicKeySettings;
             ImportSshPublicKeySettings = existing.ImportSshPublicKeySettings;
             UpdateSshPublicKeySettings = existing.UpdateSshPublicKeySettings;
+            SignSshPublicKeySettings = existing.SignSshPublicKeySettings;
             OnCopy(existing);
         }
 
@@ -195,6 +196,18 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings UpdateSshPublicKeySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(10000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OsLoginServiceClient.SignSshPublicKey</c> and <c>OsLoginServiceClient.SignSshPublicKeyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SignSshPublicKeySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="OsLoginServiceSettings"/> object.</returns>
@@ -1504,6 +1517,92 @@ namespace Google.Cloud.OsLogin.V1Beta
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<gcoc::SshPublicKey> UpdateSshPublicKeyAsync(gcoc::SshPublicKeyName name, gcoc::SshPublicKey sshPublicKey, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateSshPublicKeyAsync(name, sshPublicKey, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Signs an SSH public key for a user to authenticate to an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SignSshPublicKeyResponse SignSshPublicKey(SignSshPublicKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Signs an SSH public key for a user to authenticate to an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SignSshPublicKeyResponse> SignSshPublicKeyAsync(SignSshPublicKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Signs an SSH public key for a user to authenticate to an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SignSshPublicKeyResponse> SignSshPublicKeyAsync(SignSshPublicKeyRequest request, st::CancellationToken cancellationToken) =>
+            SignSshPublicKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Signs an SSH public key for a user to authenticate to an instance.
+        /// </summary>
+        /// <param name="parent">
+        /// The parent project and zone for the signing request. This is needed to
+        /// properly ensure per-organization ISS processing and potentially to provide
+        /// for the possibility of zone-specific certificates used in the signing
+        /// process.
+        /// </param>
+        /// <param name="sshPublicKey">
+        /// The SSH public key to sign.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SignSshPublicKeyResponse SignSshPublicKey(string parent, string sshPublicKey, gaxgrpc::CallSettings callSettings = null) =>
+            SignSshPublicKey(new SignSshPublicKeyRequest
+            {
+                SshPublicKey = sshPublicKey ?? "",
+                Parent = parent ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Signs an SSH public key for a user to authenticate to an instance.
+        /// </summary>
+        /// <param name="parent">
+        /// The parent project and zone for the signing request. This is needed to
+        /// properly ensure per-organization ISS processing and potentially to provide
+        /// for the possibility of zone-specific certificates used in the signing
+        /// process.
+        /// </param>
+        /// <param name="sshPublicKey">
+        /// The SSH public key to sign.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SignSshPublicKeyResponse> SignSshPublicKeyAsync(string parent, string sshPublicKey, gaxgrpc::CallSettings callSettings = null) =>
+            SignSshPublicKeyAsync(new SignSshPublicKeyRequest
+            {
+                SshPublicKey = sshPublicKey ?? "",
+                Parent = parent ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Signs an SSH public key for a user to authenticate to an instance.
+        /// </summary>
+        /// <param name="parent">
+        /// The parent project and zone for the signing request. This is needed to
+        /// properly ensure per-organization ISS processing and potentially to provide
+        /// for the possibility of zone-specific certificates used in the signing
+        /// process.
+        /// </param>
+        /// <param name="sshPublicKey">
+        /// The SSH public key to sign.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SignSshPublicKeyResponse> SignSshPublicKeyAsync(string parent, string sshPublicKey, st::CancellationToken cancellationToken) =>
+            SignSshPublicKeyAsync(parent, sshPublicKey, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>OsLoginService client wrapper implementation, for convenient use.</summary>
@@ -1528,6 +1627,8 @@ namespace Google.Cloud.OsLogin.V1Beta
         private readonly gaxgrpc::ApiCall<ImportSshPublicKeyRequest, ImportSshPublicKeyResponse> _callImportSshPublicKey;
 
         private readonly gaxgrpc::ApiCall<UpdateSshPublicKeyRequest, gcoc::SshPublicKey> _callUpdateSshPublicKey;
+
+        private readonly gaxgrpc::ApiCall<SignSshPublicKeyRequest, SignSshPublicKeyResponse> _callSignSshPublicKey;
 
         /// <summary>
         /// Constructs a client wrapper for the OsLoginService service, with the specified gRPC client and settings.
@@ -1561,6 +1662,9 @@ namespace Google.Cloud.OsLogin.V1Beta
             _callUpdateSshPublicKey = clientHelper.BuildApiCall<UpdateSshPublicKeyRequest, gcoc::SshPublicKey>("UpdateSshPublicKey", grpcClient.UpdateSshPublicKeyAsync, grpcClient.UpdateSshPublicKey, effectiveSettings.UpdateSshPublicKeySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpdateSshPublicKey);
             Modify_UpdateSshPublicKeyApiCall(ref _callUpdateSshPublicKey);
+            _callSignSshPublicKey = clientHelper.BuildApiCall<SignSshPublicKeyRequest, SignSshPublicKeyResponse>("SignSshPublicKey", grpcClient.SignSshPublicKeyAsync, grpcClient.SignSshPublicKey, effectiveSettings.SignSshPublicKeySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callSignSshPublicKey);
+            Modify_SignSshPublicKeyApiCall(ref _callSignSshPublicKey);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1580,6 +1684,8 @@ namespace Google.Cloud.OsLogin.V1Beta
 
         partial void Modify_UpdateSshPublicKeyApiCall(ref gaxgrpc::ApiCall<UpdateSshPublicKeyRequest, gcoc::SshPublicKey> call);
 
+        partial void Modify_SignSshPublicKeyApiCall(ref gaxgrpc::ApiCall<SignSshPublicKeyRequest, SignSshPublicKeyResponse> call);
+
         partial void OnConstruction(OsLoginService.OsLoginServiceClient grpcClient, OsLoginServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC OsLoginService client</summary>
@@ -1598,6 +1704,8 @@ namespace Google.Cloud.OsLogin.V1Beta
         partial void Modify_ImportSshPublicKeyRequest(ref ImportSshPublicKeyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateSshPublicKeyRequest(ref UpdateSshPublicKeyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SignSshPublicKeyRequest(ref SignSshPublicKeyRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Create an SSH public key
@@ -1773,6 +1881,30 @@ namespace Google.Cloud.OsLogin.V1Beta
         {
             Modify_UpdateSshPublicKeyRequest(ref request, ref callSettings);
             return _callUpdateSshPublicKey.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Signs an SSH public key for a user to authenticate to an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SignSshPublicKeyResponse SignSshPublicKey(SignSshPublicKeyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SignSshPublicKeyRequest(ref request, ref callSettings);
+            return _callSignSshPublicKey.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Signs an SSH public key for a user to authenticate to an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SignSshPublicKeyResponse> SignSshPublicKeyAsync(SignSshPublicKeyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SignSshPublicKeyRequest(ref request, ref callSettings);
+            return _callSignSshPublicKey.Async(request, callSettings);
         }
     }
 }

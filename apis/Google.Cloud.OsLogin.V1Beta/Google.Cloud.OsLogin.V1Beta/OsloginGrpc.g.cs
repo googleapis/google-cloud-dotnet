@@ -88,6 +88,10 @@ namespace Google.Cloud.OsLogin.V1Beta {
     static readonly grpc::Marshaller<global::Google.Cloud.OsLogin.V1Beta.ImportSshPublicKeyResponse> __Marshaller_google_cloud_oslogin_v1beta_ImportSshPublicKeyResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsLogin.V1Beta.ImportSshPublicKeyResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OsLogin.V1Beta.UpdateSshPublicKeyRequest> __Marshaller_google_cloud_oslogin_v1beta_UpdateSshPublicKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsLogin.V1Beta.UpdateSshPublicKeyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OsLogin.V1Beta.SignSshPublicKeyRequest> __Marshaller_google_cloud_oslogin_v1beta_SignSshPublicKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsLogin.V1Beta.SignSshPublicKeyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OsLogin.V1Beta.SignSshPublicKeyResponse> __Marshaller_google_cloud_oslogin_v1beta_SignSshPublicKeyResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsLogin.V1Beta.SignSshPublicKeyResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.OsLogin.V1Beta.CreateSshPublicKeyRequest, global::Google.Cloud.OsLogin.Common.SshPublicKey> __Method_CreateSshPublicKey = new grpc::Method<global::Google.Cloud.OsLogin.V1Beta.CreateSshPublicKeyRequest, global::Google.Cloud.OsLogin.Common.SshPublicKey>(
@@ -144,6 +148,14 @@ namespace Google.Cloud.OsLogin.V1Beta {
         "UpdateSshPublicKey",
         __Marshaller_google_cloud_oslogin_v1beta_UpdateSshPublicKeyRequest,
         __Marshaller_google_cloud_oslogin_common_SshPublicKey);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OsLogin.V1Beta.SignSshPublicKeyRequest, global::Google.Cloud.OsLogin.V1Beta.SignSshPublicKeyResponse> __Method_SignSshPublicKey = new grpc::Method<global::Google.Cloud.OsLogin.V1Beta.SignSshPublicKeyRequest, global::Google.Cloud.OsLogin.V1Beta.SignSshPublicKeyResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SignSshPublicKey",
+        __Marshaller_google_cloud_oslogin_v1beta_SignSshPublicKeyRequest,
+        __Marshaller_google_cloud_oslogin_v1beta_SignSshPublicKeyResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -239,6 +251,18 @@ namespace Google.Cloud.OsLogin.V1Beta {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OsLogin.Common.SshPublicKey> UpdateSshPublicKey(global::Google.Cloud.OsLogin.V1Beta.UpdateSshPublicKeyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Signs an SSH public key for a user to authenticate to an instance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OsLogin.V1Beta.SignSshPublicKeyResponse> SignSshPublicKey(global::Google.Cloud.OsLogin.V1Beta.SignSshPublicKeyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -624,6 +648,54 @@ namespace Google.Cloud.OsLogin.V1Beta {
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateSshPublicKey, null, options, request);
       }
+      /// <summary>
+      /// Signs an SSH public key for a user to authenticate to an instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.OsLogin.V1Beta.SignSshPublicKeyResponse SignSshPublicKey(global::Google.Cloud.OsLogin.V1Beta.SignSshPublicKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SignSshPublicKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Signs an SSH public key for a user to authenticate to an instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.OsLogin.V1Beta.SignSshPublicKeyResponse SignSshPublicKey(global::Google.Cloud.OsLogin.V1Beta.SignSshPublicKeyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SignSshPublicKey, null, options, request);
+      }
+      /// <summary>
+      /// Signs an SSH public key for a user to authenticate to an instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsLogin.V1Beta.SignSshPublicKeyResponse> SignSshPublicKeyAsync(global::Google.Cloud.OsLogin.V1Beta.SignSshPublicKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SignSshPublicKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Signs an SSH public key for a user to authenticate to an instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsLogin.V1Beta.SignSshPublicKeyResponse> SignSshPublicKeyAsync(global::Google.Cloud.OsLogin.V1Beta.SignSshPublicKeyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SignSshPublicKey, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override OsLoginServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -644,7 +716,8 @@ namespace Google.Cloud.OsLogin.V1Beta {
           .AddMethod(__Method_GetLoginProfile, serviceImpl.GetLoginProfile)
           .AddMethod(__Method_GetSshPublicKey, serviceImpl.GetSshPublicKey)
           .AddMethod(__Method_ImportSshPublicKey, serviceImpl.ImportSshPublicKey)
-          .AddMethod(__Method_UpdateSshPublicKey, serviceImpl.UpdateSshPublicKey).Build();
+          .AddMethod(__Method_UpdateSshPublicKey, serviceImpl.UpdateSshPublicKey)
+          .AddMethod(__Method_SignSshPublicKey, serviceImpl.SignSshPublicKey).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -661,6 +734,7 @@ namespace Google.Cloud.OsLogin.V1Beta {
       serviceBinder.AddMethod(__Method_GetSshPublicKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OsLogin.V1Beta.GetSshPublicKeyRequest, global::Google.Cloud.OsLogin.Common.SshPublicKey>(serviceImpl.GetSshPublicKey));
       serviceBinder.AddMethod(__Method_ImportSshPublicKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OsLogin.V1Beta.ImportSshPublicKeyRequest, global::Google.Cloud.OsLogin.V1Beta.ImportSshPublicKeyResponse>(serviceImpl.ImportSshPublicKey));
       serviceBinder.AddMethod(__Method_UpdateSshPublicKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OsLogin.V1Beta.UpdateSshPublicKeyRequest, global::Google.Cloud.OsLogin.Common.SshPublicKey>(serviceImpl.UpdateSshPublicKey));
+      serviceBinder.AddMethod(__Method_SignSshPublicKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OsLogin.V1Beta.SignSshPublicKeyRequest, global::Google.Cloud.OsLogin.V1Beta.SignSshPublicKeyResponse>(serviceImpl.SignSshPublicKey));
     }
 
   }
