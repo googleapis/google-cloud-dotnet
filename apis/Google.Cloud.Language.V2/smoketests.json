@@ -1,0 +1,12 @@
+[
+  {
+    "client": "LanguageServiceClient",
+    "method": "AnalyzeEntities",
+    "arguments": {
+      "document": {
+        "content": "Google HQ is in Mountain View, California.",
+        "type": "PLAIN_TEXT"
+      }
+    }
+  }
+]
