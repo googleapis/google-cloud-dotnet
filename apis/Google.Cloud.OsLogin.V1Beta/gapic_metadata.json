@@ -46,6 +46,12 @@
                 "ImportSshPublicKeyAsync"
               ]
             },
+            "SignSshPublicKey": {
+              "methods": [
+                "SignSshPublicKey",
+                "SignSshPublicKeyAsync"
+              ]
+            },
             "UpdateSshPublicKey": {
               "methods": [
                 "UpdateSshPublicKey",

@@ -2504,6 +2504,206 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "oslogin_v1beta_generated_OsLoginService_SignSshPublicKey_sync",
+      "title": "SignSshPublicKeyRequestObject",
+      "description": "Snippet for SignSshPublicKey",
+      "file": "OsLoginServiceClient.SignSshPublicKeyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SignSshPublicKey",
+        "fullName": "Google.Cloud.OsLogin.V1Beta.OsLoginServiceClient.SignSshPublicKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsLogin.V1Beta.SignSshPublicKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.OsLogin.V1Beta.SignSshPublicKeyResponse",
+        "client": {
+          "shortName": "OsLoginServiceClient",
+          "fullName": "Google.Cloud.OsLogin.V1Beta.OsLoginServiceClient"
+        },
+        "method": {
+          "shortName": "SignSshPublicKey",
+          "fullName": "google.cloud.oslogin.v1beta.OsLoginService.SignSshPublicKey",
+          "service": {
+            "shortName": "OsLoginService",
+            "fullName": "google.cloud.oslogin.v1beta.OsLoginService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oslogin_v1beta_generated_OsLoginService_SignSshPublicKey_async",
+      "title": "SignSshPublicKeyRequestObjectAsync",
+      "description": "Snippet for SignSshPublicKeyAsync",
+      "file": "OsLoginServiceClient.SignSshPublicKeyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SignSshPublicKeyAsync",
+        "fullName": "Google.Cloud.OsLogin.V1Beta.OsLoginServiceClient.SignSshPublicKeyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsLogin.V1Beta.SignSshPublicKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsLogin.V1Beta.SignSshPublicKeyResponse>",
+        "client": {
+          "shortName": "OsLoginServiceClient",
+          "fullName": "Google.Cloud.OsLogin.V1Beta.OsLoginServiceClient"
+        },
+        "method": {
+          "shortName": "SignSshPublicKey",
+          "fullName": "google.cloud.oslogin.v1beta.OsLoginService.SignSshPublicKey",
+          "service": {
+            "shortName": "OsLoginService",
+            "fullName": "google.cloud.oslogin.v1beta.OsLoginService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oslogin_v1beta_generated_OsLoginService_SignSshPublicKey_sync_flattened",
+      "title": "SignSshPublicKey",
+      "description": "Snippet for SignSshPublicKey",
+      "file": "OsLoginServiceClient.SignSshPublicKeySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SignSshPublicKey",
+        "fullName": "Google.Cloud.OsLogin.V1Beta.OsLoginServiceClient.SignSshPublicKey",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "sshPublicKey"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.OsLogin.V1Beta.SignSshPublicKeyResponse",
+        "client": {
+          "shortName": "OsLoginServiceClient",
+          "fullName": "Google.Cloud.OsLogin.V1Beta.OsLoginServiceClient"
+        },
+        "method": {
+          "shortName": "SignSshPublicKey",
+          "fullName": "google.cloud.oslogin.v1beta.OsLoginService.SignSshPublicKey",
+          "service": {
+            "shortName": "OsLoginService",
+            "fullName": "google.cloud.oslogin.v1beta.OsLoginService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oslogin_v1beta_generated_OsLoginService_SignSshPublicKey_async_flattened",
+      "title": "SignSshPublicKeyAsync",
+      "description": "Snippet for SignSshPublicKeyAsync",
+      "file": "OsLoginServiceClient.SignSshPublicKeyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SignSshPublicKeyAsync",
+        "fullName": "Google.Cloud.OsLogin.V1Beta.OsLoginServiceClient.SignSshPublicKeyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "sshPublicKey"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsLogin.V1Beta.SignSshPublicKeyResponse>",
+        "client": {
+          "shortName": "OsLoginServiceClient",
+          "fullName": "Google.Cloud.OsLogin.V1Beta.OsLoginServiceClient"
+        },
+        "method": {
+          "shortName": "SignSshPublicKey",
+          "fullName": "google.cloud.oslogin.v1beta.OsLoginService.SignSshPublicKey",
+          "service": {
+            "shortName": "OsLoginService",
+            "fullName": "google.cloud.oslogin.v1beta.OsLoginService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

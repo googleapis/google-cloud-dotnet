@@ -786,5 +786,69 @@ namespace GoogleCSharpSnippets
             SshPublicKey response = await osLoginServiceClient.UpdateSshPublicKeyAsync(name, sshPublicKey, updateMask);
             // End snippet
         }
+
+        /// <summary>Snippet for SignSshPublicKey</summary>
+        public void SignSshPublicKeyRequestObject()
+        {
+            // Snippet: SignSshPublicKey(SignSshPublicKeyRequest, CallSettings)
+            // Create client
+            OsLoginServiceClient osLoginServiceClient = OsLoginServiceClient.Create();
+            // Initialize request argument(s)
+            SignSshPublicKeyRequest request = new SignSshPublicKeyRequest
+            {
+                SshPublicKey = "",
+                Parent = "",
+            };
+            // Make the request
+            SignSshPublicKeyResponse response = osLoginServiceClient.SignSshPublicKey(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SignSshPublicKeyAsync</summary>
+        public async Task SignSshPublicKeyRequestObjectAsync()
+        {
+            // Snippet: SignSshPublicKeyAsync(SignSshPublicKeyRequest, CallSettings)
+            // Additional: SignSshPublicKeyAsync(SignSshPublicKeyRequest, CancellationToken)
+            // Create client
+            OsLoginServiceClient osLoginServiceClient = await OsLoginServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SignSshPublicKeyRequest request = new SignSshPublicKeyRequest
+            {
+                SshPublicKey = "",
+                Parent = "",
+            };
+            // Make the request
+            SignSshPublicKeyResponse response = await osLoginServiceClient.SignSshPublicKeyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SignSshPublicKey</summary>
+        public void SignSshPublicKey()
+        {
+            // Snippet: SignSshPublicKey(string, string, CallSettings)
+            // Create client
+            OsLoginServiceClient osLoginServiceClient = OsLoginServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "";
+            string sshPublicKey = "";
+            // Make the request
+            SignSshPublicKeyResponse response = osLoginServiceClient.SignSshPublicKey(parent, sshPublicKey);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SignSshPublicKeyAsync</summary>
+        public async Task SignSshPublicKeyAsync()
+        {
+            // Snippet: SignSshPublicKeyAsync(string, string, CallSettings)
+            // Additional: SignSshPublicKeyAsync(string, string, CancellationToken)
+            // Create client
+            OsLoginServiceClient osLoginServiceClient = await OsLoginServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "";
+            string sshPublicKey = "";
+            // Make the request
+            SignSshPublicKeyResponse response = await osLoginServiceClient.SignSshPublicKeyAsync(parent, sshPublicKey);
+            // End snippet
+        }
     }
 }
