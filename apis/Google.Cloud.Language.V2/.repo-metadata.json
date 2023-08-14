@@ -1,0 +1,8 @@
+{
+  "distribution_name": "Google.Cloud.Language.V2",
+  "release_level": "unreleased",
+  "client_documentation": "https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Language.V2/latest",
+  "library_type": "GAPIC_AUTO",
+  "language": "dotnet",
+  "api_shortname": "language"
+}
