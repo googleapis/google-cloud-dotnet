@@ -1,0 +1,15 @@
+[
+  {
+    "method": "TroubleshootIamPolicy",
+    "client": "PolicyTroubleshooterClient",
+    "arguments": {
+      "request": {
+        "accessTuple": {
+          "principal": "not-a-real-user",
+          "fullResourceName": "//cloudresourcemanager.googleapis.com/projects/${PROJECT_ID}",
+          "permission": "accessapproval.requests.approve"
+        }
+      }
+    }
+  }
+]
