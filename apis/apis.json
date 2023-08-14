@@ -2649,7 +2649,7 @@
       "productUrl": "https://cloud.google.com/natural-language",
       "version": "3.3.0",
       "type": "grpc",
-      "description": "Recommended Google client library to access the Google Cloud Natural Language API, which provides natural language understanding technologies to developers. Examples include sentiment analysis, entity recognition, and text annotations.",
+      "description": "Recommended Google client library to access the Google Cloud Natural Language API (v1), which provides natural language understanding technologies to developers. Examples include sentiment analysis, entity recognition, and text annotations.",
       "dependencies": {
         "Google.Api.Gax.Grpc": "4.4.0",
         "Grpc.Core": "2.46.6"
@@ -2661,6 +2661,23 @@
       "serviceConfigFile": "language_v1.yaml",
       "restNumericEnums": true,
       "transport": "grpc+rest"
+    },
+    {
+      "id": "Google.Cloud.Language.V2",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Cloud Natural Language",
+      "productUrl": "https://cloud.google.com/natural-language/docs",
+      "description": "Recommended Google client library to access the Google Cloud Natural Language API (v2), which provides natural language understanding technologies, such as sentiment analysis, entity recognition, entity sentiment analysis, and other text annotations, to developers.",
+      "tags": [
+        "language"
+      ],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/cloud/language/v2",
+      "shortName": "language",
+      "serviceConfigFile": "language_v2.yaml",
+      "restNumericEnums": true
     },
     {
       "id": "Google.Cloud.LifeSciences.V2Beta",
