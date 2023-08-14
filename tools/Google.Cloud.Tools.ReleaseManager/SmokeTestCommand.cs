@@ -90,6 +90,13 @@ namespace Google.Cloud.Tools.ReleaseManager
                 }
                 catch (Exception e)
                 {
+                    // For list RPCs, we get the "real" exception because by the time it fails we're
+                    // no longer using exceptions. For other RPCs, the exception is wrapped in TargetInvocationException,
+                    // so we unwrap it here for consistency.
+                    if (e is TargetInvocationException)
+                    {
+                        e = e.InnerException;
+                    }
                     failed.Add($"{test.Client}.{test.Method}");
                     Console.WriteLine($"{test.Client}.{test.Method} failed: {e.GetType().Name} {e.Message}");
                 }
