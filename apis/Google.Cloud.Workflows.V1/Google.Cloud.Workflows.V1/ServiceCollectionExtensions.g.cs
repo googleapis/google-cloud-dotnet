@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using gcwv = Google.Cloud.Workflows.V1;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;

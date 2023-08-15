@@ -38,6 +38,7 @@ namespace GoogleCSharpSnippets
             GetWorkflowRequest request = new GetWorkflowRequest
             {
                 WorkflowName = WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
+                RevisionId = "",
             };
             // Make the request
             Workflow response = workflowsClient.GetWorkflow(request);
