@@ -29,7 +29,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "L2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnBy",
             "b3RvGjJnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9tYWNoaW5lX3Jlc291",
             "cmNlcy5wcm90bxomZ29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvbW9kZWwu",
-            "cHJvdG8i7xYKDlB1Ymxpc2hlck1vZGVsEhEKBG5hbWUYASABKAlCA+BBAxIa",
+            "cHJvdG8i6hcKDlB1Ymxpc2hlck1vZGVsEhEKBG5hbWUYASABKAlCA+BBAxIa",
             "Cgp2ZXJzaW9uX2lkGAIgASgJQgbgQQXgQQMSYAoUb3Blbl9zb3VyY2VfY2F0",
             "ZWdvcnkYByABKA4yPS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5QdWJs",
             "aXNoZXJNb2RlbC5PcGVuU291cmNlQ2F0ZWdvcnlCA+BBAhJXChFzdXBwb3J0",
@@ -42,7 +42,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "YWlwbGF0Zm9ybS52MS5QcmVkaWN0U2NoZW1hdGFCA+BBARpIChFSZXNvdXJj",
             "ZVJlZmVyZW5jZRINCgN1cmkYASABKAlIABIXCg1yZXNvdXJjZV9uYW1lGAIg",
             "ASgJSABCCwoJcmVmZXJlbmNlGjkKDURvY3VtZW50YXRpb24SEgoFdGl0bGUY",
-            "ASABKAlCA+BBAhIUCgdjb250ZW50GAIgASgJQgPgQQIa5w4KDENhbGxUb0Fj",
+            "ASABKAlCA+BBAhIUCgdjb250ZW50GAIgASgJQgPgQQIa4g8KDENhbGxUb0Fj",
             "dGlvbhJfCg12aWV3X3Jlc3RfYXBpGAEgASgLMkMuZ29vZ2xlLmNsb3VkLmFp",
             "cGxhdGZvcm0udjEuUHVibGlzaGVyTW9kZWwuQ2FsbFRvQWN0aW9uLlZpZXdS",
             "ZXN0QXBpQgPgQQESbgoNb3Blbl9ub3RlYm9vaxgCIAEoCzJSLmdvb2dsZS5j",
@@ -65,47 +65,49 @@ namespace Google.Cloud.AIPlatform.V1 {
             "YWxsVG9BY3Rpb24uUmVnaW9uYWxSZXNvdXJjZVJlZmVyZW5jZXNCA+BBARJv",
             "Cg5yZXF1ZXN0X2FjY2VzcxgJIAEoCzJSLmdvb2dsZS5jbG91ZC5haXBsYXRm",
             "b3JtLnYxLlB1Ymxpc2hlck1vZGVsLkNhbGxUb0FjdGlvbi5SZWdpb25hbFJl",
-            "c291cmNlUmVmZXJlbmNlc0ID4EEBGp4CChpSZWdpb25hbFJlc291cmNlUmVm",
-            "ZXJlbmNlcxJ7CgpyZWZlcmVuY2VzGAEgAygLMmIuZ29vZ2xlLmNsb3VkLmFp",
-            "cGxhdGZvcm0udjEuUHVibGlzaGVyTW9kZWwuQ2FsbFRvQWN0aW9uLlJlZ2lv",
-            "bmFsUmVzb3VyY2VSZWZlcmVuY2VzLlJlZmVyZW5jZXNFbnRyeUID4EECEhIK",
-            "BXRpdGxlGAIgASgJQgPgQQIabwoPUmVmZXJlbmNlc0VudHJ5EgsKA2tleRgB",
-            "IAEoCRJLCgV2YWx1ZRgCIAEoCzI8Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
-            "LnYxLlB1Ymxpc2hlck1vZGVsLlJlc291cmNlUmVmZXJlbmNlOgI4ARp4CgtW",
-            "aWV3UmVzdEFwaRJVCg5kb2N1bWVudGF0aW9ucxgBIAMoCzI4Lmdvb2dsZS5j",
-            "bG91ZC5haXBsYXRmb3JtLnYxLlB1Ymxpc2hlck1vZGVsLkRvY3VtZW50YXRp",
-            "b25CA+BBAhISCgV0aXRsZRgCIAEoCUID4EECGswDCgZEZXBsb3kSTQoTZGVk",
-            "aWNhdGVkX3Jlc291cmNlcxgFIAEoCzIuLmdvb2dsZS5jbG91ZC5haXBsYXRm",
-            "b3JtLnYxLkRlZGljYXRlZFJlc291cmNlc0gAEk0KE2F1dG9tYXRpY19yZXNv",
-            "dXJjZXMYBiABKAsyLi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5BdXRv",
-            "bWF0aWNSZXNvdXJjZXNIABIaChBzaGFyZWRfcmVzb3VyY2VzGAcgASgJSAAS",
-            "HwoSbW9kZWxfZGlzcGxheV9uYW1lGAEgASgJQgPgQQESUwoVbGFyZ2VfbW9k",
-            "ZWxfcmVmZXJlbmNlGAIgASgLMi8uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
-            "djEuTGFyZ2VNb2RlbFJlZmVyZW5jZUID4EEBEksKDmNvbnRhaW5lcl9zcGVj",
-            "GAMgASgLMi4uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTW9kZWxDb250",
-            "YWluZXJTcGVjQgPgQQESGQoMYXJ0aWZhY3RfdXJpGAQgASgJQgPgQQESEgoF",
-            "dGl0bGUYCCABKAlCA+BBAkIWChRwcmVkaWN0aW9uX3Jlc291cmNlcyLbAQoS",
-            "T3BlblNvdXJjZUNhdGVnb3J5EiQKIE9QRU5fU09VUkNFX0NBVEVHT1JZX1VO",
-            "U1BFQ0lGSUVEEAASDwoLUFJPUFJJRVRBUlkQARIrCidHT09HTEVfT1dORURf",
-            "T1NTX1dJVEhfR09PR0xFX0NIRUNLUE9JTlQQAhIwCixUSElSRF9QQVJUWV9P",
-            "V05FRF9PU1NfV0lUSF9HT09HTEVfQ0hFQ0tQT0lOVBADEhQKEEdPT0dMRV9P",
-            "V05FRF9PU1MQBBIZChVUSElSRF9QQVJUWV9PV05FRF9PU1MQBSJuCgtMYXVu",
-            "Y2hTdGFnZRIcChhMQVVOQ0hfU1RBR0VfVU5TUEVDSUZJRUQQABIQCgxFWFBF",
-            "UklNRU5UQUwQARITCg9QUklWQVRFX1BSRVZJRVcQAhISCg5QVUJMSUNfUFJF",
-            "VklFVxADEgYKAkdBEAQ6VOpBUQooYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNv",
-            "bS9QdWJsaXNoZXJNb2RlbBIlcHVibGlzaGVycy97cHVibGlzaGVyfS9tb2Rl",
-            "bHMve21vZGVsfULRAQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
-            "QhNQdWJsaXNoZXJNb2RlbFByb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28v",
-            "YWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIa",
-            "R29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQ",
-            "bGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZw",
-            "cm90bzM="));
+            "c291cmNlUmVmZXJlbmNlc0ID4EEBEnkKGG9wZW5fZXZhbHVhdGlvbl9waXBl",
+            "bGluZRgLIAEoCzJSLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlB1Ymxp",
+            "c2hlck1vZGVsLkNhbGxUb0FjdGlvbi5SZWdpb25hbFJlc291cmNlUmVmZXJl",
+            "bmNlc0ID4EEBGp4CChpSZWdpb25hbFJlc291cmNlUmVmZXJlbmNlcxJ7Cgpy",
+            "ZWZlcmVuY2VzGAEgAygLMmIuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEu",
+            "UHVibGlzaGVyTW9kZWwuQ2FsbFRvQWN0aW9uLlJlZ2lvbmFsUmVzb3VyY2VS",
+            "ZWZlcmVuY2VzLlJlZmVyZW5jZXNFbnRyeUID4EECEhIKBXRpdGxlGAIgASgJ",
+            "QgPgQQIabwoPUmVmZXJlbmNlc0VudHJ5EgsKA2tleRgBIAEoCRJLCgV2YWx1",
+            "ZRgCIAEoCzI8Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlB1Ymxpc2hl",
+            "ck1vZGVsLlJlc291cmNlUmVmZXJlbmNlOgI4ARp4CgtWaWV3UmVzdEFwaRJV",
+            "Cg5kb2N1bWVudGF0aW9ucxgBIAMoCzI4Lmdvb2dsZS5jbG91ZC5haXBsYXRm",
+            "b3JtLnYxLlB1Ymxpc2hlck1vZGVsLkRvY3VtZW50YXRpb25CA+BBAhISCgV0",
+            "aXRsZRgCIAEoCUID4EECGswDCgZEZXBsb3kSTQoTZGVkaWNhdGVkX3Jlc291",
+            "cmNlcxgFIAEoCzIuLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkRlZGlj",
+            "YXRlZFJlc291cmNlc0gAEk0KE2F1dG9tYXRpY19yZXNvdXJjZXMYBiABKAsy",
+            "Li5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5BdXRvbWF0aWNSZXNvdXJj",
+            "ZXNIABIaChBzaGFyZWRfcmVzb3VyY2VzGAcgASgJSAASHwoSbW9kZWxfZGlz",
+            "cGxheV9uYW1lGAEgASgJQgPgQQESUwoVbGFyZ2VfbW9kZWxfcmVmZXJlbmNl",
+            "GAIgASgLMi8uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTGFyZ2VNb2Rl",
+            "bFJlZmVyZW5jZUID4EEBEksKDmNvbnRhaW5lcl9zcGVjGAMgASgLMi4uZ29v",
+            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTW9kZWxDb250YWluZXJTcGVjQgPg",
+            "QQESGQoMYXJ0aWZhY3RfdXJpGAQgASgJQgPgQQESEgoFdGl0bGUYCCABKAlC",
+            "A+BBAkIWChRwcmVkaWN0aW9uX3Jlc291cmNlcyLbAQoST3BlblNvdXJjZUNh",
+            "dGVnb3J5EiQKIE9QRU5fU09VUkNFX0NBVEVHT1JZX1VOU1BFQ0lGSUVEEAAS",
+            "DwoLUFJPUFJJRVRBUlkQARIrCidHT09HTEVfT1dORURfT1NTX1dJVEhfR09P",
+            "R0xFX0NIRUNLUE9JTlQQAhIwCixUSElSRF9QQVJUWV9PV05FRF9PU1NfV0lU",
+            "SF9HT09HTEVfQ0hFQ0tQT0lOVBADEhQKEEdPT0dMRV9PV05FRF9PU1MQBBIZ",
+            "ChVUSElSRF9QQVJUWV9PV05FRF9PU1MQBSJuCgtMYXVuY2hTdGFnZRIcChhM",
+            "QVVOQ0hfU1RBR0VfVU5TUEVDSUZJRUQQABIQCgxFWFBFUklNRU5UQUwQARIT",
+            "Cg9QUklWQVRFX1BSRVZJRVcQAhISCg5QVUJMSUNfUFJFVklFVxADEgYKAkdB",
+            "EAQ6VOpBUQooYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9QdWJsaXNoZXJN",
+            "b2RlbBIlcHVibGlzaGVycy97cHVibGlzaGVyfS9tb2RlbHMve21vZGVsfULR",
+            "AQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQhNQdWJsaXNoZXJN",
+            "b2RlbFByb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9h",
+            "cGl2MS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3Vk",
+            "LkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoC",
+            "HUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ModelReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PublisherModel), global::Google.Cloud.AIPlatform.V1.PublisherModel.Parser, new[]{ "Name", "VersionId", "OpenSourceCategory", "SupportedActions", "Frameworks", "LaunchStage", "PublisherModelTemplate", "PredictSchemata" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.OpenSourceCategory), typeof(global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.LaunchStage) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.ResourceReference), global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.ResourceReference.Parser, new[]{ "Uri", "ResourceName" }, new[]{ "Reference" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.Documentation), global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.Documentation.Parser, new[]{ "Title", "Content" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction), global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Parser, new[]{ "ViewRestApi", "OpenNotebook", "CreateApplication", "OpenFineTuningPipeline", "OpenPromptTuningPipeline", "OpenGenie", "Deploy", "OpenGenerationAiStudio", "RequestAccess" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.RegionalResourceReferences), global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.RegionalResourceReferences.Parser, new[]{ "References", "Title" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction), global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Parser, new[]{ "ViewRestApi", "OpenNotebook", "CreateApplication", "OpenFineTuningPipeline", "OpenPromptTuningPipeline", "OpenGenie", "Deploy", "OpenGenerationAiStudio", "RequestAccess", "OpenEvaluationPipeline" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.RegionalResourceReferences), global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.RegionalResourceReferences.Parser, new[]{ "References", "Title" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.ViewRestApi), global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.ViewRestApi.Parser, new[]{ "Documentations", "Title" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.Deploy), global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.Deploy.Parser, new[]{ "DedicatedResources", "AutomaticResources", "SharedResources", "ModelDisplayName", "LargeModelReference", "ContainerSpec", "ArtifactUri", "Title" }, new[]{ "PredictionResources" }, null, null, null)})})
           }));
@@ -1243,6 +1245,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           deploy_ = other.deploy_ != null ? other.deploy_.Clone() : null;
           openGenerationAiStudio_ = other.openGenerationAiStudio_ != null ? other.openGenerationAiStudio_.Clone() : null;
           requestAccess_ = other.requestAccess_ != null ? other.requestAccess_.Clone() : null;
+          openEvaluationPipeline_ = other.openEvaluationPipeline_ != null ? other.openEvaluationPipeline_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1387,6 +1390,21 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
         }
 
+        /// <summary>Field number for the "open_evaluation_pipeline" field.</summary>
+        public const int OpenEvaluationPipelineFieldNumber = 11;
+        private global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.RegionalResourceReferences openEvaluationPipeline_;
+        /// <summary>
+        /// Optional. Open evaluation pipeline of the PublisherModel.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.RegionalResourceReferences OpenEvaluationPipeline {
+          get { return openEvaluationPipeline_; }
+          set {
+            openEvaluationPipeline_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -1411,6 +1429,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           if (!object.Equals(Deploy, other.Deploy)) return false;
           if (!object.Equals(OpenGenerationAiStudio, other.OpenGenerationAiStudio)) return false;
           if (!object.Equals(RequestAccess, other.RequestAccess)) return false;
+          if (!object.Equals(OpenEvaluationPipeline, other.OpenEvaluationPipeline)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -1427,6 +1446,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           if (deploy_ != null) hash ^= Deploy.GetHashCode();
           if (openGenerationAiStudio_ != null) hash ^= OpenGenerationAiStudio.GetHashCode();
           if (requestAccess_ != null) hash ^= RequestAccess.GetHashCode();
+          if (openEvaluationPipeline_ != null) hash ^= OpenEvaluationPipeline.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1481,6 +1501,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteRawTag(74);
             output.WriteMessage(RequestAccess);
           }
+          if (openEvaluationPipeline_ != null) {
+            output.WriteRawTag(90);
+            output.WriteMessage(OpenEvaluationPipeline);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1527,6 +1551,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteRawTag(74);
             output.WriteMessage(RequestAccess);
           }
+          if (openEvaluationPipeline_ != null) {
+            output.WriteRawTag(90);
+            output.WriteMessage(OpenEvaluationPipeline);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1563,6 +1591,9 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           if (requestAccess_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(RequestAccess);
+          }
+          if (openEvaluationPipeline_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(OpenEvaluationPipeline);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1629,6 +1660,12 @@ namespace Google.Cloud.AIPlatform.V1 {
               RequestAccess = new global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.RegionalResourceReferences();
             }
             RequestAccess.MergeFrom(other.RequestAccess);
+          }
+          if (other.openEvaluationPipeline_ != null) {
+            if (openEvaluationPipeline_ == null) {
+              OpenEvaluationPipeline = new global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.RegionalResourceReferences();
+            }
+            OpenEvaluationPipeline.MergeFrom(other.OpenEvaluationPipeline);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -1708,6 +1745,13 @@ namespace Google.Cloud.AIPlatform.V1 {
                 input.ReadMessage(RequestAccess);
                 break;
               }
+              case 90: {
+                if (openEvaluationPipeline_ == null) {
+                  OpenEvaluationPipeline = new global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.RegionalResourceReferences();
+                }
+                input.ReadMessage(OpenEvaluationPipeline);
+                break;
+              }
             }
           }
         #endif
@@ -1784,6 +1828,13 @@ namespace Google.Cloud.AIPlatform.V1 {
                   RequestAccess = new global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.RegionalResourceReferences();
                 }
                 input.ReadMessage(RequestAccess);
+                break;
+              }
+              case 90: {
+                if (openEvaluationPipeline_ == null) {
+                  OpenEvaluationPipeline = new global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.RegionalResourceReferences();
+                }
+                input.ReadMessage(OpenEvaluationPipeline);
                 break;
               }
             }

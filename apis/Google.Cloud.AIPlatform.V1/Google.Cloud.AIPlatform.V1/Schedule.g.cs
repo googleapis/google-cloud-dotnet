@@ -31,7 +31,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "dG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ihQkKCFNjaGVk",
             "dWxlEg4KBGNyb24YCiABKAlIABJbChtjcmVhdGVfcGlwZWxpbmVfam9iX3Jl",
             "cXVlc3QYDiABKAsyNC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5DcmVh",
-            "dGVQaXBlbGluZUpvYlJlcXVlc3RIARIRCgRuYW1lGAEgASgJQgPgQQMSGQoM",
+            "dGVQaXBlbGluZUpvYlJlcXVlc3RIARIRCgRuYW1lGAEgASgJQgPgQQUSGQoM",
             "ZGlzcGxheV9uYW1lGAIgASgJQgPgQQISMwoKc3RhcnRfdGltZRgDIAEoCzIa",
             "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBARIxCghlbmRfdGltZRgE",
             "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBARIaCg1tYXhf",
@@ -201,7 +201,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. The resource name of the Schedule.
+    /// Immutable. The resource name of the Schedule.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
