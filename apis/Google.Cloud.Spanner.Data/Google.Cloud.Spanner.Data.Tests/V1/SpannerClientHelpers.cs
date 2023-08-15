@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -23,14 +23,16 @@ using Google.Protobuf.WellKnownTypes;
 using Google.Rpc;
 using Google.Rpc.Context;
 using Grpc.Core;
-using Moq;
-using Moq.Language;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Status = Grpc.Core.Status;
 using static Google.Cloud.Spanner.V1.SpannerClientImpl;
+using NSubstitute;
+using NSubstitute.Extensions;
+using NSubstitute.ExceptionExtensions;
+using NSubstitute.Core;
 
 namespace Google.Cloud.Spanner.V1.Tests
 {
@@ -51,24 +53,25 @@ namespace Google.Cloud.Spanner.V1.Tests
         /// Creates a mock SpannerClient configured with settings that include a fake clock
         /// and a fake scheduler.
         /// </summary>
-        internal static Mock<SpannerClient> CreateMockClient(Logger logger, MockBehavior behavior = MockBehavior.Strict)
+        internal static SpannerClient CreateMockClient(Logger logger)
         {
             var fakeScheduler = new FakeScheduler();
             var settings = SpannerSettings.GetDefault();
             settings.Scheduler = fakeScheduler;
             settings.Clock = fakeScheduler.Clock;
             settings.Logger = logger;
-            var mock = new Mock<SpannerClient>(behavior);
-            mock.SetupProperty(client => client.Settings, settings);
+            var mock = Substitute.ForPartsOf<SpannerClient>();
+            mock.Settings.Returns(settings);
             return mock;
         }
 
-        internal static Mock<SpannerClient> SetupBatchCreateSessionsAsync(this Mock<SpannerClient> spannerClientMock)
+        internal static SpannerClient SetupBatchCreateSessionsAsync(this SpannerClient spannerClientMock)
         {
-            spannerClientMock
-                .Setup(client => client.BatchCreateSessionsAsync(It.IsNotNull<BatchCreateSessionsRequest>(), It.IsAny<CallSettings>()))
-                .Returns<BatchCreateSessionsRequest, CallSettings>((request, _) =>
+            spannerClientMock.Configure()
+                .BatchCreateSessionsAsync(Arg.Is<BatchCreateSessionsRequest>(x => x != null), Arg.Any<CallSettings>())
+                .Returns(args =>
                 {
+                    var request = (BatchCreateSessionsRequest) args[0];
                     BatchCreateSessionsResponse response = new BatchCreateSessionsResponse();
 
                     for (int i = 0; i < request.SessionCount; i++)
@@ -87,10 +90,10 @@ namespace Google.Cloud.Spanner.V1.Tests
             return spannerClientMock;
         }
 
-        internal static Mock<SpannerClient> SetupBeginTransactionAsync(this Mock<SpannerClient> spannerClientMock)
+        internal static SpannerClient SetupBeginTransactionAsync(this SpannerClient spannerClientMock)
         {
-            spannerClientMock
-                .Setup(client => client.BeginTransactionAsync(It.IsNotNull<BeginTransactionRequest>(), It.IsAny<CallSettings>()))
+            spannerClientMock.Configure()
+                .BeginTransactionAsync(Arg.Is<BeginTransactionRequest>(x => x != null), Arg.Any<CallSettings>())
                 .Returns(Task.FromResult(
                     new Transaction
                     {
@@ -99,23 +102,23 @@ namespace Google.Cloud.Spanner.V1.Tests
             return spannerClientMock;
         }
 
-        internal static Mock<SpannerClient> SetupPartitionAsync(this Mock<SpannerClient> spannerClientMock)
+        internal static SpannerClient SetupPartitionAsync(this SpannerClient spannerClientMock)
         {
-            spannerClientMock
-                .Setup(client => client.PartitionReadAsync(It.IsNotNull<PartitionReadRequest>(), It.IsAny<CallSettings>()))
-                .Returns<PartitionReadRequest, CallSettings>((request, _) => Task.FromResult(
+            spannerClientMock.Configure()
+                .PartitionReadAsync(Arg.Is<PartitionReadRequest>(x => x != null), Arg.Any<CallSettings>())
+                .Returns(args => Task.FromResult(
                     new PartitionResponse
                     {
-                        Partitions = { Enumerable.Range(0, (int) request.PartitionOptions.MaxPartitions)
+                        Partitions = { Enumerable.Range(0, (int) ((PartitionReadRequest) args[0]).PartitionOptions.MaxPartitions)
                             .Select(token => new Partition { PartitionToken = ByteString.CopyFromUtf8(token.ToString())}) }
                     }));
             return spannerClientMock;
         }
 
-        internal static Mock<SpannerClient> SetupExecuteBatchDmlAsync(this Mock<SpannerClient> spannerClientMock)
+        internal static SpannerClient SetupExecuteBatchDmlAsync(this SpannerClient spannerClientMock)
         {
-            spannerClientMock
-                .Setup(client => client.ExecuteBatchDmlAsync(It.IsNotNull<ExecuteBatchDmlRequest>(), It.IsAny<CallSettings>()))
+            spannerClientMock.Configure()
+                .ExecuteBatchDmlAsync(Arg.Is<ExecuteBatchDmlRequest>(x => x != null), Arg.Any<CallSettings>())
                 .Returns(Task.FromResult(
                     new ExecuteBatchDmlResponse
                     {
@@ -137,17 +140,20 @@ namespace Google.Cloud.Spanner.V1.Tests
             return spannerClientMock;
         }
 
-        internal static Mock<SpannerClient> SetupExecuteBatchDmlAsync_Fails(this Mock<SpannerClient> spannerClientMock, int failures, StatusCode statusCode, string exceptionMessage = "Bang!", TimeSpan? exceptionRetryDelay = null)
+        internal static SpannerClient SetupExecuteBatchDmlAsync_Fails(this SpannerClient spannerClientMock, int failures, StatusCode statusCode, string exceptionMessage = "Bang!", TimeSpan? exceptionRetryDelay = null)
         {
-            spannerClientMock
-                .SetupSequence(client => client.ExecuteBatchDmlAsync(It.IsNotNull<ExecuteBatchDmlRequest>(), It.IsAny<CallSettings>()))
-                .SetupFailures(failures, statusCode, exceptionMessage, exceptionRetryDelay)
-                .Returns(Task.FromResult(
+            var exception = BuildRpcException(exceptionRetryDelay, statusCode, exceptionMessage);
+            var returns = new List<Func<CallInfo, Task<ExecuteBatchDmlResponse>>>();
+            for (int i = 0; i < failures; i++)
+            {
+                returns.Add(_ => throw exception);
+            }
+            returns.Add(_ => Task.FromResult(
                     new ExecuteBatchDmlResponse
                     {
                         Status = new Rpc.Status
                         {
-                            Code = (int)StatusCode.OK
+                            Code = (int) StatusCode.OK
                         },
                         ResultSets =
                         {
@@ -160,62 +166,70 @@ namespace Google.Cloud.Spanner.V1.Tests
                             }
                         }
                     }));
+
+            spannerClientMock.Configure()
+                .ExecuteBatchDmlAsync(Arg.Is<ExecuteBatchDmlRequest>(x => x != null), Arg.Any<CallSettings>())
+                .Returns(returns[0], returns.Skip(1).ToArray());
             return spannerClientMock;
         }
 
-        internal static Mock<SpannerClient> SetupCommitAsync(this Mock<SpannerClient> spannerClientMock)
+        internal static SpannerClient SetupCommitAsync(this SpannerClient spannerClientMock)
         {
-            spannerClientMock
-                .Setup(client => client.CommitAsync(It.IsNotNull<CommitRequest>(), It.IsAny<CallSettings>()))
+            var timestamp = spannerClientMock.GetNowTimestamp();
+            spannerClientMock.Configure()
+                .CommitAsync(Arg.Is<CommitRequest>(x => x != null), Arg.Any<CallSettings>())
                 .Returns(Task.FromResult(
                     new CommitResponse
                     {
-                        CommitTimestamp = spannerClientMock.GetNowTimestamp()
+                        CommitTimestamp = timestamp
                     }));
             return spannerClientMock;
         }
 
-        internal static Mock<SpannerClient> SetupCommitAsync_Fails(this Mock<SpannerClient> spannerClientMock, int failures, StatusCode statusCode, string exceptionMessage = "Bang!", TimeSpan? exceptionRetryDelay = null)
+        internal static SpannerClient SetupCommitAsync_Fails(this SpannerClient spannerClientMock, int failures, StatusCode statusCode, string exceptionMessage = "Bang!", TimeSpan? exceptionRetryDelay = null)
         {
-            spannerClientMock
-                .SetupSequence(client => client.CommitAsync(It.IsNotNull<CommitRequest>(), It.IsAny<CallSettings>()))
-                .SetupFailures(failures, statusCode, exceptionMessage, exceptionRetryDelay)
-                .Returns(Task.FromResult(
-                    new CommitResponse
-                    {
-                        CommitTimestamp = spannerClientMock.GetNowTimestamp()
-                    }));
+            var timestamp = spannerClientMock.GetNowTimestamp();
+            var exception = BuildRpcException(exceptionRetryDelay, statusCode, exceptionMessage);
+            var returns = new List<Func<CallInfo, Task<CommitResponse>>>();
+            for (int i = 0; i < failures; i++)
+            {
+                returns.Add(_ => throw exception);
+            }
+            returns.Add(_ => Task.FromResult(new CommitResponse { CommitTimestamp = timestamp }));
+            spannerClientMock.Configure()
+                .CommitAsync(Arg.Is<CommitRequest>(x => x != null), Arg.Any<CallSettings>())
+                // Annoyingly, NSubstitute doesn't have an overload which just accepts a single collection
+                .Returns(returns[0], returns.Skip(1).ToArray());
             return spannerClientMock;
         }
 
-        internal static Mock<SpannerClient> SetupCommitAsync_FailsAlways(this Mock<SpannerClient> spannerClientMock, StatusCode statusCode, string exceptionMessage = "Bang!", TimeSpan? exceptionRetryDelay = null)
+        internal static SpannerClient SetupCommitAsync_FailsAlways(this SpannerClient spannerClientMock, StatusCode statusCode, string exceptionMessage = "Bang!", TimeSpan? exceptionRetryDelay = null)
         {
-            spannerClientMock
-                .Setup(client => client.CommitAsync(It.IsNotNull<CommitRequest>(), It.IsAny<CallSettings>()))
+            spannerClientMock.Configure()
+                .CommitAsync(Arg.Is<CommitRequest>(x => x != null), Arg.Any<CallSettings>())
                 .Throws(BuildRpcException(exceptionRetryDelay, statusCode, exceptionMessage));
 
             return spannerClientMock;
         }
 
-        internal static Mock<SpannerClient> SetupRollbackAsync(this Mock<SpannerClient> spannerClientMock)
+        internal static SpannerClient SetupRollbackAsync(this SpannerClient spannerClientMock)
         {
-            spannerClientMock
-                .Setup(client => client.RollbackAsync(It.IsNotNull<RollbackRequest>(), It.IsAny<CallSettings>()))
+            spannerClientMock.Configure()
+                .RollbackAsync(Arg.Is<RollbackRequest>(x => x != null), Arg.Any<CallSettings>())
                 .Returns(Task.FromResult(true));
             return spannerClientMock;
         }
 
-        internal static Mock<SpannerClient> SetupExecuteStreamingSql(this Mock<SpannerClient> spannerClientMock) =>
+        internal static SpannerClient SetupExecuteStreamingSql(this SpannerClient spannerClientMock) =>
             SetupExecuteStreamingSql(spannerClientMock, new ExecuteSqlRequest());
 
-        internal static Mock<SpannerClient> SetupExecuteStreamingSql(this Mock<SpannerClient> spannerClientMock, ExecuteSqlRequest requestReceiver)
+        internal static SpannerClient SetupExecuteStreamingSql(this SpannerClient spannerClientMock, ExecuteSqlRequest requestReceiver)
         {
-            spannerClientMock
-                .Setup(client => client.ExecuteStreamingSql(
-                    It.IsAny<ExecuteSqlRequest>(),
-                    It.IsAny<CallSettings>()))
-                .Returns<ExecuteSqlRequest, CallSettings>((request, _) =>
+            spannerClientMock.Configure()
+                .ExecuteStreamingSql(Arg.Any<ExecuteSqlRequest>(), Arg.Any<CallSettings>())
+                .Returns(args =>
                 {
+                    var request = (ExecuteSqlRequest) args[0];
                     // Copy the executed request into the receiver so that callers can perform further checking later.
                     requestReceiver.MergeFrom(request);
                     IEnumerable<PartialResultSet> results = new string[] {"token1", "token2", "token3"}
@@ -237,17 +251,16 @@ namespace Google.Cloud.Spanner.V1.Tests
             return spannerClientMock;
         }
 
-        internal static Mock<SpannerClient> SetupStreamingRead(this Mock<SpannerClient> spannerClientMock) => 
+        internal static SpannerClient SetupStreamingRead(this SpannerClient spannerClientMock) => 
             SetupStreamingRead(spannerClientMock, new ReadRequest());
 
-        internal static Mock<SpannerClient> SetupStreamingRead(this Mock<SpannerClient> spannerClientMock, ReadRequest readRequestReceiver)
+        internal static SpannerClient SetupStreamingRead(this SpannerClient spannerClientMock, ReadRequest readRequestReceiver)
         {
-            spannerClientMock
-                .Setup(client => client.StreamingRead(
-                    It.IsAny<ReadRequest>(),
-                    It.IsAny<CallSettings>()))
-                .Returns<ReadRequest, CallSettings>((request, _) =>
+            spannerClientMock.Configure()
+                .StreamingRead(Arg.Any<ReadRequest>(), Arg.Any<CallSettings>())
+                .Returns(args =>
                 {
+                    var request = (ReadRequest) args[0];
                     // Copy the executed request into the receiver so that callers can perform further checking later.
                     readRequestReceiver.MergeFrom(request);
                     IEnumerable<PartialResultSet> results = new string[] {"token1", "token2", "token3"}
@@ -269,7 +282,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             return spannerClientMock;
         }
 
-        internal static Mock<SpannerClient> SetupExecuteStreamingSqlForDml(this Mock<SpannerClient> spannerClientMock, ResultSetStats.RowCountOneofCase type)
+        internal static SpannerClient SetupExecuteStreamingSqlForDml(this SpannerClient spannerClientMock, ResultSetStats.RowCountOneofCase type)
         {
             ResultSetStats stats = new ResultSetStats();
             if (type == ResultSetStats.RowCountOneofCase.RowCountExact)
@@ -280,11 +293,9 @@ namespace Google.Cloud.Spanner.V1.Tests
             {
                 stats.RowCountLowerBound = 100;
             }
-            spannerClientMock
-                .SetupSequence(client => client.ExecuteStreamingSql(
-                    It.IsAny<ExecuteSqlRequest>(),
-                    It.IsAny<CallSettings>()))
-                .Returns(() =>
+            spannerClientMock.Configure()
+                .ExecuteStreamingSql(Arg.Any<ExecuteSqlRequest>(), Arg.Any<CallSettings>())
+                .Returns(args =>
                 {
                     IEnumerable<PartialResultSet> results = new string[] { "token1" }
                     .Select((resumeToken, index) => new PartialResultSet
@@ -301,44 +312,32 @@ namespace Google.Cloud.Spanner.V1.Tests
             return spannerClientMock;
         }
 
-        internal static Mock<SpannerClient> SetupExecuteStreamingSqlForDmlThrowingEosError(this Mock<SpannerClient> spannerClientMock)
+        internal static SpannerClient SetupExecuteStreamingSqlForDmlThrowingEosError(this SpannerClient spannerClientMock)
         {
             const string eosError = "Received unexpected EOS on DATA frame from server";
-            spannerClientMock
-                .SetupSequence(client => client.ExecuteStreamingSql(
-                    It.IsAny<ExecuteSqlRequest>(),
-                    It.IsAny<CallSettings>()))
-		.Throws(new SpannerException(ErrorCode.Internal, eosError))
-		.Throws(new SpannerException(ErrorCode.Internal, eosError))
-                .Returns(() =>
-                {
-                    IEnumerable<PartialResultSet> results = new string[] {"token1", "token2", "token3"}
-                    .Select((resumeToken, index) => new PartialResultSet
+            spannerClientMock.Configure()
+                .ExecuteStreamingSql(Arg.Any<ExecuteSqlRequest>(), Arg.Any<CallSettings>())
+                .Returns(
+                    _ => throw new SpannerException(ErrorCode.Internal, eosError),
+                    _ => throw new SpannerException(ErrorCode.Internal, eosError),
+                    args =>
                     {
-                        ResumeToken = ByteString.CopyFromUtf8(resumeToken),
-                        Stats = new ResultSetStats
+                        IEnumerable<PartialResultSet> results = new string[] {"token1", "token2", "token3"}
+                        .Select((resumeToken, index) => new PartialResultSet
                         {
-                            RowCountExact = 10
-                        }
-                    })
-                    .ToList();
-                    var asyncResults = new AsyncStreamAdapter<PartialResultSet>(results.ToAsyncEnumerable().GetAsyncEnumerator(default));
-                    var call = new AsyncServerStreamingCall<PartialResultSet>(asyncResults,
-                        Task.FromResult(new Metadata()), () => new Status(), () => new Metadata(), () => { });
-                    return new ExecuteStreamingSqlStreamImpl(call);
-                });
+                            ResumeToken = ByteString.CopyFromUtf8(resumeToken),
+                            Stats = new ResultSetStats
+                            {
+                                RowCountExact = 10
+                            }
+                        })
+                        .ToList();
+                        var asyncResults = new AsyncStreamAdapter<PartialResultSet>(results.ToAsyncEnumerable().GetAsyncEnumerator(default));
+                        var call = new AsyncServerStreamingCall<PartialResultSet>(asyncResults,
+                            Task.FromResult(new Metadata()), () => new Status(), () => new Metadata(), () => { });
+                        return new ExecuteStreamingSqlStreamImpl(call);
+                    });
             return spannerClientMock;
-        }
-
-        private static ISetupSequentialResult<TResult> SetupFailures<TResult>(this ISetupSequentialResult<TResult> setup, int failures, StatusCode statusCode, string exceptionMessage, TimeSpan? exceptionRetryDelay)
-        {
-            var exception = BuildRpcException(exceptionRetryDelay, statusCode, exceptionMessage);
-            for (int i = 0; i < failures; i++)
-            {
-                setup = setup.Throws(exception);
-            }
-
-            return setup;
         }
 
         private static RpcException BuildRpcException(TimeSpan? exceptionRetryDelay, StatusCode exceptionStatus, string exceptionMessage)
@@ -359,9 +358,9 @@ namespace Google.Cloud.Spanner.V1.Tests
             return new RpcException(status, trailers);
         }
 
-        private static Timestamp GetNowTimestamp(this Mock<SpannerClient> spannerClientMock)
+        private static Timestamp GetNowTimestamp(this SpannerClient spannerClientMock)
         {
-            var clock = spannerClientMock.Object.Settings.Clock;
+            var clock = spannerClientMock.Settings.Clock;
             return Timestamp.FromDateTime(clock.GetCurrentDateTimeUtc());
         }
     }

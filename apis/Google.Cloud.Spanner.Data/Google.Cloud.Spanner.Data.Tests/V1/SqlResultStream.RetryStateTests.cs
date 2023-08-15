@@ -1,4 +1,4 @@
-﻿// Copyright 2019 Google LLC
+// Copyright 2019 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@ using Google.Api.Gax.Testing;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
-using Moq;
+using NSubstitute;
 using System;
 using System.Threading.Tasks;
 using Xunit;
@@ -131,18 +131,18 @@ namespace Google.Cloud.Spanner.V1.Tests
                 backoffMultiplier: 2.0,
                 ignored => false, // Ignored in SqlResultStream
                 RetrySettings.NoJitter);
-            var mock = new Mock<IScheduler>(MockBehavior.Strict);
-            mock.Setup(s => s.Delay(TimeSpan.FromSeconds(1), default)).Returns(Task.FromResult(0));
-            mock.Setup(s => s.Delay(TimeSpan.FromSeconds(2), default)).Returns(Task.FromResult(0));
-            mock.Setup(s => s.Delay(TimeSpan.FromSeconds(4), default)).Returns(Task.FromResult(0));
+            var mock = Substitute.For<IScheduler>();
+            mock.Delay(TimeSpan.FromSeconds(1), default).Returns(Task.FromResult(0));
+            mock.Delay(TimeSpan.FromSeconds(2), default).Returns(Task.FromResult(0));
+            mock.Delay(TimeSpan.FromSeconds(4), default).Returns(Task.FromResult(0));
             // Retry maxes out at 5 seconds
-            mock.Setup(s => s.Delay(TimeSpan.FromSeconds(5), default)).Returns(Task.FromResult(0));
+            mock.Delay(TimeSpan.FromSeconds(5), default).Returns(Task.FromResult(0));
             // After reset
-            mock.Setup(s => s.Delay(TimeSpan.FromSeconds(1), default)).Returns(Task.FromResult(0));
+            mock.Delay(TimeSpan.FromSeconds(1), default).Returns(Task.FromResult(0));
 
             var exception = new RpcException(new Status(StatusCode.Unavailable, "Bang"));
 
-            var state = new RetryState(new FakeClock(), mock.Object, retrySettings, s_callSettings);
+            var state = new RetryState(new FakeClock(), mock, retrySettings, s_callSettings);
 
             await state.WaitAsync(exception, default);
             await state.WaitAsync(exception, default);
@@ -155,11 +155,11 @@ namespace Google.Cloud.Spanner.V1.Tests
         [Fact]
         public async Task RecordErrorAndWait_RetryInfo()
         {
-            var mock = new Mock<IScheduler>(MockBehavior.Strict);
+            var mock = Substitute.For<IScheduler>();
             // Delay taken from retry info
-            mock.Setup(s => s.Delay(TimeSpan.FromSeconds(3), default)).Returns(Task.FromResult(0));
+            mock.Delay(TimeSpan.FromSeconds(3), default).Returns(Task.FromResult(0));
             // Delay taken from backoff settings (which weren't affected by the first exception, because it contained backoff information)
-            mock.Setup(s => s.Delay(TimeSpan.FromSeconds(1), default)).Returns(Task.FromResult(0));
+            mock.Delay(TimeSpan.FromSeconds(1), default).Returns(Task.FromResult(0));
 
             // The first exception contains retry info, so we don't use the backoff settings
             var retryInfo = new Rpc.RetryInfo { RetryDelay = Duration.FromTimeSpan(TimeSpan.FromSeconds(3)) };
@@ -170,7 +170,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             var exception1 = new RpcException(new Status(StatusCode.Unavailable, "Bang"), trailers);
             var exception2 = new RpcException(new Status(StatusCode.Unavailable, "Bang"));
 
-            RetryState state = new RetryState(new FakeClock(), mock.Object, s_retrySettings, s_callSettings);
+            RetryState state = new RetryState(new FakeClock(), mock, s_retrySettings, s_callSettings);
 
             Assert.True(state.CanRetry(exception1));
             await state.WaitAsync(exception1, default);
@@ -354,7 +354,7 @@ namespace Google.Cloud.Spanner.V1.Tests
 
         private static RetryState CreateSimpleRetryState() => new RetryState(
             new FakeClock(),
-            new Mock<IScheduler>(MockBehavior.Strict).Object,
+            Substitute.For<IScheduler>(),
             s_retrySettings,
             s_callSettings);
     }
