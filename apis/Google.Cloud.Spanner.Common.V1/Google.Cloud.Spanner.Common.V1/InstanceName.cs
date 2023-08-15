@@ -1,4 +1,4 @@
-﻿// Copyright 2018, Google LLC
+// Copyright 2018, Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -32,7 +32,7 @@ namespace Google.Cloud.Spanner.Common.V1
             ProjectInstance = 1
         }
 
-        private static gax::PathTemplate s_projectInstance = new gax::PathTemplate("projects/{project}/instances/{instance}");
+        private static readonly gax::PathTemplate s_projectInstance = new gax::PathTemplate("projects/{project}/instances/{instance}");
 
         /// <summary>Creates a <see cref="InstanceName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
