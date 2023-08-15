@@ -59,6 +59,7 @@ namespace Google.Cloud.AIPlatform.V1
             DeleteTensorboardSettings = existing.DeleteTensorboardSettings;
             DeleteTensorboardOperationsSettings = existing.DeleteTensorboardOperationsSettings.Clone();
             ReadTensorboardUsageSettings = existing.ReadTensorboardUsageSettings;
+            ReadTensorboardSizeSettings = existing.ReadTensorboardSizeSettings;
             CreateTensorboardExperimentSettings = existing.CreateTensorboardExperimentSettings;
             GetTensorboardExperimentSettings = existing.GetTensorboardExperimentSettings;
             UpdateTensorboardExperimentSettings = existing.UpdateTensorboardExperimentSettings;
@@ -221,6 +222,19 @@ namespace Google.Cloud.AIPlatform.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ReadTensorboardUsageSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>TensorboardServiceClient.ReadTensorboardSize</c> and <c>TensorboardServiceClient.ReadTensorboardSizeAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ReadTensorboardSizeSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1521,6 +1535,123 @@ namespace Google.Cloud.AIPlatform.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<ReadTensorboardUsageResponse> ReadTensorboardUsageAsync(TensorboardName tensorboard, st::CancellationToken cancellationToken) =>
             ReadTensorboardUsageAsync(tensorboard, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the storage size for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReadTensorboardSizeResponse ReadTensorboardSize(ReadTensorboardSizeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the storage size for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReadTensorboardSizeResponse> ReadTensorboardSizeAsync(ReadTensorboardSizeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the storage size for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReadTensorboardSizeResponse> ReadTensorboardSizeAsync(ReadTensorboardSizeRequest request, st::CancellationToken cancellationToken) =>
+            ReadTensorboardSizeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the storage size for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="tensorboard">
+        /// Required. The name of the Tensorboard resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReadTensorboardSizeResponse ReadTensorboardSize(string tensorboard, gaxgrpc::CallSettings callSettings = null) =>
+            ReadTensorboardSize(new ReadTensorboardSizeRequest
+            {
+                Tensorboard = gax::GaxPreconditions.CheckNotNullOrEmpty(tensorboard, nameof(tensorboard)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the storage size for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="tensorboard">
+        /// Required. The name of the Tensorboard resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReadTensorboardSizeResponse> ReadTensorboardSizeAsync(string tensorboard, gaxgrpc::CallSettings callSettings = null) =>
+            ReadTensorboardSizeAsync(new ReadTensorboardSizeRequest
+            {
+                Tensorboard = gax::GaxPreconditions.CheckNotNullOrEmpty(tensorboard, nameof(tensorboard)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the storage size for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="tensorboard">
+        /// Required. The name of the Tensorboard resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReadTensorboardSizeResponse> ReadTensorboardSizeAsync(string tensorboard, st::CancellationToken cancellationToken) =>
+            ReadTensorboardSizeAsync(tensorboard, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the storage size for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="tensorboard">
+        /// Required. The name of the Tensorboard resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReadTensorboardSizeResponse ReadTensorboardSize(TensorboardName tensorboard, gaxgrpc::CallSettings callSettings = null) =>
+            ReadTensorboardSize(new ReadTensorboardSizeRequest
+            {
+                TensorboardAsTensorboardName = gax::GaxPreconditions.CheckNotNull(tensorboard, nameof(tensorboard)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the storage size for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="tensorboard">
+        /// Required. The name of the Tensorboard resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReadTensorboardSizeResponse> ReadTensorboardSizeAsync(TensorboardName tensorboard, gaxgrpc::CallSettings callSettings = null) =>
+            ReadTensorboardSizeAsync(new ReadTensorboardSizeRequest
+            {
+                TensorboardAsTensorboardName = gax::GaxPreconditions.CheckNotNull(tensorboard, nameof(tensorboard)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the storage size for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="tensorboard">
+        /// Required. The name of the Tensorboard resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReadTensorboardSizeResponse> ReadTensorboardSizeAsync(TensorboardName tensorboard, st::CancellationToken cancellationToken) =>
+            ReadTensorboardSizeAsync(tensorboard, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a TensorboardExperiment.
@@ -4706,6 +4837,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         private readonly gaxgrpc::ApiCall<ReadTensorboardUsageRequest, ReadTensorboardUsageResponse> _callReadTensorboardUsage;
 
+        private readonly gaxgrpc::ApiCall<ReadTensorboardSizeRequest, ReadTensorboardSizeResponse> _callReadTensorboardSize;
+
         private readonly gaxgrpc::ApiCall<CreateTensorboardExperimentRequest, TensorboardExperiment> _callCreateTensorboardExperiment;
 
         private readonly gaxgrpc::ApiCall<GetTensorboardExperimentRequest, TensorboardExperiment> _callGetTensorboardExperiment;
@@ -4789,6 +4922,9 @@ namespace Google.Cloud.AIPlatform.V1
             _callReadTensorboardUsage = clientHelper.BuildApiCall<ReadTensorboardUsageRequest, ReadTensorboardUsageResponse>("ReadTensorboardUsage", grpcClient.ReadTensorboardUsageAsync, grpcClient.ReadTensorboardUsage, effectiveSettings.ReadTensorboardUsageSettings).WithGoogleRequestParam("tensorboard", request => request.Tensorboard);
             Modify_ApiCall(ref _callReadTensorboardUsage);
             Modify_ReadTensorboardUsageApiCall(ref _callReadTensorboardUsage);
+            _callReadTensorboardSize = clientHelper.BuildApiCall<ReadTensorboardSizeRequest, ReadTensorboardSizeResponse>("ReadTensorboardSize", grpcClient.ReadTensorboardSizeAsync, grpcClient.ReadTensorboardSize, effectiveSettings.ReadTensorboardSizeSettings).WithGoogleRequestParam("tensorboard", request => request.Tensorboard);
+            Modify_ApiCall(ref _callReadTensorboardSize);
+            Modify_ReadTensorboardSizeApiCall(ref _callReadTensorboardSize);
             _callCreateTensorboardExperiment = clientHelper.BuildApiCall<CreateTensorboardExperimentRequest, TensorboardExperiment>("CreateTensorboardExperiment", grpcClient.CreateTensorboardExperimentAsync, grpcClient.CreateTensorboardExperiment, effectiveSettings.CreateTensorboardExperimentSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateTensorboardExperiment);
             Modify_CreateTensorboardExperimentApiCall(ref _callCreateTensorboardExperiment);
@@ -4877,6 +5013,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         partial void Modify_ReadTensorboardUsageApiCall(ref gaxgrpc::ApiCall<ReadTensorboardUsageRequest, ReadTensorboardUsageResponse> call);
 
+        partial void Modify_ReadTensorboardSizeApiCall(ref gaxgrpc::ApiCall<ReadTensorboardSizeRequest, ReadTensorboardSizeResponse> call);
+
         partial void Modify_CreateTensorboardExperimentApiCall(ref gaxgrpc::ApiCall<CreateTensorboardExperimentRequest, TensorboardExperiment> call);
 
         partial void Modify_GetTensorboardExperimentApiCall(ref gaxgrpc::ApiCall<GetTensorboardExperimentRequest, TensorboardExperiment> call);
@@ -4945,6 +5083,8 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_DeleteTensorboardRequest(ref DeleteTensorboardRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ReadTensorboardUsageRequest(ref ReadTensorboardUsageRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ReadTensorboardSizeRequest(ref ReadTensorboardSizeRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateTensorboardExperimentRequest(ref CreateTensorboardExperimentRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -5143,6 +5283,30 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Modify_ReadTensorboardUsageRequest(ref request, ref callSettings);
             return _callReadTensorboardUsage.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the storage size for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ReadTensorboardSizeResponse ReadTensorboardSize(ReadTensorboardSizeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ReadTensorboardSizeRequest(ref request, ref callSettings);
+            return _callReadTensorboardSize.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the storage size for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ReadTensorboardSizeResponse> ReadTensorboardSizeAsync(ReadTensorboardSizeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ReadTensorboardSizeRequest(ref request, ref callSettings);
+            return _callReadTensorboardSize.Async(request, callSettings);
         }
 
         /// <summary>

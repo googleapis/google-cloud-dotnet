@@ -84,6 +84,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ReadTensorboardUsageResponse> __Marshaller_google_cloud_aiplatform_v1_ReadTensorboardUsageResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ReadTensorboardUsageResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ReadTensorboardSizeRequest> __Marshaller_google_cloud_aiplatform_v1_ReadTensorboardSizeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ReadTensorboardSizeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ReadTensorboardSizeResponse> __Marshaller_google_cloud_aiplatform_v1_ReadTensorboardSizeResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ReadTensorboardSizeResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.CreateTensorboardExperimentRequest> __Marshaller_google_cloud_aiplatform_v1_CreateTensorboardExperimentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.CreateTensorboardExperimentRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.TensorboardExperiment> __Marshaller_google_cloud_aiplatform_v1_TensorboardExperiment = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.TensorboardExperiment.Parser));
@@ -205,6 +209,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         "ReadTensorboardUsage",
         __Marshaller_google_cloud_aiplatform_v1_ReadTensorboardUsageRequest,
         __Marshaller_google_cloud_aiplatform_v1_ReadTensorboardUsageResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.ReadTensorboardSizeRequest, global::Google.Cloud.AIPlatform.V1.ReadTensorboardSizeResponse> __Method_ReadTensorboardSize = new grpc::Method<global::Google.Cloud.AIPlatform.V1.ReadTensorboardSizeRequest, global::Google.Cloud.AIPlatform.V1.ReadTensorboardSizeResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ReadTensorboardSize",
+        __Marshaller_google_cloud_aiplatform_v1_ReadTensorboardSizeRequest,
+        __Marshaller_google_cloud_aiplatform_v1_ReadTensorboardSizeResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.CreateTensorboardExperimentRequest, global::Google.Cloud.AIPlatform.V1.TensorboardExperiment> __Method_CreateTensorboardExperiment = new grpc::Method<global::Google.Cloud.AIPlatform.V1.CreateTensorboardExperimentRequest, global::Google.Cloud.AIPlatform.V1.TensorboardExperiment>(
@@ -468,6 +480,18 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.ReadTensorboardUsageResponse> ReadTensorboardUsage(global::Google.Cloud.AIPlatform.V1.ReadTensorboardUsageRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns the storage size for a given TensorBoard instance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.ReadTensorboardSizeResponse> ReadTensorboardSize(global::Google.Cloud.AIPlatform.V1.ReadTensorboardSizeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1079,6 +1103,54 @@ namespace Google.Cloud.AIPlatform.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.ReadTensorboardUsageResponse> ReadTensorboardUsageAsync(global::Google.Cloud.AIPlatform.V1.ReadTensorboardUsageRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ReadTensorboardUsage, null, options, request);
+      }
+      /// <summary>
+      /// Returns the storage size for a given TensorBoard instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1.ReadTensorboardSizeResponse ReadTensorboardSize(global::Google.Cloud.AIPlatform.V1.ReadTensorboardSizeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ReadTensorboardSize(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the storage size for a given TensorBoard instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1.ReadTensorboardSizeResponse ReadTensorboardSize(global::Google.Cloud.AIPlatform.V1.ReadTensorboardSizeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ReadTensorboardSize, null, options, request);
+      }
+      /// <summary>
+      /// Returns the storage size for a given TensorBoard instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.ReadTensorboardSizeResponse> ReadTensorboardSizeAsync(global::Google.Cloud.AIPlatform.V1.ReadTensorboardSizeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ReadTensorboardSizeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the storage size for a given TensorBoard instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.ReadTensorboardSizeResponse> ReadTensorboardSizeAsync(global::Google.Cloud.AIPlatform.V1.ReadTensorboardSizeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ReadTensorboardSize, null, options, request);
       }
       /// <summary>
       /// Creates a TensorboardExperiment.
@@ -2230,6 +2302,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           .AddMethod(__Method_ListTensorboards, serviceImpl.ListTensorboards)
           .AddMethod(__Method_DeleteTensorboard, serviceImpl.DeleteTensorboard)
           .AddMethod(__Method_ReadTensorboardUsage, serviceImpl.ReadTensorboardUsage)
+          .AddMethod(__Method_ReadTensorboardSize, serviceImpl.ReadTensorboardSize)
           .AddMethod(__Method_CreateTensorboardExperiment, serviceImpl.CreateTensorboardExperiment)
           .AddMethod(__Method_GetTensorboardExperiment, serviceImpl.GetTensorboardExperiment)
           .AddMethod(__Method_UpdateTensorboardExperiment, serviceImpl.UpdateTensorboardExperiment)
@@ -2268,6 +2341,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       serviceBinder.AddMethod(__Method_ListTensorboards, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ListTensorboardsRequest, global::Google.Cloud.AIPlatform.V1.ListTensorboardsResponse>(serviceImpl.ListTensorboards));
       serviceBinder.AddMethod(__Method_DeleteTensorboard, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.DeleteTensorboardRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteTensorboard));
       serviceBinder.AddMethod(__Method_ReadTensorboardUsage, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ReadTensorboardUsageRequest, global::Google.Cloud.AIPlatform.V1.ReadTensorboardUsageResponse>(serviceImpl.ReadTensorboardUsage));
+      serviceBinder.AddMethod(__Method_ReadTensorboardSize, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ReadTensorboardSizeRequest, global::Google.Cloud.AIPlatform.V1.ReadTensorboardSizeResponse>(serviceImpl.ReadTensorboardSize));
       serviceBinder.AddMethod(__Method_CreateTensorboardExperiment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.CreateTensorboardExperimentRequest, global::Google.Cloud.AIPlatform.V1.TensorboardExperiment>(serviceImpl.CreateTensorboardExperiment));
       serviceBinder.AddMethod(__Method_GetTensorboardExperiment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.GetTensorboardExperimentRequest, global::Google.Cloud.AIPlatform.V1.TensorboardExperiment>(serviceImpl.GetTensorboardExperiment));
       serviceBinder.AddMethod(__Method_UpdateTensorboardExperiment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.UpdateTensorboardExperimentRequest, global::Google.Cloud.AIPlatform.V1.TensorboardExperiment>(serviceImpl.UpdateTensorboardExperiment));

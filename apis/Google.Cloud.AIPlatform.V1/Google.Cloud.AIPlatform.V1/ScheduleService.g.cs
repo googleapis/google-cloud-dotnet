@@ -713,6 +713,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// descending order.
     ///
     /// Supported fields:
+    ///
     ///   * `create_time`
     ///   * `start_time`
     ///   * `end_time`
@@ -1877,7 +1878,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// Required. The Schedule which replaces the resource on the server.
     /// The following restrictions will be applied:
+    ///
     ///   * The scheduled request type cannot be changed.
+    ///   * The non-empty fields cannot be unset.
     ///   * The output_only fields will be ignored if specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

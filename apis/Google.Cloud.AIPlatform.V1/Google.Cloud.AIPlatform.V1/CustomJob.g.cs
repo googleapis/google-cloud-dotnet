@@ -82,14 +82,14 @@ namespace Google.Cloud.AIPlatform.V1 {
             "cl9pbWFnZV91cmkYASABKAlCA+BBAhIZCgxwYWNrYWdlX3VyaXMYAiADKAlC",
             "A+BBAhIaCg1weXRob25fbW9kdWxlGAMgASgJQgPgQQISDAoEYXJncxgEIAMo",
             "CRIvCgNlbnYYBSADKAsyIi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5F",
-            "bnZWYXIiXwoKU2NoZWR1bGluZxIqCgd0aW1lb3V0GAEgASgLMhkuZ29vZ2xl",
+            "bnZWYXIifQoKU2NoZWR1bGluZxIqCgd0aW1lb3V0GAEgASgLMhkuZ29vZ2xl",
             "LnByb3RvYnVmLkR1cmF0aW9uEiUKHXJlc3RhcnRfam9iX29uX3dvcmtlcl9y",
-            "ZXN0YXJ0GAMgASgIQswBCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
-            "djFCDkN1c3RvbUpvYlByb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vYWlw",
-            "bGF0Zm9ybS9hcGl2MS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIaR29v",
-            "Z2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0",
-            "Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90",
-            "bzM="));
+            "ZXN0YXJ0GAMgASgIEhwKD2Rpc2FibGVfcmV0cmllcxgFIAEoCEID4EEBQswB",
+            "Ch5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCDkN1c3RvbUpvYlBy",
+            "b3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9h",
+            "aXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxh",
+            "dGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2ds",
+            "ZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EnvVarReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.JobStateReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -98,7 +98,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.WorkerPoolSpec), global::Google.Cloud.AIPlatform.V1.WorkerPoolSpec.Parser, new[]{ "ContainerSpec", "PythonPackageSpec", "MachineSpec", "ReplicaCount", "NfsMounts", "DiskSpec" }, new[]{ "Task" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ContainerSpec), global::Google.Cloud.AIPlatform.V1.ContainerSpec.Parser, new[]{ "ImageUri", "Command", "Args", "Env" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PythonPackageSpec), global::Google.Cloud.AIPlatform.V1.PythonPackageSpec.Parser, new[]{ "ExecutorImageUri", "PackageUris", "PythonModule", "Args", "Env" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Scheduling), global::Google.Cloud.AIPlatform.V1.Scheduling.Parser, new[]{ "Timeout", "RestartJobOnWorkerRestart" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Scheduling), global::Google.Cloud.AIPlatform.V1.Scheduling.Parser, new[]{ "Timeout", "RestartJobOnWorkerRestart", "DisableRetries" }, null, null, null, null)
           }));
     }
     #endregion
@@ -2585,6 +2585,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public Scheduling(Scheduling other) : this() {
       timeout_ = other.timeout_ != null ? other.timeout_.Clone() : null;
       restartJobOnWorkerRestart_ = other.restartJobOnWorkerRestart_;
+      disableRetries_ = other.disableRetries_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2626,6 +2627,23 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "disable_retries" field.</summary>
+    public const int DisableRetriesFieldNumber = 5;
+    private bool disableRetries_;
+    /// <summary>
+    /// Optional. Indicates if the job should retry for internal errors after the
+    /// job starts running. If true, overrides
+    /// `Scheduling.restart_job_on_worker_restart` to false.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool DisableRetries {
+      get { return disableRetries_; }
+      set {
+        disableRetries_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2643,6 +2661,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (!object.Equals(Timeout, other.Timeout)) return false;
       if (RestartJobOnWorkerRestart != other.RestartJobOnWorkerRestart) return false;
+      if (DisableRetries != other.DisableRetries) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2652,6 +2671,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       int hash = 1;
       if (timeout_ != null) hash ^= Timeout.GetHashCode();
       if (RestartJobOnWorkerRestart != false) hash ^= RestartJobOnWorkerRestart.GetHashCode();
+      if (DisableRetries != false) hash ^= DisableRetries.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2678,6 +2698,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(24);
         output.WriteBool(RestartJobOnWorkerRestart);
       }
+      if (DisableRetries != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(DisableRetries);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2696,6 +2720,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(24);
         output.WriteBool(RestartJobOnWorkerRestart);
       }
+      if (DisableRetries != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(DisableRetries);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2710,6 +2738,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Timeout);
       }
       if (RestartJobOnWorkerRestart != false) {
+        size += 1 + 1;
+      }
+      if (DisableRetries != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -2732,6 +2763,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (other.RestartJobOnWorkerRestart != false) {
         RestartJobOnWorkerRestart = other.RestartJobOnWorkerRestart;
+      }
+      if (other.DisableRetries != false) {
+        DisableRetries = other.DisableRetries;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2759,6 +2793,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             RestartJobOnWorkerRestart = input.ReadBool();
             break;
           }
+          case 40: {
+            DisableRetries = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -2783,6 +2821,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 24: {
             RestartJobOnWorkerRestart = input.ReadBool();
+            break;
+          }
+          case 40: {
+            DisableRetries = input.ReadBool();
             break;
           }
         }

@@ -53395,6 +53395,293 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1_generated_TensorboardService_ReadTensorboardSize_sync",
+      "title": "ReadTensorboardSizeRequestObject",
+      "description": "Snippet for ReadTensorboardSize",
+      "file": "TensorboardServiceClient.ReadTensorboardSizeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadTensorboardSize",
+        "fullName": "Google.Cloud.AIPlatform.V1.TensorboardServiceClient.ReadTensorboardSize",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ReadTensorboardSizeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.ReadTensorboardSizeResponse",
+        "client": {
+          "shortName": "TensorboardServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.TensorboardServiceClient"
+        },
+        "method": {
+          "shortName": "ReadTensorboardSize",
+          "fullName": "google.cloud.aiplatform.v1.TensorboardService.ReadTensorboardSize",
+          "service": {
+            "shortName": "TensorboardService",
+            "fullName": "google.cloud.aiplatform.v1.TensorboardService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_TensorboardService_ReadTensorboardSize_async",
+      "title": "ReadTensorboardSizeRequestObjectAsync",
+      "description": "Snippet for ReadTensorboardSizeAsync",
+      "file": "TensorboardServiceClient.ReadTensorboardSizeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadTensorboardSizeAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.TensorboardServiceClient.ReadTensorboardSizeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ReadTensorboardSizeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.ReadTensorboardSizeResponse>",
+        "client": {
+          "shortName": "TensorboardServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.TensorboardServiceClient"
+        },
+        "method": {
+          "shortName": "ReadTensorboardSize",
+          "fullName": "google.cloud.aiplatform.v1.TensorboardService.ReadTensorboardSize",
+          "service": {
+            "shortName": "TensorboardService",
+            "fullName": "google.cloud.aiplatform.v1.TensorboardService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_TensorboardService_ReadTensorboardSize_sync_flattened",
+      "title": "ReadTensorboardSize",
+      "description": "Snippet for ReadTensorboardSize",
+      "file": "TensorboardServiceClient.ReadTensorboardSizeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadTensorboardSize",
+        "fullName": "Google.Cloud.AIPlatform.V1.TensorboardServiceClient.ReadTensorboardSize",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "tensorboard"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.ReadTensorboardSizeResponse",
+        "client": {
+          "shortName": "TensorboardServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.TensorboardServiceClient"
+        },
+        "method": {
+          "shortName": "ReadTensorboardSize",
+          "fullName": "google.cloud.aiplatform.v1.TensorboardService.ReadTensorboardSize",
+          "service": {
+            "shortName": "TensorboardService",
+            "fullName": "google.cloud.aiplatform.v1.TensorboardService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_TensorboardService_ReadTensorboardSize_async_flattened",
+      "title": "ReadTensorboardSizeAsync",
+      "description": "Snippet for ReadTensorboardSizeAsync",
+      "file": "TensorboardServiceClient.ReadTensorboardSizeAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadTensorboardSizeAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.TensorboardServiceClient.ReadTensorboardSizeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "tensorboard"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.ReadTensorboardSizeResponse>",
+        "client": {
+          "shortName": "TensorboardServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.TensorboardServiceClient"
+        },
+        "method": {
+          "shortName": "ReadTensorboardSize",
+          "fullName": "google.cloud.aiplatform.v1.TensorboardService.ReadTensorboardSize",
+          "service": {
+            "shortName": "TensorboardService",
+            "fullName": "google.cloud.aiplatform.v1.TensorboardService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_TensorboardService_ReadTensorboardSize_sync_flattened_resourceNames",
+      "title": "ReadTensorboardSizeResourceNames",
+      "description": "Snippet for ReadTensorboardSize",
+      "file": "TensorboardServiceClient.ReadTensorboardSizeResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadTensorboardSize",
+        "fullName": "Google.Cloud.AIPlatform.V1.TensorboardServiceClient.ReadTensorboardSize",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.TensorboardName",
+            "name": "tensorboard"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.ReadTensorboardSizeResponse",
+        "client": {
+          "shortName": "TensorboardServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.TensorboardServiceClient"
+        },
+        "method": {
+          "shortName": "ReadTensorboardSize",
+          "fullName": "google.cloud.aiplatform.v1.TensorboardService.ReadTensorboardSize",
+          "service": {
+            "shortName": "TensorboardService",
+            "fullName": "google.cloud.aiplatform.v1.TensorboardService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_TensorboardService_ReadTensorboardSize_async_flattened_resourceNames",
+      "title": "ReadTensorboardSizeResourceNamesAsync",
+      "description": "Snippet for ReadTensorboardSizeAsync",
+      "file": "TensorboardServiceClient.ReadTensorboardSizeResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadTensorboardSizeAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.TensorboardServiceClient.ReadTensorboardSizeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.TensorboardName",
+            "name": "tensorboard"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.ReadTensorboardSizeResponse>",
+        "client": {
+          "shortName": "TensorboardServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.TensorboardServiceClient"
+        },
+        "method": {
+          "shortName": "ReadTensorboardSize",
+          "fullName": "google.cloud.aiplatform.v1.TensorboardService.ReadTensorboardSize",
+          "service": {
+            "shortName": "TensorboardService",
+            "fullName": "google.cloud.aiplatform.v1.TensorboardService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1_generated_TensorboardService_CreateTensorboardExperiment_sync",
       "title": "CreateTensorboardExperimentRequestObject",
       "description": "Snippet for CreateTensorboardExperiment",

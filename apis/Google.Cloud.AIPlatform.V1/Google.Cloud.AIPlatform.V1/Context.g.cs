@@ -28,7 +28,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MRofZ29vZ2xlL2FwaS9maWVsZF9i",
             "ZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxocZ29v",
             "Z2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3Rp",
-            "bWVzdGFtcC5wcm90byLTBAoHQ29udGV4dBIRCgRuYW1lGAEgASgJQgPgQQMS",
+            "bWVzdGFtcC5wcm90byLTBAoHQ29udGV4dBIRCgRuYW1lGAEgASgJQgPgQQUS",
             "FAoMZGlzcGxheV9uYW1lGAIgASgJEgwKBGV0YWcYCCABKAkSPwoGbGFiZWxz",
             "GAkgAygLMi8uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuQ29udGV4dC5M",
             "YWJlbHNFbnRyeRI0CgtjcmVhdGVfdGltZRgKIAEoCzIaLmdvb2dsZS5wcm90",
@@ -118,7 +118,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. The resource name of the Context.
+    /// Immutable. The resource name of the Context.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

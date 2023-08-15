@@ -1336,6 +1336,12 @@
                 "ReadTensorboardBlobDataAsync"
               ]
             },
+            "ReadTensorboardSize": {
+              "methods": [
+                "ReadTensorboardSize",
+                "ReadTensorboardSizeAsync"
+              ]
+            },
             "ReadTensorboardTimeSeriesData": {
               "methods": [
                 "ReadTensorboardTimeSeriesData",
