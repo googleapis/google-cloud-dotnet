@@ -1308,6 +1308,29 @@
       "restNumericEnums": true
     },
     {
+      "id": "Google.Cloud.Config.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Infrastructure Manager",
+      "productUrl": "https://cloud.google.com/infrastructure-manager/docs/overview",
+      "description": "Recommended Google client library to access the Google Cloud Infrastructure Manager API, which creates and manages Google Cloud Platform resources and infrastructure.",
+      "tags": [
+        "configuration",
+        "infrastructure",
+        "resources"
+      ],
+      "dependencies": {
+        "Google.Cloud.Iam.V1": "3.0.0",
+        "Google.Cloud.Location": "2.0.0",
+        "Google.LongRunning": "3.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/config/v1",
+      "shortName": "config",
+      "serviceConfigFile": "config_v1.yaml",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.Connectors.V1",
       "version": "1.0.0-beta01",
       "type": "grpc",
