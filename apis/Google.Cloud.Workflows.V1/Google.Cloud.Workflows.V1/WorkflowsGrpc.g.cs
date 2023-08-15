@@ -3,7 +3,7 @@
 //     source: google/cloud/workflows/v1/workflows.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2021 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -133,7 +133,7 @@ namespace Google.Cloud.Workflows.V1 {
     public abstract partial class WorkflowsBase
     {
       /// <summary>
-      /// Lists Workflows in a given project and location.
+      /// Lists workflows in a given project and location.
       /// The default order is not specified.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -146,7 +146,7 @@ namespace Google.Cloud.Workflows.V1 {
       }
 
       /// <summary>
-      /// Gets details of a single Workflow.
+      /// Gets details of a single workflow.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -160,7 +160,7 @@ namespace Google.Cloud.Workflows.V1 {
       /// <summary>
       /// Creates a new workflow. If a workflow with the specified name already
       /// exists in the specified project and location, the long running operation
-      /// will return [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS] error.
+      /// returns a [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS] error.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -188,8 +188,8 @@ namespace Google.Cloud.Workflows.V1 {
       /// <summary>
       /// Updates an existing workflow.
       /// Running this method has no impact on already running executions of the
-      /// workflow. A new revision of the workflow may be created as a result of a
-      /// successful update operation. In that case, such revision will be used
+      /// workflow. A new revision of the workflow might be created as a result of a
+      /// successful update operation. In that case, the new revision is used
       /// in new workflow executions.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -231,7 +231,7 @@ namespace Google.Cloud.Workflows.V1 {
       }
 
       /// <summary>
-      /// Lists Workflows in a given project and location.
+      /// Lists workflows in a given project and location.
       /// The default order is not specified.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -245,7 +245,7 @@ namespace Google.Cloud.Workflows.V1 {
         return ListWorkflows(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists Workflows in a given project and location.
+      /// Lists workflows in a given project and location.
       /// The default order is not specified.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -257,7 +257,7 @@ namespace Google.Cloud.Workflows.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListWorkflows, null, options, request);
       }
       /// <summary>
-      /// Lists Workflows in a given project and location.
+      /// Lists workflows in a given project and location.
       /// The default order is not specified.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -271,7 +271,7 @@ namespace Google.Cloud.Workflows.V1 {
         return ListWorkflowsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists Workflows in a given project and location.
+      /// Lists workflows in a given project and location.
       /// The default order is not specified.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -283,7 +283,7 @@ namespace Google.Cloud.Workflows.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListWorkflows, null, options, request);
       }
       /// <summary>
-      /// Gets details of a single Workflow.
+      /// Gets details of a single workflow.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -296,7 +296,7 @@ namespace Google.Cloud.Workflows.V1 {
         return GetWorkflow(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets details of a single Workflow.
+      /// Gets details of a single workflow.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -307,7 +307,7 @@ namespace Google.Cloud.Workflows.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetWorkflow, null, options, request);
       }
       /// <summary>
-      /// Gets details of a single Workflow.
+      /// Gets details of a single workflow.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -320,7 +320,7 @@ namespace Google.Cloud.Workflows.V1 {
         return GetWorkflowAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets details of a single Workflow.
+      /// Gets details of a single workflow.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -333,7 +333,7 @@ namespace Google.Cloud.Workflows.V1 {
       /// <summary>
       /// Creates a new workflow. If a workflow with the specified name already
       /// exists in the specified project and location, the long running operation
-      /// will return [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS] error.
+      /// returns a [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS] error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -348,7 +348,7 @@ namespace Google.Cloud.Workflows.V1 {
       /// <summary>
       /// Creates a new workflow. If a workflow with the specified name already
       /// exists in the specified project and location, the long running operation
-      /// will return [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS] error.
+      /// returns a [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS] error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -361,7 +361,7 @@ namespace Google.Cloud.Workflows.V1 {
       /// <summary>
       /// Creates a new workflow. If a workflow with the specified name already
       /// exists in the specified project and location, the long running operation
-      /// will return [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS] error.
+      /// returns a [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS] error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -376,7 +376,7 @@ namespace Google.Cloud.Workflows.V1 {
       /// <summary>
       /// Creates a new workflow. If a workflow with the specified name already
       /// exists in the specified project and location, the long running operation
-      /// will return [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS] error.
+      /// returns a [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS] error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -445,8 +445,8 @@ namespace Google.Cloud.Workflows.V1 {
       /// <summary>
       /// Updates an existing workflow.
       /// Running this method has no impact on already running executions of the
-      /// workflow. A new revision of the workflow may be created as a result of a
-      /// successful update operation. In that case, such revision will be used
+      /// workflow. A new revision of the workflow might be created as a result of a
+      /// successful update operation. In that case, the new revision is used
       /// in new workflow executions.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -462,8 +462,8 @@ namespace Google.Cloud.Workflows.V1 {
       /// <summary>
       /// Updates an existing workflow.
       /// Running this method has no impact on already running executions of the
-      /// workflow. A new revision of the workflow may be created as a result of a
-      /// successful update operation. In that case, such revision will be used
+      /// workflow. A new revision of the workflow might be created as a result of a
+      /// successful update operation. In that case, the new revision is used
       /// in new workflow executions.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -477,8 +477,8 @@ namespace Google.Cloud.Workflows.V1 {
       /// <summary>
       /// Updates an existing workflow.
       /// Running this method has no impact on already running executions of the
-      /// workflow. A new revision of the workflow may be created as a result of a
-      /// successful update operation. In that case, such revision will be used
+      /// workflow. A new revision of the workflow might be created as a result of a
+      /// successful update operation. In that case, the new revision is used
       /// in new workflow executions.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -494,8 +494,8 @@ namespace Google.Cloud.Workflows.V1 {
       /// <summary>
       /// Updates an existing workflow.
       /// Running this method has no impact on already running executions of the
-      /// workflow. A new revision of the workflow may be created as a result of a
-      /// successful update operation. In that case, such revision will be used
+      /// workflow. A new revision of the workflow might be created as a result of a
+      /// successful update operation. In that case, the new revision is used
       /// in new workflow executions.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
