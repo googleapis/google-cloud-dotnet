@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,8 @@
 
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Firestore.V1;
-using Moq;
+using NSubstitute;
+using NSubstitute.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -291,7 +292,7 @@ namespace Google.Cloud.Firestore.Tests
         [Fact]
         public async Task CommitAsync()
         {
-            var mock = new Mock<FirestoreClient> { CallBase = true };
+            var mock = Substitute.ForPartsOf<FirestoreClient>();
             var write1 = new Write { Update = new Document { Name = "irrelevant1" } };
             var write2 = new Write { Update = new Document { Name = "irrelevant2" } };
             var write3 = new Write { Transform = new DocumentTransform { Document = "irrelevant3" } };
@@ -314,15 +315,15 @@ namespace Google.Cloud.Firestore.Tests
                 }
             };
 
-            mock.Setup(c => c.CommitAsync(request, It.IsAny<CallSettings>())).ReturnsAsync(response);
-            var db = FirestoreDb.Create("proj", "db", mock.Object);
+            mock.Configure().CommitAsync(request, Arg.Any<CallSettings>()).Returns(response);
+            var db = FirestoreDb.Create("proj", "db", mock);
             var reference = db.Document("col/doc");
             var batch = db.StartBatch();
             batch.Writes.AddRange(new[] { write1, write2, write3, write4 });
             var actualTimestamps = (await batch.CommitAsync()).Select(x => x.UpdateTime);
             var expectedTimestamps = new[] { new Timestamp(10, 0), new Timestamp(10, 500), new Timestamp(100, 0), new Timestamp(150, 0) };
             Assert.Equal(expectedTimestamps, actualTimestamps);
-            mock.VerifyAll();
+            _ = mock.Received(1).CommitAsync(request, Arg.Any<CallSettings>());
         }
 
         [Fact]
