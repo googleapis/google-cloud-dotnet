@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,15 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Bigtable.Common.V2;
 using Google.Protobuf;
-using Grpc.Core;
-using Moq;
+using NSubstitute;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -44,13 +40,13 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
         private async Task DropAllRows_ValidateArguments<TException>(TableName tableName)
             where TException : Exception
         {
-            var client = new Mock<BigtableTableAdminClient> { CallBase = true };
+            var client = Substitute.ForPartsOf<BigtableTableAdminClient>();
             Assert.Throws<TException>(
-                () => client.Object.DropAllRows(
+                () => client.DropAllRows(
                     tableName, CallSettings.FromCancellationToken(default)));
             
             await Assert.ThrowsAsync<TException>(
-                () => client.Object.DropAllRowsAsync(
+                () => client.DropAllRowsAsync(
                     tableName, CallSettings.FromCancellationToken(default)));
         }
 
@@ -86,14 +82,12 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
         private async Task DropRowRange_ValidateArguments<TException>(TableName tableName, ByteString rowKeyPrefix)
             where TException : Exception
         {
-            var client = new Mock<BigtableTableAdminClient> { CallBase = true };
+            var client = Substitute.ForPartsOf<BigtableTableAdminClient>();
             Assert.Throws<TException>(
-                () => client.Object.DropRowRange(
-                    tableName, rowKeyPrefix, CallSettings.FromCancellationToken(default)));
+                () => client.DropRowRange(tableName, rowKeyPrefix, CallSettings.FromCancellationToken(default)));
             
             await Assert.ThrowsAsync<TException>(
-                () => client.Object.DropRowRangeAsync(
-                    tableName, rowKeyPrefix, CallSettings.FromCancellationToken(default)));
+                () => client.DropRowRangeAsync(tableName, rowKeyPrefix, CallSettings.FromCancellationToken(default)));
         }
     }
 }
