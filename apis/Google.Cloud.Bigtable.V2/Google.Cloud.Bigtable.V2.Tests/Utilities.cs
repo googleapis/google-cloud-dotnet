@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,11 +16,11 @@ using Google.Api.Gax.Grpc;
 using Google.Cloud.Bigtable.Common.V2;
 using Google.Protobuf;
 using Google.Rpc;
-using Moq;
+using NSubstitute;
+using NSubstitute.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 using Xunit;
 
 namespace Google.Cloud.Bigtable.V2.Tests
@@ -41,11 +41,11 @@ namespace Google.Cloud.Bigtable.V2.Tests
             CreateMockClientForStreamingRpc(
                 initialRequest,
                 c => c.MutateRows(
-                    It.Is<MutateRowsRequest>(r => ReferenceEquals(r, initialRequest)),
-                    It.IsAny<CallSettings>()),
+                    Arg.Is<MutateRowsRequest>(r => ReferenceEquals(r, initialRequest)),
+                    Arg.Any<CallSettings>()),
                 c => c.MutateRows(
-                    It.IsAny<MutateRowsRequest>(),
-                    It.IsAny<CallSettings>()),
+                    Arg.Any<MutateRowsRequest>(),
+                    Arg.Any<CallSettings>()),
                 entriesForInitialStream,
                 entriesForRetryStreams,
                 itemsToStream: entries => new MockMutateRowsStream(new MutateRowsResponse { Entries = { entries } }),
@@ -70,11 +70,11 @@ namespace Google.Cloud.Bigtable.V2.Tests
             var result = CreateMockClientForStreamingRpc(
                 initialRequest,
                 c => c.ReadRows(
-                    It.Is<ReadRowsRequest>(r => ReferenceEquals(r, initialRequest)),
-                    It.IsAny<CallSettings>()),
+                    Arg.Is<ReadRowsRequest>(r => ReferenceEquals(r, initialRequest)),
+                    Arg.Any<CallSettings>()),
                 c => c.ReadRows(
-                    It.IsAny<ReadRowsRequest>(),
-                    It.IsAny<CallSettings>()),
+                    Arg.Any<ReadRowsRequest>(),
+                    Arg.Any<CallSettings>()),
                 initialStreamResponse,
                 responsesForRetryStreams,
                 itemsToStream: entries =>
@@ -148,8 +148,8 @@ namespace Google.Cloud.Bigtable.V2.Tests
 
         private static BigtableClient CreateMockClientForStreamingRpc<TRequest, TStream, TMockStream, TStreamItems>(
             TRequest initialRequest,
-            Expression<Func<BigtableServiceApiClient, TStream>> initialSetup,
-            Expression<Func<BigtableServiceApiClient, TStream>> retrySetup,
+            Func<BigtableServiceApiClient, TStream> initialSetup,
+            Func<BigtableServiceApiClient, TStream> retrySetup,
             TStreamItems[] entriesForInitialStream,
             TStreamItems[][] entriesForRetryStreams,
             Func<TStreamItems[], TMockStream> itemsToStream,
@@ -157,8 +157,8 @@ namespace Google.Cloud.Bigtable.V2.Tests
             BigtableServiceApiSettings settings)
             where TMockStream : class, TStream
         {
-            var mock = new Mock<BigtableServiceApiClient>();
-            mock.SetupGet(x => x.DefaultSettings).Returns(settings);
+            var mock = Substitute.ForPartsOf<BigtableServiceApiClient>();
+            mock.DefaultSettings.Returns(settings);
 
             // Even though we want to setup the initial call last, we should call the stream conversion for it
             // first so `itemsToStream` is called in the order the streams will be returned, just in case the
@@ -169,8 +169,10 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 ? new Queue<TMockStream>(entriesForRetryStreams.Select(items => items == null ? null : itemsToStream(items)))
                 : new Queue<TMockStream>();
 
-            mock.Setup(retrySetup).Returns<TRequest, CallSettings>((request, callSettings) =>
+            retrySetup(mock.Configure()).Returns(args =>
             {
+                var request = (TRequest) args[0];
+                var callSettings = (CallSettings) args[1];
                 Assert.NotEmpty(retryStreams);
                 var respose = retryStreams.Dequeue();
                 if (respose == null)
@@ -184,13 +186,15 @@ namespace Google.Cloud.Bigtable.V2.Tests
 
             // Setup the initial response last so the catch-all setup doesn't overwrite it.
             // Check for reference equality to retry requests that happen to be a duplicate of the original don't match here.
-            mock.Setup(initialSetup).Returns<TRequest, CallSettings>((request, callSettings) =>
+            initialSetup(mock).Returns(args =>
             {
+                var request = (TRequest) args[0];
+                var callSettings = (CallSettings) args[1];
                 validator?.Invoke(request, initialResponse);
                 return initialResponse;
             });
 
-            return new BigtableClientImpl(mock.Object);
+            return new BigtableClientImpl(mock);
         }
     }
 }
