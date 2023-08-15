@@ -76,6 +76,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
             ListBackupsSettings = existing.ListBackupsSettings;
             RestoreTableSettings = existing.RestoreTableSettings;
             RestoreTableOperationsSettings = existing.RestoreTableOperationsSettings.Clone();
+            CopyBackupSettings = existing.CopyBackupSettings;
+            CopyBackupOperationsSettings = existing.CopyBackupOperationsSettings.Clone();
             GetIamPolicySettings = existing.GetIamPolicySettings;
             SetIamPolicySettings = existing.SetIamPolicySettings;
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
@@ -521,6 +523,36 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableTableAdminClient.CopyBackup</c> and <c>BigtableTableAdminClient.CopyBackupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CopyBackupSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BigtableTableAdminClient.CopyBackup</c> and
+        /// <c>BigtableTableAdminClient.CopyBackupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CopyBackupOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>BigtableTableAdminClient.GetIamPolicy</c> and <c>BigtableTableAdminClient.GetIamPolicyAsync</c>.
         /// </summary>
         /// <remarks>
@@ -775,8 +807,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="tableId">
-        /// Required. The name by which the new table should be referred to within the parent
-        /// instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
+        /// Required. The name by which the new table should be referred to within the
+        /// parent instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
         /// Maximum 50 characters.
         /// </param>
         /// <param name="table">
@@ -802,8 +834,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="tableId">
-        /// Required. The name by which the new table should be referred to within the parent
-        /// instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
+        /// Required. The name by which the new table should be referred to within the
+        /// parent instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
         /// Maximum 50 characters.
         /// </param>
         /// <param name="table">
@@ -829,8 +861,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="tableId">
-        /// Required. The name by which the new table should be referred to within the parent
-        /// instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
+        /// Required. The name by which the new table should be referred to within the
+        /// parent instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
         /// Maximum 50 characters.
         /// </param>
         /// <param name="table">
@@ -851,8 +883,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="tableId">
-        /// Required. The name by which the new table should be referred to within the parent
-        /// instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
+        /// Required. The name by which the new table should be referred to within the
+        /// parent instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
         /// Maximum 50 characters.
         /// </param>
         /// <param name="table">
@@ -878,8 +910,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="tableId">
-        /// Required. The name by which the new table should be referred to within the parent
-        /// instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
+        /// Required. The name by which the new table should be referred to within the
+        /// parent instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
         /// Maximum 50 characters.
         /// </param>
         /// <param name="table">
@@ -905,8 +937,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="tableId">
-        /// Required. The name by which the new table should be referred to within the parent
-        /// instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
+        /// Required. The name by which the new table should be referred to within the
+        /// parent instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
         /// Maximum 50 characters.
         /// </param>
         /// <param name="table">
@@ -1007,13 +1039,13 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="tableId">
-        /// Required. The name by which the new table should be referred to within the parent
-        /// instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
+        /// Required. The name by which the new table should be referred to within the
+        /// parent instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
         /// </param>
         /// <param name="sourceSnapshot">
-        /// Required. The unique name of the snapshot from which to restore the table. The
-        /// snapshot and the table must be in the same instance.
-        /// Values are of the form
+        /// Required. The unique name of the snapshot from which to restore the table.
+        /// The snapshot and the table must be in the same instance. Values are of the
+        /// form
         /// `projects/{project}/instances/{instance}/clusters/{cluster}/snapshots/{snapshot}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1041,13 +1073,13 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="tableId">
-        /// Required. The name by which the new table should be referred to within the parent
-        /// instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
+        /// Required. The name by which the new table should be referred to within the
+        /// parent instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
         /// </param>
         /// <param name="sourceSnapshot">
-        /// Required. The unique name of the snapshot from which to restore the table. The
-        /// snapshot and the table must be in the same instance.
-        /// Values are of the form
+        /// Required. The unique name of the snapshot from which to restore the table.
+        /// The snapshot and the table must be in the same instance. Values are of the
+        /// form
         /// `projects/{project}/instances/{instance}/clusters/{cluster}/snapshots/{snapshot}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1075,13 +1107,13 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="tableId">
-        /// Required. The name by which the new table should be referred to within the parent
-        /// instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
+        /// Required. The name by which the new table should be referred to within the
+        /// parent instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
         /// </param>
         /// <param name="sourceSnapshot">
-        /// Required. The unique name of the snapshot from which to restore the table. The
-        /// snapshot and the table must be in the same instance.
-        /// Values are of the form
+        /// Required. The unique name of the snapshot from which to restore the table.
+        /// The snapshot and the table must be in the same instance. Values are of the
+        /// form
         /// `projects/{project}/instances/{instance}/clusters/{cluster}/snapshots/{snapshot}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1104,13 +1136,13 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="tableId">
-        /// Required. The name by which the new table should be referred to within the parent
-        /// instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
+        /// Required. The name by which the new table should be referred to within the
+        /// parent instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
         /// </param>
         /// <param name="sourceSnapshot">
-        /// Required. The unique name of the snapshot from which to restore the table. The
-        /// snapshot and the table must be in the same instance.
-        /// Values are of the form
+        /// Required. The unique name of the snapshot from which to restore the table.
+        /// The snapshot and the table must be in the same instance. Values are of the
+        /// form
         /// `projects/{project}/instances/{instance}/clusters/{cluster}/snapshots/{snapshot}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1138,13 +1170,13 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="tableId">
-        /// Required. The name by which the new table should be referred to within the parent
-        /// instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
+        /// Required. The name by which the new table should be referred to within the
+        /// parent instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
         /// </param>
         /// <param name="sourceSnapshot">
-        /// Required. The unique name of the snapshot from which to restore the table. The
-        /// snapshot and the table must be in the same instance.
-        /// Values are of the form
+        /// Required. The unique name of the snapshot from which to restore the table.
+        /// The snapshot and the table must be in the same instance. Values are of the
+        /// form
         /// `projects/{project}/instances/{instance}/clusters/{cluster}/snapshots/{snapshot}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1172,13 +1204,13 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="tableId">
-        /// Required. The name by which the new table should be referred to within the parent
-        /// instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
+        /// Required. The name by which the new table should be referred to within the
+        /// parent instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
         /// </param>
         /// <param name="sourceSnapshot">
-        /// Required. The unique name of the snapshot from which to restore the table. The
-        /// snapshot and the table must be in the same instance.
-        /// Values are of the form
+        /// Required. The unique name of the snapshot from which to restore the table.
+        /// The snapshot and the table must be in the same instance. Values are of the
+        /// form
         /// `projects/{project}/instances/{instance}/clusters/{cluster}/snapshots/{snapshot}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1208,8 +1240,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Lists all tables served from a specified instance.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the instance for which tables should be listed.
-        /// Values are of the form `projects/{project}/instances/{instance}`.
+        /// Required. The unique name of the instance for which tables should be
+        /// listed. Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1233,8 +1265,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Lists all tables served from a specified instance.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the instance for which tables should be listed.
-        /// Values are of the form `projects/{project}/instances/{instance}`.
+        /// Required. The unique name of the instance for which tables should be
+        /// listed. Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1258,8 +1290,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Lists all tables served from a specified instance.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the instance for which tables should be listed.
-        /// Values are of the form `projects/{project}/instances/{instance}`.
+        /// Required. The unique name of the instance for which tables should be
+        /// listed. Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1283,8 +1315,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Lists all tables served from a specified instance.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the instance for which tables should be listed.
-        /// Values are of the form `projects/{project}/instances/{instance}`.
+        /// Required. The unique name of the instance for which tables should be
+        /// listed. Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1868,10 +1900,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="modifications">
-        /// Required. Modifications to be atomically applied to the specified table's families.
-        /// Entries are applied in order, meaning that earlier modifications can be
-        /// masked by later ones (in the case of repeated updates to the same family,
-        /// for example).
+        /// Required. Modifications to be atomically applied to the specified table's
+        /// families. Entries are applied in order, meaning that earlier modifications
+        /// can be masked by later ones (in the case of repeated updates to the same
+        /// family, for example).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1897,10 +1929,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="modifications">
-        /// Required. Modifications to be atomically applied to the specified table's families.
-        /// Entries are applied in order, meaning that earlier modifications can be
-        /// masked by later ones (in the case of repeated updates to the same family,
-        /// for example).
+        /// Required. Modifications to be atomically applied to the specified table's
+        /// families. Entries are applied in order, meaning that earlier modifications
+        /// can be masked by later ones (in the case of repeated updates to the same
+        /// family, for example).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1926,10 +1958,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="modifications">
-        /// Required. Modifications to be atomically applied to the specified table's families.
-        /// Entries are applied in order, meaning that earlier modifications can be
-        /// masked by later ones (in the case of repeated updates to the same family,
-        /// for example).
+        /// Required. Modifications to be atomically applied to the specified table's
+        /// families. Entries are applied in order, meaning that earlier modifications
+        /// can be masked by later ones (in the case of repeated updates to the same
+        /// family, for example).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1948,10 +1980,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="modifications">
-        /// Required. Modifications to be atomically applied to the specified table's families.
-        /// Entries are applied in order, meaning that earlier modifications can be
-        /// masked by later ones (in the case of repeated updates to the same family,
-        /// for example).
+        /// Required. Modifications to be atomically applied to the specified table's
+        /// families. Entries are applied in order, meaning that earlier modifications
+        /// can be masked by later ones (in the case of repeated updates to the same
+        /// family, for example).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1977,10 +2009,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="modifications">
-        /// Required. Modifications to be atomically applied to the specified table's families.
-        /// Entries are applied in order, meaning that earlier modifications can be
-        /// masked by later ones (in the case of repeated updates to the same family,
-        /// for example).
+        /// Required. Modifications to be atomically applied to the specified table's
+        /// families. Entries are applied in order, meaning that earlier modifications
+        /// can be masked by later ones (in the case of repeated updates to the same
+        /// family, for example).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2006,10 +2038,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="modifications">
-        /// Required. Modifications to be atomically applied to the specified table's families.
-        /// Entries are applied in order, meaning that earlier modifications can be
-        /// masked by later ones (in the case of repeated updates to the same family,
-        /// for example).
+        /// Required. Modifications to be atomically applied to the specified table's
+        /// families. Entries are applied in order, meaning that earlier modifications
+        /// can be masked by later ones (in the case of repeated updates to the same
+        /// family, for example).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2092,8 +2124,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// for 90 days.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the Table for which to create a consistency token.
-        /// Values are of the form
+        /// Required. The unique name of the Table for which to create a consistency
+        /// token. Values are of the form
         /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2111,8 +2143,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// for 90 days.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the Table for which to create a consistency token.
-        /// Values are of the form
+        /// Required. The unique name of the Table for which to create a consistency
+        /// token. Values are of the form
         /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2130,8 +2162,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// for 90 days.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the Table for which to create a consistency token.
-        /// Values are of the form
+        /// Required. The unique name of the Table for which to create a consistency
+        /// token. Values are of the form
         /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2146,8 +2178,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// for 90 days.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the Table for which to create a consistency token.
-        /// Values are of the form
+        /// Required. The unique name of the Table for which to create a consistency
+        /// token. Values are of the form
         /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2165,8 +2197,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// for 90 days.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the Table for which to create a consistency token.
-        /// Values are of the form
+        /// Required. The unique name of the Table for which to create a consistency
+        /// token. Values are of the form
         /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2184,8 +2216,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// for 90 days.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the Table for which to create a consistency token.
-        /// Values are of the form
+        /// Required. The unique name of the Table for which to create a consistency
+        /// token. Values are of the form
         /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2232,8 +2264,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// and the check request.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the Table for which to check replication consistency.
-        /// Values are of the form
+        /// Required. The unique name of the Table for which to check replication
+        /// consistency. Values are of the form
         /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="consistencyToken">
@@ -2254,8 +2286,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// and the check request.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the Table for which to check replication consistency.
-        /// Values are of the form
+        /// Required. The unique name of the Table for which to check replication
+        /// consistency. Values are of the form
         /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="consistencyToken">
@@ -2276,8 +2308,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// and the check request.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the Table for which to check replication consistency.
-        /// Values are of the form
+        /// Required. The unique name of the Table for which to check replication
+        /// consistency. Values are of the form
         /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="consistencyToken">
@@ -2294,8 +2326,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// and the check request.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the Table for which to check replication consistency.
-        /// Values are of the form
+        /// Required. The unique name of the Table for which to check replication
+        /// consistency. Values are of the form
         /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="consistencyToken">
@@ -2316,8 +2348,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// and the check request.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the Table for which to check replication consistency.
-        /// Values are of the form
+        /// Required. The unique name of the Table for which to check replication
+        /// consistency. Values are of the form
         /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="consistencyToken">
@@ -2338,8 +2370,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// and the check request.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the Table for which to check replication consistency.
-        /// Values are of the form
+        /// Required. The unique name of the Table for which to check replication
+        /// consistency. Values are of the form
         /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="consistencyToken">
@@ -2445,9 +2477,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
         /// </param>
         /// <param name="snapshotId">
-        /// Required. The ID by which the new snapshot should be referred to within the parent
-        /// cluster, e.g., `mysnapshot` of the form: `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`
-        /// rather than
+        /// Required. The ID by which the new snapshot should be referred to within the
+        /// parent cluster, e.g., `mysnapshot` of the form:
+        /// `[_a-zA-Z0-9][-_.a-zA-Z0-9]*` rather than
         /// `projects/{project}/instances/{instance}/clusters/{cluster}/snapshots/mysnapshot`.
         /// </param>
         /// <param name="description">
@@ -2485,9 +2517,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
         /// </param>
         /// <param name="snapshotId">
-        /// Required. The ID by which the new snapshot should be referred to within the parent
-        /// cluster, e.g., `mysnapshot` of the form: `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`
-        /// rather than
+        /// Required. The ID by which the new snapshot should be referred to within the
+        /// parent cluster, e.g., `mysnapshot` of the form:
+        /// `[_a-zA-Z0-9][-_.a-zA-Z0-9]*` rather than
         /// `projects/{project}/instances/{instance}/clusters/{cluster}/snapshots/mysnapshot`.
         /// </param>
         /// <param name="description">
@@ -2525,9 +2557,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
         /// </param>
         /// <param name="snapshotId">
-        /// Required. The ID by which the new snapshot should be referred to within the parent
-        /// cluster, e.g., `mysnapshot` of the form: `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`
-        /// rather than
+        /// Required. The ID by which the new snapshot should be referred to within the
+        /// parent cluster, e.g., `mysnapshot` of the form:
+        /// `[_a-zA-Z0-9][-_.a-zA-Z0-9]*` rather than
         /// `projects/{project}/instances/{instance}/clusters/{cluster}/snapshots/mysnapshot`.
         /// </param>
         /// <param name="description">
@@ -2559,9 +2591,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
         /// </param>
         /// <param name="snapshotId">
-        /// Required. The ID by which the new snapshot should be referred to within the parent
-        /// cluster, e.g., `mysnapshot` of the form: `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`
-        /// rather than
+        /// Required. The ID by which the new snapshot should be referred to within the
+        /// parent cluster, e.g., `mysnapshot` of the form:
+        /// `[_a-zA-Z0-9][-_.a-zA-Z0-9]*` rather than
         /// `projects/{project}/instances/{instance}/clusters/{cluster}/snapshots/mysnapshot`.
         /// </param>
         /// <param name="description">
@@ -2599,9 +2631,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
         /// </param>
         /// <param name="snapshotId">
-        /// Required. The ID by which the new snapshot should be referred to within the parent
-        /// cluster, e.g., `mysnapshot` of the form: `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`
-        /// rather than
+        /// Required. The ID by which the new snapshot should be referred to within the
+        /// parent cluster, e.g., `mysnapshot` of the form:
+        /// `[_a-zA-Z0-9][-_.a-zA-Z0-9]*` rather than
         /// `projects/{project}/instances/{instance}/clusters/{cluster}/snapshots/mysnapshot`.
         /// </param>
         /// <param name="description">
@@ -2639,9 +2671,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
         /// </param>
         /// <param name="snapshotId">
-        /// Required. The ID by which the new snapshot should be referred to within the parent
-        /// cluster, e.g., `mysnapshot` of the form: `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`
-        /// rather than
+        /// Required. The ID by which the new snapshot should be referred to within the
+        /// parent cluster, e.g., `mysnapshot` of the form:
+        /// `[_a-zA-Z0-9][-_.a-zA-Z0-9]*` rather than
         /// `projects/{project}/instances/{instance}/clusters/{cluster}/snapshots/mysnapshot`.
         /// </param>
         /// <param name="description">
@@ -2863,8 +2895,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// policy.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the cluster for which snapshots should be listed.
-        /// Values are of the form
+        /// Required. The unique name of the cluster for which snapshots should be
+        /// listed. Values are of the form
         /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
         /// Use `{cluster} = '-'` to list snapshots for all clusters in an instance,
         /// e.g., `projects/{project}/instances/{instance}/clusters/-`.
@@ -2897,8 +2929,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// policy.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the cluster for which snapshots should be listed.
-        /// Values are of the form
+        /// Required. The unique name of the cluster for which snapshots should be
+        /// listed. Values are of the form
         /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
         /// Use `{cluster} = '-'` to list snapshots for all clusters in an instance,
         /// e.g., `projects/{project}/instances/{instance}/clusters/-`.
@@ -2931,8 +2963,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// policy.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the cluster for which snapshots should be listed.
-        /// Values are of the form
+        /// Required. The unique name of the cluster for which snapshots should be
+        /// listed. Values are of the form
         /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
         /// Use `{cluster} = '-'` to list snapshots for all clusters in an instance,
         /// e.g., `projects/{project}/instances/{instance}/clusters/-`.
@@ -2965,8 +2997,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// policy.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the cluster for which snapshots should be listed.
-        /// Values are of the form
+        /// Required. The unique name of the cluster for which snapshots should be
+        /// listed. Values are of the form
         /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
         /// Use `{cluster} = '-'` to list snapshots for all clusters in an instance,
         /// e.g., `projects/{project}/instances/{instance}/clusters/-`.
@@ -3167,8 +3199,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
         /// [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the returned operation will stop the
-        /// creation and delete the backup.
+        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
+        /// returned operation will stop the creation and delete the backup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3183,8 +3215,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
         /// [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the returned operation will stop the
-        /// creation and delete the backup.
+        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
+        /// returned operation will stop the creation and delete the backup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3199,8 +3231,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
         /// [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the returned operation will stop the
-        /// creation and delete the backup.
+        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
+        /// returned operation will stop the creation and delete the backup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3241,8 +3273,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
         /// [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the returned operation will stop the
-        /// creation and delete the backup.
+        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
+        /// returned operation will stop the creation and delete the backup.
         /// </summary>
         /// <param name="parent">
         /// Required. This must be one of the clusters in the instance in which this
@@ -3277,8 +3309,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
         /// [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the returned operation will stop the
-        /// creation and delete the backup.
+        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
+        /// returned operation will stop the creation and delete the backup.
         /// </summary>
         /// <param name="parent">
         /// Required. This must be one of the clusters in the instance in which this
@@ -3313,8 +3345,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
         /// [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the returned operation will stop the
-        /// creation and delete the backup.
+        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
+        /// returned operation will stop the creation and delete the backup.
         /// </summary>
         /// <param name="parent">
         /// Required. This must be one of the clusters in the instance in which this
@@ -3344,8 +3376,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
         /// [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the returned operation will stop the
-        /// creation and delete the backup.
+        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
+        /// returned operation will stop the creation and delete the backup.
         /// </summary>
         /// <param name="parent">
         /// Required. This must be one of the clusters in the instance in which this
@@ -3380,8 +3412,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
         /// [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the returned operation will stop the
-        /// creation and delete the backup.
+        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
+        /// returned operation will stop the creation and delete the backup.
         /// </summary>
         /// <param name="parent">
         /// Required. This must be one of the clusters in the instance in which this
@@ -3416,8 +3448,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
         /// [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the returned operation will stop the
-        /// creation and delete the backup.
+        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
+        /// returned operation will stop the creation and delete the backup.
         /// </summary>
         /// <param name="parent">
         /// Required. This must be one of the clusters in the instance in which this
@@ -3591,6 +3623,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Required. The backup to update. `backup.name`, and the fields to be updated
         /// as specified by `update_mask` are required. Other fields are ignored.
         /// Update is only supported for the following fields:
+        /// 
         /// * `backup.expire_time`.
         /// </param>
         /// <param name="updateMask">
@@ -3616,6 +3649,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Required. The backup to update. `backup.name`, and the fields to be updated
         /// as specified by `update_mask` are required. Other fields are ignored.
         /// Update is only supported for the following fields:
+        /// 
         /// * `backup.expire_time`.
         /// </param>
         /// <param name="updateMask">
@@ -3641,6 +3675,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Required. The backup to update. `backup.name`, and the fields to be updated
         /// as specified by `update_mask` are required. Other fields are ignored.
         /// Update is only supported for the following fields:
+        /// 
         /// * `backup.expire_time`.
         /// </param>
         /// <param name="updateMask">
@@ -3905,8 +3940,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             }, callSettings);
 
         /// <summary>
-        /// Create a new table by restoring from a completed backup. The new table
-        /// must be in the same project as the instance containing the backup.  The
+        /// Create a new table by restoring from a completed backup.  The
         /// returned table [long-running operation][google.longrunning.Operation] can
         /// be used to track the progress of the operation, and to cancel it.  The
         /// [metadata][google.longrunning.Operation.metadata] field type is
@@ -3921,8 +3955,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Create a new table by restoring from a completed backup. The new table
-        /// must be in the same project as the instance containing the backup.  The
+        /// Create a new table by restoring from a completed backup.  The
         /// returned table [long-running operation][google.longrunning.Operation] can
         /// be used to track the progress of the operation, and to cancel it.  The
         /// [metadata][google.longrunning.Operation.metadata] field type is
@@ -3937,8 +3970,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Create a new table by restoring from a completed backup. The new table
-        /// must be in the same project as the instance containing the backup.  The
+        /// Create a new table by restoring from a completed backup.  The
         /// returned table [long-running operation][google.longrunning.Operation] can
         /// be used to track the progress of the operation, and to cancel it.  The
         /// [metadata][google.longrunning.Operation.metadata] field type is
@@ -3977,6 +4009,314 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>A task representing the result of polling the operation.</returns>
         public virtual stt::Task<lro::Operation<Table, RestoreTableMetadata>> PollOnceRestoreTableAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<Table, RestoreTableMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RestoreTableOperationsClient, callSettings);
+
+        /// <summary>
+        /// Copy a Cloud Bigtable backup to a new backup in the destination cluster
+        /// located in the destination instance and project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Backup, CopyBackupMetadata> CopyBackup(CopyBackupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Copy a Cloud Bigtable backup to a new backup in the destination cluster
+        /// located in the destination instance and project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, CopyBackupMetadata>> CopyBackupAsync(CopyBackupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Copy a Cloud Bigtable backup to a new backup in the destination cluster
+        /// located in the destination instance and project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, CopyBackupMetadata>> CopyBackupAsync(CopyBackupRequest request, st::CancellationToken cancellationToken) =>
+            CopyBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CopyBackup</c>.</summary>
+        public virtual lro::OperationsClient CopyBackupOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CopyBackup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Backup, CopyBackupMetadata> PollOnceCopyBackup(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Backup, CopyBackupMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CopyBackupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CopyBackup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Backup, CopyBackupMetadata>> PollOnceCopyBackupAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Backup, CopyBackupMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CopyBackupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Copy a Cloud Bigtable backup to a new backup in the destination cluster
+        /// located in the destination instance and project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the destination cluster that will contain the backup
+        /// copy. The cluster must already exists. Values are of the form:
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="backupId">
+        /// Required. The id of the new backup. The `backup_id` along with `parent`
+        /// are combined as {parent}/backups/{backup_id} to create the full backup
+        /// name, of the form:
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/backups/{backup_id}`.
+        /// This string must be between 1 and 50 characters in length and match the
+        /// regex [_a-zA-Z0-9][-_.a-zA-Z0-9]*.
+        /// </param>
+        /// <param name="sourceBackup">
+        /// Required. The source backup to be copied from.
+        /// The source backup needs to be in READY state for it to be copied.
+        /// Copying a copied backup is not allowed.
+        /// Once CopyBackup is in progress, the source backup cannot be deleted or
+        /// cleaned up on expiration until CopyBackup is finished.
+        /// Values are of the form:
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;/backups/&lt;backup&gt;`.
+        /// </param>
+        /// <param name="expireTime">
+        /// Required. Required. The expiration time of the copied backup with
+        /// microsecond granularity that must be at least 6 hours and at most 30 days
+        /// from the time the request is received. Once the `expire_time` has
+        /// passed, Cloud Bigtable will delete the backup and free the resources used
+        /// by the backup.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Backup, CopyBackupMetadata> CopyBackup(string parent, string backupId, string sourceBackup, wkt::Timestamp expireTime, gaxgrpc::CallSettings callSettings = null) =>
+            CopyBackup(new CopyBackupRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                BackupId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupId, nameof(backupId)),
+                SourceBackup = gax::GaxPreconditions.CheckNotNullOrEmpty(sourceBackup, nameof(sourceBackup)),
+                ExpireTime = gax::GaxPreconditions.CheckNotNull(expireTime, nameof(expireTime)),
+            }, callSettings);
+
+        /// <summary>
+        /// Copy a Cloud Bigtable backup to a new backup in the destination cluster
+        /// located in the destination instance and project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the destination cluster that will contain the backup
+        /// copy. The cluster must already exists. Values are of the form:
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="backupId">
+        /// Required. The id of the new backup. The `backup_id` along with `parent`
+        /// are combined as {parent}/backups/{backup_id} to create the full backup
+        /// name, of the form:
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/backups/{backup_id}`.
+        /// This string must be between 1 and 50 characters in length and match the
+        /// regex [_a-zA-Z0-9][-_.a-zA-Z0-9]*.
+        /// </param>
+        /// <param name="sourceBackup">
+        /// Required. The source backup to be copied from.
+        /// The source backup needs to be in READY state for it to be copied.
+        /// Copying a copied backup is not allowed.
+        /// Once CopyBackup is in progress, the source backup cannot be deleted or
+        /// cleaned up on expiration until CopyBackup is finished.
+        /// Values are of the form:
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;/backups/&lt;backup&gt;`.
+        /// </param>
+        /// <param name="expireTime">
+        /// Required. Required. The expiration time of the copied backup with
+        /// microsecond granularity that must be at least 6 hours and at most 30 days
+        /// from the time the request is received. Once the `expire_time` has
+        /// passed, Cloud Bigtable will delete the backup and free the resources used
+        /// by the backup.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, CopyBackupMetadata>> CopyBackupAsync(string parent, string backupId, string sourceBackup, wkt::Timestamp expireTime, gaxgrpc::CallSettings callSettings = null) =>
+            CopyBackupAsync(new CopyBackupRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                BackupId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupId, nameof(backupId)),
+                SourceBackup = gax::GaxPreconditions.CheckNotNullOrEmpty(sourceBackup, nameof(sourceBackup)),
+                ExpireTime = gax::GaxPreconditions.CheckNotNull(expireTime, nameof(expireTime)),
+            }, callSettings);
+
+        /// <summary>
+        /// Copy a Cloud Bigtable backup to a new backup in the destination cluster
+        /// located in the destination instance and project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the destination cluster that will contain the backup
+        /// copy. The cluster must already exists. Values are of the form:
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="backupId">
+        /// Required. The id of the new backup. The `backup_id` along with `parent`
+        /// are combined as {parent}/backups/{backup_id} to create the full backup
+        /// name, of the form:
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/backups/{backup_id}`.
+        /// This string must be between 1 and 50 characters in length and match the
+        /// regex [_a-zA-Z0-9][-_.a-zA-Z0-9]*.
+        /// </param>
+        /// <param name="sourceBackup">
+        /// Required. The source backup to be copied from.
+        /// The source backup needs to be in READY state for it to be copied.
+        /// Copying a copied backup is not allowed.
+        /// Once CopyBackup is in progress, the source backup cannot be deleted or
+        /// cleaned up on expiration until CopyBackup is finished.
+        /// Values are of the form:
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;/backups/&lt;backup&gt;`.
+        /// </param>
+        /// <param name="expireTime">
+        /// Required. Required. The expiration time of the copied backup with
+        /// microsecond granularity that must be at least 6 hours and at most 30 days
+        /// from the time the request is received. Once the `expire_time` has
+        /// passed, Cloud Bigtable will delete the backup and free the resources used
+        /// by the backup.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, CopyBackupMetadata>> CopyBackupAsync(string parent, string backupId, string sourceBackup, wkt::Timestamp expireTime, st::CancellationToken cancellationToken) =>
+            CopyBackupAsync(parent, backupId, sourceBackup, expireTime, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Copy a Cloud Bigtable backup to a new backup in the destination cluster
+        /// located in the destination instance and project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the destination cluster that will contain the backup
+        /// copy. The cluster must already exists. Values are of the form:
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="backupId">
+        /// Required. The id of the new backup. The `backup_id` along with `parent`
+        /// are combined as {parent}/backups/{backup_id} to create the full backup
+        /// name, of the form:
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/backups/{backup_id}`.
+        /// This string must be between 1 and 50 characters in length and match the
+        /// regex [_a-zA-Z0-9][-_.a-zA-Z0-9]*.
+        /// </param>
+        /// <param name="sourceBackup">
+        /// Required. The source backup to be copied from.
+        /// The source backup needs to be in READY state for it to be copied.
+        /// Copying a copied backup is not allowed.
+        /// Once CopyBackup is in progress, the source backup cannot be deleted or
+        /// cleaned up on expiration until CopyBackup is finished.
+        /// Values are of the form:
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;/backups/&lt;backup&gt;`.
+        /// </param>
+        /// <param name="expireTime">
+        /// Required. Required. The expiration time of the copied backup with
+        /// microsecond granularity that must be at least 6 hours and at most 30 days
+        /// from the time the request is received. Once the `expire_time` has
+        /// passed, Cloud Bigtable will delete the backup and free the resources used
+        /// by the backup.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Backup, CopyBackupMetadata> CopyBackup(ClusterName parent, string backupId, BackupName sourceBackup, wkt::Timestamp expireTime, gaxgrpc::CallSettings callSettings = null) =>
+            CopyBackup(new CopyBackupRequest
+            {
+                ParentAsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                BackupId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupId, nameof(backupId)),
+                SourceBackupAsBackupName = gax::GaxPreconditions.CheckNotNull(sourceBackup, nameof(sourceBackup)),
+                ExpireTime = gax::GaxPreconditions.CheckNotNull(expireTime, nameof(expireTime)),
+            }, callSettings);
+
+        /// <summary>
+        /// Copy a Cloud Bigtable backup to a new backup in the destination cluster
+        /// located in the destination instance and project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the destination cluster that will contain the backup
+        /// copy. The cluster must already exists. Values are of the form:
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="backupId">
+        /// Required. The id of the new backup. The `backup_id` along with `parent`
+        /// are combined as {parent}/backups/{backup_id} to create the full backup
+        /// name, of the form:
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/backups/{backup_id}`.
+        /// This string must be between 1 and 50 characters in length and match the
+        /// regex [_a-zA-Z0-9][-_.a-zA-Z0-9]*.
+        /// </param>
+        /// <param name="sourceBackup">
+        /// Required. The source backup to be copied from.
+        /// The source backup needs to be in READY state for it to be copied.
+        /// Copying a copied backup is not allowed.
+        /// Once CopyBackup is in progress, the source backup cannot be deleted or
+        /// cleaned up on expiration until CopyBackup is finished.
+        /// Values are of the form:
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;/backups/&lt;backup&gt;`.
+        /// </param>
+        /// <param name="expireTime">
+        /// Required. Required. The expiration time of the copied backup with
+        /// microsecond granularity that must be at least 6 hours and at most 30 days
+        /// from the time the request is received. Once the `expire_time` has
+        /// passed, Cloud Bigtable will delete the backup and free the resources used
+        /// by the backup.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, CopyBackupMetadata>> CopyBackupAsync(ClusterName parent, string backupId, BackupName sourceBackup, wkt::Timestamp expireTime, gaxgrpc::CallSettings callSettings = null) =>
+            CopyBackupAsync(new CopyBackupRequest
+            {
+                ParentAsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                BackupId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupId, nameof(backupId)),
+                SourceBackupAsBackupName = gax::GaxPreconditions.CheckNotNull(sourceBackup, nameof(sourceBackup)),
+                ExpireTime = gax::GaxPreconditions.CheckNotNull(expireTime, nameof(expireTime)),
+            }, callSettings);
+
+        /// <summary>
+        /// Copy a Cloud Bigtable backup to a new backup in the destination cluster
+        /// located in the destination instance and project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the destination cluster that will contain the backup
+        /// copy. The cluster must already exists. Values are of the form:
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="backupId">
+        /// Required. The id of the new backup. The `backup_id` along with `parent`
+        /// are combined as {parent}/backups/{backup_id} to create the full backup
+        /// name, of the form:
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/backups/{backup_id}`.
+        /// This string must be between 1 and 50 characters in length and match the
+        /// regex [_a-zA-Z0-9][-_.a-zA-Z0-9]*.
+        /// </param>
+        /// <param name="sourceBackup">
+        /// Required. The source backup to be copied from.
+        /// The source backup needs to be in READY state for it to be copied.
+        /// Copying a copied backup is not allowed.
+        /// Once CopyBackup is in progress, the source backup cannot be deleted or
+        /// cleaned up on expiration until CopyBackup is finished.
+        /// Values are of the form:
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;/backups/&lt;backup&gt;`.
+        /// </param>
+        /// <param name="expireTime">
+        /// Required. Required. The expiration time of the copied backup with
+        /// microsecond granularity that must be at least 6 hours and at most 30 days
+        /// from the time the request is received. Once the `expire_time` has
+        /// passed, Cloud Bigtable will delete the backup and free the resources used
+        /// by the backup.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, CopyBackupMetadata>> CopyBackupAsync(ClusterName parent, string backupId, BackupName sourceBackup, wkt::Timestamp expireTime, st::CancellationToken cancellationToken) =>
+            CopyBackupAsync(parent, backupId, sourceBackup, expireTime, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets the access control policy for a Table or Backup resource.
@@ -4268,7 +4608,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
             SetIamPolicyAsync(resource, policy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns permissions that the caller has on the specified Table or Backup resource.
+        /// Returns permissions that the caller has on the specified Table or Backup
+        /// resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4277,7 +4618,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns permissions that the caller has on the specified Table or Backup resource.
+        /// Returns permissions that the caller has on the specified Table or Backup
+        /// resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4286,7 +4628,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns permissions that the caller has on the specified Table or Backup resource.
+        /// Returns permissions that the caller has on the specified Table or Backup
+        /// resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4295,7 +4638,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
             TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns permissions that the caller has on the specified Table or Backup resource.
+        /// Returns permissions that the caller has on the specified Table or Backup
+        /// resource.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
@@ -4320,7 +4664,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
             }, callSettings);
 
         /// <summary>
-        /// Returns permissions that the caller has on the specified Table or Backup resource.
+        /// Returns permissions that the caller has on the specified Table or Backup
+        /// resource.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
@@ -4345,7 +4690,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
             }, callSettings);
 
         /// <summary>
-        /// Returns permissions that the caller has on the specified Table or Backup resource.
+        /// Returns permissions that the caller has on the specified Table or Backup
+        /// resource.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
@@ -4363,7 +4709,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
             TestIamPermissionsAsync(resource, permissions, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns permissions that the caller has on the specified Table or Backup resource.
+        /// Returns permissions that the caller has on the specified Table or Backup
+        /// resource.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
@@ -4388,7 +4735,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
             }, callSettings);
 
         /// <summary>
-        /// Returns permissions that the caller has on the specified Table or Backup resource.
+        /// Returns permissions that the caller has on the specified Table or Backup
+        /// resource.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
@@ -4413,7 +4761,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
             }, callSettings);
 
         /// <summary>
-        /// Returns permissions that the caller has on the specified Table or Backup resource.
+        /// Returns permissions that the caller has on the specified Table or Backup
+        /// resource.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
@@ -4483,6 +4832,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         private readonly gaxgrpc::ApiCall<RestoreTableRequest, lro::Operation> _callRestoreTable;
 
+        private readonly gaxgrpc::ApiCall<CopyBackupRequest, lro::Operation> _callCopyBackup;
+
         private readonly gaxgrpc::ApiCall<gciv::GetIamPolicyRequest, gciv::Policy> _callGetIamPolicy;
 
         private readonly gaxgrpc::ApiCall<gciv::SetIamPolicyRequest, gciv::Policy> _callSetIamPolicy;
@@ -4506,6 +4857,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             SnapshotTableOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SnapshotTableOperationsSettings, logger);
             CreateBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBackupOperationsSettings, logger);
             RestoreTableOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RestoreTableOperationsSettings, logger);
+            CopyBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CopyBackupOperationsSettings, logger);
             _callCreateTable = clientHelper.BuildApiCall<CreateTableRequest, Table>("CreateTable", grpcClient.CreateTableAsync, grpcClient.CreateTable, effectiveSettings.CreateTableSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateTable);
             Modify_CreateTableApiCall(ref _callCreateTable);
@@ -4569,6 +4921,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
             _callRestoreTable = clientHelper.BuildApiCall<RestoreTableRequest, lro::Operation>("RestoreTable", grpcClient.RestoreTableAsync, grpcClient.RestoreTable, effectiveSettings.RestoreTableSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callRestoreTable);
             Modify_RestoreTableApiCall(ref _callRestoreTable);
+            _callCopyBackup = clientHelper.BuildApiCall<CopyBackupRequest, lro::Operation>("CopyBackup", grpcClient.CopyBackupAsync, grpcClient.CopyBackup, effectiveSettings.CopyBackupSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCopyBackup);
+            Modify_CopyBackupApiCall(ref _callCopyBackup);
             _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>("GetIamPolicy", grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callGetIamPolicy);
             Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
@@ -4625,6 +4980,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         partial void Modify_RestoreTableApiCall(ref gaxgrpc::ApiCall<RestoreTableRequest, lro::Operation> call);
 
+        partial void Modify_CopyBackupApiCall(ref gaxgrpc::ApiCall<CopyBackupRequest, lro::Operation> call);
+
         partial void Modify_GetIamPolicyApiCall(ref gaxgrpc::ApiCall<gciv::GetIamPolicyRequest, gciv::Policy> call);
 
         partial void Modify_SetIamPolicyApiCall(ref gaxgrpc::ApiCall<gciv::SetIamPolicyRequest, gciv::Policy> call);
@@ -4677,6 +5034,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         partial void Modify_ListBackupsRequest(ref ListBackupsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_RestoreTableRequest(ref RestoreTableRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CopyBackupRequest(ref CopyBackupRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetIamPolicyRequest(ref gciv::GetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -5154,8 +5513,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
         /// [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the returned operation will stop the
-        /// creation and delete the backup.
+        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
+        /// returned operation will stop the creation and delete the backup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5173,8 +5532,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
         /// [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the returned operation will stop the
-        /// creation and delete the backup.
+        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
+        /// returned operation will stop the creation and delete the backup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5287,8 +5646,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         public override lro::OperationsClient RestoreTableOperationsClient { get; }
 
         /// <summary>
-        /// Create a new table by restoring from a completed backup. The new table
-        /// must be in the same project as the instance containing the backup.  The
+        /// Create a new table by restoring from a completed backup.  The
         /// returned table [long-running operation][google.longrunning.Operation] can
         /// be used to track the progress of the operation, and to cancel it.  The
         /// [metadata][google.longrunning.Operation.metadata] field type is
@@ -5306,8 +5664,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// Create a new table by restoring from a completed backup. The new table
-        /// must be in the same project as the instance containing the backup.  The
+        /// Create a new table by restoring from a completed backup.  The
         /// returned table [long-running operation][google.longrunning.Operation] can
         /// be used to track the progress of the operation, and to cancel it.  The
         /// [metadata][google.longrunning.Operation.metadata] field type is
@@ -5322,6 +5679,35 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             Modify_RestoreTableRequest(ref request, ref callSettings);
             return new lro::Operation<Table, RestoreTableMetadata>(await _callRestoreTable.Async(request, callSettings).ConfigureAwait(false), RestoreTableOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>CopyBackup</c>.</summary>
+        public override lro::OperationsClient CopyBackupOperationsClient { get; }
+
+        /// <summary>
+        /// Copy a Cloud Bigtable backup to a new backup in the destination cluster
+        /// located in the destination instance and project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Backup, CopyBackupMetadata> CopyBackup(CopyBackupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CopyBackupRequest(ref request, ref callSettings);
+            return new lro::Operation<Backup, CopyBackupMetadata>(_callCopyBackup.Sync(request, callSettings), CopyBackupOperationsClient);
+        }
+
+        /// <summary>
+        /// Copy a Cloud Bigtable backup to a new backup in the destination cluster
+        /// located in the destination instance and project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Backup, CopyBackupMetadata>> CopyBackupAsync(CopyBackupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CopyBackupRequest(ref request, ref callSettings);
+            return new lro::Operation<Backup, CopyBackupMetadata>(await _callCopyBackup.Async(request, callSettings).ConfigureAwait(false), CopyBackupOperationsClient);
         }
 
         /// <summary>
@@ -5379,7 +5765,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// Returns permissions that the caller has on the specified Table or Backup resource.
+        /// Returns permissions that the caller has on the specified Table or Backup
+        /// resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5391,7 +5778,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// Returns permissions that the caller has on the specified Table or Backup resource.
+        /// Returns permissions that the caller has on the specified Table or Backup
+        /// resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

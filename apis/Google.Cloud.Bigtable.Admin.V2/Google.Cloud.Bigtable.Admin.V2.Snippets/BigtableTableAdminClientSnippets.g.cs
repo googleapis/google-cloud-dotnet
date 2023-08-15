@@ -2859,6 +2859,207 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for CopyBackup</summary>
+        public void CopyBackupRequestObject()
+        {
+            // Snippet: CopyBackup(CopyBackupRequest, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            CopyBackupRequest request = new CopyBackupRequest
+            {
+                ParentAsClusterName = ClusterName.FromProjectInstanceCluster("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
+                BackupId = "",
+                SourceBackupAsBackupName = BackupName.FromProjectInstanceClusterBackup("[PROJECT]", "[INSTANCE]", "[CLUSTER]", "[BACKUP]"),
+                ExpireTime = new Timestamp(),
+            };
+            // Make the request
+            Operation<Backup, CopyBackupMetadata> response = bigtableTableAdminClient.CopyBackup(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, CopyBackupMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, CopyBackupMetadata> retrievedResponse = bigtableTableAdminClient.PollOnceCopyBackup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CopyBackupAsync</summary>
+        public async Task CopyBackupRequestObjectAsync()
+        {
+            // Snippet: CopyBackupAsync(CopyBackupRequest, CallSettings)
+            // Additional: CopyBackupAsync(CopyBackupRequest, CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            CopyBackupRequest request = new CopyBackupRequest
+            {
+                ParentAsClusterName = ClusterName.FromProjectInstanceCluster("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
+                BackupId = "",
+                SourceBackupAsBackupName = BackupName.FromProjectInstanceClusterBackup("[PROJECT]", "[INSTANCE]", "[CLUSTER]", "[BACKUP]"),
+                ExpireTime = new Timestamp(),
+            };
+            // Make the request
+            Operation<Backup, CopyBackupMetadata> response = await bigtableTableAdminClient.CopyBackupAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, CopyBackupMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, CopyBackupMetadata> retrievedResponse = await bigtableTableAdminClient.PollOnceCopyBackupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CopyBackup</summary>
+        public void CopyBackup()
+        {
+            // Snippet: CopyBackup(string, string, string, Timestamp, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/instances/[INSTANCE]/clusters/[CLUSTER]";
+            string backupId = "";
+            string sourceBackup = "projects/[PROJECT]/instances/[INSTANCE]/clusters/[CLUSTER]/backups/[BACKUP]";
+            Timestamp expireTime = new Timestamp();
+            // Make the request
+            Operation<Backup, CopyBackupMetadata> response = bigtableTableAdminClient.CopyBackup(parent, backupId, sourceBackup, expireTime);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, CopyBackupMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, CopyBackupMetadata> retrievedResponse = bigtableTableAdminClient.PollOnceCopyBackup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CopyBackupAsync</summary>
+        public async Task CopyBackupAsync()
+        {
+            // Snippet: CopyBackupAsync(string, string, string, Timestamp, CallSettings)
+            // Additional: CopyBackupAsync(string, string, string, Timestamp, CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/instances/[INSTANCE]/clusters/[CLUSTER]";
+            string backupId = "";
+            string sourceBackup = "projects/[PROJECT]/instances/[INSTANCE]/clusters/[CLUSTER]/backups/[BACKUP]";
+            Timestamp expireTime = new Timestamp();
+            // Make the request
+            Operation<Backup, CopyBackupMetadata> response = await bigtableTableAdminClient.CopyBackupAsync(parent, backupId, sourceBackup, expireTime);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, CopyBackupMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, CopyBackupMetadata> retrievedResponse = await bigtableTableAdminClient.PollOnceCopyBackupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CopyBackup</summary>
+        public void CopyBackupResourceNames()
+        {
+            // Snippet: CopyBackup(ClusterName, string, BackupName, Timestamp, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            ClusterName parent = ClusterName.FromProjectInstanceCluster("[PROJECT]", "[INSTANCE]", "[CLUSTER]");
+            string backupId = "";
+            BackupName sourceBackup = BackupName.FromProjectInstanceClusterBackup("[PROJECT]", "[INSTANCE]", "[CLUSTER]", "[BACKUP]");
+            Timestamp expireTime = new Timestamp();
+            // Make the request
+            Operation<Backup, CopyBackupMetadata> response = bigtableTableAdminClient.CopyBackup(parent, backupId, sourceBackup, expireTime);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, CopyBackupMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, CopyBackupMetadata> retrievedResponse = bigtableTableAdminClient.PollOnceCopyBackup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CopyBackupAsync</summary>
+        public async Task CopyBackupResourceNamesAsync()
+        {
+            // Snippet: CopyBackupAsync(ClusterName, string, BackupName, Timestamp, CallSettings)
+            // Additional: CopyBackupAsync(ClusterName, string, BackupName, Timestamp, CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ClusterName parent = ClusterName.FromProjectInstanceCluster("[PROJECT]", "[INSTANCE]", "[CLUSTER]");
+            string backupId = "";
+            BackupName sourceBackup = BackupName.FromProjectInstanceClusterBackup("[PROJECT]", "[INSTANCE]", "[CLUSTER]", "[BACKUP]");
+            Timestamp expireTime = new Timestamp();
+            // Make the request
+            Operation<Backup, CopyBackupMetadata> response = await bigtableTableAdminClient.CopyBackupAsync(parent, backupId, sourceBackup, expireTime);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, CopyBackupMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, CopyBackupMetadata> retrievedResponse = await bigtableTableAdminClient.PollOnceCopyBackupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for GetIamPolicy</summary>
         public void GetIamPolicyRequestObject()
         {

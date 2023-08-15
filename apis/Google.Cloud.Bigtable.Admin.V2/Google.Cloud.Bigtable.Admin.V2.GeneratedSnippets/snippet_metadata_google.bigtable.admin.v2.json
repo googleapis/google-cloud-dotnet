@@ -11331,6 +11331,341 @@
       ]
     },
     {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_CopyBackup_sync",
+      "title": "CopyBackupRequestObject",
+      "description": "Snippet for CopyBackup",
+      "file": "BigtableTableAdminClient.CopyBackupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CopyBackup",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.CopyBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.CopyBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Backup, Google.Cloud.Bigtable.Admin.V2.CopyBackupMetadata>",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "CopyBackup",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.CopyBackup",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_CopyBackup_async",
+      "title": "CopyBackupRequestObjectAsync",
+      "description": "Snippet for CopyBackupAsync",
+      "file": "BigtableTableAdminClient.CopyBackupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CopyBackupAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.CopyBackupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.CopyBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Backup, Google.Cloud.Bigtable.Admin.V2.CopyBackupMetadata>>",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "CopyBackup",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.CopyBackup",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_CopyBackup_sync_flattened",
+      "title": "CopyBackup",
+      "description": "Snippet for CopyBackup",
+      "file": "BigtableTableAdminClient.CopyBackupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CopyBackup",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.CopyBackup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "backupId"
+          },
+          {
+            "type": "System.String",
+            "name": "sourceBackup"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "expireTime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Backup, Google.Cloud.Bigtable.Admin.V2.CopyBackupMetadata>",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "CopyBackup",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.CopyBackup",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_CopyBackup_async_flattened",
+      "title": "CopyBackupAsync",
+      "description": "Snippet for CopyBackupAsync",
+      "file": "BigtableTableAdminClient.CopyBackupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CopyBackupAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.CopyBackupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "backupId"
+          },
+          {
+            "type": "System.String",
+            "name": "sourceBackup"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "expireTime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Backup, Google.Cloud.Bigtable.Admin.V2.CopyBackupMetadata>>",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "CopyBackup",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.CopyBackup",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_CopyBackup_sync_flattened_resourceNames",
+      "title": "CopyBackupResourceNames",
+      "description": "Snippet for CopyBackup",
+      "file": "BigtableTableAdminClient.CopyBackupResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CopyBackup",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.CopyBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "backupId"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.BackupName",
+            "name": "sourceBackup"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "expireTime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Backup, Google.Cloud.Bigtable.Admin.V2.CopyBackupMetadata>",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "CopyBackup",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.CopyBackup",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_CopyBackup_async_flattened_resourceNames",
+      "title": "CopyBackupResourceNamesAsync",
+      "description": "Snippet for CopyBackupAsync",
+      "file": "BigtableTableAdminClient.CopyBackupResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CopyBackupAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.CopyBackupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "backupId"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.BackupName",
+            "name": "sourceBackup"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "expireTime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Backup, Google.Cloud.Bigtable.Admin.V2.CopyBackupMetadata>>",
+        "client": {
+          "shortName": "BigtableTableAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
+        },
+        "method": {
+          "shortName": "CopyBackup",
+          "fullName": "google.bigtable.admin.v2.BigtableTableAdmin.CopyBackup",
+          "service": {
+            "shortName": "BigtableTableAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableTableAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_GetIamPolicy_sync",
       "title": "GetIamPolicyRequestObject",
       "description": "Snippet for GetIamPolicy",

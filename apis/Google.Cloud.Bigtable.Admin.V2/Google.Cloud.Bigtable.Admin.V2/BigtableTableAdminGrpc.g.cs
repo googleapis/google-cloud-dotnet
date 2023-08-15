@@ -3,7 +3,7 @@
 //     source: google/bigtable/admin/v2/bigtable_table_admin.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2022 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -128,6 +128,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListBackupsResponse> __Marshaller_google_bigtable_admin_v2_ListBackupsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.ListBackupsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.RestoreTableRequest> __Marshaller_google_bigtable_admin_v2_RestoreTableRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.RestoreTableRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.CopyBackupRequest> __Marshaller_google_bigtable_admin_v2_CopyBackupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.CopyBackupRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.GetIamPolicyRequest> __Marshaller_google_iam_v1_GetIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -305,6 +307,14 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         __ServiceName,
         "RestoreTable",
         __Marshaller_google_bigtable_admin_v2_RestoreTableRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CopyBackupRequest, global::Google.LongRunning.Operation> __Method_CopyBackup = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CopyBackupRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CopyBackup",
+        __Marshaller_google_bigtable_admin_v2_CopyBackupRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -572,8 +582,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// [metadata][google.longrunning.Operation.metadata] field type is
       /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
       /// [response][google.longrunning.Operation.response] field type is
-      /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the returned operation will stop the
-      /// creation and delete the backup.
+      /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
+      /// returned operation will stop the creation and delete the backup.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -634,8 +644,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
 
       /// <summary>
-      /// Create a new table by restoring from a completed backup. The new table
-      /// must be in the same project as the instance containing the backup.  The
+      /// Create a new table by restoring from a completed backup.  The
       /// returned table [long-running operation][google.longrunning.Operation] can
       /// be used to track the progress of the operation, and to cancel it.  The
       /// [metadata][google.longrunning.Operation.metadata] field type is
@@ -648,6 +657,19 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RestoreTable(global::Google.Cloud.Bigtable.Admin.V2.RestoreTableRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Copy a Cloud Bigtable backup to a new backup in the destination cluster
+      /// located in the destination instance and project.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CopyBackup(global::Google.Cloud.Bigtable.Admin.V2.CopyBackupRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -680,7 +702,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
 
       /// <summary>
-      /// Returns permissions that the caller has on the specified Table or Backup resource.
+      /// Returns permissions that the caller has on the specified Table or Backup
+      /// resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1623,8 +1646,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// [metadata][google.longrunning.Operation.metadata] field type is
       /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
       /// [response][google.longrunning.Operation.response] field type is
-      /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the returned operation will stop the
-      /// creation and delete the backup.
+      /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
+      /// returned operation will stop the creation and delete the backup.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1643,8 +1666,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// [metadata][google.longrunning.Operation.metadata] field type is
       /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
       /// [response][google.longrunning.Operation.response] field type is
-      /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the returned operation will stop the
-      /// creation and delete the backup.
+      /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
+      /// returned operation will stop the creation and delete the backup.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1661,8 +1684,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// [metadata][google.longrunning.Operation.metadata] field type is
       /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
       /// [response][google.longrunning.Operation.response] field type is
-      /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the returned operation will stop the
-      /// creation and delete the backup.
+      /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
+      /// returned operation will stop the creation and delete the backup.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1681,8 +1704,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// [metadata][google.longrunning.Operation.metadata] field type is
       /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
       /// [response][google.longrunning.Operation.response] field type is
-      /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the returned operation will stop the
-      /// creation and delete the backup.
+      /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
+      /// returned operation will stop the creation and delete the backup.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1889,8 +1912,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_ListBackups, null, options, request);
       }
       /// <summary>
-      /// Create a new table by restoring from a completed backup. The new table
-      /// must be in the same project as the instance containing the backup.  The
+      /// Create a new table by restoring from a completed backup.  The
       /// returned table [long-running operation][google.longrunning.Operation] can
       /// be used to track the progress of the operation, and to cancel it.  The
       /// [metadata][google.longrunning.Operation.metadata] field type is
@@ -1909,8 +1931,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return RestoreTable(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Create a new table by restoring from a completed backup. The new table
-      /// must be in the same project as the instance containing the backup.  The
+      /// Create a new table by restoring from a completed backup.  The
       /// returned table [long-running operation][google.longrunning.Operation] can
       /// be used to track the progress of the operation, and to cancel it.  The
       /// [metadata][google.longrunning.Operation.metadata] field type is
@@ -1927,8 +1948,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_RestoreTable, null, options, request);
       }
       /// <summary>
-      /// Create a new table by restoring from a completed backup. The new table
-      /// must be in the same project as the instance containing the backup.  The
+      /// Create a new table by restoring from a completed backup.  The
       /// returned table [long-running operation][google.longrunning.Operation] can
       /// be used to track the progress of the operation, and to cancel it.  The
       /// [metadata][google.longrunning.Operation.metadata] field type is
@@ -1947,8 +1967,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return RestoreTableAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Create a new table by restoring from a completed backup. The new table
-      /// must be in the same project as the instance containing the backup.  The
+      /// Create a new table by restoring from a completed backup.  The
       /// returned table [long-running operation][google.longrunning.Operation] can
       /// be used to track the progress of the operation, and to cancel it.  The
       /// [metadata][google.longrunning.Operation.metadata] field type is
@@ -1963,6 +1982,58 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RestoreTableAsync(global::Google.Cloud.Bigtable.Admin.V2.RestoreTableRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RestoreTable, null, options, request);
+      }
+      /// <summary>
+      /// Copy a Cloud Bigtable backup to a new backup in the destination cluster
+      /// located in the destination instance and project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CopyBackup(global::Google.Cloud.Bigtable.Admin.V2.CopyBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CopyBackup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Copy a Cloud Bigtable backup to a new backup in the destination cluster
+      /// located in the destination instance and project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CopyBackup(global::Google.Cloud.Bigtable.Admin.V2.CopyBackupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CopyBackup, null, options, request);
+      }
+      /// <summary>
+      /// Copy a Cloud Bigtable backup to a new backup in the destination cluster
+      /// located in the destination instance and project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CopyBackupAsync(global::Google.Cloud.Bigtable.Admin.V2.CopyBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CopyBackupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Copy a Cloud Bigtable backup to a new backup in the destination cluster
+      /// located in the destination instance and project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CopyBackupAsync(global::Google.Cloud.Bigtable.Admin.V2.CopyBackupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CopyBackup, null, options, request);
       }
       /// <summary>
       /// Gets the access control policy for a Table or Backup resource.
@@ -2073,7 +2144,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_SetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// Returns permissions that the caller has on the specified Table or Backup resource.
+      /// Returns permissions that the caller has on the specified Table or Backup
+      /// resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2086,7 +2158,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return TestIamPermissions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns permissions that the caller has on the specified Table or Backup resource.
+      /// Returns permissions that the caller has on the specified Table or Backup
+      /// resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2097,7 +2170,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_TestIamPermissions, null, options, request);
       }
       /// <summary>
-      /// Returns permissions that the caller has on the specified Table or Backup resource.
+      /// Returns permissions that the caller has on the specified Table or Backup
+      /// resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2110,7 +2184,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return TestIamPermissionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns permissions that the caller has on the specified Table or Backup resource.
+      /// Returns permissions that the caller has on the specified Table or Backup
+      /// resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2155,6 +2230,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           .AddMethod(__Method_DeleteBackup, serviceImpl.DeleteBackup)
           .AddMethod(__Method_ListBackups, serviceImpl.ListBackups)
           .AddMethod(__Method_RestoreTable, serviceImpl.RestoreTable)
+          .AddMethod(__Method_CopyBackup, serviceImpl.CopyBackup)
           .AddMethod(__Method_GetIamPolicy, serviceImpl.GetIamPolicy)
           .AddMethod(__Method_SetIamPolicy, serviceImpl.SetIamPolicy)
           .AddMethod(__Method_TestIamPermissions, serviceImpl.TestIamPermissions).Build();
@@ -2188,6 +2264,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       serviceBinder.AddMethod(__Method_DeleteBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.DeleteBackupRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteBackup));
       serviceBinder.AddMethod(__Method_ListBackups, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.ListBackupsRequest, global::Google.Cloud.Bigtable.Admin.V2.ListBackupsResponse>(serviceImpl.ListBackups));
       serviceBinder.AddMethod(__Method_RestoreTable, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.RestoreTableRequest, global::Google.LongRunning.Operation>(serviceImpl.RestoreTable));
+      serviceBinder.AddMethod(__Method_CopyBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.CopyBackupRequest, global::Google.LongRunning.Operation>(serviceImpl.CopyBackup));
       serviceBinder.AddMethod(__Method_GetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.GetIamPolicy));
       serviceBinder.AddMethod(__Method_SetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.SetIamPolicy));
       serviceBinder.AddMethod(__Method_TestIamPermissions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(serviceImpl.TestIamPermissions));
