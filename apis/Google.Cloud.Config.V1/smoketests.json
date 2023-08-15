@@ -1,0 +1,19 @@
+[
+  {
+    "method": "ListLocations",
+    "client": "ConfigClient",
+    "clientNavigationProperty": "LocationsClient",
+    "arguments": {
+      "request": {
+        "name": "projects/${PROJECT_ID}"
+      }
+    }
+  },
+  {
+    "method": "ListDeployments",
+    "client": "ConfigClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-central1"
+    }
+  }
+]
