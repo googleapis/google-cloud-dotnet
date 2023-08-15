@@ -1,4 +1,4 @@
-﻿// Copyright 2022 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License").
 // you may not use this file except in compliance with the License.
@@ -15,7 +15,8 @@
 using Google.Api.Gax.Grpc;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Firestore.V1;
-using Moq;
+using NSubstitute;
+using NSubstitute.Extensions;
 using System.Threading.Tasks;
 using Xunit;
 using static Google.Cloud.Firestore.Tests.ProtoHelpers;
@@ -42,8 +43,8 @@ public class AggregateQueryTest
     [Fact]
     public async Task GetSnapshotAsync_VerifySnapshotMembers()
     {
-        Mock<FirestoreClient> mock = new() { CallBase = true };
-        var db = FirestoreDb.Create("proj", "db", mock.Object);
+        var mock = Substitute.ForPartsOf<FirestoreClient>();
+        var db = FirestoreDb.Create("proj", "db", mock);
         var query = db.Collection("col").Select("Name");
         var sampleReadTime = CreateProtoTimestamp(1, 3);
         var request = new RunAggregationQueryRequest
@@ -59,7 +60,7 @@ public class AggregateQueryTest
         {
             new RunAggregationQueryResponse { ReadTime = sampleReadTime, Result = new AggregationResult() }
         });
-        mock.Setup(c => c.RunAggregationQuery(request, It.IsAny<CallSettings>())).Returns(response);
+        mock.Configure().RunAggregationQuery(request, Arg.Any<CallSettings>()).Returns(response);
         var aggregateQuery = query.Count();
         var snapshot = await aggregateQuery.GetSnapshotAsync();
         Assert.Equal(aggregateQuery, snapshot.Query);
