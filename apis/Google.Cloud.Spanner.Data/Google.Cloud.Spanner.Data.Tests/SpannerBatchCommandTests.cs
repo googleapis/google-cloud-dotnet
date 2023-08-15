@@ -18,7 +18,7 @@ using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Cloud.Spanner.V1.Tests;
 using Google.Protobuf;
-using Moq;
+using NSubstitute;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -156,8 +156,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         [Fact]
         public void CommandPriorityDefaultsToUnspecified()
         {
-            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupBeginTransactionAsync();
@@ -171,8 +170,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public void CommandIncludesPriority()
         {
             var priority = Priority.High;
-            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupBeginTransactionAsync()
@@ -187,17 +185,16 @@ namespace Google.Cloud.Spanner.Data.Tests
             command.ExecuteNonQuery();
             transaction.Commit();
 
-            spannerClientMock.Verify(client => client.ExecuteBatchDmlAsync(
-                It.Is<ExecuteBatchDmlRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
-                It.IsAny<CallSettings>()), Times.Once());
+            spannerClientMock.Received(1).ExecuteBatchDmlAsync(
+                Arg.Is<ExecuteBatchDmlRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
+                Arg.Any<CallSettings>());
         }
 
         [Fact]
         public void EphemeralTransactionIncludesPriorityOnBatchDmlAndCommit()
         {
             var priority = Priority.Medium;
-            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupBeginTransactionAsync()
@@ -210,12 +207,12 @@ namespace Google.Cloud.Spanner.Data.Tests
             command.Priority = priority;
             command.ExecuteNonQuery();
 
-            spannerClientMock.Verify(client => client.ExecuteBatchDmlAsync(
-                It.Is<ExecuteBatchDmlRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
-                It.IsAny<CallSettings>()), Times.Once());
-            spannerClientMock.Verify(client => client.CommitAsync(
-                It.Is<CommitRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
-                It.IsAny<CallSettings>()), Times.Once());
+            spannerClientMock.Received(1).ExecuteBatchDmlAsync(
+                Arg.Is<ExecuteBatchDmlRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
+                Arg.Any<CallSettings>());
+            spannerClientMock.Received(1).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
+                Arg.Any<CallSettings>());
         }
 
         [Fact]
@@ -223,8 +220,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             var requestTag = "request-tag-1";
             var transactionTag = "transaction-tag-1";
-            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupBeginTransactionAsync()
@@ -240,12 +236,12 @@ namespace Google.Cloud.Spanner.Data.Tests
             command.ExecuteNonQuery();
             transaction.Commit();
 
-            spannerClientMock.Verify(client => client.ExecuteBatchDmlAsync(
-                It.Is<ExecuteBatchDmlRequest>(request => request.RequestOptions.RequestTag == requestTag && request.RequestOptions.TransactionTag == transactionTag),
-                It.IsAny<CallSettings>()), Times.Once());
-            spannerClientMock.Verify(client => client.CommitAsync(
-                It.Is<CommitRequest>(request => request.RequestOptions.RequestTag == "" && request.RequestOptions.TransactionTag == transactionTag),
-                It.IsAny<CallSettings>()), Times.Once());
+            spannerClientMock.Received(1).ExecuteBatchDmlAsync(
+                Arg.Is<ExecuteBatchDmlRequest>(request => request.RequestOptions.RequestTag == requestTag && request.RequestOptions.TransactionTag == transactionTag),
+                Arg.Any<CallSettings>());
+            spannerClientMock.Received(1).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.RequestOptions.RequestTag == "" && request.RequestOptions.TransactionTag == transactionTag),
+                Arg.Any<CallSettings>());
         }
 
         private class FakeSessionPool : SessionPool.ISessionPool

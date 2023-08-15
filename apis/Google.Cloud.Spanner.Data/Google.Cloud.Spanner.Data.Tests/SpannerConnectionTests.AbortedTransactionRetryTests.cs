@@ -1,4 +1,4 @@
-﻿// Copyright 2019 Google LLC
+// Copyright 2019 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,7 +18,6 @@ using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Cloud.Spanner.V1.Tests;
 using Grpc.Core;
-using Moq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,8 +45,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             [Fact]
             public async Task FirstCallSucceeds()
             {
-                var spannerClientMock = SpannerClientHelpers
-                    .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict)
+                SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger)
                     .SetupBatchCreateSessionsAsync()
                     .SetupBeginTransactionAsync()
                     .SetupExecuteBatchDmlAsync()
@@ -71,8 +69,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             [Fact]
             public async Task CommitAbortsTwice()
             {
-                var spannerClientMock = SpannerClientHelpers
-                    .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict)
+                SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger)
                     .SetupBatchCreateSessionsAsync()
                     .SetupBeginTransactionAsync()
                     .SetupExecuteBatchDmlAsync()
@@ -99,8 +96,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             [Fact]
             public async Task BatchDmlAbortsTwice()
             {
-                var spannerClientMock = SpannerClientHelpers
-                    .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict)
+                SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger)
                     .SetupBatchCreateSessionsAsync()
                     .SetupBeginTransactionAsync()
                     .SetupExecuteBatchDmlAsync_Fails(failures: 2, statusCode: StatusCode.Aborted)
@@ -126,8 +122,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             [Fact]
             public async Task CommitAbortsTwice_RecommendedDelay()
             {
-                var spannerClientMock = SpannerClientHelpers
-                    .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict)
+                SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger)
                     .SetupBatchCreateSessionsAsync()
                     .SetupBeginTransactionAsync()
                     .SetupExecuteBatchDmlAsync()
@@ -153,8 +148,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             [Fact]
             public async Task CommitAbortsAlways_RespectsOverallDeadline()
             {
-                var spannerClientMock = SpannerClientHelpers
-                    .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict)
+                SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger)
                     .SetupBatchCreateSessionsAsync()
                     .SetupBeginTransactionAsync()
                     .SetupExecuteBatchDmlAsync()
@@ -190,8 +184,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             [Fact]
             public async Task CommitFailsOtherThanAborted()
             {
-                var spannerClientMock = SpannerClientHelpers
-                    .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict)
+                SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger)
                     .SetupBatchCreateSessionsAsync()
                     .SetupBeginTransactionAsync()
                     .SetupExecuteBatchDmlAsync()
@@ -219,8 +212,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             [Fact]
             public async Task WorkFails()
             {
-                var spannerClientMock = SpannerClientHelpers
-                    .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict)
+                SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger)
                     .SetupBatchCreateSessionsAsync()
                     .SetupBeginTransactionAsync()
                     .SetupRollbackAsync();
@@ -241,9 +233,8 @@ namespace Google.Cloud.Spanner.Data.Tests
                 callee.AssertLastCallTime(scheduler.Clock.GetCurrentDateTimeUtc());
             }
 
-            private SpannerConnection BuildSpannerConnection(Mock<SpannerClient> spannerClientMock)
+            private SpannerConnection BuildSpannerConnection(SpannerClient spannerClient)
             {
-                var spannerClient = spannerClientMock.Object;
                 var sessionPoolOptions = new SessionPoolOptions
                 {
                     MaintenanceLoopDelay = TimeSpan.Zero

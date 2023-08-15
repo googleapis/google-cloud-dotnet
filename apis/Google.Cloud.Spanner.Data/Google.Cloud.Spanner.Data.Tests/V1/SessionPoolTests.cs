@@ -45,7 +45,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         {
             var logger = new InMemoryLogger();
             var mock = SpannerClientHelpers.CreateMockClient(logger);
-            var pool = new SessionPool(mock.Object, new SessionPoolOptions());
+            var pool = new SessionPool(mock, new SessionPoolOptions());
 
             var mode = ModeOneofCase.ReadOnly;
             var session = pool.CreateDetachedSession(s_sampleSessionName, s_sampleTransactionId, mode);
