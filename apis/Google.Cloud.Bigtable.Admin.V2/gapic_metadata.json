@@ -151,6 +151,12 @@
                 "CheckConsistencyAsync"
               ]
             },
+            "CopyBackup": {
+              "methods": [
+                "CopyBackup",
+                "CopyBackupAsync"
+              ]
+            },
             "CreateBackup": {
               "methods": [
                 "CreateBackup",
