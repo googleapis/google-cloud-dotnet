@@ -72,6 +72,7 @@ namespace GoogleCSharpSnippets
                             AppendRowsRequest.Types.MissingValueInterpretation.Unspecified
                         },
                     },
+                    DefaultMissingValueInterpretation = AppendRowsRequest.Types.MissingValueInterpretation.Unspecified,
                 };
                 // Stream a request to the server
                 await response.WriteAsync(request);
