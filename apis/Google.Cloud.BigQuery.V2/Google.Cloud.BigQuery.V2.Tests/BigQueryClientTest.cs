@@ -13,10 +13,12 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Apis;
 using Google.Apis.Bigquery.v2.Data;
 using Google.Cloud.ClientTesting;
-using Moq;
 using Newtonsoft.Json;
+using NSubstitute;
+using NSubstitute.Extensions;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -855,7 +857,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var stream = new MemoryStream();
             var row = new BigQueryInsertRow();
             VerifyEquivalent(new BigQueryInsertResults(new DerivedBigQueryClient(), options, Enumerable.Repeat(row, 1).ToList(), new TableDataInsertAllResponse()),
-                client => client.InsertRows(MatchesWhenSerialized(reference), new[] { row }, options),
+                client => client.InsertRows(MatchesWhenSerialized(reference), MatchesCollection(row), options),
                 client => client.InsertRow(datasetId, tableId, row, options),
                 client => client.InsertRow(ProjectId, datasetId, tableId, row, options),
                 client => new BigQueryTable(client, GetTable(reference)).InsertRow(row, options));
@@ -889,7 +891,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var stream = new MemoryStream();
             var rows = new[] { new BigQueryInsertRow(), new BigQueryInsertRow() };
             VerifyEquivalent(new BigQueryInsertResults(new DerivedBigQueryClient(), options, rows, new TableDataInsertAllResponse()),
-                client => client.InsertRows(MatchesWhenSerialized(reference), rows, null),
+                client => client.InsertRows(MatchesWhenSerialized(reference), MatchesCollection(rows), null),
                 client => client.InsertRows(datasetId, tableId, rows[0], rows[1]),
                 client => client.InsertRows(ProjectId, datasetId, tableId, rows[0], rows[1]),
                 client => new BigQueryTable(client, GetTable(reference)).InsertRows(rows[0], rows[1]));
@@ -906,7 +908,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var options = new CreateExtractJobOptions();
 
             VerifyEquivalent(new BigQueryJob(new DerivedBigQueryClient(), new Job { JobReference = jobReference }),
-                client => client.CreateExtractJob(MatchesWhenSerialized(tableReference), new[] { uri }, options),
+                client => client.CreateExtractJob(MatchesWhenSerialized(tableReference), MatchesCollection(uri), options),
                 client => client.CreateExtractJob(tableReference, uri, options),
                 client => client.CreateExtractJob(ProjectId, datasetId, tableId, uri, options),
                 client => client.CreateExtractJob(datasetId, tableId, uri, options),
@@ -927,7 +929,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var options = new CreateModelExtractJobOptions();
 
             VerifyEquivalent(new BigQueryJob(new DerivedBigQueryClient(), new Job { JobReference = jobReference }),
-                client => client.CreateModelExtractJob(MatchesWhenSerialized(modelReference), new[] { uri }, options),
+                client => client.CreateModelExtractJob(MatchesWhenSerialized(modelReference), MatchesCollection(uri), options),
                 client => client.CreateModelExtractJob(ProjectId, datasetId, modelId, uri, options),
                 client => client.CreateModelExtractJob(datasetId, modelId, uri, options),
                 client => client.CreateModelExtractJob(modelReference, uri, options),
@@ -1670,7 +1672,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var stream = new MemoryStream();
             var row = new BigQueryInsertRow();
             VerifyEquivalentAsync(new BigQueryInsertResults(new DerivedBigQueryClient(), options, Enumerable.Repeat(row, 1).ToList(), new TableDataInsertAllResponse()),
-                client => client.InsertRowsAsync(MatchesWhenSerialized(reference), new[] { row }, options, token),
+                client => client.InsertRowsAsync(MatchesWhenSerialized(reference), MatchesCollection(row), options, token),
                 client => client.InsertRowAsync(datasetId, tableId, row, options, token),
                 client => client.InsertRowAsync(ProjectId, datasetId, tableId, row, options, token),
                 client => new BigQueryTable(client, GetTable(reference)).InsertRowAsync(row, options, token));
@@ -1706,7 +1708,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var stream = new MemoryStream();
             var rows = new[] { new BigQueryInsertRow(), new BigQueryInsertRow() };
             VerifyEquivalentAsync(new BigQueryInsertResults(new DerivedBigQueryClient(), options, rows, new TableDataInsertAllResponse()),
-                client => client.InsertRowsAsync(MatchesWhenSerialized(reference), rows, null, default),
+                client => client.InsertRowsAsync(MatchesWhenSerialized(reference), MatchesCollection(rows), null, default),
                 client => client.InsertRowsAsync(datasetId, tableId, rows[0], rows[1]),
                 client => client.InsertRowsAsync(ProjectId, datasetId, tableId, rows[0], rows[1]),
                 client => new BigQueryTable(client, GetTable(reference)).InsertRowsAsync(rows[0], rows[1]));
@@ -1724,7 +1726,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var token = new CancellationTokenSource().Token;
 
             VerifyEquivalentAsync(new BigQueryJob(new DerivedBigQueryClient(), new Job { JobReference = jobReference }),
-                client => client.CreateExtractJobAsync(MatchesWhenSerialized(tableReference), new[] { uri }, options, token),
+                client => client.CreateExtractJobAsync(MatchesWhenSerialized(tableReference), MatchesCollection(uri), options, token),
                 client => client.CreateExtractJobAsync(tableReference, uri, options, token),
                 client => client.CreateExtractJobAsync(ProjectId, datasetId, tableId, uri, options, token),
                 client => client.CreateExtractJobAsync(datasetId, tableId, uri, options, token),
@@ -1746,7 +1748,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var token = new CancellationTokenSource().Token;
 
             VerifyEquivalentAsync(new BigQueryJob(new DerivedBigQueryClient(), new Job { JobReference = jobReference }),
-                client => client.CreateModelExtractJobAsync(MatchesWhenSerialized(modelReference), new[] { uri }, options, token),
+                client => client.CreateModelExtractJobAsync(MatchesWhenSerialized(modelReference), MatchesCollection(uri), options, token),
                 client => client.CreateModelExtractJobAsync(ProjectId, datasetId, modelId, uri, options, token),
                 client => client.CreateModelExtractJobAsync(datasetId, modelId, uri, options, token),
                 client => client.CreateModelExtractJobAsync(modelReference, uri, options, token),
@@ -1790,62 +1792,65 @@ namespace Google.Cloud.BigQuery.V2.Tests
         private T MatchesWhenSerialized<T>(T expected)
         {
             string serialized = JsonConvert.SerializeObject(expected);
-            return It.Is<T>(actual => JsonConvert.SerializeObject(actual) == serialized);
+            return Arg.Is<T>(actual => JsonConvert.SerializeObject(actual) == serialized);
         }
+
+        private T[] MatchesCollection<T>(params T[] expected) =>
+            Arg.Is<T[]>(actual => Enumerable.SequenceEqual(expected, actual));
 
         private void VerifyEquivalent<TResult>(
             TResult result,
-            Expression<Func<DerivedBigQueryClient, TResult>> underlyingCall,
+            Func<DerivedBigQueryClient, TResult> underlyingCall,
             params Func<BigQueryClient, TResult>[] equivalentCalls) where TResult : class
         {
             foreach (var call in equivalentCalls)
             {
-                var mock = new Mock<DerivedBigQueryClient>() { CallBase = true };
-                mock.Setup(underlyingCall).Returns(result);
-                Assert.Same(result, call(mock.Object));
-                mock.VerifyAll();
+                var mock = Substitute.ForPartsOf<DerivedBigQueryClient>();
+                underlyingCall(mock.Configure()).Returns(result);
+                Assert.Same(result, call(mock));
+                underlyingCall(mock.ReceivedWithAnyArgs(1));
             }
         }
 
         private void VerifyEquivalent(
-            Expression<Action<DerivedBigQueryClient>> underlyingCall,
+            Action<DerivedBigQueryClient> underlyingCall,
             params Action<BigQueryClient>[] equivalentCalls)
         {
             foreach (var call in equivalentCalls)
             {
-                var mock = new Mock<DerivedBigQueryClient>() { CallBase = true };
-                mock.Setup(underlyingCall);
-                call(mock.Object);
-                mock.VerifyAll();
+                var mock = Substitute.ForPartsOf<DerivedBigQueryClient>();
+                mock.When(underlyingCall).DoNotCallBase();
+                call(mock);
+                underlyingCall(mock.ReceivedWithAnyArgs(1));
             }
         }
 
         private void VerifyEquivalentAsync<TResult>(
             TResult result,
-            Expression<Func<DerivedBigQueryClient, Task<TResult>>> underlyingCall,
+            Func<DerivedBigQueryClient, Task<TResult>> underlyingCall,
             params Func<BigQueryClient, Task<TResult>>[] equivalentCalls) where TResult : class
         {
             var taskResult = Task.FromResult(result);
             foreach (var call in equivalentCalls)
             {
-                var mock = new Mock<DerivedBigQueryClient>() { CallBase = true };
-                mock.Setup(underlyingCall).Returns(taskResult);
-                Assert.Same(taskResult, call(mock.Object));
-                mock.VerifyAll();
+                var mock = Substitute.ForPartsOf<DerivedBigQueryClient>();
+                underlyingCall(mock.Configure()).Returns(taskResult);
+                Assert.Same(taskResult, call(mock));
+                underlyingCall(mock.ReceivedWithAnyArgs(1));
             }
         }
 
         private void VerifyEquivalentAsync(
-            Expression<Func<DerivedBigQueryClient, Task>> underlyingCall,
+            Func<DerivedBigQueryClient, Task> underlyingCall,
             params Func<BigQueryClient, Task>[] equivalentCalls)
         {
             var taskResult = Task.FromResult(0);
             foreach (var call in equivalentCalls)
             {
-                var mock = new Mock<DerivedBigQueryClient>() { CallBase = true };
-                mock.Setup(underlyingCall).Returns(taskResult);
-                Assert.Same(taskResult, call(mock.Object));
-                mock.VerifyAll();
+                var mock = Substitute.ForPartsOf<DerivedBigQueryClient>();
+                underlyingCall(mock.Configure()).Returns(taskResult);
+                call(mock);
+                underlyingCall(mock.ReceivedWithAnyArgs(1));
             }
         }
 

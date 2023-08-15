@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,7 +13,7 @@
 // limitations under the License.
 
 using Google.Apis.Bigquery.v2.Data;
-using Moq;
+using NSubstitute;
 using Xunit;
 
 namespace Google.Cloud.BigQuery.V2.Tests
@@ -42,7 +42,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             {
                 TableReference = new TableReference { ProjectId = projectId, DatasetId = datasetId, TableId = tableId }
             };
-            return new BigQueryTable(new Mock<BigQueryClient>().Object, table);
+            return new BigQueryTable(Substitute.For<BigQueryClient>(), table);
         }
     }
 }
