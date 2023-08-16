@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.2.0, released 2023-08-16
+
+### New features
+
+- Add UNAVAILABLE to state enum of workflow deployment ([commit a3003fc](https://github.com/googleapis/google-cloud-dotnet/commit/a3003fc3e874c5019b6a7291795abc373127f88c))
+- Add state_error field to Workflow ([commit a3003fc](https://github.com/googleapis/google-cloud-dotnet/commit/a3003fc3e874c5019b6a7291795abc373127f88c))
+- Add call_log_level field to Workflow ([commit a3003fc](https://github.com/googleapis/google-cloud-dotnet/commit/a3003fc3e874c5019b6a7291795abc373127f88c))
+- Add user_env_vars field to Workflow ([commit a3003fc](https://github.com/googleapis/google-cloud-dotnet/commit/a3003fc3e874c5019b6a7291795abc373127f88c))
+- Add revision_id to GetWorkflowRequest ([commit a3003fc](https://github.com/googleapis/google-cloud-dotnet/commit/a3003fc3e874c5019b6a7291795abc373127f88c))
+
 ## Version 2.1.0, released 2023-02-08
 
 ### New features
