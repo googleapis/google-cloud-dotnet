@@ -3389,7 +3389,7 @@
       ],
       "dependencies": {
         "Google.Api.Gax.Grpc": "4.4.0",
-        "Google.Cloud.OsLogin.Common": "project",
+        "Google.Cloud.OsLogin.Common": "3.1.0",
         "Grpc.Core": "2.46.6"
       },
       "forceOwlBotRegeneration": "OsLogin Common proto is generated and copied when it shouldn't be.",
@@ -3414,7 +3414,7 @@
       ],
       "dependencies": {
         "Google.Api.Gax.Grpc": "4.4.0",
-        "Google.Cloud.OsLogin.Common": "project",
+        "Google.Cloud.OsLogin.Common": "3.1.0",
         "Grpc.Core": "2.46.6"
       },
       "forceOwlBotRegeneration": "OsLogin Common proto is generated and copied when it shouldn't be.",
@@ -5287,15 +5287,6 @@
       "packageIds": [
         "Google.Cloud.Firestore",
         "Google.Cloud.Firestore.V1"
-      ]
-    },
-    {
-      "id": "Google.Cloud.OsLogin",
-      "displayName": "OS Login",
-      "packageIds": [
-        "Google.Cloud.OsLogin.Common",
-        "Google.Cloud.OsLogin.V1",
-        "Google.Cloud.OsLogin.V1Beta"
       ]
     },
     {
