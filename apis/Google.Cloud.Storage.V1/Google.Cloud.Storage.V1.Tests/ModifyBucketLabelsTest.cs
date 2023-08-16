@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,8 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Moq;
+using NSubstitute;
+using NSubstitute.Extensions;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
@@ -30,13 +32,13 @@ namespace Google.Cloud.Storage.V1.Tests
             var oldValue = "old-value";
             var newValue = "new-value";
             var options = new ModifyBucketLabelsOptions();
-            var mock = new Mock<StorageClient> { CallBase = true };
-            mock.Setup(obj => obj.ModifyBucketLabels(bucketName, new Dictionary<string, string> { { key, newValue } }, options))
+            var mock = Substitute.ForPartsOf<StorageClient>();
+            mock.Configure().ModifyBucketLabels(bucketName, CreateMatcher(key, newValue), options)
                 .Returns(new Dictionary<string, string> { { key, oldValue } });
 
-            var actual = mock.Object.SetBucketLabel(bucketName, key, newValue, options);
+            var actual = mock.SetBucketLabel(bucketName, key, newValue, options);
             Assert.Equal(oldValue, actual);
-            mock.VerifyAll();
+            mock.Received(1).ModifyBucketLabels(bucketName, CreateMatcher(key, newValue), options);
         }
 
         [Fact]
@@ -45,13 +47,13 @@ namespace Google.Cloud.Storage.V1.Tests
             var bucketName = "bucket";
             var key = "key";
             var options = new ModifyBucketLabelsOptions();
-            var mock = new Mock<StorageClient> { CallBase = true };
-            mock.Setup(obj => obj.ModifyBucketLabels(bucketName, new Dictionary<string, string> { { key, null } }, options))
+            var mock = Substitute.ForPartsOf<StorageClient>();
+            mock.Configure().ModifyBucketLabels(bucketName, CreateMatcher(key, null), options)
                 .Returns(new Dictionary<string, string> { { key, null } });
 
-            var actual = mock.Object.RemoveBucketLabel(bucketName, key, options);
+            var actual = mock.RemoveBucketLabel(bucketName, key, options);
             Assert.Null(actual);
-            mock.VerifyAll();
+            mock.Received(1).ModifyBucketLabels(bucketName, CreateMatcher(key, null), options);
         }
 
         [Fact]
@@ -63,13 +65,13 @@ namespace Google.Cloud.Storage.V1.Tests
             var newValue = "new-value";
             var options = new ModifyBucketLabelsOptions();
             var token = new CancellationTokenSource().Token;
-            var mock = new Mock<StorageClient> { CallBase = true };
-            mock.Setup(obj => obj.ModifyBucketLabelsAsync(bucketName, new Dictionary<string, string> { { key, newValue } }, options, token))
+            var mock = Substitute.ForPartsOf<StorageClient>();
+            mock.Configure().ModifyBucketLabelsAsync(bucketName, CreateMatcher(key, newValue), options, token)
                 .Returns(Task.FromResult<IDictionary<string, string>>(new Dictionary<string, string> { { key, oldValue } }));
 
-            var actual = mock.Object.SetBucketLabelAsync(bucketName, key, newValue, options, token).Result;
+            var actual = mock.SetBucketLabelAsync(bucketName, key, newValue, options, token).Result;
             Assert.Equal(oldValue, actual);
-            mock.VerifyAll();
+            _ = mock.Received(1).ModifyBucketLabelsAsync(bucketName, CreateMatcher(key, newValue), options, token);
         }
 
         [Fact]
@@ -79,13 +81,20 @@ namespace Google.Cloud.Storage.V1.Tests
             var key = "key";
             var options = new ModifyBucketLabelsOptions();
             var token = new CancellationTokenSource().Token;
-            var mock = new Mock<StorageClient> { CallBase = true };
-            mock.Setup(obj => obj.ModifyBucketLabelsAsync(bucketName, new Dictionary<string, string> { { "key", null } }, options, token))
+            var mock = Substitute.ForPartsOf<StorageClient>();
+            mock.Configure().ModifyBucketLabelsAsync(bucketName, CreateMatcher(key, null), options, token)
                 .Returns(Task.FromResult<IDictionary<string, string>>(new Dictionary<string, string> { { "key", null } }));
 
-            var actual = mock.Object.RemoveBucketLabelAsync(bucketName, key, options, token).Result;
+            var actual = mock.RemoveBucketLabelAsync(bucketName, key, options, token).Result;
             Assert.Null(actual);
-            mock.VerifyAll();
+            _ = mock.Received(1).ModifyBucketLabelsAsync(bucketName, CreateMatcher(key, null), options, token);
         }
+
+        // This is more awkward than it *looks* like it should be, due to Arg.Is accepting an expression tree not a delegate.
+        private Dictionary<string, string> CreateMatcher(string key, string value) =>
+            Arg.Is<Dictionary<string, string>>(dict => DictionaryMatches(dict, key, value));
+
+        private bool DictionaryMatches(Dictionary<string, string> dict, string key, string value) =>
+                dict.Count == 1 && dict.Keys.Single() == key && dict.Values.Single() == value;
     }
 }
