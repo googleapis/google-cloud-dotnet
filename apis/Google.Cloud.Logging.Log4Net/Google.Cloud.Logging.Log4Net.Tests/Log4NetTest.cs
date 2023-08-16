@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api;
 using Google.Api.Gax;
 using Google.Api.Gax.Testing;
 using Google.Cloud.Logging.V2;
@@ -22,7 +21,8 @@ using log4net;
 using log4net.Core;
 using log4net.Layout;
 using log4net.Repository.Hierarchy;
-using Moq;
+using NSubstitute;
+using NSubstitute.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -119,11 +119,11 @@ namespace Google.Cloud.Logging.Log4Net.Tests
             }
             try
             {
-                var fakeClient = new Mock<LoggingServiceV2Client>(MockBehavior.Strict);
-                fakeClient.Setup(x => x.WriteLogEntriesAsync(
-                    (LogName) null, null, It.IsAny<IDictionary<string, string>>(), It.IsAny<IEnumerable<LogEntry>>(), It.IsAny<CancellationToken>()))
-                    .Returns<LogName, MonitoredResource, IDictionary<string, string>, IEnumerable<LogEntry>, CancellationToken>((a, b, c, entries, d) => handlerFn(entries));
-                var appender = new GoogleStackdriverAppender(fakeClient.Object,
+                var fakeClient = Substitute.ForPartsOf<LoggingServiceV2Client>();
+                fakeClient.Configure().WriteLogEntriesAsync(
+                    (LogName) null, null, Arg.Any<IDictionary<string, string>>(), Arg.Any<IEnumerable<LogEntry>>(), Arg.Any<CancellationToken>())
+                    .Returns(args => handlerFn((IEnumerable<LogEntry>) args[3]));
+                var appender = new GoogleStackdriverAppender(fakeClient,
                     scheduler ?? new NoDelayScheduler(), clock ?? new FakeClock(), platform)
                 {
                     ErrorHandler = new ThrowingErrorHandler(),
@@ -278,8 +278,8 @@ namespace Google.Cloud.Logging.Log4Net.Tests
         [Fact]
         public async Task UninitialisedBehaviour()
         {
-            var fakeClient = new Mock<LoggingServiceV2Client>(MockBehavior.Strict);
-            var appender = new GoogleStackdriverAppender(fakeClient.Object, new NoDelayScheduler(), new FakeClock())
+            var fakeClient = Substitute.ForPartsOf<LoggingServiceV2Client>();
+            var appender = new GoogleStackdriverAppender(fakeClient, new NoDelayScheduler(), new FakeClock())
             {
                 ErrorHandler = new ThrowingErrorHandler(),
                 Layout = new PatternLayout { ConversionPattern = "%message" },
@@ -299,8 +299,8 @@ namespace Google.Cloud.Logging.Log4Net.Tests
         [Fact]
         public void UninitialisedGced()
         {
-            var fakeClient = new Mock<LoggingServiceV2Client>(MockBehavior.Strict);
-            var appender = new GoogleStackdriverAppender(fakeClient.Object, new NoDelayScheduler(), new FakeClock())
+            var fakeClient = Substitute.ForPartsOf<LoggingServiceV2Client>();
+            var appender = new GoogleStackdriverAppender(fakeClient, new NoDelayScheduler(), new FakeClock())
             {
                 ErrorHandler = new ThrowingErrorHandler(),
                 Layout = new PatternLayout { ConversionPattern = "%message" },
