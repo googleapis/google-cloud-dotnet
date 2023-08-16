@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.3.0, released 2023-08-16
+
+### New features
+
+- Added shadow removal and rotation correction options to Document Translation and Batch Document Translation API ([commit 1f31c26](https://github.com/googleapis/google-cloud-dotnet/commit/1f31c266c47febf4713bc733cc76fbb7c33dbdba))
+
+### Documentation improvements
+
+- Minor formatting ([commit ccddac4](https://github.com/googleapis/google-cloud-dotnet/commit/ccddac405abc0401efa6337fa134abe6f3ae011e))
+- Minor formatting ([commit 1097b47](https://github.com/googleapis/google-cloud-dotnet/commit/1097b47fe89a2f7e1d42bee388f037a98e22080e))
+
 ## Version 3.2.0, released 2023-02-22
 
 ### New features
