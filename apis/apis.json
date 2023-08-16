@@ -3465,7 +3465,7 @@
     },
     {
       "id": "Google.Cloud.PolicyTroubleshooter.Iam.V3",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Policy Troubleshooter",
       "productUrl": "https://cloud.google.com/policy-intelligence/docs/troubleshoot-access",
