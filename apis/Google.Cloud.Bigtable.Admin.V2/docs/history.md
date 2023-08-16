@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.6.0, released 2023-08-16
+
+### New features
+
+- Publish CopyBackup protos to external customers ([commit bff18a6](https://github.com/googleapis/google-cloud-dotnet/commit/bff18a61c86c6210a779639a1b15f9457ed3f594))
+
 ## Version 3.5.0, released 2023-07-13
 
 ### New features
