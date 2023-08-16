@@ -1,5 +1,20 @@
 # Version history
 
+## Version 1.2.0, released 2023-08-16
+
+### New features
+
+- Several new resources and RPCs ([commit 5ef43e6](https://github.com/googleapis/google-cloud-dotnet/commit/5ef43e6b9aa3dbedc35617bdd477a7b46057ef61))
+- Add RPCs Enable/Disable InteractiveSerialConsole ([commit 5ef43e6](https://github.com/googleapis/google-cloud-dotnet/commit/5ef43e6b9aa3dbedc35617bdd477a7b46057ef61))
+- Add RPCs Rename/Evict Volume ([commit 5ef43e6](https://github.com/googleapis/google-cloud-dotnet/commit/5ef43e6b9aa3dbedc35617bdd477a7b46057ef61))
+- Add RPC EvictLune ([commit 5ef43e6](https://github.com/googleapis/google-cloud-dotnet/commit/5ef43e6b9aa3dbedc35617bdd477a7b46057ef61))
+- Add SSHKey resource and methods ([commit 5ef43e6](https://github.com/googleapis/google-cloud-dotnet/commit/5ef43e6b9aa3dbedc35617bdd477a7b46057ef61))
+- Add VolumeSnapshot resource and methods ([commit 5ef43e6](https://github.com/googleapis/google-cloud-dotnet/commit/5ef43e6b9aa3dbedc35617bdd477a7b46057ef61))
+- Add NFSShare resource and methods ([commit 5ef43e6](https://github.com/googleapis/google-cloud-dotnet/commit/5ef43e6b9aa3dbedc35617bdd477a7b46057ef61))
+- Add ProvisioningConfig resource and methods ([commit 5ef43e6](https://github.com/googleapis/google-cloud-dotnet/commit/5ef43e6b9aa3dbedc35617bdd477a7b46057ef61))
+- Add OsImage resource and methods ([commit 5ef43e6](https://github.com/googleapis/google-cloud-dotnet/commit/5ef43e6b9aa3dbedc35617bdd477a7b46057ef61))
+- Add new Instance state values ([commit 5ef43e6](https://github.com/googleapis/google-cloud-dotnet/commit/5ef43e6b9aa3dbedc35617bdd477a7b46057ef61))
+- Include IAMPolicy mixin ([commit b2e2e45](https://github.com/googleapis/google-cloud-dotnet/commit/b2e2e45ca4281390dd35e29f3c564c1a3914afda))
 ## Version 1.1.0, released 2023-01-19
 
 ### New features
