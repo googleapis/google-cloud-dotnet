@@ -1,4 +1,4 @@
-﻿// Copyright 2019 Google LLC
+// Copyright 2019 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -121,9 +121,9 @@ namespace Google.Cloud.Datastore.V1
         // Convenience class for storing the project ID, namespace ID and a DatastoreClientBuilder for sync/async building.
         private class ConfiguredBuilder
         {
-            private string _projectId;
-            private string _namespaceId;
-            private DatastoreClientBuilder _clientBuilder;
+            private readonly string _projectId;
+            private readonly string _namespaceId;
+            private readonly DatastoreClientBuilder _clientBuilder;
 
             internal ChannelBase LastCreatedChannel => _clientBuilder.LastCreatedChannel;
 

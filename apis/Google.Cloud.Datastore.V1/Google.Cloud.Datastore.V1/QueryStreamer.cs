@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -90,7 +90,7 @@ namespace Google.Cloud.Datastore.V1
             {
                 private readonly QueryStreamer _parent;
                 private readonly CancellationToken _cancellationToken;
-                private RunQueryRequest _request;
+                private readonly RunQueryRequest _request;
                 private bool _finished;
 
                 public AsyncQueryEnumerator(QueryStreamer parent, CancellationToken cancellationToken)
