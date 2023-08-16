@@ -28,86 +28,106 @@ namespace Google.Cloud.Workflows.Executions.V1 {
             "aW9ucy5wcm90bxIkZ29vZ2xlLmNsb3VkLndvcmtmbG93cy5leGVjdXRpb25z",
             "LnYxGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGhdnb29nbGUvYXBp",
             "L2NsaWVudC5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90",
-            "bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVm",
-            "L3RpbWVzdGFtcC5wcm90byKfCQoJRXhlY3V0aW9uEhEKBG5hbWUYASABKAlC",
-            "A+BBAxIzCgpzdGFydF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcEID4EEDEjEKCGVuZF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcEID4EEDEkkKBXN0YXRlGAQgASgOMjUuZ29vZ2xlLmNs",
-            "b3VkLndvcmtmbG93cy5leGVjdXRpb25zLnYxLkV4ZWN1dGlvbi5TdGF0ZUID",
-            "4EEDEhAKCGFyZ3VtZW50GAUgASgJEhMKBnJlc3VsdBgGIAEoCUID4EEDEkkK",
-            "BWVycm9yGAcgASgLMjUuZ29vZ2xlLmNsb3VkLndvcmtmbG93cy5leGVjdXRp",
-            "b25zLnYxLkV4ZWN1dGlvbi5FcnJvckID4EEDEiEKFHdvcmtmbG93X3Jldmlz",
-            "aW9uX2lkGAggASgJQgPgQQMSVAoOY2FsbF9sb2dfbGV2ZWwYCSABKA4yPC5n",
-            "b29nbGUuY2xvdWQud29ya2Zsb3dzLmV4ZWN1dGlvbnMudjEuRXhlY3V0aW9u",
-            "LkNhbGxMb2dMZXZlbBrKAQoRU3RhY2tUcmFjZUVsZW1lbnQSDAoEc3RlcBgB",
-            "IAEoCRIPCgdyb3V0aW5lGAIgASgJElwKCHBvc2l0aW9uGAMgASgLMkouZ29v",
-            "Z2xlLmNsb3VkLndvcmtmbG93cy5leGVjdXRpb25zLnYxLkV4ZWN1dGlvbi5T",
-            "dGFja1RyYWNlRWxlbWVudC5Qb3NpdGlvbho4CghQb3NpdGlvbhIMCgRsaW5l",
-            "GAEgASgDEg4KBmNvbHVtbhgCIAEoAxIOCgZsZW5ndGgYAyABKAMaYQoKU3Rh",
-            "Y2tUcmFjZRJTCghlbGVtZW50cxgBIAMoCzJBLmdvb2dsZS5jbG91ZC53b3Jr",
-            "Zmxvd3MuZXhlY3V0aW9ucy52MS5FeGVjdXRpb24uU3RhY2tUcmFjZUVsZW1l",
-            "bnQaegoFRXJyb3ISDwoHcGF5bG9hZBgBIAEoCRIPCgdjb250ZXh0GAIgASgJ",
-            "Ek8KC3N0YWNrX3RyYWNlGAMgASgLMjouZ29vZ2xlLmNsb3VkLndvcmtmbG93",
-            "cy5leGVjdXRpb25zLnYxLkV4ZWN1dGlvbi5TdGFja1RyYWNlIlQKBVN0YXRl",
-            "EhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCgoGQUNUSVZFEAESDQoJU1VDQ0VF",
-            "REVEEAISCgoGRkFJTEVEEAMSDQoJQ0FOQ0VMTEVEEAQiVgoMQ2FsbExvZ0xl",
-            "dmVsEh4KGkNBTExfTE9HX0xFVkVMX1VOU1BFQ0lGSUVEEAASEQoNTE9HX0FM",
-            "TF9DQUxMUxABEhMKD0xPR19FUlJPUlNfT05MWRACOoYB6kGCAQord29ya2Zs",
-            "b3dleGVjdXRpb25zLmdvb2dsZWFwaXMuY29tL0V4ZWN1dGlvbhJTcHJvamVj",
-            "dHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3dvcmtmbG93cy97",
-            "d29ya2Zsb3d9L2V4ZWN1dGlvbnMve2V4ZWN1dGlvbn0iwQEKFUxpc3RFeGVj",
-            "dXRpb25zUmVxdWVzdBI5CgZwYXJlbnQYASABKAlCKeBBAvpBIwohd29ya2Zs",
-            "b3dzLmdvb2dsZWFwaXMuY29tL1dvcmtmbG93EhEKCXBhZ2Vfc2l6ZRgCIAEo",
-            "BRISCgpwYWdlX3Rva2VuGAMgASgJEkYKBHZpZXcYBCABKA4yMy5nb29nbGUu",
-            "Y2xvdWQud29ya2Zsb3dzLmV4ZWN1dGlvbnMudjEuRXhlY3V0aW9uVmlld0ID",
-            "4EEBInYKFkxpc3RFeGVjdXRpb25zUmVzcG9uc2USQwoKZXhlY3V0aW9ucxgB",
-            "IAMoCzIvLmdvb2dsZS5jbG91ZC53b3JrZmxvd3MuZXhlY3V0aW9ucy52MS5F",
-            "eGVjdXRpb24SFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIpwBChZDcmVhdGVF",
-            "eGVjdXRpb25SZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEjCiF3b3Jr",
-            "Zmxvd3MuZ29vZ2xlYXBpcy5jb20vV29ya2Zsb3cSRwoJZXhlY3V0aW9uGAIg",
-            "ASgLMi8uZ29vZ2xlLmNsb3VkLndvcmtmbG93cy5leGVjdXRpb25zLnYxLkV4",
-            "ZWN1dGlvbkID4EECIqABChNHZXRFeGVjdXRpb25SZXF1ZXN0EkEKBG5hbWUY",
-            "ASABKAlCM+BBAvpBLQord29ya2Zsb3dleGVjdXRpb25zLmdvb2dsZWFwaXMu",
-            "Y29tL0V4ZWN1dGlvbhJGCgR2aWV3GAIgASgOMjMuZ29vZ2xlLmNsb3VkLndv",
-            "cmtmbG93cy5leGVjdXRpb25zLnYxLkV4ZWN1dGlvblZpZXdCA+BBASJbChZD",
-            "YW5jZWxFeGVjdXRpb25SZXF1ZXN0EkEKBG5hbWUYASABKAlCM+BBAvpBLQor",
-            "d29ya2Zsb3dleGVjdXRpb25zLmdvb2dsZWFwaXMuY29tL0V4ZWN1dGlvbipE",
-            "Cg1FeGVjdXRpb25WaWV3Eh4KGkVYRUNVVElPTl9WSUVXX1VOU1BFQ0lGSUVE",
-            "EAASCQoFQkFTSUMQARIICgRGVUxMEAIywwcKCkV4ZWN1dGlvbnMS2AEKDkxp",
-            "c3RFeGVjdXRpb25zEjsuZ29vZ2xlLmNsb3VkLndvcmtmbG93cy5leGVjdXRp",
-            "b25zLnYxLkxpc3RFeGVjdXRpb25zUmVxdWVzdBo8Lmdvb2dsZS5jbG91ZC53",
-            "b3JrZmxvd3MuZXhlY3V0aW9ucy52MS5MaXN0RXhlY3V0aW9uc1Jlc3BvbnNl",
-            "IkuC0+STAjwSOi92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyov",
-            "d29ya2Zsb3dzLyp9L2V4ZWN1dGlvbnPaQQZwYXJlbnQS4gEKD0NyZWF0ZUV4",
-            "ZWN1dGlvbhI8Lmdvb2dsZS5jbG91ZC53b3JrZmxvd3MuZXhlY3V0aW9ucy52",
-            "MS5DcmVhdGVFeGVjdXRpb25SZXF1ZXN0Gi8uZ29vZ2xlLmNsb3VkLndvcmtm",
-            "bG93cy5leGVjdXRpb25zLnYxLkV4ZWN1dGlvbiJggtPkkwJHIjovdjEve3Bh",
-            "cmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3dvcmtmbG93cy8qfS9leGVj",
-            "dXRpb25zOglleGVjdXRpb27aQRBwYXJlbnQsZXhlY3V0aW9uEsUBCgxHZXRF",
-            "eGVjdXRpb24SOS5nb29nbGUuY2xvdWQud29ya2Zsb3dzLmV4ZWN1dGlvbnMu",
-            "djEuR2V0RXhlY3V0aW9uUmVxdWVzdBovLmdvb2dsZS5jbG91ZC53b3JrZmxv",
-            "d3MuZXhlY3V0aW9ucy52MS5FeGVjdXRpb24iSYLT5JMCPBI6L3YxL3tuYW1l",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyovd29ya2Zsb3dzLyovZXhlY3V0aW9u",
-            "cy8qfdpBBG5hbWUS1QEKD0NhbmNlbEV4ZWN1dGlvbhI8Lmdvb2dsZS5jbG91",
-            "ZC53b3JrZmxvd3MuZXhlY3V0aW9ucy52MS5DYW5jZWxFeGVjdXRpb25SZXF1",
+            "bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxoeZ29vZ2xlL3Byb3RvYnVm",
+            "L2R1cmF0aW9uLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnBy",
+            "b3RvIr0OCglFeGVjdXRpb24SEQoEbmFtZRgBIAEoCUID4EEDEjMKCnN0YXJ0",
+            "X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
+            "MQoIZW5kX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "QgPgQQMSMAoIZHVyYXRpb24YDCABKAsyGS5nb29nbGUucHJvdG9idWYuRHVy",
+            "YXRpb25CA+BBAxJJCgVzdGF0ZRgEIAEoDjI1Lmdvb2dsZS5jbG91ZC53b3Jr",
+            "Zmxvd3MuZXhlY3V0aW9ucy52MS5FeGVjdXRpb24uU3RhdGVCA+BBAxIQCghh",
+            "cmd1bWVudBgFIAEoCRITCgZyZXN1bHQYBiABKAlCA+BBAxJJCgVlcnJvchgH",
+            "IAEoCzI1Lmdvb2dsZS5jbG91ZC53b3JrZmxvd3MuZXhlY3V0aW9ucy52MS5F",
+            "eGVjdXRpb24uRXJyb3JCA+BBAxIhChR3b3JrZmxvd19yZXZpc2lvbl9pZBgI",
+            "IAEoCUID4EEDElQKDmNhbGxfbG9nX2xldmVsGAkgASgOMjwuZ29vZ2xlLmNs",
+            "b3VkLndvcmtmbG93cy5leGVjdXRpb25zLnYxLkV4ZWN1dGlvbi5DYWxsTG9n",
+            "TGV2ZWwSSwoGc3RhdHVzGAogASgLMjYuZ29vZ2xlLmNsb3VkLndvcmtmbG93",
+            "cy5leGVjdXRpb25zLnYxLkV4ZWN1dGlvbi5TdGF0dXNCA+BBAxJLCgZsYWJl",
+            "bHMYCyADKAsyOy5nb29nbGUuY2xvdWQud29ya2Zsb3dzLmV4ZWN1dGlvbnMu",
+            "djEuRXhlY3V0aW9uLkxhYmVsc0VudHJ5ElQKC3N0YXRlX2Vycm9yGA0gASgL",
+            "MjouZ29vZ2xlLmNsb3VkLndvcmtmbG93cy5leGVjdXRpb25zLnYxLkV4ZWN1",
+            "dGlvbi5TdGF0ZUVycm9yQgPgQQMaygEKEVN0YWNrVHJhY2VFbGVtZW50EgwK",
+            "BHN0ZXAYASABKAkSDwoHcm91dGluZRgCIAEoCRJcCghwb3NpdGlvbhgDIAEo",
+            "CzJKLmdvb2dsZS5jbG91ZC53b3JrZmxvd3MuZXhlY3V0aW9ucy52MS5FeGVj",
+            "dXRpb24uU3RhY2tUcmFjZUVsZW1lbnQuUG9zaXRpb24aOAoIUG9zaXRpb24S",
+            "DAoEbGluZRgBIAEoAxIOCgZjb2x1bW4YAiABKAMSDgoGbGVuZ3RoGAMgASgD",
+            "GmEKClN0YWNrVHJhY2USUwoIZWxlbWVudHMYASADKAsyQS5nb29nbGUuY2xv",
+            "dWQud29ya2Zsb3dzLmV4ZWN1dGlvbnMudjEuRXhlY3V0aW9uLlN0YWNrVHJh",
+            "Y2VFbGVtZW50GnoKBUVycm9yEg8KB3BheWxvYWQYASABKAkSDwoHY29udGV4",
+            "dBgCIAEoCRJPCgtzdGFja190cmFjZRgDIAEoCzI6Lmdvb2dsZS5jbG91ZC53",
+            "b3JrZmxvd3MuZXhlY3V0aW9ucy52MS5FeGVjdXRpb24uU3RhY2tUcmFjZRqD",
+            "AQoGU3RhdHVzElIKDWN1cnJlbnRfc3RlcHMYASADKAsyOy5nb29nbGUuY2xv",
+            "dWQud29ya2Zsb3dzLmV4ZWN1dGlvbnMudjEuRXhlY3V0aW9uLlN0YXR1cy5T",
+            "dGVwGiUKBFN0ZXASDwoHcm91dGluZRgBIAEoCRIMCgRzdGVwGAIgASgJGpkB",
+            "CgpTdGF0ZUVycm9yEg8KB2RldGFpbHMYASABKAkSTQoEdHlwZRgCIAEoDjI/",
+            "Lmdvb2dsZS5jbG91ZC53b3JrZmxvd3MuZXhlY3V0aW9ucy52MS5FeGVjdXRp",
+            "b24uU3RhdGVFcnJvci5UeXBlIisKBFR5cGUSFAoQVFlQRV9VTlNQRUNJRklF",
+            "RBAAEg0KCUtNU19FUlJPUhABGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEo",
+            "CRINCgV2YWx1ZRgCIAEoCToCOAEicQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVD",
+            "SUZJRUQQABIKCgZBQ1RJVkUQARINCglTVUNDRUVERUQQAhIKCgZGQUlMRUQQ",
+            "AxINCglDQU5DRUxMRUQQBBIPCgtVTkFWQUlMQUJMRRAFEgoKBlFVRVVFRBAG",
+            "ImQKDENhbGxMb2dMZXZlbBIeChpDQUxMX0xPR19MRVZFTF9VTlNQRUNJRklF",
+            "RBAAEhEKDUxPR19BTExfQ0FMTFMQARITCg9MT0dfRVJST1JTX09OTFkQAhIM",
+            "CghMT0dfTk9ORRADOoYB6kGCAQord29ya2Zsb3dleGVjdXRpb25zLmdvb2ds",
+            "ZWFwaXMuY29tL0V4ZWN1dGlvbhJTcHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
+            "aW9ucy97bG9jYXRpb259L3dvcmtmbG93cy97d29ya2Zsb3d9L2V4ZWN1dGlv",
+            "bnMve2V4ZWN1dGlvbn0i7QEKFUxpc3RFeGVjdXRpb25zUmVxdWVzdBI5CgZw",
+            "YXJlbnQYASABKAlCKeBBAvpBIwohd29ya2Zsb3dzLmdvb2dsZWFwaXMuY29t",
+            "L1dvcmtmbG93EhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMg",
+            "ASgJEkYKBHZpZXcYBCABKA4yMy5nb29nbGUuY2xvdWQud29ya2Zsb3dzLmV4",
+            "ZWN1dGlvbnMudjEuRXhlY3V0aW9uVmlld0ID4EEBEhMKBmZpbHRlchgFIAEo",
+            "CUID4EEBEhUKCG9yZGVyX2J5GAYgASgJQgPgQQEidgoWTGlzdEV4ZWN1dGlv",
+            "bnNSZXNwb25zZRJDCgpleGVjdXRpb25zGAEgAygLMi8uZ29vZ2xlLmNsb3Vk",
+            "LndvcmtmbG93cy5leGVjdXRpb25zLnYxLkV4ZWN1dGlvbhIXCg9uZXh0X3Bh",
+            "Z2VfdG9rZW4YAiABKAkinAEKFkNyZWF0ZUV4ZWN1dGlvblJlcXVlc3QSOQoG",
+            "cGFyZW50GAEgASgJQingQQL6QSMKIXdvcmtmbG93cy5nb29nbGVhcGlzLmNv",
+            "bS9Xb3JrZmxvdxJHCglleGVjdXRpb24YAiABKAsyLy5nb29nbGUuY2xvdWQu",
+            "d29ya2Zsb3dzLmV4ZWN1dGlvbnMudjEuRXhlY3V0aW9uQgPgQQIioAEKE0dl",
+            "dEV4ZWN1dGlvblJlcXVlc3QSQQoEbmFtZRgBIAEoCUIz4EEC+kEtCit3b3Jr",
+            "Zmxvd2V4ZWN1dGlvbnMuZ29vZ2xlYXBpcy5jb20vRXhlY3V0aW9uEkYKBHZp",
+            "ZXcYAiABKA4yMy5nb29nbGUuY2xvdWQud29ya2Zsb3dzLmV4ZWN1dGlvbnMu",
+            "djEuRXhlY3V0aW9uVmlld0ID4EEBIlsKFkNhbmNlbEV4ZWN1dGlvblJlcXVl",
+            "c3QSQQoEbmFtZRgBIAEoCUIz4EEC+kEtCit3b3JrZmxvd2V4ZWN1dGlvbnMu",
+            "Z29vZ2xlYXBpcy5jb20vRXhlY3V0aW9uKkQKDUV4ZWN1dGlvblZpZXcSHgoa",
+            "RVhFQ1VUSU9OX1ZJRVdfVU5TUEVDSUZJRUQQABIJCgVCQVNJQxABEggKBEZV",
+            "TEwQAjLDBwoKRXhlY3V0aW9ucxLYAQoOTGlzdEV4ZWN1dGlvbnMSOy5nb29n",
+            "bGUuY2xvdWQud29ya2Zsb3dzLmV4ZWN1dGlvbnMudjEuTGlzdEV4ZWN1dGlv",
+            "bnNSZXF1ZXN0GjwuZ29vZ2xlLmNsb3VkLndvcmtmbG93cy5leGVjdXRpb25z",
+            "LnYxLkxpc3RFeGVjdXRpb25zUmVzcG9uc2UiS4LT5JMCPBI6L3YxL3twYXJl",
+            "bnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi93b3JrZmxvd3MvKn0vZXhlY3V0",
+            "aW9uc9pBBnBhcmVudBLiAQoPQ3JlYXRlRXhlY3V0aW9uEjwuZ29vZ2xlLmNs",
+            "b3VkLndvcmtmbG93cy5leGVjdXRpb25zLnYxLkNyZWF0ZUV4ZWN1dGlvblJl",
+            "cXVlc3QaLy5nb29nbGUuY2xvdWQud29ya2Zsb3dzLmV4ZWN1dGlvbnMudjEu",
+            "RXhlY3V0aW9uImCC0+STAkciOi92MS97cGFyZW50PXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyovd29ya2Zsb3dzLyp9L2V4ZWN1dGlvbnM6CWV4ZWN1dGlvbtpB",
+            "EHBhcmVudCxleGVjdXRpb24SxQEKDEdldEV4ZWN1dGlvbhI5Lmdvb2dsZS5j",
+            "bG91ZC53b3JrZmxvd3MuZXhlY3V0aW9ucy52MS5HZXRFeGVjdXRpb25SZXF1",
             "ZXN0Gi8uZ29vZ2xlLmNsb3VkLndvcmtmbG93cy5leGVjdXRpb25zLnYxLkV4",
-            "ZWN1dGlvbiJTgtPkkwJGIkEvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
-            "bnMvKi93b3JrZmxvd3MvKi9leGVjdXRpb25zLyp9OmNhbmNlbDoBKtpBBG5h",
-            "bWUaVcpBIXdvcmtmbG93ZXhlY3V0aW9ucy5nb29nbGVhcGlzLmNvbdJBLmh0",
-            "dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C",
-            "6wEKKGNvbS5nb29nbGUuY2xvdWQud29ya2Zsb3dzLmV4ZWN1dGlvbnMudjFC",
-            "D0V4ZWN1dGlvbnNQcm90b1ABWkhjbG91ZC5nb29nbGUuY29tL2dvL3dvcmtm",
-            "bG93cy9leGVjdXRpb25zL2FwaXYxL2V4ZWN1dGlvbnNwYjtleGVjdXRpb25z",
-            "cGLqQWEKIXdvcmtmbG93cy5nb29nbGVhcGlzLmNvbS9Xb3JrZmxvdxI8cHJv",
-            "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3dvcmtmbG93",
-            "cy97d29ya2Zsb3d9YgZwcm90bzM="));
+            "ZWN1dGlvbiJJgtPkkwI8EjovdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKi93b3JrZmxvd3MvKi9leGVjdXRpb25zLyp92kEEbmFtZRLVAQoPQ2Fu",
+            "Y2VsRXhlY3V0aW9uEjwuZ29vZ2xlLmNsb3VkLndvcmtmbG93cy5leGVjdXRp",
+            "b25zLnYxLkNhbmNlbEV4ZWN1dGlvblJlcXVlc3QaLy5nb29nbGUuY2xvdWQu",
+            "d29ya2Zsb3dzLmV4ZWN1dGlvbnMudjEuRXhlY3V0aW9uIlOC0+STAkYiQS92",
+            "MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3dvcmtmbG93cy8qL2V4",
+            "ZWN1dGlvbnMvKn06Y2FuY2VsOgEq2kEEbmFtZRpVykEhd29ya2Zsb3dleGVj",
+            "dXRpb25zLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBp",
+            "cy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybULrAQooY29tLmdvb2dsZS5jbG91",
+            "ZC53b3JrZmxvd3MuZXhlY3V0aW9ucy52MUIPRXhlY3V0aW9uc1Byb3RvUAFa",
+            "SGNsb3VkLmdvb2dsZS5jb20vZ28vd29ya2Zsb3dzL2V4ZWN1dGlvbnMvYXBp",
+            "djEvZXhlY3V0aW9uc3BiO2V4ZWN1dGlvbnNwYupBYQohd29ya2Zsb3dzLmdv",
+            "b2dsZWFwaXMuY29tL1dvcmtmbG93Ejxwcm9qZWN0cy97cHJvamVjdH0vbG9j",
+            "YXRpb25zL3tsb2NhdGlvbn0vd29ya2Zsb3dzL3t3b3JrZmxvd31iBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Workflows.Executions.V1.ExecutionView), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.Executions.V1.Execution), global::Google.Cloud.Workflows.Executions.V1.Execution.Parser, new[]{ "Name", "StartTime", "EndTime", "State", "Argument", "Result", "Error", "WorkflowRevisionId", "CallLogLevel" }, null, new[]{ typeof(global::Google.Cloud.Workflows.Executions.V1.Execution.Types.State), typeof(global::Google.Cloud.Workflows.Executions.V1.Execution.Types.CallLogLevel) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StackTraceElement), global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StackTraceElement.Parser, new[]{ "Step", "Routine", "Position" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StackTraceElement.Types.Position), global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StackTraceElement.Types.Position.Parser, new[]{ "Line", "Column", "Length" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.Executions.V1.Execution), global::Google.Cloud.Workflows.Executions.V1.Execution.Parser, new[]{ "Name", "StartTime", "EndTime", "Duration", "State", "Argument", "Result", "Error", "WorkflowRevisionId", "CallLogLevel", "Status", "Labels", "StateError" }, null, new[]{ typeof(global::Google.Cloud.Workflows.Executions.V1.Execution.Types.State), typeof(global::Google.Cloud.Workflows.Executions.V1.Execution.Types.CallLogLevel) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StackTraceElement), global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StackTraceElement.Parser, new[]{ "Step", "Routine", "Position" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StackTraceElement.Types.Position), global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StackTraceElement.Types.Position.Parser, new[]{ "Line", "Column", "Length" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StackTrace), global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StackTrace.Parser, new[]{ "Elements" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.Executions.V1.Execution.Types.Error), global::Google.Cloud.Workflows.Executions.V1.Execution.Types.Error.Parser, new[]{ "Payload", "Context", "StackTrace" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.Executions.V1.ListExecutionsRequest), global::Google.Cloud.Workflows.Executions.V1.ListExecutionsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "View" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.Executions.V1.Execution.Types.Error), global::Google.Cloud.Workflows.Executions.V1.Execution.Types.Error.Parser, new[]{ "Payload", "Context", "StackTrace" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.Executions.V1.Execution.Types.Status), global::Google.Cloud.Workflows.Executions.V1.Execution.Types.Status.Parser, new[]{ "CurrentSteps" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.Executions.V1.Execution.Types.Status.Types.Step), global::Google.Cloud.Workflows.Executions.V1.Execution.Types.Status.Types.Step.Parser, new[]{ "Routine", "Step_" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StateError), global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StateError.Parser, new[]{ "Details", "Type" }, null, new[]{ typeof(global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StateError.Types.Type) }, null, null),
+            null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.Executions.V1.ListExecutionsRequest), global::Google.Cloud.Workflows.Executions.V1.ListExecutionsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "View", "Filter", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.Executions.V1.ListExecutionsResponse), global::Google.Cloud.Workflows.Executions.V1.ListExecutionsResponse.Parser, new[]{ "Executions", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.Executions.V1.CreateExecutionRequest), global::Google.Cloud.Workflows.Executions.V1.CreateExecutionRequest.Parser, new[]{ "Parent", "Execution" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.Executions.V1.GetExecutionRequest), global::Google.Cloud.Workflows.Executions.V1.GetExecutionRequest.Parser, new[]{ "Name", "View" }, null, null, null, null),
@@ -128,8 +148,8 @@ namespace Google.Cloud.Workflows.Executions.V1 {
     [pbr::OriginalName("EXECUTION_VIEW_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
     /// Includes only basic metadata about the execution.
-    /// Following fields are returned: name, start_time, end_time, state
-    /// and workflow_revision_id.
+    /// The following fields are returned: name, start_time, end_time, duration,
+    /// state, and workflow_revision_id.
     /// </summary>
     [pbr::OriginalName("BASIC")] Basic = 1,
     /// <summary>
@@ -182,12 +202,16 @@ namespace Google.Cloud.Workflows.Executions.V1 {
       name_ = other.name_;
       startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
       endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      duration_ = other.duration_ != null ? other.duration_.Clone() : null;
       state_ = other.state_;
       argument_ = other.argument_;
       result_ = other.result_;
       error_ = other.error_ != null ? other.error_.Clone() : null;
       workflowRevisionId_ = other.workflowRevisionId_;
       callLogLevel_ = other.callLogLevel_;
+      status_ = other.status_ != null ? other.status_.Clone() : null;
+      labels_ = other.labels_.Clone();
+      stateError_ = other.stateError_ != null ? other.stateError_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -241,6 +265,21 @@ namespace Google.Cloud.Workflows.Executions.V1 {
       get { return endTime_; }
       set {
         endTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "duration" field.</summary>
+    public const int DurationFieldNumber = 12;
+    private global::Google.Protobuf.WellKnownTypes.Duration duration_;
+    /// <summary>
+    /// Output only. Measures the duration of the execution.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration Duration {
+      get { return duration_; }
+      set {
+        duration_ = value;
       }
     }
 
@@ -342,6 +381,59 @@ namespace Google.Cloud.Workflows.Executions.V1 {
       }
     }
 
+    /// <summary>Field number for the "status" field.</summary>
+    public const int StatusFieldNumber = 10;
+    private global::Google.Cloud.Workflows.Executions.V1.Execution.Types.Status status_;
+    /// <summary>
+    /// Output only. Status tracks the current steps and progress data of this
+    /// execution.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Workflows.Executions.V1.Execution.Types.Status Status {
+      get { return status_; }
+      set {
+        status_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "labels" field.</summary>
+    public const int LabelsFieldNumber = 11;
+    private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 90);
+    private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Labels associated with this execution.
+    /// Labels can contain at most 64 entries. Keys and values can be no longer
+    /// than 63 characters and can only contain lowercase letters, numeric
+    /// characters, underscores, and dashes. Label keys must start with a letter.
+    /// International characters are allowed.
+    /// By default, labels are inherited from the workflow but are overridden by
+    /// any labels associated with the execution.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> Labels {
+      get { return labels_; }
+    }
+
+    /// <summary>Field number for the "state_error" field.</summary>
+    public const int StateErrorFieldNumber = 13;
+    private global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StateError stateError_;
+    /// <summary>
+    /// Output only. Error regarding the state of the Execution resource. For
+    /// example, this field will have error details if the execution data is
+    /// unavailable due to revoked KMS key permissions.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StateError StateError {
+      get { return stateError_; }
+      set {
+        stateError_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -360,12 +452,16 @@ namespace Google.Cloud.Workflows.Executions.V1 {
       if (Name != other.Name) return false;
       if (!object.Equals(StartTime, other.StartTime)) return false;
       if (!object.Equals(EndTime, other.EndTime)) return false;
+      if (!object.Equals(Duration, other.Duration)) return false;
       if (State != other.State) return false;
       if (Argument != other.Argument) return false;
       if (Result != other.Result) return false;
       if (!object.Equals(Error, other.Error)) return false;
       if (WorkflowRevisionId != other.WorkflowRevisionId) return false;
       if (CallLogLevel != other.CallLogLevel) return false;
+      if (!object.Equals(Status, other.Status)) return false;
+      if (!Labels.Equals(other.Labels)) return false;
+      if (!object.Equals(StateError, other.StateError)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -376,12 +472,16 @@ namespace Google.Cloud.Workflows.Executions.V1 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (startTime_ != null) hash ^= StartTime.GetHashCode();
       if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      if (duration_ != null) hash ^= Duration.GetHashCode();
       if (State != global::Google.Cloud.Workflows.Executions.V1.Execution.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (Argument.Length != 0) hash ^= Argument.GetHashCode();
       if (Result.Length != 0) hash ^= Result.GetHashCode();
       if (error_ != null) hash ^= Error.GetHashCode();
       if (WorkflowRevisionId.Length != 0) hash ^= WorkflowRevisionId.GetHashCode();
       if (CallLogLevel != global::Google.Cloud.Workflows.Executions.V1.Execution.Types.CallLogLevel.Unspecified) hash ^= CallLogLevel.GetHashCode();
+      if (status_ != null) hash ^= Status.GetHashCode();
+      hash ^= Labels.GetHashCode();
+      if (stateError_ != null) hash ^= StateError.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -436,6 +536,19 @@ namespace Google.Cloud.Workflows.Executions.V1 {
         output.WriteRawTag(72);
         output.WriteEnum((int) CallLogLevel);
       }
+      if (status_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(Status);
+      }
+      labels_.WriteTo(output, _map_labels_codec);
+      if (duration_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(Duration);
+      }
+      if (stateError_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(StateError);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -482,6 +595,19 @@ namespace Google.Cloud.Workflows.Executions.V1 {
         output.WriteRawTag(72);
         output.WriteEnum((int) CallLogLevel);
       }
+      if (status_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(Status);
+      }
+      labels_.WriteTo(ref output, _map_labels_codec);
+      if (duration_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(Duration);
+      }
+      if (stateError_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(StateError);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -501,6 +627,9 @@ namespace Google.Cloud.Workflows.Executions.V1 {
       if (endTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
       }
+      if (duration_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Duration);
+      }
       if (State != global::Google.Cloud.Workflows.Executions.V1.Execution.Types.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
@@ -518,6 +647,13 @@ namespace Google.Cloud.Workflows.Executions.V1 {
       }
       if (CallLogLevel != global::Google.Cloud.Workflows.Executions.V1.Execution.Types.CallLogLevel.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CallLogLevel);
+      }
+      if (status_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Status);
+      }
+      size += labels_.CalculateSize(_map_labels_codec);
+      if (stateError_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StateError);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -546,6 +682,12 @@ namespace Google.Cloud.Workflows.Executions.V1 {
         }
         EndTime.MergeFrom(other.EndTime);
       }
+      if (other.duration_ != null) {
+        if (duration_ == null) {
+          Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        Duration.MergeFrom(other.Duration);
+      }
       if (other.State != global::Google.Cloud.Workflows.Executions.V1.Execution.Types.State.Unspecified) {
         State = other.State;
       }
@@ -566,6 +708,19 @@ namespace Google.Cloud.Workflows.Executions.V1 {
       }
       if (other.CallLogLevel != global::Google.Cloud.Workflows.Executions.V1.Execution.Types.CallLogLevel.Unspecified) {
         CallLogLevel = other.CallLogLevel;
+      }
+      if (other.status_ != null) {
+        if (status_ == null) {
+          Status = new global::Google.Cloud.Workflows.Executions.V1.Execution.Types.Status();
+        }
+        Status.MergeFrom(other.Status);
+      }
+      labels_.MergeFrom(other.labels_);
+      if (other.stateError_ != null) {
+        if (stateError_ == null) {
+          StateError = new global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StateError();
+        }
+        StateError.MergeFrom(other.StateError);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -625,6 +780,31 @@ namespace Google.Cloud.Workflows.Executions.V1 {
           }
           case 72: {
             CallLogLevel = (global::Google.Cloud.Workflows.Executions.V1.Execution.Types.CallLogLevel) input.ReadEnum();
+            break;
+          }
+          case 82: {
+            if (status_ == null) {
+              Status = new global::Google.Cloud.Workflows.Executions.V1.Execution.Types.Status();
+            }
+            input.ReadMessage(Status);
+            break;
+          }
+          case 90: {
+            labels_.AddEntriesFrom(input, _map_labels_codec);
+            break;
+          }
+          case 98: {
+            if (duration_ == null) {
+              Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(Duration);
+            break;
+          }
+          case 106: {
+            if (stateError_ == null) {
+              StateError = new global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StateError();
+            }
+            input.ReadMessage(StateError);
             break;
           }
         }
@@ -687,6 +867,31 @@ namespace Google.Cloud.Workflows.Executions.V1 {
             CallLogLevel = (global::Google.Cloud.Workflows.Executions.V1.Execution.Types.CallLogLevel) input.ReadEnum();
             break;
           }
+          case 82: {
+            if (status_ == null) {
+              Status = new global::Google.Cloud.Workflows.Executions.V1.Execution.Types.Status();
+            }
+            input.ReadMessage(Status);
+            break;
+          }
+          case 90: {
+            labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
+          case 98: {
+            if (duration_ == null) {
+              Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(Duration);
+            break;
+          }
+          case 106: {
+            if (stateError_ == null) {
+              StateError = new global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StateError();
+            }
+            input.ReadMessage(StateError);
+            break;
+          }
         }
       }
     }
@@ -722,6 +927,14 @@ namespace Google.Cloud.Workflows.Executions.V1 {
         /// The execution was stopped intentionally.
         /// </summary>
         [pbr::OriginalName("CANCELLED")] Cancelled = 4,
+        /// <summary>
+        /// Execution data is unavailable. See the `state_error` field.
+        /// </summary>
+        [pbr::OriginalName("UNAVAILABLE")] Unavailable = 5,
+        /// <summary>
+        /// Request has been placed in the backlog for processing at a later time.
+        /// </summary>
+        [pbr::OriginalName("QUEUED")] Queued = 6,
       }
 
       /// <summary>
@@ -730,7 +943,7 @@ namespace Google.Cloud.Workflows.Executions.V1 {
       /// </summary>
       public enum CallLogLevel {
         /// <summary>
-        /// No call logging specified.
+        /// No call logging level specified.
         /// </summary>
         [pbr::OriginalName("CALL_LOG_LEVEL_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
@@ -742,6 +955,10 @@ namespace Google.Cloud.Workflows.Executions.V1 {
         /// Log only exceptions that are raised from call steps within workflows.
         /// </summary>
         [pbr::OriginalName("LOG_ERRORS_ONLY")] LogErrorsOnly = 2,
+        /// <summary>
+        /// Explicitly log nothing.
+        /// </summary>
+        [pbr::OriginalName("LOG_NONE")] LogNone = 3,
       }
 
       /// <summary>
@@ -1782,6 +1999,696 @@ namespace Google.Cloud.Workflows.Executions.V1 {
 
       }
 
+      /// <summary>
+      /// Represents the current status of this execution.
+      /// </summary>
+      public sealed partial class Status : pb::IMessage<Status>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Status> _parser = new pb::MessageParser<Status>(() => new Status());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Status> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Workflows.Executions.V1.Execution.Descriptor.NestedTypes[3]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Status() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Status(Status other) : this() {
+          currentSteps_ = other.currentSteps_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Status Clone() {
+          return new Status(this);
+        }
+
+        /// <summary>Field number for the "current_steps" field.</summary>
+        public const int CurrentStepsFieldNumber = 1;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Workflows.Executions.V1.Execution.Types.Status.Types.Step> _repeated_currentSteps_codec
+            = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Workflows.Executions.V1.Execution.Types.Status.Types.Step.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Workflows.Executions.V1.Execution.Types.Status.Types.Step> currentSteps_ = new pbc::RepeatedField<global::Google.Cloud.Workflows.Executions.V1.Execution.Types.Status.Types.Step>();
+        /// <summary>
+        /// A list of currently executing or last executed step names for the
+        /// workflow execution currently running. If the workflow has succeeded or
+        /// failed, this is the last attempted or executed step. Presently, if the
+        /// current step is inside a subworkflow, the list only includes that step.
+        /// In the future, the list will contain items for each step in the call
+        /// stack, starting with the outermost step in the `main` subworkflow, and
+        /// ending with the most deeply nested step.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.Workflows.Executions.V1.Execution.Types.Status.Types.Step> CurrentSteps {
+          get { return currentSteps_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Status);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Status other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!currentSteps_.Equals(other.currentSteps_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= currentSteps_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          currentSteps_.WriteTo(output, _repeated_currentSteps_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          currentSteps_.WriteTo(ref output, _repeated_currentSteps_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += currentSteps_.CalculateSize(_repeated_currentSteps_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Status other) {
+          if (other == null) {
+            return;
+          }
+          currentSteps_.Add(other.currentSteps_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                currentSteps_.AddEntriesFrom(input, _repeated_currentSteps_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                currentSteps_.AddEntriesFrom(ref input, _repeated_currentSteps_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the Status message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Represents a step of the workflow this execution is running.
+          /// </summary>
+          public sealed partial class Step : pb::IMessage<Step>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<Step> _parser = new pb::MessageParser<Step>(() => new Step());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<Step> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Workflows.Executions.V1.Execution.Types.Status.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public Step() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public Step(Step other) : this() {
+              routine_ = other.routine_;
+              step_ = other.step_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public Step Clone() {
+              return new Step(this);
+            }
+
+            /// <summary>Field number for the "routine" field.</summary>
+            public const int RoutineFieldNumber = 1;
+            private string routine_ = "";
+            /// <summary>
+            /// Name of a routine within the workflow.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string Routine {
+              get { return routine_; }
+              set {
+                routine_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "step" field.</summary>
+            public const int Step_FieldNumber = 2;
+            private string step_ = "";
+            /// <summary>
+            /// Name of a step within the routine.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string Step_ {
+              get { return step_; }
+              set {
+                step_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as Step);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(Step other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (Routine != other.Routine) return false;
+              if (Step_ != other.Step_) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (Routine.Length != 0) hash ^= Routine.GetHashCode();
+              if (Step_.Length != 0) hash ^= Step_.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (Routine.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Routine);
+              }
+              if (Step_.Length != 0) {
+                output.WriteRawTag(18);
+                output.WriteString(Step_);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (Routine.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Routine);
+              }
+              if (Step_.Length != 0) {
+                output.WriteRawTag(18);
+                output.WriteString(Step_);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (Routine.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(Routine);
+              }
+              if (Step_.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(Step_);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(Step other) {
+              if (other == null) {
+                return;
+              }
+              if (other.Routine.Length != 0) {
+                Routine = other.Routine;
+              }
+              if (other.Step_.Length != 0) {
+                Step_ = other.Step_;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    Routine = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    Step_ = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    Routine = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    Step_ = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
+      /// Describes an error related to the current state of the Execution resource.
+      /// </summary>
+      public sealed partial class StateError : pb::IMessage<StateError>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<StateError> _parser = new pb::MessageParser<StateError>(() => new StateError());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<StateError> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Workflows.Executions.V1.Execution.Descriptor.NestedTypes[4]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StateError() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StateError(StateError other) : this() {
+          details_ = other.details_;
+          type_ = other.type_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StateError Clone() {
+          return new StateError(this);
+        }
+
+        /// <summary>Field number for the "details" field.</summary>
+        public const int DetailsFieldNumber = 1;
+        private string details_ = "";
+        /// <summary>
+        /// Provides specifics about the error.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Details {
+          get { return details_; }
+          set {
+            details_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "type" field.</summary>
+        public const int TypeFieldNumber = 2;
+        private global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StateError.Types.Type type_ = global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StateError.Types.Type.Unspecified;
+        /// <summary>
+        /// The type of this state error.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StateError.Types.Type Type {
+          get { return type_; }
+          set {
+            type_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as StateError);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(StateError other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Details != other.Details) return false;
+          if (Type != other.Type) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Details.Length != 0) hash ^= Details.GetHashCode();
+          if (Type != global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StateError.Types.Type.Unspecified) hash ^= Type.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Details.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Details);
+          }
+          if (Type != global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StateError.Types.Type.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) Type);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Details.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Details);
+          }
+          if (Type != global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StateError.Types.Type.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) Type);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Details.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Details);
+          }
+          if (Type != global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StateError.Types.Type.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(StateError other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Details.Length != 0) {
+            Details = other.Details;
+          }
+          if (other.Type != global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StateError.Types.Type.Unspecified) {
+            Type = other.Type;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Details = input.ReadString();
+                break;
+              }
+              case 16: {
+                Type = (global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StateError.Types.Type) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Details = input.ReadString();
+                break;
+              }
+              case 16: {
+                Type = (global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StateError.Types.Type) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the StateError message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Describes the possible types of a state error.
+          /// </summary>
+          public enum Type {
+            /// <summary>
+            /// No type specified.
+            /// </summary>
+            [pbr::OriginalName("TYPE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Caused by an issue with KMS.
+            /// </summary>
+            [pbr::OriginalName("KMS_ERROR")] KmsError = 1,
+          }
+
+        }
+        #endregion
+
+      }
+
     }
     #endregion
 
@@ -1830,6 +2737,8 @@ namespace Google.Cloud.Workflows.Executions.V1 {
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
       view_ = other.view_;
+      filter_ = other.filter_;
+      orderBy_ = other.orderBy_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1860,7 +2769,7 @@ namespace Google.Cloud.Workflows.Executions.V1 {
     private int pageSize_;
     /// <summary>
     /// Maximum number of executions to return per call.
-    /// Max supported value depends on the selected Execution view: it's 10000 for
+    /// Max supported value depends on the selected Execution view: it's 1000 for
     /// BASIC and 100 for FULL. The default value used if the field is not
     /// specified is 100, regardless of the selected view. Values greater than
     /// the max value will be coerced down to it.
@@ -1883,6 +2792,9 @@ namespace Google.Cloud.Workflows.Executions.V1 {
     ///
     /// When paginating, all other parameters provided to `ListExecutions` must
     /// match the call that provided the page token.
+    ///
+    /// Note that pagination is applied to dynamic data. The list of executions
+    /// returned can change between page requests.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1897,8 +2809,8 @@ namespace Google.Cloud.Workflows.Executions.V1 {
     public const int ViewFieldNumber = 4;
     private global::Google.Cloud.Workflows.Executions.V1.ExecutionView view_ = global::Google.Cloud.Workflows.Executions.V1.ExecutionView.Unspecified;
     /// <summary>
-    /// Optional. A view defining which fields should be filled in the returned executions.
-    /// The API will default to the BASIC view.
+    /// Optional. A view defining which fields should be filled in the returned
+    /// executions. The API will default to the BASIC view.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1906,6 +2818,42 @@ namespace Google.Cloud.Workflows.Executions.V1 {
       get { return view_; }
       set {
         view_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "filter" field.</summary>
+    public const int FilterFieldNumber = 5;
+    private string filter_ = "";
+    /// <summary>
+    /// Optional. Filters applied to the [Executions.ListExecutions] results.
+    /// The following fields are supported for filtering:
+    /// executionID, state, startTime, endTime, duration, workflowRevisionID,
+    /// stepName, and label.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Filter {
+      get { return filter_; }
+      set {
+        filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "order_by" field.</summary>
+    public const int OrderByFieldNumber = 6;
+    private string orderBy_ = "";
+    /// <summary>
+    /// Optional. The ordering applied to the [Executions.ListExecutions] results.
+    /// By default the ordering is based on descending start time.
+    /// The following fields are supported for order by:
+    /// executionID, startTime, endTime, duration, state, and workflowRevisionID.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string OrderBy {
+      get { return orderBy_; }
+      set {
+        orderBy_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1928,6 +2876,8 @@ namespace Google.Cloud.Workflows.Executions.V1 {
       if (PageSize != other.PageSize) return false;
       if (PageToken != other.PageToken) return false;
       if (View != other.View) return false;
+      if (Filter != other.Filter) return false;
+      if (OrderBy != other.OrderBy) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1939,6 +2889,8 @@ namespace Google.Cloud.Workflows.Executions.V1 {
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       if (View != global::Google.Cloud.Workflows.Executions.V1.ExecutionView.Unspecified) hash ^= View.GetHashCode();
+      if (Filter.Length != 0) hash ^= Filter.GetHashCode();
+      if (OrderBy.Length != 0) hash ^= OrderBy.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1973,6 +2925,14 @@ namespace Google.Cloud.Workflows.Executions.V1 {
         output.WriteRawTag(32);
         output.WriteEnum((int) View);
       }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Filter);
+      }
+      if (OrderBy.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(OrderBy);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1999,6 +2959,14 @@ namespace Google.Cloud.Workflows.Executions.V1 {
         output.WriteRawTag(32);
         output.WriteEnum((int) View);
       }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Filter);
+      }
+      if (OrderBy.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(OrderBy);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2020,6 +2988,12 @@ namespace Google.Cloud.Workflows.Executions.V1 {
       }
       if (View != global::Google.Cloud.Workflows.Executions.V1.ExecutionView.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) View);
+      }
+      if (Filter.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
+      }
+      if (OrderBy.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OrderBy);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2044,6 +3018,12 @@ namespace Google.Cloud.Workflows.Executions.V1 {
       }
       if (other.View != global::Google.Cloud.Workflows.Executions.V1.ExecutionView.Unspecified) {
         View = other.View;
+      }
+      if (other.Filter.Length != 0) {
+        Filter = other.Filter;
+      }
+      if (other.OrderBy.Length != 0) {
+        OrderBy = other.OrderBy;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2076,6 +3056,14 @@ namespace Google.Cloud.Workflows.Executions.V1 {
             View = (global::Google.Cloud.Workflows.Executions.V1.ExecutionView) input.ReadEnum();
             break;
           }
+          case 42: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 50: {
+            OrderBy = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -2105,6 +3093,14 @@ namespace Google.Cloud.Workflows.Executions.V1 {
           }
           case 32: {
             View = (global::Google.Cloud.Workflows.Executions.V1.ExecutionView) input.ReadEnum();
+            break;
+          }
+          case 42: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 50: {
+            OrderBy = input.ReadString();
             break;
           }
         }
@@ -2660,8 +3656,8 @@ namespace Google.Cloud.Workflows.Executions.V1 {
     public const int ViewFieldNumber = 2;
     private global::Google.Cloud.Workflows.Executions.V1.ExecutionView view_ = global::Google.Cloud.Workflows.Executions.V1.ExecutionView.Unspecified;
     /// <summary>
-    /// Optional. A view defining which fields should be filled in the returned execution.
-    /// The API will default to the FULL view.
+    /// Optional. A view defining which fields should be filled in the returned
+    /// execution. The API will default to the FULL view.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
