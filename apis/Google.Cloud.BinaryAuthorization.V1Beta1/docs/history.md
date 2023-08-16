@@ -1,5 +1,16 @@
 # Version history
 
+## Version 2.0.0-beta04, released 2023-08-16
+
+### Bug fixes
+
+- **BREAKING CHANGE** Remove unused unsupported_policy_event event_type from ContinuousValidationPodEvent ([commit 84043b5](https://github.com/googleapis/google-cloud-dotnet/commit/84043b5f6a260678e2c3fdb6dde2ac56ba64b81b))
+
+### New features
+
+- Adds support for check-based platform policy evaluation to Binary Authorization Continuous Validation logs ([commit 84043b5](https://github.com/googleapis/google-cloud-dotnet/commit/84043b5f6a260678e2c3fdb6dde2ac56ba64b81b))
+- Adds support for communicating configuration issues that prevent Continuous Validation from monitoring pods ([commit 84043b5](https://github.com/googleapis/google-cloud-dotnet/commit/84043b5f6a260678e2c3fdb6dde2ac56ba64b81b))
+
 ## Version 2.0.0-beta03, released 2023-01-19
 
 ### New features
