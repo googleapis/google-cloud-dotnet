@@ -1,5 +1,17 @@
 # Version history
 
+## Version 2.0.0-alpha12, released 2023-08-16
+
+### Bug fixes
+
+- **BREAKING CHANGE** Rename the `enterprise_daily_export_enabled` field to `fresh_daily_export_enabled` in the `BigQueryLink` resource ([commit bb7b89d](https://github.com/googleapis/google-cloud-dotnet/commit/bb7b89df13baa26b976c2829cd4c41349853bd4e))
+
+### New features
+
+- Add `UpdateConversionEvent` method to the Admin API v1 alpha ([commit bb7b89d](https://github.com/googleapis/google-cloud-dotnet/commit/bb7b89df13baa26b976c2829cd4c41349853bd4e))
+- Add the `counting_method` field to the `ConversionEvent` type ([commit bb7b89d](https://github.com/googleapis/google-cloud-dotnet/commit/bb7b89df13baa26b976c2829cd4c41349853bd4e))
+- Add the `ConversionCountingMethod` enum ([commit bb7b89d](https://github.com/googleapis/google-cloud-dotnet/commit/bb7b89df13baa26b976c2829cd4c41349853bd4e))
+
 ## Version 2.0.0-alpha11, released 2023-08-04
 
 ### Bug fixes
