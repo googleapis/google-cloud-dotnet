@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.10.0, released 2023-08-16
+
+### New features
+
+- Added agent level route group ([commit a1d57da](https://github.com/googleapis/google-cloud-dotnet/commit/a1d57da865d33facbeddbf03d0e72de6caa48e4a))
+- Added flow import strategy ([commit a1d57da](https://github.com/googleapis/google-cloud-dotnet/commit/a1d57da865d33facbeddbf03d0e72de6caa48e4a))
+
 ## Version 2.9.0, released 2023-07-13
 
 ### New features
