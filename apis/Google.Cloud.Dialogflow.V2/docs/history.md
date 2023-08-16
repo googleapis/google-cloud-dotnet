@@ -1,5 +1,18 @@
 # Version history
 
+## Version 4.12.0, released 2023-08-16
+
+### New features
+
+- Added baseline model version used to generate the summary ([commit 561a1e0](https://github.com/googleapis/google-cloud-dotnet/commit/561a1e0215af68aa92c4ff57a1b863e8f8dde700))
+- Added the platform of the virtual agent response messages ([commit 561a1e0](https://github.com/googleapis/google-cloud-dotnet/commit/561a1e0215af68aa92c4ff57a1b863e8f8dde700))
+
+### Documentation improvements
+
+- Minor formatting ([commit 388c3e2](https://github.com/googleapis/google-cloud-dotnet/commit/388c3e2e054dc58062aa1ea7b24c5e613456defc))
+- Minor formatting ([commit 7648d13](https://github.com/googleapis/google-cloud-dotnet/commit/7648d133650b0ae986da702d4948dcef308221bb))
+- Added google.api.field_behavior for some fields in audio_config ([commit 8588148](https://github.com/googleapis/google-cloud-dotnet/commit/858814847ba8e5b7f6ca123cc8f806db2742d375))
+
 ## Version 4.11.0, released 2023-06-27
 
 ### New features
