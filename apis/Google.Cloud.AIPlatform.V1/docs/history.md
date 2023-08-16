@@ -1,5 +1,16 @@
 # Version history
 
+## Version 2.18.0, released 2023-08-16
+
+### New features
+
+- Update field_behavior for `name` to be IMMUTABLE instead of OUTPUT_ONLY in Context, ModelMonitor, Schedule, DeploymentResourcePool ([commit 67e1930](https://github.com/googleapis/google-cloud-dotnet/commit/67e1930923029f84aab0fe7d0d60bf744a94f099))
+- Expose CreateDatasetVersionOperationMetadata and RestoreDatasetVersionOperationMetadata to DatasetService ([commit 67e1930](https://github.com/googleapis/google-cloud-dotnet/commit/67e1930923029f84aab0fe7d0d60bf744a94f099))
+- Add disk_type and disk_size_gb to PersistentDiskSpec ([commit 67e1930](https://github.com/googleapis/google-cloud-dotnet/commit/67e1930923029f84aab0fe7d0d60bf744a94f099))
+- Add schedule_name to PipelineJob ([commit 67e1930](https://github.com/googleapis/google-cloud-dotnet/commit/67e1930923029f84aab0fe7d0d60bf744a94f099))
+- Add open_evaluation_pipeline to PublisherModel ([commit 67e1930](https://github.com/googleapis/google-cloud-dotnet/commit/67e1930923029f84aab0fe7d0d60bf744a94f099))
+- Add ReadTensorboardSize to TensorboardService ([commit 67e1930](https://github.com/googleapis/google-cloud-dotnet/commit/67e1930923029f84aab0fe7d0d60bf744a94f099))
+
 ## Version 2.17.0, released 2023-08-04
 
 ### New features
