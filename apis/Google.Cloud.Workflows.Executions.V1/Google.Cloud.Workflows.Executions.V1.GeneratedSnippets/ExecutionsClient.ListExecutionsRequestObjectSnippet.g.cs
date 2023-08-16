@@ -41,6 +41,8 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsWorkflowName = WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
                 View = ExecutionView.Unspecified,
+                Filter = "",
+                OrderBy = "",
             };
             // Make the request
             PagedEnumerable<ListExecutionsResponse, Execution> response = executionsClient.ListExecutions(request);
