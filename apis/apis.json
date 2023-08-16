@@ -4604,7 +4604,7 @@
       "productUrl": "https://cloud.google.com/translate/",
       "generator": "micro",
       "protoPath": "google/cloud/translate/v3",
-      "version": "3.2.0",
+      "version": "3.3.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Translate v3 API. The Translate API translates text from one language to another.",
       "dependencies": {
