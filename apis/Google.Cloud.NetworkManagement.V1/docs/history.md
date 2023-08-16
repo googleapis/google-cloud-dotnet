@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.5.0, released 2023-08-16
+
+### New features
+
+- Add new enum values for network firewall policies to API ([commit afe1ef0](https://github.com/googleapis/google-cloud-dotnet/commit/afe1ef01835f2cf1013235530e6bdb17f1a50cc7))
+- Add fields related to Google services to API ([commit d9335c6](https://github.com/googleapis/google-cloud-dotnet/commit/d9335c6b61c775c2a02f5fbd198a65a3d2466f4e))
+- Add fields related to PBR and NCC routes to API ([commit 6aeae60](https://github.com/googleapis/google-cloud-dotnet/commit/6aeae60337721dcd53545c3a03ba884d2cb3e25e))
+- Add new abort and drop causes to API ([commit 193519f](https://github.com/googleapis/google-cloud-dotnet/commit/193519f300eb174a6e6ba10a3581e0752c29d7d3))
+- Add fields related to load balancers to API ([commit 41b656d](https://github.com/googleapis/google-cloud-dotnet/commit/41b656d83ed1fee5688871111bb6e7b828552f4b))
+- Add dynamic probing fields to v1 API ([commit a9b44ac](https://github.com/googleapis/google-cloud-dotnet/commit/a9b44acc0e99e478e601a754ebffef4036697c3a))
 ## Version 2.4.0, released 2023-06-27
 
 ### New features
