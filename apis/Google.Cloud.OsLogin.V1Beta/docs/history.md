@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.0.0-beta03, released 2023-08-16
+
+### New features
+
+- Launch signSshPublicKey in beta ([commit 19c34de](https://github.com/googleapis/google-cloud-dotnet/commit/19c34de1802c255a1e87a7f3a136ce07aaab2ec0))
+
 ## Version 3.0.0-beta02, released 2023-02-08
 
 ### New features
