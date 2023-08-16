@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google Inc. All Rights Reserved.
+// Copyright 2018 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,7 +16,6 @@ using Google.Api;
 using Google.Api.Gax;
 using Google.Cloud.Logging.V2;
 using Google.Protobuf.WellKnownTypes;
-using Moq;
 using Newtonsoft.Json.Linq;
 using NLog;
 using NLog.Common;
@@ -24,6 +23,8 @@ using NLog.Config;
 using NLog.Layouts;
 using NLog.Targets;
 using NLog.Targets.Wrappers;
+using NSubstitute;
+using NSubstitute.Extensions;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -67,11 +68,11 @@ namespace Google.Cloud.Logging.NLog.Tests
         {
             try
             {
-                var fakeClient = new Mock<LoggingServiceV2Client>(MockBehavior.Strict);
-                fakeClient.Setup(x => x.WriteLogEntriesAsync(
-                    It.IsAny<LogName>(), It.IsAny<MonitoredResource>(), It.IsAny<IDictionary<string, string>>(), It.IsAny<IEnumerable<LogEntry>>(), It.IsAny<CancellationToken>()))
-                    .Returns<LogName, MonitoredResource, IDictionary<string, string>, IEnumerable<LogEntry>, CancellationToken>((a, b, c, entries, d) => handlerFn(entries));
-                var googleTarget = new GoogleStackdriverTarget(fakeClient.Object, platform)
+                var fakeClient = Substitute.ForPartsOf<LoggingServiceV2Client>();
+                fakeClient.Configure().WriteLogEntriesAsync(
+                    Arg.Any<LogName>(), Arg.Any<MonitoredResource>(), Arg.Any<IDictionary<string, string>>(), Arg.Any<IEnumerable<LogEntry>>(), Arg.Any<CancellationToken>())
+                    .Returns(args => handlerFn((IEnumerable<LogEntry>) args[3]));
+                var googleTarget = new GoogleStackdriverTarget(fakeClient, platform)
                 {
                     ProjectId = s_projectId,
                     LogId = s_logId,
