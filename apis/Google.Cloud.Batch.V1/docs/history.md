@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.4.0, released 2023-08-16
+
+### New features
+
+- Clarify Batch API proto doc about pubsub notifications ([commit 0d8755a](https://github.com/googleapis/google-cloud-dotnet/commit/0d8755a21bdbc85c29f8af5cfdc5ad60b91f67df))
+- Add Batch Managed Container support for v1alpha ([commit 0d8755a](https://github.com/googleapis/google-cloud-dotnet/commit/0d8755a21bdbc85c29f8af5cfdc5ad60b91f67df))
+
 ## Version 2.3.0, released 2023-08-04
 
 ### New features
