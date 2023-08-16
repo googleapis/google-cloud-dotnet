@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.10.0, released 2023-08-16
+
+### New features
+
+- Add default_missing_value_interpretation field; indicate KMS_SERVICE_ERROR is retryable ([commit 6d11153](https://github.com/googleapis/google-cloud-dotnet/commit/6d1115399c4ea9a0478ec15b1b725c5cc8e91f12))
+
 ## Version 3.9.0, released 2023-07-13
 
 ### New features
