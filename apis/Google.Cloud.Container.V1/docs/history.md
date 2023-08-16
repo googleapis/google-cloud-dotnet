@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.17.0, released 2023-08-16
+
+### New features
+
+- Add APIs for GKE OOTB metrics packages ([commit 9af1a07](https://github.com/googleapis/google-cloud-dotnet/commit/9af1a07147666f6638e74b948ec8fbeae2016dfd))
+
 ## Version 3.16.0, released 2023-08-04
 
 ### New features
