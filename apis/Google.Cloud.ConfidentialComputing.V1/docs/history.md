@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta04, released 2023-08-16
+
+### New features
+
+- Add a new field `partial_errors` to `VerifyAttestationResponse` proto ([commit ce8f831](https://github.com/googleapis/google-cloud-dotnet/commit/ce8f831ef4bb474edba185294920dbe3fed2b14a))
+
 ## Version 1.0.0-beta03, released 2023-08-07
 
 ### New features
