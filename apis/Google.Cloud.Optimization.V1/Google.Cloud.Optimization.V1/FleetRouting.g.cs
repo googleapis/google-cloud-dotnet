@@ -18100,10 +18100,12 @@ namespace Google.Cloud.Optimization.V1 {
     private global::Google.Protobuf.WellKnownTypes.Duration totalDuration_;
     /// <summary>
     /// The total duration should be equal to the sum of all durations above.
-    /// For routes, it also corresponds to
+    /// For routes, it also corresponds to:
+    /// ```
     /// [ShipmentRoute.vehicle_end_time][google.cloud.optimization.v1.ShipmentRoute.vehicle_end_time]
     /// -
-    /// [ShipmentRoute.vehicle_start_time][google.cloud.optimization.v1.ShipmentRoute.vehicle_start_time].
+    /// [ShipmentRoute.vehicle_start_time][google.cloud.optimization.v1.ShipmentRoute.vehicle_start_time]
+    /// ```
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
