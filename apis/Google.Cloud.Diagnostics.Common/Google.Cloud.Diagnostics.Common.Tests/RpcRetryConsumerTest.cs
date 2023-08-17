@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,10 +13,7 @@
 // limitations under the License.
 
 using Grpc.Core;
-using Moq;
 using System;
-using System.Collections.Generic;
-using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -28,42 +25,42 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void Receive()
         {
             var options = RetryOptions.NoRetry(ExceptionHandling.Propagate);
-            var mockConsumer = new Mock<IConsumer<int>>();
+            var consumer = new SimpleConsumer<int>();
             Func<Action, RetryOptions, ISequentialThreadingTimer> timerFactory =
                 (callback, retryOptions) => new SequentialThreadingTimer();
-            using (var retryConsumer = new RpcRetryConsumer<int>(
-                mockConsumer.Object, options, Utils.ConstantSizer<int>.GetSize, timerFactory))
-            {
-                int[] intArray = { 1, 2, 3, 4 };
-                retryConsumer.Receive(intArray);
-                mockConsumer.Verify(c => c.Receive(intArray), Times.Once);
-            }
+            using var retryConsumer = new RpcRetryConsumer<int>(consumer, options, Utils.ConstantSizer<int>.GetSize, timerFactory);
+
+            int[] intArray = { 1, 2, 3, 4 };
+            retryConsumer.Receive(intArray);
+
+            Assert.Equal(new[] { 1, 2, 3, 4 }, consumer.Items);
+            Assert.Equal(1, consumer.ReceiveCount);
         }
 
         [Fact]
         public async Task ReceiveAsync()
         {
             var options = RetryOptions.NoRetry(ExceptionHandling.Propagate);
-            var mockConsumer = new Mock<IConsumer<int>>();
+            var consumer = new SimpleConsumer<int>();
             Func<Action, RetryOptions, ISequentialThreadingTimer> timerFactory =
                 (callback, retryOptions) => new SequentialThreadingTimer();
-            using (var retryConsumer = new RpcRetryConsumer<int>(
-                mockConsumer.Object, options, Utils.ConstantSizer<int>.GetSize, timerFactory))
-            {
-                int[] intArray = { 1, 2, 3, 4 };
-                await retryConsumer.ReceiveAsync(intArray);
-                mockConsumer.Verify(c => c.ReceiveAsync(intArray, CancellationToken.None), Times.Once);
-            }
+            using var retryConsumer = new RpcRetryConsumer<int>(consumer, options, Utils.ConstantSizer<int>.GetSize, timerFactory);
+
+            int[] intArray = { 1, 2, 3, 4 };
+            await retryConsumer.ReceiveAsync(intArray);
+
+            Assert.Equal(new[] { 1, 2, 3, 4 }, consumer.Items);
+            Assert.Equal(1, consumer.ReceiveCount);
         }
 
         [Fact]
         public void Receive_NoRetry_Propagate()
         {
-            SetupTestReceiveThrows((timer, mockConsumer, retryConsumer) => {
+            SetupTestReceiveThrows((timer, consumer, retryConsumer) => {
                 int[] intArray = { 1, 2, 3, 4 };
                 Assert.Throws<RpcException>(() => { retryConsumer.Receive(intArray); });
 
-                mockConsumer.Verify(c => c.Receive(intArray), Times.Once);
+                Assert.Equal(1, consumer.FailedCalls);
                 Assert.Null(timer.Callback);
             }, RetryOptions.NoRetry(ExceptionHandling.Propagate));
         }
@@ -71,12 +68,12 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         [Fact]
         public void Receive_NoRetry_Ignore()
         {
-            SetupTestReceiveThrows((timer, mockConsumer, retryConsumer) =>
+            SetupTestReceiveThrows((timer, consumer, retryConsumer) =>
             {
                 int[] intArray = { 1, 2, 3, 4 };
                 retryConsumer.Receive(intArray);
 
-                mockConsumer.Verify(c => c.Receive(intArray), Times.Once);
+                Assert.Equal(1, consumer.FailedCalls);
                 Assert.Null(timer.Callback);
             }, RetryOptions.NoRetry());
         }
@@ -86,64 +83,56 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
             var timer = new FakeSequentialThreadingTimer();
             var options = RetryOptions.Retry();
-            var mockConsumer = new Mock<IConsumer<int>>();
             var timerFactory = CreateTimerFactory(timer);
-            var calls = 0;
-            mockConsumer.Setup(c => c.Receive(It.IsAny<IEnumerable<int>>()))
-                .Callback(() =>
-                {
-                    calls++;
-                    if (calls == 1)
-                    {
-                        throw new RpcException(Status.DefaultSuccess);
-                    }
-                });
+            var consumer = new ThrowingConsumer<int>(1);
 
-            using (var retryConsumer = new RpcRetryConsumer<int>(
-                mockConsumer.Object, options, Utils.ConstantSizer<int>.GetSize, timerFactory))
-            {
-                int[] intArray = { 1, 2, 3, 4 };
-                retryConsumer.Receive(intArray);
+            using var retryConsumer = new RpcRetryConsumer<int>(consumer, options, Utils.ConstantSizer<int>.GetSize, timerFactory);
+            int[] intArray = { 1, 2, 3, 4 };
+            retryConsumer.Receive(intArray);
 
-                timer.Call();
-                // Extra call to ensure buffer is emptied.
-                timer.Call();
-                mockConsumer.Verify(c => c.Receive(intArray), Times.Exactly(2));
-            }
+            timer.Call();
+            // Extra call to ensure buffer is emptied.
+            timer.Call();
+
+            Assert.Equal(new[] { 1, 2, 3, 4 }, consumer.Items);
+            Assert.Equal(1, consumer.ReceiveCount);
+            Assert.Equal(1, consumer.FailedCalls);
         }
 
         [Fact]
         public void Receive_Retry_BufferFull_Ignore()
         {
-            SetupTestReceiveThrows((timer, mockConsumer, retryConsumer) =>
+            SetupTestReceiveThrows((timer, consumer, retryConsumer) =>
             {
                 int[] intArray = { 1, 2, 3, 4 };
                 retryConsumer.Receive(intArray);
 
-                mockConsumer.Verify(c => c.Receive(intArray), Times.Once);
+                Assert.Equal(1, consumer.FailedCalls);
                 timer.Call();
-                mockConsumer.Verify(c => c.Receive(intArray), Times.Once);
+                // No new calls
+                Assert.Equal(1, consumer.FailedCalls);
             }, RetryOptions.Retry(bufferSizeBytes: 1));
         }
 
         [Fact]
         public void Receive_Retry_BufferFull_Throw()
         {
-            SetupTestReceiveThrows((timer, mockConsumer, retryConsumer) =>
+            SetupTestReceiveThrows((timer, consumer, retryConsumer) =>
             {
                 int[] intArray = { 1, 2, 3, 4 };
                 Assert.Throws<InvalidOperationException>(() => { retryConsumer.Receive(intArray); });
 
-                mockConsumer.Verify(c => c.Receive(intArray), Times.Once);
+                Assert.Equal(1, consumer.FailedCalls);
                 timer.Call();
-                mockConsumer.Verify(c => c.Receive(intArray), Times.Once);
+                // No new calls
+                Assert.Equal(1, consumer.FailedCalls);
             }, RetryOptions.Retry(bufferSizeBytes: 1, bufferOverflow: BufferOverflow.ThrowException));
         }
 
         [Fact]
         public void Receive_Retry_MaxRetries_Ignore()
         {
-            SetupTestReceiveThrows((timer, mockConsumer, retryConsumer) =>
+            SetupTestReceiveThrows((timer, consumer, retryConsumer) =>
             {
                 int[] intArray = { 1, 2, 3, 4 };
                 retryConsumer.Receive(intArray);
@@ -152,14 +141,14 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                 timer.Call();
                 // Extra call to ensure buffer is emptied.
                 timer.Call();
-                mockConsumer.Verify(c => c.Receive(intArray), Times.Exactly(3));
+                Assert.Equal(3, consumer.FailedCalls);
             }, RetryOptions.Retry(retryAttempts: 2));
         }
 
         [Fact]
         public void Receive_Retry_MaxRetries_Throw()
         {
-            SetupTestReceiveThrows((timer, mockConsumer, retryConsumer) =>
+            SetupTestReceiveThrows((timer, consumer, retryConsumer) =>
             {
                 int[] intArray = { 1, 2, 3, 4 };
                 retryConsumer.Receive(intArray);
@@ -168,7 +157,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                 Assert.Throws<InvalidOperationException>(() => { timer.Call(); });
                 // Extra call to ensure buffer is emptied.
                 timer.Call();
-                mockConsumer.Verify(c => c.Receive(intArray), Times.Exactly(3));
+                Assert.Equal(3, consumer.FailedCalls);
             }, RetryOptions.Retry(exceptionHandling: ExceptionHandling.Propagate, retryAttempts: 2));
         }
 
@@ -188,18 +177,17 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         /// Sets up a test where all calls to the consumer passed to the <see cref="RpcRetryConsumer"/> will throw
         /// an <see cref="RpcException"/>.
         /// </summary>
-        private void SetupTestReceiveThrows(Action<FakeSequentialThreadingTimer, Mock<IConsumer<int>>, RpcRetryConsumer<int>> action, RetryOptions options)
+        private void SetupTestReceiveThrows(Action<FakeSequentialThreadingTimer, ThrowingConsumer<int>, RpcRetryConsumer<int>> action, RetryOptions options)
         {
             var timer = new FakeSequentialThreadingTimer();
-            var mockConsumer = new Mock<IConsumer<int>>();
+            var consumer = new ThrowingConsumer<int>(int.MaxValue);
             var timerFactory = CreateTimerFactory(timer);
-            mockConsumer.Setup(c => c.Receive(It.IsAny<IEnumerable<int>>()))
-                    .Throws(new RpcException(Status.DefaultSuccess));
-            using (var retryConsumer = new RpcRetryConsumer<int>(
-                mockConsumer.Object, options, Utils.ConstantSizer<int>.GetSize, timerFactory))
-            {
-                action(timer, mockConsumer, retryConsumer);
-            }
+            using var retryConsumer = new RpcRetryConsumer<int>(consumer, options, Utils.ConstantSizer<int>.GetSize, timerFactory);
+            action(timer, consumer, retryConsumer);
+
+            // Check that we haven't somehow managed to bypass the exception and actually receive something.
+            Assert.Empty(consumer.Items);
+            Assert.Equal(0, consumer.ReceiveCount);
         }
 
         /// <summary>
