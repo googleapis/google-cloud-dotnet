@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,8 +13,8 @@
 // limitations under the License.
 
 using Google.Cloud.Logging.V2;
-using Moq;
-using System.Collections.Generic;
+using NSubstitute;
+using NSubstitute.Extensions;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
@@ -27,49 +27,45 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void Receive()
         {
             var logs = new[] { new LogEntry(), new LogEntry() };
-            var mockClient = new Mock<LoggingServiceV2Client>();
-            mockClient.Setup(c => c.WriteLogEntries((LogName) null, null, null, logs, null));
-            var consumer = new GrpcLogConsumer(mockClient.Object);
+            var mockClient = Substitute.ForPartsOf<LoggingServiceV2Client>();
+            mockClient.When(mock => mock.WriteLogEntries((LogName) null, null, null, logs, null)).DoNotCallBase();
+            var consumer = new GrpcLogConsumer(mockClient);
 
             consumer.Receive(logs);
-            mockClient.VerifyAll();
+            mockClient.Received(1).WriteLogEntries((LogName) null, null, null, logs, null);
         }
 
         [Fact]
         public void Receive_EmptyEnumerableIgnored()
         {
-            var mockClient = new Mock<LoggingServiceV2Client>();
-            var consumer = new GrpcLogConsumer(mockClient.Object);
+            var mockClient = Substitute.ForPartsOf<LoggingServiceV2Client>();
+            var consumer = new GrpcLogConsumer(mockClient);
 
             consumer.Receive(new LogEntry[] { });
-            mockClient.Verify(c => c.WriteLogEntries((LogName) null, null, null,
-                It.IsAny<IEnumerable<LogEntry>>(), null), Times.Never());
+            mockClient.DidNotReceiveWithAnyArgs().WriteLogEntries((LogName) null, null, null, null, null);
         }
 
         [Fact]
         public async Task ReceiveAsync()
         {
             var logs = new[] { new LogEntry(), new LogEntry() };
-            var mockClient = new Mock<LoggingServiceV2Client>();
-            var task = Task.FromResult(new WriteLogEntriesRequest());
-            mockClient.Setup(c => c.WriteLogEntriesAsync(
-                (LogName) null, null, null, logs, CancellationToken.None))
+            var mockClient = Substitute.ForPartsOf<LoggingServiceV2Client>();
+            mockClient.Configure().WriteLogEntriesAsync((LogName) null, null, null, logs, CancellationToken.None)
                 .Returns(Task.FromResult(new WriteLogEntriesResponse()));
-            var consumer = new GrpcLogConsumer(mockClient.Object);
+            var consumer = new GrpcLogConsumer(mockClient);
 
             await consumer.ReceiveAsync(logs, CancellationToken.None);
-            mockClient.VerifyAll();
+            _ = mockClient.Received(1).WriteLogEntriesAsync((LogName) null, null, null, logs, CancellationToken.None);
         }
 
         [Fact]
         public async Task ReceiveAsync_EmptyEnumerableIgnored()
         {
-            var mockClient = new Mock<LoggingServiceV2Client>();
-            var consumer = new GrpcLogConsumer(mockClient.Object);
+            var mockClient = Substitute.ForPartsOf<LoggingServiceV2Client>();
+            var consumer = new GrpcLogConsumer(mockClient);
 
             await consumer.ReceiveAsync(new LogEntry[] { }, CancellationToken.None);
-            mockClient.Verify(c => c.WriteLogEntriesAsync((LogName) null, null, null,
-                It.IsAny<IEnumerable<LogEntry>>(), CancellationToken.None), Times.Never());
+            _ = mockClient.DidNotReceiveWithAnyArgs().WriteLogEntriesAsync((LogName) null, null, null, null, CancellationToken.None);
         }
     }
 }
