@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Moq;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -31,8 +30,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         [Fact]
         public void InnerHandler_Unset()
         {
-            var mockTracer = new Mock<IManagedTracer>();
-            var traceHandler = new UnchainedTraceHeaderPropagatingHandler(() => mockTracer.Object);
+            var managedTracer = new FakeManagedTracer(null, null);
+            var traceHandler = new UnchainedTraceHeaderPropagatingHandler(() => managedTracer);
             Assert.Null(traceHandler.InnerHandler);
         }
 

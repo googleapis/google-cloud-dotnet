@@ -13,10 +13,10 @@
 // limitations under the License.
 
 using Google.Cloud.ClientTesting;
+using Google.Cloud.Diagnostics.Common.Tests.Trace;
 using Google.Cloud.Logging.Type;
 using Google.Cloud.Logging.V2;
 using Google.Protobuf.WellKnownTypes;
-using Moq;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -43,11 +43,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
         public ErrorReportingContextExceptionLoggerTest()
         {
-            var tracerMock = new Mock<IManagedTracer>(MockBehavior.Strict);
-
-            tracerMock.Setup(t => t.GetCurrentTraceId()).Returns(_traceId);
-            tracerMock.Setup(t => t.GetCurrentSpanId()).Returns(_spanId);
-            ContextTracerManager.SetCurrentTracer(tracerMock.Object);
+            var tracer = new FakeManagedTracer(_traceId, _spanId);
+            ContextTracerManager.SetCurrentTracer(tracer);
         }
 
         [Fact]
