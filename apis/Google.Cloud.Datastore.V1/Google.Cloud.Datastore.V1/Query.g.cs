@@ -2688,8 +2688,13 @@ namespace Google.Cloud.Datastore.V1 {
     public const int NameFieldNumber = 2;
     private string name_ = "";
     /// <summary>
-    /// The name of the property.
-    /// If name includes "."s, it may be interpreted as a property name path.
+    /// A reference to a property.
+    ///
+    /// Requires:
+    ///
+    /// * MUST be a dot-delimited (`.`) string of segments, where each segment
+    /// conforms to [entity property name][google.datastore.v1.Entity.properties]
+    /// limitations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
