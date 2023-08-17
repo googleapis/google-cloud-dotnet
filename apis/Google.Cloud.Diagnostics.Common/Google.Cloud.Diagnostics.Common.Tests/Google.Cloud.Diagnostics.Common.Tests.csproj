@@ -20,10 +20,6 @@
     <PackageReference Include="xunit.runner.visualstudio" Version="2.5.0" />
     <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
   </ItemGroup>
-  <ItemGroup>
-    <!-- Temporary extra reference while we work on removing Moq. -->
-    <PackageReference Include="Moq" Version="4.20.2" />
-  </ItemGroup>
   <PropertyGroup>
     <!-- Make sure we get suitable stack traces for tests -->
     <DebugType>pdbonly</DebugType>
