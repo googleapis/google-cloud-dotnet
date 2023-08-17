@@ -12,9 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Moq;
 using Xunit;
-using TraceProto = Google.Cloud.Trace.V1.Trace;
 
 namespace Google.Cloud.Diagnostics.Common.Tests
 {
@@ -26,9 +24,6 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
         /// <summary>A trace id factory instance. Not used for testing.</summary>
         private static readonly TraceIdFactory s_traceIdFactory = TraceIdFactory.Create();
-
-        /// <summary>A trace consumer instance. Not used for testing.</summary>
-        private static readonly IConsumer<TraceProto> s_comsumer = new Mock<IConsumer<TraceProto>>().Object;
 
         /// <summary>A trace header that will say to trace.</summary>
         private static readonly ITraceContext s_headerTrue = new SimpleTraceContext(TraceId, SpanId, true);
@@ -98,7 +93,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         }
 
         private static ManagedTracerFactory CreateFactory(ITraceOptionsFactory optionsFactory) => 
-            new ManagedTracerFactory(ProjectId, s_comsumer, optionsFactory, s_traceIdFactory);
+            new ManagedTracerFactory(ProjectId, new SimpleConsumer<Cloud.Trace.V1.Trace>(), optionsFactory, s_traceIdFactory);
 
         /// <summary>
         /// An option factory for testing.
