@@ -16,7 +16,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Google.Cloud.Diagnostics.Common.Tests.Logging;
+namespace Google.Cloud.Diagnostics.Common.Tests;
 
 public class SimpleConsumer<T> : IConsumer<T>
 {
@@ -24,9 +24,20 @@ public class SimpleConsumer<T> : IConsumer<T>
 
     public List<T> Items { get; } = new List<T>();
 
+    /// <summary>
+    /// Number of times Receive or ReceiveAsync has been called.
+    /// </summary>
+    public int ReceiveCount { get; private set; }
+
     public void Dispose() => Disposed = true;
-    public void Receive(IEnumerable<T> items) => Items.AddRange(items);
-    public Task ReceiveAsync(IEnumerable<T> items, CancellationToken cancellationToken = default)
+
+    public virtual void Receive(IEnumerable<T> items)
+    {
+        Items.AddRange(items);
+        ReceiveCount++;
+    }
+
+    public virtual Task ReceiveAsync(IEnumerable<T> items, CancellationToken cancellationToken = default)
     {
         Receive(items);
         return Task.CompletedTask;
