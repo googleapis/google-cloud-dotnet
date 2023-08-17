@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Moq;
 using System.Diagnostics;
 using System.Net;
 using System.Net.Http;
@@ -27,23 +26,13 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         [Fact]
         public void FromStackTrace()
         {
-            var frameRequest = new Mock<StackFrame>("compare_file", 22);
-            frameRequest.Setup(r => r.GetMethod()).Returns(typeof(FakeClass).GetMethod("SpecialMethod"));
-            frameRequest.CallBase = true;
+            var frameRequest = new FakeStackFrame("compare_file", 22, typeof(FakeClass).GetMethod("SpecialMethod"));
+            var frameResponse = new FakeStackFrame(typeof(FakeClass).GetMethod("UniqueMethod"));
+            var frameStack = new FakeStackFrame("concat_file", 33, typeof(FakeClass).GetMethod("ThisIsAMethod"));
 
-            var frameResponse = new Mock<StackFrame>();
-            frameResponse.Setup(r => r.GetMethod()).Returns(typeof(FakeClass).GetMethod("UniqueMethod"));
-            frameResponse.CallBase = true;
+            var stackTrace = new FakeStackTrace(frameRequest, frameResponse, frameStack);
 
-            var frameStack = new Mock<StackFrame>("concat_file", 33);
-            frameStack.Setup(s => s.GetMethod()).Returns(typeof(FakeClass).GetMethod("ThisIsAMethod"));
-            frameStack.CallBase = true;
-
-            var stackTraceMock = new Mock<StackTrace>();
-            stackTraceMock.Setup(t => t.GetFrames()).Returns(new StackFrame[] {
-                frameRequest.Object, frameResponse.Object, frameStack.Object });
-
-            var labels = TraceLabels.FromStackTrace(stackTraceMock.Object);
+            var labels = TraceLabels.FromStackTrace(stackTrace);
             Assert.Equal(1, labels.Count);
             string jsonTrace = labels[TraceLabels.StackTrace];
 
@@ -65,10 +54,9 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         [Fact]
         public void FromStackTrace_Empty()
         {
-            var stackTraceMock = new Mock<StackTrace>();
-            stackTraceMock.Setup(t => t.GetFrames()).Returns(new StackFrame[] { });
+            var stackTrace = new FakeStackTrace(new StackFrame[0]);
 
-            var labels = TraceLabels.FromStackTrace(stackTraceMock.Object);
+            var labels = TraceLabels.FromStackTrace(stackTrace);
             Assert.Equal(1, labels.Count);
             Assert.Equal(string.Empty, labels[TraceLabels.StackTrace]);
         }
@@ -76,10 +64,9 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         [Fact]
         public void FromStackTrace_Null()
         {
-            var stackTraceMock = new Mock<StackTrace>();
-            stackTraceMock.Setup(t => t.GetFrames()).Returns((StackFrame[]) null);
+            var stackTrace = new FakeStackTrace(null);
 
-            var labels = TraceLabels.FromStackTrace(stackTraceMock.Object);
+            var labels = TraceLabels.FromStackTrace(stackTrace);
             Assert.Equal(1, labels.Count);
             Assert.Equal(string.Empty, labels[TraceLabels.StackTrace]);
         }
@@ -114,6 +101,35 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             public void SpecialMethod() { }
             public void UniqueMethod() { }
             public void ThisIsAMethod() { }
+        }
+
+        public class FakeStackFrame : StackFrame
+        {
+            private readonly MethodBase _method;
+
+            public FakeStackFrame(MethodBase method)
+            {
+                _method = method;
+            }
+
+            public FakeStackFrame(string fileName, int lineNumber, MethodBase method) : base(fileName, lineNumber)
+            {
+                _method = method;
+            }
+
+            public override MethodBase GetMethod() => _method;
+        }
+
+        public class FakeStackTrace : StackTrace
+        {
+            private readonly StackFrame[] _frames;
+
+            public FakeStackTrace(params StackFrame[] frames)
+            {
+                _frames = frames;
+            }
+
+            public override StackFrame[] GetFrames() => _frames;
         }
     }
 }
