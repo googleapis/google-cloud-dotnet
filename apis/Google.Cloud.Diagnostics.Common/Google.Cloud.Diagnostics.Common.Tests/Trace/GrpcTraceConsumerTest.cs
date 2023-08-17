@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,8 @@
 
 
 using Google.Cloud.Trace.V1;
-using Moq;
+using NSubstitute;
+using NSubstitute.Extensions;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -36,22 +37,22 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
             Traces traces = GetTraces();
 
-            var mockClient = new Mock<TraceServiceClient>();
-            mockClient.Setup(c => c.PatchTraces(ProjectId, traces, null));
-            var consumer = new GrpcTraceConsumer(mockClient.Object);
+            var mockClient = Substitute.ForPartsOf<TraceServiceClient>();
+            mockClient.When(c => c.PatchTraces(ProjectId, traces, null)).DoNotCallBase();
+            var consumer = new GrpcTraceConsumer(mockClient);
 
             consumer.Receive(traces.Traces_);
-            mockClient.VerifyAll();
+            mockClient.Received(1).PatchTraces(ProjectId, traces, null);
         }
 
         [Fact]
         public void Receive_EmptyTracesIgnored()
         {
-            var mockClient = new Mock<TraceServiceClient>();
-            var consumer = new GrpcTraceConsumer(mockClient.Object);
+            var mockClient = Substitute.ForPartsOf<TraceServiceClient>();
+            var consumer = new GrpcTraceConsumer(mockClient);
 
             consumer.Receive(new List<TraceProto>());
-            mockClient.Verify(c => c.PatchTraces(It.IsAny<string>(), It.IsAny<Traces>(), null), Times.Never());
+            Assert.Empty(mockClient.ReceivedCalls());
         }
 
         [Fact]
@@ -59,23 +60,23 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
             Traces traces = GetTraces();
 
-            var mockClient = new Mock<TraceServiceClient>();
-            mockClient.Setup(c => c.PatchTracesAsync(
-                ProjectId, traces, CancellationToken.None)).Returns(CommonUtils.CompletedTask);
-            var consumer = new GrpcTraceConsumer(mockClient.Object);
+            var mockClient = Substitute.ForPartsOf<TraceServiceClient>();
+            mockClient.Configure().PatchTracesAsync(ProjectId, traces, CancellationToken.None)
+                .Returns(CommonUtils.CompletedTask);
+            var consumer = new GrpcTraceConsumer(mockClient);
 
             await consumer.ReceiveAsync(traces.Traces_, CancellationToken.None);
-            mockClient.VerifyAll();
+            _ = mockClient.Received(1).PatchTracesAsync(ProjectId, traces, CancellationToken.None);
         }
 
         [Fact]
         public async Task ReceiveAsync_EmptyTracesIgnored()
         {
-            var mockClient = new Mock<TraceServiceClient>();
-            var consumer = new GrpcTraceConsumer(mockClient.Object);
+            var mockClient = Substitute.ForPartsOf<TraceServiceClient>();
+            var consumer = new GrpcTraceConsumer(mockClient);
 
             await consumer.ReceiveAsync(new List<TraceProto>());
-            mockClient.Verify(c => c.PatchTracesAsync(It.IsAny<string>(), It.IsAny<Traces>(), null), Times.Never());
+            Assert.Empty(mockClient.ReceivedCalls());
         }
     }
 }
