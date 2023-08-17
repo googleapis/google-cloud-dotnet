@@ -5223,6 +5223,9 @@ namespace Google.Cloud.Batch.V1Alpha {
         /// <summary>
         /// Non-boot disks to be attached for each VM created by this InstancePolicy.
         /// New disks will be deleted when the VM is deleted.
+        /// A non bootable disk is a disk that can be of a device with a
+        /// file system or a raw storage drive that is not ready for data
+        /// storage and accessing.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5527,7 +5530,10 @@ namespace Google.Cloud.Batch.V1Alpha {
       }
 
       /// <summary>
-      /// Either an InstancePolicy or an instance template.
+      /// InstancePolicyOrTemplate lets you define the type of resources to use for
+      /// this job either with an InstancePolicy or an instance template.
+      /// If undefined, Batch picks the type of VM to use and doesn't include
+      /// optional VM resources such as GPUs and extra disks.
       /// </summary>
       public sealed partial class InstancePolicyOrTemplate : pb::IMessage<InstancePolicyOrTemplate>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
