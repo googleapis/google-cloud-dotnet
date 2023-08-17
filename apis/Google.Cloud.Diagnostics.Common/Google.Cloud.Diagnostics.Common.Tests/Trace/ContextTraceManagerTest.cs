@@ -1,4 +1,4 @@
-﻿// Copyright 2019 Google Inc. All Rights Reserved.
+// Copyright 2019 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Moq;
+using Google.Cloud.Diagnostics.Common.Tests.Trace;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -33,18 +33,17 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         [Fact]
         public void Set()
         {
-            var mockedManagedTracer = new Mock<IManagedTracer>(MockBehavior.Strict).Object;
-            ContextTracerManager.SetCurrentTracer(mockedManagedTracer);
+            var managedTracer = new FakeManagedTracer("traceid");
+            ContextTracerManager.SetCurrentTracer(managedTracer);
 
-            Assert.Equal(mockedManagedTracer, ContextTracerManager.GetCurrentTracer());
+            Assert.Equal(managedTracer, ContextTracerManager.GetCurrentTracer());
         }
 
         [Fact]
         public void Set_NullTraceId_NullTraceContext()
         {
-            var managedTracerMock = new Mock<IManagedTracer>(MockBehavior.Strict);
-            managedTracerMock.Setup(t => t.GetCurrentTraceId()).Returns<IManagedTracer, string>(null);
-            ContextTracerManager.SetCurrentTracer(managedTracerMock.Object);
+            var managedTracer = new FakeManagedTracer(null);
+            ContextTracerManager.SetCurrentTracer(managedTracer);
 
             Assert.Null(ContextTracerManager.GetCurrentTraceContext());
         }
@@ -52,15 +51,13 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         [Fact]
         public void Set_NullSpanId_TraceContext()
         {
-            var managedTracerMock = new Mock<IManagedTracer>(MockBehavior.Strict);
-            managedTracerMock.Setup(t => t.GetCurrentTraceId()).Returns("dummyTraceId");
-            managedTracerMock.Setup(t => t.GetCurrentSpanId()).Returns<IManagedTracer, ulong?>(null);
-            ContextTracerManager.SetCurrentTracer(managedTracerMock.Object);
+            var managedTracer = new FakeManagedTracer("sampleTraceId", null);
+            ContextTracerManager.SetCurrentTracer(managedTracer);
 
             var traceContext = ContextTracerManager.GetCurrentTraceContext();
             Assert.NotNull(traceContext);
 
-            Assert.Equal("dummyTraceId", traceContext.TraceId);
+            Assert.Equal("sampleTraceId", traceContext.TraceId);
             Assert.Null(traceContext.SpanId);
             Assert.True(traceContext.ShouldTrace);
         }
@@ -68,23 +65,21 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         [Fact]
         public void Set_TraceContext()
         {
-            var managedTracerMock = new Mock<IManagedTracer>(MockBehavior.Strict);
-            managedTracerMock.Setup(t => t.GetCurrentTraceId()).Returns("dummyTraceId");
-            managedTracerMock.Setup(t => t.GetCurrentSpanId()).Returns(123456789u);
-            ContextTracerManager.SetCurrentTracer(managedTracerMock.Object);
+            var managedTracer = new FakeManagedTracer("sampleTraceId", 123456789UL);
+            ContextTracerManager.SetCurrentTracer(managedTracer);
 
             var traceContext = ContextTracerManager.GetCurrentTraceContext();
             Assert.NotNull(traceContext);
 
-            Assert.Equal("dummyTraceId", traceContext.TraceId);
-            Assert.Equal(123456789u, traceContext.SpanId);
+            Assert.Equal("sampleTraceId", traceContext.TraceId);
+            Assert.Equal(123456789UL, traceContext.SpanId);
             Assert.True(traceContext.ShouldTrace);
         }
 
         [Fact]
         public async Task SetAndGetInNestedAsyncContexts()
         {
-            var mockedManagedTracer = new Mock<IManagedTracer>(MockBehavior.Strict).Object;
+            var managedTracer = new FakeManagedTracer("traceid");
 
             async Task<IManagedTracer> getTracer()
             {
@@ -95,23 +90,23 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
             async Task<IManagedTracer> setTracerAndGet()
             {
-                ContextTracerManager.SetCurrentTracer(mockedManagedTracer);
+                ContextTracerManager.SetCurrentTracer(managedTracer);
                 await Task.Yield();
                 return await getTracer();
             }
 
             var actualManagedTracer = await setTracerAndGet();
-            Assert.Equal(mockedManagedTracer, actualManagedTracer);
+            Assert.Equal(managedTracer, actualManagedTracer);
         }
 
         [Fact]
         public async Task SetAndGetInDifferentAsyncContexts()
         {
-            var mockedManagedTracer = new Mock<IManagedTracer>(MockBehavior.Strict).Object;
+            var managedTracer = new FakeManagedTracer("traceid");
 
             async Task setTracer()
             {
-                ContextTracerManager.SetCurrentTracer(mockedManagedTracer);
+                ContextTracerManager.SetCurrentTracer(managedTracer);
                 await Task.Yield();
             }
 
