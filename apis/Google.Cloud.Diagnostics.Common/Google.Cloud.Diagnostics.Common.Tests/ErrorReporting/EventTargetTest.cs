@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,11 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api;
-using Google.Api.Gax.Grpc;
-using Google.Cloud.Logging.V2;
-using Moq;
-using System;
 using Xunit;
 
 namespace Google.Cloud.Diagnostics.Common.Tests
@@ -25,7 +20,6 @@ namespace Google.Cloud.Diagnostics.Common.Tests
     {
         private const string _projectId = "pid";
         private const string _organizationId = "oid";
-        private static readonly LoggingServiceV2Client _loggingClient = new Mock<LoggingServiceV2Client>().Object;
 
         [Fact]
         public void ForProject()
