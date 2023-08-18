@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google Inc. All Rights Reserved.
+// Copyright 2018 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,13 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-namespace Google.Cloud.Diagnostics.AspNetCore3.Snippets
-{
-    using static IntegrationTests.TestServerHelpers;
+using static Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests.TestServerHelpers;
 
-    /// <summary>
-    /// A simple web application to use as a default Startup.
-    /// </summary>
-    internal class Startup : BaseStartup
-    { }
-}
+namespace Google.Cloud.Diagnostics.AspNetCore3.Snippets;
+
+/// <summary>
+/// A simple web application to use as a default Startup.
+/// </summary>
+internal class Startup : BaseStartup
+{ }
