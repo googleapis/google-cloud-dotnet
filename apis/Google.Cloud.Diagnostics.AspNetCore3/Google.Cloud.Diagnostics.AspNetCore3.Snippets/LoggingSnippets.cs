@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google Inc. All Rights Reserved.
+// Copyright 2018 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -26,11 +26,10 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
+using static Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests.TestServerHelpers;
 
 namespace Google.Cloud.Diagnostics.AspNetCore3.Snippets
 {
-    using static IntegrationTests.TestServerHelpers;
-
     [SnippetOutputCollector]
     public class LoggingSnippetsTests
     {
@@ -88,7 +87,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.Snippets
     // Sample: Logging
     public class LoggingSamplesController : Controller
     {
-        private ILogger _logger;
+        private readonly ILogger _logger;
 
         public LoggingSamplesController(ILogger<LoggingSamplesController> logger) =>
             _logger = logger;

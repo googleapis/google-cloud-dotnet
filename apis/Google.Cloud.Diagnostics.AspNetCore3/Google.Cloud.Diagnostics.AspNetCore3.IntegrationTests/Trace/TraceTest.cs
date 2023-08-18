@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -33,12 +33,11 @@ using System.Net.Http.Headers;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
+using static Google.Cloud.Diagnostics.Common.HttpClientBuilderExtensions;
+using static Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests.TestServerHelpers;
 
 namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
 {
-    using static Google.Cloud.Diagnostics.Common.HttpClientBuilderExtensions;
-    using static TestServerHelpers;
-
     public class TraceTest
     {
         private const string CustromTraceIdHeader = "custom_trace_id";
@@ -868,8 +867,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
         public static TestServer FirstCallServer;
         public static TestServer SecondCallServer;
 
-        private IManagedTracer _tracer;
-        private DelegatingHandler _propagatingHandler;
+        private readonly IManagedTracer _tracer;
+        private readonly DelegatingHandler _propagatingHandler;
 
         public PropagationController([FromServices] IManagedTracer tracer, [FromServices] IServiceProvider serviceProvider)
         {
