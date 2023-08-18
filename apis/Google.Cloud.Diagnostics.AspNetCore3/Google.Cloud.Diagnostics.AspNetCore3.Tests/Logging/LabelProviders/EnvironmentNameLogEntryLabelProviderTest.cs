@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google Inc. All Rights Reserved.
+// Copyright 2018 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,12 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Hosting;
+using NSubstitute;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Hosting;
-using Moq;
 using Xunit;
 
 namespace Google.Cloud.Diagnostics.AspNetCore3.Tests
@@ -36,12 +36,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.Tests
         public void AddsEnvironmentNameLabel()
         {
             // Arrange
-            var hostingEnvironmentMock = new Mock<IWebHostEnvironment>();
+            var hostingEnvironmentMock = Substitute.For<IWebHostEnvironment>();
             string expectedEnvironment = Environments.Production;
 
-            hostingEnvironmentMock.Setup(x => x.EnvironmentName).Returns(expectedEnvironment);
+            hostingEnvironmentMock.EnvironmentName.Returns(expectedEnvironment);
 
-            var instance = new EnvironmentNameLogEntryLabelProvider(hostingEnvironmentMock.Object);
+            var instance = new EnvironmentNameLogEntryLabelProvider(hostingEnvironmentMock);
             var labels = new Dictionary<string, string>();
 
             // Act
@@ -60,10 +60,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.Tests
         public void SkipsNullOrEmptyEnvironmentName(string label)
         {
             // Arrange
-            var hostingEnvironmentMock = new Mock<IWebHostEnvironment>();
-            hostingEnvironmentMock.Setup(x => x.EnvironmentName).Returns(label);
+            var hostingEnvironmentMock = Substitute.For<IWebHostEnvironment>();
+            hostingEnvironmentMock.EnvironmentName.Returns(label);
 
-            var instance = new EnvironmentNameLogEntryLabelProvider(hostingEnvironmentMock.Object);
+            var instance = new EnvironmentNameLogEntryLabelProvider(hostingEnvironmentMock);
             var labels = new Dictionary<string, string>();
 
             // Act

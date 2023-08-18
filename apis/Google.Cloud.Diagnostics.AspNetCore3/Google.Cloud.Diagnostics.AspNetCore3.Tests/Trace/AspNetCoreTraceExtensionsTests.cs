@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 using Google.Cloud.Diagnostics.Common;
 using Microsoft.AspNetCore.Http;
-using Moq;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using Xunit;
 
@@ -35,12 +35,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.Tests
 
             var traceIdFactory = TraceIdFactory.Create();
 
-            Mock<IServiceProvider> mockProvider = new Mock<IServiceProvider>();
-            mockProvider.Setup(p => p.GetService(typeof(IHttpContextAccessor))).Returns(accessor);
-            mockProvider.Setup(p => p.GetService(typeof(TraceDecisionPredicate))).Returns(
-                TraceDecisionPredicate.Default);
-            mockProvider.Setup(p => p.GetService(typeof(TraceIdFactory))).Returns(traceIdFactory);
-            return mockProvider.Object;
+            var services = new ServiceCollection();
+            services.AddSingleton<IHttpContextAccessor>(accessor);
+            services.AddSingleton(TraceDecisionPredicate.Default);
+            services.AddSingleton(traceIdFactory);
+            return new DefaultServiceProviderFactory().CreateServiceProvider(services);
         }
 
         [Fact]

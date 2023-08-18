@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google Inc. All Rights Reserved.
+// Copyright 2018 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,12 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using Microsoft.AspNetCore.Http;
-using Moq;
 using Xunit;
 
 namespace Google.Cloud.Diagnostics.AspNetCore3.Tests
@@ -36,13 +35,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.Tests
         public void AddClientIpLabel()
         {
             // Arrange
-            var mockHttpContext = new Mock<HttpContext>();
-            mockHttpContext.Setup(x => x.Connection.RemoteIpAddress).Returns(IPAddress.Loopback);
+            var httpContext = new DefaultHttpContext { Connection = { RemoteIpAddress = IPAddress.Loopback } };
+            var httpContextAccessor = new HttpContextAccessor { HttpContext = httpContext };
 
-            var mockHttpContextAccessor = new Mock<IHttpContextAccessor>();
-            mockHttpContextAccessor.Setup(x => x.HttpContext).Returns(mockHttpContext.Object);
-
-            var instance = new ClientIpLogEntryLabelProvider(mockHttpContextAccessor.Object);
+            var instance = new ClientIpLogEntryLabelProvider(httpContextAccessor);
             var labels = new Dictionary<string, string>();
 
             // Act
@@ -59,13 +55,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.Tests
         public void DoesNotAddWhenNoRemoteIp()
         {
             // Arrange
-            var mockHttpContext = new Mock<HttpContext>();
-            mockHttpContext.Setup(x => x.Connection.RemoteIpAddress).Returns((IPAddress)null);
+            var httpContext = new DefaultHttpContext { Connection = { RemoteIpAddress = null } };
+            var httpContextAccessor = new HttpContextAccessor { HttpContext = httpContext };
 
-            var mockHttpContextAccessor = new Mock<IHttpContextAccessor>();
-            mockHttpContextAccessor.Setup(x => x.HttpContext).Returns(mockHttpContext.Object);
-
-            var instance = new ClientIpLogEntryLabelProvider(mockHttpContextAccessor.Object);
+            var instance = new ClientIpLogEntryLabelProvider(httpContextAccessor);
             var labels = new Dictionary<string, string>();
 
             // Act

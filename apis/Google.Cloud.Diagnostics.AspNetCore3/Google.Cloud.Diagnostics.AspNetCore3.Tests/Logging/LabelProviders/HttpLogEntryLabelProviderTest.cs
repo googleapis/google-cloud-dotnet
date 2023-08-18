@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google Inc. All Rights Reserved.
+// Copyright 2018 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,11 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.AspNetCore.Http;
-using Moq;
 using Xunit;
 
 namespace Google.Cloud.Diagnostics.AspNetCore3.Tests
@@ -35,7 +34,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.Tests
         public void DoesNotCallInvokeCoreWhenNoHttpContext()
         {
             // Arrange
-            var instance = new ThrowingHttpLogEntryLabelProvider(Mock.Of<IHttpContextAccessor>());
+            var instance = new ThrowingHttpLogEntryLabelProvider(new HttpContextAccessor());
             var labels = new Dictionary<string, string>();
 
             // Act
@@ -50,9 +49,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.Tests
         public void CallsInvokeCore()
         {
             // Arrange
-            var mockHttpContextAccessor = new Mock<IHttpContextAccessor>();
-            mockHttpContextAccessor.Setup(x => x.HttpContext).Returns(Mock.Of<HttpContext>());
-            var instance = new DummyHttpLogEntryLabelProvider(mockHttpContextAccessor.Object);
+            var httpContextAccessor = new HttpContextAccessor { HttpContext = new DefaultHttpContext() };
+            var instance = new DummyHttpLogEntryLabelProvider(httpContextAccessor);
             var labels = new Dictionary<string, string>();
 
             // Act

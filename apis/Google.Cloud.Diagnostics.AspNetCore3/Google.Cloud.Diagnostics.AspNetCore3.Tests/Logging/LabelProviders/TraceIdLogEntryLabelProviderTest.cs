@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google Inc. All Rights Reserved.
+// Copyright 2018 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,11 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.Features;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.AspNetCore.Http;
-using Moq;
 using Xunit;
 
 namespace Google.Cloud.Diagnostics.AspNetCore3.Tests
@@ -37,13 +37,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.Tests
             // Arrange
             var traceId = Guid.NewGuid().ToString();
 
-            var mockHttpContext = new Mock<HttpContext>();
-            mockHttpContext.Setup(x => x.TraceIdentifier).Returns(traceId);
+            var httpContext = new DefaultHttpContext { TraceIdentifier = traceId };
+            var httpContextAccessor = new HttpContextAccessor { HttpContext = httpContext };
 
-            var mockHttpContextAccessor = new Mock<IHttpContextAccessor>();
-            mockHttpContextAccessor.Setup(x => x.HttpContext).Returns(mockHttpContext.Object);
-
-            var instance = new TraceIdLogEntryLabelProvider(mockHttpContextAccessor.Object);
+            var instance = new TraceIdLogEntryLabelProvider(httpContextAccessor);
             var labels = new Dictionary<string, string>();
 
             // Act
@@ -62,13 +59,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.Tests
         public void DoesNotAddWhenNoTraceId(string traceId)
         {
             // Arrange
-            var mockHttpContext = new Mock<HttpContext>();
-            mockHttpContext.Setup(x => x.TraceIdentifier).Returns(traceId);
+            var featureCollection = new FeatureCollection { [typeof(IHttpRequestIdentifierFeature)] = new NullPermittingHttpRequestIdentifierFeature() };
+            var httpContext = new DefaultHttpContext(featureCollection) { TraceIdentifier = traceId };
+            var httpContextAccessor = new HttpContextAccessor { HttpContext = httpContext };
 
-            var mockHttpContextAccessor = new Mock<IHttpContextAccessor>();
-            mockHttpContextAccessor.Setup(x => x.HttpContext).Returns(mockHttpContext.Object);
-
-            var instance = new TraceIdLogEntryLabelProvider(mockHttpContextAccessor.Object);
+            var instance = new TraceIdLogEntryLabelProvider(httpContextAccessor);
             var labels = new Dictionary<string, string>();
 
             // Act
@@ -76,6 +71,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.Tests
 
             // Assert
             Assert.Empty(labels);
+        }
+
+        // The default implementation never returns null for the TraceIdentifier, even if it's
+        // set to null. This is a simple implementation that does, so that we can test what happens
+        // if we ever encounter some other implementation that returns null.
+        private class NullPermittingHttpRequestIdentifierFeature : IHttpRequestIdentifierFeature
+        {
+            public string TraceIdentifier { get; set; }
         }
     }
 }

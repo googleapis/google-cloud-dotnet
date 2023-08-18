@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,8 +14,8 @@
 
 using Google.Cloud.Diagnostics.Common;
 using Microsoft.AspNetCore.Http;
-using Moq;
 using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
@@ -29,65 +29,86 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.Tests
         [Fact]
         public void Log()
         {
-            var mockAccessor = new Mock<IHttpContextAccessor>();
-            var mockContextLogger = new Mock<IContextExceptionLogger>();
-            var logger = new GoogleExceptionLogger(mockContextLogger.Object, mockAccessor.Object);
+            var contextAccessor = new HttpContextAccessor();
+            var contextLogger = new FakeContextExceptionLogger();
+            var logger = new GoogleExceptionLogger(contextLogger, contextAccessor);
 
             logger.Log(_exception, new DefaultHttpContext());
-            mockContextLogger.Verify(lb => lb.Log(_exception, It.IsAny<HttpContextWrapper>()));
+            Assert.Single(contextLogger.Entries);
         }
 
         [Fact]
         public void Log_NoContext()
         {
-            var mockAccessor = new Mock<IHttpContextAccessor>();
-            mockAccessor.Setup(a => a.HttpContext).Returns(new DefaultHttpContext());
-            var mockContextLogger = new Mock<IContextExceptionLogger>();
-            var logger = new GoogleExceptionLogger(mockContextLogger.Object, mockAccessor.Object);
+            var contextAccessor = new HttpContextAccessor { HttpContext = new DefaultHttpContext() };
+            var contextLogger = new FakeContextExceptionLogger();
+            var logger = new GoogleExceptionLogger(contextLogger, contextAccessor);
 
             logger.Log(_exception);
-            mockContextLogger.Verify(lb => lb.Log(_exception, It.IsAny<HttpContextWrapper>()));
+
+            var entry = Assert.Single(contextLogger.Entries);
+            Assert.Same(_exception, entry.Item1);
         }
 
         [Fact]
         public void Log_NoContext_NoAccessorContext()
         {
-            var mockAccessor = new Mock<IHttpContextAccessor>();
-            mockAccessor.Setup(a => a.HttpContext).Returns<DefaultHttpContext>(null);
-            var mockContextLogger = new Mock<IContextExceptionLogger>();
-            var logger = new GoogleExceptionLogger(mockContextLogger.Object, mockAccessor.Object);
+            var contextAccessor = new HttpContextAccessor();
+            var contextLogger = new FakeContextExceptionLogger();
+            var logger = new GoogleExceptionLogger(contextLogger, contextAccessor);
 
             logger.Log(_exception);
-            mockContextLogger.Verify(lb => lb.Log(_exception, It.IsAny<HttpContextWrapper>()));
+
+            var entry = Assert.Single(contextLogger.Entries);
+            Assert.Same(_exception, entry.Item1);
         }
 
         [Fact]
         public async Task LogAsync()
         {
-            var mockAccessor = new Mock<IHttpContextAccessor>();
-            var mockContextLogger = new Mock<IContextExceptionLogger>();
-            mockContextLogger.Setup(lb => lb.LogAsync(
-                It.IsAny<Exception>(), It.IsAny<IContextWrapper>(), It.IsAny<CancellationToken>()))
-                .Returns(Task.CompletedTask);
-            var logger = new GoogleExceptionLogger(mockContextLogger.Object, mockAccessor.Object);
+            var contextAccessor = new HttpContextAccessor();
+            var contextLogger = new FakeContextExceptionLogger();
+            var logger = new GoogleExceptionLogger(contextLogger, contextAccessor);
 
             await logger.LogAsync(_exception, new DefaultHttpContext());
-            mockContextLogger.Verify(lb => lb.LogAsync(_exception, It.IsAny<HttpContextWrapper>(), It.IsAny<CancellationToken>()));
+
+            var entry = Assert.Single(contextLogger.Entries);
+            Assert.Same(_exception, entry.Item1);
         }
 
         [Fact]
         public async Task LogAsync_NoContext()
         {
-            var mockAccessor = new Mock<IHttpContextAccessor>();
-            mockAccessor.Setup(a => a.HttpContext).Returns(new DefaultHttpContext());
-            var mockContextLogger = new Mock<IContextExceptionLogger>();
-            mockContextLogger.Setup(lb => lb.LogAsync(
-                It.IsAny<Exception>(), It.IsAny<IContextWrapper>(), It.IsAny<CancellationToken>()))
-                .Returns(Task.CompletedTask);
-            var logger = new GoogleExceptionLogger(mockContextLogger.Object, mockAccessor.Object);
+            var contextAccessor = new HttpContextAccessor { HttpContext = new DefaultHttpContext() };
+            var contextLogger = new FakeContextExceptionLogger();
+            var logger = new GoogleExceptionLogger(contextLogger, contextAccessor);
 
             await logger.LogAsync(_exception);
-            mockContextLogger.Verify(lb => lb.LogAsync(_exception, It.IsAny<HttpContextWrapper>(), It.IsAny<CancellationToken>()));
+
+            var entry = Assert.Single(contextLogger.Entries);
+            Assert.Same(_exception, entry.Item1);
+        }
+
+        private class FakeContextExceptionLogger : IContextExceptionLogger
+        {
+            public List<(Exception, IContextWrapper)> Entries { get; } = new();
+
+            public FakeContextExceptionLogger()
+            {
+            }
+
+            public void Log(Exception exception, IContextWrapper context) =>
+                Entries.Add((exception, context));
+
+            public Task LogAsync(Exception exception, IContextWrapper context, CancellationToken cancellationToken = default)
+            {
+                Log(exception, context);
+                return Task.CompletedTask;
+            }                
+
+            public void Dispose()
+            {
+            }
         }
     }
 }

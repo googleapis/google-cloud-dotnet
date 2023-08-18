@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,9 @@
 
 using Google.Cloud.Diagnostics.Common;
 using Microsoft.AspNetCore.Http;
-using Moq;
+using NSubstitute;
+using NSubstitute.Extensions;
+using NSubstitute.ReturnsExtensions;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -32,12 +34,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.Tests
         /// Creates a <see cref="Mock{IManagedTracer}"/> that is set up to start and end a span as well as
         /// annotate the span.
         /// </summary>
-        private static Mock<IManagedTracer> CreateIManagedTracerMock(HttpContext context)
+        private static IManagedTracer CreateIManagedTracerMock(HttpContext context)
         {
-            var tracerMock = new Mock<IManagedTracer>();
-            tracerMock.Setup(t => t.GetCurrentTraceId()).Returns(_traceContext.TraceId);
-            tracerMock.Setup(t => t.StartSpan(context.Request.Path, null)).Returns(new NullManagedTracer.Span());
-            tracerMock.Setup(t => t.AnnotateSpan(It.IsAny<Dictionary<string, string>>()));
+            var tracerMock = Substitute.For<IManagedTracer>();
+            tracerMock.GetCurrentTraceId().Returns(_traceContext.TraceId);
+            tracerMock.StartSpan(context.Request.Path, null).Returns(new NullManagedTracer.Span());
+            tracerMock.Configure().AnnotateSpan(Arg.Any<Dictionary<string, string>>());
             return tracerMock;
         }
 
@@ -76,14 +78,18 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.Tests
             var context = CreateHttpContext();
             var tracerMock = CreateIManagedTracerMock(context);
 
-            var delegateMock = new Mock<RequestDelegate>();
-            delegateMock.Setup(d => d(context)).Returns(Task.CompletedTask);
+            bool delegateCalled = false;
+            RequestDelegate requestDelegate = context =>
+            {
+                delegateCalled = true;
+                return Task.CompletedTask;
+            };
 
-            Func<ITraceContext, IManagedTracer> fakeFactory = f => tracerMock.Object;
+            Func<ITraceContext, IManagedTracer> fakeFactory = f => tracerMock;
 
             Assert.Equal(NullManagedTracer.Instance, ContextTracerManager.GetCurrentTracer());
 
-            var middleware = new CloudTraceMiddleware(delegateMock.Object, fakeFactory, new DefaultCloudTraceNameProvider());
+            var middleware = new CloudTraceMiddleware(requestDelegate, fakeFactory, new DefaultCloudTraceNameProvider());
             await middleware.Invoke(context, _traceContext, TraceDecisionPredicate.Default, CustomTraceContextPropagator);
 
             // Since the current tracer is AsyncLocal<>, it will be back to the default after awaiting the middleware invoke
@@ -91,8 +97,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.Tests
 
             AssertCustomTraceContext(context.Response);
 
-            delegateMock.VerifyAll();
-            tracerMock.VerifyAll();
+            Assert.True(delegateCalled);
         }
 
         [Fact]
@@ -100,21 +105,24 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.Tests
         {
             var context = CreateHttpContext();
             var tracerMock = CreateIManagedTracerMock(context);
-            tracerMock.Setup(t => t.SetStackTrace(It.IsAny<StackTrace>()));
+            tracerMock.Configure().SetStackTrace(Arg.Any<StackTrace>());
 
-            var delegateMock = new Mock<RequestDelegate>();
-            delegateMock.Setup(d => d(context)).Throws(new DivideByZeroException());
+            bool delegateCalled = false;
+            RequestDelegate requestDelegate = context =>
+            {
+                delegateCalled = true;
+                throw new DivideByZeroException();
+            };
 
-            Func<ITraceContext, IManagedTracer> fakeFactory = f => tracerMock.Object;
+            Func<ITraceContext, IManagedTracer> fakeFactory = f => tracerMock;
 
-            var middleware = new CloudTraceMiddleware(delegateMock.Object, fakeFactory, new DefaultCloudTraceNameProvider());
+            var middleware = new CloudTraceMiddleware(requestDelegate, fakeFactory, new DefaultCloudTraceNameProvider());
             await Assert.ThrowsAsync<DivideByZeroException>(
                 () => middleware.Invoke(context, _traceContext, TraceDecisionPredicate.Default, CustomTraceContextPropagator));
 
             AssertCustomTraceContext(context.Response);
 
-            delegateMock.VerifyAll();
-            tracerMock.VerifyAll();
+            Assert.True(delegateCalled);
         }
 
         [Fact]
@@ -122,34 +130,43 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.Tests
         {
             var context = CreateHttpContext();
             var tracerMock = CreateIManagedTracerMock(context);
-            tracerMock.Setup(t => t.SetStackTrace(It.IsAny<StackTrace>()))
-                .Throws(new ArgumentOutOfRangeException());
+            tracerMock.When(mock => mock.SetStackTrace(Arg.Any<StackTrace>())).Throw(new ArgumentOutOfRangeException());
 
-            var delegateMock = new Mock<RequestDelegate>();
-            delegateMock.Setup(d => d(context)).Throws(new DivideByZeroException());
+            bool delegateCalled = false;
+            RequestDelegate requestDelegate = context =>
+            {
+                delegateCalled = true;
+                throw new DivideByZeroException();
+            };
 
-            Func<ITraceContext, IManagedTracer> fakeFactory = f => tracerMock.Object;
+            Func<ITraceContext, IManagedTracer> fakeFactory = f => tracerMock;
 
-            var middleware = new CloudTraceMiddleware(delegateMock.Object, fakeFactory, new DefaultCloudTraceNameProvider());
+            var middleware = new CloudTraceMiddleware(requestDelegate, fakeFactory, new DefaultCloudTraceNameProvider());
             await Assert.ThrowsAsync<AggregateException>(
                 () => middleware.Invoke(context, _traceContext, TraceDecisionPredicate.Default, CustomTraceContextPropagator));
 
             AssertCustomTraceContext(context.Response);
 
-            delegateMock.VerifyAll();
-            tracerMock.VerifyAll();
+            Assert.True(delegateCalled);
         }
 
         [Fact]
         public async Task Invoke_NoTrace()
         {
             var context = new DefaultHttpContext();
-            var delegateMock = new Mock<RequestDelegate>();
-            var tracerMock = new Mock<IManagedTracer>();
+            var tracerMock = Substitute.For<IManagedTracer>();
+            tracerMock.GetCurrentTraceId().ReturnsNull();
 
-            Func<ITraceContext, IManagedTracer> fakeFactory = f => tracerMock.Object;
+            bool delegateCalled = false;
+            RequestDelegate requestDelegate = context =>
+            {
+                delegateCalled = true;
+                return Task.CompletedTask;
+            };
 
-            var middleware = new CloudTraceMiddleware(delegateMock.Object, fakeFactory, new DefaultCloudTraceNameProvider());
+            Func<ITraceContext, IManagedTracer> fakeFactory = f => tracerMock;
+
+            var middleware = new CloudTraceMiddleware(requestDelegate, fakeFactory, new DefaultCloudTraceNameProvider());
             await middleware.Invoke(context, _traceContext, TraceDecisionPredicate.Default, CustomTraceContextPropagator);
 
             // Since the current tracer is AsyncLocal<>, it will be back to the default after awaiting the middleware invoke
@@ -157,8 +174,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.Tests
 
             AssertNoTraceContext(context.Response);
 
-            delegateMock.Verify(d => d(context), Times.Once());
-            tracerMock.Verify(t => t.StartSpan(It.IsAny<string>(), null), Times.Never());
+            Assert.True(delegateCalled);
+            tracerMock.DidNotReceiveWithAnyArgs().StartSpan(null, null);
         }
     }
 }
