@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google Inc. All Rights Reserved.
+// Copyright 2018 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,13 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
-using System.Security.Principal;
-using Microsoft.AspNetCore.Http;
-using Moq;
 using Xunit;
 
 namespace Google.Cloud.Diagnostics.AspNetCore3.Tests
@@ -39,13 +37,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.Tests
         public void AddsUserAuthenticatedLabel(bool authenticated)
         {
             // Arrange
-            var mockHttpContext = new Mock<HttpContext>();
-            mockHttpContext.Setup(x => x.User.Identity.IsAuthenticated).Returns(authenticated);
+            var identity = new ClaimsIdentity(authenticated ? "fake-authentication-type" : null);
+            var httpContext = new DefaultHttpContext { User = new ClaimsPrincipal(identity) };
+            var httpContextAccessor = new HttpContextAccessor { HttpContext = httpContext };
 
-            var mockHttpContextAccessor = new Mock<IHttpContextAccessor>();
-            mockHttpContextAccessor.Setup(x => x.HttpContext).Returns(mockHttpContext.Object);
-
-            var instance = new UserLogEntryLabelProvider(mockHttpContextAccessor.Object);
+            var instance = new UserLogEntryLabelProvider(httpContextAccessor);
             var labels = new Dictionary<string, string>();
 
             // Act
@@ -62,14 +58,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.Tests
         public void AddsUserNameLabelWithUserName()
         {
             // Arrange
-            var mockHttpContext = new Mock<HttpContext>();
-            mockHttpContext.Setup(x => x.User.Identity.IsAuthenticated).Returns(true);
-            mockHttpContext.Setup(x => x.User.Identity.Name).Returns("Foo");
+            var identity = new ClaimsIdentity("fake-authentication-type", "fake-name-type", "fake-role-type");
+            identity.AddClaim(new Claim("fake-name-type", "Foo"));
+            var httpContext = new DefaultHttpContext { User = new ClaimsPrincipal(identity) };
 
-            var mockHttpContextAccessor = new Mock<IHttpContextAccessor>();
-            mockHttpContextAccessor.Setup(x => x.HttpContext).Returns(mockHttpContext.Object);
+            var httpContextAccessor = new HttpContextAccessor { HttpContext = httpContext };
 
-            var instance = new UserLogEntryLabelProvider(mockHttpContextAccessor.Object);
+            var instance = new UserLogEntryLabelProvider(httpContextAccessor);
             var labels = new Dictionary<string, string>();
 
             // Act
@@ -91,13 +86,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.Tests
         public void AddsUserNameLabelWithUserNameFromClaim(string claimType)
         {
             // Arrange
-            var mockHttpContext = new Mock<HttpContext>();
-            mockHttpContext.Setup(x => x.User.Identity).Returns(new ClaimsIdentity(new[] { new Claim(claimType, "Foo") }, "Cookies"));
+            var identity = new ClaimsIdentity(new[] { new Claim(claimType, "Foo") }, "Cookies");
+            var httpContext = new DefaultHttpContext { User = new ClaimsPrincipal(identity) };
 
-            var mockHttpContextAccessor = new Mock<IHttpContextAccessor>();
-            mockHttpContextAccessor.Setup(x => x.HttpContext).Returns(mockHttpContext.Object);
+            var httpContextAccessor = new HttpContextAccessor { HttpContext = httpContext };
 
-            var instance = new UserLogEntryLabelProvider(mockHttpContextAccessor.Object);
+            var instance = new UserLogEntryLabelProvider(httpContextAccessor);
             var labels = new Dictionary<string, string>();
 
             // Act
@@ -113,29 +107,18 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.Tests
         }
 
         [Fact]
-        public void DoesNotAddWhenNoUser()
-        {
-            var mockHttpContext = new Mock<HttpContext>();
-            mockHttpContext.Setup(x => x.User).Returns((ClaimsPrincipal)null);
-            AssertLabelsEmpty(mockHttpContext);
-        }
-
-        [Fact]
         public void DoesNotAddWhenNoUserIdentity()
         {
-            var mockHttpContext = new Mock<HttpContext>();
-            mockHttpContext.Setup(x => x.User.Identity).Returns((IIdentity)null);
-            AssertLabelsEmpty(mockHttpContext);
-        }
-
-        private static void AssertLabelsEmpty(Mock<HttpContext> mockHttpContext)
-        {
             // Arrange
-            var mockHttpContextAccessor = new Mock<IHttpContextAccessor>();
-            mockHttpContextAccessor.Setup(x => x.HttpContext).Returns(mockHttpContext.Object);
+            var httpContext = new DefaultHttpContext();
+            httpContext.User = new ClaimsPrincipal(new ClaimsIdentity[0]);
+            var httpContextAccessor = new HttpContextAccessor { HttpContext = httpContext };
+
+            // Check that we're actually testing what we think.
+            Assert.Null(httpContext.User.Identity);
 
             // Act
-            var instance = new UserLogEntryLabelProvider(mockHttpContextAccessor.Object);
+            var instance = new UserLogEntryLabelProvider(httpContextAccessor);
             var labels = new Dictionary<string, string>();
             instance.Invoke(labels);
 

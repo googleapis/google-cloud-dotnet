@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,9 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Diagnostics.Common.Tests;
 using Microsoft.AspNetCore.Http;
-using Moq;
 using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
@@ -26,39 +27,55 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.Tests
         [Fact]
         public async Task Invoke_NoLogs()
         {
-            var mockLogger = new Mock<IExceptionLogger>();
+            var logger = new FakeExceptionLogger(0);
             RequestDelegate requestDelegate = context => Task.CompletedTask;
-            var middleware = new ErrorReportingExceptionLoggerMiddleware(requestDelegate, mockLogger.Object);
+            var middleware = new ErrorReportingExceptionLoggerMiddleware(requestDelegate, logger);
 
             await middleware.Invoke(new DefaultHttpContext());
-
-            mockLogger.Verify(l => l.LogAsync(It.IsAny<Exception>(), It.IsAny<DefaultHttpContext>(), CancellationToken.None), Times.Never());
+            Assert.Empty(logger.Exceptions);
         }
 
         [Fact]
         public async Task Invoke_LogsAndThrows()
         {
-            var mockLogger = new Mock<IExceptionLogger>();
+            var logger = new FakeExceptionLogger(0);
             RequestDelegate requestDelegate = context => { throw new DivideByZeroException(); };
-            var middleware = new ErrorReportingExceptionLoggerMiddleware(requestDelegate, mockLogger.Object);
+            var middleware = new ErrorReportingExceptionLoggerMiddleware(requestDelegate, logger);
 
             await Assert.ThrowsAsync<DivideByZeroException>(() => middleware.Invoke(new DefaultHttpContext()));
-
-            mockLogger.Verify(l => l.LogAsync(It.IsAny<Exception>(), It.IsAny<DefaultHttpContext>(), CancellationToken.None), Times.Once());
+            var loggedException = Assert.Single(logger.Exceptions);
+            Assert.IsType<DivideByZeroException>(loggedException);
         }
 
         [Fact]
         public async Task Invoke_LogThrowsAndThrows()
         {
-            var mockLogger = new Mock<IExceptionLogger>();
-            mockLogger.Setup(l => l.LogAsync(It.IsAny<Exception>(), It.IsAny<DefaultHttpContext>(), CancellationToken.None))
-                .Throws(new ArgumentOutOfRangeException());
+            var logger = new FakeExceptionLogger(1);
             RequestDelegate requestDelegate = context => { throw new DivideByZeroException(); };
-            var middleware = new ErrorReportingExceptionLoggerMiddleware(requestDelegate, mockLogger.Object);
+            var middleware = new ErrorReportingExceptionLoggerMiddleware(requestDelegate, logger);
 
             await Assert.ThrowsAsync<AggregateException>(() => middleware.Invoke(new DefaultHttpContext()));
+            Assert.Empty(logger.Exceptions);
+            Assert.Equal(1, logger.FailedCalls);
+        }
 
-            mockLogger.Verify(l => l.LogAsync(It.IsAny<Exception>(), It.IsAny<DefaultHttpContext>(), CancellationToken.None), Times.Once());
+        private class FakeExceptionLogger : IExceptionLogger
+        {
+            private readonly ThrowingConsumer<Exception> _consumer;
+
+            public List<Exception> Exceptions => _consumer.Items;
+            public int FailedCalls => _consumer.FailedCalls;
+
+            public FakeExceptionLogger(int failures)
+            {
+                _consumer = new ThrowingConsumer<Exception>(failures);
+            }
+
+            public void Log(Exception exception, HttpContext context = null) =>
+                _consumer.Receive(new[] { exception });
+
+            public Task LogAsync(Exception exception, HttpContext context = null, CancellationToken cancellationToken = default) =>
+                _consumer.ReceiveAsync(new[] { exception }, cancellationToken);
         }
     }
 }
