@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.PrivateCatalog.V1Beta1.Snippets", "Google.Cloud.PrivateCatalog.V1Beta1.Snippets\Google.Cloud.PrivateCatalog.V1Beta1.Snippets.csproj", "{B6F4E836-FEC5-4AA0-B21A-BDB79F48D781}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.PrivateCatalog.V1Beta1.Tests", "Google.Cloud.PrivateCatalog.V1Beta1.Tests\Google.Cloud.PrivateCatalog.V1Beta1.Tests.csproj", "{3B71A8F6-50D8-4F53-A3E1-4E9343E512D6}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,9 +36,5 @@ Global
 		{B6F4E836-FEC5-4AA0-B21A-BDB79F48D781}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6F4E836-FEC5-4AA0-B21A-BDB79F48D781}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6F4E836-FEC5-4AA0-B21A-BDB79F48D781}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3B71A8F6-50D8-4F53-A3E1-4E9343E512D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3B71A8F6-50D8-4F53-A3E1-4E9343E512D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3B71A8F6-50D8-4F53-A3E1-4E9343E512D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3B71A8F6-50D8-4F53-A3E1-4E9343E512D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
