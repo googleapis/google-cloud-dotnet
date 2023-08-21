@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.Common;
-using Google.Cloud.Tools.SourceManipulation;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;

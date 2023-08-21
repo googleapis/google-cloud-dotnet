@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grafeas.V1", "Grafeas.V1\Gr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grafeas.V1.FixGeneratedCode", "Grafeas.V1.FixGeneratedCode\Grafeas.V1.FixGeneratedCode.csproj", "{6383FC04-1F77-45D7-90B7-5173EE7F5384}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.SourceManipulation", "..\..\tools\Google.Cloud.Tools.SourceManipulation\Google.Cloud.Tools.SourceManipulation.csproj", "{C9A3BE11-0E2F-42B3-8FBA-EB115640EC73}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.Common", "..\..\tools\Google.Cloud.Tools.Common\Google.Cloud.Tools.Common.csproj", "{65118AF8-AA9F-440F-ADAF-1AE0E021FDF1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grafeas.V1.GeneratedSnippets", "Grafeas.V1.GeneratedSnippets\Grafeas.V1.GeneratedSnippets.csproj", "{BC1E2F0B-5B69-439D-B4E7-E4108CAEC43D}"
@@ -31,10 +29,6 @@ Global
 		{6383FC04-1F77-45D7-90B7-5173EE7F5384}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6383FC04-1F77-45D7-90B7-5173EE7F5384}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6383FC04-1F77-45D7-90B7-5173EE7F5384}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C9A3BE11-0E2F-42B3-8FBA-EB115640EC73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C9A3BE11-0E2F-42B3-8FBA-EB115640EC73}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C9A3BE11-0E2F-42B3-8FBA-EB115640EC73}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C9A3BE11-0E2F-42B3-8FBA-EB115640EC73}.Release|Any CPU.Build.0 = Release|Any CPU
 		{65118AF8-AA9F-440F-ADAF-1AE0E021FDF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{65118AF8-AA9F-440F-ADAF-1AE0E021FDF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65118AF8-AA9F-440F-ADAF-1AE0E021FDF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
