@@ -1,4 +1,4 @@
-﻿// Copyright 2019 Google LLC
+// Copyright 2019 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -20,7 +20,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace Google.Cloud.Tools.SourceManipulation
+// Note: this used to be in its own project, when it was used by multiple APIs.
+// It may still contain more code than is needed by Grafeas, but that doesn't add
+// a maintenance burden, and it allows the code to be moved back to a common project
+// later if we ever want to.
+namespace Grafeas.V1.FixGeneratedCode
 {
     /// <summary>
     /// A text file, parsed as C# source code, with methods to simplify manipulation.
