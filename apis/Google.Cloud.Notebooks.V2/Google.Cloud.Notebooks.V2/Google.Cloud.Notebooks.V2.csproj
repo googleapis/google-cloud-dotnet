@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Version>2.0.0-beta02</Version>
+    <Version>1.0.0-beta00</Version>
     <TargetFrameworks>netstandard2.1;net462</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <Description>Recommended Google client library to access the AI Platform Notebooks API (v1 beta), which is used to manage notebook resources in Google Cloud.</Description>
+    <Description>Recommended Google client library to access the AI Platform Notebooks API (v2), which is used to manage notebook resources in Google Cloud.</Description>
     <PackageTags>ai;notebooks;Google;Cloud</PackageTags>
   </PropertyGroup>
   <ItemGroup>

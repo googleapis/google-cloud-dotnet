@@ -1,0 +1,9 @@
+[
+  {
+    "method": "ListInstances",
+    "client": "NotebookServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1-b"
+    }
+  }
+]
