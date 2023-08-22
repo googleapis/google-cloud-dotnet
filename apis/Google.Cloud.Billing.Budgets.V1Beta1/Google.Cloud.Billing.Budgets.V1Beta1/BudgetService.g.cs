@@ -39,47 +39,47 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
             "LmJpbGxpbmcuYnVkZ2V0cy52MWJldGExLkJ1ZGdldEID4EECEjQKC3VwZGF0",
             "ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EEB",
             "Ik4KEEdldEJ1ZGdldFJlcXVlc3QSOgoEbmFtZRgBIAEoCUIs4EEC+kEmCiRi",
-            "aWxsaW5nYnVkZ2V0cy5nb29nbGVhcGlzLmNvbS9CdWRnZXQigwEKEkxpc3RC",
+            "aWxsaW5nYnVkZ2V0cy5nb29nbGVhcGlzLmNvbS9CdWRnZXQilwEKEkxpc3RC",
             "dWRnZXRzUmVxdWVzdBI8CgZwYXJlbnQYASABKAlCLOBBAvpBJhIkYmlsbGlu",
-            "Z2J1ZGdldHMuZ29vZ2xlYXBpcy5jb20vQnVkZ2V0EhYKCXBhZ2Vfc2l6ZRgC",
-            "IAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BBASJtChNMaXN0QnVk",
-            "Z2V0c1Jlc3BvbnNlEj0KB2J1ZGdldHMYASADKAsyLC5nb29nbGUuY2xvdWQu",
-            "YmlsbGluZy5idWRnZXRzLnYxYmV0YTEuQnVkZ2V0EhcKD25leHRfcGFnZV90",
-            "b2tlbhgCIAEoCSJRChNEZWxldGVCdWRnZXRSZXF1ZXN0EjoKBG5hbWUYASAB",
-            "KAlCLOBBAvpBJgokYmlsbGluZ2J1ZGdldHMuZ29vZ2xlYXBpcy5jb20vQnVk",
-            "Z2V0MvcHCg1CdWRnZXRTZXJ2aWNlEq8BCgxDcmVhdGVCdWRnZXQSOS5nb29n",
-            "bGUuY2xvdWQuYmlsbGluZy5idWRnZXRzLnYxYmV0YTEuQ3JlYXRlQnVkZ2V0",
-            "UmVxdWVzdBosLmdvb2dsZS5jbG91ZC5iaWxsaW5nLmJ1ZGdldHMudjFiZXRh",
-            "MS5CdWRnZXQiNoLT5JMCMCIrL3YxYmV0YTEve3BhcmVudD1iaWxsaW5nQWNj",
-            "b3VudHMvKn0vYnVkZ2V0czoBKhK2AQoMVXBkYXRlQnVkZ2V0EjkuZ29vZ2xl",
-            "LmNsb3VkLmJpbGxpbmcuYnVkZ2V0cy52MWJldGExLlVwZGF0ZUJ1ZGdldFJl",
-            "cXVlc3QaLC5nb29nbGUuY2xvdWQuYmlsbGluZy5idWRnZXRzLnYxYmV0YTEu",
-            "QnVkZ2V0Ij2C0+STAjcyMi92MWJldGExL3tidWRnZXQubmFtZT1iaWxsaW5n",
-            "QWNjb3VudHMvKi9idWRnZXRzLyp9OgEqEqYBCglHZXRCdWRnZXQSNi5nb29n",
-            "bGUuY2xvdWQuYmlsbGluZy5idWRnZXRzLnYxYmV0YTEuR2V0QnVkZ2V0UmVx",
-            "dWVzdBosLmdvb2dsZS5jbG91ZC5iaWxsaW5nLmJ1ZGdldHMudjFiZXRhMS5C",
-            "dWRnZXQiM4LT5JMCLRIrL3YxYmV0YTEve25hbWU9YmlsbGluZ0FjY291bnRz",
-            "LyovYnVkZ2V0cy8qfRK3AQoLTGlzdEJ1ZGdldHMSOC5nb29nbGUuY2xvdWQu",
-            "YmlsbGluZy5idWRnZXRzLnYxYmV0YTEuTGlzdEJ1ZGdldHNSZXF1ZXN0Gjku",
-            "Z29vZ2xlLmNsb3VkLmJpbGxpbmcuYnVkZ2V0cy52MWJldGExLkxpc3RCdWRn",
-            "ZXRzUmVzcG9uc2UiM4LT5JMCLRIrL3YxYmV0YTEve3BhcmVudD1iaWxsaW5n",
-            "QWNjb3VudHMvKn0vYnVkZ2V0cxKWAQoMRGVsZXRlQnVkZ2V0EjkuZ29vZ2xl",
-            "LmNsb3VkLmJpbGxpbmcuYnVkZ2V0cy52MWJldGExLkRlbGV0ZUJ1ZGdldFJl",
-            "cXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiM4LT5JMCLSorL3YxYmV0",
-            "YTEve25hbWU9YmlsbGluZ0FjY291bnRzLyovYnVkZ2V0cy8qfRp/ykEdYmls",
-            "bGluZ2J1ZGdldHMuZ29vZ2xlYXBpcy5jb23SQVxodHRwczovL3d3dy5nb29n",
-            "bGVhcGlzLmNvbS9hdXRoL2Nsb3VkLWJpbGxpbmcsaHR0cHM6Ly93d3cuZ29v",
-            "Z2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUJwCihjb20uZ29vZ2xl",
-            "LmNsb3VkLmJpbGxpbmcuYnVkZ2V0cy52MWJldGExUAFaQmNsb3VkLmdvb2ds",
-            "ZS5jb20vZ28vYmlsbGluZy9idWRnZXRzL2FwaXYxYmV0YTEvYnVkZ2V0c3Bi",
-            "O2J1ZGdldHNwYmIGcHJvdG8z"));
+            "Z2J1ZGdldHMuZ29vZ2xlYXBpcy5jb20vQnVkZ2V0EhIKBXNjb3BlGAQgASgJ",
+            "QgPgQQESFgoJcGFnZV9zaXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tlbhgD",
+            "IAEoCUID4EEBIm0KE0xpc3RCdWRnZXRzUmVzcG9uc2USPQoHYnVkZ2V0cxgB",
+            "IAMoCzIsLmdvb2dsZS5jbG91ZC5iaWxsaW5nLmJ1ZGdldHMudjFiZXRhMS5C",
+            "dWRnZXQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIlEKE0RlbGV0ZUJ1ZGdl",
+            "dFJlcXVlc3QSOgoEbmFtZRgBIAEoCUIs4EEC+kEmCiRiaWxsaW5nYnVkZ2V0",
+            "cy5nb29nbGVhcGlzLmNvbS9CdWRnZXQy9wcKDUJ1ZGdldFNlcnZpY2USrwEK",
+            "DENyZWF0ZUJ1ZGdldBI5Lmdvb2dsZS5jbG91ZC5iaWxsaW5nLmJ1ZGdldHMu",
+            "djFiZXRhMS5DcmVhdGVCdWRnZXRSZXF1ZXN0GiwuZ29vZ2xlLmNsb3VkLmJp",
+            "bGxpbmcuYnVkZ2V0cy52MWJldGExLkJ1ZGdldCI2gtPkkwIwIisvdjFiZXRh",
+            "MS97cGFyZW50PWJpbGxpbmdBY2NvdW50cy8qfS9idWRnZXRzOgEqErYBCgxV",
+            "cGRhdGVCdWRnZXQSOS5nb29nbGUuY2xvdWQuYmlsbGluZy5idWRnZXRzLnYx",
+            "YmV0YTEuVXBkYXRlQnVkZ2V0UmVxdWVzdBosLmdvb2dsZS5jbG91ZC5iaWxs",
+            "aW5nLmJ1ZGdldHMudjFiZXRhMS5CdWRnZXQiPYLT5JMCNzIyL3YxYmV0YTEv",
+            "e2J1ZGdldC5uYW1lPWJpbGxpbmdBY2NvdW50cy8qL2J1ZGdldHMvKn06ASoS",
+            "pgEKCUdldEJ1ZGdldBI2Lmdvb2dsZS5jbG91ZC5iaWxsaW5nLmJ1ZGdldHMu",
+            "djFiZXRhMS5HZXRCdWRnZXRSZXF1ZXN0GiwuZ29vZ2xlLmNsb3VkLmJpbGxp",
+            "bmcuYnVkZ2V0cy52MWJldGExLkJ1ZGdldCIzgtPkkwItEisvdjFiZXRhMS97",
+            "bmFtZT1iaWxsaW5nQWNjb3VudHMvKi9idWRnZXRzLyp9ErcBCgtMaXN0QnVk",
+            "Z2V0cxI4Lmdvb2dsZS5jbG91ZC5iaWxsaW5nLmJ1ZGdldHMudjFiZXRhMS5M",
+            "aXN0QnVkZ2V0c1JlcXVlc3QaOS5nb29nbGUuY2xvdWQuYmlsbGluZy5idWRn",
+            "ZXRzLnYxYmV0YTEuTGlzdEJ1ZGdldHNSZXNwb25zZSIzgtPkkwItEisvdjFi",
+            "ZXRhMS97cGFyZW50PWJpbGxpbmdBY2NvdW50cy8qfS9idWRnZXRzEpYBCgxE",
+            "ZWxldGVCdWRnZXQSOS5nb29nbGUuY2xvdWQuYmlsbGluZy5idWRnZXRzLnYx",
+            "YmV0YTEuRGVsZXRlQnVkZ2V0UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5F",
+            "bXB0eSIzgtPkkwItKisvdjFiZXRhMS97bmFtZT1iaWxsaW5nQWNjb3VudHMv",
+            "Ki9idWRnZXRzLyp9Gn/KQR1iaWxsaW5nYnVkZ2V0cy5nb29nbGVhcGlzLmNv",
+            "bdJBXGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtYmls",
+            "bGluZyxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBs",
+            "YXRmb3JtQnAKKGNvbS5nb29nbGUuY2xvdWQuYmlsbGluZy5idWRnZXRzLnYx",
+            "YmV0YTFQAVpCY2xvdWQuZ29vZ2xlLmNvbS9nby9iaWxsaW5nL2J1ZGdldHMv",
+            "YXBpdjFiZXRhMS9idWRnZXRzcGI7YnVkZ2V0c3BiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Billing.Budgets.V1Beta1.BudgetModelReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.CreateBudgetRequest), global::Google.Cloud.Billing.Budgets.V1Beta1.CreateBudgetRequest.Parser, new[]{ "Parent", "Budget" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.UpdateBudgetRequest), global::Google.Cloud.Billing.Budgets.V1Beta1.UpdateBudgetRequest.Parser, new[]{ "Budget", "UpdateMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.GetBudgetRequest), global::Google.Cloud.Billing.Budgets.V1Beta1.GetBudgetRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.ListBudgetsRequest), global::Google.Cloud.Billing.Budgets.V1Beta1.ListBudgetsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.ListBudgetsRequest), global::Google.Cloud.Billing.Budgets.V1Beta1.ListBudgetsRequest.Parser, new[]{ "Parent", "Scope", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.ListBudgetsResponse), global::Google.Cloud.Billing.Budgets.V1Beta1.ListBudgetsResponse.Parser, new[]{ "Budgets", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.DeleteBudgetRequest), global::Google.Cloud.Billing.Budgets.V1Beta1.DeleteBudgetRequest.Parser, new[]{ "Name" }, null, null, null, null)
           }));
@@ -826,6 +826,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListBudgetsRequest(ListBudgetsRequest other) : this() {
       parent_ = other.parent_;
+      scope_ = other.scope_;
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -850,6 +851,26 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
       get { return parent_; }
       set {
         parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "scope" field.</summary>
+    public const int ScopeFieldNumber = 4;
+    private string scope_ = "";
+    /// <summary>
+    /// Optional. Set the scope of the budgets to be returned, in the format of the
+    /// resource name. The scope of a budget is the cost that it tracks, such as
+    /// costs for a single project, or the costs for all projects in a folder. Only
+    /// project scope (in the format of "projects/project-id" or "projects/123") is
+    /// supported in this field. When this field is set to a project's resource
+    /// name, the budgets returned are tracking the costs for that project.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Scope {
+      get { return scope_; }
+      set {
+        scope_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -902,6 +923,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
         return true;
       }
       if (Parent != other.Parent) return false;
+      if (Scope != other.Scope) return false;
       if (PageSize != other.PageSize) return false;
       if (PageToken != other.PageToken) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -912,6 +934,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (Scope.Length != 0) hash ^= Scope.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       if (_unknownFields != null) {
@@ -944,6 +967,10 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
         output.WriteRawTag(26);
         output.WriteString(PageToken);
       }
+      if (Scope.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Scope);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -966,6 +993,10 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
         output.WriteRawTag(26);
         output.WriteString(PageToken);
       }
+      if (Scope.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Scope);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -978,6 +1009,9 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
       int size = 0;
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (Scope.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Scope);
       }
       if (PageSize != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
@@ -999,6 +1033,9 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
       }
       if (other.Parent.Length != 0) {
         Parent = other.Parent;
+      }
+      if (other.Scope.Length != 0) {
+        Scope = other.Scope;
       }
       if (other.PageSize != 0) {
         PageSize = other.PageSize;
@@ -1033,6 +1070,10 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
             PageToken = input.ReadString();
             break;
           }
+          case 34: {
+            Scope = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1058,6 +1099,10 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
           }
           case 26: {
             PageToken = input.ReadString();
+            break;
+          }
+          case 34: {
+            Scope = input.ReadString();
             break;
           }
         }
