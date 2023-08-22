@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and 
 // limitations under the License.
 
+using Octokit;
+
 namespace Google.Cloud.Tools.ReleaseProgressReporter;
 
 /// <summary>
@@ -19,12 +21,12 @@ namespace Google.Cloud.Tools.ReleaseProgressReporter;
 /// </summary>
 public class PublishReporter
 {
-    private readonly GitHub _gitHub;
+    private readonly GitHubClient _client;
     private readonly PullRequestDetails _pullRequest;
 
-    public PublishReporter(GitHub gitHub, PullRequestDetails pullRequest)
+    public PublishReporter(GitHubClient client, PullRequestDetails pullRequest)
     {
-        _gitHub = gitHub;
+        _client = client;
         _pullRequest = pullRequest;
     }
 
@@ -46,8 +48,8 @@ public class PublishReporter
         string message = string.IsNullOrEmpty(buildUrl) ?
             "The release build has started, but the build log URL could not be determined."
             : $"The release build has started; the log can be viewed [here]({buildUrl}).";
-
-        await _gitHub.CreatePullRequestCommentAsync(_pullRequest.Owner, _pullRequest.RepoName, _pullRequest.Id, message).ConfigureAwait(false);
+        
+        await _pullRequest.AddComment(_client, message);
     }
 
     /// <summary>
@@ -59,7 +61,8 @@ public class PublishReporter
             ? ("Release build succeeded.", "autorelease: published")
             : ("The release build failed! Please investigate!", "autorelease: failed");
         message += "\n" + details;
-        await _gitHub.CreatePullRequestCommentAsync(_pullRequest.Owner, _pullRequest.RepoName, _pullRequest.Id, message).ConfigureAwait(false);
-        await _gitHub.UpdatePullLabelsAsync(_pullRequest.Owner, _pullRequest.RepoName, _pullRequest.Id, label, labelToRemove: "autorelease: tagged").ConfigureAwait(false);
+        await _pullRequest.AddComment(_client, message);
+        await _pullRequest.AddLabel(_client, label);
+        await _pullRequest.RemoveLabel(_client, "autorelease: tagged");
     }
 }
