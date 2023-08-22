@@ -215,11 +215,11 @@ namespace Google.Cloud.Video.Stitcher.V1
     public partial class CreateLiveSessionRequest
     {
         /// <summary>
-        /// <see cref="LiveSessionName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public LiveSessionName ParentAsLiveSessionName
+        public gagr::LocationName ParentAsLocationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : LiveSessionName.Parse(Parent, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }

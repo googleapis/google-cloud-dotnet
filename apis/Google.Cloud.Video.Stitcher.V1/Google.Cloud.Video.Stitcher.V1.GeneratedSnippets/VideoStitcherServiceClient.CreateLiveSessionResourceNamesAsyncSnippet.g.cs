@@ -17,6 +17,7 @@
 namespace GoogleCSharpSnippets
 {
     // [START videostitcher_v1_generated_VideoStitcherService_CreateLiveSession_async_flattened_resourceNames]
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Video.Stitcher.V1;
     using System.Threading.Tasks;
 
@@ -35,7 +36,7 @@ namespace GoogleCSharpSnippets
             // Create client
             VideoStitcherServiceClient videoStitcherServiceClient = await VideoStitcherServiceClient.CreateAsync();
             // Initialize request argument(s)
-            LiveSessionName parent = LiveSessionName.FromProjectLocationLiveSession("[PROJECT]", "[LOCATION]", "[LIVE_SESSION]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             LiveSession liveSession = new LiveSession();
             // Make the request
             LiveSession response = await videoStitcherServiceClient.CreateLiveSessionAsync(parent, liveSession);

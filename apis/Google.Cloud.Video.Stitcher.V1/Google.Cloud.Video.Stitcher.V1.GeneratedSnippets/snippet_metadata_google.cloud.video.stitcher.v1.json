@@ -5280,12 +5280,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 45,
+          "end": 46,
           "type": "FULL"
         },
         {
-          "start": 34,
-          "end": 43,
+          "start": 35,
+          "end": 44,
           "type": "SHORT"
         }
       ]
@@ -5329,12 +5329,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 46,
+          "end": 47,
           "type": "FULL"
         },
         {
-          "start": 35,
-          "end": 44,
+          "start": 36,
+          "end": 45,
           "type": "SHORT"
         }
       ]
@@ -5453,7 +5453,7 @@
         "fullName": "Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceClient.CreateLiveSession",
         "parameters": [
           {
-            "type": "Google.Cloud.Video.Stitcher.V1.LiveSessionName",
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
             "name": "parent"
           },
           {
@@ -5483,12 +5483,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 42,
+          "end": 43,
           "type": "FULL"
         },
         {
-          "start": 34,
-          "end": 40,
+          "start": 35,
+          "end": 41,
           "type": "SHORT"
         }
       ]
@@ -5505,7 +5505,7 @@
         "async": true,
         "parameters": [
           {
-            "type": "Google.Cloud.Video.Stitcher.V1.LiveSessionName",
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
             "name": "parent"
           },
           {
@@ -5535,12 +5535,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 43,
+          "end": 44,
           "type": "FULL"
         },
         {
-          "start": 35,
-          "end": 41,
+          "start": 36,
+          "end": 42,
           "type": "SHORT"
         }
       ]
