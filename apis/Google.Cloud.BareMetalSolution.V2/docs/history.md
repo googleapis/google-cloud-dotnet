@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.3.0, released 2023-08-22
+
+### New features
+
+- Restructure proto messages ([commit 1eeb6b3](https://github.com/googleapis/google-cloud-dotnet/commit/1eeb6b3e885c8067b0ab2f65346228c39059b24b))
+
 ## Version 1.2.0, released 2023-08-16
 
 ### New features
