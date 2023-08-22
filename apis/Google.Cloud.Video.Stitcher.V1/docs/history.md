@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.0.0-beta02, released 2023-08-22
+
+### Bug fixes
+
+- **BREAKING CHANGE** Use correct child_type annotation ([commit 324d882](https://github.com/googleapis/google-cloud-dotnet/commit/324d882b5e6fbf7a193d5c953ba169b6e05afbcc))
+
 ## Version 3.0.0-beta01, released 2023-04-25
 
 New major version to accommodate breaking changes. This is initially
