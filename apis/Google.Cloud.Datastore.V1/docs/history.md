@@ -1,5 +1,17 @@
 # Version history
 
+## Version 4.6.0, released 2023-08-22
+
+### New features
+
+- Add sum and average aggregates ([commit 4b253b0](https://github.com/googleapis/google-cloud-dotnet/commit/4b253b0d2b2c09a379142e59481f3ce8a3643b1e))
+- Publish proto definitions for SUM/AVG ([commit ab0464e](https://github.com/googleapis/google-cloud-dotnet/commit/ab0464e993fbacc50d91f80c6f6d7b87ff8682da))
+
+### Documentation improvements
+
+- Update property requirement specifications ([commit 11b3f20](https://github.com/googleapis/google-cloud-dotnet/commit/11b3f208b70651234d2bfef07460b98220ed23a7))
+- Minor comment update for Entity message ([commit 1d662d5](https://github.com/googleapis/google-cloud-dotnet/commit/1d662d52c880b995c733f1a2b0d70f8957fb5bf1))
+
 ## Version 4.5.0, released 2023-03-13
 
 ### New features
