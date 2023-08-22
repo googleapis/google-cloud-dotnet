@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and 
 // limitations under the License.
 
-using Octokit;
-
 namespace Google.Cloud.Tools.ReleaseProgressReporter;
 
 /// <summary>
@@ -21,39 +19,13 @@ namespace Google.Cloud.Tools.ReleaseProgressReporter;
 /// </summary>
 public class PublishReporter
 {
-    private readonly string _appId;
-    private readonly string _pr;
-    private readonly string _installationId;
-    private readonly string _privateKeyPath;
-    private readonly string _githubToken;
+    private readonly GitHub _gitHub;
+    private readonly PullRequestDetails _pullRequest;
 
-    public PublishReporter(string appId, string pr, string installationId, string privateKeyPath, string githubToken)
+    public PublishReporter(GitHub gitHub, PullRequestDetails pullRequest)
     {
-        _appId = appId;
-        _pr = pr;
-        _installationId = installationId;
-        _privateKeyPath = privateKeyPath;
-        _githubToken = githubToken;
-    }
-
-    private async Task<string> GetGitHubTokenAsync()
-    {
-        var keySource = new GitHubJwt.FilePrivateKeySource(_privateKeyPath);
-        var generator = new GitHubJwt.GitHubJwtFactory
-        (
-            keySource,
-            new GitHubJwt.GitHubJwtFactoryOptions
-            {
-                AppIntegrationId = Convert.ToInt32(_appId),
-                ExpirationSeconds = 60 // 10 minutes is the maximum time allowed.
-            }
-        );
-        var baseClient = new GitHubClient(new ProductHeaderValue(_appId))
-        {
-            Credentials = new Credentials(generator.CreateEncodedJwtToken(), AuthenticationType.Bearer)
-        };
-        var response = await baseClient.GitHubApps.CreateInstallationToken(Convert.ToInt64(_installationId)).ConfigureAwait(false);
-        return response.Token;
+        _gitHub = gitHub;
+        _pullRequest = pullRequest;
     }
 
     /// <summary>
@@ -61,9 +33,6 @@ public class PublishReporter
     /// </summary>
     public async Task StartAsync()
     {
-        var token = string.IsNullOrEmpty(_githubToken) ? await GetGitHubTokenAsync() : _githubToken;
-        var github = new GitHub(_appId, token);
-        var prDetails = PullRequestDetails.FromUrl(_pr);
         var buildUrl = Environment.GetEnvironmentVariable("CLOUD_LOGGING_URL");
 
         if (string.IsNullOrEmpty(buildUrl))
@@ -78,7 +47,7 @@ public class PublishReporter
             "The release build has started, but the build log URL could not be determined."
             : $"The release build has started; the log can be viewed [here]({buildUrl}).";
 
-        await github.CreatePullRequestCommentAsync(prDetails.RepoName, prDetails.Owner, prDetails.Id, message).ConfigureAwait(false);
+        await _gitHub.CreatePullRequestCommentAsync(_pullRequest.RepoName, _pullRequest.Owner, _pullRequest.Id, message).ConfigureAwait(false);
     }
 
     /// <summary>
@@ -86,23 +55,11 @@ public class PublishReporter
     /// </summary>
     public async Task FinishAsync(bool buildSucceeded, string details)
     {
-        var token = string.IsNullOrEmpty(_githubToken) ? await GetGitHubTokenAsync() : _githubToken;
-        var github = new GitHub(_appId, token);
-        var prDetails = PullRequestDetails.FromUrl(_pr);
-        string message;
-        string label;
-        if (buildSucceeded)
-        {
-            message = "Release build succeeded";
-            label = "autorelease: published";
-        }
-        else
-        {
-            message = "The release build failed! Please investigate!";
-            label = "autorelease: failed";
-        }
+        (string message, string label) = buildSucceeded
+            ? ("Release build succeeded.", "autorelease: published")
+            : ("The release build failed! Please investigate!", "autorelease: failed");
         message += "\n" + details;
-        await github.CreatePullRequestCommentAsync(prDetails.RepoName, prDetails.Owner, prDetails.Id, message).ConfigureAwait(false);
-        await github.UpdatePullLabelsAsync(prDetails.RepoName, prDetails.Owner, prDetails.Id, label, labelToRemove: "autorelease: tagged").ConfigureAwait(false);
+        await _gitHub.CreatePullRequestCommentAsync(_pullRequest.RepoName, _pullRequest.Owner, _pullRequest.Id, message).ConfigureAwait(false);
+        await _gitHub.UpdatePullLabelsAsync(_pullRequest.RepoName, _pullRequest.Owner, _pullRequest.Id, label, labelToRemove: "autorelease: tagged").ConfigureAwait(false);
     }
 }
