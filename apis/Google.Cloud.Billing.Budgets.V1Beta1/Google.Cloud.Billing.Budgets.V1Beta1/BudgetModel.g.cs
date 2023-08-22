@@ -48,34 +48,35 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
             "ASgBQgPgQQISUwoLc3BlbmRfYmFzaXMYAiABKA4yOS5nb29nbGUuY2xvdWQu",
             "YmlsbGluZy5idWRnZXRzLnYxYmV0YTEuVGhyZXNob2xkUnVsZS5CYXNpc0ID",
             "4EEBIkcKBUJhc2lzEhUKEUJBU0lTX1VOU1BFQ0lGSUVEEAASEQoNQ1VSUkVO",
-            "VF9TUEVORBABEhQKEEZPUkVDQVNURURfU1BFTkQQAiKkAQoOQWxsVXBkYXRl",
+            "VF9TUEVORBABEhQKEEZPUkVDQVNURURfU1BFTkQQAiLSAQoOQWxsVXBkYXRl",
             "c1J1bGUSGQoMcHVic3ViX3RvcGljGAEgASgJQgPgQQESGwoOc2NoZW1hX3Zl",
             "cnNpb24YAiABKAlCA+BBARItCiBtb25pdG9yaW5nX25vdGlmaWNhdGlvbl9j",
             "aGFubmVscxgDIAMoCUID4EEBEisKHmRpc2FibGVfZGVmYXVsdF9pYW1fcmVj",
-            "aXBpZW50cxgEIAEoCEID4EEBItgFCgZGaWx0ZXISFQoIcHJvamVjdHMYASAD",
-            "KAlCA+BBARIfChJyZXNvdXJjZV9hbmNlc3RvcnMYAiADKAlCA+BBARIZCgxj",
-            "cmVkaXRfdHlwZXMYByADKAlCA+BBARJmChZjcmVkaXRfdHlwZXNfdHJlYXRt",
-            "ZW50GAQgASgOMkEuZ29vZ2xlLmNsb3VkLmJpbGxpbmcuYnVkZ2V0cy52MWJl",
-            "dGExLkZpbHRlci5DcmVkaXRUeXBlc1RyZWF0bWVudEID4EEBEhUKCHNlcnZp",
-            "Y2VzGAMgAygJQgPgQQESGAoLc3ViYWNjb3VudHMYBSADKAlCA+BBARJNCgZs",
-            "YWJlbHMYBiADKAsyOC5nb29nbGUuY2xvdWQuYmlsbGluZy5idWRnZXRzLnYx",
-            "YmV0YTEuRmlsdGVyLkxhYmVsc0VudHJ5QgPgQQESVAoPY2FsZW5kYXJfcGVy",
-            "aW9kGAggASgOMjQuZ29vZ2xlLmNsb3VkLmJpbGxpbmcuYnVkZ2V0cy52MWJl",
-            "dGExLkNhbGVuZGFyUGVyaW9kQgPgQQFIABJQCg1jdXN0b21fcGVyaW9kGAkg",
-            "ASgLMjIuZ29vZ2xlLmNsb3VkLmJpbGxpbmcuYnVkZ2V0cy52MWJldGExLkN1",
-            "c3RvbVBlcmlvZEID4EEBSAAaSQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJ",
-            "EikKBXZhbHVlGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkxpc3RWYWx1ZToC",
-            "OAEijwEKFENyZWRpdFR5cGVzVHJlYXRtZW50EiYKIkNSRURJVF9UWVBFU19U",
-            "UkVBVE1FTlRfVU5TUEVDSUZJRUQQABIXChNJTkNMVURFX0FMTF9DUkVESVRT",
-            "EAESFwoTRVhDTFVERV9BTExfQ1JFRElUUxACEh0KGUlOQ0xVREVfU1BFQ0lG",
-            "SUVEX0NSRURJVFMQA0IOCgx1c2FnZV9wZXJpb2QiZAoMQ3VzdG9tUGVyaW9k",
-            "EioKCnN0YXJ0X2RhdGUYASABKAsyES5nb29nbGUudHlwZS5EYXRlQgPgQQIS",
-            "KAoIZW5kX2RhdGUYAiABKAsyES5nb29nbGUudHlwZS5EYXRlQgPgQQEqUwoO",
-            "Q2FsZW5kYXJQZXJpb2QSHwobQ0FMRU5EQVJfUEVSSU9EX1VOU1BFQ0lGSUVE",
-            "EAASCQoFTU9OVEgQARILCgdRVUFSVEVSEAISCAoEWUVBUhADQnAKKGNvbS5n",
-            "b29nbGUuY2xvdWQuYmlsbGluZy5idWRnZXRzLnYxYmV0YTFQAVpCY2xvdWQu",
-            "Z29vZ2xlLmNvbS9nby9iaWxsaW5nL2J1ZGdldHMvYXBpdjFiZXRhMS9idWRn",
-            "ZXRzcGI7YnVkZ2V0c3BiYgZwcm90bzM="));
+            "aXBpZW50cxgEIAEoCEID4EEBEiwKH2VuYWJsZV9wcm9qZWN0X2xldmVsX3Jl",
+            "Y2lwaWVudHMYBSABKAhCA+BBASLYBQoGRmlsdGVyEhUKCHByb2plY3RzGAEg",
+            "AygJQgPgQQESHwoScmVzb3VyY2VfYW5jZXN0b3JzGAIgAygJQgPgQQESGQoM",
+            "Y3JlZGl0X3R5cGVzGAcgAygJQgPgQQESZgoWY3JlZGl0X3R5cGVzX3RyZWF0",
+            "bWVudBgEIAEoDjJBLmdvb2dsZS5jbG91ZC5iaWxsaW5nLmJ1ZGdldHMudjFi",
+            "ZXRhMS5GaWx0ZXIuQ3JlZGl0VHlwZXNUcmVhdG1lbnRCA+BBARIVCghzZXJ2",
+            "aWNlcxgDIAMoCUID4EEBEhgKC3N1YmFjY291bnRzGAUgAygJQgPgQQESTQoG",
+            "bGFiZWxzGAYgAygLMjguZ29vZ2xlLmNsb3VkLmJpbGxpbmcuYnVkZ2V0cy52",
+            "MWJldGExLkZpbHRlci5MYWJlbHNFbnRyeUID4EEBElQKD2NhbGVuZGFyX3Bl",
+            "cmlvZBgIIAEoDjI0Lmdvb2dsZS5jbG91ZC5iaWxsaW5nLmJ1ZGdldHMudjFi",
+            "ZXRhMS5DYWxlbmRhclBlcmlvZEID4EEBSAASUAoNY3VzdG9tX3BlcmlvZBgJ",
+            "IAEoCzIyLmdvb2dsZS5jbG91ZC5iaWxsaW5nLmJ1ZGdldHMudjFiZXRhMS5D",
+            "dXN0b21QZXJpb2RCA+BBAUgAGkkKC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEo",
+            "CRIpCgV2YWx1ZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5MaXN0VmFsdWU6",
+            "AjgBIo8BChRDcmVkaXRUeXBlc1RyZWF0bWVudBImCiJDUkVESVRfVFlQRVNf",
+            "VFJFQVRNRU5UX1VOU1BFQ0lGSUVEEAASFwoTSU5DTFVERV9BTExfQ1JFRElU",
+            "UxABEhcKE0VYQ0xVREVfQUxMX0NSRURJVFMQAhIdChlJTkNMVURFX1NQRUNJ",
+            "RklFRF9DUkVESVRTEANCDgoMdXNhZ2VfcGVyaW9kImQKDEN1c3RvbVBlcmlv",
+            "ZBIqCgpzdGFydF9kYXRlGAEgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZUID4EEC",
+            "EigKCGVuZF9kYXRlGAIgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZUID4EEBKlMK",
+            "DkNhbGVuZGFyUGVyaW9kEh8KG0NBTEVOREFSX1BFUklPRF9VTlNQRUNJRklF",
+            "RBAAEgkKBU1PTlRIEAESCwoHUVVBUlRFUhACEggKBFlFQVIQA0JwCihjb20u",
+            "Z29vZ2xlLmNsb3VkLmJpbGxpbmcuYnVkZ2V0cy52MWJldGExUAFaQmNsb3Vk",
+            "Lmdvb2dsZS5jb20vZ28vYmlsbGluZy9idWRnZXRzL2FwaXYxYmV0YTEvYnVk",
+            "Z2V0c3BiO2J1ZGdldHNwYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.CalendarPeriod), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -83,7 +84,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.BudgetAmount), global::Google.Cloud.Billing.Budgets.V1Beta1.BudgetAmount.Parser, new[]{ "SpecifiedAmount", "LastPeriodAmount" }, new[]{ "BudgetAmount" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.LastPeriodAmount), global::Google.Cloud.Billing.Budgets.V1Beta1.LastPeriodAmount.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.ThresholdRule), global::Google.Cloud.Billing.Budgets.V1Beta1.ThresholdRule.Parser, new[]{ "ThresholdPercent", "SpendBasis" }, null, new[]{ typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.ThresholdRule.Types.Basis) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.AllUpdatesRule), global::Google.Cloud.Billing.Budgets.V1Beta1.AllUpdatesRule.Parser, new[]{ "PubsubTopic", "SchemaVersion", "MonitoringNotificationChannels", "DisableDefaultIamRecipients" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.AllUpdatesRule), global::Google.Cloud.Billing.Budgets.V1Beta1.AllUpdatesRule.Parser, new[]{ "PubsubTopic", "SchemaVersion", "MonitoringNotificationChannels", "DisableDefaultIamRecipients", "EnableProjectLevelRecipients" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.Filter), global::Google.Cloud.Billing.Budgets.V1Beta1.Filter.Parser, new[]{ "Projects", "ResourceAncestors", "CreditTypes", "CreditTypesTreatment", "Services", "Subaccounts", "Labels", "CalendarPeriod", "CustomPeriod" }, new[]{ "UsagePeriod" }, new[]{ typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.Filter.Types.CreditTypesTreatment) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.CustomPeriod), global::Google.Cloud.Billing.Budgets.V1Beta1.CustomPeriod.Parser, new[]{ "StartDate", "EndDate" }, null, null, null, null)
           }));
@@ -1388,6 +1389,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
       schemaVersion_ = other.schemaVersion_;
       monitoringNotificationChannels_ = other.monitoringNotificationChannels_.Clone();
       disableDefaultIamRecipients_ = other.disableDefaultIamRecipients_;
+      enableProjectLevelRecipients_ = other.enableProjectLevelRecipients_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1481,6 +1483,27 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "enable_project_level_recipients" field.</summary>
+    public const int EnableProjectLevelRecipientsFieldNumber = 5;
+    private bool enableProjectLevelRecipients_;
+    /// <summary>
+    /// Optional. When set to true, and when the budget has a single project
+    /// configured, notifications will be sent to project level recipients of that
+    /// project. This field will be ignored if the budget has multiple or no
+    /// project configured.
+    ///
+    /// Currently, project level recipients are the users with `Owner` role on a
+    /// cloud project.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool EnableProjectLevelRecipients {
+      get { return enableProjectLevelRecipients_; }
+      set {
+        enableProjectLevelRecipients_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1500,6 +1523,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
       if (SchemaVersion != other.SchemaVersion) return false;
       if(!monitoringNotificationChannels_.Equals(other.monitoringNotificationChannels_)) return false;
       if (DisableDefaultIamRecipients != other.DisableDefaultIamRecipients) return false;
+      if (EnableProjectLevelRecipients != other.EnableProjectLevelRecipients) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1511,6 +1535,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
       if (SchemaVersion.Length != 0) hash ^= SchemaVersion.GetHashCode();
       hash ^= monitoringNotificationChannels_.GetHashCode();
       if (DisableDefaultIamRecipients != false) hash ^= DisableDefaultIamRecipients.GetHashCode();
+      if (EnableProjectLevelRecipients != false) hash ^= EnableProjectLevelRecipients.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1542,6 +1567,10 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
         output.WriteRawTag(32);
         output.WriteBool(DisableDefaultIamRecipients);
       }
+      if (EnableProjectLevelRecipients != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(EnableProjectLevelRecipients);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1565,6 +1594,10 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
         output.WriteRawTag(32);
         output.WriteBool(DisableDefaultIamRecipients);
       }
+      if (EnableProjectLevelRecipients != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(EnableProjectLevelRecipients);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1583,6 +1616,9 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
       }
       size += monitoringNotificationChannels_.CalculateSize(_repeated_monitoringNotificationChannels_codec);
       if (DisableDefaultIamRecipients != false) {
+        size += 1 + 1;
+      }
+      if (EnableProjectLevelRecipients != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -1606,6 +1642,9 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
       monitoringNotificationChannels_.Add(other.monitoringNotificationChannels_);
       if (other.DisableDefaultIamRecipients != false) {
         DisableDefaultIamRecipients = other.DisableDefaultIamRecipients;
+      }
+      if (other.EnableProjectLevelRecipients != false) {
+        EnableProjectLevelRecipients = other.EnableProjectLevelRecipients;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1638,6 +1677,10 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
             DisableDefaultIamRecipients = input.ReadBool();
             break;
           }
+          case 40: {
+            EnableProjectLevelRecipients = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1667,6 +1710,10 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
           }
           case 32: {
             DisableDefaultIamRecipients = input.ReadBool();
+            break;
+          }
+          case 40: {
+            EnableProjectLevelRecipients = input.ReadBool();
             break;
           }
         }
@@ -1764,8 +1811,10 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     /// Optional. A set of folder and organization names of the form
     /// `folders/{folderId}` or `organizations/{organizationId}`, specifying that
     /// usage from only this set of folders and organizations should be included in
-    /// the budget. If omitted, the report includes all usage for all
-    /// organizations, regardless of which organization the usage occurred on.
+    /// the budget. If omitted, the budget includes all usage that the billing
+    /// account pays for. If the folder or organization contains projects that are
+    /// paid for by a different Cloud Billing account, the budget *doesn't* apply
+    /// to those projects.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
