@@ -47,7 +47,7 @@ public class PublishReporter
             "The release build has started, but the build log URL could not be determined."
             : $"The release build has started; the log can be viewed [here]({buildUrl}).";
 
-        await _gitHub.CreatePullRequestCommentAsync(_pullRequest.RepoName, _pullRequest.Owner, _pullRequest.Id, message).ConfigureAwait(false);
+        await _gitHub.CreatePullRequestCommentAsync(_pullRequest.Owner, _pullRequest.RepoName, _pullRequest.Id, message).ConfigureAwait(false);
     }
 
     /// <summary>
@@ -59,7 +59,7 @@ public class PublishReporter
             ? ("Release build succeeded.", "autorelease: published")
             : ("The release build failed! Please investigate!", "autorelease: failed");
         message += "\n" + details;
-        await _gitHub.CreatePullRequestCommentAsync(_pullRequest.RepoName, _pullRequest.Owner, _pullRequest.Id, message).ConfigureAwait(false);
-        await _gitHub.UpdatePullLabelsAsync(_pullRequest.RepoName, _pullRequest.Owner, _pullRequest.Id, label, labelToRemove: "autorelease: tagged").ConfigureAwait(false);
+        await _gitHub.CreatePullRequestCommentAsync(_pullRequest.Owner, _pullRequest.RepoName, _pullRequest.Id, message).ConfigureAwait(false);
+        await _gitHub.UpdatePullLabelsAsync(_pullRequest.Owner, _pullRequest.RepoName, _pullRequest.Id, label, labelToRemove: "autorelease: tagged").ConfigureAwait(false);
     }
 }
