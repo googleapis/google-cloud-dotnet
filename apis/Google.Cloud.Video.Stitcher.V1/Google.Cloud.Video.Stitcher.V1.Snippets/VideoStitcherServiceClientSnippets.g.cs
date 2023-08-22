@@ -3054,7 +3054,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             CreateLiveSessionRequest request = new CreateLiveSessionRequest
             {
-                ParentAsLiveSessionName = LiveSessionName.FromProjectLocationLiveSession("[PROJECT]", "[LOCATION]", "[LIVE_SESSION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 LiveSession = new LiveSession(),
             };
             // Make the request
@@ -3072,7 +3072,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             CreateLiveSessionRequest request = new CreateLiveSessionRequest
             {
-                ParentAsLiveSessionName = LiveSessionName.FromProjectLocationLiveSession("[PROJECT]", "[LOCATION]", "[LIVE_SESSION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 LiveSession = new LiveSession(),
             };
             // Make the request
@@ -3087,7 +3087,7 @@ namespace GoogleCSharpSnippets
             // Create client
             VideoStitcherServiceClient videoStitcherServiceClient = VideoStitcherServiceClient.Create();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]/liveSessions/[LIVE_SESSION]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
             LiveSession liveSession = new LiveSession();
             // Make the request
             LiveSession response = videoStitcherServiceClient.CreateLiveSession(parent, liveSession);
@@ -3102,7 +3102,7 @@ namespace GoogleCSharpSnippets
             // Create client
             VideoStitcherServiceClient videoStitcherServiceClient = await VideoStitcherServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]/liveSessions/[LIVE_SESSION]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
             LiveSession liveSession = new LiveSession();
             // Make the request
             LiveSession response = await videoStitcherServiceClient.CreateLiveSessionAsync(parent, liveSession);
@@ -3112,11 +3112,11 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for CreateLiveSession</summary>
         public void CreateLiveSessionResourceNames()
         {
-            // Snippet: CreateLiveSession(LiveSessionName, LiveSession, CallSettings)
+            // Snippet: CreateLiveSession(LocationName, LiveSession, CallSettings)
             // Create client
             VideoStitcherServiceClient videoStitcherServiceClient = VideoStitcherServiceClient.Create();
             // Initialize request argument(s)
-            LiveSessionName parent = LiveSessionName.FromProjectLocationLiveSession("[PROJECT]", "[LOCATION]", "[LIVE_SESSION]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             LiveSession liveSession = new LiveSession();
             // Make the request
             LiveSession response = videoStitcherServiceClient.CreateLiveSession(parent, liveSession);
@@ -3126,12 +3126,12 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for CreateLiveSessionAsync</summary>
         public async Task CreateLiveSessionResourceNamesAsync()
         {
-            // Snippet: CreateLiveSessionAsync(LiveSessionName, LiveSession, CallSettings)
-            // Additional: CreateLiveSessionAsync(LiveSessionName, LiveSession, CancellationToken)
+            // Snippet: CreateLiveSessionAsync(LocationName, LiveSession, CallSettings)
+            // Additional: CreateLiveSessionAsync(LocationName, LiveSession, CancellationToken)
             // Create client
             VideoStitcherServiceClient videoStitcherServiceClient = await VideoStitcherServiceClient.CreateAsync();
             // Initialize request argument(s)
-            LiveSessionName parent = LiveSessionName.FromProjectLocationLiveSession("[PROJECT]", "[LOCATION]", "[LIVE_SESSION]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             LiveSession liveSession = new LiveSession();
             // Make the request
             LiveSession response = await videoStitcherServiceClient.CreateLiveSessionAsync(parent, liveSession);

@@ -292,7 +292,9 @@ namespace Google.Cloud.Video.Stitcher.V1 {
   }
 
   /// <summary>
-  /// Information related to the details for one ad tag.
+  /// Information related to the details for one ad tag. This resource is only
+  /// available for VOD sessions that do not implement Google Ad Manager ad
+  /// insertion.
   /// </summary>
   public sealed partial class VodAdTagDetail : pb::IMessage<VodAdTagDetail>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

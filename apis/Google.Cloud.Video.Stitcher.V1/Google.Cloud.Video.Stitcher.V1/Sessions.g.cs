@@ -296,9 +296,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
     public const int AdTrackingFieldNumber = 11;
     private global::Google.Cloud.Video.Stitcher.V1.AdTracking adTracking_ = global::Google.Cloud.Video.Stitcher.V1.AdTracking.Unspecified;
     /// <summary>
-    /// Required. Determines how the ad should be tracked. If
-    /// [gam_vod_config][google.cloud.video.stitcher.v1.VodSession.gam_vod_config]
-    /// is set, the value must be `CLIENT` because the IMA SDK handles ad tracking.
+    /// Required. Determines how the ad should be tracked.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2393,8 +2391,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
     public static partial class Types {
       /// <summary>
       /// Defines fields related to Google Ad Manager (GAM). This should be set if
-      /// GAM
-      /// is being used for ads.
+      /// GAM is being used for ads.
       /// </summary>
       public sealed partial class GamSettings : pb::IMessage<GamSettings>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
