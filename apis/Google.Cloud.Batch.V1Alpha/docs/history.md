@@ -1,5 +1,13 @@
 # Version history
 
+## Version 1.0.0-alpha16, released 2023-08-22
+
+### New features
+
+- Add more compute resource API descriptions to match with VM's machine type field ([commit 2a9340b](https://github.com/googleapis/google-cloud-dotnet/commit/2a9340bb14ba9ad0a0e0706363fac4f26730f750))
+- Clarify Batch API proto doc about pubsub notifications ([commit 2a9340b](https://github.com/googleapis/google-cloud-dotnet/commit/2a9340bb14ba9ad0a0e0706363fac4f26730f750))
+- Add Batch Managed Container support for v1alpha ([commit 2a9340b](https://github.com/googleapis/google-cloud-dotnet/commit/2a9340bb14ba9ad0a0e0706363fac4f26730f750))
+
 ## Version 1.0.0-alpha15, released 2023-08-16
 
 ### New features
