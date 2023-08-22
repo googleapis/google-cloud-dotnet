@@ -61,7 +61,7 @@ public class PublishReporter
     /// </summary>
     public async Task StartAsync()
     {
-        var token = _githubToken ?? await GetGitHubTokenAsync();
+        var token = string.IsNullOrEmpty(_githubToken) ? await GetGitHubTokenAsync() : _githubToken;
         var github = new GitHub(_appId, token);
         var prDetails = PullRequestDetails.FromUrl(_pr);
         var buildUrl = Environment.GetEnvironmentVariable("CLOUD_LOGGING_URL");
@@ -86,7 +86,7 @@ public class PublishReporter
     /// </summary>
     public async Task FinishAsync(bool buildSucceeded, string details)
     {
-        var token = _githubToken ?? await GetGitHubTokenAsync();
+        var token = string.IsNullOrEmpty(_githubToken) ? await GetGitHubTokenAsync() : _githubToken;
         var github = new GitHub(_appId, token);
         var prDetails = PullRequestDetails.FromUrl(_pr);
         string message;
