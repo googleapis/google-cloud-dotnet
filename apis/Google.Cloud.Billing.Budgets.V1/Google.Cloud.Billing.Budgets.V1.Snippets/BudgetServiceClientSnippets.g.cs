@@ -281,6 +281,7 @@ namespace GoogleCSharpSnippets
             ListBudgetsRequest request = new ListBudgetsRequest
             {
                 ParentAsBillingAccountName = BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
+                Scope = "",
             };
             // Make the request
             PagedEnumerable<ListBudgetsResponse, Budget> response = budgetServiceClient.ListBudgets(request);
@@ -329,6 +330,7 @@ namespace GoogleCSharpSnippets
             ListBudgetsRequest request = new ListBudgetsRequest
             {
                 ParentAsBillingAccountName = BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
+                Scope = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListBudgetsResponse, Budget> response = budgetServiceClient.ListBudgetsAsync(request);

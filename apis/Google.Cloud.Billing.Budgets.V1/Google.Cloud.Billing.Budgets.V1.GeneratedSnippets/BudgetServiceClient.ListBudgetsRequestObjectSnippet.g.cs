@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
             ListBudgetsRequest request = new ListBudgetsRequest
             {
                 ParentAsBillingAccountName = BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
+                Scope = "",
             };
             // Make the request
             PagedEnumerable<ListBudgetsResponse, Budget> response = budgetServiceClient.ListBudgets(request);
