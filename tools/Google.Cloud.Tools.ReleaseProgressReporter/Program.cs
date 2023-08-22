@@ -14,6 +14,7 @@
 
 using Google.Cloud.Tools.Common;
 using Google.Cloud.Tools.ReleaseProgressReporter;
+using Octokit;
 
 // Note: CommandLineParser has not been used here for the sake of simplicity.
 if (args.Length < 1)
@@ -23,8 +24,8 @@ if (args.Length < 1)
 
 var progress = args[0];
 PullRequestDetails pr = PullRequestDetails.FromUrl(GetRequiredEnvironmentVariable("AUTORELEASE_PR"));
-GitHub gitHubHelper = await GetGitHubHelperFromEnvironment();
-PublishReporter reporter = new PublishReporter(gitHubHelper, pr);
+GitHubClient client = await GetGitHubClientFromEnvironment();
+PublishReporter reporter = new PublishReporter(client, pr);
 
 switch (progress)
 {
@@ -40,18 +41,21 @@ switch (progress)
         throw new UserErrorException($"Invalid progress point: '{progress}'. Available options are (start, finish)");
 }
 
-async Task<GitHub> GetGitHubHelperFromEnvironment()
+async Task<GitHubClient> GetGitHubClientFromEnvironment()
 {
     var appId = File.ReadAllText(GetRequiredEnvironmentVariable("APP_ID_PATH"));
-    string? githubToken = Environment.GetEnvironmentVariable("GITHUB_TOKEN");
-    if (githubToken is null)
+    string? accessToken = Environment.GetEnvironmentVariable("GITHUB_TOKEN");
+    if (accessToken is null)
     {
         // Admittedly these are only required when GITHUB_TOKEN isn't set, but it's close enough.
         string privateKeyPath = GetRequiredEnvironmentVariable("GITHUB_PRIVATE_KEY_PATH");
         var installationId = File.ReadAllText(GetRequiredEnvironmentVariable("INSTALLATION_ID_PATH"));
-        githubToken = await GitHub.FetchGitHubAccessTokenFromPrivateKey(privateKeyPath, appId, installationId);
+        accessToken = await GitHub.FetchGitHubAccessTokenFromPrivateKey(privateKeyPath, appId, installationId);
     }
-    return new GitHub(appId, githubToken);
+    return new GitHubClient(new ProductHeaderValue(appId))
+    {
+        Credentials = new Credentials(accessToken)
+    };
 }
 
 string GetRequiredEnvironmentVariable(string variable)

@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and 
 // limitations under the License.
 
+using Octokit;
 using System.Text.RegularExpressions;
 
 namespace Google.Cloud.Tools.ReleaseProgressReporter;
@@ -50,4 +51,28 @@ public class PullRequestDetails
             match.Groups["repo"].Value,
             int.Parse(match.Groups["number"].Value));
     }
+
+    /// <summary>
+    /// Adds a comment to the pull request.
+    /// </summary>
+    /// <param name="client">The client to use to add the comment.</param>
+    /// <param name="comment">The comment to add on the pull request.</param>
+    public async Task<IssueComment> AddComment(GitHubClient client, string comment) =>
+        await client.Issue.Comment.Create(Owner, RepoName, Id, comment);
+
+    /// <summary>
+    /// Adds the given label to the pull request.
+    /// </summary>
+    /// <param name="client">The client to use to add the label.</param>
+    /// <param name="label">Label to add on the pull request.</param>
+    public async Task<IReadOnlyList<Label>> AddLabel(GitHubClient client, string label) =>
+        await client.Issue.Labels.AddToIssue(Owner, RepoName, Id, new string[] { label });
+
+    /// <summary>
+    /// Removes the given label from the pull request.
+    /// </summary>
+    /// <param name="client">The client to use to add the label.</param>
+    /// <param name="label">Label to remove on the pull request.</param>
+    public async Task<IReadOnlyList<Label>> RemoveLabel(GitHubClient client, string label) =>
+        await client.Issue.Labels.RemoveFromIssue(Owner, RepoName, Id, label);
 }
