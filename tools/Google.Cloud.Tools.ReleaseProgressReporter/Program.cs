@@ -18,33 +18,48 @@ using Google.Cloud.Tools.ReleaseProgressReporter;
 // Note: CommandLineParser has not been used here for the sake of simplicity.
 if (args.Length < 1)
 {
-    throw new UserErrorException("Please specify the publisher API name `start` or `finish`.");
+    throw new UserErrorException("Please specify the progress point: 'start' or 'finish'.");
 }
 
-var api = args[0];
+var progress = args[0];
+PullRequestDetails pr = PullRequestDetails.FromUrl(GetRequiredEnvironmentVariable("AUTORELEASE_PR"));
+GitHub gitHubHelper = await GetGitHubHelperFromEnvironment();
+PublishReporter reporter = new PublishReporter(gitHubHelper, pr);
 
-string githubToken = Environment.GetEnvironmentVariable("GITHUB_TOKEN") ?? "";
-string pr = Environment.GetEnvironmentVariable("AUTORELEASE_PR") ?? "";
-string appIdPath = Environment.GetEnvironmentVariable("APP_ID_PATH") ?? "";
-string installationIdPath = Environment.GetEnvironmentVariable("INSTALLATION_ID_PATH") ?? "";
-string privateKeyPath = Environment.GetEnvironmentVariable("GITHUB_PRIVATE_KEY_PATH") ?? "";
-
-var appId = File.ReadAllText(appIdPath);
-var installationId = File.ReadAllText(installationIdPath);
-
-PublishReporter reporter = new PublishReporter(appId, pr, installationId, privateKeyPath, githubToken);
-
-if (api == "start")
+switch (progress)
 {
-    await reporter.StartAsync();
+    case "start":
+        await reporter.StartAsync();
+        break;
+    case "finish":
+        bool status = Convert.ToBoolean(args[1]);
+        string publishDetails = Environment.GetEnvironmentVariable("PUBLISH_DETAILS") ?? "";
+        await reporter.FinishAsync(status, publishDetails);
+        break;
+    default:
+        throw new UserErrorException($"Invalid progress point: '{progress}'. Available options are (start, finish)");
 }
-else if (api == "finish")
+
+async Task<GitHub> GetGitHubHelperFromEnvironment()
 {
-    bool status = Convert.ToBoolean(args[1]);
-    string publishDetails = Environment.GetEnvironmentVariable("PUBLISH_DETAILS") ?? "";
-    await reporter.FinishAsync(status, publishDetails);
+    var appId = File.ReadAllText(GetRequiredEnvironmentVariable("APP_ID_PATH"));
+    string? githubToken = Environment.GetEnvironmentVariable("GITHUB_TOKEN");
+    if (githubToken is null)
+    {
+        // Admittedly these are only required when GITHUB_TOKEN isn't set, but it's close enough.
+        string privateKeyPath = GetRequiredEnvironmentVariable("GITHUB_PRIVATE_KEY_PATH");
+        var installationId = File.ReadAllText(GetRequiredEnvironmentVariable("INSTALLATION_ID_PATH"));
+        githubToken = await GitHub.FetchGitHubAccessTokenFromPrivateKey(privateKeyPath, appId, installationId);
+    }
+    return new GitHub(appId, githubToken);
 }
-else
+
+string GetRequiredEnvironmentVariable(string variable)
 {
-    throw new UserErrorException("Incorrect API is passed available options are (start, finish)");
+    var value = Environment.GetEnvironmentVariable(variable) ?? "";
+    if (value == "")
+    {
+        throw new UserErrorException($"Environment variable '{variable}' must be set and non-empty.");
+    }
+    return value;
 }

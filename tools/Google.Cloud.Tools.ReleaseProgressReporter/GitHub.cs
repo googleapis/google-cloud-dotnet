@@ -12,23 +12,23 @@
 // See the License for the specific language governing permissions and 
 // limitations under the License.
 
+using GitHubJwt;
 using Octokit;
 
 namespace Google.Cloud.Tools.ReleaseProgressReporter;
 
 /// <summary>
-/// Helper class to call GitHub Apis.
+/// Helper class to call GitHub APIs.
 /// </summary>
 public class GitHub
 {
-    private readonly string _appId;
     private readonly GitHubClient _githubClient;
-    public GitHub(string appId, string githubToken)
+
+    public GitHub(string appId, string accessToken)
     {
-        _appId = appId;
-        _githubClient = new GitHubClient(new ProductHeaderValue(_appId))
+        _githubClient = new GitHubClient(new ProductHeaderValue(appId))
         {
-            Credentials = new Credentials(githubToken)
+            Credentials = new Credentials(accessToken)
         };
     }
 
@@ -92,5 +92,31 @@ public class GitHub
     {
         await _githubClient.Issue.Labels.RemoveFromIssue(owner, repoName, number, labelToRemove);
         return await AddIssueLabel(repoName, owner, number, new string[] { labelToAdd });
+    }
+
+    /// <summary>
+    /// Fetches a GitHub access token, requested from a JWT signed with a private key.
+    /// </summary>
+    /// <param name="privateKeyPath">The path to the private key file.</param>
+    /// <param name="appId">The ID of the application the key is associated with.</param>
+    /// <param name="installationId">The ID of the installation the key is associated with.</param>
+    public static async Task<string> FetchGitHubAccessTokenFromPrivateKey(string privateKeyPath, string appId, string installationId)
+    {
+        var keySource = new FilePrivateKeySource(privateKeyPath);
+        var generator = new GitHubJwtFactory
+        (
+            keySource,
+            new GitHubJwtFactoryOptions
+            {
+                AppIntegrationId = int.Parse(appId),
+                ExpirationSeconds = 60 // 10 minutes is the maximum time allowed.
+            }
+        );
+        var baseClient = new GitHubClient(new ProductHeaderValue(appId))
+        {
+            Credentials = new Credentials(generator.CreateEncodedJwtToken(), AuthenticationType.Bearer)
+        };
+        var response = await baseClient.GitHubApps.CreateInstallationToken(long.Parse(installationId)).ConfigureAwait(false);
+        return response.Token;
     }
 }
