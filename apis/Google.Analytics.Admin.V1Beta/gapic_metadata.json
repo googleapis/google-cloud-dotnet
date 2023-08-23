@@ -256,6 +256,12 @@
                 "UpdateAccountAsync"
               ]
             },
+            "UpdateConversionEvent": {
+              "methods": [
+                "UpdateConversionEvent",
+                "UpdateConversionEventAsync"
+              ]
+            },
             "UpdateCustomDimension": {
               "methods": [
                 "UpdateCustomDimension",

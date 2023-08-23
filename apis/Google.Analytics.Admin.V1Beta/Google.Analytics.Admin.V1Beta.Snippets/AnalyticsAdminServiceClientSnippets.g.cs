@@ -2793,6 +2793,70 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateConversionEvent</summary>
+        public void UpdateConversionEventRequestObject()
+        {
+            // Snippet: UpdateConversionEvent(UpdateConversionEventRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateConversionEventRequest request = new UpdateConversionEventRequest
+            {
+                ConversionEvent = new ConversionEvent(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            ConversionEvent response = analyticsAdminServiceClient.UpdateConversionEvent(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateConversionEventAsync</summary>
+        public async Task UpdateConversionEventRequestObjectAsync()
+        {
+            // Snippet: UpdateConversionEventAsync(UpdateConversionEventRequest, CallSettings)
+            // Additional: UpdateConversionEventAsync(UpdateConversionEventRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateConversionEventRequest request = new UpdateConversionEventRequest
+            {
+                ConversionEvent = new ConversionEvent(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            ConversionEvent response = await analyticsAdminServiceClient.UpdateConversionEventAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateConversionEvent</summary>
+        public void UpdateConversionEvent()
+        {
+            // Snippet: UpdateConversionEvent(ConversionEvent, FieldMask, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            ConversionEvent conversionEvent = new ConversionEvent();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            ConversionEvent response = analyticsAdminServiceClient.UpdateConversionEvent(conversionEvent, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateConversionEventAsync</summary>
+        public async Task UpdateConversionEventAsync()
+        {
+            // Snippet: UpdateConversionEventAsync(ConversionEvent, FieldMask, CallSettings)
+            // Additional: UpdateConversionEventAsync(ConversionEvent, FieldMask, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ConversionEvent conversionEvent = new ConversionEvent();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            ConversionEvent response = await analyticsAdminServiceClient.UpdateConversionEventAsync(conversionEvent, updateMask);
+            // End snippet
+        }
+
         /// <summary>Snippet for GetConversionEvent</summary>
         public void GetConversionEventRequestObject()
         {
