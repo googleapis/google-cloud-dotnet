@@ -1,5 +1,15 @@
 # Version history
 
+## Version 5.6.0, released 2023-08-23
+
+### New features
+
+- Support min_num_instances for primary worker and InstanceFlexibilityPolicy for secondary worker ([commit 1783572](https://github.com/googleapis/google-cloud-dotnet/commit/1783572f62de9ed84cb7b0bc44993d39f7cb30ce))
+
+### Documentation improvements
+
+- Minor formatting ([commit 5a4054c](https://github.com/googleapis/google-cloud-dotnet/commit/5a4054c983789e87cee928cf31fdc61483cecd29))
+
 ## Version 5.5.0, released 2023-03-20
 
 ### New features
