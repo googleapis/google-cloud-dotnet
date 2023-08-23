@@ -1384,8 +1384,9 @@ namespace Google.Cloud.Billing.V1
         /// `projects/tokyo-rain-123`.
         /// </param>
         /// <param name="projectBillingInfo">
-        /// The new billing information for the project. Read-only fields are ignored;
-        /// thus, you can leave empty all fields except `billing_account_name`.
+        /// The new billing information for the project. Output-only fields are
+        /// ignored; thus, you can leave empty all fields except
+        /// `billing_account_name`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1435,8 +1436,9 @@ namespace Google.Cloud.Billing.V1
         /// `projects/tokyo-rain-123`.
         /// </param>
         /// <param name="projectBillingInfo">
-        /// The new billing information for the project. Read-only fields are ignored;
-        /// thus, you can leave empty all fields except `billing_account_name`.
+        /// The new billing information for the project. Output-only fields are
+        /// ignored; thus, you can leave empty all fields except
+        /// `billing_account_name`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1486,8 +1488,9 @@ namespace Google.Cloud.Billing.V1
         /// `projects/tokyo-rain-123`.
         /// </param>
         /// <param name="projectBillingInfo">
-        /// The new billing information for the project. Read-only fields are ignored;
-        /// thus, you can leave empty all fields except `billing_account_name`.
+        /// The new billing information for the project. Output-only fields are
+        /// ignored; thus, you can leave empty all fields except
+        /// `billing_account_name`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
