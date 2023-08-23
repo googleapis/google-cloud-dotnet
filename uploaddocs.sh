@@ -47,10 +47,10 @@ do
 
     # TODO: Product page
     echo "Generating metadata (googleapis.dev)"
-    python -m docuploader create-metadata --name $pkg --version $version --language dotnet --github-repository googleapis/google-cloud-dotnet
+    dotnet run --project /tools/Google.Cloud.Tools.DocUploader -- create-metadata --name $pkg --version $version --language dotnet --github-repository googleapis/google-cloud-dotnet
     
     echo "Final upload stage (googleapis.dev)"
-    python -m docuploader upload . --credentials $SERVICE_ACCOUNT_JSON --staging-bucket $GOOGLEAPIS_DEV_STAGING_BUCKET
+    dotnet run --project /tools/Google.Cloud.Tools.DocUploader -- upload --documentation-path . --credentials $SERVICE_ACCOUNT_JSON --staging-bucket $GOOGLEAPIS_DEV_STAGING_BUCKET
 
     # Upload to DevSite, only for Cloud/Cloud-related packages
     if [[ -d ../devsite ]]
@@ -59,7 +59,7 @@ do
       cd ../devsite
     
       echo "Final upload stage (DevSite)"
-      python -m docuploader upload . --credentials $SERVICE_ACCOUNT_JSON --staging-bucket $DEVSITE_STAGING_BUCKET --destination-prefix docfx
+      dotnet run --project /tools/Google.Cloud.Tools.DocUploader -- upload --documentation-path . --credentials $SERVICE_ACCOUNT_JSON --staging-bucket $DEVSITE_STAGING_BUCKET --destination-prefix docfx
     fi
     
     popd > /dev/null

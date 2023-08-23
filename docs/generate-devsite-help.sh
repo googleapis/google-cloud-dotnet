@@ -36,24 +36,24 @@ cd output/devsite-help
 
 # Create the docs metadata. We assume we may need to refer to any of the utility libraries.
 # We also refer to Datastore, PubSub and Storage.
-python -m docuploader create-metadata \
+dotnet run --project ../../../tools/Google.Cloud.Tools.DocUploader -- create-metadata \
   --name help \
   --version $VERSION \
   --xref-services 'https://xref.docs.microsoft.com/query?uid={uid}' \
-  --xrefs devsite://dotnet/Google.Protobuf \
-  --xrefs devsite://dotnet/Grpc.Core \
-  --xrefs devsite://dotnet/Google.Api.CommonProtos \
-  --xrefs devsite://dotnet/Google.Api.Gax \
-  --xrefs devsite://dotnet/Google.Apis \
-  --xrefs devsite://dotnet/Google.Cloud.PubSub.V1 \
-  --xrefs devsite://dotnet/Google.Cloud.Datastore.V1 \
-  --xrefs devsite://dotnet/Google.Cloud.Storage.V1 \
-  --language dotnet  
+  --xrefs devsite://dotnet/Google.Protobuf,\
+devsite://dotnet/Grpc.Core,\
+devsite://dotnet/Google.Api.CommonProtos,\
+devsite://dotnet/Google.Api.Gax,\
+devsite://dotnet/Google.Apis,\
+devsite://dotnet/Google.Cloud.PubSub.V1,\
+devsite://dotnet/Google.Cloud.Datastore.V1,\
+devsite://dotnet/Google.Cloud.Storage.V1 \
+  --language dotnet 
 
 if [[ $SERVICE_ACCOUNT_JSON != "" ]]
 then
-  python -m docuploader upload \
-    . \
+  dotnet run --project ../../../tools/Google.Cloud.Tools.DocUploader -- upload \
+    --documentation-path . \
     --credentials $SERVICE_ACCOUNT_JSON \
     --staging-bucket $DEVSITE_STAGING_BUCKET \
     --destination-prefix docfx
