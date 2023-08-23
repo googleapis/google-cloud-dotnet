@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-alpha17, released 2023-08-23
+
+### New features
+
+- Add stderr_snippet to indicate the real stderr output by runnables to the execution field of status event ([commit db9f8f2](https://github.com/googleapis/google-cloud-dotnet/commit/db9f8f286a17594bc1a326495d73d213eaebebb7))
+
+### Documentation improvements
+
+- Update comments ([commit db9f8f2](https://github.com/googleapis/google-cloud-dotnet/commit/db9f8f286a17594bc1a326495d73d213eaebebb7))
+
 ## Version 1.0.0-alpha16, released 2023-08-22
 
 ### New features
