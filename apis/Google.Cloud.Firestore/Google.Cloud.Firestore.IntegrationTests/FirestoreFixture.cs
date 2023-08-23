@@ -13,12 +13,8 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Firestore.IntegrationTests.Models;
-using Google.Cloud.Firestore.V1;
-using Grpc.Core;
-using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;

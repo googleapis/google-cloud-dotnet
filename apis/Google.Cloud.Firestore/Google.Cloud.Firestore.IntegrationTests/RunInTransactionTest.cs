@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Google.Cloud.Firestore.IntegrationTests.Models;
-using Google.Cloud.Firestore.V1;
 using Grpc.Core;
 using System;
 using System.Linq;
