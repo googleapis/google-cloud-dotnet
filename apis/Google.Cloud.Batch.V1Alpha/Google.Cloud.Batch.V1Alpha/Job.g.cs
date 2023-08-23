@@ -4021,17 +4021,14 @@ namespace Google.Cloud.Batch.V1Alpha {
         /// <summary>Field number for the "image" field.</summary>
         public const int ImageFieldNumber = 4;
         /// <summary>
-        /// Name of an image used as the data source.
+        /// URL for a VM image to use as the data source for this disk.
         /// For example, the following are all valid URLs:
         ///
         /// * Specify the image by its family name:
-        /// &lt;pre>&lt;code>projects/&lt;var
-        /// class="apiparam">project&lt;/var>/global/images/family/&lt;var
-        /// class="apiparam">image_family&lt;/var>&lt;/code>&lt;/pre>
+        /// projects/{project}/global/images/family/{image_family}
         /// * Specify the image version:
-        /// &lt;pre>projects/&lt;var
-        /// class="apiparam">project&lt;/var>/global/images/&lt;var
-        /// class="apiparam">image_version&lt;/var>&lt;/code>&lt;/pre>
+        /// projects/{project}/global/images/{image_version}
+        ///
         /// You can also use Batch customized image in short names.
         /// The following image values are supported for a boot disk:
         ///
@@ -5223,7 +5220,7 @@ namespace Google.Cloud.Batch.V1Alpha {
         /// <summary>
         /// Non-boot disks to be attached for each VM created by this InstancePolicy.
         /// New disks will be deleted when the VM is deleted.
-        /// A non bootable disk is a disk that can be of a device with a
+        /// A non-boot disk is a disk that can be of a device with a
         /// file system or a raw storage drive that is not ready for data
         /// storage and accessing.
         /// </summary>
@@ -5935,14 +5932,10 @@ namespace Google.Cloud.Batch.V1Alpha {
         /// You can specify the network as a full or partial URL.
         ///
         /// For example, the following are all valid URLs:
-        /// &lt;pre>&lt;code>https://www.googleapis.com/compute/v1/projects/&lt;var
-        /// class="apiparam">project&lt;/var>/global/networks/&lt;var
-        /// class="apiparam">network&lt;/var>&lt;/code>&lt;/pre>
-        /// &lt;pre>&lt;code>projects/&lt;var
-        /// class="apiparam">project&lt;/var>/global/networks/&lt;var
-        /// class="apiparam">network&lt;/var>&lt;/code>&lt;/pre>
-        /// &lt;pre>&lt;code>global/networks/&lt;var
-        /// class="apiparam">network&lt;/var>&lt;/code>&lt;/pre>
+        ///
+        /// * https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
+        /// * projects/{project}/global/networks/{network}
+        /// * global/networks/{network}
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5961,16 +5954,10 @@ namespace Google.Cloud.Batch.V1Alpha {
         /// You can specify the subnetwork as a full or partial URL.
         ///
         /// For example, the following are all valid URLs:
-        /// &lt;pre>&lt;code>https://www.googleapis.com/compute/v1/projects/&lt;var
-        /// class="apiparam">project&lt;/var>/regions/&lt;var
-        /// class="apiparam">region&lt;/var>/subnetworks/&lt;var
-        /// class="apiparam">subnetwork&lt;/var>&lt;/code>&lt;/pre>
-        /// &lt;pre>&lt;code>projects/&lt;var class="apiparam">project&lt;/var>/regions/&lt;var
-        /// class="apiparam">region&lt;/var>/subnetworks/&lt;var
-        /// class="apiparam">subnetwork&lt;/var>&lt;/code>&lt;/pre>
-        /// &lt;pre>&lt;code>regions/&lt;var
-        /// class="apiparam">region&lt;/var>/subnetworks/&lt;var
-        /// class="apiparam">subnetwork&lt;/var>&lt;/code>&lt;/pre>
+        ///
+        /// * https://www.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetwork}
+        /// * projects/{project}/regions/{region}/subnetworks/{subnetwork}
+        /// * regions/{region}/subnetworks/{subnetwork}
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
