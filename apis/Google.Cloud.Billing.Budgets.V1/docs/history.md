@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.3.0, released 2023-08-23
+
+### New features
+
+- Supported project-level-budgets in Public Budget API V1 ([commit 794fa92](https://github.com/googleapis/google-cloud-dotnet/commit/794fa92ad3ebcd05f389a1eb1f4fca5cc9687b1e))
+- Added `enable_project_level_recipients` for project owner budget emails ([commit 794fa92](https://github.com/googleapis/google-cloud-dotnet/commit/794fa92ad3ebcd05f389a1eb1f4fca5cc9687b1e))
+
 ## Version 2.2.0, released 2023-06-20
 
 ### New features
