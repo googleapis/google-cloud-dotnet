@@ -75,6 +75,7 @@ namespace Google.Analytics.Admin.V1Beta
             AcknowledgeUserDataCollectionSettings = existing.AcknowledgeUserDataCollectionSettings;
             SearchChangeHistoryEventsSettings = existing.SearchChangeHistoryEventsSettings;
             CreateConversionEventSettings = existing.CreateConversionEventSettings;
+            UpdateConversionEventSettings = existing.UpdateConversionEventSettings;
             GetConversionEventSettings = existing.GetConversionEventSettings;
             DeleteConversionEventSettings = existing.DeleteConversionEventSettings;
             ListConversionEventsSettings = existing.ListConversionEventsSettings;
@@ -689,6 +690,28 @@ namespace Google.Analytics.Admin.V1Beta
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings CreateConversionEventSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.UpdateConversionEvent</c> and
+        /// <c>AnalyticsAdminServiceClient.UpdateConversionEventAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateConversionEventSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -3767,7 +3790,8 @@ namespace Google.Analytics.Admin.V1Beta
         /// Required. The measurement protocol secret to update.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated. Omitted fields will not be updated.
+        /// Required. The list of fields to be updated. Omitted fields will not be
+        /// updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3775,7 +3799,7 @@ namespace Google.Analytics.Admin.V1Beta
             UpdateMeasurementProtocolSecret(new UpdateMeasurementProtocolSecretRequest
             {
                 MeasurementProtocolSecret = gax::GaxPreconditions.CheckNotNull(measurementProtocolSecret, nameof(measurementProtocolSecret)),
-                UpdateMask = updateMask,
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
             }, callSettings);
 
         /// <summary>
@@ -3785,7 +3809,8 @@ namespace Google.Analytics.Admin.V1Beta
         /// Required. The measurement protocol secret to update.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated. Omitted fields will not be updated.
+        /// Required. The list of fields to be updated. Omitted fields will not be
+        /// updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3793,7 +3818,7 @@ namespace Google.Analytics.Admin.V1Beta
             UpdateMeasurementProtocolSecretAsync(new UpdateMeasurementProtocolSecretRequest
             {
                 MeasurementProtocolSecret = gax::GaxPreconditions.CheckNotNull(measurementProtocolSecret, nameof(measurementProtocolSecret)),
-                UpdateMask = updateMask,
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
             }, callSettings);
 
         /// <summary>
@@ -3803,7 +3828,8 @@ namespace Google.Analytics.Admin.V1Beta
         /// Required. The measurement protocol secret to update.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated. Omitted fields will not be updated.
+        /// Required. The list of fields to be updated. Omitted fields will not be
+        /// updated.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4001,6 +4027,95 @@ namespace Google.Analytics.Admin.V1Beta
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<ConversionEvent> CreateConversionEventAsync(PropertyName parent, ConversionEvent conversionEvent, st::CancellationToken cancellationToken) =>
             CreateConversionEventAsync(parent, conversionEvent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a conversion event with the specified attributes.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ConversionEvent UpdateConversionEvent(UpdateConversionEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a conversion event with the specified attributes.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ConversionEvent> UpdateConversionEventAsync(UpdateConversionEventRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a conversion event with the specified attributes.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ConversionEvent> UpdateConversionEventAsync(UpdateConversionEventRequest request, st::CancellationToken cancellationToken) =>
+            UpdateConversionEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a conversion event with the specified attributes.
+        /// </summary>
+        /// <param name="conversionEvent">
+        /// Required. The conversion event to update.
+        /// The `name` field is used to identify the settings to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ConversionEvent UpdateConversionEvent(ConversionEvent conversionEvent, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateConversionEvent(new UpdateConversionEventRequest
+            {
+                ConversionEvent = gax::GaxPreconditions.CheckNotNull(conversionEvent, nameof(conversionEvent)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a conversion event with the specified attributes.
+        /// </summary>
+        /// <param name="conversionEvent">
+        /// Required. The conversion event to update.
+        /// The `name` field is used to identify the settings to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ConversionEvent> UpdateConversionEventAsync(ConversionEvent conversionEvent, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateConversionEventAsync(new UpdateConversionEventRequest
+            {
+                ConversionEvent = gax::GaxPreconditions.CheckNotNull(conversionEvent, nameof(conversionEvent)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a conversion event with the specified attributes.
+        /// </summary>
+        /// <param name="conversionEvent">
+        /// Required. The conversion event to update.
+        /// The `name` field is used to identify the settings to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ConversionEvent> UpdateConversionEventAsync(ConversionEvent conversionEvent, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateConversionEventAsync(conversionEvent, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Retrieve a single conversion event.
@@ -6340,6 +6455,8 @@ namespace Google.Analytics.Admin.V1Beta
 
         private readonly gaxgrpc::ApiCall<CreateConversionEventRequest, ConversionEvent> _callCreateConversionEvent;
 
+        private readonly gaxgrpc::ApiCall<UpdateConversionEventRequest, ConversionEvent> _callUpdateConversionEvent;
+
         private readonly gaxgrpc::ApiCall<GetConversionEventRequest, ConversionEvent> _callGetConversionEvent;
 
         private readonly gaxgrpc::ApiCall<DeleteConversionEventRequest, wkt::Empty> _callDeleteConversionEvent;
@@ -6475,6 +6592,9 @@ namespace Google.Analytics.Admin.V1Beta
             _callCreateConversionEvent = clientHelper.BuildApiCall<CreateConversionEventRequest, ConversionEvent>("CreateConversionEvent", grpcClient.CreateConversionEventAsync, grpcClient.CreateConversionEvent, effectiveSettings.CreateConversionEventSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateConversionEvent);
             Modify_CreateConversionEventApiCall(ref _callCreateConversionEvent);
+            _callUpdateConversionEvent = clientHelper.BuildApiCall<UpdateConversionEventRequest, ConversionEvent>("UpdateConversionEvent", grpcClient.UpdateConversionEventAsync, grpcClient.UpdateConversionEvent, effectiveSettings.UpdateConversionEventSettings).WithGoogleRequestParam("conversion_event.name", request => request.ConversionEvent?.Name);
+            Modify_ApiCall(ref _callUpdateConversionEvent);
+            Modify_UpdateConversionEventApiCall(ref _callUpdateConversionEvent);
             _callGetConversionEvent = clientHelper.BuildApiCall<GetConversionEventRequest, ConversionEvent>("GetConversionEvent", grpcClient.GetConversionEventAsync, grpcClient.GetConversionEvent, effectiveSettings.GetConversionEventSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetConversionEvent);
             Modify_GetConversionEventApiCall(ref _callGetConversionEvent);
@@ -6597,6 +6717,8 @@ namespace Google.Analytics.Admin.V1Beta
 
         partial void Modify_CreateConversionEventApiCall(ref gaxgrpc::ApiCall<CreateConversionEventRequest, ConversionEvent> call);
 
+        partial void Modify_UpdateConversionEventApiCall(ref gaxgrpc::ApiCall<UpdateConversionEventRequest, ConversionEvent> call);
+
         partial void Modify_GetConversionEventApiCall(ref gaxgrpc::ApiCall<GetConversionEventRequest, ConversionEvent> call);
 
         partial void Modify_DeleteConversionEventApiCall(ref gaxgrpc::ApiCall<DeleteConversionEventRequest, wkt::Empty> call);
@@ -6697,6 +6819,8 @@ namespace Google.Analytics.Admin.V1Beta
         partial void Modify_SearchChangeHistoryEventsRequest(ref SearchChangeHistoryEventsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateConversionEventRequest(ref CreateConversionEventRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateConversionEventRequest(ref UpdateConversionEventRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetConversionEventRequest(ref GetConversionEventRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -7464,6 +7588,30 @@ namespace Google.Analytics.Admin.V1Beta
         {
             Modify_CreateConversionEventRequest(ref request, ref callSettings);
             return _callCreateConversionEvent.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a conversion event with the specified attributes.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ConversionEvent UpdateConversionEvent(UpdateConversionEventRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateConversionEventRequest(ref request, ref callSettings);
+            return _callUpdateConversionEvent.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a conversion event with the specified attributes.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ConversionEvent> UpdateConversionEventAsync(UpdateConversionEventRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateConversionEventRequest(ref request, ref callSettings);
+            return _callUpdateConversionEvent.Async(request, callSettings);
         }
 
         /// <summary>
