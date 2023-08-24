@@ -15,6 +15,7 @@
 using CommandLine;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Storage.V1;
+using Google.Cloud.Tools.Common;
 using Google.Cloud.Tools.DocUploader;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
@@ -34,16 +35,16 @@ void CreateMetadata(CreateMetadataOptions options)
     {
         UpdateTime = Timestamp.FromDateTimeOffset(DateTimeOffset.UtcNow),
         Name = options.PackageName,
-        Version = options.version,
+        Version = options.Version,
         Language = options.Language,
         DistributionName = options.DistributionName,
         ProductPage = options.ProductPage,
         GithubRepository = options.GitHubRepo,
         IssueTracker = options.IssueTracker,
         Stem = options.Stem,
+        Xrefs = { options.Xrefs },
+        XrefServices = { options.XrefServices },
     };
-    metadata.Xrefs.Add(options.Xrefs);
-    metadata.XrefServices.Add(options.XrefServices);
 
     File.WriteAllText(options.Destination, metadata.ToString());
 }
@@ -51,13 +52,12 @@ void CreateMetadata(CreateMetadataOptions options)
 // Uploads the zip file to the specified storage bucket.
 void CompressAndUploadFile(UploadFileOptions options)
 {
-    string tempFileName = "temp.tar.gz";
-    CompressDirectory(options.DocumentationPath, tempFileName);
-    UploadFile(tempFileName, GetFilenameFromMetadata(), options.StagingBucket, options.Credentials);
+    var sourceStream = CompressDirectory(options.DocumentationPath);
+    UploadFile(sourceStream, GetFilenameFromMetadata(), options.StagingBucket, options.Credentials);
 
     string GetFilenameFromMetadata()
     {
-        string metadataFilePath = string.IsNullOrEmpty(options.MetadataFile) ? Path.Combine(options.DocumentationPath, "docs.metadata.json") : options.MetadataFile;
+        string metadataFilePath = options.MetadataFile ?? Path.Combine(options.DocumentationPath, "docs.metadata.json");
         var metadata = GetMetadataFromJsonFile(metadataFilePath);
         string destinationFileName = $"{metadata.Language}-{metadata.Name}-{metadata.Version}.tar.gz";
         destinationFileName = string.IsNullOrEmpty(destinationFileName) ? destinationFileName : options.DestinationPrefix + "-" + destinationFileName;
@@ -72,7 +72,7 @@ Metadata GetMetadataFromJsonFile(string metadataFilePath)
 {
     if (!File.Exists(metadataFilePath))
     {
-        throw new FileNotFoundException("You need metadata to upload the docs.You can generate it with docuploader create-metadata");
+        throw new UserErrorException($"Unable to load metadata file '{metadataFilePath}`. Metadata is required for upload; this can be generated using the create-metadata option.");
     }
 
     var metadataText = File.ReadAllText(metadataFilePath);
@@ -82,20 +82,19 @@ Metadata GetMetadataFromJsonFile(string metadataFilePath)
 }
 
 /// <summary>
-/// Uploads the given file to the Google Cloud Storage.
+/// Uploads the given memory steam object to the Google Cloud Storage.
 /// </summary>
-void UploadFile(string source, string destination, string bucketName, string credentialsPath)
+void UploadFile(MemoryStream memoryStream, string destination, string bucketName, string credentialsPath)
 {
     // Create a new Storage client.
     var client = StorageClient.Create(GoogleCredential.FromFile(credentialsPath));
-    using var filestream = File.OpenRead(source);
-    client.UploadObject(bucketName, destination, null, filestream);
+    client.UploadObject(bucketName, destination, null, memoryStream);
 }
 
 /// <summary>
-/// Compress the given directory into tar.gz file.
+/// Compress the given directory into tar.gz file(in- memory).
 /// </summary>
-void CompressDirectory(string directory, string destination)
+MemoryStream CompressDirectory(string directory)
 {
     if (Directory.EnumerateFiles(directory).Count() == 0)
     {
@@ -104,6 +103,9 @@ void CompressDirectory(string directory, string destination)
 
     using var archive = TarArchive.Create();
     archive.AddAllFromDirectory(directory);
-    var twopt = new TarWriterOptions(CompressionType.GZip, finalizeArchiveOnClose: true);
-    archive.SaveTo(destination, twopt);
+    var writerOptions = new TarWriterOptions(CompressionType.GZip, finalizeArchiveOnClose: true);
+    var memoryStream = new MemoryStream();
+    archive.SaveTo(memoryStream, writerOptions);
+    memoryStream.Position = 0;
+    return memoryStream;
 }
