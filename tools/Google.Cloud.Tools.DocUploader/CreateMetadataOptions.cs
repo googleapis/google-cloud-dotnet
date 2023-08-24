@@ -22,7 +22,7 @@ internal class CreateMetadataOptions
     public string PackageName { get; set; }
 
     [Option("version", Required = true)]
-    public string version { get; set; }
+    public string Version { get; set; }
 
     [Option("language", Required = true)]
     public string Language { get; set; }

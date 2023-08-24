@@ -1,6 +1,7 @@
 #!/bin/sh
 
 set -e
+REPOROOT=$(git rev-parse --show-toplevel)
 
 if [[ -z "$1" || -z "$2" || -z "$3" || -z "$4" || -z "$5" ]]
 then
@@ -47,10 +48,10 @@ do
 
     # TODO: Product page
     echo "Generating metadata (googleapis.dev)"
-    dotnet run --project /tools/Google.Cloud.Tools.DocUploader -- create-metadata --name $pkg --version $version --language dotnet --github-repository googleapis/google-cloud-dotnet
+    dotnet run --project $REPOROOT/tools/Google.Cloud.Tools.DocUploader -- create-metadata --name $pkg --version $version --language dotnet --github-repository googleapis/google-cloud-dotnet
     
     echo "Final upload stage (googleapis.dev)"
-    dotnet run --project /tools/Google.Cloud.Tools.DocUploader -- upload --documentation-path . --credentials $SERVICE_ACCOUNT_JSON --staging-bucket $GOOGLEAPIS_DEV_STAGING_BUCKET
+    dotnet run --project $REPOROOT/tools/Google.Cloud.Tools.DocUploader -- upload --documentation-path . --credentials $SERVICE_ACCOUNT_JSON --staging-bucket $GOOGLEAPIS_DEV_STAGING_BUCKET
 
     # Upload to DevSite, only for Cloud/Cloud-related packages
     if [[ -d ../devsite ]]
@@ -59,7 +60,7 @@ do
       cd ../devsite
     
       echo "Final upload stage (DevSite)"
-      dotnet run --project /tools/Google.Cloud.Tools.DocUploader -- upload --documentation-path . --credentials $SERVICE_ACCOUNT_JSON --staging-bucket $DEVSITE_STAGING_BUCKET --destination-prefix docfx
+      dotnet run --project $REPOROOT/tools/Google.Cloud.Tools.DocUploader -- upload --documentation-path . --credentials $SERVICE_ACCOUNT_JSON --staging-bucket $DEVSITE_STAGING_BUCKET --destination-prefix docfx
     fi
     
     popd > /dev/null
