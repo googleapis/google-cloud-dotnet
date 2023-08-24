@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -e
+REPOROOT=$(git rev-parse --show-toplevel)
 
 source ../toolversions.sh
 
@@ -155,10 +156,10 @@ do
 done
 
 echo 'Regenerating TOC'
-dotnet run --project ../../tools/Google.Cloud.Tools.RegenerateToc -- utility/devsite/api
+dotnet run --project $REPOROOT/tools/Google.Cloud.Tools.RegenerateToc -- utility/devsite/api
 
 echo "Post-processing YAML metadata files"
-dotnet run --project ../../tools/Google.Cloud.Tools.PostProcessDevSite -- utility
+dotnet run --project $REPOROOT/tools/Google.Cloud.Tools.PostProcessDevSite -- utility
 
 cd utility/devsite
 
@@ -168,20 +169,25 @@ XREF_TMP=""
 for xref in "${XREFS[@]}"
 do
   FULL_XREF="devsite://dotnet/$xref"
-  XREF_TMP="$XREF_TMP --xrefs $FULL_XREF"
+  if [[ $XREF_TMP == "" ]]
+  then
+    XREF_TMP=$FULL_XREF
+  else
+    XREF_TMP="$XREF_TMP,$FULL_XREF"
+  fi
 done
 
-python -m docuploader create-metadata \
-  --name $DEVSITE_PACKAGE \
-  --version $VERSION \
-  --xref-services 'https://xref.docs.microsoft.com/query?uid={uid}' \
-  $XREF_TMP \
-  --language dotnet  
+dotnet run --project $REPOROOT/tools/Google.Cloud.Tools.DocUploader -- create-metadata \
+--name $DEVSITE_PACKAGE \
+--version $VERSION \
+--language dotnet \
+--xref-services 'https://xref.docs.microsoft.com/query?uid={uid}' \
+--xrefs $XREF_TMP
 
 if [[ $SERVICE_ACCOUNT_JSON != "" ]]
 then
-  python -m docuploader upload \
-    . \
+   $REPOROOT/tools/Google.Cloud.Tools.DocUploader -- upload \
+    --documentation-path . \
     --credentials $SERVICE_ACCOUNT_JSON \
     --staging-bucket $DEVSITE_STAGING_BUCKET \
     --destination-prefix docfx
