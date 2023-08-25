@@ -57,6 +57,9 @@ namespace GoogleCSharpSnippets
                 LoggingConfig = new NodePoolLoggingConfig(),
                 ResourceLabels = new ResourceLabels(),
                 WindowsNodeConfig = new WindowsNodeConfig(),
+                MachineType = "",
+                DiskType = "",
+                DiskSizeGb = 0L,
             };
             // Make the request
             Operation response = await clusterManagerClient.UpdateNodePoolAsync(request);
