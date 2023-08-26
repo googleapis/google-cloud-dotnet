@@ -91,7 +91,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             "bG91ZC5kaWFsb2dmbG93LnYyLk91dHB1dEF1ZGlvQ29uZmlnEjwKGG91dHB1",
             "dF9hdWRpb19jb25maWdfbWFzaxgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5G",
             "aWVsZE1hc2sSEwoLaW5wdXRfYXVkaW8YBiABKAwSHQoVZW5hYmxlX2RlYnVn",
-            "Z2luZ19pbmZvGAggASgIIvgGCh5DbG91ZENvbnZlcnNhdGlvbkRlYnVnZ2lu",
+            "Z2luZ19pbmZvGAggASgIIrAHCh5DbG91ZENvbnZlcnNhdGlvbkRlYnVnZ2lu",
             "Z0luZm8SGQoRYXVkaW9fZGF0YV9jaHVua3MYASABKAUSOQoWcmVzdWx0X2Vu",
             "ZF90aW1lX29mZnNldBgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlv",
             "bhI3ChRmaXJzdF9hdWRpb19kdXJhdGlvbhgDIAEoCzIZLmdvb2dsZS5wcm90",
@@ -107,66 +107,67 @@ namespace Google.Cloud.Dialogflow.V2 {
             "GA0gAygLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEkMKIHNpbmdsZV91",
             "dHRlcmFuY2VfZW5kX3RpbWVfb2Zmc2V0GA4gASgLMhkuZ29vZ2xlLnByb3Rv",
             "YnVmLkR1cmF0aW9uEjQKEW5vX3NwZWVjaF90aW1lb3V0GA8gASgLMhkuZ29v",
-            "Z2xlLnByb3RvYnVmLkR1cmF0aW9uEhUKDWlzX2lucHV0X3RleHQYECABKAgS",
-            "QAodY2xpZW50X2hhbGZfY2xvc2VfdGltZV9vZmZzZXQYESABKAsyGS5nb29n",
-            "bGUucHJvdG9idWYuRHVyYXRpb24SSgonY2xpZW50X2hhbGZfY2xvc2Vfc3Ry",
-            "ZWFtaW5nX3RpbWVfb2Zmc2V0GBIgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1",
-            "cmF0aW9uIqkDCh1TdHJlYW1pbmdEZXRlY3RJbnRlbnRSZXNwb25zZRITCgty",
-            "ZXNwb25zZV9pZBgBIAEoCRJSChJyZWNvZ25pdGlvbl9yZXN1bHQYAiABKAsy",
-            "Ni5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5TdHJlYW1pbmdSZWNvZ25p",
-            "dGlvblJlc3VsdBI9CgxxdWVyeV9yZXN1bHQYAyABKAsyJy5nb29nbGUuY2xv",
-            "dWQuZGlhbG9nZmxvdy52Mi5RdWVyeVJlc3VsdBIqCg53ZWJob29rX3N0YXR1",
-            "cxgEIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzEhQKDG91dHB1dF9hdWRpbxgF",
-            "IAEoDBJKChNvdXRwdXRfYXVkaW9fY29uZmlnGAYgASgLMi0uZ29vZ2xlLmNs",
-            "b3VkLmRpYWxvZ2Zsb3cudjIuT3V0cHV0QXVkaW9Db25maWcSUgoOZGVidWdn",
-            "aW5nX2luZm8YCCABKAsyOi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5D",
-            "bG91ZENvbnZlcnNhdGlvbkRlYnVnZ2luZ0luZm8inQMKGlN0cmVhbWluZ1Jl",
-            "Y29nbml0aW9uUmVzdWx0ElgKDG1lc3NhZ2VfdHlwZRgBIAEoDjJCLmdvb2ds",
-            "ZS5jbG91ZC5kaWFsb2dmbG93LnYyLlN0cmVhbWluZ1JlY29nbml0aW9uUmVz",
-            "dWx0Lk1lc3NhZ2VUeXBlEhIKCnRyYW5zY3JpcHQYAiABKAkSEAoIaXNfZmlu",
-            "YWwYAyABKAgSEgoKY29uZmlkZW5jZRgEIAEoAhJEChBzcGVlY2hfd29yZF9p",
-            "bmZvGAcgAygLMiouZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuU3BlZWNo",
-            "V29yZEluZm8SNAoRc3BlZWNoX2VuZF9vZmZzZXQYCCABKAsyGS5nb29nbGUu",
-            "cHJvdG9idWYuRHVyYXRpb24SFQoNbGFuZ3VhZ2VfY29kZRgKIAEoCSJYCgtN",
-            "ZXNzYWdlVHlwZRIcChhNRVNTQUdFX1RZUEVfVU5TUEVDSUZJRUQQABIOCgpU",
-            "UkFOU0NSSVBUEAESGwoXRU5EX09GX1NJTkdMRV9VVFRFUkFOQ0UQAiI6CglU",
-            "ZXh0SW5wdXQSEQoEdGV4dBgBIAEoCUID4EECEhoKDWxhbmd1YWdlX2NvZGUY",
-            "AiABKAlCA+BBAiJoCgpFdmVudElucHV0EhEKBG5hbWUYASABKAlCA+BBAhIr",
-            "CgpwYXJhbWV0ZXJzGAIgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdBIa",
-            "Cg1sYW5ndWFnZV9jb2RlGAMgASgJQgPgQQIiRgoeU2VudGltZW50QW5hbHlz",
-            "aXNSZXF1ZXN0Q29uZmlnEiQKHGFuYWx5emVfcXVlcnlfdGV4dF9zZW50aW1l",
-            "bnQYASABKAgiXgoXU2VudGltZW50QW5hbHlzaXNSZXN1bHQSQwoUcXVlcnlf",
-            "dGV4dF9zZW50aW1lbnQYASABKAsyJS5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
-            "dy52Mi5TZW50aW1lbnQiLQoJU2VudGltZW50Eg0KBXNjb3JlGAEgASgCEhEK",
-            "CW1hZ25pdHVkZRgCIAEoAjLlBQoIU2Vzc2lvbnMSyQMKDERldGVjdEludGVu",
-            "dBIvLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkRldGVjdEludGVudFJl",
-            "cXVlc3QaMC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5EZXRlY3RJbnRl",
-            "bnRSZXNwb25zZSLVAoLT5JMCuAIiNi92Mi97c2Vzc2lvbj1wcm9qZWN0cy8q",
-            "L2FnZW50L3Nlc3Npb25zLyp9OmRldGVjdEludGVudDoBKlpSIk0vdjIve3Nl",
-            "c3Npb249cHJvamVjdHMvKi9hZ2VudC9lbnZpcm9ubWVudHMvKi91c2Vycy8q",
-            "L3Nlc3Npb25zLyp9OmRldGVjdEludGVudDoBKlpHIkIvdjIve3Nlc3Npb249",
-            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hZ2VudC9zZXNzaW9ucy8qfTpkZXRl",
-            "Y3RJbnRlbnQ6ASpaXiJZL3YyL3tzZXNzaW9uPXByb2plY3RzLyovbG9jYXRp",
-            "b25zLyovYWdlbnQvZW52aXJvbm1lbnRzLyovdXNlcnMvKi9zZXNzaW9ucy8q",
-            "fTpkZXRlY3RJbnRlbnQ6ASraQRNzZXNzaW9uLHF1ZXJ5X2lucHV0EpIBChVT",
-            "dHJlYW1pbmdEZXRlY3RJbnRlbnQSOC5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
-            "dy52Mi5TdHJlYW1pbmdEZXRlY3RJbnRlbnRSZXF1ZXN0GjkuZ29vZ2xlLmNs",
-            "b3VkLmRpYWxvZ2Zsb3cudjIuU3RyZWFtaW5nRGV0ZWN0SW50ZW50UmVzcG9u",
-            "c2UiACgBMAEaeMpBGWRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb23SQVlodHRw",
-            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0",
-            "dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvZGlhbG9nZmxvd0LqAwoe",
-            "Y29tLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyQgxTZXNzaW9uUHJvdG9Q",
-            "AVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9kaWFsb2dmbG93L2FwaXYyL2RpYWxv",
-            "Z2Zsb3dwYjtkaWFsb2dmbG93cGL4AQGiAgJERqoCGkdvb2dsZS5DbG91ZC5E",
-            "aWFsb2dmbG93LlYy6kHRAgohZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbS9T",
-            "ZXNzaW9uEitwcm9qZWN0cy97cHJvamVjdH0vYWdlbnQvc2Vzc2lvbnMve3Nl",
-            "c3Npb259ElNwcm9qZWN0cy97cHJvamVjdH0vYWdlbnQvZW52aXJvbm1lbnRz",
-            "L3tlbnZpcm9ubWVudH0vdXNlcnMve3VzZXJ9L3Nlc3Npb25zL3tzZXNzaW9u",
-            "fRJAcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2Fn",
-            "ZW50L3Nlc3Npb25zL3tzZXNzaW9ufRJocHJvamVjdHMve3Byb2plY3R9L2xv",
-            "Y2F0aW9ucy97bG9jYXRpb259L2FnZW50L2Vudmlyb25tZW50cy97ZW52aXJv",
-            "bm1lbnR9L3VzZXJzL3t1c2VyfS9zZXNzaW9ucy97c2Vzc2lvbn1iBnByb3Rv",
-            "Mw=="));
+            "Z2xlLnByb3RvYnVmLkR1cmF0aW9uEjYKE2VuZHBvaW50aW5nX3RpbWVvdXQY",
+            "EyABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SFQoNaXNfaW5wdXRf",
+            "dGV4dBgQIAEoCBJACh1jbGllbnRfaGFsZl9jbG9zZV90aW1lX29mZnNldBgR",
+            "IAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhJKCidjbGllbnRfaGFs",
+            "Zl9jbG9zZV9zdHJlYW1pbmdfdGltZV9vZmZzZXQYEiABKAsyGS5nb29nbGUu",
+            "cHJvdG9idWYuRHVyYXRpb24iqQMKHVN0cmVhbWluZ0RldGVjdEludGVudFJl",
+            "c3BvbnNlEhMKC3Jlc3BvbnNlX2lkGAEgASgJElIKEnJlY29nbml0aW9uX3Jl",
+            "c3VsdBgCIAEoCzI2Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLlN0cmVh",
+            "bWluZ1JlY29nbml0aW9uUmVzdWx0Ej0KDHF1ZXJ5X3Jlc3VsdBgDIAEoCzIn",
+            "Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLlF1ZXJ5UmVzdWx0EioKDndl",
+            "Ymhvb2tfc3RhdHVzGAQgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXMSFAoMb3V0",
+            "cHV0X2F1ZGlvGAUgASgMEkoKE291dHB1dF9hdWRpb19jb25maWcYBiABKAsy",
+            "LS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5PdXRwdXRBdWRpb0NvbmZp",
+            "ZxJSCg5kZWJ1Z2dpbmdfaW5mbxgIIAEoCzI6Lmdvb2dsZS5jbG91ZC5kaWFs",
+            "b2dmbG93LnYyLkNsb3VkQ29udmVyc2F0aW9uRGVidWdnaW5nSW5mbyKdAwoa",
+            "U3RyZWFtaW5nUmVjb2duaXRpb25SZXN1bHQSWAoMbWVzc2FnZV90eXBlGAEg",
+            "ASgOMkIuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuU3RyZWFtaW5nUmVj",
+            "b2duaXRpb25SZXN1bHQuTWVzc2FnZVR5cGUSEgoKdHJhbnNjcmlwdBgCIAEo",
+            "CRIQCghpc19maW5hbBgDIAEoCBISCgpjb25maWRlbmNlGAQgASgCEkQKEHNw",
+            "ZWVjaF93b3JkX2luZm8YByADKAsyKi5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
+            "dy52Mi5TcGVlY2hXb3JkSW5mbxI0ChFzcGVlY2hfZW5kX29mZnNldBgIIAEo",
+            "CzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIVCg1sYW5ndWFnZV9jb2Rl",
+            "GAogASgJIlgKC01lc3NhZ2VUeXBlEhwKGE1FU1NBR0VfVFlQRV9VTlNQRUNJ",
+            "RklFRBAAEg4KClRSQU5TQ1JJUFQQARIbChdFTkRfT0ZfU0lOR0xFX1VUVEVS",
+            "QU5DRRACIjoKCVRleHRJbnB1dBIRCgR0ZXh0GAEgASgJQgPgQQISGgoNbGFu",
+            "Z3VhZ2VfY29kZRgCIAEoCUID4EECImgKCkV2ZW50SW5wdXQSEQoEbmFtZRgB",
+            "IAEoCUID4EECEisKCnBhcmFtZXRlcnMYAiABKAsyFy5nb29nbGUucHJvdG9i",
+            "dWYuU3RydWN0EhoKDWxhbmd1YWdlX2NvZGUYAyABKAlCA+BBAiJGCh5TZW50",
+            "aW1lbnRBbmFseXNpc1JlcXVlc3RDb25maWcSJAocYW5hbHl6ZV9xdWVyeV90",
+            "ZXh0X3NlbnRpbWVudBgBIAEoCCJeChdTZW50aW1lbnRBbmFseXNpc1Jlc3Vs",
+            "dBJDChRxdWVyeV90ZXh0X3NlbnRpbWVudBgBIAEoCzIlLmdvb2dsZS5jbG91",
+            "ZC5kaWFsb2dmbG93LnYyLlNlbnRpbWVudCItCglTZW50aW1lbnQSDQoFc2Nv",
+            "cmUYASABKAISEQoJbWFnbml0dWRlGAIgASgCMuUFCghTZXNzaW9ucxLJAwoM",
+            "RGV0ZWN0SW50ZW50Ei8uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuRGV0",
+            "ZWN0SW50ZW50UmVxdWVzdBowLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYy",
+            "LkRldGVjdEludGVudFJlc3BvbnNlItUCgtPkkwK4AiI2L3YyL3tzZXNzaW9u",
+            "PXByb2plY3RzLyovYWdlbnQvc2Vzc2lvbnMvKn06ZGV0ZWN0SW50ZW50OgEq",
+            "WlIiTS92Mi97c2Vzc2lvbj1wcm9qZWN0cy8qL2FnZW50L2Vudmlyb25tZW50",
+            "cy8qL3VzZXJzLyovc2Vzc2lvbnMvKn06ZGV0ZWN0SW50ZW50OgEqWkciQi92",
+            "Mi97c2Vzc2lvbj1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2FnZW50L3Nlc3Np",
+            "b25zLyp9OmRldGVjdEludGVudDoBKlpeIlkvdjIve3Nlc3Npb249cHJvamVj",
+            "dHMvKi9sb2NhdGlvbnMvKi9hZ2VudC9lbnZpcm9ubWVudHMvKi91c2Vycy8q",
+            "L3Nlc3Npb25zLyp9OmRldGVjdEludGVudDoBKtpBE3Nlc3Npb24scXVlcnlf",
+            "aW5wdXQSkgEKFVN0cmVhbWluZ0RldGVjdEludGVudBI4Lmdvb2dsZS5jbG91",
+            "ZC5kaWFsb2dmbG93LnYyLlN0cmVhbWluZ0RldGVjdEludGVudFJlcXVlc3Qa",
+            "OS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5TdHJlYW1pbmdEZXRlY3RJ",
+            "bnRlbnRSZXNwb25zZSIAKAEwARp4ykEZZGlhbG9nZmxvdy5nb29nbGVhcGlz",
+            "LmNvbdJBWWh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQt",
+            "cGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9kaWFs",
+            "b2dmbG93QuoDCh5jb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJCDFNl",
+            "c3Npb25Qcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2RpYWxvZ2Zsb3cv",
+            "YXBpdjIvZGlhbG9nZmxvd3BiO2RpYWxvZ2Zsb3dwYvgBAaICAkRGqgIaR29v",
+            "Z2xlLkNsb3VkLkRpYWxvZ2Zsb3cuVjLqQdECCiFkaWFsb2dmbG93Lmdvb2ds",
+            "ZWFwaXMuY29tL1Nlc3Npb24SK3Byb2plY3RzL3twcm9qZWN0fS9hZ2VudC9z",
+            "ZXNzaW9ucy97c2Vzc2lvbn0SU3Byb2plY3RzL3twcm9qZWN0fS9hZ2VudC9l",
+            "bnZpcm9ubWVudHMve2Vudmlyb25tZW50fS91c2Vycy97dXNlcn0vc2Vzc2lv",
+            "bnMve3Nlc3Npb259EkBwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
+            "b2NhdGlvbn0vYWdlbnQvc2Vzc2lvbnMve3Nlc3Npb259Emhwcm9qZWN0cy97",
+            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYWdlbnQvZW52aXJvbm1l",
+            "bnRzL3tlbnZpcm9ubWVudH0vdXNlcnMve3VzZXJ9L3Nlc3Npb25zL3tzZXNz",
+            "aW9ufWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.AudioConfigReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.ContextReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.IntentReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.SessionEntityTypeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -176,7 +177,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.QueryInput), global::Google.Cloud.Dialogflow.V2.QueryInput.Parser, new[]{ "AudioConfig", "Text", "Event" }, new[]{ "Input" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.QueryResult), global::Google.Cloud.Dialogflow.V2.QueryResult.Parser, new[]{ "QueryText", "LanguageCode", "SpeechRecognitionConfidence", "Action", "Parameters", "AllRequiredParamsPresent", "CancelsSlotFilling", "FulfillmentText", "FulfillmentMessages", "WebhookSource", "WebhookPayload", "OutputContexts", "Intent", "IntentDetectionConfidence", "DiagnosticInfo", "SentimentAnalysisResult" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.StreamingDetectIntentRequest), global::Google.Cloud.Dialogflow.V2.StreamingDetectIntentRequest.Parser, new[]{ "Session", "QueryParams", "QueryInput", "SingleUtterance", "OutputAudioConfig", "OutputAudioConfigMask", "InputAudio", "EnableDebuggingInfo" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.CloudConversationDebuggingInfo), global::Google.Cloud.Dialogflow.V2.CloudConversationDebuggingInfo.Parser, new[]{ "AudioDataChunks", "ResultEndTimeOffset", "FirstAudioDuration", "SingleUtterance", "SpeechPartialResultsEndTimes", "SpeechFinalResultsEndTimes", "PartialResponses", "SpeakerIdPassiveLatencyMsOffset", "BargeinEventTriggered", "SpeechSingleUtterance", "DtmfPartialResultsTimes", "DtmfFinalResultsTimes", "SingleUtteranceEndTimeOffset", "NoSpeechTimeout", "IsInputText", "ClientHalfCloseTimeOffset", "ClientHalfCloseStreamingTimeOffset" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.CloudConversationDebuggingInfo), global::Google.Cloud.Dialogflow.V2.CloudConversationDebuggingInfo.Parser, new[]{ "AudioDataChunks", "ResultEndTimeOffset", "FirstAudioDuration", "SingleUtterance", "SpeechPartialResultsEndTimes", "SpeechFinalResultsEndTimes", "PartialResponses", "SpeakerIdPassiveLatencyMsOffset", "BargeinEventTriggered", "SpeechSingleUtterance", "DtmfPartialResultsTimes", "DtmfFinalResultsTimes", "SingleUtteranceEndTimeOffset", "NoSpeechTimeout", "EndpointingTimeout", "IsInputText", "ClientHalfCloseTimeOffset", "ClientHalfCloseStreamingTimeOffset" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.StreamingDetectIntentResponse), global::Google.Cloud.Dialogflow.V2.StreamingDetectIntentResponse.Parser, new[]{ "ResponseId", "RecognitionResult", "QueryResult", "WebhookStatus", "OutputAudio", "OutputAudioConfig", "DebuggingInfo" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.StreamingRecognitionResult), global::Google.Cloud.Dialogflow.V2.StreamingRecognitionResult.Parser, new[]{ "MessageType", "Transcript", "IsFinal", "Confidence", "SpeechWordInfo", "SpeechEndOffset", "LanguageCode" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.V2.StreamingRecognitionResult.Types.MessageType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.TextInput), global::Google.Cloud.Dialogflow.V2.TextInput.Parser, new[]{ "Text", "LanguageCode" }, null, null, null, null),
@@ -3459,6 +3460,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       dtmfFinalResultsTimes_ = other.dtmfFinalResultsTimes_.Clone();
       singleUtteranceEndTimeOffset_ = other.singleUtteranceEndTimeOffset_ != null ? other.singleUtteranceEndTimeOffset_.Clone() : null;
       noSpeechTimeout_ = other.noSpeechTimeout_ != null ? other.noSpeechTimeout_.Clone() : null;
+      endpointingTimeout_ = other.endpointingTimeout_ != null ? other.endpointingTimeout_.Clone() : null;
       isInputText_ = other.isInputText_;
       clientHalfCloseTimeOffset_ = other.clientHalfCloseTimeOffset_ != null ? other.clientHalfCloseTimeOffset_.Clone() : null;
       clientHalfCloseStreamingTimeOffset_ = other.clientHalfCloseStreamingTimeOffset_ != null ? other.clientHalfCloseStreamingTimeOffset_.Clone() : null;
@@ -3674,7 +3676,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int NoSpeechTimeoutFieldNumber = 15;
     private global::Google.Protobuf.WellKnownTypes.Duration noSpeechTimeout_;
     /// <summary>
-    /// No speech timeout settings observed at runtime.
+    /// No speech timeout settings for the stream.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3682,6 +3684,21 @@ namespace Google.Cloud.Dialogflow.V2 {
       get { return noSpeechTimeout_; }
       set {
         noSpeechTimeout_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "endpointing_timeout" field.</summary>
+    public const int EndpointingTimeoutFieldNumber = 19;
+    private global::Google.Protobuf.WellKnownTypes.Duration endpointingTimeout_;
+    /// <summary>
+    /// Speech endpointing timeout settings for the stream.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration EndpointingTimeout {
+      get { return endpointingTimeout_; }
+      set {
+        endpointingTimeout_ = value;
       }
     }
 
@@ -3759,6 +3776,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if(!dtmfFinalResultsTimes_.Equals(other.dtmfFinalResultsTimes_)) return false;
       if (!object.Equals(SingleUtteranceEndTimeOffset, other.SingleUtteranceEndTimeOffset)) return false;
       if (!object.Equals(NoSpeechTimeout, other.NoSpeechTimeout)) return false;
+      if (!object.Equals(EndpointingTimeout, other.EndpointingTimeout)) return false;
       if (IsInputText != other.IsInputText) return false;
       if (!object.Equals(ClientHalfCloseTimeOffset, other.ClientHalfCloseTimeOffset)) return false;
       if (!object.Equals(ClientHalfCloseStreamingTimeOffset, other.ClientHalfCloseStreamingTimeOffset)) return false;
@@ -3783,6 +3801,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       hash ^= dtmfFinalResultsTimes_.GetHashCode();
       if (singleUtteranceEndTimeOffset_ != null) hash ^= SingleUtteranceEndTimeOffset.GetHashCode();
       if (noSpeechTimeout_ != null) hash ^= NoSpeechTimeout.GetHashCode();
+      if (endpointingTimeout_ != null) hash ^= EndpointingTimeout.GetHashCode();
       if (IsInputText != false) hash ^= IsInputText.GetHashCode();
       if (clientHalfCloseTimeOffset_ != null) hash ^= ClientHalfCloseTimeOffset.GetHashCode();
       if (clientHalfCloseStreamingTimeOffset_ != null) hash ^= ClientHalfCloseStreamingTimeOffset.GetHashCode();
@@ -3860,6 +3879,10 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(146, 1);
         output.WriteMessage(ClientHalfCloseStreamingTimeOffset);
       }
+      if (endpointingTimeout_ != null) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(EndpointingTimeout);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3926,6 +3949,10 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(146, 1);
         output.WriteMessage(ClientHalfCloseStreamingTimeOffset);
       }
+      if (endpointingTimeout_ != null) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(EndpointingTimeout);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3969,6 +3996,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (noSpeechTimeout_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(NoSpeechTimeout);
+      }
+      if (endpointingTimeout_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(EndpointingTimeout);
       }
       if (IsInputText != false) {
         size += 2 + 1;
@@ -4036,6 +4066,12 @@ namespace Google.Cloud.Dialogflow.V2 {
           NoSpeechTimeout = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         NoSpeechTimeout.MergeFrom(other.NoSpeechTimeout);
+      }
+      if (other.endpointingTimeout_ != null) {
+        if (endpointingTimeout_ == null) {
+          EndpointingTimeout = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        EndpointingTimeout.MergeFrom(other.EndpointingTimeout);
       }
       if (other.IsInputText != false) {
         IsInputText = other.IsInputText;
@@ -4153,6 +4189,13 @@ namespace Google.Cloud.Dialogflow.V2 {
             input.ReadMessage(ClientHalfCloseStreamingTimeOffset);
             break;
           }
+          case 154: {
+            if (endpointingTimeout_ == null) {
+              EndpointingTimeout = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(EndpointingTimeout);
+            break;
+          }
         }
       }
     #endif
@@ -4252,6 +4295,13 @@ namespace Google.Cloud.Dialogflow.V2 {
               ClientHalfCloseStreamingTimeOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
             input.ReadMessage(ClientHalfCloseStreamingTimeOffset);
+            break;
+          }
+          case 154: {
+            if (endpointingTimeout_ == null) {
+              EndpointingTimeout = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(EndpointingTimeout);
             break;
           }
         }
