@@ -56,40 +56,41 @@ namespace Google.Cloud.Dialogflow.V2 {
             "c3BlZWNoX2NvbmZpZxgDIAEoCzIyLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93",
             "LnYyLlN5bnRoZXNpemVTcGVlY2hDb25maWciVQoTVGVsZXBob255RHRtZkV2",
             "ZW50cxI+CgtkdG1mX2V2ZW50cxgBIAMoDjIpLmdvb2dsZS5jbG91ZC5kaWFs",
-            "b2dmbG93LnYyLlRlbGVwaG9ueUR0bWYicQoSU3BlZWNoVG9UZXh0Q29uZmln",
-            "EkwKFHNwZWVjaF9tb2RlbF92YXJpYW50GAEgASgOMi4uZ29vZ2xlLmNsb3Vk",
-            "LmRpYWxvZ2Zsb3cudjIuU3BlZWNoTW9kZWxWYXJpYW50Eg0KBW1vZGVsGAIg",
-            "ASgJKpQCCg1UZWxlcGhvbnlEdG1mEh4KGlRFTEVQSE9OWV9EVE1GX1VOU1BF",
-            "Q0lGSUVEEAASDAoIRFRNRl9PTkUQARIMCghEVE1GX1RXTxACEg4KCkRUTUZf",
-            "VEhSRUUQAxINCglEVE1GX0ZPVVIQBBINCglEVE1GX0ZJVkUQBRIMCghEVE1G",
-            "X1NJWBAGEg4KCkRUTUZfU0VWRU4QBxIOCgpEVE1GX0VJR0hUEAgSDQoJRFRN",
-            "Rl9OSU5FEAkSDQoJRFRNRl9aRVJPEAoSCgoGRFRNRl9BEAsSCgoGRFRNRl9C",
-            "EAwSCgoGRFRNRl9DEA0SCgoGRFRNRl9EEA4SDQoJRFRNRl9TVEFSEA8SDgoK",
-            "RFRNRl9QT1VORBAQKvsBCg1BdWRpb0VuY29kaW5nEh4KGkFVRElPX0VOQ09E",
-            "SU5HX1VOU1BFQ0lGSUVEEAASHAoYQVVESU9fRU5DT0RJTkdfTElORUFSXzE2",
-            "EAESFwoTQVVESU9fRU5DT0RJTkdfRkxBQxACEhgKFEFVRElPX0VOQ09ESU5H",
-            "X01VTEFXEAMSFgoSQVVESU9fRU5DT0RJTkdfQU1SEAQSGQoVQVVESU9fRU5D",
-            "T0RJTkdfQU1SX1dCEAUSGwoXQVVESU9fRU5DT0RJTkdfT0dHX09QVVMQBhIp",
-            "CiVBVURJT19FTkNPRElOR19TUEVFWF9XSVRIX0hFQURFUl9CWVRFEAcqdgoS",
-            "U3BlZWNoTW9kZWxWYXJpYW50EiQKIFNQRUVDSF9NT0RFTF9WQVJJQU5UX1VO",
-            "U1BFQ0lGSUVEEAASFgoSVVNFX0JFU1RfQVZBSUxBQkxFEAESEAoMVVNFX1NU",
-            "QU5EQVJEEAISEAoMVVNFX0VOSEFOQ0VEEAMqjQEKD1NzbWxWb2ljZUdlbmRl",
-            "chIhCh1TU01MX1ZPSUNFX0dFTkRFUl9VTlNQRUNJRklFRBAAEhoKFlNTTUxf",
-            "Vk9JQ0VfR0VOREVSX01BTEUQARIcChhTU01MX1ZPSUNFX0dFTkRFUl9GRU1B",
-            "TEUQAhIdChlTU01MX1ZPSUNFX0dFTkRFUl9ORVVUUkFMEAMq7AEKE091dHB1",
-            "dEF1ZGlvRW5jb2RpbmcSJQohT1VUUFVUX0FVRElPX0VOQ09ESU5HX1VOU1BF",
-            "Q0lGSUVEEAASIwofT1VUUFVUX0FVRElPX0VOQ09ESU5HX0xJTkVBUl8xNhAB",
-            "Eh0KGU9VVFBVVF9BVURJT19FTkNPRElOR19NUDMQAhIlCiFPVVRQVVRfQVVE",
-            "SU9fRU5DT0RJTkdfTVAzXzY0X0tCUFMQBBIiCh5PVVRQVVRfQVVESU9fRU5D",
-            "T0RJTkdfT0dHX09QVVMQAxIfChtPVVRQVVRfQVVESU9fRU5DT0RJTkdfTVVM",
-            "QVcQBULWAgoeY29tLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyQhBBdWRp",
-            "b0NvbmZpZ1Byb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vZGlhbG9nZmxv",
-            "dy9hcGl2Mi9kaWFsb2dmbG93cGI7ZGlhbG9nZmxvd3Bi+AEBogICREaqAhpH",
-            "b29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5WMupBVQobYXV0b21sLmdvb2dsZWFw",
-            "aXMuY29tL01vZGVsEjZwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
-            "b2NhdGlvbn0vbW9kZWxzL3ttb2RlbH3qQWIKH3NwZWVjaC5nb29nbGVhcGlz",
-            "LmNvbS9QaHJhc2VTZXQSP3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
-            "e2xvY2F0aW9ufS9waHJhc2VTZXRzL3twaHJhc2Vfc2V0fWIGcHJvdG8z"));
+            "b2dmbG93LnYyLlRlbGVwaG9ueUR0bWYimAEKElNwZWVjaFRvVGV4dENvbmZp",
+            "ZxJMChRzcGVlY2hfbW9kZWxfdmFyaWFudBgBIAEoDjIuLmdvb2dsZS5jbG91",
+            "ZC5kaWFsb2dmbG93LnYyLlNwZWVjaE1vZGVsVmFyaWFudBINCgVtb2RlbBgC",
+            "IAEoCRIlCh11c2VfdGltZW91dF9iYXNlZF9lbmRwb2ludGluZxgLIAEoCCqU",
+            "AgoNVGVsZXBob255RHRtZhIeChpURUxFUEhPTllfRFRNRl9VTlNQRUNJRklF",
+            "RBAAEgwKCERUTUZfT05FEAESDAoIRFRNRl9UV08QAhIOCgpEVE1GX1RIUkVF",
+            "EAMSDQoJRFRNRl9GT1VSEAQSDQoJRFRNRl9GSVZFEAUSDAoIRFRNRl9TSVgQ",
+            "BhIOCgpEVE1GX1NFVkVOEAcSDgoKRFRNRl9FSUdIVBAIEg0KCURUTUZfTklO",
+            "RRAJEg0KCURUTUZfWkVSTxAKEgoKBkRUTUZfQRALEgoKBkRUTUZfQhAMEgoK",
+            "BkRUTUZfQxANEgoKBkRUTUZfRBAOEg0KCURUTUZfU1RBUhAPEg4KCkRUTUZf",
+            "UE9VTkQQECr7AQoNQXVkaW9FbmNvZGluZxIeChpBVURJT19FTkNPRElOR19V",
+            "TlNQRUNJRklFRBAAEhwKGEFVRElPX0VOQ09ESU5HX0xJTkVBUl8xNhABEhcK",
+            "E0FVRElPX0VOQ09ESU5HX0ZMQUMQAhIYChRBVURJT19FTkNPRElOR19NVUxB",
+            "VxADEhYKEkFVRElPX0VOQ09ESU5HX0FNUhAEEhkKFUFVRElPX0VOQ09ESU5H",
+            "X0FNUl9XQhAFEhsKF0FVRElPX0VOQ09ESU5HX09HR19PUFVTEAYSKQolQVVE",
+            "SU9fRU5DT0RJTkdfU1BFRVhfV0lUSF9IRUFERVJfQllURRAHKnYKElNwZWVj",
+            "aE1vZGVsVmFyaWFudBIkCiBTUEVFQ0hfTU9ERUxfVkFSSUFOVF9VTlNQRUNJ",
+            "RklFRBAAEhYKElVTRV9CRVNUX0FWQUlMQUJMRRABEhAKDFVTRV9TVEFOREFS",
+            "RBACEhAKDFVTRV9FTkhBTkNFRBADKo0BCg9Tc21sVm9pY2VHZW5kZXISIQod",
+            "U1NNTF9WT0lDRV9HRU5ERVJfVU5TUEVDSUZJRUQQABIaChZTU01MX1ZPSUNF",
+            "X0dFTkRFUl9NQUxFEAESHAoYU1NNTF9WT0lDRV9HRU5ERVJfRkVNQUxFEAIS",
+            "HQoZU1NNTF9WT0lDRV9HRU5ERVJfTkVVVFJBTBADKuwBChNPdXRwdXRBdWRp",
+            "b0VuY29kaW5nEiUKIU9VVFBVVF9BVURJT19FTkNPRElOR19VTlNQRUNJRklF",
+            "RBAAEiMKH09VVFBVVF9BVURJT19FTkNPRElOR19MSU5FQVJfMTYQARIdChlP",
+            "VVRQVVRfQVVESU9fRU5DT0RJTkdfTVAzEAISJQohT1VUUFVUX0FVRElPX0VO",
+            "Q09ESU5HX01QM182NF9LQlBTEAQSIgoeT1VUUFVUX0FVRElPX0VOQ09ESU5H",
+            "X09HR19PUFVTEAMSHwobT1VUUFVUX0FVRElPX0VOQ09ESU5HX01VTEFXEAVC",
+            "1gIKHmNvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MkIQQXVkaW9Db25m",
+            "aWdQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2RpYWxvZ2Zsb3cvYXBp",
+            "djIvZGlhbG9nZmxvd3BiO2RpYWxvZ2Zsb3dwYvgBAaICAkRGqgIaR29vZ2xl",
+            "LkNsb3VkLkRpYWxvZ2Zsb3cuVjLqQVUKG2F1dG9tbC5nb29nbGVhcGlzLmNv",
+            "bS9Nb2RlbBI2cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRp",
+            "b259L21vZGVscy97bW9kZWx96kFiCh9zcGVlY2guZ29vZ2xlYXBpcy5jb20v",
+            "UGhyYXNlU2V0Ej9wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2Nh",
+            "dGlvbn0vcGhyYXNlU2V0cy97cGhyYXNlX3NldH1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dialogflow.V2.TelephonyDtmf), typeof(global::Google.Cloud.Dialogflow.V2.AudioEncoding), typeof(global::Google.Cloud.Dialogflow.V2.SpeechModelVariant), typeof(global::Google.Cloud.Dialogflow.V2.SsmlVoiceGender), typeof(global::Google.Cloud.Dialogflow.V2.OutputAudioEncoding), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -100,7 +101,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SynthesizeSpeechConfig), global::Google.Cloud.Dialogflow.V2.SynthesizeSpeechConfig.Parser, new[]{ "SpeakingRate", "Pitch", "VolumeGainDb", "EffectsProfileId", "Voice" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.OutputAudioConfig), global::Google.Cloud.Dialogflow.V2.OutputAudioConfig.Parser, new[]{ "AudioEncoding", "SampleRateHertz", "SynthesizeSpeechConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.TelephonyDtmfEvents), global::Google.Cloud.Dialogflow.V2.TelephonyDtmfEvents.Parser, new[]{ "DtmfEvents" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig), global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Parser, new[]{ "SpeechModelVariant", "Model" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig), global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Parser, new[]{ "SpeechModelVariant", "Model", "UseTimeoutBasedEndpointing" }, null, null, null, null)
           }));
     }
     #endregion
@@ -2697,6 +2698,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     public SpeechToTextConfig(SpeechToTextConfig other) : this() {
       speechModelVariant_ = other.speechModelVariant_;
       model_ = other.model_;
+      useTimeoutBasedEndpointing_ = other.useTimeoutBasedEndpointing_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2750,6 +2752,22 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
     }
 
+    /// <summary>Field number for the "use_timeout_based_endpointing" field.</summary>
+    public const int UseTimeoutBasedEndpointingFieldNumber = 11;
+    private bool useTimeoutBasedEndpointing_;
+    /// <summary>
+    /// Use timeout based endpointing, interpreting endpointer sensitivy as
+    /// seconds of timeout value.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool UseTimeoutBasedEndpointing {
+      get { return useTimeoutBasedEndpointing_; }
+      set {
+        useTimeoutBasedEndpointing_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2767,6 +2785,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (SpeechModelVariant != other.SpeechModelVariant) return false;
       if (Model != other.Model) return false;
+      if (UseTimeoutBasedEndpointing != other.UseTimeoutBasedEndpointing) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2776,6 +2795,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       int hash = 1;
       if (SpeechModelVariant != global::Google.Cloud.Dialogflow.V2.SpeechModelVariant.Unspecified) hash ^= SpeechModelVariant.GetHashCode();
       if (Model.Length != 0) hash ^= Model.GetHashCode();
+      if (UseTimeoutBasedEndpointing != false) hash ^= UseTimeoutBasedEndpointing.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2802,6 +2822,10 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(18);
         output.WriteString(Model);
       }
+      if (UseTimeoutBasedEndpointing != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(UseTimeoutBasedEndpointing);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2820,6 +2844,10 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(18);
         output.WriteString(Model);
       }
+      if (UseTimeoutBasedEndpointing != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(UseTimeoutBasedEndpointing);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2835,6 +2863,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (Model.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Model);
+      }
+      if (UseTimeoutBasedEndpointing != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2853,6 +2884,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (other.Model.Length != 0) {
         Model = other.Model;
+      }
+      if (other.UseTimeoutBasedEndpointing != false) {
+        UseTimeoutBasedEndpointing = other.UseTimeoutBasedEndpointing;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2877,6 +2911,10 @@ namespace Google.Cloud.Dialogflow.V2 {
             Model = input.ReadString();
             break;
           }
+          case 88: {
+            UseTimeoutBasedEndpointing = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -2898,6 +2936,10 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
           case 18: {
             Model = input.ReadString();
+            break;
+          }
+          case 88: {
+            UseTimeoutBasedEndpointing = input.ReadBool();
             break;
           }
         }

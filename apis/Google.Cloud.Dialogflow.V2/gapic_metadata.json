@@ -328,6 +328,12 @@
                 "ListMessagesAsync"
               ]
             },
+            "SearchKnowledge": {
+              "methods": [
+                "SearchKnowledge",
+                "SearchKnowledgeAsync"
+              ]
+            },
             "SuggestConversationSummary": {
               "methods": [
                 "SuggestConversationSummary",
