@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using gpr = Google.Protobuf.Reflection;
@@ -59,6 +60,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             yield return SearchServiceReflection.Descriptor;
             yield return UserEventReflection.Descriptor;
             yield return UserEventServiceReflection.Descriptor;
+            yield return gcl::LocationsReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }
     }

@@ -62,24 +62,24 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "ASgJQgPgQQISFgoOdHJhbnNhY3Rpb25faWQYAyABKAkSEAoDdGF4GAQgASgC",
             "SAGIAQESEQoEY29zdBgFIAEoAkgCiAEBEhsKDmRpc2NvdW50X3ZhbHVlGAYg",
             "ASgCSAOIAQFCCAoGX3ZhbHVlQgYKBF90YXhCBwoFX2Nvc3RCEQoPX2Rpc2Nv",
-            "dW50X3ZhbHVlIqwBCgxEb2N1bWVudEluZm8SDAoCaWQYASABKAlIABI8CgRu",
+            "dW50X3ZhbHVlIrsBCgxEb2N1bWVudEluZm8SDAoCaWQYASABKAlIABI8CgRu",
             "YW1lGAIgASgJQiz6QSkKJ2Rpc2NvdmVyeWVuZ2luZS5nb29nbGVhcGlzLmNv",
-            "bS9Eb2N1bWVudEgAEhUKCHF1YW50aXR5GAMgASgFSAGIAQESFQoNcHJvbW90",
-            "aW9uX2lkcxgEIAMoCUIVChNkb2N1bWVudF9kZXNjcmlwdG9yQgsKCV9xdWFu",
-            "dGl0eSKUAQoJUGFuZWxJbmZvEhUKCHBhbmVsX2lkGAIgASgJQgPgQQISFAoM",
-            "ZGlzcGxheV9uYW1lGAMgASgJEhsKDnBhbmVsX3Bvc2l0aW9uGAQgASgFSACI",
-            "AQESGQoMdG90YWxfcGFuZWxzGAUgASgFSAGIAQFCEQoPX3BhbmVsX3Bvc2l0",
-            "aW9uQg8KDV90b3RhbF9wYW5lbHMijQEKCU1lZGlhSW5mbxI6ChdtZWRpYV9w",
-            "cm9ncmVzc19kdXJhdGlvbhgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJh",
-            "dGlvbhImChltZWRpYV9wcm9ncmVzc19wZXJjZW50YWdlGAIgASgCSACIAQFC",
-            "HAoaX21lZGlhX3Byb2dyZXNzX3BlcmNlbnRhZ2VClQIKJ2NvbS5nb29nbGUu",
-            "Y2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YUIOVXNlckV2ZW50UHJvdG9Q",
-            "AVpRY2xvdWQuZ29vZ2xlLmNvbS9nby9kaXNjb3ZlcnllbmdpbmUvYXBpdjFi",
-            "ZXRhL2Rpc2NvdmVyeWVuZ2luZXBiO2Rpc2NvdmVyeWVuZ2luZXBiogIPRElT",
-            "Q09WRVJZRU5HSU5FqgIjR29vZ2xlLkNsb3VkLkRpc2NvdmVyeUVuZ2luZS5W",
-            "MUJldGHKAiNHb29nbGVcQ2xvdWRcRGlzY292ZXJ5RW5naW5lXFYxYmV0YeoC",
-            "Jkdvb2dsZTo6Q2xvdWQ6OkRpc2NvdmVyeUVuZ2luZTo6VjFiZXRhYgZwcm90",
-            "bzM="));
+            "bS9Eb2N1bWVudEgAEg0KA3VyaRgGIAEoCUgAEhUKCHF1YW50aXR5GAMgASgF",
+            "SAGIAQESFQoNcHJvbW90aW9uX2lkcxgEIAMoCUIVChNkb2N1bWVudF9kZXNj",
+            "cmlwdG9yQgsKCV9xdWFudGl0eSKUAQoJUGFuZWxJbmZvEhUKCHBhbmVsX2lk",
+            "GAIgASgJQgPgQQISFAoMZGlzcGxheV9uYW1lGAMgASgJEhsKDnBhbmVsX3Bv",
+            "c2l0aW9uGAQgASgFSACIAQESGQoMdG90YWxfcGFuZWxzGAUgASgFSAGIAQFC",
+            "EQoPX3BhbmVsX3Bvc2l0aW9uQg8KDV90b3RhbF9wYW5lbHMijQEKCU1lZGlh",
+            "SW5mbxI6ChdtZWRpYV9wcm9ncmVzc19kdXJhdGlvbhgBIAEoCzIZLmdvb2ds",
+            "ZS5wcm90b2J1Zi5EdXJhdGlvbhImChltZWRpYV9wcm9ncmVzc19wZXJjZW50",
+            "YWdlGAIgASgCSACIAQFCHAoaX21lZGlhX3Byb2dyZXNzX3BlcmNlbnRhZ2VC",
+            "lQIKJ2NvbS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YUIO",
+            "VXNlckV2ZW50UHJvdG9QAVpRY2xvdWQuZ29vZ2xlLmNvbS9nby9kaXNjb3Zl",
+            "cnllbmdpbmUvYXBpdjFiZXRhL2Rpc2NvdmVyeWVuZ2luZXBiO2Rpc2NvdmVy",
+            "eWVuZ2luZXBiogIPRElTQ09WRVJZRU5HSU5FqgIjR29vZ2xlLkNsb3VkLkRp",
+            "c2NvdmVyeUVuZ2luZS5WMUJldGHKAiNHb29nbGVcQ2xvdWRcRGlzY292ZXJ5",
+            "RW5naW5lXFYxYmV0YeoCJkdvb2dsZTo6Q2xvdWQ6OkRpc2NvdmVyeUVuZ2lu",
+            "ZTo6VjFiZXRhYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -88,7 +88,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.SearchInfo), global::Google.Cloud.DiscoveryEngine.V1Beta.SearchInfo.Parser, new[]{ "SearchQuery", "OrderBy", "Offset" }, new[]{ "Offset" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.CompletionInfo), global::Google.Cloud.DiscoveryEngine.V1Beta.CompletionInfo.Parser, new[]{ "SelectedSuggestion", "SelectedPosition" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.TransactionInfo), global::Google.Cloud.DiscoveryEngine.V1Beta.TransactionInfo.Parser, new[]{ "Value", "Currency", "TransactionId", "Tax", "Cost", "DiscountValue" }, new[]{ "Value", "Tax", "Cost", "DiscountValue" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentInfo), global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentInfo.Parser, new[]{ "Id", "Name", "Quantity", "PromotionIds" }, new[]{ "DocumentDescriptor", "Quantity" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentInfo), global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentInfo.Parser, new[]{ "Id", "Name", "Uri", "Quantity", "PromotionIds" }, new[]{ "DocumentDescriptor", "Quantity" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.PanelInfo), global::Google.Cloud.DiscoveryEngine.V1Beta.PanelInfo.Parser, new[]{ "PanelId", "DisplayName", "PanelPosition", "TotalPanels" }, new[]{ "PanelPosition", "TotalPanels" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.MediaInfo), global::Google.Cloud.DiscoveryEngine.V1Beta.MediaInfo.Parser, new[]{ "MediaProgressDuration", "MediaProgressPercentage" }, new[]{ "MediaProgressPercentage" }, null, null, null)
           }));
@@ -2588,6 +2588,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         case DocumentDescriptorOneofCase.Name:
           Name = other.Name;
           break;
+        case DocumentDescriptorOneofCase.Uri:
+          Uri = other.Uri;
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -2659,6 +2662,36 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "uri" field.</summary>
+    public const int UriFieldNumber = 6;
+    /// <summary>
+    /// The [Document][google.cloud.discoveryengine.v1beta.Document] URI - only
+    /// allowed for website data stores.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Uri {
+      get { return HasUri ? (string) documentDescriptor_ : ""; }
+      set {
+        documentDescriptor_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        documentDescriptorCase_ = DocumentDescriptorOneofCase.Uri;
+      }
+    }
+    /// <summary>Gets whether the "uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUri {
+      get { return documentDescriptorCase_ == DocumentDescriptorOneofCase.Uri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUri() {
+      if (HasUri) {
+        ClearDocumentDescriptor();
+      }
+    }
+
     /// <summary>Field number for the "quantity" field.</summary>
     public const int QuantityFieldNumber = 3;
     private readonly static int QuantityDefaultValue = 0;
@@ -2718,6 +2751,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       None = 0,
       Id = 1,
       Name = 2,
+      Uri = 6,
     }
     private DocumentDescriptorOneofCase documentDescriptorCase_ = DocumentDescriptorOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2750,6 +2784,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
       if (Id != other.Id) return false;
       if (Name != other.Name) return false;
+      if (Uri != other.Uri) return false;
       if (Quantity != other.Quantity) return false;
       if(!promotionIds_.Equals(other.promotionIds_)) return false;
       if (DocumentDescriptorCase != other.DocumentDescriptorCase) return false;
@@ -2762,6 +2797,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       int hash = 1;
       if (HasId) hash ^= Id.GetHashCode();
       if (HasName) hash ^= Name.GetHashCode();
+      if (HasUri) hash ^= Uri.GetHashCode();
       if (HasQuantity) hash ^= Quantity.GetHashCode();
       hash ^= promotionIds_.GetHashCode();
       hash ^= (int) documentDescriptorCase_;
@@ -2796,6 +2832,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteInt32(Quantity);
       }
       promotionIds_.WriteTo(output, _repeated_promotionIds_codec);
+      if (HasUri) {
+        output.WriteRawTag(50);
+        output.WriteString(Uri);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2819,6 +2859,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteInt32(Quantity);
       }
       promotionIds_.WriteTo(ref output, _repeated_promotionIds_codec);
+      if (HasUri) {
+        output.WriteRawTag(50);
+        output.WriteString(Uri);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2834,6 +2878,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
       if (HasName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (HasUri) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
       }
       if (HasQuantity) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Quantity);
@@ -2861,6 +2908,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
           break;
         case DocumentDescriptorOneofCase.Name:
           Name = other.Name;
+          break;
+        case DocumentDescriptorOneofCase.Uri:
+          Uri = other.Uri;
           break;
       }
 
@@ -2895,6 +2945,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             promotionIds_.AddEntriesFrom(input, _repeated_promotionIds_codec);
             break;
           }
+          case 50: {
+            Uri = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -2924,6 +2978,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
           }
           case 34: {
             promotionIds_.AddEntriesFrom(ref input, _repeated_promotionIds_codec);
+            break;
+          }
+          case 50: {
+            Uri = input.ReadString();
             break;
           }
         }

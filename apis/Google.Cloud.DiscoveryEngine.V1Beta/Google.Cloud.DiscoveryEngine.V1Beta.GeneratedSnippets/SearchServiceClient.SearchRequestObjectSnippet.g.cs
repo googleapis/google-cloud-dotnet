@@ -58,7 +58,9 @@ namespace GoogleCSharpSnippets
                 SafeSearch = false,
                 UserInfo = new UserInfo(),
                 UserLabels = { { "", "" }, },
+                EmbeddingSpec = new SearchRequest.Types.EmbeddingSpec(),
                 ContentSearchSpec = new SearchRequest.Types.ContentSearchSpec(),
+                RankingExpression = "",
             };
             // Make the request
             PagedEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.Search(request);
