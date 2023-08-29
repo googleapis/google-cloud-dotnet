@@ -55,6 +55,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1
             ListMessagesSettings = existing.ListMessagesSettings;
             SuggestConversationSummarySettings = existing.SuggestConversationSummarySettings;
             GenerateStatelessSummarySettings = existing.GenerateStatelessSummarySettings;
+            SearchKnowledgeSettings = existing.SearchKnowledgeSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -206,6 +207,24 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GenerateStatelessSummarySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConversationsClient.SearchKnowledge</c> and <c>ConversationsClient.SearchKnowledgeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SearchKnowledgeSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -1632,6 +1651,33 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<GenerateStatelessSummaryResponse> GenerateStatelessSummaryAsync(GenerateStatelessSummaryRequest request, st::CancellationToken cancellationToken) =>
             GenerateStatelessSummaryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get answers for the given query based on knowledge documents.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SearchKnowledgeResponse SearchKnowledge(SearchKnowledgeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get answers for the given query based on knowledge documents.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchKnowledgeResponse> SearchKnowledgeAsync(SearchKnowledgeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get answers for the given query based on knowledge documents.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchKnowledgeResponse> SearchKnowledgeAsync(SearchKnowledgeRequest request, st::CancellationToken cancellationToken) =>
+            SearchKnowledgeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Conversations client wrapper implementation, for convenient use.</summary>
@@ -1656,6 +1702,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         private readonly gaxgrpc::ApiCall<SuggestConversationSummaryRequest, SuggestConversationSummaryResponse> _callSuggestConversationSummary;
 
         private readonly gaxgrpc::ApiCall<GenerateStatelessSummaryRequest, GenerateStatelessSummaryResponse> _callGenerateStatelessSummary;
+
+        private readonly gaxgrpc::ApiCall<SearchKnowledgeRequest, SearchKnowledgeResponse> _callSearchKnowledge;
 
         /// <summary>
         /// Constructs a client wrapper for the Conversations service, with the specified gRPC client and settings.
@@ -1693,6 +1741,9 @@ namespace Google.Cloud.Dialogflow.V2Beta1
             _callGenerateStatelessSummary = clientHelper.BuildApiCall<GenerateStatelessSummaryRequest, GenerateStatelessSummaryResponse>("GenerateStatelessSummary", grpcClient.GenerateStatelessSummaryAsync, grpcClient.GenerateStatelessSummary, effectiveSettings.GenerateStatelessSummarySettings).WithGoogleRequestParam("stateless_conversation.parent", request => request.StatelessConversation?.Parent);
             Modify_ApiCall(ref _callGenerateStatelessSummary);
             Modify_GenerateStatelessSummaryApiCall(ref _callGenerateStatelessSummary);
+            _callSearchKnowledge = clientHelper.BuildApiCall<SearchKnowledgeRequest, SearchKnowledgeResponse>("SearchKnowledge", grpcClient.SearchKnowledgeAsync, grpcClient.SearchKnowledge, effectiveSettings.SearchKnowledgeSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callSearchKnowledge);
+            Modify_SearchKnowledgeApiCall(ref _callSearchKnowledge);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1713,6 +1764,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         partial void Modify_SuggestConversationSummaryApiCall(ref gaxgrpc::ApiCall<SuggestConversationSummaryRequest, SuggestConversationSummaryResponse> call);
 
         partial void Modify_GenerateStatelessSummaryApiCall(ref gaxgrpc::ApiCall<GenerateStatelessSummaryRequest, GenerateStatelessSummaryResponse> call);
+
+        partial void Modify_SearchKnowledgeApiCall(ref gaxgrpc::ApiCall<SearchKnowledgeRequest, SearchKnowledgeResponse> call);
 
         partial void OnConstruction(Conversations.ConversationsClient grpcClient, ConversationsSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1737,6 +1790,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         partial void Modify_SuggestConversationSummaryRequest(ref SuggestConversationSummaryRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GenerateStatelessSummaryRequest(ref GenerateStatelessSummaryRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SearchKnowledgeRequest(ref SearchKnowledgeRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates a new conversation. Conversations are auto-completed after 24
@@ -1986,6 +2041,30 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         {
             Modify_GenerateStatelessSummaryRequest(ref request, ref callSettings);
             return _callGenerateStatelessSummary.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get answers for the given query based on knowledge documents.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SearchKnowledgeResponse SearchKnowledge(SearchKnowledgeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchKnowledgeRequest(ref request, ref callSettings);
+            return _callSearchKnowledge.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get answers for the given query based on knowledge documents.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SearchKnowledgeResponse> SearchKnowledgeAsync(SearchKnowledgeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchKnowledgeRequest(ref request, ref callSettings);
+            return _callSearchKnowledge.Async(request, callSettings);
         }
     }
 
