@@ -40,6 +40,8 @@ namespace GoogleCSharpSnippets
                 ServingConfigAsServingConfigName = ServingConfigName.FromProjectLocationDataStoreServingConfig("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[SERVING_CONFIG]"),
                 Conversation = new Conversation(),
                 SafeSearch = false,
+                UserLabels = { { "", "" }, },
+                SummarySpec = new SearchRequest.Types.ContentSearchSpec.Types.SummarySpec(),
             };
             // Make the request
             ConverseConversationResponse response = conversationalSearchServiceClient.ConverseConversation(request);
@@ -61,6 +63,8 @@ namespace GoogleCSharpSnippets
                 ServingConfigAsServingConfigName = ServingConfigName.FromProjectLocationDataStoreServingConfig("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[SERVING_CONFIG]"),
                 Conversation = new Conversation(),
                 SafeSearch = false,
+                UserLabels = { { "", "" }, },
+                SummarySpec = new SearchRequest.Types.ContentSearchSpec.Types.SummarySpec(),
             };
             // Make the request
             ConverseConversationResponse response = await conversationalSearchServiceClient.ConverseConversationAsync(request);

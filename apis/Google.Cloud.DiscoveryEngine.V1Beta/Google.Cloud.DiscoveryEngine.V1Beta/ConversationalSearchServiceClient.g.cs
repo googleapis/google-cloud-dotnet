@@ -17,6 +17,7 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -54,6 +55,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             UpdateConversationSettings = existing.UpdateConversationSettings;
             GetConversationSettings = existing.GetConversationSettings;
             ListConversationsSettings = existing.ListConversationsSettings;
+            LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
 
@@ -172,6 +174,11 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListConversationsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="ConversationalSearchServiceSettings"/> object.</returns>
@@ -316,6 +323,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
 
         /// <summary>The underlying gRPC ConversationalSearchService client</summary>
         public virtual ConversationalSearchService.ConversationalSearchServiceClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Converses a conversation.
@@ -1165,6 +1175,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             GrpcClient = grpcClient;
             ConversationalSearchServiceSettings effectiveSettings = settings ?? ConversationalSearchServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callConverseConversation = clientHelper.BuildApiCall<ConverseConversationRequest, ConverseConversationResponse>("ConverseConversation", grpcClient.ConverseConversationAsync, grpcClient.ConverseConversation, effectiveSettings.ConverseConversationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callConverseConversation);
             Modify_ConverseConversationApiCall(ref _callConverseConversation);
@@ -1204,6 +1215,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
 
         /// <summary>The underlying gRPC ConversationalSearchService client</summary>
         public override ConversationalSearchService.ConversationalSearchServiceClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
 
         partial void Modify_ConverseConversationRequest(ref ConverseConversationRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1396,5 +1410,21 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         public scg::IEnumerator<Conversation> GetEnumerator() => Conversations.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public static partial class ConversationalSearchService
+    {
+        public partial class ConversationalSearchServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
+        }
     }
 }

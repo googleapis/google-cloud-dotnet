@@ -17,6 +17,7 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -55,6 +56,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             UpdateSchemaOperationsSettings = existing.UpdateSchemaOperationsSettings.Clone();
             DeleteSchemaSettings = existing.DeleteSchemaSettings;
             DeleteSchemaOperationsSettings = existing.DeleteSchemaOperationsSettings.Clone();
+            LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
 
@@ -204,6 +206,11 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
 
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="SchemaServiceSettings"/> object.</returns>
         public SchemaServiceSettings Clone() => new SchemaServiceSettings(this);
@@ -344,6 +351,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
 
         /// <summary>The underlying gRPC SchemaService client</summary>
         public virtual SchemaService.SchemaServiceClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Gets a [Schema][google.cloud.discoveryengine.v1beta.Schema].
@@ -1024,6 +1034,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             CreateSchemaOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateSchemaOperationsSettings, logger);
             UpdateSchemaOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateSchemaOperationsSettings, logger);
             DeleteSchemaOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteSchemaOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callGetSchema = clientHelper.BuildApiCall<GetSchemaRequest, Schema>("GetSchema", grpcClient.GetSchemaAsync, grpcClient.GetSchema, effectiveSettings.GetSchemaSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetSchema);
             Modify_GetSchemaApiCall(ref _callGetSchema);
@@ -1058,6 +1069,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
 
         /// <summary>The underlying gRPC SchemaService client</summary>
         public override SchemaService.SchemaServiceClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
 
         partial void Modify_GetSchemaRequest(ref GetSchemaRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1222,6 +1236,22 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class SchemaService
+    {
+        public partial class SchemaServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
         }
     }
 }
