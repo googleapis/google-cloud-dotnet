@@ -1196,5 +1196,48 @@ namespace GoogleCSharpSnippets
             GenerateStatelessSummaryResponse response = await conversationsClient.GenerateStatelessSummaryAsync(request);
             // End snippet
         }
+
+        /// <summary>Snippet for SearchKnowledge</summary>
+        public void SearchKnowledgeRequestObject()
+        {
+            // Snippet: SearchKnowledge(SearchKnowledgeRequest, CallSettings)
+            // Create client
+            ConversationsClient conversationsClient = ConversationsClient.Create();
+            // Initialize request argument(s)
+            SearchKnowledgeRequest request = new SearchKnowledgeRequest
+            {
+                Query = new TextInput(),
+                ConversationProfileAsConversationProfileName = ConversationProfileName.FromProjectConversationProfile("[PROJECT]", "[CONVERSATION_PROFILE]"),
+                SessionId = "",
+                ConversationAsConversationName = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]"),
+                LatestMessageAsMessageName = MessageName.FromProjectConversationMessage("[PROJECT]", "[CONVERSATION]", "[MESSAGE]"),
+                Parent = "",
+            };
+            // Make the request
+            SearchKnowledgeResponse response = conversationsClient.SearchKnowledge(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchKnowledgeAsync</summary>
+        public async Task SearchKnowledgeRequestObjectAsync()
+        {
+            // Snippet: SearchKnowledgeAsync(SearchKnowledgeRequest, CallSettings)
+            // Additional: SearchKnowledgeAsync(SearchKnowledgeRequest, CancellationToken)
+            // Create client
+            ConversationsClient conversationsClient = await ConversationsClient.CreateAsync();
+            // Initialize request argument(s)
+            SearchKnowledgeRequest request = new SearchKnowledgeRequest
+            {
+                Query = new TextInput(),
+                ConversationProfileAsConversationProfileName = ConversationProfileName.FromProjectConversationProfile("[PROJECT]", "[CONVERSATION_PROFILE]"),
+                SessionId = "",
+                ConversationAsConversationName = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]"),
+                LatestMessageAsMessageName = MessageName.FromProjectConversationMessage("[PROJECT]", "[CONVERSATION]", "[MESSAGE]"),
+                Parent = "",
+            };
+            // Make the request
+            SearchKnowledgeResponse response = await conversationsClient.SearchKnowledgeAsync(request);
+            // End snippet
+        }
     }
 }
