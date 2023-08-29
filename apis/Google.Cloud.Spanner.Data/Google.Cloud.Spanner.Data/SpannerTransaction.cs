@@ -415,7 +415,7 @@ namespace Google.Cloud.Spanner.Data
             // timestamp, and there's no need for us to repeat the RPC here when we already know the
             // result. This also allows us to more aggressively return the session to the pool after
             // committing/rolling back a transaction.
-            if (_hasCommittedOrRolledBack && _commitResponse != null)
+            if (_commitResponse != null)
             {
                 return Task.FromResult(_commitResponse.CommitTimestamp.ToDateTime());
             }
@@ -446,14 +446,11 @@ namespace Google.Cloud.Spanner.Data
                     }
                     finally
                     {
-                        // Dispose the transaction unless it is a retriable transaction.
-                        // Disposing the transaction will return the session to the pool.
-                        // Retriable transactions reuse the same session for a new transaction if the transaction is aborted
-                        // by Cloud Spanner, and will make sure the session is returned to the pool when done.
-                        if (!_isRetriable)
-                        {
-                            Dispose();
-                        }
+                        // Dispose the transaction. Disposing the transaction will return the session to the pool,
+                        // unless it is a retriable transaction. Retriable transactions reuse the same session for a new
+                        // transaction if the transaction is aborted by Cloud Spanner, and will make sure the session is
+                        // returned to the pool when done.
+                        Dispose();
                     }
                 }, "SpannerTransaction.Commit", SpannerConnection.Logger);
         }
@@ -485,14 +482,11 @@ namespace Google.Cloud.Spanner.Data
             }
             finally
             {
-                // Dispose the transaction unless it is a retriable transaction.
-                // Disposing the transaction will return the session to the pool.
-                // Retriable transactions reuse the same session for a new transaction if the transaction is aborted
-                // by Cloud Spanner, and will make sure the session is returned to the pool when done.
-                if (!_isRetriable)
-                {
-                    Dispose();
-                }
+                // Dispose the transaction. Disposing the transaction will return the session to the pool,
+                // unless it is a retriable transaction. Retriable transactions reuse the same session for a new
+                // transaction if the transaction is aborted by Cloud Spanner, and will make sure the session is
+                // returned to the pool when done.
+                Dispose();
             }
         }
 
