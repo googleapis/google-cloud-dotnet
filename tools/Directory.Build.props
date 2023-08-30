@@ -1,0 +1,8 @@
+<Project>
+  <!--
+    - Common properties for all tools projects.
+    -->
+  <PropertyGroup>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+  </PropertyGroup>
+</Project>
