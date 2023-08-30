@@ -52,6 +52,25 @@ By default - e.g. just using `ExampleClient.Create()` - the selection process is
   - Otherwise, use `GrpcCoreAdapter`
 - Otherwise, use `RestGrpcAdapter`
 
+> **Note for Grpc.Net.Client from 2.56.0 onwards**
+>
+> As of version 2.56.0 of Grpc.Net.Client, constructing a
+> `GrpcChannel` will succeed when running on .NET Framework in
+> Windows if gRPC is "mostly functional" via `WinHttpHandler`. In
+> these cases, the defaulting mechanism above will use
+> `GrpcNetClientAdapter`. If `WinHttpHandler` is fully functional,
+> that should be fine - but in some cases (e.g. on Windows Server
+> 2022 and Windows 10), client-streaming and bidi-streaming calls
+> are not supported.
+>
+> A later version of Google.Api.Gax.Grpc will detect this to avoid
+> any problems (defaulting to Grpc.Core if the environment doesn't
+> fully support gRPC) but until then, any users who have added an
+> explicit dependency on Grpc.Net.Client 2.56.0 or higher and who
+> encounter problems should explicitly use Grpc.Core either via the
+> `GRPC_DEFAULT_ADAPTER_OVERRIDE` environment variable, or in code
+> as shown below.
+
 ## Specifying an implementation in code
 
 If you explicitly want to specify a `GrpcAdapter` in code, there are two options.
