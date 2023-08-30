@@ -31,348 +31,366 @@ namespace Google.Cloud.Workstations.V1 {
             "cmVzb3VyY2UucHJvdG8aI2dvb2dsZS9sb25ncnVubmluZy9vcGVyYXRpb25z",
             "LnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aIGdvb2ds",
             "ZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGh9nb29nbGUvcHJvdG9idWYv",
-            "dGltZXN0YW1wLnByb3RvGhdnb29nbGUvcnBjL3N0YXR1cy5wcm90byLACAoS",
-            "V29ya3N0YXRpb25DbHVzdGVyEgwKBG5hbWUYASABKAkSFAoMZGlzcGxheV9u",
-            "YW1lGAIgASgJEhAKA3VpZBgDIAEoCUID4EEDEhgKC3JlY29uY2lsaW5nGAQg",
-            "ASgIQgPgQQMSVgoLYW5ub3RhdGlvbnMYBSADKAsyQS5nb29nbGUuY2xvdWQu",
-            "d29ya3N0YXRpb25zLnYxLldvcmtzdGF0aW9uQ2x1c3Rlci5Bbm5vdGF0aW9u",
-            "c0VudHJ5EkwKBmxhYmVscxgPIAMoCzI8Lmdvb2dsZS5jbG91ZC53b3Jrc3Rh",
-            "dGlvbnMudjEuV29ya3N0YXRpb25DbHVzdGVyLkxhYmVsc0VudHJ5EjQKC2Ny",
-            "ZWF0ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
-            "4EEDEjQKC3VwZGF0ZV90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcEID4EEDEjQKC2RlbGV0ZV90aW1lGAggASgLMhouZ29vZ2xlLnBy",
-            "b3RvYnVmLlRpbWVzdGFtcEID4EEDEgwKBGV0YWcYCSABKAkSFAoHbmV0d29y",
-            "axgKIAEoCUID4EEFEhcKCnN1Ym5ldHdvcmsYCyABKAlCA+BBBRIdChBjb250",
-            "cm9sX3BsYW5lX2lwGBAgASgJQgPgQQMSZQoWcHJpdmF0ZV9jbHVzdGVyX2Nv",
-            "bmZpZxgMIAEoCzJFLmdvb2dsZS5jbG91ZC53b3Jrc3RhdGlvbnMudjEuV29y",
-            "a3N0YXRpb25DbHVzdGVyLlByaXZhdGVDbHVzdGVyQ29uZmlnEhUKCGRlZ3Jh",
-            "ZGVkGA0gASgIQgPgQQMSKwoKY29uZGl0aW9ucxgOIAMoCzISLmdvb2dsZS5y",
-            "cGMuU3RhdHVzQgPgQQMamgEKFFByaXZhdGVDbHVzdGVyQ29uZmlnEiQKF2Vu",
-            "YWJsZV9wcml2YXRlX2VuZHBvaW50GAEgASgIQgPgQQUSHQoQY2x1c3Rlcl9o",
-            "b3N0bmFtZRgCIAEoCUID4EEDEiMKFnNlcnZpY2VfYXR0YWNobWVudF91cmkY",
-            "AyABKAlCA+BBAxIYChBhbGxvd2VkX3Byb2plY3RzGAQgAygJGjIKEEFubm90",
-            "YXRpb25zRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ARot",
-            "CgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgB",
-            "OooB6kGGAQoud29ya3N0YXRpb25zLmdvb2dsZWFwaXMuY29tL1dvcmtzdGF0",
-            "aW9uQ2x1c3RlchJRcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
-            "YXRpb259L3dvcmtzdGF0aW9uQ2x1c3RlcnMve3dvcmtzdGF0aW9uX2NsdXN0",
-            "ZXJ9UgEBIoQWChFXb3Jrc3RhdGlvbkNvbmZpZxIMCgRuYW1lGAEgASgJEhQK",
-            "DGRpc3BsYXlfbmFtZRgCIAEoCRIQCgN1aWQYAyABKAlCA+BBAxIYCgtyZWNv",
-            "bmNpbGluZxgEIAEoCEID4EEDElUKC2Fubm90YXRpb25zGAUgAygLMkAuZ29v",
-            "Z2xlLmNsb3VkLndvcmtzdGF0aW9ucy52MS5Xb3Jrc3RhdGlvbkNvbmZpZy5B",
-            "bm5vdGF0aW9uc0VudHJ5EksKBmxhYmVscxgSIAMoCzI7Lmdvb2dsZS5jbG91",
-            "ZC53b3Jrc3RhdGlvbnMudjEuV29ya3N0YXRpb25Db25maWcuTGFiZWxzRW50",
-            "cnkSNAoLY3JlYXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYByABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wQgPgQQMSNAoLZGVsZXRlX3RpbWUYCCABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSDAoEZXRhZxgJIAEoCRIv",
-            "CgxpZGxlX3RpbWVvdXQYCiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRp",
-            "b24SMgoPcnVubmluZ190aW1lb3V0GAsgASgLMhkuZ29vZ2xlLnByb3RvYnVm",
-            "LkR1cmF0aW9uEkIKBGhvc3QYDCABKAsyNC5nb29nbGUuY2xvdWQud29ya3N0",
-            "YXRpb25zLnYxLldvcmtzdGF0aW9uQ29uZmlnLkhvc3QSYwoWcGVyc2lzdGVu",
-            "dF9kaXJlY3RvcmllcxgNIAMoCzJDLmdvb2dsZS5jbG91ZC53b3Jrc3RhdGlv",
-            "bnMudjEuV29ya3N0YXRpb25Db25maWcuUGVyc2lzdGVudERpcmVjdG9yeRJM",
-            "Cgljb250YWluZXIYDiABKAsyOS5nb29nbGUuY2xvdWQud29ya3N0YXRpb25z",
-            "LnYxLldvcmtzdGF0aW9uQ29uZmlnLkNvbnRhaW5lchJiCg5lbmNyeXB0aW9u",
-            "X2tleRgRIAEoCzJFLmdvb2dsZS5jbG91ZC53b3Jrc3RhdGlvbnMudjEuV29y",
-            "a3N0YXRpb25Db25maWcuQ3VzdG9tZXJFbmNyeXB0aW9uS2V5QgPgQQUSFQoI",
-            "ZGVncmFkZWQYDyABKAhCA+BBAxIrCgpjb25kaXRpb25zGBAgAygLMhIuZ29v",
-            "Z2xlLnJwYy5TdGF0dXNCA+BBAxqNBgoESG9zdBJYCgxnY2VfaW5zdGFuY2UY",
-            "ASABKAsyQC5nb29nbGUuY2xvdWQud29ya3N0YXRpb25zLnYxLldvcmtzdGF0",
-            "aW9uQ29uZmlnLkhvc3QuR2NlSW5zdGFuY2VIABqgBQoLR2NlSW5zdGFuY2US",
-            "FAoMbWFjaGluZV90eXBlGAEgASgJEhcKD3NlcnZpY2VfYWNjb3VudBgCIAEo",
-            "CRIMCgR0YWdzGAQgAygJEhEKCXBvb2xfc2l6ZRgFIAEoBRIdChBwb29sZWRf",
-            "aW5zdGFuY2VzGAwgASgFQgPgQQMSIwobZGlzYWJsZV9wdWJsaWNfaXBfYWRk",
-            "cmVzc2VzGAYgASgIEiQKHGVuYWJsZV9uZXN0ZWRfdmlydHVhbGl6YXRpb24Y",
-            "ByABKAgSfAoYc2hpZWxkZWRfaW5zdGFuY2VfY29uZmlnGAggASgLMlouZ29v",
-            "Z2xlLmNsb3VkLndvcmtzdGF0aW9ucy52MS5Xb3Jrc3RhdGlvbkNvbmZpZy5I",
-            "b3N0LkdjZUluc3RhbmNlLkdjZVNoaWVsZGVkSW5zdGFuY2VDb25maWcShAEK",
+            "dGltZXN0YW1wLnByb3RvGhdnb29nbGUvcnBjL3N0YXR1cy5wcm90byKHCQoS",
+            "V29ya3N0YXRpb25DbHVzdGVyEgwKBG5hbWUYASABKAkSGQoMZGlzcGxheV9u",
+            "YW1lGAIgASgJQgPgQQESEAoDdWlkGAMgASgJQgPgQQMSGAoLcmVjb25jaWxp",
+            "bmcYBCABKAhCA+BBAxJbCgthbm5vdGF0aW9ucxgFIAMoCzJBLmdvb2dsZS5j",
+            "bG91ZC53b3Jrc3RhdGlvbnMudjEuV29ya3N0YXRpb25DbHVzdGVyLkFubm90",
+            "YXRpb25zRW50cnlCA+BBARJRCgZsYWJlbHMYDyADKAsyPC5nb29nbGUuY2xv",
+            "dWQud29ya3N0YXRpb25zLnYxLldvcmtzdGF0aW9uQ2x1c3Rlci5MYWJlbHNF",
+            "bnRyeUID4EEBEjQKC2NyZWF0ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAcgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC2RlbGV0ZV90aW1lGAgg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEhEKBGV0YWcY",
+            "CSABKAlCA+BBARIUCgduZXR3b3JrGAogASgJQgPgQQUSFwoKc3VibmV0d29y",
+            "axgLIAEoCUID4EEFEh0KEGNvbnRyb2xfcGxhbmVfaXAYECABKAlCA+BBAxJq",
+            "ChZwcml2YXRlX2NsdXN0ZXJfY29uZmlnGAwgASgLMkUuZ29vZ2xlLmNsb3Vk",
+            "LndvcmtzdGF0aW9ucy52MS5Xb3Jrc3RhdGlvbkNsdXN0ZXIuUHJpdmF0ZUNs",
+            "dXN0ZXJDb25maWdCA+BBARIVCghkZWdyYWRlZBgNIAEoCEID4EEDEisKCmNv",
+            "bmRpdGlvbnMYDiADKAsyEi5nb29nbGUucnBjLlN0YXR1c0ID4EEDGp8BChRQ",
+            "cml2YXRlQ2x1c3RlckNvbmZpZxIkChdlbmFibGVfcHJpdmF0ZV9lbmRwb2lu",
+            "dBgBIAEoCEID4EEFEh0KEGNsdXN0ZXJfaG9zdG5hbWUYAiABKAlCA+BBAxIj",
+            "ChZzZXJ2aWNlX2F0dGFjaG1lbnRfdXJpGAMgASgJQgPgQQMSHQoQYWxsb3dl",
+            "ZF9wcm9qZWN0cxgEIAMoCUID4EEBGjIKEEFubm90YXRpb25zRW50cnkSCwoD",
+            "a2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ARotCgtMYWJlbHNFbnRyeRIL",
+            "CgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOrMB6kGvAQoud29ya3N0",
+            "YXRpb25zLmdvb2dsZWFwaXMuY29tL1dvcmtzdGF0aW9uQ2x1c3RlchJRcHJv",
+            "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3dvcmtzdGF0",
+            "aW9uQ2x1c3RlcnMve3dvcmtzdGF0aW9uX2NsdXN0ZXJ9KhN3b3Jrc3RhdGlv",
+            "bkNsdXN0ZXJzMhJ3b3Jrc3RhdGlvbkNsdXN0ZXJSAQEishkKEVdvcmtzdGF0",
+            "aW9uQ29uZmlnEgwKBG5hbWUYASABKAkSGQoMZGlzcGxheV9uYW1lGAIgASgJ",
+            "QgPgQQESEAoDdWlkGAMgASgJQgPgQQMSGAoLcmVjb25jaWxpbmcYBCABKAhC",
+            "A+BBAxJaCgthbm5vdGF0aW9ucxgFIAMoCzJALmdvb2dsZS5jbG91ZC53b3Jr",
+            "c3RhdGlvbnMudjEuV29ya3N0YXRpb25Db25maWcuQW5ub3RhdGlvbnNFbnRy",
+            "eUID4EEBElAKBmxhYmVscxgSIAMoCzI7Lmdvb2dsZS5jbG91ZC53b3Jrc3Rh",
+            "dGlvbnMudjEuV29ya3N0YXRpb25Db25maWcuTGFiZWxzRW50cnlCA+BBARI0",
+            "CgtjcmVhdGVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXBCA+BBAxI0CgtkZWxldGVfdGltZRgIIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIRCgRldGFnGAkgASgJQgPgQQES",
+            "NAoMaWRsZV90aW1lb3V0GAogASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0",
+            "aW9uQgPgQQESNwoPcnVubmluZ190aW1lb3V0GAsgASgLMhkuZ29vZ2xlLnBy",
+            "b3RvYnVmLkR1cmF0aW9uQgPgQQESRwoEaG9zdBgMIAEoCzI0Lmdvb2dsZS5j",
+            "bG91ZC53b3Jrc3RhdGlvbnMudjEuV29ya3N0YXRpb25Db25maWcuSG9zdEID",
+            "4EEBEmgKFnBlcnNpc3RlbnRfZGlyZWN0b3JpZXMYDSADKAsyQy5nb29nbGUu",
+            "Y2xvdWQud29ya3N0YXRpb25zLnYxLldvcmtzdGF0aW9uQ29uZmlnLlBlcnNp",
+            "c3RlbnREaXJlY3RvcnlCA+BBARJRCgljb250YWluZXIYDiABKAsyOS5nb29n",
+            "bGUuY2xvdWQud29ya3N0YXRpb25zLnYxLldvcmtzdGF0aW9uQ29uZmlnLkNv",
+            "bnRhaW5lckID4EEBEmIKDmVuY3J5cHRpb25fa2V5GBEgASgLMkUuZ29vZ2xl",
+            "LmNsb3VkLndvcmtzdGF0aW9ucy52MS5Xb3Jrc3RhdGlvbkNvbmZpZy5DdXN0",
+            "b21lckVuY3J5cHRpb25LZXlCA+BBBRJdChByZWFkaW5lc3NfY2hlY2tzGBMg",
+            "AygLMj4uZ29vZ2xlLmNsb3VkLndvcmtzdGF0aW9ucy52MS5Xb3Jrc3RhdGlv",
+            "bkNvbmZpZy5SZWFkaW5lc3NDaGVja0ID4EEBEh0KDXJlcGxpY2Ffem9uZXMY",
+            "FyADKAlCBuBBAeBBBRIVCghkZWdyYWRlZBgPIAEoCEID4EEDEisKCmNvbmRp",
+            "dGlvbnMYECADKAsyEi5nb29nbGUucnBjLlN0YXR1c0ID4EEDGvUGCgRIb3N0",
+            "ElgKDGdjZV9pbnN0YW5jZRgBIAEoCzJALmdvb2dsZS5jbG91ZC53b3Jrc3Rh",
+            "dGlvbnMudjEuV29ya3N0YXRpb25Db25maWcuSG9zdC5HY2VJbnN0YW5jZUgA",
+            "GogGCgtHY2VJbnN0YW5jZRIZCgxtYWNoaW5lX3R5cGUYASABKAlCA+BBARIc",
+            "Cg9zZXJ2aWNlX2FjY291bnQYAiABKAlCA+BBARIjChZzZXJ2aWNlX2FjY291",
+            "bnRfc2NvcGVzGAMgAygJQgPgQQESEQoEdGFncxgEIAMoCUID4EEBEhYKCXBv",
+            "b2xfc2l6ZRgFIAEoBUID4EEBEh0KEHBvb2xlZF9pbnN0YW5jZXMYDCABKAVC",
+            "A+BBAxIoChtkaXNhYmxlX3B1YmxpY19pcF9hZGRyZXNzZXMYBiABKAhCA+BB",
+            "ARIpChxlbmFibGVfbmVzdGVkX3ZpcnR1YWxpemF0aW9uGAcgASgIQgPgQQES",
+            "gQEKGHNoaWVsZGVkX2luc3RhbmNlX2NvbmZpZxgIIAEoCzJaLmdvb2dsZS5j",
+            "bG91ZC53b3Jrc3RhdGlvbnMudjEuV29ya3N0YXRpb25Db25maWcuSG9zdC5H",
+            "Y2VJbnN0YW5jZS5HY2VTaGllbGRlZEluc3RhbmNlQ29uZmlnQgPgQQESiQEK",
             "HGNvbmZpZGVudGlhbF9pbnN0YW5jZV9jb25maWcYCiABKAsyXi5nb29nbGUu",
             "Y2xvdWQud29ya3N0YXRpb25zLnYxLldvcmtzdGF0aW9uQ29uZmlnLkhvc3Qu",
-            "R2NlSW5zdGFuY2UuR2NlQ29uZmlkZW50aWFsSW5zdGFuY2VDb25maWcSGQoR",
-            "Ym9vdF9kaXNrX3NpemVfZ2IYCSABKAUacQoZR2NlU2hpZWxkZWRJbnN0YW5j",
-            "ZUNvbmZpZxIaChJlbmFibGVfc2VjdXJlX2Jvb3QYASABKAgSEwoLZW5hYmxl",
-            "X3Z0cG0YAiABKAgSIwobZW5hYmxlX2ludGVncml0eV9tb25pdG9yaW5nGAMg",
-            "ASgIGkQKHUdjZUNvbmZpZGVudGlhbEluc3RhbmNlQ29uZmlnEiMKG2VuYWJs",
-            "ZV9jb25maWRlbnRpYWxfY29tcHV0ZRgBIAEoCEIICgZjb25maWca5wMKE1Bl",
-            "cnNpc3RlbnREaXJlY3RvcnkSbwoGZ2NlX3BkGAIgASgLMl0uZ29vZ2xlLmNs",
-            "b3VkLndvcmtzdGF0aW9ucy52MS5Xb3Jrc3RhdGlvbkNvbmZpZy5QZXJzaXN0",
-            "ZW50RGlyZWN0b3J5LkdjZVJlZ2lvbmFsUGVyc2lzdGVudERpc2tIABISCgpt",
-            "b3VudF9wYXRoGAEgASgJGrgCChlHY2VSZWdpb25hbFBlcnNpc3RlbnREaXNr",
-            "Eg8KB3NpemVfZ2IYASABKAUSDwoHZnNfdHlwZRgCIAEoCRIRCglkaXNrX3R5",
-            "cGUYAyABKAkSFwoPc291cmNlX3NuYXBzaG90GAUgASgJEoMBCg5yZWNsYWlt",
-            "X3BvbGljeRgEIAEoDjJrLmdvb2dsZS5jbG91ZC53b3Jrc3RhdGlvbnMudjEu",
-            "V29ya3N0YXRpb25Db25maWcuUGVyc2lzdGVudERpcmVjdG9yeS5HY2VSZWdp",
-            "b25hbFBlcnNpc3RlbnREaXNrLlJlY2xhaW1Qb2xpY3kiRwoNUmVjbGFpbVBv",
-            "bGljeRIeChpSRUNMQUlNX1BPTElDWV9VTlNQRUNJRklFRBAAEgoKBkRFTEVU",
-            "RRABEgoKBlJFVEFJThACQhAKDmRpcmVjdG9yeV90eXBlGuABCglDb250YWlu",
-            "ZXISDQoFaW1hZ2UYASABKAkSDwoHY29tbWFuZBgCIAMoCRIMCgRhcmdzGAMg",
-            "AygJEk8KA2VudhgEIAMoCzJCLmdvb2dsZS5jbG91ZC53b3Jrc3RhdGlvbnMu",
-            "djEuV29ya3N0YXRpb25Db25maWcuQ29udGFpbmVyLkVudkVudHJ5EhMKC3dv",
-            "cmtpbmdfZGlyGAUgASgJEhMKC3J1bl9hc191c2VyGAYgASgFGioKCEVudkVu",
-            "dHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaUwoVQ3VzdG9t",
-            "ZXJFbmNyeXB0aW9uS2V5EhQKB2ttc19rZXkYASABKAlCA+BBBRIkChdrbXNf",
-            "a2V5X3NlcnZpY2VfYWNjb3VudBgCIAEoCUID4EEFGjIKEEFubm90YXRpb25z",
-            "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ARotCgtMYWJl",
-            "bHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOrEB6kGt",
-            "AQotd29ya3N0YXRpb25zLmdvb2dsZWFwaXMuY29tL1dvcmtzdGF0aW9uQ29u",
-            "ZmlnEnlwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
-            "d29ya3N0YXRpb25DbHVzdGVycy97d29ya3N0YXRpb25fY2x1c3Rlcn0vd29y",
-            "a3N0YXRpb25Db25maWdzL3t3b3Jrc3RhdGlvbl9jb25maWd9UgEBIpgHCgtX",
-            "b3Jrc3RhdGlvbhIMCgRuYW1lGAEgASgJEhQKDGRpc3BsYXlfbmFtZRgCIAEo",
-            "CRIQCgN1aWQYAyABKAlCA+BBAxIYCgtyZWNvbmNpbGluZxgEIAEoCEID4EED",
-            "Ek8KC2Fubm90YXRpb25zGAUgAygLMjouZ29vZ2xlLmNsb3VkLndvcmtzdGF0",
-            "aW9ucy52MS5Xb3Jrc3RhdGlvbi5Bbm5vdGF0aW9uc0VudHJ5EkUKBmxhYmVs",
-            "cxgNIAMoCzI1Lmdvb2dsZS5jbG91ZC53b3Jrc3RhdGlvbnMudjEuV29ya3N0",
-            "YXRpb24uTGFiZWxzRW50cnkSNAoLY3JlYXRlX3RpbWUYBiABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYByAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLZGVsZXRl",
-            "X3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
-            "DAoEZXRhZxgJIAEoCRJDCgVzdGF0ZRgKIAEoDjIvLmdvb2dsZS5jbG91ZC53",
-            "b3Jrc3RhdGlvbnMudjEuV29ya3N0YXRpb24uU3RhdGVCA+BBAxIRCgRob3N0",
-            "GAsgASgJQgPgQQMaMgoQQW5ub3RhdGlvbnNFbnRyeRILCgNrZXkYASABKAkS",
-            "DQoFdmFsdWUYAiABKAk6AjgBGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEo",
-            "CRINCgV2YWx1ZRgCIAEoCToCOAEibAoFU3RhdGUSFQoRU1RBVEVfVU5TUEVD",
-            "SUZJRUQQABISCg5TVEFURV9TVEFSVElORxABEhEKDVNUQVRFX1JVTk5JTkcQ",
-            "AhISCg5TVEFURV9TVE9QUElORxADEhEKDVNUQVRFX1NUT1BQRUQQBDrHAepB",
-            "wwEKJ3dvcmtzdGF0aW9ucy5nb29nbGVhcGlzLmNvbS9Xb3Jrc3RhdGlvbhKU",
-            "AXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS93b3Jr",
-            "c3RhdGlvbkNsdXN0ZXJzL3t3b3Jrc3RhdGlvbl9jbHVzdGVyfS93b3Jrc3Rh",
-            "dGlvbkNvbmZpZ3Mve3dvcmtzdGF0aW9uX2NvbmZpZ30vd29ya3N0YXRpb25z",
-            "L3t3b3Jrc3RhdGlvbn1SAQEiZAocR2V0V29ya3N0YXRpb25DbHVzdGVyUmVx",
-            "dWVzdBJECgRuYW1lGAEgASgJQjbgQQL6QTAKLndvcmtzdGF0aW9ucy5nb29n",
-            "bGVhcGlzLmNvbS9Xb3Jrc3RhdGlvbkNsdXN0ZXIijwEKHkxpc3RXb3Jrc3Rh",
-            "dGlvbkNsdXN0ZXJzUmVxdWVzdBJGCgZwYXJlbnQYASABKAlCNuBBAvpBMBIu",
-            "d29ya3N0YXRpb25zLmdvb2dsZWFwaXMuY29tL1dvcmtzdGF0aW9uQ2x1c3Rl",
-            "chIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSKfAQof",
-            "TGlzdFdvcmtzdGF0aW9uQ2x1c3RlcnNSZXNwb25zZRJOChR3b3Jrc3RhdGlv",
-            "bl9jbHVzdGVycxgBIAMoCzIwLmdvb2dsZS5jbG91ZC53b3Jrc3RhdGlvbnMu",
-            "djEuV29ya3N0YXRpb25DbHVzdGVyEhcKD25leHRfcGFnZV90b2tlbhgCIAEo",
-            "CRITCgt1bnJlYWNoYWJsZRgDIAMoCSL5AQofQ3JlYXRlV29ya3N0YXRpb25D",
-            "bHVzdGVyUmVxdWVzdBJGCgZwYXJlbnQYASABKAlCNuBBAvpBMBIud29ya3N0",
-            "YXRpb25zLmdvb2dsZWFwaXMuY29tL1dvcmtzdGF0aW9uQ2x1c3RlchIjChZ3",
-            "b3Jrc3RhdGlvbl9jbHVzdGVyX2lkGAIgASgJQgPgQQISUgoTd29ya3N0YXRp",
-            "b25fY2x1c3RlchgDIAEoCzIwLmdvb2dsZS5jbG91ZC53b3Jrc3RhdGlvbnMu",
-            "djEuV29ya3N0YXRpb25DbHVzdGVyQgPgQQISFQoNdmFsaWRhdGVfb25seRgE",
-            "IAEoCCLZAQofVXBkYXRlV29ya3N0YXRpb25DbHVzdGVyUmVxdWVzdBJSChN3",
-            "b3Jrc3RhdGlvbl9jbHVzdGVyGAEgASgLMjAuZ29vZ2xlLmNsb3VkLndvcmtz",
-            "dGF0aW9ucy52MS5Xb3Jrc3RhdGlvbkNsdXN0ZXJCA+BBAhI0Cgt1cGRhdGVf",
-            "bWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBAhIV",
-            "Cg12YWxpZGF0ZV9vbmx5GAMgASgIEhUKDWFsbG93X21pc3NpbmcYBCABKAgi",
-            "mwEKH0RlbGV0ZVdvcmtzdGF0aW9uQ2x1c3RlclJlcXVlc3QSRAoEbmFtZRgB",
-            "IAEoCUI24EEC+kEwCi53b3Jrc3RhdGlvbnMuZ29vZ2xlYXBpcy5jb20vV29y",
-            "a3N0YXRpb25DbHVzdGVyEhUKDXZhbGlkYXRlX29ubHkYAiABKAgSDAoEZXRh",
-            "ZxgDIAEoCRINCgVmb3JjZRgEIAEoCCJiChtHZXRXb3Jrc3RhdGlvbkNvbmZp",
-            "Z1JlcXVlc3QSQwoEbmFtZRgBIAEoCUI14EEC+kEvCi13b3Jrc3RhdGlvbnMu",
-            "Z29vZ2xlYXBpcy5jb20vV29ya3N0YXRpb25Db25maWcijgEKHUxpc3RXb3Jr",
-            "c3RhdGlvbkNvbmZpZ3NSZXF1ZXN0EkYKBnBhcmVudBgBIAEoCUI24EEC+kEw",
-            "Ci53b3Jrc3RhdGlvbnMuZ29vZ2xlYXBpcy5jb20vV29ya3N0YXRpb25DbHVz",
-            "dGVyEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJIpwB",
-            "Ch5MaXN0V29ya3N0YXRpb25Db25maWdzUmVzcG9uc2USTAoTd29ya3N0YXRp",
-            "b25fY29uZmlncxgBIAMoCzIvLmdvb2dsZS5jbG91ZC53b3Jrc3RhdGlvbnMu",
-            "djEuV29ya3N0YXRpb25Db25maWcSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJ",
-            "EhMKC3VucmVhY2hhYmxlGAMgAygJIpQBCiNMaXN0VXNhYmxlV29ya3N0YXRp",
-            "b25Db25maWdzUmVxdWVzdBJGCgZwYXJlbnQYASABKAlCNuBBAvpBMAoud29y",
-            "a3N0YXRpb25zLmdvb2dsZWFwaXMuY29tL1dvcmtzdGF0aW9uQ2x1c3RlchIR",
-            "CglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSKiAQokTGlz",
-            "dFVzYWJsZVdvcmtzdGF0aW9uQ29uZmlnc1Jlc3BvbnNlEkwKE3dvcmtzdGF0",
-            "aW9uX2NvbmZpZ3MYASADKAsyLy5nb29nbGUuY2xvdWQud29ya3N0YXRpb25z",
-            "LnYxLldvcmtzdGF0aW9uQ29uZmlnEhcKD25leHRfcGFnZV90b2tlbhgCIAEo",
-            "CRITCgt1bnJlYWNoYWJsZRgDIAMoCSL1AQoeQ3JlYXRlV29ya3N0YXRpb25D",
-            "b25maWdSZXF1ZXN0EkYKBnBhcmVudBgBIAEoCUI24EEC+kEwCi53b3Jrc3Rh",
-            "dGlvbnMuZ29vZ2xlYXBpcy5jb20vV29ya3N0YXRpb25DbHVzdGVyEiIKFXdv",
-            "cmtzdGF0aW9uX2NvbmZpZ19pZBgCIAEoCUID4EECElAKEndvcmtzdGF0aW9u",
-            "X2NvbmZpZxgDIAEoCzIvLmdvb2dsZS5jbG91ZC53b3Jrc3RhdGlvbnMudjEu",
-            "V29ya3N0YXRpb25Db25maWdCA+BBAhIVCg12YWxpZGF0ZV9vbmx5GAQgASgI",
-            "ItYBCh5VcGRhdGVXb3Jrc3RhdGlvbkNvbmZpZ1JlcXVlc3QSUAoSd29ya3N0",
-            "YXRpb25fY29uZmlnGAEgASgLMi8uZ29vZ2xlLmNsb3VkLndvcmtzdGF0aW9u",
-            "cy52MS5Xb3Jrc3RhdGlvbkNvbmZpZ0ID4EECEjQKC3VwZGF0ZV9tYXNrGAIg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EECEhUKDXZhbGlk",
-            "YXRlX29ubHkYAyABKAgSFQoNYWxsb3dfbWlzc2luZxgEIAEoCCKZAQoeRGVs",
-            "ZXRlV29ya3N0YXRpb25Db25maWdSZXF1ZXN0EkMKBG5hbWUYASABKAlCNeBB",
-            "AvpBLwotd29ya3N0YXRpb25zLmdvb2dsZWFwaXMuY29tL1dvcmtzdGF0aW9u",
-            "Q29uZmlnEhUKDXZhbGlkYXRlX29ubHkYAiABKAgSDAoEZXRhZxgDIAEoCRIN",
-            "CgVmb3JjZRgEIAEoCCJWChVHZXRXb3Jrc3RhdGlvblJlcXVlc3QSPQoEbmFt",
-            "ZRgBIAEoCUIv4EEC+kEpCid3b3Jrc3RhdGlvbnMuZ29vZ2xlYXBpcy5jb20v",
-            "V29ya3N0YXRpb24ihwEKF0xpc3RXb3Jrc3RhdGlvbnNSZXF1ZXN0EkUKBnBh",
-            "cmVudBgBIAEoCUI14EEC+kEvCi13b3Jrc3RhdGlvbnMuZ29vZ2xlYXBpcy5j",
-            "b20vV29ya3N0YXRpb25Db25maWcSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBh",
-            "Z2VfdG9rZW4YAyABKAkiiQEKGExpc3RXb3Jrc3RhdGlvbnNSZXNwb25zZRI/",
-            "Cgx3b3Jrc3RhdGlvbnMYASADKAsyKS5nb29nbGUuY2xvdWQud29ya3N0YXRp",
-            "b25zLnYxLldvcmtzdGF0aW9uEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRIT",
-            "Cgt1bnJlYWNoYWJsZRgDIAMoCSKNAQodTGlzdFVzYWJsZVdvcmtzdGF0aW9u",
-            "c1JlcXVlc3QSRQoGcGFyZW50GAEgASgJQjXgQQL6QS8KLXdvcmtzdGF0aW9u",
-            "cy5nb29nbGVhcGlzLmNvbS9Xb3Jrc3RhdGlvbkNvbmZpZxIRCglwYWdlX3Np",
-            "emUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSKPAQoeTGlzdFVzYWJsZVdv",
-            "cmtzdGF0aW9uc1Jlc3BvbnNlEj8KDHdvcmtzdGF0aW9ucxgBIAMoCzIpLmdv",
-            "b2dsZS5jbG91ZC53b3Jrc3RhdGlvbnMudjEuV29ya3N0YXRpb24SFwoPbmV4",
-            "dF9wYWdlX3Rva2VuGAIgASgJEhMKC3VucmVhY2hhYmxlGAMgAygJItoBChhD",
-            "cmVhdGVXb3Jrc3RhdGlvblJlcXVlc3QSRQoGcGFyZW50GAEgASgJQjXgQQL6",
-            "QS8KLXdvcmtzdGF0aW9ucy5nb29nbGVhcGlzLmNvbS9Xb3Jrc3RhdGlvbkNv",
-            "bmZpZxIbCg53b3Jrc3RhdGlvbl9pZBgCIAEoCUID4EECEkMKC3dvcmtzdGF0",
-            "aW9uGAMgASgLMikuZ29vZ2xlLmNsb3VkLndvcmtzdGF0aW9ucy52MS5Xb3Jr",
-            "c3RhdGlvbkID4EECEhUKDXZhbGlkYXRlX29ubHkYBCABKAgiwwEKGFVwZGF0",
-            "ZVdvcmtzdGF0aW9uUmVxdWVzdBJDCgt3b3Jrc3RhdGlvbhgBIAEoCzIpLmdv",
-            "b2dsZS5jbG91ZC53b3Jrc3RhdGlvbnMudjEuV29ya3N0YXRpb25CA+BBAhI0",
-            "Cgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1h",
-            "c2tCA+BBAhIVCg12YWxpZGF0ZV9vbmx5GAMgASgIEhUKDWFsbG93X21pc3Np",
-            "bmcYBCABKAgifgoYRGVsZXRlV29ya3N0YXRpb25SZXF1ZXN0Ej0KBG5hbWUY",
-            "ASABKAlCL+BBAvpBKQond29ya3N0YXRpb25zLmdvb2dsZWFwaXMuY29tL1dv",
-            "cmtzdGF0aW9uEhUKDXZhbGlkYXRlX29ubHkYAiABKAgSDAoEZXRhZxgDIAEo",
-            "CSJ9ChdTdGFydFdvcmtzdGF0aW9uUmVxdWVzdBI9CgRuYW1lGAEgASgJQi/g",
-            "QQL6QSkKJ3dvcmtzdGF0aW9ucy5nb29nbGVhcGlzLmNvbS9Xb3Jrc3RhdGlv",
-            "bhIVCg12YWxpZGF0ZV9vbmx5GAIgASgIEgwKBGV0YWcYAyABKAkifAoWU3Rv",
-            "cFdvcmtzdGF0aW9uUmVxdWVzdBI9CgRuYW1lGAEgASgJQi/gQQL6QSkKJ3dv",
-            "cmtzdGF0aW9ucy5nb29nbGVhcGlzLmNvbS9Xb3Jrc3RhdGlvbhIVCg12YWxp",
-            "ZGF0ZV9vbmx5GAIgASgIEgwKBGV0YWcYAyABKAkizQEKGkdlbmVyYXRlQWNj",
-            "ZXNzVG9rZW5SZXF1ZXN0EjEKC2V4cGlyZV90aW1lGAIgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcEgAEigKA3R0bBgDIAEoCzIZLmdvb2dsZS5w",
-            "cm90b2J1Zi5EdXJhdGlvbkgAEkQKC3dvcmtzdGF0aW9uGAEgASgJQi/gQQL6",
-            "QSkKJ3dvcmtzdGF0aW9ucy5nb29nbGVhcGlzLmNvbS9Xb3Jrc3RhdGlvbkIM",
-            "CgpleHBpcmF0aW9uImQKG0dlbmVyYXRlQWNjZXNzVG9rZW5SZXNwb25zZRIU",
-            "CgxhY2Nlc3NfdG9rZW4YASABKAkSLwoLZXhwaXJlX3RpbWUYAiABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wIoACChFPcGVyYXRpb25NZXRhZGF0",
-            "YRI0CgtjcmVhdGVfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXBCA+BBAxIxCghlbmRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5UaW1lc3RhbXBCA+BBAxITCgZ0YXJnZXQYAyABKAlCA+BBAxIRCgR2ZXJi",
-            "GAQgASgJQgPgQQMSGwoOc3RhdHVzX21lc3NhZ2UYBSABKAlCA+BBAxIjChZy",
-            "ZXF1ZXN0ZWRfY2FuY2VsbGF0aW9uGAYgASgIQgPgQQMSGAoLYXBpX3ZlcnNp",
-            "b24YByABKAlCA+BBAzKbKgoMV29ya3N0YXRpb25zEs0BChVHZXRXb3Jrc3Rh",
-            "dGlvbkNsdXN0ZXISOi5nb29nbGUuY2xvdWQud29ya3N0YXRpb25zLnYxLkdl",
-            "dFdvcmtzdGF0aW9uQ2x1c3RlclJlcXVlc3QaMC5nb29nbGUuY2xvdWQud29y",
-            "a3N0YXRpb25zLnYxLldvcmtzdGF0aW9uQ2x1c3RlciJGgtPkkwI5EjcvdjEv",
-            "e25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi93b3Jrc3RhdGlvbkNsdXN0",
-            "ZXJzLyp92kEEbmFtZRLgAQoXTGlzdFdvcmtzdGF0aW9uQ2x1c3RlcnMSPC5n",
-            "b29nbGUuY2xvdWQud29ya3N0YXRpb25zLnYxLkxpc3RXb3Jrc3RhdGlvbkNs",
-            "dXN0ZXJzUmVxdWVzdBo9Lmdvb2dsZS5jbG91ZC53b3Jrc3RhdGlvbnMudjEu",
-            "TGlzdFdvcmtzdGF0aW9uQ2x1c3RlcnNSZXNwb25zZSJIgtPkkwI5EjcvdjEv",
-            "e3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS93b3Jrc3RhdGlvbkNs",
-            "dXN0ZXJz2kEGcGFyZW50Eq0CChhDcmVhdGVXb3Jrc3RhdGlvbkNsdXN0ZXIS",
-            "PS5nb29nbGUuY2xvdWQud29ya3N0YXRpb25zLnYxLkNyZWF0ZVdvcmtzdGF0",
-            "aW9uQ2x1c3RlclJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0",
-            "aW9uIrIBgtPkkwJOIjcvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9u",
-            "cy8qfS93b3Jrc3RhdGlvbkNsdXN0ZXJzOhN3b3Jrc3RhdGlvbl9jbHVzdGVy",
-            "2kExcGFyZW50LHdvcmtzdGF0aW9uX2NsdXN0ZXIsd29ya3N0YXRpb25fY2x1",
-            "c3Rlcl9pZMpBJwoSV29ya3N0YXRpb25DbHVzdGVyEhFPcGVyYXRpb25NZXRh",
-            "ZGF0YRKvAgoYVXBkYXRlV29ya3N0YXRpb25DbHVzdGVyEj0uZ29vZ2xlLmNs",
-            "b3VkLndvcmtzdGF0aW9ucy52MS5VcGRhdGVXb3Jrc3RhdGlvbkNsdXN0ZXJS",
-            "ZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiK0AYLT5JMC",
-            "YjJLL3YxL3t3b3Jrc3RhdGlvbl9jbHVzdGVyLm5hbWU9cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKi93b3Jrc3RhdGlvbkNsdXN0ZXJzLyp9OhN3b3Jrc3RhdGlv",
-            "bl9jbHVzdGVy2kEfd29ya3N0YXRpb25fY2x1c3Rlcix1cGRhdGVfbWFza8pB",
-            "JwoSV29ya3N0YXRpb25DbHVzdGVyEhFPcGVyYXRpb25NZXRhZGF0YRLqAQoY",
-            "RGVsZXRlV29ya3N0YXRpb25DbHVzdGVyEj0uZ29vZ2xlLmNsb3VkLndvcmtz",
-            "dGF0aW9ucy52MS5EZWxldGVXb3Jrc3RhdGlvbkNsdXN0ZXJSZXF1ZXN0Gh0u",
-            "Z29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJwgtPkkwI5KjcvdjEve25h",
-            "bWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi93b3Jrc3RhdGlvbkNsdXN0ZXJz",
-            "Lyp92kEEbmFtZcpBJwoSV29ya3N0YXRpb25DbHVzdGVyEhFPcGVyYXRpb25N",
-            "ZXRhZGF0YRLfAQoUR2V0V29ya3N0YXRpb25Db25maWcSOS5nb29nbGUuY2xv",
-            "dWQud29ya3N0YXRpb25zLnYxLkdldFdvcmtzdGF0aW9uQ29uZmlnUmVxdWVz",
-            "dBovLmdvb2dsZS5jbG91ZC53b3Jrc3RhdGlvbnMudjEuV29ya3N0YXRpb25D",
-            "b25maWciW4LT5JMCThJML3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25z",
-            "Lyovd29ya3N0YXRpb25DbHVzdGVycy8qL3dvcmtzdGF0aW9uQ29uZmlncy8q",
-            "fdpBBG5hbWUS8gEKFkxpc3RXb3Jrc3RhdGlvbkNvbmZpZ3MSOy5nb29nbGUu",
-            "Y2xvdWQud29ya3N0YXRpb25zLnYxLkxpc3RXb3Jrc3RhdGlvbkNvbmZpZ3NS",
-            "ZXF1ZXN0GjwuZ29vZ2xlLmNsb3VkLndvcmtzdGF0aW9ucy52MS5MaXN0V29y",
-            "a3N0YXRpb25Db25maWdzUmVzcG9uc2UiXYLT5JMCThJML3YxL3twYXJlbnQ9",
-            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi93b3Jrc3RhdGlvbkNsdXN0ZXJzLyp9",
-            "L3dvcmtzdGF0aW9uQ29uZmlnc9pBBnBhcmVudBKPAgocTGlzdFVzYWJsZVdv",
-            "cmtzdGF0aW9uQ29uZmlncxJBLmdvb2dsZS5jbG91ZC53b3Jrc3RhdGlvbnMu",
-            "djEuTGlzdFVzYWJsZVdvcmtzdGF0aW9uQ29uZmlnc1JlcXVlc3QaQi5nb29n",
-            "bGUuY2xvdWQud29ya3N0YXRpb25zLnYxLkxpc3RVc2FibGVXb3Jrc3RhdGlv",
-            "bkNvbmZpZ3NSZXNwb25zZSJogtPkkwJZElcvdjEve3BhcmVudD1wcm9qZWN0",
-            "cy8qL2xvY2F0aW9ucy8qL3dvcmtzdGF0aW9uQ2x1c3RlcnMvKn0vd29ya3N0",
-            "YXRpb25Db25maWdzOmxpc3RVc2FibGXaQQZwYXJlbnQSvAIKF0NyZWF0ZVdv",
-            "cmtzdGF0aW9uQ29uZmlnEjwuZ29vZ2xlLmNsb3VkLndvcmtzdGF0aW9ucy52",
-            "MS5DcmVhdGVXb3Jrc3RhdGlvbkNvbmZpZ1JlcXVlc3QaHS5nb29nbGUubG9u",
-            "Z3J1bm5pbmcuT3BlcmF0aW9uIsMBgtPkkwJiIkwvdjEve3BhcmVudD1wcm9q",
-            "ZWN0cy8qL2xvY2F0aW9ucy8qL3dvcmtzdGF0aW9uQ2x1c3RlcnMvKn0vd29y",
-            "a3N0YXRpb25Db25maWdzOhJ3b3Jrc3RhdGlvbl9jb25maWfaQS9wYXJlbnQs",
-            "d29ya3N0YXRpb25fY29uZmlnLHdvcmtzdGF0aW9uX2NvbmZpZ19pZMpBJgoR",
-            "V29ya3N0YXRpb25Db25maWcSEU9wZXJhdGlvbk1ldGFkYXRhEr4CChdVcGRh",
+            "R2NlSW5zdGFuY2UuR2NlQ29uZmlkZW50aWFsSW5zdGFuY2VDb25maWdCA+BB",
+            "ARIeChFib290X2Rpc2tfc2l6ZV9nYhgJIAEoBUID4EEBGoABChlHY2VTaGll",
+            "bGRlZEluc3RhbmNlQ29uZmlnEh8KEmVuYWJsZV9zZWN1cmVfYm9vdBgBIAEo",
+            "CEID4EEBEhgKC2VuYWJsZV92dHBtGAIgASgIQgPgQQESKAobZW5hYmxlX2lu",
+            "dGVncml0eV9tb25pdG9yaW5nGAMgASgIQgPgQQEaSQodR2NlQ29uZmlkZW50",
+            "aWFsSW5zdGFuY2VDb25maWcSKAobZW5hYmxlX2NvbmZpZGVudGlhbF9jb21w",
+            "dXRlGAEgASgIQgPgQQFCCAoGY29uZmlnGoUEChNQZXJzaXN0ZW50RGlyZWN0",
+            "b3J5Em8KBmdjZV9wZBgCIAEoCzJdLmdvb2dsZS5jbG91ZC53b3Jrc3RhdGlv",
+            "bnMudjEuV29ya3N0YXRpb25Db25maWcuUGVyc2lzdGVudERpcmVjdG9yeS5H",
+            "Y2VSZWdpb25hbFBlcnNpc3RlbnREaXNrSAASFwoKbW91bnRfcGF0aBgBIAEo",
+            "CUID4EEBGtECChlHY2VSZWdpb25hbFBlcnNpc3RlbnREaXNrEhQKB3NpemVf",
+            "Z2IYASABKAVCA+BBARIUCgdmc190eXBlGAIgASgJQgPgQQESFgoJZGlza190",
+            "eXBlGAMgASgJQgPgQQESHAoPc291cmNlX3NuYXBzaG90GAUgASgJQgPgQQES",
+            "iAEKDnJlY2xhaW1fcG9saWN5GAQgASgOMmsuZ29vZ2xlLmNsb3VkLndvcmtz",
+            "dGF0aW9ucy52MS5Xb3Jrc3RhdGlvbkNvbmZpZy5QZXJzaXN0ZW50RGlyZWN0",
+            "b3J5LkdjZVJlZ2lvbmFsUGVyc2lzdGVudERpc2suUmVjbGFpbVBvbGljeUID",
+            "4EEBIkcKDVJlY2xhaW1Qb2xpY3kSHgoaUkVDTEFJTV9QT0xJQ1lfVU5TUEVD",
+            "SUZJRUQQABIKCgZERUxFVEUQARIKCgZSRVRBSU4QAkIQCg5kaXJlY3Rvcnlf",
+            "dHlwZRr+AQoJQ29udGFpbmVyEhIKBWltYWdlGAEgASgJQgPgQQESFAoHY29t",
+            "bWFuZBgCIAMoCUID4EEBEhEKBGFyZ3MYAyADKAlCA+BBARJUCgNlbnYYBCAD",
+            "KAsyQi5nb29nbGUuY2xvdWQud29ya3N0YXRpb25zLnYxLldvcmtzdGF0aW9u",
+            "Q29uZmlnLkNvbnRhaW5lci5FbnZFbnRyeUID4EEBEhgKC3dvcmtpbmdfZGly",
+            "GAUgASgJQgPgQQESGAoLcnVuX2FzX3VzZXIYBiABKAVCA+BBARoqCghFbnZF",
+            "bnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBGlMKFUN1c3Rv",
+            "bWVyRW5jcnlwdGlvbktleRIUCgdrbXNfa2V5GAEgASgJQgPgQQUSJAoXa21z",
+            "X2tleV9zZXJ2aWNlX2FjY291bnQYAiABKAlCA+BBBRo2Cg5SZWFkaW5lc3ND",
+            "aGVjaxIRCgRwYXRoGAEgASgJQgPgQQESEQoEcG9ydBgCIAEoBUID4EEBGjIK",
+            "EEFubm90YXRpb25zRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJ",
+            "OgI4ARotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
+            "KAk6AjgBOtgB6kHUAQotd29ya3N0YXRpb25zLmdvb2dsZWFwaXMuY29tL1dv",
+            "cmtzdGF0aW9uQ29uZmlnEnlwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
+            "L3tsb2NhdGlvbn0vd29ya3N0YXRpb25DbHVzdGVycy97d29ya3N0YXRpb25f",
+            "Y2x1c3Rlcn0vd29ya3N0YXRpb25Db25maWdzL3t3b3Jrc3RhdGlvbl9jb25m",
+            "aWd9KhJ3b3Jrc3RhdGlvbkNvbmZpZ3MyEXdvcmtzdGF0aW9uQ29uZmlnUgEB",
+            "IvwHCgtXb3Jrc3RhdGlvbhIMCgRuYW1lGAEgASgJEhkKDGRpc3BsYXlfbmFt",
+            "ZRgCIAEoCUID4EEBEhAKA3VpZBgDIAEoCUID4EEDEhgKC3JlY29uY2lsaW5n",
+            "GAQgASgIQgPgQQMSVAoLYW5ub3RhdGlvbnMYBSADKAsyOi5nb29nbGUuY2xv",
+            "dWQud29ya3N0YXRpb25zLnYxLldvcmtzdGF0aW9uLkFubm90YXRpb25zRW50",
+            "cnlCA+BBARJKCgZsYWJlbHMYDSADKAsyNS5nb29nbGUuY2xvdWQud29ya3N0",
+            "YXRpb25zLnYxLldvcmtzdGF0aW9uLkxhYmVsc0VudHJ5QgPgQQESNAoLY3Jl",
+            "YXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
+            "QQMSNAoLdXBkYXRlX3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wQgPgQQMSMwoKc3RhcnRfdGltZRgOIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXBCA+BBAxI0CgtkZWxldGVfdGltZRgIIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIRCgRldGFnGAkgASgJQgPg",
+            "QQESQwoFc3RhdGUYCiABKA4yLy5nb29nbGUuY2xvdWQud29ya3N0YXRpb25z",
+            "LnYxLldvcmtzdGF0aW9uLlN0YXRlQgPgQQMSEQoEaG9zdBgLIAEoCUID4EED",
+            "GjIKEEFubm90YXRpb25zRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIg",
+            "ASgJOgI4ARotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
+            "AiABKAk6AjgBImwKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASEgoO",
+            "U1RBVEVfU1RBUlRJTkcQARIRCg1TVEFURV9SVU5OSU5HEAISEgoOU1RBVEVf",
+            "U1RPUFBJTkcQAxIRCg1TVEFURV9TVE9QUEVEEAQ64gHqQd4BCid3b3Jrc3Rh",
+            "dGlvbnMuZ29vZ2xlYXBpcy5jb20vV29ya3N0YXRpb24SlAFwcm9qZWN0cy97",
+            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vd29ya3N0YXRpb25DbHVz",
+            "dGVycy97d29ya3N0YXRpb25fY2x1c3Rlcn0vd29ya3N0YXRpb25Db25maWdz",
+            "L3t3b3Jrc3RhdGlvbl9jb25maWd9L3dvcmtzdGF0aW9ucy97d29ya3N0YXRp",
+            "b259Kgx3b3Jrc3RhdGlvbnMyC3dvcmtzdGF0aW9uUgEBImQKHEdldFdvcmtz",
+            "dGF0aW9uQ2x1c3RlclJlcXVlc3QSRAoEbmFtZRgBIAEoCUI24EEC+kEwCi53",
+            "b3Jrc3RhdGlvbnMuZ29vZ2xlYXBpcy5jb20vV29ya3N0YXRpb25DbHVzdGVy",
+            "IpkBCh5MaXN0V29ya3N0YXRpb25DbHVzdGVyc1JlcXVlc3QSRgoGcGFyZW50",
+            "GAEgASgJQjbgQQL6QTASLndvcmtzdGF0aW9ucy5nb29nbGVhcGlzLmNvbS9X",
+            "b3Jrc3RhdGlvbkNsdXN0ZXISFgoJcGFnZV9zaXplGAIgASgFQgPgQQESFwoK",
+            "cGFnZV90b2tlbhgDIAEoCUID4EEBIp8BCh9MaXN0V29ya3N0YXRpb25DbHVz",
+            "dGVyc1Jlc3BvbnNlEk4KFHdvcmtzdGF0aW9uX2NsdXN0ZXJzGAEgAygLMjAu",
+            "Z29vZ2xlLmNsb3VkLndvcmtzdGF0aW9ucy52MS5Xb3Jrc3RhdGlvbkNsdXN0",
+            "ZXISFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhMKC3VucmVhY2hhYmxlGAMg",
+            "AygJIv4BCh9DcmVhdGVXb3Jrc3RhdGlvbkNsdXN0ZXJSZXF1ZXN0EkYKBnBh",
+            "cmVudBgBIAEoCUI24EEC+kEwEi53b3Jrc3RhdGlvbnMuZ29vZ2xlYXBpcy5j",
+            "b20vV29ya3N0YXRpb25DbHVzdGVyEiMKFndvcmtzdGF0aW9uX2NsdXN0ZXJf",
+            "aWQYAiABKAlCA+BBAhJSChN3b3Jrc3RhdGlvbl9jbHVzdGVyGAMgASgLMjAu",
+            "Z29vZ2xlLmNsb3VkLndvcmtzdGF0aW9ucy52MS5Xb3Jrc3RhdGlvbkNsdXN0",
+            "ZXJCA+BBAhIaCg12YWxpZGF0ZV9vbmx5GAQgASgIQgPgQQEi4wEKH1VwZGF0",
+            "ZVdvcmtzdGF0aW9uQ2x1c3RlclJlcXVlc3QSUgoTd29ya3N0YXRpb25fY2x1",
+            "c3RlchgBIAEoCzIwLmdvb2dsZS5jbG91ZC53b3Jrc3RhdGlvbnMudjEuV29y",
+            "a3N0YXRpb25DbHVzdGVyQgPgQQISNAoLdXBkYXRlX21hc2sYAiABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQISGgoNdmFsaWRhdGVfb25s",
+            "eRgDIAEoCEID4EEBEhoKDWFsbG93X21pc3NpbmcYBCABKAhCA+BBASKqAQof",
+            "RGVsZXRlV29ya3N0YXRpb25DbHVzdGVyUmVxdWVzdBJECgRuYW1lGAEgASgJ",
+            "QjbgQQL6QTAKLndvcmtzdGF0aW9ucy5nb29nbGVhcGlzLmNvbS9Xb3Jrc3Rh",
+            "dGlvbkNsdXN0ZXISGgoNdmFsaWRhdGVfb25seRgCIAEoCEID4EEBEhEKBGV0",
+            "YWcYAyABKAlCA+BBARISCgVmb3JjZRgEIAEoCEID4EEBImIKG0dldFdvcmtz",
+            "dGF0aW9uQ29uZmlnUmVxdWVzdBJDCgRuYW1lGAEgASgJQjXgQQL6QS8KLXdv",
+            "cmtzdGF0aW9ucy5nb29nbGVhcGlzLmNvbS9Xb3Jrc3RhdGlvbkNvbmZpZyKY",
+            "AQodTGlzdFdvcmtzdGF0aW9uQ29uZmlnc1JlcXVlc3QSRgoGcGFyZW50GAEg",
+            "ASgJQjbgQQL6QTAKLndvcmtzdGF0aW9ucy5nb29nbGVhcGlzLmNvbS9Xb3Jr",
+            "c3RhdGlvbkNsdXN0ZXISFgoJcGFnZV9zaXplGAIgASgFQgPgQQESFwoKcGFn",
+            "ZV90b2tlbhgDIAEoCUID4EEBIpwBCh5MaXN0V29ya3N0YXRpb25Db25maWdz",
+            "UmVzcG9uc2USTAoTd29ya3N0YXRpb25fY29uZmlncxgBIAMoCzIvLmdvb2ds",
+            "ZS5jbG91ZC53b3Jrc3RhdGlvbnMudjEuV29ya3N0YXRpb25Db25maWcSFwoP",
+            "bmV4dF9wYWdlX3Rva2VuGAIgASgJEhMKC3VucmVhY2hhYmxlGAMgAygJIp4B",
+            "CiNMaXN0VXNhYmxlV29ya3N0YXRpb25Db25maWdzUmVxdWVzdBJGCgZwYXJl",
+            "bnQYASABKAlCNuBBAvpBMAoud29ya3N0YXRpb25zLmdvb2dsZWFwaXMuY29t",
+            "L1dvcmtzdGF0aW9uQ2x1c3RlchIWCglwYWdlX3NpemUYAiABKAVCA+BBARIX",
+            "CgpwYWdlX3Rva2VuGAMgASgJQgPgQQEiogEKJExpc3RVc2FibGVXb3Jrc3Rh",
+            "dGlvbkNvbmZpZ3NSZXNwb25zZRJMChN3b3Jrc3RhdGlvbl9jb25maWdzGAEg",
+            "AygLMi8uZ29vZ2xlLmNsb3VkLndvcmtzdGF0aW9ucy52MS5Xb3Jrc3RhdGlv",
+            "bkNvbmZpZxIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkSEwoLdW5yZWFjaGFi",
+            "bGUYAyADKAki+gEKHkNyZWF0ZVdvcmtzdGF0aW9uQ29uZmlnUmVxdWVzdBJG",
+            "CgZwYXJlbnQYASABKAlCNuBBAvpBMAoud29ya3N0YXRpb25zLmdvb2dsZWFw",
+            "aXMuY29tL1dvcmtzdGF0aW9uQ2x1c3RlchIiChV3b3Jrc3RhdGlvbl9jb25m",
+            "aWdfaWQYAiABKAlCA+BBAhJQChJ3b3Jrc3RhdGlvbl9jb25maWcYAyABKAsy",
+            "Ly5nb29nbGUuY2xvdWQud29ya3N0YXRpb25zLnYxLldvcmtzdGF0aW9uQ29u",
+            "ZmlnQgPgQQISGgoNdmFsaWRhdGVfb25seRgEIAEoCEID4EEBIuABCh5VcGRh",
+            "dGVXb3Jrc3RhdGlvbkNvbmZpZ1JlcXVlc3QSUAoSd29ya3N0YXRpb25fY29u",
+            "ZmlnGAEgASgLMi8uZ29vZ2xlLmNsb3VkLndvcmtzdGF0aW9ucy52MS5Xb3Jr",
+            "c3RhdGlvbkNvbmZpZ0ID4EECEjQKC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EECEhoKDXZhbGlkYXRlX29ubHkY",
+            "AyABKAhCA+BBARIaCg1hbGxvd19taXNzaW5nGAQgASgIQgPgQQEiqAEKHkRl",
+            "bGV0ZVdvcmtzdGF0aW9uQ29uZmlnUmVxdWVzdBJDCgRuYW1lGAEgASgJQjXg",
+            "QQL6QS8KLXdvcmtzdGF0aW9ucy5nb29nbGVhcGlzLmNvbS9Xb3Jrc3RhdGlv",
+            "bkNvbmZpZxIaCg12YWxpZGF0ZV9vbmx5GAIgASgIQgPgQQESEQoEZXRhZxgD",
+            "IAEoCUID4EEBEhIKBWZvcmNlGAQgASgIQgPgQQEiVgoVR2V0V29ya3N0YXRp",
+            "b25SZXF1ZXN0Ej0KBG5hbWUYASABKAlCL+BBAvpBKQond29ya3N0YXRpb25z",
+            "Lmdvb2dsZWFwaXMuY29tL1dvcmtzdGF0aW9uIpEBChdMaXN0V29ya3N0YXRp",
+            "b25zUmVxdWVzdBJFCgZwYXJlbnQYASABKAlCNeBBAvpBLwotd29ya3N0YXRp",
+            "b25zLmdvb2dsZWFwaXMuY29tL1dvcmtzdGF0aW9uQ29uZmlnEhYKCXBhZ2Vf",
+            "c2l6ZRgCIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BBASKTAQoY",
+            "TGlzdFdvcmtzdGF0aW9uc1Jlc3BvbnNlEj8KDHdvcmtzdGF0aW9ucxgBIAMo",
+            "CzIpLmdvb2dsZS5jbG91ZC53b3Jrc3RhdGlvbnMudjEuV29ya3N0YXRpb24S",
+            "HAoPbmV4dF9wYWdlX3Rva2VuGAIgASgJQgPgQQESGAoLdW5yZWFjaGFibGUY",
+            "AyADKAlCA+BBASKXAQodTGlzdFVzYWJsZVdvcmtzdGF0aW9uc1JlcXVlc3QS",
+            "RQoGcGFyZW50GAEgASgJQjXgQQL6QS8KLXdvcmtzdGF0aW9ucy5nb29nbGVh",
+            "cGlzLmNvbS9Xb3Jrc3RhdGlvbkNvbmZpZxIWCglwYWdlX3NpemUYAiABKAVC",
+            "A+BBARIXCgpwYWdlX3Rva2VuGAMgASgJQgPgQQEijwEKHkxpc3RVc2FibGVX",
+            "b3Jrc3RhdGlvbnNSZXNwb25zZRI/Cgx3b3Jrc3RhdGlvbnMYASADKAsyKS5n",
+            "b29nbGUuY2xvdWQud29ya3N0YXRpb25zLnYxLldvcmtzdGF0aW9uEhcKD25l",
+            "eHRfcGFnZV90b2tlbhgCIAEoCRITCgt1bnJlYWNoYWJsZRgDIAMoCSLfAQoY",
+            "Q3JlYXRlV29ya3N0YXRpb25SZXF1ZXN0EkUKBnBhcmVudBgBIAEoCUI14EEC",
+            "+kEvCi13b3Jrc3RhdGlvbnMuZ29vZ2xlYXBpcy5jb20vV29ya3N0YXRpb25D",
+            "b25maWcSGwoOd29ya3N0YXRpb25faWQYAiABKAlCA+BBAhJDCgt3b3Jrc3Rh",
+            "dGlvbhgDIAEoCzIpLmdvb2dsZS5jbG91ZC53b3Jrc3RhdGlvbnMudjEuV29y",
+            "a3N0YXRpb25CA+BBAhIaCg12YWxpZGF0ZV9vbmx5GAQgASgIQgPgQQEizQEK",
+            "GFVwZGF0ZVdvcmtzdGF0aW9uUmVxdWVzdBJDCgt3b3Jrc3RhdGlvbhgBIAEo",
+            "CzIpLmdvb2dsZS5jbG91ZC53b3Jrc3RhdGlvbnMudjEuV29ya3N0YXRpb25C",
+            "A+BBAhI0Cgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5G",
+            "aWVsZE1hc2tCA+BBAhIaCg12YWxpZGF0ZV9vbmx5GAMgASgIQgPgQQESGgoN",
+            "YWxsb3dfbWlzc2luZxgEIAEoCEID4EEBIogBChhEZWxldGVXb3Jrc3RhdGlv",
+            "blJlcXVlc3QSPQoEbmFtZRgBIAEoCUIv4EEC+kEpCid3b3Jrc3RhdGlvbnMu",
+            "Z29vZ2xlYXBpcy5jb20vV29ya3N0YXRpb24SGgoNdmFsaWRhdGVfb25seRgC",
+            "IAEoCEID4EEBEhEKBGV0YWcYAyABKAlCA+BBASKHAQoXU3RhcnRXb3Jrc3Rh",
+            "dGlvblJlcXVlc3QSPQoEbmFtZRgBIAEoCUIv4EEC+kEpCid3b3Jrc3RhdGlv",
+            "bnMuZ29vZ2xlYXBpcy5jb20vV29ya3N0YXRpb24SGgoNdmFsaWRhdGVfb25s",
+            "eRgCIAEoCEID4EEBEhEKBGV0YWcYAyABKAlCA+BBASKGAQoWU3RvcFdvcmtz",
+            "dGF0aW9uUmVxdWVzdBI9CgRuYW1lGAEgASgJQi/gQQL6QSkKJ3dvcmtzdGF0",
+            "aW9ucy5nb29nbGVhcGlzLmNvbS9Xb3Jrc3RhdGlvbhIaCg12YWxpZGF0ZV9v",
+            "bmx5GAIgASgIQgPgQQESEQoEZXRhZxgDIAEoCUID4EEBIs0BChpHZW5lcmF0",
+            "ZUFjY2Vzc1Rva2VuUmVxdWVzdBIxCgtleHBpcmVfdGltZRgCIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIABIoCgN0dGwYAyABKAsyGS5nb29n",
+            "bGUucHJvdG9idWYuRHVyYXRpb25IABJECgt3b3Jrc3RhdGlvbhgBIAEoCUIv",
+            "4EEC+kEpCid3b3Jrc3RhdGlvbnMuZ29vZ2xlYXBpcy5jb20vV29ya3N0YXRp",
+            "b25CDAoKZXhwaXJhdGlvbiJkChtHZW5lcmF0ZUFjY2Vzc1Rva2VuUmVzcG9u",
+            "c2USFAoMYWNjZXNzX3Rva2VuGAEgASgJEi8KC2V4cGlyZV90aW1lGAIgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCKAAgoRT3BlcmF0aW9uTWV0",
+            "YWRhdGESNAoLY3JlYXRlX3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wQgPgQQMSMQoIZW5kX3RpbWUYAiABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wQgPgQQMSEwoGdGFyZ2V0GAMgASgJQgPgQQMSEQoE",
+            "dmVyYhgEIAEoCUID4EEDEhsKDnN0YXR1c19tZXNzYWdlGAUgASgJQgPgQQMS",
+            "IwoWcmVxdWVzdGVkX2NhbmNlbGxhdGlvbhgGIAEoCEID4EEDEhgKC2FwaV92",
+            "ZXJzaW9uGAcgASgJQgPgQQMymyoKDFdvcmtzdGF0aW9ucxLNAQoVR2V0V29y",
+            "a3N0YXRpb25DbHVzdGVyEjouZ29vZ2xlLmNsb3VkLndvcmtzdGF0aW9ucy52",
+            "MS5HZXRXb3Jrc3RhdGlvbkNsdXN0ZXJSZXF1ZXN0GjAuZ29vZ2xlLmNsb3Vk",
+            "LndvcmtzdGF0aW9ucy52MS5Xb3Jrc3RhdGlvbkNsdXN0ZXIiRoLT5JMCORI3",
+            "L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovd29ya3N0YXRpb25D",
+            "bHVzdGVycy8qfdpBBG5hbWUS4AEKF0xpc3RXb3Jrc3RhdGlvbkNsdXN0ZXJz",
+            "EjwuZ29vZ2xlLmNsb3VkLndvcmtzdGF0aW9ucy52MS5MaXN0V29ya3N0YXRp",
+            "b25DbHVzdGVyc1JlcXVlc3QaPS5nb29nbGUuY2xvdWQud29ya3N0YXRpb25z",
+            "LnYxLkxpc3RXb3Jrc3RhdGlvbkNsdXN0ZXJzUmVzcG9uc2UiSILT5JMCORI3",
+            "L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vd29ya3N0YXRp",
+            "b25DbHVzdGVyc9pBBnBhcmVudBKtAgoYQ3JlYXRlV29ya3N0YXRpb25DbHVz",
+            "dGVyEj0uZ29vZ2xlLmNsb3VkLndvcmtzdGF0aW9ucy52MS5DcmVhdGVXb3Jr",
+            "c3RhdGlvbkNsdXN0ZXJSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9w",
+            "ZXJhdGlvbiKyAYLT5JMCTiI3L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2Nh",
+            "dGlvbnMvKn0vd29ya3N0YXRpb25DbHVzdGVyczoTd29ya3N0YXRpb25fY2x1",
+            "c3RlctpBMXBhcmVudCx3b3Jrc3RhdGlvbl9jbHVzdGVyLHdvcmtzdGF0aW9u",
+            "X2NsdXN0ZXJfaWTKQScKEldvcmtzdGF0aW9uQ2x1c3RlchIRT3BlcmF0aW9u",
+            "TWV0YWRhdGESrwIKGFVwZGF0ZVdvcmtzdGF0aW9uQ2x1c3RlchI9Lmdvb2ds",
+            "ZS5jbG91ZC53b3Jrc3RhdGlvbnMudjEuVXBkYXRlV29ya3N0YXRpb25DbHVz",
+            "dGVyUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24itAGC",
+            "0+STAmIySy92MS97d29ya3N0YXRpb25fY2x1c3Rlci5uYW1lPXByb2plY3Rz",
+            "LyovbG9jYXRpb25zLyovd29ya3N0YXRpb25DbHVzdGVycy8qfToTd29ya3N0",
+            "YXRpb25fY2x1c3RlctpBH3dvcmtzdGF0aW9uX2NsdXN0ZXIsdXBkYXRlX21h",
+            "c2vKQScKEldvcmtzdGF0aW9uQ2x1c3RlchIRT3BlcmF0aW9uTWV0YWRhdGES",
+            "6gEKGERlbGV0ZVdvcmtzdGF0aW9uQ2x1c3RlchI9Lmdvb2dsZS5jbG91ZC53",
+            "b3Jrc3RhdGlvbnMudjEuRGVsZXRlV29ya3N0YXRpb25DbHVzdGVyUmVxdWVz",
+            "dBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24icILT5JMCOSo3L3Yx",
+            "L3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovd29ya3N0YXRpb25DbHVz",
+            "dGVycy8qfdpBBG5hbWXKQScKEldvcmtzdGF0aW9uQ2x1c3RlchIRT3BlcmF0",
+            "aW9uTWV0YWRhdGES3wEKFEdldFdvcmtzdGF0aW9uQ29uZmlnEjkuZ29vZ2xl",
+            "LmNsb3VkLndvcmtzdGF0aW9ucy52MS5HZXRXb3Jrc3RhdGlvbkNvbmZpZ1Jl",
+            "cXVlc3QaLy5nb29nbGUuY2xvdWQud29ya3N0YXRpb25zLnYxLldvcmtzdGF0",
+            "aW9uQ29uZmlnIluC0+STAk4STC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qL3dvcmtzdGF0aW9uQ2x1c3RlcnMvKi93b3Jrc3RhdGlvbkNvbmZp",
+            "Z3MvKn3aQQRuYW1lEvIBChZMaXN0V29ya3N0YXRpb25Db25maWdzEjsuZ29v",
+            "Z2xlLmNsb3VkLndvcmtzdGF0aW9ucy52MS5MaXN0V29ya3N0YXRpb25Db25m",
+            "aWdzUmVxdWVzdBo8Lmdvb2dsZS5jbG91ZC53b3Jrc3RhdGlvbnMudjEuTGlz",
+            "dFdvcmtzdGF0aW9uQ29uZmlnc1Jlc3BvbnNlIl2C0+STAk4STC92MS97cGFy",
+            "ZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovd29ya3N0YXRpb25DbHVzdGVy",
+            "cy8qfS93b3Jrc3RhdGlvbkNvbmZpZ3PaQQZwYXJlbnQSjwIKHExpc3RVc2Fi",
+            "bGVXb3Jrc3RhdGlvbkNvbmZpZ3MSQS5nb29nbGUuY2xvdWQud29ya3N0YXRp",
+            "b25zLnYxLkxpc3RVc2FibGVXb3Jrc3RhdGlvbkNvbmZpZ3NSZXF1ZXN0GkIu",
+            "Z29vZ2xlLmNsb3VkLndvcmtzdGF0aW9ucy52MS5MaXN0VXNhYmxlV29ya3N0",
+            "YXRpb25Db25maWdzUmVzcG9uc2UiaILT5JMCWRJXL3YxL3twYXJlbnQ9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKi93b3Jrc3RhdGlvbkNsdXN0ZXJzLyp9L3dv",
+            "cmtzdGF0aW9uQ29uZmlnczpsaXN0VXNhYmxl2kEGcGFyZW50ErwCChdDcmVh",
             "dGVXb3Jrc3RhdGlvbkNvbmZpZxI8Lmdvb2dsZS5jbG91ZC53b3Jrc3RhdGlv",
-            "bnMudjEuVXBkYXRlV29ya3N0YXRpb25Db25maWdSZXF1ZXN0Gh0uZ29vZ2xl",
-            "LmxvbmdydW5uaW5nLk9wZXJhdGlvbiLFAYLT5JMCdTJfL3YxL3t3b3Jrc3Rh",
-            "dGlvbl9jb25maWcubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3dvcmtz",
-            "dGF0aW9uQ2x1c3RlcnMvKi93b3Jrc3RhdGlvbkNvbmZpZ3MvKn06Endvcmtz",
-            "dGF0aW9uX2NvbmZpZ9pBHndvcmtzdGF0aW9uX2NvbmZpZyx1cGRhdGVfbWFz",
-            "a8pBJgoRV29ya3N0YXRpb25Db25maWcSEU9wZXJhdGlvbk1ldGFkYXRhEv0B",
-            "ChdEZWxldGVXb3Jrc3RhdGlvbkNvbmZpZxI8Lmdvb2dsZS5jbG91ZC53b3Jr",
-            "c3RhdGlvbnMudjEuRGVsZXRlV29ya3N0YXRpb25Db25maWdSZXF1ZXN0Gh0u",
-            "Z29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKEAYLT5JMCTipML3YxL3tu",
-            "YW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovd29ya3N0YXRpb25DbHVzdGVy",
-            "cy8qL3dvcmtzdGF0aW9uQ29uZmlncy8qfdpBBG5hbWXKQSYKEVdvcmtzdGF0",
-            "aW9uQ29uZmlnEhFPcGVyYXRpb25NZXRhZGF0YRLcAQoOR2V0V29ya3N0YXRp",
-            "b24SMy5nb29nbGUuY2xvdWQud29ya3N0YXRpb25zLnYxLkdldFdvcmtzdGF0",
-            "aW9uUmVxdWVzdBopLmdvb2dsZS5jbG91ZC53b3Jrc3RhdGlvbnMudjEuV29y",
-            "a3N0YXRpb24iaoLT5JMCXRJbL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRp",
-            "b25zLyovd29ya3N0YXRpb25DbHVzdGVycy8qL3dvcmtzdGF0aW9uQ29uZmln",
-            "cy8qL3dvcmtzdGF0aW9ucy8qfdpBBG5hbWUS7wEKEExpc3RXb3Jrc3RhdGlv",
-            "bnMSNS5nb29nbGUuY2xvdWQud29ya3N0YXRpb25zLnYxLkxpc3RXb3Jrc3Rh",
-            "dGlvbnNSZXF1ZXN0GjYuZ29vZ2xlLmNsb3VkLndvcmtzdGF0aW9ucy52MS5M",
-            "aXN0V29ya3N0YXRpb25zUmVzcG9uc2UibILT5JMCXRJbL3YxL3twYXJlbnQ9",
+            "bnMudjEuQ3JlYXRlV29ya3N0YXRpb25Db25maWdSZXF1ZXN0Gh0uZ29vZ2xl",
+            "LmxvbmdydW5uaW5nLk9wZXJhdGlvbiLDAYLT5JMCYiJML3YxL3twYXJlbnQ9",
+            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi93b3Jrc3RhdGlvbkNsdXN0ZXJzLyp9",
+            "L3dvcmtzdGF0aW9uQ29uZmlnczoSd29ya3N0YXRpb25fY29uZmln2kEvcGFy",
+            "ZW50LHdvcmtzdGF0aW9uX2NvbmZpZyx3b3Jrc3RhdGlvbl9jb25maWdfaWTK",
+            "QSYKEVdvcmtzdGF0aW9uQ29uZmlnEhFPcGVyYXRpb25NZXRhZGF0YRK+AgoX",
+            "VXBkYXRlV29ya3N0YXRpb25Db25maWcSPC5nb29nbGUuY2xvdWQud29ya3N0",
+            "YXRpb25zLnYxLlVwZGF0ZVdvcmtzdGF0aW9uQ29uZmlnUmVxdWVzdBodLmdv",
+            "b2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ixQGC0+STAnUyXy92MS97d29y",
+            "a3N0YXRpb25fY29uZmlnLm5hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi93",
+            "b3Jrc3RhdGlvbkNsdXN0ZXJzLyovd29ya3N0YXRpb25Db25maWdzLyp9OhJ3",
+            "b3Jrc3RhdGlvbl9jb25maWfaQR53b3Jrc3RhdGlvbl9jb25maWcsdXBkYXRl",
+            "X21hc2vKQSYKEVdvcmtzdGF0aW9uQ29uZmlnEhFPcGVyYXRpb25NZXRhZGF0",
+            "YRL9AQoXRGVsZXRlV29ya3N0YXRpb25Db25maWcSPC5nb29nbGUuY2xvdWQu",
+            "d29ya3N0YXRpb25zLnYxLkRlbGV0ZVdvcmtzdGF0aW9uQ29uZmlnUmVxdWVz",
+            "dBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ihAGC0+STAk4qTC92",
+            "MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3dvcmtzdGF0aW9uQ2x1",
+            "c3RlcnMvKi93b3Jrc3RhdGlvbkNvbmZpZ3MvKn3aQQRuYW1lykEmChFXb3Jr",
+            "c3RhdGlvbkNvbmZpZxIRT3BlcmF0aW9uTWV0YWRhdGES3AEKDkdldFdvcmtz",
+            "dGF0aW9uEjMuZ29vZ2xlLmNsb3VkLndvcmtzdGF0aW9ucy52MS5HZXRXb3Jr",
+            "c3RhdGlvblJlcXVlc3QaKS5nb29nbGUuY2xvdWQud29ya3N0YXRpb25zLnYx",
+            "LldvcmtzdGF0aW9uImqC0+STAl0SWy92MS97bmFtZT1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qL3dvcmtzdGF0aW9uQ2x1c3RlcnMvKi93b3Jrc3RhdGlvbkNv",
+            "bmZpZ3MvKi93b3Jrc3RhdGlvbnMvKn3aQQRuYW1lEu8BChBMaXN0V29ya3N0",
+            "YXRpb25zEjUuZ29vZ2xlLmNsb3VkLndvcmtzdGF0aW9ucy52MS5MaXN0V29y",
+            "a3N0YXRpb25zUmVxdWVzdBo2Lmdvb2dsZS5jbG91ZC53b3Jrc3RhdGlvbnMu",
+            "djEuTGlzdFdvcmtzdGF0aW9uc1Jlc3BvbnNlImyC0+STAl0SWy92MS97cGFy",
+            "ZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovd29ya3N0YXRpb25DbHVzdGVy",
+            "cy8qL3dvcmtzdGF0aW9uQ29uZmlncy8qfS93b3Jrc3RhdGlvbnPaQQZwYXJl",
+            "bnQSjAIKFkxpc3RVc2FibGVXb3Jrc3RhdGlvbnMSOy5nb29nbGUuY2xvdWQu",
+            "d29ya3N0YXRpb25zLnYxLkxpc3RVc2FibGVXb3Jrc3RhdGlvbnNSZXF1ZXN0",
+            "GjwuZ29vZ2xlLmNsb3VkLndvcmtzdGF0aW9ucy52MS5MaXN0VXNhYmxlV29y",
+            "a3N0YXRpb25zUmVzcG9uc2Uid4LT5JMCaBJmL3YxL3twYXJlbnQ9cHJvamVj",
+            "dHMvKi9sb2NhdGlvbnMvKi93b3Jrc3RhdGlvbkNsdXN0ZXJzLyovd29ya3N0",
+            "YXRpb25Db25maWdzLyp9L3dvcmtzdGF0aW9uczpsaXN0VXNhYmxl2kEGcGFy",
+            "ZW50EqQCChFDcmVhdGVXb3Jrc3RhdGlvbhI2Lmdvb2dsZS5jbG91ZC53b3Jr",
+            "c3RhdGlvbnMudjEuQ3JlYXRlV29ya3N0YXRpb25SZXF1ZXN0Gh0uZ29vZ2xl",
+            "LmxvbmdydW5uaW5nLk9wZXJhdGlvbiK3AYLT5JMCaiJbL3YxL3twYXJlbnQ9",
             "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi93b3Jrc3RhdGlvbkNsdXN0ZXJzLyov",
-            "d29ya3N0YXRpb25Db25maWdzLyp9L3dvcmtzdGF0aW9uc9pBBnBhcmVudBKM",
-            "AgoWTGlzdFVzYWJsZVdvcmtzdGF0aW9ucxI7Lmdvb2dsZS5jbG91ZC53b3Jr",
-            "c3RhdGlvbnMudjEuTGlzdFVzYWJsZVdvcmtzdGF0aW9uc1JlcXVlc3QaPC5n",
-            "b29nbGUuY2xvdWQud29ya3N0YXRpb25zLnYxLkxpc3RVc2FibGVXb3Jrc3Rh",
-            "dGlvbnNSZXNwb25zZSJ3gtPkkwJoEmYvdjEve3BhcmVudD1wcm9qZWN0cy8q",
+            "d29ya3N0YXRpb25Db25maWdzLyp9L3dvcmtzdGF0aW9uczoLd29ya3N0YXRp",
+            "b27aQSFwYXJlbnQsd29ya3N0YXRpb24sd29ya3N0YXRpb25faWTKQSAKC1dv",
+            "cmtzdGF0aW9uEhFPcGVyYXRpb25NZXRhZGF0YRKmAgoRVXBkYXRlV29ya3N0",
+            "YXRpb24SNi5nb29nbGUuY2xvdWQud29ya3N0YXRpb25zLnYxLlVwZGF0ZVdv",
+            "cmtzdGF0aW9uUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRp",
+            "b24iuQGC0+STAnYyZy92MS97d29ya3N0YXRpb24ubmFtZT1wcm9qZWN0cy8q",
             "L2xvY2F0aW9ucy8qL3dvcmtzdGF0aW9uQ2x1c3RlcnMvKi93b3Jrc3RhdGlv",
-            "bkNvbmZpZ3MvKn0vd29ya3N0YXRpb25zOmxpc3RVc2FibGXaQQZwYXJlbnQS",
-            "pAIKEUNyZWF0ZVdvcmtzdGF0aW9uEjYuZ29vZ2xlLmNsb3VkLndvcmtzdGF0",
-            "aW9ucy52MS5DcmVhdGVXb3Jrc3RhdGlvblJlcXVlc3QaHS5nb29nbGUubG9u",
-            "Z3J1bm5pbmcuT3BlcmF0aW9uIrcBgtPkkwJqIlsvdjEve3BhcmVudD1wcm9q",
-            "ZWN0cy8qL2xvY2F0aW9ucy8qL3dvcmtzdGF0aW9uQ2x1c3RlcnMvKi93b3Jr",
-            "c3RhdGlvbkNvbmZpZ3MvKn0vd29ya3N0YXRpb25zOgt3b3Jrc3RhdGlvbtpB",
-            "IXBhcmVudCx3b3Jrc3RhdGlvbix3b3Jrc3RhdGlvbl9pZMpBIAoLV29ya3N0",
-            "YXRpb24SEU9wZXJhdGlvbk1ldGFkYXRhEqYCChFVcGRhdGVXb3Jrc3RhdGlv",
-            "bhI2Lmdvb2dsZS5jbG91ZC53b3Jrc3RhdGlvbnMudjEuVXBkYXRlV29ya3N0",
-            "YXRpb25SZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiK5",
-            "AYLT5JMCdjJnL3YxL3t3b3Jrc3RhdGlvbi5uYW1lPXByb2plY3RzLyovbG9j",
+            "bkNvbmZpZ3MvKi93b3Jrc3RhdGlvbnMvKn06C3dvcmtzdGF0aW9u2kEXd29y",
+            "a3N0YXRpb24sdXBkYXRlX21hc2vKQSAKC1dvcmtzdGF0aW9uEhFPcGVyYXRp",
+            "b25NZXRhZGF0YRL6AQoRRGVsZXRlV29ya3N0YXRpb24SNi5nb29nbGUuY2xv",
+            "dWQud29ya3N0YXRpb25zLnYxLkRlbGV0ZVdvcmtzdGF0aW9uUmVxdWVzdBod",
+            "Lmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ijQGC0+STAl0qWy92MS97",
+            "bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3dvcmtzdGF0aW9uQ2x1c3Rl",
+            "cnMvKi93b3Jrc3RhdGlvbkNvbmZpZ3MvKi93b3Jrc3RhdGlvbnMvKn3aQQRu",
+            "YW1lykEgCgtXb3Jrc3RhdGlvbhIRT3BlcmF0aW9uTWV0YWRhdGESgQIKEFN0",
+            "YXJ0V29ya3N0YXRpb24SNS5nb29nbGUuY2xvdWQud29ya3N0YXRpb25zLnYx",
+            "LlN0YXJ0V29ya3N0YXRpb25SZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5n",
+            "Lk9wZXJhdGlvbiKWAYLT5JMCZiJhL3YxL3tuYW1lPXByb2plY3RzLyovbG9j",
             "YXRpb25zLyovd29ya3N0YXRpb25DbHVzdGVycy8qL3dvcmtzdGF0aW9uQ29u",
-            "Zmlncy8qL3dvcmtzdGF0aW9ucy8qfToLd29ya3N0YXRpb27aQRd3b3Jrc3Rh",
-            "dGlvbix1cGRhdGVfbWFza8pBIAoLV29ya3N0YXRpb24SEU9wZXJhdGlvbk1l",
-            "dGFkYXRhEvoBChFEZWxldGVXb3Jrc3RhdGlvbhI2Lmdvb2dsZS5jbG91ZC53",
-            "b3Jrc3RhdGlvbnMudjEuRGVsZXRlV29ya3N0YXRpb25SZXF1ZXN0Gh0uZ29v",
-            "Z2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKNAYLT5JMCXSpbL3YxL3tuYW1l",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyovd29ya3N0YXRpb25DbHVzdGVycy8q",
-            "L3dvcmtzdGF0aW9uQ29uZmlncy8qL3dvcmtzdGF0aW9ucy8qfdpBBG5hbWXK",
-            "QSAKC1dvcmtzdGF0aW9uEhFPcGVyYXRpb25NZXRhZGF0YRKBAgoQU3RhcnRX",
-            "b3Jrc3RhdGlvbhI1Lmdvb2dsZS5jbG91ZC53b3Jrc3RhdGlvbnMudjEuU3Rh",
-            "cnRXb3Jrc3RhdGlvblJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3Bl",
-            "cmF0aW9uIpYBgtPkkwJmImEvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
-            "bnMvKi93b3Jrc3RhdGlvbkNsdXN0ZXJzLyovd29ya3N0YXRpb25Db25maWdz",
-            "Lyovd29ya3N0YXRpb25zLyp9OnN0YXJ0OgEq2kEEbmFtZcpBIAoLV29ya3N0",
-            "YXRpb24SEU9wZXJhdGlvbk1ldGFkYXRhEv4BCg9TdG9wV29ya3N0YXRpb24S",
-            "NC5nb29nbGUuY2xvdWQud29ya3N0YXRpb25zLnYxLlN0b3BXb3Jrc3RhdGlv",
-            "blJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIpUBgtPk",
-            "kwJlImAvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi93b3Jrc3Rh",
-            "dGlvbkNsdXN0ZXJzLyovd29ya3N0YXRpb25Db25maWdzLyovd29ya3N0YXRp",
-            "b25zLyp9OnN0b3A6ASraQQRuYW1lykEgCgtXb3Jrc3RhdGlvbhIRT3BlcmF0",
-            "aW9uTWV0YWRhdGESnAIKE0dlbmVyYXRlQWNjZXNzVG9rZW4SOC5nb29nbGUu",
-            "Y2xvdWQud29ya3N0YXRpb25zLnYxLkdlbmVyYXRlQWNjZXNzVG9rZW5SZXF1",
-            "ZXN0GjkuZ29vZ2xlLmNsb3VkLndvcmtzdGF0aW9ucy52MS5HZW5lcmF0ZUFj",
-            "Y2Vzc1Rva2VuUmVzcG9uc2UijwGC0+STAnsidi92MS97d29ya3N0YXRpb249",
-            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi93b3Jrc3RhdGlvbkNsdXN0ZXJzLyov",
-            "d29ya3N0YXRpb25Db25maWdzLyovd29ya3N0YXRpb25zLyp9OmdlbmVyYXRl",
-            "QWNjZXNzVG9rZW46ASraQQt3b3Jrc3RhdGlvbhpPykEbd29ya3N0YXRpb25z",
-            "Lmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20v",
-            "YXV0aC9jbG91ZC1wbGF0Zm9ybUJ9CiBjb20uZ29vZ2xlLmNsb3VkLndvcmtz",
-            "dGF0aW9ucy52MUIRV29ya3N0YXRpb25zUHJvdG9QAVpEY2xvdWQuZ29vZ2xl",
-            "LmNvbS9nby93b3Jrc3RhdGlvbnMvYXBpdjEvd29ya3N0YXRpb25zcGI7d29y",
-            "a3N0YXRpb25zcGJiBnByb3RvMw=="));
+            "Zmlncy8qL3dvcmtzdGF0aW9ucy8qfTpzdGFydDoBKtpBBG5hbWXKQSAKC1dv",
+            "cmtzdGF0aW9uEhFPcGVyYXRpb25NZXRhZGF0YRL+AQoPU3RvcFdvcmtzdGF0",
+            "aW9uEjQuZ29vZ2xlLmNsb3VkLndvcmtzdGF0aW9ucy52MS5TdG9wV29ya3N0",
+            "YXRpb25SZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKV",
+            "AYLT5JMCZSJgL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovd29y",
+            "a3N0YXRpb25DbHVzdGVycy8qL3dvcmtzdGF0aW9uQ29uZmlncy8qL3dvcmtz",
+            "dGF0aW9ucy8qfTpzdG9wOgEq2kEEbmFtZcpBIAoLV29ya3N0YXRpb24SEU9w",
+            "ZXJhdGlvbk1ldGFkYXRhEpwCChNHZW5lcmF0ZUFjY2Vzc1Rva2VuEjguZ29v",
+            "Z2xlLmNsb3VkLndvcmtzdGF0aW9ucy52MS5HZW5lcmF0ZUFjY2Vzc1Rva2Vu",
+            "UmVxdWVzdBo5Lmdvb2dsZS5jbG91ZC53b3Jrc3RhdGlvbnMudjEuR2VuZXJh",
+            "dGVBY2Nlc3NUb2tlblJlc3BvbnNlIo8BgtPkkwJ7InYvdjEve3dvcmtzdGF0",
+            "aW9uPXByb2plY3RzLyovbG9jYXRpb25zLyovd29ya3N0YXRpb25DbHVzdGVy",
+            "cy8qL3dvcmtzdGF0aW9uQ29uZmlncy8qL3dvcmtzdGF0aW9ucy8qfTpnZW5l",
+            "cmF0ZUFjY2Vzc1Rva2VuOgEq2kELd29ya3N0YXRpb24aT8pBG3dvcmtzdGF0",
+            "aW9ucy5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMu",
+            "Y29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CfQogY29tLmdvb2dsZS5jbG91ZC53",
+            "b3Jrc3RhdGlvbnMudjFCEVdvcmtzdGF0aW9uc1Byb3RvUAFaRGNsb3VkLmdv",
+            "b2dsZS5jb20vZ28vd29ya3N0YXRpb25zL2FwaXYxL3dvcmtzdGF0aW9uc3Bi",
+            "O3dvcmtzdGF0aW9uc3BiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workstations.V1.WorkstationCluster), global::Google.Cloud.Workstations.V1.WorkstationCluster.Parser, new[]{ "Name", "DisplayName", "Uid", "Reconciling", "Annotations", "Labels", "CreateTime", "UpdateTime", "DeleteTime", "Etag", "Network", "Subnetwork", "ControlPlaneIp", "PrivateClusterConfig", "Degraded", "Conditions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workstations.V1.WorkstationCluster.Types.PrivateClusterConfig), global::Google.Cloud.Workstations.V1.WorkstationCluster.Types.PrivateClusterConfig.Parser, new[]{ "EnablePrivateEndpoint", "ClusterHostname", "ServiceAttachmentUri", "AllowedProjects" }, null, null, null, null),
             null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workstations.V1.WorkstationConfig), global::Google.Cloud.Workstations.V1.WorkstationConfig.Parser, new[]{ "Name", "DisplayName", "Uid", "Reconciling", "Annotations", "Labels", "CreateTime", "UpdateTime", "DeleteTime", "Etag", "IdleTimeout", "RunningTimeout", "Host", "PersistentDirectories", "Container", "EncryptionKey", "Degraded", "Conditions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.Host), global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.Host.Parser, new[]{ "GceInstance" }, new[]{ "Config" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.Host.Types.GceInstance), global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.Host.Types.GceInstance.Parser, new[]{ "MachineType", "ServiceAccount", "Tags", "PoolSize", "PooledInstances", "DisablePublicIpAddresses", "EnableNestedVirtualization", "ShieldedInstanceConfig", "ConfidentialInstanceConfig", "BootDiskSizeGb" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.Host.Types.GceInstance.Types.GceShieldedInstanceConfig), global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.Host.Types.GceInstance.Types.GceShieldedInstanceConfig.Parser, new[]{ "EnableSecureBoot", "EnableVtpm", "EnableIntegrityMonitoring" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workstations.V1.WorkstationConfig), global::Google.Cloud.Workstations.V1.WorkstationConfig.Parser, new[]{ "Name", "DisplayName", "Uid", "Reconciling", "Annotations", "Labels", "CreateTime", "UpdateTime", "DeleteTime", "Etag", "IdleTimeout", "RunningTimeout", "Host", "PersistentDirectories", "Container", "EncryptionKey", "ReadinessChecks", "ReplicaZones", "Degraded", "Conditions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.Host), global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.Host.Parser, new[]{ "GceInstance" }, new[]{ "Config" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.Host.Types.GceInstance), global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.Host.Types.GceInstance.Parser, new[]{ "MachineType", "ServiceAccount", "ServiceAccountScopes", "Tags", "PoolSize", "PooledInstances", "DisablePublicIpAddresses", "EnableNestedVirtualization", "ShieldedInstanceConfig", "ConfidentialInstanceConfig", "BootDiskSizeGb" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.Host.Types.GceInstance.Types.GceShieldedInstanceConfig), global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.Host.Types.GceInstance.Types.GceShieldedInstanceConfig.Parser, new[]{ "EnableSecureBoot", "EnableVtpm", "EnableIntegrityMonitoring" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.Host.Types.GceInstance.Types.GceConfidentialInstanceConfig), global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.Host.Types.GceInstance.Types.GceConfidentialInstanceConfig.Parser, new[]{ "EnableConfidentialCompute" }, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.PersistentDirectory), global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.PersistentDirectory.Parser, new[]{ "GcePd", "MountPath" }, new[]{ "DirectoryType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.PersistentDirectory.Types.GceRegionalPersistentDisk), global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.PersistentDirectory.Types.GceRegionalPersistentDisk.Parser, new[]{ "SizeGb", "FsType", "DiskType", "SourceSnapshot", "ReclaimPolicy" }, null, new[]{ typeof(global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.PersistentDirectory.Types.GceRegionalPersistentDisk.Types.ReclaimPolicy) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.Container), global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.Container.Parser, new[]{ "Image", "Command", "Args", "Env", "WorkingDir", "RunAsUser" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.CustomerEncryptionKey), global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.CustomerEncryptionKey.Parser, new[]{ "KmsKey", "KmsKeyServiceAccount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.ReadinessCheck), global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.ReadinessCheck.Parser, new[]{ "Path", "Port" }, null, null, null, null),
             null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workstations.V1.Workstation), global::Google.Cloud.Workstations.V1.Workstation.Parser, new[]{ "Name", "DisplayName", "Uid", "Reconciling", "Annotations", "Labels", "CreateTime", "UpdateTime", "DeleteTime", "Etag", "State", "Host" }, null, new[]{ typeof(global::Google.Cloud.Workstations.V1.Workstation.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workstations.V1.Workstation), global::Google.Cloud.Workstations.V1.Workstation.Parser, new[]{ "Name", "DisplayName", "Uid", "Reconciling", "Annotations", "Labels", "CreateTime", "UpdateTime", "StartTime", "DeleteTime", "Etag", "State", "Host" }, null, new[]{ typeof(global::Google.Cloud.Workstations.V1.Workstation.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workstations.V1.GetWorkstationClusterRequest), global::Google.Cloud.Workstations.V1.GetWorkstationClusterRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workstations.V1.ListWorkstationClustersRequest), global::Google.Cloud.Workstations.V1.ListWorkstationClustersRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workstations.V1.ListWorkstationClustersResponse), global::Google.Cloud.Workstations.V1.ListWorkstationClustersResponse.Parser, new[]{ "WorkstationClusters", "NextPageToken", "Unreachable" }, null, null, null, null),
@@ -407,8 +425,10 @@ namespace Google.Cloud.Workstations.V1 {
   }
   #region Messages
   /// <summary>
-  /// A grouping of workstation configurations and the associated workstations
-  ///  in that region.
+  /// A workstation cluster resource in the Cloud Workstations API.
+  ///
+  /// Defines a group of workstations in a particular region and the
+  /// VPC network they're attached to.
   /// </summary>
   public sealed partial class WorkstationCluster : pb::IMessage<WorkstationCluster>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -473,7 +493,7 @@ namespace Google.Cloud.Workstations.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Full name of this resource.
+    /// Full name of this workstation cluster.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -488,7 +508,7 @@ namespace Google.Cloud.Workstations.V1 {
     public const int DisplayNameFieldNumber = 2;
     private string displayName_ = "";
     /// <summary>
-    /// Human-readable name for this resource.
+    /// Optional. Human-readable name for this workstation cluster.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -503,7 +523,8 @@ namespace Google.Cloud.Workstations.V1 {
     public const int UidFieldNumber = 3;
     private string uid_ = "";
     /// <summary>
-    /// Output only. A system-assigned unique identified for this resource.
+    /// Output only. A system-assigned unique identifier for this workstation
+    /// cluster.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -518,8 +539,8 @@ namespace Google.Cloud.Workstations.V1 {
     public const int ReconcilingFieldNumber = 4;
     private bool reconciling_;
     /// <summary>
-    /// Output only. Indicates whether this resource is currently being updated to
-    /// match its intended state.
+    /// Output only. Indicates whether this workstation cluster is currently being
+    /// updated to match its intended state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -536,7 +557,7 @@ namespace Google.Cloud.Workstations.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 42);
     private readonly pbc::MapField<string, string> annotations_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// Client-specified annotations.
+    /// Optional. Client-specified annotations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -550,8 +571,10 @@ namespace Google.Cloud.Workstations.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 122);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// Client-specified labels that are applied to the resource and that are also
-    /// propagated to the underlying Compute Engine resources.
+    /// Optional.
+    /// [Labels](https://cloud.google.com/workstations/docs/label-resources) that
+    /// are applied to the workstation cluster and that are also propagated to the
+    /// underlying Compute Engine resources.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -563,7 +586,7 @@ namespace Google.Cloud.Workstations.V1 {
     public const int CreateTimeFieldNumber = 6;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Output only. Time when this resource was created.
+    /// Output only. Time when this workstation cluster was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -578,7 +601,7 @@ namespace Google.Cloud.Workstations.V1 {
     public const int UpdateTimeFieldNumber = 7;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
-    /// Output only. Time when this resource was most recently updated.
+    /// Output only. Time when this workstation cluster was most recently updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -593,7 +616,7 @@ namespace Google.Cloud.Workstations.V1 {
     public const int DeleteTimeFieldNumber = 8;
     private global::Google.Protobuf.WellKnownTypes.Timestamp deleteTime_;
     /// <summary>
-    /// Output only. Time when this resource was soft-deleted.
+    /// Output only. Time when this workstation cluster was soft-deleted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -608,8 +631,9 @@ namespace Google.Cloud.Workstations.V1 {
     public const int EtagFieldNumber = 9;
     private string etag_ = "";
     /// <summary>
-    /// Checksum computed by the server. May be sent on update and delete requests
-    /// to make sure that the client has an up-to-date value before proceeding.
+    /// Optional. Checksum computed by the server. May be sent on update and delete
+    /// requests to make sure that the client has an up-to-date value before
+    /// proceeding.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -625,7 +649,7 @@ namespace Google.Cloud.Workstations.V1 {
     private string network_ = "";
     /// <summary>
     /// Immutable. Name of the Compute Engine network in which instances associated
-    /// with this cluster will be created.
+    /// with this workstation cluster will be created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -641,8 +665,8 @@ namespace Google.Cloud.Workstations.V1 {
     private string subnetwork_ = "";
     /// <summary>
     /// Immutable. Name of the Compute Engine subnetwork in which instances
-    /// associated with this cluster will be created. Must be part of the
-    /// subnetwork specified for this cluster.
+    /// associated with this workstation cluster will be created. Must be part of
+    /// the subnetwork specified for this workstation cluster.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -657,10 +681,10 @@ namespace Google.Cloud.Workstations.V1 {
     public const int ControlPlaneIpFieldNumber = 16;
     private string controlPlaneIp_ = "";
     /// <summary>
-    /// Output only. The private IP address of the control plane for this cluster.
-    /// Workstation VMs need access to this IP address to work with the service, so
-    /// make sure that your firewall rules allow egress from the workstation VMs to
-    /// this address.
+    /// Output only. The private IP address of the control plane for this
+    /// workstation cluster. Workstation VMs need access to this IP address to work
+    /// with the service, so make sure that your firewall rules allow egress from
+    /// the workstation VMs to this address.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -675,7 +699,7 @@ namespace Google.Cloud.Workstations.V1 {
     public const int PrivateClusterConfigFieldNumber = 12;
     private global::Google.Cloud.Workstations.V1.WorkstationCluster.Types.PrivateClusterConfig privateClusterConfig_;
     /// <summary>
-    /// Configuration for private cluster.
+    /// Optional. Configuration for private workstation cluster.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -690,9 +714,10 @@ namespace Google.Cloud.Workstations.V1 {
     public const int DegradedFieldNumber = 13;
     private bool degraded_;
     /// <summary>
-    /// Output only. Whether this resource is in degraded mode, in which case it
-    /// may require user action to restore full functionality. Details can be found
-    /// in the `conditions` field.
+    /// Output only. Whether this workstation cluster is in degraded mode, in which
+    /// case it may require user action to restore full functionality. Details can
+    /// be found in
+    /// [conditions][google.cloud.workstations.v1.WorkstationCluster.conditions].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -709,7 +734,8 @@ namespace Google.Cloud.Workstations.V1 {
         = pb::FieldCodec.ForMessage(114, global::Google.Rpc.Status.Parser);
     private readonly pbc::RepeatedField<global::Google.Rpc.Status> conditions_ = new pbc::RepeatedField<global::Google.Rpc.Status>();
     /// <summary>
-    /// Output only. Status conditions describing the current resource state.
+    /// Output only. Status conditions describing the workstation cluster's current
+    /// state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1220,7 +1246,7 @@ namespace Google.Cloud.Workstations.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// Configuration options for private clusters.
+      /// Configuration options for private workstation clusters.
       /// </summary>
       public sealed partial class PrivateClusterConfig : pb::IMessage<PrivateClusterConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1290,9 +1316,9 @@ namespace Google.Cloud.Workstations.V1 {
         /// <summary>
         /// Output only. Hostname for the workstation cluster. This field will be
         /// populated only when private endpoint is enabled. To access workstations
-        /// in the cluster, create a new DNS zone mapping this domain name to an
-        /// internal IP address and a forwarding rule mapping that address to the
-        /// service attachment.
+        /// in the workstation cluster, create a new DNS zone mapping this domain
+        /// name to an internal IP address and a forwarding rule mapping that address
+        /// to the service attachment.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1309,8 +1335,8 @@ namespace Google.Cloud.Workstations.V1 {
         /// <summary>
         /// Output only. Service attachment URI for the workstation cluster. The
         /// service attachemnt is created when private endpoint is enabled. To access
-        /// workstations in the cluster, configure access to the managed service
-        /// using [Private Service
+        /// workstations in the workstation cluster, configure access to the managed
+        /// service using [Private Service
         /// Connect](https://cloud.google.com/vpc/docs/configure-private-service-connect-services).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1328,9 +1354,9 @@ namespace Google.Cloud.Workstations.V1 {
             = pb::FieldCodec.ForString(34);
         private readonly pbc::RepeatedField<string> allowedProjects_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// Additional projects that are allowed to attach to the workstation
-        /// cluster's service attachment. By default, the workstation cluster's
-        /// project and the VPC host project (if different) are allowed.
+        /// Optional. Additional projects that are allowed to attach to the
+        /// workstation cluster's service attachment. By default, the workstation
+        /// cluster's project and the VPC host project (if different) are allowed.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1539,9 +1565,15 @@ namespace Google.Cloud.Workstations.V1 {
   }
 
   /// <summary>
-  /// A set of configuration options describing how a workstation will be run.
-  /// Workstation configurations are intended to be shared across multiple
-  /// workstations.
+  /// A workstation configuration resource in the Cloud Workstations API.
+  ///
+  /// Workstation configurations act as templates for workstations. The workstation
+  /// configuration defines details such as the workstation virtual machine (VM)
+  /// instance type, persistent storage, container image defining environment,
+  /// which IDE or Code Editor to use, and more. Administrators and platform teams
+  /// can also use [Identity and Access Management
+  /// (IAM)](https://cloud.google.com/iam/docs/overview) rules to grant access to
+  /// teams or to individual developers.
   /// </summary>
   public sealed partial class WorkstationConfig : pb::IMessage<WorkstationConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1593,6 +1625,8 @@ namespace Google.Cloud.Workstations.V1 {
       persistentDirectories_ = other.persistentDirectories_.Clone();
       container_ = other.container_ != null ? other.container_.Clone() : null;
       encryptionKey_ = other.encryptionKey_ != null ? other.encryptionKey_.Clone() : null;
+      readinessChecks_ = other.readinessChecks_.Clone();
+      replicaZones_ = other.replicaZones_.Clone();
       degraded_ = other.degraded_;
       conditions_ = other.conditions_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1608,7 +1642,7 @@ namespace Google.Cloud.Workstations.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Full name of this resource.
+    /// Full name of this workstation configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1623,7 +1657,7 @@ namespace Google.Cloud.Workstations.V1 {
     public const int DisplayNameFieldNumber = 2;
     private string displayName_ = "";
     /// <summary>
-    /// Human-readable name for this resource.
+    /// Optional. Human-readable name for this workstation configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1638,7 +1672,8 @@ namespace Google.Cloud.Workstations.V1 {
     public const int UidFieldNumber = 3;
     private string uid_ = "";
     /// <summary>
-    /// Output only. A system-assigned unique identified for this resource.
+    /// Output only. A system-assigned unique identifier for this workstation
+    /// configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1653,8 +1688,8 @@ namespace Google.Cloud.Workstations.V1 {
     public const int ReconcilingFieldNumber = 4;
     private bool reconciling_;
     /// <summary>
-    /// Output only. Indicates whether this resource is currently being updated to
-    /// match its intended state.
+    /// Output only. Indicates whether this workstation configuration is currently
+    /// being updated to match its intended state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1671,7 +1706,7 @@ namespace Google.Cloud.Workstations.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 42);
     private readonly pbc::MapField<string, string> annotations_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// Client-specified annotations.
+    /// Optional. Client-specified annotations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1685,8 +1720,10 @@ namespace Google.Cloud.Workstations.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 146);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// Client-specified labels that are applied to the resource and that are also
-    /// propagated to the underlying Compute Engine resources.
+    /// Optional.
+    /// [Labels](https://cloud.google.com/workstations/docs/label-resources) that
+    /// are applied to the workstation configuration and that are also propagated
+    /// to the underlying Compute Engine resources.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1698,7 +1735,7 @@ namespace Google.Cloud.Workstations.V1 {
     public const int CreateTimeFieldNumber = 6;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Output only. Time when this resource was created.
+    /// Output only. Time when this workstation configuration was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1713,7 +1750,8 @@ namespace Google.Cloud.Workstations.V1 {
     public const int UpdateTimeFieldNumber = 7;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
-    /// Output only. Time when this resource was most recently updated.
+    /// Output only. Time when this workstation configuration was most recently
+    /// updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1728,7 +1766,7 @@ namespace Google.Cloud.Workstations.V1 {
     public const int DeleteTimeFieldNumber = 8;
     private global::Google.Protobuf.WellKnownTypes.Timestamp deleteTime_;
     /// <summary>
-    /// Output only. Time when this resource was soft-deleted.
+    /// Output only. Time when this workstation configuration was soft-deleted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1743,8 +1781,9 @@ namespace Google.Cloud.Workstations.V1 {
     public const int EtagFieldNumber = 9;
     private string etag_ = "";
     /// <summary>
-    /// Checksum computed by the server. May be sent on update and delete requests
-    /// to make sure that the client has an up-to-date value before proceeding.
+    /// Optional. Checksum computed by the server. May be sent on update and delete
+    /// requests to make sure that the client has an up-to-date value before
+    /// proceeding.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1759,9 +1798,15 @@ namespace Google.Cloud.Workstations.V1 {
     public const int IdleTimeoutFieldNumber = 10;
     private global::Google.Protobuf.WellKnownTypes.Duration idleTimeout_;
     /// <summary>
-    /// How long to wait before automatically stopping an instance that hasn't
-    /// received any user traffic. A value of 0 indicates that this instance
-    /// should never time out due to idleness. Defaults to 20 minutes.
+    /// Optional. Number of seconds to wait before automatically stopping a
+    /// workstation after it last received user traffic.
+    ///
+    /// A value of `"0s"` indicates that Cloud Workstations VMs created with this
+    /// configuration should never time out due to idleness.
+    /// Provide
+    /// [duration](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#duration)
+    /// terminated by `s` for seconds—for example, `"7200s"` (2 hours).
+    /// The default is `"1200s"` (20 minutes).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1776,10 +1821,28 @@ namespace Google.Cloud.Workstations.V1 {
     public const int RunningTimeoutFieldNumber = 11;
     private global::Google.Protobuf.WellKnownTypes.Duration runningTimeout_;
     /// <summary>
-    /// How long to wait before automatically stopping a workstation after it
-    /// started. A value of 0 indicates that workstations using this configuration
-    /// should never time out. Must be greater than 0 and less than 24 hours if
-    /// encryption_key is set. Defaults to 12 hours.
+    /// Optional. Number of seconds that a workstation can run until it is
+    /// automatically shut down. We recommend that workstations be shut down daily
+    /// to reduce costs and so that security updates can be applied upon restart.
+    /// The
+    /// [idle_timeout][google.cloud.workstations.v1.WorkstationConfig.idle_timeout]
+    /// and
+    /// [running_timeout][google.cloud.workstations.v1.WorkstationConfig.running_timeout]
+    /// fields are independent of each other. Note that the
+    /// [running_timeout][google.cloud.workstations.v1.WorkstationConfig.running_timeout]
+    /// field shuts down VMs after the specified time, regardless of whether or not
+    /// the VMs are idle.
+    ///
+    /// Provide duration terminated by `s` for seconds—for example, `"54000s"`
+    /// (15 hours). Defaults to `"43200s"` (12 hours). A value of `"0s"` indicates
+    /// that workstations using this configuration should never time out. If
+    /// [encryption_key][google.cloud.workstations.v1.WorkstationConfig.encryption_key]
+    /// is set, it must be greater than `"0s"` and less than
+    /// `"86400s"` (24 hours).
+    ///
+    /// Warning: A value of `"0s"` indicates that Cloud Workstations VMs created
+    /// with this configuration have no maximum running time. This is strongly
+    /// discouraged because you incur costs and will not pick up security updates.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1794,7 +1857,7 @@ namespace Google.Cloud.Workstations.V1 {
     public const int HostFieldNumber = 12;
     private global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.Host host_;
     /// <summary>
-    /// Runtime host for the workstation.
+    /// Optional. Runtime host for the workstation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1811,7 +1874,7 @@ namespace Google.Cloud.Workstations.V1 {
         = pb::FieldCodec.ForMessage(106, global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.PersistentDirectory.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.PersistentDirectory> persistentDirectories_ = new pbc::RepeatedField<global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.PersistentDirectory>();
     /// <summary>
-    /// Directories to persist across workstation sessions.
+    /// Optional. Directories to persist across workstation sessions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1823,8 +1886,8 @@ namespace Google.Cloud.Workstations.V1 {
     public const int ContainerFieldNumber = 14;
     private global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.Container container_;
     /// <summary>
-    /// Container that will be run for each workstation using this configuration
-    /// when that workstation is started.
+    /// Optional. Container that runs upon startup for each workstation using this
+    /// workstation configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1840,7 +1903,7 @@ namespace Google.Cloud.Workstations.V1 {
     private global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.CustomerEncryptionKey encryptionKey_;
     /// <summary>
     /// Immutable. Encrypts resources of this workstation configuration using a
-    /// customer-managed encryption key.
+    /// customer-managed encryption key (CMEK).
     ///
     /// If specified, the boot disk of the Compute Engine instance and the
     /// persistent disk are encrypted using this encryption key. If
@@ -1851,10 +1914,10 @@ namespace Google.Cloud.Workstations.V1 {
     /// instance is stopped, the system attempts to recreate the
     /// persistent disk with the new version of the key. Be sure to keep
     /// older versions of the key until the persistent disk is recreated.
-    /// Otherwise, data on the persistent disk will be lost.
+    /// Otherwise, data on the persistent disk might be lost.
     ///
-    /// If the encryption key is revoked, the workstation session will
-    /// automatically be stopped within 7 hours.
+    /// If the encryption key is revoked, the workstation session automatically
+    /// stops within 7 hours.
     ///
     /// Immutable after the workstation configuration is created.
     /// </summary>
@@ -1867,13 +1930,50 @@ namespace Google.Cloud.Workstations.V1 {
       }
     }
 
+    /// <summary>Field number for the "readiness_checks" field.</summary>
+    public const int ReadinessChecksFieldNumber = 19;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.ReadinessCheck> _repeated_readinessChecks_codec
+        = pb::FieldCodec.ForMessage(154, global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.ReadinessCheck.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.ReadinessCheck> readinessChecks_ = new pbc::RepeatedField<global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.ReadinessCheck>();
+    /// <summary>
+    /// Optional. Readiness checks to perform when starting a workstation using
+    /// this workstation configuration. Mark a workstation as running only after
+    /// all specified readiness checks return 200 status codes.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.ReadinessCheck> ReadinessChecks {
+      get { return readinessChecks_; }
+    }
+
+    /// <summary>Field number for the "replica_zones" field.</summary>
+    public const int ReplicaZonesFieldNumber = 23;
+    private static readonly pb::FieldCodec<string> _repeated_replicaZones_codec
+        = pb::FieldCodec.ForString(186);
+    private readonly pbc::RepeatedField<string> replicaZones_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. Immutable. Specifies the zones used to replicate the VM and disk
+    /// resources within the region. If set, exactly two zones within the
+    /// workstation cluster's region must be specified—for example,
+    /// `['us-central1-a', 'us-central1-f']`. If this field is empty, two default
+    /// zones within the region are used.
+    ///
+    /// Immutable after the workstation configuration is created.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ReplicaZones {
+      get { return replicaZones_; }
+    }
+
     /// <summary>Field number for the "degraded" field.</summary>
     public const int DegradedFieldNumber = 15;
     private bool degraded_;
     /// <summary>
     /// Output only. Whether this resource is degraded, in which case it may
     /// require user action to restore full functionality. See also the
-    /// `conditions` field.
+    /// [conditions][google.cloud.workstations.v1.WorkstationConfig.conditions]
+    /// field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1929,6 +2029,8 @@ namespace Google.Cloud.Workstations.V1 {
       if(!persistentDirectories_.Equals(other.persistentDirectories_)) return false;
       if (!object.Equals(Container, other.Container)) return false;
       if (!object.Equals(EncryptionKey, other.EncryptionKey)) return false;
+      if(!readinessChecks_.Equals(other.readinessChecks_)) return false;
+      if(!replicaZones_.Equals(other.replicaZones_)) return false;
       if (Degraded != other.Degraded) return false;
       if(!conditions_.Equals(other.conditions_)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -1954,6 +2056,8 @@ namespace Google.Cloud.Workstations.V1 {
       hash ^= persistentDirectories_.GetHashCode();
       if (container_ != null) hash ^= Container.GetHashCode();
       if (encryptionKey_ != null) hash ^= EncryptionKey.GetHashCode();
+      hash ^= readinessChecks_.GetHashCode();
+      hash ^= replicaZones_.GetHashCode();
       if (Degraded != false) hash ^= Degraded.GetHashCode();
       hash ^= conditions_.GetHashCode();
       if (_unknownFields != null) {
@@ -2034,6 +2138,8 @@ namespace Google.Cloud.Workstations.V1 {
         output.WriteMessage(EncryptionKey);
       }
       labels_.WriteTo(output, _map_labels_codec);
+      readinessChecks_.WriteTo(output, _repeated_readinessChecks_codec);
+      replicaZones_.WriteTo(output, _repeated_replicaZones_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2104,6 +2210,8 @@ namespace Google.Cloud.Workstations.V1 {
         output.WriteMessage(EncryptionKey);
       }
       labels_.WriteTo(ref output, _map_labels_codec);
+      readinessChecks_.WriteTo(ref output, _repeated_readinessChecks_codec);
+      replicaZones_.WriteTo(ref output, _repeated_replicaZones_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2156,6 +2264,8 @@ namespace Google.Cloud.Workstations.V1 {
       if (encryptionKey_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(EncryptionKey);
       }
+      size += readinessChecks_.CalculateSize(_repeated_readinessChecks_codec);
+      size += replicaZones_.CalculateSize(_repeated_replicaZones_codec);
       if (Degraded != false) {
         size += 1 + 1;
       }
@@ -2238,6 +2348,8 @@ namespace Google.Cloud.Workstations.V1 {
         }
         EncryptionKey.MergeFrom(other.EncryptionKey);
       }
+      readinessChecks_.Add(other.readinessChecks_);
+      replicaZones_.Add(other.replicaZones_);
       if (other.Degraded != false) {
         Degraded = other.Degraded;
       }
@@ -2353,6 +2465,14 @@ namespace Google.Cloud.Workstations.V1 {
             labels_.AddEntriesFrom(input, _map_labels_codec);
             break;
           }
+          case 154: {
+            readinessChecks_.AddEntriesFrom(input, _repeated_readinessChecks_codec);
+            break;
+          }
+          case 186: {
+            replicaZones_.AddEntriesFrom(input, _repeated_replicaZones_codec);
+            break;
+          }
         }
       }
     #endif
@@ -2462,6 +2582,14 @@ namespace Google.Cloud.Workstations.V1 {
           }
           case 146: {
             labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
+          case 154: {
+            readinessChecks_.AddEntriesFrom(ref input, _repeated_readinessChecks_codec);
+            break;
+          }
+          case 186: {
+            replicaZones_.AddEntriesFrom(ref input, _repeated_replicaZones_codec);
             break;
           }
         }
@@ -2754,6 +2882,7 @@ namespace Google.Cloud.Workstations.V1 {
             public GceInstance(GceInstance other) : this() {
               machineType_ = other.machineType_;
               serviceAccount_ = other.serviceAccount_;
+              serviceAccountScopes_ = other.serviceAccountScopes_.Clone();
               tags_ = other.tags_.Clone();
               poolSize_ = other.poolSize_;
               pooledInstances_ = other.pooledInstances_;
@@ -2775,7 +2904,11 @@ namespace Google.Cloud.Workstations.V1 {
             public const int MachineTypeFieldNumber = 1;
             private string machineType_ = "";
             /// <summary>
-            /// The name of a Compute Engine machine type.
+            /// Optional. The type of machine to use for VM instances—for example,
+            /// `"e2-standard-4"`. For more information about machine types that
+            /// Cloud Workstations supports, see the list of
+            /// [available machine
+            /// types](https://cloud.google.com/workstations/docs/available-machine-types).
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2790,11 +2923,23 @@ namespace Google.Cloud.Workstations.V1 {
             public const int ServiceAccountFieldNumber = 2;
             private string serviceAccount_ = "";
             /// <summary>
-            /// Email address of the service account used on VM instances
-            /// used to support this configuration. If not set, VMs run with a
-            /// Google-managed service account. This service account must have
-            /// permission to pull the specified container image; otherwise, the image
-            /// must be publicly accessible.
+            /// Optional. The email address of the service account for Cloud
+            /// Workstations VMs created with this configuration. When specified, be
+            /// sure that the service account has `logginglogEntries.create` permission
+            /// on the project so it can write logs out to Cloud Logging. If using a
+            /// custom container image, the service account must have permissions to
+            /// pull the specified image.
+            ///
+            /// If you as the administrator want to be able to `ssh` into the
+            /// underlying VM, you need to set this value to a service account
+            /// for which you have the `iam.serviceAccounts.actAs` permission.
+            /// Conversely, if you don't want anyone to be able to `ssh` into the
+            /// underlying VM, use a service account where no one has that
+            /// permission.
+            ///
+            /// If not set, VMs run with a service account provided by the
+            /// Cloud Workstations service, and the image must be publicly
+            /// accessible.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2805,14 +2950,37 @@ namespace Google.Cloud.Workstations.V1 {
               }
             }
 
+            /// <summary>Field number for the "service_account_scopes" field.</summary>
+            public const int ServiceAccountScopesFieldNumber = 3;
+            private static readonly pb::FieldCodec<string> _repeated_serviceAccountScopes_codec
+                = pb::FieldCodec.ForString(26);
+            private readonly pbc::RepeatedField<string> serviceAccountScopes_ = new pbc::RepeatedField<string>();
+            /// <summary>
+            /// Optional. Scopes to grant to the
+            /// [service_account][google.cloud.workstations.v1.WorkstationConfig.Host.GceInstance.service_account].
+            /// Various scopes are automatically added based on feature usage. When
+            /// specified, users of workstations under this configuration must have
+            /// `iam.serviceAccounts.actAs` on the service account.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::RepeatedField<string> ServiceAccountScopes {
+              get { return serviceAccountScopes_; }
+            }
+
             /// <summary>Field number for the "tags" field.</summary>
             public const int TagsFieldNumber = 4;
             private static readonly pb::FieldCodec<string> _repeated_tags_codec
                 = pb::FieldCodec.ForString(34);
             private readonly pbc::RepeatedField<string> tags_ = new pbc::RepeatedField<string>();
             /// <summary>
-            /// Network tags to add to the Compute Engine machines backing the
-            /// Workstations.
+            /// Optional. Network tags to add to the Compute Engine VMs backing the
+            /// workstations. This option applies
+            /// [network
+            /// tags](https://cloud.google.com/vpc/docs/add-remove-network-tags) to VMs
+            /// created with this configuration. These network tags enable the creation
+            /// of [firewall
+            /// rules](https://cloud.google.com/workstations/docs/configure-firewall-rules).
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2824,7 +2992,9 @@ namespace Google.Cloud.Workstations.V1 {
             public const int PoolSizeFieldNumber = 5;
             private int poolSize_;
             /// <summary>
-            /// Number of instances to pool for faster workstation startup.
+            /// Optional. The number of VMs that the system should keep idle so that
+            /// new workstations can be started quickly for new users. Defaults to `0`
+            /// in the API.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2855,7 +3025,13 @@ namespace Google.Cloud.Workstations.V1 {
             public const int DisablePublicIpAddressesFieldNumber = 6;
             private bool disablePublicIpAddresses_;
             /// <summary>
-            /// Whether instances have no public IP address.
+            /// Optional. When set to true, disables public IP addresses for VMs. If
+            /// you disable public IP addresses, you must set up Private Google Access
+            /// or Cloud NAT on your network. If you use Private Google Access and you
+            /// use `private.googleapis.com` or `restricted.googleapis.com` for
+            /// Container Registry and Artifact Registry, make sure that you set
+            /// up DNS records for domains `*.gcr.io` and `*.pkg.dev`.
+            /// Defaults to false (VMs have public IP addresses).
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2870,7 +3046,40 @@ namespace Google.Cloud.Workstations.V1 {
             public const int EnableNestedVirtualizationFieldNumber = 7;
             private bool enableNestedVirtualization_;
             /// <summary>
-            /// Whether to enable nested virtualization on instances.
+            /// Optional. Whether to enable nested virtualization on Cloud Workstations
+            /// VMs created under this workstation configuration.
+            ///
+            /// Nested virtualization lets you run virtual machine (VM) instances
+            /// inside your workstation. Before enabling nested virtualization,
+            /// consider the following important considerations. Cloud Workstations
+            /// instances are subject to the [same restrictions as Compute Engine
+            /// instances](https://cloud.google.com/compute/docs/instances/nested-virtualization/overview#restrictions):
+            ///
+            /// * **Organization policy**: projects, folders, or
+            /// organizations may be restricted from creating nested VMs if the
+            /// **Disable VM nested virtualization** constraint is enforced in
+            /// the organization policy. For more information, see the
+            /// Compute Engine section,
+            /// [Checking whether nested virtualization is
+            /// allowed](https://cloud.google.com/compute/docs/instances/nested-virtualization/managing-constraint#checking_whether_nested_virtualization_is_allowed).
+            /// * **Performance**: nested VMs might experience a 10% or greater
+            /// decrease in performance for workloads that are CPU-bound and
+            /// possibly greater than a 10% decrease for workloads that are
+            /// input/output bound.
+            /// * **Machine Type**: nested virtualization can only be enabled on
+            /// workstation configurations that specify a
+            /// [machine_type][google.cloud.workstations.v1.WorkstationConfig.Host.GceInstance.machine_type]
+            /// in the N1 or N2 machine series.
+            /// * **GPUs**: nested virtualization may not be enabled on workstation
+            /// configurations with accelerators.
+            /// * **Operating System**: Because
+            /// [Container-Optimized
+            /// OS](https://cloud.google.com/compute/docs/images/os-details#container-optimized_os_cos)
+            /// does not support nested virtualization, when nested virtualization is
+            /// enabled, the underlying Compute Engine VM instances boot from an
+            /// [Ubuntu
+            /// LTS](https://cloud.google.com/compute/docs/images/os-details#ubuntu_lts)
+            /// image.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2885,7 +3094,7 @@ namespace Google.Cloud.Workstations.V1 {
             public const int ShieldedInstanceConfigFieldNumber = 8;
             private global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.Host.Types.GceInstance.Types.GceShieldedInstanceConfig shieldedInstanceConfig_;
             /// <summary>
-            /// A set of Compute Engine Shielded instance options.
+            /// Optional. A set of Compute Engine Shielded instance options.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2900,7 +3109,7 @@ namespace Google.Cloud.Workstations.V1 {
             public const int ConfidentialInstanceConfigFieldNumber = 10;
             private global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.Host.Types.GceInstance.Types.GceConfidentialInstanceConfig confidentialInstanceConfig_;
             /// <summary>
-            /// A set of Compute Engine Confidential VM instance options.
+            /// Optional. A set of Compute Engine Confidential VM instance options.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2915,7 +3124,8 @@ namespace Google.Cloud.Workstations.V1 {
             public const int BootDiskSizeGbFieldNumber = 9;
             private int bootDiskSizeGb_;
             /// <summary>
-            /// Size of the boot disk in GB. Defaults to 50.
+            /// Optional. The size of the boot disk for the VM in gigabytes (GB).
+            /// The minimum boot disk size is `30` GB. Defaults to `50` GB.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2943,6 +3153,7 @@ namespace Google.Cloud.Workstations.V1 {
               }
               if (MachineType != other.MachineType) return false;
               if (ServiceAccount != other.ServiceAccount) return false;
+              if(!serviceAccountScopes_.Equals(other.serviceAccountScopes_)) return false;
               if(!tags_.Equals(other.tags_)) return false;
               if (PoolSize != other.PoolSize) return false;
               if (PooledInstances != other.PooledInstances) return false;
@@ -2960,6 +3171,7 @@ namespace Google.Cloud.Workstations.V1 {
               int hash = 1;
               if (MachineType.Length != 0) hash ^= MachineType.GetHashCode();
               if (ServiceAccount.Length != 0) hash ^= ServiceAccount.GetHashCode();
+              hash ^= serviceAccountScopes_.GetHashCode();
               hash ^= tags_.GetHashCode();
               if (PoolSize != 0) hash ^= PoolSize.GetHashCode();
               if (PooledInstances != 0) hash ^= PooledInstances.GetHashCode();
@@ -2994,6 +3206,7 @@ namespace Google.Cloud.Workstations.V1 {
                 output.WriteRawTag(18);
                 output.WriteString(ServiceAccount);
               }
+              serviceAccountScopes_.WriteTo(output, _repeated_serviceAccountScopes_codec);
               tags_.WriteTo(output, _repeated_tags_codec);
               if (PoolSize != 0) {
                 output.WriteRawTag(40);
@@ -3041,6 +3254,7 @@ namespace Google.Cloud.Workstations.V1 {
                 output.WriteRawTag(18);
                 output.WriteString(ServiceAccount);
               }
+              serviceAccountScopes_.WriteTo(ref output, _repeated_serviceAccountScopes_codec);
               tags_.WriteTo(ref output, _repeated_tags_codec);
               if (PoolSize != 0) {
                 output.WriteRawTag(40);
@@ -3086,6 +3300,7 @@ namespace Google.Cloud.Workstations.V1 {
               if (ServiceAccount.Length != 0) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceAccount);
               }
+              size += serviceAccountScopes_.CalculateSize(_repeated_serviceAccountScopes_codec);
               size += tags_.CalculateSize(_repeated_tags_codec);
               if (PoolSize != 0) {
                 size += 1 + pb::CodedOutputStream.ComputeInt32Size(PoolSize);
@@ -3126,6 +3341,7 @@ namespace Google.Cloud.Workstations.V1 {
               if (other.ServiceAccount.Length != 0) {
                 ServiceAccount = other.ServiceAccount;
               }
+              serviceAccountScopes_.Add(other.serviceAccountScopes_);
               tags_.Add(other.tags_);
               if (other.PoolSize != 0) {
                 PoolSize = other.PoolSize;
@@ -3175,6 +3391,10 @@ namespace Google.Cloud.Workstations.V1 {
                   }
                   case 18: {
                     ServiceAccount = input.ReadString();
+                    break;
+                  }
+                  case 26: {
+                    serviceAccountScopes_.AddEntriesFrom(input, _repeated_serviceAccountScopes_codec);
                     break;
                   }
                   case 34: {
@@ -3236,6 +3456,10 @@ namespace Google.Cloud.Workstations.V1 {
                   }
                   case 18: {
                     ServiceAccount = input.ReadString();
+                    break;
+                  }
+                  case 26: {
+                    serviceAccountScopes_.AddEntriesFrom(ref input, _repeated_serviceAccountScopes_codec);
                     break;
                   }
                   case 34: {
@@ -3339,7 +3563,7 @@ namespace Google.Cloud.Workstations.V1 {
                 public const int EnableSecureBootFieldNumber = 1;
                 private bool enableSecureBoot_;
                 /// <summary>
-                /// Whether the instance has Secure Boot enabled.
+                /// Optional. Whether the instance has Secure Boot enabled.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3354,7 +3578,7 @@ namespace Google.Cloud.Workstations.V1 {
                 public const int EnableVtpmFieldNumber = 2;
                 private bool enableVtpm_;
                 /// <summary>
-                /// Whether the instance has the vTPM enabled.
+                /// Optional. Whether the instance has the vTPM enabled.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3369,7 +3593,7 @@ namespace Google.Cloud.Workstations.V1 {
                 public const int EnableIntegrityMonitoringFieldNumber = 3;
                 private bool enableIntegrityMonitoring_;
                 /// <summary>
-                /// Whether the instance has integrity monitoring enabled.
+                /// Optional. Whether the instance has integrity monitoring enabled.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3612,7 +3836,7 @@ namespace Google.Cloud.Workstations.V1 {
                 public const int EnableConfidentialComputeFieldNumber = 1;
                 private bool enableConfidentialCompute_;
                 /// <summary>
-                /// Whether the instance has confidential compute enabled.
+                /// Optional. Whether the instance has confidential compute enabled.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3838,7 +4062,7 @@ namespace Google.Cloud.Workstations.V1 {
         public const int MountPathFieldNumber = 1;
         private string mountPath_ = "";
         /// <summary>
-        /// Location of this directory in the running workstation.
+        /// Optional. Location of this directory in the running workstation.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4049,7 +4273,15 @@ namespace Google.Cloud.Workstations.V1 {
         public static partial class Types {
           /// <summary>
           /// A PersistentDirectory backed by a Compute Engine regional persistent
-          /// disk.
+          /// disk. The
+          /// [persistent_directories][google.cloud.workstations.v1.WorkstationConfig.persistent_directories]
+          /// field is repeated, but it may contain only one entry. It creates a
+          /// [persistent
+          /// disk](https://cloud.google.com/compute/docs/disks/persistent-disks) that
+          /// mounts to the workstation VM at `/home` when the session starts and
+          /// detaches when the session ends. If this field is empty, workstations
+          /// created with this configuration do not have a persistent home
+          /// directory.
           /// </summary>
           public sealed partial class GceRegionalPersistentDisk : pb::IMessage<GceRegionalPersistentDisk>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4103,8 +4335,16 @@ namespace Google.Cloud.Workstations.V1 {
             public const int SizeGbFieldNumber = 1;
             private int sizeGb_;
             /// <summary>
-            /// Size of the disk in GB. Must be empty if source_snapshot is set.
-            /// Defaults to 200.
+            /// Optional. The GB capacity of a persistent home directory for each
+            /// workstation created with this configuration. Must be empty if
+            /// [source_snapshot][google.cloud.workstations.v1.WorkstationConfig.PersistentDirectory.GceRegionalPersistentDisk.source_snapshot]
+            /// is set.
+            ///
+            /// Valid values are `10`, `50`, `100`, `200`, `500`, or `1000`.
+            /// Defaults to `200`. If less than `200` GB, the
+            /// [disk_type][google.cloud.workstations.v1.WorkstationConfig.PersistentDirectory.GceRegionalPersistentDisk.disk_type]
+            /// must be
+            /// `"pd-balanced"` or `"pd-ssd"`.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4119,9 +4359,11 @@ namespace Google.Cloud.Workstations.V1 {
             public const int FsTypeFieldNumber = 2;
             private string fsType_ = "";
             /// <summary>
-            /// Type of file system that the disk should be formatted with. The
-            /// workstation image must support this file system type. Must be empty
-            /// if source_snapshot is set. Defaults to ext4.
+            /// Optional. Type of file system that the disk should be formatted with.
+            /// The workstation image must support this file system type. Must be empty
+            /// if
+            /// [source_snapshot][google.cloud.workstations.v1.WorkstationConfig.PersistentDirectory.GceRegionalPersistentDisk.source_snapshot]
+            /// is set. Defaults to `"ext4"`.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4136,7 +4378,9 @@ namespace Google.Cloud.Workstations.V1 {
             public const int DiskTypeFieldNumber = 3;
             private string diskType_ = "";
             /// <summary>
-            /// Type of the disk to use. Defaults to pd-standard.
+            /// Optional. The [type of the persistent
+            /// disk](https://cloud.google.com/compute/docs/disks#disk-types) for the
+            /// home directory. Defaults to `"pd-standard"`.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4151,8 +4395,12 @@ namespace Google.Cloud.Workstations.V1 {
             public const int SourceSnapshotFieldNumber = 5;
             private string sourceSnapshot_ = "";
             /// <summary>
-            /// Name of the snapshot to use as the source for the disk. If set,
-            /// size_gb and fs_type must be empty.
+            /// Optional. Name of the snapshot to use as the source for the disk. If
+            /// set,
+            /// [size_gb][google.cloud.workstations.v1.WorkstationConfig.PersistentDirectory.GceRegionalPersistentDisk.size_gb]
+            /// and
+            /// [fs_type][google.cloud.workstations.v1.WorkstationConfig.PersistentDirectory.GceRegionalPersistentDisk.fs_type]
+            /// must be empty.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4167,8 +4415,9 @@ namespace Google.Cloud.Workstations.V1 {
             public const int ReclaimPolicyFieldNumber = 4;
             private global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.PersistentDirectory.Types.GceRegionalPersistentDisk.Types.ReclaimPolicy reclaimPolicy_ = global::Google.Cloud.Workstations.V1.WorkstationConfig.Types.PersistentDirectory.Types.GceRegionalPersistentDisk.Types.ReclaimPolicy.Unspecified;
             /// <summary>
-            /// What should happen to the disk after the workstation is deleted.
-            /// Defaults to DELETE.
+            /// Optional. Whether the persistent disk should be deleted when the
+            /// workstation is deleted. Valid values are `DELETE` and `RETAIN`.
+            /// Defaults to `DELETE`.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4421,12 +4670,12 @@ namespace Google.Cloud.Workstations.V1 {
                 /// </summary>
                 [pbr::OriginalName("RECLAIM_POLICY_UNSPECIFIED")] Unspecified = 0,
                 /// <summary>
-                /// The persistent disk will be deleted with the workstation.
+                /// Delete the persistent disk when deleting the workstation.
                 /// </summary>
                 [pbr::OriginalName("DELETE")] Delete = 1,
                 /// <summary>
-                /// The persistent disk will be remain after the workstation is deleted,
-                /// and the administrator must manually delete the disk.
+                /// Keep the persistent disk when deleting the workstation.
+                /// An administrator must manually delete the disk.
                 /// </summary>
                 [pbr::OriginalName("RETAIN")] Retain = 2,
               }
@@ -4497,8 +4746,18 @@ namespace Google.Cloud.Workstations.V1 {
         public const int ImageFieldNumber = 1;
         private string image_ = "";
         /// <summary>
-        /// Docker image defining the container. This image must be accessible by the
-        /// service account specified in the workstation configuration.
+        /// Optional. A Docker container image that defines a custom environment.
+        ///
+        /// Cloud Workstations provides a number of
+        /// [preconfigured
+        /// images](https://cloud.google.com/workstations/docs/preconfigured-base-images),
+        /// but you can create your own
+        /// [custom container
+        /// images](https://cloud.google.com/workstations/docs/custom-container-images).
+        /// If using a private image, the `host.gceInstance.serviceAccount` field
+        /// must be specified in the workstation configuration and must have
+        /// permission to pull the specified image. Otherwise, the image must be
+        /// publicly accessible.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4515,7 +4774,8 @@ namespace Google.Cloud.Workstations.V1 {
             = pb::FieldCodec.ForString(18);
         private readonly pbc::RepeatedField<string> command_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// If set, overrides the default ENTRYPOINT specified by the image.
+        /// Optional. If set, overrides the default ENTRYPOINT specified by the
+        /// image.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4529,7 +4789,7 @@ namespace Google.Cloud.Workstations.V1 {
             = pb::FieldCodec.ForString(26);
         private readonly pbc::RepeatedField<string> args_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// Arguments passed to the entrypoint.
+        /// Optional. Arguments passed to the entrypoint.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4543,7 +4803,7 @@ namespace Google.Cloud.Workstations.V1 {
             = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 34);
         private readonly pbc::MapField<string, string> env_ = new pbc::MapField<string, string>();
         /// <summary>
-        /// Environment variables passed to the container's entrypoint.
+        /// Optional. Environment variables passed to the container's entrypoint.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4555,7 +4815,7 @@ namespace Google.Cloud.Workstations.V1 {
         public const int WorkingDirFieldNumber = 5;
         private string workingDir_ = "";
         /// <summary>
-        /// If set, overrides the default DIR specified by the image.
+        /// Optional. If set, overrides the default DIR specified by the image.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4570,7 +4830,8 @@ namespace Google.Cloud.Workstations.V1 {
         public const int RunAsUserFieldNumber = 6;
         private int runAsUser_;
         /// <summary>
-        /// If set, overrides the USER specified in the image with the given uid.
+        /// Optional. If set, overrides the USER specified in the image with the
+        /// given uid.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4805,8 +5066,12 @@ namespace Google.Cloud.Workstations.V1 {
       }
 
       /// <summary>
-      /// A customer-managed encryption key for the Compute Engine resources
-      /// of this workstation configuration.
+      /// A customer-managed encryption key (CMEK) for the Compute Engine
+      /// resources of the associated workstation configuration. Specify the name of
+      /// your Cloud KMS encryption key and the default service account.
+      /// We recommend that you use a separate service account and follow
+      /// [Cloud KMS best
+      /// practices](https://cloud.google.com/kms/docs/separation-of-duties).
       /// </summary>
       public sealed partial class CustomerEncryptionKey : pb::IMessage<CustomerEncryptionKey>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4858,7 +5123,8 @@ namespace Google.Cloud.Workstations.V1 {
         private string kmsKey_ = "";
         /// <summary>
         /// Immutable. The name of the Google Cloud KMS encryption key. For example,
-        /// `projects/PROJECT_ID/locations/REGION/keyRings/KEY_RING/cryptoKeys/KEY_NAME`.
+        /// `"projects/PROJECT_ID/locations/REGION/keyRings/KEY_RING/cryptoKeys/KEY_NAME"`.
+        /// The key must be in the same region as the workstation configuration.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5047,6 +5313,241 @@ namespace Google.Cloud.Workstations.V1 {
 
       }
 
+      /// <summary>
+      /// A readiness check to be performed on a workstation.
+      /// </summary>
+      public sealed partial class ReadinessCheck : pb::IMessage<ReadinessCheck>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ReadinessCheck> _parser = new pb::MessageParser<ReadinessCheck>(() => new ReadinessCheck());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ReadinessCheck> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Workstations.V1.WorkstationConfig.Descriptor.NestedTypes[4]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ReadinessCheck() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ReadinessCheck(ReadinessCheck other) : this() {
+          path_ = other.path_;
+          port_ = other.port_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ReadinessCheck Clone() {
+          return new ReadinessCheck(this);
+        }
+
+        /// <summary>Field number for the "path" field.</summary>
+        public const int PathFieldNumber = 1;
+        private string path_ = "";
+        /// <summary>
+        /// Optional. Path to which the request should be sent.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Path {
+          get { return path_; }
+          set {
+            path_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "port" field.</summary>
+        public const int PortFieldNumber = 2;
+        private int port_;
+        /// <summary>
+        /// Optional. Port to which the request should be sent.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int Port {
+          get { return port_; }
+          set {
+            port_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ReadinessCheck);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ReadinessCheck other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Path != other.Path) return false;
+          if (Port != other.Port) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Path.Length != 0) hash ^= Path.GetHashCode();
+          if (Port != 0) hash ^= Port.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Path.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Path);
+          }
+          if (Port != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(Port);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Path.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Path);
+          }
+          if (Port != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(Port);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Path.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Path);
+          }
+          if (Port != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(Port);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ReadinessCheck other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Path.Length != 0) {
+            Path = other.Path;
+          }
+          if (other.Port != 0) {
+            Port = other.Port;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Path = input.ReadString();
+                break;
+              }
+              case 16: {
+                Port = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Path = input.ReadString();
+                break;
+              }
+              case 16: {
+                Port = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
     }
     #endregion
 
@@ -5097,6 +5598,7 @@ namespace Google.Cloud.Workstations.V1 {
       labels_ = other.labels_.Clone();
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
       deleteTime_ = other.deleteTime_ != null ? other.deleteTime_.Clone() : null;
       etag_ = other.etag_;
       state_ = other.state_;
@@ -5114,7 +5616,7 @@ namespace Google.Cloud.Workstations.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Full name of this resource.
+    /// Full name of this workstation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5129,7 +5631,7 @@ namespace Google.Cloud.Workstations.V1 {
     public const int DisplayNameFieldNumber = 2;
     private string displayName_ = "";
     /// <summary>
-    /// Human-readable name for this resource.
+    /// Optional. Human-readable name for this workstation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5144,7 +5646,7 @@ namespace Google.Cloud.Workstations.V1 {
     public const int UidFieldNumber = 3;
     private string uid_ = "";
     /// <summary>
-    /// Output only. A system-assigned unique identified for this resource.
+    /// Output only. A system-assigned unique identifier for this workstation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5159,8 +5661,8 @@ namespace Google.Cloud.Workstations.V1 {
     public const int ReconcilingFieldNumber = 4;
     private bool reconciling_;
     /// <summary>
-    /// Output only. Indicates whether this resource is currently being updated to
-    /// match its intended state.
+    /// Output only. Indicates whether this workstation is currently being updated
+    /// to match its intended state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5177,7 +5679,7 @@ namespace Google.Cloud.Workstations.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 42);
     private readonly pbc::MapField<string, string> annotations_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// Client-specified annotations.
+    /// Optional. Client-specified annotations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5191,8 +5693,10 @@ namespace Google.Cloud.Workstations.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 106);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// Client-specified labels that are applied to the resource and that are also
-    /// propagated to the underlying Compute Engine resources.
+    /// Optional.
+    /// [Labels](https://cloud.google.com/workstations/docs/label-resources) that
+    /// are applied to the workstation and that are also propagated to the
+    /// underlying Compute Engine resources.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5204,7 +5708,7 @@ namespace Google.Cloud.Workstations.V1 {
     public const int CreateTimeFieldNumber = 6;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Output only. Time when this resource was created.
+    /// Output only. Time when this workstation was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5219,7 +5723,7 @@ namespace Google.Cloud.Workstations.V1 {
     public const int UpdateTimeFieldNumber = 7;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
-    /// Output only. Time when this resource was most recently updated.
+    /// Output only. Time when this workstation was most recently updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5230,11 +5734,27 @@ namespace Google.Cloud.Workstations.V1 {
       }
     }
 
+    /// <summary>Field number for the "start_time" field.</summary>
+    public const int StartTimeFieldNumber = 14;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
+    /// <summary>
+    /// Output only. Time when this workstation was most recently successfully
+    /// started, regardless of the workstation's initial state.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
+      get { return startTime_; }
+      set {
+        startTime_ = value;
+      }
+    }
+
     /// <summary>Field number for the "delete_time" field.</summary>
     public const int DeleteTimeFieldNumber = 8;
     private global::Google.Protobuf.WellKnownTypes.Timestamp deleteTime_;
     /// <summary>
-    /// Output only. Time when this resource was soft-deleted.
+    /// Output only. Time when this workstation was soft-deleted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5249,8 +5769,9 @@ namespace Google.Cloud.Workstations.V1 {
     public const int EtagFieldNumber = 9;
     private string etag_ = "";
     /// <summary>
-    /// Checksum computed by the server. May be sent on update and delete requests
-    /// to make sure that the client has an up-to-date value before proceeding.
+    /// Optional. Checksum computed by the server. May be sent on update and delete
+    /// requests to make sure that the client has an up-to-date value before
+    /// proceeding.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5318,6 +5839,7 @@ namespace Google.Cloud.Workstations.V1 {
       if (!Labels.Equals(other.Labels)) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      if (!object.Equals(StartTime, other.StartTime)) return false;
       if (!object.Equals(DeleteTime, other.DeleteTime)) return false;
       if (Etag != other.Etag) return false;
       if (State != other.State) return false;
@@ -5337,6 +5859,7 @@ namespace Google.Cloud.Workstations.V1 {
       hash ^= Labels.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+      if (startTime_ != null) hash ^= StartTime.GetHashCode();
       if (deleteTime_ != null) hash ^= DeleteTime.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       if (State != global::Google.Cloud.Workstations.V1.Workstation.Types.State.Unspecified) hash ^= State.GetHashCode();
@@ -5401,6 +5924,10 @@ namespace Google.Cloud.Workstations.V1 {
         output.WriteString(Host);
       }
       labels_.WriteTo(output, _map_labels_codec);
+      if (startTime_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(StartTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5453,6 +5980,10 @@ namespace Google.Cloud.Workstations.V1 {
         output.WriteString(Host);
       }
       labels_.WriteTo(ref output, _map_labels_codec);
+      if (startTime_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(StartTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5482,6 +6013,9 @@ namespace Google.Cloud.Workstations.V1 {
       }
       if (updateTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+      }
+      if (startTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
       }
       if (deleteTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DeleteTime);
@@ -5532,6 +6066,12 @@ namespace Google.Cloud.Workstations.V1 {
           UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         UpdateTime.MergeFrom(other.UpdateTime);
+      }
+      if (other.startTime_ != null) {
+        if (startTime_ == null) {
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        StartTime.MergeFrom(other.StartTime);
       }
       if (other.deleteTime_ != null) {
         if (deleteTime_ == null) {
@@ -5620,6 +6160,13 @@ namespace Google.Cloud.Workstations.V1 {
             labels_.AddEntriesFrom(input, _map_labels_codec);
             break;
           }
+          case 114: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
         }
       }
     #endif
@@ -5690,6 +6237,13 @@ namespace Google.Cloud.Workstations.V1 {
           }
           case 106: {
             labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
+          case 114: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
             break;
           }
         }
@@ -5998,7 +6552,7 @@ namespace Google.Cloud.Workstations.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Maximum number of items to return.
+    /// Optional. Maximum number of items to return.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6013,7 +6567,8 @@ namespace Google.Cloud.Workstations.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// next_page_token value returned from a previous List request, if any.
+    /// Optional. next_page_token value returned from a previous List request, if
+    /// any.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6558,8 +7113,8 @@ namespace Google.Cloud.Workstations.V1 {
     public const int ValidateOnlyFieldNumber = 4;
     private bool validateOnly_;
     /// <summary>
-    /// If set, validate the request and preview the review, but do not actually
-    /// apply it.
+    /// Optional. If set, validate the request and preview the review, but do not
+    /// actually apply it.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6869,8 +7424,8 @@ namespace Google.Cloud.Workstations.V1 {
     public const int ValidateOnlyFieldNumber = 3;
     private bool validateOnly_;
     /// <summary>
-    /// If set, validate the request and preview the review, but do not actually
-    /// apply it.
+    /// Optional. If set, validate the request and preview the review, but do not
+    /// actually apply it.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6885,8 +7440,9 @@ namespace Google.Cloud.Workstations.V1 {
     public const int AllowMissingFieldNumber = 4;
     private bool allowMissing_;
     /// <summary>
-    /// If set, and the workstation cluster is not found, a new workstation
-    /// cluster will be created. In this situation, update_mask is ignored.
+    /// Optional. If set, and the workstation cluster is not found, a new
+    /// workstation cluster will be created. In this situation, update_mask is
+    /// ignored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7189,7 +7745,8 @@ namespace Google.Cloud.Workstations.V1 {
     public const int ValidateOnlyFieldNumber = 2;
     private bool validateOnly_;
     /// <summary>
-    /// If set, validate the request and preview the review, but do not apply it.
+    /// Optional. If set, validate the request and preview the review, but do not
+    /// apply it.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7204,7 +7761,7 @@ namespace Google.Cloud.Workstations.V1 {
     public const int EtagFieldNumber = 3;
     private string etag_ = "";
     /// <summary>
-    /// If set, the request will be rejected if the latest version of the
+    /// Optional. If set, the request will be rejected if the latest version of the
     /// workstation cluster on the server does not have this ETag.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7220,7 +7777,7 @@ namespace Google.Cloud.Workstations.V1 {
     public const int ForceFieldNumber = 4;
     private bool force_;
     /// <summary>
-    /// If set, any workstation configurations and workstations in the
+    /// Optional. If set, any workstation configurations and workstations in the
     /// workstation cluster are also deleted. Otherwise, the request only
     /// works if the workstation cluster has no configurations or workstations.
     /// </summary>
@@ -7701,7 +8258,7 @@ namespace Google.Cloud.Workstations.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Maximum number of items to return.
+    /// Optional. Maximum number of items to return.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7716,7 +8273,8 @@ namespace Google.Cloud.Workstations.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// next_page_token value returned from a previous List request, if any.
+    /// Optional. next_page_token value returned from a previous List request, if
+    /// any.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8230,7 +8788,7 @@ namespace Google.Cloud.Workstations.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Maximum number of items to return.
+    /// Optional. Maximum number of items to return.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8245,7 +8803,8 @@ namespace Google.Cloud.Workstations.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// next_page_token value returned from a previous List request, if any.
+    /// Optional. next_page_token value returned from a previous List request, if
+    /// any.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8790,8 +9349,8 @@ namespace Google.Cloud.Workstations.V1 {
     public const int ValidateOnlyFieldNumber = 4;
     private bool validateOnly_;
     /// <summary>
-    /// If set, validate the request and preview the review, but do not actually
-    /// apply it.
+    /// Optional. If set, validate the request and preview the review, but do not
+    /// actually apply it.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9101,8 +9660,8 @@ namespace Google.Cloud.Workstations.V1 {
     public const int ValidateOnlyFieldNumber = 3;
     private bool validateOnly_;
     /// <summary>
-    /// If set, validate the request and preview the review, but do not actually
-    /// apply it.
+    /// Optional. If set, validate the request and preview the review, but do not
+    /// actually apply it.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9117,7 +9676,7 @@ namespace Google.Cloud.Workstations.V1 {
     public const int AllowMissingFieldNumber = 4;
     private bool allowMissing_;
     /// <summary>
-    /// If set and the workstation configuration is not found, a new
+    /// Optional. If set and the workstation configuration is not found, a new
     /// workstation configuration will be created. In this situation,
     /// update_mask is ignored.
     /// </summary>
@@ -9422,8 +9981,8 @@ namespace Google.Cloud.Workstations.V1 {
     public const int ValidateOnlyFieldNumber = 2;
     private bool validateOnly_;
     /// <summary>
-    /// If set, validate the request and preview the review, but do not actually
-    /// apply it.
+    /// Optional. If set, validate the request and preview the review, but do not
+    /// actually apply it.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9438,7 +9997,7 @@ namespace Google.Cloud.Workstations.V1 {
     public const int EtagFieldNumber = 3;
     private string etag_ = "";
     /// <summary>
-    /// If set, the request is rejected if the latest version of the
+    /// Optional. If set, the request is rejected if the latest version of the
     /// workstation configuration on the server does not have this ETag.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9454,9 +10013,9 @@ namespace Google.Cloud.Workstations.V1 {
     public const int ForceFieldNumber = 4;
     private bool force_;
     /// <summary>
-    /// If set, any workstations in the workstation configuration are also deleted.
-    /// Otherwise, the request works only if the workstation configuration has
-    /// no workstations.
+    /// Optional. If set, any workstations in the workstation configuration are
+    /// also deleted. Otherwise, the request works only if the workstation
+    /// configuration has no workstations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9935,7 +10494,7 @@ namespace Google.Cloud.Workstations.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Maximum number of items to return.
+    /// Optional. Maximum number of items to return.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9950,7 +10509,8 @@ namespace Google.Cloud.Workstations.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// next_page_token value returned from a previous List request, if any.
+    /// Optional. next_page_token value returned from a previous List request, if
+    /// any.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10209,8 +10769,8 @@ namespace Google.Cloud.Workstations.V1 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    /// Token to retrieve the next page of results, or empty if there are no more
-    /// results in the list.
+    /// Optional. Token to retrieve the next page of results, or empty if there are
+    /// no more results in the list.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10227,7 +10787,7 @@ namespace Google.Cloud.Workstations.V1 {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> unreachable_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Unreachable resources.
+    /// Optional. Unreachable resources.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10464,7 +11024,7 @@ namespace Google.Cloud.Workstations.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Maximum number of items to return.
+    /// Optional. Maximum number of items to return.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10479,7 +11039,8 @@ namespace Google.Cloud.Workstations.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// next_page_token value returned from a previous List request, if any.
+    /// Optional. next_page_token value returned from a previous List request, if
+    /// any.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11024,8 +11585,8 @@ namespace Google.Cloud.Workstations.V1 {
     public const int ValidateOnlyFieldNumber = 4;
     private bool validateOnly_;
     /// <summary>
-    /// If set, validate the request and preview the review, but do not actually
-    /// apply it.
+    /// Optional. If set, validate the request and preview the review, but do not
+    /// actually apply it.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11335,8 +11896,8 @@ namespace Google.Cloud.Workstations.V1 {
     public const int ValidateOnlyFieldNumber = 3;
     private bool validateOnly_;
     /// <summary>
-    /// If set, validate the request and preview the review, but do not actually
-    /// apply it.
+    /// Optional. If set, validate the request and preview the review, but do not
+    /// actually apply it.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11351,7 +11912,7 @@ namespace Google.Cloud.Workstations.V1 {
     public const int AllowMissingFieldNumber = 4;
     private bool allowMissing_;
     /// <summary>
-    /// If set and the workstation configuration is not found, a new
+    /// Optional. If set and the workstation configuration is not found, a new
     /// workstation configuration is created. In this situation, update_mask
     /// is ignored.
     /// </summary>
@@ -11655,8 +12216,8 @@ namespace Google.Cloud.Workstations.V1 {
     public const int ValidateOnlyFieldNumber = 2;
     private bool validateOnly_;
     /// <summary>
-    /// If set, validate the request and preview the review, but do not actually
-    /// apply it.
+    /// Optional. If set, validate the request and preview the review, but do not
+    /// actually apply it.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11671,7 +12232,7 @@ namespace Google.Cloud.Workstations.V1 {
     public const int EtagFieldNumber = 3;
     private string etag_ = "";
     /// <summary>
-    /// If set, the request will be rejected if the latest version of the
+    /// Optional. If set, the request will be rejected if the latest version of the
     /// workstation on the server does not have this ETag.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11932,8 +12493,8 @@ namespace Google.Cloud.Workstations.V1 {
     public const int ValidateOnlyFieldNumber = 2;
     private bool validateOnly_;
     /// <summary>
-    /// If set, validate the request and preview the review, but do not actually
-    /// apply it.
+    /// Optional. If set, validate the request and preview the review, but do not
+    /// actually apply it.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11948,7 +12509,7 @@ namespace Google.Cloud.Workstations.V1 {
     public const int EtagFieldNumber = 3;
     private string etag_ = "";
     /// <summary>
-    /// If set, the request will be rejected if the latest version of the
+    /// Optional. If set, the request will be rejected if the latest version of the
     /// workstation on the server does not have this ETag.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12209,8 +12770,8 @@ namespace Google.Cloud.Workstations.V1 {
     public const int ValidateOnlyFieldNumber = 2;
     private bool validateOnly_;
     /// <summary>
-    /// If set, validate the request and preview the review, but do not actually
-    /// apply it.
+    /// Optional. If set, validate the request and preview the review, but do not
+    /// actually apply it.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12225,7 +12786,7 @@ namespace Google.Cloud.Workstations.V1 {
     public const int EtagFieldNumber = 3;
     private string etag_ = "";
     /// <summary>
-    /// If set, the request will be rejected if the latest version of the
+    /// Optional. If set, the request will be rejected if the latest version of the
     /// workstation on the server does not have this ETag.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
