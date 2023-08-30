@@ -594,6 +594,56 @@ namespace Google.Analytics.Admin.V1Alpha
         }
     }
 
+    public partial class GetSKAdNetworkConversionValueSchemaRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::SKAdNetworkConversionValueSchemaName"/>-typed view over the <see cref="Name"/> resource
+        /// name property.
+        /// </summary>
+        public gaav::SKAdNetworkConversionValueSchemaName SKAdNetworkConversionValueSchemaName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::SKAdNetworkConversionValueSchemaName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateSKAdNetworkConversionValueSchemaRequest
+    {
+        /// <summary>
+        /// <see cref="DataStreamName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public DataStreamName ParentAsDataStreamName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : DataStreamName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteSKAdNetworkConversionValueSchemaRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::SKAdNetworkConversionValueSchemaName"/>-typed view over the <see cref="Name"/> resource
+        /// name property.
+        /// </summary>
+        public gaav::SKAdNetworkConversionValueSchemaName SKAdNetworkConversionValueSchemaName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::SKAdNetworkConversionValueSchemaName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListSKAdNetworkConversionValueSchemasRequest
+    {
+        /// <summary>
+        /// <see cref="DataStreamName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public DataStreamName ParentAsDataStreamName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : DataStreamName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetGoogleSignalsSettingsRequest
     {
         /// <summary>

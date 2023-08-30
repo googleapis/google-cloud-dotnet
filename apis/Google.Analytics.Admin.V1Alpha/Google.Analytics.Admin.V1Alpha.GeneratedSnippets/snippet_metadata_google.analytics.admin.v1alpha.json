@@ -8295,6 +8295,1399 @@
       ]
     },
     {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetSKAdNetworkConversionValueSchema_sync",
+      "title": "GetSKAdNetworkConversionValueSchemaRequestObject",
+      "description": "Snippet for GetSKAdNetworkConversionValueSchema",
+      "file": "AnalyticsAdminServiceClient.GetSKAdNetworkConversionValueSchemaRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSKAdNetworkConversionValueSchema",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetSKAdNetworkConversionValueSchema",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.GetSKAdNetworkConversionValueSchemaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetSKAdNetworkConversionValueSchema",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetSKAdNetworkConversionValueSchema",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetSKAdNetworkConversionValueSchema_async",
+      "title": "GetSKAdNetworkConversionValueSchemaRequestObjectAsync",
+      "description": "Snippet for GetSKAdNetworkConversionValueSchemaAsync",
+      "file": "AnalyticsAdminServiceClient.GetSKAdNetworkConversionValueSchemaRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSKAdNetworkConversionValueSchemaAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetSKAdNetworkConversionValueSchemaAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.GetSKAdNetworkConversionValueSchemaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetSKAdNetworkConversionValueSchema",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetSKAdNetworkConversionValueSchema",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetSKAdNetworkConversionValueSchema_sync_flattened",
+      "title": "GetSKAdNetworkConversionValueSchema",
+      "description": "Snippet for GetSKAdNetworkConversionValueSchema",
+      "file": "AnalyticsAdminServiceClient.GetSKAdNetworkConversionValueSchemaSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSKAdNetworkConversionValueSchema",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetSKAdNetworkConversionValueSchema",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetSKAdNetworkConversionValueSchema",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetSKAdNetworkConversionValueSchema",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetSKAdNetworkConversionValueSchema_async_flattened",
+      "title": "GetSKAdNetworkConversionValueSchemaAsync",
+      "description": "Snippet for GetSKAdNetworkConversionValueSchemaAsync",
+      "file": "AnalyticsAdminServiceClient.GetSKAdNetworkConversionValueSchemaAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSKAdNetworkConversionValueSchemaAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetSKAdNetworkConversionValueSchemaAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetSKAdNetworkConversionValueSchema",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetSKAdNetworkConversionValueSchema",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetSKAdNetworkConversionValueSchema_sync_flattened_resourceNames",
+      "title": "GetSKAdNetworkConversionValueSchemaResourceNames",
+      "description": "Snippet for GetSKAdNetworkConversionValueSchema",
+      "file": "AnalyticsAdminServiceClient.GetSKAdNetworkConversionValueSchemaResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSKAdNetworkConversionValueSchema",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetSKAdNetworkConversionValueSchema",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchemaName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetSKAdNetworkConversionValueSchema",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetSKAdNetworkConversionValueSchema",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetSKAdNetworkConversionValueSchema_async_flattened_resourceNames",
+      "title": "GetSKAdNetworkConversionValueSchemaResourceNamesAsync",
+      "description": "Snippet for GetSKAdNetworkConversionValueSchemaAsync",
+      "file": "AnalyticsAdminServiceClient.GetSKAdNetworkConversionValueSchemaResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSKAdNetworkConversionValueSchemaAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetSKAdNetworkConversionValueSchemaAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchemaName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetSKAdNetworkConversionValueSchema",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetSKAdNetworkConversionValueSchema",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateSKAdNetworkConversionValueSchema_sync",
+      "title": "CreateSKAdNetworkConversionValueSchemaRequestObject",
+      "description": "Snippet for CreateSKAdNetworkConversionValueSchema",
+      "file": "AnalyticsAdminServiceClient.CreateSKAdNetworkConversionValueSchemaRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSKAdNetworkConversionValueSchema",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateSKAdNetworkConversionValueSchema",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.CreateSKAdNetworkConversionValueSchemaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSKAdNetworkConversionValueSchema",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateSKAdNetworkConversionValueSchema",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateSKAdNetworkConversionValueSchema_async",
+      "title": "CreateSKAdNetworkConversionValueSchemaRequestObjectAsync",
+      "description": "Snippet for CreateSKAdNetworkConversionValueSchemaAsync",
+      "file": "AnalyticsAdminServiceClient.CreateSKAdNetworkConversionValueSchemaRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSKAdNetworkConversionValueSchemaAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateSKAdNetworkConversionValueSchemaAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.CreateSKAdNetworkConversionValueSchemaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSKAdNetworkConversionValueSchema",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateSKAdNetworkConversionValueSchema",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateSKAdNetworkConversionValueSchema_sync_flattened",
+      "title": "CreateSKAdNetworkConversionValueSchema",
+      "description": "Snippet for CreateSKAdNetworkConversionValueSchema",
+      "file": "AnalyticsAdminServiceClient.CreateSKAdNetworkConversionValueSchemaSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSKAdNetworkConversionValueSchema",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateSKAdNetworkConversionValueSchema",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema",
+            "name": "skadnetworkConversionValueSchema"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSKAdNetworkConversionValueSchema",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateSKAdNetworkConversionValueSchema",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateSKAdNetworkConversionValueSchema_async_flattened",
+      "title": "CreateSKAdNetworkConversionValueSchemaAsync",
+      "description": "Snippet for CreateSKAdNetworkConversionValueSchemaAsync",
+      "file": "AnalyticsAdminServiceClient.CreateSKAdNetworkConversionValueSchemaAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSKAdNetworkConversionValueSchemaAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateSKAdNetworkConversionValueSchemaAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema",
+            "name": "skadnetworkConversionValueSchema"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSKAdNetworkConversionValueSchema",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateSKAdNetworkConversionValueSchema",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateSKAdNetworkConversionValueSchema_sync_flattened_resourceNames",
+      "title": "CreateSKAdNetworkConversionValueSchemaResourceNames",
+      "description": "Snippet for CreateSKAdNetworkConversionValueSchema",
+      "file": "AnalyticsAdminServiceClient.CreateSKAdNetworkConversionValueSchemaResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSKAdNetworkConversionValueSchema",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateSKAdNetworkConversionValueSchema",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.DataStreamName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema",
+            "name": "skadnetworkConversionValueSchema"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSKAdNetworkConversionValueSchema",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateSKAdNetworkConversionValueSchema",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateSKAdNetworkConversionValueSchema_async_flattened_resourceNames",
+      "title": "CreateSKAdNetworkConversionValueSchemaResourceNamesAsync",
+      "description": "Snippet for CreateSKAdNetworkConversionValueSchemaAsync",
+      "file": "AnalyticsAdminServiceClient.CreateSKAdNetworkConversionValueSchemaResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSKAdNetworkConversionValueSchemaAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateSKAdNetworkConversionValueSchemaAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.DataStreamName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema",
+            "name": "skadnetworkConversionValueSchema"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSKAdNetworkConversionValueSchema",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateSKAdNetworkConversionValueSchema",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteSKAdNetworkConversionValueSchema_sync",
+      "title": "DeleteSKAdNetworkConversionValueSchemaRequestObject",
+      "description": "Snippet for DeleteSKAdNetworkConversionValueSchema",
+      "file": "AnalyticsAdminServiceClient.DeleteSKAdNetworkConversionValueSchemaRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSKAdNetworkConversionValueSchema",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteSKAdNetworkConversionValueSchema",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.DeleteSKAdNetworkConversionValueSchemaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSKAdNetworkConversionValueSchema",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteSKAdNetworkConversionValueSchema",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteSKAdNetworkConversionValueSchema_async",
+      "title": "DeleteSKAdNetworkConversionValueSchemaRequestObjectAsync",
+      "description": "Snippet for DeleteSKAdNetworkConversionValueSchemaAsync",
+      "file": "AnalyticsAdminServiceClient.DeleteSKAdNetworkConversionValueSchemaRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSKAdNetworkConversionValueSchemaAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteSKAdNetworkConversionValueSchemaAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.DeleteSKAdNetworkConversionValueSchemaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSKAdNetworkConversionValueSchema",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteSKAdNetworkConversionValueSchema",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteSKAdNetworkConversionValueSchema_sync_flattened",
+      "title": "DeleteSKAdNetworkConversionValueSchema",
+      "description": "Snippet for DeleteSKAdNetworkConversionValueSchema",
+      "file": "AnalyticsAdminServiceClient.DeleteSKAdNetworkConversionValueSchemaSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSKAdNetworkConversionValueSchema",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteSKAdNetworkConversionValueSchema",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSKAdNetworkConversionValueSchema",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteSKAdNetworkConversionValueSchema",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteSKAdNetworkConversionValueSchema_async_flattened",
+      "title": "DeleteSKAdNetworkConversionValueSchemaAsync",
+      "description": "Snippet for DeleteSKAdNetworkConversionValueSchemaAsync",
+      "file": "AnalyticsAdminServiceClient.DeleteSKAdNetworkConversionValueSchemaAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSKAdNetworkConversionValueSchemaAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteSKAdNetworkConversionValueSchemaAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSKAdNetworkConversionValueSchema",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteSKAdNetworkConversionValueSchema",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteSKAdNetworkConversionValueSchema_sync_flattened_resourceNames",
+      "title": "DeleteSKAdNetworkConversionValueSchemaResourceNames",
+      "description": "Snippet for DeleteSKAdNetworkConversionValueSchema",
+      "file": "AnalyticsAdminServiceClient.DeleteSKAdNetworkConversionValueSchemaResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSKAdNetworkConversionValueSchema",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteSKAdNetworkConversionValueSchema",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchemaName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSKAdNetworkConversionValueSchema",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteSKAdNetworkConversionValueSchema",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteSKAdNetworkConversionValueSchema_async_flattened_resourceNames",
+      "title": "DeleteSKAdNetworkConversionValueSchemaResourceNamesAsync",
+      "description": "Snippet for DeleteSKAdNetworkConversionValueSchemaAsync",
+      "file": "AnalyticsAdminServiceClient.DeleteSKAdNetworkConversionValueSchemaResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSKAdNetworkConversionValueSchemaAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteSKAdNetworkConversionValueSchemaAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchemaName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSKAdNetworkConversionValueSchema",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteSKAdNetworkConversionValueSchema",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateSKAdNetworkConversionValueSchema_sync",
+      "title": "UpdateSKAdNetworkConversionValueSchemaRequestObject",
+      "description": "Snippet for UpdateSKAdNetworkConversionValueSchema",
+      "file": "AnalyticsAdminServiceClient.UpdateSKAdNetworkConversionValueSchemaRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSKAdNetworkConversionValueSchema",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateSKAdNetworkConversionValueSchema",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.UpdateSKAdNetworkConversionValueSchemaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSKAdNetworkConversionValueSchema",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateSKAdNetworkConversionValueSchema",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateSKAdNetworkConversionValueSchema_async",
+      "title": "UpdateSKAdNetworkConversionValueSchemaRequestObjectAsync",
+      "description": "Snippet for UpdateSKAdNetworkConversionValueSchemaAsync",
+      "file": "AnalyticsAdminServiceClient.UpdateSKAdNetworkConversionValueSchemaRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSKAdNetworkConversionValueSchemaAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateSKAdNetworkConversionValueSchemaAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.UpdateSKAdNetworkConversionValueSchemaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSKAdNetworkConversionValueSchema",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateSKAdNetworkConversionValueSchema",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateSKAdNetworkConversionValueSchema_sync_flattened",
+      "title": "UpdateSKAdNetworkConversionValueSchema",
+      "description": "Snippet for UpdateSKAdNetworkConversionValueSchema",
+      "file": "AnalyticsAdminServiceClient.UpdateSKAdNetworkConversionValueSchemaSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSKAdNetworkConversionValueSchema",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateSKAdNetworkConversionValueSchema",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema",
+            "name": "skadnetworkConversionValueSchema"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSKAdNetworkConversionValueSchema",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateSKAdNetworkConversionValueSchema",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateSKAdNetworkConversionValueSchema_async_flattened",
+      "title": "UpdateSKAdNetworkConversionValueSchemaAsync",
+      "description": "Snippet for UpdateSKAdNetworkConversionValueSchemaAsync",
+      "file": "AnalyticsAdminServiceClient.UpdateSKAdNetworkConversionValueSchemaAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSKAdNetworkConversionValueSchemaAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateSKAdNetworkConversionValueSchemaAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema",
+            "name": "skadnetworkConversionValueSchema"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSKAdNetworkConversionValueSchema",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateSKAdNetworkConversionValueSchema",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListSKAdNetworkConversionValueSchemas_sync",
+      "title": "ListSKAdNetworkConversionValueSchemasRequestObject",
+      "description": "Snippet for ListSKAdNetworkConversionValueSchemas",
+      "file": "AnalyticsAdminServiceClient.ListSKAdNetworkConversionValueSchemasRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSKAdNetworkConversionValueSchemas",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListSKAdNetworkConversionValueSchemas",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasResponse, Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListSKAdNetworkConversionValueSchemas",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListSKAdNetworkConversionValueSchemas",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListSKAdNetworkConversionValueSchemas_async",
+      "title": "ListSKAdNetworkConversionValueSchemasRequestObjectAsync",
+      "description": "Snippet for ListSKAdNetworkConversionValueSchemasAsync",
+      "file": "AnalyticsAdminServiceClient.ListSKAdNetworkConversionValueSchemasRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSKAdNetworkConversionValueSchemasAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListSKAdNetworkConversionValueSchemasAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasResponse, Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListSKAdNetworkConversionValueSchemas",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListSKAdNetworkConversionValueSchemas",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListSKAdNetworkConversionValueSchemas_sync_flattened",
+      "title": "ListSKAdNetworkConversionValueSchemas",
+      "description": "Snippet for ListSKAdNetworkConversionValueSchemas",
+      "file": "AnalyticsAdminServiceClient.ListSKAdNetworkConversionValueSchemasSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSKAdNetworkConversionValueSchemas",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListSKAdNetworkConversionValueSchemas",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasResponse, Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListSKAdNetworkConversionValueSchemas",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListSKAdNetworkConversionValueSchemas",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListSKAdNetworkConversionValueSchemas_async_flattened",
+      "title": "ListSKAdNetworkConversionValueSchemasAsync",
+      "description": "Snippet for ListSKAdNetworkConversionValueSchemasAsync",
+      "file": "AnalyticsAdminServiceClient.ListSKAdNetworkConversionValueSchemasAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSKAdNetworkConversionValueSchemasAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListSKAdNetworkConversionValueSchemasAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasResponse, Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListSKAdNetworkConversionValueSchemas",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListSKAdNetworkConversionValueSchemas",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListSKAdNetworkConversionValueSchemas_sync_flattened_resourceNames",
+      "title": "ListSKAdNetworkConversionValueSchemasResourceNames",
+      "description": "Snippet for ListSKAdNetworkConversionValueSchemas",
+      "file": "AnalyticsAdminServiceClient.ListSKAdNetworkConversionValueSchemasResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSKAdNetworkConversionValueSchemas",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListSKAdNetworkConversionValueSchemas",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.DataStreamName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasResponse, Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListSKAdNetworkConversionValueSchemas",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListSKAdNetworkConversionValueSchemas",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListSKAdNetworkConversionValueSchemas_async_flattened_resourceNames",
+      "title": "ListSKAdNetworkConversionValueSchemasResourceNamesAsync",
+      "description": "Snippet for ListSKAdNetworkConversionValueSchemasAsync",
+      "file": "AnalyticsAdminServiceClient.ListSKAdNetworkConversionValueSchemasResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSKAdNetworkConversionValueSchemasAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListSKAdNetworkConversionValueSchemasAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.DataStreamName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasResponse, Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListSKAdNetworkConversionValueSchemas",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListSKAdNetworkConversionValueSchemas",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_SearchChangeHistoryEvents_sync",
       "title": "SearchChangeHistoryEventsRequestObject",
       "description": "Snippet for SearchChangeHistoryEvents",

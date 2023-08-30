@@ -180,6 +180,20 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.AcknowledgeUserDataCollectionResponse> __Marshaller_google_analytics_admin_v1alpha_AcknowledgeUserDataCollectionResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.AcknowledgeUserDataCollectionResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetSKAdNetworkConversionValueSchemaRequest> __Marshaller_google_analytics_admin_v1alpha_GetSKAdNetworkConversionValueSchemaRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetSKAdNetworkConversionValueSchemaRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema> __Marshaller_google_analytics_admin_v1alpha_SKAdNetworkConversionValueSchema = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateSKAdNetworkConversionValueSchemaRequest> __Marshaller_google_analytics_admin_v1alpha_CreateSKAdNetworkConversionValueSchemaRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateSKAdNetworkConversionValueSchemaRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DeleteSKAdNetworkConversionValueSchemaRequest> __Marshaller_google_analytics_admin_v1alpha_DeleteSKAdNetworkConversionValueSchemaRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DeleteSKAdNetworkConversionValueSchemaRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateSKAdNetworkConversionValueSchemaRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateSKAdNetworkConversionValueSchemaRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateSKAdNetworkConversionValueSchemaRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasRequest> __Marshaller_google_analytics_admin_v1alpha_ListSKAdNetworkConversionValueSchemasRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasResponse> __Marshaller_google_analytics_admin_v1alpha_ListSKAdNetworkConversionValueSchemasResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsRequest> __Marshaller_google_analytics_admin_v1alpha_SearchChangeHistoryEventsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsResponse> __Marshaller_google_analytics_admin_v1alpha_SearchChangeHistoryEventsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsResponse.Parser));
@@ -727,6 +741,46 @@ namespace Google.Analytics.Admin.V1Alpha {
         "AcknowledgeUserDataCollection",
         __Marshaller_google_analytics_admin_v1alpha_AcknowledgeUserDataCollectionRequest,
         __Marshaller_google_analytics_admin_v1alpha_AcknowledgeUserDataCollectionResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetSKAdNetworkConversionValueSchemaRequest, global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema> __Method_GetSKAdNetworkConversionValueSchema = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetSKAdNetworkConversionValueSchemaRequest, global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetSKAdNetworkConversionValueSchema",
+        __Marshaller_google_analytics_admin_v1alpha_GetSKAdNetworkConversionValueSchemaRequest,
+        __Marshaller_google_analytics_admin_v1alpha_SKAdNetworkConversionValueSchema);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateSKAdNetworkConversionValueSchemaRequest, global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema> __Method_CreateSKAdNetworkConversionValueSchema = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateSKAdNetworkConversionValueSchemaRequest, global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateSKAdNetworkConversionValueSchema",
+        __Marshaller_google_analytics_admin_v1alpha_CreateSKAdNetworkConversionValueSchemaRequest,
+        __Marshaller_google_analytics_admin_v1alpha_SKAdNetworkConversionValueSchema);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteSKAdNetworkConversionValueSchemaRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteSKAdNetworkConversionValueSchema = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteSKAdNetworkConversionValueSchemaRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteSKAdNetworkConversionValueSchema",
+        __Marshaller_google_analytics_admin_v1alpha_DeleteSKAdNetworkConversionValueSchemaRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateSKAdNetworkConversionValueSchemaRequest, global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema> __Method_UpdateSKAdNetworkConversionValueSchema = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateSKAdNetworkConversionValueSchemaRequest, global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateSKAdNetworkConversionValueSchema",
+        __Marshaller_google_analytics_admin_v1alpha_UpdateSKAdNetworkConversionValueSchemaRequest,
+        __Marshaller_google_analytics_admin_v1alpha_SKAdNetworkConversionValueSchema);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasRequest, global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasResponse> __Method_ListSKAdNetworkConversionValueSchemas = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasRequest, global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListSKAdNetworkConversionValueSchemas",
+        __Marshaller_google_analytics_admin_v1alpha_ListSKAdNetworkConversionValueSchemasRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ListSKAdNetworkConversionValueSchemasResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsRequest, global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsResponse> __Method_SearchChangeHistoryEvents = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsRequest, global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsResponse>(
@@ -1916,6 +1970,67 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.AcknowledgeUserDataCollectionResponse> AcknowledgeUserDataCollection(global::Google.Analytics.Admin.V1Alpha.AcknowledgeUserDataCollectionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Looks up a single SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema> GetSKAdNetworkConversionValueSchema(global::Google.Analytics.Admin.V1Alpha.GetSKAdNetworkConversionValueSchemaRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema> CreateSKAdNetworkConversionValueSchema(global::Google.Analytics.Admin.V1Alpha.CreateSKAdNetworkConversionValueSchemaRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes target SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSKAdNetworkConversionValueSchema(global::Google.Analytics.Admin.V1Alpha.DeleteSKAdNetworkConversionValueSchemaRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema> UpdateSKAdNetworkConversionValueSchema(global::Google.Analytics.Admin.V1Alpha.UpdateSKAdNetworkConversionValueSchemaRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists SKAdNetworkConversionValueSchema on a stream.
+      /// Properties can have at most one SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasResponse> ListSKAdNetworkConversionValueSchemas(global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -4985,6 +5100,250 @@ namespace Google.Analytics.Admin.V1Alpha {
       public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.AcknowledgeUserDataCollectionResponse> AcknowledgeUserDataCollectionAsync(global::Google.Analytics.Admin.V1Alpha.AcknowledgeUserDataCollectionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_AcknowledgeUserDataCollection, null, options, request);
+      }
+      /// <summary>
+      /// Looks up a single SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema GetSKAdNetworkConversionValueSchema(global::Google.Analytics.Admin.V1Alpha.GetSKAdNetworkConversionValueSchemaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSKAdNetworkConversionValueSchema(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Looks up a single SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema GetSKAdNetworkConversionValueSchema(global::Google.Analytics.Admin.V1Alpha.GetSKAdNetworkConversionValueSchemaRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetSKAdNetworkConversionValueSchema, null, options, request);
+      }
+      /// <summary>
+      /// Looks up a single SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema> GetSKAdNetworkConversionValueSchemaAsync(global::Google.Analytics.Admin.V1Alpha.GetSKAdNetworkConversionValueSchemaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSKAdNetworkConversionValueSchemaAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Looks up a single SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema> GetSKAdNetworkConversionValueSchemaAsync(global::Google.Analytics.Admin.V1Alpha.GetSKAdNetworkConversionValueSchemaRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetSKAdNetworkConversionValueSchema, null, options, request);
+      }
+      /// <summary>
+      /// Creates a SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema CreateSKAdNetworkConversionValueSchema(global::Google.Analytics.Admin.V1Alpha.CreateSKAdNetworkConversionValueSchemaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateSKAdNetworkConversionValueSchema(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema CreateSKAdNetworkConversionValueSchema(global::Google.Analytics.Admin.V1Alpha.CreateSKAdNetworkConversionValueSchemaRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateSKAdNetworkConversionValueSchema, null, options, request);
+      }
+      /// <summary>
+      /// Creates a SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema> CreateSKAdNetworkConversionValueSchemaAsync(global::Google.Analytics.Admin.V1Alpha.CreateSKAdNetworkConversionValueSchemaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateSKAdNetworkConversionValueSchemaAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema> CreateSKAdNetworkConversionValueSchemaAsync(global::Google.Analytics.Admin.V1Alpha.CreateSKAdNetworkConversionValueSchemaRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateSKAdNetworkConversionValueSchema, null, options, request);
+      }
+      /// <summary>
+      /// Deletes target SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSKAdNetworkConversionValueSchema(global::Google.Analytics.Admin.V1Alpha.DeleteSKAdNetworkConversionValueSchemaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteSKAdNetworkConversionValueSchema(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes target SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSKAdNetworkConversionValueSchema(global::Google.Analytics.Admin.V1Alpha.DeleteSKAdNetworkConversionValueSchemaRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteSKAdNetworkConversionValueSchema, null, options, request);
+      }
+      /// <summary>
+      /// Deletes target SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSKAdNetworkConversionValueSchemaAsync(global::Google.Analytics.Admin.V1Alpha.DeleteSKAdNetworkConversionValueSchemaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteSKAdNetworkConversionValueSchemaAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes target SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSKAdNetworkConversionValueSchemaAsync(global::Google.Analytics.Admin.V1Alpha.DeleteSKAdNetworkConversionValueSchemaRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteSKAdNetworkConversionValueSchema, null, options, request);
+      }
+      /// <summary>
+      /// Updates a SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema UpdateSKAdNetworkConversionValueSchema(global::Google.Analytics.Admin.V1Alpha.UpdateSKAdNetworkConversionValueSchemaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSKAdNetworkConversionValueSchema(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema UpdateSKAdNetworkConversionValueSchema(global::Google.Analytics.Admin.V1Alpha.UpdateSKAdNetworkConversionValueSchemaRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateSKAdNetworkConversionValueSchema, null, options, request);
+      }
+      /// <summary>
+      /// Updates a SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema> UpdateSKAdNetworkConversionValueSchemaAsync(global::Google.Analytics.Admin.V1Alpha.UpdateSKAdNetworkConversionValueSchemaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSKAdNetworkConversionValueSchemaAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema> UpdateSKAdNetworkConversionValueSchemaAsync(global::Google.Analytics.Admin.V1Alpha.UpdateSKAdNetworkConversionValueSchemaRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateSKAdNetworkConversionValueSchema, null, options, request);
+      }
+      /// <summary>
+      /// Lists SKAdNetworkConversionValueSchema on a stream.
+      /// Properties can have at most one SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasResponse ListSKAdNetworkConversionValueSchemas(global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSKAdNetworkConversionValueSchemas(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists SKAdNetworkConversionValueSchema on a stream.
+      /// Properties can have at most one SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasResponse ListSKAdNetworkConversionValueSchemas(global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListSKAdNetworkConversionValueSchemas, null, options, request);
+      }
+      /// <summary>
+      /// Lists SKAdNetworkConversionValueSchema on a stream.
+      /// Properties can have at most one SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasResponse> ListSKAdNetworkConversionValueSchemasAsync(global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSKAdNetworkConversionValueSchemasAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists SKAdNetworkConversionValueSchema on a stream.
+      /// Properties can have at most one SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasResponse> ListSKAdNetworkConversionValueSchemasAsync(global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListSKAdNetworkConversionValueSchemas, null, options, request);
       }
       /// <summary>
       /// Searches through all changes to an account or its children given the
@@ -9408,6 +9767,11 @@ namespace Google.Analytics.Admin.V1Alpha {
           .AddMethod(__Method_DeleteMeasurementProtocolSecret, serviceImpl.DeleteMeasurementProtocolSecret)
           .AddMethod(__Method_UpdateMeasurementProtocolSecret, serviceImpl.UpdateMeasurementProtocolSecret)
           .AddMethod(__Method_AcknowledgeUserDataCollection, serviceImpl.AcknowledgeUserDataCollection)
+          .AddMethod(__Method_GetSKAdNetworkConversionValueSchema, serviceImpl.GetSKAdNetworkConversionValueSchema)
+          .AddMethod(__Method_CreateSKAdNetworkConversionValueSchema, serviceImpl.CreateSKAdNetworkConversionValueSchema)
+          .AddMethod(__Method_DeleteSKAdNetworkConversionValueSchema, serviceImpl.DeleteSKAdNetworkConversionValueSchema)
+          .AddMethod(__Method_UpdateSKAdNetworkConversionValueSchema, serviceImpl.UpdateSKAdNetworkConversionValueSchema)
+          .AddMethod(__Method_ListSKAdNetworkConversionValueSchemas, serviceImpl.ListSKAdNetworkConversionValueSchemas)
           .AddMethod(__Method_SearchChangeHistoryEvents, serviceImpl.SearchChangeHistoryEvents)
           .AddMethod(__Method_GetGoogleSignalsSettings, serviceImpl.GetGoogleSignalsSettings)
           .AddMethod(__Method_UpdateGoogleSignalsSettings, serviceImpl.UpdateGoogleSignalsSettings)
@@ -9540,6 +9904,11 @@ namespace Google.Analytics.Admin.V1Alpha {
       serviceBinder.AddMethod(__Method_DeleteMeasurementProtocolSecret, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteMeasurementProtocolSecretRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteMeasurementProtocolSecret));
       serviceBinder.AddMethod(__Method_UpdateMeasurementProtocolSecret, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateMeasurementProtocolSecretRequest, global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret>(serviceImpl.UpdateMeasurementProtocolSecret));
       serviceBinder.AddMethod(__Method_AcknowledgeUserDataCollection, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.AcknowledgeUserDataCollectionRequest, global::Google.Analytics.Admin.V1Alpha.AcknowledgeUserDataCollectionResponse>(serviceImpl.AcknowledgeUserDataCollection));
+      serviceBinder.AddMethod(__Method_GetSKAdNetworkConversionValueSchema, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetSKAdNetworkConversionValueSchemaRequest, global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema>(serviceImpl.GetSKAdNetworkConversionValueSchema));
+      serviceBinder.AddMethod(__Method_CreateSKAdNetworkConversionValueSchema, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateSKAdNetworkConversionValueSchemaRequest, global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema>(serviceImpl.CreateSKAdNetworkConversionValueSchema));
+      serviceBinder.AddMethod(__Method_DeleteSKAdNetworkConversionValueSchema, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteSKAdNetworkConversionValueSchemaRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteSKAdNetworkConversionValueSchema));
+      serviceBinder.AddMethod(__Method_UpdateSKAdNetworkConversionValueSchema, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateSKAdNetworkConversionValueSchemaRequest, global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema>(serviceImpl.UpdateSKAdNetworkConversionValueSchema));
+      serviceBinder.AddMethod(__Method_ListSKAdNetworkConversionValueSchemas, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasRequest, global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasResponse>(serviceImpl.ListSKAdNetworkConversionValueSchemas));
       serviceBinder.AddMethod(__Method_SearchChangeHistoryEvents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsRequest, global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsResponse>(serviceImpl.SearchChangeHistoryEvents));
       serviceBinder.AddMethod(__Method_GetGoogleSignalsSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetGoogleSignalsSettingsRequest, global::Google.Analytics.Admin.V1Alpha.GoogleSignalsSettings>(serviceImpl.GetGoogleSignalsSettings));
       serviceBinder.AddMethod(__Method_UpdateGoogleSignalsSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateGoogleSignalsSettingsRequest, global::Google.Analytics.Admin.V1Alpha.GoogleSignalsSettings>(serviceImpl.UpdateGoogleSignalsSettings));

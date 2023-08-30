@@ -3653,6 +3653,613 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetSKAdNetworkConversionValueSchema</summary>
+        public void GetSKAdNetworkConversionValueSchemaRequestObject()
+        {
+            // Snippet: GetSKAdNetworkConversionValueSchema(GetSKAdNetworkConversionValueSchemaRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            GetSKAdNetworkConversionValueSchemaRequest request = new GetSKAdNetworkConversionValueSchemaRequest
+            {
+                SKAdNetworkConversionValueSchemaName = SKAdNetworkConversionValueSchemaName.FromPropertyDataStreamSkadnetworkConversionValueSchema("[PROPERTY]", "[DATA_STREAM]", "[SKADNETWORK_CONVERSION_VALUE_SCHEMA]"),
+            };
+            // Make the request
+            SKAdNetworkConversionValueSchema response = analyticsAdminServiceClient.GetSKAdNetworkConversionValueSchema(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSKAdNetworkConversionValueSchemaAsync</summary>
+        public async Task GetSKAdNetworkConversionValueSchemaRequestObjectAsync()
+        {
+            // Snippet: GetSKAdNetworkConversionValueSchemaAsync(GetSKAdNetworkConversionValueSchemaRequest, CallSettings)
+            // Additional: GetSKAdNetworkConversionValueSchemaAsync(GetSKAdNetworkConversionValueSchemaRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetSKAdNetworkConversionValueSchemaRequest request = new GetSKAdNetworkConversionValueSchemaRequest
+            {
+                SKAdNetworkConversionValueSchemaName = SKAdNetworkConversionValueSchemaName.FromPropertyDataStreamSkadnetworkConversionValueSchema("[PROPERTY]", "[DATA_STREAM]", "[SKADNETWORK_CONVERSION_VALUE_SCHEMA]"),
+            };
+            // Make the request
+            SKAdNetworkConversionValueSchema response = await analyticsAdminServiceClient.GetSKAdNetworkConversionValueSchemaAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSKAdNetworkConversionValueSchema</summary>
+        public void GetSKAdNetworkConversionValueSchema()
+        {
+            // Snippet: GetSKAdNetworkConversionValueSchema(string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/dataStreams/[DATA_STREAM]/sKAdNetworkConversionValueSchema/[SKADNETWORK_CONVERSION_VALUE_SCHEMA]";
+            // Make the request
+            SKAdNetworkConversionValueSchema response = analyticsAdminServiceClient.GetSKAdNetworkConversionValueSchema(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSKAdNetworkConversionValueSchemaAsync</summary>
+        public async Task GetSKAdNetworkConversionValueSchemaAsync()
+        {
+            // Snippet: GetSKAdNetworkConversionValueSchemaAsync(string, CallSettings)
+            // Additional: GetSKAdNetworkConversionValueSchemaAsync(string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/dataStreams/[DATA_STREAM]/sKAdNetworkConversionValueSchema/[SKADNETWORK_CONVERSION_VALUE_SCHEMA]";
+            // Make the request
+            SKAdNetworkConversionValueSchema response = await analyticsAdminServiceClient.GetSKAdNetworkConversionValueSchemaAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSKAdNetworkConversionValueSchema</summary>
+        public void GetSKAdNetworkConversionValueSchemaResourceNames()
+        {
+            // Snippet: GetSKAdNetworkConversionValueSchema(SKAdNetworkConversionValueSchemaName, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            SKAdNetworkConversionValueSchemaName name = SKAdNetworkConversionValueSchemaName.FromPropertyDataStreamSkadnetworkConversionValueSchema("[PROPERTY]", "[DATA_STREAM]", "[SKADNETWORK_CONVERSION_VALUE_SCHEMA]");
+            // Make the request
+            SKAdNetworkConversionValueSchema response = analyticsAdminServiceClient.GetSKAdNetworkConversionValueSchema(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSKAdNetworkConversionValueSchemaAsync</summary>
+        public async Task GetSKAdNetworkConversionValueSchemaResourceNamesAsync()
+        {
+            // Snippet: GetSKAdNetworkConversionValueSchemaAsync(SKAdNetworkConversionValueSchemaName, CallSettings)
+            // Additional: GetSKAdNetworkConversionValueSchemaAsync(SKAdNetworkConversionValueSchemaName, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SKAdNetworkConversionValueSchemaName name = SKAdNetworkConversionValueSchemaName.FromPropertyDataStreamSkadnetworkConversionValueSchema("[PROPERTY]", "[DATA_STREAM]", "[SKADNETWORK_CONVERSION_VALUE_SCHEMA]");
+            // Make the request
+            SKAdNetworkConversionValueSchema response = await analyticsAdminServiceClient.GetSKAdNetworkConversionValueSchemaAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSKAdNetworkConversionValueSchema</summary>
+        public void CreateSKAdNetworkConversionValueSchemaRequestObject()
+        {
+            // Snippet: CreateSKAdNetworkConversionValueSchema(CreateSKAdNetworkConversionValueSchemaRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            CreateSKAdNetworkConversionValueSchemaRequest request = new CreateSKAdNetworkConversionValueSchemaRequest
+            {
+                ParentAsDataStreamName = DataStreamName.FromPropertyDataStream("[PROPERTY]", "[DATA_STREAM]"),
+                SkadnetworkConversionValueSchema = new SKAdNetworkConversionValueSchema(),
+            };
+            // Make the request
+            SKAdNetworkConversionValueSchema response = analyticsAdminServiceClient.CreateSKAdNetworkConversionValueSchema(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSKAdNetworkConversionValueSchemaAsync</summary>
+        public async Task CreateSKAdNetworkConversionValueSchemaRequestObjectAsync()
+        {
+            // Snippet: CreateSKAdNetworkConversionValueSchemaAsync(CreateSKAdNetworkConversionValueSchemaRequest, CallSettings)
+            // Additional: CreateSKAdNetworkConversionValueSchemaAsync(CreateSKAdNetworkConversionValueSchemaRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateSKAdNetworkConversionValueSchemaRequest request = new CreateSKAdNetworkConversionValueSchemaRequest
+            {
+                ParentAsDataStreamName = DataStreamName.FromPropertyDataStream("[PROPERTY]", "[DATA_STREAM]"),
+                SkadnetworkConversionValueSchema = new SKAdNetworkConversionValueSchema(),
+            };
+            // Make the request
+            SKAdNetworkConversionValueSchema response = await analyticsAdminServiceClient.CreateSKAdNetworkConversionValueSchemaAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSKAdNetworkConversionValueSchema</summary>
+        public void CreateSKAdNetworkConversionValueSchema()
+        {
+            // Snippet: CreateSKAdNetworkConversionValueSchema(string, SKAdNetworkConversionValueSchema, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]/dataStreams/[DATA_STREAM]";
+            SKAdNetworkConversionValueSchema skadnetworkConversionValueSchema = new SKAdNetworkConversionValueSchema();
+            // Make the request
+            SKAdNetworkConversionValueSchema response = analyticsAdminServiceClient.CreateSKAdNetworkConversionValueSchema(parent, skadnetworkConversionValueSchema);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSKAdNetworkConversionValueSchemaAsync</summary>
+        public async Task CreateSKAdNetworkConversionValueSchemaAsync()
+        {
+            // Snippet: CreateSKAdNetworkConversionValueSchemaAsync(string, SKAdNetworkConversionValueSchema, CallSettings)
+            // Additional: CreateSKAdNetworkConversionValueSchemaAsync(string, SKAdNetworkConversionValueSchema, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]/dataStreams/[DATA_STREAM]";
+            SKAdNetworkConversionValueSchema skadnetworkConversionValueSchema = new SKAdNetworkConversionValueSchema();
+            // Make the request
+            SKAdNetworkConversionValueSchema response = await analyticsAdminServiceClient.CreateSKAdNetworkConversionValueSchemaAsync(parent, skadnetworkConversionValueSchema);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSKAdNetworkConversionValueSchema</summary>
+        public void CreateSKAdNetworkConversionValueSchemaResourceNames()
+        {
+            // Snippet: CreateSKAdNetworkConversionValueSchema(DataStreamName, SKAdNetworkConversionValueSchema, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            DataStreamName parent = DataStreamName.FromPropertyDataStream("[PROPERTY]", "[DATA_STREAM]");
+            SKAdNetworkConversionValueSchema skadnetworkConversionValueSchema = new SKAdNetworkConversionValueSchema();
+            // Make the request
+            SKAdNetworkConversionValueSchema response = analyticsAdminServiceClient.CreateSKAdNetworkConversionValueSchema(parent, skadnetworkConversionValueSchema);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSKAdNetworkConversionValueSchemaAsync</summary>
+        public async Task CreateSKAdNetworkConversionValueSchemaResourceNamesAsync()
+        {
+            // Snippet: CreateSKAdNetworkConversionValueSchemaAsync(DataStreamName, SKAdNetworkConversionValueSchema, CallSettings)
+            // Additional: CreateSKAdNetworkConversionValueSchemaAsync(DataStreamName, SKAdNetworkConversionValueSchema, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DataStreamName parent = DataStreamName.FromPropertyDataStream("[PROPERTY]", "[DATA_STREAM]");
+            SKAdNetworkConversionValueSchema skadnetworkConversionValueSchema = new SKAdNetworkConversionValueSchema();
+            // Make the request
+            SKAdNetworkConversionValueSchema response = await analyticsAdminServiceClient.CreateSKAdNetworkConversionValueSchemaAsync(parent, skadnetworkConversionValueSchema);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSKAdNetworkConversionValueSchema</summary>
+        public void DeleteSKAdNetworkConversionValueSchemaRequestObject()
+        {
+            // Snippet: DeleteSKAdNetworkConversionValueSchema(DeleteSKAdNetworkConversionValueSchemaRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteSKAdNetworkConversionValueSchemaRequest request = new DeleteSKAdNetworkConversionValueSchemaRequest
+            {
+                SKAdNetworkConversionValueSchemaName = SKAdNetworkConversionValueSchemaName.FromPropertyDataStreamSkadnetworkConversionValueSchema("[PROPERTY]", "[DATA_STREAM]", "[SKADNETWORK_CONVERSION_VALUE_SCHEMA]"),
+            };
+            // Make the request
+            analyticsAdminServiceClient.DeleteSKAdNetworkConversionValueSchema(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSKAdNetworkConversionValueSchemaAsync</summary>
+        public async Task DeleteSKAdNetworkConversionValueSchemaRequestObjectAsync()
+        {
+            // Snippet: DeleteSKAdNetworkConversionValueSchemaAsync(DeleteSKAdNetworkConversionValueSchemaRequest, CallSettings)
+            // Additional: DeleteSKAdNetworkConversionValueSchemaAsync(DeleteSKAdNetworkConversionValueSchemaRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteSKAdNetworkConversionValueSchemaRequest request = new DeleteSKAdNetworkConversionValueSchemaRequest
+            {
+                SKAdNetworkConversionValueSchemaName = SKAdNetworkConversionValueSchemaName.FromPropertyDataStreamSkadnetworkConversionValueSchema("[PROPERTY]", "[DATA_STREAM]", "[SKADNETWORK_CONVERSION_VALUE_SCHEMA]"),
+            };
+            // Make the request
+            await analyticsAdminServiceClient.DeleteSKAdNetworkConversionValueSchemaAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSKAdNetworkConversionValueSchema</summary>
+        public void DeleteSKAdNetworkConversionValueSchema()
+        {
+            // Snippet: DeleteSKAdNetworkConversionValueSchema(string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/dataStreams/[DATA_STREAM]/sKAdNetworkConversionValueSchema/[SKADNETWORK_CONVERSION_VALUE_SCHEMA]";
+            // Make the request
+            analyticsAdminServiceClient.DeleteSKAdNetworkConversionValueSchema(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSKAdNetworkConversionValueSchemaAsync</summary>
+        public async Task DeleteSKAdNetworkConversionValueSchemaAsync()
+        {
+            // Snippet: DeleteSKAdNetworkConversionValueSchemaAsync(string, CallSettings)
+            // Additional: DeleteSKAdNetworkConversionValueSchemaAsync(string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/dataStreams/[DATA_STREAM]/sKAdNetworkConversionValueSchema/[SKADNETWORK_CONVERSION_VALUE_SCHEMA]";
+            // Make the request
+            await analyticsAdminServiceClient.DeleteSKAdNetworkConversionValueSchemaAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSKAdNetworkConversionValueSchema</summary>
+        public void DeleteSKAdNetworkConversionValueSchemaResourceNames()
+        {
+            // Snippet: DeleteSKAdNetworkConversionValueSchema(SKAdNetworkConversionValueSchemaName, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            SKAdNetworkConversionValueSchemaName name = SKAdNetworkConversionValueSchemaName.FromPropertyDataStreamSkadnetworkConversionValueSchema("[PROPERTY]", "[DATA_STREAM]", "[SKADNETWORK_CONVERSION_VALUE_SCHEMA]");
+            // Make the request
+            analyticsAdminServiceClient.DeleteSKAdNetworkConversionValueSchema(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSKAdNetworkConversionValueSchemaAsync</summary>
+        public async Task DeleteSKAdNetworkConversionValueSchemaResourceNamesAsync()
+        {
+            // Snippet: DeleteSKAdNetworkConversionValueSchemaAsync(SKAdNetworkConversionValueSchemaName, CallSettings)
+            // Additional: DeleteSKAdNetworkConversionValueSchemaAsync(SKAdNetworkConversionValueSchemaName, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SKAdNetworkConversionValueSchemaName name = SKAdNetworkConversionValueSchemaName.FromPropertyDataStreamSkadnetworkConversionValueSchema("[PROPERTY]", "[DATA_STREAM]", "[SKADNETWORK_CONVERSION_VALUE_SCHEMA]");
+            // Make the request
+            await analyticsAdminServiceClient.DeleteSKAdNetworkConversionValueSchemaAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSKAdNetworkConversionValueSchema</summary>
+        public void UpdateSKAdNetworkConversionValueSchemaRequestObject()
+        {
+            // Snippet: UpdateSKAdNetworkConversionValueSchema(UpdateSKAdNetworkConversionValueSchemaRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateSKAdNetworkConversionValueSchemaRequest request = new UpdateSKAdNetworkConversionValueSchemaRequest
+            {
+                SkadnetworkConversionValueSchema = new SKAdNetworkConversionValueSchema(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            SKAdNetworkConversionValueSchema response = analyticsAdminServiceClient.UpdateSKAdNetworkConversionValueSchema(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSKAdNetworkConversionValueSchemaAsync</summary>
+        public async Task UpdateSKAdNetworkConversionValueSchemaRequestObjectAsync()
+        {
+            // Snippet: UpdateSKAdNetworkConversionValueSchemaAsync(UpdateSKAdNetworkConversionValueSchemaRequest, CallSettings)
+            // Additional: UpdateSKAdNetworkConversionValueSchemaAsync(UpdateSKAdNetworkConversionValueSchemaRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateSKAdNetworkConversionValueSchemaRequest request = new UpdateSKAdNetworkConversionValueSchemaRequest
+            {
+                SkadnetworkConversionValueSchema = new SKAdNetworkConversionValueSchema(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            SKAdNetworkConversionValueSchema response = await analyticsAdminServiceClient.UpdateSKAdNetworkConversionValueSchemaAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSKAdNetworkConversionValueSchema</summary>
+        public void UpdateSKAdNetworkConversionValueSchema()
+        {
+            // Snippet: UpdateSKAdNetworkConversionValueSchema(SKAdNetworkConversionValueSchema, FieldMask, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            SKAdNetworkConversionValueSchema skadnetworkConversionValueSchema = new SKAdNetworkConversionValueSchema();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            SKAdNetworkConversionValueSchema response = analyticsAdminServiceClient.UpdateSKAdNetworkConversionValueSchema(skadnetworkConversionValueSchema, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSKAdNetworkConversionValueSchemaAsync</summary>
+        public async Task UpdateSKAdNetworkConversionValueSchemaAsync()
+        {
+            // Snippet: UpdateSKAdNetworkConversionValueSchemaAsync(SKAdNetworkConversionValueSchema, FieldMask, CallSettings)
+            // Additional: UpdateSKAdNetworkConversionValueSchemaAsync(SKAdNetworkConversionValueSchema, FieldMask, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SKAdNetworkConversionValueSchema skadnetworkConversionValueSchema = new SKAdNetworkConversionValueSchema();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            SKAdNetworkConversionValueSchema response = await analyticsAdminServiceClient.UpdateSKAdNetworkConversionValueSchemaAsync(skadnetworkConversionValueSchema, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSKAdNetworkConversionValueSchemas</summary>
+        public void ListSKAdNetworkConversionValueSchemasRequestObject()
+        {
+            // Snippet: ListSKAdNetworkConversionValueSchemas(ListSKAdNetworkConversionValueSchemasRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            ListSKAdNetworkConversionValueSchemasRequest request = new ListSKAdNetworkConversionValueSchemasRequest
+            {
+                ParentAsDataStreamName = DataStreamName.FromPropertyDataStream("[PROPERTY]", "[DATA_STREAM]"),
+            };
+            // Make the request
+            PagedEnumerable<ListSKAdNetworkConversionValueSchemasResponse, SKAdNetworkConversionValueSchema> response = analyticsAdminServiceClient.ListSKAdNetworkConversionValueSchemas(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SKAdNetworkConversionValueSchema item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSKAdNetworkConversionValueSchemasResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SKAdNetworkConversionValueSchema item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SKAdNetworkConversionValueSchema> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SKAdNetworkConversionValueSchema item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSKAdNetworkConversionValueSchemasAsync</summary>
+        public async Task ListSKAdNetworkConversionValueSchemasRequestObjectAsync()
+        {
+            // Snippet: ListSKAdNetworkConversionValueSchemasAsync(ListSKAdNetworkConversionValueSchemasRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListSKAdNetworkConversionValueSchemasRequest request = new ListSKAdNetworkConversionValueSchemasRequest
+            {
+                ParentAsDataStreamName = DataStreamName.FromPropertyDataStream("[PROPERTY]", "[DATA_STREAM]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListSKAdNetworkConversionValueSchemasResponse, SKAdNetworkConversionValueSchema> response = analyticsAdminServiceClient.ListSKAdNetworkConversionValueSchemasAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SKAdNetworkConversionValueSchema item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSKAdNetworkConversionValueSchemasResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SKAdNetworkConversionValueSchema item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SKAdNetworkConversionValueSchema> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SKAdNetworkConversionValueSchema item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSKAdNetworkConversionValueSchemas</summary>
+        public void ListSKAdNetworkConversionValueSchemas()
+        {
+            // Snippet: ListSKAdNetworkConversionValueSchemas(string, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]/dataStreams/[DATA_STREAM]";
+            // Make the request
+            PagedEnumerable<ListSKAdNetworkConversionValueSchemasResponse, SKAdNetworkConversionValueSchema> response = analyticsAdminServiceClient.ListSKAdNetworkConversionValueSchemas(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SKAdNetworkConversionValueSchema item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSKAdNetworkConversionValueSchemasResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SKAdNetworkConversionValueSchema item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SKAdNetworkConversionValueSchema> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SKAdNetworkConversionValueSchema item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSKAdNetworkConversionValueSchemasAsync</summary>
+        public async Task ListSKAdNetworkConversionValueSchemasAsync()
+        {
+            // Snippet: ListSKAdNetworkConversionValueSchemasAsync(string, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]/dataStreams/[DATA_STREAM]";
+            // Make the request
+            PagedAsyncEnumerable<ListSKAdNetworkConversionValueSchemasResponse, SKAdNetworkConversionValueSchema> response = analyticsAdminServiceClient.ListSKAdNetworkConversionValueSchemasAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SKAdNetworkConversionValueSchema item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSKAdNetworkConversionValueSchemasResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SKAdNetworkConversionValueSchema item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SKAdNetworkConversionValueSchema> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SKAdNetworkConversionValueSchema item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSKAdNetworkConversionValueSchemas</summary>
+        public void ListSKAdNetworkConversionValueSchemasResourceNames()
+        {
+            // Snippet: ListSKAdNetworkConversionValueSchemas(DataStreamName, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            DataStreamName parent = DataStreamName.FromPropertyDataStream("[PROPERTY]", "[DATA_STREAM]");
+            // Make the request
+            PagedEnumerable<ListSKAdNetworkConversionValueSchemasResponse, SKAdNetworkConversionValueSchema> response = analyticsAdminServiceClient.ListSKAdNetworkConversionValueSchemas(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SKAdNetworkConversionValueSchema item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSKAdNetworkConversionValueSchemasResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SKAdNetworkConversionValueSchema item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SKAdNetworkConversionValueSchema> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SKAdNetworkConversionValueSchema item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSKAdNetworkConversionValueSchemasAsync</summary>
+        public async Task ListSKAdNetworkConversionValueSchemasResourceNamesAsync()
+        {
+            // Snippet: ListSKAdNetworkConversionValueSchemasAsync(DataStreamName, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DataStreamName parent = DataStreamName.FromPropertyDataStream("[PROPERTY]", "[DATA_STREAM]");
+            // Make the request
+            PagedAsyncEnumerable<ListSKAdNetworkConversionValueSchemasResponse, SKAdNetworkConversionValueSchema> response = analyticsAdminServiceClient.ListSKAdNetworkConversionValueSchemasAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SKAdNetworkConversionValueSchema item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSKAdNetworkConversionValueSchemasResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SKAdNetworkConversionValueSchema item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SKAdNetworkConversionValueSchema> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SKAdNetworkConversionValueSchema item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         /// <summary>Snippet for SearchChangeHistoryEvents</summary>
         public void SearchChangeHistoryEventsRequestObject()
         {

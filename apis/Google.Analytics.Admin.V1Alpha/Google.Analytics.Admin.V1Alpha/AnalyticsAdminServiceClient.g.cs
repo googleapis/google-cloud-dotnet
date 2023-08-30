@@ -84,6 +84,11 @@ namespace Google.Analytics.Admin.V1Alpha
             DeleteMeasurementProtocolSecretSettings = existing.DeleteMeasurementProtocolSecretSettings;
             UpdateMeasurementProtocolSecretSettings = existing.UpdateMeasurementProtocolSecretSettings;
             AcknowledgeUserDataCollectionSettings = existing.AcknowledgeUserDataCollectionSettings;
+            GetSKAdNetworkConversionValueSchemaSettings = existing.GetSKAdNetworkConversionValueSchemaSettings;
+            CreateSKAdNetworkConversionValueSchemaSettings = existing.CreateSKAdNetworkConversionValueSchemaSettings;
+            DeleteSKAdNetworkConversionValueSchemaSettings = existing.DeleteSKAdNetworkConversionValueSchemaSettings;
+            UpdateSKAdNetworkConversionValueSchemaSettings = existing.UpdateSKAdNetworkConversionValueSchemaSettings;
+            ListSKAdNetworkConversionValueSchemasSettings = existing.ListSKAdNetworkConversionValueSchemasSettings;
             SearchChangeHistoryEventsSettings = existing.SearchChangeHistoryEventsSettings;
             GetGoogleSignalsSettingsSettings = existing.GetGoogleSignalsSettingsSettings;
             UpdateGoogleSignalsSettingsSettings = existing.UpdateGoogleSignalsSettingsSettings;
@@ -708,6 +713,116 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings AcknowledgeUserDataCollectionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.GetSKAdNetworkConversionValueSchema</c> and
+        /// <c>AnalyticsAdminServiceClient.GetSKAdNetworkConversionValueSchemaAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetSKAdNetworkConversionValueSchemaSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.CreateSKAdNetworkConversionValueSchema</c> and
+        /// <c>AnalyticsAdminServiceClient.CreateSKAdNetworkConversionValueSchemaAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateSKAdNetworkConversionValueSchemaSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.DeleteSKAdNetworkConversionValueSchema</c> and
+        /// <c>AnalyticsAdminServiceClient.DeleteSKAdNetworkConversionValueSchemaAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteSKAdNetworkConversionValueSchemaSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.UpdateSKAdNetworkConversionValueSchema</c> and
+        /// <c>AnalyticsAdminServiceClient.UpdateSKAdNetworkConversionValueSchemaAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateSKAdNetworkConversionValueSchemaSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.ListSKAdNetworkConversionValueSchemas</c> and
+        /// <c>AnalyticsAdminServiceClient.ListSKAdNetworkConversionValueSchemasAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListSKAdNetworkConversionValueSchemasSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -6252,6 +6367,587 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<AcknowledgeUserDataCollectionResponse> AcknowledgeUserDataCollectionAsync(AcknowledgeUserDataCollectionRequest request, st::CancellationToken cancellationToken) =>
             AcknowledgeUserDataCollectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Looks up a single SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SKAdNetworkConversionValueSchema GetSKAdNetworkConversionValueSchema(GetSKAdNetworkConversionValueSchemaRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Looks up a single SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SKAdNetworkConversionValueSchema> GetSKAdNetworkConversionValueSchemaAsync(GetSKAdNetworkConversionValueSchemaRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Looks up a single SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SKAdNetworkConversionValueSchema> GetSKAdNetworkConversionValueSchemaAsync(GetSKAdNetworkConversionValueSchemaRequest request, st::CancellationToken cancellationToken) =>
+            GetSKAdNetworkConversionValueSchemaAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Looks up a single SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of SKAdNetwork conversion value schema to look
+        /// up. Format:
+        /// properties/{property}/dataStreams/{dataStream}/sKAdNetworkConversionValueSchema/{skadnetwork_conversion_value_schema}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SKAdNetworkConversionValueSchema GetSKAdNetworkConversionValueSchema(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSKAdNetworkConversionValueSchema(new GetSKAdNetworkConversionValueSchemaRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Looks up a single SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of SKAdNetwork conversion value schema to look
+        /// up. Format:
+        /// properties/{property}/dataStreams/{dataStream}/sKAdNetworkConversionValueSchema/{skadnetwork_conversion_value_schema}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SKAdNetworkConversionValueSchema> GetSKAdNetworkConversionValueSchemaAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSKAdNetworkConversionValueSchemaAsync(new GetSKAdNetworkConversionValueSchemaRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Looks up a single SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of SKAdNetwork conversion value schema to look
+        /// up. Format:
+        /// properties/{property}/dataStreams/{dataStream}/sKAdNetworkConversionValueSchema/{skadnetwork_conversion_value_schema}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SKAdNetworkConversionValueSchema> GetSKAdNetworkConversionValueSchemaAsync(string name, st::CancellationToken cancellationToken) =>
+            GetSKAdNetworkConversionValueSchemaAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Looks up a single SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of SKAdNetwork conversion value schema to look
+        /// up. Format:
+        /// properties/{property}/dataStreams/{dataStream}/sKAdNetworkConversionValueSchema/{skadnetwork_conversion_value_schema}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SKAdNetworkConversionValueSchema GetSKAdNetworkConversionValueSchema(SKAdNetworkConversionValueSchemaName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSKAdNetworkConversionValueSchema(new GetSKAdNetworkConversionValueSchemaRequest
+            {
+                SKAdNetworkConversionValueSchemaName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Looks up a single SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of SKAdNetwork conversion value schema to look
+        /// up. Format:
+        /// properties/{property}/dataStreams/{dataStream}/sKAdNetworkConversionValueSchema/{skadnetwork_conversion_value_schema}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SKAdNetworkConversionValueSchema> GetSKAdNetworkConversionValueSchemaAsync(SKAdNetworkConversionValueSchemaName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSKAdNetworkConversionValueSchemaAsync(new GetSKAdNetworkConversionValueSchemaRequest
+            {
+                SKAdNetworkConversionValueSchemaName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Looks up a single SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of SKAdNetwork conversion value schema to look
+        /// up. Format:
+        /// properties/{property}/dataStreams/{dataStream}/sKAdNetworkConversionValueSchema/{skadnetwork_conversion_value_schema}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SKAdNetworkConversionValueSchema> GetSKAdNetworkConversionValueSchemaAsync(SKAdNetworkConversionValueSchemaName name, st::CancellationToken cancellationToken) =>
+            GetSKAdNetworkConversionValueSchemaAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SKAdNetworkConversionValueSchema CreateSKAdNetworkConversionValueSchema(CreateSKAdNetworkConversionValueSchemaRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SKAdNetworkConversionValueSchema> CreateSKAdNetworkConversionValueSchemaAsync(CreateSKAdNetworkConversionValueSchemaRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SKAdNetworkConversionValueSchema> CreateSKAdNetworkConversionValueSchemaAsync(CreateSKAdNetworkConversionValueSchemaRequest request, st::CancellationToken cancellationToken) =>
+            CreateSKAdNetworkConversionValueSchemaAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this schema will be created.
+        /// Format: properties/{property}/dataStreams/{dataStream}
+        /// </param>
+        /// <param name="skadnetworkConversionValueSchema">
+        /// Required. SKAdNetwork conversion value schema to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SKAdNetworkConversionValueSchema CreateSKAdNetworkConversionValueSchema(string parent, SKAdNetworkConversionValueSchema skadnetworkConversionValueSchema, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSKAdNetworkConversionValueSchema(new CreateSKAdNetworkConversionValueSchemaRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                SkadnetworkConversionValueSchema = gax::GaxPreconditions.CheckNotNull(skadnetworkConversionValueSchema, nameof(skadnetworkConversionValueSchema)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this schema will be created.
+        /// Format: properties/{property}/dataStreams/{dataStream}
+        /// </param>
+        /// <param name="skadnetworkConversionValueSchema">
+        /// Required. SKAdNetwork conversion value schema to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SKAdNetworkConversionValueSchema> CreateSKAdNetworkConversionValueSchemaAsync(string parent, SKAdNetworkConversionValueSchema skadnetworkConversionValueSchema, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSKAdNetworkConversionValueSchemaAsync(new CreateSKAdNetworkConversionValueSchemaRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                SkadnetworkConversionValueSchema = gax::GaxPreconditions.CheckNotNull(skadnetworkConversionValueSchema, nameof(skadnetworkConversionValueSchema)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this schema will be created.
+        /// Format: properties/{property}/dataStreams/{dataStream}
+        /// </param>
+        /// <param name="skadnetworkConversionValueSchema">
+        /// Required. SKAdNetwork conversion value schema to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SKAdNetworkConversionValueSchema> CreateSKAdNetworkConversionValueSchemaAsync(string parent, SKAdNetworkConversionValueSchema skadnetworkConversionValueSchema, st::CancellationToken cancellationToken) =>
+            CreateSKAdNetworkConversionValueSchemaAsync(parent, skadnetworkConversionValueSchema, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this schema will be created.
+        /// Format: properties/{property}/dataStreams/{dataStream}
+        /// </param>
+        /// <param name="skadnetworkConversionValueSchema">
+        /// Required. SKAdNetwork conversion value schema to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SKAdNetworkConversionValueSchema CreateSKAdNetworkConversionValueSchema(DataStreamName parent, SKAdNetworkConversionValueSchema skadnetworkConversionValueSchema, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSKAdNetworkConversionValueSchema(new CreateSKAdNetworkConversionValueSchemaRequest
+            {
+                ParentAsDataStreamName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                SkadnetworkConversionValueSchema = gax::GaxPreconditions.CheckNotNull(skadnetworkConversionValueSchema, nameof(skadnetworkConversionValueSchema)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this schema will be created.
+        /// Format: properties/{property}/dataStreams/{dataStream}
+        /// </param>
+        /// <param name="skadnetworkConversionValueSchema">
+        /// Required. SKAdNetwork conversion value schema to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SKAdNetworkConversionValueSchema> CreateSKAdNetworkConversionValueSchemaAsync(DataStreamName parent, SKAdNetworkConversionValueSchema skadnetworkConversionValueSchema, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSKAdNetworkConversionValueSchemaAsync(new CreateSKAdNetworkConversionValueSchemaRequest
+            {
+                ParentAsDataStreamName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                SkadnetworkConversionValueSchema = gax::GaxPreconditions.CheckNotNull(skadnetworkConversionValueSchema, nameof(skadnetworkConversionValueSchema)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this schema will be created.
+        /// Format: properties/{property}/dataStreams/{dataStream}
+        /// </param>
+        /// <param name="skadnetworkConversionValueSchema">
+        /// Required. SKAdNetwork conversion value schema to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SKAdNetworkConversionValueSchema> CreateSKAdNetworkConversionValueSchemaAsync(DataStreamName parent, SKAdNetworkConversionValueSchema skadnetworkConversionValueSchema, st::CancellationToken cancellationToken) =>
+            CreateSKAdNetworkConversionValueSchemaAsync(parent, skadnetworkConversionValueSchema, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes target SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteSKAdNetworkConversionValueSchema(DeleteSKAdNetworkConversionValueSchemaRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes target SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSKAdNetworkConversionValueSchemaAsync(DeleteSKAdNetworkConversionValueSchemaRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes target SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSKAdNetworkConversionValueSchemaAsync(DeleteSKAdNetworkConversionValueSchemaRequest request, st::CancellationToken cancellationToken) =>
+            DeleteSKAdNetworkConversionValueSchemaAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes target SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the SKAdNetworkConversionValueSchema to delete.
+        /// Format:
+        /// properties/{property}/dataStreams/{dataStream}/sKAdNetworkConversionValueSchema/{skadnetwork_conversion_value_schema}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteSKAdNetworkConversionValueSchema(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSKAdNetworkConversionValueSchema(new DeleteSKAdNetworkConversionValueSchemaRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes target SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the SKAdNetworkConversionValueSchema to delete.
+        /// Format:
+        /// properties/{property}/dataStreams/{dataStream}/sKAdNetworkConversionValueSchema/{skadnetwork_conversion_value_schema}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSKAdNetworkConversionValueSchemaAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSKAdNetworkConversionValueSchemaAsync(new DeleteSKAdNetworkConversionValueSchemaRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes target SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the SKAdNetworkConversionValueSchema to delete.
+        /// Format:
+        /// properties/{property}/dataStreams/{dataStream}/sKAdNetworkConversionValueSchema/{skadnetwork_conversion_value_schema}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSKAdNetworkConversionValueSchemaAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteSKAdNetworkConversionValueSchemaAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes target SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the SKAdNetworkConversionValueSchema to delete.
+        /// Format:
+        /// properties/{property}/dataStreams/{dataStream}/sKAdNetworkConversionValueSchema/{skadnetwork_conversion_value_schema}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteSKAdNetworkConversionValueSchema(SKAdNetworkConversionValueSchemaName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSKAdNetworkConversionValueSchema(new DeleteSKAdNetworkConversionValueSchemaRequest
+            {
+                SKAdNetworkConversionValueSchemaName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes target SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the SKAdNetworkConversionValueSchema to delete.
+        /// Format:
+        /// properties/{property}/dataStreams/{dataStream}/sKAdNetworkConversionValueSchema/{skadnetwork_conversion_value_schema}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSKAdNetworkConversionValueSchemaAsync(SKAdNetworkConversionValueSchemaName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSKAdNetworkConversionValueSchemaAsync(new DeleteSKAdNetworkConversionValueSchemaRequest
+            {
+                SKAdNetworkConversionValueSchemaName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes target SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the SKAdNetworkConversionValueSchema to delete.
+        /// Format:
+        /// properties/{property}/dataStreams/{dataStream}/sKAdNetworkConversionValueSchema/{skadnetwork_conversion_value_schema}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSKAdNetworkConversionValueSchemaAsync(SKAdNetworkConversionValueSchemaName name, st::CancellationToken cancellationToken) =>
+            DeleteSKAdNetworkConversionValueSchemaAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SKAdNetworkConversionValueSchema UpdateSKAdNetworkConversionValueSchema(UpdateSKAdNetworkConversionValueSchemaRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SKAdNetworkConversionValueSchema> UpdateSKAdNetworkConversionValueSchemaAsync(UpdateSKAdNetworkConversionValueSchemaRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SKAdNetworkConversionValueSchema> UpdateSKAdNetworkConversionValueSchemaAsync(UpdateSKAdNetworkConversionValueSchemaRequest request, st::CancellationToken cancellationToken) =>
+            UpdateSKAdNetworkConversionValueSchemaAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="skadnetworkConversionValueSchema">
+        /// Required. SKAdNetwork conversion value schema to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Omitted fields will not be
+        /// updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SKAdNetworkConversionValueSchema UpdateSKAdNetworkConversionValueSchema(SKAdNetworkConversionValueSchema skadnetworkConversionValueSchema, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSKAdNetworkConversionValueSchema(new UpdateSKAdNetworkConversionValueSchemaRequest
+            {
+                SkadnetworkConversionValueSchema = gax::GaxPreconditions.CheckNotNull(skadnetworkConversionValueSchema, nameof(skadnetworkConversionValueSchema)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="skadnetworkConversionValueSchema">
+        /// Required. SKAdNetwork conversion value schema to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Omitted fields will not be
+        /// updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SKAdNetworkConversionValueSchema> UpdateSKAdNetworkConversionValueSchemaAsync(SKAdNetworkConversionValueSchema skadnetworkConversionValueSchema, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSKAdNetworkConversionValueSchemaAsync(new UpdateSKAdNetworkConversionValueSchemaRequest
+            {
+                SkadnetworkConversionValueSchema = gax::GaxPreconditions.CheckNotNull(skadnetworkConversionValueSchema, nameof(skadnetworkConversionValueSchema)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="skadnetworkConversionValueSchema">
+        /// Required. SKAdNetwork conversion value schema to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Omitted fields will not be
+        /// updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SKAdNetworkConversionValueSchema> UpdateSKAdNetworkConversionValueSchemaAsync(SKAdNetworkConversionValueSchema skadnetworkConversionValueSchema, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateSKAdNetworkConversionValueSchemaAsync(skadnetworkConversionValueSchema, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists SKAdNetworkConversionValueSchema on a stream.
+        /// Properties can have at most one SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SKAdNetworkConversionValueSchema"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSKAdNetworkConversionValueSchemasResponse, SKAdNetworkConversionValueSchema> ListSKAdNetworkConversionValueSchemas(ListSKAdNetworkConversionValueSchemasRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists SKAdNetworkConversionValueSchema on a stream.
+        /// Properties can have at most one SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="SKAdNetworkConversionValueSchema"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListSKAdNetworkConversionValueSchemasResponse, SKAdNetworkConversionValueSchema> ListSKAdNetworkConversionValueSchemasAsync(ListSKAdNetworkConversionValueSchemasRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists SKAdNetworkConversionValueSchema on a stream.
+        /// Properties can have at most one SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format:
+        /// properties/{property_id}/dataStreams/{dataStream}/sKAdNetworkConversionValueSchema
+        /// Example: properties/1234/dataStreams/5678/sKAdNetworkConversionValueSchema
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SKAdNetworkConversionValueSchema"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSKAdNetworkConversionValueSchemasResponse, SKAdNetworkConversionValueSchema> ListSKAdNetworkConversionValueSchemas(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSKAdNetworkConversionValueSchemas(new ListSKAdNetworkConversionValueSchemasRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists SKAdNetworkConversionValueSchema on a stream.
+        /// Properties can have at most one SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format:
+        /// properties/{property_id}/dataStreams/{dataStream}/sKAdNetworkConversionValueSchema
+        /// Example: properties/1234/dataStreams/5678/sKAdNetworkConversionValueSchema
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="SKAdNetworkConversionValueSchema"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListSKAdNetworkConversionValueSchemasResponse, SKAdNetworkConversionValueSchema> ListSKAdNetworkConversionValueSchemasAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSKAdNetworkConversionValueSchemasAsync(new ListSKAdNetworkConversionValueSchemasRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists SKAdNetworkConversionValueSchema on a stream.
+        /// Properties can have at most one SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format:
+        /// properties/{property_id}/dataStreams/{dataStream}/sKAdNetworkConversionValueSchema
+        /// Example: properties/1234/dataStreams/5678/sKAdNetworkConversionValueSchema
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SKAdNetworkConversionValueSchema"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSKAdNetworkConversionValueSchemasResponse, SKAdNetworkConversionValueSchema> ListSKAdNetworkConversionValueSchemas(DataStreamName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSKAdNetworkConversionValueSchemas(new ListSKAdNetworkConversionValueSchemasRequest
+            {
+                ParentAsDataStreamName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists SKAdNetworkConversionValueSchema on a stream.
+        /// Properties can have at most one SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format:
+        /// properties/{property_id}/dataStreams/{dataStream}/sKAdNetworkConversionValueSchema
+        /// Example: properties/1234/dataStreams/5678/sKAdNetworkConversionValueSchema
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="SKAdNetworkConversionValueSchema"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListSKAdNetworkConversionValueSchemasResponse, SKAdNetworkConversionValueSchema> ListSKAdNetworkConversionValueSchemasAsync(DataStreamName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSKAdNetworkConversionValueSchemasAsync(new ListSKAdNetworkConversionValueSchemasRequest
+            {
+                ParentAsDataStreamName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
 
         /// <summary>
         /// Searches through all changes to an account or its children given the
@@ -15068,6 +15764,16 @@ namespace Google.Analytics.Admin.V1Alpha
 
         private readonly gaxgrpc::ApiCall<AcknowledgeUserDataCollectionRequest, AcknowledgeUserDataCollectionResponse> _callAcknowledgeUserDataCollection;
 
+        private readonly gaxgrpc::ApiCall<GetSKAdNetworkConversionValueSchemaRequest, SKAdNetworkConversionValueSchema> _callGetSKAdNetworkConversionValueSchema;
+
+        private readonly gaxgrpc::ApiCall<CreateSKAdNetworkConversionValueSchemaRequest, SKAdNetworkConversionValueSchema> _callCreateSKAdNetworkConversionValueSchema;
+
+        private readonly gaxgrpc::ApiCall<DeleteSKAdNetworkConversionValueSchemaRequest, wkt::Empty> _callDeleteSKAdNetworkConversionValueSchema;
+
+        private readonly gaxgrpc::ApiCall<UpdateSKAdNetworkConversionValueSchemaRequest, SKAdNetworkConversionValueSchema> _callUpdateSKAdNetworkConversionValueSchema;
+
+        private readonly gaxgrpc::ApiCall<ListSKAdNetworkConversionValueSchemasRequest, ListSKAdNetworkConversionValueSchemasResponse> _callListSKAdNetworkConversionValueSchemas;
+
         private readonly gaxgrpc::ApiCall<SearchChangeHistoryEventsRequest, SearchChangeHistoryEventsResponse> _callSearchChangeHistoryEvents;
 
         private readonly gaxgrpc::ApiCall<GetGoogleSignalsSettingsRequest, GoogleSignalsSettings> _callGetGoogleSignalsSettings;
@@ -15362,6 +16068,21 @@ namespace Google.Analytics.Admin.V1Alpha
             _callAcknowledgeUserDataCollection = clientHelper.BuildApiCall<AcknowledgeUserDataCollectionRequest, AcknowledgeUserDataCollectionResponse>("AcknowledgeUserDataCollection", grpcClient.AcknowledgeUserDataCollectionAsync, grpcClient.AcknowledgeUserDataCollection, effectiveSettings.AcknowledgeUserDataCollectionSettings).WithGoogleRequestParam("property", request => request.Property);
             Modify_ApiCall(ref _callAcknowledgeUserDataCollection);
             Modify_AcknowledgeUserDataCollectionApiCall(ref _callAcknowledgeUserDataCollection);
+            _callGetSKAdNetworkConversionValueSchema = clientHelper.BuildApiCall<GetSKAdNetworkConversionValueSchemaRequest, SKAdNetworkConversionValueSchema>("GetSKAdNetworkConversionValueSchema", grpcClient.GetSKAdNetworkConversionValueSchemaAsync, grpcClient.GetSKAdNetworkConversionValueSchema, effectiveSettings.GetSKAdNetworkConversionValueSchemaSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetSKAdNetworkConversionValueSchema);
+            Modify_GetSKAdNetworkConversionValueSchemaApiCall(ref _callGetSKAdNetworkConversionValueSchema);
+            _callCreateSKAdNetworkConversionValueSchema = clientHelper.BuildApiCall<CreateSKAdNetworkConversionValueSchemaRequest, SKAdNetworkConversionValueSchema>("CreateSKAdNetworkConversionValueSchema", grpcClient.CreateSKAdNetworkConversionValueSchemaAsync, grpcClient.CreateSKAdNetworkConversionValueSchema, effectiveSettings.CreateSKAdNetworkConversionValueSchemaSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateSKAdNetworkConversionValueSchema);
+            Modify_CreateSKAdNetworkConversionValueSchemaApiCall(ref _callCreateSKAdNetworkConversionValueSchema);
+            _callDeleteSKAdNetworkConversionValueSchema = clientHelper.BuildApiCall<DeleteSKAdNetworkConversionValueSchemaRequest, wkt::Empty>("DeleteSKAdNetworkConversionValueSchema", grpcClient.DeleteSKAdNetworkConversionValueSchemaAsync, grpcClient.DeleteSKAdNetworkConversionValueSchema, effectiveSettings.DeleteSKAdNetworkConversionValueSchemaSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteSKAdNetworkConversionValueSchema);
+            Modify_DeleteSKAdNetworkConversionValueSchemaApiCall(ref _callDeleteSKAdNetworkConversionValueSchema);
+            _callUpdateSKAdNetworkConversionValueSchema = clientHelper.BuildApiCall<UpdateSKAdNetworkConversionValueSchemaRequest, SKAdNetworkConversionValueSchema>("UpdateSKAdNetworkConversionValueSchema", grpcClient.UpdateSKAdNetworkConversionValueSchemaAsync, grpcClient.UpdateSKAdNetworkConversionValueSchema, effectiveSettings.UpdateSKAdNetworkConversionValueSchemaSettings).WithGoogleRequestParam("skadnetwork_conversion_value_schema.name", request => request.SkadnetworkConversionValueSchema?.Name);
+            Modify_ApiCall(ref _callUpdateSKAdNetworkConversionValueSchema);
+            Modify_UpdateSKAdNetworkConversionValueSchemaApiCall(ref _callUpdateSKAdNetworkConversionValueSchema);
+            _callListSKAdNetworkConversionValueSchemas = clientHelper.BuildApiCall<ListSKAdNetworkConversionValueSchemasRequest, ListSKAdNetworkConversionValueSchemasResponse>("ListSKAdNetworkConversionValueSchemas", grpcClient.ListSKAdNetworkConversionValueSchemasAsync, grpcClient.ListSKAdNetworkConversionValueSchemas, effectiveSettings.ListSKAdNetworkConversionValueSchemasSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListSKAdNetworkConversionValueSchemas);
+            Modify_ListSKAdNetworkConversionValueSchemasApiCall(ref _callListSKAdNetworkConversionValueSchemas);
             _callSearchChangeHistoryEvents = clientHelper.BuildApiCall<SearchChangeHistoryEventsRequest, SearchChangeHistoryEventsResponse>("SearchChangeHistoryEvents", grpcClient.SearchChangeHistoryEventsAsync, grpcClient.SearchChangeHistoryEvents, effectiveSettings.SearchChangeHistoryEventsSettings).WithGoogleRequestParam("account", request => request.Account);
             Modify_ApiCall(ref _callSearchChangeHistoryEvents);
             Modify_SearchChangeHistoryEventsApiCall(ref _callSearchChangeHistoryEvents);
@@ -15700,6 +16421,16 @@ namespace Google.Analytics.Admin.V1Alpha
 
         partial void Modify_AcknowledgeUserDataCollectionApiCall(ref gaxgrpc::ApiCall<AcknowledgeUserDataCollectionRequest, AcknowledgeUserDataCollectionResponse> call);
 
+        partial void Modify_GetSKAdNetworkConversionValueSchemaApiCall(ref gaxgrpc::ApiCall<GetSKAdNetworkConversionValueSchemaRequest, SKAdNetworkConversionValueSchema> call);
+
+        partial void Modify_CreateSKAdNetworkConversionValueSchemaApiCall(ref gaxgrpc::ApiCall<CreateSKAdNetworkConversionValueSchemaRequest, SKAdNetworkConversionValueSchema> call);
+
+        partial void Modify_DeleteSKAdNetworkConversionValueSchemaApiCall(ref gaxgrpc::ApiCall<DeleteSKAdNetworkConversionValueSchemaRequest, wkt::Empty> call);
+
+        partial void Modify_UpdateSKAdNetworkConversionValueSchemaApiCall(ref gaxgrpc::ApiCall<UpdateSKAdNetworkConversionValueSchemaRequest, SKAdNetworkConversionValueSchema> call);
+
+        partial void Modify_ListSKAdNetworkConversionValueSchemasApiCall(ref gaxgrpc::ApiCall<ListSKAdNetworkConversionValueSchemasRequest, ListSKAdNetworkConversionValueSchemasResponse> call);
+
         partial void Modify_SearchChangeHistoryEventsApiCall(ref gaxgrpc::ApiCall<SearchChangeHistoryEventsRequest, SearchChangeHistoryEventsResponse> call);
 
         partial void Modify_GetGoogleSignalsSettingsApiCall(ref gaxgrpc::ApiCall<GetGoogleSignalsSettingsRequest, GoogleSignalsSettings> call);
@@ -15950,6 +16681,16 @@ namespace Google.Analytics.Admin.V1Alpha
         partial void Modify_UpdateMeasurementProtocolSecretRequest(ref UpdateMeasurementProtocolSecretRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_AcknowledgeUserDataCollectionRequest(ref AcknowledgeUserDataCollectionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetSKAdNetworkConversionValueSchemaRequest(ref GetSKAdNetworkConversionValueSchemaRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateSKAdNetworkConversionValueSchemaRequest(ref CreateSKAdNetworkConversionValueSchemaRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteSKAdNetworkConversionValueSchemaRequest(ref DeleteSKAdNetworkConversionValueSchemaRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateSKAdNetworkConversionValueSchemaRequest(ref UpdateSKAdNetworkConversionValueSchemaRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListSKAdNetworkConversionValueSchemasRequest(ref ListSKAdNetworkConversionValueSchemasRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SearchChangeHistoryEventsRequest(ref SearchChangeHistoryEventsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -17095,6 +17836,130 @@ namespace Google.Analytics.Admin.V1Alpha
         {
             Modify_AcknowledgeUserDataCollectionRequest(ref request, ref callSettings);
             return _callAcknowledgeUserDataCollection.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Looks up a single SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SKAdNetworkConversionValueSchema GetSKAdNetworkConversionValueSchema(GetSKAdNetworkConversionValueSchemaRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSKAdNetworkConversionValueSchemaRequest(ref request, ref callSettings);
+            return _callGetSKAdNetworkConversionValueSchema.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Looks up a single SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SKAdNetworkConversionValueSchema> GetSKAdNetworkConversionValueSchemaAsync(GetSKAdNetworkConversionValueSchemaRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSKAdNetworkConversionValueSchemaRequest(ref request, ref callSettings);
+            return _callGetSKAdNetworkConversionValueSchema.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SKAdNetworkConversionValueSchema CreateSKAdNetworkConversionValueSchema(CreateSKAdNetworkConversionValueSchemaRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateSKAdNetworkConversionValueSchemaRequest(ref request, ref callSettings);
+            return _callCreateSKAdNetworkConversionValueSchema.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SKAdNetworkConversionValueSchema> CreateSKAdNetworkConversionValueSchemaAsync(CreateSKAdNetworkConversionValueSchemaRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateSKAdNetworkConversionValueSchemaRequest(ref request, ref callSettings);
+            return _callCreateSKAdNetworkConversionValueSchema.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes target SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteSKAdNetworkConversionValueSchema(DeleteSKAdNetworkConversionValueSchemaRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteSKAdNetworkConversionValueSchemaRequest(ref request, ref callSettings);
+            _callDeleteSKAdNetworkConversionValueSchema.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes target SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteSKAdNetworkConversionValueSchemaAsync(DeleteSKAdNetworkConversionValueSchemaRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteSKAdNetworkConversionValueSchemaRequest(ref request, ref callSettings);
+            return _callDeleteSKAdNetworkConversionValueSchema.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SKAdNetworkConversionValueSchema UpdateSKAdNetworkConversionValueSchema(UpdateSKAdNetworkConversionValueSchemaRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateSKAdNetworkConversionValueSchemaRequest(ref request, ref callSettings);
+            return _callUpdateSKAdNetworkConversionValueSchema.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SKAdNetworkConversionValueSchema> UpdateSKAdNetworkConversionValueSchemaAsync(UpdateSKAdNetworkConversionValueSchemaRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateSKAdNetworkConversionValueSchemaRequest(ref request, ref callSettings);
+            return _callUpdateSKAdNetworkConversionValueSchema.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists SKAdNetworkConversionValueSchema on a stream.
+        /// Properties can have at most one SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SKAdNetworkConversionValueSchema"/> resources.</returns>
+        public override gax::PagedEnumerable<ListSKAdNetworkConversionValueSchemasResponse, SKAdNetworkConversionValueSchema> ListSKAdNetworkConversionValueSchemas(ListSKAdNetworkConversionValueSchemasRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSKAdNetworkConversionValueSchemasRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListSKAdNetworkConversionValueSchemasRequest, ListSKAdNetworkConversionValueSchemasResponse, SKAdNetworkConversionValueSchema>(_callListSKAdNetworkConversionValueSchemas, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists SKAdNetworkConversionValueSchema on a stream.
+        /// Properties can have at most one SKAdNetworkConversionValueSchema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="SKAdNetworkConversionValueSchema"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<ListSKAdNetworkConversionValueSchemasResponse, SKAdNetworkConversionValueSchema> ListSKAdNetworkConversionValueSchemasAsync(ListSKAdNetworkConversionValueSchemasRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSKAdNetworkConversionValueSchemasRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListSKAdNetworkConversionValueSchemasRequest, ListSKAdNetworkConversionValueSchemasResponse, SKAdNetworkConversionValueSchema>(_callListSKAdNetworkConversionValueSchemas, request, callSettings);
         }
 
         /// <summary>
@@ -19320,6 +20185,10 @@ namespace Google.Analytics.Admin.V1Alpha
     {
     }
 
+    public partial class ListSKAdNetworkConversionValueSchemasRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class SearchChangeHistoryEventsRequest : gaxgrpc::IPageRequest
     {
     }
@@ -19440,6 +20309,15 @@ namespace Google.Analytics.Admin.V1Alpha
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<MeasurementProtocolSecret> GetEnumerator() => MeasurementProtocolSecrets.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListSKAdNetworkConversionValueSchemasResponse : gaxgrpc::IPageResponse<SKAdNetworkConversionValueSchema>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<SKAdNetworkConversionValueSchema> GetEnumerator() =>
+            SkadnetworkConversionValueSchemas.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
