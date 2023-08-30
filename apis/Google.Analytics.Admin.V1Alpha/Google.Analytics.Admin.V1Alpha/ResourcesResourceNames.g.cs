@@ -2272,6 +2272,302 @@ namespace Google.Analytics.Admin.V1Alpha
         public static bool operator !=(MeasurementProtocolSecretName a, MeasurementProtocolSecretName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>SKAdNetworkConversionValueSchema</c> resource.</summary>
+    public sealed partial class SKAdNetworkConversionValueSchemaName : gax::IResourceName, sys::IEquatable<SKAdNetworkConversionValueSchemaName>
+    {
+        /// <summary>The possible contents of <see cref="SKAdNetworkConversionValueSchemaName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>
+            /// properties/{property}/dataStreams/{data_stream}/sKAdNetworkConversionValueSchema/{skadnetwork_conversion_value_schema}</c>
+            /// .
+            /// </summary>
+            PropertyDataStreamSkadnetworkConversionValueSchema = 1,
+        }
+
+        private static gax::PathTemplate s_propertyDataStreamSkadnetworkConversionValueSchema = new gax::PathTemplate("properties/{property}/dataStreams/{data_stream}/sKAdNetworkConversionValueSchema/{skadnetwork_conversion_value_schema}");
+
+        /// <summary>
+        /// Creates a <see cref="SKAdNetworkConversionValueSchemaName"/> containing an unparsed resource name.
+        /// </summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="SKAdNetworkConversionValueSchemaName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static SKAdNetworkConversionValueSchemaName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new SKAdNetworkConversionValueSchemaName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="SKAdNetworkConversionValueSchemaName"/> with the pattern
+        /// <c>
+        /// properties/{property}/dataStreams/{data_stream}/sKAdNetworkConversionValueSchema/{skadnetwork_conversion_value_schema}</c>
+        /// .
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="dataStreamId">The <c>DataStream</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="skadnetworkConversionValueSchemaId">
+        /// The <c>SkadnetworkConversionValueSchema</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// A new instance of <see cref="SKAdNetworkConversionValueSchemaName"/> constructed from the provided ids.
+        /// </returns>
+        public static SKAdNetworkConversionValueSchemaName FromPropertyDataStreamSkadnetworkConversionValueSchema(string propertyId, string dataStreamId, string skadnetworkConversionValueSchemaId) =>
+            new SKAdNetworkConversionValueSchemaName(ResourceNameType.PropertyDataStreamSkadnetworkConversionValueSchema, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), dataStreamId: gax::GaxPreconditions.CheckNotNullOrEmpty(dataStreamId, nameof(dataStreamId)), skadnetworkConversionValueSchemaId: gax::GaxPreconditions.CheckNotNullOrEmpty(skadnetworkConversionValueSchemaId, nameof(skadnetworkConversionValueSchemaId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="SKAdNetworkConversionValueSchemaName"/>
+        /// with pattern
+        /// <c>
+        /// properties/{property}/dataStreams/{data_stream}/sKAdNetworkConversionValueSchema/{skadnetwork_conversion_value_schema}</c>
+        /// .
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="dataStreamId">The <c>DataStream</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="skadnetworkConversionValueSchemaId">
+        /// The <c>SkadnetworkConversionValueSchema</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// The string representation of this <see cref="SKAdNetworkConversionValueSchemaName"/> with pattern
+        /// <c>
+        /// properties/{property}/dataStreams/{data_stream}/sKAdNetworkConversionValueSchema/{skadnetwork_conversion_value_schema}</c>
+        /// .
+        /// </returns>
+        public static string Format(string propertyId, string dataStreamId, string skadnetworkConversionValueSchemaId) =>
+            FormatPropertyDataStreamSkadnetworkConversionValueSchema(propertyId, dataStreamId, skadnetworkConversionValueSchemaId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="SKAdNetworkConversionValueSchemaName"/>
+        /// with pattern
+        /// <c>
+        /// properties/{property}/dataStreams/{data_stream}/sKAdNetworkConversionValueSchema/{skadnetwork_conversion_value_schema}</c>
+        /// .
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="dataStreamId">The <c>DataStream</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="skadnetworkConversionValueSchemaId">
+        /// The <c>SkadnetworkConversionValueSchema</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// The string representation of this <see cref="SKAdNetworkConversionValueSchemaName"/> with pattern
+        /// <c>
+        /// properties/{property}/dataStreams/{data_stream}/sKAdNetworkConversionValueSchema/{skadnetwork_conversion_value_schema}</c>
+        /// .
+        /// </returns>
+        public static string FormatPropertyDataStreamSkadnetworkConversionValueSchema(string propertyId, string dataStreamId, string skadnetworkConversionValueSchemaId) =>
+            s_propertyDataStreamSkadnetworkConversionValueSchema.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), gax::GaxPreconditions.CheckNotNullOrEmpty(dataStreamId, nameof(dataStreamId)), gax::GaxPreconditions.CheckNotNullOrEmpty(skadnetworkConversionValueSchemaId, nameof(skadnetworkConversionValueSchemaId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="SKAdNetworkConversionValueSchemaName"/>
+        /// instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>
+        /// properties/{property}/dataStreams/{data_stream}/sKAdNetworkConversionValueSchema/{skadnetwork_conversion_value_schema}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="sKAdNetworkConversionValueSchemaName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <returns>The parsed <see cref="SKAdNetworkConversionValueSchemaName"/> if successful.</returns>
+        public static SKAdNetworkConversionValueSchemaName Parse(string sKAdNetworkConversionValueSchemaName) =>
+            Parse(sKAdNetworkConversionValueSchemaName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="SKAdNetworkConversionValueSchemaName"/>
+        /// instance; optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>
+        /// properties/{property}/dataStreams/{data_stream}/sKAdNetworkConversionValueSchema/{skadnetwork_conversion_value_schema}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="sKAdNetworkConversionValueSchemaName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="SKAdNetworkConversionValueSchemaName"/> if successful.</returns>
+        public static SKAdNetworkConversionValueSchemaName Parse(string sKAdNetworkConversionValueSchemaName, bool allowUnparsed) =>
+            TryParse(sKAdNetworkConversionValueSchemaName, allowUnparsed, out SKAdNetworkConversionValueSchemaName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="SKAdNetworkConversionValueSchemaName"/>
+        /// instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>
+        /// properties/{property}/dataStreams/{data_stream}/sKAdNetworkConversionValueSchema/{skadnetwork_conversion_value_schema}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="sKAdNetworkConversionValueSchemaName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="SKAdNetworkConversionValueSchemaName"/>, or <c>null</c> if
+        /// parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string sKAdNetworkConversionValueSchemaName, out SKAdNetworkConversionValueSchemaName result) =>
+            TryParse(sKAdNetworkConversionValueSchemaName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="SKAdNetworkConversionValueSchemaName"/>
+        /// instance; optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>
+        /// properties/{property}/dataStreams/{data_stream}/sKAdNetworkConversionValueSchema/{skadnetwork_conversion_value_schema}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="sKAdNetworkConversionValueSchemaName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="SKAdNetworkConversionValueSchemaName"/>, or <c>null</c> if
+        /// parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string sKAdNetworkConversionValueSchemaName, bool allowUnparsed, out SKAdNetworkConversionValueSchemaName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(sKAdNetworkConversionValueSchemaName, nameof(sKAdNetworkConversionValueSchemaName));
+            gax::TemplatedResourceName resourceName;
+            if (s_propertyDataStreamSkadnetworkConversionValueSchema.TryParseName(sKAdNetworkConversionValueSchemaName, out resourceName))
+            {
+                result = FromPropertyDataStreamSkadnetworkConversionValueSchema(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(sKAdNetworkConversionValueSchemaName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private SKAdNetworkConversionValueSchemaName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string dataStreamId = null, string propertyId = null, string skadnetworkConversionValueSchemaId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            DataStreamId = dataStreamId;
+            PropertyId = propertyId;
+            SkadnetworkConversionValueSchemaId = skadnetworkConversionValueSchemaId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="SKAdNetworkConversionValueSchemaName"/> class from the component
+        /// parts of pattern
+        /// <c>
+        /// properties/{property}/dataStreams/{data_stream}/sKAdNetworkConversionValueSchema/{skadnetwork_conversion_value_schema}</c>
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="dataStreamId">The <c>DataStream</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="skadnetworkConversionValueSchemaId">
+        /// The <c>SkadnetworkConversionValueSchema</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        public SKAdNetworkConversionValueSchemaName(string propertyId, string dataStreamId, string skadnetworkConversionValueSchemaId) : this(ResourceNameType.PropertyDataStreamSkadnetworkConversionValueSchema, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), dataStreamId: gax::GaxPreconditions.CheckNotNullOrEmpty(dataStreamId, nameof(dataStreamId)), skadnetworkConversionValueSchemaId: gax::GaxPreconditions.CheckNotNullOrEmpty(skadnetworkConversionValueSchemaId, nameof(skadnetworkConversionValueSchemaId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>DataStream</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string DataStreamId { get; }
+
+        /// <summary>
+        /// The <c>Property</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string PropertyId { get; }
+
+        /// <summary>
+        /// The <c>SkadnetworkConversionValueSchema</c> ID. Will not be <c>null</c>, unless this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public string SkadnetworkConversionValueSchemaId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.PropertyDataStreamSkadnetworkConversionValueSchema: return s_propertyDataStreamSkadnetworkConversionValueSchema.Expand(PropertyId, DataStreamId, SkadnetworkConversionValueSchemaId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as SKAdNetworkConversionValueSchemaName);
+
+        /// <inheritdoc/>
+        public bool Equals(SKAdNetworkConversionValueSchemaName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(SKAdNetworkConversionValueSchemaName a, SKAdNetworkConversionValueSchemaName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(SKAdNetworkConversionValueSchemaName a, SKAdNetworkConversionValueSchemaName b) => !(a == b);
+    }
+
     /// <summary>Resource name for the <c>DisplayVideo360AdvertiserLink</c> resource.</summary>
     public sealed partial class DisplayVideo360AdvertiserLinkName : gax::IResourceName, sys::IEquatable<DisplayVideo360AdvertiserLinkName>
     {
@@ -5476,6 +5772,19 @@ namespace Google.Analytics.Admin.V1Alpha
         public gaav::MeasurementProtocolSecretName MeasurementProtocolSecretName
         {
             get => string.IsNullOrEmpty(Name) ? null : gaav::MeasurementProtocolSecretName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class SKAdNetworkConversionValueSchema
+    {
+        /// <summary>
+        /// <see cref="gaav::SKAdNetworkConversionValueSchemaName"/>-typed view over the <see cref="Name"/> resource
+        /// name property.
+        /// </summary>
+        public gaav::SKAdNetworkConversionValueSchemaName SKAdNetworkConversionValueSchemaName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::SKAdNetworkConversionValueSchemaName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

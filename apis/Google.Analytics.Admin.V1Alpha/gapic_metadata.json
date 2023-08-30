@@ -202,6 +202,12 @@
                 "CreatePropertyAsync"
               ]
             },
+            "CreateSKAdNetworkConversionValueSchema": {
+              "methods": [
+                "CreateSKAdNetworkConversionValueSchema",
+                "CreateSKAdNetworkConversionValueSchemaAsync"
+              ]
+            },
             "CreateSearchAds360Link": {
               "methods": [
                 "CreateSearchAds360Link",
@@ -302,6 +308,12 @@
               "methods": [
                 "DeleteProperty",
                 "DeletePropertyAsync"
+              ]
+            },
+            "DeleteSKAdNetworkConversionValueSchema": {
+              "methods": [
+                "DeleteSKAdNetworkConversionValueSchema",
+                "DeleteSKAdNetworkConversionValueSchemaAsync"
               ]
             },
             "DeleteSearchAds360Link": {
@@ -460,6 +472,12 @@
                 "GetPropertyAsync"
               ]
             },
+            "GetSKAdNetworkConversionValueSchema": {
+              "methods": [
+                "GetSKAdNetworkConversionValueSchema",
+                "GetSKAdNetworkConversionValueSchemaAsync"
+              ]
+            },
             "GetSearchAds360Link": {
               "methods": [
                 "GetSearchAds360Link",
@@ -590,6 +608,12 @@
               "methods": [
                 "ListProperties",
                 "ListPropertiesAsync"
+              ]
+            },
+            "ListSKAdNetworkConversionValueSchemas": {
+              "methods": [
+                "ListSKAdNetworkConversionValueSchemas",
+                "ListSKAdNetworkConversionValueSchemasAsync"
               ]
             },
             "ListSearchAds360Links": {
@@ -734,6 +758,12 @@
               "methods": [
                 "UpdateProperty",
                 "UpdatePropertyAsync"
+              ]
+            },
+            "UpdateSKAdNetworkConversionValueSchema": {
+              "methods": [
+                "UpdateSKAdNetworkConversionValueSchema",
+                "UpdateSKAdNetworkConversionValueSchemaAsync"
               ]
             },
             "UpdateSearchAds360Link": {
