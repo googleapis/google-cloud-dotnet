@@ -1780,6 +1780,103 @@
       ]
     },
     {
+      "regionTag": "recommender_v1_generated_Recommender_MarkRecommendationDismissed_sync",
+      "title": "MarkRecommendationDismissedRequestObject",
+      "description": "Snippet for MarkRecommendationDismissed",
+      "file": "RecommenderClient.MarkRecommendationDismissedRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MarkRecommendationDismissed",
+        "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.MarkRecommendationDismissed",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.MarkRecommendationDismissedRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Recommender.V1.Recommendation",
+        "client": {
+          "shortName": "RecommenderClient",
+          "fullName": "Google.Cloud.Recommender.V1.RecommenderClient"
+        },
+        "method": {
+          "shortName": "MarkRecommendationDismissed",
+          "fullName": "google.cloud.recommender.v1.Recommender.MarkRecommendationDismissed",
+          "service": {
+            "shortName": "Recommender",
+            "fullName": "google.cloud.recommender.v1.Recommender"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "recommender_v1_generated_Recommender_MarkRecommendationDismissed_async",
+      "title": "MarkRecommendationDismissedRequestObjectAsync",
+      "description": "Snippet for MarkRecommendationDismissedAsync",
+      "file": "RecommenderClient.MarkRecommendationDismissedRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MarkRecommendationDismissedAsync",
+        "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.MarkRecommendationDismissedAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.MarkRecommendationDismissedRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.Recommendation>",
+        "client": {
+          "shortName": "RecommenderClient",
+          "fullName": "Google.Cloud.Recommender.V1.RecommenderClient"
+        },
+        "method": {
+          "shortName": "MarkRecommendationDismissed",
+          "fullName": "google.cloud.recommender.v1.Recommender.MarkRecommendationDismissed",
+          "service": {
+            "shortName": "Recommender",
+            "fullName": "google.cloud.recommender.v1.Recommender"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "recommender_v1_generated_Recommender_MarkRecommendationClaimed_sync",
       "title": "MarkRecommendationClaimedRequestObject",
       "description": "Snippet for MarkRecommendationClaimed",

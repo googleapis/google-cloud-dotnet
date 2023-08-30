@@ -41,11 +41,19 @@ namespace Google.Cloud.Recommender.V1
             /// <c>organizations/{organization}/locations/{location}/recommenders/{recommender}/config</c>.
             /// </summary>
             OrganizationLocationRecommender = 2,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>billingAccounts/{billing_account}/locations/{location}/recommenders/{recommender}/config</c>.
+            /// </summary>
+            BillingAccountLocationRecommender = 3,
         }
 
         private static gax::PathTemplate s_projectLocationRecommender = new gax::PathTemplate("projects/{project}/locations/{location}/recommenders/{recommender}/config");
 
         private static gax::PathTemplate s_organizationLocationRecommender = new gax::PathTemplate("organizations/{organization}/locations/{location}/recommenders/{recommender}/config");
+
+        private static gax::PathTemplate s_billingAccountLocationRecommender = new gax::PathTemplate("billingAccounts/{billing_account}/locations/{location}/recommenders/{recommender}/config");
 
         /// <summary>Creates a <see cref="RecommenderConfigName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -77,6 +85,17 @@ namespace Google.Cloud.Recommender.V1
         /// <returns>A new instance of <see cref="RecommenderConfigName"/> constructed from the provided ids.</returns>
         public static RecommenderConfigName FromOrganizationLocationRecommender(string organizationId, string locationId, string recommenderId) =>
             new RecommenderConfigName(ResourceNameType.OrganizationLocationRecommender, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), recommenderId: gax::GaxPreconditions.CheckNotNullOrEmpty(recommenderId, nameof(recommenderId)));
+
+        /// <summary>
+        /// Creates a <see cref="RecommenderConfigName"/> with the pattern
+        /// <c>billingAccounts/{billing_account}/locations/{location}/recommenders/{recommender}/config</c>.
+        /// </summary>
+        /// <param name="billingAccountId">The <c>BillingAccount</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="recommenderId">The <c>Recommender</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="RecommenderConfigName"/> constructed from the provided ids.</returns>
+        public static RecommenderConfigName FromBillingAccountLocationRecommender(string billingAccountId, string locationId, string recommenderId) =>
+            new RecommenderConfigName(ResourceNameType.BillingAccountLocationRecommender, billingAccountId: gax::GaxPreconditions.CheckNotNullOrEmpty(billingAccountId, nameof(billingAccountId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), recommenderId: gax::GaxPreconditions.CheckNotNullOrEmpty(recommenderId, nameof(recommenderId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="RecommenderConfigName"/> with pattern
@@ -121,6 +140,20 @@ namespace Google.Cloud.Recommender.V1
             s_organizationLocationRecommender.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(recommenderId, nameof(recommenderId)));
 
         /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="RecommenderConfigName"/> with pattern
+        /// <c>billingAccounts/{billing_account}/locations/{location}/recommenders/{recommender}/config</c>.
+        /// </summary>
+        /// <param name="billingAccountId">The <c>BillingAccount</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="recommenderId">The <c>Recommender</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="RecommenderConfigName"/> with pattern
+        /// <c>billingAccounts/{billing_account}/locations/{location}/recommenders/{recommender}/config</c>.
+        /// </returns>
+        public static string FormatBillingAccountLocationRecommender(string billingAccountId, string locationId, string recommenderId) =>
+            s_billingAccountLocationRecommender.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(billingAccountId, nameof(billingAccountId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(recommenderId, nameof(recommenderId)));
+
+        /// <summary>
         /// Parses the given resource name string into a new <see cref="RecommenderConfigName"/> instance.
         /// </summary>
         /// <remarks>
@@ -132,6 +165,11 @@ namespace Google.Cloud.Recommender.V1
         /// <item>
         /// <description>
         /// <c>organizations/{organization}/locations/{location}/recommenders/{recommender}/config</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>billingAccounts/{billing_account}/locations/{location}/recommenders/{recommender}/config</c>
         /// </description>
         /// </item>
         /// </list>
@@ -153,6 +191,11 @@ namespace Google.Cloud.Recommender.V1
         /// <item>
         /// <description>
         /// <c>organizations/{organization}/locations/{location}/recommenders/{recommender}/config</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>billingAccounts/{billing_account}/locations/{location}/recommenders/{recommender}/config</c>
         /// </description>
         /// </item>
         /// </list>
@@ -182,6 +225,11 @@ namespace Google.Cloud.Recommender.V1
         /// <c>organizations/{organization}/locations/{location}/recommenders/{recommender}/config</c>
         /// </description>
         /// </item>
+        /// <item>
+        /// <description>
+        /// <c>billingAccounts/{billing_account}/locations/{location}/recommenders/{recommender}/config</c>
+        /// </description>
+        /// </item>
         /// </list>
         /// </remarks>
         /// <param name="recommenderConfigName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -205,6 +253,11 @@ namespace Google.Cloud.Recommender.V1
         /// <item>
         /// <description>
         /// <c>organizations/{organization}/locations/{location}/recommenders/{recommender}/config</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>billingAccounts/{billing_account}/locations/{location}/recommenders/{recommender}/config</c>
         /// </description>
         /// </item>
         /// </list>
@@ -234,6 +287,11 @@ namespace Google.Cloud.Recommender.V1
                 result = FromOrganizationLocationRecommender(resourceName[0], resourceName[1], resourceName[2]);
                 return true;
             }
+            if (s_billingAccountLocationRecommender.TryParseName(recommenderConfigName, out resourceName))
+            {
+                result = FromBillingAccountLocationRecommender(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
             if (allowUnparsed)
             {
                 if (gax::UnparsedResourceName.TryParse(recommenderConfigName, out gax::UnparsedResourceName unparsedResourceName))
@@ -246,10 +304,11 @@ namespace Google.Cloud.Recommender.V1
             return false;
         }
 
-        private RecommenderConfigName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string organizationId = null, string projectId = null, string recommenderId = null)
+        private RecommenderConfigName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string billingAccountId = null, string locationId = null, string organizationId = null, string projectId = null, string recommenderId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
+            BillingAccountId = billingAccountId;
             LocationId = locationId;
             OrganizationId = organizationId;
             ProjectId = projectId;
@@ -275,6 +334,12 @@ namespace Google.Cloud.Recommender.V1
         /// unparsed resource name.
         /// </summary>
         public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>BillingAccount</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
+        /// </summary>
+        public string BillingAccountId { get; }
 
         /// <summary>
         /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
@@ -310,6 +375,7 @@ namespace Google.Cloud.Recommender.V1
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
                 case ResourceNameType.ProjectLocationRecommender: return s_projectLocationRecommender.Expand(ProjectId, LocationId, RecommenderId);
                 case ResourceNameType.OrganizationLocationRecommender: return s_organizationLocationRecommender.Expand(OrganizationId, LocationId, RecommenderId);
+                case ResourceNameType.BillingAccountLocationRecommender: return s_billingAccountLocationRecommender.Expand(BillingAccountId, LocationId, RecommenderId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }

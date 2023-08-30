@@ -79,6 +79,18 @@ namespace Google.Cloud.Recommender.V1
         }
     }
 
+    public partial class MarkRecommendationDismissedRequest
+    {
+        /// <summary>
+        /// <see cref="gcrv::RecommendationName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcrv::RecommendationName RecommendationName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::RecommendationName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class MarkRecommendationClaimedRequest
     {
         /// <summary>

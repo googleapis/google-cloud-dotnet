@@ -58,6 +58,12 @@
                 "MarkRecommendationClaimedAsync"
               ]
             },
+            "MarkRecommendationDismissed": {
+              "methods": [
+                "MarkRecommendationDismissed",
+                "MarkRecommendationDismissedAsync"
+              ]
+            },
             "MarkRecommendationFailed": {
               "methods": [
                 "MarkRecommendationFailed",

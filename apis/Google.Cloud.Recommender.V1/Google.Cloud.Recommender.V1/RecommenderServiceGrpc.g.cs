@@ -3,7 +3,7 @@
 //     source: google/cloud/recommender/v1/recommender_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2022 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -85,6 +85,8 @@ namespace Google.Cloud.Recommender.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.Recommendation> __Marshaller_google_cloud_recommender_v1_Recommendation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Recommender.V1.Recommendation.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.MarkRecommendationDismissedRequest> __Marshaller_google_cloud_recommender_v1_MarkRecommendationDismissedRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Recommender.V1.MarkRecommendationDismissedRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.MarkRecommendationClaimedRequest> __Marshaller_google_cloud_recommender_v1_MarkRecommendationClaimedRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Recommender.V1.MarkRecommendationClaimedRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.MarkRecommendationSucceededRequest> __Marshaller_google_cloud_recommender_v1_MarkRecommendationSucceededRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Recommender.V1.MarkRecommendationSucceededRequest.Parser));
@@ -141,6 +143,14 @@ namespace Google.Cloud.Recommender.V1 {
         __ServiceName,
         "GetRecommendation",
         __Marshaller_google_cloud_recommender_v1_GetRecommendationRequest,
+        __Marshaller_google_cloud_recommender_v1_Recommendation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Recommender.V1.MarkRecommendationDismissedRequest, global::Google.Cloud.Recommender.V1.Recommendation> __Method_MarkRecommendationDismissed = new grpc::Method<global::Google.Cloud.Recommender.V1.MarkRecommendationDismissedRequest, global::Google.Cloud.Recommender.V1.Recommendation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "MarkRecommendationDismissed",
+        __Marshaller_google_cloud_recommender_v1_MarkRecommendationDismissedRequest,
         __Marshaller_google_cloud_recommender_v1_Recommendation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -274,6 +284,26 @@ namespace Google.Cloud.Recommender.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Recommender.V1.Recommendation> GetRecommendation(global::Google.Cloud.Recommender.V1.GetRecommendationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Mark the Recommendation State as Dismissed. Users can use this method to
+      /// indicate to the Recommender API that an ACTIVE recommendation has to
+      /// be marked back as DISMISSED.
+      ///
+      /// MarkRecommendationDismissed can be applied to recommendations in ACTIVE
+      /// state.
+      ///
+      /// Requires the recommender.*.update IAM permission for the specified
+      /// recommender.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Recommender.V1.Recommendation> MarkRecommendationDismissed(global::Google.Cloud.Recommender.V1.MarkRecommendationDismissedRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -699,6 +729,86 @@ namespace Google.Cloud.Recommender.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Recommender.V1.Recommendation> GetRecommendationAsync(global::Google.Cloud.Recommender.V1.GetRecommendationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetRecommendation, null, options, request);
+      }
+      /// <summary>
+      /// Mark the Recommendation State as Dismissed. Users can use this method to
+      /// indicate to the Recommender API that an ACTIVE recommendation has to
+      /// be marked back as DISMISSED.
+      ///
+      /// MarkRecommendationDismissed can be applied to recommendations in ACTIVE
+      /// state.
+      ///
+      /// Requires the recommender.*.update IAM permission for the specified
+      /// recommender.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Recommender.V1.Recommendation MarkRecommendationDismissed(global::Google.Cloud.Recommender.V1.MarkRecommendationDismissedRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return MarkRecommendationDismissed(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Mark the Recommendation State as Dismissed. Users can use this method to
+      /// indicate to the Recommender API that an ACTIVE recommendation has to
+      /// be marked back as DISMISSED.
+      ///
+      /// MarkRecommendationDismissed can be applied to recommendations in ACTIVE
+      /// state.
+      ///
+      /// Requires the recommender.*.update IAM permission for the specified
+      /// recommender.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Recommender.V1.Recommendation MarkRecommendationDismissed(global::Google.Cloud.Recommender.V1.MarkRecommendationDismissedRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_MarkRecommendationDismissed, null, options, request);
+      }
+      /// <summary>
+      /// Mark the Recommendation State as Dismissed. Users can use this method to
+      /// indicate to the Recommender API that an ACTIVE recommendation has to
+      /// be marked back as DISMISSED.
+      ///
+      /// MarkRecommendationDismissed can be applied to recommendations in ACTIVE
+      /// state.
+      ///
+      /// Requires the recommender.*.update IAM permission for the specified
+      /// recommender.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Recommender.V1.Recommendation> MarkRecommendationDismissedAsync(global::Google.Cloud.Recommender.V1.MarkRecommendationDismissedRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return MarkRecommendationDismissedAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Mark the Recommendation State as Dismissed. Users can use this method to
+      /// indicate to the Recommender API that an ACTIVE recommendation has to
+      /// be marked back as DISMISSED.
+      ///
+      /// MarkRecommendationDismissed can be applied to recommendations in ACTIVE
+      /// state.
+      ///
+      /// Requires the recommender.*.update IAM permission for the specified
+      /// recommender.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Recommender.V1.Recommendation> MarkRecommendationDismissedAsync(global::Google.Cloud.Recommender.V1.MarkRecommendationDismissedRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_MarkRecommendationDismissed, null, options, request);
       }
       /// <summary>
       /// Marks the Recommendation State as Claimed. Users can use this method to
@@ -1187,6 +1297,7 @@ namespace Google.Cloud.Recommender.V1 {
           .AddMethod(__Method_MarkInsightAccepted, serviceImpl.MarkInsightAccepted)
           .AddMethod(__Method_ListRecommendations, serviceImpl.ListRecommendations)
           .AddMethod(__Method_GetRecommendation, serviceImpl.GetRecommendation)
+          .AddMethod(__Method_MarkRecommendationDismissed, serviceImpl.MarkRecommendationDismissed)
           .AddMethod(__Method_MarkRecommendationClaimed, serviceImpl.MarkRecommendationClaimed)
           .AddMethod(__Method_MarkRecommendationSucceeded, serviceImpl.MarkRecommendationSucceeded)
           .AddMethod(__Method_MarkRecommendationFailed, serviceImpl.MarkRecommendationFailed)
@@ -1208,6 +1319,7 @@ namespace Google.Cloud.Recommender.V1 {
       serviceBinder.AddMethod(__Method_MarkInsightAccepted, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Recommender.V1.MarkInsightAcceptedRequest, global::Google.Cloud.Recommender.V1.Insight>(serviceImpl.MarkInsightAccepted));
       serviceBinder.AddMethod(__Method_ListRecommendations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Recommender.V1.ListRecommendationsRequest, global::Google.Cloud.Recommender.V1.ListRecommendationsResponse>(serviceImpl.ListRecommendations));
       serviceBinder.AddMethod(__Method_GetRecommendation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Recommender.V1.GetRecommendationRequest, global::Google.Cloud.Recommender.V1.Recommendation>(serviceImpl.GetRecommendation));
+      serviceBinder.AddMethod(__Method_MarkRecommendationDismissed, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Recommender.V1.MarkRecommendationDismissedRequest, global::Google.Cloud.Recommender.V1.Recommendation>(serviceImpl.MarkRecommendationDismissed));
       serviceBinder.AddMethod(__Method_MarkRecommendationClaimed, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Recommender.V1.MarkRecommendationClaimedRequest, global::Google.Cloud.Recommender.V1.Recommendation>(serviceImpl.MarkRecommendationClaimed));
       serviceBinder.AddMethod(__Method_MarkRecommendationSucceeded, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Recommender.V1.MarkRecommendationSucceededRequest, global::Google.Cloud.Recommender.V1.Recommendation>(serviceImpl.MarkRecommendationSucceeded));
       serviceBinder.AddMethod(__Method_MarkRecommendationFailed, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Recommender.V1.MarkRecommendationFailedRequest, global::Google.Cloud.Recommender.V1.Recommendation>(serviceImpl.MarkRecommendationFailed));
