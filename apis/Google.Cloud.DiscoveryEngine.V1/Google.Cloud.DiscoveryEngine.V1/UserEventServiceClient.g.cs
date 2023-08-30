@@ -18,6 +18,7 @@
 using ga = Google.Api;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
@@ -50,6 +51,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
             CollectUserEventSettings = existing.CollectUserEventSettings;
             ImportUserEventsSettings = existing.ImportUserEventsSettings;
             ImportUserEventsOperationsSettings = existing.ImportUserEventsOperationsSettings.Clone();
+            LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
 
@@ -126,6 +128,11 @@ namespace Google.Cloud.DiscoveryEngine.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="UserEventServiceSettings"/> object.</returns>
@@ -268,6 +275,9 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// <summary>The underlying gRPC UserEventService client</summary>
         public virtual UserEventService.UserEventServiceClient GrpcClient => throw new sys::NotImplementedException();
 
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
+
         /// <summary>
         /// Writes a single user event.
         /// </summary>
@@ -297,7 +307,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
 
         /// <summary>
         /// Writes a single user event from the browser. This uses a GET request to
-        /// due to browser restriction of POST-ing to a 3rd party domain.
+        /// due to browser restriction of POST-ing to a third-party domain.
         /// 
         /// This method is used only by the Discovery Engine API JavaScript pixel and
         /// Google Tag Manager. Users should not call this method directly.
@@ -310,7 +320,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
 
         /// <summary>
         /// Writes a single user event from the browser. This uses a GET request to
-        /// due to browser restriction of POST-ing to a 3rd party domain.
+        /// due to browser restriction of POST-ing to a third-party domain.
         /// 
         /// This method is used only by the Discovery Engine API JavaScript pixel and
         /// Google Tag Manager. Users should not call this method directly.
@@ -323,7 +333,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
 
         /// <summary>
         /// Writes a single user event from the browser. This uses a GET request to
-        /// due to browser restriction of POST-ing to a 3rd party domain.
+        /// due to browser restriction of POST-ing to a third-party domain.
         /// 
         /// This method is used only by the Discovery Engine API JavaScript pixel and
         /// Google Tag Manager. Users should not call this method directly.
@@ -430,6 +440,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
             UserEventServiceSettings effectiveSettings = settings ?? UserEventServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
             ImportUserEventsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportUserEventsOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callWriteUserEvent = clientHelper.BuildApiCall<WriteUserEventRequest, UserEvent>("WriteUserEvent", grpcClient.WriteUserEventAsync, grpcClient.WriteUserEvent, effectiveSettings.WriteUserEventSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callWriteUserEvent);
             Modify_WriteUserEventApiCall(ref _callWriteUserEvent);
@@ -454,6 +465,9 @@ namespace Google.Cloud.DiscoveryEngine.V1
 
         /// <summary>The underlying gRPC UserEventService client</summary>
         public override UserEventService.UserEventServiceClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
 
         partial void Modify_WriteUserEventRequest(ref WriteUserEventRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -487,7 +501,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
 
         /// <summary>
         /// Writes a single user event from the browser. This uses a GET request to
-        /// due to browser restriction of POST-ing to a 3rd party domain.
+        /// due to browser restriction of POST-ing to a third-party domain.
         /// 
         /// This method is used only by the Discovery Engine API JavaScript pixel and
         /// Google Tag Manager. Users should not call this method directly.
@@ -503,7 +517,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
 
         /// <summary>
         /// Writes a single user event from the browser. This uses a GET request to
-        /// due to browser restriction of POST-ing to a 3rd party domain.
+        /// due to browser restriction of POST-ing to a third-party domain.
         /// 
         /// This method is used only by the Discovery Engine API JavaScript pixel and
         /// Google Tag Manager. Users should not call this method directly.
@@ -568,6 +582,22 @@ namespace Google.Cloud.DiscoveryEngine.V1
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class UserEventService
+    {
+        public partial class UserEventServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
         }
     }
 }

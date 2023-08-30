@@ -17,6 +17,7 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -56,6 +57,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
             ImportDocumentsOperationsSettings = existing.ImportDocumentsOperationsSettings.Clone();
             PurgeDocumentsSettings = existing.PurgeDocumentsSettings;
             PurgeDocumentsOperationsSettings = existing.PurgeDocumentsOperationsSettings.Clone();
+            LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
 
@@ -223,6 +225,11 @@ namespace Google.Cloud.DiscoveryEngine.V1
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
 
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="DocumentServiceSettings"/> object.</returns>
         public DocumentServiceSettings Clone() => new DocumentServiceSettings(this);
@@ -364,6 +371,9 @@ namespace Google.Cloud.DiscoveryEngine.V1
 
         /// <summary>The underlying gRPC DocumentService client</summary>
         public virtual DocumentService.DocumentServiceClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Gets a [Document][google.cloud.discoveryengine.v1.Document].
@@ -551,9 +561,10 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// Use `default_branch` as the branch ID, to list documents under the default
         /// branch.
         /// 
-        /// If the caller does not have permission to list [Documents][]s under this
-        /// branch, regardless of whether or not this branch exists, a
-        /// `PERMISSION_DENIED` error is returned.
+        /// If the caller does not have permission to list
+        /// [Document][google.cloud.discoveryengine.v1.Document]s under this branch,
+        /// regardless of whether or not this branch exists, a `PERMISSION_DENIED`
+        /// error is returned.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -582,9 +593,10 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// Use `default_branch` as the branch ID, to list documents under the default
         /// branch.
         /// 
-        /// If the caller does not have permission to list [Documents][]s under this
-        /// branch, regardless of whether or not this branch exists, a
-        /// `PERMISSION_DENIED` error is returned.
+        /// If the caller does not have permission to list
+        /// [Document][google.cloud.discoveryengine.v1.Document]s under this branch,
+        /// regardless of whether or not this branch exists, a `PERMISSION_DENIED`
+        /// error is returned.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -613,9 +625,10 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// Use `default_branch` as the branch ID, to list documents under the default
         /// branch.
         /// 
-        /// If the caller does not have permission to list [Documents][]s under this
-        /// branch, regardless of whether or not this branch exists, a
-        /// `PERMISSION_DENIED` error is returned.
+        /// If the caller does not have permission to list
+        /// [Document][google.cloud.discoveryengine.v1.Document]s under this branch,
+        /// regardless of whether or not this branch exists, a `PERMISSION_DENIED`
+        /// error is returned.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -644,9 +657,10 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// Use `default_branch` as the branch ID, to list documents under the default
         /// branch.
         /// 
-        /// If the caller does not have permission to list [Documents][]s under this
-        /// branch, regardless of whether or not this branch exists, a
-        /// `PERMISSION_DENIED` error is returned.
+        /// If the caller does not have permission to list
+        /// [Document][google.cloud.discoveryengine.v1.Document]s under this branch,
+        /// regardless of whether or not this branch exists, a `PERMISSION_DENIED`
+        /// error is returned.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1313,6 +1327,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
             ImportDocumentsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportDocumentsOperationsSettings, logger);
             PurgeDocumentsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PurgeDocumentsOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callGetDocument = clientHelper.BuildApiCall<GetDocumentRequest, Document>("GetDocument", grpcClient.GetDocumentAsync, grpcClient.GetDocument, effectiveSettings.GetDocumentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDocument);
             Modify_GetDocumentApiCall(ref _callGetDocument);
@@ -1357,6 +1372,9 @@ namespace Google.Cloud.DiscoveryEngine.V1
 
         /// <summary>The underlying gRPC DocumentService client</summary>
         public override DocumentService.DocumentServiceClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
 
         partial void Modify_GetDocumentRequest(ref GetDocumentRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1612,6 +1630,22 @@ namespace Google.Cloud.DiscoveryEngine.V1
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class DocumentService
+    {
+        public partial class DocumentServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
         }
     }
 }

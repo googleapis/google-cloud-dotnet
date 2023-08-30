@@ -125,8 +125,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     public const int StructDataFieldNumber = 4;
     /// <summary>
     /// The structured JSON data for the document. It should conform to the
-    /// registered [Schema.schema][google.cloud.discoveryengine.v1.Schema.schema]
-    /// or an `INVALID_ARGUMENT` error is thrown.
+    /// registered [Schema][google.cloud.discoveryengine.v1.Schema] or an
+    /// `INVALID_ARGUMENT` error is thrown.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -142,8 +142,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     public const int JsonDataFieldNumber = 5;
     /// <summary>
     /// The JSON string representation of the document. It should conform to the
-    /// registered [Schema.schema][google.cloud.discoveryengine.v1.Schema.schema]
-    /// or an `INVALID_ARGUMENT` error is thrown.
+    /// registered [Schema][google.cloud.discoveryengine.v1.Schema] or an
+    /// `INVALID_ARGUMENT` error is thrown.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -764,8 +764,11 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         /// <summary>
         /// The MIME type of the content. Supported types:
         ///
-        /// * `application/pdf` (PDF)
+        /// * `application/pdf` (PDF, only native PDFs are supported for now)
         /// * `text/html` (HTML)
+        /// * `application/vnd.openxmlformats-officedocument.wordprocessingml.document` (DOCX)
+        /// * `application/vnd.openxmlformats-officedocument.presentationml.presentation` (PPTX)
+        /// * `text/plain` (TXT)
         ///
         /// See https://www.iana.org/assignments/media-types/media-types.xhtml.
         /// </summary>

@@ -45,10 +45,18 @@ namespace GoogleCSharpSnippets
                 BranchAsBranchName = BranchName.FromProjectLocationDataStoreBranch("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[BRANCH]"),
                 Query = "",
                 Offset = 0,
+                Filter = "",
+                OrderBy = "",
+                FacetSpecs =
+                {
+                    new SearchRequest.Types.FacetSpec(),
+                },
+                BoostSpec = new SearchRequest.Types.BoostSpec(),
                 Params = { { "", new Value() }, },
                 QueryExpansionSpec = new SearchRequest.Types.QueryExpansionSpec(),
                 SpellCorrectionSpec = new SearchRequest.Types.SpellCorrectionSpec(),
                 UserPseudoId = "",
+                ImageQuery = new SearchRequest.Types.ImageQuery(),
                 SafeSearch = false,
                 UserInfo = new UserInfo(),
                 UserLabels = { { "", "" }, },
