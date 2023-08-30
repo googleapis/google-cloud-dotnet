@@ -51,6 +51,7 @@ namespace Google.Cloud.Recommender.V1
             MarkInsightAcceptedSettings = existing.MarkInsightAcceptedSettings;
             ListRecommendationsSettings = existing.ListRecommendationsSettings;
             GetRecommendationSettings = existing.GetRecommendationSettings;
+            MarkRecommendationDismissedSettings = existing.MarkRecommendationDismissedSettings;
             MarkRecommendationClaimedSettings = existing.MarkRecommendationClaimedSettings;
             MarkRecommendationSucceededSettings = existing.MarkRecommendationSucceededSettings;
             MarkRecommendationFailedSettings = existing.MarkRecommendationFailedSettings;
@@ -158,6 +159,19 @@ namespace Google.Cloud.Recommender.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetRecommendationSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RecommenderClient.MarkRecommendationDismissed</c> and
+        /// <c>RecommenderClient.MarkRecommendationDismissedAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings MarkRecommendationDismissedSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1458,6 +1472,57 @@ namespace Google.Cloud.Recommender.V1
             GetRecommendationAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Mark the Recommendation State as Dismissed. Users can use this method to
+        /// indicate to the Recommender API that an ACTIVE recommendation has to
+        /// be marked back as DISMISSED.
+        /// 
+        /// MarkRecommendationDismissed can be applied to recommendations in ACTIVE
+        /// state.
+        /// 
+        /// Requires the recommender.*.update IAM permission for the specified
+        /// recommender.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Recommendation MarkRecommendationDismissed(MarkRecommendationDismissedRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Mark the Recommendation State as Dismissed. Users can use this method to
+        /// indicate to the Recommender API that an ACTIVE recommendation has to
+        /// be marked back as DISMISSED.
+        /// 
+        /// MarkRecommendationDismissed can be applied to recommendations in ACTIVE
+        /// state.
+        /// 
+        /// Requires the recommender.*.update IAM permission for the specified
+        /// recommender.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Recommendation> MarkRecommendationDismissedAsync(MarkRecommendationDismissedRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Mark the Recommendation State as Dismissed. Users can use this method to
+        /// indicate to the Recommender API that an ACTIVE recommendation has to
+        /// be marked back as DISMISSED.
+        /// 
+        /// MarkRecommendationDismissed can be applied to recommendations in ACTIVE
+        /// state.
+        /// 
+        /// Requires the recommender.*.update IAM permission for the specified
+        /// recommender.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Recommendation> MarkRecommendationDismissedAsync(MarkRecommendationDismissedRequest request, st::CancellationToken cancellationToken) =>
+            MarkRecommendationDismissedAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Marks the Recommendation State as Claimed. Users can use this method to
         /// indicate to the Recommender API that they are starting to apply the
         /// recommendation themselves. This stops the recommendation content from being
@@ -2299,6 +2364,8 @@ namespace Google.Cloud.Recommender.V1
         /// * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
         /// 
         /// * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
+        /// 
+        /// * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2322,6 +2389,8 @@ namespace Google.Cloud.Recommender.V1
         /// * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
         /// 
         /// * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
+        /// 
+        /// * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2345,6 +2414,8 @@ namespace Google.Cloud.Recommender.V1
         /// * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
         /// 
         /// * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
+        /// 
+        /// * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2365,6 +2436,8 @@ namespace Google.Cloud.Recommender.V1
         /// * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
         /// 
         /// * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
+        /// 
+        /// * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2388,6 +2461,8 @@ namespace Google.Cloud.Recommender.V1
         /// * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
         /// 
         /// * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
+        /// 
+        /// * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2411,6 +2486,8 @@ namespace Google.Cloud.Recommender.V1
         /// * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
         /// 
         /// * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
+        /// 
+        /// * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2539,11 +2616,13 @@ namespace Google.Cloud.Recommender.V1
         /// 
         /// Acceptable formats:
         /// 
-        /// * `projects/[PROJECT_NUMBER]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+        /// * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config`
         /// 
-        /// * `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+        /// * `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config`
         /// 
-        /// * `organizations/[ORGANIZATION_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+        /// * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config`
+        /// 
+        /// * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2562,11 +2641,13 @@ namespace Google.Cloud.Recommender.V1
         /// 
         /// Acceptable formats:
         /// 
-        /// * `projects/[PROJECT_NUMBER]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+        /// * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config`
         /// 
-        /// * `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+        /// * `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config`
         /// 
-        /// * `organizations/[ORGANIZATION_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+        /// * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config`
+        /// 
+        /// * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2585,11 +2666,13 @@ namespace Google.Cloud.Recommender.V1
         /// 
         /// Acceptable formats:
         /// 
-        /// * `projects/[PROJECT_NUMBER]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+        /// * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config`
         /// 
-        /// * `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+        /// * `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config`
         /// 
-        /// * `organizations/[ORGANIZATION_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+        /// * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config`
+        /// 
+        /// * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2605,11 +2688,13 @@ namespace Google.Cloud.Recommender.V1
         /// 
         /// Acceptable formats:
         /// 
-        /// * `projects/[PROJECT_NUMBER]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+        /// * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config`
         /// 
-        /// * `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+        /// * `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config`
         /// 
-        /// * `organizations/[ORGANIZATION_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+        /// * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config`
+        /// 
+        /// * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2628,11 +2713,13 @@ namespace Google.Cloud.Recommender.V1
         /// 
         /// Acceptable formats:
         /// 
-        /// * `projects/[PROJECT_NUMBER]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+        /// * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config`
         /// 
-        /// * `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+        /// * `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config`
         /// 
-        /// * `organizations/[ORGANIZATION_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+        /// * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config`
+        /// 
+        /// * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2651,11 +2738,13 @@ namespace Google.Cloud.Recommender.V1
         /// 
         /// Acceptable formats:
         /// 
-        /// * `projects/[PROJECT_NUMBER]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+        /// * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config`
         /// 
-        /// * `projects/[PROJECT_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+        /// * `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config`
         /// 
-        /// * `organizations/[ORGANIZATION_ID]/locations/global/recommenders/[INSIGHT_TYPE_ID]/config`
+        /// * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config`
+        /// 
+        /// * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2765,6 +2854,8 @@ namespace Google.Cloud.Recommender.V1
 
         private readonly gaxgrpc::ApiCall<GetRecommendationRequest, Recommendation> _callGetRecommendation;
 
+        private readonly gaxgrpc::ApiCall<MarkRecommendationDismissedRequest, Recommendation> _callMarkRecommendationDismissed;
+
         private readonly gaxgrpc::ApiCall<MarkRecommendationClaimedRequest, Recommendation> _callMarkRecommendationClaimed;
 
         private readonly gaxgrpc::ApiCall<MarkRecommendationSucceededRequest, Recommendation> _callMarkRecommendationSucceeded;
@@ -2805,6 +2896,9 @@ namespace Google.Cloud.Recommender.V1
             _callGetRecommendation = clientHelper.BuildApiCall<GetRecommendationRequest, Recommendation>("GetRecommendation", grpcClient.GetRecommendationAsync, grpcClient.GetRecommendation, effectiveSettings.GetRecommendationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetRecommendation);
             Modify_GetRecommendationApiCall(ref _callGetRecommendation);
+            _callMarkRecommendationDismissed = clientHelper.BuildApiCall<MarkRecommendationDismissedRequest, Recommendation>("MarkRecommendationDismissed", grpcClient.MarkRecommendationDismissedAsync, grpcClient.MarkRecommendationDismissed, effectiveSettings.MarkRecommendationDismissedSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callMarkRecommendationDismissed);
+            Modify_MarkRecommendationDismissedApiCall(ref _callMarkRecommendationDismissed);
             _callMarkRecommendationClaimed = clientHelper.BuildApiCall<MarkRecommendationClaimedRequest, Recommendation>("MarkRecommendationClaimed", grpcClient.MarkRecommendationClaimedAsync, grpcClient.MarkRecommendationClaimed, effectiveSettings.MarkRecommendationClaimedSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callMarkRecommendationClaimed);
             Modify_MarkRecommendationClaimedApiCall(ref _callMarkRecommendationClaimed);
@@ -2841,6 +2935,8 @@ namespace Google.Cloud.Recommender.V1
 
         partial void Modify_GetRecommendationApiCall(ref gaxgrpc::ApiCall<GetRecommendationRequest, Recommendation> call);
 
+        partial void Modify_MarkRecommendationDismissedApiCall(ref gaxgrpc::ApiCall<MarkRecommendationDismissedRequest, Recommendation> call);
+
         partial void Modify_MarkRecommendationClaimedApiCall(ref gaxgrpc::ApiCall<MarkRecommendationClaimedRequest, Recommendation> call);
 
         partial void Modify_MarkRecommendationSucceededApiCall(ref gaxgrpc::ApiCall<MarkRecommendationSucceededRequest, Recommendation> call);
@@ -2869,6 +2965,8 @@ namespace Google.Cloud.Recommender.V1
         partial void Modify_ListRecommendationsRequest(ref ListRecommendationsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetRecommendationRequest(ref GetRecommendationRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_MarkRecommendationDismissedRequest(ref MarkRecommendationDismissedRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_MarkRecommendationClaimedRequest(ref MarkRecommendationClaimedRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -3020,6 +3118,46 @@ namespace Google.Cloud.Recommender.V1
         {
             Modify_GetRecommendationRequest(ref request, ref callSettings);
             return _callGetRecommendation.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Mark the Recommendation State as Dismissed. Users can use this method to
+        /// indicate to the Recommender API that an ACTIVE recommendation has to
+        /// be marked back as DISMISSED.
+        /// 
+        /// MarkRecommendationDismissed can be applied to recommendations in ACTIVE
+        /// state.
+        /// 
+        /// Requires the recommender.*.update IAM permission for the specified
+        /// recommender.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Recommendation MarkRecommendationDismissed(MarkRecommendationDismissedRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_MarkRecommendationDismissedRequest(ref request, ref callSettings);
+            return _callMarkRecommendationDismissed.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Mark the Recommendation State as Dismissed. Users can use this method to
+        /// indicate to the Recommender API that an ACTIVE recommendation has to
+        /// be marked back as DISMISSED.
+        /// 
+        /// MarkRecommendationDismissed can be applied to recommendations in ACTIVE
+        /// state.
+        /// 
+        /// Requires the recommender.*.update IAM permission for the specified
+        /// recommender.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Recommendation> MarkRecommendationDismissedAsync(MarkRecommendationDismissedRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_MarkRecommendationDismissedRequest(ref request, ref callSettings);
+            return _callMarkRecommendationDismissed.Async(request, callSettings);
         }
 
         /// <summary>

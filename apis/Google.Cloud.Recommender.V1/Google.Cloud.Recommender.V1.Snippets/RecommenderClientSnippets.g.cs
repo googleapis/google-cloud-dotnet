@@ -1040,6 +1040,41 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for MarkRecommendationDismissed</summary>
+        public void MarkRecommendationDismissedRequestObject()
+        {
+            // Snippet: MarkRecommendationDismissed(MarkRecommendationDismissedRequest, CallSettings)
+            // Create client
+            RecommenderClient recommenderClient = RecommenderClient.Create();
+            // Initialize request argument(s)
+            MarkRecommendationDismissedRequest request = new MarkRecommendationDismissedRequest
+            {
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                Etag = "",
+            };
+            // Make the request
+            Recommendation response = recommenderClient.MarkRecommendationDismissed(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for MarkRecommendationDismissedAsync</summary>
+        public async Task MarkRecommendationDismissedRequestObjectAsync()
+        {
+            // Snippet: MarkRecommendationDismissedAsync(MarkRecommendationDismissedRequest, CallSettings)
+            // Additional: MarkRecommendationDismissedAsync(MarkRecommendationDismissedRequest, CancellationToken)
+            // Create client
+            RecommenderClient recommenderClient = await RecommenderClient.CreateAsync();
+            // Initialize request argument(s)
+            MarkRecommendationDismissedRequest request = new MarkRecommendationDismissedRequest
+            {
+                RecommendationName = RecommendationName.FromProjectLocationRecommenderRecommendation("[PROJECT]", "[LOCATION]", "[RECOMMENDER]", "[RECOMMENDATION]"),
+                Etag = "",
+            };
+            // Make the request
+            Recommendation response = await recommenderClient.MarkRecommendationDismissedAsync(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for MarkRecommendationClaimed</summary>
         public void MarkRecommendationClaimedRequestObject()
         {
