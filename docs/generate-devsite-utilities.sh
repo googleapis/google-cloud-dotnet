@@ -186,7 +186,7 @@ dotnet run --project $REPOROOT/tools/Google.Cloud.Tools.DocUploader -- create-me
 
 if [[ $SERVICE_ACCOUNT_JSON != "" ]]
 then
-   $REPOROOT/tools/Google.Cloud.Tools.DocUploader -- upload \
+   dotnet run --project $REPOROOT/tools/Google.Cloud.Tools.DocUploader -- upload \
     --documentation-path . \
     --credentials $SERVICE_ACCOUNT_JSON \
     --staging-bucket $DEVSITE_STAGING_BUCKET \
