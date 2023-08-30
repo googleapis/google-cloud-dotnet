@@ -12,6 +12,11 @@
 // See the License for the specific language governing permissions and 
 // limitations under the License.
 
+// The nullability of the properties reflects whether or not they're
+// required/defaulted; we rely on the library to ensure they're actually non-null.
+#nullable enable annotations
+#nullable disable warnings
+
 using CommandLine;
 using Google.Protobuf.WellKnownTypes;
 
@@ -24,19 +29,12 @@ public class UploadFileOptions
     [Option("staging-bucket", Default = "docs-resources", HelpText = "The bucket to upload the staged documentation to.")]
     public string StagingBucket { get; set; }
 
-    [Option("credentials", HelpText = "Path to the credentials file to use for Google Cloud Storage.")]
+    [Option("credentials", Required = true, HelpText = "Path to the credentials file to use for Google Cloud Storage.")]
     public string Credentials { get; set; }
 
-    [Option("metadata-file", HelpText = "Path to the docs.metadata file. The path must be relative to the CWD.")]
-    public string MetadataFile { get; set; }
+    [Option("metadata-file", Required = false, HelpText = "Path to the docs.metadata file. The path must be relative to the CWD.")]
+    public string? MetadataFile { get; set; }
 
     [Option("destination-prefix", HelpText = "Prefix to include when uploading tar file. A - will be added after the prefix, if there is one.")]
-    public string DestinationPrefix { get; set; }
+    public string? DestinationPrefix { get; set; }
 }
-
-
-
-
-
-
-
