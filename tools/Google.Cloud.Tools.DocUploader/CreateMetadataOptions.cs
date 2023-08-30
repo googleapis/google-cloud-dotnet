@@ -12,6 +12,11 @@
 // See the License for the specific language governing permissions and 
 // limitations under the License.
 
+// The nullability of the properties reflects whether or not they're
+// required/defaulted; we rely on the library to ensure they're actually non-null.
+#nullable enable annotations
+#nullable disable warnings
+
 using CommandLine;
 using Google.Protobuf.WellKnownTypes;
 
@@ -28,28 +33,28 @@ internal class CreateMetadataOptions
     public string Language { get; set; }
 
     [Option("distribution-name", Required = false, Default = "")]
-    public string DistributionName { get; set; }
+    public string? DistributionName { get; set; }
 
     [Option("product-page", Required = false, Default = "")]
-    public string ProductPage { get; set; }
+    public string? ProductPage { get; set; }
 
     [Option("github-repository", Required = false, Default = "")]
-    public string GitHubRepo { get; set; }
+    public string? GitHubRepo { get; set; }
 
     [Option("issue-tracker", Required = false, Default = "")]
-    public string IssueTracker { get; set; }
+    public string? IssueTracker { get; set; }
 
     [Option("stem", Required = false, Default = "")]
-    public string Stem { get; set; }
+    public string? Stem { get; set; }
 
     [Option("serving-path", Required = false, Default = "")]
-    public string ServingPath { get; set; }
+    public string? ServingPath { get; set; }
 
     [Option("xrefs", Required = false, Separator = ',')]
-    public IList<string> Xrefs { get; set; }
+    public IList<string>? Xrefs { get; set; }
 
     [Option("xref-services", Required = false, Separator = ',')]
-    public IList<string> XrefServices { get; set; }
+    public IList<string>? XrefServices { get; set; }
 
     [Option("destination", Default = "docs.metadata.json")]
     public string Destination { get; set; }
