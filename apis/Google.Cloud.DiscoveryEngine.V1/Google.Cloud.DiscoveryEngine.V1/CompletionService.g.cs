@@ -28,34 +28,36 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "c2VydmljZS5wcm90bxIfZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52",
             "MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxoXZ29vZ2xlL2FwaS9j",
             "bGllbnQucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8a",
-            "GWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8inQEKFENvbXBsZXRlUXVlcnlS",
+            "GWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8ivwEKFENvbXBsZXRlUXVlcnlS",
             "ZXF1ZXN0EkQKCmRhdGFfc3RvcmUYASABKAlCMOBBAvpBKgooZGlzY292ZXJ5",
             "ZW5naW5lLmdvb2dsZWFwaXMuY29tL0RhdGFTdG9yZRISCgVxdWVyeRgCIAEo",
             "CUID4EECEhMKC3F1ZXJ5X21vZGVsGAMgASgJEhYKDnVzZXJfcHNldWRvX2lk",
-            "GAQgASgJIqEBChVDb21wbGV0ZVF1ZXJ5UmVzcG9uc2USYQoRcXVlcnlfc3Vn",
-            "Z2VzdGlvbnMYASADKAsyRi5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5l",
-            "LnYxLkNvbXBsZXRlUXVlcnlSZXNwb25zZS5RdWVyeVN1Z2dlc3Rpb24aJQoP",
-            "UXVlcnlTdWdnZXN0aW9uEhIKCnN1Z2dlc3Rpb24YASABKAkyigMKEUNvbXBs",
-            "ZXRpb25TZXJ2aWNlEqACCg1Db21wbGV0ZVF1ZXJ5EjUuZ29vZ2xlLmNsb3Vk",
-            "LmRpc2NvdmVyeWVuZ2luZS52MS5Db21wbGV0ZVF1ZXJ5UmVxdWVzdBo2Lmdv",
-            "b2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuQ29tcGxldGVRdWVyeVJl",
-            "c3BvbnNlIp8BgtPkkwKYARJCL3YxL3tkYXRhX3N0b3JlPXByb2plY3RzLyov",
-            "bG9jYXRpb25zLyovZGF0YVN0b3Jlcy8qfTpjb21wbGV0ZVF1ZXJ5WlISUC92",
-            "MS97ZGF0YV9zdG9yZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbGxlY3Rp",
-            "b25zLyovZGF0YVN0b3Jlcy8qfTpjb21wbGV0ZVF1ZXJ5GlLKQR5kaXNjb3Zl",
-            "cnllbmdpbmUuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVh",
-            "cGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQokCCiNjb20uZ29vZ2xlLmNs",
-            "b3VkLmRpc2NvdmVyeWVuZ2luZS52MUIWQ29tcGxldGlvblNlcnZpY2VQcm90",
-            "b1ABWk1jbG91ZC5nb29nbGUuY29tL2dvL2Rpc2NvdmVyeWVuZ2luZS9hcGl2",
-            "MS9kaXNjb3ZlcnllbmdpbmVwYjtkaXNjb3ZlcnllbmdpbmVwYqICD0RJU0NP",
-            "VkVSWUVOR0lORaoCH0dvb2dsZS5DbG91ZC5EaXNjb3ZlcnlFbmdpbmUuVjHK",
-            "Ah9Hb29nbGVcQ2xvdWRcRGlzY292ZXJ5RW5naW5lXFYx6gIiR29vZ2xlOjpD",
-            "bG91ZDo6RGlzY292ZXJ5RW5naW5lOjpWMWIGcHJvdG8z"));
+            "GAQgASgJEiAKGGluY2x1ZGVfdGFpbF9zdWdnZXN0aW9ucxgFIAEoCCK/AQoV",
+            "Q29tcGxldGVRdWVyeVJlc3BvbnNlEmEKEXF1ZXJ5X3N1Z2dlc3Rpb25zGAEg",
+            "AygLMkYuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5Db21wbGV0",
+            "ZVF1ZXJ5UmVzcG9uc2UuUXVlcnlTdWdnZXN0aW9uEhwKFHRhaWxfbWF0Y2hf",
+            "dHJpZ2dlcmVkGAIgASgIGiUKD1F1ZXJ5U3VnZ2VzdGlvbhISCgpzdWdnZXN0",
+            "aW9uGAEgASgJMooDChFDb21wbGV0aW9uU2VydmljZRKgAgoNQ29tcGxldGVR",
+            "dWVyeRI1Lmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuQ29tcGxl",
+            "dGVRdWVyeVJlcXVlc3QaNi5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5l",
+            "LnYxLkNvbXBsZXRlUXVlcnlSZXNwb25zZSKfAYLT5JMCmAESQi92MS97ZGF0",
+            "YV9zdG9yZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFTdG9yZXMvKn06",
+            "Y29tcGxldGVRdWVyeVpSElAvdjEve2RhdGFfc3RvcmU9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKi9jb2xsZWN0aW9ucy8qL2RhdGFTdG9yZXMvKn06Y29tcGxl",
+            "dGVRdWVyeRpSykEeZGlzY292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMuY29t0kEu",
+            "aHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9y",
+            "bUKJAgojY29tLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFCFkNv",
+            "bXBsZXRpb25TZXJ2aWNlUHJvdG9QAVpNY2xvdWQuZ29vZ2xlLmNvbS9nby9k",
+            "aXNjb3ZlcnllbmdpbmUvYXBpdjEvZGlzY292ZXJ5ZW5naW5lcGI7ZGlzY292",
+            "ZXJ5ZW5naW5lcGKiAg9ESVNDT1ZFUllFTkdJTkWqAh9Hb29nbGUuQ2xvdWQu",
+            "RGlzY292ZXJ5RW5naW5lLlYxygIfR29vZ2xlXENsb3VkXERpc2NvdmVyeUVu",
+            "Z2luZVxWMeoCIkdvb2dsZTo6Q2xvdWQ6OkRpc2NvdmVyeUVuZ2luZTo6VjFi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.CompleteQueryRequest), global::Google.Cloud.DiscoveryEngine.V1.CompleteQueryRequest.Parser, new[]{ "DataStore", "Query", "QueryModel", "UserPseudoId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.CompleteQueryResponse), global::Google.Cloud.DiscoveryEngine.V1.CompleteQueryResponse.Parser, new[]{ "QuerySuggestions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.CompleteQueryResponse.Types.QuerySuggestion), global::Google.Cloud.DiscoveryEngine.V1.CompleteQueryResponse.Types.QuerySuggestion.Parser, new[]{ "Suggestion" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.CompleteQueryRequest), global::Google.Cloud.DiscoveryEngine.V1.CompleteQueryRequest.Parser, new[]{ "DataStore", "Query", "QueryModel", "UserPseudoId", "IncludeTailSuggestions" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.CompleteQueryResponse), global::Google.Cloud.DiscoveryEngine.V1.CompleteQueryResponse.Parser, new[]{ "QuerySuggestions", "TailMatchTriggered" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.CompleteQueryResponse.Types.QuerySuggestion), global::Google.Cloud.DiscoveryEngine.V1.CompleteQueryResponse.Types.QuerySuggestion.Parser, new[]{ "Suggestion" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -105,6 +107,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       query_ = other.query_;
       queryModel_ = other.queryModel_;
       userPseudoId_ = other.userPseudoId_;
+      includeTailSuggestions_ = other.includeTailSuggestions_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -160,13 +163,14 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     /// API calls. Do not use it when there is no traffic for Search API.
     /// * `user-event` - Using suggestions generated from user-imported search
     /// events.
+    /// * `document-completable` - Using suggestions taken directly from
+    /// user-imported document fields marked as completable.
     ///
     /// Default values:
     ///
     /// * `document` is the default model for regular dataStores.
     /// * `search-history` is the default model for
-    /// [IndustryVertical.SITE_SEARCH][google.cloud.discoveryengine.v1.IndustryVertical.SITE_SEARCH]
-    /// dataStores.
+    /// [IndustryVertical.SITE_SEARCH][] dataStores.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -205,6 +209,24 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
     }
 
+    /// <summary>Field number for the "include_tail_suggestions" field.</summary>
+    public const int IncludeTailSuggestionsFieldNumber = 5;
+    private bool includeTailSuggestions_;
+    /// <summary>
+    /// Indicates if tail suggestions should be returned if there are no
+    /// suggestions that match the full query. Even if set to true, if there are
+    /// suggestions that match the full query, those are returned and no
+    /// tail suggestions are returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IncludeTailSuggestions {
+      get { return includeTailSuggestions_; }
+      set {
+        includeTailSuggestions_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -224,6 +246,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (Query != other.Query) return false;
       if (QueryModel != other.QueryModel) return false;
       if (UserPseudoId != other.UserPseudoId) return false;
+      if (IncludeTailSuggestions != other.IncludeTailSuggestions) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -235,6 +258,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (Query.Length != 0) hash ^= Query.GetHashCode();
       if (QueryModel.Length != 0) hash ^= QueryModel.GetHashCode();
       if (UserPseudoId.Length != 0) hash ^= UserPseudoId.GetHashCode();
+      if (IncludeTailSuggestions != false) hash ^= IncludeTailSuggestions.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -269,6 +293,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(34);
         output.WriteString(UserPseudoId);
       }
+      if (IncludeTailSuggestions != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(IncludeTailSuggestions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -295,6 +323,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(34);
         output.WriteString(UserPseudoId);
       }
+      if (IncludeTailSuggestions != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(IncludeTailSuggestions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -316,6 +348,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
       if (UserPseudoId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(UserPseudoId);
+      }
+      if (IncludeTailSuggestions != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -340,6 +375,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
       if (other.UserPseudoId.Length != 0) {
         UserPseudoId = other.UserPseudoId;
+      }
+      if (other.IncludeTailSuggestions != false) {
+        IncludeTailSuggestions = other.IncludeTailSuggestions;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -372,6 +410,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             UserPseudoId = input.ReadString();
             break;
           }
+          case 40: {
+            IncludeTailSuggestions = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -401,6 +443,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           }
           case 34: {
             UserPseudoId = input.ReadString();
+            break;
+          }
+          case 40: {
+            IncludeTailSuggestions = input.ReadBool();
             break;
           }
         }
@@ -450,6 +496,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CompleteQueryResponse(CompleteQueryResponse other) : this() {
       querySuggestions_ = other.querySuggestions_.Clone();
+      tailMatchTriggered_ = other.tailMatchTriggered_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -474,6 +521,24 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       get { return querySuggestions_; }
     }
 
+    /// <summary>Field number for the "tail_match_triggered" field.</summary>
+    public const int TailMatchTriggeredFieldNumber = 2;
+    private bool tailMatchTriggered_;
+    /// <summary>
+    /// True if the returned suggestions are all tail suggestions.
+    ///
+    /// For tail matching to be triggered, include_tail_suggestions in the request
+    /// must be true and there must be no suggestions that match the full query.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool TailMatchTriggered {
+      get { return tailMatchTriggered_; }
+      set {
+        tailMatchTriggered_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -490,6 +555,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         return true;
       }
       if(!querySuggestions_.Equals(other.querySuggestions_)) return false;
+      if (TailMatchTriggered != other.TailMatchTriggered) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -498,6 +564,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= querySuggestions_.GetHashCode();
+      if (TailMatchTriggered != false) hash ^= TailMatchTriggered.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -517,6 +584,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       output.WriteRawMessage(this);
     #else
       querySuggestions_.WriteTo(output, _repeated_querySuggestions_codec);
+      if (TailMatchTriggered != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(TailMatchTriggered);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -528,6 +599,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       querySuggestions_.WriteTo(ref output, _repeated_querySuggestions_codec);
+      if (TailMatchTriggered != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(TailMatchTriggered);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -539,6 +614,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     public int CalculateSize() {
       int size = 0;
       size += querySuggestions_.CalculateSize(_repeated_querySuggestions_codec);
+      if (TailMatchTriggered != false) {
+        size += 1 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -552,6 +630,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         return;
       }
       querySuggestions_.Add(other.querySuggestions_);
+      if (other.TailMatchTriggered != false) {
+        TailMatchTriggered = other.TailMatchTriggered;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -571,6 +652,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             querySuggestions_.AddEntriesFrom(input, _repeated_querySuggestions_codec);
             break;
           }
+          case 16: {
+            TailMatchTriggered = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -588,6 +673,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             break;
           case 10: {
             querySuggestions_.AddEntriesFrom(ref input, _repeated_querySuggestions_codec);
+            break;
+          }
+          case 16: {
+            TailMatchTriggered = input.ReadBool();
             break;
           }
         }

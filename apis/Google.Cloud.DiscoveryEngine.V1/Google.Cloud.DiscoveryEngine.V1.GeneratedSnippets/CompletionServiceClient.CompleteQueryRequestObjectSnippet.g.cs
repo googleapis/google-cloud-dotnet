@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
                 Query = "",
                 QueryModel = "",
                 UserPseudoId = "",
+                IncludeTailSuggestions = false,
             };
             // Make the request
             CompleteQueryResponse response = completionServiceClient.CompleteQuery(request);
