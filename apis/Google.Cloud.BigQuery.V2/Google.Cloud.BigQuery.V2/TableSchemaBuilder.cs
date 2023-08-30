@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,13 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
+using Google.Api.Gax.Rest;
 using Google.Apis.Bigquery.v2.Data;
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using System;
+using System.Linq;
 using System.Text.RegularExpressions;
-using Google.Api.Gax.Rest;
-using Google.Api.Gax;
 
 namespace Google.Cloud.BigQuery.V2
 {
@@ -40,8 +41,25 @@ namespace Google.Cloud.BigQuery.V2
         public void Add(TableFieldSchema field)
         {
             GaxPreconditions.CheckNotNull(field, nameof(field));
-
             _fields.Add(field);
+        }
+
+        /// <summary>
+        /// Modifies the field with <paramref name="fieldName"/> by running the given action.
+        /// </summary>
+        /// <param name="fieldName">The name of the field to be modified. Must not be null.</param>
+        /// <param name="fieldModifier">An action to be performed on the given field.</param>
+        /// <returns>
+        /// This <see cref="TableSchemaBuilder"/> after having applied the modification. For the purposes of method chaining.
+        /// </returns>
+        /// <exception cref="ArgumentException"><paramref name="fieldName"/> is not present within the schema being built.</exception>
+        public TableSchemaBuilder ModifyField(string fieldName, Action<TableFieldSchema> fieldModifier)
+        {
+            GaxPreconditions.CheckNotNull(fieldName, nameof(fieldName));
+            GaxPreconditions.CheckNotNull(fieldModifier, nameof(fieldModifier));
+            var field = _fields.FirstOrDefault(field => field.Name == fieldName) ?? throw new ArgumentException($"Field '{fieldName}' not found in the schema.", nameof(fieldName));
+            fieldModifier(field);
+            return this;
         }
 
         /// <summary>

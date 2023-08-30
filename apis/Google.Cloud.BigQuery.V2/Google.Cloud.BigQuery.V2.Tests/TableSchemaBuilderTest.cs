@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,6 +13,7 @@
 // limitations under the License.
 using System;
 using Xunit;
+using static Google.Apis.Bigquery.v2.Data.TableFieldSchema;
 
 namespace Google.Cloud.BigQuery.V2.Tests
 {
@@ -77,6 +78,23 @@ namespace Google.Cloud.BigQuery.V2.Tests
         public void ValidateFieldName_Invalid(string name)
         {
             Assert.Throws<ArgumentException>(() => TableSchemaBuilder.ValidateFieldName(name, "field"));
+        }
+
+        [Fact]
+        public void AddWithPolicyTags()
+        {
+            var builder = new TableSchemaBuilder
+            {
+                { "field", BigQueryDbType.Int64, BigQueryFieldMode.Repeated, "My field" }
+            }.ModifyField("field", field => field.PolicyTags = new PolicyTagsData { Names = new[] { "policyName" } });
+
+            var schema = builder.Build();
+            var field = schema.Fields[0];
+            Assert.Equal("field", field.Name);
+            Assert.Equal("INTEGER", field.Type);
+            Assert.Equal("REPEATED", field.Mode);
+            Assert.Equal("My field", field.Description);
+            Assert.Contains("policyName", field.PolicyTags.Names);
         }
 
         [Fact]

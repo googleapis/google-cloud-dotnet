@@ -21,6 +21,7 @@ using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
+using static Google.Apis.Bigquery.v2.Data.TableFieldSchema;
 
 namespace Google.Cloud.BigQuery.V2.IntegrationTests
 {
@@ -820,6 +821,27 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
 
             var response = client.TestTableIamPermissions(_fixture.DatasetId, _fixture.HighScoreTableId, new List<string> { "bigquery.tables.get" });
             Assert.Collection(response.Permissions, role => Assert.Equal("bigquery.tables.get", role));
+        }
+
+        [Fact]
+        public void CreateTableWithPolicyTagsFields()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+
+            string sampleTag = $"projects/{_fixture.ProjectId}/locations/us/taxonomies/1/policyTags/2";
+            var dataset = client.GetDataset(_fixture.DatasetId);
+            var tableId = _fixture.CreateTableId();
+
+            var schema = new TableSchemaBuilder
+            {
+                { "full_name", BigQueryDbType.String, BigQueryFieldMode.Nullable, "field with policy tag" }
+            }.ModifyField("full_name", field => field.PolicyTags = new PolicyTagsData { Names = new[] { sampleTag } })
+            .Build();
+
+            dataset.CreateTable(tableId, schema);
+            var table = dataset.GetTable(tableId);
+
+            Assert.Contains(sampleTag, table.Schema.Fields.First().PolicyTags.Names);
         }
     }
 }
