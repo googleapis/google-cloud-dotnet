@@ -15,7 +15,6 @@
 using CommandLine;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Storage.V1;
-using Google.Cloud.Tools.Common;
 using Google.Cloud.Tools.DocUploader;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
@@ -73,7 +72,7 @@ Metadata GetMetadataFromJsonFile(string metadataFilePath)
 {
     if (!File.Exists(metadataFilePath))
     {
-        throw new UserErrorException($"Unable to load metadata file '{metadataFilePath}`. Metadata is required for upload; this can be generated using the create-metadata option.");
+        throw new Exception($"Unable to load metadata file '{metadataFilePath}`. Metadata is required for upload; this can be generated using the create-metadata option.");
     }
 
     var metadataText = File.ReadAllText(metadataFilePath);
