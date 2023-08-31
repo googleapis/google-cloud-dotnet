@@ -46,7 +46,8 @@ void CreateMetadata(CreateMetadataOptions options)
         XrefServices = { options.XrefServices },
     };
 
-    File.WriteAllText(options.Destination, metadata.ToString());
+    var formatter = new JsonFormatter(JsonFormatter.Settings.Default.WithIndentation());
+    File.WriteAllText(options.Destination, formatter.Format(metadata));
 }
 
 // Uploads the zip file to the specified storage bucket.
