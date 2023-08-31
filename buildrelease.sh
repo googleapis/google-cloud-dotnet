@@ -67,6 +67,17 @@ then
   exit 1
 fi
 
+# If we're building at least one tool, assume we're not building anything else: we just need to pack
+# the tools into the nuget directory, and finish.
+if [[ $projects == Google.Cloud.Tools.* ]]
+then
+  for project in $projects
+  do
+    dotnet pack -c Release -o $PWD/nuget -c Release tools/$project
+  done
+  exit 0
+fi
+
 ./build.sh $projects
 
 # Build LRO and IAM to make docs simpler. We always build the docs from "current" even if there's
