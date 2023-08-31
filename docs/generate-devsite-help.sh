@@ -35,7 +35,7 @@ cd output/devsite-help
 
 # Create the docs metadata. We assume we may need to refer to any of the utility libraries.
 # We also refer to Datastore, PubSub and Storage.
-dotnet run --project $REPOROOT/tools/Google.Cloud.Tools.DocUploader -- create-metadata \
+dotnet docuploader create-metadata \
   --name help \
   --version $VERSION \
   --xref-services 'https://xref.docs.microsoft.com/query?uid={uid}' \
@@ -51,7 +51,7 @@ devsite://dotnet/Google.Cloud.Storage.V1 \
 
 if [[ $SERVICE_ACCOUNT_JSON != "" ]]
 then
-  dotnet run --project $REPOROOT/tools/Google.Cloud.Tools.DocUploader -- upload \
+  dotnet docuploader upload \
     --documentation-path . \
     --credentials $SERVICE_ACCOUNT_JSON \
     --staging-bucket $DEVSITE_STAGING_BUCKET \

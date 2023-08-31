@@ -7,11 +7,12 @@ SCRIPT_DIR=$(dirname "$SCRIPT")
 
 cd $SCRIPT_DIR
 
-# Make sure secrets are loaded in a well known localtion before running releasetool
+# Make sure secrets are loaded in a well known localtion before running the release reporter
 source ./populatesecrets.sh
 populate_all_secrets
 
-source ../tools/Google.Cloud.Tools.ReleaseProgressReporter/publish_reporter.sh
+dotnet tool restore
+source <(dotnet release-progress-reporter publish-reporter-script)
 
 # Secrets are already populated, let's not do that again
 ./release.sh --skippopulatesecrets
