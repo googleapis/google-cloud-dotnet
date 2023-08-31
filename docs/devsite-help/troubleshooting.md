@@ -220,8 +220,8 @@ native libraries are copied appropriately.
 
 ## How can I modify repeated fields and maps in protobuf messages?
 
-This information is now in the [protocol buffers guide](protobuf.md#repeated-fields-and-maps); this section has been
-retained for the sake of existing links.
+This information is now in the [protocol buffers guide](protobuf.md#repeated-fields-and-map-fields);
+this section has been retained for the sake of existing links.
 
 ## How can I get ErrorInfo from RpcException?
 
