@@ -398,4 +398,25 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class KnowledgeConnectorSettings
+    {
+        /// <summary>
+        /// <see cref="PageName"/>-typed view over the <see cref="TargetPage"/> resource name property.
+        /// </summary>
+        public PageName TargetPageAsPageName
+        {
+            get => string.IsNullOrEmpty(TargetPage) ? null : PageName.Parse(TargetPage, allowUnparsed: true);
+            set => TargetPage = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="FlowName"/>-typed view over the <see cref="TargetFlow"/> resource name property.
+        /// </summary>
+        public FlowName TargetFlowAsFlowName
+        {
+            get => string.IsNullOrEmpty(TargetFlow) ? null : FlowName.Parse(TargetFlow, allowUnparsed: true);
+            set => TargetFlow = value?.ToString() ?? "";
+        }
+    }
 }

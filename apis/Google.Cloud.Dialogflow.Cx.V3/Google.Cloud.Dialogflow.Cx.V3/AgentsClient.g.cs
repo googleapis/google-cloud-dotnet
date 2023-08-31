@@ -60,6 +60,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             RestoreAgentOperationsSettings = existing.RestoreAgentOperationsSettings.Clone();
             ValidateAgentSettings = existing.ValidateAgentSettings;
             GetAgentValidationResultSettings = existing.GetAgentValidationResultSettings;
+            GetGenerativeSettingsSettings = existing.GetGenerativeSettingsSettings;
+            UpdateGenerativeSettingsSettings = existing.UpdateGenerativeSettingsSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -263,6 +265,42 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetAgentValidationResultSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AgentsClient.GetGenerativeSettings</c> and <c>AgentsClient.GetGenerativeSettingsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetGenerativeSettingsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AgentsClient.UpdateGenerativeSettings</c> and <c>AgentsClient.UpdateGenerativeSettingsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateGenerativeSettingsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -1366,6 +1404,219 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<AgentValidationResult> GetAgentValidationResultAsync(AgentValidationResultName name, st::CancellationToken cancellationToken) =>
             GetAgentValidationResultAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the generative settings for the agent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GenerativeSettings GetGenerativeSettings(GetGenerativeSettingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the generative settings for the agent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerativeSettings> GetGenerativeSettingsAsync(GetGenerativeSettingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the generative settings for the agent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerativeSettings> GetGenerativeSettingsAsync(GetGenerativeSettingsRequest request, st::CancellationToken cancellationToken) =>
+            GetGenerativeSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the generative settings for the agent.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/agents/&lt;Agent ID&gt;/generativeSettings`.
+        /// </param>
+        /// <param name="languageCode">
+        /// Required. Language code of the generative settings.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GenerativeSettings GetGenerativeSettings(string name, string languageCode, gaxgrpc::CallSettings callSettings = null) =>
+            GetGenerativeSettings(new GetGenerativeSettingsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                LanguageCode = gax::GaxPreconditions.CheckNotNullOrEmpty(languageCode, nameof(languageCode)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the generative settings for the agent.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/agents/&lt;Agent ID&gt;/generativeSettings`.
+        /// </param>
+        /// <param name="languageCode">
+        /// Required. Language code of the generative settings.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerativeSettings> GetGenerativeSettingsAsync(string name, string languageCode, gaxgrpc::CallSettings callSettings = null) =>
+            GetGenerativeSettingsAsync(new GetGenerativeSettingsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                LanguageCode = gax::GaxPreconditions.CheckNotNullOrEmpty(languageCode, nameof(languageCode)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the generative settings for the agent.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/agents/&lt;Agent ID&gt;/generativeSettings`.
+        /// </param>
+        /// <param name="languageCode">
+        /// Required. Language code of the generative settings.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerativeSettings> GetGenerativeSettingsAsync(string name, string languageCode, st::CancellationToken cancellationToken) =>
+            GetGenerativeSettingsAsync(name, languageCode, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the generative settings for the agent.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/agents/&lt;Agent ID&gt;/generativeSettings`.
+        /// </param>
+        /// <param name="languageCode">
+        /// Required. Language code of the generative settings.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GenerativeSettings GetGenerativeSettings(AgentGenerativeSettingsName name, string languageCode, gaxgrpc::CallSettings callSettings = null) =>
+            GetGenerativeSettings(new GetGenerativeSettingsRequest
+            {
+                AgentGenerativeSettingsName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                LanguageCode = gax::GaxPreconditions.CheckNotNullOrEmpty(languageCode, nameof(languageCode)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the generative settings for the agent.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/agents/&lt;Agent ID&gt;/generativeSettings`.
+        /// </param>
+        /// <param name="languageCode">
+        /// Required. Language code of the generative settings.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerativeSettings> GetGenerativeSettingsAsync(AgentGenerativeSettingsName name, string languageCode, gaxgrpc::CallSettings callSettings = null) =>
+            GetGenerativeSettingsAsync(new GetGenerativeSettingsRequest
+            {
+                AgentGenerativeSettingsName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                LanguageCode = gax::GaxPreconditions.CheckNotNullOrEmpty(languageCode, nameof(languageCode)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the generative settings for the agent.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/agents/&lt;Agent ID&gt;/generativeSettings`.
+        /// </param>
+        /// <param name="languageCode">
+        /// Required. Language code of the generative settings.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerativeSettings> GetGenerativeSettingsAsync(AgentGenerativeSettingsName name, string languageCode, st::CancellationToken cancellationToken) =>
+            GetGenerativeSettingsAsync(name, languageCode, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the generative settings for the agent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GenerativeSettings UpdateGenerativeSettings(UpdateGenerativeSettingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the generative settings for the agent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerativeSettings> UpdateGenerativeSettingsAsync(UpdateGenerativeSettingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the generative settings for the agent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerativeSettings> UpdateGenerativeSettingsAsync(UpdateGenerativeSettingsRequest request, st::CancellationToken cancellationToken) =>
+            UpdateGenerativeSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the generative settings for the agent.
+        /// </summary>
+        /// <param name="generativeSettings">
+        /// Required. Generative settings to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The mask to control which fields get updated. If the mask is not
+        /// present, all fields will be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GenerativeSettings UpdateGenerativeSettings(GenerativeSettings generativeSettings, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateGenerativeSettings(new UpdateGenerativeSettingsRequest
+            {
+                GenerativeSettings = gax::GaxPreconditions.CheckNotNull(generativeSettings, nameof(generativeSettings)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the generative settings for the agent.
+        /// </summary>
+        /// <param name="generativeSettings">
+        /// Required. Generative settings to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The mask to control which fields get updated. If the mask is not
+        /// present, all fields will be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerativeSettings> UpdateGenerativeSettingsAsync(GenerativeSettings generativeSettings, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateGenerativeSettingsAsync(new UpdateGenerativeSettingsRequest
+            {
+                GenerativeSettings = gax::GaxPreconditions.CheckNotNull(generativeSettings, nameof(generativeSettings)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the generative settings for the agent.
+        /// </summary>
+        /// <param name="generativeSettings">
+        /// Required. Generative settings to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The mask to control which fields get updated. If the mask is not
+        /// present, all fields will be updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerativeSettings> UpdateGenerativeSettingsAsync(GenerativeSettings generativeSettings, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateGenerativeSettingsAsync(generativeSettings, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Agents client wrapper implementation, for convenient use.</summary>
@@ -1391,6 +1642,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         private readonly gaxgrpc::ApiCall<ValidateAgentRequest, AgentValidationResult> _callValidateAgent;
 
         private readonly gaxgrpc::ApiCall<GetAgentValidationResultRequest, AgentValidationResult> _callGetAgentValidationResult;
+
+        private readonly gaxgrpc::ApiCall<GetGenerativeSettingsRequest, GenerativeSettings> _callGetGenerativeSettings;
+
+        private readonly gaxgrpc::ApiCall<UpdateGenerativeSettingsRequest, GenerativeSettings> _callUpdateGenerativeSettings;
 
         /// <summary>
         /// Constructs a client wrapper for the Agents service, with the specified gRPC client and settings.
@@ -1433,6 +1688,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             _callGetAgentValidationResult = clientHelper.BuildApiCall<GetAgentValidationResultRequest, AgentValidationResult>("GetAgentValidationResult", grpcClient.GetAgentValidationResultAsync, grpcClient.GetAgentValidationResult, effectiveSettings.GetAgentValidationResultSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetAgentValidationResult);
             Modify_GetAgentValidationResultApiCall(ref _callGetAgentValidationResult);
+            _callGetGenerativeSettings = clientHelper.BuildApiCall<GetGenerativeSettingsRequest, GenerativeSettings>("GetGenerativeSettings", grpcClient.GetGenerativeSettingsAsync, grpcClient.GetGenerativeSettings, effectiveSettings.GetGenerativeSettingsSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetGenerativeSettings);
+            Modify_GetGenerativeSettingsApiCall(ref _callGetGenerativeSettings);
+            _callUpdateGenerativeSettings = clientHelper.BuildApiCall<UpdateGenerativeSettingsRequest, GenerativeSettings>("UpdateGenerativeSettings", grpcClient.UpdateGenerativeSettingsAsync, grpcClient.UpdateGenerativeSettings, effectiveSettings.UpdateGenerativeSettingsSettings).WithGoogleRequestParam("generative_settings.name", request => request.GenerativeSettings?.Name);
+            Modify_ApiCall(ref _callUpdateGenerativeSettings);
+            Modify_UpdateGenerativeSettingsApiCall(ref _callUpdateGenerativeSettings);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1455,6 +1716,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         partial void Modify_ValidateAgentApiCall(ref gaxgrpc::ApiCall<ValidateAgentRequest, AgentValidationResult> call);
 
         partial void Modify_GetAgentValidationResultApiCall(ref gaxgrpc::ApiCall<GetAgentValidationResultRequest, AgentValidationResult> call);
+
+        partial void Modify_GetGenerativeSettingsApiCall(ref gaxgrpc::ApiCall<GetGenerativeSettingsRequest, GenerativeSettings> call);
+
+        partial void Modify_UpdateGenerativeSettingsApiCall(ref gaxgrpc::ApiCall<UpdateGenerativeSettingsRequest, GenerativeSettings> call);
 
         partial void OnConstruction(Agents.AgentsClient grpcClient, AgentsSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1481,6 +1746,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         partial void Modify_ValidateAgentRequest(ref ValidateAgentRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetAgentValidationResultRequest(ref GetAgentValidationResultRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetGenerativeSettingsRequest(ref GetGenerativeSettingsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateGenerativeSettingsRequest(ref UpdateGenerativeSettingsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Returns the list of all agents in the specified location.
@@ -1774,6 +2043,54 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             Modify_GetAgentValidationResultRequest(ref request, ref callSettings);
             return _callGetAgentValidationResult.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the generative settings for the agent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override GenerativeSettings GetGenerativeSettings(GetGenerativeSettingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetGenerativeSettingsRequest(ref request, ref callSettings);
+            return _callGetGenerativeSettings.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the generative settings for the agent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<GenerativeSettings> GetGenerativeSettingsAsync(GetGenerativeSettingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetGenerativeSettingsRequest(ref request, ref callSettings);
+            return _callGetGenerativeSettings.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the generative settings for the agent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override GenerativeSettings UpdateGenerativeSettings(UpdateGenerativeSettingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateGenerativeSettingsRequest(ref request, ref callSettings);
+            return _callUpdateGenerativeSettings.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the generative settings for the agent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<GenerativeSettings> UpdateGenerativeSettingsAsync(UpdateGenerativeSettingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateGenerativeSettingsRequest(ref request, ref callSettings);
+            return _callUpdateGenerativeSettings.Async(request, callSettings);
         }
     }
 
