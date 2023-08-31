@@ -65,6 +65,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             yield return AgentReflection.Descriptor;
             yield return AudioConfigReflection.Descriptor;
             yield return ChangelogReflection.Descriptor;
+            yield return DataStoreConnectionReflection.Descriptor;
             yield return DeploymentReflection.Descriptor;
             yield return EntityTypeReflection.Descriptor;
             yield return EnvironmentReflection.Descriptor;
@@ -72,10 +73,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             yield return FlowReflection.Descriptor;
             yield return FulfillmentReflection.Descriptor;
             yield return GcsReflection.Descriptor;
+            yield return GenerativeSettingsReflection.Descriptor;
             yield return ImportStrategyReflection.Descriptor;
             yield return IntentReflection.Descriptor;
             yield return PageReflection.Descriptor;
             yield return ResponseMessageReflection.Descriptor;
+            yield return SafetySettingsReflection.Descriptor;
             yield return SecuritySettingsReflection.Descriptor;
             yield return SessionReflection.Descriptor;
             yield return SessionEntityTypeReflection.Descriptor;

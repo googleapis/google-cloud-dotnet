@@ -91,6 +91,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.AgentValidationResult> __Marshaller_google_cloud_dialogflow_cx_v3_AgentValidationResult = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.AgentValidationResult.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.GetAgentValidationResultRequest> __Marshaller_google_cloud_dialogflow_cx_v3_GetAgentValidationResultRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.GetAgentValidationResultRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.GetGenerativeSettingsRequest> __Marshaller_google_cloud_dialogflow_cx_v3_GetGenerativeSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.GetGenerativeSettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings> __Marshaller_google_cloud_dialogflow_cx_v3_GenerativeSettings = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.UpdateGenerativeSettingsRequest> __Marshaller_google_cloud_dialogflow_cx_v3_UpdateGenerativeSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.UpdateGenerativeSettingsRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.ListAgentsRequest, global::Google.Cloud.Dialogflow.Cx.V3.ListAgentsResponse> __Method_ListAgents = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.ListAgentsRequest, global::Google.Cloud.Dialogflow.Cx.V3.ListAgentsResponse>(
@@ -163,6 +169,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         "GetAgentValidationResult",
         __Marshaller_google_cloud_dialogflow_cx_v3_GetAgentValidationResultRequest,
         __Marshaller_google_cloud_dialogflow_cx_v3_AgentValidationResult);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.GetGenerativeSettingsRequest, global::Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings> __Method_GetGenerativeSettings = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.GetGenerativeSettingsRequest, global::Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetGenerativeSettings",
+        __Marshaller_google_cloud_dialogflow_cx_v3_GetGenerativeSettingsRequest,
+        __Marshaller_google_cloud_dialogflow_cx_v3_GenerativeSettings);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.UpdateGenerativeSettingsRequest, global::Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings> __Method_UpdateGenerativeSettings = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.UpdateGenerativeSettingsRequest, global::Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateGenerativeSettings",
+        __Marshaller_google_cloud_dialogflow_cx_v3_UpdateGenerativeSettingsRequest,
+        __Marshaller_google_cloud_dialogflow_cx_v3_GenerativeSettings);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -314,6 +336,30 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.Cx.V3.AgentValidationResult> GetAgentValidationResult(global::Google.Cloud.Dialogflow.Cx.V3.GetAgentValidationResultRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets the generative settings for the agent.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings> GetGenerativeSettings(global::Google.Cloud.Dialogflow.Cx.V3.GetGenerativeSettingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the generative settings for the agent.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings> UpdateGenerativeSettings(global::Google.Cloud.Dialogflow.Cx.V3.UpdateGenerativeSettingsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -923,6 +969,102 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetAgentValidationResult, null, options, request);
       }
+      /// <summary>
+      /// Gets the generative settings for the agent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings GetGenerativeSettings(global::Google.Cloud.Dialogflow.Cx.V3.GetGenerativeSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetGenerativeSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the generative settings for the agent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings GetGenerativeSettings(global::Google.Cloud.Dialogflow.Cx.V3.GetGenerativeSettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetGenerativeSettings, null, options, request);
+      }
+      /// <summary>
+      /// Gets the generative settings for the agent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings> GetGenerativeSettingsAsync(global::Google.Cloud.Dialogflow.Cx.V3.GetGenerativeSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetGenerativeSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the generative settings for the agent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings> GetGenerativeSettingsAsync(global::Google.Cloud.Dialogflow.Cx.V3.GetGenerativeSettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetGenerativeSettings, null, options, request);
+      }
+      /// <summary>
+      /// Updates the generative settings for the agent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings UpdateGenerativeSettings(global::Google.Cloud.Dialogflow.Cx.V3.UpdateGenerativeSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateGenerativeSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the generative settings for the agent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings UpdateGenerativeSettings(global::Google.Cloud.Dialogflow.Cx.V3.UpdateGenerativeSettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateGenerativeSettings, null, options, request);
+      }
+      /// <summary>
+      /// Updates the generative settings for the agent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings> UpdateGenerativeSettingsAsync(global::Google.Cloud.Dialogflow.Cx.V3.UpdateGenerativeSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateGenerativeSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the generative settings for the agent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings> UpdateGenerativeSettingsAsync(global::Google.Cloud.Dialogflow.Cx.V3.UpdateGenerativeSettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateGenerativeSettings, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override AgentsClient NewInstance(ClientBaseConfiguration configuration)
@@ -945,7 +1087,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           .AddMethod(__Method_ExportAgent, serviceImpl.ExportAgent)
           .AddMethod(__Method_RestoreAgent, serviceImpl.RestoreAgent)
           .AddMethod(__Method_ValidateAgent, serviceImpl.ValidateAgent)
-          .AddMethod(__Method_GetAgentValidationResult, serviceImpl.GetAgentValidationResult).Build();
+          .AddMethod(__Method_GetAgentValidationResult, serviceImpl.GetAgentValidationResult)
+          .AddMethod(__Method_GetGenerativeSettings, serviceImpl.GetGenerativeSettings)
+          .AddMethod(__Method_UpdateGenerativeSettings, serviceImpl.UpdateGenerativeSettings).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -964,6 +1108,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       serviceBinder.AddMethod(__Method_RestoreAgent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.RestoreAgentRequest, global::Google.LongRunning.Operation>(serviceImpl.RestoreAgent));
       serviceBinder.AddMethod(__Method_ValidateAgent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.ValidateAgentRequest, global::Google.Cloud.Dialogflow.Cx.V3.AgentValidationResult>(serviceImpl.ValidateAgent));
       serviceBinder.AddMethod(__Method_GetAgentValidationResult, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.GetAgentValidationResultRequest, global::Google.Cloud.Dialogflow.Cx.V3.AgentValidationResult>(serviceImpl.GetAgentValidationResult));
+      serviceBinder.AddMethod(__Method_GetGenerativeSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.GetGenerativeSettingsRequest, global::Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings>(serviceImpl.GetGenerativeSettings));
+      serviceBinder.AddMethod(__Method_UpdateGenerativeSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.UpdateGenerativeSettingsRequest, global::Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings>(serviceImpl.UpdateGenerativeSettings));
     }
 
   }

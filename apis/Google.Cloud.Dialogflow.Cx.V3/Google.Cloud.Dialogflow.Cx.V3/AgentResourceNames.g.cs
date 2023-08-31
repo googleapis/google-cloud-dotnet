@@ -647,4 +647,17 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class GetGenerativeSettingsRequest
+    {
+        /// <summary>
+        /// <see cref="gcdcv::AgentGenerativeSettingsName"/>-typed view over the <see cref="Name"/> resource name
+        /// property.
+        /// </summary>
+        public gcdcv::AgentGenerativeSettingsName AgentGenerativeSettingsName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdcv::AgentGenerativeSettingsName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }

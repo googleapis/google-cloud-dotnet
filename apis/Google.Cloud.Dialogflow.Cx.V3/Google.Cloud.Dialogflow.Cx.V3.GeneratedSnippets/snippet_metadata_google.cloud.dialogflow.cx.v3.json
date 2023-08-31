@@ -1982,6 +1982,509 @@
       ]
     },
     {
+      "regionTag": "dialogflow_v3_generated_Agents_GetGenerativeSettings_sync",
+      "title": "GetGenerativeSettingsRequestObject",
+      "description": "Snippet for GetGenerativeSettings",
+      "file": "AgentsClient.GetGenerativeSettingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGenerativeSettings",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient.GetGenerativeSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.GetGenerativeSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings",
+        "client": {
+          "shortName": "AgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient"
+        },
+        "method": {
+          "shortName": "GetGenerativeSettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.Agents.GetGenerativeSettings",
+          "service": {
+            "shortName": "Agents",
+            "fullName": "google.cloud.dialogflow.cx.v3.Agents"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Agents_GetGenerativeSettings_async",
+      "title": "GetGenerativeSettingsRequestObjectAsync",
+      "description": "Snippet for GetGenerativeSettingsAsync",
+      "file": "AgentsClient.GetGenerativeSettingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGenerativeSettingsAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient.GetGenerativeSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.GetGenerativeSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings>",
+        "client": {
+          "shortName": "AgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient"
+        },
+        "method": {
+          "shortName": "GetGenerativeSettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.Agents.GetGenerativeSettings",
+          "service": {
+            "shortName": "Agents",
+            "fullName": "google.cloud.dialogflow.cx.v3.Agents"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Agents_GetGenerativeSettings_sync_flattened",
+      "title": "GetGenerativeSettings",
+      "description": "Snippet for GetGenerativeSettings",
+      "file": "AgentsClient.GetGenerativeSettingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGenerativeSettings",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient.GetGenerativeSettings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "languageCode"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings",
+        "client": {
+          "shortName": "AgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient"
+        },
+        "method": {
+          "shortName": "GetGenerativeSettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.Agents.GetGenerativeSettings",
+          "service": {
+            "shortName": "Agents",
+            "fullName": "google.cloud.dialogflow.cx.v3.Agents"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Agents_GetGenerativeSettings_async_flattened",
+      "title": "GetGenerativeSettingsAsync",
+      "description": "Snippet for GetGenerativeSettingsAsync",
+      "file": "AgentsClient.GetGenerativeSettingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGenerativeSettingsAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient.GetGenerativeSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "languageCode"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings>",
+        "client": {
+          "shortName": "AgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient"
+        },
+        "method": {
+          "shortName": "GetGenerativeSettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.Agents.GetGenerativeSettings",
+          "service": {
+            "shortName": "Agents",
+            "fullName": "google.cloud.dialogflow.cx.v3.Agents"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Agents_GetGenerativeSettings_sync_flattened_resourceNames",
+      "title": "GetGenerativeSettingsResourceNames",
+      "description": "Snippet for GetGenerativeSettings",
+      "file": "AgentsClient.GetGenerativeSettingsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGenerativeSettings",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient.GetGenerativeSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.AgentGenerativeSettingsName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "languageCode"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings",
+        "client": {
+          "shortName": "AgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient"
+        },
+        "method": {
+          "shortName": "GetGenerativeSettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.Agents.GetGenerativeSettings",
+          "service": {
+            "shortName": "Agents",
+            "fullName": "google.cloud.dialogflow.cx.v3.Agents"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Agents_GetGenerativeSettings_async_flattened_resourceNames",
+      "title": "GetGenerativeSettingsResourceNamesAsync",
+      "description": "Snippet for GetGenerativeSettingsAsync",
+      "file": "AgentsClient.GetGenerativeSettingsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGenerativeSettingsAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient.GetGenerativeSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.AgentGenerativeSettingsName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "languageCode"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings>",
+        "client": {
+          "shortName": "AgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient"
+        },
+        "method": {
+          "shortName": "GetGenerativeSettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.Agents.GetGenerativeSettings",
+          "service": {
+            "shortName": "Agents",
+            "fullName": "google.cloud.dialogflow.cx.v3.Agents"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Agents_UpdateGenerativeSettings_sync",
+      "title": "UpdateGenerativeSettingsRequestObject",
+      "description": "Snippet for UpdateGenerativeSettings",
+      "file": "AgentsClient.UpdateGenerativeSettingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGenerativeSettings",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient.UpdateGenerativeSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.UpdateGenerativeSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings",
+        "client": {
+          "shortName": "AgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient"
+        },
+        "method": {
+          "shortName": "UpdateGenerativeSettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.Agents.UpdateGenerativeSettings",
+          "service": {
+            "shortName": "Agents",
+            "fullName": "google.cloud.dialogflow.cx.v3.Agents"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Agents_UpdateGenerativeSettings_async",
+      "title": "UpdateGenerativeSettingsRequestObjectAsync",
+      "description": "Snippet for UpdateGenerativeSettingsAsync",
+      "file": "AgentsClient.UpdateGenerativeSettingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGenerativeSettingsAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient.UpdateGenerativeSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.UpdateGenerativeSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings>",
+        "client": {
+          "shortName": "AgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient"
+        },
+        "method": {
+          "shortName": "UpdateGenerativeSettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.Agents.UpdateGenerativeSettings",
+          "service": {
+            "shortName": "Agents",
+            "fullName": "google.cloud.dialogflow.cx.v3.Agents"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Agents_UpdateGenerativeSettings_sync_flattened",
+      "title": "UpdateGenerativeSettings",
+      "description": "Snippet for UpdateGenerativeSettings",
+      "file": "AgentsClient.UpdateGenerativeSettingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGenerativeSettings",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient.UpdateGenerativeSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings",
+            "name": "generativeSettings"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings",
+        "client": {
+          "shortName": "AgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient"
+        },
+        "method": {
+          "shortName": "UpdateGenerativeSettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.Agents.UpdateGenerativeSettings",
+          "service": {
+            "shortName": "Agents",
+            "fullName": "google.cloud.dialogflow.cx.v3.Agents"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Agents_UpdateGenerativeSettings_async_flattened",
+      "title": "UpdateGenerativeSettingsAsync",
+      "description": "Snippet for UpdateGenerativeSettingsAsync",
+      "file": "AgentsClient.UpdateGenerativeSettingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGenerativeSettingsAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient.UpdateGenerativeSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings",
+            "name": "generativeSettings"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings>",
+        "client": {
+          "shortName": "AgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient"
+        },
+        "method": {
+          "shortName": "UpdateGenerativeSettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.Agents.UpdateGenerativeSettings",
+          "service": {
+            "shortName": "Agents",
+            "fullName": "google.cloud.dialogflow.cx.v3.Agents"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "dialogflow_v3_generated_Changelogs_ListChangelogs_sync",
       "title": "ListChangelogsRequestObject",
       "description": "Snippet for ListChangelogs",

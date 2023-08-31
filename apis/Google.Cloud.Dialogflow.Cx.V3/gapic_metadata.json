@@ -40,6 +40,12 @@
                 "GetAgentValidationResultAsync"
               ]
             },
+            "GetGenerativeSettings": {
+              "methods": [
+                "GetGenerativeSettings",
+                "GetGenerativeSettingsAsync"
+              ]
+            },
             "ListAgents": {
               "methods": [
                 "ListAgents",
@@ -56,6 +62,12 @@
               "methods": [
                 "UpdateAgent",
                 "UpdateAgentAsync"
+              ]
+            },
+            "UpdateGenerativeSettings": {
+              "methods": [
+                "UpdateGenerativeSettings",
+                "UpdateGenerativeSettingsAsync"
               ]
             },
             "ValidateAgent": {

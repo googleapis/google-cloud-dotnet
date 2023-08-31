@@ -27,7 +27,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "CjRnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy9jeC92My9yZXNwb25zZV9tZXNz",
             "YWdlLnByb3RvEh1nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52MxofZ29v",
             "Z2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxocZ29vZ2xlL3Byb3RvYnVm",
-            "L3N0cnVjdC5wcm90byL7DAoPUmVzcG9uc2VNZXNzYWdlEkMKBHRleHQYASAB",
+            "L3N0cnVjdC5wcm90byLxDQoPUmVzcG9uc2VNZXNzYWdlEkMKBHRleHQYASAB",
             "KAsyMy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5SZXNwb25zZU1l",
             "c3NhZ2UuVGV4dEgAEioKB3BheWxvYWQYAiABKAsyFy5nb29nbGUucHJvdG9i",
             "dWYuU3RydWN0SAASYgoUY29udmVyc2F0aW9uX3N1Y2Nlc3MYCSABKAsyQi5n",
@@ -44,42 +44,46 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "MjkuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuUmVzcG9uc2VNZXNz",
             "YWdlLk1peGVkQXVkaW9CA+BBA0gAEmcKF3RlbGVwaG9ueV90cmFuc2Zlcl9j",
             "YWxsGBIgASgLMkQuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuUmVz",
-            "cG9uc2VNZXNzYWdlLlRlbGVwaG9ueVRyYW5zZmVyQ2FsbEgAElIKDXJlc3Bv",
-            "bnNlX3R5cGUYBCABKA4yOy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52",
-            "My5SZXNwb25zZU1lc3NhZ2UuUmVzcG9uc2VUeXBlEg8KB2NoYW5uZWwYEyAB",
-            "KAkaQwoEVGV4dBIRCgR0ZXh0GAEgAygJQgPgQQISKAobYWxsb3dfcGxheWJh",
-            "Y2tfaW50ZXJydXB0aW9uGAIgASgIQgPgQQMaPQoQTGl2ZUFnZW50SGFuZG9m",
-            "ZhIpCghtZXRhZGF0YRgBIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3Qa",
-            "QAoTQ29udmVyc2F0aW9uU3VjY2VzcxIpCghtZXRhZGF0YRgBIAEoCzIXLmdv",
-            "b2dsZS5wcm90b2J1Zi5TdHJ1Y3QaZQoPT3V0cHV0QXVkaW9UZXh0Eg4KBHRl",
-            "eHQYASABKAlIABIOCgRzc21sGAIgASgJSAASKAobYWxsb3dfcGxheWJhY2tf",
-            "aW50ZXJydXB0aW9uGAMgASgIQgPgQQNCCAoGc291cmNlGhAKDkVuZEludGVy",
-            "YWN0aW9uGk0KCVBsYXlBdWRpbxIWCglhdWRpb191cmkYASABKAlCA+BBAhIo",
-            "ChthbGxvd19wbGF5YmFja19pbnRlcnJ1cHRpb24YAiABKAhCA+BBAxrBAQoK",
-            "TWl4ZWRBdWRpbxJTCghzZWdtZW50cxgBIAMoCzJBLmdvb2dsZS5jbG91ZC5k",
-            "aWFsb2dmbG93LmN4LnYzLlJlc3BvbnNlTWVzc2FnZS5NaXhlZEF1ZGlvLlNl",
-            "Z21lbnQaXgoHU2VnbWVudBIPCgVhdWRpbxgBIAEoDEgAEg0KA3VyaRgCIAEo",
-            "CUgAEigKG2FsbG93X3BsYXliYWNrX2ludGVycnVwdGlvbhgDIAEoCEID4EED",
-            "QgkKB2NvbnRlbnQaOwoVVGVsZXBob255VHJhbnNmZXJDYWxsEhYKDHBob25l",
-            "X251bWJlchgBIAEoCUgAQgoKCGVuZHBvaW50ImkKDFJlc3BvbnNlVHlwZRId",
-            "ChlSRVNQT05TRV9UWVBFX1VOU1BFQ0lGSUVEEAASEAoMRU5UUllfUFJPTVBU",
-            "EAESFAoQUEFSQU1FVEVSX1BST01QVBACEhIKDkhBTkRMRVJfUFJPTVBUEANC",
-            "CQoHbWVzc2FnZUK6AQohY29tLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4",
-            "LnYzQhRSZXNwb25zZU1lc3NhZ2VQcm90b1ABWjFjbG91ZC5nb29nbGUuY29t",
-            "L2dvL2RpYWxvZ2Zsb3cvY3gvYXBpdjMvY3hwYjtjeHBi+AEBogICREaqAh1H",
-            "b29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5DeC5WM+oCIUdvb2dsZTo6Q2xvdWQ6",
-            "OkRpYWxvZ2Zsb3c6OkNYOjpWM2IGcHJvdG8z"));
+            "cG9uc2VNZXNzYWdlLlRlbGVwaG9ueVRyYW5zZmVyQ2FsbEgAEl8KE2tub3ds",
+            "ZWRnZV9pbmZvX2NhcmQYFCABKAsyQC5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
+            "dy5jeC52My5SZXNwb25zZU1lc3NhZ2UuS25vd2xlZGdlSW5mb0NhcmRIABJS",
+            "Cg1yZXNwb25zZV90eXBlGAQgASgOMjsuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
+            "b3cuY3gudjMuUmVzcG9uc2VNZXNzYWdlLlJlc3BvbnNlVHlwZRIPCgdjaGFu",
+            "bmVsGBMgASgJGkMKBFRleHQSEQoEdGV4dBgBIAMoCUID4EECEigKG2FsbG93",
+            "X3BsYXliYWNrX2ludGVycnVwdGlvbhgCIAEoCEID4EEDGj0KEExpdmVBZ2Vu",
+            "dEhhbmRvZmYSKQoIbWV0YWRhdGEYASABKAsyFy5nb29nbGUucHJvdG9idWYu",
+            "U3RydWN0GkAKE0NvbnZlcnNhdGlvblN1Y2Nlc3MSKQoIbWV0YWRhdGEYASAB",
+            "KAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0GmUKD091dHB1dEF1ZGlvVGV4",
+            "dBIOCgR0ZXh0GAEgASgJSAASDgoEc3NtbBgCIAEoCUgAEigKG2FsbG93X3Bs",
+            "YXliYWNrX2ludGVycnVwdGlvbhgDIAEoCEID4EEDQggKBnNvdXJjZRoQCg5F",
+            "bmRJbnRlcmFjdGlvbhpNCglQbGF5QXVkaW8SFgoJYXVkaW9fdXJpGAEgASgJ",
+            "QgPgQQISKAobYWxsb3dfcGxheWJhY2tfaW50ZXJydXB0aW9uGAIgASgIQgPg",
+            "QQMawQEKCk1peGVkQXVkaW8SUwoIc2VnbWVudHMYASADKAsyQS5nb29nbGUu",
+            "Y2xvdWQuZGlhbG9nZmxvdy5jeC52My5SZXNwb25zZU1lc3NhZ2UuTWl4ZWRB",
+            "dWRpby5TZWdtZW50Gl4KB1NlZ21lbnQSDwoFYXVkaW8YASABKAxIABINCgN1",
+            "cmkYAiABKAlIABIoChthbGxvd19wbGF5YmFja19pbnRlcnJ1cHRpb24YAyAB",
+            "KAhCA+BBA0IJCgdjb250ZW50GjsKFVRlbGVwaG9ueVRyYW5zZmVyQ2FsbBIW",
+            "CgxwaG9uZV9udW1iZXIYASABKAlIAEIKCghlbmRwb2ludBoTChFLbm93bGVk",
+            "Z2VJbmZvQ2FyZCJpCgxSZXNwb25zZVR5cGUSHQoZUkVTUE9OU0VfVFlQRV9V",
+            "TlNQRUNJRklFRBAAEhAKDEVOVFJZX1BST01QVBABEhQKEFBBUkFNRVRFUl9Q",
+            "Uk9NUFQQAhISCg5IQU5ETEVSX1BST01QVBADQgkKB21lc3NhZ2VCugEKIWNv",
+            "bS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52M0IUUmVzcG9uc2VNZXNz",
+            "YWdlUHJvdG9QAVoxY2xvdWQuZ29vZ2xlLmNvbS9nby9kaWFsb2dmbG93L2N4",
+            "L2FwaXYzL2N4cGI7Y3hwYvgBAaICAkRGqgIdR29vZ2xlLkNsb3VkLkRpYWxv",
+            "Z2Zsb3cuQ3guVjPqAiFHb29nbGU6OkNsb3VkOjpEaWFsb2dmbG93OjpDWDo6",
+            "VjNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Parser, new[]{ "Text", "Payload", "ConversationSuccess", "OutputAudioText", "LiveAgentHandoff", "EndInteraction", "PlayAudio", "MixedAudio", "TelephonyTransferCall", "ResponseType", "Channel" }, new[]{ "Message" }, new[]{ typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ResponseType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.Text), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.Text.Parser, new[]{ "Text_", "AllowPlaybackInterruption" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Parser, new[]{ "Text", "Payload", "ConversationSuccess", "OutputAudioText", "LiveAgentHandoff", "EndInteraction", "PlayAudio", "MixedAudio", "TelephonyTransferCall", "KnowledgeInfoCard", "ResponseType", "Channel" }, new[]{ "Message" }, new[]{ typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ResponseType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.Text), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.Text.Parser, new[]{ "Text_", "AllowPlaybackInterruption" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.LiveAgentHandoff), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.LiveAgentHandoff.Parser, new[]{ "Metadata" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ConversationSuccess), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ConversationSuccess.Parser, new[]{ "Metadata" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.OutputAudioText), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.OutputAudioText.Parser, new[]{ "Text", "Ssml", "AllowPlaybackInterruption" }, new[]{ "Source" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.EndInteraction), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.EndInteraction.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.PlayAudio), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.PlayAudio.Parser, new[]{ "AudioUri", "AllowPlaybackInterruption" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.MixedAudio), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.MixedAudio.Parser, new[]{ "Segments" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.MixedAudio.Types.Segment), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.MixedAudio.Types.Segment.Parser, new[]{ "Audio", "Uri", "AllowPlaybackInterruption" }, new[]{ "Content" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.TelephonyTransferCall), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.TelephonyTransferCall.Parser, new[]{ "PhoneNumber" }, new[]{ "Endpoint" }, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.TelephonyTransferCall), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.TelephonyTransferCall.Parser, new[]{ "PhoneNumber" }, new[]{ "Endpoint" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.KnowledgeInfoCard), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.KnowledgeInfoCard.Parser, null, null, null, null, null)})
           }));
     }
     #endregion
@@ -168,6 +172,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           break;
         case MessageOneofCase.TelephonyTransferCall:
           TelephonyTransferCall = other.TelephonyTransferCall.Clone();
+          break;
+        case MessageOneofCase.KnowledgeInfoCard:
+          KnowledgeInfoCard = other.KnowledgeInfoCard.Clone();
           break;
       }
 
@@ -330,6 +337,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
     }
 
+    /// <summary>Field number for the "knowledge_info_card" field.</summary>
+    public const int KnowledgeInfoCardFieldNumber = 20;
+    /// <summary>
+    /// Represents info card for knowledge answers, to be better rendered in
+    /// Dialogflow Messenger.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.KnowledgeInfoCard KnowledgeInfoCard {
+      get { return messageCase_ == MessageOneofCase.KnowledgeInfoCard ? (global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.KnowledgeInfoCard) message_ : null; }
+      set {
+        message_ = value;
+        messageCase_ = value == null ? MessageOneofCase.None : MessageOneofCase.KnowledgeInfoCard;
+      }
+    }
+
     /// <summary>Field number for the "response_type" field.</summary>
     public const int ResponseTypeFieldNumber = 4;
     private global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ResponseType responseType_ = global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ResponseType.Unspecified;
@@ -376,6 +399,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       PlayAudio = 12,
       MixedAudio = 13,
       TelephonyTransferCall = 18,
+      KnowledgeInfoCard = 20,
     }
     private MessageOneofCase messageCase_ = MessageOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -415,6 +439,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (!object.Equals(PlayAudio, other.PlayAudio)) return false;
       if (!object.Equals(MixedAudio, other.MixedAudio)) return false;
       if (!object.Equals(TelephonyTransferCall, other.TelephonyTransferCall)) return false;
+      if (!object.Equals(KnowledgeInfoCard, other.KnowledgeInfoCard)) return false;
       if (ResponseType != other.ResponseType) return false;
       if (Channel != other.Channel) return false;
       if (MessageCase != other.MessageCase) return false;
@@ -434,6 +459,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (messageCase_ == MessageOneofCase.PlayAudio) hash ^= PlayAudio.GetHashCode();
       if (messageCase_ == MessageOneofCase.MixedAudio) hash ^= MixedAudio.GetHashCode();
       if (messageCase_ == MessageOneofCase.TelephonyTransferCall) hash ^= TelephonyTransferCall.GetHashCode();
+      if (messageCase_ == MessageOneofCase.KnowledgeInfoCard) hash ^= KnowledgeInfoCard.GetHashCode();
       if (ResponseType != global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ResponseType.Unspecified) hash ^= ResponseType.GetHashCode();
       if (Channel.Length != 0) hash ^= Channel.GetHashCode();
       hash ^= (int) messageCase_;
@@ -499,6 +525,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(154, 1);
         output.WriteString(Channel);
       }
+      if (messageCase_ == MessageOneofCase.KnowledgeInfoCard) {
+        output.WriteRawTag(162, 1);
+        output.WriteMessage(KnowledgeInfoCard);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -553,6 +583,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(154, 1);
         output.WriteString(Channel);
       }
+      if (messageCase_ == MessageOneofCase.KnowledgeInfoCard) {
+        output.WriteRawTag(162, 1);
+        output.WriteMessage(KnowledgeInfoCard);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -589,6 +623,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       if (messageCase_ == MessageOneofCase.TelephonyTransferCall) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(TelephonyTransferCall);
+      }
+      if (messageCase_ == MessageOneofCase.KnowledgeInfoCard) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(KnowledgeInfoCard);
       }
       if (ResponseType != global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ResponseType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ResponseType);
@@ -668,6 +705,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             TelephonyTransferCall = new global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.TelephonyTransferCall();
           }
           TelephonyTransferCall.MergeFrom(other.TelephonyTransferCall);
+          break;
+        case MessageOneofCase.KnowledgeInfoCard:
+          if (KnowledgeInfoCard == null) {
+            KnowledgeInfoCard = new global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.KnowledgeInfoCard();
+          }
+          KnowledgeInfoCard.MergeFrom(other.KnowledgeInfoCard);
           break;
       }
 
@@ -775,6 +818,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             Channel = input.ReadString();
             break;
           }
+          case 162: {
+            global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.KnowledgeInfoCard subBuilder = new global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.KnowledgeInfoCard();
+            if (messageCase_ == MessageOneofCase.KnowledgeInfoCard) {
+              subBuilder.MergeFrom(KnowledgeInfoCard);
+            }
+            input.ReadMessage(subBuilder);
+            KnowledgeInfoCard = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -877,6 +929,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           }
           case 154: {
             Channel = input.ReadString();
+            break;
+          }
+          case 162: {
+            global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.KnowledgeInfoCard subBuilder = new global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.KnowledgeInfoCard();
+            if (messageCase_ == MessageOneofCase.KnowledgeInfoCard) {
+              subBuilder.MergeFrom(KnowledgeInfoCard);
+            }
+            input.ReadMessage(subBuilder);
+            KnowledgeInfoCard = subBuilder;
             break;
           }
         }
@@ -3087,6 +3148,165 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
                 PhoneNumber = input.ReadString();
                 break;
               }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Represents info card response. If the response contains generative
+      /// knowledge prediction, Dialogflow will return a payload with Infobot
+      /// Messenger compatible info card.
+      ///
+      /// Otherwise, the info card response is skipped.
+      /// </summary>
+      public sealed partial class KnowledgeInfoCard : pb::IMessage<KnowledgeInfoCard>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<KnowledgeInfoCard> _parser = new pb::MessageParser<KnowledgeInfoCard>(() => new KnowledgeInfoCard());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<KnowledgeInfoCard> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Descriptor.NestedTypes[8]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public KnowledgeInfoCard() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public KnowledgeInfoCard(KnowledgeInfoCard other) : this() {
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public KnowledgeInfoCard Clone() {
+          return new KnowledgeInfoCard(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as KnowledgeInfoCard);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(KnowledgeInfoCard other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(KnowledgeInfoCard other) {
+          if (other == null) {
+            return;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
             }
           }
         }

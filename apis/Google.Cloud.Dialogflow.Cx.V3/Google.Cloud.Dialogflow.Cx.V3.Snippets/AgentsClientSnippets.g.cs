@@ -902,5 +902,162 @@ namespace GoogleCSharpSnippets
             AgentValidationResult response = await agentsClient.GetAgentValidationResultAsync(name);
             // End snippet
         }
+
+        /// <summary>Snippet for GetGenerativeSettings</summary>
+        public void GetGenerativeSettingsRequestObject()
+        {
+            // Snippet: GetGenerativeSettings(GetGenerativeSettingsRequest, CallSettings)
+            // Create client
+            AgentsClient agentsClient = AgentsClient.Create();
+            // Initialize request argument(s)
+            GetGenerativeSettingsRequest request = new GetGenerativeSettingsRequest
+            {
+                AgentGenerativeSettingsName = AgentGenerativeSettingsName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
+                LanguageCode = "",
+            };
+            // Make the request
+            GenerativeSettings response = agentsClient.GetGenerativeSettings(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGenerativeSettingsAsync</summary>
+        public async Task GetGenerativeSettingsRequestObjectAsync()
+        {
+            // Snippet: GetGenerativeSettingsAsync(GetGenerativeSettingsRequest, CallSettings)
+            // Additional: GetGenerativeSettingsAsync(GetGenerativeSettingsRequest, CancellationToken)
+            // Create client
+            AgentsClient agentsClient = await AgentsClient.CreateAsync();
+            // Initialize request argument(s)
+            GetGenerativeSettingsRequest request = new GetGenerativeSettingsRequest
+            {
+                AgentGenerativeSettingsName = AgentGenerativeSettingsName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
+                LanguageCode = "",
+            };
+            // Make the request
+            GenerativeSettings response = await agentsClient.GetGenerativeSettingsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGenerativeSettings</summary>
+        public void GetGenerativeSettings()
+        {
+            // Snippet: GetGenerativeSettings(string, string, CallSettings)
+            // Create client
+            AgentsClient agentsClient = AgentsClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/agents/[AGENT]/generativeSettings";
+            string languageCode = "";
+            // Make the request
+            GenerativeSettings response = agentsClient.GetGenerativeSettings(name, languageCode);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGenerativeSettingsAsync</summary>
+        public async Task GetGenerativeSettingsAsync()
+        {
+            // Snippet: GetGenerativeSettingsAsync(string, string, CallSettings)
+            // Additional: GetGenerativeSettingsAsync(string, string, CancellationToken)
+            // Create client
+            AgentsClient agentsClient = await AgentsClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/agents/[AGENT]/generativeSettings";
+            string languageCode = "";
+            // Make the request
+            GenerativeSettings response = await agentsClient.GetGenerativeSettingsAsync(name, languageCode);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGenerativeSettings</summary>
+        public void GetGenerativeSettingsResourceNames()
+        {
+            // Snippet: GetGenerativeSettings(AgentGenerativeSettingsName, string, CallSettings)
+            // Create client
+            AgentsClient agentsClient = AgentsClient.Create();
+            // Initialize request argument(s)
+            AgentGenerativeSettingsName name = AgentGenerativeSettingsName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]");
+            string languageCode = "";
+            // Make the request
+            GenerativeSettings response = agentsClient.GetGenerativeSettings(name, languageCode);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGenerativeSettingsAsync</summary>
+        public async Task GetGenerativeSettingsResourceNamesAsync()
+        {
+            // Snippet: GetGenerativeSettingsAsync(AgentGenerativeSettingsName, string, CallSettings)
+            // Additional: GetGenerativeSettingsAsync(AgentGenerativeSettingsName, string, CancellationToken)
+            // Create client
+            AgentsClient agentsClient = await AgentsClient.CreateAsync();
+            // Initialize request argument(s)
+            AgentGenerativeSettingsName name = AgentGenerativeSettingsName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]");
+            string languageCode = "";
+            // Make the request
+            GenerativeSettings response = await agentsClient.GetGenerativeSettingsAsync(name, languageCode);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateGenerativeSettings</summary>
+        public void UpdateGenerativeSettingsRequestObject()
+        {
+            // Snippet: UpdateGenerativeSettings(UpdateGenerativeSettingsRequest, CallSettings)
+            // Create client
+            AgentsClient agentsClient = AgentsClient.Create();
+            // Initialize request argument(s)
+            UpdateGenerativeSettingsRequest request = new UpdateGenerativeSettingsRequest
+            {
+                GenerativeSettings = new GenerativeSettings(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            GenerativeSettings response = agentsClient.UpdateGenerativeSettings(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateGenerativeSettingsAsync</summary>
+        public async Task UpdateGenerativeSettingsRequestObjectAsync()
+        {
+            // Snippet: UpdateGenerativeSettingsAsync(UpdateGenerativeSettingsRequest, CallSettings)
+            // Additional: UpdateGenerativeSettingsAsync(UpdateGenerativeSettingsRequest, CancellationToken)
+            // Create client
+            AgentsClient agentsClient = await AgentsClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateGenerativeSettingsRequest request = new UpdateGenerativeSettingsRequest
+            {
+                GenerativeSettings = new GenerativeSettings(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            GenerativeSettings response = await agentsClient.UpdateGenerativeSettingsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateGenerativeSettings</summary>
+        public void UpdateGenerativeSettings()
+        {
+            // Snippet: UpdateGenerativeSettings(GenerativeSettings, FieldMask, CallSettings)
+            // Create client
+            AgentsClient agentsClient = AgentsClient.Create();
+            // Initialize request argument(s)
+            GenerativeSettings generativeSettings = new GenerativeSettings();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            GenerativeSettings response = agentsClient.UpdateGenerativeSettings(generativeSettings, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateGenerativeSettingsAsync</summary>
+        public async Task UpdateGenerativeSettingsAsync()
+        {
+            // Snippet: UpdateGenerativeSettingsAsync(GenerativeSettings, FieldMask, CallSettings)
+            // Additional: UpdateGenerativeSettingsAsync(GenerativeSettings, FieldMask, CancellationToken)
+            // Create client
+            AgentsClient agentsClient = await AgentsClient.CreateAsync();
+            // Initialize request argument(s)
+            GenerativeSettings generativeSettings = new GenerativeSettings();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            GenerativeSettings response = await agentsClient.UpdateGenerativeSettingsAsync(generativeSettings, updateMask);
+            // End snippet
+        }
     }
 }
