@@ -1,0 +1,28 @@
+<Project>
+  <!-- Properties common to all projects which are published to NuGet as dotnet tools. -->
+
+  <PropertyGroup>
+    <!-- Make the repository root available for other properties -->
+    <RepoRoot>$([System.IO.Path]::GetDirectoryName($([MSBuild]::GetPathOfFileAbove('.gitignore', '$(MSBuildThisFileDirectory)'))))</RepoRoot>
+
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+
+    <Authors>Google LLC</Authors>
+    <Copyright>Copyright $([System.DateTime]::UtcNow.ToString(yyyy)) Google LLC</Copyright>
+    <PackageIcon>NuGetIcon.png</PackageIcon>
+    <PackageIconUrl>https://cloud.google.com/images/gcp-icon-64x64.png</PackageIconUrl>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/googleapis/google-cloud-dotnet</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/googleapis/google-cloud-dotnet</RepositoryUrl>
+
+    <PackAsTool>true</PackAsTool>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="$(RepoRoot)/LICENSE" Pack="true" PackagePath="" />
+    <None Include="$(RepoRoot)/NuGetIcon.png" Pack="true" PackagePath="" />
+  </ItemGroup>
+</Project>
