@@ -139,14 +139,6 @@ install_grpc() {
   chmod +x $GRPC_PLUGIN
 }
 
-install_docfx() {
-  # Note that errors will still appear in stderr, but we don't need
-  # the banner of "here's how to invoke the tool" when installing.
-  # TODO: We can probably remove this soon, and just use "dotnet tool restore"
-  # directly.
-  dotnet tool restore > /dev/null
-}
-
 # Logs to both stdout and a build timing log, allowing
 # post-processing to see how long each part of the build takes.
 # The console log is in magenta to stand out, and doesn't include the

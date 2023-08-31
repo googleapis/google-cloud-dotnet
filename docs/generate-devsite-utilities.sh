@@ -3,9 +3,7 @@
 set -e
 REPOROOT=$(git rev-parse --show-toplevel)
 
-source ../toolversions.sh
-
-install_docfx
+dotnet tool restore > /dev/null
 
 # Some versions of docfx fail if VSINSTALLDIR is set.
 export VSINSTALLDIR=

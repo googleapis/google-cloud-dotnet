@@ -3,7 +3,7 @@
 set -e
 source ../toolversions.sh
 
-install_docfx
+dotnet tool restore > /dev/null
 
 # Some versions of docfx fail if VSINSTALLDIR is set.
 export VSINSTALLDIR=

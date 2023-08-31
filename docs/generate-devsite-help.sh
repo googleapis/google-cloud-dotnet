@@ -9,9 +9,7 @@ then
   exit 1
 fi
 
-source ../toolversions.sh
-
-install_docfx
+dotnet tool restore > /dev/null
 
 if [[ "$2" != "" ]]
 then
