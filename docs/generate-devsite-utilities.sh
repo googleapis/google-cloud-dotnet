@@ -175,7 +175,7 @@ do
   fi
 done
 
-dotnet run --project $REPOROOT/tools/Google.Cloud.Tools.DocUploader -- create-metadata \
+dotnet docuploader create-metadata \
 --name $DEVSITE_PACKAGE \
 --version $VERSION \
 --language dotnet \
@@ -184,7 +184,7 @@ dotnet run --project $REPOROOT/tools/Google.Cloud.Tools.DocUploader -- create-me
 
 if [[ $SERVICE_ACCOUNT_JSON != "" ]]
 then
-   dotnet run --project $REPOROOT/tools/Google.Cloud.Tools.DocUploader -- upload \
+   dotnet docuploader upload \
     --documentation-path . \
     --credentials $SERVICE_ACCOUNT_JSON \
     --staging-bucket $DEVSITE_STAGING_BUCKET \

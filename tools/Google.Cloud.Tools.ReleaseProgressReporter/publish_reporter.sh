@@ -36,9 +36,9 @@ fi
 releasetool_finish_report() {
     rv=$?
     if [[ $rv == 0 ]]; then
-        dotnet run --project ../tools/Google.Cloud.Tools.ReleaseProgressReporter finish true || true
+        dotnet release-progress-reporter finish true || true
     else
-        dotnet run --project ../tools/Google.Cloud.Tools.ReleaseProgressReporter finish false || true
+        dotnet release-progress-reporter finish false || true
     fi
     echo "Release status reported."
     exit $rv
@@ -47,4 +47,4 @@ releasetool_finish_report() {
 trap releasetool_finish_report EXIT
 
 # Report the start of a build
-dotnet run --project ../tools/Google.Cloud.Tools.ReleaseProgressReporter start || true
+dotnet release-progress-reporter start || true
