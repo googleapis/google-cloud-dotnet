@@ -12,14 +12,13 @@
 // See the License for the specific language governing permissions and 
 // limitations under the License.
 
-using Google.Cloud.Tools.Common;
 using Google.Cloud.Tools.ReleaseProgressReporter;
 using Octokit;
 
 // Note: CommandLineParser has not been used here for the sake of simplicity.
 if (args.Length < 1)
 {
-    throw new UserErrorException("Please specify the progress point: 'start' or 'finish'.");
+    throw new Exception("Please specify the progress point: 'publish-reporter-script', 'start' or 'finish'.");
 }
 
 var progress = args[0];
@@ -38,7 +37,7 @@ switch (progress)
         await reporter.FinishAsync(status, publishDetails);
         break;
     default:
-        throw new UserErrorException($"Invalid progress point: '{progress}'. Available options are (start, finish)");
+        throw new Exception($"Invalid progress point: '{progress}'. Available options are (publish-reporter-script, start, finish)");
 }
 
 async Task<GitHubClient> GetGitHubClientFromEnvironment()
@@ -63,7 +62,7 @@ string GetRequiredEnvironmentVariable(string variable)
     var value = Environment.GetEnvironmentVariable(variable) ?? "";
     if (value == "")
     {
-        throw new UserErrorException($"Environment variable '{variable}' must be set and non-empty.");
+        throw new Exception($"Environment variable '{variable}' must be set and non-empty.");
     }
     return value;
 }
