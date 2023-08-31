@@ -28,6 +28,17 @@ PublishReporter reporter = new PublishReporter(client, pr);
 
 switch (progress)
 {
+    case "publish-reporter-script":
+        using (var stream = typeof(PublishReporter).Assembly.GetManifestResourceStream("Google.Cloud.Tools.ReleaseProgressReporter.publish_reporter.sh"))
+        {
+            if (stream is null)
+            {
+                throw new Exception("Unable to load reporter script");
+            }
+            var script = new StreamReader(stream).ReadToEnd();
+            Console.WriteLine(script);
+        }
+        break;
     case "start":
         await reporter.StartAsync();
         break;
