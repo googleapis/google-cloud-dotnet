@@ -4984,7 +4984,7 @@
       ],
       "dependencies": {
         "Google.Api.Gax.Grpc": "4.4.0",
-        "Google.Cloud.Workflows.Common.V1": "project",
+        "Google.Cloud.Workflows.Common.V1": "2.2.0",
         "Grpc.Core": "2.46.6"
       },
       "generator": "micro",
@@ -5004,7 +5004,7 @@
         "workflows"
       ],
       "dependencies": {
-        "Google.Cloud.Workflows.Common.V1Beta": "project"
+        "Google.Cloud.Workflows.Common.V1Beta": "2.0.0-beta02"
       },
       "generator": "micro",
       "protoPath": "google/cloud/workflows/executions/v1beta",
@@ -5025,7 +5025,7 @@
       "dependencies": {
         "Google.Api.Gax.Grpc": "4.4.0",
         "Google.Cloud.Location": "2.0.0",
-        "Google.Cloud.Workflows.Common.V1": "project",
+        "Google.Cloud.Workflows.Common.V1": "2.2.0",
         "Google.LongRunning": "3.0.0",
         "Grpc.Core": "2.46.6"
       },
@@ -5048,7 +5048,7 @@
         "workflows"
       ],
       "dependencies": {
-        "Google.Cloud.Workflows.Common.V1Beta": "project",
+        "Google.Cloud.Workflows.Common.V1Beta": "2.0.0-beta02",
         "Google.LongRunning": "3.0.0"
       },
       "generator": "micro",
@@ -5332,24 +5332,6 @@
       "packageIds": [
         "Google.Cloud.Firestore",
         "Google.Cloud.Firestore.V1"
-      ]
-    },
-    {
-      "id": "Google.Cloud.Workflows.V1",
-      "displayName": "Cloud Workflows V1",
-      "packageIds": [
-        "Google.Cloud.Workflows.Common.V1",
-        "Google.Cloud.Workflows.Executions.V1",
-        "Google.Cloud.Workflows.V1"
-      ]
-    },
-    {
-      "id": "Google.Cloud.Workflows.V1Beta",
-      "displayName": "Cloud Workflows V1Beta",
-      "packageIds": [
-        "Google.Cloud.Workflows.Common.V1Beta",
-        "Google.Cloud.Workflows.Executions.V1Beta",
-        "Google.Cloud.Workflows.V1Beta"
       ]
     }
   ]
