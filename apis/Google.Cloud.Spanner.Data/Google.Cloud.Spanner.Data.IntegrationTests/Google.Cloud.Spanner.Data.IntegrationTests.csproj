@@ -6,9 +6,6 @@
     <IsPackable>false</IsPackable>
     <NoWarn>1701;1702;1705;xUnit2004;xUnit2013</NoWarn>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netcoreapp1.0|AnyCPU'">
-    <DefineConstants>TRACE;DEBUG;NETCOREAPP1_0</DefineConstants>
-  </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="CoreCompat.EnterpriseLibrary.TransientFaultHandling" Version="6.0.1304-r3" />
     <PackageReference Include="Google.Api.Gax.Grpc.Testing" Version="[4.4.0, 5.0.0)" />

@@ -17,25 +17,25 @@ To run with an interactive menu, run with no arguments (just the
 framework for `dotnet run`):
 
 ```text
-dotnet run -c Release -f netcoreapp2.0
+dotnet run -c Release -f net6.0
 ```
 
 To run all the benchmarks, specify `*` as a command line argument:
 
 ```text
-dotnet run -c Release -f netcoreapp2.0 -- '*'
+dotnet run -c Release -f net6.0 -- '*'
 ```
 
 To run a single benchmark class, use `--class=`:
 
 ```text
-dotnet run -c Release -f netcoreapp2.0 -- --class=BigQueryNumericBenchmark
+dotnet run -c Release -f net6.0 -- --class=BigQueryNumericBenchmark
 ```
 
 To run a single method, use `--method=`:
 
 ```text
-dotnet run -c Release -f netcoreapp2.0 -- --method=Parse_Huge
+dotnet run -c Release -f net6.0 -- --method=Parse_Huge
 ```
 
 Results
