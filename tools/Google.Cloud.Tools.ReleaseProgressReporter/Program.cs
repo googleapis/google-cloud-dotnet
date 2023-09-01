@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.ReleaseProgressReporter;
-using Octokit;
 
 // Note: CommandLineParser has not been used here for the sake of simplicity.
 if (args.Length < 1)
@@ -37,49 +36,15 @@ switch (progress)
         }
         break;
     case "start":
-        var startReporter = await CreatePublishReporter();
+        var startReporter = await PublishReporter.FromEnvironmentVariables();
         await startReporter.StartAsync();
         break;
     case "finish":
         bool status = Convert.ToBoolean(args[1]);
         string publishDetails = Environment.GetEnvironmentVariable("PUBLISH_DETAILS") ?? "";
-        var finishReporter = await CreatePublishReporter();
+        var finishReporter = await PublishReporter.FromEnvironmentVariables();
         await finishReporter.FinishAsync(status, publishDetails);
         break;
     default:
         throw new Exception($"Invalid progress point: '{progress}'. Available options are (publish-reporter-script, start, finish)");
-}
-
-async Task<PublishReporter> CreatePublishReporter()
-{
-    PullRequestDetails pr = PullRequestDetails.FromUrl(GetRequiredEnvironmentVariable("AUTORELEASE_PR"));
-    GitHubClient client = await GetGitHubClientFromEnvironment();
-    return new PublishReporter(client, pr);
-}
-
-async Task<GitHubClient> GetGitHubClientFromEnvironment()
-{
-    var appId = File.ReadAllText(GetRequiredEnvironmentVariable("APP_ID_PATH"));
-    string? accessToken = Environment.GetEnvironmentVariable("GITHUB_TOKEN");
-    if (accessToken is null)
-    {
-        // Admittedly these are only required when GITHUB_TOKEN isn't set, but it's close enough.
-        string privateKeyPath = GetRequiredEnvironmentVariable("GITHUB_PRIVATE_KEY_PATH");
-        var installationId = File.ReadAllText(GetRequiredEnvironmentVariable("INSTALLATION_ID_PATH"));
-        accessToken = await GitHub.FetchGitHubAccessTokenFromPrivateKey(privateKeyPath, appId, installationId);
-    }
-    return new GitHubClient(new ProductHeaderValue(appId))
-    {
-        Credentials = new Credentials(accessToken)
-    };
-}
-
-string GetRequiredEnvironmentVariable(string variable)
-{
-    var value = Environment.GetEnvironmentVariable(variable) ?? "";
-    if (value == "")
-    {
-        throw new Exception($"Environment variable '{variable}' must be set and non-empty.");
-    }
-    return value;
 }

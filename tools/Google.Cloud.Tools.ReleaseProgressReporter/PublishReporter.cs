@@ -65,4 +65,38 @@ public class PublishReporter
         await _pullRequest.AddLabel(_client, label);
         await _pullRequest.RemoveLabel(_client, "autorelease: tagged");
     }
+
+    public static async Task<PublishReporter> FromEnvironmentVariables()
+    {
+        PullRequestDetails pr = PullRequestDetails.FromUrl(GetRequiredEnvironmentVariable("AUTORELEASE_PR"));
+        GitHubClient client = await GetGitHubClientFromEnvironment();
+        return new PublishReporter(client, pr);
+
+        async Task<GitHubClient> GetGitHubClientFromEnvironment()
+        {
+            var appId = File.ReadAllText(GetRequiredEnvironmentVariable("APP_ID_PATH"));
+            string? accessToken = Environment.GetEnvironmentVariable("GITHUB_TOKEN");
+            if (accessToken is null)
+            {
+                // Admittedly these are only required when GITHUB_TOKEN isn't set, but it's close enough.
+                string privateKeyPath = GetRequiredEnvironmentVariable("GITHUB_PRIVATE_KEY_PATH");
+                var installationId = File.ReadAllText(GetRequiredEnvironmentVariable("INSTALLATION_ID_PATH"));
+                accessToken = await GitHub.FetchGitHubAccessTokenFromPrivateKey(privateKeyPath, appId, installationId);
+            }
+            return new GitHubClient(new ProductHeaderValue(appId))
+            {
+                Credentials = new Credentials(accessToken)
+            };
+        }
+
+        string GetRequiredEnvironmentVariable(string variable)
+        {
+            var value = Environment.GetEnvironmentVariable(variable) ?? "";
+            if (value == "")
+            {
+                throw new Exception($"Environment variable '{variable}' must be set and non-empty.");
+            }
+            return value;
+        }
+    }
 }
