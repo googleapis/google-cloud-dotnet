@@ -22,9 +22,6 @@ if (args.Length < 1)
 }
 
 var progress = args[0];
-PullRequestDetails pr = PullRequestDetails.FromUrl(GetRequiredEnvironmentVariable("AUTORELEASE_PR"));
-GitHubClient client = await GetGitHubClientFromEnvironment();
-PublishReporter reporter = new PublishReporter(client, pr);
 
 switch (progress)
 {
@@ -40,15 +37,24 @@ switch (progress)
         }
         break;
     case "start":
-        await reporter.StartAsync();
+        var startReporter = await CreatePublishReporter();
+        await startReporter.StartAsync();
         break;
     case "finish":
         bool status = Convert.ToBoolean(args[1]);
         string publishDetails = Environment.GetEnvironmentVariable("PUBLISH_DETAILS") ?? "";
-        await reporter.FinishAsync(status, publishDetails);
+        var finishReporter = await CreatePublishReporter();
+        await finishReporter.FinishAsync(status, publishDetails);
         break;
     default:
         throw new Exception($"Invalid progress point: '{progress}'. Available options are (publish-reporter-script, start, finish)");
+}
+
+async Task<PublishReporter> CreatePublishReporter()
+{
+    PullRequestDetails pr = PullRequestDetails.FromUrl(GetRequiredEnvironmentVariable("AUTORELEASE_PR"));
+    GitHubClient client = await GetGitHubClientFromEnvironment();
+    return new PublishReporter(client, pr);
 }
 
 async Task<GitHubClient> GetGitHubClientFromEnvironment()
