@@ -1,5 +1,19 @@
 # Version history
 
+## Version 1.0.0-beta04, released 2023-09-01
+
+### Bug fixes
+
+- **BREAKING CHANGE** Add the missing `REQUIRED` annotation to the `update_mask` field of `UpdateMeasurementProtocolSecretRequest` ([commit c54eaea](https://github.com/googleapis/google-cloud-dotnet/commit/c54eaea9c6fb63c36eb3ec72c53da88c64e82dae))
+
+### New features
+
+- Add `UpdateConversionEvent` method to the Admin API v1 beta ([commit c54eaea](https://github.com/googleapis/google-cloud-dotnet/commit/c54eaea9c6fb63c36eb3ec72c53da88c64e82dae))
+- Add the `counting_method` field to the `ConversionEvent` type ([commit c54eaea](https://github.com/googleapis/google-cloud-dotnet/commit/c54eaea9c6fb63c36eb3ec72c53da88c64e82dae))
+- Add the `ConversionCountingMethod` enum ([commit c54eaea](https://github.com/googleapis/google-cloud-dotnet/commit/c54eaea9c6fb63c36eb3ec72c53da88c64e82dae))
+- Add the `ITEM` option to the `DimensionScope` enum ([commit c54eaea](https://github.com/googleapis/google-cloud-dotnet/commit/c54eaea9c6fb63c36eb3ec72c53da88c64e82dae))
+- Make the field `default_uri` of `WebStreamData` mutable ([commit c54eaea](https://github.com/googleapis/google-cloud-dotnet/commit/c54eaea9c6fb63c36eb3ec72c53da88c64e82dae))
+
 ## Version 1.0.0-beta03, released 2023-03-27
 
 ### New features
