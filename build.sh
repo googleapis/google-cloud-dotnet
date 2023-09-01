@@ -61,7 +61,7 @@ done
 # If no APIs were specified explicitly, build all of them (and tools on Windows)
 if [[ ${#apis[@]} -eq 0 && $diff == false ]]
 then
-  apis=(${tools} $($PYTHON3 tools/listapis.py apis/apis.json))
+  apis=(${tools} $(dotnet run --project tools/Google.Cloud.Tools.ReleaseManager -- query-api-catalog list))
 fi
 
 # If we were given an API filter regex, apply it now.

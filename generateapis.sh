@@ -21,6 +21,14 @@ fi
 # Allow pre/post-generation scripts to know where to find the repos
 export GOOGLEAPIS
 
+get_api_field() {
+  dotnet run -c Release --no-build --no-restore --project tools/Google.Cloud.Tools.ReleaseManager -- query-api-catalog get-field "$@"
+}
+
+list_generated_apis() {
+  dotnet run -c Release --no-build --no-restore --project tools/Google.Cloud.Tools.ReleaseManager -- query-api-catalog list generator
+}
+
 fetch_github_repos() {
   # We assume that if the directory has been explicitly specified, we don't need
   # to fetch it.
@@ -49,7 +57,7 @@ generate_microgenerator() {
   PRODUCTION_PACKAGE_DIR=$API_TMP_DIR/$PACKAGE_ID
   GRPC_GENERATION_DIR=$API_TMP_DIR/grpc-$PACKAGE_ID
   API_OUT_DIR=apis
-  API_SRC_DIR=$GOOGLEAPIS/$($PYTHON3 tools/getapifield.py apis/apis.json $PACKAGE_ID protoPath)
+  API_SRC_DIR=$GOOGLEAPIS/$(get_api_field $PACKAGE_ID protoPath)
 
   # Delete previously-generated files
   delete_generated apis/$1/$1
@@ -72,18 +80,18 @@ generate_microgenerator() {
 
   # Note: defaulting to "x" is pretty horrible, but it's hard to tell the difference
   # between empty and unspecified otherwise.
-  API_COMMON_RESOURCES_CONFIG=$($PYTHON3 tools/getapifield.py apis/apis.json $PACKAGE_ID commonResourcesConfig --default=x)
+  API_COMMON_RESOURCES_CONFIG=$(get_api_field $PACKAGE_ID commonResourcesConfig x)
   if [[ $API_COMMON_RESOURCES_CONFIG != "" && $API_COMMON_RESOURCES_CONFIG != "x" ]]
   then
     COMMON_RESOURCES_CONFIG=$COMMON_RESOURCES_CONFIG,common-resources-config=$API_COMMON_RESOURCES_CONFIG
   fi
   COMMON_RESOURCES_OPTION=--gapic_opt=$COMMON_RESOURCES_CONFIG
-  TRANSPORT_OPTION=--gapic_opt=transport=$($PYTHON3 tools/getapifield.py apis/apis.json $PACKAGE transport --default=grpc)
-  REST_NUMERIC_ENUMS_OPTION=--gapic_opt=rest-numeric-enums=$($PYTHON3 tools/getapifield.py apis/apis.json $PACKAGE restNumericEnums --default=false)    
+  TRANSPORT_OPTION=--gapic_opt=transport=$(get_api_field $PACKAGE transport grpc)
+  REST_NUMERIC_ENUMS_OPTION=--gapic_opt=rest-numeric-enums=$(get_api_field $PACKAGE restNumericEnums false)
 
   # All APIs should have a service config specified, but it might be deliberately "none" to mean
   # "there are no services for this API directory" e.g. for oslogin/common
-  SERVICE_CONFIG_FILE=$($PYTHON3 tools/getapifield.py apis/apis.json $PACKAGE_ID serviceConfigFile)
+  SERVICE_CONFIG_FILE=$(get_api_field $PACKAGE_ID serviceConfigFile)
   SERVICE_CONFIG_OPTION=
   if [[ $SERVICE_CONFIG_FILE != "none" ]]
   then
@@ -147,7 +155,7 @@ generate_proto() {
   # Delete previously-generated files
   delete_generated apis/$1/$1
 
-  API_SRC_DIR=$GOOGLEAPIS/$($PYTHON3 tools/getapifield.py apis/apis.json $1 protoPath)
+  API_SRC_DIR=$GOOGLEAPIS/$(get_api_field $1 protoPath)
   mkdir -p apis/$1/$1
   $PROTOC \
     --csharp_out=apis/$1/$1 \
@@ -163,7 +171,7 @@ generate_api() {
   PACKAGE_DIR=apis/$1
 
   echo "Generating $PACKAGE"
-  GENERATOR=$($PYTHON3 tools/getapifield.py apis/apis.json $PACKAGE generator)
+  GENERATOR=$(get_api_field $PACKAGE generator)
   if [[ -f $PACKAGE_DIR/pregeneration.sh ]]
   then
     echo "Running pre-generation script for $PACKAGE"
@@ -210,6 +218,9 @@ install_microgenerator
 install_grpc
 fetch_github_repos
 
+# Used to query the API catalog
+dotnet build -nologo -clp:NoSummary -v quiet -c Release tools/Google.Cloud.Tools.ReleaseManager
+
 OUTDIR=tmp
 rm -rf $OUTDIR
 mkdir $OUTDIR
@@ -223,7 +234,7 @@ fi
 packages=$@
 if [[ -z "$packages" ]]
 then
-  packages=$($PYTHON3 tools/listapis.py apis/apis.json --test generator)
+  packages=$(list_generated_apis)
 fi
 
 # TODO: For OwlBot APIs, should we just copy from googleapis-gen,
