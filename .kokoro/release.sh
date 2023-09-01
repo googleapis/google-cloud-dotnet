@@ -38,8 +38,6 @@ fi
 export GOOGLE_APPLICATION_CREDENTIALS="$SECRETS_LOCATION/cloud-sharp-jenkins-compute-service-account"
 export REQUESTER_PAYS_CREDENTIALS="$SECRETS_LOCATION/gcloud-devel-service-account"
 
-PYTHON3=$(source toolversions.sh && echo $PYTHON3)
-
 DOCS_CREDENTIALS="$SECRETS_LOCATION/docuploader_service_account"
 GOOGLE_CLOUD_NUGET_API_KEY="$(cat "$SECRETS_LOCATION"/google-cloud-nuget-api-key)"
 GOOGLE_APIS_PACKAGES_NUGET_API_KEY="$(cat "$SECRETS_LOCATION"/google-apis-nuget-api-key)"
@@ -74,7 +72,7 @@ then
     else
       # Work out the package owner based on apis.json and the package ID
       default_package_owner=$([[ $pkg == Google.Cloud* ]] && echo google-cloud || echo google-apis-packages)
-      package_owner=$($PYTHON3 ../tools/getapifield.py ../apis/apis.json $pkg_id packageOwner --default=$default_package_owner)    
+      package_owner=$(dotnet run tools/Google.Cloud.Tools.ReleaseManager -- query-api-catalog get-field $pkg_id packageOwner $default_package_owner)
     fi
     
     # Work out the right NuGet API key based on the package owner
