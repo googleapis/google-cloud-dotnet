@@ -3,33 +3,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Workflows.Executions.V1Beta", "Google.Cloud.Workflows.Executions.V1Beta\Google.Cloud.Workflows.Executions.V1Beta.csproj", "{8649AC29-9E55-4164-B4C7-876AA5B178F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Workflows.Executions.V1Beta", "Google.Cloud.Workflows.Executions.V1Beta\Google.Cloud.Workflows.Executions.V1Beta.csproj", "{8649AC29-9E55-4164-B4C7-876AA5B178F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Workflows.Common.V1Beta", "..\Google.Cloud.Workflows.Common.V1Beta\Google.Cloud.Workflows.Common.V1Beta\Google.Cloud.Workflows.Common.V1Beta.csproj", "{F7EE697F-1B32-4D26-B844-4FDE9759213B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Workflows.Executions.V1Beta.GeneratedSnippets", "Google.Cloud.Workflows.Executions.V1Beta.GeneratedSnippets\Google.Cloud.Workflows.Executions.V1Beta.GeneratedSnippets.csproj", "{80541CED-A4DA-487E-85B4-F56EBB8B7D72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Workflows.Executions.V1Beta.GeneratedSnippets", "Google.Cloud.Workflows.Executions.V1Beta.GeneratedSnippets\Google.Cloud.Workflows.Executions.V1Beta.GeneratedSnippets.csproj", "{80541CED-A4DA-487E-85B4-F56EBB8B7D72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{BEB9293F-FE5C-492E-9B76-242B79432CDD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{BEB9293F-FE5C-492E-9B76-242B79432CDD}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Workflows.Executions.V1Beta.Snippets", "Google.Cloud.Workflows.Executions.V1Beta.Snippets\Google.Cloud.Workflows.Executions.V1Beta.Snippets.csproj", "{FD7E7093-19F7-495B-9684-959250E2DFC4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Workflows.Executions.V1Beta.Snippets", "Google.Cloud.Workflows.Executions.V1Beta.Snippets\Google.Cloud.Workflows.Executions.V1Beta.Snippets.csproj", "{FD7E7093-19F7-495B-9684-959250E2DFC4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{8649AC29-9E55-4164-B4C7-876AA5B178F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8649AC29-9E55-4164-B4C7-876AA5B178F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8649AC29-9E55-4164-B4C7-876AA5B178F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8649AC29-9E55-4164-B4C7-876AA5B178F3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F7EE697F-1B32-4D26-B844-4FDE9759213B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F7EE697F-1B32-4D26-B844-4FDE9759213B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F7EE697F-1B32-4D26-B844-4FDE9759213B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F7EE697F-1B32-4D26-B844-4FDE9759213B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{80541CED-A4DA-487E-85B4-F56EBB8B7D72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{80541CED-A4DA-487E-85B4-F56EBB8B7D72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80541CED-A4DA-487E-85B4-F56EBB8B7D72}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -42,5 +33,8 @@ Global
 		{FD7E7093-19F7-495B-9684-959250E2DFC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD7E7093-19F7-495B-9684-959250E2DFC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD7E7093-19F7-495B-9684-959250E2DFC4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
