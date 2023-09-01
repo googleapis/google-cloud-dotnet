@@ -235,7 +235,7 @@ namespace Google.Cloud.Tools.Common
         /// the token is part of <see cref="ApiCatalog.Json"/>.
         /// </summary>
         [JsonIgnore]
-        public JToken Json { get; set; }
+        public JObject Json { get; set; }
 
         /// <summary>
         /// The package group that this package is part of. This is populated
