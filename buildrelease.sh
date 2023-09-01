@@ -73,7 +73,7 @@ if [[ $projects == Google.Cloud.Tools.* ]]
 then
   for project in $projects
   do
-    dotnet pack -c Release -o $PWD/nuget -c Release tools/$project
+    dotnet pack -c Release -o $PWD/nuget tools/$project
   done
   exit 0
 fi
