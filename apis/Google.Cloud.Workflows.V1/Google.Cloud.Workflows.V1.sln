@@ -3,33 +3,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Workflows.V1", "Google.Cloud.Workflows.V1\Google.Cloud.Workflows.V1.csproj", "{6B44AF00-A815-41DF-BD1E-DA75D7707938}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Workflows.V1", "Google.Cloud.Workflows.V1\Google.Cloud.Workflows.V1.csproj", "{6B44AF00-A815-41DF-BD1E-DA75D7707938}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Workflows.Common.V1", "..\Google.Cloud.Workflows.Common.V1\Google.Cloud.Workflows.Common.V1\Google.Cloud.Workflows.Common.V1.csproj", "{2062A928-BEC0-4B29-A2BB-AEC8F5D4DDC1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Workflows.V1.GeneratedSnippets", "Google.Cloud.Workflows.V1.GeneratedSnippets\Google.Cloud.Workflows.V1.GeneratedSnippets.csproj", "{899D799B-75B7-41F4-8A9A-0A8AD49157CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Workflows.V1.GeneratedSnippets", "Google.Cloud.Workflows.V1.GeneratedSnippets\Google.Cloud.Workflows.V1.GeneratedSnippets.csproj", "{899D799B-75B7-41F4-8A9A-0A8AD49157CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{CE438CFF-4893-4BC6-B7D1-1CE961A8F0E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{CE438CFF-4893-4BC6-B7D1-1CE961A8F0E6}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Workflows.V1.Snippets", "Google.Cloud.Workflows.V1.Snippets\Google.Cloud.Workflows.V1.Snippets.csproj", "{84DECD18-E384-48B1-B9FB-325A8555D409}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Workflows.V1.Snippets", "Google.Cloud.Workflows.V1.Snippets\Google.Cloud.Workflows.V1.Snippets.csproj", "{84DECD18-E384-48B1-B9FB-325A8555D409}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{6B44AF00-A815-41DF-BD1E-DA75D7707938}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6B44AF00-A815-41DF-BD1E-DA75D7707938}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B44AF00-A815-41DF-BD1E-DA75D7707938}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B44AF00-A815-41DF-BD1E-DA75D7707938}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2062A928-BEC0-4B29-A2BB-AEC8F5D4DDC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2062A928-BEC0-4B29-A2BB-AEC8F5D4DDC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2062A928-BEC0-4B29-A2BB-AEC8F5D4DDC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2062A928-BEC0-4B29-A2BB-AEC8F5D4DDC1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{899D799B-75B7-41F4-8A9A-0A8AD49157CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{899D799B-75B7-41F4-8A9A-0A8AD49157CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{899D799B-75B7-41F4-8A9A-0A8AD49157CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -42,5 +33,8 @@ Global
 		{84DECD18-E384-48B1-B9FB-325A8555D409}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84DECD18-E384-48B1-B9FB-325A8555D409}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84DECD18-E384-48B1-B9FB-325A8555D409}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
