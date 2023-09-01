@@ -108,7 +108,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                 Converters = { new StringEnumConverter(new CamelCaseNamingStrategy()) },
                 ContractResolver = new DefaultContractResolver { NamingStrategy = new CamelCaseNamingStrategy() }
             };
-            api.Json = JToken.FromObject(api, serializer);
+            api.Json = (JObject) JToken.FromObject(api, serializer);
 
             var followingApi = catalog.Apis.FirstOrDefault(api => string.Compare(api.Id, id, StringComparison.Ordinal) > 0);
             if (followingApi is object)
