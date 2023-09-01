@@ -40,6 +40,11 @@ namespace Google.Cloud.Tools.ProcessBuildTimingLog
                 Console.WriteLine("Required single argument: log file path");
                 return 1;
             }
+            if (!File.Exists(args[0]))
+            {
+                Console.WriteLine("No timing log found; skipping.");
+                return 0;
+            }
             string[] lines = File.ReadAllLines(args[0]);
 
             var logEntries = lines.Where(line => line.Length > 0).Select(LogEntry.FromLogLine).ToList();
