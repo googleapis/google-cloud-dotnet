@@ -54,11 +54,6 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             {
                 projectId = "emulator-test-project";
                 instanceId = "doesnt-matter";
-#if NETCOREAPP3_1
-                // On .NET Core 3.1 (but not .NET 6) Grpc.Net.Client needs an additional switch
-                // to allow an insecure channel in HTTP/2.
-                AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
-#endif
             }
             else
             {
