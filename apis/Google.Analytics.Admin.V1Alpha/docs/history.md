@@ -1,5 +1,18 @@
 # Version history
 
+## Version 2.0.0-alpha13, released 2023-09-01
+
+### Bug fixes
+
+- **BREAKING CHANGE** Rename the `enterprise_daily_export_enabled` field to `fresh_daily_export_enabled` in the `BigQueryLink` resource ([commit 58e7869](https://github.com/googleapis/google-cloud-dotnet/commit/58e786952625c333bd690f1a9e64687e5d68a2fc))
+
+### New features
+
+- Add `GetSKAdNetworkConversionValueSchema`, `CreateSKAdNetworkConversionValueSchema`, `DeleteSKAdNetworkConversionValueSchema`, `UpdateSKAdNetworkConversionValueSchema`, `ListSKAdNetworkConversionValueSchemas` methods to the Admin API v1 alpha ([commit 58e7869](https://github.com/googleapis/google-cloud-dotnet/commit/58e786952625c333bd690f1a9e64687e5d68a2fc))
+- Add the `skadnetwork_conversion_value_schema` field to the `ChangeHistoryResource.resource` oneof type ([commit 58e7869](https://github.com/googleapis/google-cloud-dotnet/commit/58e786952625c333bd690f1a9e64687e5d68a2fc))
+- Add the `SKADNETWORK_CONVERSION_VALUE_SCHEMA` option to the `ChangeHistoryResourceType` enum ([commit 58e7869](https://github.com/googleapis/google-cloud-dotnet/commit/58e786952625c333bd690f1a9e64687e5d68a2fc))
+- Add `CoarseValue`, `ConversionValues`, `EventMapping`, `SKAdNetworkConversionValueSchema` types ([commit 58e7869](https://github.com/googleapis/google-cloud-dotnet/commit/58e786952625c333bd690f1a9e64687e5d68a2fc))
+
 ## Version 2.0.0-alpha12, released 2023-08-16
 
 ### Bug fixes
