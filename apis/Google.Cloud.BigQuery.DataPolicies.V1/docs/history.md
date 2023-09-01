@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.2.0, released 2023-09-01
+
+### New features
+
+- Support using custom UDF in the data policy ([commit dc1e324](https://github.com/googleapis/google-cloud-dotnet/commit/dc1e3247355968b3fab41a3dd92e53adc1240b94))
+
 ## Version 1.1.0, released 2023-08-16
 
 ### Bug fixes
