@@ -17,6 +17,7 @@
 namespace GoogleCSharpSnippets
 {
     // [START datamigration_v1_generated_DataMigrationService_CreateConnectionProfile_sync_flattened_resourceNames]
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.CloudDms.V1;
     using Google.LongRunning;
 
@@ -35,7 +36,7 @@ namespace GoogleCSharpSnippets
             // Create client
             DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
             // Initialize request argument(s)
-            ConnectionProfileName parent = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTION_PROFILE]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             ConnectionProfile connectionProfile = new ConnectionProfile();
             string connectionProfileId = "";
             // Make the request

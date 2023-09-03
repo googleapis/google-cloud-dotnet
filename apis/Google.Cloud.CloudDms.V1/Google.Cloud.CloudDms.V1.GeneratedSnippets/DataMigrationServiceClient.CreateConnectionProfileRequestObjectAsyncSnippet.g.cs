@@ -17,6 +17,7 @@
 namespace GoogleCSharpSnippets
 {
     // [START datamigration_v1_generated_DataMigrationService_CreateConnectionProfile_async]
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.CloudDms.V1;
     using Google.LongRunning;
     using System.Threading.Tasks;
@@ -38,7 +39,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             CreateConnectionProfileRequest request = new CreateConnectionProfileRequest
             {
-                ParentAsConnectionProfileName = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTION_PROFILE]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ConnectionProfileId = "",
                 ConnectionProfile = new ConnectionProfile(),
                 RequestId = "",

@@ -38,6 +38,7 @@ namespace GoogleCSharpSnippets
             RestartMigrationJobRequest request = new RestartMigrationJobRequest
             {
                 MigrationJobName = MigrationJobName.FromProjectLocationMigrationJob("[PROJECT]", "[LOCATION]", "[MIGRATION_JOB]"),
+                SkipValidation = false,
             };
             // Make the request
             Operation<MigrationJob, OperationMetadata> response = dataMigrationServiceClient.RestartMigrationJob(request);

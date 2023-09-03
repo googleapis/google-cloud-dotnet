@@ -40,6 +40,12 @@
                 "CreateConversionWorkspaceAsync"
               ]
             },
+            "CreateMappingRule": {
+              "methods": [
+                "CreateMappingRule",
+                "CreateMappingRuleAsync"
+              ]
+            },
             "CreateMigrationJob": {
               "methods": [
                 "CreateMigrationJob",
@@ -62,6 +68,12 @@
               "methods": [
                 "DeleteConversionWorkspace",
                 "DeleteConversionWorkspaceAsync"
+              ]
+            },
+            "DeleteMappingRule": {
+              "methods": [
+                "DeleteMappingRule",
+                "DeleteMappingRuleAsync"
               ]
             },
             "DeleteMigrationJob": {
@@ -100,6 +112,12 @@
                 "GenerateSshScriptAsync"
               ]
             },
+            "GenerateTcpProxyScript": {
+              "methods": [
+                "GenerateTcpProxyScript",
+                "GenerateTcpProxyScriptAsync"
+              ]
+            },
             "GetConnectionProfile": {
               "methods": [
                 "GetConnectionProfile",
@@ -110,6 +128,12 @@
               "methods": [
                 "GetConversionWorkspace",
                 "GetConversionWorkspaceAsync"
+              ]
+            },
+            "GetMappingRule": {
+              "methods": [
+                "GetMappingRule",
+                "GetMappingRuleAsync"
               ]
             },
             "GetMigrationJob": {
@@ -140,6 +164,12 @@
               "methods": [
                 "ListConversionWorkspaces",
                 "ListConversionWorkspacesAsync"
+              ]
+            },
+            "ListMappingRules": {
+              "methods": [
+                "ListMappingRules",
+                "ListMappingRulesAsync"
               ]
             },
             "ListMigrationJobs": {

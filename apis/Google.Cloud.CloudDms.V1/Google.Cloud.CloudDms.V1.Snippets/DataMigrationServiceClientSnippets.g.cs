@@ -919,6 +919,7 @@ namespace GoogleCSharpSnippets
             StartMigrationJobRequest request = new StartMigrationJobRequest
             {
                 MigrationJobName = MigrationJobName.FromProjectLocationMigrationJob("[PROJECT]", "[LOCATION]", "[MIGRATION_JOB]"),
+                SkipValidation = false,
             };
             // Make the request
             Operation<MigrationJob, OperationMetadata> response = dataMigrationServiceClient.StartMigrationJob(request);
@@ -952,6 +953,7 @@ namespace GoogleCSharpSnippets
             StartMigrationJobRequest request = new StartMigrationJobRequest
             {
                 MigrationJobName = MigrationJobName.FromProjectLocationMigrationJob("[PROJECT]", "[LOCATION]", "[MIGRATION_JOB]"),
+                SkipValidation = false,
             };
             // Make the request
             Operation<MigrationJob, OperationMetadata> response = await dataMigrationServiceClient.StartMigrationJobAsync(request);
@@ -1179,6 +1181,8 @@ namespace GoogleCSharpSnippets
             VerifyMigrationJobRequest request = new VerifyMigrationJobRequest
             {
                 MigrationJobName = MigrationJobName.FromProjectLocationMigrationJob("[PROJECT]", "[LOCATION]", "[MIGRATION_JOB]"),
+                UpdateMask = new FieldMask(),
+                MigrationJob = new MigrationJob(),
             };
             // Make the request
             Operation<MigrationJob, OperationMetadata> response = dataMigrationServiceClient.VerifyMigrationJob(request);
@@ -1212,6 +1216,8 @@ namespace GoogleCSharpSnippets
             VerifyMigrationJobRequest request = new VerifyMigrationJobRequest
             {
                 MigrationJobName = MigrationJobName.FromProjectLocationMigrationJob("[PROJECT]", "[LOCATION]", "[MIGRATION_JOB]"),
+                UpdateMask = new FieldMask(),
+                MigrationJob = new MigrationJob(),
             };
             // Make the request
             Operation<MigrationJob, OperationMetadata> response = await dataMigrationServiceClient.VerifyMigrationJobAsync(request);
@@ -1244,6 +1250,7 @@ namespace GoogleCSharpSnippets
             RestartMigrationJobRequest request = new RestartMigrationJobRequest
             {
                 MigrationJobName = MigrationJobName.FromProjectLocationMigrationJob("[PROJECT]", "[LOCATION]", "[MIGRATION_JOB]"),
+                SkipValidation = false,
             };
             // Make the request
             Operation<MigrationJob, OperationMetadata> response = dataMigrationServiceClient.RestartMigrationJob(request);
@@ -1277,6 +1284,7 @@ namespace GoogleCSharpSnippets
             RestartMigrationJobRequest request = new RestartMigrationJobRequest
             {
                 MigrationJobName = MigrationJobName.FromProjectLocationMigrationJob("[PROJECT]", "[LOCATION]", "[MIGRATION_JOB]"),
+                SkipValidation = false,
             };
             // Make the request
             Operation<MigrationJob, OperationMetadata> response = await dataMigrationServiceClient.RestartMigrationJobAsync(request);
@@ -1335,6 +1343,47 @@ namespace GoogleCSharpSnippets
             };
             // Make the request
             SshScript response = await dataMigrationServiceClient.GenerateSshScriptAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateTcpProxyScript</summary>
+        public void GenerateTcpProxyScriptRequestObject()
+        {
+            // Snippet: GenerateTcpProxyScript(GenerateTcpProxyScriptRequest, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            GenerateTcpProxyScriptRequest request = new GenerateTcpProxyScriptRequest
+            {
+                MigrationJobAsMigrationJobName = MigrationJobName.FromProjectLocationMigrationJob("[PROJECT]", "[LOCATION]", "[MIGRATION_JOB]"),
+                VmName = "",
+                VmMachineType = "",
+                VmZone = "",
+                VmSubnet = "",
+            };
+            // Make the request
+            TcpProxyScript response = dataMigrationServiceClient.GenerateTcpProxyScript(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateTcpProxyScriptAsync</summary>
+        public async Task GenerateTcpProxyScriptRequestObjectAsync()
+        {
+            // Snippet: GenerateTcpProxyScriptAsync(GenerateTcpProxyScriptRequest, CallSettings)
+            // Additional: GenerateTcpProxyScriptAsync(GenerateTcpProxyScriptRequest, CancellationToken)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GenerateTcpProxyScriptRequest request = new GenerateTcpProxyScriptRequest
+            {
+                MigrationJobAsMigrationJobName = MigrationJobName.FromProjectLocationMigrationJob("[PROJECT]", "[LOCATION]", "[MIGRATION_JOB]"),
+                VmName = "",
+                VmMachineType = "",
+                VmZone = "",
+                VmSubnet = "",
+            };
+            // Make the request
+            TcpProxyScript response = await dataMigrationServiceClient.GenerateTcpProxyScriptAsync(request);
             // End snippet
         }
 
@@ -1714,7 +1763,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             CreateConnectionProfileRequest request = new CreateConnectionProfileRequest
             {
-                ParentAsConnectionProfileName = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTION_PROFILE]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ConnectionProfileId = "",
                 ConnectionProfile = new ConnectionProfile(),
                 RequestId = "",
@@ -1752,7 +1801,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             CreateConnectionProfileRequest request = new CreateConnectionProfileRequest
             {
-                ParentAsConnectionProfileName = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTION_PROFILE]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ConnectionProfileId = "",
                 ConnectionProfile = new ConnectionProfile(),
                 RequestId = "",
@@ -1787,7 +1836,7 @@ namespace GoogleCSharpSnippets
             // Create client
             DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]/connectionProfiles/[CONNECTION_PROFILE]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
             ConnectionProfile connectionProfile = new ConnectionProfile();
             string connectionProfileId = "";
             // Make the request
@@ -1819,7 +1868,7 @@ namespace GoogleCSharpSnippets
             // Create client
             DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]/connectionProfiles/[CONNECTION_PROFILE]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
             ConnectionProfile connectionProfile = new ConnectionProfile();
             string connectionProfileId = "";
             // Make the request
@@ -1846,11 +1895,11 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for CreateConnectionProfile</summary>
         public void CreateConnectionProfileResourceNames()
         {
-            // Snippet: CreateConnectionProfile(ConnectionProfileName, ConnectionProfile, string, CallSettings)
+            // Snippet: CreateConnectionProfile(LocationName, ConnectionProfile, string, CallSettings)
             // Create client
             DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
             // Initialize request argument(s)
-            ConnectionProfileName parent = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTION_PROFILE]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             ConnectionProfile connectionProfile = new ConnectionProfile();
             string connectionProfileId = "";
             // Make the request
@@ -1877,12 +1926,12 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for CreateConnectionProfileAsync</summary>
         public async Task CreateConnectionProfileResourceNamesAsync()
         {
-            // Snippet: CreateConnectionProfileAsync(ConnectionProfileName, ConnectionProfile, string, CallSettings)
-            // Additional: CreateConnectionProfileAsync(ConnectionProfileName, ConnectionProfile, string, CancellationToken)
+            // Snippet: CreateConnectionProfileAsync(LocationName, ConnectionProfile, string, CallSettings)
+            // Additional: CreateConnectionProfileAsync(LocationName, ConnectionProfile, string, CancellationToken)
             // Create client
             DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ConnectionProfileName parent = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTION_PROFILE]");
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             ConnectionProfile connectionProfile = new ConnectionProfile();
             string connectionProfileId = "";
             // Make the request
@@ -3681,6 +3730,7 @@ namespace GoogleCSharpSnippets
             {
                 ConversionWorkspaceName = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]"),
                 RequestId = "",
+                Force = false,
             };
             // Make the request
             Operation<Empty, OperationMetadata> response = dataMigrationServiceClient.DeleteConversionWorkspace(request);
@@ -3715,6 +3765,7 @@ namespace GoogleCSharpSnippets
             {
                 ConversionWorkspaceName = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]"),
                 RequestId = "",
+                Force = false,
             };
             // Make the request
             Operation<Empty, OperationMetadata> response = await dataMigrationServiceClient.DeleteConversionWorkspaceAsync(request);
@@ -3852,6 +3903,559 @@ namespace GoogleCSharpSnippets
                 // If it has completed, then access the result
                 Empty retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMappingRule</summary>
+        public void CreateMappingRuleRequestObject()
+        {
+            // Snippet: CreateMappingRule(CreateMappingRuleRequest, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            CreateMappingRuleRequest request = new CreateMappingRuleRequest
+            {
+                ParentAsConversionWorkspaceName = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]"),
+                MappingRuleId = "",
+                MappingRule = new MappingRule(),
+                RequestId = "",
+            };
+            // Make the request
+            MappingRule response = dataMigrationServiceClient.CreateMappingRule(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMappingRuleAsync</summary>
+        public async Task CreateMappingRuleRequestObjectAsync()
+        {
+            // Snippet: CreateMappingRuleAsync(CreateMappingRuleRequest, CallSettings)
+            // Additional: CreateMappingRuleAsync(CreateMappingRuleRequest, CancellationToken)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateMappingRuleRequest request = new CreateMappingRuleRequest
+            {
+                ParentAsConversionWorkspaceName = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]"),
+                MappingRuleId = "",
+                MappingRule = new MappingRule(),
+                RequestId = "",
+            };
+            // Make the request
+            MappingRule response = await dataMigrationServiceClient.CreateMappingRuleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMappingRule</summary>
+        public void CreateMappingRule()
+        {
+            // Snippet: CreateMappingRule(string, MappingRule, string, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/conversionWorkspaces/[CONVERSION_WORKSPACE]";
+            MappingRule mappingRule = new MappingRule();
+            string mappingRuleId = "";
+            // Make the request
+            MappingRule response = dataMigrationServiceClient.CreateMappingRule(parent, mappingRule, mappingRuleId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMappingRuleAsync</summary>
+        public async Task CreateMappingRuleAsync()
+        {
+            // Snippet: CreateMappingRuleAsync(string, MappingRule, string, CallSettings)
+            // Additional: CreateMappingRuleAsync(string, MappingRule, string, CancellationToken)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/conversionWorkspaces/[CONVERSION_WORKSPACE]";
+            MappingRule mappingRule = new MappingRule();
+            string mappingRuleId = "";
+            // Make the request
+            MappingRule response = await dataMigrationServiceClient.CreateMappingRuleAsync(parent, mappingRule, mappingRuleId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMappingRule</summary>
+        public void CreateMappingRuleResourceNames()
+        {
+            // Snippet: CreateMappingRule(ConversionWorkspaceName, MappingRule, string, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            ConversionWorkspaceName parent = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]");
+            MappingRule mappingRule = new MappingRule();
+            string mappingRuleId = "";
+            // Make the request
+            MappingRule response = dataMigrationServiceClient.CreateMappingRule(parent, mappingRule, mappingRuleId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMappingRuleAsync</summary>
+        public async Task CreateMappingRuleResourceNamesAsync()
+        {
+            // Snippet: CreateMappingRuleAsync(ConversionWorkspaceName, MappingRule, string, CallSettings)
+            // Additional: CreateMappingRuleAsync(ConversionWorkspaceName, MappingRule, string, CancellationToken)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ConversionWorkspaceName parent = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]");
+            MappingRule mappingRule = new MappingRule();
+            string mappingRuleId = "";
+            // Make the request
+            MappingRule response = await dataMigrationServiceClient.CreateMappingRuleAsync(parent, mappingRule, mappingRuleId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteMappingRule</summary>
+        public void DeleteMappingRuleRequestObject()
+        {
+            // Snippet: DeleteMappingRule(DeleteMappingRuleRequest, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteMappingRuleRequest request = new DeleteMappingRuleRequest
+            {
+                ConversionWorkspaceName = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]"),
+                RequestId = "",
+            };
+            // Make the request
+            dataMigrationServiceClient.DeleteMappingRule(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteMappingRuleAsync</summary>
+        public async Task DeleteMappingRuleRequestObjectAsync()
+        {
+            // Snippet: DeleteMappingRuleAsync(DeleteMappingRuleRequest, CallSettings)
+            // Additional: DeleteMappingRuleAsync(DeleteMappingRuleRequest, CancellationToken)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteMappingRuleRequest request = new DeleteMappingRuleRequest
+            {
+                ConversionWorkspaceName = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]"),
+                RequestId = "",
+            };
+            // Make the request
+            await dataMigrationServiceClient.DeleteMappingRuleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteMappingRule</summary>
+        public void DeleteMappingRule()
+        {
+            // Snippet: DeleteMappingRule(string, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/conversionWorkspaces/[CONVERSION_WORKSPACE]";
+            // Make the request
+            dataMigrationServiceClient.DeleteMappingRule(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteMappingRuleAsync</summary>
+        public async Task DeleteMappingRuleAsync()
+        {
+            // Snippet: DeleteMappingRuleAsync(string, CallSettings)
+            // Additional: DeleteMappingRuleAsync(string, CancellationToken)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/conversionWorkspaces/[CONVERSION_WORKSPACE]";
+            // Make the request
+            await dataMigrationServiceClient.DeleteMappingRuleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteMappingRule</summary>
+        public void DeleteMappingRuleResourceNames()
+        {
+            // Snippet: DeleteMappingRule(ConversionWorkspaceName, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            ConversionWorkspaceName name = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]");
+            // Make the request
+            dataMigrationServiceClient.DeleteMappingRule(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteMappingRuleAsync</summary>
+        public async Task DeleteMappingRuleResourceNamesAsync()
+        {
+            // Snippet: DeleteMappingRuleAsync(ConversionWorkspaceName, CallSettings)
+            // Additional: DeleteMappingRuleAsync(ConversionWorkspaceName, CancellationToken)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ConversionWorkspaceName name = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]");
+            // Make the request
+            await dataMigrationServiceClient.DeleteMappingRuleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMappingRules</summary>
+        public void ListMappingRulesRequestObject()
+        {
+            // Snippet: ListMappingRules(ListMappingRulesRequest, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            ListMappingRulesRequest request = new ListMappingRulesRequest
+            {
+                ParentAsConversionWorkspaceName = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]"),
+            };
+            // Make the request
+            PagedEnumerable<ListMappingRulesResponse, MappingRule> response = dataMigrationServiceClient.ListMappingRules(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (MappingRule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMappingRulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MappingRule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MappingRule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MappingRule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMappingRulesAsync</summary>
+        public async Task ListMappingRulesRequestObjectAsync()
+        {
+            // Snippet: ListMappingRulesAsync(ListMappingRulesRequest, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListMappingRulesRequest request = new ListMappingRulesRequest
+            {
+                ParentAsConversionWorkspaceName = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListMappingRulesResponse, MappingRule> response = dataMigrationServiceClient.ListMappingRulesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((MappingRule item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListMappingRulesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MappingRule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MappingRule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MappingRule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMappingRules</summary>
+        public void ListMappingRules()
+        {
+            // Snippet: ListMappingRules(string, string, int?, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/conversionWorkspaces/[CONVERSION_WORKSPACE]";
+            // Make the request
+            PagedEnumerable<ListMappingRulesResponse, MappingRule> response = dataMigrationServiceClient.ListMappingRules(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (MappingRule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMappingRulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MappingRule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MappingRule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MappingRule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMappingRulesAsync</summary>
+        public async Task ListMappingRulesAsync()
+        {
+            // Snippet: ListMappingRulesAsync(string, string, int?, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/conversionWorkspaces/[CONVERSION_WORKSPACE]";
+            // Make the request
+            PagedAsyncEnumerable<ListMappingRulesResponse, MappingRule> response = dataMigrationServiceClient.ListMappingRulesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((MappingRule item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListMappingRulesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MappingRule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MappingRule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MappingRule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMappingRules</summary>
+        public void ListMappingRulesResourceNames()
+        {
+            // Snippet: ListMappingRules(ConversionWorkspaceName, string, int?, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            ConversionWorkspaceName parent = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]");
+            // Make the request
+            PagedEnumerable<ListMappingRulesResponse, MappingRule> response = dataMigrationServiceClient.ListMappingRules(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (MappingRule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMappingRulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MappingRule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MappingRule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MappingRule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMappingRulesAsync</summary>
+        public async Task ListMappingRulesResourceNamesAsync()
+        {
+            // Snippet: ListMappingRulesAsync(ConversionWorkspaceName, string, int?, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ConversionWorkspaceName parent = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]");
+            // Make the request
+            PagedAsyncEnumerable<ListMappingRulesResponse, MappingRule> response = dataMigrationServiceClient.ListMappingRulesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((MappingRule item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListMappingRulesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MappingRule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MappingRule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MappingRule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMappingRule</summary>
+        public void GetMappingRuleRequestObject()
+        {
+            // Snippet: GetMappingRule(GetMappingRuleRequest, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            GetMappingRuleRequest request = new GetMappingRuleRequest
+            {
+                MappingRuleName = MappingRuleName.FromProjectLocationConversionWorkspaceMappingRule("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]", "[MAPPING_RULE]"),
+            };
+            // Make the request
+            MappingRule response = dataMigrationServiceClient.GetMappingRule(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMappingRuleAsync</summary>
+        public async Task GetMappingRuleRequestObjectAsync()
+        {
+            // Snippet: GetMappingRuleAsync(GetMappingRuleRequest, CallSettings)
+            // Additional: GetMappingRuleAsync(GetMappingRuleRequest, CancellationToken)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetMappingRuleRequest request = new GetMappingRuleRequest
+            {
+                MappingRuleName = MappingRuleName.FromProjectLocationConversionWorkspaceMappingRule("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]", "[MAPPING_RULE]"),
+            };
+            // Make the request
+            MappingRule response = await dataMigrationServiceClient.GetMappingRuleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMappingRule</summary>
+        public void GetMappingRule()
+        {
+            // Snippet: GetMappingRule(string, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/conversionWorkspaces/[CONVERSION_WORKSPACE]/mappingRules/[MAPPING_RULE]";
+            // Make the request
+            MappingRule response = dataMigrationServiceClient.GetMappingRule(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMappingRuleAsync</summary>
+        public async Task GetMappingRuleAsync()
+        {
+            // Snippet: GetMappingRuleAsync(string, CallSettings)
+            // Additional: GetMappingRuleAsync(string, CancellationToken)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/conversionWorkspaces/[CONVERSION_WORKSPACE]/mappingRules/[MAPPING_RULE]";
+            // Make the request
+            MappingRule response = await dataMigrationServiceClient.GetMappingRuleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMappingRule</summary>
+        public void GetMappingRuleResourceNames()
+        {
+            // Snippet: GetMappingRule(MappingRuleName, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            MappingRuleName name = MappingRuleName.FromProjectLocationConversionWorkspaceMappingRule("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]", "[MAPPING_RULE]");
+            // Make the request
+            MappingRule response = dataMigrationServiceClient.GetMappingRule(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMappingRuleAsync</summary>
+        public async Task GetMappingRuleResourceNamesAsync()
+        {
+            // Snippet: GetMappingRuleAsync(MappingRuleName, CallSettings)
+            // Additional: GetMappingRuleAsync(MappingRuleName, CancellationToken)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            MappingRuleName name = MappingRuleName.FromProjectLocationConversionWorkspaceMappingRule("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]", "[MAPPING_RULE]");
+            // Make the request
+            MappingRule response = await dataMigrationServiceClient.GetMappingRuleAsync(name);
             // End snippet
         }
 
@@ -4013,6 +4617,7 @@ namespace GoogleCSharpSnippets
                 ConversionWorkspaceName = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]"),
                 AutoCommit = false,
                 Filter = "",
+                ConvertFullPath = false,
             };
             // Make the request
             Operation<ConversionWorkspace, OperationMetadata> response = dataMigrationServiceClient.ConvertConversionWorkspace(request);
@@ -4048,6 +4653,7 @@ namespace GoogleCSharpSnippets
                 ConversionWorkspaceName = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]"),
                 AutoCommit = false,
                 Filter = "",
+                ConvertFullPath = false,
             };
             // Make the request
             Operation<ConversionWorkspace, OperationMetadata> response = await dataMigrationServiceClient.ConvertConversionWorkspaceAsync(request);
@@ -4213,6 +4819,8 @@ namespace GoogleCSharpSnippets
             {
                 ConversionWorkspaceName = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]"),
                 Filter = "",
+                DryRun = false,
+                AutoCommit = false,
                 ConnectionProfile = "",
             };
             // Make the request
@@ -4248,6 +4856,8 @@ namespace GoogleCSharpSnippets
             {
                 ConversionWorkspaceName = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]"),
                 Filter = "",
+                DryRun = false,
+                AutoCommit = false,
                 ConnectionProfile = "",
             };
             // Make the request
@@ -4285,6 +4895,7 @@ namespace GoogleCSharpSnippets
                 Uncommitted = false,
                 CommitId = "",
                 Filter = "",
+                View = DatabaseEntityView.Unspecified,
             };
             // Make the request
             PagedEnumerable<DescribeDatabaseEntitiesResponse, DatabaseEntity> response = dataMigrationServiceClient.DescribeDatabaseEntities(request);
@@ -4337,6 +4948,7 @@ namespace GoogleCSharpSnippets
                 Uncommitted = false,
                 CommitId = "",
                 Filter = "",
+                View = DatabaseEntityView.Unspecified,
             };
             // Make the request
             PagedAsyncEnumerable<DescribeDatabaseEntitiesResponse, DatabaseEntity> response = dataMigrationServiceClient.DescribeDatabaseEntitiesAsync(request);

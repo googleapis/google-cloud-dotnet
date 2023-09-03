@@ -152,6 +152,18 @@ namespace Google.Cloud.CloudDms.V1
         }
     }
 
+    public partial class GenerateTcpProxyScriptRequest
+    {
+        /// <summary>
+        /// <see cref="MigrationJobName"/>-typed view over the <see cref="MigrationJob"/> resource name property.
+        /// </summary>
+        public MigrationJobName MigrationJobAsMigrationJobName
+        {
+            get => string.IsNullOrEmpty(MigrationJob) ? null : MigrationJobName.Parse(MigrationJob, allowUnparsed: true);
+            set => MigrationJob = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ListConnectionProfilesRequest
     {
         /// <summary>
@@ -179,11 +191,11 @@ namespace Google.Cloud.CloudDms.V1
     public partial class CreateConnectionProfileRequest
     {
         /// <summary>
-        /// <see cref="ConnectionProfileName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public ConnectionProfileName ParentAsConnectionProfileName
+        public gagr::LocationName ParentAsLocationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : ConnectionProfileName.Parse(Parent, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -332,6 +344,30 @@ namespace Google.Cloud.CloudDms.V1
         }
     }
 
+    public partial class ListMappingRulesRequest
+    {
+        /// <summary>
+        /// <see cref="ConversionWorkspaceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ConversionWorkspaceName ParentAsConversionWorkspaceName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : ConversionWorkspaceName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetMappingRuleRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::MappingRuleName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::MappingRuleName MappingRuleName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::MappingRuleName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class SeedConversionWorkspaceRequest
     {
         /// <summary>
@@ -404,6 +440,30 @@ namespace Google.Cloud.CloudDms.V1
         {
             get => string.IsNullOrEmpty(ConversionWorkspace) ? null : ConversionWorkspaceName.Parse(ConversionWorkspace, allowUnparsed: true);
             set => ConversionWorkspace = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateMappingRuleRequest
+    {
+        /// <summary>
+        /// <see cref="ConversionWorkspaceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ConversionWorkspaceName ParentAsConversionWorkspaceName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : ConversionWorkspaceName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteMappingRuleRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::ConversionWorkspaceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::ConversionWorkspaceName ConversionWorkspaceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::ConversionWorkspaceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
         }
     }
 

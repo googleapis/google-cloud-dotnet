@@ -39,6 +39,7 @@ namespace GoogleCSharpSnippets
             StartMigrationJobRequest request = new StartMigrationJobRequest
             {
                 MigrationJobName = MigrationJobName.FromProjectLocationMigrationJob("[PROJECT]", "[LOCATION]", "[MIGRATION_JOB]"),
+                SkipValidation = false,
             };
             // Make the request
             Operation<MigrationJob, OperationMetadata> response = await dataMigrationServiceClient.StartMigrationJobAsync(request);

@@ -45,6 +45,7 @@ namespace GoogleCSharpSnippets
                 Uncommitted = false,
                 CommitId = "",
                 Filter = "",
+                View = DatabaseEntityView.Unspecified,
             };
             // Make the request
             PagedAsyncEnumerable<DescribeDatabaseEntitiesResponse, DatabaseEntity> response = dataMigrationServiceClient.DescribeDatabaseEntitiesAsync(request);

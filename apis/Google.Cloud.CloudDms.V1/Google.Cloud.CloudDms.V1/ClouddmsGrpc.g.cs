@@ -96,6 +96,10 @@ namespace Google.Cloud.CloudDms.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.SshScript> __Marshaller_google_cloud_clouddms_v1_SshScript = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.SshScript.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.GenerateTcpProxyScriptRequest> __Marshaller_google_cloud_clouddms_v1_GenerateTcpProxyScriptRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.GenerateTcpProxyScriptRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.TcpProxyScript> __Marshaller_google_cloud_clouddms_v1_TcpProxyScript = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.TcpProxyScript.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.ListConnectionProfilesRequest> __Marshaller_google_cloud_clouddms_v1_ListConnectionProfilesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.ListConnectionProfilesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.ListConnectionProfilesResponse> __Marshaller_google_cloud_clouddms_v1_ListConnectionProfilesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.ListConnectionProfilesResponse.Parser));
@@ -135,6 +139,20 @@ namespace Google.Cloud.CloudDms.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.UpdateConversionWorkspaceRequest> __Marshaller_google_cloud_clouddms_v1_UpdateConversionWorkspaceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.UpdateConversionWorkspaceRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.DeleteConversionWorkspaceRequest> __Marshaller_google_cloud_clouddms_v1_DeleteConversionWorkspaceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.DeleteConversionWorkspaceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.CreateMappingRuleRequest> __Marshaller_google_cloud_clouddms_v1_CreateMappingRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.CreateMappingRuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.MappingRule> __Marshaller_google_cloud_clouddms_v1_MappingRule = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.MappingRule.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.DeleteMappingRuleRequest> __Marshaller_google_cloud_clouddms_v1_DeleteMappingRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.DeleteMappingRuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.ListMappingRulesRequest> __Marshaller_google_cloud_clouddms_v1_ListMappingRulesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.ListMappingRulesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.ListMappingRulesResponse> __Marshaller_google_cloud_clouddms_v1_ListMappingRulesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.ListMappingRulesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.GetMappingRuleRequest> __Marshaller_google_cloud_clouddms_v1_GetMappingRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.GetMappingRuleRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.SeedConversionWorkspaceRequest> __Marshaller_google_cloud_clouddms_v1_SeedConversionWorkspaceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.SeedConversionWorkspaceRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -261,6 +279,14 @@ namespace Google.Cloud.CloudDms.V1 {
         __Marshaller_google_cloud_clouddms_v1_SshScript);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.GenerateTcpProxyScriptRequest, global::Google.Cloud.CloudDms.V1.TcpProxyScript> __Method_GenerateTcpProxyScript = new grpc::Method<global::Google.Cloud.CloudDms.V1.GenerateTcpProxyScriptRequest, global::Google.Cloud.CloudDms.V1.TcpProxyScript>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GenerateTcpProxyScript",
+        __Marshaller_google_cloud_clouddms_v1_GenerateTcpProxyScriptRequest,
+        __Marshaller_google_cloud_clouddms_v1_TcpProxyScript);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.ListConnectionProfilesRequest, global::Google.Cloud.CloudDms.V1.ListConnectionProfilesResponse> __Method_ListConnectionProfiles = new grpc::Method<global::Google.Cloud.CloudDms.V1.ListConnectionProfilesRequest, global::Google.Cloud.CloudDms.V1.ListConnectionProfilesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -371,6 +397,38 @@ namespace Google.Cloud.CloudDms.V1 {
         "DeleteConversionWorkspace",
         __Marshaller_google_cloud_clouddms_v1_DeleteConversionWorkspaceRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.CreateMappingRuleRequest, global::Google.Cloud.CloudDms.V1.MappingRule> __Method_CreateMappingRule = new grpc::Method<global::Google.Cloud.CloudDms.V1.CreateMappingRuleRequest, global::Google.Cloud.CloudDms.V1.MappingRule>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateMappingRule",
+        __Marshaller_google_cloud_clouddms_v1_CreateMappingRuleRequest,
+        __Marshaller_google_cloud_clouddms_v1_MappingRule);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.DeleteMappingRuleRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteMappingRule = new grpc::Method<global::Google.Cloud.CloudDms.V1.DeleteMappingRuleRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteMappingRule",
+        __Marshaller_google_cloud_clouddms_v1_DeleteMappingRuleRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.ListMappingRulesRequest, global::Google.Cloud.CloudDms.V1.ListMappingRulesResponse> __Method_ListMappingRules = new grpc::Method<global::Google.Cloud.CloudDms.V1.ListMappingRulesRequest, global::Google.Cloud.CloudDms.V1.ListMappingRulesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListMappingRules",
+        __Marshaller_google_cloud_clouddms_v1_ListMappingRulesRequest,
+        __Marshaller_google_cloud_clouddms_v1_ListMappingRulesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.GetMappingRuleRequest, global::Google.Cloud.CloudDms.V1.MappingRule> __Method_GetMappingRule = new grpc::Method<global::Google.Cloud.CloudDms.V1.GetMappingRuleRequest, global::Google.Cloud.CloudDms.V1.MappingRule>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetMappingRule",
+        __Marshaller_google_cloud_clouddms_v1_GetMappingRuleRequest,
+        __Marshaller_google_cloud_clouddms_v1_MappingRule);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.SeedConversionWorkspaceRequest, global::Google.LongRunning.Operation> __Method_SeedConversionWorkspace = new grpc::Method<global::Google.Cloud.CloudDms.V1.SeedConversionWorkspaceRequest, global::Google.LongRunning.Operation>(
@@ -613,6 +671,19 @@ namespace Google.Cloud.CloudDms.V1 {
       }
 
       /// <summary>
+      /// Generate a TCP Proxy configuration script to configure a cloud-hosted VM
+      /// running a TCP Proxy.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CloudDms.V1.TcpProxyScript> GenerateTcpProxyScript(global::Google.Cloud.CloudDms.V1.GenerateTcpProxyScriptRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Retrieves a list of all connection profiles in a given project and
       /// location.
       /// </summary>
@@ -779,6 +850,54 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteConversionWorkspace(global::Google.Cloud.CloudDms.V1.DeleteConversionWorkspaceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new mapping rule for a given conversion workspace.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CloudDms.V1.MappingRule> CreateMappingRule(global::Google.Cloud.CloudDms.V1.CreateMappingRuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a single mapping rule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteMappingRule(global::Google.Cloud.CloudDms.V1.DeleteMappingRuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists the mapping rules for a specific conversion workspace.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CloudDms.V1.ListMappingRulesResponse> ListMappingRules(global::Google.Cloud.CloudDms.V1.ListMappingRulesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets the details of a mapping rule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CloudDms.V1.MappingRule> GetMappingRule(global::Google.Cloud.CloudDms.V1.GetMappingRuleRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1547,6 +1666,58 @@ namespace Google.Cloud.CloudDms.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GenerateSshScript, null, options, request);
       }
       /// <summary>
+      /// Generate a TCP Proxy configuration script to configure a cloud-hosted VM
+      /// running a TCP Proxy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CloudDms.V1.TcpProxyScript GenerateTcpProxyScript(global::Google.Cloud.CloudDms.V1.GenerateTcpProxyScriptRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GenerateTcpProxyScript(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Generate a TCP Proxy configuration script to configure a cloud-hosted VM
+      /// running a TCP Proxy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CloudDms.V1.TcpProxyScript GenerateTcpProxyScript(global::Google.Cloud.CloudDms.V1.GenerateTcpProxyScriptRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GenerateTcpProxyScript, null, options, request);
+      }
+      /// <summary>
+      /// Generate a TCP Proxy configuration script to configure a cloud-hosted VM
+      /// running a TCP Proxy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudDms.V1.TcpProxyScript> GenerateTcpProxyScriptAsync(global::Google.Cloud.CloudDms.V1.GenerateTcpProxyScriptRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GenerateTcpProxyScriptAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Generate a TCP Proxy configuration script to configure a cloud-hosted VM
+      /// running a TCP Proxy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudDms.V1.TcpProxyScript> GenerateTcpProxyScriptAsync(global::Google.Cloud.CloudDms.V1.GenerateTcpProxyScriptRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GenerateTcpProxyScript, null, options, request);
+      }
+      /// <summary>
       /// Retrieves a list of all connection profiles in a given project and
       /// location.
       /// </summary>
@@ -2231,6 +2402,198 @@ namespace Google.Cloud.CloudDms.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteConversionWorkspace, null, options, request);
       }
       /// <summary>
+      /// Creates a new mapping rule for a given conversion workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CloudDms.V1.MappingRule CreateMappingRule(global::Google.Cloud.CloudDms.V1.CreateMappingRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateMappingRule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new mapping rule for a given conversion workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CloudDms.V1.MappingRule CreateMappingRule(global::Google.Cloud.CloudDms.V1.CreateMappingRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateMappingRule, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new mapping rule for a given conversion workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudDms.V1.MappingRule> CreateMappingRuleAsync(global::Google.Cloud.CloudDms.V1.CreateMappingRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateMappingRuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new mapping rule for a given conversion workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudDms.V1.MappingRule> CreateMappingRuleAsync(global::Google.Cloud.CloudDms.V1.CreateMappingRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateMappingRule, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single mapping rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteMappingRule(global::Google.Cloud.CloudDms.V1.DeleteMappingRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteMappingRule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single mapping rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteMappingRule(global::Google.Cloud.CloudDms.V1.DeleteMappingRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteMappingRule, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single mapping rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteMappingRuleAsync(global::Google.Cloud.CloudDms.V1.DeleteMappingRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteMappingRuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single mapping rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteMappingRuleAsync(global::Google.Cloud.CloudDms.V1.DeleteMappingRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteMappingRule, null, options, request);
+      }
+      /// <summary>
+      /// Lists the mapping rules for a specific conversion workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CloudDms.V1.ListMappingRulesResponse ListMappingRules(global::Google.Cloud.CloudDms.V1.ListMappingRulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListMappingRules(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the mapping rules for a specific conversion workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CloudDms.V1.ListMappingRulesResponse ListMappingRules(global::Google.Cloud.CloudDms.V1.ListMappingRulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListMappingRules, null, options, request);
+      }
+      /// <summary>
+      /// Lists the mapping rules for a specific conversion workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudDms.V1.ListMappingRulesResponse> ListMappingRulesAsync(global::Google.Cloud.CloudDms.V1.ListMappingRulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListMappingRulesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the mapping rules for a specific conversion workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudDms.V1.ListMappingRulesResponse> ListMappingRulesAsync(global::Google.Cloud.CloudDms.V1.ListMappingRulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListMappingRules, null, options, request);
+      }
+      /// <summary>
+      /// Gets the details of a mapping rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CloudDms.V1.MappingRule GetMappingRule(global::Google.Cloud.CloudDms.V1.GetMappingRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetMappingRule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the details of a mapping rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CloudDms.V1.MappingRule GetMappingRule(global::Google.Cloud.CloudDms.V1.GetMappingRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetMappingRule, null, options, request);
+      }
+      /// <summary>
+      /// Gets the details of a mapping rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudDms.V1.MappingRule> GetMappingRuleAsync(global::Google.Cloud.CloudDms.V1.GetMappingRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetMappingRuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the details of a mapping rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudDms.V1.MappingRule> GetMappingRuleAsync(global::Google.Cloud.CloudDms.V1.GetMappingRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetMappingRule, null, options, request);
+      }
+      /// <summary>
       /// Imports a snapshot of the source database into the
       /// conversion workspace.
       /// </summary>
@@ -2792,6 +3155,7 @@ namespace Google.Cloud.CloudDms.V1 {
           .AddMethod(__Method_VerifyMigrationJob, serviceImpl.VerifyMigrationJob)
           .AddMethod(__Method_RestartMigrationJob, serviceImpl.RestartMigrationJob)
           .AddMethod(__Method_GenerateSshScript, serviceImpl.GenerateSshScript)
+          .AddMethod(__Method_GenerateTcpProxyScript, serviceImpl.GenerateTcpProxyScript)
           .AddMethod(__Method_ListConnectionProfiles, serviceImpl.ListConnectionProfiles)
           .AddMethod(__Method_GetConnectionProfile, serviceImpl.GetConnectionProfile)
           .AddMethod(__Method_CreateConnectionProfile, serviceImpl.CreateConnectionProfile)
@@ -2806,6 +3170,10 @@ namespace Google.Cloud.CloudDms.V1 {
           .AddMethod(__Method_CreateConversionWorkspace, serviceImpl.CreateConversionWorkspace)
           .AddMethod(__Method_UpdateConversionWorkspace, serviceImpl.UpdateConversionWorkspace)
           .AddMethod(__Method_DeleteConversionWorkspace, serviceImpl.DeleteConversionWorkspace)
+          .AddMethod(__Method_CreateMappingRule, serviceImpl.CreateMappingRule)
+          .AddMethod(__Method_DeleteMappingRule, serviceImpl.DeleteMappingRule)
+          .AddMethod(__Method_ListMappingRules, serviceImpl.ListMappingRules)
+          .AddMethod(__Method_GetMappingRule, serviceImpl.GetMappingRule)
           .AddMethod(__Method_SeedConversionWorkspace, serviceImpl.SeedConversionWorkspace)
           .AddMethod(__Method_ImportMappingRules, serviceImpl.ImportMappingRules)
           .AddMethod(__Method_ConvertConversionWorkspace, serviceImpl.ConvertConversionWorkspace)
@@ -2837,6 +3205,7 @@ namespace Google.Cloud.CloudDms.V1 {
       serviceBinder.AddMethod(__Method_VerifyMigrationJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.VerifyMigrationJobRequest, global::Google.LongRunning.Operation>(serviceImpl.VerifyMigrationJob));
       serviceBinder.AddMethod(__Method_RestartMigrationJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.RestartMigrationJobRequest, global::Google.LongRunning.Operation>(serviceImpl.RestartMigrationJob));
       serviceBinder.AddMethod(__Method_GenerateSshScript, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.GenerateSshScriptRequest, global::Google.Cloud.CloudDms.V1.SshScript>(serviceImpl.GenerateSshScript));
+      serviceBinder.AddMethod(__Method_GenerateTcpProxyScript, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.GenerateTcpProxyScriptRequest, global::Google.Cloud.CloudDms.V1.TcpProxyScript>(serviceImpl.GenerateTcpProxyScript));
       serviceBinder.AddMethod(__Method_ListConnectionProfiles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.ListConnectionProfilesRequest, global::Google.Cloud.CloudDms.V1.ListConnectionProfilesResponse>(serviceImpl.ListConnectionProfiles));
       serviceBinder.AddMethod(__Method_GetConnectionProfile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.GetConnectionProfileRequest, global::Google.Cloud.CloudDms.V1.ConnectionProfile>(serviceImpl.GetConnectionProfile));
       serviceBinder.AddMethod(__Method_CreateConnectionProfile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.CreateConnectionProfileRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateConnectionProfile));
@@ -2851,6 +3220,10 @@ namespace Google.Cloud.CloudDms.V1 {
       serviceBinder.AddMethod(__Method_CreateConversionWorkspace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.CreateConversionWorkspaceRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateConversionWorkspace));
       serviceBinder.AddMethod(__Method_UpdateConversionWorkspace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.UpdateConversionWorkspaceRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateConversionWorkspace));
       serviceBinder.AddMethod(__Method_DeleteConversionWorkspace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.DeleteConversionWorkspaceRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteConversionWorkspace));
+      serviceBinder.AddMethod(__Method_CreateMappingRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.CreateMappingRuleRequest, global::Google.Cloud.CloudDms.V1.MappingRule>(serviceImpl.CreateMappingRule));
+      serviceBinder.AddMethod(__Method_DeleteMappingRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.DeleteMappingRuleRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteMappingRule));
+      serviceBinder.AddMethod(__Method_ListMappingRules, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.ListMappingRulesRequest, global::Google.Cloud.CloudDms.V1.ListMappingRulesResponse>(serviceImpl.ListMappingRules));
+      serviceBinder.AddMethod(__Method_GetMappingRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.GetMappingRuleRequest, global::Google.Cloud.CloudDms.V1.MappingRule>(serviceImpl.GetMappingRule));
       serviceBinder.AddMethod(__Method_SeedConversionWorkspace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.SeedConversionWorkspaceRequest, global::Google.LongRunning.Operation>(serviceImpl.SeedConversionWorkspace));
       serviceBinder.AddMethod(__Method_ImportMappingRules, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.ImportMappingRulesRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportMappingRules));
       serviceBinder.AddMethod(__Method_ConvertConversionWorkspace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.ConvertConversionWorkspaceRequest, global::Google.LongRunning.Operation>(serviceImpl.ConvertConversionWorkspace));

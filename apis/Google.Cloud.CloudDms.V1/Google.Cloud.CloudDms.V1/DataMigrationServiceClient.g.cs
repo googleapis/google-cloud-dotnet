@@ -71,6 +71,7 @@ namespace Google.Cloud.CloudDms.V1
             RestartMigrationJobSettings = existing.RestartMigrationJobSettings;
             RestartMigrationJobOperationsSettings = existing.RestartMigrationJobOperationsSettings.Clone();
             GenerateSshScriptSettings = existing.GenerateSshScriptSettings;
+            GenerateTcpProxyScriptSettings = existing.GenerateTcpProxyScriptSettings;
             ListConnectionProfilesSettings = existing.ListConnectionProfilesSettings;
             GetConnectionProfileSettings = existing.GetConnectionProfileSettings;
             CreateConnectionProfileSettings = existing.CreateConnectionProfileSettings;
@@ -93,6 +94,10 @@ namespace Google.Cloud.CloudDms.V1
             UpdateConversionWorkspaceOperationsSettings = existing.UpdateConversionWorkspaceOperationsSettings.Clone();
             DeleteConversionWorkspaceSettings = existing.DeleteConversionWorkspaceSettings;
             DeleteConversionWorkspaceOperationsSettings = existing.DeleteConversionWorkspaceOperationsSettings.Clone();
+            CreateMappingRuleSettings = existing.CreateMappingRuleSettings;
+            DeleteMappingRuleSettings = existing.DeleteMappingRuleSettings;
+            ListMappingRulesSettings = existing.ListMappingRulesSettings;
+            GetMappingRuleSettings = existing.GetMappingRuleSettings;
             SeedConversionWorkspaceSettings = existing.SeedConversionWorkspaceSettings;
             SeedConversionWorkspaceOperationsSettings = existing.SeedConversionWorkspaceOperationsSettings.Clone();
             ImportMappingRulesSettings = existing.ImportMappingRulesSettings;
@@ -436,6 +441,25 @@ namespace Google.Cloud.CloudDms.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataMigrationServiceClient.GenerateTcpProxyScript</c> and
+        /// <c>DataMigrationServiceClient.GenerateTcpProxyScriptAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GenerateTcpProxyScriptSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DataMigrationServiceClient.ListConnectionProfiles</c> and
         /// <c>DataMigrationServiceClient.ListConnectionProfilesAsync</c>.
         /// </summary>
@@ -759,6 +783,81 @@ namespace Google.Cloud.CloudDms.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataMigrationServiceClient.CreateMappingRule</c> and <c>DataMigrationServiceClient.CreateMappingRuleAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateMappingRuleSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataMigrationServiceClient.DeleteMappingRule</c> and <c>DataMigrationServiceClient.DeleteMappingRuleAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteMappingRuleSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataMigrationServiceClient.ListMappingRules</c> and <c>DataMigrationServiceClient.ListMappingRulesAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListMappingRulesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataMigrationServiceClient.GetMappingRule</c> and <c>DataMigrationServiceClient.GetMappingRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetMappingRuleSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -2172,6 +2271,36 @@ namespace Google.Cloud.CloudDms.V1
             GenerateSshScriptAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Generate a TCP Proxy configuration script to configure a cloud-hosted VM
+        /// running a TCP Proxy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TcpProxyScript GenerateTcpProxyScript(GenerateTcpProxyScriptRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generate a TCP Proxy configuration script to configure a cloud-hosted VM
+        /// running a TCP Proxy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TcpProxyScript> GenerateTcpProxyScriptAsync(GenerateTcpProxyScriptRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generate a TCP Proxy configuration script to configure a cloud-hosted VM
+        /// running a TCP Proxy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TcpProxyScript> GenerateTcpProxyScriptAsync(GenerateTcpProxyScriptRequest request, st::CancellationToken cancellationToken) =>
+            GenerateTcpProxyScriptAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Retrieves a list of all connection profiles in a given project and
         /// location.
         /// </summary>
@@ -2525,10 +2654,10 @@ namespace Google.Cloud.CloudDms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<ConnectionProfile, OperationMetadata> CreateConnectionProfile(ConnectionProfileName parent, ConnectionProfile connectionProfile, string connectionProfileId, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<ConnectionProfile, OperationMetadata> CreateConnectionProfile(gagr::LocationName parent, ConnectionProfile connectionProfile, string connectionProfileId, gaxgrpc::CallSettings callSettings = null) =>
             CreateConnectionProfile(new CreateConnectionProfileRequest
             {
-                ParentAsConnectionProfileName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 ConnectionProfileId = gax::GaxPreconditions.CheckNotNullOrEmpty(connectionProfileId, nameof(connectionProfileId)),
                 ConnectionProfile = gax::GaxPreconditions.CheckNotNull(connectionProfile, nameof(connectionProfile)),
             }, callSettings);
@@ -2547,10 +2676,10 @@ namespace Google.Cloud.CloudDms.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<ConnectionProfile, OperationMetadata>> CreateConnectionProfileAsync(ConnectionProfileName parent, ConnectionProfile connectionProfile, string connectionProfileId, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<ConnectionProfile, OperationMetadata>> CreateConnectionProfileAsync(gagr::LocationName parent, ConnectionProfile connectionProfile, string connectionProfileId, gaxgrpc::CallSettings callSettings = null) =>
             CreateConnectionProfileAsync(new CreateConnectionProfileRequest
             {
-                ParentAsConnectionProfileName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 ConnectionProfileId = gax::GaxPreconditions.CheckNotNullOrEmpty(connectionProfileId, nameof(connectionProfileId)),
                 ConnectionProfile = gax::GaxPreconditions.CheckNotNull(connectionProfile, nameof(connectionProfile)),
             }, callSettings);
@@ -2569,7 +2698,7 @@ namespace Google.Cloud.CloudDms.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<ConnectionProfile, OperationMetadata>> CreateConnectionProfileAsync(ConnectionProfileName parent, ConnectionProfile connectionProfile, string connectionProfileId, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<ConnectionProfile, OperationMetadata>> CreateConnectionProfileAsync(gagr::LocationName parent, ConnectionProfile connectionProfile, string connectionProfileId, st::CancellationToken cancellationToken) =>
             CreateConnectionProfileAsync(parent, connectionProfile, connectionProfileId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -3991,6 +4120,535 @@ namespace Google.Cloud.CloudDms.V1
             DeleteConversionWorkspaceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Creates a new mapping rule for a given conversion workspace.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual MappingRule CreateMappingRule(CreateMappingRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new mapping rule for a given conversion workspace.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MappingRule> CreateMappingRuleAsync(CreateMappingRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new mapping rule for a given conversion workspace.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MappingRule> CreateMappingRuleAsync(CreateMappingRuleRequest request, st::CancellationToken cancellationToken) =>
+            CreateMappingRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new mapping rule for a given conversion workspace.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent which owns this collection of mapping rules.
+        /// </param>
+        /// <param name="mappingRule">
+        /// Required. Represents a [mapping rule]
+        /// (https://cloud.google.com/database-migration/reference/rest/v1/projects.locations.mappingRules)
+        /// object.
+        /// </param>
+        /// <param name="mappingRuleId">
+        /// Required. The ID of the rule to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual MappingRule CreateMappingRule(string parent, MappingRule mappingRule, string mappingRuleId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMappingRule(new CreateMappingRuleRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                MappingRuleId = gax::GaxPreconditions.CheckNotNullOrEmpty(mappingRuleId, nameof(mappingRuleId)),
+                MappingRule = gax::GaxPreconditions.CheckNotNull(mappingRule, nameof(mappingRule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new mapping rule for a given conversion workspace.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent which owns this collection of mapping rules.
+        /// </param>
+        /// <param name="mappingRule">
+        /// Required. Represents a [mapping rule]
+        /// (https://cloud.google.com/database-migration/reference/rest/v1/projects.locations.mappingRules)
+        /// object.
+        /// </param>
+        /// <param name="mappingRuleId">
+        /// Required. The ID of the rule to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MappingRule> CreateMappingRuleAsync(string parent, MappingRule mappingRule, string mappingRuleId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMappingRuleAsync(new CreateMappingRuleRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                MappingRuleId = gax::GaxPreconditions.CheckNotNullOrEmpty(mappingRuleId, nameof(mappingRuleId)),
+                MappingRule = gax::GaxPreconditions.CheckNotNull(mappingRule, nameof(mappingRule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new mapping rule for a given conversion workspace.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent which owns this collection of mapping rules.
+        /// </param>
+        /// <param name="mappingRule">
+        /// Required. Represents a [mapping rule]
+        /// (https://cloud.google.com/database-migration/reference/rest/v1/projects.locations.mappingRules)
+        /// object.
+        /// </param>
+        /// <param name="mappingRuleId">
+        /// Required. The ID of the rule to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MappingRule> CreateMappingRuleAsync(string parent, MappingRule mappingRule, string mappingRuleId, st::CancellationToken cancellationToken) =>
+            CreateMappingRuleAsync(parent, mappingRule, mappingRuleId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new mapping rule for a given conversion workspace.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent which owns this collection of mapping rules.
+        /// </param>
+        /// <param name="mappingRule">
+        /// Required. Represents a [mapping rule]
+        /// (https://cloud.google.com/database-migration/reference/rest/v1/projects.locations.mappingRules)
+        /// object.
+        /// </param>
+        /// <param name="mappingRuleId">
+        /// Required. The ID of the rule to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual MappingRule CreateMappingRule(ConversionWorkspaceName parent, MappingRule mappingRule, string mappingRuleId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMappingRule(new CreateMappingRuleRequest
+            {
+                ParentAsConversionWorkspaceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                MappingRuleId = gax::GaxPreconditions.CheckNotNullOrEmpty(mappingRuleId, nameof(mappingRuleId)),
+                MappingRule = gax::GaxPreconditions.CheckNotNull(mappingRule, nameof(mappingRule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new mapping rule for a given conversion workspace.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent which owns this collection of mapping rules.
+        /// </param>
+        /// <param name="mappingRule">
+        /// Required. Represents a [mapping rule]
+        /// (https://cloud.google.com/database-migration/reference/rest/v1/projects.locations.mappingRules)
+        /// object.
+        /// </param>
+        /// <param name="mappingRuleId">
+        /// Required. The ID of the rule to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MappingRule> CreateMappingRuleAsync(ConversionWorkspaceName parent, MappingRule mappingRule, string mappingRuleId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMappingRuleAsync(new CreateMappingRuleRequest
+            {
+                ParentAsConversionWorkspaceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                MappingRuleId = gax::GaxPreconditions.CheckNotNullOrEmpty(mappingRuleId, nameof(mappingRuleId)),
+                MappingRule = gax::GaxPreconditions.CheckNotNull(mappingRule, nameof(mappingRule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new mapping rule for a given conversion workspace.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent which owns this collection of mapping rules.
+        /// </param>
+        /// <param name="mappingRule">
+        /// Required. Represents a [mapping rule]
+        /// (https://cloud.google.com/database-migration/reference/rest/v1/projects.locations.mappingRules)
+        /// object.
+        /// </param>
+        /// <param name="mappingRuleId">
+        /// Required. The ID of the rule to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MappingRule> CreateMappingRuleAsync(ConversionWorkspaceName parent, MappingRule mappingRule, string mappingRuleId, st::CancellationToken cancellationToken) =>
+            CreateMappingRuleAsync(parent, mappingRule, mappingRuleId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single mapping rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteMappingRule(DeleteMappingRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single mapping rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteMappingRuleAsync(DeleteMappingRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single mapping rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteMappingRuleAsync(DeleteMappingRuleRequest request, st::CancellationToken cancellationToken) =>
+            DeleteMappingRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single mapping rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the mapping rule resource to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteMappingRule(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteMappingRule(new DeleteMappingRuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single mapping rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the mapping rule resource to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteMappingRuleAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteMappingRuleAsync(new DeleteMappingRuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single mapping rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the mapping rule resource to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteMappingRuleAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteMappingRuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single mapping rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the mapping rule resource to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteMappingRule(ConversionWorkspaceName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteMappingRule(new DeleteMappingRuleRequest
+            {
+                ConversionWorkspaceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single mapping rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the mapping rule resource to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteMappingRuleAsync(ConversionWorkspaceName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteMappingRuleAsync(new DeleteMappingRuleRequest
+            {
+                ConversionWorkspaceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single mapping rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the mapping rule resource to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteMappingRuleAsync(ConversionWorkspaceName name, st::CancellationToken cancellationToken) =>
+            DeleteMappingRuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists the mapping rules for a specific conversion workspace.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="MappingRule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListMappingRulesResponse, MappingRule> ListMappingRules(ListMappingRulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists the mapping rules for a specific conversion workspace.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="MappingRule"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListMappingRulesResponse, MappingRule> ListMappingRulesAsync(ListMappingRulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists the mapping rules for a specific conversion workspace.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the conversion workspace resource whose mapping rules are
+        /// listed in the form of:
+        /// projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="MappingRule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListMappingRulesResponse, MappingRule> ListMappingRules(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListMappingRules(new ListMappingRulesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists the mapping rules for a specific conversion workspace.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the conversion workspace resource whose mapping rules are
+        /// listed in the form of:
+        /// projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="MappingRule"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListMappingRulesResponse, MappingRule> ListMappingRulesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListMappingRulesAsync(new ListMappingRulesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists the mapping rules for a specific conversion workspace.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the conversion workspace resource whose mapping rules are
+        /// listed in the form of:
+        /// projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="MappingRule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListMappingRulesResponse, MappingRule> ListMappingRules(ConversionWorkspaceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListMappingRules(new ListMappingRulesRequest
+            {
+                ParentAsConversionWorkspaceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists the mapping rules for a specific conversion workspace.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the conversion workspace resource whose mapping rules are
+        /// listed in the form of:
+        /// projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="MappingRule"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListMappingRulesResponse, MappingRule> ListMappingRulesAsync(ConversionWorkspaceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListMappingRulesAsync(new ListMappingRulesRequest
+            {
+                ParentAsConversionWorkspaceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of a mapping rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual MappingRule GetMappingRule(GetMappingRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the details of a mapping rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MappingRule> GetMappingRuleAsync(GetMappingRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the details of a mapping rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MappingRule> GetMappingRuleAsync(GetMappingRuleRequest request, st::CancellationToken cancellationToken) =>
+            GetMappingRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the details of a mapping rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the mapping rule resource to get.
+        /// Example: conversionWorkspaces/123/mappingRules/rule123
+        /// 
+        /// In order to retrieve a previous revision of the mapping rule, also provide
+        /// the revision ID.
+        /// Example:
+        /// conversionWorkspace/123/mappingRules/rule123@c7cfa2a8c7cfa2a8c7cfa2a8c7cfa2a8
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual MappingRule GetMappingRule(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMappingRule(new GetMappingRuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of a mapping rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the mapping rule resource to get.
+        /// Example: conversionWorkspaces/123/mappingRules/rule123
+        /// 
+        /// In order to retrieve a previous revision of the mapping rule, also provide
+        /// the revision ID.
+        /// Example:
+        /// conversionWorkspace/123/mappingRules/rule123@c7cfa2a8c7cfa2a8c7cfa2a8c7cfa2a8
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MappingRule> GetMappingRuleAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMappingRuleAsync(new GetMappingRuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of a mapping rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the mapping rule resource to get.
+        /// Example: conversionWorkspaces/123/mappingRules/rule123
+        /// 
+        /// In order to retrieve a previous revision of the mapping rule, also provide
+        /// the revision ID.
+        /// Example:
+        /// conversionWorkspace/123/mappingRules/rule123@c7cfa2a8c7cfa2a8c7cfa2a8c7cfa2a8
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MappingRule> GetMappingRuleAsync(string name, st::CancellationToken cancellationToken) =>
+            GetMappingRuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the details of a mapping rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the mapping rule resource to get.
+        /// Example: conversionWorkspaces/123/mappingRules/rule123
+        /// 
+        /// In order to retrieve a previous revision of the mapping rule, also provide
+        /// the revision ID.
+        /// Example:
+        /// conversionWorkspace/123/mappingRules/rule123@c7cfa2a8c7cfa2a8c7cfa2a8c7cfa2a8
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual MappingRule GetMappingRule(MappingRuleName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMappingRule(new GetMappingRuleRequest
+            {
+                MappingRuleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of a mapping rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the mapping rule resource to get.
+        /// Example: conversionWorkspaces/123/mappingRules/rule123
+        /// 
+        /// In order to retrieve a previous revision of the mapping rule, also provide
+        /// the revision ID.
+        /// Example:
+        /// conversionWorkspace/123/mappingRules/rule123@c7cfa2a8c7cfa2a8c7cfa2a8c7cfa2a8
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MappingRule> GetMappingRuleAsync(MappingRuleName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMappingRuleAsync(new GetMappingRuleRequest
+            {
+                MappingRuleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of a mapping rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the mapping rule resource to get.
+        /// Example: conversionWorkspaces/123/mappingRules/rule123
+        /// 
+        /// In order to retrieve a previous revision of the mapping rule, also provide
+        /// the revision ID.
+        /// Example:
+        /// conversionWorkspace/123/mappingRules/rule123@c7cfa2a8c7cfa2a8c7cfa2a8c7cfa2a8
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MappingRule> GetMappingRuleAsync(MappingRuleName name, st::CancellationToken cancellationToken) =>
+            GetMappingRuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Imports a snapshot of the source database into the
         /// conversion workspace.
         /// </summary>
@@ -4575,6 +5233,8 @@ namespace Google.Cloud.CloudDms.V1
 
         private readonly gaxgrpc::ApiCall<GenerateSshScriptRequest, SshScript> _callGenerateSshScript;
 
+        private readonly gaxgrpc::ApiCall<GenerateTcpProxyScriptRequest, TcpProxyScript> _callGenerateTcpProxyScript;
+
         private readonly gaxgrpc::ApiCall<ListConnectionProfilesRequest, ListConnectionProfilesResponse> _callListConnectionProfiles;
 
         private readonly gaxgrpc::ApiCall<GetConnectionProfileRequest, ConnectionProfile> _callGetConnectionProfile;
@@ -4602,6 +5262,14 @@ namespace Google.Cloud.CloudDms.V1
         private readonly gaxgrpc::ApiCall<UpdateConversionWorkspaceRequest, lro::Operation> _callUpdateConversionWorkspace;
 
         private readonly gaxgrpc::ApiCall<DeleteConversionWorkspaceRequest, lro::Operation> _callDeleteConversionWorkspace;
+
+        private readonly gaxgrpc::ApiCall<CreateMappingRuleRequest, MappingRule> _callCreateMappingRule;
+
+        private readonly gaxgrpc::ApiCall<DeleteMappingRuleRequest, wkt::Empty> _callDeleteMappingRule;
+
+        private readonly gaxgrpc::ApiCall<ListMappingRulesRequest, ListMappingRulesResponse> _callListMappingRules;
+
+        private readonly gaxgrpc::ApiCall<GetMappingRuleRequest, MappingRule> _callGetMappingRule;
 
         private readonly gaxgrpc::ApiCall<SeedConversionWorkspaceRequest, lro::Operation> _callSeedConversionWorkspace;
 
@@ -4696,6 +5364,9 @@ namespace Google.Cloud.CloudDms.V1
             _callGenerateSshScript = clientHelper.BuildApiCall<GenerateSshScriptRequest, SshScript>("GenerateSshScript", grpcClient.GenerateSshScriptAsync, grpcClient.GenerateSshScript, effectiveSettings.GenerateSshScriptSettings).WithGoogleRequestParam("migration_job", request => request.MigrationJob);
             Modify_ApiCall(ref _callGenerateSshScript);
             Modify_GenerateSshScriptApiCall(ref _callGenerateSshScript);
+            _callGenerateTcpProxyScript = clientHelper.BuildApiCall<GenerateTcpProxyScriptRequest, TcpProxyScript>("GenerateTcpProxyScript", grpcClient.GenerateTcpProxyScriptAsync, grpcClient.GenerateTcpProxyScript, effectiveSettings.GenerateTcpProxyScriptSettings).WithGoogleRequestParam("migration_job", request => request.MigrationJob);
+            Modify_ApiCall(ref _callGenerateTcpProxyScript);
+            Modify_GenerateTcpProxyScriptApiCall(ref _callGenerateTcpProxyScript);
             _callListConnectionProfiles = clientHelper.BuildApiCall<ListConnectionProfilesRequest, ListConnectionProfilesResponse>("ListConnectionProfiles", grpcClient.ListConnectionProfilesAsync, grpcClient.ListConnectionProfiles, effectiveSettings.ListConnectionProfilesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListConnectionProfiles);
             Modify_ListConnectionProfilesApiCall(ref _callListConnectionProfiles);
@@ -4738,6 +5409,18 @@ namespace Google.Cloud.CloudDms.V1
             _callDeleteConversionWorkspace = clientHelper.BuildApiCall<DeleteConversionWorkspaceRequest, lro::Operation>("DeleteConversionWorkspace", grpcClient.DeleteConversionWorkspaceAsync, grpcClient.DeleteConversionWorkspace, effectiveSettings.DeleteConversionWorkspaceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteConversionWorkspace);
             Modify_DeleteConversionWorkspaceApiCall(ref _callDeleteConversionWorkspace);
+            _callCreateMappingRule = clientHelper.BuildApiCall<CreateMappingRuleRequest, MappingRule>("CreateMappingRule", grpcClient.CreateMappingRuleAsync, grpcClient.CreateMappingRule, effectiveSettings.CreateMappingRuleSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateMappingRule);
+            Modify_CreateMappingRuleApiCall(ref _callCreateMappingRule);
+            _callDeleteMappingRule = clientHelper.BuildApiCall<DeleteMappingRuleRequest, wkt::Empty>("DeleteMappingRule", grpcClient.DeleteMappingRuleAsync, grpcClient.DeleteMappingRule, effectiveSettings.DeleteMappingRuleSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteMappingRule);
+            Modify_DeleteMappingRuleApiCall(ref _callDeleteMappingRule);
+            _callListMappingRules = clientHelper.BuildApiCall<ListMappingRulesRequest, ListMappingRulesResponse>("ListMappingRules", grpcClient.ListMappingRulesAsync, grpcClient.ListMappingRules, effectiveSettings.ListMappingRulesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListMappingRules);
+            Modify_ListMappingRulesApiCall(ref _callListMappingRules);
+            _callGetMappingRule = clientHelper.BuildApiCall<GetMappingRuleRequest, MappingRule>("GetMappingRule", grpcClient.GetMappingRuleAsync, grpcClient.GetMappingRule, effectiveSettings.GetMappingRuleSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetMappingRule);
+            Modify_GetMappingRuleApiCall(ref _callGetMappingRule);
             _callSeedConversionWorkspace = clientHelper.BuildApiCall<SeedConversionWorkspaceRequest, lro::Operation>("SeedConversionWorkspace", grpcClient.SeedConversionWorkspaceAsync, grpcClient.SeedConversionWorkspace, effectiveSettings.SeedConversionWorkspaceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callSeedConversionWorkspace);
             Modify_SeedConversionWorkspaceApiCall(ref _callSeedConversionWorkspace);
@@ -4797,6 +5480,8 @@ namespace Google.Cloud.CloudDms.V1
 
         partial void Modify_GenerateSshScriptApiCall(ref gaxgrpc::ApiCall<GenerateSshScriptRequest, SshScript> call);
 
+        partial void Modify_GenerateTcpProxyScriptApiCall(ref gaxgrpc::ApiCall<GenerateTcpProxyScriptRequest, TcpProxyScript> call);
+
         partial void Modify_ListConnectionProfilesApiCall(ref gaxgrpc::ApiCall<ListConnectionProfilesRequest, ListConnectionProfilesResponse> call);
 
         partial void Modify_GetConnectionProfileApiCall(ref gaxgrpc::ApiCall<GetConnectionProfileRequest, ConnectionProfile> call);
@@ -4824,6 +5509,14 @@ namespace Google.Cloud.CloudDms.V1
         partial void Modify_UpdateConversionWorkspaceApiCall(ref gaxgrpc::ApiCall<UpdateConversionWorkspaceRequest, lro::Operation> call);
 
         partial void Modify_DeleteConversionWorkspaceApiCall(ref gaxgrpc::ApiCall<DeleteConversionWorkspaceRequest, lro::Operation> call);
+
+        partial void Modify_CreateMappingRuleApiCall(ref gaxgrpc::ApiCall<CreateMappingRuleRequest, MappingRule> call);
+
+        partial void Modify_DeleteMappingRuleApiCall(ref gaxgrpc::ApiCall<DeleteMappingRuleRequest, wkt::Empty> call);
+
+        partial void Modify_ListMappingRulesApiCall(ref gaxgrpc::ApiCall<ListMappingRulesRequest, ListMappingRulesResponse> call);
+
+        partial void Modify_GetMappingRuleApiCall(ref gaxgrpc::ApiCall<GetMappingRuleRequest, MappingRule> call);
 
         partial void Modify_SeedConversionWorkspaceApiCall(ref gaxgrpc::ApiCall<SeedConversionWorkspaceRequest, lro::Operation> call);
 
@@ -4880,6 +5573,8 @@ namespace Google.Cloud.CloudDms.V1
 
         partial void Modify_GenerateSshScriptRequest(ref GenerateSshScriptRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_GenerateTcpProxyScriptRequest(ref GenerateTcpProxyScriptRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_ListConnectionProfilesRequest(ref ListConnectionProfilesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetConnectionProfileRequest(ref GetConnectionProfileRequest request, ref gaxgrpc::CallSettings settings);
@@ -4907,6 +5602,14 @@ namespace Google.Cloud.CloudDms.V1
         partial void Modify_UpdateConversionWorkspaceRequest(ref UpdateConversionWorkspaceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteConversionWorkspaceRequest(ref DeleteConversionWorkspaceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateMappingRuleRequest(ref CreateMappingRuleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteMappingRuleRequest(ref DeleteMappingRuleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListMappingRulesRequest(ref ListMappingRulesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetMappingRuleRequest(ref GetMappingRuleRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SeedConversionWorkspaceRequest(ref SeedConversionWorkspaceRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -5253,6 +5956,32 @@ namespace Google.Cloud.CloudDms.V1
         {
             Modify_GenerateSshScriptRequest(ref request, ref callSettings);
             return _callGenerateSshScript.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Generate a TCP Proxy configuration script to configure a cloud-hosted VM
+        /// running a TCP Proxy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override TcpProxyScript GenerateTcpProxyScript(GenerateTcpProxyScriptRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GenerateTcpProxyScriptRequest(ref request, ref callSettings);
+            return _callGenerateTcpProxyScript.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Generate a TCP Proxy configuration script to configure a cloud-hosted VM
+        /// running a TCP Proxy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<TcpProxyScript> GenerateTcpProxyScriptAsync(GenerateTcpProxyScriptRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GenerateTcpProxyScriptRequest(ref request, ref callSettings);
+            return _callGenerateTcpProxyScript.Async(request, callSettings);
         }
 
         /// <summary>
@@ -5621,6 +6350,102 @@ namespace Google.Cloud.CloudDms.V1
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteConversionWorkspace.Async(request, callSettings).ConfigureAwait(false), DeleteConversionWorkspaceOperationsClient);
         }
 
+        /// <summary>
+        /// Creates a new mapping rule for a given conversion workspace.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override MappingRule CreateMappingRule(CreateMappingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateMappingRuleRequest(ref request, ref callSettings);
+            return _callCreateMappingRule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new mapping rule for a given conversion workspace.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<MappingRule> CreateMappingRuleAsync(CreateMappingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateMappingRuleRequest(ref request, ref callSettings);
+            return _callCreateMappingRule.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a single mapping rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteMappingRule(DeleteMappingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteMappingRuleRequest(ref request, ref callSettings);
+            _callDeleteMappingRule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a single mapping rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteMappingRuleAsync(DeleteMappingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteMappingRuleRequest(ref request, ref callSettings);
+            return _callDeleteMappingRule.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the mapping rules for a specific conversion workspace.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="MappingRule"/> resources.</returns>
+        public override gax::PagedEnumerable<ListMappingRulesResponse, MappingRule> ListMappingRules(ListMappingRulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListMappingRulesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListMappingRulesRequest, ListMappingRulesResponse, MappingRule>(_callListMappingRules, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the mapping rules for a specific conversion workspace.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="MappingRule"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListMappingRulesResponse, MappingRule> ListMappingRulesAsync(ListMappingRulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListMappingRulesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListMappingRulesRequest, ListMappingRulesResponse, MappingRule>(_callListMappingRules, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the details of a mapping rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override MappingRule GetMappingRule(GetMappingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetMappingRuleRequest(ref request, ref callSettings);
+            return _callGetMappingRule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the details of a mapping rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<MappingRule> GetMappingRuleAsync(GetMappingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetMappingRuleRequest(ref request, ref callSettings);
+            return _callGetMappingRule.Async(request, callSettings);
+        }
+
         /// <summary>The long-running operations client for <c>SeedConversionWorkspace</c>.</summary>
         public override lro::OperationsClient SeedConversionWorkspaceOperationsClient { get; }
 
@@ -5924,6 +6749,10 @@ namespace Google.Cloud.CloudDms.V1
     {
     }
 
+    public partial class ListMappingRulesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class DescribeDatabaseEntitiesRequest : gaxgrpc::IPageRequest
     {
     }
@@ -5960,6 +6789,14 @@ namespace Google.Cloud.CloudDms.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<ConversionWorkspace> GetEnumerator() => ConversionWorkspaces.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListMappingRulesResponse : gaxgrpc::IPageResponse<MappingRule>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<MappingRule> GetEnumerator() => MappingRules.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
