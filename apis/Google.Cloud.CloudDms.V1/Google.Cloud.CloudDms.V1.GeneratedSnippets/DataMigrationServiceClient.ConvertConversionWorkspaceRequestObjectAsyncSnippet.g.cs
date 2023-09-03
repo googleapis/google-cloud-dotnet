@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
                 ConversionWorkspaceName = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]"),
                 AutoCommit = false,
                 Filter = "",
+                ConvertFullPath = false,
             };
             // Make the request
             Operation<ConversionWorkspace, OperationMetadata> response = await dataMigrationServiceClient.ConvertConversionWorkspaceAsync(request);

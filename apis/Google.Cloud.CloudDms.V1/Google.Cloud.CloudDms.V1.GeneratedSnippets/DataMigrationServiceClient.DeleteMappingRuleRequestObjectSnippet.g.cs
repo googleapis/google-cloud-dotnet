@@ -16,13 +16,12 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START datamigration_v1_generated_DataMigrationService_ApplyConversionWorkspace_sync]
+    // [START datamigration_v1_generated_DataMigrationService_DeleteMappingRule_sync]
     using Google.Cloud.CloudDms.V1;
-    using Google.LongRunning;
 
     public sealed partial class GeneratedDataMigrationServiceClientSnippets
     {
-        /// <summary>Snippet for ApplyConversionWorkspace</summary>
+        /// <summary>Snippet for DeleteMappingRule</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,38 +29,19 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void ApplyConversionWorkspaceRequestObject()
+        public void DeleteMappingRuleRequestObject()
         {
             // Create client
             DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
             // Initialize request argument(s)
-            ApplyConversionWorkspaceRequest request = new ApplyConversionWorkspaceRequest
+            DeleteMappingRuleRequest request = new DeleteMappingRuleRequest
             {
                 ConversionWorkspaceName = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]"),
-                Filter = "",
-                DryRun = false,
-                AutoCommit = false,
-                ConnectionProfile = "",
+                RequestId = "",
             };
             // Make the request
-            Operation<ConversionWorkspace, OperationMetadata> response = dataMigrationServiceClient.ApplyConversionWorkspace(request);
-
-            // Poll until the returned long-running operation is complete
-            Operation<ConversionWorkspace, OperationMetadata> completedResponse = response.PollUntilCompleted();
-            // Retrieve the operation result
-            ConversionWorkspace result = completedResponse.Result;
-
-            // Or get the name of the operation
-            string operationName = response.Name;
-            // This name can be stored, then the long-running operation retrieved later by name
-            Operation<ConversionWorkspace, OperationMetadata> retrievedResponse = dataMigrationServiceClient.PollOnceApplyConversionWorkspace(operationName);
-            // Check if the retrieved long-running operation has completed
-            if (retrievedResponse.IsCompleted)
-            {
-                // If it has completed, then access the result
-                ConversionWorkspace retrievedResult = retrievedResponse.Result;
-            }
+            dataMigrationServiceClient.DeleteMappingRule(request);
         }
     }
-    // [END datamigration_v1_generated_DataMigrationService_ApplyConversionWorkspace_sync]
+    // [END datamigration_v1_generated_DataMigrationService_DeleteMappingRule_sync]
 }

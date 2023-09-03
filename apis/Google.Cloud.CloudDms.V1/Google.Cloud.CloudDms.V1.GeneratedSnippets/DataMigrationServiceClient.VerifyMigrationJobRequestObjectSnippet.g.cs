@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     // [START datamigration_v1_generated_DataMigrationService_VerifyMigrationJob_sync]
     using Google.Cloud.CloudDms.V1;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedDataMigrationServiceClientSnippets
     {
@@ -38,6 +39,8 @@ namespace GoogleCSharpSnippets
             VerifyMigrationJobRequest request = new VerifyMigrationJobRequest
             {
                 MigrationJobName = MigrationJobName.FromProjectLocationMigrationJob("[PROJECT]", "[LOCATION]", "[MIGRATION_JOB]"),
+                UpdateMask = new FieldMask(),
+                MigrationJob = new MigrationJob(),
             };
             // Make the request
             Operation<MigrationJob, OperationMetadata> response = dataMigrationServiceClient.VerifyMigrationJob(request);

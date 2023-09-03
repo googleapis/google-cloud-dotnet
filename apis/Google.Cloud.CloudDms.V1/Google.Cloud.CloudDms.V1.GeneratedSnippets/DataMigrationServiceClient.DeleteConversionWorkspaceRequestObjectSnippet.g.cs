@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
             {
                 ConversionWorkspaceName = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]"),
                 RequestId = "",
+                Force = false,
             };
             // Make the request
             Operation<Empty, OperationMetadata> response = dataMigrationServiceClient.DeleteConversionWorkspace(request);
