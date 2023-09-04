@@ -58,10 +58,14 @@ done
 # Build and test the tools, but only on Windows
 [[ "$OS" == "Windows_NT" ]] && tools="tools" || tools=""
 
+# Build ReleaseManager first separately, so that we get any build messages
+# here rather than when we try to run it
+dotnet build tools/Google.Cloud.Tools.ReleaseManager
+
 # If no APIs were specified explicitly, build all of them (and tools on Windows)
 if [[ ${#apis[@]} -eq 0 && $diff == false ]]
 then
-  apis=(${tools} $(dotnet run --project tools/Google.Cloud.Tools.ReleaseManager -- query-api-catalog list))
+  apis=(${tools} $(dotnet run --no-build --no-restore --project tools/Google.Cloud.Tools.ReleaseManager -- query-api-catalog list))
 fi
 
 # If we were given an API filter regex, apply it now.
