@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.18.0, released 2023-09-04
+
+### New features
+
+- Add support for NodeConfig Update ([commit d5f12a7](https://github.com/googleapis/google-cloud-dotnet/commit/d5f12a7b8d70a2d7cbcef3a349c44e77751b58e6))
+- Publicize tpu topology in v1 API ([commit d5f12a7](https://github.com/googleapis/google-cloud-dotnet/commit/d5f12a7b8d70a2d7cbcef3a349c44e77751b58e6))
+
 ## Version 3.17.0, released 2023-08-16
 
 ### New features
