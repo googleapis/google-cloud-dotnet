@@ -1,5 +1,34 @@
 # Version history
 
+## Version 2.2.0, released 2023-09-04
+
+## Breaking change
+
+The resource annotation for `CreateConnectionProfileRequest.Parent`
+has changed from referring to a `ConnectionProfileName` to a
+`LocationName`.
+This means
+`CreateConnectionProfileRequest.ParentAsConnectionProfileName` has
+been removed, and
+`CreateConnectionProfileRequest.ParentAsLocationName` has replaced it.
+
+Although this is clearly a breaking change (as removing a public
+property always is), we have not taken a major version bump as any
+customers whose source code is broken by this would already have
+been broken when making a request. Customers whose code is already
+working will not be affected.
+
+### New features
+
+- Adding GenerateTcpProxyScript API ([commit 8c998c6](https://github.com/googleapis/google-cloud-dotnet/commit/8c998c684d4cb839a9fc6452b1046235bef8599e))
+- Add MappingRule resource and CRUD operations ([commit 8c998c6](https://github.com/googleapis/google-cloud-dotnet/commit/8c998c684d4cb839a9fc6452b1046235bef8599e))
+- Support for PostgreSQL 15 ([commit 8c998c6](https://github.com/googleapis/google-cloud-dotnet/commit/8c998c684d4cb839a9fc6452b1046235bef8599e))
+- Add support for CloudSQL editions ([commit 8c998c6](https://github.com/googleapis/google-cloud-dotnet/commit/8c998c684d4cb839a9fc6452b1046235bef8599e))
+- Add support for VLDB migrations ([commit 8c998c6](https://github.com/googleapis/google-cloud-dotnet/commit/8c998c684d4cb839a9fc6452b1046235bef8599e))
+- Add SSL config to Oracle Connection Profile ([commit 8c998c6](https://github.com/googleapis/google-cloud-dotnet/commit/8c998c684d4cb839a9fc6452b1046235bef8599e))
+- Change CreateConnectionProfileRequest resource reference ([commit 8c998c6](https://github.com/googleapis/google-cloud-dotnet/commit/8c998c684d4cb839a9fc6452b1046235bef8599e))
+- Change ImportMappingRulesRequest and DescribeDatabaseEntitiesRequest fields to required ([commit 8c998c6](https://github.com/googleapis/google-cloud-dotnet/commit/8c998c684d4cb839a9fc6452b1046235bef8599e))
+
 ## Version 2.1.0, released 2023-05-26
 
 ### New features
