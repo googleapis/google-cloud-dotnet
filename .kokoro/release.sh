@@ -72,7 +72,7 @@ then
     else
       # Work out the package owner based on apis.json and the package ID
       default_package_owner=$([[ $pkg == Google.Cloud* ]] && echo google-cloud || echo google-apis-packages)
-      package_owner=$(dotnet run ../tools/Google.Cloud.Tools.ReleaseManager -- query-api-catalog get-field $pkg_id packageOwner $default_package_owner)
+      package_owner=$(dotnet run --project ../tools/Google.Cloud.Tools.ReleaseManager -- query-api-catalog get-field $pkg_id packageOwner $default_package_owner)
     fi
     
     # Work out the right NuGet API key based on the package owner
