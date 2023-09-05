@@ -96,7 +96,7 @@ namespace Google.Cloud.Firestore
         /// <summary>
         /// Creates an instance for the specified project, using the specified <see cref="FirestoreClient"/> for RPC operations.
         /// </summary>
-        /// <param name="projectId">The ID of the Google Cloud Platform project that contains the database. May be null, in which case
+        /// <param name="projectId">The ID of the Google Cloud project that contains the database. May be null, in which case
         /// the project will be automatically detected if possible.</param>
         /// <param name="client">The client to use for RPC operations. May be null, in which case a client will be created with default credentials.</param>
         /// <returns>A new instance.</returns>
@@ -106,7 +106,7 @@ namespace Google.Cloud.Firestore
         /// <summary>
         /// Asynchronously creates an instance for the specified project, using the specified <see cref="FirestoreClient"/> for RPC operations.
         /// </summary>
-        /// <param name="projectId">The ID of the Google Cloud Platform project that contains the database. May be null, in which case
+        /// <param name="projectId">The ID of the Google Cloud project that contains the database. May be null, in which case
         /// the project will be automatically detected if possible.</param>
         /// <param name="client">The client to use for RPC operations. May be null, in which case a client will be created with default credentials.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result of the task is the new instance.</returns>
@@ -125,7 +125,7 @@ namespace Google.Cloud.Firestore
         /// Additional parameters should be made optional, for source (but not binary) compatibility with tests.
         /// This method does not perform any blocking operations, so may be used from async methods.
         /// </summary>
-        /// <param name="projectId">The ID of the Google Cloud Platform project that contains the database. Must not be null.</param>
+        /// <param name="projectId">The ID of the Google Cloud project that contains the database. Must not be null.</param>
         /// <param name="databaseId">The ID of the database within the project. May be null, in which case the default database will be used.</param>
         /// <param name="client">The client to use for RPC operations. Must not be null.</param>
         /// <param name="warningLogger">The warning logger to use, if any. May be null.</param>
