@@ -45,7 +45,7 @@ namespace Google.Cloud.Firestore
         public FirestoreSettings Settings { get; set; }
 
         /// <summary>
-        /// The ID of the Google Cloud Platform project that contains the database. May be null, in which case
+        /// The ID of the Google Cloud project that contains the database. May be null, in which case
         /// the project will be automatically detected if possible.
         /// </summary>
         public string ProjectId { get; set; }

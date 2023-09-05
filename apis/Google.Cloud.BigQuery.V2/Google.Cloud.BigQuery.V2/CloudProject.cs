@@ -18,7 +18,7 @@ using static Google.Apis.Bigquery.v2.Data.ProjectList;
 namespace Google.Cloud.BigQuery.V2
 {
     /// <summary>
-    /// A project within Google Cloud Platform.
+    /// A project within Google Cloud.
     /// </summary>
     public sealed class CloudProject
     {
