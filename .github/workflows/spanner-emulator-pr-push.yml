@@ -23,7 +23,7 @@ jobs:
           - 9020:9020
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         submodules: true
 
