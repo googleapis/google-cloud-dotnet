@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The Google Cloud Platform client libraries have been designed to make simple
+The Google Cloud client libraries have been designed to make simple
 operations as simple as possible, without sacrificing fine-grained tuning where
 necessary.
 
@@ -11,7 +11,7 @@ advantage of each of them at the appropriate time.
 
 ## Background: gRPC and REST APIs
 
-For a long time, most Google APIs - including those in Google Cloud Platform - have
+For a long time, most Google APIs - including those in Google Cloud - have
 used a REST-based approach, usually using JSON to represent the resources. These APIs
 have been self-describing using the [Google API Discovery Service](https://developers.google.com/discovery/),
 which has been used to generate per-API packages under the umbrella of the

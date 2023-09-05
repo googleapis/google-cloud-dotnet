@@ -35,7 +35,7 @@ work in some situations, we cannot offer help if you run into problems.
 If a problem looks like it *may* be network-related, it's worth attempting to
 reproduce the issue in a different network environment. For example, if you're
 seeing a problem when running behind a corporate firewall, try to reproduce it
-when running on a different network or within a Google Cloud Platform VM or
+when running on a different network or within a Google Cloud VM or
 container. ([Google Cloud Functions](https://cloud.google.com/functions) are
 very simple to create and deploy, as a quick way of performing a single API
 call as a test.)
