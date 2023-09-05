@@ -205,7 +205,7 @@ pre-release version (`{api.Version}`) of `{api.Id}`.";
             string auth =
 @"## Authentication
 
-When running on Google Cloud Platform, no action needs to be taken to authenticate.
+When running on Google Cloud, no action needs to be taken to authenticate.
 
 Otherwise, the simplest way of authenticating your API calls is to
 download a service account JSON file then set the `GOOGLE_APPLICATION_CREDENTIALS` environment variable to refer to it.
