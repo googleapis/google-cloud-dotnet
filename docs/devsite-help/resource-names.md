@@ -2,7 +2,7 @@
 
 ## Concepts
 
-Many Google Cloud Platform APIs deal with multiple resources. Historically there
+Many Google Cloud APIs deal with multiple resources. Historically there
 have been many different approaches to identifying these resources, but new APIs
 are coalescing around the idea of a single *resource name* which uniquely identifies
 that resource within an API.

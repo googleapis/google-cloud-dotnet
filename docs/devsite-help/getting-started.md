@@ -64,7 +64,7 @@ dotnet add package Google.Cloud.Translate.V3
 >
 > - Google.Protobuf: the library supporting the [Protocol Buffers](https://protobuf.dev) seralization format
 > - Google.Api.Gax, Google.Api.Gax.Grpc: support libraries specifically tailored for the Google Cloud client libraries
-> - Google.Apis.Auth, Google.Apis, Google.Apis.Core: authentication support for Google Cloud Platform credentials
+> - Google.Apis.Auth, Google.Apis, Google.Apis.Core: authentication support for Google Cloud credentials
 > - Grpc.Auth, Grpc.Core.Api, Grpc.Net.Client, Grpc.Net.Common: support for the [gRPC](https://grpc.io/) RPC protocol
 > - Google.LongRunning: support for [long-running operations](long-running-operations.md)
 

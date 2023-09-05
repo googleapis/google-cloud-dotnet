@@ -23,9 +23,9 @@ feel comfortable describing these platforms as "supported".
 
 Additionally, the authentication model for the services is intended
 primarily for end user access to user-owned resources (such as
-calendars or documents), or for access based on Google Cloud
-Platform projects. The latter adds challenges to accessing general
-Google services such as Cloud Speech-to-Text from user-owned devices.
+calendars or documents), or for access based on Google Cloud projects.
+The latter adds challenges to accessing general Google services such
+as Cloud Speech-to-Text from user-owned devices.
 
 For Unity users, we recommend consulting the [Firebase Unity
 documentation](https://firebase.google.com/docs/unity/setup) to see
