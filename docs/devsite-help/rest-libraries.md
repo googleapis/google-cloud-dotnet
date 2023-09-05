@@ -166,3 +166,24 @@ This situation is more complex than the "date-time" scenario above, as one prope
 The generated code maintains backward compatibility with early versions which *only* contained the
 `object`-typed property as far as possible, but we recommend that all existing code using that property
 now migrates to use the `DateTimeOffset`-based property if possible, or the raw string property otherwise.
+
+## Creating a DelegatingHandler from a credential
+
+There are cases where you may wish to create an `HttpClient` (potentially with `IHttpClientFactory`)
+which applies the authentication headers from a Google credential.
+
+This can be performed using the `ToDelegatingHandler` extension method targeting the
+`Google.Apis.Http.IHttpExecuteInterceptor` interface implemented by the credential classes.
+This creates a [DelegatingHandler](https://learn.microsoft.com/en-us/dotnet/api/system.net.http.delegatinghandler)
+which can be used either in the construction of an `HttpClient`, or via the
+[AddHttpMessageHandler](https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependencyinjection.httpclientbuilderextensions.addhttpmessagehandler)
+extension method for dependency injection.
+
+Sample code:
+
+```csharp
+GoogleCredential = GoogleCredential.FromFile(...); // Or any other way of creating a credential
+DelegatingHandler handler = credential.ToDelegatingHandler(new HttpClientHandler());
+HttpClient client = new HttpClient(handler);
+// Requests made by the client will automatically have authorization headers applied.
+```
