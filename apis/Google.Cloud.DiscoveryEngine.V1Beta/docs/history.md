@@ -1,5 +1,20 @@
 # Version history
 
+## Version 1.0.0-beta08, released 2023-09-06
+
+### New features
+
+- Supported bring your own embedding feature ([commit d6f6676](https://github.com/googleapis/google-cloud-dotnet/commit/d6f6676a3e821b42a861a9527c63cf0985dbe9d9))
+- Added more options for search extractive content support ([commit d6f6676](https://github.com/googleapis/google-cloud-dotnet/commit/d6f6676a3e821b42a861a9527c63cf0985dbe9d9))
+- Added more skip reasons and details for search summarization ([commit d6f6676](https://github.com/googleapis/google-cloud-dotnet/commit/d6f6676a3e821b42a861a9527c63cf0985dbe9d9))
+- Added query expansion details in search response ([commit d6f6676](https://github.com/googleapis/google-cloud-dotnet/commit/d6f6676a3e821b42a861a9527c63cf0985dbe9d9))
+- Updated summarization interface for multi-turn search ([commit d6f6676](https://github.com/googleapis/google-cloud-dotnet/commit/d6f6676a3e821b42a861a9527c63cf0985dbe9d9))
+- Allow uri in user events ([commit d6f6676](https://github.com/googleapis/google-cloud-dotnet/commit/d6f6676a3e821b42a861a9527c63cf0985dbe9d9))
+
+### Documentation improvements
+
+- Keep the API doc up-to-date with recent changes ([commit d6f6676](https://github.com/googleapis/google-cloud-dotnet/commit/d6f6676a3e821b42a861a9527c63cf0985dbe9d9))
+
 ## Version 1.0.0-beta07, released 2023-08-04
 
 ### New features
