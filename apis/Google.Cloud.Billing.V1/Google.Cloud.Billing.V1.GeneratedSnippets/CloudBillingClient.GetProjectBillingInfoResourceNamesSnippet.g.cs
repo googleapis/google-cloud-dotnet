@@ -17,6 +17,7 @@
 namespace GoogleCSharpSnippets
 {
     // [START cloudbilling_v1_generated_CloudBilling_GetProjectBillingInfo_sync_flattened_resourceNames]
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Billing.V1;
 
     public sealed partial class GeneratedCloudBillingClientSnippets
@@ -34,7 +35,7 @@ namespace GoogleCSharpSnippets
             // Create client
             CloudBillingClient cloudBillingClient = CloudBillingClient.Create();
             // Initialize request argument(s)
-            ProjectBillingInfoName name = ProjectBillingInfoName.FromProject("[PROJECT]");
+            ProjectName name = ProjectName.FromProject("[PROJECT]");
             // Make the request
             ProjectBillingInfo response = cloudBillingClient.GetProjectBillingInfo(name);
         }

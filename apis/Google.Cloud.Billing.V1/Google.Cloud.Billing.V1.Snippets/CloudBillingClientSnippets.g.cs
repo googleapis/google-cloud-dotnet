@@ -732,7 +732,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             GetProjectBillingInfoRequest request = new GetProjectBillingInfoRequest
             {
-                ProjectBillingInfoName = ProjectBillingInfoName.FromProject("[PROJECT]"),
+                ProjectName = ProjectName.FromProject("[PROJECT]"),
             };
             // Make the request
             ProjectBillingInfo response = cloudBillingClient.GetProjectBillingInfo(request);
@@ -749,7 +749,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             GetProjectBillingInfoRequest request = new GetProjectBillingInfoRequest
             {
-                ProjectBillingInfoName = ProjectBillingInfoName.FromProject("[PROJECT]"),
+                ProjectName = ProjectName.FromProject("[PROJECT]"),
             };
             // Make the request
             ProjectBillingInfo response = await cloudBillingClient.GetProjectBillingInfoAsync(request);
@@ -763,7 +763,7 @@ namespace GoogleCSharpSnippets
             // Create client
             CloudBillingClient cloudBillingClient = CloudBillingClient.Create();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/billingInfo";
+            string name = "projects/[PROJECT]";
             // Make the request
             ProjectBillingInfo response = cloudBillingClient.GetProjectBillingInfo(name);
             // End snippet
@@ -777,7 +777,7 @@ namespace GoogleCSharpSnippets
             // Create client
             CloudBillingClient cloudBillingClient = await CloudBillingClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/billingInfo";
+            string name = "projects/[PROJECT]";
             // Make the request
             ProjectBillingInfo response = await cloudBillingClient.GetProjectBillingInfoAsync(name);
             // End snippet
@@ -786,11 +786,11 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for GetProjectBillingInfo</summary>
         public void GetProjectBillingInfoResourceNames()
         {
-            // Snippet: GetProjectBillingInfo(ProjectBillingInfoName, CallSettings)
+            // Snippet: GetProjectBillingInfo(ProjectName, CallSettings)
             // Create client
             CloudBillingClient cloudBillingClient = CloudBillingClient.Create();
             // Initialize request argument(s)
-            ProjectBillingInfoName name = ProjectBillingInfoName.FromProject("[PROJECT]");
+            ProjectName name = ProjectName.FromProject("[PROJECT]");
             // Make the request
             ProjectBillingInfo response = cloudBillingClient.GetProjectBillingInfo(name);
             // End snippet
@@ -799,12 +799,12 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for GetProjectBillingInfoAsync</summary>
         public async Task GetProjectBillingInfoResourceNamesAsync()
         {
-            // Snippet: GetProjectBillingInfoAsync(ProjectBillingInfoName, CallSettings)
-            // Additional: GetProjectBillingInfoAsync(ProjectBillingInfoName, CancellationToken)
+            // Snippet: GetProjectBillingInfoAsync(ProjectName, CallSettings)
+            // Additional: GetProjectBillingInfoAsync(ProjectName, CancellationToken)
             // Create client
             CloudBillingClient cloudBillingClient = await CloudBillingClient.CreateAsync();
             // Initialize request argument(s)
-            ProjectBillingInfoName name = ProjectBillingInfoName.FromProject("[PROJECT]");
+            ProjectName name = ProjectName.FromProject("[PROJECT]");
             // Make the request
             ProjectBillingInfo response = await cloudBillingClient.GetProjectBillingInfoAsync(name);
             // End snippet

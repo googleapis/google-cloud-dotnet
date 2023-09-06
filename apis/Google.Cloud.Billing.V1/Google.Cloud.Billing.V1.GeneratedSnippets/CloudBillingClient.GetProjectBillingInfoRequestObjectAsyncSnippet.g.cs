@@ -17,6 +17,7 @@
 namespace GoogleCSharpSnippets
 {
     // [START cloudbilling_v1_generated_CloudBilling_GetProjectBillingInfo_async]
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Billing.V1;
     using System.Threading.Tasks;
 
@@ -37,7 +38,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             GetProjectBillingInfoRequest request = new GetProjectBillingInfoRequest
             {
-                ProjectBillingInfoName = ProjectBillingInfoName.FromProject("[PROJECT]"),
+                ProjectName = ProjectName.FromProject("[PROJECT]"),
             };
             // Make the request
             ProjectBillingInfo response = await cloudBillingClient.GetProjectBillingInfoAsync(request);
