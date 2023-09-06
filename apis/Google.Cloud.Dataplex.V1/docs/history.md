@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.6.0, released 2023-09-06
+
+### Bug fixes
+
+- Remove unused annotation in results_table ([commit 78ebeac](https://github.com/googleapis/google-cloud-dotnet/commit/78ebeace797b97e5ec53e9908f860f688a25e8c2))
+
 ## Version 2.5.0, released 2023-08-04
 
 ### New features
