@@ -1,5 +1,14 @@
 # Version history
 
+## Version 2.3.0, released 2023-09-06
+
+### New features
+
+- Add UNAVAILABLE and QUEUED to state enum ([commit 21221cb](https://github.com/googleapis/google-cloud-dotnet/commit/21221cb0b71345b466bce0bd0e9dee9e934b41d2))
+- Add LOG_NONE to call_log_level ([commit 21221cb](https://github.com/googleapis/google-cloud-dotnet/commit/21221cb0b71345b466bce0bd0e9dee9e934b41d2))
+- Add status, labels, duration and state_error fields to Execution ([commit 21221cb](https://github.com/googleapis/google-cloud-dotnet/commit/21221cb0b71345b466bce0bd0e9dee9e934b41d2))
+- Add filter and order_by fields to ListExecutionsRequest ([commit 21221cb](https://github.com/googleapis/google-cloud-dotnet/commit/21221cb0b71345b466bce0bd0e9dee9e934b41d2))
+
 ## Version 2.2.0, released 2023-08-16
 
 No API surface changes; just dependency updates.
