@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.0.0-beta10, released 2023-09-06
+
+### New features
+
+- Added speech endpointing setting ([commit d275b98](https://github.com/googleapis/google-cloud-dotnet/commit/d275b989c2bb0476bf61c1cb4dbda9a1814dbd2f))
+- Added Knowledge Search API ([commit d275b98](https://github.com/googleapis/google-cloud-dotnet/commit/d275b989c2bb0476bf61c1cb4dbda9a1814dbd2f))
+
 ## Version 1.0.0-beta09, released 2023-08-16
 
 ### New features
