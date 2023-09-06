@@ -36,29 +36,29 @@ namespace Google.Cloud.Optimization.V1 {
             "KAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SOgoFbW9kZWwYAyABKAsy",
             "Ky5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLlNoaXBtZW50TW9kZWwS",
             "VAoMc29sdmluZ19tb2RlGAQgASgOMj4uZ29vZ2xlLmNsb3VkLm9wdGltaXph",
-            "dGlvbi52MS5PcHRpbWl6ZVRvdXJzUmVxdWVzdC5Tb2x2aW5nTW9kZRIiChVt",
-            "YXhfdmFsaWRhdGlvbl9lcnJvcnMYBSABKAVIAIgBARJSCgtzZWFyY2hfbW9k",
-            "ZRgGIAEoDjI9Lmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEuT3B0aW1p",
-            "emVUb3Vyc1JlcXVlc3QuU2VhcmNoTW9kZRJTCh5pbmplY3RlZF9maXJzdF9z",
-            "b2x1dGlvbl9yb3V0ZXMYByADKAsyKy5nb29nbGUuY2xvdWQub3B0aW1pemF0",
-            "aW9uLnYxLlNoaXBtZW50Um91dGUSXgocaW5qZWN0ZWRfc29sdXRpb25fY29u",
-            "c3RyYWludBgIIAEoCzI4Lmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEu",
-            "SW5qZWN0ZWRTb2x1dGlvbkNvbnN0cmFpbnQSSwoWcmVmcmVzaF9kZXRhaWxz",
-            "X3JvdXRlcxgJIAMoCzIrLmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEu",
-            "U2hpcG1lbnRSb3V0ZRIxCilpbnRlcnByZXRfaW5qZWN0ZWRfc29sdXRpb25z",
-            "X3VzaW5nX2xhYmVscxgKIAEoCBIdChVjb25zaWRlcl9yb2FkX3RyYWZmaWMY",
-            "CyABKAgSGgoScG9wdWxhdGVfcG9seWxpbmVzGAwgASgIEiUKHXBvcHVsYXRl",
-            "X3RyYW5zaXRpb25fcG9seWxpbmVzGA0gASgIEjYKLmFsbG93X2xhcmdlX2Rl",
-            "YWRsaW5lX2Rlc3BpdGVfaW50ZXJydXB0aW9uX3Jpc2sYDiABKAgSHgoWdXNl",
-            "X2dlb2Rlc2ljX2Rpc3RhbmNlcxgPIAEoCBInChpnZW9kZXNpY19tZXRlcnNf",
-            "cGVyX3NlY29uZBgQIAEoAUgBiAEBEg0KBWxhYmVsGBEgASgJEioKHnBvcHVs",
+            "dGlvbi52MS5PcHRpbWl6ZVRvdXJzUmVxdWVzdC5Tb2x2aW5nTW9kZRJSCgtz",
+            "ZWFyY2hfbW9kZRgGIAEoDjI9Lmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24u",
+            "djEuT3B0aW1pemVUb3Vyc1JlcXVlc3QuU2VhcmNoTW9kZRJTCh5pbmplY3Rl",
+            "ZF9maXJzdF9zb2x1dGlvbl9yb3V0ZXMYByADKAsyKy5nb29nbGUuY2xvdWQu",
+            "b3B0aW1pemF0aW9uLnYxLlNoaXBtZW50Um91dGUSXgocaW5qZWN0ZWRfc29s",
+            "dXRpb25fY29uc3RyYWludBgIIAEoCzI4Lmdvb2dsZS5jbG91ZC5vcHRpbWl6",
+            "YXRpb24udjEuSW5qZWN0ZWRTb2x1dGlvbkNvbnN0cmFpbnQSSwoWcmVmcmVz",
+            "aF9kZXRhaWxzX3JvdXRlcxgJIAMoCzIrLmdvb2dsZS5jbG91ZC5vcHRpbWl6",
+            "YXRpb24udjEuU2hpcG1lbnRSb3V0ZRIxCilpbnRlcnByZXRfaW5qZWN0ZWRf",
+            "c29sdXRpb25zX3VzaW5nX2xhYmVscxgKIAEoCBIdChVjb25zaWRlcl9yb2Fk",
+            "X3RyYWZmaWMYCyABKAgSGgoScG9wdWxhdGVfcG9seWxpbmVzGAwgASgIEiUK",
+            "HXBvcHVsYXRlX3RyYW5zaXRpb25fcG9seWxpbmVzGA0gASgIEjYKLmFsbG93",
+            "X2xhcmdlX2RlYWRsaW5lX2Rlc3BpdGVfaW50ZXJydXB0aW9uX3Jpc2sYDiAB",
+            "KAgSHgoWdXNlX2dlb2Rlc2ljX2Rpc3RhbmNlcxgPIAEoCBInChpnZW9kZXNp",
+            "Y19tZXRlcnNfcGVyX3NlY29uZBgQIAEoAUgAiAEBEiIKFW1heF92YWxpZGF0",
+            "aW9uX2Vycm9ycxgFIAEoBUgBiAEBEg0KBWxhYmVsGBEgASgJEioKHnBvcHVs",
             "YXRlX3RyYXZlbF9zdGVwX3BvbHlsaW5lcxgUIAEoCEICGAEiWQoLU29sdmlu",
             "Z01vZGUSEQoNREVGQVVMVF9TT0xWRRAAEhEKDVZBTElEQVRFX09OTFkQARIk",
             "CiBERVRFQ1RfU09NRV9JTkZFQVNJQkxFX1NISVBNRU5UUxACIloKClNlYXJj",
             "aE1vZGUSGwoXU0VBUkNIX01PREVfVU5TUEVDSUZJRUQQABIPCgtSRVRVUk5f",
-            "RkFTVBABEh4KGkNPTlNVTUVfQUxMX0FWQUlMQUJMRV9USU1FEAJCGAoWX21h",
-            "eF92YWxpZGF0aW9uX2Vycm9yc0IdChtfZ2VvZGVzaWNfbWV0ZXJzX3Blcl9z",
-            "ZWNvbmQirgYKFU9wdGltaXplVG91cnNSZXNwb25zZRI7CgZyb3V0ZXMYASAD",
+            "RkFTVBABEh4KGkNPTlNVTUVfQUxMX0FWQUlMQUJMRV9USU1FEAJCHQobX2dl",
+            "b2Rlc2ljX21ldGVyc19wZXJfc2Vjb25kQhgKFl9tYXhfdmFsaWRhdGlvbl9l",
+            "cnJvcnMirgYKFU9wdGltaXplVG91cnNSZXNwb25zZRI7CgZyb3V0ZXMYASAD",
             "KAsyKy5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLlNoaXBtZW50Um91",
             "dGUSFQoNcmVxdWVzdF9sYWJlbBgDIAEoCRJIChFza2lwcGVkX3NoaXBtZW50",
             "cxgEIAMoCzItLmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEuU2tpcHBl",
@@ -177,7 +177,7 @@ namespace Google.Cloud.Optimization.V1 {
             "b2RlEiAKHFJFUVVJUkVNRU5UX01PREVfVU5TUEVDSUZJRUQQABIdChlQRVJG",
             "T1JNRURfQllfU0FNRV9WRUhJQ0xFEAESIgoeSU5fU0FNRV9WRUhJQ0xFX0FU",
             "X1BJQ0tVUF9USU1FEAISJAogSU5fU0FNRV9WRUhJQ0xFX0FUX0RFTElWRVJZ",
-            "X1RJTUUQAyLBFAoHVmVoaWNsZRJFCgt0cmF2ZWxfbW9kZRgBIAEoDjIwLmdv",
+            "X1RJTUUQAyLOFAoHVmVoaWNsZRJFCgt0cmF2ZWxfbW9kZRgBIAEoDjIwLmdv",
             "b2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEuVmVoaWNsZS5UcmF2ZWxNb2Rl",
             "EisKDnN0YXJ0X2xvY2F0aW9uGAMgASgLMhMuZ29vZ2xlLnR5cGUuTGF0TG5n",
             "Ej4KDnN0YXJ0X3dheXBvaW50GAQgASgLMiYuZ29vZ2xlLmNsb3VkLm9wdGlt",
@@ -231,192 +231,194 @@ namespace Google.Cloud.Optimization.V1 {
             "IAEoCzIvLmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEuVmVoaWNsZS5M",
             "b2FkTGltaXQ6AjgBGmAKI0V4dHJhVmlzaXREdXJhdGlvbkZvclZpc2l0VHlw",
             "ZUVudHJ5EgsKA2tleRgBIAEoCRIoCgV2YWx1ZRgCIAEoCzIZLmdvb2dsZS5w",
-            "cm90b2J1Zi5EdXJhdGlvbjoCOAEiNgoKVHJhdmVsTW9kZRIbChdUUkFWRUxf",
-            "TU9ERV9VTlNQRUNJRklFRBAAEgsKB0RSSVZJTkcQASJiCg9VbmxvYWRpbmdQ",
-            "b2xpY3kSIAocVU5MT0FESU5HX1BPTElDWV9VTlNQRUNJRklFRBAAEhUKEUxB",
-            "U1RfSU5fRklSU1RfT1VUEAESFgoSRklSU1RfSU5fRklSU1RfT1VUEAJCGwoZ",
-            "X3RyYXZlbF9kdXJhdGlvbl9tdWx0aXBsZSKEAwoKVGltZVdpbmRvdxIuCgpz",
-            "dGFydF90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIs",
-            "CghlbmRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
-            "MwoPc29mdF9zdGFydF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcBIxCg1zb2Z0X2VuZF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcBIxCiRjb3N0X3Blcl9ob3VyX2JlZm9yZV9zb2Z0X3N0",
-            "YXJ0X3RpbWUYBSABKAFIAIgBARIuCiFjb3N0X3Blcl9ob3VyX2FmdGVyX3Nv",
-            "ZnRfZW5kX3RpbWUYBiABKAFIAYgBAUInCiVfY29zdF9wZXJfaG91cl9iZWZv",
-            "cmVfc29mdF9zdGFydF90aW1lQiQKIl9jb3N0X3Blcl9ob3VyX2FmdGVyX3Nv",
-            "ZnRfZW5kX3RpbWUiMwoQQ2FwYWNpdHlRdWFudGl0eRIMCgR0eXBlGAEgASgJ",
-            "Eg0KBXZhbHVlGAIgASgDOgIYASJ4ChhDYXBhY2l0eVF1YW50aXR5SW50ZXJ2",
-            "YWwSDAoEdHlwZRgBIAEoCRIWCgltaW5fdmFsdWUYAiABKANIAIgBARIWCglt",
-            "YXhfdmFsdWUYAyABKANIAYgBAToCGAFCDAoKX21pbl92YWx1ZUIMCgpfbWF4",
-            "X3ZhbHVlIr8BCg1EaXN0YW5jZUxpbWl0EhcKCm1heF9tZXRlcnMYASABKANI",
-            "AIgBARIcCg9zb2Z0X21heF9tZXRlcnMYAiABKANIAYgBARIuCiFjb3N0X3Bl",
-            "cl9raWxvbWV0ZXJfYWJvdmVfc29mdF9tYXgYAyABKAFIAogBAUINCgtfbWF4",
-            "X21ldGVyc0ISChBfc29mdF9tYXhfbWV0ZXJzQiQKIl9jb3N0X3Blcl9raWxv",
-            "bWV0ZXJfYWJvdmVfc29mdF9tYXgihQIKFFRyYW5zaXRpb25BdHRyaWJ1dGVz",
-            "Eg8KB3NyY190YWcYASABKAkSGAoQZXhjbHVkZWRfc3JjX3RhZxgCIAEoCRIP",
-            "Cgdkc3RfdGFnGAMgASgJEhgKEGV4Y2x1ZGVkX2RzdF90YWcYBCABKAkSDAoE",
-            "Y29zdBgFIAEoARIaChJjb3N0X3Blcl9raWxvbWV0ZXIYBiABKAESQwoOZGlz",
-            "dGFuY2VfbGltaXQYByABKAsyKy5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9u",
-            "LnYxLkRpc3RhbmNlTGltaXQSKAoFZGVsYXkYCCABKAsyGS5nb29nbGUucHJv",
-            "dG9idWYuRHVyYXRpb24igQEKCFdheXBvaW50EjoKCGxvY2F0aW9uGAEgASgL",
-            "MiYuZ29vZ2xlLmNsb3VkLm9wdGltaXphdGlvbi52MS5Mb2NhdGlvbkgAEhIK",
-            "CHBsYWNlX2lkGAIgASgJSAASFAoMc2lkZV9vZl9yb2FkGAMgASgIQg8KDWxv",
-            "Y2F0aW9uX3R5cGUiUgoITG9jYXRpb24SJAoHbGF0X2xuZxgBIAEoCzITLmdv",
-            "b2dsZS50eXBlLkxhdExuZxIUCgdoZWFkaW5nGAIgASgFSACIAQFCCgoIX2hl",
-            "YWRpbmcijAQKCUJyZWFrUnVsZRJMCg5icmVha19yZXF1ZXN0cxgBIAMoCzI0",
-            "Lmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEuQnJlYWtSdWxlLkJyZWFr",
-            "UmVxdWVzdBJaChVmcmVxdWVuY3lfY29uc3RyYWludHMYAiADKAsyOy5nb29n",
-            "bGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLkJyZWFrUnVsZS5GcmVxdWVuY3lD",
-            "b25zdHJhaW50Gr4BCgxCcmVha1JlcXVlc3QSPAoTZWFybGllc3Rfc3RhcnRf",
-            "dGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAhI6",
-            "ChFsYXRlc3Rfc3RhcnRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXBCA+BBAhI0CgxtaW5fZHVyYXRpb24YAyABKAsyGS5nb29nbGUu",
-            "cHJvdG9idWYuRHVyYXRpb25CA+BBAhqTAQoTRnJlcXVlbmN5Q29uc3RyYWlu",
-            "dBI6ChJtaW5fYnJlYWtfZHVyYXRpb24YASABKAsyGS5nb29nbGUucHJvdG9i",
-            "dWYuRHVyYXRpb25CA+BBAhJAChhtYXhfaW50ZXJfYnJlYWtfZHVyYXRpb24Y",
-            "AiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBAiLDFgoNU2hp",
-            "cG1lbnRSb3V0ZRIVCg12ZWhpY2xlX2luZGV4GAEgASgFEhUKDXZlaGljbGVf",
-            "bGFiZWwYAiABKAkSNgoSdmVoaWNsZV9zdGFydF90aW1lGAUgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBI0ChB2ZWhpY2xlX2VuZF90aW1lGAYg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBJBCgZ2aXNpdHMYByAD",
-            "KAsyMS5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLlNoaXBtZW50Um91",
-            "dGUuVmlzaXQSSwoLdHJhbnNpdGlvbnMYCCADKAsyNi5nb29nbGUuY2xvdWQu",
-            "b3B0aW1pemF0aW9uLnYxLlNoaXBtZW50Um91dGUuVHJhbnNpdGlvbhIjChto",
-            "YXNfdHJhZmZpY19pbmZlYXNpYmlsaXRpZXMYCSABKAgSUwoOcm91dGVfcG9s",
-            "eWxpbmUYCiABKAsyOy5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLlNo",
-            "aXBtZW50Um91dGUuRW5jb2RlZFBvbHlsaW5lEkEKBmJyZWFrcxgLIAMoCzIx",
-            "Lmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEuU2hpcG1lbnRSb3V0ZS5C",
-            "cmVhaxJACgdtZXRyaWNzGAwgASgLMi8uZ29vZ2xlLmNsb3VkLm9wdGltaXph",
-            "dGlvbi52MS5BZ2dyZWdhdGVkTWV0cmljcxJQCgtyb3V0ZV9jb3N0cxgRIAMo",
-            "CzI7Lmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEuU2hpcG1lbnRSb3V0",
-            "ZS5Sb3V0ZUNvc3RzRW50cnkSGAoQcm91dGVfdG90YWxfY29zdBgSIAEoARJF",
-            "CgllbmRfbG9hZHMYDSADKAsyLi5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9u",
-            "LnYxLkNhcGFjaXR5UXVhbnRpdHlCAhgBElAKDHRyYXZlbF9zdGVwcxgOIAMo",
-            "CzI2Lmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEuU2hpcG1lbnRSb3V0",
-            "ZS5UcmF2ZWxTdGVwQgIYARI1Cg52ZWhpY2xlX2RldG91chgPIAEoCzIZLmdv",
-            "b2dsZS5wcm90b2J1Zi5EdXJhdGlvbkICGAESVwoYZGVsYXlfYmVmb3JlX3Zl",
-            "aGljbGVfZW5kGBAgASgLMjEuZ29vZ2xlLmNsb3VkLm9wdGltaXphdGlvbi52",
-            "MS5TaGlwbWVudFJvdXRlLkRlbGF5QgIYARpoCgVEZWxheRIuCgpzdGFydF90",
-            "aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIrCghkdXJh",
-            "dGlvbhgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbjoCGAEa9QQK",
-            "BVZpc2l0EhYKDnNoaXBtZW50X2luZGV4GAEgASgFEhEKCWlzX3BpY2t1cBgC",
-            "IAEoCBIbChN2aXNpdF9yZXF1ZXN0X2luZGV4GAMgASgFEi4KCnN0YXJ0X3Rp",
-            "bWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wElgKDGxvYWRf",
-            "ZGVtYW5kcxgLIAMoCzJCLmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEu",
-            "U2hpcG1lbnRSb3V0ZS5WaXNpdC5Mb2FkRGVtYW5kc0VudHJ5EikKBmRldG91",
-            "chgGIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIWCg5zaGlwbWVu",
-            "dF9sYWJlbBgHIAEoCRITCgt2aXNpdF9sYWJlbBgIIAEoCRJJCg1hcnJpdmFs",
-            "X2xvYWRzGAkgAygLMi4uZ29vZ2xlLmNsb3VkLm9wdGltaXphdGlvbi52MS5D",
-            "YXBhY2l0eVF1YW50aXR5QgIYARJRChJkZWxheV9iZWZvcmVfc3RhcnQYCiAB",
-            "KAsyMS5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLlNoaXBtZW50Um91",
-            "dGUuRGVsYXlCAhgBEkMKB2RlbWFuZHMYBSADKAsyLi5nb29nbGUuY2xvdWQu",
-            "b3B0aW1pemF0aW9uLnYxLkNhcGFjaXR5UXVhbnRpdHlCAhgBGl8KEExvYWRE",
-            "ZW1hbmRzRW50cnkSCwoDa2V5GAEgASgJEjoKBXZhbHVlGAIgASgLMisuZ29v",
-            "Z2xlLmNsb3VkLm9wdGltaXphdGlvbi52MS5TaGlwbWVudC5Mb2FkOgI4ARrk",
-            "BQoKVHJhbnNpdGlvbhIyCg90cmF2ZWxfZHVyYXRpb24YASABKAsyGS5nb29n",
-            "bGUucHJvdG9idWYuRHVyYXRpb24SHgoWdHJhdmVsX2Rpc3RhbmNlX21ldGVy",
-            "cxgCIAEoARIgChh0cmFmZmljX2luZm9fdW5hdmFpbGFibGUYAyABKAgSMQoO",
+            "cm90b2J1Zi5EdXJhdGlvbjoCOAEiQwoKVHJhdmVsTW9kZRIbChdUUkFWRUxf",
+            "TU9ERV9VTlNQRUNJRklFRBAAEgsKB0RSSVZJTkcQARILCgdXQUxLSU5HEAIi",
+            "YgoPVW5sb2FkaW5nUG9saWN5EiAKHFVOTE9BRElOR19QT0xJQ1lfVU5TUEVD",
+            "SUZJRUQQABIVChFMQVNUX0lOX0ZJUlNUX09VVBABEhYKEkZJUlNUX0lOX0ZJ",
+            "UlNUX09VVBACQhsKGV90cmF2ZWxfZHVyYXRpb25fbXVsdGlwbGUihAMKClRp",
+            "bWVXaW5kb3cSLgoKc3RhcnRfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wEjMKD3NvZnRfc3RhcnRfdGltZRgDIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXASMQoNc29mdF9lbmRfdGltZRgEIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMQokY29zdF9wZXJfaG91cl9i",
+            "ZWZvcmVfc29mdF9zdGFydF90aW1lGAUgASgBSACIAQESLgohY29zdF9wZXJf",
+            "aG91cl9hZnRlcl9zb2Z0X2VuZF90aW1lGAYgASgBSAGIAQFCJwolX2Nvc3Rf",
+            "cGVyX2hvdXJfYmVmb3JlX3NvZnRfc3RhcnRfdGltZUIkCiJfY29zdF9wZXJf",
+            "aG91cl9hZnRlcl9zb2Z0X2VuZF90aW1lIjMKEENhcGFjaXR5UXVhbnRpdHkS",
+            "DAoEdHlwZRgBIAEoCRINCgV2YWx1ZRgCIAEoAzoCGAEieAoYQ2FwYWNpdHlR",
+            "dWFudGl0eUludGVydmFsEgwKBHR5cGUYASABKAkSFgoJbWluX3ZhbHVlGAIg",
+            "ASgDSACIAQESFgoJbWF4X3ZhbHVlGAMgASgDSAGIAQE6AhgBQgwKCl9taW5f",
+            "dmFsdWVCDAoKX21heF92YWx1ZSKVAgoNRGlzdGFuY2VMaW1pdBIXCgptYXhf",
+            "bWV0ZXJzGAEgASgDSACIAQESHAoPc29mdF9tYXhfbWV0ZXJzGAIgASgDSAGI",
+            "AQESLgohY29zdF9wZXJfa2lsb21ldGVyX2JlbG93X3NvZnRfbWF4GAQgASgB",
+            "SAKIAQESLgohY29zdF9wZXJfa2lsb21ldGVyX2Fib3ZlX3NvZnRfbWF4GAMg",
+            "ASgBSAOIAQFCDQoLX21heF9tZXRlcnNCEgoQX3NvZnRfbWF4X21ldGVyc0Ik",
+            "CiJfY29zdF9wZXJfa2lsb21ldGVyX2JlbG93X3NvZnRfbWF4QiQKIl9jb3N0",
+            "X3Blcl9raWxvbWV0ZXJfYWJvdmVfc29mdF9tYXgihQIKFFRyYW5zaXRpb25B",
+            "dHRyaWJ1dGVzEg8KB3NyY190YWcYASABKAkSGAoQZXhjbHVkZWRfc3JjX3Rh",
+            "ZxgCIAEoCRIPCgdkc3RfdGFnGAMgASgJEhgKEGV4Y2x1ZGVkX2RzdF90YWcY",
+            "BCABKAkSDAoEY29zdBgFIAEoARIaChJjb3N0X3Blcl9raWxvbWV0ZXIYBiAB",
+            "KAESQwoOZGlzdGFuY2VfbGltaXQYByABKAsyKy5nb29nbGUuY2xvdWQub3B0",
+            "aW1pemF0aW9uLnYxLkRpc3RhbmNlTGltaXQSKAoFZGVsYXkYCCABKAsyGS5n",
+            "b29nbGUucHJvdG9idWYuRHVyYXRpb24igQEKCFdheXBvaW50EjoKCGxvY2F0",
+            "aW9uGAEgASgLMiYuZ29vZ2xlLmNsb3VkLm9wdGltaXphdGlvbi52MS5Mb2Nh",
+            "dGlvbkgAEhIKCHBsYWNlX2lkGAIgASgJSAASFAoMc2lkZV9vZl9yb2FkGAMg",
+            "ASgIQg8KDWxvY2F0aW9uX3R5cGUiUgoITG9jYXRpb24SJAoHbGF0X2xuZxgB",
+            "IAEoCzITLmdvb2dsZS50eXBlLkxhdExuZxIUCgdoZWFkaW5nGAIgASgFSACI",
+            "AQFCCgoIX2hlYWRpbmcijAQKCUJyZWFrUnVsZRJMCg5icmVha19yZXF1ZXN0",
+            "cxgBIAMoCzI0Lmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEuQnJlYWtS",
+            "dWxlLkJyZWFrUmVxdWVzdBJaChVmcmVxdWVuY3lfY29uc3RyYWludHMYAiAD",
+            "KAsyOy5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLkJyZWFrUnVsZS5G",
+            "cmVxdWVuY3lDb25zdHJhaW50Gr4BCgxCcmVha1JlcXVlc3QSPAoTZWFybGll",
+            "c3Rfc3RhcnRfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXBCA+BBAhI6ChFsYXRlc3Rfc3RhcnRfdGltZRgCIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAhI0CgxtaW5fZHVyYXRpb24YAyABKAsy",
+            "GS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBAhqTAQoTRnJlcXVlbmN5",
+            "Q29uc3RyYWludBI6ChJtaW5fYnJlYWtfZHVyYXRpb24YASABKAsyGS5nb29n",
+            "bGUucHJvdG9idWYuRHVyYXRpb25CA+BBAhJAChhtYXhfaW50ZXJfYnJlYWtf",
+            "ZHVyYXRpb24YAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BB",
+            "AiLDFgoNU2hpcG1lbnRSb3V0ZRIVCg12ZWhpY2xlX2luZGV4GAEgASgFEhUK",
+            "DXZlaGljbGVfbGFiZWwYAiABKAkSNgoSdmVoaWNsZV9zdGFydF90aW1lGAUg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI0ChB2ZWhpY2xlX2Vu",
+            "ZF90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBJBCgZ2",
+            "aXNpdHMYByADKAsyMS5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLlNo",
+            "aXBtZW50Um91dGUuVmlzaXQSSwoLdHJhbnNpdGlvbnMYCCADKAsyNi5nb29n",
+            "bGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLlNoaXBtZW50Um91dGUuVHJhbnNp",
+            "dGlvbhIjChtoYXNfdHJhZmZpY19pbmZlYXNpYmlsaXRpZXMYCSABKAgSUwoO",
+            "cm91dGVfcG9seWxpbmUYCiABKAsyOy5nb29nbGUuY2xvdWQub3B0aW1pemF0",
+            "aW9uLnYxLlNoaXBtZW50Um91dGUuRW5jb2RlZFBvbHlsaW5lEkEKBmJyZWFr",
+            "cxgLIAMoCzIxLmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEuU2hpcG1l",
+            "bnRSb3V0ZS5CcmVhaxJACgdtZXRyaWNzGAwgASgLMi8uZ29vZ2xlLmNsb3Vk",
+            "Lm9wdGltaXphdGlvbi52MS5BZ2dyZWdhdGVkTWV0cmljcxJQCgtyb3V0ZV9j",
+            "b3N0cxgRIAMoCzI7Lmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEuU2hp",
+            "cG1lbnRSb3V0ZS5Sb3V0ZUNvc3RzRW50cnkSGAoQcm91dGVfdG90YWxfY29z",
+            "dBgSIAEoARJFCgllbmRfbG9hZHMYDSADKAsyLi5nb29nbGUuY2xvdWQub3B0",
+            "aW1pemF0aW9uLnYxLkNhcGFjaXR5UXVhbnRpdHlCAhgBElAKDHRyYXZlbF9z",
+            "dGVwcxgOIAMoCzI2Lmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEuU2hp",
+            "cG1lbnRSb3V0ZS5UcmF2ZWxTdGVwQgIYARI1Cg52ZWhpY2xlX2RldG91chgP",
+            "IAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkICGAESVwoYZGVsYXlf",
+            "YmVmb3JlX3ZlaGljbGVfZW5kGBAgASgLMjEuZ29vZ2xlLmNsb3VkLm9wdGlt",
+            "aXphdGlvbi52MS5TaGlwbWVudFJvdXRlLkRlbGF5QgIYARpoCgVEZWxheRIu",
+            "CgpzdGFydF90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cBIrCghkdXJhdGlvbhgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlv",
+            "bjoCGAEa9QQKBVZpc2l0EhYKDnNoaXBtZW50X2luZGV4GAEgASgFEhEKCWlz",
+            "X3BpY2t1cBgCIAEoCBIbChN2aXNpdF9yZXF1ZXN0X2luZGV4GAMgASgFEi4K",
+            "CnN0YXJ0X3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "ElgKDGxvYWRfZGVtYW5kcxgLIAMoCzJCLmdvb2dsZS5jbG91ZC5vcHRpbWl6",
+            "YXRpb24udjEuU2hpcG1lbnRSb3V0ZS5WaXNpdC5Mb2FkRGVtYW5kc0VudHJ5",
+            "EikKBmRldG91chgGIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIW",
+            "Cg5zaGlwbWVudF9sYWJlbBgHIAEoCRITCgt2aXNpdF9sYWJlbBgIIAEoCRJJ",
+            "Cg1hcnJpdmFsX2xvYWRzGAkgAygLMi4uZ29vZ2xlLmNsb3VkLm9wdGltaXph",
+            "dGlvbi52MS5DYXBhY2l0eVF1YW50aXR5QgIYARJRChJkZWxheV9iZWZvcmVf",
+            "c3RhcnQYCiABKAsyMS5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLlNo",
+            "aXBtZW50Um91dGUuRGVsYXlCAhgBEkMKB2RlbWFuZHMYBSADKAsyLi5nb29n",
+            "bGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLkNhcGFjaXR5UXVhbnRpdHlCAhgB",
+            "Gl8KEExvYWREZW1hbmRzRW50cnkSCwoDa2V5GAEgASgJEjoKBXZhbHVlGAIg",
+            "ASgLMisuZ29vZ2xlLmNsb3VkLm9wdGltaXphdGlvbi52MS5TaGlwbWVudC5M",
+            "b2FkOgI4ARrkBQoKVHJhbnNpdGlvbhIyCg90cmF2ZWxfZHVyYXRpb24YASAB",
+            "KAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SHgoWdHJhdmVsX2Rpc3Rh",
+            "bmNlX21ldGVycxgCIAEoARIgChh0cmFmZmljX2luZm9fdW5hdmFpbGFibGUY",
+            "AyABKAgSMQoOZGVsYXlfZHVyYXRpb24YBCABKAsyGS5nb29nbGUucHJvdG9i",
+            "dWYuRHVyYXRpb24SMQoOYnJlYWtfZHVyYXRpb24YBSABKAsyGS5nb29nbGUu",
+            "cHJvdG9idWYuRHVyYXRpb24SMAoNd2FpdF9kdXJhdGlvbhgGIAEoCzIZLmdv",
+            "b2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIxCg50b3RhbF9kdXJhdGlvbhgHIAEo",
+            "CzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIuCgpzdGFydF90aW1lGAgg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBJTCg5yb3V0ZV9wb2x5",
+            "bGluZRgJIAEoCzI7Lmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEuU2hp",
+            "cG1lbnRSb3V0ZS5FbmNvZGVkUG9seWxpbmUSXwoNdmVoaWNsZV9sb2FkcxgL",
+            "IAMoCzJILmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEuU2hpcG1lbnRS",
+            "b3V0ZS5UcmFuc2l0aW9uLlZlaGljbGVMb2Fkc0VudHJ5EkEKBWxvYWRzGAog",
+            "AygLMi4uZ29vZ2xlLmNsb3VkLm9wdGltaXphdGlvbi52MS5DYXBhY2l0eVF1",
+            "YW50aXR5QgIYARpsChFWZWhpY2xlTG9hZHNFbnRyeRILCgNrZXkYASABKAkS",
+            "RgoFdmFsdWUYAiABKAsyNy5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9uLnYx",
+            "LlNoaXBtZW50Um91dGUuVmVoaWNsZUxvYWQ6AjgBGh0KC1ZlaGljbGVMb2Fk",
+            "Eg4KBmFtb3VudBgBIAEoAxohCg9FbmNvZGVkUG9seWxpbmUSDgoGcG9pbnRz",
+            "GAEgASgJGmQKBUJyZWFrEi4KCnN0YXJ0X3RpbWUYASABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wEisKCGR1cmF0aW9uGAIgASgLMhkuZ29vZ2xl",
+            "LnByb3RvYnVmLkR1cmF0aW9uGs0BCgpUcmF2ZWxTdGVwEisKCGR1cmF0aW9u",
+            "GAEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEhcKD2Rpc3RhbmNl",
+            "X21ldGVycxgCIAEoARIgChh0cmFmZmljX2luZm9fdW5hdmFpbGFibGUYAyAB",
+            "KAgSUwoOcm91dGVfcG9seWxpbmUYBCABKAsyOy5nb29nbGUuY2xvdWQub3B0",
+            "aW1pemF0aW9uLnYxLlNoaXBtZW50Um91dGUuRW5jb2RlZFBvbHlsaW5lOgIY",
+            "ARoxCg9Sb3V0ZUNvc3RzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIg",
+            "ASgBOgI4ASL+BAoPU2tpcHBlZFNoaXBtZW50Eg0KBWluZGV4GAEgASgFEg0K",
+            "BWxhYmVsGAIgASgJEkUKB3JlYXNvbnMYAyADKAsyNC5nb29nbGUuY2xvdWQu",
+            "b3B0aW1pemF0aW9uLnYxLlNraXBwZWRTaGlwbWVudC5SZWFzb24ahQQKBlJl",
+            "YXNvbhJHCgRjb2RlGAEgASgOMjkuZ29vZ2xlLmNsb3VkLm9wdGltaXphdGlv",
+            "bi52MS5Ta2lwcGVkU2hpcG1lbnQuUmVhc29uLkNvZGUSIgoVZXhhbXBsZV92",
+            "ZWhpY2xlX2luZGV4GAIgASgFSACIAQESJgoeZXhhbXBsZV9leGNlZWRlZF9j",
+            "YXBhY2l0eV90eXBlGAMgASgJIssCCgRDb2RlEhQKEENPREVfVU5TUEVDSUZJ",
+            "RUQQABIOCgpOT19WRUhJQ0xFEAESIwofREVNQU5EX0VYQ0VFRFNfVkVISUNM",
+            "RV9DQVBBQ0lUWRACEjUKMUNBTk5PVF9CRV9QRVJGT1JNRURfV0lUSElOX1ZF",
+            "SElDTEVfRElTVEFOQ0VfTElNSVQQAxI1CjFDQU5OT1RfQkVfUEVSRk9STUVE",
+            "X1dJVEhJTl9WRUhJQ0xFX0RVUkFUSU9OX0xJTUlUEAQSPAo4Q0FOTk9UX0JF",
+            "X1BFUkZPUk1FRF9XSVRISU5fVkVISUNMRV9UUkFWRUxfRFVSQVRJT05fTElN",
+            "SVQQBRIzCi9DQU5OT1RfQkVfUEVSRk9STUVEX1dJVEhJTl9WRUhJQ0xFX1RJ",
+            "TUVfV0lORE9XUxAGEhcKE1ZFSElDTEVfTk9UX0FMTE9XRUQQB0IYChZfZXhh",
+            "bXBsZV92ZWhpY2xlX2luZGV4ItgFChFBZ2dyZWdhdGVkTWV0cmljcxIgChhw",
+            "ZXJmb3JtZWRfc2hpcG1lbnRfY291bnQYASABKAUSMgoPdHJhdmVsX2R1cmF0",
+            "aW9uGAIgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjAKDXdhaXRf",
+            "ZHVyYXRpb24YAyABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SMQoO",
             "ZGVsYXlfZHVyYXRpb24YBCABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRp",
             "b24SMQoOYnJlYWtfZHVyYXRpb24YBSABKAsyGS5nb29nbGUucHJvdG9idWYu",
-            "RHVyYXRpb24SMAoNd2FpdF9kdXJhdGlvbhgGIAEoCzIZLmdvb2dsZS5wcm90",
-            "b2J1Zi5EdXJhdGlvbhIxCg50b3RhbF9kdXJhdGlvbhgHIAEoCzIZLmdvb2ds",
-            "ZS5wcm90b2J1Zi5EdXJhdGlvbhIuCgpzdGFydF90aW1lGAggASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBJTCg5yb3V0ZV9wb2x5bGluZRgJIAEo",
-            "CzI7Lmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEuU2hpcG1lbnRSb3V0",
-            "ZS5FbmNvZGVkUG9seWxpbmUSXwoNdmVoaWNsZV9sb2FkcxgLIAMoCzJILmdv",
-            "b2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEuU2hpcG1lbnRSb3V0ZS5UcmFu",
-            "c2l0aW9uLlZlaGljbGVMb2Fkc0VudHJ5EkEKBWxvYWRzGAogAygLMi4uZ29v",
-            "Z2xlLmNsb3VkLm9wdGltaXphdGlvbi52MS5DYXBhY2l0eVF1YW50aXR5QgIY",
-            "ARpsChFWZWhpY2xlTG9hZHNFbnRyeRILCgNrZXkYASABKAkSRgoFdmFsdWUY",
-            "AiABKAsyNy5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLlNoaXBtZW50",
-            "Um91dGUuVmVoaWNsZUxvYWQ6AjgBGh0KC1ZlaGljbGVMb2FkEg4KBmFtb3Vu",
-            "dBgBIAEoAxohCg9FbmNvZGVkUG9seWxpbmUSDgoGcG9pbnRzGAEgASgJGmQK",
-            "BUJyZWFrEi4KCnN0YXJ0X3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wEisKCGR1cmF0aW9uGAIgASgLMhkuZ29vZ2xlLnByb3RvYnVm",
-            "LkR1cmF0aW9uGs0BCgpUcmF2ZWxTdGVwEisKCGR1cmF0aW9uGAEgASgLMhku",
-            "Z29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEhcKD2Rpc3RhbmNlX21ldGVycxgC",
-            "IAEoARIgChh0cmFmZmljX2luZm9fdW5hdmFpbGFibGUYAyABKAgSUwoOcm91",
-            "dGVfcG9seWxpbmUYBCABKAsyOy5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9u",
-            "LnYxLlNoaXBtZW50Um91dGUuRW5jb2RlZFBvbHlsaW5lOgIYARoxCg9Sb3V0",
-            "ZUNvc3RzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgBOgI4ASL+",
-            "BAoPU2tpcHBlZFNoaXBtZW50Eg0KBWluZGV4GAEgASgFEg0KBWxhYmVsGAIg",
-            "ASgJEkUKB3JlYXNvbnMYAyADKAsyNC5nb29nbGUuY2xvdWQub3B0aW1pemF0",
-            "aW9uLnYxLlNraXBwZWRTaGlwbWVudC5SZWFzb24ahQQKBlJlYXNvbhJHCgRj",
-            "b2RlGAEgASgOMjkuZ29vZ2xlLmNsb3VkLm9wdGltaXphdGlvbi52MS5Ta2lw",
-            "cGVkU2hpcG1lbnQuUmVhc29uLkNvZGUSIgoVZXhhbXBsZV92ZWhpY2xlX2lu",
-            "ZGV4GAIgASgFSACIAQESJgoeZXhhbXBsZV9leGNlZWRlZF9jYXBhY2l0eV90",
-            "eXBlGAMgASgJIssCCgRDb2RlEhQKEENPREVfVU5TUEVDSUZJRUQQABIOCgpO",
-            "T19WRUhJQ0xFEAESIwofREVNQU5EX0VYQ0VFRFNfVkVISUNMRV9DQVBBQ0lU",
-            "WRACEjUKMUNBTk5PVF9CRV9QRVJGT1JNRURfV0lUSElOX1ZFSElDTEVfRElT",
-            "VEFOQ0VfTElNSVQQAxI1CjFDQU5OT1RfQkVfUEVSRk9STUVEX1dJVEhJTl9W",
-            "RUhJQ0xFX0RVUkFUSU9OX0xJTUlUEAQSPAo4Q0FOTk9UX0JFX1BFUkZPUk1F",
-            "RF9XSVRISU5fVkVISUNMRV9UUkFWRUxfRFVSQVRJT05fTElNSVQQBRIzCi9D",
-            "QU5OT1RfQkVfUEVSRk9STUVEX1dJVEhJTl9WRUhJQ0xFX1RJTUVfV0lORE9X",
-            "UxAGEhcKE1ZFSElDTEVfTk9UX0FMTE9XRUQQB0IYChZfZXhhbXBsZV92ZWhp",
-            "Y2xlX2luZGV4ItgFChFBZ2dyZWdhdGVkTWV0cmljcxIgChhwZXJmb3JtZWRf",
-            "c2hpcG1lbnRfY291bnQYASABKAUSMgoPdHJhdmVsX2R1cmF0aW9uGAIgASgL",
-            "MhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjAKDXdhaXRfZHVyYXRpb24Y",
-            "AyABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SMQoOZGVsYXlfZHVy",
-            "YXRpb24YBCABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SMQoOYnJl",
-            "YWtfZHVyYXRpb24YBSABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24S",
-            "MQoOdmlzaXRfZHVyYXRpb24YBiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVy",
-            "YXRpb24SMQoOdG90YWxfZHVyYXRpb24YByABKAsyGS5nb29nbGUucHJvdG9i",
-            "dWYuRHVyYXRpb24SHgoWdHJhdmVsX2Rpc3RhbmNlX21ldGVycxgIIAEoARJQ",
-            "CgltYXhfbG9hZHMYCSADKAsyPS5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9u",
-            "LnYxLkFnZ3JlZ2F0ZWRNZXRyaWNzLk1heExvYWRzRW50cnkSTQoFY29zdHMY",
-            "CiADKAsyOi5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLkFnZ3JlZ2F0",
-            "ZWRNZXRyaWNzLkNvc3RzRW50cnlCAhgBEhYKCnRvdGFsX2Nvc3QYCyABKAFC",
-            "AhgBGmgKDU1heExvYWRzRW50cnkSCwoDa2V5GAEgASgJEkYKBXZhbHVlGAIg",
-            "ASgLMjcuZ29vZ2xlLmNsb3VkLm9wdGltaXphdGlvbi52MS5TaGlwbWVudFJv",
-            "dXRlLlZlaGljbGVMb2FkOgI4ARosCgpDb3N0c0VudHJ5EgsKA2tleRgBIAEo",
-            "CRINCgV2YWx1ZRgCIAEoAToCOAEinwYKGkluamVjdGVkU29sdXRpb25Db25z",
-            "dHJhaW50EjsKBnJvdXRlcxgBIAMoCzIrLmdvb2dsZS5jbG91ZC5vcHRpbWl6",
-            "YXRpb24udjEuU2hpcG1lbnRSb3V0ZRJIChFza2lwcGVkX3NoaXBtZW50cxgC",
-            "IAMoCzItLmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEuU2tpcHBlZFNo",
-            "aXBtZW50Em0KFmNvbnN0cmFpbnRfcmVsYXhhdGlvbnMYAyADKAsyTS5nb29n",
-            "bGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLkluamVjdGVkU29sdXRpb25Db25z",
-            "dHJhaW50LkNvbnN0cmFpbnRSZWxheGF0aW9uGooEChRDb25zdHJhaW50UmVs",
-            "YXhhdGlvbhJtCgtyZWxheGF0aW9ucxgBIAMoCzJYLmdvb2dsZS5jbG91ZC5v",
-            "cHRpbWl6YXRpb24udjEuSW5qZWN0ZWRTb2x1dGlvbkNvbnN0cmFpbnQuQ29u",
-            "c3RyYWludFJlbGF4YXRpb24uUmVsYXhhdGlvbhIXCg92ZWhpY2xlX2luZGlj",
-            "ZXMYAiADKAUa6QIKClJlbGF4YXRpb24SbQoFbGV2ZWwYASABKA4yXi5nb29n",
-            "bGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLkluamVjdGVkU29sdXRpb25Db25z",
-            "dHJhaW50LkNvbnN0cmFpbnRSZWxheGF0aW9uLlJlbGF4YXRpb24uTGV2ZWwS",
-            "MgoOdGhyZXNob2xkX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wEh0KFXRocmVzaG9sZF92aXNpdF9jb3VudBgDIAEoBSKYAQoFTGV2",
-            "ZWwSFQoRTEVWRUxfVU5TUEVDSUZJRUQQABIlCiFSRUxBWF9WSVNJVF9USU1F",
-            "U19BRlRFUl9USFJFU0hPTEQQARIyCi5SRUxBWF9WSVNJVF9USU1FU19BTkRf",
-            "U0VRVUVOQ0VfQUZURVJfVEhSRVNIT0xEEAISHQoZUkVMQVhfQUxMX0FGVEVS",
-            "X1RIUkVTSE9MRBADIv0CChxPcHRpbWl6ZVRvdXJzVmFsaWRhdGlvbkVycm9y",
-            "EgwKBGNvZGUYASABKAUSFAoMZGlzcGxheV9uYW1lGAIgASgJElkKBmZpZWxk",
-            "cxgDIAMoCzJJLmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEuT3B0aW1p",
-            "emVUb3Vyc1ZhbGlkYXRpb25FcnJvci5GaWVsZFJlZmVyZW5jZRIVCg1lcnJv",
-            "cl9tZXNzYWdlGAQgASgJEhgKEG9mZmVuZGluZ192YWx1ZXMYBSABKAkarAEK",
-            "DkZpZWxkUmVmZXJlbmNlEgwKBG5hbWUYASABKAkSDwoFaW5kZXgYAiABKAVI",
-            "ABINCgNrZXkYBCABKAlIABJcCglzdWJfZmllbGQYAyABKAsySS5nb29nbGUu",
-            "Y2xvdWQub3B0aW1pemF0aW9uLnYxLk9wdGltaXplVG91cnNWYWxpZGF0aW9u",
-            "RXJyb3IuRmllbGRSZWZlcmVuY2VCDgoMaW5kZXhfb3Jfa2V5MuAECgxGbGVl",
-            "dFJvdXRpbmcS4gEKDU9wdGltaXplVG91cnMSMi5nb29nbGUuY2xvdWQub3B0",
-            "aW1pemF0aW9uLnYxLk9wdGltaXplVG91cnNSZXF1ZXN0GjMuZ29vZ2xlLmNs",
-            "b3VkLm9wdGltaXphdGlvbi52MS5PcHRpbWl6ZVRvdXJzUmVzcG9uc2UiaILT",
-            "5JMCYiIxL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn06b3B0",
-            "aW1pemVUb3VyczoBKloqIiUvdjEve3BhcmVudD1wcm9qZWN0cy8qfTpvcHRp",
-            "bWl6ZVRvdXJzOgEqEpQCChJCYXRjaE9wdGltaXplVG91cnMSNy5nb29nbGUu",
-            "Y2xvdWQub3B0aW1pemF0aW9uLnYxLkJhdGNoT3B0aW1pemVUb3Vyc1JlcXVl",
-            "c3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIqUBgtPkkwJsIjYv",
-            "djEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfTpiYXRjaE9wdGlt",
-            "aXplVG91cnM6ASpaLyIqL3YxL3twYXJlbnQ9cHJvamVjdHMvKn06YmF0Y2hP",
-            "cHRpbWl6ZVRvdXJzOgEqykEwChpCYXRjaE9wdGltaXplVG91cnNSZXNwb25z",
-            "ZRISQXN5bmNNb2RlbE1ldGFkYXRhGlTKQSBjbG91ZG9wdGltaXphdGlvbi5n",
-            "b29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1",
-            "dGgvY2xvdWQtcGxhdGZvcm1CfQogY29tLmdvb2dsZS5jbG91ZC5vcHRpbWl6",
-            "YXRpb24udjFCEUZsZWV0Um91dGluZ1Byb3RvUAFaRGNsb3VkLmdvb2dsZS5j",
-            "b20vZ28vb3B0aW1pemF0aW9uL2FwaXYxL29wdGltaXphdGlvbnBiO29wdGlt",
-            "aXphdGlvbnBiYgZwcm90bzM="));
+            "RHVyYXRpb24SMQoOdmlzaXRfZHVyYXRpb24YBiABKAsyGS5nb29nbGUucHJv",
+            "dG9idWYuRHVyYXRpb24SMQoOdG90YWxfZHVyYXRpb24YByABKAsyGS5nb29n",
+            "bGUucHJvdG9idWYuRHVyYXRpb24SHgoWdHJhdmVsX2Rpc3RhbmNlX21ldGVy",
+            "cxgIIAEoARJQCgltYXhfbG9hZHMYCSADKAsyPS5nb29nbGUuY2xvdWQub3B0",
+            "aW1pemF0aW9uLnYxLkFnZ3JlZ2F0ZWRNZXRyaWNzLk1heExvYWRzRW50cnkS",
+            "TQoFY29zdHMYCiADKAsyOi5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9uLnYx",
+            "LkFnZ3JlZ2F0ZWRNZXRyaWNzLkNvc3RzRW50cnlCAhgBEhYKCnRvdGFsX2Nv",
+            "c3QYCyABKAFCAhgBGmgKDU1heExvYWRzRW50cnkSCwoDa2V5GAEgASgJEkYK",
+            "BXZhbHVlGAIgASgLMjcuZ29vZ2xlLmNsb3VkLm9wdGltaXphdGlvbi52MS5T",
+            "aGlwbWVudFJvdXRlLlZlaGljbGVMb2FkOgI4ARosCgpDb3N0c0VudHJ5EgsK",
+            "A2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoAToCOAEinwYKGkluamVjdGVkU29s",
+            "dXRpb25Db25zdHJhaW50EjsKBnJvdXRlcxgBIAMoCzIrLmdvb2dsZS5jbG91",
+            "ZC5vcHRpbWl6YXRpb24udjEuU2hpcG1lbnRSb3V0ZRJIChFza2lwcGVkX3No",
+            "aXBtZW50cxgCIAMoCzItLmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEu",
+            "U2tpcHBlZFNoaXBtZW50Em0KFmNvbnN0cmFpbnRfcmVsYXhhdGlvbnMYAyAD",
+            "KAsyTS5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLkluamVjdGVkU29s",
+            "dXRpb25Db25zdHJhaW50LkNvbnN0cmFpbnRSZWxheGF0aW9uGooEChRDb25z",
+            "dHJhaW50UmVsYXhhdGlvbhJtCgtyZWxheGF0aW9ucxgBIAMoCzJYLmdvb2ds",
+            "ZS5jbG91ZC5vcHRpbWl6YXRpb24udjEuSW5qZWN0ZWRTb2x1dGlvbkNvbnN0",
+            "cmFpbnQuQ29uc3RyYWludFJlbGF4YXRpb24uUmVsYXhhdGlvbhIXCg92ZWhp",
+            "Y2xlX2luZGljZXMYAiADKAUa6QIKClJlbGF4YXRpb24SbQoFbGV2ZWwYASAB",
+            "KA4yXi5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLkluamVjdGVkU29s",
+            "dXRpb25Db25zdHJhaW50LkNvbnN0cmFpbnRSZWxheGF0aW9uLlJlbGF4YXRp",
+            "b24uTGV2ZWwSMgoOdGhyZXNob2xkX3RpbWUYAiABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wEh0KFXRocmVzaG9sZF92aXNpdF9jb3VudBgDIAEo",
+            "BSKYAQoFTGV2ZWwSFQoRTEVWRUxfVU5TUEVDSUZJRUQQABIlCiFSRUxBWF9W",
+            "SVNJVF9USU1FU19BRlRFUl9USFJFU0hPTEQQARIyCi5SRUxBWF9WSVNJVF9U",
+            "SU1FU19BTkRfU0VRVUVOQ0VfQUZURVJfVEhSRVNIT0xEEAISHQoZUkVMQVhf",
+            "QUxMX0FGVEVSX1RIUkVTSE9MRBADIv0CChxPcHRpbWl6ZVRvdXJzVmFsaWRh",
+            "dGlvbkVycm9yEgwKBGNvZGUYASABKAUSFAoMZGlzcGxheV9uYW1lGAIgASgJ",
+            "ElkKBmZpZWxkcxgDIAMoCzJJLmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24u",
+            "djEuT3B0aW1pemVUb3Vyc1ZhbGlkYXRpb25FcnJvci5GaWVsZFJlZmVyZW5j",
+            "ZRIVCg1lcnJvcl9tZXNzYWdlGAQgASgJEhgKEG9mZmVuZGluZ192YWx1ZXMY",
+            "BSABKAkarAEKDkZpZWxkUmVmZXJlbmNlEgwKBG5hbWUYASABKAkSDwoFaW5k",
+            "ZXgYAiABKAVIABINCgNrZXkYBCABKAlIABJcCglzdWJfZmllbGQYAyABKAsy",
+            "SS5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLk9wdGltaXplVG91cnNW",
+            "YWxpZGF0aW9uRXJyb3IuRmllbGRSZWZlcmVuY2VCDgoMaW5kZXhfb3Jfa2V5",
+            "MuAECgxGbGVldFJvdXRpbmcS4gEKDU9wdGltaXplVG91cnMSMi5nb29nbGUu",
+            "Y2xvdWQub3B0aW1pemF0aW9uLnYxLk9wdGltaXplVG91cnNSZXF1ZXN0GjMu",
+            "Z29vZ2xlLmNsb3VkLm9wdGltaXphdGlvbi52MS5PcHRpbWl6ZVRvdXJzUmVz",
+            "cG9uc2UiaILT5JMCYiIxL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKn06b3B0aW1pemVUb3VyczoBKloqIiUvdjEve3BhcmVudD1wcm9qZWN0",
+            "cy8qfTpvcHRpbWl6ZVRvdXJzOgEqEpQCChJCYXRjaE9wdGltaXplVG91cnMS",
+            "Ny5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLkJhdGNoT3B0aW1pemVU",
+            "b3Vyc1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIqUB",
+            "gtPkkwJsIjYvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfTpi",
+            "YXRjaE9wdGltaXplVG91cnM6ASpaLyIqL3YxL3twYXJlbnQ9cHJvamVjdHMv",
+            "Kn06YmF0Y2hPcHRpbWl6ZVRvdXJzOgEqykEwChpCYXRjaE9wdGltaXplVG91",
+            "cnNSZXNwb25zZRISQXN5bmNNb2RlbE1ldGFkYXRhGlTKQSBjbG91ZG9wdGlt",
+            "aXphdGlvbi5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFw",
+            "aXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CfQogY29tLmdvb2dsZS5jbG91",
+            "ZC5vcHRpbWl6YXRpb24udjFCEUZsZWV0Um91dGluZ1Byb3RvUAFaRGNsb3Vk",
+            "Lmdvb2dsZS5jb20vZ28vb3B0aW1pemF0aW9uL2FwaXYxL29wdGltaXphdGlv",
+            "bnBiO29wdGltaXphdGlvbnBiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Optimization.V1.AsyncModelReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.OptimizeToursRequest), global::Google.Cloud.Optimization.V1.OptimizeToursRequest.Parser, new[]{ "Parent", "Timeout", "Model", "SolvingMode", "MaxValidationErrors", "SearchMode", "InjectedFirstSolutionRoutes", "InjectedSolutionConstraint", "RefreshDetailsRoutes", "InterpretInjectedSolutionsUsingLabels", "ConsiderRoadTraffic", "PopulatePolylines", "PopulateTransitionPolylines", "AllowLargeDeadlineDespiteInterruptionRisk", "UseGeodesicDistances", "GeodesicMetersPerSecond", "Label", "PopulateTravelStepPolylines" }, new[]{ "MaxValidationErrors", "GeodesicMetersPerSecond" }, new[]{ typeof(global::Google.Cloud.Optimization.V1.OptimizeToursRequest.Types.SolvingMode), typeof(global::Google.Cloud.Optimization.V1.OptimizeToursRequest.Types.SearchMode) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.OptimizeToursRequest), global::Google.Cloud.Optimization.V1.OptimizeToursRequest.Parser, new[]{ "Parent", "Timeout", "Model", "SolvingMode", "SearchMode", "InjectedFirstSolutionRoutes", "InjectedSolutionConstraint", "RefreshDetailsRoutes", "InterpretInjectedSolutionsUsingLabels", "ConsiderRoadTraffic", "PopulatePolylines", "PopulateTransitionPolylines", "AllowLargeDeadlineDespiteInterruptionRisk", "UseGeodesicDistances", "GeodesicMetersPerSecond", "MaxValidationErrors", "Label", "PopulateTravelStepPolylines" }, new[]{ "GeodesicMetersPerSecond", "MaxValidationErrors" }, new[]{ typeof(global::Google.Cloud.Optimization.V1.OptimizeToursRequest.Types.SolvingMode), typeof(global::Google.Cloud.Optimization.V1.OptimizeToursRequest.Types.SearchMode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.OptimizeToursResponse), global::Google.Cloud.Optimization.V1.OptimizeToursResponse.Parser, new[]{ "Routes", "RequestLabel", "SkippedShipments", "ValidationErrors", "Metrics", "TotalCost" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.OptimizeToursResponse.Types.Metrics), global::Google.Cloud.Optimization.V1.OptimizeToursResponse.Types.Metrics.Parser, new[]{ "AggregatedRouteMetrics", "SkippedMandatoryShipmentCount", "UsedVehicleCount", "EarliestVehicleStartTime", "LatestVehicleEndTime", "Costs", "TotalCost" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.BatchOptimizeToursRequest), global::Google.Cloud.Optimization.V1.BatchOptimizeToursRequest.Parser, new[]{ "Parent", "ModelConfigs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.BatchOptimizeToursRequest.Types.AsyncModelConfig), global::Google.Cloud.Optimization.V1.BatchOptimizeToursRequest.Types.AsyncModelConfig.Parser, new[]{ "DisplayName", "InputConfig", "OutputConfig", "EnableCheckpoints" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.BatchOptimizeToursResponse), global::Google.Cloud.Optimization.V1.BatchOptimizeToursResponse.Parser, null, null, null, null, null),
@@ -435,7 +437,7 @@ namespace Google.Cloud.Optimization.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.TimeWindow), global::Google.Cloud.Optimization.V1.TimeWindow.Parser, new[]{ "StartTime", "EndTime", "SoftStartTime", "SoftEndTime", "CostPerHourBeforeSoftStartTime", "CostPerHourAfterSoftEndTime" }, new[]{ "CostPerHourBeforeSoftStartTime", "CostPerHourAfterSoftEndTime" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.CapacityQuantity), global::Google.Cloud.Optimization.V1.CapacityQuantity.Parser, new[]{ "Type", "Value" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.CapacityQuantityInterval), global::Google.Cloud.Optimization.V1.CapacityQuantityInterval.Parser, new[]{ "Type", "MinValue", "MaxValue" }, new[]{ "MinValue", "MaxValue" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.DistanceLimit), global::Google.Cloud.Optimization.V1.DistanceLimit.Parser, new[]{ "MaxMeters", "SoftMaxMeters", "CostPerKilometerAboveSoftMax" }, new[]{ "MaxMeters", "SoftMaxMeters", "CostPerKilometerAboveSoftMax" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.DistanceLimit), global::Google.Cloud.Optimization.V1.DistanceLimit.Parser, new[]{ "MaxMeters", "SoftMaxMeters", "CostPerKilometerBelowSoftMax", "CostPerKilometerAboveSoftMax" }, new[]{ "MaxMeters", "SoftMaxMeters", "CostPerKilometerBelowSoftMax", "CostPerKilometerAboveSoftMax" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.TransitionAttributes), global::Google.Cloud.Optimization.V1.TransitionAttributes.Parser, new[]{ "SrcTag", "ExcludedSrcTag", "DstTag", "ExcludedDstTag", "Cost", "CostPerKilometer", "DistanceLimit", "Delay" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.Waypoint), global::Google.Cloud.Optimization.V1.Waypoint.Parser, new[]{ "Location", "PlaceId", "SideOfRoad" }, new[]{ "LocationType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.Location), global::Google.Cloud.Optimization.V1.Location.Parser, new[]{ "LatLng", "Heading" }, new[]{ "Heading" }, null, null, null),
@@ -503,7 +505,6 @@ namespace Google.Cloud.Optimization.V1 {
       timeout_ = other.timeout_ != null ? other.timeout_.Clone() : null;
       model_ = other.model_ != null ? other.model_.Clone() : null;
       solvingMode_ = other.solvingMode_;
-      maxValidationErrors_ = other.maxValidationErrors_;
       searchMode_ = other.searchMode_;
       injectedFirstSolutionRoutes_ = other.injectedFirstSolutionRoutes_.Clone();
       injectedSolutionConstraint_ = other.injectedSolutionConstraint_ != null ? other.injectedSolutionConstraint_.Clone() : null;
@@ -515,6 +516,7 @@ namespace Google.Cloud.Optimization.V1 {
       allowLargeDeadlineDespiteInterruptionRisk_ = other.allowLargeDeadlineDespiteInterruptionRisk_;
       useGeodesicDistances_ = other.useGeodesicDistances_;
       geodesicMetersPerSecond_ = other.geodesicMetersPerSecond_;
+      maxValidationErrors_ = other.maxValidationErrors_;
       label_ = other.label_;
       populateTravelStepPolylines_ = other.populateTravelStepPolylines_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -593,42 +595,6 @@ namespace Google.Cloud.Optimization.V1 {
       set {
         solvingMode_ = value;
       }
-    }
-
-    /// <summary>Field number for the "max_validation_errors" field.</summary>
-    public const int MaxValidationErrorsFieldNumber = 5;
-    private readonly static int MaxValidationErrorsDefaultValue = 0;
-
-    private int maxValidationErrors_;
-    /// <summary>
-    /// Truncates the number of validation errors returned. These errors are
-    /// typically attached to an INVALID_ARGUMENT error payload as a BadRequest
-    /// error detail (https://cloud.google.com/apis/design/errors#error_details),
-    /// unless solving_mode=VALIDATE_ONLY: see the
-    /// [OptimizeToursResponse.validation_errors][google.cloud.optimization.v1.OptimizeToursResponse.validation_errors]
-    /// field.
-    /// This defaults to 100 and is capped at 10,000.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int MaxValidationErrors {
-      get { if ((_hasBits0 & 1) != 0) { return maxValidationErrors_; } else { return MaxValidationErrorsDefaultValue; } }
-      set {
-        _hasBits0 |= 1;
-        maxValidationErrors_ = value;
-      }
-    }
-    /// <summary>Gets whether the "max_validation_errors" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasMaxValidationErrors {
-      get { return (_hasBits0 & 1) != 0; }
-    }
-    /// <summary>Clears the value of the "max_validation_errors" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearMaxValidationErrors() {
-      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "search_mode" field.</summary>
@@ -941,6 +907,42 @@ namespace Google.Cloud.Optimization.V1 {
       _hasBits0 &= ~2;
     }
 
+    /// <summary>Field number for the "max_validation_errors" field.</summary>
+    public const int MaxValidationErrorsFieldNumber = 5;
+    private readonly static int MaxValidationErrorsDefaultValue = 0;
+
+    private int maxValidationErrors_;
+    /// <summary>
+    /// Truncates the number of validation errors returned. These errors are
+    /// typically attached to an INVALID_ARGUMENT error payload as a BadRequest
+    /// error detail (https://cloud.google.com/apis/design/errors#error_details),
+    /// unless solving_mode=VALIDATE_ONLY: see the
+    /// [OptimizeToursResponse.validation_errors][google.cloud.optimization.v1.OptimizeToursResponse.validation_errors]
+    /// field.
+    /// This defaults to 100 and is capped at 10,000.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int MaxValidationErrors {
+      get { if ((_hasBits0 & 1) != 0) { return maxValidationErrors_; } else { return MaxValidationErrorsDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        maxValidationErrors_ = value;
+      }
+    }
+    /// <summary>Gets whether the "max_validation_errors" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMaxValidationErrors {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "max_validation_errors" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMaxValidationErrors() {
+      _hasBits0 &= ~1;
+    }
+
     /// <summary>Field number for the "label" field.</summary>
     public const int LabelFieldNumber = 17;
     private string label_ = "";
@@ -997,7 +999,6 @@ namespace Google.Cloud.Optimization.V1 {
       if (!object.Equals(Timeout, other.Timeout)) return false;
       if (!object.Equals(Model, other.Model)) return false;
       if (SolvingMode != other.SolvingMode) return false;
-      if (MaxValidationErrors != other.MaxValidationErrors) return false;
       if (SearchMode != other.SearchMode) return false;
       if(!injectedFirstSolutionRoutes_.Equals(other.injectedFirstSolutionRoutes_)) return false;
       if (!object.Equals(InjectedSolutionConstraint, other.InjectedSolutionConstraint)) return false;
@@ -1009,6 +1010,7 @@ namespace Google.Cloud.Optimization.V1 {
       if (AllowLargeDeadlineDespiteInterruptionRisk != other.AllowLargeDeadlineDespiteInterruptionRisk) return false;
       if (UseGeodesicDistances != other.UseGeodesicDistances) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(GeodesicMetersPerSecond, other.GeodesicMetersPerSecond)) return false;
+      if (MaxValidationErrors != other.MaxValidationErrors) return false;
       if (Label != other.Label) return false;
       if (PopulateTravelStepPolylines != other.PopulateTravelStepPolylines) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -1022,7 +1024,6 @@ namespace Google.Cloud.Optimization.V1 {
       if (timeout_ != null) hash ^= Timeout.GetHashCode();
       if (model_ != null) hash ^= Model.GetHashCode();
       if (SolvingMode != global::Google.Cloud.Optimization.V1.OptimizeToursRequest.Types.SolvingMode.DefaultSolve) hash ^= SolvingMode.GetHashCode();
-      if (HasMaxValidationErrors) hash ^= MaxValidationErrors.GetHashCode();
       if (SearchMode != global::Google.Cloud.Optimization.V1.OptimizeToursRequest.Types.SearchMode.Unspecified) hash ^= SearchMode.GetHashCode();
       hash ^= injectedFirstSolutionRoutes_.GetHashCode();
       if (injectedSolutionConstraint_ != null) hash ^= InjectedSolutionConstraint.GetHashCode();
@@ -1034,6 +1035,7 @@ namespace Google.Cloud.Optimization.V1 {
       if (AllowLargeDeadlineDespiteInterruptionRisk != false) hash ^= AllowLargeDeadlineDespiteInterruptionRisk.GetHashCode();
       if (UseGeodesicDistances != false) hash ^= UseGeodesicDistances.GetHashCode();
       if (HasGeodesicMetersPerSecond) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(GeodesicMetersPerSecond);
+      if (HasMaxValidationErrors) hash ^= MaxValidationErrors.GetHashCode();
       if (Label.Length != 0) hash ^= Label.GetHashCode();
       if (PopulateTravelStepPolylines != false) hash ^= PopulateTravelStepPolylines.GetHashCode();
       if (_unknownFields != null) {
@@ -1218,9 +1220,6 @@ namespace Google.Cloud.Optimization.V1 {
       if (SolvingMode != global::Google.Cloud.Optimization.V1.OptimizeToursRequest.Types.SolvingMode.DefaultSolve) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SolvingMode);
       }
-      if (HasMaxValidationErrors) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxValidationErrors);
-      }
       if (SearchMode != global::Google.Cloud.Optimization.V1.OptimizeToursRequest.Types.SearchMode.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SearchMode);
       }
@@ -1249,6 +1248,9 @@ namespace Google.Cloud.Optimization.V1 {
       }
       if (HasGeodesicMetersPerSecond) {
         size += 2 + 8;
+      }
+      if (HasMaxValidationErrors) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxValidationErrors);
       }
       if (Label.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Label);
@@ -1286,9 +1288,6 @@ namespace Google.Cloud.Optimization.V1 {
       if (other.SolvingMode != global::Google.Cloud.Optimization.V1.OptimizeToursRequest.Types.SolvingMode.DefaultSolve) {
         SolvingMode = other.SolvingMode;
       }
-      if (other.HasMaxValidationErrors) {
-        MaxValidationErrors = other.MaxValidationErrors;
-      }
       if (other.SearchMode != global::Google.Cloud.Optimization.V1.OptimizeToursRequest.Types.SearchMode.Unspecified) {
         SearchMode = other.SearchMode;
       }
@@ -1320,6 +1319,9 @@ namespace Google.Cloud.Optimization.V1 {
       }
       if (other.HasGeodesicMetersPerSecond) {
         GeodesicMetersPerSecond = other.GeodesicMetersPerSecond;
+      }
+      if (other.HasMaxValidationErrors) {
+        MaxValidationErrors = other.MaxValidationErrors;
       }
       if (other.Label.Length != 0) {
         Label = other.Label;
@@ -1549,12 +1551,20 @@ namespace Google.Cloud.Optimization.V1 {
         [pbr::OriginalName("VALIDATE_ONLY")] ValidateOnly = 1,
         /// <summary>
         /// Only populates
+        /// [OptimizeToursResponse.validation_errors][google.cloud.optimization.v1.OptimizeToursResponse.validation_errors]
+        /// or
         /// [OptimizeToursResponse.skipped_shipments][google.cloud.optimization.v1.OptimizeToursResponse.skipped_shipments],
         /// and doesn't actually solve the rest of the request (`status` and `routes`
         /// are unset in the response).
+        /// If infeasibilities in `injected_solution_constraint` routes are detected
+        /// they are populated in the
+        /// [OptimizeToursResponse.validation_errors][google.cloud.optimization.v1.OptimizeToursResponse.validation_errors]
+        /// field and
+        /// [OptimizeToursResponse.skipped_shipments][google.cloud.optimization.v1.OptimizeToursResponse.skipped_shipments]
+        /// is left empty.
         ///
         /// *IMPORTANT*: not all infeasible shipments are returned here, but only the
-        /// ones that are detected as infeasible as a preprocessing.
+        /// ones that are detected as infeasible during preprocessing.
         /// </summary>
         [pbr::OriginalName("DETECT_SOME_INFEASIBLE_SHIPMENTS")] DetectSomeInfeasibleShipments = 2,
       }
@@ -9299,6 +9309,10 @@ namespace Google.Cloud.Optimization.V1 {
         /// Travel mode corresponding to driving directions (car, ...).
         /// </summary>
         [pbr::OriginalName("DRIVING")] Driving = 1,
+        /// <summary>
+        /// Travel mode corresponding to walking directions.
+        /// </summary>
+        [pbr::OriginalName("WALKING")] Walking = 2,
       }
 
       /// <summary>
@@ -11530,6 +11544,7 @@ namespace Google.Cloud.Optimization.V1 {
       _hasBits0 = other._hasBits0;
       maxMeters_ = other.maxMeters_;
       softMaxMeters_ = other.softMaxMeters_;
+      costPerKilometerBelowSoftMax_ = other.costPerKilometerBelowSoftMax_;
       costPerKilometerAboveSoftMax_ = other.costPerKilometerAboveSoftMax_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -11606,6 +11621,42 @@ namespace Google.Cloud.Optimization.V1 {
       _hasBits0 &= ~2;
     }
 
+    /// <summary>Field number for the "cost_per_kilometer_below_soft_max" field.</summary>
+    public const int CostPerKilometerBelowSoftMaxFieldNumber = 4;
+    private readonly static double CostPerKilometerBelowSoftMaxDefaultValue = 0D;
+
+    private double costPerKilometerBelowSoftMax_;
+    /// <summary>
+    /// Cost per kilometer incurred, increasing up to `soft_max_meters`, with
+    /// formula:
+    /// ```
+    ///   min(distance_meters, soft_max_meters) / 1000.0 *
+    ///   cost_per_kilometer_below_soft_max.
+    /// ```
+    /// This cost is not supported in `route_distance_limit`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double CostPerKilometerBelowSoftMax {
+      get { if ((_hasBits0 & 8) != 0) { return costPerKilometerBelowSoftMax_; } else { return CostPerKilometerBelowSoftMaxDefaultValue; } }
+      set {
+        _hasBits0 |= 8;
+        costPerKilometerBelowSoftMax_ = value;
+      }
+    }
+    /// <summary>Gets whether the "cost_per_kilometer_below_soft_max" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCostPerKilometerBelowSoftMax {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "cost_per_kilometer_below_soft_max" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCostPerKilometerBelowSoftMax() {
+      _hasBits0 &= ~8;
+    }
+
     /// <summary>Field number for the "cost_per_kilometer_above_soft_max" field.</summary>
     public const int CostPerKilometerAboveSoftMaxFieldNumber = 3;
     private readonly static double CostPerKilometerAboveSoftMaxDefaultValue = 0D;
@@ -11660,6 +11711,7 @@ namespace Google.Cloud.Optimization.V1 {
       }
       if (MaxMeters != other.MaxMeters) return false;
       if (SoftMaxMeters != other.SoftMaxMeters) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(CostPerKilometerBelowSoftMax, other.CostPerKilometerBelowSoftMax)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(CostPerKilometerAboveSoftMax, other.CostPerKilometerAboveSoftMax)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -11670,6 +11722,7 @@ namespace Google.Cloud.Optimization.V1 {
       int hash = 1;
       if (HasMaxMeters) hash ^= MaxMeters.GetHashCode();
       if (HasSoftMaxMeters) hash ^= SoftMaxMeters.GetHashCode();
+      if (HasCostPerKilometerBelowSoftMax) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(CostPerKilometerBelowSoftMax);
       if (HasCostPerKilometerAboveSoftMax) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(CostPerKilometerAboveSoftMax);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -11701,6 +11754,10 @@ namespace Google.Cloud.Optimization.V1 {
         output.WriteRawTag(25);
         output.WriteDouble(CostPerKilometerAboveSoftMax);
       }
+      if (HasCostPerKilometerBelowSoftMax) {
+        output.WriteRawTag(33);
+        output.WriteDouble(CostPerKilometerBelowSoftMax);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -11723,6 +11780,10 @@ namespace Google.Cloud.Optimization.V1 {
         output.WriteRawTag(25);
         output.WriteDouble(CostPerKilometerAboveSoftMax);
       }
+      if (HasCostPerKilometerBelowSoftMax) {
+        output.WriteRawTag(33);
+        output.WriteDouble(CostPerKilometerBelowSoftMax);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -11738,6 +11799,9 @@ namespace Google.Cloud.Optimization.V1 {
       }
       if (HasSoftMaxMeters) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(SoftMaxMeters);
+      }
+      if (HasCostPerKilometerBelowSoftMax) {
+        size += 1 + 8;
       }
       if (HasCostPerKilometerAboveSoftMax) {
         size += 1 + 8;
@@ -11759,6 +11823,9 @@ namespace Google.Cloud.Optimization.V1 {
       }
       if (other.HasSoftMaxMeters) {
         SoftMaxMeters = other.SoftMaxMeters;
+      }
+      if (other.HasCostPerKilometerBelowSoftMax) {
+        CostPerKilometerBelowSoftMax = other.CostPerKilometerBelowSoftMax;
       }
       if (other.HasCostPerKilometerAboveSoftMax) {
         CostPerKilometerAboveSoftMax = other.CostPerKilometerAboveSoftMax;
@@ -11790,6 +11857,10 @@ namespace Google.Cloud.Optimization.V1 {
             CostPerKilometerAboveSoftMax = input.ReadDouble();
             break;
           }
+          case 33: {
+            CostPerKilometerBelowSoftMax = input.ReadDouble();
+            break;
+          }
         }
       }
     #endif
@@ -11815,6 +11886,10 @@ namespace Google.Cloud.Optimization.V1 {
           }
           case 25: {
             CostPerKilometerAboveSoftMax = input.ReadDouble();
+            break;
+          }
+          case 33: {
+            CostPerKilometerBelowSoftMax = input.ReadDouble();
             break;
           }
         }
@@ -19431,7 +19506,8 @@ namespace Google.Cloud.Optimization.V1 {
                 [pbr::OriginalName("RELAX_VISIT_TIMES_AFTER_THRESHOLD")] RelaxVisitTimesAfterThreshold = 1,
                 /// <summary>
                 /// Same as `RELAX_VISIT_TIMES_AFTER_THRESHOLD`, but the visit sequence
-                /// is also relaxed: visits remain simply bound to their vehicle.
+                /// is also relaxed: visits can only be performed by this vehicle, but
+                /// can potentially become unperformed.
                 /// </summary>
                 [pbr::OriginalName("RELAX_VISIT_TIMES_AND_SEQUENCE_AFTER_THRESHOLD")] RelaxVisitTimesAndSequenceAfterThreshold = 2,
                 /// <summary>
@@ -19562,6 +19638,7 @@ namespace Google.Cloud.Optimization.V1 {
     ///     * INJECTED_SOLUTION_CONCURRENT_SOLUTION_TYPES = 2005;
     ///     * INJECTED_SOLUTION_MORE_THAN_ONE_PER_TYPE = 2006;
     ///     * INJECTED_SOLUTION_REFRESH_WITHOUT_POPULATE = 2008;
+    ///     * INJECTED_SOLUTION_CONSTRAINED_ROUTE_PORTION_INFEASIBLE = 2010;
     /// * SHIPMENT_MODEL_ERROR = 22;
     ///     * SHIPMENT_MODEL_TOO_LARGE = 2200;
     ///     * SHIPMENT_MODEL_TOO_MANY_CAPACITY_TYPES = 2201;
