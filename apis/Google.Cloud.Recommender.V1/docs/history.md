@@ -1,5 +1,13 @@
 # Version history
 
+## Version 3.3.0, released 2023-09-06
+
+### New features
+
+- Add MarkRecommendationDismissed method ([commit 3c1e0a6](https://github.com/googleapis/google-cloud-dotnet/commit/3c1e0a6f137f2ef7d2ac35b7cba98121848f17b7))
+- Billing account scoped Recommender/InsightType config ([commit 3c1e0a6](https://github.com/googleapis/google-cloud-dotnet/commit/3c1e0a6f137f2ef7d2ac35b7cba98121848f17b7))
+- Add Sustainability and Reliability impact ([commit 3c1e0a6](https://github.com/googleapis/google-cloud-dotnet/commit/3c1e0a6f137f2ef7d2ac35b7cba98121848f17b7))
+
 ## Version 3.2.0, released 2023-01-18
 
 ### New features
