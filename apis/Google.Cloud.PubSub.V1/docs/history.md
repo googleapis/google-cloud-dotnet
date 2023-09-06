@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.7.0, released 2023-09-06
+
+### Bug fixes
+
+- Make retry policy back off more aggressively for RPCs that retry RESOURCE_EXHAUSTD ([commit c5e2b5f](https://github.com/googleapis/google-cloud-dotnet/commit/c5e2b5f81844f6a126c9b5cbe90f8690fad6827f))
+
+### Documentation improvements
+
+- Clarified where ordering_key will be written if write_metadata is set ([commit 2436db1](https://github.com/googleapis/google-cloud-dotnet/commit/2436db17387e39b5e378188fa70c34480d2436b7))
+- Tightened requirements on cloud storage subscription filename suffixes ([commit f4d7887](https://github.com/googleapis/google-cloud-dotnet/commit/f4d78878946ab94b60197c245ecf2b34ccec735b))
+
 ## Version 3.6.0, released 2023-06-12
 
 ### Bug fixes
