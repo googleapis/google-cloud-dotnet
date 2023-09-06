@@ -5060,7 +5060,7 @@
     },
     {
       "id": "Google.Cloud.Workstations.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0-beta02",
       "type": "grpc",
       "productName": "Cloud Workstations",
       "productUrl": "https://cloud.google.com/workstations/docs",
