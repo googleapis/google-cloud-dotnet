@@ -1187,10 +1187,10 @@ namespace Google.Cloud.Billing.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual ProjectBillingInfo GetProjectBillingInfo(ProjectBillingInfoName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual ProjectBillingInfo GetProjectBillingInfo(gagr::ProjectName name, gaxgrpc::CallSettings callSettings = null) =>
             GetProjectBillingInfo(new GetProjectBillingInfoRequest
             {
-                ProjectBillingInfoName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
             }, callSettings);
 
         /// <summary>
@@ -1206,10 +1206,10 @@ namespace Google.Cloud.Billing.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ProjectBillingInfo> GetProjectBillingInfoAsync(ProjectBillingInfoName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<ProjectBillingInfo> GetProjectBillingInfoAsync(gagr::ProjectName name, gaxgrpc::CallSettings callSettings = null) =>
             GetProjectBillingInfoAsync(new GetProjectBillingInfoRequest
             {
-                ProjectBillingInfoName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
             }, callSettings);
 
         /// <summary>
@@ -1225,7 +1225,7 @@ namespace Google.Cloud.Billing.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ProjectBillingInfo> GetProjectBillingInfoAsync(ProjectBillingInfoName name, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<ProjectBillingInfo> GetProjectBillingInfoAsync(gagr::ProjectName name, st::CancellationToken cancellationToken) =>
             GetProjectBillingInfoAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>

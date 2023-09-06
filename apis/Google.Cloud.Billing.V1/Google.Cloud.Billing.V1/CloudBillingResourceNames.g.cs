@@ -286,11 +286,11 @@ namespace Google.Cloud.Billing.V1
     public partial class GetProjectBillingInfoRequest
     {
         /// <summary>
-        /// <see cref="gcbv::ProjectBillingInfoName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public gcbv::ProjectBillingInfoName ProjectBillingInfoName
+        public gagr::ProjectName ProjectName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcbv::ProjectBillingInfoName.Parse(Name, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Name) ? null : gagr::ProjectName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
