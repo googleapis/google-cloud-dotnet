@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.11.0, released 2023-09-06
+
+### New features
+
+- Added generative AI, safety/security and speech endpointing settings ([commit f62319c](https://github.com/googleapis/google-cloud-dotnet/commit/f62319c38194fafcc40ac79e7879e99d17ba0964))
+
 ## Version 2.10.0, released 2023-08-16
 
 ### New features
