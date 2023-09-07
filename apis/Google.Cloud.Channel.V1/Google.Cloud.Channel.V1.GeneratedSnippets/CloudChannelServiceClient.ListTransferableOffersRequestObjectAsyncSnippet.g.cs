@@ -44,6 +44,7 @@ namespace GoogleCSharpSnippets
                 CloudIdentityId = "",
                 Sku = "",
                 LanguageCode = "",
+                BillingAccount = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListTransferableOffersResponse, TransferableOffer> response = cloudChannelServiceClient.ListTransferableOffersAsync(request);

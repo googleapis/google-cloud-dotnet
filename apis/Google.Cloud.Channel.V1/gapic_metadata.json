@@ -265,6 +265,12 @@
                 "ProvisionCloudIdentityAsync"
               ]
             },
+            "QueryEligibleBillingAccounts": {
+              "methods": [
+                "QueryEligibleBillingAccounts",
+                "QueryEligibleBillingAccountsAsync"
+              ]
+            },
             "RegisterSubscriber": {
               "methods": [
                 "RegisterSubscriber",
