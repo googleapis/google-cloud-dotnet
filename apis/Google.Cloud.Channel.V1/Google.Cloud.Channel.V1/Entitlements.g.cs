@@ -76,13 +76,14 @@ namespace Google.Cloud.Channel.V1 {
             "YW5zZmVyX2VsaWdpYmlsaXR5GAkgASgLMiwuZ29vZ2xlLmNsb3VkLmNoYW5u",
             "ZWwudjEuVHJhbnNmZXJFbGlnaWJpbGl0eRIpCgNza3UYCyABKAsyHC5nb29n",
             "bGUuY2xvdWQuY2hhbm5lbC52MS5Ta3USNQoKbGVnYWN5X3NrdRgMIAEoCzIc",
-            "Lmdvb2dsZS5jbG91ZC5jaGFubmVsLnYxLlNrdUID4EEBIvkBChNUcmFuc2Zl",
+            "Lmdvb2dsZS5jbG91ZC5jaGFubmVsLnYxLlNrdUID4EEBIqYCChNUcmFuc2Zl",
             "ckVsaWdpYmlsaXR5EhMKC2lzX2VsaWdpYmxlGAEgASgIEhMKC2Rlc2NyaXB0",
             "aW9uGAIgASgJElEKFGluZWxpZ2liaWxpdHlfcmVhc29uGAMgASgOMjMuZ29v",
             "Z2xlLmNsb3VkLmNoYW5uZWwudjEuVHJhbnNmZXJFbGlnaWJpbGl0eS5SZWFz",
-            "b24iZQoGUmVhc29uEhYKElJFQVNPTl9VTlNQRUNJRklFRBAAEhoKFlBFTkRJ",
-            "TkdfVE9TX0FDQ0VQVEFOQ0UQARIUChBTS1VfTk9UX0VMSUdJQkxFEAISEQoN",
-            "U0tVX1NVU1BFTkRFRBADQmkKG2NvbS5nb29nbGUuY2xvdWQuY2hhbm5lbC52",
+            "b24ikQEKBlJlYXNvbhIWChJSRUFTT05fVU5TUEVDSUZJRUQQABIaChZQRU5E",
+            "SU5HX1RPU19BQ0NFUFRBTkNFEAESFAoQU0tVX05PVF9FTElHSUJMRRACEhEK",
+            "DVNLVV9TVVNQRU5ERUQQAxIqCiZDSEFOTkVMX1BBUlRORVJfTk9UX0FVVEhP",
+            "UklaRURfRk9SX1NLVRAEQmkKG2NvbS5nb29nbGUuY2xvdWQuY2hhbm5lbC52",
             "MUIRRW50aXRsZW1lbnRzUHJvdG9QAVo1Y2xvdWQuZ29vZ2xlLmNvbS9nby9j",
             "aGFubmVsL2FwaXYxL2NoYW5uZWxwYjtjaGFubmVscGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -1435,7 +1436,7 @@ namespace Google.Cloud.Channel.V1 {
     /// <summary>
     /// Output only. Provisioning ID of the entitlement. For Google Workspace, this
     /// is the underlying Subscription ID. For Google Cloud, this is the Billing
-    /// Account ID of the billing subaccount."
+    /// Account ID of the billing subaccount.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3139,6 +3140,11 @@ namespace Google.Cloud.Channel.V1 {
         /// SKU subscription is suspended
         /// </summary>
         [pbr::OriginalName("SKU_SUSPENDED")] SkuSuspended = 3,
+        /// <summary>
+        /// The reseller is not authorized to transact on this Product. See
+        /// https://support.google.com/channelservices/answer/9759265
+        /// </summary>
+        [pbr::OriginalName("CHANNEL_PARTNER_NOT_AUTHORIZED_FOR_SKU")] ChannelPartnerNotAuthorizedForSku = 4,
       }
 
     }

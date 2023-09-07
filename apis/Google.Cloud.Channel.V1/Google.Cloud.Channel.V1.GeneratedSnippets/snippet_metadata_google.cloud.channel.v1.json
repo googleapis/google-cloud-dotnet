@@ -2019,12 +2019,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -2068,12 +2068,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 81,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -2504,12 +2504,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 65,
+          "end": 66,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 63,
+          "end": 64,
           "type": "SHORT"
         }
       ]
@@ -2553,12 +2553,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 66,
+          "end": 67,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 64,
+          "end": 65,
           "type": "SHORT"
         }
       ]
@@ -7408,6 +7408,103 @@
         {
           "start": 38,
           "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_QueryEligibleBillingAccounts_sync",
+      "title": "QueryEligibleBillingAccountsRequestObject",
+      "description": "Snippet for QueryEligibleBillingAccounts",
+      "file": "CloudChannelServiceClient.QueryEligibleBillingAccountsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryEligibleBillingAccounts",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.QueryEligibleBillingAccounts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.QueryEligibleBillingAccountsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Channel.V1.QueryEligibleBillingAccountsResponse",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "QueryEligibleBillingAccounts",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.QueryEligibleBillingAccounts",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_QueryEligibleBillingAccounts_async",
+      "title": "QueryEligibleBillingAccountsRequestObjectAsync",
+      "description": "Snippet for QueryEligibleBillingAccountsAsync",
+      "file": "CloudChannelServiceClient.QueryEligibleBillingAccountsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryEligibleBillingAccountsAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.QueryEligibleBillingAccountsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.QueryEligibleBillingAccountsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Channel.V1.QueryEligibleBillingAccountsResponse>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "QueryEligibleBillingAccounts",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.QueryEligibleBillingAccounts",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
           "type": "SHORT"
         }
       ]

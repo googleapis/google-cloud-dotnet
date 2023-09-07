@@ -729,6 +729,7 @@ namespace GoogleCSharpSnippets
                 CloudIdentityId = "",
                 Sku = "",
                 LanguageCode = "",
+                BillingAccount = "",
             };
             // Make the request
             PagedEnumerable<ListTransferableOffersResponse, TransferableOffer> response = cloudChannelServiceClient.ListTransferableOffers(request);
@@ -780,6 +781,7 @@ namespace GoogleCSharpSnippets
                 CloudIdentityId = "",
                 Sku = "",
                 LanguageCode = "",
+                BillingAccount = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListTransferableOffersResponse, TransferableOffer> response = cloudChannelServiceClient.ListTransferableOffersAsync(request);
@@ -1074,6 +1076,7 @@ namespace GoogleCSharpSnippets
                 Parameters = { new Parameter(), },
                 PurchaseOrderId = "",
                 RequestId = "",
+                BillingAccount = "",
             };
             // Make the request
             Operation<Entitlement, OperationMetadata> response = cloudChannelServiceClient.ChangeOffer(request);
@@ -1111,6 +1114,7 @@ namespace GoogleCSharpSnippets
                 Parameters = { new Parameter(), },
                 PurchaseOrderId = "",
                 RequestId = "",
+                BillingAccount = "",
             };
             // Make the request
             Operation<Entitlement, OperationMetadata> response = await cloudChannelServiceClient.ChangeOfferAsync(request);
@@ -3942,6 +3946,41 @@ namespace GoogleCSharpSnippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryEligibleBillingAccounts</summary>
+        public void QueryEligibleBillingAccountsRequestObject()
+        {
+            // Snippet: QueryEligibleBillingAccounts(QueryEligibleBillingAccountsRequest, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            QueryEligibleBillingAccountsRequest request = new QueryEligibleBillingAccountsRequest
+            {
+                CustomerAsCustomerName = CustomerName.FromAccountCustomer("[ACCOUNT]", "[CUSTOMER]"),
+                Skus = { "", },
+            };
+            // Make the request
+            QueryEligibleBillingAccountsResponse response = cloudChannelServiceClient.QueryEligibleBillingAccounts(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryEligibleBillingAccountsAsync</summary>
+        public async Task QueryEligibleBillingAccountsRequestObjectAsync()
+        {
+            // Snippet: QueryEligibleBillingAccountsAsync(QueryEligibleBillingAccountsRequest, CallSettings)
+            // Additional: QueryEligibleBillingAccountsAsync(QueryEligibleBillingAccountsRequest, CancellationToken)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            QueryEligibleBillingAccountsRequest request = new QueryEligibleBillingAccountsRequest
+            {
+                CustomerAsCustomerName = CustomerName.FromAccountCustomer("[ACCOUNT]", "[CUSTOMER]"),
+                Skus = { "", },
+            };
+            // Make the request
+            QueryEligibleBillingAccountsResponse response = await cloudChannelServiceClient.QueryEligibleBillingAccountsAsync(request);
             // End snippet
         }
 
