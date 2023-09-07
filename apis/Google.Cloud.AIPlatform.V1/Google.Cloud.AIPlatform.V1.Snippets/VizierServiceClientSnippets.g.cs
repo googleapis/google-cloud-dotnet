@@ -671,6 +671,7 @@ namespace GoogleCSharpSnippets
                 ParentAsStudyName = StudyName.FromProjectLocationStudy("[PROJECT]", "[LOCATION]", "[STUDY]"),
                 SuggestionCount = 0,
                 ClientId = "",
+                Contexts = { new TrialContext(), },
             };
             // Make the request
             Operation<SuggestTrialsResponse, SuggestTrialsMetadata> response = vizierServiceClient.SuggestTrials(request);
@@ -706,6 +707,7 @@ namespace GoogleCSharpSnippets
                 ParentAsStudyName = StudyName.FromProjectLocationStudy("[PROJECT]", "[LOCATION]", "[STUDY]"),
                 SuggestionCount = 0,
                 ClientId = "",
+                Contexts = { new TrialContext(), },
             };
             // Make the request
             Operation<SuggestTrialsResponse, SuggestTrialsMetadata> response = await vizierServiceClient.SuggestTrialsAsync(request);

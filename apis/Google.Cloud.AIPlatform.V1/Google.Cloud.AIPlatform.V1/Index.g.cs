@@ -28,44 +28,47 @@ namespace Google.Cloud.AIPlatform.V1 {
             "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEaH2dvb2dsZS9hcGkvZmllbGRfYmVo",
             "YXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aM2dvb2ds",
             "ZS9jbG91ZC9haXBsYXRmb3JtL3YxL2RlcGxveWVkX2luZGV4X3JlZi5wcm90",
-            "bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90bxofZ29vZ2xlL3Byb3Rv",
-            "YnVmL3RpbWVzdGFtcC5wcm90byKiBgoFSW5kZXgSEQoEbmFtZRgBIAEoCUID",
-            "4EEDEhkKDGRpc3BsYXlfbmFtZRgCIAEoCUID4EECEhMKC2Rlc2NyaXB0aW9u",
-            "GAMgASgJEiAKE21ldGFkYXRhX3NjaGVtYV91cmkYBCABKAlCA+BBBRIoCght",
-            "ZXRhZGF0YRgGIAEoCzIWLmdvb2dsZS5wcm90b2J1Zi5WYWx1ZRJLChBkZXBs",
-            "b3llZF9pbmRleGVzGAcgAygLMiwuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
-            "djEuRGVwbG95ZWRJbmRleFJlZkID4EEDEgwKBGV0YWcYCCABKAkSPQoGbGFi",
-            "ZWxzGAkgAygLMi0uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuSW5kZXgu",
-            "TGFiZWxzRW50cnkSNAoLY3JlYXRlX3RpbWUYCiABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYCyABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSQAoLaW5kZXhfc3RhdHMY",
-            "DiABKAsyJi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5JbmRleFN0YXRz",
-            "QgPgQQMSVQoTaW5kZXhfdXBkYXRlX21ldGhvZBgQIAEoDjIzLmdvb2dsZS5j",
-            "bG91ZC5haXBsYXRmb3JtLnYxLkluZGV4LkluZGV4VXBkYXRlTWV0aG9kQgPg",
-            "QQUaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJ",
-            "OgI4ASJdChFJbmRleFVwZGF0ZU1ldGhvZBIjCh9JTkRFWF9VUERBVEVfTUVU",
-            "SE9EX1VOU1BFQ0lGSUVEEAASEAoMQkFUQ0hfVVBEQVRFEAESEQoNU1RSRUFN",
-            "X1VQREFURRACOl3qQVoKH2FpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vSW5k",
-            "ZXgSN3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9p",
-            "bmRleGVzL3tpbmRleH0i3wIKDkluZGV4RGF0YXBvaW50EhkKDGRhdGFwb2lu",
-            "dF9pZBgBIAEoCUID4EECEhsKDmZlYXR1cmVfdmVjdG9yGAIgAygCQgPgQQIS",
-            "TgoJcmVzdHJpY3RzGAQgAygLMjYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
-            "djEuSW5kZXhEYXRhcG9pbnQuUmVzdHJpY3Rpb25CA+BBARJRCgxjcm93ZGlu",
-            "Z190YWcYBSABKAsyNi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5JbmRl",
-            "eERhdGFwb2ludC5Dcm93ZGluZ1RhZ0ID4EEBGkcKC1Jlc3RyaWN0aW9uEhEK",
-            "CW5hbWVzcGFjZRgBIAEoCRISCgphbGxvd19saXN0GAIgAygJEhEKCWRlbnlf",
-            "bGlzdBgDIAMoCRopCgtDcm93ZGluZ1RhZxIaChJjcm93ZGluZ19hdHRyaWJ1",
-            "dGUYASABKAkiQwoKSW5kZXhTdGF0cxIaCg12ZWN0b3JzX2NvdW50GAEgASgD",
-            "QgPgQQMSGQoMc2hhcmRzX2NvdW50GAIgASgFQgPgQQNCyAEKHmNvbS5nb29n",
-            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIKSW5kZXhQcm90b1ABWj5jbG91ZC5n",
-            "b29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2Fp",
-            "cGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29v",
-            "Z2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBs",
-            "YXRmb3JtOjpWMWIGcHJvdG8z"));
+            "bxowZ29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvZW5jcnlwdGlvbl9zcGVj",
+            "LnByb3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvGh9nb29nbGUv",
+            "cHJvdG9idWYvdGltZXN0YW1wLnByb3RvIuwGCgVJbmRleBIRCgRuYW1lGAEg",
+            "ASgJQgPgQQMSGQoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQISEwoLZGVzY3Jp",
+            "cHRpb24YAyABKAkSIAoTbWV0YWRhdGFfc2NoZW1hX3VyaRgEIAEoCUID4EEF",
+            "EigKCG1ldGFkYXRhGAYgASgLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlEksK",
+            "EGRlcGxveWVkX2luZGV4ZXMYByADKAsyLC5nb29nbGUuY2xvdWQuYWlwbGF0",
+            "Zm9ybS52MS5EZXBsb3llZEluZGV4UmVmQgPgQQMSDAoEZXRhZxgIIAEoCRI9",
+            "CgZsYWJlbHMYCSADKAsyLS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5J",
+            "bmRleC5MYWJlbHNFbnRyeRI0CgtjcmVhdGVfdGltZRgKIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgLIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJACgtpbmRleF9z",
+            "dGF0cxgOIAEoCzImLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkluZGV4",
+            "U3RhdHNCA+BBAxJVChNpbmRleF91cGRhdGVfbWV0aG9kGBAgASgOMjMuZ29v",
+            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuSW5kZXguSW5kZXhVcGRhdGVNZXRo",
+            "b2RCA+BBBRJICg9lbmNyeXB0aW9uX3NwZWMYESABKAsyKi5nb29nbGUuY2xv",
+            "dWQuYWlwbGF0Zm9ybS52MS5FbmNyeXB0aW9uU3BlY0ID4EEFGi0KC0xhYmVs",
+            "c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiXQoRSW5k",
+            "ZXhVcGRhdGVNZXRob2QSIwofSU5ERVhfVVBEQVRFX01FVEhPRF9VTlNQRUNJ",
+            "RklFRBAAEhAKDEJBVENIX1VQREFURRABEhEKDVNUUkVBTV9VUERBVEUQAjpd",
+            "6kFaCh9haXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0luZGV4Ejdwcm9qZWN0",
+            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vaW5kZXhlcy97aW5k",
+            "ZXh9It8CCg5JbmRleERhdGFwb2ludBIZCgxkYXRhcG9pbnRfaWQYASABKAlC",
+            "A+BBAhIbCg5mZWF0dXJlX3ZlY3RvchgCIAMoAkID4EECEk4KCXJlc3RyaWN0",
+            "cxgEIAMoCzI2Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkluZGV4RGF0",
+            "YXBvaW50LlJlc3RyaWN0aW9uQgPgQQESUQoMY3Jvd2RpbmdfdGFnGAUgASgL",
+            "MjYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuSW5kZXhEYXRhcG9pbnQu",
+            "Q3Jvd2RpbmdUYWdCA+BBARpHCgtSZXN0cmljdGlvbhIRCgluYW1lc3BhY2UY",
+            "ASABKAkSEgoKYWxsb3dfbGlzdBgCIAMoCRIRCglkZW55X2xpc3QYAyADKAka",
+            "KQoLQ3Jvd2RpbmdUYWcSGgoSY3Jvd2RpbmdfYXR0cmlidXRlGAEgASgJIkMK",
+            "CkluZGV4U3RhdHMSGgoNdmVjdG9yc19jb3VudBgBIAEoA0ID4EEDEhkKDHNo",
+            "YXJkc19jb3VudBgCIAEoBUID4EEDQsgBCh5jb20uZ29vZ2xlLmNsb3VkLmFp",
+            "cGxhdGZvcm0udjFCCkluZGV4UHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9n",
+            "by9haXBsYXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKq",
+            "AhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxB",
+            "SVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.DeployedIndexRefReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.DeployedIndexRefReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Index), global::Google.Cloud.AIPlatform.V1.Index.Parser, new[]{ "Name", "DisplayName", "Description", "MetadataSchemaUri", "Metadata", "DeployedIndexes", "Etag", "Labels", "CreateTime", "UpdateTime", "IndexStats", "IndexUpdateMethod" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Index.Types.IndexUpdateMethod) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Index), global::Google.Cloud.AIPlatform.V1.Index.Parser, new[]{ "Name", "DisplayName", "Description", "MetadataSchemaUri", "Metadata", "DeployedIndexes", "Etag", "Labels", "CreateTime", "UpdateTime", "IndexStats", "IndexUpdateMethod", "EncryptionSpec" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Index.Types.IndexUpdateMethod) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.IndexDatapoint), global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Parser, new[]{ "DatapointId", "FeatureVector", "Restricts", "CrowdingTag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.Restriction), global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.Restriction.Parser, new[]{ "Namespace", "AllowList", "DenyList" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.CrowdingTag), global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.CrowdingTag.Parser, new[]{ "CrowdingAttribute" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.IndexStats), global::Google.Cloud.AIPlatform.V1.IndexStats.Parser, new[]{ "VectorsCount", "ShardsCount" }, null, null, null, null)
@@ -125,6 +128,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       indexStats_ = other.indexStats_ != null ? other.indexStats_.Clone() : null;
       indexUpdateMethod_ = other.indexUpdateMethod_;
+      encryptionSpec_ = other.encryptionSpec_ != null ? other.encryptionSpec_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -340,6 +344,22 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "encryption_spec" field.</summary>
+    public const int EncryptionSpecFieldNumber = 17;
+    private global::Google.Cloud.AIPlatform.V1.EncryptionSpec encryptionSpec_;
+    /// <summary>
+    /// Immutable. Customer-managed encryption key spec for an Index. If set, this
+    /// Index and all sub-resources of this Index will be secured by this key.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.EncryptionSpec EncryptionSpec {
+      get { return encryptionSpec_; }
+      set {
+        encryptionSpec_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -367,6 +387,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (!object.Equals(IndexStats, other.IndexStats)) return false;
       if (IndexUpdateMethod != other.IndexUpdateMethod) return false;
+      if (!object.Equals(EncryptionSpec, other.EncryptionSpec)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -386,6 +407,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (indexStats_ != null) hash ^= IndexStats.GetHashCode();
       if (IndexUpdateMethod != global::Google.Cloud.AIPlatform.V1.Index.Types.IndexUpdateMethod.Unspecified) hash ^= IndexUpdateMethod.GetHashCode();
+      if (encryptionSpec_ != null) hash ^= EncryptionSpec.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -446,6 +468,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(128, 1);
         output.WriteEnum((int) IndexUpdateMethod);
       }
+      if (encryptionSpec_ != null) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(EncryptionSpec);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -498,6 +524,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(128, 1);
         output.WriteEnum((int) IndexUpdateMethod);
       }
+      if (encryptionSpec_ != null) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(EncryptionSpec);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -539,6 +569,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (IndexUpdateMethod != global::Google.Cloud.AIPlatform.V1.Index.Types.IndexUpdateMethod.Unspecified) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) IndexUpdateMethod);
+      }
+      if (encryptionSpec_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(EncryptionSpec);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -595,6 +628,12 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (other.IndexUpdateMethod != global::Google.Cloud.AIPlatform.V1.Index.Types.IndexUpdateMethod.Unspecified) {
         IndexUpdateMethod = other.IndexUpdateMethod;
+      }
+      if (other.encryptionSpec_ != null) {
+        if (encryptionSpec_ == null) {
+          EncryptionSpec = new global::Google.Cloud.AIPlatform.V1.EncryptionSpec();
+        }
+        EncryptionSpec.MergeFrom(other.EncryptionSpec);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -671,6 +710,13 @@ namespace Google.Cloud.AIPlatform.V1 {
             IndexUpdateMethod = (global::Google.Cloud.AIPlatform.V1.Index.Types.IndexUpdateMethod) input.ReadEnum();
             break;
           }
+          case 138: {
+            if (encryptionSpec_ == null) {
+              EncryptionSpec = new global::Google.Cloud.AIPlatform.V1.EncryptionSpec();
+            }
+            input.ReadMessage(EncryptionSpec);
+            break;
+          }
         }
       }
     #endif
@@ -744,6 +790,13 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 128: {
             IndexUpdateMethod = (global::Google.Cloud.AIPlatform.V1.Index.Types.IndexUpdateMethod) input.ReadEnum();
+            break;
+          }
+          case 138: {
+            if (encryptionSpec_ == null) {
+              EncryptionSpec = new global::Google.Cloud.AIPlatform.V1.EncryptionSpec();
+            }
+            input.ReadMessage(EncryptionSpec);
             break;
           }
         }
