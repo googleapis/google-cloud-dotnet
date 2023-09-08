@@ -9,7 +9,6 @@
   {
     "method": "ListSchemas",
     "client": "SchemaServiceClient",
-    "skip": "Not ready yet",
     "arguments": {
       "parent": "projects/${PROJECT_ID}/locations/global/collections/default_collection/dataStores/default_data_store"
     }
@@ -17,7 +16,6 @@
   {
     "method": "CompleteQuery",
     "client": "CompletionServiceClient",
-    "skip": "Not ready yet",
     "arguments": {
       "request": {
         "dataStore": "projects/${PROJECT_ID}/locations/global/collections/default_collection/dataStores/default_data_store",
@@ -30,7 +28,7 @@
   {
     "method": "Search",
     "client": "SearchServiceClient",
-    "skip": "Not ready yet",
+    "skip": "See b/284167057",
     "arguments": {
       "request": {
         "servingConfig": "projects/${PROJECT_ID}/locations/global/collections/default_collection/dataStores/default_data_store/servingConfigs/default_serving_config",
