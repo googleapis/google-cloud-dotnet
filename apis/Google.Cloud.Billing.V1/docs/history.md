@@ -1,5 +1,21 @@
 # Version history
 
+## Version 3.4.0, released 2023-09-08
+
+### Breaking change
+
+The resource annotation for `GetProjectBillingInfoRequest.Name` has changed from referring to a `ProjectBillingInfoName` to a `ProjectName`. This means `GetProjectBillingInfoRequest.ProjectBillingInfoName` has been removed, and `GetProjectBillingInfo.ProjectName` has replaced it, and the overloads to the `GetProjectName` method have changed accordingly.
+
+Although this is clearly a breaking change (as removing a public property always is), we have not taken a major version bump as any customers whose source code is broken by this would already have been broken when making a request. Customers whose code is already working will not be affected.
+
+### Bug fixes
+
+- Fixed resource_reference for name in GetProjectBillingInfo ([commit 58d6168](https://github.com/googleapis/google-cloud-dotnet/commit/58d6168573e2039bae924d9a3e15ffe32aa38f0d))
+
+### Documentation improvements
+
+- Update comments ([commit 5de2c9b](https://github.com/googleapis/google-cloud-dotnet/commit/5de2c9b2badcd4b58642b12c5fa5413ed96be75f))
+
 ## Version 3.3.0, released 2023-06-20
 
 ### New features
