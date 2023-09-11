@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.9.0, released 2023-09-11
+
+### New features
+
+- Mark ChannelPartnerGranularity as deprecated and offer alternatives ([commit 40d1d8f](https://github.com/googleapis/google-cloud-dotnet/commit/40d1d8f082c4240c541be12911e06bb1e9f0eb39))
+- Launch QueryEligibleBillingAccounts API ([commit 5496ac6](https://github.com/googleapis/google-cloud-dotnet/commit/5496ac69a5806e5453e7dee405d219cf85b8b91b))
+
 ## Version 2.8.0, released 2023-06-20
 
 ### New features
