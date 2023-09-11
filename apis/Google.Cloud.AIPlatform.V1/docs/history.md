@@ -1,5 +1,13 @@
 # Version history
 
+## Version 2.19.0, released 2023-09-11
+
+### New features
+
+- Add encryption_spec to index.proto and index_endpoint.proto ([commit e03e41b](https://github.com/googleapis/google-cloud-dotnet/commit/e03e41b4698958ed0b42e3fb4233ad89985196a2))
+- Add TrialContext to study.proto ([commit e03e41b](https://github.com/googleapis/google-cloud-dotnet/commit/e03e41b4698958ed0b42e3fb4233ad89985196a2))
+- Add contexts to SuggestTrialsRequest in vizier_service.proto ([commit e03e41b](https://github.com/googleapis/google-cloud-dotnet/commit/e03e41b4698958ed0b42e3fb4233ad89985196a2))
+
 ## Version 2.18.0, released 2023-08-16
 
 ### New features
