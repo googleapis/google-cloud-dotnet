@@ -1,5 +1,17 @@
 # Version history
 
+## Version 2.2.0, released 2023-09-11
+
+### New features
+
+- Added support for walking mode and cost_per_kilometer_below_soft_max ([commit ad1f21c](https://github.com/googleapis/google-cloud-dotnet/commit/ad1f21c26a890aa20f68e8521b2746a8427996cb))
+
+### Documentation improvements
+
+- Minor formatting fix ([commit 0a0b732](https://github.com/googleapis/google-cloud-dotnet/commit/0a0b732a4e07f18f70085b524af978cbf79a2a57))
+- Minor formatting ([commit 0d3ca27](https://github.com/googleapis/google-cloud-dotnet/commit/0d3ca27514dd40c9f0325692508c991b3eeeb350))
+- Clarification for deprecated fields ([commit 4a99682](https://github.com/googleapis/google-cloud-dotnet/commit/4a99682d647b486f3eca9154452779a693565f16))
+
 ## Version 2.1.0, released 2023-01-19
 
 ### New features
