@@ -576,7 +576,9 @@ namespace Google.Cloud.Monitoring.V3 {
     private string type_ = "";
     /// <summary>
     /// The type of the notification channel. This field matches the
-    /// value of the [NotificationChannelDescriptor.type][google.monitoring.v3.NotificationChannelDescriptor.type] field.
+    /// value of the
+    /// [NotificationChannelDescriptor.type][google.monitoring.v3.NotificationChannelDescriptor.type]
+    /// field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -649,8 +651,8 @@ namespace Google.Cloud.Monitoring.V3 {
     /// <summary>
     /// Configuration fields that define the channel and its behavior. The
     /// permissible and required labels are specified in the
-    /// [NotificationChannelDescriptor.labels][google.monitoring.v3.NotificationChannelDescriptor.labels] of the
-    /// `NotificationChannelDescriptor` corresponding to the `type` field.
+    /// [NotificationChannelDescriptor.labels][google.monitoring.v3.NotificationChannelDescriptor.labels]
+    /// of the `NotificationChannelDescriptor` corresponding to the `type` field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

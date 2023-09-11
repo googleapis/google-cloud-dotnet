@@ -30,7 +30,7 @@ namespace Google.Cloud.Monitoring.V3 {
             "L3YzL2NvbW1vbi5wcm90bxoqZ29vZ2xlL21vbml0b3JpbmcvdjMvbXV0YXRp",
             "b25fcmVjb3JkLnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJv",
             "dG8aHmdvb2dsZS9wcm90b2J1Zi93cmFwcGVycy5wcm90bxoXZ29vZ2xlL3Jw",
-            "Yy9zdGF0dXMucHJvdG8i2xoKC0FsZXJ0UG9saWN5EgwKBG5hbWUYASABKAkS",
+            "Yy9zdGF0dXMucHJvdG8ihyIKC0FsZXJ0UG9saWN5EgwKBG5hbWUYASABKAkS",
             "FAoMZGlzcGxheV9uYW1lGAIgASgJEkYKDWRvY3VtZW50YXRpb24YDSABKAsy",
             "Ly5nb29nbGUubW9uaXRvcmluZy52My5BbGVydFBvbGljeS5Eb2N1bWVudGF0",
             "aW9uEkYKC3VzZXJfbGFiZWxzGBAgAygLMjEuZ29vZ2xlLm1vbml0b3Jpbmcu",
@@ -44,83 +44,106 @@ namespace Google.Cloud.Monitoring.V3 {
             "Z2xlLm1vbml0b3JpbmcudjMuTXV0YXRpb25SZWNvcmQSPQoPbXV0YXRpb25f",
             "cmVjb3JkGAsgASgLMiQuZ29vZ2xlLm1vbml0b3JpbmcudjMuTXV0YXRpb25S",
             "ZWNvcmQSRwoOYWxlcnRfc3RyYXRlZ3kYFSABKAsyLy5nb29nbGUubW9uaXRv",
-            "cmluZy52My5BbGVydFBvbGljeS5BbGVydFN0cmF0ZWd5GjMKDURvY3VtZW50",
-            "YXRpb24SDwoHY29udGVudBgBIAEoCRIRCgltaW1lX3R5cGUYAiABKAkazhAK",
-            "CUNvbmRpdGlvbhIMCgRuYW1lGAwgASgJEhQKDGRpc3BsYXlfbmFtZRgGIAEo",
-            "CRJaChNjb25kaXRpb25fdGhyZXNob2xkGAEgASgLMjsuZ29vZ2xlLm1vbml0",
-            "b3JpbmcudjMuQWxlcnRQb2xpY3kuQ29uZGl0aW9uLk1ldHJpY1RocmVzaG9s",
-            "ZEgAElUKEGNvbmRpdGlvbl9hYnNlbnQYAiABKAsyOS5nb29nbGUubW9uaXRv",
-            "cmluZy52My5BbGVydFBvbGljeS5Db25kaXRpb24uTWV0cmljQWJzZW5jZUgA",
-            "ElUKFWNvbmRpdGlvbl9tYXRjaGVkX2xvZxgUIAEoCzI0Lmdvb2dsZS5tb25p",
-            "dG9yaW5nLnYzLkFsZXJ0UG9saWN5LkNvbmRpdGlvbi5Mb2dNYXRjaEgAEnsK",
-            "I2NvbmRpdGlvbl9tb25pdG9yaW5nX3F1ZXJ5X2xhbmd1YWdlGBMgASgLMkwu",
-            "Z29vZ2xlLm1vbml0b3JpbmcudjMuQWxlcnRQb2xpY3kuQ29uZGl0aW9uLk1v",
-            "bml0b3JpbmdRdWVyeUxhbmd1YWdlQ29uZGl0aW9uSAAaNQoHVHJpZ2dlchIP",
-            "CgVjb3VudBgBIAEoBUgAEhEKB3BlcmNlbnQYAiABKAFIAEIGCgR0eXBlGuoD",
-            "Cg9NZXRyaWNUaHJlc2hvbGQSEwoGZmlsdGVyGAIgASgJQgPgQQISNwoMYWdn",
-            "cmVnYXRpb25zGAggAygLMiEuZ29vZ2xlLm1vbml0b3JpbmcudjMuQWdncmVn",
-            "YXRpb24SGgoSZGVub21pbmF0b3JfZmlsdGVyGAkgASgJEkMKGGRlbm9taW5h",
-            "dG9yX2FnZ3JlZ2F0aW9ucxgKIAMoCzIhLmdvb2dsZS5tb25pdG9yaW5nLnYz",
-            "LkFnZ3JlZ2F0aW9uEjgKCmNvbXBhcmlzb24YBCABKA4yJC5nb29nbGUubW9u",
-            "aXRvcmluZy52My5Db21wYXJpc29uVHlwZRIXCg90aHJlc2hvbGRfdmFsdWUY",
-            "BSABKAESKwoIZHVyYXRpb24YBiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVy",
-            "YXRpb24SRAoHdHJpZ2dlchgHIAEoCzIzLmdvb2dsZS5tb25pdG9yaW5nLnYz",
-            "LkFsZXJ0UG9saWN5LkNvbmRpdGlvbi5UcmlnZ2VyEmIKF2V2YWx1YXRpb25f",
-            "bWlzc2luZ19kYXRhGAsgASgOMkEuZ29vZ2xlLm1vbml0b3JpbmcudjMuQWxl",
-            "cnRQb2xpY3kuQ29uZGl0aW9uLkV2YWx1YXRpb25NaXNzaW5nRGF0YRrQAQoN",
-            "TWV0cmljQWJzZW5jZRITCgZmaWx0ZXIYASABKAlCA+BBAhI3CgxhZ2dyZWdh",
-            "dGlvbnMYBSADKAsyIS5nb29nbGUubW9uaXRvcmluZy52My5BZ2dyZWdhdGlv",
-            "bhIrCghkdXJhdGlvbhgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlv",
-            "bhJECgd0cmlnZ2VyGAMgASgLMjMuZ29vZ2xlLm1vbml0b3JpbmcudjMuQWxl",
-            "cnRQb2xpY3kuQ29uZGl0aW9uLlRyaWdnZXIavAEKCExvZ01hdGNoEhMKBmZp",
-            "bHRlchgBIAEoCUID4EECEmMKEGxhYmVsX2V4dHJhY3RvcnMYAiADKAsySS5n",
-            "b29nbGUubW9uaXRvcmluZy52My5BbGVydFBvbGljeS5Db25kaXRpb24uTG9n",
-            "TWF0Y2guTGFiZWxFeHRyYWN0b3JzRW50cnkaNgoUTGFiZWxFeHRyYWN0b3Jz",
-            "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ARqIAgogTW9u",
-            "aXRvcmluZ1F1ZXJ5TGFuZ3VhZ2VDb25kaXRpb24SDQoFcXVlcnkYASABKAkS",
-            "KwoIZHVyYXRpb24YAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24S",
-            "RAoHdHJpZ2dlchgDIAEoCzIzLmdvb2dsZS5tb25pdG9yaW5nLnYzLkFsZXJ0",
-            "UG9saWN5LkNvbmRpdGlvbi5UcmlnZ2VyEmIKF2V2YWx1YXRpb25fbWlzc2lu",
-            "Z19kYXRhGAQgASgOMkEuZ29vZ2xlLm1vbml0b3JpbmcudjMuQWxlcnRQb2xp",
-            "Y3kuQ29uZGl0aW9uLkV2YWx1YXRpb25NaXNzaW5nRGF0YSKtAQoVRXZhbHVh",
-            "dGlvbk1pc3NpbmdEYXRhEicKI0VWQUxVQVRJT05fTUlTU0lOR19EQVRBX1VO",
-            "U1BFQ0lGSUVEEAASJAogRVZBTFVBVElPTl9NSVNTSU5HX0RBVEFfSU5BQ1RJ",
-            "VkUQARIiCh5FVkFMVUFUSU9OX01JU1NJTkdfREFUQV9BQ1RJVkUQAhIhCh1F",
-            "VkFMVUFUSU9OX01JU1NJTkdfREFUQV9OT19PUBADOpcC6kGTAgoubW9uaXRv",
-            "cmluZy5nb29nbGVhcGlzLmNvbS9BbGVydFBvbGljeUNvbmRpdGlvbhJGcHJv",
-            "amVjdHMve3Byb2plY3R9L2FsZXJ0UG9saWNpZXMve2FsZXJ0X3BvbGljeX0v",
-            "Y29uZGl0aW9ucy97Y29uZGl0aW9ufRJQb3JnYW5pemF0aW9ucy97b3JnYW5p",
-            "emF0aW9ufS9hbGVydFBvbGljaWVzL3thbGVydF9wb2xpY3l9L2NvbmRpdGlv",
-            "bnMve2NvbmRpdGlvbn0SRGZvbGRlcnMve2ZvbGRlcn0vYWxlcnRQb2xpY2ll",
-            "cy97YWxlcnRfcG9saWN5fS9jb25kaXRpb25zL3tjb25kaXRpb259EgEqQgsK",
-            "CWNvbmRpdGlvbhrqAQoNQWxlcnRTdHJhdGVneRJmChdub3RpZmljYXRpb25f",
-            "cmF0ZV9saW1pdBgBIAEoCzJFLmdvb2dsZS5tb25pdG9yaW5nLnYzLkFsZXJ0",
-            "UG9saWN5LkFsZXJ0U3RyYXRlZ3kuTm90aWZpY2F0aW9uUmF0ZUxpbWl0Ei0K",
-            "CmF1dG9fY2xvc2UYAyABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24a",
-            "QgoVTm90aWZpY2F0aW9uUmF0ZUxpbWl0EikKBnBlcmlvZBgBIAEoCzIZLmdv",
-            "b2dsZS5wcm90b2J1Zi5EdXJhdGlvbhoxCg9Vc2VyTGFiZWxzRW50cnkSCwoD",
-            "a2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJhChVDb25kaXRpb25Db21i",
-            "aW5lclR5cGUSFwoTQ09NQklORV9VTlNQRUNJRklFRBAAEgcKA0FORBABEgYK",
-            "Ak9SEAISHgoaQU5EX1dJVEhfTUFUQ0hJTkdfUkVTT1VSQ0UQAzrJAepBxQEK",
-            "JW1vbml0b3JpbmcuZ29vZ2xlYXBpcy5jb20vQWxlcnRQb2xpY3kSL3Byb2pl",
-            "Y3RzL3twcm9qZWN0fS9hbGVydFBvbGljaWVzL3thbGVydF9wb2xpY3l9Ejlv",
-            "cmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L2FsZXJ0UG9saWNpZXMve2Fs",
-            "ZXJ0X3BvbGljeX0SLWZvbGRlcnMve2ZvbGRlcn0vYWxlcnRQb2xpY2llcy97",
-            "YWxlcnRfcG9saWN5fRIBKkLFAQoYY29tLmdvb2dsZS5tb25pdG9yaW5nLnYz",
-            "QgpBbGVydFByb3RvUAFaQWNsb3VkLmdvb2dsZS5jb20vZ28vbW9uaXRvcmlu",
-            "Zy9hcGl2My92Mi9tb25pdG9yaW5ncGI7bW9uaXRvcmluZ3BiqgIaR29vZ2xl",
-            "LkNsb3VkLk1vbml0b3JpbmcuVjPKAhpHb29nbGVcQ2xvdWRcTW9uaXRvcmlu",
-            "Z1xWM+oCHUdvb2dsZTo6Q2xvdWQ6Ok1vbml0b3Jpbmc6OlYzYgZwcm90bzM="));
+            "cmluZy52My5BbGVydFBvbGljeS5BbGVydFN0cmF0ZWd5GkkKDURvY3VtZW50",
+            "YXRpb24SDwoHY29udGVudBgBIAEoCRIRCgltaW1lX3R5cGUYAiABKAkSFAoH",
+            "c3ViamVjdBgDIAEoCUID4EEBGvcVCglDb25kaXRpb24SDAoEbmFtZRgMIAEo",
+            "CRIUCgxkaXNwbGF5X25hbWUYBiABKAkSWgoTY29uZGl0aW9uX3RocmVzaG9s",
+            "ZBgBIAEoCzI7Lmdvb2dsZS5tb25pdG9yaW5nLnYzLkFsZXJ0UG9saWN5LkNv",
+            "bmRpdGlvbi5NZXRyaWNUaHJlc2hvbGRIABJVChBjb25kaXRpb25fYWJzZW50",
+            "GAIgASgLMjkuZ29vZ2xlLm1vbml0b3JpbmcudjMuQWxlcnRQb2xpY3kuQ29u",
+            "ZGl0aW9uLk1ldHJpY0Fic2VuY2VIABJVChVjb25kaXRpb25fbWF0Y2hlZF9s",
+            "b2cYFCABKAsyNC5nb29nbGUubW9uaXRvcmluZy52My5BbGVydFBvbGljeS5D",
+            "b25kaXRpb24uTG9nTWF0Y2hIABJ7CiNjb25kaXRpb25fbW9uaXRvcmluZ19x",
+            "dWVyeV9sYW5ndWFnZRgTIAEoCzJMLmdvb2dsZS5tb25pdG9yaW5nLnYzLkFs",
+            "ZXJ0UG9saWN5LkNvbmRpdGlvbi5Nb25pdG9yaW5nUXVlcnlMYW5ndWFnZUNv",
+            "bmRpdGlvbkgAEnsKI2NvbmRpdGlvbl9wcm9tZXRoZXVzX3F1ZXJ5X2xhbmd1",
+            "YWdlGBUgASgLMkwuZ29vZ2xlLm1vbml0b3JpbmcudjMuQWxlcnRQb2xpY3ku",
+            "Q29uZGl0aW9uLlByb21ldGhldXNRdWVyeUxhbmd1YWdlQ29uZGl0aW9uSAAa",
+            "NQoHVHJpZ2dlchIPCgVjb3VudBgBIAEoBUgAEhEKB3BlcmNlbnQYAiABKAFI",
+            "AEIGCgR0eXBlGp4FCg9NZXRyaWNUaHJlc2hvbGQSEwoGZmlsdGVyGAIgASgJ",
+            "QgPgQQISNwoMYWdncmVnYXRpb25zGAggAygLMiEuZ29vZ2xlLm1vbml0b3Jp",
+            "bmcudjMuQWdncmVnYXRpb24SGgoSZGVub21pbmF0b3JfZmlsdGVyGAkgASgJ",
+            "EkMKGGRlbm9taW5hdG9yX2FnZ3JlZ2F0aW9ucxgKIAMoCzIhLmdvb2dsZS5t",
+            "b25pdG9yaW5nLnYzLkFnZ3JlZ2F0aW9uEmUKEGZvcmVjYXN0X29wdGlvbnMY",
+            "DCABKAsySy5nb29nbGUubW9uaXRvcmluZy52My5BbGVydFBvbGljeS5Db25k",
+            "aXRpb24uTWV0cmljVGhyZXNob2xkLkZvcmVjYXN0T3B0aW9ucxI4Cgpjb21w",
+            "YXJpc29uGAQgASgOMiQuZ29vZ2xlLm1vbml0b3JpbmcudjMuQ29tcGFyaXNv",
+            "blR5cGUSFwoPdGhyZXNob2xkX3ZhbHVlGAUgASgBEisKCGR1cmF0aW9uGAYg",
+            "ASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEkQKB3RyaWdnZXIYByAB",
+            "KAsyMy5nb29nbGUubW9uaXRvcmluZy52My5BbGVydFBvbGljeS5Db25kaXRp",
+            "b24uVHJpZ2dlchJiChdldmFsdWF0aW9uX21pc3NpbmdfZGF0YRgLIAEoDjJB",
+            "Lmdvb2dsZS5tb25pdG9yaW5nLnYzLkFsZXJ0UG9saWN5LkNvbmRpdGlvbi5F",
+            "dmFsdWF0aW9uTWlzc2luZ0RhdGEaSwoPRm9yZWNhc3RPcHRpb25zEjgKEGZv",
+            "cmVjYXN0X2hvcml6b24YASABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRp",
+            "b25CA+BBAhrQAQoNTWV0cmljQWJzZW5jZRITCgZmaWx0ZXIYASABKAlCA+BB",
+            "AhI3CgxhZ2dyZWdhdGlvbnMYBSADKAsyIS5nb29nbGUubW9uaXRvcmluZy52",
+            "My5BZ2dyZWdhdGlvbhIrCghkdXJhdGlvbhgCIAEoCzIZLmdvb2dsZS5wcm90",
+            "b2J1Zi5EdXJhdGlvbhJECgd0cmlnZ2VyGAMgASgLMjMuZ29vZ2xlLm1vbml0",
+            "b3JpbmcudjMuQWxlcnRQb2xpY3kuQ29uZGl0aW9uLlRyaWdnZXIavAEKCExv",
+            "Z01hdGNoEhMKBmZpbHRlchgBIAEoCUID4EECEmMKEGxhYmVsX2V4dHJhY3Rv",
+            "cnMYAiADKAsySS5nb29nbGUubW9uaXRvcmluZy52My5BbGVydFBvbGljeS5D",
+            "b25kaXRpb24uTG9nTWF0Y2guTGFiZWxFeHRyYWN0b3JzRW50cnkaNgoUTGFi",
+            "ZWxFeHRyYWN0b3JzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJ",
+            "OgI4ARqIAgogTW9uaXRvcmluZ1F1ZXJ5TGFuZ3VhZ2VDb25kaXRpb24SDQoF",
+            "cXVlcnkYASABKAkSKwoIZHVyYXRpb24YAiABKAsyGS5nb29nbGUucHJvdG9i",
+            "dWYuRHVyYXRpb24SRAoHdHJpZ2dlchgDIAEoCzIzLmdvb2dsZS5tb25pdG9y",
+            "aW5nLnYzLkFsZXJ0UG9saWN5LkNvbmRpdGlvbi5UcmlnZ2VyEmIKF2V2YWx1",
+            "YXRpb25fbWlzc2luZ19kYXRhGAQgASgOMkEuZ29vZ2xlLm1vbml0b3Jpbmcu",
+            "djMuQWxlcnRQb2xpY3kuQ29uZGl0aW9uLkV2YWx1YXRpb25NaXNzaW5nRGF0",
+            "YRr1AgogUHJvbWV0aGV1c1F1ZXJ5TGFuZ3VhZ2VDb25kaXRpb24SEgoFcXVl",
+            "cnkYASABKAlCA+BBAhIwCghkdXJhdGlvbhgCIAEoCzIZLmdvb2dsZS5wcm90",
+            "b2J1Zi5EdXJhdGlvbkID4EEBEjsKE2V2YWx1YXRpb25faW50ZXJ2YWwYAyAB",
+            "KAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBARJtCgZsYWJlbHMY",
+            "BCADKAsyWC5nb29nbGUubW9uaXRvcmluZy52My5BbGVydFBvbGljeS5Db25k",
+            "aXRpb24uUHJvbWV0aGV1c1F1ZXJ5TGFuZ3VhZ2VDb25kaXRpb24uTGFiZWxz",
+            "RW50cnlCA+BBARIXCgpydWxlX2dyb3VwGAUgASgJQgPgQQESFwoKYWxlcnRf",
+            "cnVsZRgGIAEoCUID4EEBGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRIN",
+            "CgV2YWx1ZRgCIAEoCToCOAEirQEKFUV2YWx1YXRpb25NaXNzaW5nRGF0YRIn",
+            "CiNFVkFMVUFUSU9OX01JU1NJTkdfREFUQV9VTlNQRUNJRklFRBAAEiQKIEVW",
+            "QUxVQVRJT05fTUlTU0lOR19EQVRBX0lOQUNUSVZFEAESIgoeRVZBTFVBVElP",
+            "Tl9NSVNTSU5HX0RBVEFfQUNUSVZFEAISIQodRVZBTFVBVElPTl9NSVNTSU5H",
+            "X0RBVEFfTk9fT1AQAzqXAupBkwIKLm1vbml0b3JpbmcuZ29vZ2xlYXBpcy5j",
+            "b20vQWxlcnRQb2xpY3lDb25kaXRpb24SRnByb2plY3RzL3twcm9qZWN0fS9h",
+            "bGVydFBvbGljaWVzL3thbGVydF9wb2xpY3l9L2NvbmRpdGlvbnMve2NvbmRp",
+            "dGlvbn0SUG9yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vYWxlcnRQb2xp",
+            "Y2llcy97YWxlcnRfcG9saWN5fS9jb25kaXRpb25zL3tjb25kaXRpb259EkRm",
+            "b2xkZXJzL3tmb2xkZXJ9L2FsZXJ0UG9saWNpZXMve2FsZXJ0X3BvbGljeX0v",
+            "Y29uZGl0aW9ucy97Y29uZGl0aW9ufRIBKkILCgljb25kaXRpb24a1wMKDUFs",
+            "ZXJ0U3RyYXRlZ3kSZgoXbm90aWZpY2F0aW9uX3JhdGVfbGltaXQYASABKAsy",
+            "RS5nb29nbGUubW9uaXRvcmluZy52My5BbGVydFBvbGljeS5BbGVydFN0cmF0",
+            "ZWd5Lk5vdGlmaWNhdGlvblJhdGVMaW1pdBItCgphdXRvX2Nsb3NlGAMgASgL",
+            "MhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEnIKHW5vdGlmaWNhdGlvbl9j",
+            "aGFubmVsX3N0cmF0ZWd5GAQgAygLMksuZ29vZ2xlLm1vbml0b3JpbmcudjMu",
+            "QWxlcnRQb2xpY3kuQWxlcnRTdHJhdGVneS5Ob3RpZmljYXRpb25DaGFubmVs",
+            "U3RyYXRlZ3kaQgoVTm90aWZpY2F0aW9uUmF0ZUxpbWl0EikKBnBlcmlvZBgB",
+            "IAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhp3ChtOb3RpZmljYXRp",
+            "b25DaGFubmVsU3RyYXRlZ3kSIgoabm90aWZpY2F0aW9uX2NoYW5uZWxfbmFt",
+            "ZXMYASADKAkSNAoRcmVub3RpZnlfaW50ZXJ2YWwYAiABKAsyGS5nb29nbGUu",
+            "cHJvdG9idWYuRHVyYXRpb24aMQoPVXNlckxhYmVsc0VudHJ5EgsKA2tleRgB",
+            "IAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiYQoVQ29uZGl0aW9uQ29tYmluZXJU",
+            "eXBlEhcKE0NPTUJJTkVfVU5TUEVDSUZJRUQQABIHCgNBTkQQARIGCgJPUhAC",
+            "Eh4KGkFORF9XSVRIX01BVENISU5HX1JFU09VUkNFEAM6yQHqQcUBCiVtb25p",
+            "dG9yaW5nLmdvb2dsZWFwaXMuY29tL0FsZXJ0UG9saWN5Ei9wcm9qZWN0cy97",
+            "cHJvamVjdH0vYWxlcnRQb2xpY2llcy97YWxlcnRfcG9saWN5fRI5b3JnYW5p",
+            "emF0aW9ucy97b3JnYW5pemF0aW9ufS9hbGVydFBvbGljaWVzL3thbGVydF9w",
+            "b2xpY3l9Ei1mb2xkZXJzL3tmb2xkZXJ9L2FsZXJ0UG9saWNpZXMve2FsZXJ0",
+            "X3BvbGljeX0SASpCxQEKGGNvbS5nb29nbGUubW9uaXRvcmluZy52M0IKQWxl",
+            "cnRQcm90b1ABWkFjbG91ZC5nb29nbGUuY29tL2dvL21vbml0b3JpbmcvYXBp",
+            "djMvdjIvbW9uaXRvcmluZ3BiO21vbml0b3JpbmdwYqoCGkdvb2dsZS5DbG91",
+            "ZC5Nb25pdG9yaW5nLlYzygIaR29vZ2xlXENsb3VkXE1vbml0b3JpbmdcVjPq",
+            "Ah1Hb29nbGU6OkNsb3VkOjpNb25pdG9yaW5nOjpWM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor, global::Google.Cloud.Monitoring.V3.MutationRecordReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy), global::Google.Cloud.Monitoring.V3.AlertPolicy.Parser, new[]{ "Name", "DisplayName", "Documentation", "UserLabels", "Conditions", "Combiner", "Enabled", "Validity", "NotificationChannels", "CreationRecord", "MutationRecord", "AlertStrategy" }, null, new[]{ typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.ConditionCombinerType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Documentation), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Documentation.Parser, new[]{ "Content", "MimeType" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Parser, new[]{ "Name", "DisplayName", "ConditionThreshold", "ConditionAbsent", "ConditionMatchedLog", "ConditionMonitoringQueryLanguage" }, new[]{ "Condition" }, new[]{ typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.EvaluationMissingData) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.Trigger), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.Trigger.Parser, new[]{ "Count", "Percent" }, new[]{ "Type" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricThreshold), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricThreshold.Parser, new[]{ "Filter", "Aggregations", "DenominatorFilter", "DenominatorAggregations", "Comparison", "ThresholdValue", "Duration", "Trigger", "EvaluationMissingData" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy), global::Google.Cloud.Monitoring.V3.AlertPolicy.Parser, new[]{ "Name", "DisplayName", "Documentation", "UserLabels", "Conditions", "Combiner", "Enabled", "Validity", "NotificationChannels", "CreationRecord", "MutationRecord", "AlertStrategy" }, null, new[]{ typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.ConditionCombinerType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Documentation), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Documentation.Parser, new[]{ "Content", "MimeType", "Subject" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Parser, new[]{ "Name", "DisplayName", "ConditionThreshold", "ConditionAbsent", "ConditionMatchedLog", "ConditionMonitoringQueryLanguage", "ConditionPrometheusQueryLanguage" }, new[]{ "Condition" }, new[]{ typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.EvaluationMissingData) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.Trigger), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.Trigger.Parser, new[]{ "Count", "Percent" }, new[]{ "Type" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricThreshold), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricThreshold.Parser, new[]{ "Filter", "Aggregations", "DenominatorFilter", "DenominatorAggregations", "ForecastOptions", "Comparison", "ThresholdValue", "Duration", "Trigger", "EvaluationMissingData" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricThreshold.Types.ForecastOptions), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricThreshold.Types.ForecastOptions.Parser, new[]{ "ForecastHorizon" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricAbsence), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricAbsence.Parser, new[]{ "Filter", "Aggregations", "Duration", "Trigger" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.LogMatch), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.LogMatch.Parser, new[]{ "Filter", "LabelExtractors" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MonitoringQueryLanguageCondition), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MonitoringQueryLanguageCondition.Parser, new[]{ "Query", "Duration", "Trigger", "EvaluationMissingData" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Parser, new[]{ "NotificationRateLimit", "AutoClose" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationRateLimit), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationRateLimit.Parser, new[]{ "Period" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MonitoringQueryLanguageCondition), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MonitoringQueryLanguageCondition.Parser, new[]{ "Query", "Duration", "Trigger", "EvaluationMissingData" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.PrometheusQueryLanguageCondition), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.PrometheusQueryLanguageCondition.Parser, new[]{ "Query", "Duration", "EvaluationInterval", "Labels", "RuleGroup", "AlertRule" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Parser, new[]{ "NotificationRateLimit", "AutoClose", "NotificationChannelStrategy" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationRateLimit), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationRateLimit.Parser, new[]{ "Period" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationChannelStrategy), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationChannelStrategy.Parser, new[]{ "NotificationChannelNames", "RenotifyInterval" }, null, null, null, null)}),
             null, })
           }));
     }
@@ -221,6 +244,12 @@ namespace Google.Cloud.Monitoring.V3 {
     /// notifications, and incidents. To avoid confusion, don't use the same
     /// display name for multiple policies in the same project. The name is
     /// limited to 512 Unicode characters.
+    ///
+    /// The convention for the display_name of a PrometheusQueryLanguageCondition
+    /// is "{rule group name}/{alert name}", where the {rule group name} and
+    /// {alert name} should be taken from the corresponding Prometheus
+    /// configuration file. This convention is not enforced.
+    /// In any case the display_name is not a unique key of the AlertPolicy.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -263,6 +292,13 @@ namespace Google.Cloud.Monitoring.V3 {
     /// 63 Unicode characters or 128 bytes, whichever is smaller. Labels and
     /// values can contain only lowercase letters, numerals, underscores, and
     /// dashes. Keys must begin with a letter.
+    ///
+    /// Note that Prometheus {alert name} is a
+    /// [valid Prometheus label
+    /// names](https://prometheus.io/docs/concepts/data_model/#metric-names-and-labels),
+    /// whereas Prometheus {rule group} is an unrestricted UTF-8 string.
+    /// This means that they cannot be stored as-is in user labels, because
+    /// they may contain characters that are not allowed in user-label values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -281,6 +317,8 @@ namespace Google.Cloud.Monitoring.V3 {
     /// to true, then an incident is created. A policy can have from one to six
     /// conditions.
     /// If `condition_time_series_query_language` is present, it must be the only
+    /// `condition`.
+    /// If `condition_monitoring_query_language` is present, it must be the only
     /// `condition`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -332,8 +370,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int ValidityFieldNumber = 18;
     private global::Google.Rpc.Status validity_;
     /// <summary>
-    /// Read-only description of how the alert policy is invalid. OK if the alert
-    /// policy is valid. If not OK, the alert policy will not generate incidents.
+    /// Read-only description of how the alert policy is invalid. This field is
+    /// only set when the alert policy is invalid. An invalid alert policy will not
+    /// generate incidents.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -903,6 +942,7 @@ namespace Google.Cloud.Monitoring.V3 {
         public Documentation(Documentation other) : this() {
           content_ = other.content_;
           mimeType_ = other.mimeType_;
+          subject_ = other.subject_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -916,7 +956,7 @@ namespace Google.Cloud.Monitoring.V3 {
         public const int ContentFieldNumber = 1;
         private string content_ = "";
         /// <summary>
-        /// The text of the documentation, interpreted according to `mime_type`.
+        /// The body of the documentation, interpreted according to `mime_type`.
         /// The content may not exceed 8,192 Unicode characters and may not exceed
         /// more than 10,240 bytes when encoded in UTF-8 format, whichever is
         /// smaller. This text can be [templatized by using
@@ -948,6 +988,33 @@ namespace Google.Cloud.Monitoring.V3 {
           }
         }
 
+        /// <summary>Field number for the "subject" field.</summary>
+        public const int SubjectFieldNumber = 3;
+        private string subject_ = "";
+        /// <summary>
+        /// Optional. The subject line of the notification. The subject line may not
+        /// exceed 10,240 bytes. In notifications generated by this policy, the
+        /// contents of the subject line after variable expansion will be truncated
+        /// to 255 bytes or shorter at the latest UTF-8 character boundary. The
+        /// 255-byte limit is recommended by [this
+        /// thread](https://stackoverflow.com/questions/1592291/what-is-the-email-subject-length-limit).
+        /// It is both the limit imposed by some third-party ticketing products and
+        /// it is common to define textual fields in databases as VARCHAR(255).
+        ///
+        /// The contents of the subject line can be [templatized by using
+        /// variables](https://cloud.google.com/monitoring/alerts/doc-variables).
+        /// If this field is missing or empty, a default subject line will be
+        /// generated.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Subject {
+          get { return subject_; }
+          set {
+            subject_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -965,6 +1032,7 @@ namespace Google.Cloud.Monitoring.V3 {
           }
           if (Content != other.Content) return false;
           if (MimeType != other.MimeType) return false;
+          if (Subject != other.Subject) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -974,6 +1042,7 @@ namespace Google.Cloud.Monitoring.V3 {
           int hash = 1;
           if (Content.Length != 0) hash ^= Content.GetHashCode();
           if (MimeType.Length != 0) hash ^= MimeType.GetHashCode();
+          if (Subject.Length != 0) hash ^= Subject.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1000,6 +1069,10 @@ namespace Google.Cloud.Monitoring.V3 {
             output.WriteRawTag(18);
             output.WriteString(MimeType);
           }
+          if (Subject.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(Subject);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1018,6 +1091,10 @@ namespace Google.Cloud.Monitoring.V3 {
             output.WriteRawTag(18);
             output.WriteString(MimeType);
           }
+          if (Subject.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(Subject);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1033,6 +1110,9 @@ namespace Google.Cloud.Monitoring.V3 {
           }
           if (MimeType.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(MimeType);
+          }
+          if (Subject.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Subject);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1051,6 +1131,9 @@ namespace Google.Cloud.Monitoring.V3 {
           }
           if (other.MimeType.Length != 0) {
             MimeType = other.MimeType;
+          }
+          if (other.Subject.Length != 0) {
+            Subject = other.Subject;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -1075,6 +1158,10 @@ namespace Google.Cloud.Monitoring.V3 {
                 MimeType = input.ReadString();
                 break;
               }
+              case 26: {
+                Subject = input.ReadString();
+                break;
+              }
             }
           }
         #endif
@@ -1096,6 +1183,10 @@ namespace Google.Cloud.Monitoring.V3 {
               }
               case 18: {
                 MimeType = input.ReadString();
+                break;
+              }
+              case 26: {
+                Subject = input.ReadString();
                 break;
               }
             }
@@ -1158,6 +1249,9 @@ namespace Google.Cloud.Monitoring.V3 {
               break;
             case ConditionOneofCase.ConditionMonitoringQueryLanguage:
               ConditionMonitoringQueryLanguage = other.ConditionMonitoringQueryLanguage.Clone();
+              break;
+            case ConditionOneofCase.ConditionPrometheusQueryLanguage:
+              ConditionPrometheusQueryLanguage = other.ConditionPrometheusQueryLanguage.Clone();
               break;
           }
 
@@ -1289,6 +1383,21 @@ namespace Google.Cloud.Monitoring.V3 {
           }
         }
 
+        /// <summary>Field number for the "condition_prometheus_query_language" field.</summary>
+        public const int ConditionPrometheusQueryLanguageFieldNumber = 21;
+        /// <summary>
+        /// A condition that uses the Prometheus query language to define alerts.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.PrometheusQueryLanguageCondition ConditionPrometheusQueryLanguage {
+          get { return conditionCase_ == ConditionOneofCase.ConditionPrometheusQueryLanguage ? (global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.PrometheusQueryLanguageCondition) condition_ : null; }
+          set {
+            condition_ = value;
+            conditionCase_ = value == null ? ConditionOneofCase.None : ConditionOneofCase.ConditionPrometheusQueryLanguage;
+          }
+        }
+
         private object condition_;
         /// <summary>Enum of possible cases for the "condition" oneof.</summary>
         public enum ConditionOneofCase {
@@ -1297,6 +1406,7 @@ namespace Google.Cloud.Monitoring.V3 {
           ConditionAbsent = 2,
           ConditionMatchedLog = 20,
           ConditionMonitoringQueryLanguage = 19,
+          ConditionPrometheusQueryLanguage = 21,
         }
         private ConditionOneofCase conditionCase_ = ConditionOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1333,6 +1443,7 @@ namespace Google.Cloud.Monitoring.V3 {
           if (!object.Equals(ConditionAbsent, other.ConditionAbsent)) return false;
           if (!object.Equals(ConditionMatchedLog, other.ConditionMatchedLog)) return false;
           if (!object.Equals(ConditionMonitoringQueryLanguage, other.ConditionMonitoringQueryLanguage)) return false;
+          if (!object.Equals(ConditionPrometheusQueryLanguage, other.ConditionPrometheusQueryLanguage)) return false;
           if (ConditionCase != other.ConditionCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -1347,6 +1458,7 @@ namespace Google.Cloud.Monitoring.V3 {
           if (conditionCase_ == ConditionOneofCase.ConditionAbsent) hash ^= ConditionAbsent.GetHashCode();
           if (conditionCase_ == ConditionOneofCase.ConditionMatchedLog) hash ^= ConditionMatchedLog.GetHashCode();
           if (conditionCase_ == ConditionOneofCase.ConditionMonitoringQueryLanguage) hash ^= ConditionMonitoringQueryLanguage.GetHashCode();
+          if (conditionCase_ == ConditionOneofCase.ConditionPrometheusQueryLanguage) hash ^= ConditionPrometheusQueryLanguage.GetHashCode();
           hash ^= (int) conditionCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -1390,6 +1502,10 @@ namespace Google.Cloud.Monitoring.V3 {
             output.WriteRawTag(162, 1);
             output.WriteMessage(ConditionMatchedLog);
           }
+          if (conditionCase_ == ConditionOneofCase.ConditionPrometheusQueryLanguage) {
+            output.WriteRawTag(170, 1);
+            output.WriteMessage(ConditionPrometheusQueryLanguage);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1424,6 +1540,10 @@ namespace Google.Cloud.Monitoring.V3 {
             output.WriteRawTag(162, 1);
             output.WriteMessage(ConditionMatchedLog);
           }
+          if (conditionCase_ == ConditionOneofCase.ConditionPrometheusQueryLanguage) {
+            output.WriteRawTag(170, 1);
+            output.WriteMessage(ConditionPrometheusQueryLanguage);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1451,6 +1571,9 @@ namespace Google.Cloud.Monitoring.V3 {
           }
           if (conditionCase_ == ConditionOneofCase.ConditionMonitoringQueryLanguage) {
             size += 2 + pb::CodedOutputStream.ComputeMessageSize(ConditionMonitoringQueryLanguage);
+          }
+          if (conditionCase_ == ConditionOneofCase.ConditionPrometheusQueryLanguage) {
+            size += 2 + pb::CodedOutputStream.ComputeMessageSize(ConditionPrometheusQueryLanguage);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1494,6 +1617,12 @@ namespace Google.Cloud.Monitoring.V3 {
                 ConditionMonitoringQueryLanguage = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MonitoringQueryLanguageCondition();
               }
               ConditionMonitoringQueryLanguage.MergeFrom(other.ConditionMonitoringQueryLanguage);
+              break;
+            case ConditionOneofCase.ConditionPrometheusQueryLanguage:
+              if (ConditionPrometheusQueryLanguage == null) {
+                ConditionPrometheusQueryLanguage = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.PrometheusQueryLanguageCondition();
+              }
+              ConditionPrometheusQueryLanguage.MergeFrom(other.ConditionPrometheusQueryLanguage);
               break;
           }
 
@@ -1556,6 +1685,15 @@ namespace Google.Cloud.Monitoring.V3 {
                 ConditionMatchedLog = subBuilder;
                 break;
               }
+              case 170: {
+                global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.PrometheusQueryLanguageCondition subBuilder = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.PrometheusQueryLanguageCondition();
+                if (conditionCase_ == ConditionOneofCase.ConditionPrometheusQueryLanguage) {
+                  subBuilder.MergeFrom(ConditionPrometheusQueryLanguage);
+                }
+                input.ReadMessage(subBuilder);
+                ConditionPrometheusQueryLanguage = subBuilder;
+                break;
+              }
             }
           }
         #endif
@@ -1613,6 +1751,15 @@ namespace Google.Cloud.Monitoring.V3 {
                 }
                 input.ReadMessage(subBuilder);
                 ConditionMatchedLog = subBuilder;
+                break;
+              }
+              case 170: {
+                global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.PrometheusQueryLanguageCondition subBuilder = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.PrometheusQueryLanguageCondition();
+                if (conditionCase_ == ConditionOneofCase.ConditionPrometheusQueryLanguage) {
+                  subBuilder.MergeFrom(ConditionPrometheusQueryLanguage);
+                }
+                input.ReadMessage(subBuilder);
+                ConditionPrometheusQueryLanguage = subBuilder;
                 break;
               }
             }
@@ -1993,6 +2140,7 @@ namespace Google.Cloud.Monitoring.V3 {
               aggregations_ = other.aggregations_.Clone();
               denominatorFilter_ = other.denominatorFilter_;
               denominatorAggregations_ = other.denominatorAggregations_.Clone();
+              forecastOptions_ = other.forecastOptions_ != null ? other.forecastOptions_.Clone() : null;
               comparison_ = other.comparison_;
               thresholdValue_ = other.thresholdValue_;
               duration_ = other.duration_ != null ? other.duration_.Clone() : null;
@@ -2011,7 +2159,8 @@ namespace Google.Cloud.Monitoring.V3 {
             public const int FilterFieldNumber = 2;
             private string filter_ = "";
             /// <summary>
-            /// Required. A [filter](https://cloud.google.com/monitoring/api/v3/filters) that
+            /// Required. A
+            /// [filter](https://cloud.google.com/monitoring/api/v3/filters) that
             /// identifies which time series should be compared with the threshold.
             ///
             /// The filter is similar to the one that is specified in the
@@ -2099,6 +2248,25 @@ namespace Google.Cloud.Monitoring.V3 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.Aggregation> DenominatorAggregations {
               get { return denominatorAggregations_; }
+            }
+
+            /// <summary>Field number for the "forecast_options" field.</summary>
+            public const int ForecastOptionsFieldNumber = 12;
+            private global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricThreshold.Types.ForecastOptions forecastOptions_;
+            /// <summary>
+            /// When this field is present, the `MetricThreshold` condition forecasts
+            /// whether the time series is predicted to violate the threshold within
+            /// the `forecast_horizon`. When this field is not set, the
+            /// `MetricThreshold` tests the current value of the timeseries against the
+            /// threshold.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricThreshold.Types.ForecastOptions ForecastOptions {
+              get { return forecastOptions_; }
+              set {
+                forecastOptions_ = value;
+              }
             }
 
             /// <summary>Field number for the "comparison" field.</summary>
@@ -2215,6 +2383,7 @@ namespace Google.Cloud.Monitoring.V3 {
               if(!aggregations_.Equals(other.aggregations_)) return false;
               if (DenominatorFilter != other.DenominatorFilter) return false;
               if(!denominatorAggregations_.Equals(other.denominatorAggregations_)) return false;
+              if (!object.Equals(ForecastOptions, other.ForecastOptions)) return false;
               if (Comparison != other.Comparison) return false;
               if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(ThresholdValue, other.ThresholdValue)) return false;
               if (!object.Equals(Duration, other.Duration)) return false;
@@ -2231,6 +2400,7 @@ namespace Google.Cloud.Monitoring.V3 {
               hash ^= aggregations_.GetHashCode();
               if (DenominatorFilter.Length != 0) hash ^= DenominatorFilter.GetHashCode();
               hash ^= denominatorAggregations_.GetHashCode();
+              if (forecastOptions_ != null) hash ^= ForecastOptions.GetHashCode();
               if (Comparison != global::Google.Cloud.Monitoring.V3.ComparisonType.ComparisonUnspecified) hash ^= Comparison.GetHashCode();
               if (ThresholdValue != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(ThresholdValue);
               if (duration_ != null) hash ^= Duration.GetHashCode();
@@ -2284,6 +2454,10 @@ namespace Google.Cloud.Monitoring.V3 {
                 output.WriteRawTag(88);
                 output.WriteEnum((int) EvaluationMissingData);
               }
+              if (forecastOptions_ != null) {
+                output.WriteRawTag(98);
+                output.WriteMessage(ForecastOptions);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
@@ -2324,6 +2498,10 @@ namespace Google.Cloud.Monitoring.V3 {
                 output.WriteRawTag(88);
                 output.WriteEnum((int) EvaluationMissingData);
               }
+              if (forecastOptions_ != null) {
+                output.WriteRawTag(98);
+                output.WriteMessage(ForecastOptions);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(ref output);
               }
@@ -2342,6 +2520,9 @@ namespace Google.Cloud.Monitoring.V3 {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(DenominatorFilter);
               }
               size += denominatorAggregations_.CalculateSize(_repeated_denominatorAggregations_codec);
+              if (forecastOptions_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(ForecastOptions);
+              }
               if (Comparison != global::Google.Cloud.Monitoring.V3.ComparisonType.ComparisonUnspecified) {
                 size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Comparison);
               }
@@ -2377,6 +2558,12 @@ namespace Google.Cloud.Monitoring.V3 {
                 DenominatorFilter = other.DenominatorFilter;
               }
               denominatorAggregations_.Add(other.denominatorAggregations_);
+              if (other.forecastOptions_ != null) {
+                if (forecastOptions_ == null) {
+                  ForecastOptions = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricThreshold.Types.ForecastOptions();
+                }
+                ForecastOptions.MergeFrom(other.ForecastOptions);
+              }
               if (other.Comparison != global::Google.Cloud.Monitoring.V3.ComparisonType.ComparisonUnspecified) {
                 Comparison = other.Comparison;
               }
@@ -2455,6 +2642,13 @@ namespace Google.Cloud.Monitoring.V3 {
                     EvaluationMissingData = (global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.EvaluationMissingData) input.ReadEnum();
                     break;
                   }
+                  case 98: {
+                    if (forecastOptions_ == null) {
+                      ForecastOptions = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricThreshold.Types.ForecastOptions();
+                    }
+                    input.ReadMessage(ForecastOptions);
+                    break;
+                  }
                 }
               }
             #endif
@@ -2512,10 +2706,234 @@ namespace Google.Cloud.Monitoring.V3 {
                     EvaluationMissingData = (global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.EvaluationMissingData) input.ReadEnum();
                     break;
                   }
+                  case 98: {
+                    if (forecastOptions_ == null) {
+                      ForecastOptions = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricThreshold.Types.ForecastOptions();
+                    }
+                    input.ReadMessage(ForecastOptions);
+                    break;
+                  }
                 }
               }
             }
             #endif
+
+            #region Nested types
+            /// <summary>Container for nested types declared in the MetricThreshold message type.</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static partial class Types {
+              /// <summary>
+              /// Options used when forecasting the time series and testing
+              /// the predicted value against the threshold.
+              /// </summary>
+              public sealed partial class ForecastOptions : pb::IMessage<ForecastOptions>
+              #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  , pb::IBufferMessage
+              #endif
+              {
+                private static readonly pb::MessageParser<ForecastOptions> _parser = new pb::MessageParser<ForecastOptions>(() => new ForecastOptions());
+                private pb::UnknownFieldSet _unknownFields;
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pb::MessageParser<ForecastOptions> Parser { get { return _parser; } }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pbr::MessageDescriptor Descriptor {
+                  get { return global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricThreshold.Descriptor.NestedTypes[0]; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                pbr::MessageDescriptor pb::IMessage.Descriptor {
+                  get { return Descriptor; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public ForecastOptions() {
+                  OnConstruction();
+                }
+
+                partial void OnConstruction();
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public ForecastOptions(ForecastOptions other) : this() {
+                  forecastHorizon_ = other.forecastHorizon_ != null ? other.forecastHorizon_.Clone() : null;
+                  _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public ForecastOptions Clone() {
+                  return new ForecastOptions(this);
+                }
+
+                /// <summary>Field number for the "forecast_horizon" field.</summary>
+                public const int ForecastHorizonFieldNumber = 1;
+                private global::Google.Protobuf.WellKnownTypes.Duration forecastHorizon_;
+                /// <summary>
+                /// Required. The length of time into the future to forecast whether a
+                /// time series will violate the threshold. If the predicted value is
+                /// found to violate the threshold, and the violation is observed in all
+                /// forecasts made for the configured `duration`, then the time series is
+                /// considered to be failing.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public global::Google.Protobuf.WellKnownTypes.Duration ForecastHorizon {
+                  get { return forecastHorizon_; }
+                  set {
+                    forecastHorizon_ = value;
+                  }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override bool Equals(object other) {
+                  return Equals(other as ForecastOptions);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Equals(ForecastOptions other) {
+                  if (ReferenceEquals(other, null)) {
+                    return false;
+                  }
+                  if (ReferenceEquals(other, this)) {
+                    return true;
+                  }
+                  if (!object.Equals(ForecastHorizon, other.ForecastHorizon)) return false;
+                  return Equals(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override int GetHashCode() {
+                  int hash = 1;
+                  if (forecastHorizon_ != null) hash ^= ForecastHorizon.GetHashCode();
+                  if (_unknownFields != null) {
+                    hash ^= _unknownFields.GetHashCode();
+                  }
+                  return hash;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override string ToString() {
+                  return pb::JsonFormatter.ToDiagnosticString(this);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void WriteTo(pb::CodedOutputStream output) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  output.WriteRawMessage(this);
+                #else
+                  if (forecastHorizon_ != null) {
+                    output.WriteRawTag(10);
+                    output.WriteMessage(ForecastHorizon);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(output);
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  if (forecastHorizon_ != null) {
+                    output.WriteRawTag(10);
+                    output.WriteMessage(ForecastHorizon);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(ref output);
+                  }
+                }
+                #endif
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int CalculateSize() {
+                  int size = 0;
+                  if (forecastHorizon_ != null) {
+                    size += 1 + pb::CodedOutputStream.ComputeMessageSize(ForecastHorizon);
+                  }
+                  if (_unknownFields != null) {
+                    size += _unknownFields.CalculateSize();
+                  }
+                  return size;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(ForecastOptions other) {
+                  if (other == null) {
+                    return;
+                  }
+                  if (other.forecastHorizon_ != null) {
+                    if (forecastHorizon_ == null) {
+                      ForecastHorizon = new global::Google.Protobuf.WellKnownTypes.Duration();
+                    }
+                    ForecastHorizon.MergeFrom(other.ForecastHorizon);
+                  }
+                  _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(pb::CodedInputStream input) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  input.ReadRawMessage(this);
+                #else
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                        break;
+                      case 10: {
+                        if (forecastHorizon_ == null) {
+                          ForecastHorizon = new global::Google.Protobuf.WellKnownTypes.Duration();
+                        }
+                        input.ReadMessage(ForecastHorizon);
+                        break;
+                      }
+                    }
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                      case 10: {
+                        if (forecastHorizon_ == null) {
+                          ForecastHorizon = new global::Google.Protobuf.WellKnownTypes.Duration();
+                        }
+                        input.ReadMessage(ForecastHorizon);
+                        break;
+                      }
+                    }
+                  }
+                }
+                #endif
+
+              }
+
+            }
+            #endregion
 
           }
 
@@ -2577,7 +2995,8 @@ namespace Google.Cloud.Monitoring.V3 {
             public const int FilterFieldNumber = 1;
             private string filter_ = "";
             /// <summary>
-            /// Required. A [filter](https://cloud.google.com/monitoring/api/v3/filters) that
+            /// Required. A
+            /// [filter](https://cloud.google.com/monitoring/api/v3/filters) that
             /// identifies which time series should be compared with the threshold.
             ///
             /// The filter is similar to the one that is specified in the
@@ -3462,6 +3881,479 @@ namespace Google.Cloud.Monitoring.V3 {
 
           }
 
+          /// <summary>
+          /// A condition type that allows alert policies to be defined using
+          /// [Prometheus Query Language
+          /// (PromQL)](https://prometheus.io/docs/prometheus/latest/querying/basics/).
+          ///
+          /// The PrometheusQueryLanguageCondition message contains information
+          /// from a Prometheus alerting rule and its associated rule group.
+          ///
+          /// A Prometheus alerting rule is described
+          /// [here](https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/).
+          /// The semantics of a Prometheus alerting rule is described
+          /// [here](https://prometheus.io/docs/prometheus/latest/configuration/recording_rules/#rule).
+          ///
+          /// A Prometheus rule group is described
+          /// [here](https://prometheus.io/docs/prometheus/latest/configuration/recording_rules/).
+          /// The semantics of a Prometheus rule group is described
+          /// [here](https://prometheus.io/docs/prometheus/latest/configuration/recording_rules/#rule_group).
+          ///
+          /// Because Cloud Alerting has no representation of a Prometheus rule
+          /// group resource, we must embed the information of the parent rule
+          /// group inside each of the conditions that refer to it. We must also
+          /// update the contents of all Prometheus alerts in case the information
+          /// of their rule group changes.
+          ///
+          /// The PrometheusQueryLanguageCondition protocol buffer combines the
+          /// information of the corresponding rule group and alerting rule.
+          /// The structure of the PrometheusQueryLanguageCondition protocol buffer
+          /// does NOT mimic the structure of the Prometheus rule group and alerting
+          /// rule YAML declarations. The PrometheusQueryLanguageCondition protocol
+          /// buffer may change in the future to support future rule group and/or
+          /// alerting rule features. There are no new such features at the present
+          /// time (2023-06-26).
+          /// </summary>
+          public sealed partial class PrometheusQueryLanguageCondition : pb::IMessage<PrometheusQueryLanguageCondition>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<PrometheusQueryLanguageCondition> _parser = new pb::MessageParser<PrometheusQueryLanguageCondition>(() => new PrometheusQueryLanguageCondition());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<PrometheusQueryLanguageCondition> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Descriptor.NestedTypes[5]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public PrometheusQueryLanguageCondition() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public PrometheusQueryLanguageCondition(PrometheusQueryLanguageCondition other) : this() {
+              query_ = other.query_;
+              duration_ = other.duration_ != null ? other.duration_.Clone() : null;
+              evaluationInterval_ = other.evaluationInterval_ != null ? other.evaluationInterval_.Clone() : null;
+              labels_ = other.labels_.Clone();
+              ruleGroup_ = other.ruleGroup_;
+              alertRule_ = other.alertRule_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public PrometheusQueryLanguageCondition Clone() {
+              return new PrometheusQueryLanguageCondition(this);
+            }
+
+            /// <summary>Field number for the "query" field.</summary>
+            public const int QueryFieldNumber = 1;
+            private string query_ = "";
+            /// <summary>
+            /// Required. The PromQL expression to evaluate. Every evaluation cycle
+            /// this expression is evaluated at the current time, and all resultant
+            /// time series become pending/firing alerts. This field must not be empty.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string Query {
+              get { return query_; }
+              set {
+                query_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "duration" field.</summary>
+            public const int DurationFieldNumber = 2;
+            private global::Google.Protobuf.WellKnownTypes.Duration duration_;
+            /// <summary>
+            /// Optional. Alerts are considered firing once their PromQL expression was
+            /// evaluated to be "true" for this long.
+            /// Alerts whose PromQL expression was not evaluated to be "true" for
+            /// long enough are considered pending.
+            /// Must be a non-negative duration or missing.
+            /// This field is optional. Its default value is zero.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Protobuf.WellKnownTypes.Duration Duration {
+              get { return duration_; }
+              set {
+                duration_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "evaluation_interval" field.</summary>
+            public const int EvaluationIntervalFieldNumber = 3;
+            private global::Google.Protobuf.WellKnownTypes.Duration evaluationInterval_;
+            /// <summary>
+            /// Optional. How often this rule should be evaluated.
+            /// Must be a positive multiple of 30 seconds or missing.
+            /// This field is optional. Its default value is 30 seconds.
+            /// If this PrometheusQueryLanguageCondition was generated from a
+            /// Prometheus alerting rule, then this value should be taken from the
+            /// enclosing rule group.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Protobuf.WellKnownTypes.Duration EvaluationInterval {
+              get { return evaluationInterval_; }
+              set {
+                evaluationInterval_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "labels" field.</summary>
+            public const int LabelsFieldNumber = 4;
+            private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
+                = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 34);
+            private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
+            /// <summary>
+            /// Optional. Labels to add to or overwrite in the PromQL query result.
+            /// Label names [must be
+            /// valid](https://prometheus.io/docs/concepts/data_model/#metric-names-and-labels).
+            /// Label values can be [templatized by using
+            /// variables](https://cloud.google.com/monitoring/alerts/doc-variables).
+            /// The only available variable names are the names of the labels in the
+            /// PromQL result, including "__name__" and "value". "labels" may be empty.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::MapField<string, string> Labels {
+              get { return labels_; }
+            }
+
+            /// <summary>Field number for the "rule_group" field.</summary>
+            public const int RuleGroupFieldNumber = 5;
+            private string ruleGroup_ = "";
+            /// <summary>
+            /// Optional. The rule group name of this alert in the corresponding
+            /// Prometheus configuration file.
+            ///
+            /// Some external tools may require this field to be populated correctly
+            /// in order to refer to the original Prometheus configuration file.
+            /// The rule group name and the alert name are necessary to update the
+            /// relevant AlertPolicies in case the definition of the rule group changes
+            /// in the future.
+            ///
+            /// This field is optional. If this field is not empty, then it must
+            /// contain a valid UTF-8 string.
+            /// This field may not exceed 2048 Unicode characters in length.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string RuleGroup {
+              get { return ruleGroup_; }
+              set {
+                ruleGroup_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "alert_rule" field.</summary>
+            public const int AlertRuleFieldNumber = 6;
+            private string alertRule_ = "";
+            /// <summary>
+            /// Optional. The alerting rule name of this alert in the corresponding
+            /// Prometheus configuration file.
+            ///
+            /// Some external tools may require this field to be populated correctly
+            /// in order to refer to the original Prometheus configuration file.
+            /// The rule group name and the alert name are necessary to update the
+            /// relevant AlertPolicies in case the definition of the rule group changes
+            /// in the future.
+            ///
+            /// This field is optional. If this field is not empty, then it must be a
+            /// [valid Prometheus label
+            /// name](https://prometheus.io/docs/concepts/data_model/#metric-names-and-labels).
+            /// This field may not exceed 2048 Unicode characters in length.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string AlertRule {
+              get { return alertRule_; }
+              set {
+                alertRule_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as PrometheusQueryLanguageCondition);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(PrometheusQueryLanguageCondition other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (Query != other.Query) return false;
+              if (!object.Equals(Duration, other.Duration)) return false;
+              if (!object.Equals(EvaluationInterval, other.EvaluationInterval)) return false;
+              if (!Labels.Equals(other.Labels)) return false;
+              if (RuleGroup != other.RuleGroup) return false;
+              if (AlertRule != other.AlertRule) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (Query.Length != 0) hash ^= Query.GetHashCode();
+              if (duration_ != null) hash ^= Duration.GetHashCode();
+              if (evaluationInterval_ != null) hash ^= EvaluationInterval.GetHashCode();
+              hash ^= Labels.GetHashCode();
+              if (RuleGroup.Length != 0) hash ^= RuleGroup.GetHashCode();
+              if (AlertRule.Length != 0) hash ^= AlertRule.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (Query.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Query);
+              }
+              if (duration_ != null) {
+                output.WriteRawTag(18);
+                output.WriteMessage(Duration);
+              }
+              if (evaluationInterval_ != null) {
+                output.WriteRawTag(26);
+                output.WriteMessage(EvaluationInterval);
+              }
+              labels_.WriteTo(output, _map_labels_codec);
+              if (RuleGroup.Length != 0) {
+                output.WriteRawTag(42);
+                output.WriteString(RuleGroup);
+              }
+              if (AlertRule.Length != 0) {
+                output.WriteRawTag(50);
+                output.WriteString(AlertRule);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (Query.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Query);
+              }
+              if (duration_ != null) {
+                output.WriteRawTag(18);
+                output.WriteMessage(Duration);
+              }
+              if (evaluationInterval_ != null) {
+                output.WriteRawTag(26);
+                output.WriteMessage(EvaluationInterval);
+              }
+              labels_.WriteTo(ref output, _map_labels_codec);
+              if (RuleGroup.Length != 0) {
+                output.WriteRawTag(42);
+                output.WriteString(RuleGroup);
+              }
+              if (AlertRule.Length != 0) {
+                output.WriteRawTag(50);
+                output.WriteString(AlertRule);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (Query.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(Query);
+              }
+              if (duration_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(Duration);
+              }
+              if (evaluationInterval_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(EvaluationInterval);
+              }
+              size += labels_.CalculateSize(_map_labels_codec);
+              if (RuleGroup.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(RuleGroup);
+              }
+              if (AlertRule.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(AlertRule);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(PrometheusQueryLanguageCondition other) {
+              if (other == null) {
+                return;
+              }
+              if (other.Query.Length != 0) {
+                Query = other.Query;
+              }
+              if (other.duration_ != null) {
+                if (duration_ == null) {
+                  Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
+                }
+                Duration.MergeFrom(other.Duration);
+              }
+              if (other.evaluationInterval_ != null) {
+                if (evaluationInterval_ == null) {
+                  EvaluationInterval = new global::Google.Protobuf.WellKnownTypes.Duration();
+                }
+                EvaluationInterval.MergeFrom(other.EvaluationInterval);
+              }
+              labels_.MergeFrom(other.labels_);
+              if (other.RuleGroup.Length != 0) {
+                RuleGroup = other.RuleGroup;
+              }
+              if (other.AlertRule.Length != 0) {
+                AlertRule = other.AlertRule;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    Query = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    if (duration_ == null) {
+                      Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
+                    }
+                    input.ReadMessage(Duration);
+                    break;
+                  }
+                  case 26: {
+                    if (evaluationInterval_ == null) {
+                      EvaluationInterval = new global::Google.Protobuf.WellKnownTypes.Duration();
+                    }
+                    input.ReadMessage(EvaluationInterval);
+                    break;
+                  }
+                  case 34: {
+                    labels_.AddEntriesFrom(input, _map_labels_codec);
+                    break;
+                  }
+                  case 42: {
+                    RuleGroup = input.ReadString();
+                    break;
+                  }
+                  case 50: {
+                    AlertRule = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    Query = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    if (duration_ == null) {
+                      Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
+                    }
+                    input.ReadMessage(Duration);
+                    break;
+                  }
+                  case 26: {
+                    if (evaluationInterval_ == null) {
+                      EvaluationInterval = new global::Google.Protobuf.WellKnownTypes.Duration();
+                    }
+                    input.ReadMessage(EvaluationInterval);
+                    break;
+                  }
+                  case 34: {
+                    labels_.AddEntriesFrom(ref input, _map_labels_codec);
+                    break;
+                  }
+                  case 42: {
+                    RuleGroup = input.ReadString();
+                    break;
+                  }
+                  case 50: {
+                    AlertRule = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
         }
         #endregion
 
@@ -3507,6 +4399,7 @@ namespace Google.Cloud.Monitoring.V3 {
         public AlertStrategy(AlertStrategy other) : this() {
           notificationRateLimit_ = other.notificationRateLimit_ != null ? other.notificationRateLimit_.Clone() : null;
           autoClose_ = other.autoClose_ != null ? other.autoClose_.Clone() : null;
+          notificationChannelStrategy_ = other.notificationChannelStrategy_.Clone();
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -3549,6 +4442,20 @@ namespace Google.Cloud.Monitoring.V3 {
           }
         }
 
+        /// <summary>Field number for the "notification_channel_strategy" field.</summary>
+        public const int NotificationChannelStrategyFieldNumber = 4;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationChannelStrategy> _repeated_notificationChannelStrategy_codec
+            = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationChannelStrategy.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationChannelStrategy> notificationChannelStrategy_ = new pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationChannelStrategy>();
+        /// <summary>
+        /// Control how notifications will be sent out, on a per-channel basis.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationChannelStrategy> NotificationChannelStrategy {
+          get { return notificationChannelStrategy_; }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -3566,6 +4473,7 @@ namespace Google.Cloud.Monitoring.V3 {
           }
           if (!object.Equals(NotificationRateLimit, other.NotificationRateLimit)) return false;
           if (!object.Equals(AutoClose, other.AutoClose)) return false;
+          if(!notificationChannelStrategy_.Equals(other.notificationChannelStrategy_)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -3575,6 +4483,7 @@ namespace Google.Cloud.Monitoring.V3 {
           int hash = 1;
           if (notificationRateLimit_ != null) hash ^= NotificationRateLimit.GetHashCode();
           if (autoClose_ != null) hash ^= AutoClose.GetHashCode();
+          hash ^= notificationChannelStrategy_.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -3601,6 +4510,7 @@ namespace Google.Cloud.Monitoring.V3 {
             output.WriteRawTag(26);
             output.WriteMessage(AutoClose);
           }
+          notificationChannelStrategy_.WriteTo(output, _repeated_notificationChannelStrategy_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -3619,6 +4529,7 @@ namespace Google.Cloud.Monitoring.V3 {
             output.WriteRawTag(26);
             output.WriteMessage(AutoClose);
           }
+          notificationChannelStrategy_.WriteTo(ref output, _repeated_notificationChannelStrategy_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -3635,6 +4546,7 @@ namespace Google.Cloud.Monitoring.V3 {
           if (autoClose_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(AutoClose);
           }
+          size += notificationChannelStrategy_.CalculateSize(_repeated_notificationChannelStrategy_codec);
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -3659,6 +4571,7 @@ namespace Google.Cloud.Monitoring.V3 {
             }
             AutoClose.MergeFrom(other.AutoClose);
           }
+          notificationChannelStrategy_.Add(other.notificationChannelStrategy_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -3688,6 +4601,10 @@ namespace Google.Cloud.Monitoring.V3 {
                 input.ReadMessage(AutoClose);
                 break;
               }
+              case 34: {
+                notificationChannelStrategy_.AddEntriesFrom(input, _repeated_notificationChannelStrategy_codec);
+                break;
+              }
             }
           }
         #endif
@@ -3715,6 +4632,10 @@ namespace Google.Cloud.Monitoring.V3 {
                   AutoClose = new global::Google.Protobuf.WellKnownTypes.Duration();
                 }
                 input.ReadMessage(AutoClose);
+                break;
+              }
+              case 34: {
+                notificationChannelStrategy_.AddEntriesFrom(ref input, _repeated_notificationChannelStrategy_codec);
                 break;
               }
             }
@@ -3923,6 +4844,247 @@ namespace Google.Cloud.Monitoring.V3 {
                       Period = new global::Google.Protobuf.WellKnownTypes.Duration();
                     }
                     input.ReadMessage(Period);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+          /// <summary>
+          /// Control over how the notification channels in `notification_channels`
+          /// are notified when this alert fires, on a per-channel basis.
+          /// </summary>
+          public sealed partial class NotificationChannelStrategy : pb::IMessage<NotificationChannelStrategy>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<NotificationChannelStrategy> _parser = new pb::MessageParser<NotificationChannelStrategy>(() => new NotificationChannelStrategy());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<NotificationChannelStrategy> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Descriptor.NestedTypes[1]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public NotificationChannelStrategy() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public NotificationChannelStrategy(NotificationChannelStrategy other) : this() {
+              notificationChannelNames_ = other.notificationChannelNames_.Clone();
+              renotifyInterval_ = other.renotifyInterval_ != null ? other.renotifyInterval_.Clone() : null;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public NotificationChannelStrategy Clone() {
+              return new NotificationChannelStrategy(this);
+            }
+
+            /// <summary>Field number for the "notification_channel_names" field.</summary>
+            public const int NotificationChannelNamesFieldNumber = 1;
+            private static readonly pb::FieldCodec<string> _repeated_notificationChannelNames_codec
+                = pb::FieldCodec.ForString(10);
+            private readonly pbc::RepeatedField<string> notificationChannelNames_ = new pbc::RepeatedField<string>();
+            /// <summary>
+            /// The full REST resource name for the notification channels that these
+            /// settings apply to. Each of these correspond to the name field in one
+            /// of the NotificationChannel objects referenced in the
+            /// notification_channels field of this AlertPolicy.
+            /// The format is:
+            ///
+            ///     projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID]
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::RepeatedField<string> NotificationChannelNames {
+              get { return notificationChannelNames_; }
+            }
+
+            /// <summary>Field number for the "renotify_interval" field.</summary>
+            public const int RenotifyIntervalFieldNumber = 2;
+            private global::Google.Protobuf.WellKnownTypes.Duration renotifyInterval_;
+            /// <summary>
+            /// The frequency at which to send reminder notifications for open
+            /// incidents.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Protobuf.WellKnownTypes.Duration RenotifyInterval {
+              get { return renotifyInterval_; }
+              set {
+                renotifyInterval_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as NotificationChannelStrategy);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(NotificationChannelStrategy other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if(!notificationChannelNames_.Equals(other.notificationChannelNames_)) return false;
+              if (!object.Equals(RenotifyInterval, other.RenotifyInterval)) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              hash ^= notificationChannelNames_.GetHashCode();
+              if (renotifyInterval_ != null) hash ^= RenotifyInterval.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              notificationChannelNames_.WriteTo(output, _repeated_notificationChannelNames_codec);
+              if (renotifyInterval_ != null) {
+                output.WriteRawTag(18);
+                output.WriteMessage(RenotifyInterval);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              notificationChannelNames_.WriteTo(ref output, _repeated_notificationChannelNames_codec);
+              if (renotifyInterval_ != null) {
+                output.WriteRawTag(18);
+                output.WriteMessage(RenotifyInterval);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              size += notificationChannelNames_.CalculateSize(_repeated_notificationChannelNames_codec);
+              if (renotifyInterval_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(RenotifyInterval);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(NotificationChannelStrategy other) {
+              if (other == null) {
+                return;
+              }
+              notificationChannelNames_.Add(other.notificationChannelNames_);
+              if (other.renotifyInterval_ != null) {
+                if (renotifyInterval_ == null) {
+                  RenotifyInterval = new global::Google.Protobuf.WellKnownTypes.Duration();
+                }
+                RenotifyInterval.MergeFrom(other.RenotifyInterval);
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    notificationChannelNames_.AddEntriesFrom(input, _repeated_notificationChannelNames_codec);
+                    break;
+                  }
+                  case 18: {
+                    if (renotifyInterval_ == null) {
+                      RenotifyInterval = new global::Google.Protobuf.WellKnownTypes.Duration();
+                    }
+                    input.ReadMessage(RenotifyInterval);
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    notificationChannelNames_.AddEntriesFrom(ref input, _repeated_notificationChannelNames_codec);
+                    break;
+                  }
+                  case 18: {
+                    if (renotifyInterval_ == null) {
+                      RenotifyInterval = new global::Google.Protobuf.WellKnownTypes.Duration();
+                    }
+                    input.ReadMessage(RenotifyInterval);
                     break;
                   }
                 }

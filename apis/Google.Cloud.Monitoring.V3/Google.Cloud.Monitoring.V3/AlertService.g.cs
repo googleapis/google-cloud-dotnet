@@ -143,8 +143,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 3;
     private string name_ = "";
     /// <summary>
-    /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-    /// which to create the alerting policy. The format is:
+    /// Required. The
+    /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+    /// to create the alerting policy. The format is:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]
     ///
@@ -169,9 +170,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int AlertPolicyFieldNumber = 2;
     private global::Google.Cloud.Monitoring.V3.AlertPolicy alertPolicy_;
     /// <summary>
-    /// Required. The requested alerting policy. You should omit the `name` field in this
-    /// policy. The name will be returned in the new policy, including
-    /// a new `[ALERT_POLICY_ID]` value.
+    /// Required. The requested alerting policy. You should omit the `name` field
+    /// in this policy. The name will be returned in the new policy, including a
+    /// new `[ALERT_POLICY_ID]` value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -600,8 +601,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 4;
     private string name_ = "";
     /// <summary>
-    /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
-    /// whose alert policies are to be listed. The format is:
+    /// Required. The
+    /// [project](https://cloud.google.com/monitoring/api/v3#project_name) whose
+    /// alert policies are to be listed. The format is:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]
     ///
