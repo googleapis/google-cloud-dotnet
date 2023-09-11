@@ -920,8 +920,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 3;
     private string name_ = "";
     /// <summary>
-    /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-    /// which to execute the request. The format is:
+    /// Required. The
+    /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+    /// to execute the request. The format is:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]
     ///
@@ -1175,8 +1176,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 5;
     private string name_ = "";
     /// <summary>
-    /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-    /// which to execute the request. The format is:
+    /// Required. The
+    /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+    /// to execute the request. The format is:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]
     ///
@@ -2706,9 +2708,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The notification channel for which a verification code is to be generated
-    /// and retrieved. This must name a channel that is already verified; if
-    /// the specified channel is not verified, the request will fail.
+    /// Required. The notification channel for which a verification code is to be
+    /// generated and retrieved. This must name a channel that is already verified;
+    /// if the specified channel is not verified, the request will fail.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

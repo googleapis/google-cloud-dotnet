@@ -3,7 +3,7 @@
 //     source: google/monitoring/v3/notification_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2021 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -215,6 +215,8 @@ namespace Google.Cloud.Monitoring.V3 {
 
       /// <summary>
       /// Lists the notification channels that have been created for the project.
+      /// To list the types of notification channels that are supported, use
+      /// the `ListNotificationChannelDescriptors` method.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -244,6 +246,11 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <summary>
       /// Creates a new notification channel, representing a single notification
       /// endpoint such as an email address, SMS number, or PagerDuty service.
+      ///
+      /// Design your application to single-thread API calls that modify the state of
+      /// notification channels in a single project. This includes calls to
+      /// CreateNotificationChannel, DeleteNotificationChannel and
+      /// UpdateNotificationChannel.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -257,6 +264,11 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <summary>
       /// Updates a notification channel. Fields not specified in the field mask
       /// remain unchanged.
+      ///
+      /// Design your application to single-thread API calls that modify the state of
+      /// notification channels in a single project. This includes calls to
+      /// CreateNotificationChannel, DeleteNotificationChannel and
+      /// UpdateNotificationChannel.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -269,6 +281,11 @@ namespace Google.Cloud.Monitoring.V3 {
 
       /// <summary>
       /// Deletes a notification channel.
+      ///
+      /// Design your application to single-thread API calls that modify the state of
+      /// notification channels in a single project. This includes calls to
+      /// CreateNotificationChannel, DeleteNotificationChannel and
+      /// UpdateNotificationChannel.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -473,6 +490,8 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       /// <summary>
       /// Lists the notification channels that have been created for the project.
+      /// To list the types of notification channels that are supported, use
+      /// the `ListNotificationChannelDescriptors` method.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -486,6 +505,8 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       /// <summary>
       /// Lists the notification channels that have been created for the project.
+      /// To list the types of notification channels that are supported, use
+      /// the `ListNotificationChannelDescriptors` method.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -497,6 +518,8 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       /// <summary>
       /// Lists the notification channels that have been created for the project.
+      /// To list the types of notification channels that are supported, use
+      /// the `ListNotificationChannelDescriptors` method.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -510,6 +533,8 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       /// <summary>
       /// Lists the notification channels that have been created for the project.
+      /// To list the types of notification channels that are supported, use
+      /// the `ListNotificationChannelDescriptors` method.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -586,6 +611,11 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <summary>
       /// Creates a new notification channel, representing a single notification
       /// endpoint such as an email address, SMS number, or PagerDuty service.
+      ///
+      /// Design your application to single-thread API calls that modify the state of
+      /// notification channels in a single project. This includes calls to
+      /// CreateNotificationChannel, DeleteNotificationChannel and
+      /// UpdateNotificationChannel.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -600,6 +630,11 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <summary>
       /// Creates a new notification channel, representing a single notification
       /// endpoint such as an email address, SMS number, or PagerDuty service.
+      ///
+      /// Design your application to single-thread API calls that modify the state of
+      /// notification channels in a single project. This includes calls to
+      /// CreateNotificationChannel, DeleteNotificationChannel and
+      /// UpdateNotificationChannel.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -612,6 +647,11 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <summary>
       /// Creates a new notification channel, representing a single notification
       /// endpoint such as an email address, SMS number, or PagerDuty service.
+      ///
+      /// Design your application to single-thread API calls that modify the state of
+      /// notification channels in a single project. This includes calls to
+      /// CreateNotificationChannel, DeleteNotificationChannel and
+      /// UpdateNotificationChannel.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -626,6 +666,11 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <summary>
       /// Creates a new notification channel, representing a single notification
       /// endpoint such as an email address, SMS number, or PagerDuty service.
+      ///
+      /// Design your application to single-thread API calls that modify the state of
+      /// notification channels in a single project. This includes calls to
+      /// CreateNotificationChannel, DeleteNotificationChannel and
+      /// UpdateNotificationChannel.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -638,6 +683,11 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <summary>
       /// Updates a notification channel. Fields not specified in the field mask
       /// remain unchanged.
+      ///
+      /// Design your application to single-thread API calls that modify the state of
+      /// notification channels in a single project. This includes calls to
+      /// CreateNotificationChannel, DeleteNotificationChannel and
+      /// UpdateNotificationChannel.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -652,6 +702,11 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <summary>
       /// Updates a notification channel. Fields not specified in the field mask
       /// remain unchanged.
+      ///
+      /// Design your application to single-thread API calls that modify the state of
+      /// notification channels in a single project. This includes calls to
+      /// CreateNotificationChannel, DeleteNotificationChannel and
+      /// UpdateNotificationChannel.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -664,6 +719,11 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <summary>
       /// Updates a notification channel. Fields not specified in the field mask
       /// remain unchanged.
+      ///
+      /// Design your application to single-thread API calls that modify the state of
+      /// notification channels in a single project. This includes calls to
+      /// CreateNotificationChannel, DeleteNotificationChannel and
+      /// UpdateNotificationChannel.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -678,6 +738,11 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <summary>
       /// Updates a notification channel. Fields not specified in the field mask
       /// remain unchanged.
+      ///
+      /// Design your application to single-thread API calls that modify the state of
+      /// notification channels in a single project. This includes calls to
+      /// CreateNotificationChannel, DeleteNotificationChannel and
+      /// UpdateNotificationChannel.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -689,6 +754,11 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       /// <summary>
       /// Deletes a notification channel.
+      ///
+      /// Design your application to single-thread API calls that modify the state of
+      /// notification channels in a single project. This includes calls to
+      /// CreateNotificationChannel, DeleteNotificationChannel and
+      /// UpdateNotificationChannel.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -702,6 +772,11 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       /// <summary>
       /// Deletes a notification channel.
+      ///
+      /// Design your application to single-thread API calls that modify the state of
+      /// notification channels in a single project. This includes calls to
+      /// CreateNotificationChannel, DeleteNotificationChannel and
+      /// UpdateNotificationChannel.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -713,6 +788,11 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       /// <summary>
       /// Deletes a notification channel.
+      ///
+      /// Design your application to single-thread API calls that modify the state of
+      /// notification channels in a single project. This includes calls to
+      /// CreateNotificationChannel, DeleteNotificationChannel and
+      /// UpdateNotificationChannel.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -726,6 +806,11 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       /// <summary>
       /// Deletes a notification channel.
+      ///
+      /// Design your application to single-thread API calls that modify the state of
+      /// notification channels in a single project. This includes calls to
+      /// CreateNotificationChannel, DeleteNotificationChannel and
+      /// UpdateNotificationChannel.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

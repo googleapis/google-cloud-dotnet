@@ -3,7 +3,7 @@
 //     source: google/monitoring/v3/alert_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2022 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -164,6 +164,10 @@ namespace Google.Cloud.Monitoring.V3 {
 
       /// <summary>
       /// Creates a new alerting policy.
+      ///
+      /// Design your application to single-thread API calls that modify the state of
+      /// alerting policies in a single project. This includes calls to
+      /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -176,6 +180,10 @@ namespace Google.Cloud.Monitoring.V3 {
 
       /// <summary>
       /// Deletes an alerting policy.
+      ///
+      /// Design your application to single-thread API calls that modify the state of
+      /// alerting policies in a single project. This includes calls to
+      /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -191,6 +199,10 @@ namespace Google.Cloud.Monitoring.V3 {
       /// a new one or replace only certain fields in the current alerting policy by
       /// specifying the fields to be updated via `updateMask`. Returns the
       /// updated alerting policy.
+      ///
+      /// Design your application to single-thread API calls that modify the state of
+      /// alerting policies in a single project. This includes calls to
+      /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -328,6 +340,10 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       /// <summary>
       /// Creates a new alerting policy.
+      ///
+      /// Design your application to single-thread API calls that modify the state of
+      /// alerting policies in a single project. This includes calls to
+      /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -341,6 +357,10 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       /// <summary>
       /// Creates a new alerting policy.
+      ///
+      /// Design your application to single-thread API calls that modify the state of
+      /// alerting policies in a single project. This includes calls to
+      /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -352,6 +372,10 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       /// <summary>
       /// Creates a new alerting policy.
+      ///
+      /// Design your application to single-thread API calls that modify the state of
+      /// alerting policies in a single project. This includes calls to
+      /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -365,6 +389,10 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       /// <summary>
       /// Creates a new alerting policy.
+      ///
+      /// Design your application to single-thread API calls that modify the state of
+      /// alerting policies in a single project. This includes calls to
+      /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -376,6 +404,10 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       /// <summary>
       /// Deletes an alerting policy.
+      ///
+      /// Design your application to single-thread API calls that modify the state of
+      /// alerting policies in a single project. This includes calls to
+      /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -389,6 +421,10 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       /// <summary>
       /// Deletes an alerting policy.
+      ///
+      /// Design your application to single-thread API calls that modify the state of
+      /// alerting policies in a single project. This includes calls to
+      /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -400,6 +436,10 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       /// <summary>
       /// Deletes an alerting policy.
+      ///
+      /// Design your application to single-thread API calls that modify the state of
+      /// alerting policies in a single project. This includes calls to
+      /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -413,6 +453,10 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       /// <summary>
       /// Deletes an alerting policy.
+      ///
+      /// Design your application to single-thread API calls that modify the state of
+      /// alerting policies in a single project. This includes calls to
+      /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -427,6 +471,10 @@ namespace Google.Cloud.Monitoring.V3 {
       /// a new one or replace only certain fields in the current alerting policy by
       /// specifying the fields to be updated via `updateMask`. Returns the
       /// updated alerting policy.
+      ///
+      /// Design your application to single-thread API calls that modify the state of
+      /// alerting policies in a single project. This includes calls to
+      /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -443,6 +491,10 @@ namespace Google.Cloud.Monitoring.V3 {
       /// a new one or replace only certain fields in the current alerting policy by
       /// specifying the fields to be updated via `updateMask`. Returns the
       /// updated alerting policy.
+      ///
+      /// Design your application to single-thread API calls that modify the state of
+      /// alerting policies in a single project. This includes calls to
+      /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -457,6 +509,10 @@ namespace Google.Cloud.Monitoring.V3 {
       /// a new one or replace only certain fields in the current alerting policy by
       /// specifying the fields to be updated via `updateMask`. Returns the
       /// updated alerting policy.
+      ///
+      /// Design your application to single-thread API calls that modify the state of
+      /// alerting policies in a single project. This includes calls to
+      /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -473,6 +529,10 @@ namespace Google.Cloud.Monitoring.V3 {
       /// a new one or replace only certain fields in the current alerting policy by
       /// specifying the fields to be updated via `updateMask`. Returns the
       /// updated alerting policy.
+      ///
+      /// Design your application to single-thread API calls that modify the state of
+      /// alerting policies in a single project. This includes calls to
+      /// CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
