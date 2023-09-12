@@ -17,7 +17,7 @@ using System;
 namespace Google.Cloud.PubSub.V1
 {
     /// <summary>
-    /// Exception thrown when publishing a message with an ordering key that is in an error state. 
+    /// Exception thrown when publishing a message with an ordering key that is in an error state.
     /// </summary>
     public class OrderingKeyInErrorStateException : InvalidOperationException
     {

@@ -1,11 +1,11 @@
 // Copyright 2017 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -86,7 +86,7 @@ namespace Google.Cloud.Spanner.Data
         public static SpannerDbType Numeric { get; } = new SpannerDbType(TypeCode.Numeric);
 
         /// <summary>
-        /// Representation of PostgreSQL numeric type. 
+        /// Representation of PostgreSQL numeric type.
         /// The PostgreSQL numeric type has max precision of 147,455 and a max scale of 16383.
         /// </summary>
         public static SpannerDbType PgNumeric { get; } = new SpannerDbType(TypeCode.Numeric, TypeAnnotationCode.PgNumeric);

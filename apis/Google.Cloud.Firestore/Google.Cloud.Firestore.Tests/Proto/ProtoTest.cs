@@ -89,7 +89,7 @@ namespace Google.Cloud.Firestore.Tests.Proto
                 batch.Create(doc, documentData);
             });
         }
-        
+
         [Theory]
         [MemberData(nameof(DeleteTests))]
         public void Delete(SerializableTest wrapper)
@@ -310,7 +310,7 @@ namespace Google.Cloud.Firestore.Tests.Proto
             DocumentChange ConvertChange(DocChange change, Timestamp readTime)
             {
                 var snapshot = DocumentSnapshot.ForDocument(db, change.Doc, readTime);
-                return new DocumentChange(snapshot, (DocumentChange.Type) change.Kind, 
+                return new DocumentChange(snapshot, (DocumentChange.Type) change.Kind,
                     change.OldIndex == -1 ? default(int?) : change.OldIndex, change.NewIndex == - 1 ? default(int?) : change.NewIndex);
             }
         }
@@ -366,7 +366,7 @@ namespace Google.Cloud.Firestore.Tests.Proto
                 info.AddValue(nameof(Test), Test.ToByteArray());
 
             public override string ToString() => Test?.Description ?? "(Unknown)";
-        }        
+        }
 
         private static object DeserializeJson(string json)
         {

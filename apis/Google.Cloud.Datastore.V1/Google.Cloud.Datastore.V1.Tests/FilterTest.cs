@@ -73,7 +73,7 @@ namespace Google.Cloud.Datastore.V1.Tests
                     Filters = { filter2, filter3 }
                 }
             };
-                
+
             var expected = new Filter
             {
                 CompositeFilter = new CompositeFilter

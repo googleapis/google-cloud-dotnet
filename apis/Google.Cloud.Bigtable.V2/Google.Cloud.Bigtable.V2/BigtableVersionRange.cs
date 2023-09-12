@@ -70,7 +70,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="start">
         /// Inclusive lower bound non-negative version value, or -1 to initialize from the
         /// milliseconds of DateTime.UtcNow. Must be less than or equal to 9223372036854775.
-        /// If null, interpreted as 0. 
+        /// If null, interpreted as 0.
         /// </param>
         /// <param name="end">
         /// Exclusive upper bound non-negative version value, or -1 to initialize from the

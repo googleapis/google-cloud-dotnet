@@ -206,7 +206,7 @@ namespace Google.Cloud.Translation.V2
             if (firstInvalid != null)
             {
                 throw new InvalidOperationException($"Unexpected detection result: {firstInvalid.Count} items");
-            }                
+            }
             return inputs.Zip(detections, (input, resourceList) => new Detection(input, resourceList[0]))
                 .ToList();
         }

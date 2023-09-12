@@ -65,7 +65,7 @@ namespace Google.Cloud.Datastore.V1
         /// <param name="value">The value to convert.</param>
         /// <returns>The embedded <see cref="IntegerValue"/>.</returns>
         /// <exception cref="InvalidOperationException">The value does not have the expected kind.</exception>
-        /// <exception cref="ArgumentNullException"><paramref name="value"/> is null.</exception>        
+        /// <exception cref="ArgumentNullException"><paramref name="value"/> is null.</exception>
         public static explicit operator long(Value value) => CheckKindForNonNullable(value, ValueTypeOneofCase.IntegerValue).IntegerValue;
 
         /// <summary>
@@ -92,7 +92,7 @@ namespace Google.Cloud.Datastore.V1
         /// <param name="value">The value to convert.</param>
         /// <returns>The embedded <see cref="DoubleValue"/>.</returns>
         /// <exception cref="InvalidOperationException">The value does not have the expected kind.</exception>
-        /// <exception cref="ArgumentNullException"><paramref name="value"/> is null.</exception>        
+        /// <exception cref="ArgumentNullException"><paramref name="value"/> is null.</exception>
         public static explicit operator double(Value value) => CheckKindForNonNullable(value, ValueTypeOneofCase.DoubleValue).DoubleValue;
 
         /// <summary>
@@ -110,7 +110,7 @@ namespace Google.Cloud.Datastore.V1
         /// <param name="value">The value to convert.</param>
         /// <returns>The embedded <see cref="BooleanValue"/>.</returns>
         /// <exception cref="InvalidOperationException">The value does not have the expected kind.</exception>
-        /// <exception cref="ArgumentNullException"><paramref name="value"/> is null.</exception>        
+        /// <exception cref="ArgumentNullException"><paramref name="value"/> is null.</exception>
         public static explicit operator bool(Value value) => CheckKindForNonNullable(value, ValueTypeOneofCase.BooleanValue).BooleanValue;
 
         /// <summary>
@@ -181,7 +181,7 @@ namespace Google.Cloud.Datastore.V1
         /// <param name="value">The value to convert.</param>
         /// <returns>The embedded <see cref="TimestampValue"/> as a <see cref="DateTime"/> with a <see cref="DateTimeKind"/> of <c>Utc</c>.</returns>
         /// <exception cref="InvalidOperationException">The value does not have the expected kind.</exception>
-        /// <exception cref="ArgumentNullException"><paramref name="value"/> is null.</exception>        
+        /// <exception cref="ArgumentNullException"><paramref name="value"/> is null.</exception>
         public static explicit operator DateTime(Value value) => ((Timestamp) value).ToDateTime();
 
         /// <summary>
@@ -199,7 +199,7 @@ namespace Google.Cloud.Datastore.V1
         /// <param name="value">The value to convert.</param>
         /// <returns>The embedded <see cref="TimestampValue"/> as a <see cref="DateTimeOffset"/> with an offset of zero.</returns>
         /// <exception cref="InvalidOperationException">The value does not have the expected kind.</exception>
-        /// <exception cref="ArgumentNullException"><paramref name="value"/> is null.</exception>        
+        /// <exception cref="ArgumentNullException"><paramref name="value"/> is null.</exception>
         public static explicit operator DateTimeOffset(Value value) => ((Timestamp)value).ToDateTimeOffset();
 
         /// <summary>

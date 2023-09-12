@@ -51,7 +51,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
                 // Sample output: Group: 8002882452986879952; Count: 6; Services: SampleApp/1.0.0
                 IEnumerable<string> services = item.AffectedServices.Select(s => $"{s.Service}/{s.Version}");
                 Console.WriteLine($"Group: {item.Group.GroupId}; Count: {item.Count}; Services: {string.Join(", ", services)}");
-            }            
+            }
             // End sample
         }
     }

@@ -1,11 +1,11 @@
 // Copyright 2019 Google LLC
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     https://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -133,7 +133,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     // Whether it succeeded or aborted, we signal the task performing the
                     // other concurrent update that we're done with our own update.
                     thisUpdateDone.Set();
-                    // We don't need to reset the event because we only need 
+                    // We don't need to reset the event because we only need
                     // one concurrent update to test the retriable transaction.
                     // If both tasks execute more than once, we can let them compete
                     // naturally, the retry transaction has already been guaranteed

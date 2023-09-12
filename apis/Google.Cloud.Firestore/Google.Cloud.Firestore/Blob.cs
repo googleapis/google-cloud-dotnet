@@ -55,7 +55,7 @@ namespace Google.Cloud.Firestore
         /// <param name="byteString">The ByteString to wrap. Must not be null.</param>
         /// <returns>A new blob wrapping <paramref name="byteString"/>.</returns>
         public static Blob FromByteString(ByteString byteString) => new Blob(byteString);
-        
+
         /// <summary>
         /// Constructs a new <see cref="Blob"/> by copying the current content of <paramref name="bytes"/>.
         /// </summary>

@@ -50,7 +50,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
                         FunctionName = "ComputeTrickyAnswer",
                         LineNumber = 100
                     },
-                    User = "userid"                    
+                    User = "userid"
                 },
 
                 // If this is a stack trace, the service will parse it.

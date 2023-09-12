@@ -56,7 +56,7 @@ namespace Google.Cloud.Bigtable.V2
                 ColumnQualifier = columnQualifier.Value,
                 AppendValue = appendValue.Value
             };
-        
+
         /// <summary>
         /// Rule specifying that <paramref name="incrementAmount"/> be added to the existing value.
         /// If the targeted cell is unset, it will be treated as containing a zero.

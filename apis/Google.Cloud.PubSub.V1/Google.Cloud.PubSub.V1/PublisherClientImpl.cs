@@ -266,7 +266,7 @@ public sealed class PublisherClientImpl : PublisherClient
         }
     }
 
-    /// <inheritdoc/>        
+    /// <inheritdoc/>
     public override ValueTask DisposeAsync() => new ValueTask(ShutdownAsync(_disposeTimeout));
 
     /// <inheritdoc/>
@@ -275,13 +275,13 @@ public sealed class PublisherClientImpl : PublisherClient
         lock (_lock)
         {
             // If we come here for a second or subsequent time, this condition would always be true.
-            // Note: If multiple shutdown requests are made, only the first cancellation token is observed. 
+            // Note: If multiple shutdown requests are made, only the first cancellation token is observed.
             if (_softStopCts.IsCancellationRequested)
             {
                 // No-op. We don't want to throw exceptions if DisposeAsync or ShutdownAsync is called a second time.
                 return _shutdownTcs.Task;
             }
-            
+
             _softStopCts.Cancel();
             foreach (var state in _keyedState.Values)
             {

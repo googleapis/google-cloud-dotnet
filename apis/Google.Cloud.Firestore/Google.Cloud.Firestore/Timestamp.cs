@@ -90,7 +90,7 @@ namespace Google.Cloud.Firestore
             int nanoseconds = (int)(dateTime.Ticks % TimeSpan.TicksPerSecond) * NanosecondsPerTick;
             return new Timestamp(secondsSinceBclEpoch - BclSecondsAtUnixEpoch, nanoseconds);
         }
-        
+
 
         /// <summary>
         /// Converts the given <see cref="DateTimeOffset"/> to a <see cref="Timestamp"/>

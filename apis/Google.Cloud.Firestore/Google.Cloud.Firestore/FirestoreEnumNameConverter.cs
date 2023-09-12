@@ -59,7 +59,7 @@ namespace Google.Cloud.Firestore
                 s_valueToNameMap[value] = name;
             }
         }
-        
+
         /// <inheritdoc />
         public T FromFirestore(object value) =>
             s_nameToValueMap.TryGetValue((string) value, out var result) ?

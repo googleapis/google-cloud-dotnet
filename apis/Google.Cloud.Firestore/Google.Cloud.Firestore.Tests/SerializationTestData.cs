@@ -97,7 +97,7 @@ namespace Google.Cloud.Firestore.Tests
             { UInt64Enum.MaxRepresentableValue, new Value { IntegerValue = long.MaxValue } },
             { CustomConversionEnum.Foo, new Value { StringValue = "Foo" } },
             { CustomConversionEnum.Bar, new Value { StringValue = "Bar" } },
-            
+
             // Timestamps
             { new Timestamp(1, 500),
                 new Value { TimestampValue = CreateProtoTimestamp(1, 500) } },
@@ -439,7 +439,7 @@ namespace Google.Cloud.Firestore.Tests
             public int Score { get; set; }
 
             public override int GetHashCode() => Name.GetHashCode() ^ Score;
-            public override bool Equals(object obj) => Equals(obj as CustomPlayer);        
+            public override bool Equals(object obj) => Equals(obj as CustomPlayer);
             public bool Equals(CustomPlayer other) => other != null && other.Name == Name && other.Score == Score;
         }
 

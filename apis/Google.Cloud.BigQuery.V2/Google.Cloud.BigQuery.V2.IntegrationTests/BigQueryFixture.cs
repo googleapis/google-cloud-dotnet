@@ -1,11 +1,11 @@
 // Copyright 2016 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -77,7 +77,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                     { "gameStarted", BigQueryDbType.Timestamp },
                     { "score", BigQueryDbType.Int64 }
                 }.Build());
-            
+
             var rows = new[]
             {
                 new BigQueryInsertRow {
@@ -134,7 +134,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
 
         private void CreatePeopleTable(BigQueryDataset dataset)
         {
-            // Sample schema taken from 
+            // Sample schema taken from
             // https://cloud.google.com/bigquery/docs/data
             // Data is loaded in UploadTest.
             var table = dataset.CreateTable(PeopleTableId, new TableSchemaBuilder
@@ -212,7 +212,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 { "single_string", BigQueryDbType.String },
                 { "repeated_string", BigQueryDbType.String, BigQueryFieldMode.Repeated },
                 { "nested_record",
-                    new TableSchemaBuilder {    
+                    new TableSchemaBuilder {
                         { "a", BigQueryDbType.Int64 },
                         { "b", BigQueryDbType.Int64 },
                     }
@@ -236,7 +236,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 { "single_geography", BigQueryDbType.Geography },
                 { "single_json", BigQueryDbType.Json },
                 { "single_record", recordSchema },
-                
+
                 // Repeated fields
                 { "array_string", BigQueryDbType.String, BigQueryFieldMode.Repeated },
                 { "array_bool", BigQueryDbType.Bool, BigQueryFieldMode.Repeated },
@@ -251,7 +251,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 { "array_big_numeric", BigQueryDbType.BigNumeric, BigQueryFieldMode.Repeated },
                 { "array_geography", BigQueryDbType.Geography, BigQueryFieldMode.Repeated },
                 { "array_json", BigQueryDbType.Json, BigQueryFieldMode.Repeated },
-                { "array_record", recordSchema, BigQueryFieldMode.Repeated },                
+                { "array_record", recordSchema, BigQueryFieldMode.Repeated },
             }.Build());
 
             InsertAndWait(table, () => table.InsertRow(ExhaustiveTypesTest.GetSampleRow()), 1);

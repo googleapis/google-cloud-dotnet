@@ -388,7 +388,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             }
             // End snippet
 
-            // We don't want to be too strict about what we get back here, but these should be okay.            
+            // We don't want to be too strict about what we get back here, but these should be okay.
             Assert.Contains(annotations, a => a.Name == "Bicycle");
             Assert.Contains(annotations, a => a.Name == "Picture frame");
         }

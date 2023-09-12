@@ -27,7 +27,7 @@ namespace Google.Cloud.Firestore
         /// <summary>
         /// The dictionary key used to specify the document ID when deserializing,
         /// or null if the document ID is not propagated.
-        /// </summary>        
+        /// </summary>
         public string DocumentIdKey { get; set; }
 
         /// <summary>

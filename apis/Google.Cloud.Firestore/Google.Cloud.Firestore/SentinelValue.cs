@@ -66,7 +66,7 @@ namespace Google.Cloud.Firestore
         internal Value ToProtoValue() => _protoFactory();
 
         internal SentinelKind Kind { get; }
-        
+
         /// <summary>
         /// Returns the detected kind of a serialized sentinel value, or None if it's not a sentinel value.
         /// </summary>

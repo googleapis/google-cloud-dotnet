@@ -94,7 +94,7 @@ namespace Google.Cloud.Storage.V1.Snippets
             // Sample: CustomerSuppliedEncryptionKeys
             // Use EncryptionKey.Create if you already have a key.
             EncryptionKey key = EncryptionKey.Generate();
-            
+
             // This will affect all relevant object-based operations by default.
             var client = StorageClient.Create(encryptionKey: key);
             var content = Encoding.UTF8.GetBytes("hello, world");
@@ -699,7 +699,7 @@ namespace Google.Cloud.Storage.V1.Snippets
             var bucketName = _fixture.BucketName;
             // Snippet: TestBucketIamPermissions(string,*,*)
             StorageClient client = StorageClient.Create();
-            
+
             IList<string> permissions = client.TestBucketIamPermissions(bucketName,
                 new[] { "storage.buckets.get", "storage.objects.list" });
             Console.WriteLine("Permissions held:");
@@ -977,7 +977,7 @@ namespace Google.Cloud.Storage.V1.Snippets
 
             // End sample
 
-            _fixture.RegisterTopicToDelete(topicName);            
+            _fixture.RegisterTopicToDelete(topicName);
         }
 
         [Fact]

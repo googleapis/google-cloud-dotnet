@@ -173,7 +173,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         // Member: UploadOrcAsync(*, *, *)
         // See [BigQueryClient.UploadOrc](ref) for an example using BigQueryClient.
         // End see-also
-        
+
         // See-also: BigQueryClient.UploadJson(string, string, TableSchema, Stream, *)
         // Member: UploadJson(Stream, *)
         // See [BigQueryClient.UploadJson](ref) for an example using BigQueryClient.

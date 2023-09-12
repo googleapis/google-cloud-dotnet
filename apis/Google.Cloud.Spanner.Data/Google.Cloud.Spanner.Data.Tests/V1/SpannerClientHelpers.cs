@@ -251,7 +251,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             return spannerClientMock;
         }
 
-        internal static SpannerClient SetupStreamingRead(this SpannerClient spannerClientMock) => 
+        internal static SpannerClient SetupStreamingRead(this SpannerClient spannerClientMock) =>
             SetupStreamingRead(spannerClientMock, new ReadRequest());
 
         internal static SpannerClient SetupStreamingRead(this SpannerClient spannerClientMock, ReadRequest readRequestReceiver)

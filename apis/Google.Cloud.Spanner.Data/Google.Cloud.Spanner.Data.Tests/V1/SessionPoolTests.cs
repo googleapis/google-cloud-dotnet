@@ -211,7 +211,7 @@ namespace Google.Cloud.Spanner.V1.Tests
 
             // When the pool *is* ready, we should be able to acquire a session directly from the pool,
             // without any further delays.
-            await sessionPool.AcquireSessionAsync(s_sampleDatabaseName, new TransactionOptions(), default);            
+            await sessionPool.AcquireSessionAsync(s_sampleDatabaseName, new TransactionOptions(), default);
         }
 
         [Fact]
@@ -236,7 +236,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             var acquisitionTask1 = sessionPool.AcquireSessionAsync(SessionPoolSegmentKey.Create(s_sampleDatabaseName).WithDatabaseRole(s_databaseRole), new TransactionOptions(), default);
             var acquisitionTask2 = sessionPool.AcquireSessionAsync(SessionPoolSegmentKey.Create(s_sampleDatabaseName2), new TransactionOptions(), default);
 
-            // Wait a little in real time because session creation tasks 
+            // Wait a little in real time because session creation tasks
             // are started in a controlled fire and forget manner.
             // Let's give time for stats to be updated.
             await Task.Delay(TimeSpan.FromMilliseconds(250));
@@ -278,7 +278,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             sessionPool = null;
             GC.Collect();
             GC.WaitForPendingFinalizers();
-            
+
             // Depending on the frameowrk version and the release mode, the pool may or may not be collected
             // at this point. If this weak reference has been cleared, we'll assume the internal one has been
             // as well. Otherwise, this test is pointless but harmless.

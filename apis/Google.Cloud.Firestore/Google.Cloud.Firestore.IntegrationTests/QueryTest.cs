@@ -498,12 +498,12 @@ namespace Google.Cloud.Firestore.IntegrationTests
 
         [Fact]
         public async Task OrQueriesAsync()
-        { 
+        {
             CollectionReference collection = _fixture.HighScoreCollection;
             var query = collection.Where(Filter.Or(
                                                     Filter.EqualTo("Score", 90),
                                                     Filter.EqualTo("Score", 110)
-                                                   )); 
+                                                   ));
             var snapshot = await query.GetSnapshotAsync();
             Assert.Equal(2, snapshot.Count);
         }

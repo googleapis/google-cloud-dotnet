@@ -37,7 +37,7 @@ namespace Google.Cloud.Firestore.Converters
         {
             var typeInfo = targetType.GetTypeInfo();
             _attribute = attribute;
-            
+
             // Check for user bugs in terms of attribute specifications.
             GaxPreconditions.CheckState(Enum.IsDefined(typeof(UnknownPropertyHandling), _attribute.UnknownPropertyHandling),
                 "Type {0} has invalid {1} value", targetType.FullName, nameof(FirestoreDataAttribute.UnknownPropertyHandling));

@@ -106,7 +106,7 @@ namespace Google.Cloud.Translation.V2
         /// Constructs an instance from an API result.
         /// </summary>
         internal TranslationResult(TranslationsResource resource, string originalText, string specifiedSourceLanguage, string targetLanguage)
-            : this(originalText, resource.TranslatedText, resource.DetectedSourceLanguage, 
+            : this(originalText, resource.TranslatedText, resource.DetectedSourceLanguage,
                   specifiedSourceLanguage, targetLanguage, TranslationModels.GetModel(resource.Model), resource.Model)
         {
         }

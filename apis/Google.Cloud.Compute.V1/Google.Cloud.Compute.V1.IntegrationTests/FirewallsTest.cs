@@ -35,22 +35,22 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
         /// </summary>
         [Fact]
         public void CreateFirewall()
-        {   
+        {
             var client = FirewallsClient.Create();
             var firewallName = _fixture.GenerateResourceId();
             var firewallResource = new Firewall
             {
                 Name = firewallName,
-                SourceRanges = 
+                SourceRanges =
                 {
                     "0.0.0.0/0"
                 },
-                Allowed = 
+                Allowed =
                 {
-                    new Allowed 
+                    new Allowed
                     {
                         IPProtocol = "tcp",
-                        Ports = 
+                        Ports =
                         {
                             "80",
                         },

@@ -811,7 +811,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
             using var client = server.CreateClient();
 
             // We are using a client with a bad credential.
-            var exception = await Assert.ThrowsAsync<AggregateException>(() => client.GetAsync($"/Main/Warning/{testId}"));            
+            var exception = await Assert.ThrowsAsync<AggregateException>(() => client.GetAsync($"/Main/Warning/{testId}"));
             var rpcException = Assert.IsType<RpcException>(exception.InnerException);
             Assert.Equal(StatusCode.Unauthenticated, rpcException.StatusCode);
         }
@@ -830,7 +830,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
     {
         protected readonly string _projectId = TestEnvironment.GetTestProjectId();
 
-        public override void ConfigureServices(IServiceCollection services) 
+        public override void ConfigureServices(IServiceCollection services)
         {
             services.AddHttpContextAccessor();
             services.AddLogging(builder => builder.AddGoogle(new LoggingServiceOptions

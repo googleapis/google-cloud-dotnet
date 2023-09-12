@@ -1,11 +1,11 @@
 // Copyright 2016 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -39,7 +39,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="resultsOptions">The options for retrieving query results. May be null, in which case defaults will be supplied.</param>
         /// <returns>The result of the query.</returns>
         public virtual BigQueryResults ExecuteQuery(string sql, IEnumerable<BigQueryParameter> parameters, QueryOptions queryOptions = null, GetQueryResultsOptions resultsOptions = null) =>
-            CreateQueryJob(sql, parameters, queryOptions).GetQueryResults(resultsOptions);        
+            CreateQueryJob(sql, parameters, queryOptions).GetQueryResults(resultsOptions);
 
         /// <summary>
         /// Asynchronously executes a query.
@@ -62,7 +62,7 @@ namespace Google.Cloud.BigQuery.V2
         {
             var job = await CreateQueryJobAsync(sql, parameters, queryOptions, cancellationToken).ConfigureAwait(false);
             return await job.GetQueryResultsAsync(resultsOptions, cancellationToken).ConfigureAwait(false);
-        }        
+        }
         #endregion
 
         #region CreateQueryJob

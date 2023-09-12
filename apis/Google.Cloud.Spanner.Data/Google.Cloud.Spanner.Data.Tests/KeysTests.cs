@@ -1,11 +1,11 @@
 // Copyright 2021 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -118,7 +118,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 v => Assert.Equal("1", v.StringValue),
                 v => Assert.Equal(NullValue.NullValue, v.NullValue));
         }
-        
+
         [Fact]
         public void TypeMappings()
         {
@@ -126,17 +126,17 @@ namespace Google.Cloud.Spanner.Data.Tests
             var key = new Key(new SpannerParameterCollection { new SpannerParameter { ParameterName = "k1", Value = 3.14m },
                 new SpannerParameter { ParameterName = "k2", Value = new DateTime(2022, 06, 08) } });
 
-            Assert.Equal(new ListValue { Values = { Value.ForNumber(3.14), Value.ForString("2022-06-08T00:00:00Z") } }, 
+            Assert.Equal(new ListValue { Values = { Value.ForNumber(3.14), Value.ForString("2022-06-08T00:00:00Z") } },
                 key.ToProtobuf(builder.ConversionOptions));
 
             // Specify the type mappings.
             builder.ClrToSpannerTypeDefaultMappings = "DecimalToNumeric,DateTimeToDate";
-            Assert.Equal(new ListValue { Values = { Value.ForString("3.14"), Value.ForString("2022-06-08") } }, 
+            Assert.Equal(new ListValue { Values = { Value.ForString("3.14"), Value.ForString("2022-06-08") } },
                 key.ToProtobuf(builder.ConversionOptions));
 
             // Revert the type mappings.
             builder.ClrToSpannerTypeDefaultMappings = "";
-            Assert.Equal(new ListValue { Values = { Value.ForNumber(3.14), Value.ForString("2022-06-08T00:00:00Z") } }, 
+            Assert.Equal(new ListValue { Values = { Value.ForNumber(3.14), Value.ForString("2022-06-08T00:00:00Z") } },
                 key.ToProtobuf(builder.ConversionOptions));
         }
 
@@ -350,7 +350,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             var builder = new SpannerConnectionStringBuilder();
             var keySet = KeySet.FromParameters(new SpannerParameterCollection { new SpannerParameter { ParameterName = "k1", Value = 3.14m },
                 new SpannerParameter { ParameterName = "k2", Value = new DateTime(2022, 06, 08) } });
-            
+
             var protobufValues = keySet.ToProtobuf(builder.ConversionOptions);
             Assert.Equal(3.14d, protobufValues.Keys[0].Values[0].NumberValue); // default to double.
             Assert.Equal("2022-06-08T00:00:00Z", protobufValues.Keys[0].Values[1].StringValue); // default to Timestamp.

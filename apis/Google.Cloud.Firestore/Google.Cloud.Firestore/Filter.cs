@@ -2,14 +2,14 @@
 //
 // Licensed under the Apache License, Version 2.0 (the "License").
 // you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at 
+// You may obtain a copy of the License at
 //
-// https://www.apache.org/licenses/LICENSE-2.0 
+// https://www.apache.org/licenses/LICENSE-2.0
 //
-// Unless required by applicable law or agreed to in writing, software 
+// Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and 
+// See the License for the specific language governing permissions and
 // limitations under the License.
 
 using Google.Cloud.Firestore.V1;
@@ -142,42 +142,42 @@ public abstract partial class Filter : IEquatable<Filter>
         new UnaryFilter(fieldPath, FieldOp.GreaterThan, value);
 
     /// <summary>
-    /// Returns a filter specifying that the value in <paramref name="fieldPath"/> must be greater than or equal to 
+    /// Returns a filter specifying that the value in <paramref name="fieldPath"/> must be greater than or equal to
     /// <paramref name="value"/>.
     /// </summary>
     public static Filter GreaterThanOrEqualTo(string fieldPath, Object value) =>
         new UnaryFilter(fieldPath, FieldOp.GreaterThanOrEqual, value);
 
     /// <summary>
-    /// Returns a filter specifying that the value in <paramref name="fieldPath"/> must be greater than or equal to 
+    /// Returns a filter specifying that the value in <paramref name="fieldPath"/> must be greater than or equal to
     /// <paramref name="value"/>.
     /// </summary>
     public static Filter GreaterThanOrEqualTo(FieldPath fieldPath, Object value) =>
         new UnaryFilter(fieldPath, FieldOp.GreaterThanOrEqual, value);
 
     /// <summary>
-    /// Returns a filter specifying that the value in <paramref name="fieldPath"/> must be less than 
+    /// Returns a filter specifying that the value in <paramref name="fieldPath"/> must be less than
     /// <paramref name="value"/>.
     /// </summary>
     public static Filter LessThan(string fieldPath, Object value) =>
         new UnaryFilter(fieldPath, FieldOp.LessThan, value);
 
     /// <summary>
-    /// Returns a filter specifying that the value in <paramref name="fieldPath"/> must be less than 
+    /// Returns a filter specifying that the value in <paramref name="fieldPath"/> must be less than
     /// <paramref name="value"/>.
     /// </summary>
     public static Filter LessThan(FieldPath fieldPath, Object value) =>
         new UnaryFilter(fieldPath, FieldOp.LessThan, value);
 
     /// <summary>
-    /// Returns a filter specifying that the value in <paramref name="fieldPath"/> must be less than or equal to 
+    /// Returns a filter specifying that the value in <paramref name="fieldPath"/> must be less than or equal to
     /// <paramref name="value"/>.
     /// </summary>
     public static Filter LessThanOrEqualTo(string fieldPath, Object value) =>
         new UnaryFilter(fieldPath, FieldOp.LessThanOrEqual, value);
 
     /// <summary>
-    /// Returns a filter specifying that the value in <paramref name="fieldPath"/> must be less than or equal to 
+    /// Returns a filter specifying that the value in <paramref name="fieldPath"/> must be less than or equal to
     /// <paramref name="value"/>.
     /// </summary>
     public static Filter LessThanOrEqualTo(FieldPath fieldPath, Object value) =>

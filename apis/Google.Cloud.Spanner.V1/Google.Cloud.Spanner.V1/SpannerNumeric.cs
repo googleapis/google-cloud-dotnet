@@ -1,11 +1,11 @@
 ﻿// Copyright 2020 Google LLC
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     https://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -321,7 +321,7 @@ namespace Google.Cloud.Spanner.V1
         }
 
         /// <summary>
-        /// Converts a <see cref="decimal"/> value to <see cref="SpannerNumeric"/>, 
+        /// Converts a <see cref="decimal"/> value to <see cref="SpannerNumeric"/>,
         /// </summary>
         /// <remarks>
         /// This conversion may silently lose precision, depending on <paramref name="lossOfPrecisionHandling"/>.
@@ -338,7 +338,7 @@ namespace Google.Cloud.Spanner.V1
             BigInteger mediumBits = new BigInteger((uint) bits[1]) << 32;
             BigInteger highBits = new BigInteger((uint) bits[2]) << 64;
             BigInteger rawInteger = lowBits | mediumBits | highBits;
-            
+
             int exponent = (bits[3] & 0x1f0000) >> 16;
             if (bits[3] < 0)
             {
@@ -414,10 +414,10 @@ namespace Google.Cloud.Spanner.V1
         // Conversions from SpannerNumeric to CLR types.
 
         /// <summary>
-        /// Converts this value to <see cref="decimal"/>, 
+        /// Converts this value to <see cref="decimal"/>,
         /// </summary>
         /// <remarks>
-        /// This conversion may silently lose precision, depending on <paramref name="lossOfPrecisionHandling"/>, but 
+        /// This conversion may silently lose precision, depending on <paramref name="lossOfPrecisionHandling"/>, but
         /// will always throw <see cref="OverflowException"/> if value is out of the range of <see cref="decimal"/>.
         /// </remarks>
         /// <param name="lossOfPrecisionHandling">How to handle values with signficant digits that would be lost by the conversion.</param>

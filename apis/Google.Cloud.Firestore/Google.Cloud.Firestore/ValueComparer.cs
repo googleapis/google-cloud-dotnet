@@ -69,7 +69,7 @@ namespace Google.Cloud.Firestore
             {
                 return leftType.CompareTo(rightType);
             }
-        
+
             // Values are of the same broad type, although integer/double both count as "number".
             switch (leftType)
             {
@@ -140,7 +140,7 @@ namespace Google.Cloud.Firestore
         {
             var leftArray = left.ArrayValue.Values;
             var rightArray = right.ArrayValue.Values;
-            
+
             int size = Math.Min(leftArray.Count, rightArray.Count);
             for (int i = 0; i < size; i++)
             {

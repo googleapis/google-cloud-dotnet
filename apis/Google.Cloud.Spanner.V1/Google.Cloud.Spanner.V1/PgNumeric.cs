@@ -1,11 +1,11 @@
 ﻿// Copyright 2022 Google LLC
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     https://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -22,7 +22,7 @@ using System.Text.RegularExpressions;
 namespace Google.Cloud.Spanner.V1
 {
     /// <summary>
-    /// Representation of PostgreSQL numeric type which has max precision of 147455 and a max scale of 16383. 
+    /// Representation of PostgreSQL numeric type which has max precision of 147455 and a max scale of 16383.
     /// </summary>
     public readonly struct PgNumeric : IEquatable<PgNumeric>, IComparable<PgNumeric>, IComparable
     {
@@ -42,7 +42,7 @@ namespace Google.Cloud.Spanner.V1
         private const string NotANumber = "NaN";
 
         // For a number of max precision P, the max value is 10^P - 1, i.e. all P digits are 9.
-        // For instance for a number of max precision 4, the max value is 10^4 - 1 = 10_000 - 1 = 9_999.       
+        // For instance for a number of max precision 4, the max value is 10^4 - 1 = 10_000 - 1 = 9_999.
         private static readonly BigInteger s_maxValue = BigInteger.Pow(10, MaxPrecision) - 1;
 
         private static readonly BigInteger s_minValue = -s_maxValue;
@@ -61,7 +61,7 @@ namespace Google.Cloud.Spanner.V1
         public static PgNumeric Zero { get; } = default;
 
         /// <summary>
-        /// NaN (Not a number) represented as a <see cref="PgNumeric"/>. 
+        /// NaN (Not a number) represented as a <see cref="PgNumeric"/>.
         /// </summary>
         public static PgNumeric NaN { get; } = new PgNumeric(0, 0, 0, true);
 
@@ -84,7 +84,7 @@ namespace Google.Cloud.Spanner.V1
         // The scale of _scaledValue.
         private readonly int _scale;
 
-        // Original trailing zeros after the decimal point which are not included in _scaledValue. 
+        // Original trailing zeros after the decimal point which are not included in _scaledValue.
         private readonly int _trailingZeros;
 
         // This flag would be true if PgNumeric is not a number.
@@ -324,7 +324,7 @@ namespace Google.Cloud.Spanner.V1
 
             int signLength = sign > 0 ? 0 : 1;
 
-            // We can have a scaled value or a non-scaled value, check if its scaled. 
+            // We can have a scaled value or a non-scaled value, check if its scaled.
             if (_scale == 0)
             {
                 return _trailingZeros == 0 ? integerText : integerText + '.' + new string('0',decimalPrecisionCalculator(integerText, integerText.Length - signLength, _trailingZeros));
@@ -382,7 +382,7 @@ namespace Google.Cloud.Spanner.V1
         }
 
         /// <summary>
-        /// Converts a <see cref="decimal"/> value to <see cref="PgNumeric"/>, 
+        /// Converts a <see cref="decimal"/> value to <see cref="PgNumeric"/>,
         /// </summary>
         /// <param name="value">The value to convert</param>
         /// <returns>The converted value.</returns>
@@ -455,10 +455,10 @@ namespace Google.Cloud.Spanner.V1
         // Conversions from PgNumeric to CLR types.
 
         /// <summary>
-        /// Converts this value to <see cref="PgNumeric"/>, 
+        /// Converts this value to <see cref="PgNumeric"/>,
         /// </summary>
         /// <remarks>
-        /// This conversion may silently lose precision, depending on <paramref name="lossOfPrecisionHandling"/>, but 
+        /// This conversion may silently lose precision, depending on <paramref name="lossOfPrecisionHandling"/>, but
         /// will always throw <see cref="OverflowException"/> if value is out of the range of <see cref="Decimal"/>.
         /// </remarks>
         /// <param name="lossOfPrecisionHandling">How to handle values with signficant digits that would be lost by the conversion.</param>

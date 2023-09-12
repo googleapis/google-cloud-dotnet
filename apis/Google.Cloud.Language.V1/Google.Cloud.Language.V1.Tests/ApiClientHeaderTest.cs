@@ -42,7 +42,7 @@ namespace Google.Cloud.Language.V1.Tests
         private class FakeCallInvoker : CallInvoker
         {
             public Metadata Metadata { get; private set; }
-            
+
             public override AsyncClientStreamingCall<TRequest, TResponse> AsyncClientStreamingCall<TRequest, TResponse>(Method<TRequest, TResponse> method, string host, CallOptions options) =>
                 throw new NotImplementedException();
 

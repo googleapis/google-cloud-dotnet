@@ -608,7 +608,7 @@ namespace Google.Cloud.Firestore.Tests
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
-        
+
         [Fact]
         public void EndAt()
         {

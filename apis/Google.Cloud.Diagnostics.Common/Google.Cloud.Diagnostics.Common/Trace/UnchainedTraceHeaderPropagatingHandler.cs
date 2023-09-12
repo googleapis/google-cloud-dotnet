@@ -26,7 +26,7 @@ namespace Google.Cloud.Diagnostics.Common
     /// </summary>
     /// <remarks>
     /// <para>
-    /// Ensures the trace context is propagated for outgoing HTTP requests and 
+    /// Ensures the trace context is propagated for outgoing HTTP requests and
     /// traces the total time of the outgoing HTTP request. This is only done if tracing is initialized
     /// and tracing is enabled for the current request.
     /// </para>

@@ -39,7 +39,7 @@ public abstract partial class SubscriberClient : IAsyncDisposable
 {
     /// <summary>
     /// Reply from a message handler; whether to <see cref="Ack"/>
-    /// or <see cref="Nack"/> the message to the server. 
+    /// or <see cref="Nack"/> the message to the server.
     /// </summary>
     public enum Reply
     {
@@ -183,7 +183,7 @@ public abstract partial class SubscriberClient : IAsyncDisposable
             ApiSettings = clientCreationSettings?.SubscriberServiceApiSettings
         };
 #pragma warning restore CS0618 // Type or member is obsolete
-        
+
     /// <summary>
     /// Starts receiving messages. The returned <see cref="Task"/> completes when either <see cref="StopAsync(CancellationToken)"/> is called
     /// or if an unrecoverable fault occurs. See <see cref="StopAsync(CancellationToken)"/> for more details.

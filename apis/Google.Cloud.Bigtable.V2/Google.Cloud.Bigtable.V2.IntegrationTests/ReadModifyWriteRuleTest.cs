@@ -46,7 +46,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     BigtableFixture.DefaultColumnFamily,
                     "log",
                     "2017-11-08 02:35:34Z - updated value\\n"));
-            
+
             var row = await client.ReadRowAsync(
                 tableName,
                 rowKey,
@@ -76,7 +76,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     BigtableFixture.DefaultColumnFamily,
                     "log",
                     "2017-11-08 02:35:34Z - updated value\\n"));
-            
+
             var row = await client.ReadRowAsync(
                 tableName,
                 rowKey,
@@ -102,7 +102,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     BigtableFixture.DefaultColumnFamily,
                     "log",
                     "2017-11-08 02:35:34Z - updated value\\n"));
-            
+
             await BigtableAssert.HasSingleValueAsync(
                 client,
                 tableName,
@@ -126,7 +126,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                     BigtableFixture.DefaultColumnFamily,
                     "log",
                     "2017-11-08 02:35:34Z - updated value\\n"));
-            
+
             await BigtableAssert.HasSingleValueAsync(
                 client,
                 tableName,

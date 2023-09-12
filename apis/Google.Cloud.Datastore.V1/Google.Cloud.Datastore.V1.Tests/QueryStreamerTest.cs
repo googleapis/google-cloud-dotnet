@@ -45,7 +45,7 @@ namespace Google.Cloud.Datastore.V1.Tests
             var firstStructured = new Query(structured) { Limit = 6, StartCursor = ByteString.CopyFromUtf8("4") };
             Assert.Equal(firstStructured, server.Requests[1].Query);
         }
-        
+
         [Fact]
         public void LimitAndOffset()
         {

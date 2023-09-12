@@ -66,7 +66,7 @@ namespace Google.Cloud.Firestore
         /// <summary>
         /// The index of the changed document in the result set immediately after this DocumentChange
         /// (i.e. supposing that all prior DocumentChange objects and this one have been applied),
-        /// null if the change type is <see cref="Type.Removed"/>. The index will never be negative.    
+        /// null if the change type is <see cref="Type.Removed"/>. The index will never be negative.
         /// </summary>
         public int? NewIndex { get; }
 

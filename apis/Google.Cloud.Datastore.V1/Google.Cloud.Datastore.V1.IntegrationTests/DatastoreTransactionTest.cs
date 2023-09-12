@@ -193,7 +193,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
             using var transaction = db.BeginTransaction();
 
             var gqlQuery = new GqlQuery { QueryString = "SELECT count(*)  as `count`,sum(height) as `sum_height`, avg(height) as `avg_height` FROM GQLAggTestTransaction " };
-            var query = new Query("GQLAggTestTransaction");            
+            var query = new Query("GQLAggTestTransaction");
             AggregationQueryResults results = transaction.RunAggregationQuery(gqlQuery);
 
             Assert.Equal(4, results["count"].IntegerValue);

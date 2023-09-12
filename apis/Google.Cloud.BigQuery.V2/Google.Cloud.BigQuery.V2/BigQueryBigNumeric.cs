@@ -1,11 +1,11 @@
 ﻿// Copyright 2022 Google LLC
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     https://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -202,10 +202,10 @@ namespace Google.Cloud.BigQuery.V2
         // Conversions from BigQueryBigNumeric to CLR types.
 
         /// <summary>
-        /// Converts this value to <see cref="BigQueryBigNumeric"/>, 
+        /// Converts this value to <see cref="BigQueryBigNumeric"/>,
         /// </summary>
         /// <remarks>
-        /// This conversion may silently lose precision, depending on <paramref name="lossOfPrecisionHandling"/>, but 
+        /// This conversion may silently lose precision, depending on <paramref name="lossOfPrecisionHandling"/>, but
         /// will always throw <see cref="OverflowException"/> if value is out of the range of <see cref="decimal"/>.
         /// </remarks>
         /// <param name="lossOfPrecisionHandling">How to handle values with signficant digits that would be lost by the conversion.</param>

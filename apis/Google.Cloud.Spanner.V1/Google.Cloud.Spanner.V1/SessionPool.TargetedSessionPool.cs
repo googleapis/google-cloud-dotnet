@@ -567,7 +567,7 @@ namespace Google.Cloud.Spanner.V1
                     // current size. TryPopRange will try to pop as many elements as sessions.Length
                     // but will return the actual number of elements popped.
                     // Also, because right now this code is executed inside the lock, the stack won't
-                    // probably change from when we created the array to this point, but by using the 
+                    // probably change from when we created the array to this point, but by using the
                     // actual number of elements popped we are making it more robust for any future changes.
                     int count;
                     if ((count = stack.TryPopRange(sessions)) > 0)
@@ -633,7 +633,7 @@ namespace Google.Cloud.Spanner.V1
                     catch (Exception e)
                     {
                         // CreatePooledSessionAsync will have caused the session pool to become unhealthy already, so we shouldn't get
-                        // any new waiting callers at this point. 
+                        // any new waiting callers at this point.
                         // Propagate this exception to all waiting callers.
                         List<TaskCompletionSource<PooledSession>> pendingAcquisitionsList = new List<TaskCompletionSource<PooledSession>>();
                         List<TaskCompletionSource<int>> minimumSizeWaiters;
@@ -651,7 +651,7 @@ namespace Google.Cloud.Spanner.V1
                         minimumSizeWaiters.ForEach(tcs => tcs.TrySetException(e));
                     }
                 }
-            } 
+            }
 
             private Task GetNursePoolBackToHealthTask(CancellationToken cancellationToken)
             {
@@ -697,7 +697,7 @@ namespace Google.Cloud.Spanner.V1
                         // In contrast with StartSessionCreationTasksIfNecessary.PrepareNewSessionsAsync here
                         // we don't need to notify callers waiting for new sessions to become available that the
                         // pool is now unhealthy, this method is only called when the pool is already unhealthy
-                        // so callers waiting for sessions had already been notified by 
+                        // so callers waiting for sessions had already been notified by
                         // StartSessionCreationTasksIfNecessary.PrepareNewSessionsAsync, which is the method that
                         // first "discovers" that the pool has become unhealthy.
                     }

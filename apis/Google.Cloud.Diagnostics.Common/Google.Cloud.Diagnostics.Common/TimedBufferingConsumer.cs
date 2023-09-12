@@ -1,11 +1,11 @@
 // Copyright 2016 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -19,7 +19,7 @@ using System.Collections.Generic;
 namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
-    /// A <see cref="IFlushableConsumer{T}"/> that will automatically flush the buffer after a 
+    /// A <see cref="IFlushableConsumer{T}"/> that will automatically flush the buffer after a
     /// given amount of time.
     /// </summary>
     internal class TimedBufferingConsumer<T> : FlushableConsumerBase<T>
@@ -55,7 +55,7 @@ namespace Google.Cloud.Diagnostics.Common
         }
 
         /// <summary>
-        /// Creates a new <see cref="TimedBufferingConsumer{T}"/> that will automatically flush the 
+        /// Creates a new <see cref="TimedBufferingConsumer{T}"/> that will automatically flush the
         /// buffer to the <see cref="IConsumer{T}"/> after the given wait time.
         /// </summary>
         /// <param name="consumer">The consumer to flush to. Must not be null.</param>

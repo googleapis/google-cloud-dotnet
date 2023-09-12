@@ -60,7 +60,7 @@ namespace Google.Cloud.Firestore
         internal string DocumentsPath { get; }
 
         private Action<string> WarningLogger { get; }
-        
+
         internal SerializationContext SerializationContext { get; }
 
         private readonly CallSettings _batchGetCallSettings;
@@ -330,7 +330,7 @@ namespace Google.Cloud.Firestore
             };
 
             var retryingTask = RetryHelper.Retry(function, request, callSettings, clock, scheduler);
-            return await retryingTask.ConfigureAwait(false);            
+            return await retryingTask.ConfigureAwait(false);
 
             string ExtractPath(DocumentReference documentReference)
             {

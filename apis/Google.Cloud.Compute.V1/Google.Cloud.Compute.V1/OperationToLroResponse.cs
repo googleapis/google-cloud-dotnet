@@ -32,7 +32,7 @@ namespace Google.Cloud.Compute.V1
                 // Taken from [(google.cloud.operation_field) = NAME]
                 Name = name,
                 // Always pack the raw response as metadata
-                Metadata = wkt::Any.Pack(this)                
+                Metadata = wkt::Any.Pack(this)
             };
             if (proto.Done)
             {

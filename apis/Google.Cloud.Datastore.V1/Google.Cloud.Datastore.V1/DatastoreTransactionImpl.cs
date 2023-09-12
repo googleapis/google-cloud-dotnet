@@ -181,7 +181,7 @@ namespace Google.Cloud.Datastore.V1
 
         /// <inheritdoc />
         public override IReadOnlyList<Entity> Lookup(IEnumerable<Key> keys, CallSettings callSettings = null) =>
-            DatastoreDb.LookupImpl(_client, _projectId, _readOptions, keys, callSettings);        
+            DatastoreDb.LookupImpl(_client, _projectId, _readOptions, keys, callSettings);
 
         /// <inheritdoc />
         public override Task<IReadOnlyList<Entity>> LookupAsync(IEnumerable<Key> keys, CallSettings callSettings = null) =>

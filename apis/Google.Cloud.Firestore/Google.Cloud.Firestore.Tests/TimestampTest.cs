@@ -42,7 +42,7 @@ namespace Google.Cloud.Firestore.Tests
         public void Comparisons()
         {
             Timestamp t1 = new Timestamp(1, 2);
-            Timestamp t2 = new Timestamp(1, 2); 
+            Timestamp t2 = new Timestamp(1, 2);
             Timestamp t3 = new Timestamp(2, 2);
             Timestamp t4 = new Timestamp(2, 3);
 

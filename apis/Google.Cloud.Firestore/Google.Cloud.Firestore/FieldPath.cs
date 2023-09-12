@@ -191,7 +191,7 @@ namespace Google.Cloud.Firestore
             // determine which situation we're in, with a shorter path being deemed "less than" a longer one.
             return Segments.Length - other.Segments.Length;
         }
-        
+
         /// <summary>
         /// Conversion from FieldPath to FieldReference.
         /// </summary>

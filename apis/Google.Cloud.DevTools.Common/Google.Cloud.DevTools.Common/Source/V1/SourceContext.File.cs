@@ -1,11 +1,11 @@
 ﻿// Copyright 2017 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -42,7 +42,7 @@ namespace Google.Cloud.DevTools.Source.V1
         /// When writing a Stackdriver Logging entry, the user should add this custom label,
         /// with a value of the git revision id for the source code.
         /// This enables Google Cloud Tools for Visual Studio to locate the source file revision
-        /// of the log entry. 
+        /// of the log entry.
         /// </summary>
         public const string GitRevisionIdLogLabel = "git_revision_id";
 

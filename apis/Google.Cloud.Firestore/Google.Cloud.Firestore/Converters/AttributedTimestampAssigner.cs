@@ -37,7 +37,7 @@ namespace Google.Cloud.Firestore.Converters
             { typeof(DateTimeOffset), timestamp => timestamp?.ToDateTimeOffset() ?? default },
             { typeof(wkt::Timestamp), timestamp => timestamp?.ToProto() },
         };
-        
+
         private static readonly ConcurrentDictionary<BclType, Action<object, IDeserializationContext>> s_assigners =
             new ConcurrentDictionary<BclType, Action<object, IDeserializationContext>>();
 
@@ -103,7 +103,7 @@ namespace Google.Cloud.Firestore.Converters
             GaxPreconditions.CheckState(!hasAttribute,
                 "{0}.{1} is decorated with multiple timestamp attributes",
                 typeName, property.Name);
-            
+
             // Prohibit later attributes from being applied.
             hasAttribute = true;
 

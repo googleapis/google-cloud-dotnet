@@ -34,7 +34,7 @@ namespace Google.Cloud.VideoIntelligence.V1
         /// property must not be null.</param>
         public AnnotateVideoException(VideoAnnotationResults response) : base(response?.Error?.Message)
         {
-            // The null-conditional operator in the constructor initializer make it okay 
+            // The null-conditional operator in the constructor initializer make it okay
             GaxPreconditions.CheckNotNull(response, nameof(response)); GaxPreconditions.CheckNotNull(response, nameof(response));
             GaxPreconditions.CheckArgument(response.Error != null, nameof(response), "response must contain an error");
             Response = response;

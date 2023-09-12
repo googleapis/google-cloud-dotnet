@@ -540,7 +540,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             KeyFactory keyFactory = db.CreateKeyFactory("message");
 
             // Dispose automatically rolls back an uncommitted transaction synchronously.
-            // To roll back asynchronously, 
+            // To roll back asynchronously,
             bool committed = false;
             DatastoreTransaction transaction = await db.BeginTransactionAsync();
             try

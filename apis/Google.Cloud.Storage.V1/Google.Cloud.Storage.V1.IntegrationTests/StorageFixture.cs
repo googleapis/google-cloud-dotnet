@@ -239,7 +239,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                 RequesterPaysClient.UploadObject(name, SmallObject, "text/plain", new MemoryStream(SmallContent),
                     new UploadObjectOptions { UserProject = RequesterPaysProjectId });
             }
-            
+
         }
 
         internal Bucket CreateBucket(string name, bool multiVersion)
@@ -324,7 +324,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                 _delayTestsTypeBeingRegistered = null;
             }
         }
-        
+
         internal void RegisterDelayTest(TimeSpan duration, Func<TimeSpan, Task> beforeDelay, Func<Task> afterDelay, [CallerMemberName] string initMethodName = null)
         {
             GaxPreconditions.CheckArgument(

@@ -394,7 +394,7 @@ namespace Google.Cloud.Firestore.Tests
 
             [FirestoreProperty]
             public string Name { get; set; }
-            
+
             [FirestoreProperty]
             public int Value { get; set; }
         }
@@ -417,7 +417,7 @@ namespace Google.Cloud.Firestore.Tests
 
             [FirestoreProperty]
             public NestedData Nested { get; set; }
-            
+
             [FirestoreDocumentCreateTimestamp]
             public Timestamp CreateTimestamp { get; set; }
 

@@ -30,7 +30,7 @@ namespace Google.Cloud.Firestore.Tests
 
             var control = db1.Document("col1/doc1/col2/doc2");
             var equal = new[]
-            {                
+            {
                 db1.Document("col1/doc1/col2/doc2"),
                 db2.Document("col1/doc1/col2/doc2"),
                 db1.Collection("col1").Document("doc1").Collection("col2").Document("doc2")

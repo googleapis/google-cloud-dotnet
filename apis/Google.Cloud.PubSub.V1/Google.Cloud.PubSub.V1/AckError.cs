@@ -124,7 +124,7 @@ internal sealed class AckError
         GaxPreconditions.CheckNotNull(rpcException, nameof(rpcException));
         GaxPreconditions.CheckNotNull(ids, nameof(ids));
 
-        // Check the gRPC StatusCode. For certain StatusCodes, we need to retry all ids.            
+        // Check the gRPC StatusCode. For certain StatusCodes, we need to retry all ids.
         bool retryAll = ShouldRetryAll(rpcException);
         if (retryAll)
         {

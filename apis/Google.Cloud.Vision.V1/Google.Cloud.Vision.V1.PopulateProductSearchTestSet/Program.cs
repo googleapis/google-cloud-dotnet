@@ -71,7 +71,7 @@ namespace Google.Cloud.Vision.V1.PopulateProductSearchTestSet
                     DisplayName = "Product set for testing"
                 }
             };
-            
+
             // Add the products. Each product needs to be:
             // - Created
             // - Added to the product set
@@ -88,7 +88,7 @@ namespace Google.Cloud.Vision.V1.PopulateProductSearchTestSet
                         Description = product.Description,
                         DisplayName = product.DisplayName,
                         ProductCategory = product.Category,
-                        ProductLabels = { product.Labels.Select(kvp => new Product.Types.KeyValue { Key = kvp.Key, Value = kvp.Value }) }                        
+                        ProductLabels = { product.Labels.Select(kvp => new Product.Types.KeyValue { Key = kvp.Key, Value = kvp.Value }) }
                     }
                 };
                 var productResource = productSearchClient.CreateProduct(createProductRequest);

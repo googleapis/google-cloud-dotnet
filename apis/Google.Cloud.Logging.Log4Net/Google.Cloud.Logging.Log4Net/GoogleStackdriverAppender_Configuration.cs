@@ -66,7 +66,7 @@ namespace Google.Cloud.Logging.Log4Net
     }
 
     /// <summary>
-    /// Whether log events are queued in memory or to disk. Only in-memory is currently supported. 
+    /// Whether log events are queued in memory or to disk. Only in-memory is currently supported.
     /// </summary>
     public enum LocalQueueType
     {
@@ -100,7 +100,7 @@ namespace Google.Cloud.Logging.Log4Net
         private bool _disableResourceTypeDetection = false;
         /// <summary>
         /// If set, disables resource-type detection based on platform,
-        /// so ResourceType will default to "global" if not manually set. 
+        /// so ResourceType will default to "global" if not manually set.
         /// </summary>
         public bool DisableResourceTypeDetection
         {
@@ -309,7 +309,7 @@ namespace Google.Cloud.Logging.Log4Net
 
         private int _disposeTimeoutSeconds = 30;
         /// <summary>
-        /// The maximum time the <c>Dispose()</c> call of <see cref="GoogleStackdriverAppender"/> may take. 
+        /// The maximum time the <c>Dispose()</c> call of <see cref="GoogleStackdriverAppender"/> may take.
         /// Default value is 30 seconds.
         /// </summary>
         public int DisposeTimeoutSeconds

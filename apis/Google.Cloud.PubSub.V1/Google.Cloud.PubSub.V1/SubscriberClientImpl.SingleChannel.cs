@@ -45,7 +45,7 @@ public sealed partial class SubscriberClientImpl
         {
             internal bool IsPull { get; }
             internal Action Action { get; }
-            
+
             internal NextAction(bool isPull, Action action)
             {
                 IsPull = isPull;
@@ -57,24 +57,24 @@ public sealed partial class SubscriberClientImpl
         {
             internal Task Task { get; }
             internal NextAction NextAction { get; }
-            
+
             internal TaskNextAction(Task task, NextAction nextAction)
             {
                 Task = task;
                 NextAction = nextAction;
-            }            
+            }
         }
 
         private readonly struct TimedId // "Time" is abstract, a monotonic incrementing counter is used.
         {
             internal long Time { get; }
             internal string Id { get; }
-            
+
             internal TimedId(long time, string id)
             {
                 Time = time;
                 Id = id;
-            }           
+            }
         }
 
         /// <summary>
@@ -107,8 +107,8 @@ public sealed partial class SubscriberClientImpl
 
             internal RetryInfo WithBackoff(TimeSpan? backoff) => new RetryInfo(FirstTimeOfFailureInUtc, backoff);
         }
-        
-        
+
+
         private static readonly RetrySettings s_pullBackoff = RetrySettings.FromExponentialBackoff(
             maxAttempts: int.MaxValue,
             initialBackoff: TimeSpan.FromSeconds(0.5),
@@ -175,7 +175,7 @@ public sealed partial class SubscriberClientImpl
         private long _extendThrottleLow = 0; // Incremented after _extendQueueThrottleInterval, checked when throttling.
         private bool _exactlyOnceDeliveryEnabled = false; // True if subscription is exactly once, else false.
         private TimeSpan? _pullBackoff = null;
-        
+
         internal SingleChannel(SubscriberClientImpl subscriber,
             SubscriberServiceApiClient client, SubscriptionHandler handler,
             Flow flow, bool useLegacyFlowControl,
@@ -470,7 +470,7 @@ public sealed partial class SubscriberClientImpl
                 return _taskHelper.Run(() => ProcessPullMessagesAsync(messages, messageIds));
             }
         }
-        
+
         private async Task ProcessPullMessagesAsync(List<ReceivedMessage> msgs, HashSet<string> msgIds)
         {
             // Running async. Common data needs locking
@@ -530,7 +530,7 @@ public sealed partial class SubscriberClientImpl
 
             public LeaseCancellation(CancellationTokenSource softStopCts) =>
                 _cts = CancellationTokenSource.CreateLinkedTokenSource(softStopCts.Token);
-           
+
             public void Dispose()
             {
                 lock (_lock)
@@ -699,7 +699,7 @@ public sealed partial class SubscriberClientImpl
         {
             _concurrentPushCount -= 1;
             _pushInFlight -= (ackIds?.Count ?? 0) + (nackIds?.Count ?? 0) + (extendIds?.Count ?? 0);
-            
+
             bool hasAckIds = ackIds?.Count > 0;
             bool hasNackIds = nackIds?.Count > 0;
             bool hasExtendIds = extendIds?.Count > 0;
@@ -895,7 +895,7 @@ public sealed partial class SubscriberClientImpl
                 // Successful Ids = AllIds - (TemporaryFailures + Permanent failures)
                 // TODO: Check if there is an impact due to lazy loading of IEnumerable<T>.
                 var successfulIds = allIds.Except(temporaryFailureIds).Except(permanentFailureIds);
-                // Some ids may have permanent failures and some may have succeeded. Those ids shouldn't be retried. 
+                // Some ids may have permanent failures and some may have succeeded. Those ids shouldn't be retried.
                 var nonRetryableIds = permanentFailureIds.Concat(successfulIds);
 
                 foreach (var item in temporaryFailureIds)
@@ -964,7 +964,7 @@ public sealed partial class SubscriberClientImpl
                 // Any uncaught exception in the handler will terminate the client.
                 _handler.HandleNackResponses(ackNackResponses);
             }
-            
+
             if (_exactlyOnceDeliveryEnabled)
             {
                 HandleAckResponseForExactlyOnceDelivery(writeTask, ackIds, nackIds, extendIds);
@@ -975,7 +975,7 @@ public sealed partial class SubscriberClientImpl
             _pushInFlight -= (ackIds?.Count ?? 0) + (nackIds?.Count ?? 0) + (extendIds?.Count ?? 0);
             if (writeTask.IsFaulted)
             {
-                // Check if it's an RpcException. If it is, then ignore it and continue. We may want to log it later. 
+                // Check if it's an RpcException. If it is, then ignore it and continue. We may want to log it later.
                 // Other non-gRPC unrecoverable errors will continue to be thrown.
                 if (writeTask.Exception.As<RpcException>() is null)
                 {

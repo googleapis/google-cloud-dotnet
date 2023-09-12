@@ -20,7 +20,7 @@ using WktValue = Google.Protobuf.WellKnownTypes.Value;
 namespace Google.Cloud.AIPlatform.V1
 {
     /// <summary>
-    /// Utility methods for working with 
+    /// Utility methods for working with
     /// <see cref="Google.Protobuf.WellKnownTypes.Value"/> and <see cref="Google.Protobuf.WellKnownTypes.Struct"/>.
     /// </summary>
     public static class ValueConverter

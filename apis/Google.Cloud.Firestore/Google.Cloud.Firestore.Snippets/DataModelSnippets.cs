@@ -187,7 +187,7 @@ namespace Google.Cloud.Firestore.Snippets
             {
                 switch (value)
                 {
-                    // This is the expected path: 
+                    // This is the expected path:
                     case string id:
                         return new PlayerId(id);
                     // The converter will never be called with a null value from Google.Cloud.Firestore,
@@ -279,7 +279,7 @@ namespace Google.Cloud.Firestore.Snippets
         {
             [FirestoreDocumentId]
             public DocumentReference Reference { get; set; }
-            
+
             [FirestoreDocumentCreateTimestamp]
             public Timestamp CreateTime { get; set; }
 
@@ -307,7 +307,7 @@ namespace Google.Cloud.Firestore.Snippets
             // Create a document with a random ID in the "rooms" collection.
             CollectionReference collection = db.Collection("rooms");
             DocumentReference document = await collection.AddAsync(new ChatRoom { Name = "Jon's private chat" });
-            
+
             // Later in code, fetch a snapshot (potentially using a query; we're fetching directly for simplicity)
             DocumentSnapshot snapshot = await document.GetSnapshotAsync();
             ChatRoom room = snapshot.ConvertTo<ChatRoom>();

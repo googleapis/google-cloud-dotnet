@@ -64,7 +64,7 @@ namespace Google.Cloud.Datastore.V1.Tests
         {
             await TestLookup((db, keys) => db.LookupAsync(keys));
         }
-        
+
         private async Task TestLookup(Func<DatastoreDb, IEnumerable<Key>, Task<IReadOnlyList<Entity>>> lookupFunc)
         {
             KeyFactory factory = new KeyFactory("project", "ns", "kind");
@@ -110,7 +110,7 @@ namespace Google.Cloud.Datastore.V1.Tests
             string path = string.Join("/", key.Path.Select(pe => $"{pe.Kind}={pe.Id}"));
             return $"{key.PartitionId.ProjectId}:{key.PartitionId.NamespaceId}/{path}";
         }
-        
+
         private class FakeDatastoreClient : DatastoreClient
         {
             private readonly KeyFactory keyFactory;
@@ -126,7 +126,7 @@ namespace Google.Cloud.Datastore.V1.Tests
             }
 
             public override LookupResponse Lookup(LookupRequest request, CallSettings callSettings = null)
-            {                
+            {
                 requests.Add(NormalizeRequest(request));
                 // Report "found" entities in the order they were presented in the constructor.
                 // Report everything else as deferred. Ignore "missing"...

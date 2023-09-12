@@ -215,7 +215,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
 
             ReadRowsRequest originalRequest = new ReadRowsRequest { Rows = fullRowSet };
             ReadRowsRequest filteredRequest = new ReadRowsRequest { Rows = filteredRowSet };
-            
+
             BigtableReadRowsRequestManager underTest = new BigtableReadRowsRequestManager(originalRequest);
             Assert.Equal(originalRequest, underTest.BuildUpdatedRequest());
             underTest.LastFoundKey = lastFoundKey;

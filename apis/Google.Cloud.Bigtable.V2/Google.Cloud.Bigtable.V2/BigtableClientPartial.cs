@@ -56,7 +56,7 @@ namespace Google.Cloud.Bigtable.V2
         /// The <see cref="BigtableServiceApiClient"/> to use in the <see cref="BigtableClient"/>. Must not be null.
         /// </param>
         /// <returns>The created <see cref="BigtableClient"/>.</returns>
-        public static BigtableClient Create(BigtableServiceApiClient client) => 
+        public static BigtableClient Create(BigtableServiceApiClient client) =>
             new BigtableClientImpl(GaxPreconditions.CheckNotNull(client, nameof(client)));
 
         /// <summary>
@@ -446,7 +446,7 @@ namespace Google.Cloud.Bigtable.V2
         {
             GaxPreconditions.CheckNotNull(tableName, nameof(tableName));
             GaxPreconditions.CheckArgument(rowKey.Length != 0, nameof(rowKey), "The row key must not empty");
-            
+
             var request = new MutateRowRequest
             {
                 TableNameAsTableName = tableName,
@@ -794,7 +794,7 @@ namespace Google.Cloud.Bigtable.V2
         {
             GaxPreconditions.CheckNotNull(tableName, nameof(tableName));
             GaxPreconditions.CheckArgument(rowKey.Length != 0, nameof(rowKey), "The row key must not empty");
-            
+
             var request = new ReadModifyWriteRowRequest
             {
                 TableNameAsTableName = tableName,

@@ -262,7 +262,7 @@ namespace Google.Cloud.Firestore.Snippets
             FirestoreDb db = FirestoreDb.Create(projectId);
             CollectionReference collection = db.Collection("counters");
             DocumentReference currentCounter = collection.Document("current");
-            
+
             long newValue = await db.RunTransactionAsync(async transaction =>
             {
                 DocumentSnapshot currentSnapshot = await transaction.GetSnapshotAsync(currentCounter);
@@ -290,7 +290,7 @@ namespace Google.Cloud.Firestore.Snippets
                 State = "CA",
                 IsCapital = false,
                 Population = 3900000L
-            };            
+            };
             DocumentReference document = await collection.AddAsync(city);
 
             // Sample: DocumentSnapshot
@@ -409,7 +409,7 @@ namespace Google.Cloud.Firestore.Snippets
             // Sample: ListenDocument
             FirestoreDb db = FirestoreDb.Create(projectId);
             // Create a random document ID. The document doesn't exist yet.
-            DocumentReference doc = db.Collection(collectionId).Document();            
+            DocumentReference doc = db.Collection(collectionId).Document();
 
             FirestoreChangeListener listener = doc.Listen(snapshot =>
             {

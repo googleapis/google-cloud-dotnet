@@ -809,7 +809,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             }
             // End sample
         }
-        
+
         // Snippets ported from https://cloud.google.com/datastore/docs/concepts/entities
 
         [Fact]
@@ -938,13 +938,13 @@ namespace Google.Cloud.Datastore.V1.Snippets
                 Order = { { "priority", Direction.Descending } },
             };
 
-            DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);            
+            DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
             foreach (Entity entity in db.RunQueryLazily(query))
             {
                 Console.WriteLine((string)entity["description"]);
             }
             // TODO: Results beyond this batch?
-            // End sample           
+            // End sample
         }
 
         [Fact]
@@ -962,7 +962,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             };
             // End sample
         }
-        
+
         [Fact]
         public void AncestorQuery()
         {
@@ -1022,7 +1022,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             foreach (Entity entity in db.RunQueryLazily(query))
             {
                 Console.WriteLine($"{(int)entity["priority"]}: {(double?)entity["percentage_complete"]}");
-            }            
+            }
             // End sample
         }
 

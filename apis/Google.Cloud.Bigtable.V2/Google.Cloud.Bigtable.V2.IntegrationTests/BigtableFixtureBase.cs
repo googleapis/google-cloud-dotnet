@@ -43,7 +43,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
 
         public BigtableFixtureBase()
         {
-#if NET462_OR_GREATER            
+#if NET462_OR_GREATER
             GrpcInfo.EnableSubchannelCounting();
 #endif
             RunningAgainstEmulator = !string.IsNullOrEmpty(Environment.GetEnvironmentVariable(EmulatorEnvironmentVariable));
