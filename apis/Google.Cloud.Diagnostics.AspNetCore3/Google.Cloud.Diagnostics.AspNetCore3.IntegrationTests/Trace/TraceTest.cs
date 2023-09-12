@@ -1,11 +1,11 @@
 // Copyright 2017 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -305,7 +305,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
                 // Set the servers on the Controller so it can generate the subsequent requests.
                 // This is needed beacuse we are not making requests against published services but
                 // to services that are only available through the test servers.
-                // Whoever makes requests to those services (as PropagationController does) needs to do so 
+                // Whoever makes requests to those services (as PropagationController does) needs to do so
                 // through an HttpClient generated from the test server.
                 PropagationController.FirstCallServer = firstCallServer;
                 PropagationController.SecondCallServer = secondCallServer;
@@ -665,7 +665,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
             {
                 Credential = GoogleCredential.FromAccessToken("very_fake_token")
             }.Build();
-        
+
     }
 
     /// <summary>

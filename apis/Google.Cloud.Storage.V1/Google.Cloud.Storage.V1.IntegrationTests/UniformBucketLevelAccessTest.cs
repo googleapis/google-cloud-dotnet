@@ -63,7 +63,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                 var fetched = client.GetBucket(bucketName);
                 Assert.False(fetched.IamConfiguration.UniformBucketLevelAccess.Enabled);
             }
-        }        
+        }
 
         [Fact]
         public void GeneralSmokeTest()
@@ -101,7 +101,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                 exception = Assert.Throws<GoogleApiException>(() => client.Service.ObjectAccessControls.List(bucketName, objectName).Execute());
                 Assert.Equal(HttpStatusCode.BadRequest, exception.HttpStatusCode);
             }
-        }        
+        }
 
         private static Bucket CreateBucketRepresentation(string bucketName, bool enabled) =>
             new Bucket

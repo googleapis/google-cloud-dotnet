@@ -138,7 +138,7 @@ public sealed class GoogleCloudConsoleFormatter : ConsoleFormatter, IDisposable
             return;
         }
 
-        // Write the scopes as an array property, but only if there are any.            
+        // Write the scopes as an array property, but only if there are any.
         scopeProvider.ForEachScope(WriteScope, writer);
         // If there are no scopes, the write state will still be "object". If
         // we've written at least one scope, the write state will be "array".

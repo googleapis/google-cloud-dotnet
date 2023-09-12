@@ -165,7 +165,7 @@ namespace Google.Cloud.Firestore.Converters
 
         /// <summary>
         /// If <paramref name="targetType"/> is a type that implements <see cref="IEnumerable{T}"/>, we check to see if <see cref="List{T}"/> is
-        /// compatible with the target type. 
+        /// compatible with the target type.
         /// </summary>
         /// <param name="targetType"></param>
         /// <returns>null if <paramref name="targetType"/> cannot be implemented via <see cref="List{T}"/>; the list type otherwise.</returns>

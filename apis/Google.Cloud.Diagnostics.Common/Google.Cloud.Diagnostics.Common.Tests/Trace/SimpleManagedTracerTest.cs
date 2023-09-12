@@ -1,11 +1,11 @@
 // Copyright 2016 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -66,10 +66,10 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         }
 
         /// <summary>
-        /// Used to ensure a <see cref="TraceSpan"/>'s that starts ends immediately 
+        /// Used to ensure a <see cref="TraceSpan"/>'s that starts ends immediately
         /// has a total run time of 1ms.
-        /// 
-        /// This is needed as we set the length to 1ms for spans that do not have 
+        ///
+        /// This is needed as we set the length to 1ms for spans that do not have
         /// a difference of 1ms between start and end. If we do not the Trace
         /// API will not record the span.
         /// </summary>
@@ -316,7 +316,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
             var entry = Assert.Single(consumer.Items);
             var spans = entry.Spans;
-            Assert.Equal(5, spans.Count);            
+            Assert.Equal(5, spans.Count);
             AssertValidSpan(spans[0], "child-one", spans[4].SpanId);
             Assert.False(string.IsNullOrWhiteSpace(spans[0].Labels[TraceLabels.StackTrace]));
             AssertValidSpan(spans[1], "grandchild-one", spans[3].SpanId, SpanKind.RpcClient);

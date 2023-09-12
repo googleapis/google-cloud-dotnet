@@ -30,7 +30,7 @@ using System.Threading.Tasks;
 namespace Google.Cloud.PubSub.V1;
 
 /// <summary>
-/// Implementation of <see cref="SubscriberClient"/>. 
+/// Implementation of <see cref="SubscriberClient"/>.
 /// </summary>
 public sealed partial class SubscriberClientImpl : SubscriberClient
 {
@@ -187,7 +187,7 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
     {
         lock (_lock)
         {
-            // Note: If multiple stop requests are made, only the first cancellation token is observed.  
+            // Note: If multiple stop requests are made, only the first cancellation token is observed.
             if (_mainTcs is not null && _globalSoftStopCts.IsCancellationRequested)
             {
                 // No-op. We don't want to throw exceptions if DisposeAsync or StopAsync is called a second time.

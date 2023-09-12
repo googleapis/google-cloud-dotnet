@@ -59,7 +59,7 @@ public abstract partial class PublisherClient : IAsyncDisposable
     public static long DefaultCompressionBytesThreshold { get; } = 240;
 
     /// <summary>
-    /// The associated <see cref="TopicName"/>. 
+    /// The associated <see cref="TopicName"/>.
     /// </summary>
     public virtual TopicName TopicName => throw new NotImplementedException();
 

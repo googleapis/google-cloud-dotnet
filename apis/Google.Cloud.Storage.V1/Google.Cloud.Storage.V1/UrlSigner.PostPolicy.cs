@@ -1,11 +1,11 @@
 ﻿// Copyright 2020 Google LLC
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     https://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -36,7 +36,7 @@ namespace Google.Cloud.Storage.V1
 
             /// <summary>
             /// The name of the bucket that you want to allow uploads to.
-            /// Alternatively, you can include the bucket name when you add 
+            /// Alternatively, you can include the bucket name when you add
             /// the <see cref="PostPolicyStandardElement.Key"/> element.
             /// </summary>
             BucketName = 1,
@@ -88,7 +88,7 @@ namespace Google.Cloud.Storage.V1
             SuccessActionRedirect = 9,
 
             /// <summary>
-            /// The status code returned to the client upon successful upload if 
+            /// The status code returned to the client upon successful upload if
             /// <see cref="SuccessActionRedirect"/> is not specified.
             /// Allowed values are <see cref="HttpStatusCode.OK"/>, <see cref="HttpStatusCode.Created"/>,
             /// <see cref="HttpStatusCode.NoContent"/>.
@@ -114,7 +114,7 @@ namespace Google.Cloud.Storage.V1
         }
 
         /// <summary>
-        /// Represents an unsigned post policy. It needs to be signed with <see cref="UrlSigner.Sign(PostPolicy, Options)"/> 
+        /// Represents an unsigned post policy. It needs to be signed with <see cref="UrlSigner.Sign(PostPolicy, Options)"/>
         /// before it is used to enforced policies when posting objects via form.
         /// </summary>
         public sealed class PostPolicy
@@ -143,7 +143,7 @@ namespace Google.Cloud.Storage.V1
             private readonly SortedDictionary<IPostPolicyElement, IPostPolicyCondition> _conditions;
 
             private PostPolicy()
-                :this (new ElementComparer()) 
+                :this (new ElementComparer())
             { }
 
             // Only for testing purpuses. Elements in conformance tests are not sorted.

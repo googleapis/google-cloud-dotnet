@@ -30,7 +30,7 @@ namespace Google.Cloud.DevTools.Common.Tests
         private static readonly string s_sampleContextFileContent = $@"
 {{
   ""git"": {{
-    ""revisionId"": ""{TestRevisionId}"", 
+    ""revisionId"": ""{TestRevisionId}"",
     ""url"": ""{TestGitUrl}""
   }}
 }}

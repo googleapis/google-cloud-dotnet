@@ -36,7 +36,7 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
-        /// Returns the affected rows for each of the batch commands that executed succesfully. 
+        /// Returns the affected rows for each of the batch commands that executed succesfully.
         /// </summary>
         public IEnumerable<long> SuccessfulCommandResults { get; }
     }

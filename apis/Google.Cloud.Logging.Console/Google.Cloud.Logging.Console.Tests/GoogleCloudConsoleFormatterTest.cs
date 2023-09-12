@@ -28,7 +28,7 @@ public class GoogleCloudConsoleFormatterTest
 {
     // The expected Json string for a simple log entry with no trace information and no scope information, comprising of just message, category and severity.
     private const string ExpectedSimpleLogEntryJson = "{\"message\":\"test\",\"category\":\"LogCategory\",\"severity\":\"INFO\"}\n";
-    
+
     [Fact]
     public void SimplestLog()
     {
@@ -64,10 +64,10 @@ public class GoogleCloudConsoleFormatterTest
     public void Log_CorrectScopeInformation()
     {
         var options = new GoogleCloudConsoleFormatterOptions { IncludeScopes = true };
-        
+
         var scopeProvider = new LoggerExternalScopeProvider();
         scopeProvider.Push("Inner Scope");
-        
+
         var expectedJson = "{\"message\":\"test\",\"category\":\"LogCategory\",\"severity\":\"INFO\",\"scopes\":[\"Inner Scope\"]}\n";
         var actualJson = LogSimpleLogEntry(options, scopeProvider);
 
@@ -78,7 +78,7 @@ public class GoogleCloudConsoleFormatterTest
     public void Log_EmptyScopeArrayIsIgnored()
     {
         var options = new GoogleCloudConsoleFormatterOptions { IncludeScopes = true };
-               
+
         var scopeProvider = new LoggerExternalScopeProvider();
         var actualJson = LogSimpleLogEntry(options, scopeProvider);
 
@@ -100,7 +100,7 @@ public class GoogleCloudConsoleFormatterTest
         var writer = new StringWriter { NewLine = "\n" };
 
         formatter.Write(logEntry, scopeProvider: null, writer);
-        
+
         var actualJson = writer.ToString();
 
         var actualState = JsonDocument.Parse(actualJson);
@@ -143,7 +143,7 @@ public class GoogleCloudConsoleFormatterTest
     public void ConsoleLoggerOptions_NoProjectId_TraceInformationIsNotLogged()
     {
         // TraceGoogleCloudProjectId is not set.
-        
+
         using var activity = new Activity("my-activity").Start();
         var actualJson = LogSimpleLogEntry();
 
@@ -161,7 +161,7 @@ public class GoogleCloudConsoleFormatterTest
 
         Assert.Equal(ExpectedSimpleLogEntryJson, actualJson);
     }
-    
+
     [Fact]
     public void Log_TraceInformationIsLogged()
     {
@@ -183,7 +183,7 @@ public class GoogleCloudConsoleFormatterTest
 
         var expectedJson = $"{{\"message\":\"test\",\"category\":\"LogCategory\",\"severity\":\"INFO\",\"logging.googleapis.com/trace\":\"projects/{traceProjectId}/traces/{activity.TraceId}\",\"logging.googleapis.com/spanId\":\"{activity.SpanId}\",\"logging.googleapis.com/trace_sampled\":{expectedTraceSampled}}}\n";
         var actualJson = LogSimpleLogEntry(options);
-        
+
         Assert.Equal(expectedJson, actualJson);
     }
 

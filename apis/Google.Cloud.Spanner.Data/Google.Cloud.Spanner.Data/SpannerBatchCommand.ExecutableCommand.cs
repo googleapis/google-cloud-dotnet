@@ -58,7 +58,7 @@ namespace Google.Cloud.Spanner.Data
             /// Executes the batch commands sequentially. The execution of this method overall is asynchronous.
             /// </summary>
             /// <param name="cancellationToken">A cancellation token for the operation.</param>
-            /// <returns>A task that once completed will indicate the number of rows 
+            /// <returns>A task that once completed will indicate the number of rows
             /// affected by each of the executed commands.
             /// If a command fails, execution is halted and this method will return a faulted task with an <see cref="SpannerBatchNonQueryException"/>
             /// containing information about the failure and the number of affected rows by each of the commands

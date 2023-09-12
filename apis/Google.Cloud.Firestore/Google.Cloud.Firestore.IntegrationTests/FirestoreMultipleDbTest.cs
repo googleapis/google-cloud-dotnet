@@ -25,7 +25,7 @@ public class FirestoreMultipleDbTest
     private readonly MultipleFirestoreDbFixture _fixture;
     public FirestoreMultipleDbTest(MultipleFirestoreDbFixture multipleFirestoreDbFixture) =>
         _fixture = multipleFirestoreDbFixture;
-    
+
     [Fact(Skip = "Not supported at the server yet")]
     public async Task MultipleDbReadWriteTest()
     {

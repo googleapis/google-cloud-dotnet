@@ -1,11 +1,11 @@
 // Copyright 2021 Google LLC
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     https://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -36,7 +36,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// How this information is included will depend on the actual <paramref name="logger"/>.
         /// <see cref="GoogleLogger"/>" will include this information in <see cref="LogEntry.Labels"/>.
         /// For the consumption of other loggers, the information will be included in newly created scopes
-        /// at the moment of logging, in a format that all loggers should understand. 
+        /// at the moment of logging, in a format that all loggers should understand.
         /// </para>
         /// <para>
         /// If <paramref name="logger"/> had already been augmented with labels, the old labels will be replaced
@@ -52,7 +52,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// How this information is included will depend on the actual <paramref name="logger"/>.
         /// <see cref="GoogleLogger"/>" will include this information in <see cref="LogEntry.Labels"/>.
         /// For the consumption of other loggers, the information will be included in newly created scopes
-        /// at the moment of logging, in a format that all loggers should understand. 
+        /// at the moment of logging, in a format that all loggers should understand.
         /// </para>
         /// <para>
         /// If <paramref name="logger"/> had already been augmented with labels, the old labels will be replaced
@@ -72,7 +72,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// How this information is included will depend on the actual <paramref name="logger"/>.
         /// <see cref="GoogleLogger"/>" will include this information in <see cref="LogEntry.Labels"/>.
         /// For the consumption of other loggers, the information will be included in newly created scopes
-        /// at the moment of logging, in a format that all loggers should understand. 
+        /// at the moment of logging, in a format that all loggers should understand.
         /// </para>
         /// <para>
         /// If <paramref name="logger"/> had already been augmented with labels, <paramref name="labels"/>
@@ -88,7 +88,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// How this information is included will depend on the actual <paramref name="logger"/>.
         /// <see cref="GoogleLogger"/>" will include this information in <see cref="LogEntry.Labels"/>.
         /// For the consumption of other loggers, the information will be included in newly created scopes
-        /// at the moment of logging, in a format that all loggers should understand. 
+        /// at the moment of logging, in a format that all loggers should understand.
         /// </para>
         /// <para>
         /// If <paramref name="logger"/> had already been augmented with labels, <paramref name="labels"/>
@@ -108,7 +108,7 @@ namespace Google.Cloud.Diagnostics.Common
             private readonly IEnumerable<KeyValuePair<string, string>> _labels;
 
             private AugmentedLogger(ILogger logger, IEnumerable<KeyValuePair<string, string>> labels) =>
-                (_innerLogger, _labels) = 
+                (_innerLogger, _labels) =
                 (GaxPreconditions.CheckNotNull(logger, nameof(logger)), GaxPreconditions.CheckNotNull(labels, nameof(labels)));
 
             public static AugmentedLogger ForLabels(ILogger logger, IEnumerable<KeyValuePair<string, string>> labels) =>

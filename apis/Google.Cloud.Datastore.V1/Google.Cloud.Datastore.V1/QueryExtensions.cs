@@ -40,7 +40,7 @@ namespace Google.Cloud.Datastore.V1
 
         /// <summary>
         /// Adds an entry to the list of property references.
-        /// This enables repeated property reference fields (such as <see cref="Query.DistinctOn"/> 
+        /// This enables repeated property reference fields (such as <see cref="Query.DistinctOn"/>
         /// to be specified in a query with a collection initializer
         /// in C# 6 and later.
         /// </summary>

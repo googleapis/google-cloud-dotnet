@@ -77,7 +77,7 @@ namespace Grafeas.V1.FixGeneratedCode
                 {
                     return node;
                 }
-                
+
                 var oldClientDeclaration = body.Statements.FirstOrDefault(
                     st => st is LocalDeclarationStatementSyntax ldss && ldss.Declaration.Variables.Any(v => v.Identifier.Text == "grafeasClient"));
                 if (oldClientDeclaration == null)

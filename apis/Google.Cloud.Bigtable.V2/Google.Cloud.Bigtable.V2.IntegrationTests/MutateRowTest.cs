@@ -77,7 +77,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 "test12345",
                 new BigtableVersion(1));
         }
-        
+
         [Fact]
         public async Task ModifyRow()
         {
@@ -129,7 +129,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 "new_cell_value",
                 new BigtableVersion(1));
         }
-        
+
         [Fact]
         public async Task DeleteFromColumn()
         {

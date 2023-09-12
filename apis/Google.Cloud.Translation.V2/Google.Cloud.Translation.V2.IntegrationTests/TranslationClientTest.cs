@@ -34,7 +34,7 @@ namespace Google.Cloud.Translation.V2.IntegrationTests
             var detection = client.DetectLanguage(LargeText);
             Assert.Equal("en", detection.Language);
         }
-        
+
         [Fact]
         public void Translate_LargeText()
         {

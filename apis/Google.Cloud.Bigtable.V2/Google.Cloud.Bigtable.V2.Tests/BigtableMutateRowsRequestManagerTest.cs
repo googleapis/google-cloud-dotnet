@@ -79,7 +79,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         /// <summary>
         /// Builds a <see cref="MutateRowsResponse"/> message to be returned to user.
         /// </summary>
-        /// <param name="statuses"> 
+        /// <param name="statuses">
         /// Array that holds results of all <see cref="MutateRowsRequest"/> Entries.
         /// </param>
         /// <returns>MutateRowsResponse.</returns>
@@ -90,7 +90,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             };
 
         /// <summary>
-        /// Sends <see cref="MutateRowsResponse"/> message to <see cref="BigtableMutateRowsRequestManager"/> 
+        /// Sends <see cref="MutateRowsResponse"/> message to <see cref="BigtableMutateRowsRequestManager"/>
         /// and requests back <see cref="BigtableMutateRowsRequestManager.ProcessingStatus"/> based on the message sent.
         /// </summary>
         /// <param name="underTest">
@@ -267,7 +267,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
 
         /// <summary>
         /// Two calls, retry call has one of the resonses with non-retryable status.
-        /// In this case we should not retry, RetryRequest should be null. 
+        /// In this case we should not retry, RetryRequest should be null.
         /// </summary>
         [Fact]
         public void TestTwoTryPartialFailNotRetryable()

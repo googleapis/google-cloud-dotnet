@@ -1466,7 +1466,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             Assert.Equal(rowsBefore + 2, actualCount);
         }
 
-        // See-also: InsertRowsAsync(string, string, *) 
+        // See-also: InsertRowsAsync(string, string, *)
         // Member: InsertRowsAsync(string, string, string, *)
         // Member: InsertRowsAsync(TableReference, *)
         // Member: InsertRowsAsync(string, string, IEnumerable<BigQueryInsertRow>, *, CancellationToken)
@@ -1944,8 +1944,8 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             {
                 { "message", BigQueryDbType.String }
             }.Build();
-            Table tableToCreate = new Table 
-            { 
+            Table tableToCreate = new Table
+            {
                 TimePartitioning = TimePartition.CreateDailyPartitioning(expiration: null),
                 Schema = schema
             };
@@ -1954,7 +1954,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             // the _PARTITIONTIME column will be null while it's being served from the streaming buffer.
             // This code assumes the upload succeeds; normally, you should check the job results.
             table.UploadJson(new[] { "{ \"message\": \"Sample message\" }" }).PollUntilCompleted();
-            
+
             BigQueryResults results = client.ExecuteQuery(
                 $"SELECT message, _PARTITIONTIME AS pt FROM {table}",
                 parameters: null);

@@ -1,11 +1,11 @@
 // Copyright 2018 Google LLC
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     https://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -35,7 +35,7 @@ namespace Google.Cloud.Spanner.Data
         /// Class that effectively contains a copy of the parameters of a SpannerCommand, but in a shallow-immutable way.
         /// This means we can validate various things and not worry about them changing. The parameter collection may be modified
         /// externally, along with the SpannerConnection, but other objects should be fine.
-        /// 
+        ///
         /// This class is an implementation detail, used to keep "code required to execute Spanner commands" separate from the ADO
         /// API surface with its mutable properties and many overloads.
         /// </summary>

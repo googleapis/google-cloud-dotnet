@@ -1,11 +1,11 @@
 // Copyright 2017 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -88,7 +88,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 datasetId,
                 tableId,
                 new Table
-                { 
+                {
                     TableReference = new TableReference
                     {
                         ProjectId = _fixture.ProjectId,
@@ -370,12 +370,12 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         /// We use 5 threads as that's the quota limit for updates to a single dataset's metadata within 10
         /// seconds. We can't actually tell for sure whether any of the calls went through all three RPCs,
         /// but the test does fail without the final "get".
-        /// 
+        ///
         /// We could potentially detect the create request failing due to lack of quota and perform
         /// a second "get", but the quota check happens early - leading to "not found" errors while the dataset
         /// is being created. Rather than get into polling intervals etc, we just let it fail in that case;
         /// users will need to write higher-level retry if they're in that very niche situation.
-        /// 
+        ///
         /// (Threads are used rather than tasks to ensure that the requests really are pretty much "all at
         /// the same time"; we don't want the normal slow task warm-up to skew this, although they're used
         /// in the async test for convenience.)

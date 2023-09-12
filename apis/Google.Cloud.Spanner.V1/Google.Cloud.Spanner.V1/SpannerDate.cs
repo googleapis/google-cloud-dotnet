@@ -1,11 +1,11 @@
 ﻿// Copyright 2022 Google LLC
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     https://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -172,7 +172,7 @@ namespace Google.Cloud.Spanner.V1
         /// Returns a new instance of the <see cref="SpannerDate"/> that adds the specified number of days to the value of this instance.
         /// </summary>
         /// <param name="days">The number of days to be added.</param>
-        /// <returns>A new instance of the SpannerDate value that is the sum of the date represented by this instance and the number of 
+        /// <returns>A new instance of the SpannerDate value that is the sum of the date represented by this instance and the number of
         /// days represented by <paramref name="days"/>.</returns>
         public SpannerDate AddDays(int days) => new SpannerDate(_days + days);
 

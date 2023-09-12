@@ -118,7 +118,7 @@ namespace Google.Cloud.Firestore.Tests.Converters
             [FirestoreProperty, ServerTimestamp]
             public Timestamp Created { get; set; }
         }
-        
+
         [Fact]
         public void SerializeMap()
         {

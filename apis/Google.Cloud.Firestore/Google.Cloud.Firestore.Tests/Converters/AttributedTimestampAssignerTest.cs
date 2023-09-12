@@ -22,7 +22,7 @@ using static Google.Cloud.Firestore.Tests.DocumentSnapshotHelpers;
 namespace Google.Cloud.Firestore.Tests.Converters
 {
     public class AttributedTimestampAssignerTest
-    {        
+    {
         [Fact]
         public void PopulateTimestamps()
         {

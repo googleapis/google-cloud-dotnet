@@ -58,7 +58,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             var family = row.Families.SingleOrDefault();
             Assert.NotNull(family);
             Assert.Equal(familyName, family.Name);
-            
+
             var column = family?.Columns.SingleOrDefault();
             Assert.NotNull(column);
             Assert.Equal(columnQualifier.Value, column.Qualifier);

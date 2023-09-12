@@ -94,7 +94,7 @@ namespace Google.Cloud.Spanner.V1
             /// </summary>
             internal DatabaseStatistics(SessionPoolSegmentStatistics sessionPoolSegmentStatistics) =>
                 SegmentStatistics = sessionPoolSegmentStatistics;
-            
+
             /// <inheritdoc />
             public override string ToString() => SegmentStatistics.ToString();
         }

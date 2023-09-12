@@ -1,11 +1,11 @@
 ﻿// Copyright 2022 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -27,7 +27,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.Equal(false, options.UseDBNull);
             options = options.WithClrDefaultForNullSetting(false);
             Assert.Equal(true, options.UseDBNull);
-            
+
             // Test with builder as well.
             var builder = new SpannerConnectionStringBuilder();
             builder.UseClrDefaultForNull = true;
@@ -47,7 +47,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             options = options.WithSpannerToClrMappings("DateToSpannerDate");
             Assert.Equal(typeof(SpannerDate), options.DateToConfiguredClrType);
-            
+
             // Test with builder as well.
             var builder = new SpannerConnectionStringBuilder();
             builder.SpannerToClrTypeDefaultMappings = "DateToDateTime";
@@ -96,7 +96,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         [Theory]
         [InlineData("DecimalToFloat64,DecimalToNumeric,DateTimeToDate")] // Multiple mappings for a type.
         [InlineData("DecimalToFloat64,DecimalToPgNumeric,DateTimeToDate,DateTimeToTimestamp")] // Multiple mappings for a type.
-        [InlineData("DecimalToFloat64   ,DecimalToNumeric,DateTimeToDate")] // Multiple mappings and whitespace.       
+        [InlineData("DecimalToFloat64   ,DecimalToNumeric,DateTimeToDate")] // Multiple mappings and whitespace.
         [InlineData("DecimalToFloat64   ,  DateTimeToDate")] // Valid mapping with whitespace.
         [InlineData("UseDecimalToNumeric,DateTimeToDate")] // Invalid values.
         public void BadClrToSpannerTypeDefaultMappingsThrows(string clrToSpannerTypeMappings)
@@ -107,7 +107,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
         [Theory]
         [InlineData("DateToDateTime,DateToSpannerDate")] // Multiple mappings for a type.
-        [InlineData("  DateToDateTime  ,")] // Whitespace.   
+        [InlineData("  DateToDateTime  ,")] // Whitespace.
         [InlineData("UseDateToSpannerDate")] // Invalid value.
         public void BadSpannerToClrTypeDefaultMappingsThrows(string spannerToClrTypeMappings)
         {

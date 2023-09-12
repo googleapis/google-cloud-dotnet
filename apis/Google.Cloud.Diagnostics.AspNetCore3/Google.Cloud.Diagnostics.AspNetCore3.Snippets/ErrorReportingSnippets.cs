@@ -58,7 +58,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.Snippets
         }
 
         /// <summary>
-        /// Test for the snippet sample LogExceptions. On the snippet we need to show 
+        /// Test for the snippet sample LogExceptions. On the snippet we need to show
         /// the method signature to show injection of the logger from services, and also
         /// we need the method to live in a MVC controller so that the logger is properly
         /// injected. Because of that we can't have the snippet being the test itself.
@@ -147,7 +147,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.Snippets
         /// <summary>
         /// This method catches an exception thrown by another method and explicitly
         /// logs that exception.
-        /// The <see cref="IExceptionLogger"/> is populated by dependency injection 
+        /// The <see cref="IExceptionLogger"/> is populated by dependency injection
         /// thanks to the use of the <see cref="FromServicesAttribute"/> attribute.
         /// </summary>
         public void CatchesAndLogsException(string id, [FromServices]IExceptionLogger exceptionLogger)

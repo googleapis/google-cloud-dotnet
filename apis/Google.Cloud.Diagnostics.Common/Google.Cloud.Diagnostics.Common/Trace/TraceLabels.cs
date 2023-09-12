@@ -1,11 +1,11 @@
 ﻿// Copyright 2017 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -26,22 +26,22 @@ namespace Google.Cloud.Diagnostics.Common
     /// </summary>
     public static class TraceLabels
     {
-        ///<summary>The label to denote the size of a request.</summary> 
+        ///<summary>The label to denote the size of a request.</summary>
         public const string HttpRequestSize = "/http/request/size";
 
-        ///<summary>The label to denote the host.</summary> 
+        ///<summary>The label to denote the host.</summary>
         public const string HttpHost = "/http/host";
 
-        ///<summary>The label to denote the request method.</summary> 
+        ///<summary>The label to denote the request method.</summary>
         public const string HttpMethod = "/http/method";
 
-        ///<summary>The label to denote the response status code.</summary> 
+        ///<summary>The label to denote the response status code.</summary>
         public const string HttpStatusCode = "/http/status_code";
 
-        ///<summary>The label to denote a stack trace.</summary> 
+        ///<summary>The label to denote a stack trace.</summary>
         public const string StackTrace = "/stacktrace";
 
-        ///<summary>The label to denote an agent.</summary> 
+        ///<summary>The label to denote an agent.</summary>
         public const string Agent = "/agent";
 
         /// <summary>

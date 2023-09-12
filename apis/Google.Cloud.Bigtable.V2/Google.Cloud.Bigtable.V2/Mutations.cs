@@ -68,7 +68,7 @@ namespace Google.Cloud.Bigtable.V2
         /// restricting the deletions to a given version range.
         /// </summary>
         /// <remarks>
-        /// <para> 
+        /// <para>
         /// Note that string is implicitly convertible to <see cref="BigtableByteString"/>,
         /// so <paramref name="columnQualifier"/> can be specified using a string as well and
         /// its UTF-8 representations will be used.

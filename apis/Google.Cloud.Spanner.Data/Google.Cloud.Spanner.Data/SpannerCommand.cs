@@ -1,11 +1,11 @@
 // Copyright 2017 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -27,12 +27,12 @@ namespace Google.Cloud.Spanner.Data
     /// a Spanner database.
     /// If the command is a SQL query, then <see cref="SpannerCommand.CommandText"/>
     /// contains the entire SQL statement. Use <see cref="SpannerCommand.ExecuteReaderAsync()"/>  to obtain results.
-    /// 
+    ///
     /// If the command is an update, insert or delete command, then <see cref="SpannerCommand.CommandText"/>
     /// is simply "[operation] [spanner_table]" such as "UPDATE MYTABLE" with the parameter
     /// collection containing <see cref="SpannerParameter"/> instances whose name matches a column
     /// in the target table. Use <see cref="ExecuteNonQueryAsync"/> to execute the command.
-    /// 
+    ///
     /// The command may also be a DDL statement such as CREATE TABLE. Use <see cref="ExecuteNonQueryAsync"/>
     /// to execute a DDL statement.
     /// </summary>
@@ -468,7 +468,7 @@ namespace Google.Cloud.Spanner.Data
         /// The command is executed in parallel across multiple partitions, and automatically committed as it executes.
         /// This operation is not atomic: if it is cancelled part way through, the data that has already been updated will
         /// remain updated. Additionally, it is performed "at least once" in each partition; if the statement is non-idempotent
-        /// (for example, incrementing a column) then the update may be performed more than once on a given row. 
+        /// (for example, incrementing a column) then the update may be performed more than once on a given row.
         /// This command must not be part of any other transaction.
         /// </remarks>
         /// <returns>A lower bound for the number of rows affected.</returns>
@@ -483,7 +483,7 @@ namespace Google.Cloud.Spanner.Data
         /// The command is executed in parallel across multiple partitions, and automatically committed as it executes.
         /// This operation is not atomic: if it is cancelled part way through, the data that has already been updated will
         /// remain updated. Additionally, it is performed "at least once" in each partition; if the statement is non-idempotent
-        /// (for example, incrementing a column) then the update may be performed more than once on a given row. 
+        /// (for example, incrementing a column) then the update may be performed more than once on a given row.
         /// This command must not be part of any other transaction.
         /// </remarks>
         /// <param name="cancellationToken">An optional token for canceling the call.</param>

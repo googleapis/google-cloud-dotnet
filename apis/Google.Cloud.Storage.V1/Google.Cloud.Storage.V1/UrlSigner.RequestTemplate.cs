@@ -1,11 +1,11 @@
 ﻿// Copyright 2020 Google LLC
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     https://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -44,7 +44,7 @@ namespace Google.Cloud.Storage.V1
         {
             private static readonly IReadOnlyDictionary<string, IReadOnlyCollection<string>> s_empty =
                 new ReadOnlyDictionary<string, IReadOnlyCollection<string>>(new Dictionary<string, IReadOnlyCollection<string>>());
-            
+
             /// <summary>
             /// The name of the bucket. This will never be null.
             /// </summary>
@@ -64,7 +64,7 @@ namespace Google.Cloud.Storage.V1
             /// </summary>
             /// <remarks>
             /// <para>
-            /// Note that when GET is specified as the <see cref="HttpMethod"/>, 
+            /// Note that when GET is specified as the <see cref="HttpMethod"/>,
             /// both GET and HEAD requests can be made with the created signed URL.
             /// </para>
             /// </remarks>
@@ -78,9 +78,9 @@ namespace Google.Cloud.Storage.V1
             /// <remarks>
             /// <para>
             /// When using <see cref="SigningVersion.V2"/>, from all the headers supplied in <see cref="RequestHeaders"/>,
-            /// only the ones starting with "x-goog-" will be included in the signed URL's signature 
+            /// only the ones starting with "x-goog-" will be included in the signed URL's signature
             /// and therefor must be included in requests made with the created URL.
-            /// All other headers supplied in <see cref="RequestHeaders"/> will be ignored when creating the signed URL 
+            /// All other headers supplied in <see cref="RequestHeaders"/> will be ignored when creating the signed URL
             /// so they shouldn't be included in requests made with the created URL.
             /// </para>
             /// When using <see cref="SigningVersion.V4"/> all headers supplied in <see cref="RequestHeaders"/>

@@ -212,7 +212,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 // Publish a message.
                 var pubTask = pub.PublishAsync("1");
-                // Dispose the publisher. 
+                // Dispose the publisher.
                 await taskHelper.ConfigureAwaitHideCancellation(
                    () => pub.DisposeAsync().AsTask());
                 // Call DisposeAsync again. It shouldn't throw an exception.

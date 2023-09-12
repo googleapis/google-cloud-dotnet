@@ -1,11 +1,11 @@
 ﻿// Copyright 2016 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -185,7 +185,7 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         /// <param name="tableId">The table ID. Must not be null.</param>
         /// <param name="table">The table resource representation to use for the creation. Must not be null.
-        /// If this table's <see cref="Table.TableReference"/> is specified, 
+        /// If this table's <see cref="Table.TableReference"/> is specified,
         /// then it must be the same as the one obtained from the other parameters.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The newly created table.</returns>
@@ -220,7 +220,7 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         /// <param name="tableId">The table ID. Must not be null.</param>
         /// <param name="table">The table resource representation to use for the creation. Must not be null.
-        /// If this table's <see cref="Table.TableReference"/> is specified, 
+        /// If this table's <see cref="Table.TableReference"/> is specified,
         /// then it must be the same as the one obtained from the other parameters.</param>
         /// <param name="getOptions">The options for the "get" operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="createOptions">The options for the "create" operation. May be null, in which case defaults will be supplied.</param>
@@ -247,7 +247,7 @@ namespace Google.Cloud.BigQuery.V2
         /// </para>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>A sequence of models within this dataset.</returns>
-        public PagedEnumerable<ListModelsResponse, BigQueryModel> ListModels(ListModelsOptions options = null) => 
+        public PagedEnumerable<ListModelsResponse, BigQueryModel> ListModels(ListModelsOptions options = null) =>
             _client.ListModels(Reference, options);
 
         /// <summary>
@@ -288,7 +288,7 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         /// <param name="routineId">The routine ID. Must not be null.</param>
         /// <param name="routine">The routine resource representation to use for the creation. Must not be null.
-        /// If this routine's <see cref="Routine.RoutineReference"/> is specified, 
+        /// If this routine's <see cref="Routine.RoutineReference"/> is specified,
         /// then it must be the same as the one obtained from the other parameters.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The newly created routine.</returns>
@@ -311,7 +311,7 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         /// <param name="routineId">The routine ID. Must not be null.</param>
         /// <param name="routine">The routine resource representation to use for the creation. Must not be null.
-        /// If this table's <see cref="Routine.RoutineReference"/> is specified, 
+        /// If this table's <see cref="Routine.RoutineReference"/> is specified,
         /// then it must be the same as the one obtained from the other parameters.</param>
         /// <param name="getOptions">The options for the "get" operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="createOptions">The options for the "create" operation. May be null, in which case defaults will be supplied.</param>
@@ -492,7 +492,7 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         /// <param name="tableId">The table ID. Must not be null.</param>
         /// <param name="table">The table resource representation to use for the creation. Must not be null.
-        /// If this table's <see cref="Table.TableReference"/> is specified, 
+        /// If this table's <see cref="Table.TableReference"/> is specified,
         /// then it must be the same as the one obtained from the other parameters.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
@@ -533,7 +533,7 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         /// <param name="tableId">The table ID. Must not be null.</param>
         /// <param name="table">The table resource representation to use for the creation. Must not be null.
-        /// If this table's <see cref="Table.TableReference"/> is specified, 
+        /// If this table's <see cref="Table.TableReference"/> is specified,
         /// then it must be the same as the one obtained from the other parameters.</param>
         /// <param name="getOptions">The options for the "get" operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="createOptions">The options for the "create" operation. May be null, in which case defaults will be supplied.</param>
@@ -591,7 +591,7 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         /// <param name="routineId">The routine ID. Must not be null.</param>
         /// <param name="routine">The routine resource representation to use for the creation. Must not be null.
-        /// If this table's <see cref="Routine.RoutineReference"/> is specified, 
+        /// If this table's <see cref="Routine.RoutineReference"/> is specified,
         /// then it must be the same as the one obtained from the other parameters.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
@@ -614,12 +614,12 @@ namespace Google.Cloud.BigQuery.V2
 
         /// <summary>
         /// Attempts to fetch the specified routine within this dataset, creating it if it doesn't exist.
-        /// This method just creates a <see cref="RoutineReference"/> and delegates to 
+        /// This method just creates a <see cref="RoutineReference"/> and delegates to
         /// <see cref="BigQueryClient.GetOrCreateRoutineAsync(RoutineReference, Routine, GetRoutineOptions, CreateRoutineOptions, CancellationToken)"/>.
         /// </summary>
         /// <param name="routineId">The routine ID. Must not be null.</param>
         /// <param name="routine">The routine resource representation to use for the creation. Must not be null.
-        /// If this routine's <see cref="Routine.RoutineReference"/> is specified, 
+        /// If this routine's <see cref="Routine.RoutineReference"/> is specified,
         /// then it must be the same as the one obtained from the other parameters.</param>
         /// <param name="getOptions">The options for the "get" operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="createOptions">The options for the "create" operation. May be null, in which case defaults will be supplied.</param>

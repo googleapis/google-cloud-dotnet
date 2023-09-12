@@ -32,12 +32,12 @@ public class MultipleFirestoreDbFixture : CloudProjectFixtureBase, ICollectionFi
     private readonly HttpClient _httpClient;
 
     public MultipleFirestoreDbFixture() : base(ProjectEnvironmentVariable)
-    { 
+    {
         // Scope used for the REST API to create databases.
         string scope = "https://www.googleapis.com/auth/datastore";
         string credentialsPath = Environment.GetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS");
 
-        // Initalize gcloud credentials to be used with REST API calls. 
+        // Initalize gcloud credentials to be used with REST API calls.
         GoogleCredential googleCredential = GoogleCredential.FromFile(credentialsPath).CreateScoped(scope);
         _httpClient = new HttpClientFactory()
             .CreateHttpClient(new CreateHttpClientArgs { Initializers = { googleCredential } });

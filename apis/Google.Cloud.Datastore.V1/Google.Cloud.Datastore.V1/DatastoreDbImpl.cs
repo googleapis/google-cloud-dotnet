@@ -64,7 +64,7 @@ namespace Google.Cloud.Datastore.V1
 
         /// <inheritdoc/>
         public override KeyFactory CreateKeyFactory(string kind) => new KeyFactory(_partitionId, kind);
-        
+
         /// <inheritdoc/>
         public override LazyDatastoreQuery RunQueryLazily(
             Query query,

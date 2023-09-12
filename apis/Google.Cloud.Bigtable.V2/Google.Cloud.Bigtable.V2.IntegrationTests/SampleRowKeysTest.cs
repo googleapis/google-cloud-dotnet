@@ -38,7 +38,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             var tableName = await _fixture.CreateTable();
 
             await _fixture.InsertRowsAsync(
-                tableName, 
+                tableName,
                 Enumerable.Range(0, 10000).Select(i => (BigtableByteString)$"row{i:d5}"));
 
             var stream = client.SampleRowKeys(tableName);

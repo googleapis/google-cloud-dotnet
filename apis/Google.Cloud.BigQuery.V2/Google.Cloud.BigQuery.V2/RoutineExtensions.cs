@@ -1,11 +1,11 @@
 ﻿// Copyright 2020 Google LLC
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     https://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -30,7 +30,7 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public static RoutineType? GetRoutineType(this Routine routine) =>
             GaxPreconditions.CheckNotNull(routine, nameof(routine)).RoutineType switch
-            { 
+            {
                 null => null,
                 UnspecifiedRoutineType => null,
                 _ => EnumMap<RoutineType>.ToValue(routine.RoutineType, nameof(routine.RoutineType))
@@ -41,7 +41,7 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public static void SetRoutineType(this Routine routine, RoutineType? type) =>
             GaxPreconditions.CheckNotNull(routine, nameof(routine)).RoutineType = type switch
-            { 
+            {
                 null => null,
                 _ => EnumMap.ToApiValue(type.Value, nameof(type))
             };

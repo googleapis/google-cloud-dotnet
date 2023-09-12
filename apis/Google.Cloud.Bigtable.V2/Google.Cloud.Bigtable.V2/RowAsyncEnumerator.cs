@@ -349,7 +349,7 @@ namespace Google.Cloud.Bigtable.V2
                 // calculate cell size
                 owner._currentCell.ValueSizeExpected = isSplit ? chunk.ValueSize : chunk.Value.Length;
                 owner._currentCell.ValueSizeRemaining = owner._currentCell.ValueSizeExpected - chunk.Value.Length;
-                
+
                 if (owner._currentCell.ValueSizeRemaining != 0)
                 {
                     ref var accumulator = ref owner._currentCell.ValueAccumulator;
@@ -366,11 +366,11 @@ namespace Google.Cloud.Bigtable.V2
                     owner._currentCell.ValueAccumulator.AddRange(chunk.Value);
                     return CellInProgress.Instance;
                 }
-                
+
                 owner.AddCompletedCellToRow(chunk.Value);
                 return NewCell.Instance;
             }
-            
+
             public override RowMergeState CommitRow(RowAsyncEnumerator owner)
             {
                 Debug.Assert(owner._currentCell.ValueSizeRemaining == 0);

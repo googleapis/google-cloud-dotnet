@@ -54,7 +54,7 @@ namespace Google.Cloud.Datastore.V1
         /// <param name="id">The ID of the path element to append.</param>
         /// <returns>A clone of this key, with the specified path element.</returns>
         public Key WithElement(string kind, long id) => WithElement(new PathElement(kind, id));
-        
+
         /// <summary>
         /// Constructs a clone of this key and removes the final path element.
         /// </summary>

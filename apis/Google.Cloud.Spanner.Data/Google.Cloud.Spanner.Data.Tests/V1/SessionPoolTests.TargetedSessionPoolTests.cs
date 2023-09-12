@@ -113,7 +113,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 await client.Scheduler.RunForSecondsAsync(15);
 
                 stats = pool.GetStatisticsSnapshot();
-                
+
                 Assert.Equal(0, stats.InFlightCreationCount);
                 // It's very likely that we'll end up with "all read/write" sessions,
                 // as all the new sessions will go through the "do we need more read/write transactions?"
@@ -755,7 +755,7 @@ namespace Google.Cloud.Spanner.V1.Tests
 
                 Assert.Equal(TaskStatus.WaitingForActivation, task1.Status);
                 Assert.Equal(TaskStatus.WaitingForActivation, task2.Status);
-                
+
                 // If we cancel one cancelation token, that task will fail,
                 // but the other won't.
                 cts.Cancel();
@@ -952,7 +952,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 return tasks.Select(t => t.Result).ToList();
             }
 
-            private List<Task<PooledSession>> AcquireSessionTasks(TargetedSessionPool pool, int sessionsToAcquiere) => 
+            private List<Task<PooledSession>> AcquireSessionTasks(TargetedSessionPool pool, int sessionsToAcquiere) =>
                 Enumerable
                 .Range(0, sessionsToAcquiere)
                 .Select(_ => pool.AcquireSessionAsync(new TransactionOptions(), default))

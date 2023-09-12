@@ -49,7 +49,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             resource.Type = resourceType;
             return resource;
         }
-        
+
         [Theory]
         [InlineData("gae_app", "project-id")]
         [InlineData("gce_instance", "project-id")]

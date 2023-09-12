@@ -65,7 +65,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
         {
             string projectId = _fixture.ProjectId;
             PartitionId partitionId = _fixture.PartitionId;
-            
+
             // Snippet: RunQuery(RunQueryRequest,*)
             DatastoreClient client = DatastoreClient.Create();
 

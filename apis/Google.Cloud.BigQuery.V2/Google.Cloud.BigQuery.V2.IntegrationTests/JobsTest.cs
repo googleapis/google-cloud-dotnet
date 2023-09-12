@@ -1,11 +1,11 @@
 // Copyright 2016 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -137,7 +137,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var table = client.GetTable(_fixture.ProjectId, _fixture.DatasetId, _fixture.HighScoreTableId);
             var options = new QueryOptions { Labels = JobLabels };
             var jobToFind = client.CreateQueryJob($"SELECT * FROM {table}", null, options);
-            
+
             var jobFound = client.GetJob(jobToFind.Reference);
 
             VerifyJobLabels(jobFound?.Resource?.Configuration.Labels);
@@ -212,7 +212,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             extractJob = extractJob.PollUntilCompleted().ThrowOnAnyError();
 
             var loadJob = bqClient.CreateLoadJob(
-                destinationUri, destinationReference, originTable.Schema, 
+                destinationUri, destinationReference, originTable.Schema,
                 new CreateLoadJobOptions { SkipLeadingRows = 1, Labels = JobLabels });
             VerifyJobLabels(loadJob?.Resource?.Configuration?.Labels);
 

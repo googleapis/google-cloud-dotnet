@@ -197,7 +197,7 @@ namespace Google.Cloud.Firestore
             GaxPreconditions.CheckNotNull(field, nameof(field));
             Update(documentReference, new Dictionary<string, object> { { field, value } }, precondition);
         }
-        
+
         /// <summary>
         /// Adds an operation to update a document's data in this transaction.
         /// </summary>

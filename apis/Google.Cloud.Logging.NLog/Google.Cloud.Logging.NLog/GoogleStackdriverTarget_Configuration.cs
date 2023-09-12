@@ -42,7 +42,7 @@ namespace Google.Cloud.Logging.NLog
 
         /// <summary>
         /// If set, disables resource-type detection based on platform,
-        /// so ResourceType will default to "global" if not manually set. 
+        /// so ResourceType will default to "global" if not manually set.
         /// </summary>
         public bool DisableResourceTypeDetection { get; set; }
 

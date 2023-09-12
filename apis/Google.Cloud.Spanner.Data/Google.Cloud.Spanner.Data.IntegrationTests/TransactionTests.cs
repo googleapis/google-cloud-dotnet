@@ -1,11 +1,11 @@
 // Copyright 2017 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -144,7 +144,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             // connection 2 reads again -- abort should be thrown.
 
             // Note: deeply nested using statements to ensure that we dispose of everything even in the case of failure,
-            // but we manually dispose of both tx1 and connection1. 
+            // but we manually dispose of both tx1 and connection1.
             using (var connection1 = new SpannerConnection(_fixture.ConnectionString))
             {
                 using (var connection2 = new SpannerConnection(_fixture.ConnectionString))
@@ -190,7 +190,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             }
                             connection1.Dispose();
 
-                            // TX2 READ AGAIN/THROWS            
+                            // TX2 READ AGAIN/THROWS
                             using (var cmd = CreateSelectAllCommandForKey(connection2))
                             {
                                 cmd.Transaction = tx2;
@@ -267,7 +267,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             cmd2.Parameters.Add("Int64Value", SpannerDbType.Int64).Value = 50;
                             cmd2.ExecuteNonQuery();
                         }
-                        
+
                         // Commit mutations from both commands, atomically.
                         transaction.Commit();
                     }
@@ -593,7 +593,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             cmd1.Parameters.Add("StringValue", SpannerDbType.String).Value = "text";
                             await cmd1.ExecuteNonQueryAsync();
                         }
-                
+
                         using (var cmd2 = connection.CreateInsertCommand(_fixture.TableName2))
                         {
                             cmd2.Transaction = transaction;
@@ -601,7 +601,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             cmd2.Parameters.Add("Int64Value", SpannerDbType.Int64).Value = 50;
                             await cmd2.ExecuteNonQueryAsync();
                         }
-                
+
                         await transaction.CommitAsync();
                         // MutationCount == 4, as we inserted 2 rows with 2 columns each.
                         Assert.Equal(4, logger.LastCommitResponse?.CommitStats?.MutationCount);

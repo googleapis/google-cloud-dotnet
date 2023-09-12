@@ -460,7 +460,7 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
         private class RequestMethodToImplRewriter : CSharpSyntaxRewriter
         {
             public RequestMethodToImplRewriter() : base(visitIntoStructuredTrivia: true) { }
-            
+
             public override SyntaxNode VisitMethodDeclaration(MethodDeclarationSyntax node)
             {
                 node = (MethodDeclarationSyntax)base.VisitMethodDeclaration(node);

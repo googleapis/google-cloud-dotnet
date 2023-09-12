@@ -1,11 +1,11 @@
 ﻿// Copyright 2020 Google LLC
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     https://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -86,7 +86,7 @@ namespace Google.Cloud.Storage.V1
             {
                 GaxPreconditions.CheckArgument(
                     duration.HasValue != expiration.HasValue,
-                    nameof(duration), 
+                    nameof(duration),
                     "One and only one of {0} or {1} must be specified",
                     nameof(duration),
                     nameof(expiration));

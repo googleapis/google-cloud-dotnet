@@ -331,7 +331,7 @@ namespace Google.Cloud.Firestore.Tests
             /// </summary>
             internal void ProvideResponse(WatchResponseResult result)
             {
-                // The response is opaque to WatchStream, but we want to make sure the state machine gets the 
+                // The response is opaque to WatchStream, but we want to make sure the state machine gets the
                 var response = new ListenResponse { TargetChange = new TargetChange { TargetIds = { _responseIndex++ } } };
                 _currentResponseList.Add(() => response);
                 _watchState.ExpectResponse(response, result);

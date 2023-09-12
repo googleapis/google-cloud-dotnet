@@ -314,7 +314,7 @@ namespace Google.LongRunning
         /// Asynchronously returns a new instance reflecting the most recent state of the operation.
         /// </summary>
         /// <param name="callSettings">Any overriding call settings to apply to the RPC.</param>
-        /// <returns>A task representing the asynchronous poll operation. The result of the task is 
+        /// <returns>A task representing the asynchronous poll operation. The result of the task is
         /// the most recent state of the operation, or a reference to the same
         /// object if the operation has already completed.</returns>
         public Task<Operation<TResponse, TMetadata>> PollOnceAsync(CallSettings callSettings = null) =>
@@ -324,7 +324,7 @@ namespace Google.LongRunning
         /// Asynchronously returns a new instance reflecting the most recent state of the operation.
         /// </summary>
         /// <param name="cancellationToken">A cancellation token for the poll operation.</param>
-        /// <returns>A task representing the asynchronous poll operation. The result of the task is 
+        /// <returns>A task representing the asynchronous poll operation. The result of the task is
         /// the most recent state of the operation, or a reference to the same
         /// object if the operation has already completed.</returns>
         public Task<Operation<TResponse, TMetadata>> PollOnceAsync(CancellationToken cancellationToken) =>

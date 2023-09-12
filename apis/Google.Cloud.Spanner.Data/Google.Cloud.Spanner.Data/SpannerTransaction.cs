@@ -1,11 +1,11 @@
 // Copyright 2017 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -109,7 +109,7 @@ namespace Google.Cloud.Spanner.Data
 
         // Note: We use seconds here to follow the convention set by DbCommand.CommandTimeout.
         /// <summary>
-        /// Gets or sets the wait time before terminating the attempt to <see cref="Commit()"/> 
+        /// Gets or sets the wait time before terminating the attempt to <see cref="Commit()"/>
         /// or <see cref="Rollback"/> and generating an error.
         /// Defaults to the timeout from the connection string. A value of '0' normally indicates that no timeout should be used (it waits an infinite amount of time).
         /// However, if you specify AllowImmediateTimeouts=true in the connection string, '0' will cause a timeout

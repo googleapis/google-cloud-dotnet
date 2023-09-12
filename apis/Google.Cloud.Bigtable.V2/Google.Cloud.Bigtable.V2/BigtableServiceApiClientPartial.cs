@@ -205,7 +205,7 @@ namespace Google.Cloud.Bigtable.V2
         protected override CallInvoker CreateCallInvoker() => CallInvoker ?? CreateGcpCallInvoker();
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <returns></returns>
         public GcpCallInvoker CreateGcpCallInvoker()
@@ -245,7 +245,7 @@ namespace Google.Cloud.Bigtable.V2
             CallInvoker ?? await CreateGcpCallInvokerAsync(cancellationToken).ConfigureAwait(false);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <returns></returns>
         public async Task<GcpCallInvoker> CreateGcpCallInvokerAsync(CancellationToken cancellationToken)

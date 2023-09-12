@@ -381,7 +381,7 @@ namespace Google.LongRunning.Tests
         {
             var message = new Operation
             {
-                Done = false,                
+                Done = false,
                 Name = "name",
                 Metadata = metadata == null ? null : Any.Pack(new StringValue { Value = metadata })
             };

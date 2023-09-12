@@ -1,11 +1,11 @@
 // Copyright 2016 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -345,7 +345,7 @@ namespace Google.Cloud.BigQuery.V2
             parameter.ParameterValue = new QueryParameterValue { ArrayValues = parameterValues };
             return parameter;
         }
-                
+
         private static void ValidateValue(object value, string paramName)
         {
             if (value == null ||
@@ -417,7 +417,7 @@ namespace Google.Cloud.BigQuery.V2
         internal static QueryParameter PopulateFloatingPoint(this QueryParameter parameter, object value)
         {
             if (value is float || value is double)
-            {                
+            {
                 IFormattable formattable = (IFormattable) value;
                 parameter.ParameterValue = new QueryParameterValue { Value = formattable.ToString("r", s_floatingPointFormat) };
                 return parameter;
@@ -431,7 +431,7 @@ namespace Google.Cloud.BigQuery.V2
         /// we can't handle a value of this type.
         /// </summary>
         internal static QueryParameter UseNullScalarOrThrow(this QueryParameter parameter, object value)
-        {            
+        {
             if (value == null)
             {
                 parameter.ParameterValue = new QueryParameterValue();

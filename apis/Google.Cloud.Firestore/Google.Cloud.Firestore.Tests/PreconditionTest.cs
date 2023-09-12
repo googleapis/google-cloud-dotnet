@@ -54,6 +54,6 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Null(precondition.Exists);
             Assert.Equal(timestamp, precondition.LastUpdateTime);
             Assert.Equal(new V1.Precondition { UpdateTime = CreateProtoTimestamp(1, 5) }, precondition.Proto);
-        }        
+        }
     }
 }

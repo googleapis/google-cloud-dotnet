@@ -1,11 +1,11 @@
 // Copyright 2018 Google LLC
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     https://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -66,7 +66,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                     var obj = await fixture.Client.ListObjectsAsync(bucket, name).FirstOrDefaultAsync(o => o.Name == name);
                     Assert.Null(obj);
 
-                    // Restore the object. 
+                    // Restore the object.
                     await fixture.Client.UploadObjectAsync(bucket, name, "", new MemoryStream(fixture.SmallContent));
                 },
                 afterDelay: async () =>
@@ -197,7 +197,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                     encryptingClient.UploadObject(bucket, name, "application/octet-stream", new MemoryStream(content));
 
                     // We don't need to specify the encryption key headers explicitly in the signer template.
-                    // The request message we are using in the template already has them set 
+                    // The request message we are using in the template already has them set
                     // (by key.ModifyRequest(request)) and the signer will extract them from there.
                     var request = createGetRequest();
                     var requestTemplate = RequestTemplate
@@ -479,7 +479,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                 beforeDelay: async duration =>
                 {
                     // We don't need to specify the encryption key headers explicitly in the signer template.
-                    // The request message we are using in the template already has them set 
+                    // The request message we are using in the template already has them set
                     // (by key.ModifyRequest(request)) and the signer will extract them from there.
                     var request = createPutRequest();
                     var requestTemplate = RequestTemplate
@@ -679,16 +679,16 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                 .FromBucket(bucket)
                 .WithObjectName(name)
                 .WithHttpMethod(ResumableHttpMethod)
-                .WithRequestHeaders( new Dictionary<string, IEnumerable<string>> 
+                .WithRequestHeaders( new Dictionary<string, IEnumerable<string>>
                 {
                     { "x-goog-encryption-algorithm", new [] { "AES256" } },
                     { "x-goog-encryption-key-sha256", new [] { key.Base64Hash } },
                     { "x-goog-encryption-key", new [] { key.Base64Key } }
                 });
 
-            
+
             var content = fixture.SmallContent;
-            string url = null;            
+            string url = null;
 
             fixture.RegisterDelayTest(
                 s_duration,

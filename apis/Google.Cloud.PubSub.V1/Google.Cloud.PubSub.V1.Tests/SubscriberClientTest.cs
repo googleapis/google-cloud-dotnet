@@ -381,7 +381,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             /// <param name="ackIds">The list of acknowledgement ids being processed.</param>
             private void MaybeThrowException(IEnumerable<string> ackIds)
             {
-                // This method simulates exception thrown from AcknowledgeAsync or ModifyDeadlineAsync methods based on available test parameters. 
+                // This method simulates exception thrown from AcknowledgeAsync or ModifyDeadlineAsync methods based on available test parameters.
                 // For non exactly once delivery, this method always throws an exception for the specified number of times as _numberOfAckModifyAckDeadlineFailures.
                 // For exactly once delivery, this method should throw exception for following scenarios:
                 //  1. If the entire request failed based on gRPC status code.
@@ -505,7 +505,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         /// which marks message id 2 as temporary failure and message id 3 as permanent failure.</param>
         /// <returns>The <see cref="RpcException"/> with temporary and permanent errors.</returns>
         /// <remarks>
-        /// This test method is useful to test exactly once subscription only. 
+        /// This test method is useful to test exactly once subscription only.
         /// </remarks>
         private static RpcException GetExactlyOnceDeliveryMixedException(Rpc.ErrorInfo errorInfo = null)
         {
@@ -567,7 +567,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                         throw new Exception("Should never get here");
                     });
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), CancellationToken.None));
-                    // Dispose the subscriber. 
+                    // Dispose the subscriber.
                     await fake.TaskHelper.ConfigureAwaitHideCancellation(
                         () => fake.Subscriber.DisposeAsync().AsTask());
                     // Call DisposeAsync again. It shouldn't throw an exception.
@@ -745,7 +745,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 });
             }
         }
-        
+
         [Fact]
         public void UserHandlerFaults()
         {
@@ -774,7 +774,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 });
             }
         }
-        
+
         [Theory, PairwiseData]
         public void ServerFaultsRecoverable(
             [CombinatorialValues(1, 3, 9, 14)] int threadCount)
@@ -805,7 +805,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 });
             }
         }
-        
+
         [Theory, PairwiseData]
         public void ServerFaultsUnrecoverable(
             [CombinatorialValues(true, false)] bool badMoveNext,
@@ -842,7 +842,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 });
             }
         }
-        
+
         [Fact]
         public void OnlyOneStart()
         {
@@ -1055,7 +1055,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 AckExtensionWindow = SubscriberClient.MinimumAckExtensionWindow
             };
             new SubscriberClientImpl(subscriptionName, clients, settingsAckExtension1, null);
-            
+
             var settingsAckExtension2 = new SubscriberClient.Settings
             {
                 AckExtensionWindow = TimeSpan.FromTicks(SubscriberClient.DefaultAckDeadline.Ticks / 2)
@@ -1223,7 +1223,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [Theory, CombinatorialData]
         public void AckModifyAckDeadlineFault_NotThrown([CombinatorialValues(true, false, null)] bool? ackOrModifyAck)
         {
-            var msgs = new[] 
+            var msgs = new[]
             {
                 ServerAction.Data(TimeSpan.Zero, new[] { "1" }),
                 ServerAction.Data(TimeSpan.FromSeconds(5), new[] { "2" }),
@@ -1237,9 +1237,9 @@ namespace Google.Cloud.PubSub.V1.Tests
             // If ackOrModifyAck is null, then both Acknowledge and ModifyAcknowledgeDeadline will throw the supplied RpcException, total 2 times.
             // If ackOrModifyAck is true, then Acknowledge will throw the supplied RpcException 2 times.
             // If ackOrModifyAck is false, then ModifyAcknowledgementDeadline will throw the supplied RpcException 2 times.
-            var ackModifyAckDeadlineAction = 
-                ackOrModifyAck == null ? AckModifyAckDeadlineAction.BadExtend(rpcException, 2) 
-                : ackOrModifyAck.Value ? AckModifyAckDeadlineAction.BadAck(rpcException, 2) 
+            var ackModifyAckDeadlineAction =
+                ackOrModifyAck == null ? AckModifyAckDeadlineAction.BadExtend(rpcException, 2)
+                : ackOrModifyAck.Value ? AckModifyAckDeadlineAction.BadAck(rpcException, 2)
                 : AckModifyAckDeadlineAction.BadNack(rpcException, 2);
 
             using var fake = Fake.Create(new[] { msgs }, ackDeadline: TimeSpan.FromSeconds(30), ackExtendWindow: TimeSpan.FromSeconds(10), ackModifyAckDeadlineAction: ackModifyAckDeadlineAction);
@@ -1264,7 +1264,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [Theory, CombinatorialData]
         public void AckModifyAckDeadlineFault_Thrown([CombinatorialValues(true, false)] bool ackOrModifyAck)
         {
-            var msgs = new[] 
+            var msgs = new[]
             {
                 ServerAction.Data(TimeSpan.Zero, new[] { "1" }),
                 ServerAction.Data(TimeSpan.FromSeconds(5), new[] { "2" }),
@@ -1278,8 +1278,8 @@ namespace Google.Cloud.PubSub.V1.Tests
             // If ackOrModifyAck is true, then Acknowledge will throw the supplied Exception.
             // If ackOrModifyAck is false, then ModifyAcknowledgeDeadline will throw the supplied Exception.
             // Since exception is thrown, the client will shutdown, so exception count is specified as 1.
-            var ackModifyAckDeadlineAction = 
-                ackOrModifyAck ? AckModifyAckDeadlineAction.BadAck(exception, 1) 
+            var ackModifyAckDeadlineAction =
+                ackOrModifyAck ? AckModifyAckDeadlineAction.BadAck(exception, 1)
                 : AckModifyAckDeadlineAction.BadExtend(exception, 1);
 
             using var fake = Fake.Create(new[] { msgs }, ackDeadline: TimeSpan.FromSeconds(30), ackExtendWindow: TimeSpan.FromSeconds(10), ackModifyAckDeadlineAction: ackModifyAckDeadlineAction);
@@ -1388,7 +1388,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 ServerAction.Data(TimeSpan.Zero, new[] { "4" }),
                 ServerAction.Inf()
             };
-                        
+
             var exception = new RpcException(new Status(StatusCode.FailedPrecondition, ""), "");
             // If ackOrNack is true, then it is acknowledge request. Acknowledge RPC will throw the supplied exception.
             // If ackOrNack is false, then it is nack request. ModifyAcknowledgeDeadline RPC will throw the supplied exception.
@@ -1564,7 +1564,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             var exception = GetExactlyOnceDeliveryMixedException();
             // We have both temporary and permanent failures.
             // Temporary failure in extend request should be retried.
-            // Based on succeedOnRetry parameter, message 2 should either succeed or fail. 
+            // Based on succeedOnRetry parameter, message 2 should either succeed or fail.
             var ackModifyAckDeadlineAction = AckModifyAckDeadlineAction.BadExtend(exception, numberOfFailures: succeedOnRetry ? 2 : 10);
 
             using var fake = Fake.Create(new[] { msgs }, useMsgAsId: true, ackModifyAckDeadlineAction: ackModifyAckDeadlineAction, isExactlyOnceDelivery: true);
@@ -1614,11 +1614,11 @@ namespace Google.Cloud.PubSub.V1.Tests
             };
 
             var exception = GetExactlyOnceDeliveryMixedException(ackError);
-            
+
             var ackModifyAckDeadlineAction = AckModifyAckDeadlineAction.BadExtend(exception, numberOfFailures: 4);
 
             using var fake = Fake.Create(new[] { msgs }, useMsgAsId: true, ackModifyAckDeadlineAction: ackModifyAckDeadlineAction, isExactlyOnceDelivery: true);
-            
+
             fake.Scheduler.Run(async () =>
             {
                 var handledMsgs = new List<string>();
@@ -1628,7 +1628,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(10), ct));
                     return await Task.FromResult(SubscriberClient.Reply.Ack);
                 });
-                
+
                 await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
                 await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
                 // Permanently failed receipt ModAcks won't be passed to the user handler, so all 4 messages are not handled.

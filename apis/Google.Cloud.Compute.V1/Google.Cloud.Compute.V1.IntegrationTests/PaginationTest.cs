@@ -29,7 +29,7 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
 
         [Fact]
         public void ListAcceleratorTypes_ExplicitRequest()
-        {   
+        {
             var client = AcceleratorTypesClient.Create();
             var allTypes = client.List(new ListAcceleratorTypesRequest { Project = _fixture.ProjectId, Zone = _fixture.Zone, MaxResults = 2 });
             Assert.Contains(allTypes, IsNVidiaTeslaT4);
@@ -45,7 +45,7 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
 
         [Fact]
         public void AggregatedListAcceleratorTypes()
-        {   
+        {
             var client = AcceleratorTypesClient.Create();
             var allTypes = client.AggregatedList(_fixture.ProjectId);
             Assert.Contains(allTypes,

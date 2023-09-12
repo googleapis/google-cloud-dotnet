@@ -48,7 +48,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             // into the Update method.
             dataset.Resource.FriendlyName = "Updated dataset";
             BigQueryDataset updated = dataset.Update();
-            
+
             Console.WriteLine($"Updated dataset friendly name: {updated.Resource.FriendlyName}");
             // End snippet
 

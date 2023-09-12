@@ -51,7 +51,7 @@ namespace Google.Cloud.Firestore
             Id = GaxPreconditions.CheckNotNull(id, nameof(id));
             Path = $"{ParentPath}/{Id}";
         }
-        
+
         /// <summary>
         /// Creates a <see cref="DocumentReference"/> for a direct child document of this collection with a random ID.
         /// This performs no server-side operations; it only generates the appropriate <c>DocumentReference</c>.

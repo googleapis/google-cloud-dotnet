@@ -1,11 +1,11 @@
 // Copyright 2015 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -170,7 +170,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         {
             var bucket = _fixture.ReadBucket;
             var name = _fixture.SmallThenLargeObject;
-            var objects = _fixture.Client.ListObjects(bucket, name, new ListObjectsOptions { Versions = true })                
+            var objects = _fixture.Client.ListObjects(bucket, name, new ListObjectsOptions { Versions = true })
                 .OrderBy(x => x.Generation)
                 .ToList();
             Assert.Equal(2, objects.Count);
@@ -180,7 +180,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             _fixture.Client.DownloadObject(objects[0], stream);
             Assert.Equal((long) objects[1].Size, stream.Length);
         }
-        
+
         [Fact]
         public void DownloadObjectIfGenerationMatch_Matching()
         {
@@ -327,7 +327,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var actual = stream.ToArray();
             Assert.Equal(expected, actual);
         }
-        
+
         [SkippableFact]
         public void DownloadGzippedFile_NoClientDecompression_IgnoreHash()
         {

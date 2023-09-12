@@ -124,7 +124,7 @@ namespace Google.Cloud.Firestore.Tests
 
             var expectedRequest = new CommitRequest
             {
-                Database = "projects/proj/databases/db",                
+                Database = "projects/proj/databases/db",
                 Transaction = ByteString.CopyFromUtf8("transaction 1"),
                 Writes =
                 {

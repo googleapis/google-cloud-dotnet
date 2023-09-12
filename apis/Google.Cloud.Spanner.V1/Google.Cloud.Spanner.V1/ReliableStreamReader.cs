@@ -1,11 +1,11 @@
 // Copyright 2017 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -159,7 +159,7 @@ namespace Google.Cloud.Spanner.V1
             return result;
 
             async Task<Value> NextChunkAsync(CancellationToken innerCancellationToken)
-            {                
+            {
                 // This needs to be a while loop to handle chunked streams with no results (e.g. for partitioned DML)
                 while (_currentResultSet != null && _nextIndex >= _currentResultSet.Values.Count)
                 {

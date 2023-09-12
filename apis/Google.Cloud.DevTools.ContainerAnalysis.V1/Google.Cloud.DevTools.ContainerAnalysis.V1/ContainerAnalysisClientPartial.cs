@@ -45,7 +45,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
     public partial class ContainerAnalysisClientImpl
     {
         private GrafeasClient _grafeasClient;
-        
+
         /// <inheritdoc />
         public override GrafeasClient GrafeasClient => _grafeasClient;
 

@@ -67,7 +67,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
             // random-col/present-outer
 
             // When we list "random-col", we should get both random-col/missing-outer
-            // and random-col/present-outer, 
+            // and random-col/present-outer,
             var outerCol = _fixture.CreateUniqueCollection();
             var missingOuterDoc = outerCol.Document("missing-outer"); // This document is never created
             var presentOuterDoc = outerCol.Document("present-outer");

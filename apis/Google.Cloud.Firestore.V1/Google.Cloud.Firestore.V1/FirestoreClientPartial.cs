@@ -99,7 +99,7 @@ namespace Google.Cloud.Firestore.V1
             string database = GetDatabaseResourceName(resource);
             settings = settings.WithHeader(ResourcePrefixHeader, database);
         }
-        
+
         // Visible for testing
 
         /// <summary>
@@ -148,7 +148,7 @@ namespace Google.Cloud.Firestore.V1
 
     // Support for FirestoreDbBuilder.
     public sealed partial class FirestoreClientBuilder : ClientBuilderBase<FirestoreClient>
-    {       
+    {
         /// <summary>
         /// Creates a <see cref="FirestoreClientBuilder"/> by copying common settings from another builder.
         /// This method is intended for use in Google.Cloud.Firestore with FirestoreDbBuilder. It will

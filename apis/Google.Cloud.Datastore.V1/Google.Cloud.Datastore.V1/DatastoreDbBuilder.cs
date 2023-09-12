@@ -61,7 +61,7 @@ namespace Google.Cloud.Datastore.V1
         /// (or detected via an emulator environment variable) before building the <see cref="DatastoreDb"/>.
         /// </summary>
         public string ProjectId { get; set; }
-        
+
         /// <summary>
         /// The namespace ID, or null to use the default.
         /// </summary>

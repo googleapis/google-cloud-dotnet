@@ -1,11 +1,11 @@
 ﻿// Copyright 2016 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -37,7 +37,7 @@ namespace Google.Cloud.Diagnostics.Common
         public const string TraceHeader = "X-Cloud-Trace-Context";
 
         /// <summary>
-        /// A regex to match the trace header. 
+        /// A regex to match the trace header.
         /// - ([A-Fa-f0-9]{32}): The trace id, a 32 character hex value.
         /// - ([0-9]+): The span id, a 64 bit integer.
         /// - (?:;o=([0-1])): The trace mask, 1 denotes it should be traced. (The ?: makes the outer group non-capturing.)
@@ -62,7 +62,7 @@ namespace Google.Cloud.Diagnostics.Common
             new TraceHeaderContext(traceId, spanId, shouldTrace);
 
         /// <summary>
-        /// Creates a <see cref="TraceHeaderContext"/> from a header. 
+        /// Creates a <see cref="TraceHeaderContext"/> from a header.
         /// </summary>
         /// <param name="header">The string value of the trace header. Can be null.
         ///     See: https://cloud.google.com/trace/docs/faq </param>
@@ -91,7 +91,7 @@ namespace Google.Cloud.Diagnostics.Common
         }
 
         /// <summary>
-        /// Creates a <see cref="TraceHeaderContext"/> from a header. 
+        /// Creates a <see cref="TraceHeaderContext"/> from a header.
         /// </summary>
         /// <param name="header">The string value of the trace header. Can be null.
         ///     See: https://cloud.google.com/trace/docs/faq </param>

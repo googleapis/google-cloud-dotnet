@@ -70,7 +70,7 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Equal(nameof(PrivateEnum.SampleValue), converter.ToFirestore(PrivateEnum.SampleValue));
             Assert.Equal(PrivateEnum.SampleValue, converter.FromFirestore(nameof(PrivateEnum.SampleValue)));
         }
-        
+
         /// <summary>
         /// SampleEnum has to be public so we can use it in a theory. We have a single test that
         /// private enums work too.

@@ -93,7 +93,7 @@ namespace Google.Cloud.Firestore
         // to keep a database-relative path or perform more complex comparisons.
         /// <inheritdoc />
         public int CompareTo(DocumentReference other) => other == null ? 1 : PathComparer.Instance.Compare(Path, other.Path);
-        
+
         /// <summary>
         /// Asynchronously creates a document on the server with the given data. The document must not exist beforehand.
         /// </summary>
@@ -124,7 +124,7 @@ namespace Google.Cloud.Firestore
             var results = await batch.CommitAsync(cancellationToken).ConfigureAwait(false);
             return results[0];
         }
-        
+
         /// <summary>
         /// Asynchronously performs a set of updates on the document referred to by this path, with an optional precondition.
         /// </summary>

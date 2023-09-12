@@ -34,20 +34,20 @@ namespace Google.Cloud.Bigtable.V2
 
         /// <summary>
         /// When doing retries, the retry sends a partial set of the original Entries that failed with a
-        /// retryable status. This array contains a mapping of indices from the <see cref="NextRequest"/> 
+        /// retryable status. This array contains a mapping of indices from the <see cref="NextRequest"/>
         /// to <see cref="_originalRequest"/>.
         /// </summary>
         private int[] _mapToOriginalIndex;
 
         /// <summary>
         /// This set tracks failed RPC status codes thats should be retried
-        /// </summary> 
+        /// </summary>
         private readonly HashSet<int> _retryableCodes;
 
         /// <summary>
         /// This array tracks the cumulative set of results across all RPC requests.
         /// Maps to the original request's entries indices.
-        /// </summary> 
+        /// </summary>
         private readonly Rpc.Status[] _results;
 
         private bool _messageIsInvalid;
@@ -88,7 +88,7 @@ namespace Google.Cloud.Bigtable.V2
             NextRequest = _originalRequest;
 
             _results = new Rpc.Status[_originalRequest.Entries.Count];
-            
+
             _retryableCodes = new HashSet<int>(retryStatuses.Select(status => (int)status));
         }
 
@@ -131,7 +131,7 @@ namespace Google.Cloud.Bigtable.V2
         {
             // Sanity check to make sure that every mutation received a response.
             _messageIsInvalid = _messageIsInvalid || _results.Any(result => result == null);
-            
+
             // There was a problem in the data found in SetStatus(), so fail the RPC.
             if (_messageIsInvalid)
             {

@@ -44,7 +44,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             Assert.Throws<TException>(
                 () => client.DropAllRows(
                     tableName, CallSettings.FromCancellationToken(default)));
-            
+
             await Assert.ThrowsAsync<TException>(
                 () => client.DropAllRowsAsync(
                     tableName, CallSettings.FromCancellationToken(default)));
@@ -85,7 +85,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             var client = Substitute.ForPartsOf<BigtableTableAdminClient>();
             Assert.Throws<TException>(
                 () => client.DropRowRange(tableName, rowKeyPrefix, CallSettings.FromCancellationToken(default)));
-            
+
             await Assert.ThrowsAsync<TException>(
                 () => client.DropRowRangeAsync(tableName, rowKeyPrefix, CallSettings.FromCancellationToken(default)));
         }

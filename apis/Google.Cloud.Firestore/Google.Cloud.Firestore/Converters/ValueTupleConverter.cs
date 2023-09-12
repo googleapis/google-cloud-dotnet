@@ -121,10 +121,10 @@ namespace Google.Cloud.Firestore.Converters
         private interface ITupleAccessor
         {
             object this[int index] { get; set; }
-            object Value { get; set; }            
+            object Value { get; set; }
         }
 
-        // Tuple accessor implementations. These all look the same, 
+        // Tuple accessor implementations. These all look the same,
         private sealed class TupleAccessor<T1> : ITupleAccessor
         {
             private ValueTuple<T1> _tuple;
@@ -280,7 +280,7 @@ namespace Google.Cloud.Firestore.Converters
                 }
             }
         }
-        
+
         private sealed class TupleAccessor<T1, T2, T3, T4, T5> : ITupleAccessor
         {
             private ValueTuple<T1, T2, T3, T4, T5> _tuple;
