@@ -25,18 +25,18 @@ namespace Google.Cloud.Bigtable.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiZnb29nbGUvYmlndGFibGUvdjIvZmVhdHVyZV9mbGFncy5wcm90bxISZ29v",
-            "Z2xlLmJpZ3RhYmxlLnYyImkKDEZlYXR1cmVGbGFncxIVCg1yZXZlcnNlX3Nj",
-            "YW5zGAEgASgIEh4KFm11dGF0ZV9yb3dzX3JhdGVfbGltaXQYAyABKAgSIgoa",
-            "bGFzdF9zY2FubmVkX3Jvd19yZXNwb25zZXMYBCABKAhCvQEKFmNvbS5nb29n",
-            "bGUuYmlndGFibGUudjJCEUZlYXR1cmVGbGFnc1Byb3RvUAFaOmdvb2dsZS5n",
-            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYmlndGFibGUvdjI7Ymln",
-            "dGFibGWqAhhHb29nbGUuQ2xvdWQuQmlndGFibGUuVjLKAhhHb29nbGVcQ2xv",
-            "dWRcQmlndGFibGVcVjLqAhtHb29nbGU6OkNsb3VkOjpCaWd0YWJsZTo6VjJi",
-            "BnByb3RvMw=="));
+            "Z2xlLmJpZ3RhYmxlLnYyIooBCgxGZWF0dXJlRmxhZ3MSFQoNcmV2ZXJzZV9z",
+            "Y2FucxgBIAEoCBIeChZtdXRhdGVfcm93c19yYXRlX2xpbWl0GAMgASgIEh8K",
+            "F211dGF0ZV9yb3dzX3JhdGVfbGltaXQyGAUgASgIEiIKGmxhc3Rfc2Nhbm5l",
+            "ZF9yb3dfcmVzcG9uc2VzGAQgASgIQr0BChZjb20uZ29vZ2xlLmJpZ3RhYmxl",
+            "LnYyQhFGZWF0dXJlRmxhZ3NQcm90b1ABWjpnb29nbGUuZ29sYW5nLm9yZy9n",
+            "ZW5wcm90by9nb29nbGVhcGlzL2JpZ3RhYmxlL3YyO2JpZ3RhYmxlqgIYR29v",
+            "Z2xlLkNsb3VkLkJpZ3RhYmxlLlYyygIYR29vZ2xlXENsb3VkXEJpZ3RhYmxl",
+            "XFYy6gIbR29vZ2xlOjpDbG91ZDo6QmlndGFibGU6OlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.FeatureFlags), global::Google.Cloud.Bigtable.V2.FeatureFlags.Parser, new[]{ "ReverseScans", "MutateRowsRateLimit", "LastScannedRowResponses" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.FeatureFlags), global::Google.Cloud.Bigtable.V2.FeatureFlags.Parser, new[]{ "ReverseScans", "MutateRowsRateLimit", "MutateRowsRateLimit2", "LastScannedRowResponses" }, null, null, null, null)
           }));
     }
     #endregion
@@ -44,13 +44,13 @@ namespace Google.Cloud.Bigtable.V2 {
   }
   #region Messages
   /// <summary>
-  /// Feature flags supported by a client.
+  /// Feature flags supported or enabled by a client.
   /// This is intended to be sent as part of request metadata to assure the server
   /// that certain behaviors are safe to enable. This proto is meant to be
   /// serialized and websafe-base64 encoded under the `bigtable-features` metadata
   /// key. The value will remain constant for the lifetime of a client and due to
   /// HTTP2's HPACK compression, the request overhead will be tiny.
-  /// This is an internal implementation detail and should not be used by endusers
+  /// This is an internal implementation detail and should not be used by end users
   /// directly.
   /// </summary>
   public sealed partial class FeatureFlags : pb::IMessage<FeatureFlags>
@@ -89,6 +89,7 @@ namespace Google.Cloud.Bigtable.V2 {
     public FeatureFlags(FeatureFlags other) : this() {
       reverseScans_ = other.reverseScans_;
       mutateRowsRateLimit_ = other.mutateRowsRateLimit_;
+      mutateRowsRateLimit2_ = other.mutateRowsRateLimit2_;
       lastScannedRowResponses_ = other.lastScannedRowResponses_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -120,7 +121,8 @@ namespace Google.Cloud.Bigtable.V2 {
     private bool mutateRowsRateLimit_;
     /// <summary>
     /// Notify the server that the client enables batch write flow control by
-    /// requesting RateLimitInfo from MutateRowsResponse.
+    /// requesting RateLimitInfo from MutateRowsResponse. Due to technical reasons,
+    /// this disables partial retries.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -131,12 +133,29 @@ namespace Google.Cloud.Bigtable.V2 {
       }
     }
 
+    /// <summary>Field number for the "mutate_rows_rate_limit2" field.</summary>
+    public const int MutateRowsRateLimit2FieldNumber = 5;
+    private bool mutateRowsRateLimit2_;
+    /// <summary>
+    /// Notify the server that the client enables batch write flow control by
+    /// requesting RateLimitInfo from MutateRowsResponse. With partial retries
+    /// enabled.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool MutateRowsRateLimit2 {
+      get { return mutateRowsRateLimit2_; }
+      set {
+        mutateRowsRateLimit2_ = value;
+      }
+    }
+
     /// <summary>Field number for the "last_scanned_row_responses" field.</summary>
     public const int LastScannedRowResponsesFieldNumber = 4;
     private bool lastScannedRowResponses_;
     /// <summary>
     /// Notify the server that the client supports the last_scanned_row field
-    /// in ReadRowsResponse for long-running sparse scans.
+    /// in ReadRowsResponse for long-running scans.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -164,6 +183,7 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (ReverseScans != other.ReverseScans) return false;
       if (MutateRowsRateLimit != other.MutateRowsRateLimit) return false;
+      if (MutateRowsRateLimit2 != other.MutateRowsRateLimit2) return false;
       if (LastScannedRowResponses != other.LastScannedRowResponses) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -174,6 +194,7 @@ namespace Google.Cloud.Bigtable.V2 {
       int hash = 1;
       if (ReverseScans != false) hash ^= ReverseScans.GetHashCode();
       if (MutateRowsRateLimit != false) hash ^= MutateRowsRateLimit.GetHashCode();
+      if (MutateRowsRateLimit2 != false) hash ^= MutateRowsRateLimit2.GetHashCode();
       if (LastScannedRowResponses != false) hash ^= LastScannedRowResponses.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -205,6 +226,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(32);
         output.WriteBool(LastScannedRowResponses);
       }
+      if (MutateRowsRateLimit2 != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(MutateRowsRateLimit2);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -227,6 +252,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(32);
         output.WriteBool(LastScannedRowResponses);
       }
+      if (MutateRowsRateLimit2 != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(MutateRowsRateLimit2);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -241,6 +270,9 @@ namespace Google.Cloud.Bigtable.V2 {
         size += 1 + 1;
       }
       if (MutateRowsRateLimit != false) {
+        size += 1 + 1;
+      }
+      if (MutateRowsRateLimit2 != false) {
         size += 1 + 1;
       }
       if (LastScannedRowResponses != false) {
@@ -263,6 +295,9 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (other.MutateRowsRateLimit != false) {
         MutateRowsRateLimit = other.MutateRowsRateLimit;
+      }
+      if (other.MutateRowsRateLimit2 != false) {
+        MutateRowsRateLimit2 = other.MutateRowsRateLimit2;
       }
       if (other.LastScannedRowResponses != false) {
         LastScannedRowResponses = other.LastScannedRowResponses;
@@ -294,6 +329,10 @@ namespace Google.Cloud.Bigtable.V2 {
             LastScannedRowResponses = input.ReadBool();
             break;
           }
+          case 40: {
+            MutateRowsRateLimit2 = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -319,6 +358,10 @@ namespace Google.Cloud.Bigtable.V2 {
           }
           case 32: {
             LastScannedRowResponses = input.ReadBool();
+            break;
+          }
+          case 40: {
+            MutateRowsRateLimit2 = input.ReadBool();
             break;
           }
         }
