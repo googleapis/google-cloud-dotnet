@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -490,6 +490,37 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var table = client.GetTable(tableRef);
             var rows = table.ListRows().ToList();
             Assert.Equal(50, rows.Count);
+        }
+
+        [Fact]
+        public void CreateLoadJobWithSession()
+        {
+            string sourceUri = "gs://cloud-samples-data/bigquery/us-states/us-states.parquet";
+
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var tableRef = client.GetTableReference("_SESSION", "TempTestTable");
+
+            var options = new CreateLoadJobOptions { SourceFormat = FileFormat.Parquet, CreateSession = true };
+            var job = client.CreateLoadJob(sourceUri, tableRef, schema: null, options: options);
+            job.PollUntilCompleted().ThrowOnAnyError();
+
+            var sessionId = job.Statistics.SessionInfo.SessionId;
+            Assert.NotNull(sessionId);
+
+            var optionsWithConnectionProp = new CreateLoadJobOptions { SourceFormat = FileFormat.Parquet, SessionID = sessionId };
+            var jobWithConnectionProp = client.CreateLoadJob(sourceUri, tableRef, schema: null, options: optionsWithConnectionProp);
+            jobWithConnectionProp.PollUntilCompleted().ThrowOnAnyError();
+
+            Assert.NotNull(jobWithConnectionProp.Statistics.SessionInfo.SessionId);
+            Assert.Equal(sessionId, jobWithConnectionProp.Statistics.SessionInfo.SessionId);
+
+            // Checking if the data is loaded to the temp table in the session.
+            string queryTempTable = $"SELECT * FROM _SESSION.TempTestTable; ";
+            var queryOptions = new QueryOptions { Labels = JobsTest.JobLabels, SessionID = sessionId };
+            var queryJob = client.CreateQueryJob(queryTempTable, null, queryOptions);
+            queryJob.PollUntilCompleted().ThrowOnAnyError();
+
+            Assert.NotNull(queryJob.GetQueryResults());
         }
     }
 }

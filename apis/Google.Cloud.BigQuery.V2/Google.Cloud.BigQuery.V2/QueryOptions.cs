@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -195,6 +195,19 @@ namespace Google.Cloud.BigQuery.V2
             if (TimePartitioning != null)
             {
                 query.TimePartitioning = TimePartitioning;
+            }
+            if (SessionID != null)
+            {
+                var cp = new ConnectionProperty
+                {
+                    Key = "session_id",
+                    Value = SessionID
+                };
+                query.ConnectionProperties = new ConnectionProperty[] { cp };
+            }
+            if (CreateSession != null)
+            {
+                query.CreateSession = CreateSession;
             }
         }
     }

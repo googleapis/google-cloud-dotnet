@@ -216,6 +216,19 @@ namespace Google.Cloud.BigQuery.V2
             {
                 load.Encoding = Encoding;
             }
+            if (SessionID != null)
+            {
+                var cp = new ConnectionProperty
+                {
+                    Key = "session_id",
+                    Value = SessionID
+                };
+                load.ConnectionProperties = new ConnectionProperty[] { cp };
+            }
+            if (CreateSession != null)
+            {
+                load.CreateSession = CreateSession;
+            }
         }
     }
 }

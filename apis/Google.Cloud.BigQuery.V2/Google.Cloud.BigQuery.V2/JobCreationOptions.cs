@@ -59,5 +59,18 @@ namespace Google.Cloud.BigQuery.V2
         /// Label keys must start with a letter.
         /// </summary>
         public IDictionary<string, string> Labels { get; set; }
+
+        /// <summary>
+        /// The ID of the session in which to create the job.
+        /// If specified it is Used to resolve _SESSION appearing as the dataset id.
+        /// </summary>
+        public string SessionID { get; set; }
+
+        /// <summary>
+        /// If true, creates a new session, where session id will be a server generated random id.
+        /// If false, runs query with an existing session_id passed in ConnectionProperty,
+        /// otherwise runs the load job in non-session mode.
+        /// </summary>
+        public bool? CreateSession { get; set; }
     }
 }
