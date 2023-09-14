@@ -60,7 +60,7 @@ void CompressAndUploadFile(UploadFileOptions options)
         string metadataFilePath = options.MetadataFile ?? Path.Combine(options.DocumentationPath, "docs.metadata.json");
         var metadata = GetMetadataFromJsonFile(metadataFilePath);
         string destinationFileName = $"{metadata.Language}-{metadata.Name}-{metadata.Version}.tar.gz";
-        destinationFileName = string.IsNullOrEmpty(destinationFileName) ? destinationFileName : options.DestinationPrefix + "-" + destinationFileName;
+        destinationFileName = string.IsNullOrEmpty(options.DestinationPrefix) ? destinationFileName : options.DestinationPrefix + "-" + destinationFileName;
         return destinationFileName;
     }
 }
