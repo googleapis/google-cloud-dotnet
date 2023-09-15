@@ -20,6 +20,7 @@ namespace GoogleCSharpSnippets
     using Google.Cloud.Dataproc.V1;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
+    using Google.Type;
     using System;
     using System.Linq;
     using System.Threading.Tasks;
@@ -955,6 +956,10 @@ namespace GoogleCSharpSnippets
                 ProjectId = "",
                 ClusterName = "",
                 Region = "",
+                TarballGcsDir = "",
+                DiagnosisInterval = new Interval(),
+                Jobs = { "", },
+                YarnApplicationIds = { "", },
             };
             // Make the request
             Operation<DiagnoseClusterResults, ClusterOperationMetadata> response = clusterControllerClient.DiagnoseCluster(request);
@@ -990,6 +995,10 @@ namespace GoogleCSharpSnippets
                 ProjectId = "",
                 ClusterName = "",
                 Region = "",
+                TarballGcsDir = "",
+                DiagnosisInterval = new Interval(),
+                Jobs = { "", },
+                YarnApplicationIds = { "", },
             };
             // Make the request
             Operation<DiagnoseClusterResults, ClusterOperationMetadata> response = await clusterControllerClient.DiagnoseClusterAsync(request);
