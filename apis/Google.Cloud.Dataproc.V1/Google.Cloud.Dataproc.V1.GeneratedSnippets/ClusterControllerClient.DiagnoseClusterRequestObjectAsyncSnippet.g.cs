@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     // [START dataproc_v1_generated_ClusterController_DiagnoseCluster_async]
     using Google.Cloud.Dataproc.V1;
     using Google.LongRunning;
+    using Google.Type;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedClusterControllerClientSnippets
@@ -41,6 +42,10 @@ namespace GoogleCSharpSnippets
                 ProjectId = "",
                 ClusterName = "",
                 Region = "",
+                TarballGcsDir = "",
+                DiagnosisInterval = new Interval(),
+                Jobs = { "", },
+                YarnApplicationIds = { "", },
             };
             // Make the request
             Operation<DiagnoseClusterResults, ClusterOperationMetadata> response = await clusterControllerClient.DiagnoseClusterAsync(request);

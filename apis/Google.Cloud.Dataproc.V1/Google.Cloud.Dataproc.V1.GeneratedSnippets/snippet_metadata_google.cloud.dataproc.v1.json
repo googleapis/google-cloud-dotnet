@@ -4241,12 +4241,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 63,
+          "end": 68,
           "type": "FULL"
         },
         {
-          "start": 35,
-          "end": 61,
+          "start": 36,
+          "end": 66,
           "type": "SHORT"
         }
       ]
@@ -4290,12 +4290,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 64,
+          "end": 69,
           "type": "FULL"
         },
         {
-          "start": 36,
-          "end": 62,
+          "start": 37,
+          "end": 67,
           "type": "SHORT"
         }
       ]
