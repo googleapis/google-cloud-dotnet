@@ -240,8 +240,8 @@ namespace Google.Cloud.ApiKeys.V2 {
     public const int DeleteTimeFieldNumber = 7;
     private global::Google.Protobuf.WellKnownTypes.Timestamp deleteTime_;
     /// <summary>
-    /// Output only. A timestamp when this key was deleted. If the resource is not deleted,
-    /// this must be empty.
+    /// Output only. A timestamp when this key was deleted. If the resource is not
+    /// deleted, this must be empty.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -287,10 +287,10 @@ namespace Google.Cloud.ApiKeys.V2 {
     public const int EtagFieldNumber = 11;
     private string etag_ = "";
     /// <summary>
-    /// Output only. A checksum computed by the server based on the current value of the Key
-    /// resource. This may be sent on update and delete requests to ensure the
-    /// client has an up-to-date value before proceeding.
-    /// See https://google.aip.dev/154.
+    /// Output only. A checksum computed by the server based on the current value
+    /// of the Key resource. This may be sent on update and delete requests to
+    /// ensure the client has an up-to-date value before proceeding. See
+    /// https://google.aip.dev/154.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
