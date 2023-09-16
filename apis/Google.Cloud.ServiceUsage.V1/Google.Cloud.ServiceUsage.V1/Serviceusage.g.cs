@@ -26,9 +26,9 @@ namespace Google.Cloud.ServiceUsage.V1 {
           string.Concat(
             "Ci1nb29nbGUvYXBpL3NlcnZpY2V1c2FnZS92MS9zZXJ2aWNldXNhZ2UucHJv",
             "dG8SGmdvb2dsZS5hcGkuc2VydmljZXVzYWdlLnYxGhxnb29nbGUvYXBpL2Fu",
-            "bm90YXRpb25zLnByb3RvGipnb29nbGUvYXBpL3NlcnZpY2V1c2FnZS92MS9y",
-            "ZXNvdXJjZXMucHJvdG8aI2dvb2dsZS9sb25ncnVubmluZy9vcGVyYXRpb25z",
-            "LnByb3RvGhdnb29nbGUvYXBpL2NsaWVudC5wcm90byIkChRFbmFibGVTZXJ2",
+            "bm90YXRpb25zLnByb3RvGhdnb29nbGUvYXBpL2NsaWVudC5wcm90bxoqZ29v",
+            "Z2xlL2FwaS9zZXJ2aWNldXNhZ2UvdjEvcmVzb3VyY2VzLnByb3RvGiNnb29n",
+            "bGUvbG9uZ3J1bm5pbmcvb3BlcmF0aW9ucy5wcm90byIkChRFbmFibGVTZXJ2",
             "aWNlUmVxdWVzdBIMCgRuYW1lGAEgASgJIk0KFUVuYWJsZVNlcnZpY2VSZXNw",
             "b25zZRI0CgdzZXJ2aWNlGAEgASgLMiMuZ29vZ2xlLmFwaS5zZXJ2aWNldXNh",
             "Z2UudjEuU2VydmljZSKSAgoVRGlzYWJsZVNlcnZpY2VSZXF1ZXN0EgwKBG5h",
@@ -89,7 +89,7 @@ namespace Google.Cloud.ServiceUsage.V1 {
             "b3VkXFNlcnZpY2VVc2FnZVxWMeoCH0dvb2dsZTo6Q2xvdWQ6OlNlcnZpY2VV",
             "c2FnZTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.ServiceUsage.V1.ResourcesReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Cloud.ServiceUsage.V1.ResourcesReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ServiceUsage.V1.EnableServiceRequest), global::Google.Cloud.ServiceUsage.V1.EnableServiceRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ServiceUsage.V1.EnableServiceResponse), global::Google.Cloud.ServiceUsage.V1.EnableServiceResponse.Parser, new[]{ "Service" }, null, null, null, null),
