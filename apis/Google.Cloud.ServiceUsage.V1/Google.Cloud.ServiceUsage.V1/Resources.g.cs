@@ -29,30 +29,34 @@ namespace Google.Cloud.ServiceUsage.V1 {
             "cHJvdG8aHmdvb2dsZS9hcGkvZG9jdW1lbnRhdGlvbi5wcm90bxoZZ29vZ2xl",
             "L2FwaS9lbmRwb2ludC5wcm90bxojZ29vZ2xlL2FwaS9tb25pdG9yZWRfcmVz",
             "b3VyY2UucHJvdG8aG2dvb2dsZS9hcGkvbW9uaXRvcmluZy5wcm90bxoWZ29v",
-            "Z2xlL2FwaS9xdW90YS5wcm90bxoWZ29vZ2xlL2FwaS91c2FnZS5wcm90bxoZ",
-            "Z29vZ2xlL3Byb3RvYnVmL2FwaS5wcm90byKUAQoHU2VydmljZRIMCgRuYW1l",
-            "GAEgASgJEg4KBnBhcmVudBgFIAEoCRI5CgZjb25maWcYAiABKAsyKS5nb29n",
-            "bGUuYXBpLnNlcnZpY2V1c2FnZS52MS5TZXJ2aWNlQ29uZmlnEjAKBXN0YXRl",
-            "GAQgASgOMiEuZ29vZ2xlLmFwaS5zZXJ2aWNldXNhZ2UudjEuU3RhdGUilQMK",
-            "DVNlcnZpY2VDb25maWcSDAoEbmFtZRgBIAEoCRINCgV0aXRsZRgCIAEoCRIi",
-            "CgRhcGlzGAMgAygLMhQuZ29vZ2xlLnByb3RvYnVmLkFwaRIwCg1kb2N1bWVu",
-            "dGF0aW9uGAYgASgLMhkuZ29vZ2xlLmFwaS5Eb2N1bWVudGF0aW9uEiAKBXF1",
-            "b3RhGAogASgLMhEuZ29vZ2xlLmFwaS5RdW90YRIyCg5hdXRoZW50aWNhdGlv",
-            "bhgLIAEoCzIaLmdvb2dsZS5hcGkuQXV0aGVudGljYXRpb24SIAoFdXNhZ2UY",
-            "DyABKAsyES5nb29nbGUuYXBpLlVzYWdlEicKCWVuZHBvaW50cxgSIAMoCzIU",
-            "Lmdvb2dsZS5hcGkuRW5kcG9pbnQSRAoTbW9uaXRvcmVkX3Jlc291cmNlcxgZ",
-            "IAMoCzInLmdvb2dsZS5hcGkuTW9uaXRvcmVkUmVzb3VyY2VEZXNjcmlwdG9y",
-            "EioKCm1vbml0b3JpbmcYHCABKAsyFi5nb29nbGUuYXBpLk1vbml0b3Jpbmci",
-            "KwoRT3BlcmF0aW9uTWV0YWRhdGESFgoOcmVzb3VyY2VfbmFtZXMYAiADKAkq",
-            "OQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIMCghESVNBQkxFRBAB",
-            "EgsKB0VOQUJMRUQQAkLYAQoeY29tLmdvb2dsZS5hcGkuc2VydmljZXVzYWdl",
-            "LnYxQg5SZXNvdXJjZXNQcm90b1ABWkRjbG91ZC5nb29nbGUuY29tL2dvL3Nl",
-            "cnZpY2V1c2FnZS9hcGl2MS9zZXJ2aWNldXNhZ2VwYjtzZXJ2aWNldXNhZ2Vw",
-            "YqoCHEdvb2dsZS5DbG91ZC5TZXJ2aWNlVXNhZ2UuVjHKAhxHb29nbGVcQ2xv",
-            "dWRcU2VydmljZVVzYWdlXFYx6gIfR29vZ2xlOjpDbG91ZDo6U2VydmljZVVz",
-            "YWdlOjpWMWIGcHJvdG8z"));
+            "Z2xlL2FwaS9xdW90YS5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90",
+            "bxoWZ29vZ2xlL2FwaS91c2FnZS5wcm90bxoZZ29vZ2xlL3Byb3RvYnVmL2Fw",
+            "aS5wcm90byK9AgoHU2VydmljZRIMCgRuYW1lGAEgASgJEg4KBnBhcmVudBgF",
+            "IAEoCRI5CgZjb25maWcYAiABKAsyKS5nb29nbGUuYXBpLnNlcnZpY2V1c2Fn",
+            "ZS52MS5TZXJ2aWNlQ29uZmlnEjAKBXN0YXRlGAQgASgOMiEuZ29vZ2xlLmFw",
+            "aS5zZXJ2aWNldXNhZ2UudjEuU3RhdGU6pgHqQaIBCiNzZXJ2aWNldXNhZ2Uu",
+            "Z29vZ2xlYXBpcy5jb20vU2VydmljZRIlcHJvamVjdHMve3Byb2plY3R9L3Nl",
+            "cnZpY2VzL3tzZXJ2aWNlfRIjZm9sZGVycy97Zm9sZGVyfS9zZXJ2aWNlcy97",
+            "c2VydmljZX0SL29yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vc2Vydmlj",
+            "ZXMve3NlcnZpY2V9IpUDCg1TZXJ2aWNlQ29uZmlnEgwKBG5hbWUYASABKAkS",
+            "DQoFdGl0bGUYAiABKAkSIgoEYXBpcxgDIAMoCzIULmdvb2dsZS5wcm90b2J1",
+            "Zi5BcGkSMAoNZG9jdW1lbnRhdGlvbhgGIAEoCzIZLmdvb2dsZS5hcGkuRG9j",
+            "dW1lbnRhdGlvbhIgCgVxdW90YRgKIAEoCzIRLmdvb2dsZS5hcGkuUXVvdGES",
+            "MgoOYXV0aGVudGljYXRpb24YCyABKAsyGi5nb29nbGUuYXBpLkF1dGhlbnRp",
+            "Y2F0aW9uEiAKBXVzYWdlGA8gASgLMhEuZ29vZ2xlLmFwaS5Vc2FnZRInCgll",
+            "bmRwb2ludHMYEiADKAsyFC5nb29nbGUuYXBpLkVuZHBvaW50EkQKE21vbml0",
+            "b3JlZF9yZXNvdXJjZXMYGSADKAsyJy5nb29nbGUuYXBpLk1vbml0b3JlZFJl",
+            "c291cmNlRGVzY3JpcHRvchIqCgptb25pdG9yaW5nGBwgASgLMhYuZ29vZ2xl",
+            "LmFwaS5Nb25pdG9yaW5nIisKEU9wZXJhdGlvbk1ldGFkYXRhEhYKDnJlc291",
+            "cmNlX25hbWVzGAIgAygJKjkKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVE",
+            "EAASDAoIRElTQUJMRUQQARILCgdFTkFCTEVEEAJC2AEKHmNvbS5nb29nbGUu",
+            "YXBpLnNlcnZpY2V1c2FnZS52MUIOUmVzb3VyY2VzUHJvdG9QAVpEY2xvdWQu",
+            "Z29vZ2xlLmNvbS9nby9zZXJ2aWNldXNhZ2UvYXBpdjEvc2VydmljZXVzYWdl",
+            "cGI7c2VydmljZXVzYWdlcGKqAhxHb29nbGUuQ2xvdWQuU2VydmljZVVzYWdl",
+            "LlYxygIcR29vZ2xlXENsb3VkXFNlcnZpY2VVc2FnZVxWMeoCH0dvb2dsZTo6",
+            "Q2xvdWQ6OlNlcnZpY2VVc2FnZTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AuthReflection.Descriptor, global::Google.Api.DocumentationReflection.Descriptor, global::Google.Api.EndpointReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Api.MonitoringReflection.Descriptor, global::Google.Api.QuotaReflection.Descriptor, global::Google.Api.UsageReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.ApiReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AuthReflection.Descriptor, global::Google.Api.DocumentationReflection.Descriptor, global::Google.Api.EndpointReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Api.MonitoringReflection.Descriptor, global::Google.Api.QuotaReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.UsageReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.ApiReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.ServiceUsage.V1.State), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ServiceUsage.V1.Service), global::Google.Cloud.ServiceUsage.V1.Service.Parser, new[]{ "Name", "Parent", "Config", "State" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ServiceUsage.V1.ServiceConfig), global::Google.Cloud.ServiceUsage.V1.ServiceConfig.Parser, new[]{ "Name", "Title", "Apis", "Documentation", "Quota", "Authentication", "Usage", "Endpoints", "MonitoredResources", "Monitoring" }, null, null, null, null),
@@ -607,7 +611,8 @@ namespace Google.Cloud.ServiceUsage.V1 {
     private readonly pbc::RepeatedField<global::Google.Api.MonitoredResourceDescriptor> monitoredResources_ = new pbc::RepeatedField<global::Google.Api.MonitoredResourceDescriptor>();
     /// <summary>
     /// Defines the monitored resources used by this service. This is required
-    /// by the [Service.monitoring][google.api.Service.monitoring] and [Service.logging][google.api.Service.logging] configurations.
+    /// by the [Service.monitoring][google.api.Service.monitoring] and
+    /// [Service.logging][google.api.Service.logging] configurations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
