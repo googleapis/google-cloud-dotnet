@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.8.0, released 2023-09-18
+
+### Bug fixes
+
+- Add feature flag for improved mutate rows throttling ([commit ecb32d7](https://github.com/googleapis/google-cloud-dotnet/commit/ecb32d7dd57e3eaa044e470889df2fbbb7422d06))
+
 ## Version 3.7.0, released 2023-08-04
 
 ### New features
