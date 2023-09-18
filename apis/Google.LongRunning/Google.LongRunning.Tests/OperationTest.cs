@@ -428,7 +428,7 @@ namespace Google.LongRunning.Tests
                 .ToList();
 
         // We may want to make this public in a testing package at some point... and possibly the helper methods above.
-        class FakeOperationsClient : OperationsClient
+        internal sealed class FakeOperationsClient : OperationsClient
         {
             private readonly CallSettings _baseCallSettings;
             private readonly Action<CallSettings> _callSettingsValidation;
