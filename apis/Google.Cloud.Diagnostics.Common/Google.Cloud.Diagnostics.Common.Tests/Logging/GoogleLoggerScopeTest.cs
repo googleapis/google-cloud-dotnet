@@ -293,8 +293,10 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                 Assert.Null(GoogleLoggerScope.Current);
             };
 
+#pragma warning disable xUnit1031 // Do not use blocking task operations in test method
             var t1 = Task.Run(() => op("parent-one", "child-one").Wait());
             var t2 = Task.Run(() => op("parent-two", "child-two").Wait());
+#pragma warning restore xUnit1031 // Do not use blocking task operations in test method
 
             using (GoogleLoggerScope.BeginScope("root"))
             {
@@ -338,8 +340,10 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             Task t2;
             using (GoogleLoggerScope.BeginScope(rootScope))
             {
+#pragma warning disable xUnit1031 // Do not use blocking task operations in test method
                 t1 = Task.Run(() => op("parent-one", "child-one").Wait());
                 t2 = Task.Run(() => op("parent-two", "child-two").Wait());
+#pragma warning restore xUnit1031 // Do not use blocking task operations in test method
             }
 
             childThreadsReleased.Set();

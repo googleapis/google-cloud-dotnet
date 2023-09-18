@@ -53,12 +53,12 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
         private async Task CreateTopicAndSubscription(TopicName topicName, SubscriptionName subscriptionName)
         {
             // Create topic
-            var publisherApi = await CreatePublisherServiceApiClientAsync().ConfigureAwait(false);
-            await publisherApi.CreateTopicAsync(topicName).ConfigureAwait(false);
+            var publisherApi = await CreatePublisherServiceApiClientAsync();
+            await publisherApi.CreateTopicAsync(topicName);
 
             // Subscribe to the topic
-            var subscriberApi = await CreateSubscriberServiceApiClientAsync().ConfigureAwait(false);
-            await subscriberApi.CreateSubscriptionAsync(subscriptionName, topicName, null, 60).ConfigureAwait(false);
+            var subscriberApi = await CreateSubscriberServiceApiClientAsync();
+            await subscriberApi.CreateSubscriptionAsync(subscriptionName, topicName, null, 60);
         }
 
         private async Task RunBulkMessaging(
@@ -115,7 +115,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                                 retryFilter: RetrySettings.FilterForStatusCodes(StatusCode.Unavailable)))
                             .WithTimeout(timeouts.Value)
                 }
-            }.BuildAsync().ConfigureAwait(false);
+            }.BuildAsync();
             var subscriber = await new SubscriberClientBuilder
             {
                 SubscriptionName = subscriptionName,
@@ -125,7 +125,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                     AckDeadline = timeouts,
                     FlowControlSettings = new FlowControlSettings(maxMessagesInFlight, null)
                 }
-            }.BuildAsync().ConfigureAwait(false);
+            }.BuildAsync();
 
             Console.WriteLine("Topic, Subscription, Publisher and Subscriber all created");
 
@@ -186,7 +186,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                 int noProgressCount = 0;
                 while (true)
                 {
-                    await Task.Delay(debugOutputPeriod1, watchdogCts.Token).ConfigureAwait(false);
+                    await Task.Delay(debugOutputPeriod1, watchdogCts.Token);
                     var localSentCount = Interlocked.Add(ref sentCount, 0);
                     var localRecvCount = Interlocked.Add(ref recvCount, 0);
                     var localDupCount = Interlocked.Add(ref dupCount, 0);
@@ -224,7 +224,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                 }
                 if (i > 0 && interPublishDelay is TimeSpan delay)
                 {
-                    await Task.Delay(delay, watchdogCts.Token).ConfigureAwait(false);
+                    await Task.Delay(delay, watchdogCts.Token);
                 }
                 var msgSize = rnd.Next(minMessageSize, maxMessageSize + 1);
                 var msg = new byte[msgSize];
@@ -241,16 +241,16 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                 // If too many messages are currently in flight, wait a bit
                 while (activePubs.Locked(() => activePubs.Count) >= maxMessagesInFlight)
                 {
-                    await Task.Delay(TimeSpan.FromMilliseconds(1)).ConfigureAwait(false);
+                    await Task.Delay(TimeSpan.FromMilliseconds(1));
                 }
             }
             Console.WriteLine("Publishing complete");
             // Wait for all messages to be sent to server
-            await Task.WhenAll(activePubs.Locked(() => activePubs.ToArray())).ConfigureAwait(false);
+            await Task.WhenAll(activePubs.Locked(() => activePubs.ToArray()));
             Console.WriteLine("Publishing completed sending to server");
 
             // Wait for subscriber to finish shutdown
-            await subTask.ConfigureAwait(false);
+            await subTask;
             watchdogCts.Cancel();
             Console.WriteLine("Subscriber finished shutdown");
             Console.WriteLine($"Sent: {sentCount}; Recv: {recvCount}");
@@ -315,10 +315,10 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             var topicId = _fixture.CreateTopicId();
             // Create topic
             var topicName = new TopicName(_fixture.ProjectId, topicId);
-            var publisherApi = await CreatePublisherServiceApiClientAsync().ConfigureAwait(false);
-            await publisherApi.CreateTopicAsync(topicName).ConfigureAwait(false);
+            var publisherApi = await CreatePublisherServiceApiClientAsync();
+            await publisherApi.CreateTopicAsync(topicName);
             // Create Publisher
-            var publisher = await PublisherClient.CreateAsync(topicName).ConfigureAwait(false);
+            var publisher = await PublisherClient.CreateAsync(topicName);
             // Create oversized message
             Random rnd = new Random(1234);
             byte[] msg = new byte[10_000_001];
@@ -326,11 +326,11 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             // Publish a few messages. They should all throw an exception due to size
             for (int i = 0; i < 5; i++)
             {
-                var ex = await Assert.ThrowsAsync<RpcException>(() => publisher.PublishAsync(msg)).ConfigureAwait(false);
+                var ex = await Assert.ThrowsAsync<RpcException>(() => publisher.PublishAsync(msg));
                 Assert.Equal(StatusCode.InvalidArgument, ex.Status.StatusCode);
                 Assert.Contains("too large", ex.Status.Detail);
             }
-            await publisher.ShutdownAsync(TimeSpan.FromSeconds(15)).ConfigureAwait(false);
+            await publisher.ShutdownAsync(TimeSpan.FromSeconds(15));
         }
 
         [Fact]
@@ -340,8 +340,8 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             var topicId = _fixture.CreateTopicId();
             // Create topic
             var topicName = new TopicName(_fixture.ProjectId, topicId);
-            var publisherApi = await CreatePublisherServiceApiClientAsync().ConfigureAwait(false);
-            await publisherApi.CreateTopicAsync(topicName).ConfigureAwait(false);
+            var publisherApi = await CreatePublisherServiceApiClientAsync();
+            await publisherApi.CreateTopicAsync(topicName);
             // Create Publisher, with no retry
             var batchingSettings = new BatchingSettings(PublisherClient.ApiMaxBatchingSettings.ElementCountThreshold,
                 PublisherClient.ApiMaxBatchingSettings.ByteCountThreshold, TimeSpan.FromSeconds(4));
@@ -353,7 +353,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                 ClientCount = 1,
                 ApiSettings = publisherServiceApiSettings,
                 Settings = new PublisherClient.Settings { BatchingSettings = batchingSettings }
-            }.BuildAsync().ConfigureAwait(false);
+            }.BuildAsync();
             var msgCount = PublisherClient.ApiMaxBatchingSettings.ElementCountThreshold.Value;
             var msgSize = PublisherClient.ApiMaxBatchingSettings.ByteCountThreshold.Value / msgCount;
             var rnd = new Random(1234);
@@ -367,7 +367,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             for (int i = 0; i < msgCount; i++)
             {
                 // Throws exception if there's a problem
-                await publishTasks[i].ConfigureAwait(false);
+                await publishTasks[i];
             }
         }
 
@@ -391,14 +391,14 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             var subscriptionId = _fixture.CreateSubscriptionId();
             // Create topic
             var topicName = new TopicName(_fixture.ProjectId, topicId);
-            var publisherApi = await CreatePublisherServiceApiClientAsync().ConfigureAwait(false);
-            await publisherApi.CreateTopicAsync(topicName).ConfigureAwait(false);
+            var publisherApi = await CreatePublisherServiceApiClientAsync();
+            await publisherApi.CreateTopicAsync(topicName);
             // Subscribe to the topic
             var subscriptionName = new SubscriptionName(_fixture.ProjectId, subscriptionId);
-            var subscriberApi = await CreateSubscriberServiceApiClientAsync().ConfigureAwait(false);
-            await subscriberApi.CreateSubscriptionAsync(subscriptionName, topicName, null, 60).ConfigureAwait(false);
+            var subscriberApi = await CreateSubscriberServiceApiClientAsync();
+            await subscriberApi.CreateSubscriptionAsync(subscriptionName, topicName, null, 60);
             // Create publisher, and start publishing messages
-            var publisher = await PublisherClient.CreateAsync(topicName).ConfigureAwait(false);
+            var publisher = await PublisherClient.CreateAsync(topicName);
             var publishTask = Task.Run(async () =>
             {
                 Console.WriteLine($"Starting to publish {totalMessageCount} messages.");
@@ -408,7 +408,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                     publisher.PublishAsync($"Message:{i}");
                     if ((i + 1) % publisherBatchSize == 0)
                     {
-                        await Task.Delay(publisherDelay).ConfigureAwait(false);
+                        await Task.Delay(publisherDelay);
                     }
                 }
                 Console.WriteLine("Publishing complete.");
@@ -422,18 +422,18 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                 while (recvedMsgs.Locked(() => recvedMsgs.Count) < totalMessageCount)
                 {
                     Console.WriteLine("Starting subscriber");
-                    var subscriber = await SubscriberClient.CreateAsync(subscriptionName).ConfigureAwait(false);
+                    var subscriber = await SubscriberClient.CreateAsync(subscriptionName);
                     var subscribeTask = subscriber.StartAsync(async (msg, ct) =>
                     {
                         recvedMsgs.Locked(() => recvedMsgs.Add(msg.Data.ToStringUtf8()));
-                        await Task.Delay(handlerDelay, ct).ConfigureAwait(false);
+                        await Task.Delay(handlerDelay, ct);
                         return SubscriberClient.Reply.Ack;
                     });
-                    await Task.Delay(subscriberLifetime).ConfigureAwait(false);
+                    await Task.Delay(subscriberLifetime);
                     Console.WriteLine("Stopping subscriber");
                     Task stopTask = subscriber.StopAsync(TimeSpan.FromSeconds(15));
                     // If shutdown times-out then stopTask, and also Task.WhenAll will cancel, causing the test to fail.
-                    await Task.WhenAll(subscribeTask, stopTask).ConfigureAwait(false);
+                    await Task.WhenAll(subscribeTask, stopTask);
                     int recvCount = recvedMsgs.Locked(() => recvedMsgs.Count);
                     Console.WriteLine($"Stopped subscriber. Recv count: {recvCount}");
                     if (prevRecvCount == recvCount)
@@ -450,7 +450,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                 }
             });
             Console.WriteLine("Waiting for pub+sub to complete.");
-            await Task.WhenAll(publishTask, subscribeAllTask).ConfigureAwait(false);
+            await Task.WhenAll(publishTask, subscribeAllTask);
             Console.WriteLine("pub+sub completed.");
         }
 
@@ -458,7 +458,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
         public async Task DeadLetterQueueAndDeliveryAttempt()
         {
             // Construct the pubsub service account name. This is required for setting IAM permissions.
-            var projectNumber = await _fixture.GetProjectNumberAsync().ConfigureAwait(false);
+            var projectNumber = await _fixture.GetProjectNumberAsync();
             var pubsubServiceAccount = $"service-{projectNumber}@gcp-sa-pubsub.iam.gserviceaccount.com";
 
             var topicId = _fixture.CreateTopicId();
@@ -471,9 +471,9 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             var dlqSubscriptionName = new SubscriptionName(_fixture.ProjectId, dlqSubscriptionId);
 
             // Create topics.
-            var publisherApi = await CreatePublisherServiceApiClientAsync().ConfigureAwait(false);
-            await publisherApi.CreateTopicAsync(topicName).ConfigureAwait(false);
-            await publisherApi.CreateTopicAsync(dlqTopicName).ConfigureAwait(false);
+            var publisherApi = await CreatePublisherServiceApiClientAsync();
+            await publisherApi.CreateTopicAsync(topicName);
+            await publisherApi.CreateTopicAsync(dlqTopicName);
             // Allow pubsub-managed service account to publish to the DLQ topic.
             await publisherApi.IAMPolicyClient.SetIamPolicyAsync(new SetIamPolicyRequest
             {
@@ -489,11 +489,11 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                         },
                     }
                 }
-            }).ConfigureAwait(false);
+            });
 
             // Subscribe to the topics.
-            var subscriberApi = await CreateSubscriberServiceApiClientAsync().ConfigureAwait(false);
-            await subscriberApi.CreateSubscriptionAsync(dlqSubscriptionName, dlqTopicName, null, 60).ConfigureAwait(false);
+            var subscriberApi = await CreateSubscriberServiceApiClientAsync();
+            await subscriberApi.CreateSubscriptionAsync(dlqSubscriptionName, dlqTopicName, null, 60);
             await subscriberApi.CreateSubscriptionAsync(new Subscription
             {
                 SubscriptionName = subscriptionName,
@@ -504,7 +504,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                     MaxDeliveryAttempts = 10,
                 },
                 AckDeadlineSeconds = 60,
-            }).ConfigureAwait(false);
+            });
             // Allow pubsub-managed service account to ACK message in subscription (so it won't be sent to client again).
             await subscriberApi.IAMPolicyClient.SetIamPolicyAsync(new SetIamPolicyRequest
             {
@@ -520,11 +520,11 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                         }
                     }
                 }
-            }).ConfigureAwait(false);
+            });
 
-            var pub = await new PublisherClientBuilder { TopicName = topicName, ClientCount = 1 }.BuildAsync().ConfigureAwait(false);
-            var sub = await new SubscriberClientBuilder { SubscriptionName = subscriptionName, ClientCount = 1 }.BuildAsync().ConfigureAwait(false);
-            var dlqSub = await new SubscriberClientBuilder { SubscriptionName = dlqSubscriptionName, ClientCount = 1 }.BuildAsync().ConfigureAwait(false);
+            var pub = await new PublisherClientBuilder { TopicName = topicName, ClientCount = 1 }.BuildAsync();
+            var sub = await new SubscriberClientBuilder { SubscriptionName = subscriptionName, ClientCount = 1 }.BuildAsync();
+            var dlqSub = await new SubscriberClientBuilder { SubscriptionName = dlqSubscriptionName, ClientCount = 1 }.BuildAsync();
 
             var result = new List<(int? deliveryAttempt, bool isDlq)>();
 
@@ -544,12 +544,12 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             });
 
             // Publish one message. This should be delivered 10 times (NACKed each time), then to the DLQ subscription once.
-            await pub.PublishAsync("m").ConfigureAwait(false);
+            await pub.PublishAsync("m");
 
             // Cancel test if it takes too long.
             var timeoutTask = Task.Delay(TimeSpan.FromSeconds(60));
 
-            await Task.WhenAny(timeoutTask, Task.WhenAll(taskSub, taskDlqSub)).ConfigureAwait(false);
+            await Task.WhenAny(timeoutTask, Task.WhenAll(taskSub, taskDlqSub));
             Assert.True(taskSub.Status == TaskStatus.RanToCompletion, "Subscription task did not complete.");
             Assert.True(taskDlqSub.Status == TaskStatus.RanToCompletion, "DLQ subscription task did not complete.");
 

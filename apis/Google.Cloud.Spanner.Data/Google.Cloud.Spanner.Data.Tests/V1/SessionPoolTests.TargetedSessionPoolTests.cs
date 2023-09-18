@@ -856,11 +856,13 @@ namespace Google.Cloud.Spanner.V1.Tests
                 Assert.Equal(TaskStatus.RanToCompletion, sessionTask.Status);
                 Assert.Equal(TaskStatus.WaitingForActivation, waitTask.Status);
 
+#pragma warning disable xUnit1031 // Do not use blocking task operations in test method
                 // Releasing the session puts it back in the pool directly (with no delays to schedule)
                 sessionTask.Result.ReleaseToPool(false);
-                // We don't check the status directly, as we need continuations to run, but it should
-                // complete pretty quickly. (The timeout is just to avoid the test hanging if there's a bug.)
+                                 // We don't check the status directly, as we need continuations to run, but it should
+                                 // complete pretty quickly. (The timeout is just to avoid the test hanging if there's a bug.)
                 Assert.True(waitTask.Wait(1000));
+#pragma warning restore xUnit1031 // Do not use blocking task operations in test method
             }
 
             [Fact(Timeout = TestTimeoutMilliseconds)]
