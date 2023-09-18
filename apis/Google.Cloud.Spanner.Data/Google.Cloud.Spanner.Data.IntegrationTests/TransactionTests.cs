@@ -128,7 +128,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 using (var cmd = connection.CreateSelectCommand($"SELECT Int64Value FROM {_fixture.TableName} WHERE K=@k"))
                 {
                     cmd.Parameters.Add("k", SpannerDbType.String, _key);
-                    Assert.Equal(DBNull.Value, await cmd.ExecuteScalarAsync().ConfigureAwait(false));
+                    Assert.Equal(DBNull.Value, await cmd.ExecuteScalarAsync());
                 }
             }
         }
@@ -184,8 +184,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                                 cmd.Parameters.Add("k", SpannerDbType.String, _key);
                                 cmd.Parameters.Add("Int64Value", SpannerDbType.Int64, 0);
                                 cmd.Transaction = tx1;
-                                await cmd.ExecuteNonQueryAsync().ConfigureAwait(false);
-                                await tx1.CommitAsync().ConfigureAwait(false);
+                                await cmd.ExecuteNonQueryAsync();
+                                await tx1.CommitAsync();
                                 tx1.Dispose();
                             }
                             connection1.Dispose();
@@ -225,13 +225,13 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 tasks[i] = IncrementByOneAsync(connections[i]);
             }
-            await Task.WhenAll(tasks).ConfigureAwait(false);
+            await Task.WhenAll(tasks);
 
             // Now ensure we have the correct value
             using (var cmd = connections[0].CreateSelectCommand($"SELECT Int64Value FROM {_fixture.TableName} WHERE K=@k"))
             {
                 cmd.Parameters.Add("k", SpannerDbType.String, _key);
-                Assert.Equal(5, await cmd.ExecuteScalarAsync<long>().ConfigureAwait(false));
+                Assert.Equal(5, await cmd.ExecuteScalarAsync<long>());
             }
 
             for (var i = 0; i < concurrentThreads; i++)

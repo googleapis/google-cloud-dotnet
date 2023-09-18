@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -71,7 +71,9 @@ namespace Google.Cloud.PubSub.V1.Tests.Tasks
                         tasks[i] = WaitTest(scheduler, i);
                     }
                     await taskHelper.ConfigureAwait(taskHelper.WhenAll(tasks));
+#pragma warning disable xUnit1031 // Do not use blocking task operations in test method
                     return tasks.Sum(x => x.Result);
+#pragma warning restore xUnit1031 // Do not use blocking task operations in test method
                 });
                 Assert.Equal(1000 * 999 / 2, number);
             }

@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -117,7 +117,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             // Make sure we grab a row of a person with children for testing fields that should be present.
             var rowAsyncTask = rowsAsync.FirstAsync(row => ((Dictionary<string, object>[])row["children"])?.Length > 0);
             var rowSync = rows.First(row => ((Dictionary<string, object>[])row["children"])?.Length > 0);
-            var rowAsync = await rowAsyncTask.ConfigureAwait(false);
+            var rowAsync = await rowAsyncTask;
 
             AssertPartialRow(rowSync);
             AssertPartialRow(rowAsync);
@@ -148,7 +148,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             // We should get full rows.
             var rowsAsyncTask = client.ListRowsAsync(datasetId, tableId, new TableSchema()).ToListAsync();
             var rowsSync = client.ListRows(datasetId, tableId, new TableSchema()).ToList();
-            var rowsAsync = await rowsAsyncTask.ConfigureAwait(false);
+            var rowsAsync = await rowsAsyncTask;
 
             AssertFullRows(rowsSync);
             AssertFullRows(rowsAsync);

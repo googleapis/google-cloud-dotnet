@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -252,7 +252,7 @@ namespace Google.LongRunning.Tests
             await client.FakeScheduler.RunAsync(async () =>
             {
                 client.AddSuccessfulOperation("op", client.Clock.GetCurrentDateTimeUtc().AddSeconds(3), new StringValue { Value = "result" });
-                var initial = Operation<StringValue, Timestamp>.PollOnceFromNameAsync("op", client).Result;
+                var initial = await Operation<StringValue, Timestamp>.PollOnceFromNameAsync("op", client);
                 var settings = new PollSettings(Expiration.FromTimeout(TimeSpan.FromSeconds(5)), TimeSpan.FromSeconds(2));
                 // Second request at t=0, then at t=2, then another at t=4
                 var completedOperation = await initial.PollUntilCompletedAsync(settings, metadataCallback: actualMetadata.Add);
@@ -271,7 +271,7 @@ namespace Google.LongRunning.Tests
             await client.FakeScheduler.RunAsync(async () =>
             {
                 client.AddSuccessfulOperation("op", client.Clock.GetCurrentDateTimeUtc().AddSeconds(3), new StringValue { Value = "result" });
-                var initial = Operation<StringValue, Timestamp>.PollOnceFromNameAsync("op", client).Result;
+                var initial = await Operation<StringValue, Timestamp>.PollOnceFromNameAsync("op", client);
                 var settings = new PollSettings(Expiration.FromTimeout(TimeSpan.FromSeconds(5)), TimeSpan.FromSeconds(2));
                 // Second request at t=0, then at t=2, then another at t=4
                 var completedOperation = await initial.PollUntilCompletedAsync(settings, metadataCallback: actualMetadata.Add);
@@ -333,7 +333,7 @@ namespace Google.LongRunning.Tests
             await client.FakeScheduler.RunAsync(async () =>
             {
                 client.AddSuccessfulOperation("op", client.Clock.GetCurrentDateTimeUtc().AddSeconds(10), new StringValue { Value = "result" });
-                var initial = Operation<StringValue, Timestamp>.PollOnceFromNameAsync("op", client).Result;
+                var initial = await Operation<StringValue, Timestamp>.PollOnceFromNameAsync("op", client);
                 // Second request at t=0, then at t=2, then at t=4, then we give up.
                 var settings = new PollSettings(Expiration.FromTimeout(TimeSpan.FromSeconds(5)), TimeSpan.FromSeconds(2));
                 await Assert.ThrowsAsync<TimeoutException>(() => initial.PollUntilCompletedAsync(settings, metadataCallback: actualMetadata.Add));
@@ -369,7 +369,7 @@ namespace Google.LongRunning.Tests
             await client.FakeScheduler.RunAsync(async () =>
             {
                 client.AddSuccessfulOperation("op", client.Clock.GetCurrentDateTimeUtc().AddSeconds(3), new StringValue { Value = "result" });
-                var initial = Operation<StringValue, Timestamp>.PollOnceFromNameAsync("op", client).Result;
+                var initial = await Operation<StringValue, Timestamp>.PollOnceFromNameAsync("op", client);
                 await initial.PollUntilCompletedAsync(callSettings: callSettings);
             });
         }

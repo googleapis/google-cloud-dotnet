@@ -40,7 +40,7 @@ namespace Google.Cloud.Firestore.Tests
         private static readonly TimeSpan s_timeout = TimeSpan.FromSeconds(10);
 
         [Fact]
-        public void Stop()
+        public async Task Stop()
         {
             var sequence = new TestSequence();
             sequence.ExpectConnect(null, StreamInitializationCause.WatchStarting);
@@ -49,12 +49,12 @@ namespace Google.Cloud.Firestore.Tests
 
             Task task = sequence.RunToStability();
             sequence.WatchStream.Stop(CancellationToken.None);
-            task.Wait();
+            await task;
             sequence.Verify();
         }
 
         [Fact]
-        public void StreamReset()
+        public async Task StreamReset()
         {
             ByteString token = ByteString.CopyFromUtf8("token");
             var sequence = new TestSequence();
@@ -71,12 +71,12 @@ namespace Google.Cloud.Firestore.Tests
 
             Task task = sequence.RunToStability();
             sequence.WatchStream.Stop(CancellationToken.None);
-            task.Wait();
+            await task;
             sequence.Verify();
         }
 
         [Fact]
-        public void StreamComplete()
+        public async Task StreamComplete()
         {
             ByteString token1 = ByteString.CopyFromUtf8("token1");
             ByteString token2 = ByteString.CopyFromUtf8("token2");
@@ -93,12 +93,12 @@ namespace Google.Cloud.Firestore.Tests
 
             Task task = sequence.RunToStability();
             sequence.WatchStream.Stop(CancellationToken.None);
-            task.Wait();
+            await task;
             sequence.Verify();
         }
 
         [Fact]
-        public void RetriableRpcException()
+        public async Task RetriableRpcException()
         {
             ByteString token1 = ByteString.CopyFromUtf8("token1");
             ByteString token2 = ByteString.CopyFromUtf8("token2");
@@ -115,12 +115,12 @@ namespace Google.Cloud.Firestore.Tests
 
             Task task = sequence.RunToStability();
             sequence.WatchStream.Stop(CancellationToken.None);
-            task.Wait();
+            await task;
             sequence.Verify();
         }
 
         [Fact]
-        public void ResourceExhaustedRpcException()
+        public async Task ResourceExhaustedRpcException()
         {
             ByteString token1 = ByteString.CopyFromUtf8("token1");
             ByteString token2 = ByteString.CopyFromUtf8("token2");
@@ -139,7 +139,7 @@ namespace Google.Cloud.Firestore.Tests
 
             Task task = sequence.RunToStability();
             sequence.WatchStream.Stop(CancellationToken.None);
-            task.Wait();
+            await task;
             sequence.Verify();
         }
 
@@ -175,7 +175,9 @@ namespace Google.Cloud.Firestore.Tests
             Task task = sequence.RunToStability();
             tokenSource.Cancel();
             // If it doesn't finish quickly, Task.Wait will time out and the assertion will fail.
+#pragma warning disable xUnit1031 // Do not use blocking task operations in test method
             Assert.Throws<AggregateException>(() => task.Wait(s_timeout));
+#pragma warning restore xUnit1031 // Do not use blocking task operations in test method
             Assert.Equal(TaskStatus.Canceled, task.Status);
         }
 

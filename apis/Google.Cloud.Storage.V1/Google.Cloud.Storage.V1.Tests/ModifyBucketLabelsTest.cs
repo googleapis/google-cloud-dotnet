@@ -57,7 +57,7 @@ namespace Google.Cloud.Storage.V1.Tests
         }
 
         [Fact]
-        public void SetLabelAsync()
+        public async Task SetLabelAsync()
         {
             var bucketName = "bucket";
             var key = "key";
@@ -69,13 +69,14 @@ namespace Google.Cloud.Storage.V1.Tests
             mock.Configure().ModifyBucketLabelsAsync(bucketName, CreateMatcher(key, newValue), options, token)
                 .Returns(Task.FromResult<IDictionary<string, string>>(new Dictionary<string, string> { { key, oldValue } }));
 
-            var actual = mock.SetBucketLabelAsync(bucketName, key, newValue, options, token).Result;
+            // The task should already have completed, but it's simplest just to await it to prevent xUnit complaining.
+            var actual = await mock.SetBucketLabelAsync(bucketName, key, newValue, options, token);
             Assert.Equal(oldValue, actual);
             _ = mock.Received(1).ModifyBucketLabelsAsync(bucketName, CreateMatcher(key, newValue), options, token);
         }
 
         [Fact]
-        public void RemoveLabelAsync()
+        public async Task RemoveLabelAsync()
         {
             var bucketName = "bucket";
             var key = "key";
@@ -85,7 +86,8 @@ namespace Google.Cloud.Storage.V1.Tests
             mock.Configure().ModifyBucketLabelsAsync(bucketName, CreateMatcher(key, null), options, token)
                 .Returns(Task.FromResult<IDictionary<string, string>>(new Dictionary<string, string> { { "key", null } }));
 
-            var actual = mock.RemoveBucketLabelAsync(bucketName, key, options, token).Result;
+            // The task should already have completed, but it's simplest just to await it to prevent xUnit complaining.
+            var actual = await mock.RemoveBucketLabelAsync(bucketName, key, options, token);
             Assert.Null(actual);
             _ = mock.Received(1).ModifyBucketLabelsAsync(bucketName, CreateMatcher(key, null), options, token);
         }

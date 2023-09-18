@@ -35,6 +35,7 @@ using System.Threading.Tasks;
 using Xunit;
 using static Google.Cloud.Diagnostics.Common.HttpClientBuilderExtensions;
 using static Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests.TestServerHelpers;
+using System.Runtime.CompilerServices;
 
 namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
 {
@@ -350,7 +351,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
 
         [Theory]
         [MemberData(nameof(ConfigurationData))]
-        public void Trace_QPS(Action<IWebHostBuilder> testServerConfigurator)
+        public async Task Trace_QPS(Action<IWebHostBuilder> testServerConfigurator)
         {
             var traceUri = $"/Trace/{nameof(TraceController.Trace)}/{_testId}";
             var traceLabelUri = $"/Trace/{nameof(TraceController.TraceLabels)}/{_testId}";
@@ -360,7 +361,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
             // Make two requests, one of the two should be traced as they both occur at nearly the same time.
             var traceTask = client.GetAsync(traceUri);
             var traceLabelsTask = client.GetAsync(traceLabelUri);
-            Task.WaitAll(traceTask, traceLabelsTask);
+            await Task.WhenAll(traceTask, traceLabelsTask);
 
             // We expect exactly one of the two following traces to have been sent to the backend,
             // but we don't know which. By polling but not expecting a trace in both cases we force

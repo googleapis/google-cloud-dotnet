@@ -387,8 +387,10 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                     await Task.Yield();
                 }
             };
+#pragma warning disable xUnit1031 // Do not use blocking task operations in test method
             var t1 = Task.Run(() => op("child-one", "grandchild-one").Wait());
             var t2 = Task.Run(() => op("child-two", "grandchild-two").Wait());
+#pragma warning restore xUnit1031 // Do not use blocking task operations in test method
 
             using (tracer.StartSpan("root"))
             {
@@ -450,8 +452,10 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             Task t2;
             using (tracer.StartSpan("root"))
             {
+#pragma warning disable xUnit1031 // Do not use blocking task operations in test method
                 t1 = Task.Run(() => op("child-one", "grandchild-one").Wait());
                 t2 = Task.Run(() => op("child-two", "grandchild-two").Wait());
+#pragma warning restore xUnit1031 // Do not use blocking task operations in test method
             }
 
             childThreadsReleased.Set();
