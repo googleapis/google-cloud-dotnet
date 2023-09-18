@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -47,7 +47,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             });
         }
 
-        private Lazy<Task<string>> _projectNumber;
+        private readonly Lazy<Task<string>> _projectNumber;
         internal Task<string> GetProjectNumberAsync() => _projectNumber.Value;
 
         internal string CreateTopicId() => IdGenerator.FromGuid(prefix: TopicPrefix);
