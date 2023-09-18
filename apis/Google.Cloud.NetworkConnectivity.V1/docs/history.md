@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.4.0, released 2023-09-18
+
+### New features
+
+- Add PolicyBasedRouting APIs ([commit 7d8d2b0](https://github.com/googleapis/google-cloud-dotnet/commit/7d8d2b0f58d91865588fd067a14e558e4db57b32))
+
 ## Version 2.3.0, released 2023-02-08
 
 ### Bug fixes
