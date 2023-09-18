@@ -1,5 +1,13 @@
 # Version history
 
+## Version 2.2.0, released 2023-09-18
+
+### New features
+
+- Introduce resource class serviceusage.googleapis.com/Service ([commit 6cecdd9](https://github.com/googleapis/google-cloud-dotnet/commit/6cecdd9badf4d838884abdf2faaba829b5225739))
+- Added ConsumerQuotaLimit.supported_locations ([commit 6cecdd9](https://github.com/googleapis/google-cloud-dotnet/commit/6cecdd9badf4d838884abdf2faaba829b5225739))
+- Added ProducerQuotaPolicy message and QuotaBucket.producer_quota_policy field ([commit 6cecdd9](https://github.com/googleapis/google-cloud-dotnet/commit/6cecdd9badf4d838884abdf2faaba829b5225739))
+
 ## Version 2.1.0, released 2023-01-19
 
 ### New features
