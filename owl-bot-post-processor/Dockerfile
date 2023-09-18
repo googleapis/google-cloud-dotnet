@@ -29,7 +29,6 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0.414-jammy
 
 RUN apt-get update
 RUN apt-get install -y unzip
-RUN apt-get install -y python3
 
 # Note: main.sh is not packed into the docker image.  This command
 # invokes the current main.sh in the repo.
