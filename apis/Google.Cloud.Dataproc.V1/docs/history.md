@@ -1,5 +1,11 @@
 # Version history
 
+## Version 5.7.0, released 2023-09-18
+
+### New features
+
+- Add optional parameters (tarball_gcs_dir, diagnosis_interval, jobs, yarn_application_ids) in DiagnoseClusterRequest ([commit adf57b2](https://github.com/googleapis/google-cloud-dotnet/commit/adf57b2465aec1a9c6d5d11559dc8ba34cdc45bb))
+
 ## Version 5.6.0, released 2023-08-23
 
 ### New features
