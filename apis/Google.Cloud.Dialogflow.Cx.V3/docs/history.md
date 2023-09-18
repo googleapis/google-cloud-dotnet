@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.12.0, released 2023-09-18
+
+### Bug fixes
+
+- Fix Ruby namespaces for generative AI classes ([commit 14f47b3](https://github.com/googleapis/google-cloud-dotnet/commit/14f47b39303a84751ea8e43945abdda45af4f6f1))
+
 ## Version 2.11.0, released 2023-09-06
 
 ### New features
