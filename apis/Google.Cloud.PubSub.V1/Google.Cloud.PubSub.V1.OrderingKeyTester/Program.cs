@@ -1,4 +1,18 @@
-﻿using Grpc.Core;
+// Copyright 2023 Google LLC
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     https://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+using Grpc.Core;
 using Grpc.Net.Client;
 using System;
 using System.Collections.Generic;
@@ -17,7 +31,7 @@ namespace Google.Cloud.PubSub.V1.OrderingKeyTester
     ///   "{ordering key, or empty string for no ordering key}","{message text}"
     /// Before running this test the pubsub emulator must be started on localhost using ipv4 (not ipv6).
     /// </summary>
-    class Program
+    internal class Program
     {
         private class InputLine
         {
@@ -36,7 +50,7 @@ namespace Google.Cloud.PubSub.V1.OrderingKeyTester
             public string Message { get; }
         }
 
-        static int Main(string[] args)
+        private static int Main(string[] args)
         {
             if (args.Length != 3)
             {

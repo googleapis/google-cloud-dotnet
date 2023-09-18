@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -81,8 +81,8 @@ namespace Google.Cloud.PubSub.V1.Tests.Tasks
                     _thread.Start();
                 }
 
-                private Thread _thread;
-                private Queue<Action> _actions = new Queue<Action>();
+                private readonly Thread _thread;
+                private readonly Queue<Action> _actions = new Queue<Action>();
                 private volatile bool _disposed;
                 private volatile TaskCompletionSource<int> _signal = new TaskCompletionSource<int>();
 
@@ -113,7 +113,7 @@ namespace Google.Cloud.PubSub.V1.Tests.Tasks
 
             private CachingSimpleThreadPool() { }
 
-            private Stack<ThreadRunner> _cache = new Stack<ThreadRunner>();
+            private readonly Stack<ThreadRunner> _cache = new Stack<ThreadRunner>();
 
             public override Task Start(Action action)
             {
