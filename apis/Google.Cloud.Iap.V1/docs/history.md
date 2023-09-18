@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.4.0, released 2023-09-18
+
+### New features
+
+- Adding programmatic_clients attribute to UpdateIapSettings API request ([commit 31934fa](https://github.com/googleapis/google-cloud-dotnet/commit/31934fa84d842b659d6dd2c67723e5a477f5b5a6))
+
+### Documentation improvements
+
+- Few minor changes on doc description came out of cl/512701532 ([commit 48f33ea](https://github.com/googleapis/google-cloud-dotnet/commit/48f33ea923ee67bfe04181855670e8698940d6b7))
+
 ## Version 2.3.0, released 2023-03-20
 
 ### New features
