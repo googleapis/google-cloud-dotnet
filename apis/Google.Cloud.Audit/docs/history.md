@@ -1,5 +1,16 @@
 # Version history
 
+## Version 2.2.0, released 2023-09-18
+
+### New features
+
+- Add the name of the reservation the job was submitted to as a field ([commit 8509295](https://github.com/googleapis/google-cloud-dotnet/commit/8509295870d00b72bc70b8d3a63a10bcacd8dafd))
+
+### Documentation improvements
+
+- Use deprecated=true for deprecated fields ([commit ac35511](https://github.com/googleapis/google-cloud-dotnet/commit/ac35511716630dc7391dde688e03e9224386e8b1))
+- Mark ReservationResourceUsage field as deprecated ([commit f1929cb](https://github.com/googleapis/google-cloud-dotnet/commit/f1929cbfa7a04ddf841749c9df6adab1696cf1e7))
+
 ## Version 2.1.0, released 2022-10-17
 
 ### New features
