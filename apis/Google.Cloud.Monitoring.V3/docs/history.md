@@ -1,5 +1,13 @@
 # Version history
 
+## Version 3.4.0, released 2023-09-18
+
+### New features
+
+- Added support for retriggering notifications in AlertPolicy ([commit f2d8855](https://github.com/googleapis/google-cloud-dotnet/commit/f2d8855accef7c793dfec45ad7c86db005224993))
+- Added support for forecast options in AlertPolicy ([commit f2d8855](https://github.com/googleapis/google-cloud-dotnet/commit/f2d8855accef7c793dfec45ad7c86db005224993))
+- Added support for promQL condition type in AlertPolicy ([commit f2d8855](https://github.com/googleapis/google-cloud-dotnet/commit/f2d8855accef7c793dfec45ad7c86db005224993))
+
 ## Version 3.3.0, released 2023-05-11
 
 ### New features
