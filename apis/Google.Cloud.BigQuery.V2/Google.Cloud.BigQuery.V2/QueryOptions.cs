@@ -196,14 +196,9 @@ namespace Google.Cloud.BigQuery.V2
             {
                 query.TimePartitioning = TimePartitioning;
             }
-            if (SessionID != null)
+            if (SessionId != null)
             {
-                var cp = new ConnectionProperty
-                {
-                    Key = "session_id",
-                    Value = SessionID
-                };
-                query.ConnectionProperties = new ConnectionProperty[] { cp };
+                query.ConnectionProperties = GetConnectionProperties();
             }
             if (CreateSession != null)
             {

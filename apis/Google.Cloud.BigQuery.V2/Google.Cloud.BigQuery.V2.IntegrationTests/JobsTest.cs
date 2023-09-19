@@ -307,6 +307,65 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             client.DeleteJob(jobToFind.Reference);
         }
 
+        [Fact]
+        public void LoadJob_CreateNewSession()
+        {
+            string sourceUri = "gs://cloud-samples-data/bigquery/us-states/us-states.parquet";
+
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var tempTableName = "TempTestTable";
+            var tableRef = client.GetTableReference(SessionData.TempDatasetId, tempTableName);
+
+            var options = new CreateLoadJobOptions { SourceFormat = FileFormat.Parquet, CreateSession = true };
+            var job = client.CreateLoadJob(sourceUri, tableRef, schema: null, options: options);
+            job.PollUntilCompleted().ThrowOnAnyError();
+
+            var sessionId = job.Statistics.SessionInfo.SessionId;
+            Assert.NotNull(sessionId);
+
+            // Checking if the data is loaded to the temp table in the session.
+            string queryTempTable = $"SELECT * FROM {SessionData.TempDatasetId}.{tempTableName};";
+            var queryOptions = new QueryOptions { Labels = JobsTest.JobLabels, SessionId = sessionId };
+            var queryJob = client.CreateQueryJob(queryTempTable, null, queryOptions);
+            queryJob.PollUntilCompleted().ThrowOnAnyError();
+            var result = queryJob.GetQueryResults();
+            Assert.Equal(50, (int) result.TotalRows);
+        }
+
+        [Fact]
+        public void LoadJob_UseExistingSession()
+        {
+            string sourceUriLoad1 = "gs://cloud-samples-data/bigquery/us-states/us-states.parquet";
+            string sourceUriLoad2 = "gs://cloud-samples-data/bigquery/federated-formats-reference-file-schema/a-twitter.avro";
+
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var tempTableName = "TempTestTable";
+            var tableRef = client.GetTableReference(SessionData.TempDatasetId, tempTableName);
+
+            var options = new CreateLoadJobOptions { SourceFormat = FileFormat.Parquet, CreateSession = true };
+            var job = client.CreateLoadJob(sourceUriLoad1, tableRef, schema: null, options: options);
+            job.PollUntilCompleted().ThrowOnAnyError();
+
+            var sessionId = job.Statistics.SessionInfo.SessionId;
+            Assert.NotNull(sessionId);
+
+            // Add the same data but into a different table than before.
+            var tempTableName2 = "TempTestTableOnExistingSession";
+            var tableRef2 = client.GetTableReference(SessionData.TempDatasetId, tempTableName2);
+            var optionsWithExistingSession = new CreateLoadJobOptions { SourceFormat = FileFormat.Avro, SessionId = sessionId};
+            var job2 = client.CreateLoadJob(sourceUriLoad2, tableRef2, schema: null, options: optionsWithExistingSession);
+            job2.PollUntilCompleted().ThrowOnAnyError();
+
+            // Checking if the data is loaded to the temp table in the session.
+            string queryTempTable = $"SELECT * FROM {SessionData.TempDatasetId}.{tempTableName2};";
+            var queryOptions = new QueryOptions { Labels = JobsTest.JobLabels, SessionId = sessionId };
+            var queryJob = client.CreateQueryJob(queryTempTable, null, queryOptions);
+            queryJob.PollUntilCompleted().ThrowOnAnyError();
+            var result = queryJob.GetQueryResults();
+            Assert.Equal(7, (int) result.TotalRows);
+
+        }
+
         internal static void VerifyJobLabels(IDictionary<string, string> actual)
         {
             Assert.NotNull(actual);
