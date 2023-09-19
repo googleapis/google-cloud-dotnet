@@ -2020,6 +2020,7 @@ namespace Google.Cloud.AlloyDb.V1Beta
         /// <summary>
         /// <see cref="NetworkName"/>-typed view over the <see cref="Network"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public NetworkName NetworkAsNetworkName
         {
             get => string.IsNullOrEmpty(Network) ? null : NetworkName.Parse(Network, allowUnparsed: true);
