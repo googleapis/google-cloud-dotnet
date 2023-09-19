@@ -3627,7 +3627,7 @@ namespace Google.Cloud.Iap.V1 {
         = pb::FieldCodec.ForString(42);
     private readonly pbc::RepeatedField<string> programmaticClients_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// List of Oauth client IDs allowed to programmatically authenticate with IAP.
+    /// List of OAuth client IDs allowed to programmatically authenticate with IAP.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
