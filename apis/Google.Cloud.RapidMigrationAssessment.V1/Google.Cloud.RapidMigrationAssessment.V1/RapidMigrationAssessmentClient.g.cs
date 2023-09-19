@@ -421,7 +421,7 @@ namespace Google.Cloud.RapidMigrationAssessment.V1
 
     /// <summary>RapidMigrationAssessment client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// Rapid Migration Assessment service
+    /// Service describing handlers for resources.
     /// </remarks>
     public abstract partial class RapidMigrationAssessmentClient
     {
@@ -1287,6 +1287,7 @@ namespace Google.Cloud.RapidMigrationAssessment.V1
 
         /// <summary>
         /// Deletes a single Collector - changes state of collector to "Deleting".
+        /// Background jobs does final deletion thorugh producer api.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1296,6 +1297,7 @@ namespace Google.Cloud.RapidMigrationAssessment.V1
 
         /// <summary>
         /// Deletes a single Collector - changes state of collector to "Deleting".
+        /// Background jobs does final deletion thorugh producer api.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1305,6 +1307,7 @@ namespace Google.Cloud.RapidMigrationAssessment.V1
 
         /// <summary>
         /// Deletes a single Collector - changes state of collector to "Deleting".
+        /// Background jobs does final deletion thorugh producer api.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1340,6 +1343,7 @@ namespace Google.Cloud.RapidMigrationAssessment.V1
 
         /// <summary>
         /// Deletes a single Collector - changes state of collector to "Deleting".
+        /// Background jobs does final deletion thorugh producer api.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the resource.
@@ -1354,6 +1358,7 @@ namespace Google.Cloud.RapidMigrationAssessment.V1
 
         /// <summary>
         /// Deletes a single Collector - changes state of collector to "Deleting".
+        /// Background jobs does final deletion thorugh producer api.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the resource.
@@ -1368,6 +1373,7 @@ namespace Google.Cloud.RapidMigrationAssessment.V1
 
         /// <summary>
         /// Deletes a single Collector - changes state of collector to "Deleting".
+        /// Background jobs does final deletion thorugh producer api.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the resource.
@@ -1379,6 +1385,7 @@ namespace Google.Cloud.RapidMigrationAssessment.V1
 
         /// <summary>
         /// Deletes a single Collector - changes state of collector to "Deleting".
+        /// Background jobs does final deletion thorugh producer api.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the resource.
@@ -1393,6 +1400,7 @@ namespace Google.Cloud.RapidMigrationAssessment.V1
 
         /// <summary>
         /// Deletes a single Collector - changes state of collector to "Deleting".
+        /// Background jobs does final deletion thorugh producer api.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the resource.
@@ -1407,6 +1415,7 @@ namespace Google.Cloud.RapidMigrationAssessment.V1
 
         /// <summary>
         /// Deletes a single Collector - changes state of collector to "Deleting".
+        /// Background jobs does final deletion thorugh producer api.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the resource.
@@ -1813,7 +1822,7 @@ namespace Google.Cloud.RapidMigrationAssessment.V1
 
     /// <summary>RapidMigrationAssessment client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// Rapid Migration Assessment service
+    /// Service describing handlers for resources.
     /// </remarks>
     public sealed partial class RapidMigrationAssessmentClientImpl : RapidMigrationAssessmentClient
     {
@@ -2102,6 +2111,7 @@ namespace Google.Cloud.RapidMigrationAssessment.V1
 
         /// <summary>
         /// Deletes a single Collector - changes state of collector to "Deleting".
+        /// Background jobs does final deletion thorugh producer api.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2114,6 +2124,7 @@ namespace Google.Cloud.RapidMigrationAssessment.V1
 
         /// <summary>
         /// Deletes a single Collector - changes state of collector to "Deleting".
+        /// Background jobs does final deletion thorugh producer api.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
