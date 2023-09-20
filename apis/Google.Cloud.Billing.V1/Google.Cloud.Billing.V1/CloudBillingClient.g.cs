@@ -797,7 +797,7 @@ namespace Google.Cloud.Billing.V1
         /// typically given to billing account
         /// [administrators](https://cloud.google.com/billing/docs/how-to/billing-access).
         /// This method will return an error if the parent account has not been
-        /// provisioned as a reseller account.
+        /// provisioned for subaccounts.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -820,7 +820,7 @@ namespace Google.Cloud.Billing.V1
         /// typically given to billing account
         /// [administrators](https://cloud.google.com/billing/docs/how-to/billing-access).
         /// This method will return an error if the parent account has not been
-        /// provisioned as a reseller account.
+        /// provisioned for subaccounts.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -843,7 +843,7 @@ namespace Google.Cloud.Billing.V1
         /// typically given to billing account
         /// [administrators](https://cloud.google.com/billing/docs/how-to/billing-access).
         /// This method will return an error if the parent account has not been
-        /// provisioned as a reseller account.
+        /// provisioned for subaccounts.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -866,7 +866,7 @@ namespace Google.Cloud.Billing.V1
         /// typically given to billing account
         /// [administrators](https://cloud.google.com/billing/docs/how-to/billing-access).
         /// This method will return an error if the parent account has not been
-        /// provisioned as a reseller account.
+        /// provisioned for subaccounts.
         /// </summary>
         /// <param name="billingAccount">
         /// Required. The billing account resource to create.
@@ -897,7 +897,7 @@ namespace Google.Cloud.Billing.V1
         /// typically given to billing account
         /// [administrators](https://cloud.google.com/billing/docs/how-to/billing-access).
         /// This method will return an error if the parent account has not been
-        /// provisioned as a reseller account.
+        /// provisioned for subaccounts.
         /// </summary>
         /// <param name="billingAccount">
         /// Required. The billing account resource to create.
@@ -928,7 +928,7 @@ namespace Google.Cloud.Billing.V1
         /// typically given to billing account
         /// [administrators](https://cloud.google.com/billing/docs/how-to/billing-access).
         /// This method will return an error if the parent account has not been
-        /// provisioned as a reseller account.
+        /// provisioned for subaccounts.
         /// </summary>
         /// <param name="billingAccount">
         /// Required. The billing account resource to create.
@@ -2227,7 +2227,7 @@ namespace Google.Cloud.Billing.V1
         /// typically given to billing account
         /// [administrators](https://cloud.google.com/billing/docs/how-to/billing-access).
         /// This method will return an error if the parent account has not been
-        /// provisioned as a reseller account.
+        /// provisioned for subaccounts.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2253,7 +2253,7 @@ namespace Google.Cloud.Billing.V1
         /// typically given to billing account
         /// [administrators](https://cloud.google.com/billing/docs/how-to/billing-access).
         /// This method will return an error if the parent account has not been
-        /// provisioned as a reseller account.
+        /// provisioned for subaccounts.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
