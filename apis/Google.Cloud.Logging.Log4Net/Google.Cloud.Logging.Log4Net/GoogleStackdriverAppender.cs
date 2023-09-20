@@ -407,9 +407,24 @@ namespace Google.Cloud.Logging.Log4Net
                 {
                     try
                     {
-                        return AppDomain.CurrentDomain.GetAssemblies()
-                            .SelectMany(a => a.GetTypes())
-                            .FirstOrDefault(t => t.FullName == fullTypeName);
+                        var assemblies = AppDomain.CurrentDomain.GetAssemblies();
+                        foreach (var assembly in assemblies)
+                        {
+                            try
+                            {
+                                var type = assembly.GetTypes().FirstOrDefault(t => t.FullName == fullTypeName);
+                                if (type is not null)
+                                {
+                                    return type;
+                                }
+                            }
+                            catch
+                            {
+                                // Ignore exceptions for this assembly, but continue to further assemblies.
+                            }
+                        }
+                        // Type not found, for whatever reason; cache the failure.
+                        return null;
                     }
                     catch
                     {
