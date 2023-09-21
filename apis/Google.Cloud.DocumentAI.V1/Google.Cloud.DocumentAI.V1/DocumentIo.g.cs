@@ -26,39 +26,39 @@ namespace Google.Cloud.DocumentAI.V1 {
           string.Concat(
             "Cixnb29nbGUvY2xvdWQvZG9jdW1lbnRhaS92MS9kb2N1bWVudF9pby5wcm90",
             "bxIaZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjEaIGdvb2dsZS9wcm90b2J1",
-            "Zi9maWVsZF9tYXNrLnByb3RvIjEKC1Jhd0RvY3VtZW50Eg8KB2NvbnRlbnQY",
-            "ASABKAwSEQoJbWltZV90eXBlGAIgASgJIjEKC0djc0RvY3VtZW50Eg8KB2dj",
-            "c191cmkYASABKAkSEQoJbWltZV90eXBlGAIgASgJIkoKDEdjc0RvY3VtZW50",
-            "cxI6Cglkb2N1bWVudHMYASADKAsyJy5nb29nbGUuY2xvdWQuZG9jdW1lbnRh",
-            "aS52MS5HY3NEb2N1bWVudCIjCglHY3NQcmVmaXgSFgoOZ2NzX3VyaV9wcmVm",
-            "aXgYASABKAkipQEKGUJhdGNoRG9jdW1lbnRzSW5wdXRDb25maWcSOwoKZ2Nz",
-            "X3ByZWZpeBgBIAEoCzIlLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxLkdj",
-            "c1ByZWZpeEgAEkEKDWdjc19kb2N1bWVudHMYAiABKAsyKC5nb29nbGUuY2xv",
-            "dWQuZG9jdW1lbnRhaS52MS5HY3NEb2N1bWVudHNIAEIICgZzb3VyY2UihQMK",
-            "FERvY3VtZW50T3V0cHV0Q29uZmlnEl0KEWdjc19vdXRwdXRfY29uZmlnGAEg",
-            "ASgLMkAuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjEuRG9jdW1lbnRPdXRw",
-            "dXRDb25maWcuR2NzT3V0cHV0Q29uZmlnSAAa/gEKD0djc091dHB1dENvbmZp",
-            "ZxIPCgdnY3NfdXJpGAEgASgJEi4KCmZpZWxkX21hc2sYAiABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuRmllbGRNYXNrEmgKD3NoYXJkaW5nX2NvbmZpZxgDIAEo",
-            "CzJPLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxLkRvY3VtZW50T3V0cHV0",
-            "Q29uZmlnLkdjc091dHB1dENvbmZpZy5TaGFyZGluZ0NvbmZpZxpACg5TaGFy",
-            "ZGluZ0NvbmZpZxIXCg9wYWdlc19wZXJfc2hhcmQYASABKAUSFQoNcGFnZXNf",
-            "b3ZlcmxhcBgCIAEoBUINCgtkZXN0aW5hdGlvbiKBAgoJT2NyQ29uZmlnEjoK",
-            "BWhpbnRzGAIgASgLMisuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjEuT2Ny",
-            "Q29uZmlnLkhpbnRzEiEKGWVuYWJsZV9uYXRpdmVfcGRmX3BhcnNpbmcYAyAB",
-            "KAgSIwobZW5hYmxlX2ltYWdlX3F1YWxpdHlfc2NvcmVzGAQgASgIEhwKFGFk",
-            "dmFuY2VkX29jcl9vcHRpb25zGAUgAygJEhUKDWVuYWJsZV9zeW1ib2wYBiAB",
-            "KAgSGgoSY29tcHV0ZV9zdHlsZV9pbmZvGAggASgIGh8KBUhpbnRzEhYKDmxh",
-            "bmd1YWdlX2hpbnRzGAEgAygJQs0BCh5jb20uZ29vZ2xlLmNsb3VkLmRvY3Vt",
-            "ZW50YWkudjFCD0RvY3VtZW50SW9Qcm90b1ABWj5jbG91ZC5nb29nbGUuY29t",
-            "L2dvL2RvY3VtZW50YWkvYXBpdjEvZG9jdW1lbnRhaXBiO2RvY3VtZW50YWlw",
-            "YqoCGkdvb2dsZS5DbG91ZC5Eb2N1bWVudEFJLlYxygIaR29vZ2xlXENsb3Vk",
-            "XERvY3VtZW50QUlcVjHqAh1Hb29nbGU6OkNsb3VkOjpEb2N1bWVudEFJOjpW",
-            "MWIGcHJvdG8z"));
+            "Zi9maWVsZF9tYXNrLnByb3RvIkcKC1Jhd0RvY3VtZW50Eg8KB2NvbnRlbnQY",
+            "ASABKAwSEQoJbWltZV90eXBlGAIgASgJEhQKDGRpc3BsYXlfbmFtZRgDIAEo",
+            "CSIxCgtHY3NEb2N1bWVudBIPCgdnY3NfdXJpGAEgASgJEhEKCW1pbWVfdHlw",
+            "ZRgCIAEoCSJKCgxHY3NEb2N1bWVudHMSOgoJZG9jdW1lbnRzGAEgAygLMicu",
+            "Z29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjEuR2NzRG9jdW1lbnQiIwoJR2Nz",
+            "UHJlZml4EhYKDmdjc191cmlfcHJlZml4GAEgASgJIqUBChlCYXRjaERvY3Vt",
+            "ZW50c0lucHV0Q29uZmlnEjsKCmdjc19wcmVmaXgYASABKAsyJS5nb29nbGUu",
+            "Y2xvdWQuZG9jdW1lbnRhaS52MS5HY3NQcmVmaXhIABJBCg1nY3NfZG9jdW1l",
+            "bnRzGAIgASgLMiguZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjEuR2NzRG9j",
+            "dW1lbnRzSABCCAoGc291cmNlIoUDChREb2N1bWVudE91dHB1dENvbmZpZxJd",
+            "ChFnY3Nfb3V0cHV0X2NvbmZpZxgBIAEoCzJALmdvb2dsZS5jbG91ZC5kb2N1",
+            "bWVudGFpLnYxLkRvY3VtZW50T3V0cHV0Q29uZmlnLkdjc091dHB1dENvbmZp",
+            "Z0gAGv4BCg9HY3NPdXRwdXRDb25maWcSDwoHZ2NzX3VyaRgBIAEoCRIuCgpm",
+            "aWVsZF9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzaxJo",
+            "Cg9zaGFyZGluZ19jb25maWcYAyABKAsyTy5nb29nbGUuY2xvdWQuZG9jdW1l",
+            "bnRhaS52MS5Eb2N1bWVudE91dHB1dENvbmZpZy5HY3NPdXRwdXRDb25maWcu",
+            "U2hhcmRpbmdDb25maWcaQAoOU2hhcmRpbmdDb25maWcSFwoPcGFnZXNfcGVy",
+            "X3NoYXJkGAEgASgFEhUKDXBhZ2VzX292ZXJsYXAYAiABKAVCDQoLZGVzdGlu",
+            "YXRpb24ihQIKCU9jckNvbmZpZxI6CgVoaW50cxgCIAEoCzIrLmdvb2dsZS5j",
+            "bG91ZC5kb2N1bWVudGFpLnYxLk9jckNvbmZpZy5IaW50cxIhChllbmFibGVf",
+            "bmF0aXZlX3BkZl9wYXJzaW5nGAMgASgIEiMKG2VuYWJsZV9pbWFnZV9xdWFs",
+            "aXR5X3Njb3JlcxgEIAEoCBIcChRhZHZhbmNlZF9vY3Jfb3B0aW9ucxgFIAMo",
+            "CRIVCg1lbmFibGVfc3ltYm9sGAYgASgIEh4KEmNvbXB1dGVfc3R5bGVfaW5m",
+            "bxgIIAEoCEICGAEaHwoFSGludHMSFgoObGFuZ3VhZ2VfaGludHMYASADKAlC",
+            "zQEKHmNvbS5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MUIPRG9jdW1lbnRJ",
+            "b1Byb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vZG9jdW1lbnRhaS9hcGl2",
+            "MS9kb2N1bWVudGFpcGI7ZG9jdW1lbnRhaXBiqgIaR29vZ2xlLkNsb3VkLkRv",
+            "Y3VtZW50QUkuVjHKAhpHb29nbGVcQ2xvdWRcRG9jdW1lbnRBSVxWMeoCHUdv",
+            "b2dsZTo6Q2xvdWQ6OkRvY3VtZW50QUk6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.RawDocument), global::Google.Cloud.DocumentAI.V1.RawDocument.Parser, new[]{ "Content", "MimeType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.RawDocument), global::Google.Cloud.DocumentAI.V1.RawDocument.Parser, new[]{ "Content", "MimeType", "DisplayName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.GcsDocument), global::Google.Cloud.DocumentAI.V1.GcsDocument.Parser, new[]{ "GcsUri", "MimeType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.GcsDocuments), global::Google.Cloud.DocumentAI.V1.GcsDocuments.Parser, new[]{ "Documents" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.GcsPrefix), global::Google.Cloud.DocumentAI.V1.GcsPrefix.Parser, new[]{ "GcsUriPrefix" }, null, null, null, null),
@@ -110,6 +110,7 @@ namespace Google.Cloud.DocumentAI.V1 {
     public RawDocument(RawDocument other) : this() {
       content_ = other.content_;
       mimeType_ = other.mimeType_;
+      displayName_ = other.displayName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -150,6 +151,25 @@ namespace Google.Cloud.DocumentAI.V1 {
       }
     }
 
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 3;
+    private string displayName_ = "";
+    /// <summary>
+    /// The display name of the document, it supports all Unicode characters except
+    /// the following:
+    /// `*`, `?`, `[`, `]`, `%`, `{`, `}`,`'`, `\"`, `,`
+    /// `~`, `=` and `:` are reserved.
+    /// If not specified, a default ID will be generated.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayName {
+      get { return displayName_; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -167,6 +187,7 @@ namespace Google.Cloud.DocumentAI.V1 {
       }
       if (Content != other.Content) return false;
       if (MimeType != other.MimeType) return false;
+      if (DisplayName != other.DisplayName) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -176,6 +197,7 @@ namespace Google.Cloud.DocumentAI.V1 {
       int hash = 1;
       if (Content.Length != 0) hash ^= Content.GetHashCode();
       if (MimeType.Length != 0) hash ^= MimeType.GetHashCode();
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -202,6 +224,10 @@ namespace Google.Cloud.DocumentAI.V1 {
         output.WriteRawTag(18);
         output.WriteString(MimeType);
       }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(DisplayName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -220,6 +246,10 @@ namespace Google.Cloud.DocumentAI.V1 {
         output.WriteRawTag(18);
         output.WriteString(MimeType);
       }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(DisplayName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -235,6 +265,9 @@ namespace Google.Cloud.DocumentAI.V1 {
       }
       if (MimeType.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MimeType);
+      }
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -253,6 +286,9 @@ namespace Google.Cloud.DocumentAI.V1 {
       }
       if (other.MimeType.Length != 0) {
         MimeType = other.MimeType;
+      }
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -277,6 +313,10 @@ namespace Google.Cloud.DocumentAI.V1 {
             MimeType = input.ReadString();
             break;
           }
+          case 26: {
+            DisplayName = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -298,6 +338,10 @@ namespace Google.Cloud.DocumentAI.V1 {
           }
           case 18: {
             MimeType = input.ReadString();
+            break;
+          }
+          case 26: {
+            DisplayName = input.ReadString();
             break;
           }
         }
@@ -2140,7 +2184,9 @@ namespace Google.Cloud.DocumentAI.V1 {
     private bool computeStyleInfo_;
     /// <summary>
     /// Turn on font id model and returns font style information.
+    /// Use PremiumFeatures.compute_style_info instead.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ComputeStyleInfo {
