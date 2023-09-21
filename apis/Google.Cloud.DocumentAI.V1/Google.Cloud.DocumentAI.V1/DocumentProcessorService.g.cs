@@ -10346,8 +10346,8 @@ namespace Google.Cloud.DocumentAI.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
-          /// Training Method for CDE. TRAINING_METHOD_UNSPECIFIED will fallback to
-          /// MODEL_BASED.
+          /// Training Method for CDE. `TRAINING_METHOD_UNSPECIFIED` will fall back to
+          /// `MODEL_BASED`.
           /// </summary>
           public enum TrainingMethod {
             [pbr::OriginalName("TRAINING_METHOD_UNSPECIFIED")] Unspecified = 0,
