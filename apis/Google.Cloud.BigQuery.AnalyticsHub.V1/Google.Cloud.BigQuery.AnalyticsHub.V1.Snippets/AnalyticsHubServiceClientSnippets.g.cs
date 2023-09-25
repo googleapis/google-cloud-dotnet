@@ -20,6 +20,7 @@ namespace GoogleCSharpSnippets
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.BigQuery.AnalyticsHub.V1;
     using Google.Cloud.Iam.V1;
+    using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Linq;
@@ -1512,6 +1513,1291 @@ namespace GoogleCSharpSnippets
             ListingName name = ListingName.FromProjectLocationDataExchangeListing("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]", "[LISTING]");
             // Make the request
             SubscribeListingResponse response = await analyticsHubServiceClient.SubscribeListingAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SubscribeDataExchange</summary>
+        public void SubscribeDataExchangeRequestObject()
+        {
+            // Snippet: SubscribeDataExchange(SubscribeDataExchangeRequest, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            SubscribeDataExchangeRequest request = new SubscribeDataExchangeRequest
+            {
+                DataExchangeName = DataExchangeName.FromProjectLocationDataExchange("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]"),
+                DestinationAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                SubscriberContact = "",
+                Subscription = "",
+            };
+            // Make the request
+            Operation<SubscribeDataExchangeResponse, OperationMetadata> response = analyticsHubServiceClient.SubscribeDataExchange(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<SubscribeDataExchangeResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            SubscribeDataExchangeResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<SubscribeDataExchangeResponse, OperationMetadata> retrievedResponse = analyticsHubServiceClient.PollOnceSubscribeDataExchange(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                SubscribeDataExchangeResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SubscribeDataExchangeAsync</summary>
+        public async Task SubscribeDataExchangeRequestObjectAsync()
+        {
+            // Snippet: SubscribeDataExchangeAsync(SubscribeDataExchangeRequest, CallSettings)
+            // Additional: SubscribeDataExchangeAsync(SubscribeDataExchangeRequest, CancellationToken)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SubscribeDataExchangeRequest request = new SubscribeDataExchangeRequest
+            {
+                DataExchangeName = DataExchangeName.FromProjectLocationDataExchange("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]"),
+                DestinationAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                SubscriberContact = "",
+                Subscription = "",
+            };
+            // Make the request
+            Operation<SubscribeDataExchangeResponse, OperationMetadata> response = await analyticsHubServiceClient.SubscribeDataExchangeAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<SubscribeDataExchangeResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            SubscribeDataExchangeResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<SubscribeDataExchangeResponse, OperationMetadata> retrievedResponse = await analyticsHubServiceClient.PollOnceSubscribeDataExchangeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                SubscribeDataExchangeResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SubscribeDataExchange</summary>
+        public void SubscribeDataExchange()
+        {
+            // Snippet: SubscribeDataExchange(string, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/dataExchanges/[DATA_EXCHANGE]";
+            // Make the request
+            Operation<SubscribeDataExchangeResponse, OperationMetadata> response = analyticsHubServiceClient.SubscribeDataExchange(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<SubscribeDataExchangeResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            SubscribeDataExchangeResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<SubscribeDataExchangeResponse, OperationMetadata> retrievedResponse = analyticsHubServiceClient.PollOnceSubscribeDataExchange(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                SubscribeDataExchangeResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SubscribeDataExchangeAsync</summary>
+        public async Task SubscribeDataExchangeAsync()
+        {
+            // Snippet: SubscribeDataExchangeAsync(string, CallSettings)
+            // Additional: SubscribeDataExchangeAsync(string, CancellationToken)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/dataExchanges/[DATA_EXCHANGE]";
+            // Make the request
+            Operation<SubscribeDataExchangeResponse, OperationMetadata> response = await analyticsHubServiceClient.SubscribeDataExchangeAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<SubscribeDataExchangeResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            SubscribeDataExchangeResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<SubscribeDataExchangeResponse, OperationMetadata> retrievedResponse = await analyticsHubServiceClient.PollOnceSubscribeDataExchangeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                SubscribeDataExchangeResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SubscribeDataExchange</summary>
+        public void SubscribeDataExchangeResourceNames()
+        {
+            // Snippet: SubscribeDataExchange(DataExchangeName, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            DataExchangeName name = DataExchangeName.FromProjectLocationDataExchange("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]");
+            // Make the request
+            Operation<SubscribeDataExchangeResponse, OperationMetadata> response = analyticsHubServiceClient.SubscribeDataExchange(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<SubscribeDataExchangeResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            SubscribeDataExchangeResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<SubscribeDataExchangeResponse, OperationMetadata> retrievedResponse = analyticsHubServiceClient.PollOnceSubscribeDataExchange(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                SubscribeDataExchangeResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SubscribeDataExchangeAsync</summary>
+        public async Task SubscribeDataExchangeResourceNamesAsync()
+        {
+            // Snippet: SubscribeDataExchangeAsync(DataExchangeName, CallSettings)
+            // Additional: SubscribeDataExchangeAsync(DataExchangeName, CancellationToken)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DataExchangeName name = DataExchangeName.FromProjectLocationDataExchange("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]");
+            // Make the request
+            Operation<SubscribeDataExchangeResponse, OperationMetadata> response = await analyticsHubServiceClient.SubscribeDataExchangeAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<SubscribeDataExchangeResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            SubscribeDataExchangeResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<SubscribeDataExchangeResponse, OperationMetadata> retrievedResponse = await analyticsHubServiceClient.PollOnceSubscribeDataExchangeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                SubscribeDataExchangeResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RefreshSubscription</summary>
+        public void RefreshSubscriptionRequestObject()
+        {
+            // Snippet: RefreshSubscription(RefreshSubscriptionRequest, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            RefreshSubscriptionRequest request = new RefreshSubscriptionRequest
+            {
+                SubscriptionName = SubscriptionName.FromProjectLocationSubscription("[PROJECT]", "[LOCATION]", "[SUBSCRIPTION]"),
+            };
+            // Make the request
+            Operation<RefreshSubscriptionResponse, OperationMetadata> response = analyticsHubServiceClient.RefreshSubscription(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RefreshSubscriptionResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RefreshSubscriptionResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RefreshSubscriptionResponse, OperationMetadata> retrievedResponse = analyticsHubServiceClient.PollOnceRefreshSubscription(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RefreshSubscriptionResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RefreshSubscriptionAsync</summary>
+        public async Task RefreshSubscriptionRequestObjectAsync()
+        {
+            // Snippet: RefreshSubscriptionAsync(RefreshSubscriptionRequest, CallSettings)
+            // Additional: RefreshSubscriptionAsync(RefreshSubscriptionRequest, CancellationToken)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RefreshSubscriptionRequest request = new RefreshSubscriptionRequest
+            {
+                SubscriptionName = SubscriptionName.FromProjectLocationSubscription("[PROJECT]", "[LOCATION]", "[SUBSCRIPTION]"),
+            };
+            // Make the request
+            Operation<RefreshSubscriptionResponse, OperationMetadata> response = await analyticsHubServiceClient.RefreshSubscriptionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RefreshSubscriptionResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RefreshSubscriptionResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RefreshSubscriptionResponse, OperationMetadata> retrievedResponse = await analyticsHubServiceClient.PollOnceRefreshSubscriptionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RefreshSubscriptionResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RefreshSubscription</summary>
+        public void RefreshSubscription()
+        {
+            // Snippet: RefreshSubscription(string, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/subscriptions/[SUBSCRIPTION]";
+            // Make the request
+            Operation<RefreshSubscriptionResponse, OperationMetadata> response = analyticsHubServiceClient.RefreshSubscription(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RefreshSubscriptionResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RefreshSubscriptionResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RefreshSubscriptionResponse, OperationMetadata> retrievedResponse = analyticsHubServiceClient.PollOnceRefreshSubscription(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RefreshSubscriptionResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RefreshSubscriptionAsync</summary>
+        public async Task RefreshSubscriptionAsync()
+        {
+            // Snippet: RefreshSubscriptionAsync(string, CallSettings)
+            // Additional: RefreshSubscriptionAsync(string, CancellationToken)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/subscriptions/[SUBSCRIPTION]";
+            // Make the request
+            Operation<RefreshSubscriptionResponse, OperationMetadata> response = await analyticsHubServiceClient.RefreshSubscriptionAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RefreshSubscriptionResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RefreshSubscriptionResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RefreshSubscriptionResponse, OperationMetadata> retrievedResponse = await analyticsHubServiceClient.PollOnceRefreshSubscriptionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RefreshSubscriptionResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RefreshSubscription</summary>
+        public void RefreshSubscriptionResourceNames()
+        {
+            // Snippet: RefreshSubscription(SubscriptionName, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            SubscriptionName name = SubscriptionName.FromProjectLocationSubscription("[PROJECT]", "[LOCATION]", "[SUBSCRIPTION]");
+            // Make the request
+            Operation<RefreshSubscriptionResponse, OperationMetadata> response = analyticsHubServiceClient.RefreshSubscription(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RefreshSubscriptionResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RefreshSubscriptionResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RefreshSubscriptionResponse, OperationMetadata> retrievedResponse = analyticsHubServiceClient.PollOnceRefreshSubscription(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RefreshSubscriptionResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RefreshSubscriptionAsync</summary>
+        public async Task RefreshSubscriptionResourceNamesAsync()
+        {
+            // Snippet: RefreshSubscriptionAsync(SubscriptionName, CallSettings)
+            // Additional: RefreshSubscriptionAsync(SubscriptionName, CancellationToken)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SubscriptionName name = SubscriptionName.FromProjectLocationSubscription("[PROJECT]", "[LOCATION]", "[SUBSCRIPTION]");
+            // Make the request
+            Operation<RefreshSubscriptionResponse, OperationMetadata> response = await analyticsHubServiceClient.RefreshSubscriptionAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RefreshSubscriptionResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RefreshSubscriptionResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RefreshSubscriptionResponse, OperationMetadata> retrievedResponse = await analyticsHubServiceClient.PollOnceRefreshSubscriptionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RefreshSubscriptionResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSubscription</summary>
+        public void GetSubscriptionRequestObject()
+        {
+            // Snippet: GetSubscription(GetSubscriptionRequest, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            GetSubscriptionRequest request = new GetSubscriptionRequest
+            {
+                SubscriptionName = SubscriptionName.FromProjectLocationSubscription("[PROJECT]", "[LOCATION]", "[SUBSCRIPTION]"),
+            };
+            // Make the request
+            Subscription response = analyticsHubServiceClient.GetSubscription(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSubscriptionAsync</summary>
+        public async Task GetSubscriptionRequestObjectAsync()
+        {
+            // Snippet: GetSubscriptionAsync(GetSubscriptionRequest, CallSettings)
+            // Additional: GetSubscriptionAsync(GetSubscriptionRequest, CancellationToken)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetSubscriptionRequest request = new GetSubscriptionRequest
+            {
+                SubscriptionName = SubscriptionName.FromProjectLocationSubscription("[PROJECT]", "[LOCATION]", "[SUBSCRIPTION]"),
+            };
+            // Make the request
+            Subscription response = await analyticsHubServiceClient.GetSubscriptionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSubscription</summary>
+        public void GetSubscription()
+        {
+            // Snippet: GetSubscription(string, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/subscriptions/[SUBSCRIPTION]";
+            // Make the request
+            Subscription response = analyticsHubServiceClient.GetSubscription(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSubscriptionAsync</summary>
+        public async Task GetSubscriptionAsync()
+        {
+            // Snippet: GetSubscriptionAsync(string, CallSettings)
+            // Additional: GetSubscriptionAsync(string, CancellationToken)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/subscriptions/[SUBSCRIPTION]";
+            // Make the request
+            Subscription response = await analyticsHubServiceClient.GetSubscriptionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSubscription</summary>
+        public void GetSubscriptionResourceNames()
+        {
+            // Snippet: GetSubscription(SubscriptionName, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            SubscriptionName name = SubscriptionName.FromProjectLocationSubscription("[PROJECT]", "[LOCATION]", "[SUBSCRIPTION]");
+            // Make the request
+            Subscription response = analyticsHubServiceClient.GetSubscription(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSubscriptionAsync</summary>
+        public async Task GetSubscriptionResourceNamesAsync()
+        {
+            // Snippet: GetSubscriptionAsync(SubscriptionName, CallSettings)
+            // Additional: GetSubscriptionAsync(SubscriptionName, CancellationToken)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SubscriptionName name = SubscriptionName.FromProjectLocationSubscription("[PROJECT]", "[LOCATION]", "[SUBSCRIPTION]");
+            // Make the request
+            Subscription response = await analyticsHubServiceClient.GetSubscriptionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSubscriptions</summary>
+        public void ListSubscriptionsRequestObject()
+        {
+            // Snippet: ListSubscriptions(ListSubscriptionsRequest, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            ListSubscriptionsRequest request = new ListSubscriptionsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListSubscriptionsResponse, Subscription> response = analyticsHubServiceClient.ListSubscriptions(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Subscription item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSubscriptionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Subscription item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Subscription> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Subscription item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSubscriptionsAsync</summary>
+        public async Task ListSubscriptionsRequestObjectAsync()
+        {
+            // Snippet: ListSubscriptionsAsync(ListSubscriptionsRequest, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListSubscriptionsRequest request = new ListSubscriptionsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListSubscriptionsResponse, Subscription> response = analyticsHubServiceClient.ListSubscriptionsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Subscription item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSubscriptionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Subscription item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Subscription> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Subscription item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSubscriptions</summary>
+        public void ListSubscriptions()
+        {
+            // Snippet: ListSubscriptions(string, string, int?, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListSubscriptionsResponse, Subscription> response = analyticsHubServiceClient.ListSubscriptions(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Subscription item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSubscriptionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Subscription item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Subscription> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Subscription item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSubscriptionsAsync</summary>
+        public async Task ListSubscriptionsAsync()
+        {
+            // Snippet: ListSubscriptionsAsync(string, string, int?, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListSubscriptionsResponse, Subscription> response = analyticsHubServiceClient.ListSubscriptionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Subscription item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSubscriptionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Subscription item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Subscription> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Subscription item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSubscriptions</summary>
+        public void ListSubscriptionsResourceNames()
+        {
+            // Snippet: ListSubscriptions(LocationName, string, int?, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListSubscriptionsResponse, Subscription> response = analyticsHubServiceClient.ListSubscriptions(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Subscription item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSubscriptionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Subscription item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Subscription> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Subscription item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSubscriptionsAsync</summary>
+        public async Task ListSubscriptionsResourceNamesAsync()
+        {
+            // Snippet: ListSubscriptionsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListSubscriptionsResponse, Subscription> response = analyticsHubServiceClient.ListSubscriptionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Subscription item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSubscriptionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Subscription item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Subscription> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Subscription item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSharedResourceSubscriptions</summary>
+        public void ListSharedResourceSubscriptionsRequestObject()
+        {
+            // Snippet: ListSharedResourceSubscriptions(ListSharedResourceSubscriptionsRequest, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            ListSharedResourceSubscriptionsRequest request = new ListSharedResourceSubscriptionsRequest
+            {
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                IncludeDeletedSubscriptions = false,
+            };
+            // Make the request
+            PagedEnumerable<ListSharedResourceSubscriptionsResponse, Subscription> response = analyticsHubServiceClient.ListSharedResourceSubscriptions(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Subscription item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSharedResourceSubscriptionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Subscription item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Subscription> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Subscription item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSharedResourceSubscriptionsAsync</summary>
+        public async Task ListSharedResourceSubscriptionsRequestObjectAsync()
+        {
+            // Snippet: ListSharedResourceSubscriptionsAsync(ListSharedResourceSubscriptionsRequest, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListSharedResourceSubscriptionsRequest request = new ListSharedResourceSubscriptionsRequest
+            {
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                IncludeDeletedSubscriptions = false,
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListSharedResourceSubscriptionsResponse, Subscription> response = analyticsHubServiceClient.ListSharedResourceSubscriptionsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Subscription item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSharedResourceSubscriptionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Subscription item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Subscription> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Subscription item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSharedResourceSubscriptions</summary>
+        public void ListSharedResourceSubscriptions()
+        {
+            // Snippet: ListSharedResourceSubscriptions(string, string, int?, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            string resource = "a/wildcard/resource";
+            // Make the request
+            PagedEnumerable<ListSharedResourceSubscriptionsResponse, Subscription> response = analyticsHubServiceClient.ListSharedResourceSubscriptions(resource);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Subscription item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSharedResourceSubscriptionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Subscription item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Subscription> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Subscription item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSharedResourceSubscriptionsAsync</summary>
+        public async Task ListSharedResourceSubscriptionsAsync()
+        {
+            // Snippet: ListSharedResourceSubscriptionsAsync(string, string, int?, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string resource = "a/wildcard/resource";
+            // Make the request
+            PagedAsyncEnumerable<ListSharedResourceSubscriptionsResponse, Subscription> response = analyticsHubServiceClient.ListSharedResourceSubscriptionsAsync(resource);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Subscription item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSharedResourceSubscriptionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Subscription item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Subscription> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Subscription item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSharedResourceSubscriptions</summary>
+        public void ListSharedResourceSubscriptionsResourceNames()
+        {
+            // Snippet: ListSharedResourceSubscriptions(IResourceName, string, int?, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
+            // Make the request
+            PagedEnumerable<ListSharedResourceSubscriptionsResponse, Subscription> response = analyticsHubServiceClient.ListSharedResourceSubscriptions(resource);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Subscription item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSharedResourceSubscriptionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Subscription item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Subscription> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Subscription item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSharedResourceSubscriptionsAsync</summary>
+        public async Task ListSharedResourceSubscriptionsResourceNamesAsync()
+        {
+            // Snippet: ListSharedResourceSubscriptionsAsync(IResourceName, string, int?, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
+            // Make the request
+            PagedAsyncEnumerable<ListSharedResourceSubscriptionsResponse, Subscription> response = analyticsHubServiceClient.ListSharedResourceSubscriptionsAsync(resource);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Subscription item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSharedResourceSubscriptionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Subscription item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Subscription> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Subscription item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for RevokeSubscription</summary>
+        public void RevokeSubscriptionRequestObject()
+        {
+            // Snippet: RevokeSubscription(RevokeSubscriptionRequest, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            RevokeSubscriptionRequest request = new RevokeSubscriptionRequest
+            {
+                SubscriptionName = SubscriptionName.FromProjectLocationSubscription("[PROJECT]", "[LOCATION]", "[SUBSCRIPTION]"),
+            };
+            // Make the request
+            RevokeSubscriptionResponse response = analyticsHubServiceClient.RevokeSubscription(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RevokeSubscriptionAsync</summary>
+        public async Task RevokeSubscriptionRequestObjectAsync()
+        {
+            // Snippet: RevokeSubscriptionAsync(RevokeSubscriptionRequest, CallSettings)
+            // Additional: RevokeSubscriptionAsync(RevokeSubscriptionRequest, CancellationToken)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RevokeSubscriptionRequest request = new RevokeSubscriptionRequest
+            {
+                SubscriptionName = SubscriptionName.FromProjectLocationSubscription("[PROJECT]", "[LOCATION]", "[SUBSCRIPTION]"),
+            };
+            // Make the request
+            RevokeSubscriptionResponse response = await analyticsHubServiceClient.RevokeSubscriptionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RevokeSubscription</summary>
+        public void RevokeSubscription()
+        {
+            // Snippet: RevokeSubscription(string, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/subscriptions/[SUBSCRIPTION]";
+            // Make the request
+            RevokeSubscriptionResponse response = analyticsHubServiceClient.RevokeSubscription(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RevokeSubscriptionAsync</summary>
+        public async Task RevokeSubscriptionAsync()
+        {
+            // Snippet: RevokeSubscriptionAsync(string, CallSettings)
+            // Additional: RevokeSubscriptionAsync(string, CancellationToken)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/subscriptions/[SUBSCRIPTION]";
+            // Make the request
+            RevokeSubscriptionResponse response = await analyticsHubServiceClient.RevokeSubscriptionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RevokeSubscription</summary>
+        public void RevokeSubscriptionResourceNames()
+        {
+            // Snippet: RevokeSubscription(SubscriptionName, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            SubscriptionName name = SubscriptionName.FromProjectLocationSubscription("[PROJECT]", "[LOCATION]", "[SUBSCRIPTION]");
+            // Make the request
+            RevokeSubscriptionResponse response = analyticsHubServiceClient.RevokeSubscription(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RevokeSubscriptionAsync</summary>
+        public async Task RevokeSubscriptionResourceNamesAsync()
+        {
+            // Snippet: RevokeSubscriptionAsync(SubscriptionName, CallSettings)
+            // Additional: RevokeSubscriptionAsync(SubscriptionName, CancellationToken)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SubscriptionName name = SubscriptionName.FromProjectLocationSubscription("[PROJECT]", "[LOCATION]", "[SUBSCRIPTION]");
+            // Make the request
+            RevokeSubscriptionResponse response = await analyticsHubServiceClient.RevokeSubscriptionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSubscription</summary>
+        public void DeleteSubscriptionRequestObject()
+        {
+            // Snippet: DeleteSubscription(DeleteSubscriptionRequest, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteSubscriptionRequest request = new DeleteSubscriptionRequest
+            {
+                SubscriptionName = SubscriptionName.FromProjectLocationSubscription("[PROJECT]", "[LOCATION]", "[SUBSCRIPTION]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = analyticsHubServiceClient.DeleteSubscription(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = analyticsHubServiceClient.PollOnceDeleteSubscription(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSubscriptionAsync</summary>
+        public async Task DeleteSubscriptionRequestObjectAsync()
+        {
+            // Snippet: DeleteSubscriptionAsync(DeleteSubscriptionRequest, CallSettings)
+            // Additional: DeleteSubscriptionAsync(DeleteSubscriptionRequest, CancellationToken)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteSubscriptionRequest request = new DeleteSubscriptionRequest
+            {
+                SubscriptionName = SubscriptionName.FromProjectLocationSubscription("[PROJECT]", "[LOCATION]", "[SUBSCRIPTION]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await analyticsHubServiceClient.DeleteSubscriptionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await analyticsHubServiceClient.PollOnceDeleteSubscriptionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSubscription</summary>
+        public void DeleteSubscription()
+        {
+            // Snippet: DeleteSubscription(string, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/subscriptions/[SUBSCRIPTION]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = analyticsHubServiceClient.DeleteSubscription(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = analyticsHubServiceClient.PollOnceDeleteSubscription(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSubscriptionAsync</summary>
+        public async Task DeleteSubscriptionAsync()
+        {
+            // Snippet: DeleteSubscriptionAsync(string, CallSettings)
+            // Additional: DeleteSubscriptionAsync(string, CancellationToken)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/subscriptions/[SUBSCRIPTION]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await analyticsHubServiceClient.DeleteSubscriptionAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await analyticsHubServiceClient.PollOnceDeleteSubscriptionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSubscription</summary>
+        public void DeleteSubscriptionResourceNames()
+        {
+            // Snippet: DeleteSubscription(SubscriptionName, CallSettings)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = AnalyticsHubServiceClient.Create();
+            // Initialize request argument(s)
+            SubscriptionName name = SubscriptionName.FromProjectLocationSubscription("[PROJECT]", "[LOCATION]", "[SUBSCRIPTION]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = analyticsHubServiceClient.DeleteSubscription(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = analyticsHubServiceClient.PollOnceDeleteSubscription(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSubscriptionAsync</summary>
+        public async Task DeleteSubscriptionResourceNamesAsync()
+        {
+            // Snippet: DeleteSubscriptionAsync(SubscriptionName, CallSettings)
+            // Additional: DeleteSubscriptionAsync(SubscriptionName, CancellationToken)
+            // Create client
+            AnalyticsHubServiceClient analyticsHubServiceClient = await AnalyticsHubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SubscriptionName name = SubscriptionName.FromProjectLocationSubscription("[PROJECT]", "[LOCATION]", "[SUBSCRIPTION]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await analyticsHubServiceClient.DeleteSubscriptionAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await analyticsHubServiceClient.PollOnceDeleteSubscriptionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 

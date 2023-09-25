@@ -19,6 +19,7 @@ using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
+using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -60,6 +61,16 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
             UpdateListingSettings = existing.UpdateListingSettings;
             DeleteListingSettings = existing.DeleteListingSettings;
             SubscribeListingSettings = existing.SubscribeListingSettings;
+            SubscribeDataExchangeSettings = existing.SubscribeDataExchangeSettings;
+            SubscribeDataExchangeOperationsSettings = existing.SubscribeDataExchangeOperationsSettings.Clone();
+            RefreshSubscriptionSettings = existing.RefreshSubscriptionSettings;
+            RefreshSubscriptionOperationsSettings = existing.RefreshSubscriptionOperationsSettings.Clone();
+            GetSubscriptionSettings = existing.GetSubscriptionSettings;
+            ListSubscriptionsSettings = existing.ListSubscriptionsSettings;
+            ListSharedResourceSubscriptionsSettings = existing.ListSharedResourceSubscriptionsSettings;
+            RevokeSubscriptionSettings = existing.RevokeSubscriptionSettings;
+            DeleteSubscriptionSettings = existing.DeleteSubscriptionSettings;
+            DeleteSubscriptionOperationsSettings = existing.DeleteSubscriptionOperationsSettings.Clone();
             GetIamPolicySettings = existing.GetIamPolicySettings;
             SetIamPolicySettings = existing.SetIamPolicySettings;
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
@@ -325,6 +336,213 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings SubscribeListingSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsHubServiceClient.SubscribeDataExchange</c> and
+        /// <c>AnalyticsHubServiceClient.SubscribeDataExchangeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SubscribeDataExchangeSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>AnalyticsHubServiceClient.SubscribeDataExchange</c> and
+        /// <c>AnalyticsHubServiceClient.SubscribeDataExchangeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings SubscribeDataExchangeOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsHubServiceClient.RefreshSubscription</c> and
+        /// <c>AnalyticsHubServiceClient.RefreshSubscriptionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RefreshSubscriptionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>AnalyticsHubServiceClient.RefreshSubscription</c> and
+        /// <c>AnalyticsHubServiceClient.RefreshSubscriptionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings RefreshSubscriptionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsHubServiceClient.GetSubscription</c> and <c>AnalyticsHubServiceClient.GetSubscriptionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetSubscriptionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsHubServiceClient.ListSubscriptions</c> and <c>AnalyticsHubServiceClient.ListSubscriptionsAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListSubscriptionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsHubServiceClient.ListSharedResourceSubscriptions</c> and
+        /// <c>AnalyticsHubServiceClient.ListSharedResourceSubscriptionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListSharedResourceSubscriptionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsHubServiceClient.RevokeSubscription</c> and <c>AnalyticsHubServiceClient.RevokeSubscriptionAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RevokeSubscriptionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsHubServiceClient.DeleteSubscription</c> and <c>AnalyticsHubServiceClient.DeleteSubscriptionAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteSubscriptionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>AnalyticsHubServiceClient.DeleteSubscription</c> and
+        /// <c>AnalyticsHubServiceClient.DeleteSubscriptionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteSubscriptionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -684,8 +902,8 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// location.
         /// </summary>
         /// <param name="organization">
-        /// Required. The organization resource path of the projects containing DataExchanges.
-        /// e.g. `organizations/myorg/locations/US`.
+        /// Required. The organization resource path of the projects containing
+        /// DataExchanges. e.g. `organizations/myorg/locations/US`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -710,8 +928,8 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// location.
         /// </summary>
         /// <param name="organization">
-        /// Required. The organization resource path of the projects containing DataExchanges.
-        /// e.g. `organizations/myorg/locations/US`.
+        /// Required. The organization resource path of the projects containing
+        /// DataExchanges. e.g. `organizations/myorg/locations/US`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1089,8 +1307,8 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// Deletes an existing data exchange.
         /// </summary>
         /// <param name="name">
-        /// Required. The full name of the data exchange resource that you want to delete.
-        /// For example, `projects/myproject/locations/US/dataExchanges/123`.
+        /// Required. The full name of the data exchange resource that you want to
+        /// delete. For example, `projects/myproject/locations/US/dataExchanges/123`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1104,8 +1322,8 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// Deletes an existing data exchange.
         /// </summary>
         /// <param name="name">
-        /// Required. The full name of the data exchange resource that you want to delete.
-        /// For example, `projects/myproject/locations/US/dataExchanges/123`.
+        /// Required. The full name of the data exchange resource that you want to
+        /// delete. For example, `projects/myproject/locations/US/dataExchanges/123`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1119,8 +1337,8 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// Deletes an existing data exchange.
         /// </summary>
         /// <param name="name">
-        /// Required. The full name of the data exchange resource that you want to delete.
-        /// For example, `projects/myproject/locations/US/dataExchanges/123`.
+        /// Required. The full name of the data exchange resource that you want to
+        /// delete. For example, `projects/myproject/locations/US/dataExchanges/123`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1131,8 +1349,8 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// Deletes an existing data exchange.
         /// </summary>
         /// <param name="name">
-        /// Required. The full name of the data exchange resource that you want to delete.
-        /// For example, `projects/myproject/locations/US/dataExchanges/123`.
+        /// Required. The full name of the data exchange resource that you want to
+        /// delete. For example, `projects/myproject/locations/US/dataExchanges/123`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1146,8 +1364,8 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// Deletes an existing data exchange.
         /// </summary>
         /// <param name="name">
-        /// Required. The full name of the data exchange resource that you want to delete.
-        /// For example, `projects/myproject/locations/US/dataExchanges/123`.
+        /// Required. The full name of the data exchange resource that you want to
+        /// delete. For example, `projects/myproject/locations/US/dataExchanges/123`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1161,8 +1379,8 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// Deletes an existing data exchange.
         /// </summary>
         /// <param name="name">
-        /// Required. The full name of the data exchange resource that you want to delete.
-        /// For example, `projects/myproject/locations/US/dataExchanges/123`.
+        /// Required. The full name of the data exchange resource that you want to
+        /// delete. For example, `projects/myproject/locations/US/dataExchanges/123`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1565,9 +1783,9 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// Required. The listing to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask specifies the fields to update in the listing resource. The
-        /// fields specified in the `updateMask` are relative to the resource and are
-        /// not a full request.
+        /// Required. Field mask specifies the fields to update in the listing
+        /// resource. The fields specified in the `updateMask` are relative to the
+        /// resource and are not a full request.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1585,9 +1803,9 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// Required. The listing to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask specifies the fields to update in the listing resource. The
-        /// fields specified in the `updateMask` are relative to the resource and are
-        /// not a full request.
+        /// Required. Field mask specifies the fields to update in the listing
+        /// resource. The fields specified in the `updateMask` are relative to the
+        /// resource and are not a full request.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1605,9 +1823,9 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// Required. The listing to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask specifies the fields to update in the listing resource. The
-        /// fields specified in the `updateMask` are relative to the resource and are
-        /// not a full request.
+        /// Required. Field mask specifies the fields to update in the listing
+        /// resource. The fields specified in the `updateMask` are relative to the
+        /// resource and are not a full request.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1882,6 +2100,913 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
             SubscribeListingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Creates a Subscription to a Data Exchange. This is a long-running operation
+        /// as it will create one or more linked datasets.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<SubscribeDataExchangeResponse, OperationMetadata> SubscribeDataExchange(SubscribeDataExchangeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a Subscription to a Data Exchange. This is a long-running operation
+        /// as it will create one or more linked datasets.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<SubscribeDataExchangeResponse, OperationMetadata>> SubscribeDataExchangeAsync(SubscribeDataExchangeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a Subscription to a Data Exchange. This is a long-running operation
+        /// as it will create one or more linked datasets.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<SubscribeDataExchangeResponse, OperationMetadata>> SubscribeDataExchangeAsync(SubscribeDataExchangeRequest request, st::CancellationToken cancellationToken) =>
+            SubscribeDataExchangeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>SubscribeDataExchange</c>.</summary>
+        public virtual lro::OperationsClient SubscribeDataExchangeOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>SubscribeDataExchange</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<SubscribeDataExchangeResponse, OperationMetadata> PollOnceSubscribeDataExchange(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<SubscribeDataExchangeResponse, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SubscribeDataExchangeOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SubscribeDataExchange</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<SubscribeDataExchangeResponse, OperationMetadata>> PollOnceSubscribeDataExchangeAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<SubscribeDataExchangeResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SubscribeDataExchangeOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a Subscription to a Data Exchange. This is a long-running operation
+        /// as it will create one or more linked datasets.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the Data Exchange.
+        /// e.g. `projects/publisherproject/locations/US/dataExchanges/123`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<SubscribeDataExchangeResponse, OperationMetadata> SubscribeDataExchange(string name, gaxgrpc::CallSettings callSettings = null) =>
+            SubscribeDataExchange(new SubscribeDataExchangeRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Subscription to a Data Exchange. This is a long-running operation
+        /// as it will create one or more linked datasets.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the Data Exchange.
+        /// e.g. `projects/publisherproject/locations/US/dataExchanges/123`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<SubscribeDataExchangeResponse, OperationMetadata>> SubscribeDataExchangeAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            SubscribeDataExchangeAsync(new SubscribeDataExchangeRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Subscription to a Data Exchange. This is a long-running operation
+        /// as it will create one or more linked datasets.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the Data Exchange.
+        /// e.g. `projects/publisherproject/locations/US/dataExchanges/123`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<SubscribeDataExchangeResponse, OperationMetadata>> SubscribeDataExchangeAsync(string name, st::CancellationToken cancellationToken) =>
+            SubscribeDataExchangeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a Subscription to a Data Exchange. This is a long-running operation
+        /// as it will create one or more linked datasets.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the Data Exchange.
+        /// e.g. `projects/publisherproject/locations/US/dataExchanges/123`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<SubscribeDataExchangeResponse, OperationMetadata> SubscribeDataExchange(DataExchangeName name, gaxgrpc::CallSettings callSettings = null) =>
+            SubscribeDataExchange(new SubscribeDataExchangeRequest
+            {
+                DataExchangeName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Subscription to a Data Exchange. This is a long-running operation
+        /// as it will create one or more linked datasets.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the Data Exchange.
+        /// e.g. `projects/publisherproject/locations/US/dataExchanges/123`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<SubscribeDataExchangeResponse, OperationMetadata>> SubscribeDataExchangeAsync(DataExchangeName name, gaxgrpc::CallSettings callSettings = null) =>
+            SubscribeDataExchangeAsync(new SubscribeDataExchangeRequest
+            {
+                DataExchangeName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Subscription to a Data Exchange. This is a long-running operation
+        /// as it will create one or more linked datasets.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the Data Exchange.
+        /// e.g. `projects/publisherproject/locations/US/dataExchanges/123`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<SubscribeDataExchangeResponse, OperationMetadata>> SubscribeDataExchangeAsync(DataExchangeName name, st::CancellationToken cancellationToken) =>
+            SubscribeDataExchangeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Refreshes a Subscription to a Data Exchange. A Data Exchange can become
+        /// stale when a publisher adds or removes data. This is a long-running
+        /// operation as it may create many linked datasets.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RefreshSubscriptionResponse, OperationMetadata> RefreshSubscription(RefreshSubscriptionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Refreshes a Subscription to a Data Exchange. A Data Exchange can become
+        /// stale when a publisher adds or removes data. This is a long-running
+        /// operation as it may create many linked datasets.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RefreshSubscriptionResponse, OperationMetadata>> RefreshSubscriptionAsync(RefreshSubscriptionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Refreshes a Subscription to a Data Exchange. A Data Exchange can become
+        /// stale when a publisher adds or removes data. This is a long-running
+        /// operation as it may create many linked datasets.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RefreshSubscriptionResponse, OperationMetadata>> RefreshSubscriptionAsync(RefreshSubscriptionRequest request, st::CancellationToken cancellationToken) =>
+            RefreshSubscriptionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>RefreshSubscription</c>.</summary>
+        public virtual lro::OperationsClient RefreshSubscriptionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>RefreshSubscription</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<RefreshSubscriptionResponse, OperationMetadata> PollOnceRefreshSubscription(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<RefreshSubscriptionResponse, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RefreshSubscriptionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RefreshSubscription</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<RefreshSubscriptionResponse, OperationMetadata>> PollOnceRefreshSubscriptionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<RefreshSubscriptionResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RefreshSubscriptionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Refreshes a Subscription to a Data Exchange. A Data Exchange can become
+        /// stale when a publisher adds or removes data. This is a long-running
+        /// operation as it may create many linked datasets.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the Subscription to refresh.
+        /// e.g. `projects/subscriberproject/locations/US/subscriptions/123`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RefreshSubscriptionResponse, OperationMetadata> RefreshSubscription(string name, gaxgrpc::CallSettings callSettings = null) =>
+            RefreshSubscription(new RefreshSubscriptionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Refreshes a Subscription to a Data Exchange. A Data Exchange can become
+        /// stale when a publisher adds or removes data. This is a long-running
+        /// operation as it may create many linked datasets.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the Subscription to refresh.
+        /// e.g. `projects/subscriberproject/locations/US/subscriptions/123`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RefreshSubscriptionResponse, OperationMetadata>> RefreshSubscriptionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            RefreshSubscriptionAsync(new RefreshSubscriptionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Refreshes a Subscription to a Data Exchange. A Data Exchange can become
+        /// stale when a publisher adds or removes data. This is a long-running
+        /// operation as it may create many linked datasets.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the Subscription to refresh.
+        /// e.g. `projects/subscriberproject/locations/US/subscriptions/123`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RefreshSubscriptionResponse, OperationMetadata>> RefreshSubscriptionAsync(string name, st::CancellationToken cancellationToken) =>
+            RefreshSubscriptionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Refreshes a Subscription to a Data Exchange. A Data Exchange can become
+        /// stale when a publisher adds or removes data. This is a long-running
+        /// operation as it may create many linked datasets.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the Subscription to refresh.
+        /// e.g. `projects/subscriberproject/locations/US/subscriptions/123`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RefreshSubscriptionResponse, OperationMetadata> RefreshSubscription(SubscriptionName name, gaxgrpc::CallSettings callSettings = null) =>
+            RefreshSubscription(new RefreshSubscriptionRequest
+            {
+                SubscriptionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Refreshes a Subscription to a Data Exchange. A Data Exchange can become
+        /// stale when a publisher adds or removes data. This is a long-running
+        /// operation as it may create many linked datasets.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the Subscription to refresh.
+        /// e.g. `projects/subscriberproject/locations/US/subscriptions/123`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RefreshSubscriptionResponse, OperationMetadata>> RefreshSubscriptionAsync(SubscriptionName name, gaxgrpc::CallSettings callSettings = null) =>
+            RefreshSubscriptionAsync(new RefreshSubscriptionRequest
+            {
+                SubscriptionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Refreshes a Subscription to a Data Exchange. A Data Exchange can become
+        /// stale when a publisher adds or removes data. This is a long-running
+        /// operation as it may create many linked datasets.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the Subscription to refresh.
+        /// e.g. `projects/subscriberproject/locations/US/subscriptions/123`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RefreshSubscriptionResponse, OperationMetadata>> RefreshSubscriptionAsync(SubscriptionName name, st::CancellationToken cancellationToken) =>
+            RefreshSubscriptionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the details of a Subscription.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Subscription GetSubscription(GetSubscriptionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the details of a Subscription.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Subscription> GetSubscriptionAsync(GetSubscriptionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the details of a Subscription.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Subscription> GetSubscriptionAsync(GetSubscriptionRequest request, st::CancellationToken cancellationToken) =>
+            GetSubscriptionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the details of a Subscription.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the subscription.
+        /// e.g. projects/123/locations/US/subscriptions/456
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Subscription GetSubscription(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSubscription(new GetSubscriptionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of a Subscription.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the subscription.
+        /// e.g. projects/123/locations/US/subscriptions/456
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Subscription> GetSubscriptionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSubscriptionAsync(new GetSubscriptionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of a Subscription.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the subscription.
+        /// e.g. projects/123/locations/US/subscriptions/456
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Subscription> GetSubscriptionAsync(string name, st::CancellationToken cancellationToken) =>
+            GetSubscriptionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the details of a Subscription.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the subscription.
+        /// e.g. projects/123/locations/US/subscriptions/456
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Subscription GetSubscription(SubscriptionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSubscription(new GetSubscriptionRequest
+            {
+                SubscriptionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of a Subscription.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the subscription.
+        /// e.g. projects/123/locations/US/subscriptions/456
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Subscription> GetSubscriptionAsync(SubscriptionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSubscriptionAsync(new GetSubscriptionRequest
+            {
+                SubscriptionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of a Subscription.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the subscription.
+        /// e.g. projects/123/locations/US/subscriptions/456
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Subscription> GetSubscriptionAsync(SubscriptionName name, st::CancellationToken cancellationToken) =>
+            GetSubscriptionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all subscriptions in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Subscription"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptions(ListSubscriptionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all subscriptions in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Subscription"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptionsAsync(ListSubscriptionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all subscriptions in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource path of the subscription.
+        /// e.g. projects/myproject/locations/US
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Subscription"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSubscriptions(new ListSubscriptionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all subscriptions in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource path of the subscription.
+        /// e.g. projects/myproject/locations/US
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Subscription"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSubscriptionsAsync(new ListSubscriptionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all subscriptions in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource path of the subscription.
+        /// e.g. projects/myproject/locations/US
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Subscription"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptions(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSubscriptions(new ListSubscriptionsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all subscriptions in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource path of the subscription.
+        /// e.g. projects/myproject/locations/US
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Subscription"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSubscriptionsAsync(new ListSubscriptionsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all subscriptions on a given Data Exchange or Listing.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Subscription"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSharedResourceSubscriptionsResponse, Subscription> ListSharedResourceSubscriptions(ListSharedResourceSubscriptionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all subscriptions on a given Data Exchange or Listing.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Subscription"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSharedResourceSubscriptionsResponse, Subscription> ListSharedResourceSubscriptionsAsync(ListSharedResourceSubscriptionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all subscriptions on a given Data Exchange or Listing.
+        /// </summary>
+        /// <param name="resource">
+        /// Required. Resource name of the requested target. This resource may be
+        /// either a Listing or a DataExchange. e.g.
+        /// projects/123/locations/US/dataExchanges/456 OR e.g.
+        /// projects/123/locations/US/dataExchanges/456/listings/789
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Subscription"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSharedResourceSubscriptionsResponse, Subscription> ListSharedResourceSubscriptions(string resource, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSharedResourceSubscriptions(new ListSharedResourceSubscriptionsRequest
+            {
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all subscriptions on a given Data Exchange or Listing.
+        /// </summary>
+        /// <param name="resource">
+        /// Required. Resource name of the requested target. This resource may be
+        /// either a Listing or a DataExchange. e.g.
+        /// projects/123/locations/US/dataExchanges/456 OR e.g.
+        /// projects/123/locations/US/dataExchanges/456/listings/789
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Subscription"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSharedResourceSubscriptionsResponse, Subscription> ListSharedResourceSubscriptionsAsync(string resource, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSharedResourceSubscriptionsAsync(new ListSharedResourceSubscriptionsRequest
+            {
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all subscriptions on a given Data Exchange or Listing.
+        /// </summary>
+        /// <param name="resource">
+        /// Required. Resource name of the requested target. This resource may be
+        /// either a Listing or a DataExchange. e.g.
+        /// projects/123/locations/US/dataExchanges/456 OR e.g.
+        /// projects/123/locations/US/dataExchanges/456/listings/789
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Subscription"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSharedResourceSubscriptionsResponse, Subscription> ListSharedResourceSubscriptions(gax::IResourceName resource, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSharedResourceSubscriptions(new ListSharedResourceSubscriptionsRequest
+            {
+                ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all subscriptions on a given Data Exchange or Listing.
+        /// </summary>
+        /// <param name="resource">
+        /// Required. Resource name of the requested target. This resource may be
+        /// either a Listing or a DataExchange. e.g.
+        /// projects/123/locations/US/dataExchanges/456 OR e.g.
+        /// projects/123/locations/US/dataExchanges/456/listings/789
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Subscription"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSharedResourceSubscriptionsResponse, Subscription> ListSharedResourceSubscriptionsAsync(gax::IResourceName resource, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSharedResourceSubscriptionsAsync(new ListSharedResourceSubscriptionsRequest
+            {
+                ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Revokes a given subscription.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RevokeSubscriptionResponse RevokeSubscription(RevokeSubscriptionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Revokes a given subscription.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RevokeSubscriptionResponse> RevokeSubscriptionAsync(RevokeSubscriptionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Revokes a given subscription.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RevokeSubscriptionResponse> RevokeSubscriptionAsync(RevokeSubscriptionRequest request, st::CancellationToken cancellationToken) =>
+            RevokeSubscriptionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Revokes a given subscription.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the subscription to revoke.
+        /// e.g. projects/123/locations/US/subscriptions/456
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RevokeSubscriptionResponse RevokeSubscription(string name, gaxgrpc::CallSettings callSettings = null) =>
+            RevokeSubscription(new RevokeSubscriptionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Revokes a given subscription.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the subscription to revoke.
+        /// e.g. projects/123/locations/US/subscriptions/456
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RevokeSubscriptionResponse> RevokeSubscriptionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            RevokeSubscriptionAsync(new RevokeSubscriptionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Revokes a given subscription.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the subscription to revoke.
+        /// e.g. projects/123/locations/US/subscriptions/456
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RevokeSubscriptionResponse> RevokeSubscriptionAsync(string name, st::CancellationToken cancellationToken) =>
+            RevokeSubscriptionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Revokes a given subscription.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the subscription to revoke.
+        /// e.g. projects/123/locations/US/subscriptions/456
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RevokeSubscriptionResponse RevokeSubscription(SubscriptionName name, gaxgrpc::CallSettings callSettings = null) =>
+            RevokeSubscription(new RevokeSubscriptionRequest
+            {
+                SubscriptionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Revokes a given subscription.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the subscription to revoke.
+        /// e.g. projects/123/locations/US/subscriptions/456
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RevokeSubscriptionResponse> RevokeSubscriptionAsync(SubscriptionName name, gaxgrpc::CallSettings callSettings = null) =>
+            RevokeSubscriptionAsync(new RevokeSubscriptionRequest
+            {
+                SubscriptionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Revokes a given subscription.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the subscription to revoke.
+        /// e.g. projects/123/locations/US/subscriptions/456
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RevokeSubscriptionResponse> RevokeSubscriptionAsync(SubscriptionName name, st::CancellationToken cancellationToken) =>
+            RevokeSubscriptionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a subscription.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteSubscription(DeleteSubscriptionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a subscription.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteSubscriptionAsync(DeleteSubscriptionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a subscription.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteSubscriptionAsync(DeleteSubscriptionRequest request, st::CancellationToken cancellationToken) =>
+            DeleteSubscriptionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteSubscription</c>.</summary>
+        public virtual lro::OperationsClient DeleteSubscriptionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteSubscription</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteSubscription(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteSubscriptionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteSubscription</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteSubscriptionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteSubscriptionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a subscription.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the subscription to delete.
+        /// e.g. projects/123/locations/US/subscriptions/456
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteSubscription(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSubscription(new DeleteSubscriptionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a subscription.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the subscription to delete.
+        /// e.g. projects/123/locations/US/subscriptions/456
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteSubscriptionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSubscriptionAsync(new DeleteSubscriptionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a subscription.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the subscription to delete.
+        /// e.g. projects/123/locations/US/subscriptions/456
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteSubscriptionAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteSubscriptionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a subscription.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the subscription to delete.
+        /// e.g. projects/123/locations/US/subscriptions/456
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteSubscription(SubscriptionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSubscription(new DeleteSubscriptionRequest
+            {
+                SubscriptionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a subscription.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the subscription to delete.
+        /// e.g. projects/123/locations/US/subscriptions/456
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteSubscriptionAsync(SubscriptionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSubscriptionAsync(new DeleteSubscriptionRequest
+            {
+                SubscriptionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a subscription.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the subscription to delete.
+        /// e.g. projects/123/locations/US/subscriptions/456
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteSubscriptionAsync(SubscriptionName name, st::CancellationToken cancellationToken) =>
+            DeleteSubscriptionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets the IAM policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1998,6 +3123,20 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
 
         private readonly gaxgrpc::ApiCall<SubscribeListingRequest, SubscribeListingResponse> _callSubscribeListing;
 
+        private readonly gaxgrpc::ApiCall<SubscribeDataExchangeRequest, lro::Operation> _callSubscribeDataExchange;
+
+        private readonly gaxgrpc::ApiCall<RefreshSubscriptionRequest, lro::Operation> _callRefreshSubscription;
+
+        private readonly gaxgrpc::ApiCall<GetSubscriptionRequest, Subscription> _callGetSubscription;
+
+        private readonly gaxgrpc::ApiCall<ListSubscriptionsRequest, ListSubscriptionsResponse> _callListSubscriptions;
+
+        private readonly gaxgrpc::ApiCall<ListSharedResourceSubscriptionsRequest, ListSharedResourceSubscriptionsResponse> _callListSharedResourceSubscriptions;
+
+        private readonly gaxgrpc::ApiCall<RevokeSubscriptionRequest, RevokeSubscriptionResponse> _callRevokeSubscription;
+
+        private readonly gaxgrpc::ApiCall<DeleteSubscriptionRequest, lro::Operation> _callDeleteSubscription;
+
         private readonly gaxgrpc::ApiCall<gciv::GetIamPolicyRequest, gciv::Policy> _callGetIamPolicy;
 
         private readonly gaxgrpc::ApiCall<gciv::SetIamPolicyRequest, gciv::Policy> _callSetIamPolicy;
@@ -2016,6 +3155,9 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
             GrpcClient = grpcClient;
             AnalyticsHubServiceSettings effectiveSettings = settings ?? AnalyticsHubServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            SubscribeDataExchangeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SubscribeDataExchangeOperationsSettings, logger);
+            RefreshSubscriptionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RefreshSubscriptionOperationsSettings, logger);
+            DeleteSubscriptionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteSubscriptionOperationsSettings, logger);
             _callListDataExchanges = clientHelper.BuildApiCall<ListDataExchangesRequest, ListDataExchangesResponse>("ListDataExchanges", grpcClient.ListDataExchangesAsync, grpcClient.ListDataExchanges, effectiveSettings.ListDataExchangesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDataExchanges);
             Modify_ListDataExchangesApiCall(ref _callListDataExchanges);
@@ -2052,6 +3194,27 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
             _callSubscribeListing = clientHelper.BuildApiCall<SubscribeListingRequest, SubscribeListingResponse>("SubscribeListing", grpcClient.SubscribeListingAsync, grpcClient.SubscribeListing, effectiveSettings.SubscribeListingSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callSubscribeListing);
             Modify_SubscribeListingApiCall(ref _callSubscribeListing);
+            _callSubscribeDataExchange = clientHelper.BuildApiCall<SubscribeDataExchangeRequest, lro::Operation>("SubscribeDataExchange", grpcClient.SubscribeDataExchangeAsync, grpcClient.SubscribeDataExchange, effectiveSettings.SubscribeDataExchangeSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callSubscribeDataExchange);
+            Modify_SubscribeDataExchangeApiCall(ref _callSubscribeDataExchange);
+            _callRefreshSubscription = clientHelper.BuildApiCall<RefreshSubscriptionRequest, lro::Operation>("RefreshSubscription", grpcClient.RefreshSubscriptionAsync, grpcClient.RefreshSubscription, effectiveSettings.RefreshSubscriptionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callRefreshSubscription);
+            Modify_RefreshSubscriptionApiCall(ref _callRefreshSubscription);
+            _callGetSubscription = clientHelper.BuildApiCall<GetSubscriptionRequest, Subscription>("GetSubscription", grpcClient.GetSubscriptionAsync, grpcClient.GetSubscription, effectiveSettings.GetSubscriptionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetSubscription);
+            Modify_GetSubscriptionApiCall(ref _callGetSubscription);
+            _callListSubscriptions = clientHelper.BuildApiCall<ListSubscriptionsRequest, ListSubscriptionsResponse>("ListSubscriptions", grpcClient.ListSubscriptionsAsync, grpcClient.ListSubscriptions, effectiveSettings.ListSubscriptionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListSubscriptions);
+            Modify_ListSubscriptionsApiCall(ref _callListSubscriptions);
+            _callListSharedResourceSubscriptions = clientHelper.BuildApiCall<ListSharedResourceSubscriptionsRequest, ListSharedResourceSubscriptionsResponse>("ListSharedResourceSubscriptions", grpcClient.ListSharedResourceSubscriptionsAsync, grpcClient.ListSharedResourceSubscriptions, effectiveSettings.ListSharedResourceSubscriptionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
+            Modify_ApiCall(ref _callListSharedResourceSubscriptions);
+            Modify_ListSharedResourceSubscriptionsApiCall(ref _callListSharedResourceSubscriptions);
+            _callRevokeSubscription = clientHelper.BuildApiCall<RevokeSubscriptionRequest, RevokeSubscriptionResponse>("RevokeSubscription", grpcClient.RevokeSubscriptionAsync, grpcClient.RevokeSubscription, effectiveSettings.RevokeSubscriptionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callRevokeSubscription);
+            Modify_RevokeSubscriptionApiCall(ref _callRevokeSubscription);
+            _callDeleteSubscription = clientHelper.BuildApiCall<DeleteSubscriptionRequest, lro::Operation>("DeleteSubscription", grpcClient.DeleteSubscriptionAsync, grpcClient.DeleteSubscription, effectiveSettings.DeleteSubscriptionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteSubscription);
+            Modify_DeleteSubscriptionApiCall(ref _callDeleteSubscription);
             _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>("GetIamPolicy", grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callGetIamPolicy);
             Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
@@ -2090,6 +3253,20 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
 
         partial void Modify_SubscribeListingApiCall(ref gaxgrpc::ApiCall<SubscribeListingRequest, SubscribeListingResponse> call);
 
+        partial void Modify_SubscribeDataExchangeApiCall(ref gaxgrpc::ApiCall<SubscribeDataExchangeRequest, lro::Operation> call);
+
+        partial void Modify_RefreshSubscriptionApiCall(ref gaxgrpc::ApiCall<RefreshSubscriptionRequest, lro::Operation> call);
+
+        partial void Modify_GetSubscriptionApiCall(ref gaxgrpc::ApiCall<GetSubscriptionRequest, Subscription> call);
+
+        partial void Modify_ListSubscriptionsApiCall(ref gaxgrpc::ApiCall<ListSubscriptionsRequest, ListSubscriptionsResponse> call);
+
+        partial void Modify_ListSharedResourceSubscriptionsApiCall(ref gaxgrpc::ApiCall<ListSharedResourceSubscriptionsRequest, ListSharedResourceSubscriptionsResponse> call);
+
+        partial void Modify_RevokeSubscriptionApiCall(ref gaxgrpc::ApiCall<RevokeSubscriptionRequest, RevokeSubscriptionResponse> call);
+
+        partial void Modify_DeleteSubscriptionApiCall(ref gaxgrpc::ApiCall<DeleteSubscriptionRequest, lro::Operation> call);
+
         partial void Modify_GetIamPolicyApiCall(ref gaxgrpc::ApiCall<gciv::GetIamPolicyRequest, gciv::Policy> call);
 
         partial void Modify_SetIamPolicyApiCall(ref gaxgrpc::ApiCall<gciv::SetIamPolicyRequest, gciv::Policy> call);
@@ -2124,6 +3301,20 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         partial void Modify_DeleteListingRequest(ref DeleteListingRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SubscribeListingRequest(ref SubscribeListingRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SubscribeDataExchangeRequest(ref SubscribeDataExchangeRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RefreshSubscriptionRequest(ref RefreshSubscriptionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetSubscriptionRequest(ref GetSubscriptionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListSubscriptionsRequest(ref ListSubscriptionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListSharedResourceSubscriptionsRequest(ref ListSharedResourceSubscriptionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RevokeSubscriptionRequest(ref RevokeSubscriptionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteSubscriptionRequest(ref DeleteSubscriptionRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetIamPolicyRequest(ref gciv::GetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2431,6 +3622,189 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
             return _callSubscribeListing.Async(request, callSettings);
         }
 
+        /// <summary>The long-running operations client for <c>SubscribeDataExchange</c>.</summary>
+        public override lro::OperationsClient SubscribeDataExchangeOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a Subscription to a Data Exchange. This is a long-running operation
+        /// as it will create one or more linked datasets.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<SubscribeDataExchangeResponse, OperationMetadata> SubscribeDataExchange(SubscribeDataExchangeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SubscribeDataExchangeRequest(ref request, ref callSettings);
+            return new lro::Operation<SubscribeDataExchangeResponse, OperationMetadata>(_callSubscribeDataExchange.Sync(request, callSettings), SubscribeDataExchangeOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a Subscription to a Data Exchange. This is a long-running operation
+        /// as it will create one or more linked datasets.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<SubscribeDataExchangeResponse, OperationMetadata>> SubscribeDataExchangeAsync(SubscribeDataExchangeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SubscribeDataExchangeRequest(ref request, ref callSettings);
+            return new lro::Operation<SubscribeDataExchangeResponse, OperationMetadata>(await _callSubscribeDataExchange.Async(request, callSettings).ConfigureAwait(false), SubscribeDataExchangeOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>RefreshSubscription</c>.</summary>
+        public override lro::OperationsClient RefreshSubscriptionOperationsClient { get; }
+
+        /// <summary>
+        /// Refreshes a Subscription to a Data Exchange. A Data Exchange can become
+        /// stale when a publisher adds or removes data. This is a long-running
+        /// operation as it may create many linked datasets.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<RefreshSubscriptionResponse, OperationMetadata> RefreshSubscription(RefreshSubscriptionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RefreshSubscriptionRequest(ref request, ref callSettings);
+            return new lro::Operation<RefreshSubscriptionResponse, OperationMetadata>(_callRefreshSubscription.Sync(request, callSettings), RefreshSubscriptionOperationsClient);
+        }
+
+        /// <summary>
+        /// Refreshes a Subscription to a Data Exchange. A Data Exchange can become
+        /// stale when a publisher adds or removes data. This is a long-running
+        /// operation as it may create many linked datasets.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<RefreshSubscriptionResponse, OperationMetadata>> RefreshSubscriptionAsync(RefreshSubscriptionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RefreshSubscriptionRequest(ref request, ref callSettings);
+            return new lro::Operation<RefreshSubscriptionResponse, OperationMetadata>(await _callRefreshSubscription.Async(request, callSettings).ConfigureAwait(false), RefreshSubscriptionOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets the details of a Subscription.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Subscription GetSubscription(GetSubscriptionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSubscriptionRequest(ref request, ref callSettings);
+            return _callGetSubscription.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the details of a Subscription.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Subscription> GetSubscriptionAsync(GetSubscriptionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSubscriptionRequest(ref request, ref callSettings);
+            return _callGetSubscription.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all subscriptions in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Subscription"/> resources.</returns>
+        public override gax::PagedEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptions(ListSubscriptionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSubscriptionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListSubscriptionsRequest, ListSubscriptionsResponse, Subscription>(_callListSubscriptions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all subscriptions in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Subscription"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptionsAsync(ListSubscriptionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSubscriptionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListSubscriptionsRequest, ListSubscriptionsResponse, Subscription>(_callListSubscriptions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all subscriptions on a given Data Exchange or Listing.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Subscription"/> resources.</returns>
+        public override gax::PagedEnumerable<ListSharedResourceSubscriptionsResponse, Subscription> ListSharedResourceSubscriptions(ListSharedResourceSubscriptionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSharedResourceSubscriptionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListSharedResourceSubscriptionsRequest, ListSharedResourceSubscriptionsResponse, Subscription>(_callListSharedResourceSubscriptions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all subscriptions on a given Data Exchange or Listing.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Subscription"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListSharedResourceSubscriptionsResponse, Subscription> ListSharedResourceSubscriptionsAsync(ListSharedResourceSubscriptionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSharedResourceSubscriptionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListSharedResourceSubscriptionsRequest, ListSharedResourceSubscriptionsResponse, Subscription>(_callListSharedResourceSubscriptions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Revokes a given subscription.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RevokeSubscriptionResponse RevokeSubscription(RevokeSubscriptionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RevokeSubscriptionRequest(ref request, ref callSettings);
+            return _callRevokeSubscription.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Revokes a given subscription.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RevokeSubscriptionResponse> RevokeSubscriptionAsync(RevokeSubscriptionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RevokeSubscriptionRequest(ref request, ref callSettings);
+            return _callRevokeSubscription.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteSubscription</c>.</summary>
+        public override lro::OperationsClient DeleteSubscriptionOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a subscription.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteSubscription(DeleteSubscriptionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteSubscriptionRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteSubscription.Sync(request, callSettings), DeleteSubscriptionOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a subscription.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteSubscriptionAsync(DeleteSubscriptionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteSubscriptionRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteSubscription.Async(request, callSettings).ConfigureAwait(false), DeleteSubscriptionOperationsClient);
+        }
+
         /// <summary>
         /// Gets the IAM policy.
         /// </summary>
@@ -2516,6 +3890,14 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
     {
     }
 
+    public partial class ListSubscriptionsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListSharedResourceSubscriptionsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListDataExchangesResponse : gaxgrpc::IPageResponse<DataExchange>
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
@@ -2538,5 +3920,35 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         public scg::IEnumerator<Listing> GetEnumerator() => Listings.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListSubscriptionsResponse : gaxgrpc::IPageResponse<Subscription>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Subscription> GetEnumerator() => Subscriptions.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListSharedResourceSubscriptionsResponse : gaxgrpc::IPageResponse<Subscription>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Subscription> GetEnumerator() => SharedResourceSubscriptions.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public static partial class AnalyticsHubService
+    {
+        public partial class AnalyticsHubServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>A new Operations client for the same target as this client.</returns>
+            public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
+                new lro::Operations.OperationsClient(CallInvoker);
+        }
     }
 }
