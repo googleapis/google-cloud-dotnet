@@ -25,6 +25,7 @@ using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
 using sys = System;
+using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
@@ -52,6 +53,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3
             ImportDocumentsSettings = existing.ImportDocumentsSettings;
             ImportDocumentsOperationsSettings = existing.ImportDocumentsOperationsSettings.Clone();
             GetDocumentSettings = existing.GetDocumentSettings;
+            ListDocumentsSettings = existing.ListDocumentsSettings;
             BatchDeleteDocumentsSettings = existing.BatchDeleteDocumentsSettings;
             BatchDeleteDocumentsOperationsSettings = existing.BatchDeleteDocumentsOperationsSettings.Clone();
             GetDatasetSchemaSettings = existing.GetDatasetSchemaSettings;
@@ -133,6 +135,18 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetDocumentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DocumentServiceClient.ListDocuments</c> and <c>DocumentServiceClient.ListDocumentsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListDocumentsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -705,6 +719,128 @@ namespace Google.Cloud.DocumentAI.V1Beta3
             GetDocumentAsync(dataset, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Returns a list of documents present in the dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DocumentMetadata"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDocumentsResponse, DocumentMetadata> ListDocuments(ListDocumentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of documents present in the dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DocumentMetadata"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDocumentsResponse, DocumentMetadata> ListDocumentsAsync(ListDocumentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of documents present in the dataset.
+        /// </summary>
+        /// <param name="dataset">
+        /// Required. The resource name of the dataset to be listed.
+        /// Format:
+        /// projects/{project}/locations/{location}/processors/{processor}/dataset
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DocumentMetadata"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDocumentsResponse, DocumentMetadata> ListDocuments(string dataset, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDocuments(new ListDocumentsRequest
+            {
+                Dataset = gax::GaxPreconditions.CheckNotNullOrEmpty(dataset, nameof(dataset)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of documents present in the dataset.
+        /// </summary>
+        /// <param name="dataset">
+        /// Required. The resource name of the dataset to be listed.
+        /// Format:
+        /// projects/{project}/locations/{location}/processors/{processor}/dataset
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DocumentMetadata"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDocumentsResponse, DocumentMetadata> ListDocumentsAsync(string dataset, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDocumentsAsync(new ListDocumentsRequest
+            {
+                Dataset = gax::GaxPreconditions.CheckNotNullOrEmpty(dataset, nameof(dataset)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of documents present in the dataset.
+        /// </summary>
+        /// <param name="dataset">
+        /// Required. The resource name of the dataset to be listed.
+        /// Format:
+        /// projects/{project}/locations/{location}/processors/{processor}/dataset
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DocumentMetadata"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDocumentsResponse, DocumentMetadata> ListDocuments(DatasetName dataset, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDocuments(new ListDocumentsRequest
+            {
+                DatasetAsDatasetName = gax::GaxPreconditions.CheckNotNull(dataset, nameof(dataset)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of documents present in the dataset.
+        /// </summary>
+        /// <param name="dataset">
+        /// Required. The resource name of the dataset to be listed.
+        /// Format:
+        /// projects/{project}/locations/{location}/processors/{processor}/dataset
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DocumentMetadata"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDocumentsResponse, DocumentMetadata> ListDocumentsAsync(DatasetName dataset, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDocumentsAsync(new ListDocumentsRequest
+            {
+                DatasetAsDatasetName = gax::GaxPreconditions.CheckNotNull(dataset, nameof(dataset)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
         /// Deletes a set of documents.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1013,6 +1149,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3
 
         private readonly gaxgrpc::ApiCall<GetDocumentRequest, GetDocumentResponse> _callGetDocument;
 
+        private readonly gaxgrpc::ApiCall<ListDocumentsRequest, ListDocumentsResponse> _callListDocuments;
+
         private readonly gaxgrpc::ApiCall<BatchDeleteDocumentsRequest, lro::Operation> _callBatchDeleteDocuments;
 
         private readonly gaxgrpc::ApiCall<GetDatasetSchemaRequest, DatasetSchema> _callGetDatasetSchema;
@@ -1043,6 +1181,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3
             _callGetDocument = clientHelper.BuildApiCall<GetDocumentRequest, GetDocumentResponse>("GetDocument", grpcClient.GetDocumentAsync, grpcClient.GetDocument, effectiveSettings.GetDocumentSettings).WithGoogleRequestParam("dataset", request => request.Dataset);
             Modify_ApiCall(ref _callGetDocument);
             Modify_GetDocumentApiCall(ref _callGetDocument);
+            _callListDocuments = clientHelper.BuildApiCall<ListDocumentsRequest, ListDocumentsResponse>("ListDocuments", grpcClient.ListDocumentsAsync, grpcClient.ListDocuments, effectiveSettings.ListDocumentsSettings).WithGoogleRequestParam("dataset", request => request.Dataset);
+            Modify_ApiCall(ref _callListDocuments);
+            Modify_ListDocumentsApiCall(ref _callListDocuments);
             _callBatchDeleteDocuments = clientHelper.BuildApiCall<BatchDeleteDocumentsRequest, lro::Operation>("BatchDeleteDocuments", grpcClient.BatchDeleteDocumentsAsync, grpcClient.BatchDeleteDocuments, effectiveSettings.BatchDeleteDocumentsSettings).WithGoogleRequestParam("dataset", request => request.Dataset);
             Modify_ApiCall(ref _callBatchDeleteDocuments);
             Modify_BatchDeleteDocumentsApiCall(ref _callBatchDeleteDocuments);
@@ -1063,6 +1204,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3
 
         partial void Modify_GetDocumentApiCall(ref gaxgrpc::ApiCall<GetDocumentRequest, GetDocumentResponse> call);
 
+        partial void Modify_ListDocumentsApiCall(ref gaxgrpc::ApiCall<ListDocumentsRequest, ListDocumentsResponse> call);
+
         partial void Modify_BatchDeleteDocumentsApiCall(ref gaxgrpc::ApiCall<BatchDeleteDocumentsRequest, lro::Operation> call);
 
         partial void Modify_GetDatasetSchemaApiCall(ref gaxgrpc::ApiCall<GetDatasetSchemaRequest, DatasetSchema> call);
@@ -1082,6 +1225,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         partial void Modify_ImportDocumentsRequest(ref ImportDocumentsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetDocumentRequest(ref GetDocumentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListDocumentsRequest(ref ListDocumentsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_BatchDeleteDocumentsRequest(ref BatchDeleteDocumentsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1167,6 +1312,30 @@ namespace Google.Cloud.DocumentAI.V1Beta3
             return _callGetDocument.Async(request, callSettings);
         }
 
+        /// <summary>
+        /// Returns a list of documents present in the dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DocumentMetadata"/> resources.</returns>
+        public override gax::PagedEnumerable<ListDocumentsResponse, DocumentMetadata> ListDocuments(ListDocumentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDocumentsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListDocumentsRequest, ListDocumentsResponse, DocumentMetadata>(_callListDocuments, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of documents present in the dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DocumentMetadata"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListDocumentsResponse, DocumentMetadata> ListDocumentsAsync(ListDocumentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDocumentsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListDocumentsRequest, ListDocumentsResponse, DocumentMetadata>(_callListDocuments, request, callSettings);
+        }
+
         /// <summary>The long-running operations client for <c>BatchDeleteDocuments</c>.</summary>
         public override lro::OperationsClient BatchDeleteDocumentsOperationsClient { get; }
 
@@ -1241,6 +1410,18 @@ namespace Google.Cloud.DocumentAI.V1Beta3
             Modify_UpdateDatasetSchemaRequest(ref request, ref callSettings);
             return _callUpdateDatasetSchema.Async(request, callSettings);
         }
+    }
+
+    public partial class ListDocumentsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListDocumentsResponse : gaxgrpc::IPageResponse<DocumentMetadata>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<DocumentMetadata> GetEnumerator() => DocumentMetadata.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
     public static partial class DocumentService

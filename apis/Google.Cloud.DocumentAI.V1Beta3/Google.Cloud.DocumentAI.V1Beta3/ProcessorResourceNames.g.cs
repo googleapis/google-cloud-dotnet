@@ -533,6 +533,19 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         }
     }
 
+    public partial class ProcessorVersionAlias
+    {
+        /// <summary>
+        /// <see cref="ProcessorVersionName"/>-typed view over the <see cref="ProcessorVersion"/> resource name
+        /// property.
+        /// </summary>
+        public ProcessorVersionName ProcessorVersionAsProcessorVersionName
+        {
+            get => string.IsNullOrEmpty(ProcessorVersion) ? null : ProcessorVersionName.Parse(ProcessorVersion, allowUnparsed: true);
+            set => ProcessorVersion = value?.ToString() ?? "";
+        }
+    }
+
     public partial class Processor
     {
         /// <summary>
