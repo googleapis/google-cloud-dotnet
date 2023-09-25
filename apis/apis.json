@@ -2749,7 +2749,7 @@
     },
     {
       "id": "Google.Cloud.Logging.Log4Net",
-      "version": "4.0.0",
+      "version": "4.1.0",
       "type": "other",
       "metadataType": "INTEGRATION",
       "targetFrameworks": "netstandard2.1;net462",
@@ -2763,7 +2763,7 @@
       "dependencies": {
         "Google.Api.Gax.Grpc": "4.4.0",
         "Google.Cloud.DevTools.Common": "3.0.0",
-        "Google.Cloud.Logging.V2": "4.0.0",
+        "Google.Cloud.Logging.V2": "4.1.0",
         "Grpc.Core": "2.46.6",
         "log4net": "2.0.14"
       },
