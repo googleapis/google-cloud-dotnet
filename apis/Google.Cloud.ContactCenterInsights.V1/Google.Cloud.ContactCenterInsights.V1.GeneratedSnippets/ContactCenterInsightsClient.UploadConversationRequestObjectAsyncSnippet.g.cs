@@ -43,6 +43,7 @@ namespace GoogleCSharpSnippets
                 Conversation = new Conversation(),
                 ConversationId = "",
                 RedactionConfig = new RedactionConfig(),
+                SpeechConfig = new SpeechConfig(),
             };
             // Make the request
             Operation<Conversation, UploadConversationMetadata> response = await contactCenterInsightsClient.UploadConversationAsync(request);

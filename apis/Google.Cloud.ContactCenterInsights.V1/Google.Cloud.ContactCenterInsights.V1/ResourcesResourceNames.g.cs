@@ -2605,6 +2605,18 @@ namespace Google.Cloud.ContactCenterInsights.V1
         }
     }
 
+    public partial class SpeechConfig
+    {
+        /// <summary>
+        /// <see cref="RecognizerName"/>-typed view over the <see cref="SpeechRecognizer"/> resource name property.
+        /// </summary>
+        public RecognizerName SpeechRecognizerAsRecognizerName
+        {
+            get => string.IsNullOrEmpty(SpeechRecognizer) ? null : RecognizerName.Parse(SpeechRecognizer, allowUnparsed: true);
+            set => SpeechRecognizer = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ConversationParticipant
     {
         /// <summary>
