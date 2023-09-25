@@ -63,6 +63,7 @@ namespace Google.Cloud.Spanner.V1
             RollbackSettings = existing.RollbackSettings;
             PartitionQuerySettings = existing.PartitionQuerySettings;
             PartitionReadSettings = existing.PartitionReadSettings;
+            BatchWriteSettings = existing.BatchWriteSettings;
             OnCopy(existing);
         }
 
@@ -325,6 +326,18 @@ namespace Google.Cloud.Spanner.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings PartitionReadSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(250), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>SpannerClient.BatchWrite</c>
+        ///  and <c>SpannerClient.BatchWriteAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 3600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchWriteSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="SpannerSettings"/> object.</returns>
@@ -2517,6 +2530,106 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<PartitionResponse> PartitionReadAsync(PartitionReadRequest request, st::CancellationToken cancellationToken) =>
             PartitionReadAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Server streaming methods for <see cref="BatchWrite(BatchWriteRequest,gaxgrpc::CallSettings)"/>.
+        /// </summary>
+        public abstract partial class BatchWriteStream : gaxgrpc::ServerStreamingBase<BatchWriteResponse>
+        {
+        }
+
+        /// <summary>
+        /// Batches the supplied mutation groups in a collection of efficient
+        /// transactions. All mutations in a group are committed atomically. However,
+        /// mutations across groups can be committed non-atomically in an unspecified
+        /// order and thus, they must be independent of each other. Partial failure is
+        /// possible, i.e., some groups may have been committed successfully, while
+        /// some may have failed. The results of individual batches are streamed into
+        /// the response as the batches are applied.
+        /// 
+        /// BatchWrite requests are not replay protected, meaning that each mutation
+        /// group may be applied more than once. Replays of non-idempotent mutations
+        /// may have undesirable effects. For example, replays of an insert mutation
+        /// may produce an already exists error or if you use generated or commit
+        /// timestamp-based keys, it may result in additional rows being added to the
+        /// mutation's table. We recommend structuring your mutation groups to be
+        /// idempotent to avoid this issue.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual BatchWriteStream BatchWrite(BatchWriteRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Batches the supplied mutation groups in a collection of efficient
+        /// transactions. All mutations in a group are committed atomically. However,
+        /// mutations across groups can be committed non-atomically in an unspecified
+        /// order and thus, they must be independent of each other. Partial failure is
+        /// possible, i.e., some groups may have been committed successfully, while
+        /// some may have failed. The results of individual batches are streamed into
+        /// the response as the batches are applied.
+        /// 
+        /// BatchWrite requests are not replay protected, meaning that each mutation
+        /// group may be applied more than once. Replays of non-idempotent mutations
+        /// may have undesirable effects. For example, replays of an insert mutation
+        /// may produce an already exists error or if you use generated or commit
+        /// timestamp-based keys, it may result in additional rows being added to the
+        /// mutation's table. We recommend structuring your mutation groups to be
+        /// idempotent to avoid this issue.
+        /// </summary>
+        /// <param name="session">
+        /// Required. The session in which the batch request is to be run.
+        /// </param>
+        /// <param name="mutationGroups">
+        /// Required. The groups of mutations to be applied.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual BatchWriteStream BatchWrite(string session, scg::IEnumerable<BatchWriteRequest.Types.MutationGroup> mutationGroups, gaxgrpc::CallSettings callSettings = null) =>
+            BatchWrite(new BatchWriteRequest
+            {
+                Session = gax::GaxPreconditions.CheckNotNullOrEmpty(session, nameof(session)),
+                MutationGroups =
+                {
+                    gax::GaxPreconditions.CheckNotNull(mutationGroups, nameof(mutationGroups)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batches the supplied mutation groups in a collection of efficient
+        /// transactions. All mutations in a group are committed atomically. However,
+        /// mutations across groups can be committed non-atomically in an unspecified
+        /// order and thus, they must be independent of each other. Partial failure is
+        /// possible, i.e., some groups may have been committed successfully, while
+        /// some may have failed. The results of individual batches are streamed into
+        /// the response as the batches are applied.
+        /// 
+        /// BatchWrite requests are not replay protected, meaning that each mutation
+        /// group may be applied more than once. Replays of non-idempotent mutations
+        /// may have undesirable effects. For example, replays of an insert mutation
+        /// may produce an already exists error or if you use generated or commit
+        /// timestamp-based keys, it may result in additional rows being added to the
+        /// mutation's table. We recommend structuring your mutation groups to be
+        /// idempotent to avoid this issue.
+        /// </summary>
+        /// <param name="session">
+        /// Required. The session in which the batch request is to be run.
+        /// </param>
+        /// <param name="mutationGroups">
+        /// Required. The groups of mutations to be applied.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual BatchWriteStream BatchWrite(SessionName session, scg::IEnumerable<BatchWriteRequest.Types.MutationGroup> mutationGroups, gaxgrpc::CallSettings callSettings = null) =>
+            BatchWrite(new BatchWriteRequest
+            {
+                SessionAsSessionName = gax::GaxPreconditions.CheckNotNull(session, nameof(session)),
+                MutationGroups =
+                {
+                    gax::GaxPreconditions.CheckNotNull(mutationGroups, nameof(mutationGroups)),
+                },
+            }, callSettings);
     }
 
     /// <summary>Spanner client wrapper implementation, for convenient use.</summary>
@@ -2557,6 +2670,8 @@ namespace Google.Cloud.Spanner.V1
         private readonly gaxgrpc::ApiCall<PartitionQueryRequest, PartitionResponse> _callPartitionQuery;
 
         private readonly gaxgrpc::ApiCall<PartitionReadRequest, PartitionResponse> _callPartitionRead;
+
+        private readonly gaxgrpc::ApiServerStreamingCall<BatchWriteRequest, BatchWriteResponse> _callBatchWrite;
 
         /// <summary>
         /// Constructs a client wrapper for the Spanner service, with the specified gRPC client and settings.
@@ -2614,6 +2729,9 @@ namespace Google.Cloud.Spanner.V1
             _callPartitionRead = clientHelper.BuildApiCall<PartitionReadRequest, PartitionResponse>("PartitionRead", grpcClient.PartitionReadAsync, grpcClient.PartitionRead, effectiveSettings.PartitionReadSettings).WithGoogleRequestParam("session", request => request.Session);
             Modify_ApiCall(ref _callPartitionRead);
             Modify_PartitionReadApiCall(ref _callPartitionRead);
+            _callBatchWrite = clientHelper.BuildApiCall<BatchWriteRequest, BatchWriteResponse>("BatchWrite", grpcClient.BatchWrite, effectiveSettings.BatchWriteSettings).WithGoogleRequestParam("session", request => request.Session);
+            Modify_ApiCall(ref _callBatchWrite);
+            Modify_BatchWriteApiCall(ref _callBatchWrite);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2651,6 +2769,8 @@ namespace Google.Cloud.Spanner.V1
 
         partial void Modify_PartitionReadApiCall(ref gaxgrpc::ApiCall<PartitionReadRequest, PartitionResponse> call);
 
+        partial void Modify_BatchWriteApiCall(ref gaxgrpc::ApiServerStreamingCall<BatchWriteRequest, BatchWriteResponse> call);
+
         partial void OnConstruction(Spanner.SpannerClient grpcClient, SpannerSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC Spanner client</summary>
@@ -2681,6 +2801,8 @@ namespace Google.Cloud.Spanner.V1
         partial void Modify_PartitionQueryRequest(ref PartitionQueryRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_PartitionReadRequest(ref PartitionReadRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchWriteRequest(ref BatchWriteRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates a new session. A session can be used to perform
@@ -3246,6 +3368,41 @@ namespace Google.Cloud.Spanner.V1
         {
             Modify_PartitionReadRequest(ref request, ref callSettings);
             return _callPartitionRead.Async(request, callSettings);
+        }
+
+        internal sealed partial class BatchWriteStreamImpl : BatchWriteStream
+        {
+            /// <summary>Construct the server streaming method for <c>BatchWrite</c>.</summary>
+            /// <param name="call">The underlying gRPC server streaming call.</param>
+            public BatchWriteStreamImpl(grpccore::AsyncServerStreamingCall<BatchWriteResponse> call) => GrpcCall = call;
+
+            public override grpccore::AsyncServerStreamingCall<BatchWriteResponse> GrpcCall { get; }
+        }
+
+        /// <summary>
+        /// Batches the supplied mutation groups in a collection of efficient
+        /// transactions. All mutations in a group are committed atomically. However,
+        /// mutations across groups can be committed non-atomically in an unspecified
+        /// order and thus, they must be independent of each other. Partial failure is
+        /// possible, i.e., some groups may have been committed successfully, while
+        /// some may have failed. The results of individual batches are streamed into
+        /// the response as the batches are applied.
+        /// 
+        /// BatchWrite requests are not replay protected, meaning that each mutation
+        /// group may be applied more than once. Replays of non-idempotent mutations
+        /// may have undesirable effects. For example, replays of an insert mutation
+        /// may produce an already exists error or if you use generated or commit
+        /// timestamp-based keys, it may result in additional rows being added to the
+        /// mutation's table. We recommend structuring your mutation groups to be
+        /// idempotent to avoid this issue.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public override SpannerClient.BatchWriteStream BatchWrite(BatchWriteRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchWriteRequest(ref request, ref callSettings);
+            return new BatchWriteStreamImpl(_callBatchWrite.Call(request, callSettings));
         }
     }
 
