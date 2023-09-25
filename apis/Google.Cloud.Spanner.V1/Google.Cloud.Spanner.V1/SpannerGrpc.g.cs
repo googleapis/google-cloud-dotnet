@@ -112,6 +112,10 @@ namespace Google.Cloud.Spanner.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.PartitionResponse> __Marshaller_google_spanner_v1_PartitionResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.PartitionResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.PartitionReadRequest> __Marshaller_google_spanner_v1_PartitionReadRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.PartitionReadRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.BatchWriteRequest> __Marshaller_google_spanner_v1_BatchWriteRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.BatchWriteRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.BatchWriteResponse> __Marshaller_google_spanner_v1_BatchWriteResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.BatchWriteResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Spanner.V1.CreateSessionRequest, global::Google.Cloud.Spanner.V1.Session> __Method_CreateSession = new grpc::Method<global::Google.Cloud.Spanner.V1.CreateSessionRequest, global::Google.Cloud.Spanner.V1.Session>(
@@ -232,6 +236,14 @@ namespace Google.Cloud.Spanner.V1 {
         "PartitionRead",
         __Marshaller_google_spanner_v1_PartitionReadRequest,
         __Marshaller_google_spanner_v1_PartitionResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Spanner.V1.BatchWriteRequest, global::Google.Cloud.Spanner.V1.BatchWriteResponse> __Method_BatchWrite = new grpc::Method<global::Google.Cloud.Spanner.V1.BatchWriteRequest, global::Google.Cloud.Spanner.V1.BatchWriteResponse>(
+        grpc::MethodType.ServerStreaming,
+        __ServiceName,
+        "BatchWrite",
+        __Marshaller_google_spanner_v1_BatchWriteRequest,
+        __Marshaller_google_spanner_v1_BatchWriteResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -531,6 +543,33 @@ namespace Google.Cloud.Spanner.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.V1.PartitionResponse> PartitionRead(global::Google.Cloud.Spanner.V1.PartitionReadRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Batches the supplied mutation groups in a collection of efficient
+      /// transactions. All mutations in a group are committed atomically. However,
+      /// mutations across groups can be committed non-atomically in an unspecified
+      /// order and thus, they must be independent of each other. Partial failure is
+      /// possible, i.e., some groups may have been committed successfully, while
+      /// some may have failed. The results of individual batches are streamed into
+      /// the response as the batches are applied.
+      ///
+      /// BatchWrite requests are not replay protected, meaning that each mutation
+      /// group may be applied more than once. Replays of non-idempotent mutations
+      /// may have undesirable effects. For example, replays of an insert mutation
+      /// may produce an already exists error or if you use generated or commit
+      /// timestamp-based keys, it may result in additional rows being added to the
+      /// mutation's table. We recommend structuring your mutation groups to be
+      /// idempotent to avoid this issue.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="responseStream">Used for sending responses back to the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task BatchWrite(global::Google.Cloud.Spanner.V1.BatchWriteRequest request, grpc::IServerStreamWriter<global::Google.Cloud.Spanner.V1.BatchWriteResponse> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1660,6 +1699,58 @@ namespace Google.Cloud.Spanner.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_PartitionRead, null, options, request);
       }
+      /// <summary>
+      /// Batches the supplied mutation groups in a collection of efficient
+      /// transactions. All mutations in a group are committed atomically. However,
+      /// mutations across groups can be committed non-atomically in an unspecified
+      /// order and thus, they must be independent of each other. Partial failure is
+      /// possible, i.e., some groups may have been committed successfully, while
+      /// some may have failed. The results of individual batches are streamed into
+      /// the response as the batches are applied.
+      ///
+      /// BatchWrite requests are not replay protected, meaning that each mutation
+      /// group may be applied more than once. Replays of non-idempotent mutations
+      /// may have undesirable effects. For example, replays of an insert mutation
+      /// may produce an already exists error or if you use generated or commit
+      /// timestamp-based keys, it may result in additional rows being added to the
+      /// mutation's table. We recommend structuring your mutation groups to be
+      /// idempotent to avoid this issue.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Spanner.V1.BatchWriteResponse> BatchWrite(global::Google.Cloud.Spanner.V1.BatchWriteRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchWrite(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batches the supplied mutation groups in a collection of efficient
+      /// transactions. All mutations in a group are committed atomically. However,
+      /// mutations across groups can be committed non-atomically in an unspecified
+      /// order and thus, they must be independent of each other. Partial failure is
+      /// possible, i.e., some groups may have been committed successfully, while
+      /// some may have failed. The results of individual batches are streamed into
+      /// the response as the batches are applied.
+      ///
+      /// BatchWrite requests are not replay protected, meaning that each mutation
+      /// group may be applied more than once. Replays of non-idempotent mutations
+      /// may have undesirable effects. For example, replays of an insert mutation
+      /// may produce an already exists error or if you use generated or commit
+      /// timestamp-based keys, it may result in additional rows being added to the
+      /// mutation's table. We recommend structuring your mutation groups to be
+      /// idempotent to avoid this issue.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Spanner.V1.BatchWriteResponse> BatchWrite(global::Google.Cloud.Spanner.V1.BatchWriteRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncServerStreamingCall(__Method_BatchWrite, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override SpannerClient NewInstance(ClientBaseConfiguration configuration)
@@ -1688,7 +1779,8 @@ namespace Google.Cloud.Spanner.V1 {
           .AddMethod(__Method_Commit, serviceImpl.Commit)
           .AddMethod(__Method_Rollback, serviceImpl.Rollback)
           .AddMethod(__Method_PartitionQuery, serviceImpl.PartitionQuery)
-          .AddMethod(__Method_PartitionRead, serviceImpl.PartitionRead).Build();
+          .AddMethod(__Method_PartitionRead, serviceImpl.PartitionRead)
+          .AddMethod(__Method_BatchWrite, serviceImpl.BatchWrite).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1713,6 +1805,7 @@ namespace Google.Cloud.Spanner.V1 {
       serviceBinder.AddMethod(__Method_Rollback, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.V1.RollbackRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.Rollback));
       serviceBinder.AddMethod(__Method_PartitionQuery, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.V1.PartitionQueryRequest, global::Google.Cloud.Spanner.V1.PartitionResponse>(serviceImpl.PartitionQuery));
       serviceBinder.AddMethod(__Method_PartitionRead, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.V1.PartitionReadRequest, global::Google.Cloud.Spanner.V1.PartitionResponse>(serviceImpl.PartitionRead));
+      serviceBinder.AddMethod(__Method_BatchWrite, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Google.Cloud.Spanner.V1.BatchWriteRequest, global::Google.Cloud.Spanner.V1.BatchWriteResponse>(serviceImpl.BatchWrite));
     }
 
   }

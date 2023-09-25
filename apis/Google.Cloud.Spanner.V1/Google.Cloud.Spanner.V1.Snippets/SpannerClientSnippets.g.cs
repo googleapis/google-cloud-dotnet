@@ -1396,5 +1396,90 @@ namespace GoogleCSharpSnippets
             gcsv::PartitionResponse response = await spannerClient.PartitionReadAsync(request);
             // End snippet
         }
+
+        /// <summary>Snippet for BatchWrite</summary>
+        public async Task BatchWriteRequestObject()
+        {
+            // Snippet: BatchWrite(BatchWriteRequest, CallSettings)
+            // Create client
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
+            // Initialize request argument(s)
+            gcsv::BatchWriteRequest request = new gcsv::BatchWriteRequest
+            {
+                SessionAsSessionName = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                RequestOptions = new gcsv::RequestOptions(),
+                MutationGroups =
+                {
+                    new gcsv::BatchWriteRequest.Types.MutationGroup(),
+                },
+            };
+            // Make the request, returning a streaming response
+            using gcsv::SpannerClient.BatchWriteStream response = spannerClient.BatchWrite(request);
+
+            // Read streaming responses from server until complete
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<gcsv::BatchWriteResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
+            {
+                gcsv::BatchWriteResponse responseItem = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchWrite</summary>
+        public async Task BatchWrite()
+        {
+            // Snippet: BatchWrite(string, IEnumerable<BatchWriteRequest.Types.MutationGroup>, CallSettings)
+            // Create client
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
+            // Initialize request argument(s)
+            string session = "projects/[PROJECT]/instances/[INSTANCE]/databases/[DATABASE]/sessions/[SESSION]";
+            IEnumerable<gcsv::BatchWriteRequest.Types.MutationGroup> mutationGroups = new gcsv::BatchWriteRequest.Types.MutationGroup[]
+            {
+                new gcsv::BatchWriteRequest.Types.MutationGroup(),
+            };
+            // Make the request, returning a streaming response
+            using gcsv::SpannerClient.BatchWriteStream response = spannerClient.BatchWrite(session, mutationGroups);
+
+            // Read streaming responses from server until complete
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<gcsv::BatchWriteResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
+            {
+                gcsv::BatchWriteResponse responseItem = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchWrite</summary>
+        public async Task BatchWriteResourceNames()
+        {
+            // Snippet: BatchWrite(SessionName, IEnumerable<BatchWriteRequest.Types.MutationGroup>, CallSettings)
+            // Create client
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
+            // Initialize request argument(s)
+            gcsv::SessionName session = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
+            IEnumerable<gcsv::BatchWriteRequest.Types.MutationGroup> mutationGroups = new gcsv::BatchWriteRequest.Types.MutationGroup[]
+            {
+                new gcsv::BatchWriteRequest.Types.MutationGroup(),
+            };
+            // Make the request, returning a streaming response
+            using gcsv::SpannerClient.BatchWriteStream response = spannerClient.BatchWrite(session, mutationGroups);
+
+            // Read streaming responses from server until complete
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<gcsv::BatchWriteResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
+            {
+                gcsv::BatchWriteResponse responseItem = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
+            // End snippet
+        }
     }
 }

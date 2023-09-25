@@ -3214,6 +3214,156 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_Spanner_BatchWrite_sync",
+      "title": "BatchWriteRequestObject",
+      "description": "Snippet for BatchWrite",
+      "file": "SpannerClient.BatchWriteRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchWrite",
+        "fullName": "Google.Cloud.Spanner.V1.SpannerClient.BatchWrite",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.BatchWriteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Spanner.V1.SpannerClient+BatchWriteStream",
+        "client": {
+          "shortName": "SpannerClient",
+          "fullName": "Google.Cloud.Spanner.V1.SpannerClient"
+        },
+        "method": {
+          "shortName": "BatchWrite",
+          "fullName": "google.spanner.v1.Spanner.BatchWrite",
+          "service": {
+            "shortName": "Spanner",
+            "fullName": "google.spanner.v1.Spanner"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_Spanner_BatchWrite_sync_flattened",
+      "title": "BatchWrite",
+      "description": "Snippet for BatchWrite",
+      "file": "SpannerClient.BatchWriteSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchWrite",
+        "fullName": "Google.Cloud.Spanner.V1.SpannerClient.BatchWrite",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "session"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Spanner.V1.BatchWriteRequest+Types+MutationGroup>",
+            "name": "mutationGroups"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Spanner.V1.SpannerClient+BatchWriteStream",
+        "client": {
+          "shortName": "SpannerClient",
+          "fullName": "Google.Cloud.Spanner.V1.SpannerClient"
+        },
+        "method": {
+          "shortName": "BatchWrite",
+          "fullName": "google.spanner.v1.Spanner.BatchWrite",
+          "service": {
+            "shortName": "Spanner",
+            "fullName": "google.spanner.v1.Spanner"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_Spanner_BatchWrite_sync_flattened_resourceNames",
+      "title": "BatchWriteResourceNames",
+      "description": "Snippet for BatchWrite",
+      "file": "SpannerClient.BatchWriteResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchWrite",
+        "fullName": "Google.Cloud.Spanner.V1.SpannerClient.BatchWrite",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.SessionName",
+            "name": "session"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Spanner.V1.BatchWriteRequest+Types+MutationGroup>",
+            "name": "mutationGroups"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Spanner.V1.SpannerClient+BatchWriteStream",
+        "client": {
+          "shortName": "SpannerClient",
+          "fullName": "Google.Cloud.Spanner.V1.SpannerClient"
+        },
+        "method": {
+          "shortName": "BatchWrite",
+          "fullName": "google.spanner.v1.Spanner.BatchWrite",
+          "service": {
+            "shortName": "Spanner",
+            "fullName": "google.spanner.v1.Spanner"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

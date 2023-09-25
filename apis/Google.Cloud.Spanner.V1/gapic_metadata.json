@@ -16,6 +16,12 @@
                 "BatchCreateSessionsAsync"
               ]
             },
+            "BatchWrite": {
+              "methods": [
+                "BatchWrite",
+                "BatchWriteAsync"
+              ]
+            },
             "BeginTransaction": {
               "methods": [
                 "BeginTransaction",

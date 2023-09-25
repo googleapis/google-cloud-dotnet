@@ -445,4 +445,16 @@ namespace Google.Cloud.Spanner.V1
             set => Session = value?.ToString() ?? "";
         }
     }
+
+    public partial class BatchWriteRequest
+    {
+        /// <summary>
+        /// <see cref="SessionName"/>-typed view over the <see cref="Session"/> resource name property.
+        /// </summary>
+        public SessionName SessionAsSessionName
+        {
+            get => string.IsNullOrEmpty(Session) ? null : SessionName.Parse(Session, allowUnparsed: true);
+            set => Session = value?.ToString() ?? "";
+        }
+    }
 }
