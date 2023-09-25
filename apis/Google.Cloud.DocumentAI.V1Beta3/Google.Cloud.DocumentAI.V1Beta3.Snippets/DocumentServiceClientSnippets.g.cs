@@ -16,9 +16,12 @@
 
 namespace GoogleCSharpSnippets
 {
+    using Google.Api.Gax;
     using Google.Cloud.DocumentAI.V1Beta3;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
+    using System;
+    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -433,6 +436,288 @@ namespace GoogleCSharpSnippets
             DatasetName dataset = DatasetName.FromProjectLocationProcessor("[PROJECT]", "[LOCATION]", "[PROCESSOR]");
             // Make the request
             GetDocumentResponse response = await documentServiceClient.GetDocumentAsync(dataset);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDocuments</summary>
+        public void ListDocumentsRequestObject()
+        {
+            // Snippet: ListDocuments(ListDocumentsRequest, CallSettings)
+            // Create client
+            DocumentServiceClient documentServiceClient = DocumentServiceClient.Create();
+            // Initialize request argument(s)
+            ListDocumentsRequest request = new ListDocumentsRequest
+            {
+                DatasetAsDatasetName = DatasetName.FromProjectLocationProcessor("[PROJECT]", "[LOCATION]", "[PROCESSOR]"),
+                Filter = "",
+                ReturnTotalSize = false,
+                Skip = 0,
+            };
+            // Make the request
+            PagedEnumerable<ListDocumentsResponse, DocumentMetadata> response = documentServiceClient.ListDocuments(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DocumentMetadata item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDocumentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DocumentMetadata item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DocumentMetadata> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DocumentMetadata item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDocumentsAsync</summary>
+        public async Task ListDocumentsRequestObjectAsync()
+        {
+            // Snippet: ListDocumentsAsync(ListDocumentsRequest, CallSettings)
+            // Create client
+            DocumentServiceClient documentServiceClient = await DocumentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListDocumentsRequest request = new ListDocumentsRequest
+            {
+                DatasetAsDatasetName = DatasetName.FromProjectLocationProcessor("[PROJECT]", "[LOCATION]", "[PROCESSOR]"),
+                Filter = "",
+                ReturnTotalSize = false,
+                Skip = 0,
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListDocumentsResponse, DocumentMetadata> response = documentServiceClient.ListDocumentsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DocumentMetadata item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDocumentsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DocumentMetadata item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DocumentMetadata> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DocumentMetadata item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDocuments</summary>
+        public void ListDocuments()
+        {
+            // Snippet: ListDocuments(string, string, int?, CallSettings)
+            // Create client
+            DocumentServiceClient documentServiceClient = DocumentServiceClient.Create();
+            // Initialize request argument(s)
+            string dataset = "projects/[PROJECT]/locations/[LOCATION]/processors/[PROCESSOR]/dataset";
+            // Make the request
+            PagedEnumerable<ListDocumentsResponse, DocumentMetadata> response = documentServiceClient.ListDocuments(dataset);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DocumentMetadata item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDocumentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DocumentMetadata item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DocumentMetadata> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DocumentMetadata item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDocumentsAsync</summary>
+        public async Task ListDocumentsAsync()
+        {
+            // Snippet: ListDocumentsAsync(string, string, int?, CallSettings)
+            // Create client
+            DocumentServiceClient documentServiceClient = await DocumentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string dataset = "projects/[PROJECT]/locations/[LOCATION]/processors/[PROCESSOR]/dataset";
+            // Make the request
+            PagedAsyncEnumerable<ListDocumentsResponse, DocumentMetadata> response = documentServiceClient.ListDocumentsAsync(dataset);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DocumentMetadata item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDocumentsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DocumentMetadata item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DocumentMetadata> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DocumentMetadata item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDocuments</summary>
+        public void ListDocumentsResourceNames()
+        {
+            // Snippet: ListDocuments(DatasetName, string, int?, CallSettings)
+            // Create client
+            DocumentServiceClient documentServiceClient = DocumentServiceClient.Create();
+            // Initialize request argument(s)
+            DatasetName dataset = DatasetName.FromProjectLocationProcessor("[PROJECT]", "[LOCATION]", "[PROCESSOR]");
+            // Make the request
+            PagedEnumerable<ListDocumentsResponse, DocumentMetadata> response = documentServiceClient.ListDocuments(dataset);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DocumentMetadata item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDocumentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DocumentMetadata item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DocumentMetadata> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DocumentMetadata item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDocumentsAsync</summary>
+        public async Task ListDocumentsResourceNamesAsync()
+        {
+            // Snippet: ListDocumentsAsync(DatasetName, string, int?, CallSettings)
+            // Create client
+            DocumentServiceClient documentServiceClient = await DocumentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DatasetName dataset = DatasetName.FromProjectLocationProcessor("[PROJECT]", "[LOCATION]", "[PROCESSOR]");
+            // Make the request
+            PagedAsyncEnumerable<ListDocumentsResponse, DocumentMetadata> response = documentServiceClient.ListDocumentsAsync(dataset);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DocumentMetadata item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDocumentsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DocumentMetadata item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DocumentMetadata> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DocumentMetadata item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 

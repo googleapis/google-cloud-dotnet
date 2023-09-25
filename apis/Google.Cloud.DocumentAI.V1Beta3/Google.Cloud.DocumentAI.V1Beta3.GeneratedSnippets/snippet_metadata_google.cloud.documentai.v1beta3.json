@@ -6976,6 +6976,325 @@
       ]
     },
     {
+      "regionTag": "documentai_v1beta3_generated_DocumentService_ListDocuments_sync",
+      "title": "ListDocumentsRequestObject",
+      "description": "Snippet for ListDocuments",
+      "file": "DocumentServiceClient.ListDocumentsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDocuments",
+        "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentServiceClient.ListDocuments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ListDocumentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DocumentAI.V1Beta3.ListDocumentsResponse, Google.Cloud.DocumentAI.V1Beta3.DocumentMetadata>",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "ListDocuments",
+          "fullName": "google.cloud.documentai.v1beta3.DocumentService.ListDocuments",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.documentai.v1beta3.DocumentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "documentai_v1beta3_generated_DocumentService_ListDocuments_async",
+      "title": "ListDocumentsRequestObjectAsync",
+      "description": "Snippet for ListDocumentsAsync",
+      "file": "DocumentServiceClient.ListDocumentsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDocumentsAsync",
+        "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentServiceClient.ListDocumentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ListDocumentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DocumentAI.V1Beta3.ListDocumentsResponse, Google.Cloud.DocumentAI.V1Beta3.DocumentMetadata>",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "ListDocuments",
+          "fullName": "google.cloud.documentai.v1beta3.DocumentService.ListDocuments",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.documentai.v1beta3.DocumentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "documentai_v1beta3_generated_DocumentService_ListDocuments_sync_flattened",
+      "title": "ListDocuments",
+      "description": "Snippet for ListDocuments",
+      "file": "DocumentServiceClient.ListDocumentsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDocuments",
+        "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentServiceClient.ListDocuments",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "dataset"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DocumentAI.V1Beta3.ListDocumentsResponse, Google.Cloud.DocumentAI.V1Beta3.DocumentMetadata>",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "ListDocuments",
+          "fullName": "google.cloud.documentai.v1beta3.DocumentService.ListDocuments",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.documentai.v1beta3.DocumentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "documentai_v1beta3_generated_DocumentService_ListDocuments_async_flattened",
+      "title": "ListDocumentsAsync",
+      "description": "Snippet for ListDocumentsAsync",
+      "file": "DocumentServiceClient.ListDocumentsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDocumentsAsync",
+        "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentServiceClient.ListDocumentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "dataset"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DocumentAI.V1Beta3.ListDocumentsResponse, Google.Cloud.DocumentAI.V1Beta3.DocumentMetadata>",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "ListDocuments",
+          "fullName": "google.cloud.documentai.v1beta3.DocumentService.ListDocuments",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.documentai.v1beta3.DocumentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "documentai_v1beta3_generated_DocumentService_ListDocuments_sync_flattened_resourceNames",
+      "title": "ListDocumentsResourceNames",
+      "description": "Snippet for ListDocuments",
+      "file": "DocumentServiceClient.ListDocumentsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDocuments",
+        "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentServiceClient.ListDocuments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.DatasetName",
+            "name": "dataset"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DocumentAI.V1Beta3.ListDocumentsResponse, Google.Cloud.DocumentAI.V1Beta3.DocumentMetadata>",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "ListDocuments",
+          "fullName": "google.cloud.documentai.v1beta3.DocumentService.ListDocuments",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.documentai.v1beta3.DocumentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "documentai_v1beta3_generated_DocumentService_ListDocuments_async_flattened_resourceNames",
+      "title": "ListDocumentsResourceNamesAsync",
+      "description": "Snippet for ListDocumentsAsync",
+      "file": "DocumentServiceClient.ListDocumentsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDocumentsAsync",
+        "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentServiceClient.ListDocumentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.DatasetName",
+            "name": "dataset"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DocumentAI.V1Beta3.ListDocumentsResponse, Google.Cloud.DocumentAI.V1Beta3.DocumentMetadata>",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "ListDocuments",
+          "fullName": "google.cloud.documentai.v1beta3.DocumentService.ListDocuments",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.documentai.v1beta3.DocumentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "documentai_v1beta3_generated_DocumentService_BatchDeleteDocuments_sync",
       "title": "BatchDeleteDocumentsRequestObject",
       "description": "Snippet for BatchDeleteDocuments",

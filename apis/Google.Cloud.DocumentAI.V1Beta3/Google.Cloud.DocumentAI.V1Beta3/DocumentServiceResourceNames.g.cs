@@ -43,6 +43,18 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         }
     }
 
+    public partial class ListDocumentsRequest
+    {
+        /// <summary>
+        /// <see cref="DatasetName"/>-typed view over the <see cref="Dataset"/> resource name property.
+        /// </summary>
+        public DatasetName DatasetAsDatasetName
+        {
+            get => string.IsNullOrEmpty(Dataset) ? null : DatasetName.Parse(Dataset, allowUnparsed: true);
+            set => Dataset = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetDatasetSchemaRequest
     {
         /// <summary>

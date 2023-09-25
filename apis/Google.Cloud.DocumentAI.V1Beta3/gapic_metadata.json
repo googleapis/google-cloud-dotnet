@@ -181,6 +181,12 @@
                 "ImportDocumentsAsync"
               ]
             },
+            "ListDocuments": {
+              "methods": [
+                "ListDocuments",
+                "ListDocumentsAsync"
+              ]
+            },
             "UpdateDataset": {
               "methods": [
                 "UpdateDataset",

@@ -13830,7 +13830,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       /// </summary>
       public enum RevisionCase {
         /// <summary>
-        /// Unspecified case, fallback to read the LATEST_HUMAN_REVIEW.
+        /// Unspecified case, fall back to read the `LATEST_HUMAN_REVIEW`.
         /// </summary>
         [pbr::OriginalName("REVISION_CASE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
