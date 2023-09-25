@@ -71,6 +71,12 @@ namespace Google.Cloud.AdvisoryNotifications.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.AdvisoryNotifications.V1.GetNotificationRequest> __Marshaller_google_cloud_advisorynotifications_v1_GetNotificationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AdvisoryNotifications.V1.GetNotificationRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AdvisoryNotifications.V1.Notification> __Marshaller_google_cloud_advisorynotifications_v1_Notification = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AdvisoryNotifications.V1.Notification.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AdvisoryNotifications.V1.GetSettingsRequest> __Marshaller_google_cloud_advisorynotifications_v1_GetSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AdvisoryNotifications.V1.GetSettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AdvisoryNotifications.V1.Settings> __Marshaller_google_cloud_advisorynotifications_v1_Settings = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AdvisoryNotifications.V1.Settings.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AdvisoryNotifications.V1.UpdateSettingsRequest> __Marshaller_google_cloud_advisorynotifications_v1_UpdateSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AdvisoryNotifications.V1.UpdateSettingsRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AdvisoryNotifications.V1.ListNotificationsRequest, global::Google.Cloud.AdvisoryNotifications.V1.ListNotificationsResponse> __Method_ListNotifications = new grpc::Method<global::Google.Cloud.AdvisoryNotifications.V1.ListNotificationsRequest, global::Google.Cloud.AdvisoryNotifications.V1.ListNotificationsResponse>(
@@ -87,6 +93,22 @@ namespace Google.Cloud.AdvisoryNotifications.V1 {
         "GetNotification",
         __Marshaller_google_cloud_advisorynotifications_v1_GetNotificationRequest,
         __Marshaller_google_cloud_advisorynotifications_v1_Notification);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AdvisoryNotifications.V1.GetSettingsRequest, global::Google.Cloud.AdvisoryNotifications.V1.Settings> __Method_GetSettings = new grpc::Method<global::Google.Cloud.AdvisoryNotifications.V1.GetSettingsRequest, global::Google.Cloud.AdvisoryNotifications.V1.Settings>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetSettings",
+        __Marshaller_google_cloud_advisorynotifications_v1_GetSettingsRequest,
+        __Marshaller_google_cloud_advisorynotifications_v1_Settings);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AdvisoryNotifications.V1.UpdateSettingsRequest, global::Google.Cloud.AdvisoryNotifications.V1.Settings> __Method_UpdateSettings = new grpc::Method<global::Google.Cloud.AdvisoryNotifications.V1.UpdateSettingsRequest, global::Google.Cloud.AdvisoryNotifications.V1.Settings>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateSettings",
+        __Marshaller_google_cloud_advisorynotifications_v1_UpdateSettingsRequest,
+        __Marshaller_google_cloud_advisorynotifications_v1_Settings);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -118,6 +140,30 @@ namespace Google.Cloud.AdvisoryNotifications.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AdvisoryNotifications.V1.Notification> GetNotification(global::Google.Cloud.AdvisoryNotifications.V1.GetNotificationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Get notification settings.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AdvisoryNotifications.V1.Settings> GetSettings(global::Google.Cloud.AdvisoryNotifications.V1.GetSettingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Update notification settings.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AdvisoryNotifications.V1.Settings> UpdateSettings(global::Google.Cloud.AdvisoryNotifications.V1.UpdateSettingsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -247,6 +293,102 @@ namespace Google.Cloud.AdvisoryNotifications.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetNotification, null, options, request);
       }
+      /// <summary>
+      /// Get notification settings.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AdvisoryNotifications.V1.Settings GetSettings(global::Google.Cloud.AdvisoryNotifications.V1.GetSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get notification settings.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AdvisoryNotifications.V1.Settings GetSettings(global::Google.Cloud.AdvisoryNotifications.V1.GetSettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetSettings, null, options, request);
+      }
+      /// <summary>
+      /// Get notification settings.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AdvisoryNotifications.V1.Settings> GetSettingsAsync(global::Google.Cloud.AdvisoryNotifications.V1.GetSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get notification settings.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AdvisoryNotifications.V1.Settings> GetSettingsAsync(global::Google.Cloud.AdvisoryNotifications.V1.GetSettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetSettings, null, options, request);
+      }
+      /// <summary>
+      /// Update notification settings.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AdvisoryNotifications.V1.Settings UpdateSettings(global::Google.Cloud.AdvisoryNotifications.V1.UpdateSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update notification settings.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AdvisoryNotifications.V1.Settings UpdateSettings(global::Google.Cloud.AdvisoryNotifications.V1.UpdateSettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateSettings, null, options, request);
+      }
+      /// <summary>
+      /// Update notification settings.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AdvisoryNotifications.V1.Settings> UpdateSettingsAsync(global::Google.Cloud.AdvisoryNotifications.V1.UpdateSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update notification settings.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AdvisoryNotifications.V1.Settings> UpdateSettingsAsync(global::Google.Cloud.AdvisoryNotifications.V1.UpdateSettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateSettings, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override AdvisoryNotificationsServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -262,7 +404,9 @@ namespace Google.Cloud.AdvisoryNotifications.V1 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_ListNotifications, serviceImpl.ListNotifications)
-          .AddMethod(__Method_GetNotification, serviceImpl.GetNotification).Build();
+          .AddMethod(__Method_GetNotification, serviceImpl.GetNotification)
+          .AddMethod(__Method_GetSettings, serviceImpl.GetSettings)
+          .AddMethod(__Method_UpdateSettings, serviceImpl.UpdateSettings).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -274,6 +418,8 @@ namespace Google.Cloud.AdvisoryNotifications.V1 {
     {
       serviceBinder.AddMethod(__Method_ListNotifications, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AdvisoryNotifications.V1.ListNotificationsRequest, global::Google.Cloud.AdvisoryNotifications.V1.ListNotificationsResponse>(serviceImpl.ListNotifications));
       serviceBinder.AddMethod(__Method_GetNotification, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AdvisoryNotifications.V1.GetNotificationRequest, global::Google.Cloud.AdvisoryNotifications.V1.Notification>(serviceImpl.GetNotification));
+      serviceBinder.AddMethod(__Method_GetSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AdvisoryNotifications.V1.GetSettingsRequest, global::Google.Cloud.AdvisoryNotifications.V1.Settings>(serviceImpl.GetSettings));
+      serviceBinder.AddMethod(__Method_UpdateSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AdvisoryNotifications.V1.UpdateSettingsRequest, global::Google.Cloud.AdvisoryNotifications.V1.Settings>(serviceImpl.UpdateSettings));
     }
 
   }

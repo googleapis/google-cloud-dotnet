@@ -16,10 +16,22 @@
                 "GetNotificationAsync"
               ]
             },
+            "GetSettings": {
+              "methods": [
+                "GetSettings",
+                "GetSettingsAsync"
+              ]
+            },
             "ListNotifications": {
               "methods": [
                 "ListNotifications",
                 "ListNotificationsAsync"
+              ]
+            },
+            "UpdateSettings": {
+              "methods": [
+                "UpdateSettings",
+                "UpdateSettingsAsync"
               ]
             }
           }

@@ -615,6 +615,485 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "advisorynotifications_v1_generated_AdvisoryNotificationsService_GetSettings_sync",
+      "title": "GetSettingsRequestObject",
+      "description": "Snippet for GetSettings",
+      "file": "AdvisoryNotificationsServiceClient.GetSettingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSettings",
+        "fullName": "Google.Cloud.AdvisoryNotifications.V1.AdvisoryNotificationsServiceClient.GetSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AdvisoryNotifications.V1.GetSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AdvisoryNotifications.V1.Settings",
+        "client": {
+          "shortName": "AdvisoryNotificationsServiceClient",
+          "fullName": "Google.Cloud.AdvisoryNotifications.V1.AdvisoryNotificationsServiceClient"
+        },
+        "method": {
+          "shortName": "GetSettings",
+          "fullName": "google.cloud.advisorynotifications.v1.AdvisoryNotificationsService.GetSettings",
+          "service": {
+            "shortName": "AdvisoryNotificationsService",
+            "fullName": "google.cloud.advisorynotifications.v1.AdvisoryNotificationsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "advisorynotifications_v1_generated_AdvisoryNotificationsService_GetSettings_async",
+      "title": "GetSettingsRequestObjectAsync",
+      "description": "Snippet for GetSettingsAsync",
+      "file": "AdvisoryNotificationsServiceClient.GetSettingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSettingsAsync",
+        "fullName": "Google.Cloud.AdvisoryNotifications.V1.AdvisoryNotificationsServiceClient.GetSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AdvisoryNotifications.V1.GetSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AdvisoryNotifications.V1.Settings>",
+        "client": {
+          "shortName": "AdvisoryNotificationsServiceClient",
+          "fullName": "Google.Cloud.AdvisoryNotifications.V1.AdvisoryNotificationsServiceClient"
+        },
+        "method": {
+          "shortName": "GetSettings",
+          "fullName": "google.cloud.advisorynotifications.v1.AdvisoryNotificationsService.GetSettings",
+          "service": {
+            "shortName": "AdvisoryNotificationsService",
+            "fullName": "google.cloud.advisorynotifications.v1.AdvisoryNotificationsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "advisorynotifications_v1_generated_AdvisoryNotificationsService_GetSettings_sync_flattened",
+      "title": "GetSettings",
+      "description": "Snippet for GetSettings",
+      "file": "AdvisoryNotificationsServiceClient.GetSettingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSettings",
+        "fullName": "Google.Cloud.AdvisoryNotifications.V1.AdvisoryNotificationsServiceClient.GetSettings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AdvisoryNotifications.V1.Settings",
+        "client": {
+          "shortName": "AdvisoryNotificationsServiceClient",
+          "fullName": "Google.Cloud.AdvisoryNotifications.V1.AdvisoryNotificationsServiceClient"
+        },
+        "method": {
+          "shortName": "GetSettings",
+          "fullName": "google.cloud.advisorynotifications.v1.AdvisoryNotificationsService.GetSettings",
+          "service": {
+            "shortName": "AdvisoryNotificationsService",
+            "fullName": "google.cloud.advisorynotifications.v1.AdvisoryNotificationsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "advisorynotifications_v1_generated_AdvisoryNotificationsService_GetSettings_async_flattened",
+      "title": "GetSettingsAsync",
+      "description": "Snippet for GetSettingsAsync",
+      "file": "AdvisoryNotificationsServiceClient.GetSettingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSettingsAsync",
+        "fullName": "Google.Cloud.AdvisoryNotifications.V1.AdvisoryNotificationsServiceClient.GetSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AdvisoryNotifications.V1.Settings>",
+        "client": {
+          "shortName": "AdvisoryNotificationsServiceClient",
+          "fullName": "Google.Cloud.AdvisoryNotifications.V1.AdvisoryNotificationsServiceClient"
+        },
+        "method": {
+          "shortName": "GetSettings",
+          "fullName": "google.cloud.advisorynotifications.v1.AdvisoryNotificationsService.GetSettings",
+          "service": {
+            "shortName": "AdvisoryNotificationsService",
+            "fullName": "google.cloud.advisorynotifications.v1.AdvisoryNotificationsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "advisorynotifications_v1_generated_AdvisoryNotificationsService_GetSettings_sync_flattened_resourceNames",
+      "title": "GetSettingsResourceNames",
+      "description": "Snippet for GetSettings",
+      "file": "AdvisoryNotificationsServiceClient.GetSettingsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSettings",
+        "fullName": "Google.Cloud.AdvisoryNotifications.V1.AdvisoryNotificationsServiceClient.GetSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AdvisoryNotifications.V1.SettingsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AdvisoryNotifications.V1.Settings",
+        "client": {
+          "shortName": "AdvisoryNotificationsServiceClient",
+          "fullName": "Google.Cloud.AdvisoryNotifications.V1.AdvisoryNotificationsServiceClient"
+        },
+        "method": {
+          "shortName": "GetSettings",
+          "fullName": "google.cloud.advisorynotifications.v1.AdvisoryNotificationsService.GetSettings",
+          "service": {
+            "shortName": "AdvisoryNotificationsService",
+            "fullName": "google.cloud.advisorynotifications.v1.AdvisoryNotificationsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "advisorynotifications_v1_generated_AdvisoryNotificationsService_GetSettings_async_flattened_resourceNames",
+      "title": "GetSettingsResourceNamesAsync",
+      "description": "Snippet for GetSettingsAsync",
+      "file": "AdvisoryNotificationsServiceClient.GetSettingsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSettingsAsync",
+        "fullName": "Google.Cloud.AdvisoryNotifications.V1.AdvisoryNotificationsServiceClient.GetSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AdvisoryNotifications.V1.SettingsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AdvisoryNotifications.V1.Settings>",
+        "client": {
+          "shortName": "AdvisoryNotificationsServiceClient",
+          "fullName": "Google.Cloud.AdvisoryNotifications.V1.AdvisoryNotificationsServiceClient"
+        },
+        "method": {
+          "shortName": "GetSettings",
+          "fullName": "google.cloud.advisorynotifications.v1.AdvisoryNotificationsService.GetSettings",
+          "service": {
+            "shortName": "AdvisoryNotificationsService",
+            "fullName": "google.cloud.advisorynotifications.v1.AdvisoryNotificationsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "advisorynotifications_v1_generated_AdvisoryNotificationsService_UpdateSettings_sync",
+      "title": "UpdateSettingsRequestObject",
+      "description": "Snippet for UpdateSettings",
+      "file": "AdvisoryNotificationsServiceClient.UpdateSettingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSettings",
+        "fullName": "Google.Cloud.AdvisoryNotifications.V1.AdvisoryNotificationsServiceClient.UpdateSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AdvisoryNotifications.V1.UpdateSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AdvisoryNotifications.V1.Settings",
+        "client": {
+          "shortName": "AdvisoryNotificationsServiceClient",
+          "fullName": "Google.Cloud.AdvisoryNotifications.V1.AdvisoryNotificationsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSettings",
+          "fullName": "google.cloud.advisorynotifications.v1.AdvisoryNotificationsService.UpdateSettings",
+          "service": {
+            "shortName": "AdvisoryNotificationsService",
+            "fullName": "google.cloud.advisorynotifications.v1.AdvisoryNotificationsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "advisorynotifications_v1_generated_AdvisoryNotificationsService_UpdateSettings_async",
+      "title": "UpdateSettingsRequestObjectAsync",
+      "description": "Snippet for UpdateSettingsAsync",
+      "file": "AdvisoryNotificationsServiceClient.UpdateSettingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSettingsAsync",
+        "fullName": "Google.Cloud.AdvisoryNotifications.V1.AdvisoryNotificationsServiceClient.UpdateSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AdvisoryNotifications.V1.UpdateSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AdvisoryNotifications.V1.Settings>",
+        "client": {
+          "shortName": "AdvisoryNotificationsServiceClient",
+          "fullName": "Google.Cloud.AdvisoryNotifications.V1.AdvisoryNotificationsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSettings",
+          "fullName": "google.cloud.advisorynotifications.v1.AdvisoryNotificationsService.UpdateSettings",
+          "service": {
+            "shortName": "AdvisoryNotificationsService",
+            "fullName": "google.cloud.advisorynotifications.v1.AdvisoryNotificationsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "advisorynotifications_v1_generated_AdvisoryNotificationsService_UpdateSettings_sync_flattened",
+      "title": "UpdateSettings",
+      "description": "Snippet for UpdateSettings",
+      "file": "AdvisoryNotificationsServiceClient.UpdateSettingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSettings",
+        "fullName": "Google.Cloud.AdvisoryNotifications.V1.AdvisoryNotificationsServiceClient.UpdateSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AdvisoryNotifications.V1.Settings",
+            "name": "settings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AdvisoryNotifications.V1.Settings",
+        "client": {
+          "shortName": "AdvisoryNotificationsServiceClient",
+          "fullName": "Google.Cloud.AdvisoryNotifications.V1.AdvisoryNotificationsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSettings",
+          "fullName": "google.cloud.advisorynotifications.v1.AdvisoryNotificationsService.UpdateSettings",
+          "service": {
+            "shortName": "AdvisoryNotificationsService",
+            "fullName": "google.cloud.advisorynotifications.v1.AdvisoryNotificationsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "advisorynotifications_v1_generated_AdvisoryNotificationsService_UpdateSettings_async_flattened",
+      "title": "UpdateSettingsAsync",
+      "description": "Snippet for UpdateSettingsAsync",
+      "file": "AdvisoryNotificationsServiceClient.UpdateSettingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSettingsAsync",
+        "fullName": "Google.Cloud.AdvisoryNotifications.V1.AdvisoryNotificationsServiceClient.UpdateSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AdvisoryNotifications.V1.Settings",
+            "name": "settings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AdvisoryNotifications.V1.Settings>",
+        "client": {
+          "shortName": "AdvisoryNotificationsServiceClient",
+          "fullName": "Google.Cloud.AdvisoryNotifications.V1.AdvisoryNotificationsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSettings",
+          "fullName": "google.cloud.advisorynotifications.v1.AdvisoryNotificationsService.UpdateSettings",
+          "service": {
+            "shortName": "AdvisoryNotificationsService",
+            "fullName": "google.cloud.advisorynotifications.v1.AdvisoryNotificationsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }
