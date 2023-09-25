@@ -393,5 +393,152 @@ namespace GoogleCSharpSnippets
             Notification response = await advisoryNotificationsServiceClient.GetNotificationAsync(name);
             // End snippet
         }
+
+        /// <summary>Snippet for GetSettings</summary>
+        public void GetSettingsRequestObject()
+        {
+            // Snippet: GetSettings(GetSettingsRequest, CallSettings)
+            // Create client
+            AdvisoryNotificationsServiceClient advisoryNotificationsServiceClient = AdvisoryNotificationsServiceClient.Create();
+            // Initialize request argument(s)
+            GetSettingsRequest request = new GetSettingsRequest
+            {
+                SettingsName = SettingsName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]"),
+            };
+            // Make the request
+            Settings response = advisoryNotificationsServiceClient.GetSettings(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSettingsAsync</summary>
+        public async Task GetSettingsRequestObjectAsync()
+        {
+            // Snippet: GetSettingsAsync(GetSettingsRequest, CallSettings)
+            // Additional: GetSettingsAsync(GetSettingsRequest, CancellationToken)
+            // Create client
+            AdvisoryNotificationsServiceClient advisoryNotificationsServiceClient = await AdvisoryNotificationsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetSettingsRequest request = new GetSettingsRequest
+            {
+                SettingsName = SettingsName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]"),
+            };
+            // Make the request
+            Settings response = await advisoryNotificationsServiceClient.GetSettingsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSettings</summary>
+        public void GetSettings()
+        {
+            // Snippet: GetSettings(string, CallSettings)
+            // Create client
+            AdvisoryNotificationsServiceClient advisoryNotificationsServiceClient = AdvisoryNotificationsServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/locations/[LOCATION]/settings";
+            // Make the request
+            Settings response = advisoryNotificationsServiceClient.GetSettings(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSettingsAsync</summary>
+        public async Task GetSettingsAsync()
+        {
+            // Snippet: GetSettingsAsync(string, CallSettings)
+            // Additional: GetSettingsAsync(string, CancellationToken)
+            // Create client
+            AdvisoryNotificationsServiceClient advisoryNotificationsServiceClient = await AdvisoryNotificationsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/locations/[LOCATION]/settings";
+            // Make the request
+            Settings response = await advisoryNotificationsServiceClient.GetSettingsAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSettings</summary>
+        public void GetSettingsResourceNames()
+        {
+            // Snippet: GetSettings(SettingsName, CallSettings)
+            // Create client
+            AdvisoryNotificationsServiceClient advisoryNotificationsServiceClient = AdvisoryNotificationsServiceClient.Create();
+            // Initialize request argument(s)
+            SettingsName name = SettingsName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            // Make the request
+            Settings response = advisoryNotificationsServiceClient.GetSettings(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSettingsAsync</summary>
+        public async Task GetSettingsResourceNamesAsync()
+        {
+            // Snippet: GetSettingsAsync(SettingsName, CallSettings)
+            // Additional: GetSettingsAsync(SettingsName, CancellationToken)
+            // Create client
+            AdvisoryNotificationsServiceClient advisoryNotificationsServiceClient = await AdvisoryNotificationsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SettingsName name = SettingsName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            // Make the request
+            Settings response = await advisoryNotificationsServiceClient.GetSettingsAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSettings</summary>
+        public void UpdateSettingsRequestObject()
+        {
+            // Snippet: UpdateSettings(UpdateSettingsRequest, CallSettings)
+            // Create client
+            AdvisoryNotificationsServiceClient advisoryNotificationsServiceClient = AdvisoryNotificationsServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateSettingsRequest request = new UpdateSettingsRequest
+            {
+                Settings = new Settings(),
+            };
+            // Make the request
+            Settings response = advisoryNotificationsServiceClient.UpdateSettings(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSettingsAsync</summary>
+        public async Task UpdateSettingsRequestObjectAsync()
+        {
+            // Snippet: UpdateSettingsAsync(UpdateSettingsRequest, CallSettings)
+            // Additional: UpdateSettingsAsync(UpdateSettingsRequest, CancellationToken)
+            // Create client
+            AdvisoryNotificationsServiceClient advisoryNotificationsServiceClient = await AdvisoryNotificationsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateSettingsRequest request = new UpdateSettingsRequest
+            {
+                Settings = new Settings(),
+            };
+            // Make the request
+            Settings response = await advisoryNotificationsServiceClient.UpdateSettingsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSettings</summary>
+        public void UpdateSettings()
+        {
+            // Snippet: UpdateSettings(Settings, CallSettings)
+            // Create client
+            AdvisoryNotificationsServiceClient advisoryNotificationsServiceClient = AdvisoryNotificationsServiceClient.Create();
+            // Initialize request argument(s)
+            Settings settings = new Settings();
+            // Make the request
+            Settings response = advisoryNotificationsServiceClient.UpdateSettings(settings);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSettingsAsync</summary>
+        public async Task UpdateSettingsAsync()
+        {
+            // Snippet: UpdateSettingsAsync(Settings, CallSettings)
+            // Additional: UpdateSettingsAsync(Settings, CancellationToken)
+            // Create client
+            AdvisoryNotificationsServiceClient advisoryNotificationsServiceClient = await AdvisoryNotificationsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            Settings settings = new Settings();
+            // Make the request
+            Settings response = await advisoryNotificationsServiceClient.UpdateSettingsAsync(settings);
+            // End snippet
+        }
     }
 }
