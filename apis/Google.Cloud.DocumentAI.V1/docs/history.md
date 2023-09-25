@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.9.0, released 2023-09-25
+
+### Bug fixes
+
+- Deprecated OcrConfig.compute_style_info ([commit ab6b622](https://github.com/googleapis/google-cloud-dotnet/commit/ab6b622e7e2a1a79fe808f860ed21d90ded49a58))
+
+### New features
+
+- Added field Processor.processor_version_aliases ([commit ab6b622](https://github.com/googleapis/google-cloud-dotnet/commit/ab6b622e7e2a1a79fe808f860ed21d90ded49a58))
+- Added field RawDocument.display_name ([commit ab6b622](https://github.com/googleapis/google-cloud-dotnet/commit/ab6b622e7e2a1a79fe808f860ed21d90ded49a58))
+
 ## Version 3.8.0, released 2023-08-04
 
 ### New features
