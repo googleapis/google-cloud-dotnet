@@ -534,8 +534,7 @@ namespace Google.Cloud.Asset.V1 {
 
       /// <summary>
       /// Issue a job that queries assets using a SQL statement compatible with
-      /// [BigQuery Standard
-      /// SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql).
+      /// [BigQuery SQL](https://cloud.google.com/bigquery/docs/introduction-sql).
       ///
       /// If the query execution finishes within timeout and there's no pagination,
       /// the full query results will be returned in the `QueryAssetsResponse`.
@@ -544,9 +543,8 @@ namespace Google.Cloud.Asset.V1 {
       /// with the `job_reference` from the a previous `QueryAssets` call.
       ///
       /// Note, the query result has approximately 10 GB limitation enforced by
-      /// BigQuery
-      /// https://cloud.google.com/bigquery/docs/best-practices-performance-output,
-      /// queries return larger results will result in errors.
+      /// [BigQuery](https://cloud.google.com/bigquery/docs/best-practices-performance-output).
+      /// Queries return larger results will result in errors.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1491,8 +1489,7 @@ namespace Google.Cloud.Asset.V1 {
       }
       /// <summary>
       /// Issue a job that queries assets using a SQL statement compatible with
-      /// [BigQuery Standard
-      /// SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql).
+      /// [BigQuery SQL](https://cloud.google.com/bigquery/docs/introduction-sql).
       ///
       /// If the query execution finishes within timeout and there's no pagination,
       /// the full query results will be returned in the `QueryAssetsResponse`.
@@ -1501,9 +1498,8 @@ namespace Google.Cloud.Asset.V1 {
       /// with the `job_reference` from the a previous `QueryAssets` call.
       ///
       /// Note, the query result has approximately 10 GB limitation enforced by
-      /// BigQuery
-      /// https://cloud.google.com/bigquery/docs/best-practices-performance-output,
-      /// queries return larger results will result in errors.
+      /// [BigQuery](https://cloud.google.com/bigquery/docs/best-practices-performance-output).
+      /// Queries return larger results will result in errors.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1517,8 +1513,7 @@ namespace Google.Cloud.Asset.V1 {
       }
       /// <summary>
       /// Issue a job that queries assets using a SQL statement compatible with
-      /// [BigQuery Standard
-      /// SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql).
+      /// [BigQuery SQL](https://cloud.google.com/bigquery/docs/introduction-sql).
       ///
       /// If the query execution finishes within timeout and there's no pagination,
       /// the full query results will be returned in the `QueryAssetsResponse`.
@@ -1527,9 +1522,8 @@ namespace Google.Cloud.Asset.V1 {
       /// with the `job_reference` from the a previous `QueryAssets` call.
       ///
       /// Note, the query result has approximately 10 GB limitation enforced by
-      /// BigQuery
-      /// https://cloud.google.com/bigquery/docs/best-practices-performance-output,
-      /// queries return larger results will result in errors.
+      /// [BigQuery](https://cloud.google.com/bigquery/docs/best-practices-performance-output).
+      /// Queries return larger results will result in errors.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1541,8 +1535,7 @@ namespace Google.Cloud.Asset.V1 {
       }
       /// <summary>
       /// Issue a job that queries assets using a SQL statement compatible with
-      /// [BigQuery Standard
-      /// SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql).
+      /// [BigQuery SQL](https://cloud.google.com/bigquery/docs/introduction-sql).
       ///
       /// If the query execution finishes within timeout and there's no pagination,
       /// the full query results will be returned in the `QueryAssetsResponse`.
@@ -1551,9 +1544,8 @@ namespace Google.Cloud.Asset.V1 {
       /// with the `job_reference` from the a previous `QueryAssets` call.
       ///
       /// Note, the query result has approximately 10 GB limitation enforced by
-      /// BigQuery
-      /// https://cloud.google.com/bigquery/docs/best-practices-performance-output,
-      /// queries return larger results will result in errors.
+      /// [BigQuery](https://cloud.google.com/bigquery/docs/best-practices-performance-output).
+      /// Queries return larger results will result in errors.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1567,8 +1559,7 @@ namespace Google.Cloud.Asset.V1 {
       }
       /// <summary>
       /// Issue a job that queries assets using a SQL statement compatible with
-      /// [BigQuery Standard
-      /// SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql).
+      /// [BigQuery SQL](https://cloud.google.com/bigquery/docs/introduction-sql).
       ///
       /// If the query execution finishes within timeout and there's no pagination,
       /// the full query results will be returned in the `QueryAssetsResponse`.
@@ -1577,9 +1568,8 @@ namespace Google.Cloud.Asset.V1 {
       /// with the `job_reference` from the a previous `QueryAssets` call.
       ///
       /// Note, the query result has approximately 10 GB limitation enforced by
-      /// BigQuery
-      /// https://cloud.google.com/bigquery/docs/best-practices-performance-output,
-      /// queries return larger results will result in errors.
+      /// [BigQuery](https://cloud.google.com/bigquery/docs/best-practices-performance-output).
+      /// Queries return larger results will result in errors.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
