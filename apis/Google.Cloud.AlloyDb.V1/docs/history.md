@@ -1,5 +1,14 @@
 # Version history
 
+## Version 1.2.0, released 2023-09-25
+
+### New features
+
+- Changed description for recovery_window_days in ContinuousBackupConfig ([commit 4de4022](https://github.com/googleapis/google-cloud-dotnet/commit/4de402263662134af0f348db4d8d16dcbfc7799e))
+- Added NetworkConfig, deprecated network ([commit 4de4022](https://github.com/googleapis/google-cloud-dotnet/commit/4de402263662134af0f348db4d8d16dcbfc7799e))
+- Added ClientConnectionConfig ([commit 4de4022](https://github.com/googleapis/google-cloud-dotnet/commit/4de402263662134af0f348db4d8d16dcbfc7799e))
+- Added DatabaseVersion ([commit 4de4022](https://github.com/googleapis/google-cloud-dotnet/commit/4de402263662134af0f348db4d8d16dcbfc7799e))
+- Added QuantityBasedExpiry ([commit 4de4022](https://github.com/googleapis/google-cloud-dotnet/commit/4de402263662134af0f348db4d8d16dcbfc7799e))
 ## Version 1.1.0, released 2023-06-20
 
 ### Bug fixes
