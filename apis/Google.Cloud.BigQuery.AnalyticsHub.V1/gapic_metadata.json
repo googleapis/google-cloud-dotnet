@@ -34,6 +34,12 @@
                 "DeleteListingAsync"
               ]
             },
+            "DeleteSubscription": {
+              "methods": [
+                "DeleteSubscription",
+                "DeleteSubscriptionAsync"
+              ]
+            },
             "GetDataExchange": {
               "methods": [
                 "GetDataExchange",
@@ -50,6 +56,12 @@
               "methods": [
                 "GetListing",
                 "GetListingAsync"
+              ]
+            },
+            "GetSubscription": {
+              "methods": [
+                "GetSubscription",
+                "GetSubscriptionAsync"
               ]
             },
             "ListDataExchanges": {
@@ -70,10 +82,40 @@
                 "ListOrgDataExchangesAsync"
               ]
             },
+            "ListSharedResourceSubscriptions": {
+              "methods": [
+                "ListSharedResourceSubscriptions",
+                "ListSharedResourceSubscriptionsAsync"
+              ]
+            },
+            "ListSubscriptions": {
+              "methods": [
+                "ListSubscriptions",
+                "ListSubscriptionsAsync"
+              ]
+            },
+            "RefreshSubscription": {
+              "methods": [
+                "RefreshSubscription",
+                "RefreshSubscriptionAsync"
+              ]
+            },
+            "RevokeSubscription": {
+              "methods": [
+                "RevokeSubscription",
+                "RevokeSubscriptionAsync"
+              ]
+            },
             "SetIamPolicy": {
               "methods": [
                 "SetIamPolicy",
                 "SetIamPolicyAsync"
+              ]
+            },
+            "SubscribeDataExchange": {
+              "methods": [
+                "SubscribeDataExchange",
+                "SubscribeDataExchangeAsync"
               ]
             },
             "SubscribeListing": {

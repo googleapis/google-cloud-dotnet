@@ -3,7 +3,7 @@
 //     source: google/cloud/bigquery/analyticshub/v1/analyticshub.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2022 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -106,6 +106,30 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.AnalyticsHub.V1.SubscribeListingRequest> __Marshaller_google_cloud_bigquery_analyticshub_v1_SubscribeListingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.AnalyticsHub.V1.SubscribeListingRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.AnalyticsHub.V1.SubscribeListingResponse> __Marshaller_google_cloud_bigquery_analyticshub_v1_SubscribeListingResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.AnalyticsHub.V1.SubscribeListingResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.AnalyticsHub.V1.SubscribeDataExchangeRequest> __Marshaller_google_cloud_bigquery_analyticshub_v1_SubscribeDataExchangeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.AnalyticsHub.V1.SubscribeDataExchangeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.AnalyticsHub.V1.RefreshSubscriptionRequest> __Marshaller_google_cloud_bigquery_analyticshub_v1_RefreshSubscriptionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.AnalyticsHub.V1.RefreshSubscriptionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.AnalyticsHub.V1.GetSubscriptionRequest> __Marshaller_google_cloud_bigquery_analyticshub_v1_GetSubscriptionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.AnalyticsHub.V1.GetSubscriptionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.AnalyticsHub.V1.Subscription> __Marshaller_google_cloud_bigquery_analyticshub_v1_Subscription = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.AnalyticsHub.V1.Subscription.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSubscriptionsRequest> __Marshaller_google_cloud_bigquery_analyticshub_v1_ListSubscriptionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSubscriptionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSubscriptionsResponse> __Marshaller_google_cloud_bigquery_analyticshub_v1_ListSubscriptionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSubscriptionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSharedResourceSubscriptionsRequest> __Marshaller_google_cloud_bigquery_analyticshub_v1_ListSharedResourceSubscriptionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSharedResourceSubscriptionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSharedResourceSubscriptionsResponse> __Marshaller_google_cloud_bigquery_analyticshub_v1_ListSharedResourceSubscriptionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSharedResourceSubscriptionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.AnalyticsHub.V1.RevokeSubscriptionRequest> __Marshaller_google_cloud_bigquery_analyticshub_v1_RevokeSubscriptionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.AnalyticsHub.V1.RevokeSubscriptionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.AnalyticsHub.V1.RevokeSubscriptionResponse> __Marshaller_google_cloud_bigquery_analyticshub_v1_RevokeSubscriptionResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.AnalyticsHub.V1.RevokeSubscriptionResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.AnalyticsHub.V1.DeleteSubscriptionRequest> __Marshaller_google_cloud_bigquery_analyticshub_v1_DeleteSubscriptionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.AnalyticsHub.V1.DeleteSubscriptionRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.GetIamPolicyRequest> __Marshaller_google_iam_v1_GetIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -212,6 +236,62 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1 {
         "SubscribeListing",
         __Marshaller_google_cloud_bigquery_analyticshub_v1_SubscribeListingRequest,
         __Marshaller_google_cloud_bigquery_analyticshub_v1_SubscribeListingResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BigQuery.AnalyticsHub.V1.SubscribeDataExchangeRequest, global::Google.LongRunning.Operation> __Method_SubscribeDataExchange = new grpc::Method<global::Google.Cloud.BigQuery.AnalyticsHub.V1.SubscribeDataExchangeRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SubscribeDataExchange",
+        __Marshaller_google_cloud_bigquery_analyticshub_v1_SubscribeDataExchangeRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BigQuery.AnalyticsHub.V1.RefreshSubscriptionRequest, global::Google.LongRunning.Operation> __Method_RefreshSubscription = new grpc::Method<global::Google.Cloud.BigQuery.AnalyticsHub.V1.RefreshSubscriptionRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RefreshSubscription",
+        __Marshaller_google_cloud_bigquery_analyticshub_v1_RefreshSubscriptionRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BigQuery.AnalyticsHub.V1.GetSubscriptionRequest, global::Google.Cloud.BigQuery.AnalyticsHub.V1.Subscription> __Method_GetSubscription = new grpc::Method<global::Google.Cloud.BigQuery.AnalyticsHub.V1.GetSubscriptionRequest, global::Google.Cloud.BigQuery.AnalyticsHub.V1.Subscription>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetSubscription",
+        __Marshaller_google_cloud_bigquery_analyticshub_v1_GetSubscriptionRequest,
+        __Marshaller_google_cloud_bigquery_analyticshub_v1_Subscription);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSubscriptionsRequest, global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSubscriptionsResponse> __Method_ListSubscriptions = new grpc::Method<global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSubscriptionsRequest, global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSubscriptionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListSubscriptions",
+        __Marshaller_google_cloud_bigquery_analyticshub_v1_ListSubscriptionsRequest,
+        __Marshaller_google_cloud_bigquery_analyticshub_v1_ListSubscriptionsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSharedResourceSubscriptionsRequest, global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSharedResourceSubscriptionsResponse> __Method_ListSharedResourceSubscriptions = new grpc::Method<global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSharedResourceSubscriptionsRequest, global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSharedResourceSubscriptionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListSharedResourceSubscriptions",
+        __Marshaller_google_cloud_bigquery_analyticshub_v1_ListSharedResourceSubscriptionsRequest,
+        __Marshaller_google_cloud_bigquery_analyticshub_v1_ListSharedResourceSubscriptionsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BigQuery.AnalyticsHub.V1.RevokeSubscriptionRequest, global::Google.Cloud.BigQuery.AnalyticsHub.V1.RevokeSubscriptionResponse> __Method_RevokeSubscription = new grpc::Method<global::Google.Cloud.BigQuery.AnalyticsHub.V1.RevokeSubscriptionRequest, global::Google.Cloud.BigQuery.AnalyticsHub.V1.RevokeSubscriptionResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RevokeSubscription",
+        __Marshaller_google_cloud_bigquery_analyticshub_v1_RevokeSubscriptionRequest,
+        __Marshaller_google_cloud_bigquery_analyticshub_v1_RevokeSubscriptionResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BigQuery.AnalyticsHub.V1.DeleteSubscriptionRequest, global::Google.LongRunning.Operation> __Method_DeleteSubscription = new grpc::Method<global::Google.Cloud.BigQuery.AnalyticsHub.V1.DeleteSubscriptionRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteSubscription",
+        __Marshaller_google_cloud_bigquery_analyticshub_v1_DeleteSubscriptionRequest,
+        __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_GetIamPolicy = new grpc::Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
@@ -393,6 +473,93 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.AnalyticsHub.V1.SubscribeListingResponse> SubscribeListing(global::Google.Cloud.BigQuery.AnalyticsHub.V1.SubscribeListingRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a Subscription to a Data Exchange. This is a long-running operation
+      /// as it will create one or more linked datasets.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> SubscribeDataExchange(global::Google.Cloud.BigQuery.AnalyticsHub.V1.SubscribeDataExchangeRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Refreshes a Subscription to a Data Exchange. A Data Exchange can become
+      /// stale when a publisher adds or removes data. This is a long-running
+      /// operation as it may create many linked datasets.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RefreshSubscription(global::Google.Cloud.BigQuery.AnalyticsHub.V1.RefreshSubscriptionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets the details of a Subscription.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.AnalyticsHub.V1.Subscription> GetSubscription(global::Google.Cloud.BigQuery.AnalyticsHub.V1.GetSubscriptionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all subscriptions in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSubscriptionsResponse> ListSubscriptions(global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSubscriptionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all subscriptions on a given Data Exchange or Listing.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSharedResourceSubscriptionsResponse> ListSharedResourceSubscriptions(global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSharedResourceSubscriptionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Revokes a given subscription.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.AnalyticsHub.V1.RevokeSubscriptionResponse> RevokeSubscription(global::Google.Cloud.BigQuery.AnalyticsHub.V1.RevokeSubscriptionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a subscription.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteSubscription(global::Google.Cloud.BigQuery.AnalyticsHub.V1.DeleteSubscriptionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1063,6 +1230,354 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_SubscribeListing, null, options, request);
       }
       /// <summary>
+      /// Creates a Subscription to a Data Exchange. This is a long-running operation
+      /// as it will create one or more linked datasets.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation SubscribeDataExchange(global::Google.Cloud.BigQuery.AnalyticsHub.V1.SubscribeDataExchangeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SubscribeDataExchange(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a Subscription to a Data Exchange. This is a long-running operation
+      /// as it will create one or more linked datasets.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation SubscribeDataExchange(global::Google.Cloud.BigQuery.AnalyticsHub.V1.SubscribeDataExchangeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SubscribeDataExchange, null, options, request);
+      }
+      /// <summary>
+      /// Creates a Subscription to a Data Exchange. This is a long-running operation
+      /// as it will create one or more linked datasets.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> SubscribeDataExchangeAsync(global::Google.Cloud.BigQuery.AnalyticsHub.V1.SubscribeDataExchangeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SubscribeDataExchangeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a Subscription to a Data Exchange. This is a long-running operation
+      /// as it will create one or more linked datasets.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> SubscribeDataExchangeAsync(global::Google.Cloud.BigQuery.AnalyticsHub.V1.SubscribeDataExchangeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SubscribeDataExchange, null, options, request);
+      }
+      /// <summary>
+      /// Refreshes a Subscription to a Data Exchange. A Data Exchange can become
+      /// stale when a publisher adds or removes data. This is a long-running
+      /// operation as it may create many linked datasets.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RefreshSubscription(global::Google.Cloud.BigQuery.AnalyticsHub.V1.RefreshSubscriptionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RefreshSubscription(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Refreshes a Subscription to a Data Exchange. A Data Exchange can become
+      /// stale when a publisher adds or removes data. This is a long-running
+      /// operation as it may create many linked datasets.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RefreshSubscription(global::Google.Cloud.BigQuery.AnalyticsHub.V1.RefreshSubscriptionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RefreshSubscription, null, options, request);
+      }
+      /// <summary>
+      /// Refreshes a Subscription to a Data Exchange. A Data Exchange can become
+      /// stale when a publisher adds or removes data. This is a long-running
+      /// operation as it may create many linked datasets.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RefreshSubscriptionAsync(global::Google.Cloud.BigQuery.AnalyticsHub.V1.RefreshSubscriptionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RefreshSubscriptionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Refreshes a Subscription to a Data Exchange. A Data Exchange can become
+      /// stale when a publisher adds or removes data. This is a long-running
+      /// operation as it may create many linked datasets.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RefreshSubscriptionAsync(global::Google.Cloud.BigQuery.AnalyticsHub.V1.RefreshSubscriptionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RefreshSubscription, null, options, request);
+      }
+      /// <summary>
+      /// Gets the details of a Subscription.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.AnalyticsHub.V1.Subscription GetSubscription(global::Google.Cloud.BigQuery.AnalyticsHub.V1.GetSubscriptionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSubscription(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the details of a Subscription.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.AnalyticsHub.V1.Subscription GetSubscription(global::Google.Cloud.BigQuery.AnalyticsHub.V1.GetSubscriptionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetSubscription, null, options, request);
+      }
+      /// <summary>
+      /// Gets the details of a Subscription.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.AnalyticsHub.V1.Subscription> GetSubscriptionAsync(global::Google.Cloud.BigQuery.AnalyticsHub.V1.GetSubscriptionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSubscriptionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the details of a Subscription.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.AnalyticsHub.V1.Subscription> GetSubscriptionAsync(global::Google.Cloud.BigQuery.AnalyticsHub.V1.GetSubscriptionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetSubscription, null, options, request);
+      }
+      /// <summary>
+      /// Lists all subscriptions in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSubscriptionsResponse ListSubscriptions(global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSubscriptionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSubscriptions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all subscriptions in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSubscriptionsResponse ListSubscriptions(global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSubscriptionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListSubscriptions, null, options, request);
+      }
+      /// <summary>
+      /// Lists all subscriptions in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSubscriptionsResponse> ListSubscriptionsAsync(global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSubscriptionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSubscriptionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all subscriptions in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSubscriptionsResponse> ListSubscriptionsAsync(global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSubscriptionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListSubscriptions, null, options, request);
+      }
+      /// <summary>
+      /// Lists all subscriptions on a given Data Exchange or Listing.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSharedResourceSubscriptionsResponse ListSharedResourceSubscriptions(global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSharedResourceSubscriptionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSharedResourceSubscriptions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all subscriptions on a given Data Exchange or Listing.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSharedResourceSubscriptionsResponse ListSharedResourceSubscriptions(global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSharedResourceSubscriptionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListSharedResourceSubscriptions, null, options, request);
+      }
+      /// <summary>
+      /// Lists all subscriptions on a given Data Exchange or Listing.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSharedResourceSubscriptionsResponse> ListSharedResourceSubscriptionsAsync(global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSharedResourceSubscriptionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSharedResourceSubscriptionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all subscriptions on a given Data Exchange or Listing.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSharedResourceSubscriptionsResponse> ListSharedResourceSubscriptionsAsync(global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSharedResourceSubscriptionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListSharedResourceSubscriptions, null, options, request);
+      }
+      /// <summary>
+      /// Revokes a given subscription.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.AnalyticsHub.V1.RevokeSubscriptionResponse RevokeSubscription(global::Google.Cloud.BigQuery.AnalyticsHub.V1.RevokeSubscriptionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RevokeSubscription(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Revokes a given subscription.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.AnalyticsHub.V1.RevokeSubscriptionResponse RevokeSubscription(global::Google.Cloud.BigQuery.AnalyticsHub.V1.RevokeSubscriptionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RevokeSubscription, null, options, request);
+      }
+      /// <summary>
+      /// Revokes a given subscription.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.AnalyticsHub.V1.RevokeSubscriptionResponse> RevokeSubscriptionAsync(global::Google.Cloud.BigQuery.AnalyticsHub.V1.RevokeSubscriptionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RevokeSubscriptionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Revokes a given subscription.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.AnalyticsHub.V1.RevokeSubscriptionResponse> RevokeSubscriptionAsync(global::Google.Cloud.BigQuery.AnalyticsHub.V1.RevokeSubscriptionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RevokeSubscription, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a subscription.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteSubscription(global::Google.Cloud.BigQuery.AnalyticsHub.V1.DeleteSubscriptionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteSubscription(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a subscription.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteSubscription(global::Google.Cloud.BigQuery.AnalyticsHub.V1.DeleteSubscriptionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteSubscription, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a subscription.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteSubscriptionAsync(global::Google.Cloud.BigQuery.AnalyticsHub.V1.DeleteSubscriptionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteSubscriptionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a subscription.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteSubscriptionAsync(global::Google.Cloud.BigQuery.AnalyticsHub.V1.DeleteSubscriptionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteSubscription, null, options, request);
+      }
+      /// <summary>
       /// Gets the IAM policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1232,6 +1747,13 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1 {
           .AddMethod(__Method_UpdateListing, serviceImpl.UpdateListing)
           .AddMethod(__Method_DeleteListing, serviceImpl.DeleteListing)
           .AddMethod(__Method_SubscribeListing, serviceImpl.SubscribeListing)
+          .AddMethod(__Method_SubscribeDataExchange, serviceImpl.SubscribeDataExchange)
+          .AddMethod(__Method_RefreshSubscription, serviceImpl.RefreshSubscription)
+          .AddMethod(__Method_GetSubscription, serviceImpl.GetSubscription)
+          .AddMethod(__Method_ListSubscriptions, serviceImpl.ListSubscriptions)
+          .AddMethod(__Method_ListSharedResourceSubscriptions, serviceImpl.ListSharedResourceSubscriptions)
+          .AddMethod(__Method_RevokeSubscription, serviceImpl.RevokeSubscription)
+          .AddMethod(__Method_DeleteSubscription, serviceImpl.DeleteSubscription)
           .AddMethod(__Method_GetIamPolicy, serviceImpl.GetIamPolicy)
           .AddMethod(__Method_SetIamPolicy, serviceImpl.SetIamPolicy)
           .AddMethod(__Method_TestIamPermissions, serviceImpl.TestIamPermissions).Build();
@@ -1256,6 +1778,13 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1 {
       serviceBinder.AddMethod(__Method_UpdateListing, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.AnalyticsHub.V1.UpdateListingRequest, global::Google.Cloud.BigQuery.AnalyticsHub.V1.Listing>(serviceImpl.UpdateListing));
       serviceBinder.AddMethod(__Method_DeleteListing, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.AnalyticsHub.V1.DeleteListingRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteListing));
       serviceBinder.AddMethod(__Method_SubscribeListing, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.AnalyticsHub.V1.SubscribeListingRequest, global::Google.Cloud.BigQuery.AnalyticsHub.V1.SubscribeListingResponse>(serviceImpl.SubscribeListing));
+      serviceBinder.AddMethod(__Method_SubscribeDataExchange, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.AnalyticsHub.V1.SubscribeDataExchangeRequest, global::Google.LongRunning.Operation>(serviceImpl.SubscribeDataExchange));
+      serviceBinder.AddMethod(__Method_RefreshSubscription, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.AnalyticsHub.V1.RefreshSubscriptionRequest, global::Google.LongRunning.Operation>(serviceImpl.RefreshSubscription));
+      serviceBinder.AddMethod(__Method_GetSubscription, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.AnalyticsHub.V1.GetSubscriptionRequest, global::Google.Cloud.BigQuery.AnalyticsHub.V1.Subscription>(serviceImpl.GetSubscription));
+      serviceBinder.AddMethod(__Method_ListSubscriptions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSubscriptionsRequest, global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSubscriptionsResponse>(serviceImpl.ListSubscriptions));
+      serviceBinder.AddMethod(__Method_ListSharedResourceSubscriptions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSharedResourceSubscriptionsRequest, global::Google.Cloud.BigQuery.AnalyticsHub.V1.ListSharedResourceSubscriptionsResponse>(serviceImpl.ListSharedResourceSubscriptions));
+      serviceBinder.AddMethod(__Method_RevokeSubscription, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.AnalyticsHub.V1.RevokeSubscriptionRequest, global::Google.Cloud.BigQuery.AnalyticsHub.V1.RevokeSubscriptionResponse>(serviceImpl.RevokeSubscription));
+      serviceBinder.AddMethod(__Method_DeleteSubscription, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.AnalyticsHub.V1.DeleteSubscriptionRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteSubscription));
       serviceBinder.AddMethod(__Method_GetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.GetIamPolicy));
       serviceBinder.AddMethod(__Method_SetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.SetIamPolicy));
       serviceBinder.AddMethod(__Method_TestIamPermissions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(serviceImpl.TestIamPermissions));
