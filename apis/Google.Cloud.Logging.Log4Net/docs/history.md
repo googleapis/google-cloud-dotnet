@@ -1,5 +1,11 @@
 # Version history
 
+## Version 4.1.0, released 2023-09-25
+
+### Bug fixes
+
+- Make Log4Net type searching more robust ([commit 3a9cf53](https://github.com/googleapis/google-cloud-dotnet/commit/3a9cf538123553707bf7e49b82d8887102254c5c))
+
 ## Version 4.0.0, released 2022-06-09
 
 This is the first version of this package to depend on GAX v4.
