@@ -1,5 +1,14 @@
 # Version history
 
+## Version 1.0.0-alpha04, released 2023-09-25
+
+### New features
+
+- Added enum value for PG15 ([commit 92f51da](https://github.com/googleapis/google-cloud-dotnet/commit/92f51da889998ff8160a5bd778ff07d89d01f636))
+- Deprecate network field in favor of network_config.network ([commit 92f51da](https://github.com/googleapis/google-cloud-dotnet/commit/92f51da889998ff8160a5bd778ff07d89d01f636))
+- Added ClientConnectionConfig ([commit 92f51da](https://github.com/googleapis/google-cloud-dotnet/commit/92f51da889998ff8160a5bd778ff07d89d01f636))
+- Added DatabaseVersion ([commit 92f51da](https://github.com/googleapis/google-cloud-dotnet/commit/92f51da889998ff8160a5bd778ff07d89d01f636))
+
 ## Version 1.0.0-alpha03, released 2023-07-25
 
 ### New features
