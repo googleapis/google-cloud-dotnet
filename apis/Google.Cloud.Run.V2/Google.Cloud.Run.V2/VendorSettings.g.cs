@@ -25,31 +25,35 @@ namespace Google.Cloud.Run.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cilnb29nbGUvY2xvdWQvcnVuL3YyL3ZlbmRvcl9zZXR0aW5ncy5wcm90bxIT",
-            "Z29vZ2xlLmNsb3VkLnJ1bi52MhoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90",
-            "byLUAQoJVnBjQWNjZXNzEjoKCWNvbm5lY3RvchgBIAEoCUIn+kEkCiJ2cGNh",
-            "Y2Nlc3MuZ29vZ2xlYXBpcy5jb20vQ29ubmVjdG9yEjgKBmVncmVzcxgCIAEo",
-            "DjIoLmdvb2dsZS5jbG91ZC5ydW4udjIuVnBjQWNjZXNzLlZwY0VncmVzcyJR",
-            "CglWcGNFZ3Jlc3MSGgoWVlBDX0VHUkVTU19VTlNQRUNJRklFRBAAEg8KC0FM",
-            "TF9UUkFGRklDEAESFwoTUFJJVkFURV9SQU5HRVNfT05MWRACImEKE0JpbmFy",
-            "eUF1dGhvcml6YXRpb24SFQoLdXNlX2RlZmF1bHQYASABKAhIABIgChhicmVh",
-            "a2dsYXNzX2p1c3RpZmljYXRpb24YAiABKAlCEQoPYmluYXV0aHpfbWV0aG9k",
-            "IkkKD1JldmlzaW9uU2NhbGluZxIaChJtaW5faW5zdGFuY2VfY291bnQYASAB",
-            "KAUSGgoSbWF4X2luc3RhbmNlX2NvdW50GAIgASgFKpkBCg5JbmdyZXNzVHJh",
-            "ZmZpYxIfChtJTkdSRVNTX1RSQUZGSUNfVU5TUEVDSUZJRUQQABIXChNJTkdS",
-            "RVNTX1RSQUZGSUNfQUxMEAESIQodSU5HUkVTU19UUkFGRklDX0lOVEVSTkFM",
-            "X09OTFkQAhIqCiZJTkdSRVNTX1RSQUZGSUNfSU5URVJOQUxfTE9BRF9CQUxB",
-            "TkNFUhADKn0KFEV4ZWN1dGlvbkVudmlyb25tZW50EiUKIUVYRUNVVElPTl9F",
-            "TlZJUk9OTUVOVF9VTlNQRUNJRklFRBAAEh4KGkVYRUNVVElPTl9FTlZJUk9O",
-            "TUVOVF9HRU4xEAESHgoaRVhFQ1VUSU9OX0VOVklST05NRU5UX0dFTjIQAipw",
-            "Ch1FbmNyeXB0aW9uS2V5UmV2b2NhdGlvbkFjdGlvbhIwCixFTkNSWVBUSU9O",
-            "X0tFWV9SRVZPQ0FUSU9OX0FDVElPTl9VTlNQRUNJRklFRBAAEg8KC1BSRVZF",
-            "TlRfTkVXEAESDAoIU0hVVERPV04QAkJbChdjb20uZ29vZ2xlLmNsb3VkLnJ1",
-            "bi52MkITVmVuZG9yU2V0dGluZ3NQcm90b1ABWiljbG91ZC5nb29nbGUuY29t",
-            "L2dvL3J1bi9hcGl2Mi9ydW5wYjtydW5wYmIGcHJvdG8z"));
+            "Z29vZ2xlLmNsb3VkLnJ1bi52MhofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlv",
+            "ci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byLoAgoJVnBjQWNj",
+            "ZXNzEjoKCWNvbm5lY3RvchgBIAEoCUIn+kEkCiJ2cGNhY2Nlc3MuZ29vZ2xl",
+            "YXBpcy5jb20vQ29ubmVjdG9yEjgKBmVncmVzcxgCIAEoDjIoLmdvb2dsZS5j",
+            "bG91ZC5ydW4udjIuVnBjQWNjZXNzLlZwY0VncmVzcxJLChJuZXR3b3JrX2lu",
+            "dGVyZmFjZXMYAyADKAsyLy5nb29nbGUuY2xvdWQucnVuLnYyLlZwY0FjY2Vz",
+            "cy5OZXR3b3JrSW50ZXJmYWNlGkUKEE5ldHdvcmtJbnRlcmZhY2USDwoHbmV0",
+            "d29yaxgBIAEoCRISCgpzdWJuZXR3b3JrGAIgASgJEgwKBHRhZ3MYAyADKAki",
+            "UQoJVnBjRWdyZXNzEhoKFlZQQ19FR1JFU1NfVU5TUEVDSUZJRUQQABIPCgtB",
+            "TExfVFJBRkZJQxABEhcKE1BSSVZBVEVfUkFOR0VTX09OTFkQAiJhChNCaW5h",
+            "cnlBdXRob3JpemF0aW9uEhUKC3VzZV9kZWZhdWx0GAEgASgISAASIAoYYnJl",
+            "YWtnbGFzc19qdXN0aWZpY2F0aW9uGAIgASgJQhEKD2JpbmF1dGh6X21ldGhv",
+            "ZCJJCg9SZXZpc2lvblNjYWxpbmcSGgoSbWluX2luc3RhbmNlX2NvdW50GAEg",
+            "ASgFEhoKEm1heF9pbnN0YW5jZV9jb3VudBgCIAEoBSqZAQoOSW5ncmVzc1Ry",
+            "YWZmaWMSHwobSU5HUkVTU19UUkFGRklDX1VOU1BFQ0lGSUVEEAASFwoTSU5H",
+            "UkVTU19UUkFGRklDX0FMTBABEiEKHUlOR1JFU1NfVFJBRkZJQ19JTlRFUk5B",
+            "TF9PTkxZEAISKgomSU5HUkVTU19UUkFGRklDX0lOVEVSTkFMX0xPQURfQkFM",
+            "QU5DRVIQAyp9ChRFeGVjdXRpb25FbnZpcm9ubWVudBIlCiFFWEVDVVRJT05f",
+            "RU5WSVJPTk1FTlRfVU5TUEVDSUZJRUQQABIeChpFWEVDVVRJT05fRU5WSVJP",
+            "Tk1FTlRfR0VOMRABEh4KGkVYRUNVVElPTl9FTlZJUk9OTUVOVF9HRU4yEAIq",
+            "cAodRW5jcnlwdGlvbktleVJldm9jYXRpb25BY3Rpb24SMAosRU5DUllQVElP",
+            "Tl9LRVlfUkVWT0NBVElPTl9BQ1RJT05fVU5TUEVDSUZJRUQQABIPCgtQUkVW",
+            "RU5UX05FVxABEgwKCFNIVVRET1dOEAJCWwoXY29tLmdvb2dsZS5jbG91ZC5y",
+            "dW4udjJCE1ZlbmRvclNldHRpbmdzUHJvdG9QAVopY2xvdWQuZ29vZ2xlLmNv",
+            "bS9nby9ydW4vYXBpdjIvcnVucGI7cnVucGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Run.V2.IngressTraffic), typeof(global::Google.Cloud.Run.V2.ExecutionEnvironment), typeof(global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.VpcAccess), global::Google.Cloud.Run.V2.VpcAccess.Parser, new[]{ "Connector", "Egress" }, null, new[]{ typeof(global::Google.Cloud.Run.V2.VpcAccess.Types.VpcEgress) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.VpcAccess), global::Google.Cloud.Run.V2.VpcAccess.Parser, new[]{ "Connector", "Egress", "NetworkInterfaces" }, null, new[]{ typeof(global::Google.Cloud.Run.V2.VpcAccess.Types.VpcEgress) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.VpcAccess.Types.NetworkInterface), global::Google.Cloud.Run.V2.VpcAccess.Types.NetworkInterface.Parser, new[]{ "Network", "Subnetwork", "Tags" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.BinaryAuthorization), global::Google.Cloud.Run.V2.BinaryAuthorization.Parser, new[]{ "UseDefault", "BreakglassJustification" }, new[]{ "BinauthzMethod" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.RevisionScaling), global::Google.Cloud.Run.V2.RevisionScaling.Parser, new[]{ "MinInstanceCount", "MaxInstanceCount" }, null, null, null, null)
           }));
@@ -120,10 +124,8 @@ namespace Google.Cloud.Run.V2 {
 
   #region Messages
   /// <summary>
-  /// VPC Access settings. For more information on creating a VPC Connector, visit
-  /// https://cloud.google.com/vpc/docs/configure-serverless-vpc-access For
-  /// information on how to configure Cloud Run with an existing VPC Connector,
-  /// visit https://cloud.google.com/run/docs/configuring/connecting-vpc
+  /// VPC Access settings. For more information on sending traffic to a VPC
+  /// network, visit https://cloud.google.com/run/docs/configuring/connecting-vpc.
   /// </summary>
   public sealed partial class VpcAccess : pb::IMessage<VpcAccess>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -161,6 +163,7 @@ namespace Google.Cloud.Run.V2 {
     public VpcAccess(VpcAccess other) : this() {
       connector_ = other.connector_;
       egress_ = other.egress_;
+      networkInterfaces_ = other.networkInterfaces_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -177,6 +180,8 @@ namespace Google.Cloud.Run.V2 {
     /// VPC Access connector name.
     /// Format: projects/{project}/locations/{location}/connectors/{connector},
     /// where {project} can be project id or number.
+    /// For more information on sending traffic to a VPC network via a connector,
+    /// visit https://cloud.google.com/run/docs/configuring/vpc-connectors.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -191,7 +196,8 @@ namespace Google.Cloud.Run.V2 {
     public const int EgressFieldNumber = 2;
     private global::Google.Cloud.Run.V2.VpcAccess.Types.VpcEgress egress_ = global::Google.Cloud.Run.V2.VpcAccess.Types.VpcEgress.Unspecified;
     /// <summary>
-    /// Traffic VPC egress settings.
+    /// Traffic VPC egress settings. If not provided, it defaults to
+    /// PRIVATE_RANGES_ONLY.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -200,6 +206,21 @@ namespace Google.Cloud.Run.V2 {
       set {
         egress_ = value;
       }
+    }
+
+    /// <summary>Field number for the "network_interfaces" field.</summary>
+    public const int NetworkInterfacesFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Run.V2.VpcAccess.Types.NetworkInterface> _repeated_networkInterfaces_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Run.V2.VpcAccess.Types.NetworkInterface.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Run.V2.VpcAccess.Types.NetworkInterface> networkInterfaces_ = new pbc::RepeatedField<global::Google.Cloud.Run.V2.VpcAccess.Types.NetworkInterface>();
+    /// <summary>
+    /// Direct VPC egress settings. Currently only single network interface is
+    /// supported.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Run.V2.VpcAccess.Types.NetworkInterface> NetworkInterfaces {
+      get { return networkInterfaces_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -219,6 +240,7 @@ namespace Google.Cloud.Run.V2 {
       }
       if (Connector != other.Connector) return false;
       if (Egress != other.Egress) return false;
+      if(!networkInterfaces_.Equals(other.networkInterfaces_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -228,6 +250,7 @@ namespace Google.Cloud.Run.V2 {
       int hash = 1;
       if (Connector.Length != 0) hash ^= Connector.GetHashCode();
       if (Egress != global::Google.Cloud.Run.V2.VpcAccess.Types.VpcEgress.Unspecified) hash ^= Egress.GetHashCode();
+      hash ^= networkInterfaces_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -254,6 +277,7 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(16);
         output.WriteEnum((int) Egress);
       }
+      networkInterfaces_.WriteTo(output, _repeated_networkInterfaces_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -272,6 +296,7 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(16);
         output.WriteEnum((int) Egress);
       }
+      networkInterfaces_.WriteTo(ref output, _repeated_networkInterfaces_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -288,6 +313,7 @@ namespace Google.Cloud.Run.V2 {
       if (Egress != global::Google.Cloud.Run.V2.VpcAccess.Types.VpcEgress.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Egress);
       }
+      size += networkInterfaces_.CalculateSize(_repeated_networkInterfaces_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -306,6 +332,7 @@ namespace Google.Cloud.Run.V2 {
       if (other.Egress != global::Google.Cloud.Run.V2.VpcAccess.Types.VpcEgress.Unspecified) {
         Egress = other.Egress;
       }
+      networkInterfaces_.Add(other.networkInterfaces_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -329,6 +356,10 @@ namespace Google.Cloud.Run.V2 {
             Egress = (global::Google.Cloud.Run.V2.VpcAccess.Types.VpcEgress) input.ReadEnum();
             break;
           }
+          case 26: {
+            networkInterfaces_.AddEntriesFrom(input, _repeated_networkInterfaces_codec);
+            break;
+          }
         }
       }
     #endif
@@ -350,6 +381,10 @@ namespace Google.Cloud.Run.V2 {
           }
           case 16: {
             Egress = (global::Google.Cloud.Run.V2.VpcAccess.Types.VpcEgress) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            networkInterfaces_.AddEntriesFrom(ref input, _repeated_networkInterfaces_codec);
             break;
           }
         }
@@ -378,6 +413,278 @@ namespace Google.Cloud.Run.V2 {
         /// Only private IP ranges are routed through the VPC connector.
         /// </summary>
         [pbr::OriginalName("PRIVATE_RANGES_ONLY")] PrivateRangesOnly = 2,
+      }
+
+      /// <summary>
+      /// Direct VPC egress settings.
+      /// </summary>
+      public sealed partial class NetworkInterface : pb::IMessage<NetworkInterface>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<NetworkInterface> _parser = new pb::MessageParser<NetworkInterface>(() => new NetworkInterface());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<NetworkInterface> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Run.V2.VpcAccess.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public NetworkInterface() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public NetworkInterface(NetworkInterface other) : this() {
+          network_ = other.network_;
+          subnetwork_ = other.subnetwork_;
+          tags_ = other.tags_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public NetworkInterface Clone() {
+          return new NetworkInterface(this);
+        }
+
+        /// <summary>Field number for the "network" field.</summary>
+        public const int NetworkFieldNumber = 1;
+        private string network_ = "";
+        /// <summary>
+        /// The VPC network that the Cloud Run resource will be able to send traffic
+        /// to. At least one of network or subnetwork must be specified. If both
+        /// network and subnetwork are specified, the given VPC subnetwork must
+        /// belong to the given VPC network. If network is not specified, it will be
+        /// looked up from the subnetwork.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Network {
+          get { return network_; }
+          set {
+            network_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "subnetwork" field.</summary>
+        public const int SubnetworkFieldNumber = 2;
+        private string subnetwork_ = "";
+        /// <summary>
+        /// The VPC subnetwork that the Cloud Run resource will get IPs from. At
+        /// least one of network or subnetwork must be specified. If both
+        /// network and subnetwork are specified, the given VPC subnetwork must
+        /// belong to the given VPC network. If subnetwork is not specified, the
+        /// subnetwork with the same name with the network will be used.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Subnetwork {
+          get { return subnetwork_; }
+          set {
+            subnetwork_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "tags" field.</summary>
+        public const int TagsFieldNumber = 3;
+        private static readonly pb::FieldCodec<string> _repeated_tags_codec
+            = pb::FieldCodec.ForString(26);
+        private readonly pbc::RepeatedField<string> tags_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Network tags applied to this Cloud Run resource.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> Tags {
+          get { return tags_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as NetworkInterface);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(NetworkInterface other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Network != other.Network) return false;
+          if (Subnetwork != other.Subnetwork) return false;
+          if(!tags_.Equals(other.tags_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Network.Length != 0) hash ^= Network.GetHashCode();
+          if (Subnetwork.Length != 0) hash ^= Subnetwork.GetHashCode();
+          hash ^= tags_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Network.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Network);
+          }
+          if (Subnetwork.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Subnetwork);
+          }
+          tags_.WriteTo(output, _repeated_tags_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Network.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Network);
+          }
+          if (Subnetwork.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Subnetwork);
+          }
+          tags_.WriteTo(ref output, _repeated_tags_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Network.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Network);
+          }
+          if (Subnetwork.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Subnetwork);
+          }
+          size += tags_.CalculateSize(_repeated_tags_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(NetworkInterface other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Network.Length != 0) {
+            Network = other.Network;
+          }
+          if (other.Subnetwork.Length != 0) {
+            Subnetwork = other.Subnetwork;
+          }
+          tags_.Add(other.tags_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Network = input.ReadString();
+                break;
+              }
+              case 18: {
+                Subnetwork = input.ReadString();
+                break;
+              }
+              case 26: {
+                tags_.AddEntriesFrom(input, _repeated_tags_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Network = input.ReadString();
+                break;
+              }
+              case 18: {
+                Subnetwork = input.ReadString();
+                break;
+              }
+              case 26: {
+                tags_.AddEntriesFrom(ref input, _repeated_tags_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
       }
 
     }

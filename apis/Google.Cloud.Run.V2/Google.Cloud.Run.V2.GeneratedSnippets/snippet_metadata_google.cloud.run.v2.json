@@ -904,6 +904,293 @@
       ]
     },
     {
+      "regionTag": "run_v2_generated_Executions_CancelExecution_sync",
+      "title": "CancelExecutionRequestObject",
+      "description": "Snippet for CancelExecution",
+      "file": "ExecutionsClient.CancelExecutionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelExecution",
+        "fullName": "Google.Cloud.Run.V2.ExecutionsClient.CancelExecution",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Run.V2.CancelExecutionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Run.V2.Execution, Google.Cloud.Run.V2.Execution>",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Run.V2.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "CancelExecution",
+          "fullName": "google.cloud.run.v2.Executions.CancelExecution",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.run.v2.Executions"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_Executions_CancelExecution_async",
+      "title": "CancelExecutionRequestObjectAsync",
+      "description": "Snippet for CancelExecutionAsync",
+      "file": "ExecutionsClient.CancelExecutionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelExecutionAsync",
+        "fullName": "Google.Cloud.Run.V2.ExecutionsClient.CancelExecutionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Run.V2.CancelExecutionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Run.V2.Execution, Google.Cloud.Run.V2.Execution>>",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Run.V2.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "CancelExecution",
+          "fullName": "google.cloud.run.v2.Executions.CancelExecution",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.run.v2.Executions"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_Executions_CancelExecution_sync_flattened",
+      "title": "CancelExecution",
+      "description": "Snippet for CancelExecution",
+      "file": "ExecutionsClient.CancelExecutionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelExecution",
+        "fullName": "Google.Cloud.Run.V2.ExecutionsClient.CancelExecution",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Run.V2.Execution, Google.Cloud.Run.V2.Execution>",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Run.V2.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "CancelExecution",
+          "fullName": "google.cloud.run.v2.Executions.CancelExecution",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.run.v2.Executions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_Executions_CancelExecution_async_flattened",
+      "title": "CancelExecutionAsync",
+      "description": "Snippet for CancelExecutionAsync",
+      "file": "ExecutionsClient.CancelExecutionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelExecutionAsync",
+        "fullName": "Google.Cloud.Run.V2.ExecutionsClient.CancelExecutionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Run.V2.Execution, Google.Cloud.Run.V2.Execution>>",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Run.V2.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "CancelExecution",
+          "fullName": "google.cloud.run.v2.Executions.CancelExecution",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.run.v2.Executions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_Executions_CancelExecution_sync_flattened_resourceNames",
+      "title": "CancelExecutionResourceNames",
+      "description": "Snippet for CancelExecution",
+      "file": "ExecutionsClient.CancelExecutionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelExecution",
+        "fullName": "Google.Cloud.Run.V2.ExecutionsClient.CancelExecution",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Run.V2.ExecutionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Run.V2.Execution, Google.Cloud.Run.V2.Execution>",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Run.V2.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "CancelExecution",
+          "fullName": "google.cloud.run.v2.Executions.CancelExecution",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.run.v2.Executions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "run_v2_generated_Executions_CancelExecution_async_flattened_resourceNames",
+      "title": "CancelExecutionResourceNamesAsync",
+      "description": "Snippet for CancelExecutionAsync",
+      "file": "ExecutionsClient.CancelExecutionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelExecutionAsync",
+        "fullName": "Google.Cloud.Run.V2.ExecutionsClient.CancelExecutionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Run.V2.ExecutionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Run.V2.Execution, Google.Cloud.Run.V2.Execution>>",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Run.V2.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "CancelExecution",
+          "fullName": "google.cloud.run.v2.Executions.CancelExecution",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.run.v2.Executions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "run_v2_generated_Jobs_CreateJob_sync",
       "title": "CreateJobRequestObject",
       "description": "Snippet for CreateJob",
@@ -2345,12 +2632,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 63,
+          "end": 64,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 61,
+          "end": 62,
           "type": "SHORT"
         }
       ]
@@ -2394,12 +2681,12 @@
       "segments": [
         {
           "start": 22,
-          "end": 66,
+          "end": 67,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 64,
+          "end": 65,
           "type": "SHORT"
         }
       ]

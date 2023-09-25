@@ -304,6 +304,18 @@ namespace Google.Cloud.Run.V2
         }
     }
 
+    public partial class CancelExecutionRequest
+    {
+        /// <summary>
+        /// <see cref="gcrv::ExecutionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcrv::ExecutionName ExecutionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::ExecutionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class Execution
     {
         /// <summary>

@@ -16,13 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START run_v2_generated_Jobs_RunJob_sync]
+    // [START run_v2_generated_Executions_CancelExecution_sync_flattened]
     using Google.Cloud.Run.V2;
     using Google.LongRunning;
 
-    public sealed partial class GeneratedJobsClientSnippets
+    public sealed partial class GeneratedExecutionsClientSnippets
     {
-        /// <summary>Snippet for RunJob</summary>
+        /// <summary>Snippet for CancelExecution</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,20 +30,14 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void RunJobRequestObject()
+        public void CancelExecution()
         {
             // Create client
-            JobsClient jobsClient = JobsClient.Create();
+            ExecutionsClient executionsClient = ExecutionsClient.Create();
             // Initialize request argument(s)
-            RunJobRequest request = new RunJobRequest
-            {
-                JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
-                ValidateOnly = false,
-                Etag = "",
-                Overrides = new RunJobRequest.Types.Overrides(),
-            };
+            string name = "projects/[PROJECT]/locations/[LOCATION]/jobs/[JOB]/executions/[EXECUTION]";
             // Make the request
-            Operation<Execution, Execution> response = jobsClient.RunJob(request);
+            Operation<Execution, Execution> response = executionsClient.CancelExecution(name);
 
             // Poll until the returned long-running operation is complete
             Operation<Execution, Execution> completedResponse = response.PollUntilCompleted();
@@ -53,7 +47,7 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Execution, Execution> retrievedResponse = jobsClient.PollOnceRunJob(operationName);
+            Operation<Execution, Execution> retrievedResponse = executionsClient.PollOnceCancelExecution(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -62,5 +56,5 @@ namespace GoogleCSharpSnippets
             }
         }
     }
-    // [END run_v2_generated_Jobs_RunJob_sync]
+    // [END run_v2_generated_Executions_CancelExecution_sync_flattened]
 }
