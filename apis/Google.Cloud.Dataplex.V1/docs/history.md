@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.7.0, released 2023-09-25
+
+### New features
+
+- Additional HTTP bindings for IAM methods ([commit b904305](https://github.com/googleapis/google-cloud-dotnet/commit/b904305dc867d732f7fac4db82aeb0d014aa2dce))
+
 ## Version 2.6.0, released 2023-09-06
 
 ### Bug fixes
