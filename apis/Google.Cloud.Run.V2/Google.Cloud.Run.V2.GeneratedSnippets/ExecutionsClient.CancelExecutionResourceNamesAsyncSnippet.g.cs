@@ -14,15 +14,18 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace GoogleCSharpSnippets
 {
-    // [START run_v2_generated_Jobs_RunJob_sync]
-    using Google.Cloud.Run.V2;
+    // [START run_v2_generated_Executions_CancelExecution_async_flattened_resourceNames]
     using Google.LongRunning;
+    using System.Threading.Tasks;
+    using gcrv = Google.Cloud.Run.V2;
 
-    public sealed partial class GeneratedJobsClientSnippets
+    public sealed partial class GeneratedExecutionsClientSnippets
     {
-        /// <summary>Snippet for RunJob</summary>
+        /// <summary>Snippet for CancelExecutionAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,37 +33,31 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void RunJobRequestObject()
+        public async Task CancelExecutionResourceNamesAsync()
         {
             // Create client
-            JobsClient jobsClient = JobsClient.Create();
+            gcrv::ExecutionsClient executionsClient = await gcrv::ExecutionsClient.CreateAsync();
             // Initialize request argument(s)
-            RunJobRequest request = new RunJobRequest
-            {
-                JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
-                ValidateOnly = false,
-                Etag = "",
-                Overrides = new RunJobRequest.Types.Overrides(),
-            };
+            gcrv::ExecutionName name = gcrv::ExecutionName.FromProjectLocationJobExecution("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]");
             // Make the request
-            Operation<Execution, Execution> response = jobsClient.RunJob(request);
+            Operation<gcrv::Execution, gcrv::Execution> response = await executionsClient.CancelExecutionAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Execution, Execution> completedResponse = response.PollUntilCompleted();
+            Operation<gcrv::Execution, gcrv::Execution> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Execution result = completedResponse.Result;
+            gcrv::Execution result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Execution, Execution> retrievedResponse = jobsClient.PollOnceRunJob(operationName);
+            Operation<gcrv::Execution, gcrv::Execution> retrievedResponse = await executionsClient.PollOnceCancelExecutionAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Execution retrievedResult = retrievedResponse.Result;
+                gcrv::Execution retrievedResult = retrievedResponse.Result;
             }
         }
     }
-    // [END run_v2_generated_Jobs_RunJob_sync]
+    // [END run_v2_generated_Executions_CancelExecution_async_flattened_resourceNames]
 }

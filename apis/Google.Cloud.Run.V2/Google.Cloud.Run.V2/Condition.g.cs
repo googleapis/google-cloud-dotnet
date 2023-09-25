@@ -26,7 +26,7 @@ namespace Google.Cloud.Run.V2 {
           string.Concat(
             "CiNnb29nbGUvY2xvdWQvcnVuL3YyL2NvbmRpdGlvbi5wcm90bxITZ29vZ2xl",
             "LmNsb3VkLnJ1bi52MhofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90",
-            "byKQDAoJQ29uZGl0aW9uEgwKBHR5cGUYASABKAkSMwoFc3RhdGUYAiABKA4y",
+            "byKdDAoJQ29uZGl0aW9uEgwKBHR5cGUYASABKAkSMwoFc3RhdGUYAiABKA4y",
             "JC5nb29nbGUuY2xvdWQucnVuLnYyLkNvbmRpdGlvbi5TdGF0ZRIPCgdtZXNz",
             "YWdlGAMgASgJEjgKFGxhc3RfdHJhbnNpdGlvbl90aW1lGAQgASgLMhouZ29v",
             "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBI5CghzZXZlcml0eRgFIAEoDjInLmdv",
@@ -57,12 +57,12 @@ namespace Google.Cloud.Run.V2 {
             "Ch1NSU5fSU5TVEFOQ0VTX05PVF9QUk9WSVNJT05FRBAIEiEKHUFDVElWRV9S",
             "RVZJU0lPTl9MSU1JVF9SRUFDSEVEEAkSEQoNTk9fREVQTE9ZTUVOVBAKEhgK",
             "FEhFQUxUSF9DSEVDS19TS0lQUEVEEAsSGQoVTUlOX0lOU1RBTkNFU19XQVJN",
-            "SU5HEAwijgEKD0V4ZWN1dGlvblJlYXNvbhIeChpFWEVDVVRJT05fUkVBU09O",
+            "SU5HEAwimwEKD0V4ZWN1dGlvblJlYXNvbhIeChpFWEVDVVRJT05fUkVBU09O",
             "X1VOREVGSU5FRBAAEiQKIEpPQl9TVEFUVVNfU0VSVklDRV9QT0xMSU5HX0VS",
             "Uk9SEAESFgoSTk9OX1pFUk9fRVhJVF9DT0RFEAISDQoJQ0FOQ0VMTEVEEAMS",
-            "DgoKQ0FOQ0VMTElORxAEQgkKB3JlYXNvbnNCVgoXY29tLmdvb2dsZS5jbG91",
-            "ZC5ydW4udjJCDkNvbmRpdGlvblByb3RvUAFaKWNsb3VkLmdvb2dsZS5jb20v",
-            "Z28vcnVuL2FwaXYyL3J1bnBiO3J1bnBiYgZwcm90bzM="));
+            "DgoKQ0FOQ0VMTElORxAEEgsKB0RFTEVURUQQBUIJCgdyZWFzb25zQlYKF2Nv",
+            "bS5nb29nbGUuY2xvdWQucnVuLnYyQg5Db25kaXRpb25Qcm90b1ABWiljbG91",
+            "ZC5nb29nbGUuY29tL2dvL3J1bi9hcGl2Mi9ydW5wYjtydW5wYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -852,6 +852,10 @@ namespace Google.Cloud.Run.V2 {
         /// The execution is in the process of being cancelled.
         /// </summary>
         [pbr::OriginalName("CANCELLING")] Cancelling = 4,
+        /// <summary>
+        /// The execution was deleted.
+        /// </summary>
+        [pbr::OriginalName("DELETED")] Deleted = 5,
       }
 
     }

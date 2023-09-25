@@ -579,5 +579,192 @@ namespace GoogleCSharpSnippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for CancelExecution</summary>
+        public void CancelExecutionRequestObject()
+        {
+            // Snippet: CancelExecution(CancelExecutionRequest, CallSettings)
+            // Create client
+            gcrv::ExecutionsClient executionsClient = gcrv::ExecutionsClient.Create();
+            // Initialize request argument(s)
+            gcrv::CancelExecutionRequest request = new gcrv::CancelExecutionRequest
+            {
+                ExecutionName = gcrv::ExecutionName.FromProjectLocationJobExecution("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]"),
+                ValidateOnly = false,
+                Etag = "",
+            };
+            // Make the request
+            Operation<gcrv::Execution, gcrv::Execution> response = executionsClient.CancelExecution(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcrv::Execution, gcrv::Execution> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcrv::Execution result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcrv::Execution, gcrv::Execution> retrievedResponse = executionsClient.PollOnceCancelExecution(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcrv::Execution retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelExecutionAsync</summary>
+        public async Task CancelExecutionRequestObjectAsync()
+        {
+            // Snippet: CancelExecutionAsync(CancelExecutionRequest, CallSettings)
+            // Additional: CancelExecutionAsync(CancelExecutionRequest, CancellationToken)
+            // Create client
+            gcrv::ExecutionsClient executionsClient = await gcrv::ExecutionsClient.CreateAsync();
+            // Initialize request argument(s)
+            gcrv::CancelExecutionRequest request = new gcrv::CancelExecutionRequest
+            {
+                ExecutionName = gcrv::ExecutionName.FromProjectLocationJobExecution("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]"),
+                ValidateOnly = false,
+                Etag = "",
+            };
+            // Make the request
+            Operation<gcrv::Execution, gcrv::Execution> response = await executionsClient.CancelExecutionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcrv::Execution, gcrv::Execution> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcrv::Execution result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcrv::Execution, gcrv::Execution> retrievedResponse = await executionsClient.PollOnceCancelExecutionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcrv::Execution retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelExecution</summary>
+        public void CancelExecution()
+        {
+            // Snippet: CancelExecution(string, CallSettings)
+            // Create client
+            gcrv::ExecutionsClient executionsClient = gcrv::ExecutionsClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/jobs/[JOB]/executions/[EXECUTION]";
+            // Make the request
+            Operation<gcrv::Execution, gcrv::Execution> response = executionsClient.CancelExecution(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcrv::Execution, gcrv::Execution> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcrv::Execution result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcrv::Execution, gcrv::Execution> retrievedResponse = executionsClient.PollOnceCancelExecution(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcrv::Execution retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelExecutionAsync</summary>
+        public async Task CancelExecutionAsync()
+        {
+            // Snippet: CancelExecutionAsync(string, CallSettings)
+            // Additional: CancelExecutionAsync(string, CancellationToken)
+            // Create client
+            gcrv::ExecutionsClient executionsClient = await gcrv::ExecutionsClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/jobs/[JOB]/executions/[EXECUTION]";
+            // Make the request
+            Operation<gcrv::Execution, gcrv::Execution> response = await executionsClient.CancelExecutionAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcrv::Execution, gcrv::Execution> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcrv::Execution result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcrv::Execution, gcrv::Execution> retrievedResponse = await executionsClient.PollOnceCancelExecutionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcrv::Execution retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelExecution</summary>
+        public void CancelExecutionResourceNames()
+        {
+            // Snippet: CancelExecution(ExecutionName, CallSettings)
+            // Create client
+            gcrv::ExecutionsClient executionsClient = gcrv::ExecutionsClient.Create();
+            // Initialize request argument(s)
+            gcrv::ExecutionName name = gcrv::ExecutionName.FromProjectLocationJobExecution("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]");
+            // Make the request
+            Operation<gcrv::Execution, gcrv::Execution> response = executionsClient.CancelExecution(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcrv::Execution, gcrv::Execution> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcrv::Execution result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcrv::Execution, gcrv::Execution> retrievedResponse = executionsClient.PollOnceCancelExecution(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcrv::Execution retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelExecutionAsync</summary>
+        public async Task CancelExecutionResourceNamesAsync()
+        {
+            // Snippet: CancelExecutionAsync(ExecutionName, CallSettings)
+            // Additional: CancelExecutionAsync(ExecutionName, CancellationToken)
+            // Create client
+            gcrv::ExecutionsClient executionsClient = await gcrv::ExecutionsClient.CreateAsync();
+            // Initialize request argument(s)
+            gcrv::ExecutionName name = gcrv::ExecutionName.FromProjectLocationJobExecution("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]");
+            // Make the request
+            Operation<gcrv::Execution, gcrv::Execution> response = await executionsClient.CancelExecutionAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcrv::Execution, gcrv::Execution> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcrv::Execution result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcrv::Execution, gcrv::Execution> retrievedResponse = await executionsClient.PollOnceCancelExecutionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcrv::Execution retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }

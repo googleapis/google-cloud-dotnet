@@ -26,7 +26,7 @@ namespace Google.Cloud.Run.V2 {
           string.Concat(
             "CiFnb29nbGUvY2xvdWQvcnVuL3YyL2s4cy5taW4ucHJvdG8SE2dvb2dsZS5j",
             "bG91ZC5ydW4udjIaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8a",
-            "GWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8inAMKCUNvbnRhaW5lchIMCgRu",
+            "GWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8isAMKCUNvbnRhaW5lchIMCgRu",
             "YW1lGAEgASgJEhIKBWltYWdlGAIgASgJQgPgQQISDwoHY29tbWFuZBgDIAMo",
             "CRIMCgRhcmdzGAQgAygJEigKA2VudhgFIAMoCzIbLmdvb2dsZS5jbG91ZC5y",
             "dW4udjIuRW52VmFyEjwKCXJlc291cmNlcxgGIAEoCzIpLmdvb2dsZS5jbG91",
@@ -35,67 +35,73 @@ namespace Google.Cloud.Run.V2 {
             "X21vdW50cxgIIAMoCzIgLmdvb2dsZS5jbG91ZC5ydW4udjIuVm9sdW1lTW91",
             "bnQSEwoLd29ya2luZ19kaXIYCSABKAkSMgoObGl2ZW5lc3NfcHJvYmUYCiAB",
             "KAsyGi5nb29nbGUuY2xvdWQucnVuLnYyLlByb2JlEjEKDXN0YXJ0dXBfcHJv",
-            "YmUYCyABKAsyGi5nb29nbGUuY2xvdWQucnVuLnYyLlByb2JlIrkBChRSZXNv",
-            "dXJjZVJlcXVpcmVtZW50cxJFCgZsaW1pdHMYASADKAsyNS5nb29nbGUuY2xv",
-            "dWQucnVuLnYyLlJlc291cmNlUmVxdWlyZW1lbnRzLkxpbWl0c0VudHJ5EhAK",
-            "CGNwdV9pZGxlGAIgASgIEhkKEXN0YXJ0dXBfY3B1X2Jvb3N0GAMgASgIGi0K",
-            "C0xpbWl0c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEi",
-            "cQoGRW52VmFyEhEKBG5hbWUYASABKAlCA+BBAhIPCgV2YWx1ZRgCIAEoCUgA",
-            "EjkKDHZhbHVlX3NvdXJjZRgDIAEoCzIhLmdvb2dsZS5jbG91ZC5ydW4udjIu",
-            "RW52VmFyU291cmNlSABCCAoGdmFsdWVzIk4KDEVudlZhclNvdXJjZRI+Cg5z",
-            "ZWNyZXRfa2V5X3JlZhgBIAEoCzImLmdvb2dsZS5jbG91ZC5ydW4udjIuU2Vj",
-            "cmV0S2V5U2VsZWN0b3IikgEKEVNlY3JldEtleVNlbGVjdG9yEjsKBnNlY3Jl",
-            "dBgBIAEoCUIr4EEC+kElCiNzZWNyZXRtYW5hZ2VyLmdvb2dsZWFwaXMuY29t",
-            "L1NlY3JldBJACgd2ZXJzaW9uGAIgASgJQi/6QSwKKnNlY3JldG1hbmFnZXIu",
-            "Z29vZ2xlYXBpcy5jb20vU2VjcmV0VmVyc2lvbiI1Cg1Db250YWluZXJQb3J0",
-            "EgwKBG5hbWUYASABKAkSFgoOY29udGFpbmVyX3BvcnQYAyABKAUiOQoLVm9s",
-            "dW1lTW91bnQSEQoEbmFtZRgBIAEoCUID4EECEhcKCm1vdW50X3BhdGgYAyAB",
-            "KAlCA+BBAiKqAQoGVm9sdW1lEhEKBG5hbWUYASABKAlCA+BBAhI5CgZzZWNy",
-            "ZXQYAiABKAsyJy5nb29nbGUuY2xvdWQucnVuLnYyLlNlY3JldFZvbHVtZVNv",
-            "dXJjZUgAEkMKEmNsb3VkX3NxbF9pbnN0YW5jZRgDIAEoCzIlLmdvb2dsZS5j",
-            "bG91ZC5ydW4udjIuQ2xvdWRTcWxJbnN0YW5jZUgAQg0KC3ZvbHVtZV90eXBl",
-            "InIKElNlY3JldFZvbHVtZVNvdXJjZRITCgZzZWNyZXQYASABKAlCA+BBAhIx",
-            "CgVpdGVtcxgCIAMoCzIiLmdvb2dsZS5jbG91ZC5ydW4udjIuVmVyc2lvblRv",
-            "UGF0aBIUCgxkZWZhdWx0X21vZGUYAyABKAUiQQoNVmVyc2lvblRvUGF0aBIR",
-            "CgRwYXRoGAEgASgJQgPgQQISDwoHdmVyc2lvbhgCIAEoCRIMCgRtb2RlGAMg",
-            "ASgFIiUKEENsb3VkU3FsSW5zdGFuY2USEQoJaW5zdGFuY2VzGAEgAygJIqUC",
-            "CgVQcm9iZRIdChVpbml0aWFsX2RlbGF5X3NlY29uZHMYASABKAUSFwoPdGlt",
-            "ZW91dF9zZWNvbmRzGAIgASgFEhYKDnBlcmlvZF9zZWNvbmRzGAMgASgFEhkK",
-            "EWZhaWx1cmVfdGhyZXNob2xkGAQgASgFEjYKCGh0dHBfZ2V0GAUgASgLMiIu",
-            "Z29vZ2xlLmNsb3VkLnJ1bi52Mi5IVFRQR2V0QWN0aW9uSAASOgoKdGNwX3Nv",
-            "Y2tldBgGIAEoCzIkLmdvb2dsZS5jbG91ZC5ydW4udjIuVENQU29ja2V0QWN0",
-            "aW9uSAASLwoEZ3JwYxgHIAEoCzIfLmdvb2dsZS5jbG91ZC5ydW4udjIuR1JQ",
-            "Q0FjdGlvbkgAQgwKCnByb2JlX3R5cGUiYgoNSFRUUEdldEFjdGlvbhIMCgRw",
-            "YXRoGAEgASgJEjUKDGh0dHBfaGVhZGVycxgEIAMoCzIfLmdvb2dsZS5jbG91",
-            "ZC5ydW4udjIuSFRUUEhlYWRlchIMCgRwb3J0GAUgASgFIi4KCkhUVFBIZWFk",
-            "ZXISEQoEbmFtZRgBIAEoCUID4EECEg0KBXZhbHVlGAIgASgJIh8KD1RDUFNv",
-            "Y2tldEFjdGlvbhIMCgRwb3J0GAEgASgFIisKCkdSUENBY3Rpb24SDAoEcG9y",
-            "dBgBIAEoBRIPCgdzZXJ2aWNlGAIgASgJQukDChdjb20uZ29vZ2xlLmNsb3Vk",
-            "LnJ1bi52MkILSzhzTWluUHJvdG9QAVopY2xvdWQuZ29vZ2xlLmNvbS9nby9y",
-            "dW4vYXBpdjIvcnVucGI7cnVucGLqQXgKIWNsb3Vka21zLmdvb2dsZWFwaXMu",
-            "Y29tL0NyeXB0b0tleRJTcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97",
-            "bG9jYXRpb259L2tleVJpbmdzL3trZXlfcmluZ30vY3J5cHRvS2V5cy97Y3J5",
-            "cHRvX2tleX3qQUoKI3NlY3JldG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vU2Vj",
-            "cmV0EiNwcm9qZWN0cy97cHJvamVjdH0vc2VjcmV0cy97c2VjcmV0fepBZAoq",
-            "c2VjcmV0bWFuYWdlci5nb29nbGVhcGlzLmNvbS9TZWNyZXRWZXJzaW9uEjZw",
-            "cm9qZWN0cy97cHJvamVjdH0vc2VjcmV0cy97c2VjcmV0fS92ZXJzaW9ucy97",
-            "dmVyc2lvbn3qQWQKInZwY2FjY2Vzcy5nb29nbGVhcGlzLmNvbS9Db25uZWN0",
-            "b3ISPnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9j",
-            "b25uZWN0b3JzL3tjb25uZWN0b3J9YgZwcm90bzM="));
+            "YmUYCyABKAsyGi5nb29nbGUuY2xvdWQucnVuLnYyLlByb2JlEhIKCmRlcGVu",
+            "ZHNfb24YDCADKAkiuQEKFFJlc291cmNlUmVxdWlyZW1lbnRzEkUKBmxpbWl0",
+            "cxgBIAMoCzI1Lmdvb2dsZS5jbG91ZC5ydW4udjIuUmVzb3VyY2VSZXF1aXJl",
+            "bWVudHMuTGltaXRzRW50cnkSEAoIY3B1X2lkbGUYAiABKAgSGQoRc3RhcnR1",
+            "cF9jcHVfYm9vc3QYAyABKAgaLQoLTGltaXRzRW50cnkSCwoDa2V5GAEgASgJ",
+            "Eg0KBXZhbHVlGAIgASgJOgI4ASJxCgZFbnZWYXISEQoEbmFtZRgBIAEoCUID",
+            "4EECEg8KBXZhbHVlGAIgASgJSAASOQoMdmFsdWVfc291cmNlGAMgASgLMiEu",
+            "Z29vZ2xlLmNsb3VkLnJ1bi52Mi5FbnZWYXJTb3VyY2VIAEIICgZ2YWx1ZXMi",
+            "TgoMRW52VmFyU291cmNlEj4KDnNlY3JldF9rZXlfcmVmGAEgASgLMiYuZ29v",
+            "Z2xlLmNsb3VkLnJ1bi52Mi5TZWNyZXRLZXlTZWxlY3RvciKSAQoRU2VjcmV0",
+            "S2V5U2VsZWN0b3ISOwoGc2VjcmV0GAEgASgJQivgQQL6QSUKI3NlY3JldG1h",
+            "bmFnZXIuZ29vZ2xlYXBpcy5jb20vU2VjcmV0EkAKB3ZlcnNpb24YAiABKAlC",
+            "L/pBLAoqc2VjcmV0bWFuYWdlci5nb29nbGVhcGlzLmNvbS9TZWNyZXRWZXJz",
+            "aW9uIjUKDUNvbnRhaW5lclBvcnQSDAoEbmFtZRgBIAEoCRIWCg5jb250YWlu",
+            "ZXJfcG9ydBgDIAEoBSI5CgtWb2x1bWVNb3VudBIRCgRuYW1lGAEgASgJQgPg",
+            "QQISFwoKbW91bnRfcGF0aBgDIAEoCUID4EECIuoBCgZWb2x1bWUSEQoEbmFt",
+            "ZRgBIAEoCUID4EECEjkKBnNlY3JldBgCIAEoCzInLmdvb2dsZS5jbG91ZC5y",
+            "dW4udjIuU2VjcmV0Vm9sdW1lU291cmNlSAASQwoSY2xvdWRfc3FsX2luc3Rh",
+            "bmNlGAMgASgLMiUuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5DbG91ZFNxbEluc3Rh",
+            "bmNlSAASPgoJZW1wdHlfZGlyGAQgASgLMikuZ29vZ2xlLmNsb3VkLnJ1bi52",
+            "Mi5FbXB0eURpclZvbHVtZVNvdXJjZUgAQg0KC3ZvbHVtZV90eXBlInIKElNl",
+            "Y3JldFZvbHVtZVNvdXJjZRITCgZzZWNyZXQYASABKAlCA+BBAhIxCgVpdGVt",
+            "cxgCIAMoCzIiLmdvb2dsZS5jbG91ZC5ydW4udjIuVmVyc2lvblRvUGF0aBIU",
+            "CgxkZWZhdWx0X21vZGUYAyABKAUiQQoNVmVyc2lvblRvUGF0aBIRCgRwYXRo",
+            "GAEgASgJQgPgQQISDwoHdmVyc2lvbhgCIAEoCRIMCgRtb2RlGAMgASgFIiUK",
+            "EENsb3VkU3FsSW5zdGFuY2USEQoJaW5zdGFuY2VzGAEgAygJIpoBChRFbXB0",
+            "eURpclZvbHVtZVNvdXJjZRJACgZtZWRpdW0YASABKA4yMC5nb29nbGUuY2xv",
+            "dWQucnVuLnYyLkVtcHR5RGlyVm9sdW1lU291cmNlLk1lZGl1bRISCgpzaXpl",
+            "X2xpbWl0GAIgASgJIiwKBk1lZGl1bRIWChJNRURJVU1fVU5TUEVDSUZJRUQQ",
+            "ABIKCgZNRU1PUlkQASKlAgoFUHJvYmUSHQoVaW5pdGlhbF9kZWxheV9zZWNv",
+            "bmRzGAEgASgFEhcKD3RpbWVvdXRfc2Vjb25kcxgCIAEoBRIWCg5wZXJpb2Rf",
+            "c2Vjb25kcxgDIAEoBRIZChFmYWlsdXJlX3RocmVzaG9sZBgEIAEoBRI2Cgho",
+            "dHRwX2dldBgFIAEoCzIiLmdvb2dsZS5jbG91ZC5ydW4udjIuSFRUUEdldEFj",
+            "dGlvbkgAEjoKCnRjcF9zb2NrZXQYBiABKAsyJC5nb29nbGUuY2xvdWQucnVu",
+            "LnYyLlRDUFNvY2tldEFjdGlvbkgAEi8KBGdycGMYByABKAsyHy5nb29nbGUu",
+            "Y2xvdWQucnVuLnYyLkdSUENBY3Rpb25IAEIMCgpwcm9iZV90eXBlImIKDUhU",
+            "VFBHZXRBY3Rpb24SDAoEcGF0aBgBIAEoCRI1CgxodHRwX2hlYWRlcnMYBCAD",
+            "KAsyHy5nb29nbGUuY2xvdWQucnVuLnYyLkhUVFBIZWFkZXISDAoEcG9ydBgF",
+            "IAEoBSIuCgpIVFRQSGVhZGVyEhEKBG5hbWUYASABKAlCA+BBAhINCgV2YWx1",
+            "ZRgCIAEoCSIfCg9UQ1BTb2NrZXRBY3Rpb24SDAoEcG9ydBgBIAEoBSIrCgpH",
+            "UlBDQWN0aW9uEgwKBHBvcnQYASABKAUSDwoHc2VydmljZRgCIAEoCULpAwoX",
+            "Y29tLmdvb2dsZS5jbG91ZC5ydW4udjJCC0s4c01pblByb3RvUAFaKWNsb3Vk",
+            "Lmdvb2dsZS5jb20vZ28vcnVuL2FwaXYyL3J1bnBiO3J1bnBi6kF4CiFjbG91",
+            "ZGttcy5nb29nbGVhcGlzLmNvbS9DcnlwdG9LZXkSU3Byb2plY3RzL3twcm9q",
+            "ZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9rZXlSaW5ncy97a2V5X3Jpbmd9",
+            "L2NyeXB0b0tleXMve2NyeXB0b19rZXl96kFKCiNzZWNyZXRtYW5hZ2VyLmdv",
+            "b2dsZWFwaXMuY29tL1NlY3JldBIjcHJvamVjdHMve3Byb2plY3R9L3NlY3Jl",
+            "dHMve3NlY3JldH3qQWQKKnNlY3JldG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20v",
+            "U2VjcmV0VmVyc2lvbhI2cHJvamVjdHMve3Byb2plY3R9L3NlY3JldHMve3Nl",
+            "Y3JldH0vdmVyc2lvbnMve3ZlcnNpb2596kFkCiJ2cGNhY2Nlc3MuZ29vZ2xl",
+            "YXBpcy5jb20vQ29ubmVjdG9yEj5wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
+            "b25zL3tsb2NhdGlvbn0vY29ubmVjdG9ycy97Y29ubmVjdG9yfWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Container), global::Google.Cloud.Run.V2.Container.Parser, new[]{ "Name", "Image", "Command", "Args", "Env", "Resources", "Ports", "VolumeMounts", "WorkingDir", "LivenessProbe", "StartupProbe" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Container), global::Google.Cloud.Run.V2.Container.Parser, new[]{ "Name", "Image", "Command", "Args", "Env", "Resources", "Ports", "VolumeMounts", "WorkingDir", "LivenessProbe", "StartupProbe", "DependsOn" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ResourceRequirements), global::Google.Cloud.Run.V2.ResourceRequirements.Parser, new[]{ "Limits", "CpuIdle", "StartupCpuBoost" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.EnvVar), global::Google.Cloud.Run.V2.EnvVar.Parser, new[]{ "Name", "Value", "ValueSource" }, new[]{ "Values" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.EnvVarSource), global::Google.Cloud.Run.V2.EnvVarSource.Parser, new[]{ "SecretKeyRef" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.SecretKeySelector), global::Google.Cloud.Run.V2.SecretKeySelector.Parser, new[]{ "Secret", "Version" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ContainerPort), global::Google.Cloud.Run.V2.ContainerPort.Parser, new[]{ "Name", "ContainerPort_" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.VolumeMount), global::Google.Cloud.Run.V2.VolumeMount.Parser, new[]{ "Name", "MountPath" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Volume), global::Google.Cloud.Run.V2.Volume.Parser, new[]{ "Name", "Secret", "CloudSqlInstance" }, new[]{ "VolumeType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Volume), global::Google.Cloud.Run.V2.Volume.Parser, new[]{ "Name", "Secret", "CloudSqlInstance", "EmptyDir" }, new[]{ "VolumeType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.SecretVolumeSource), global::Google.Cloud.Run.V2.SecretVolumeSource.Parser, new[]{ "Secret", "Items", "DefaultMode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.VersionToPath), global::Google.Cloud.Run.V2.VersionToPath.Parser, new[]{ "Path", "Version", "Mode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.CloudSqlInstance), global::Google.Cloud.Run.V2.CloudSqlInstance.Parser, new[]{ "Instances" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.EmptyDirVolumeSource), global::Google.Cloud.Run.V2.EmptyDirVolumeSource.Parser, new[]{ "Medium", "SizeLimit" }, null, new[]{ typeof(global::Google.Cloud.Run.V2.EmptyDirVolumeSource.Types.Medium) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Probe), global::Google.Cloud.Run.V2.Probe.Parser, new[]{ "InitialDelaySeconds", "TimeoutSeconds", "PeriodSeconds", "FailureThreshold", "HttpGet", "TcpSocket", "Grpc" }, new[]{ "ProbeType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.HTTPGetAction), global::Google.Cloud.Run.V2.HTTPGetAction.Parser, new[]{ "Path", "HttpHeaders", "Port" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.HTTPHeader), global::Google.Cloud.Run.V2.HTTPHeader.Parser, new[]{ "Name", "Value" }, null, null, null, null),
@@ -111,7 +117,7 @@ namespace Google.Cloud.Run.V2 {
   /// A single application container.
   /// This specifies both the container to run, the command to run in the container
   /// and the arguments to supply to it.
-  /// Note that additional arguments may be supplied by the system to the container
+  /// Note that additional arguments can be supplied by the system to the container
   /// at runtime.
   /// </summary>
   public sealed partial class Container : pb::IMessage<Container>
@@ -159,6 +165,7 @@ namespace Google.Cloud.Run.V2 {
       workingDir_ = other.workingDir_;
       livenessProbe_ = other.livenessProbe_ != null ? other.livenessProbe_.Clone() : null;
       startupProbe_ = other.startupProbe_ != null ? other.startupProbe_.Clone() : null;
+      dependsOn_ = other.dependsOn_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -343,6 +350,20 @@ namespace Google.Cloud.Run.V2 {
       }
     }
 
+    /// <summary>Field number for the "depends_on" field.</summary>
+    public const int DependsOnFieldNumber = 12;
+    private static readonly pb::FieldCodec<string> _repeated_dependsOn_codec
+        = pb::FieldCodec.ForString(98);
+    private readonly pbc::RepeatedField<string> dependsOn_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Names of the containers that must start before this container.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> DependsOn {
+      get { return dependsOn_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -369,6 +390,7 @@ namespace Google.Cloud.Run.V2 {
       if (WorkingDir != other.WorkingDir) return false;
       if (!object.Equals(LivenessProbe, other.LivenessProbe)) return false;
       if (!object.Equals(StartupProbe, other.StartupProbe)) return false;
+      if(!dependsOn_.Equals(other.dependsOn_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -387,6 +409,7 @@ namespace Google.Cloud.Run.V2 {
       if (WorkingDir.Length != 0) hash ^= WorkingDir.GetHashCode();
       if (livenessProbe_ != null) hash ^= LivenessProbe.GetHashCode();
       if (startupProbe_ != null) hash ^= StartupProbe.GetHashCode();
+      hash ^= dependsOn_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -434,6 +457,7 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(90);
         output.WriteMessage(StartupProbe);
       }
+      dependsOn_.WriteTo(output, _repeated_dependsOn_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -473,6 +497,7 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(90);
         output.WriteMessage(StartupProbe);
       }
+      dependsOn_.WriteTo(ref output, _repeated_dependsOn_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -506,6 +531,7 @@ namespace Google.Cloud.Run.V2 {
       if (startupProbe_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartupProbe);
       }
+      size += dependsOn_.CalculateSize(_repeated_dependsOn_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -550,6 +576,7 @@ namespace Google.Cloud.Run.V2 {
         }
         StartupProbe.MergeFrom(other.StartupProbe);
       }
+      dependsOn_.Add(other.dependsOn_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -618,6 +645,10 @@ namespace Google.Cloud.Run.V2 {
             input.ReadMessage(StartupProbe);
             break;
           }
+          case 98: {
+            dependsOn_.AddEntriesFrom(input, _repeated_dependsOn_codec);
+            break;
+          }
         }
       }
     #endif
@@ -684,6 +715,10 @@ namespace Google.Cloud.Run.V2 {
               StartupProbe = new global::Google.Cloud.Run.V2.Probe();
             }
             input.ReadMessage(StartupProbe);
+            break;
+          }
+          case 98: {
+            dependsOn_.AddEntriesFrom(ref input, _repeated_dependsOn_codec);
             break;
           }
         }
@@ -1027,7 +1062,7 @@ namespace Google.Cloud.Run.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. Name of the environment variable. Must be a C_IDENTIFIER, and
-    /// mnay not exceed 32768 characters.
+    /// must not exceed 32768 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2274,6 +2309,9 @@ namespace Google.Cloud.Run.V2 {
         case VolumeTypeOneofCase.CloudSqlInstance:
           CloudSqlInstance = other.CloudSqlInstance.Clone();
           break;
+        case VolumeTypeOneofCase.EmptyDir:
+          EmptyDir = other.EmptyDir.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -2332,12 +2370,28 @@ namespace Google.Cloud.Run.V2 {
       }
     }
 
+    /// <summary>Field number for the "empty_dir" field.</summary>
+    public const int EmptyDirFieldNumber = 4;
+    /// <summary>
+    /// Ephemeral storage used as a shared volume.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Run.V2.EmptyDirVolumeSource EmptyDir {
+      get { return volumeTypeCase_ == VolumeTypeOneofCase.EmptyDir ? (global::Google.Cloud.Run.V2.EmptyDirVolumeSource) volumeType_ : null; }
+      set {
+        volumeType_ = value;
+        volumeTypeCase_ = value == null ? VolumeTypeOneofCase.None : VolumeTypeOneofCase.EmptyDir;
+      }
+    }
+
     private object volumeType_;
     /// <summary>Enum of possible cases for the "volume_type" oneof.</summary>
     public enum VolumeTypeOneofCase {
       None = 0,
       Secret = 2,
       CloudSqlInstance = 3,
+      EmptyDir = 4,
     }
     private VolumeTypeOneofCase volumeTypeCase_ = VolumeTypeOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2371,6 +2425,7 @@ namespace Google.Cloud.Run.V2 {
       if (Name != other.Name) return false;
       if (!object.Equals(Secret, other.Secret)) return false;
       if (!object.Equals(CloudSqlInstance, other.CloudSqlInstance)) return false;
+      if (!object.Equals(EmptyDir, other.EmptyDir)) return false;
       if (VolumeTypeCase != other.VolumeTypeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2382,6 +2437,7 @@ namespace Google.Cloud.Run.V2 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (volumeTypeCase_ == VolumeTypeOneofCase.Secret) hash ^= Secret.GetHashCode();
       if (volumeTypeCase_ == VolumeTypeOneofCase.CloudSqlInstance) hash ^= CloudSqlInstance.GetHashCode();
+      if (volumeTypeCase_ == VolumeTypeOneofCase.EmptyDir) hash ^= EmptyDir.GetHashCode();
       hash ^= (int) volumeTypeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2413,6 +2469,10 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(26);
         output.WriteMessage(CloudSqlInstance);
       }
+      if (volumeTypeCase_ == VolumeTypeOneofCase.EmptyDir) {
+        output.WriteRawTag(34);
+        output.WriteMessage(EmptyDir);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2435,6 +2495,10 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(26);
         output.WriteMessage(CloudSqlInstance);
       }
+      if (volumeTypeCase_ == VolumeTypeOneofCase.EmptyDir) {
+        output.WriteRawTag(34);
+        output.WriteMessage(EmptyDir);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2453,6 +2517,9 @@ namespace Google.Cloud.Run.V2 {
       }
       if (volumeTypeCase_ == VolumeTypeOneofCase.CloudSqlInstance) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CloudSqlInstance);
+      }
+      if (volumeTypeCase_ == VolumeTypeOneofCase.EmptyDir) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EmptyDir);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2481,6 +2548,12 @@ namespace Google.Cloud.Run.V2 {
             CloudSqlInstance = new global::Google.Cloud.Run.V2.CloudSqlInstance();
           }
           CloudSqlInstance.MergeFrom(other.CloudSqlInstance);
+          break;
+        case VolumeTypeOneofCase.EmptyDir:
+          if (EmptyDir == null) {
+            EmptyDir = new global::Google.Cloud.Run.V2.EmptyDirVolumeSource();
+          }
+          EmptyDir.MergeFrom(other.EmptyDir);
           break;
       }
 
@@ -2521,6 +2594,15 @@ namespace Google.Cloud.Run.V2 {
             CloudSqlInstance = subBuilder;
             break;
           }
+          case 34: {
+            global::Google.Cloud.Run.V2.EmptyDirVolumeSource subBuilder = new global::Google.Cloud.Run.V2.EmptyDirVolumeSource();
+            if (volumeTypeCase_ == VolumeTypeOneofCase.EmptyDir) {
+              subBuilder.MergeFrom(EmptyDir);
+            }
+            input.ReadMessage(subBuilder);
+            EmptyDir = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -2556,6 +2638,15 @@ namespace Google.Cloud.Run.V2 {
             }
             input.ReadMessage(subBuilder);
             CloudSqlInstance = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.Run.V2.EmptyDirVolumeSource subBuilder = new global::Google.Cloud.Run.V2.EmptyDirVolumeSource();
+            if (volumeTypeCase_ == VolumeTypeOneofCase.EmptyDir) {
+              subBuilder.MergeFrom(EmptyDir);
+            }
+            input.ReadMessage(subBuilder);
+            EmptyDir = subBuilder;
             break;
           }
         }
@@ -3339,6 +3430,276 @@ namespace Google.Cloud.Run.V2 {
   }
 
   /// <summary>
+  /// In memory (tmpfs) ephemeral storage.
+  /// It is ephemeral in the sense that when the sandbox is taken down, the data is
+  /// destroyed with it (it does not persist across sandbox runs).
+  /// </summary>
+  public sealed partial class EmptyDirVolumeSource : pb::IMessage<EmptyDirVolumeSource>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<EmptyDirVolumeSource> _parser = new pb::MessageParser<EmptyDirVolumeSource>(() => new EmptyDirVolumeSource());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<EmptyDirVolumeSource> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EmptyDirVolumeSource() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EmptyDirVolumeSource(EmptyDirVolumeSource other) : this() {
+      medium_ = other.medium_;
+      sizeLimit_ = other.sizeLimit_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EmptyDirVolumeSource Clone() {
+      return new EmptyDirVolumeSource(this);
+    }
+
+    /// <summary>Field number for the "medium" field.</summary>
+    public const int MediumFieldNumber = 1;
+    private global::Google.Cloud.Run.V2.EmptyDirVolumeSource.Types.Medium medium_ = global::Google.Cloud.Run.V2.EmptyDirVolumeSource.Types.Medium.Unspecified;
+    /// <summary>
+    /// The medium on which the data is stored. Acceptable values today is only
+    /// MEMORY or none. When none, the default will currently be backed by memory
+    /// but could change over time. +optional
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Run.V2.EmptyDirVolumeSource.Types.Medium Medium {
+      get { return medium_; }
+      set {
+        medium_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "size_limit" field.</summary>
+    public const int SizeLimitFieldNumber = 2;
+    private string sizeLimit_ = "";
+    /// <summary>
+    /// Limit on the storage usable by this EmptyDir volume.
+    /// The size limit is also applicable for memory medium.
+    /// The maximum usage on memory medium EmptyDir would be the minimum value
+    /// between the SizeLimit specified here and the sum of memory limits of all
+    /// containers. The default is nil which means that the limit is undefined.
+    /// More info:
+    /// https://cloud.google.com/run/docs/configuring/in-memory-volumes#configure-volume.
+    /// Info in Kubernetes:
+    /// https://kubernetes.io/docs/concepts/storage/volumes/#emptydir
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SizeLimit {
+      get { return sizeLimit_; }
+      set {
+        sizeLimit_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as EmptyDirVolumeSource);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(EmptyDirVolumeSource other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Medium != other.Medium) return false;
+      if (SizeLimit != other.SizeLimit) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Medium != global::Google.Cloud.Run.V2.EmptyDirVolumeSource.Types.Medium.Unspecified) hash ^= Medium.GetHashCode();
+      if (SizeLimit.Length != 0) hash ^= SizeLimit.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Medium != global::Google.Cloud.Run.V2.EmptyDirVolumeSource.Types.Medium.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Medium);
+      }
+      if (SizeLimit.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SizeLimit);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Medium != global::Google.Cloud.Run.V2.EmptyDirVolumeSource.Types.Medium.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Medium);
+      }
+      if (SizeLimit.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SizeLimit);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Medium != global::Google.Cloud.Run.V2.EmptyDirVolumeSource.Types.Medium.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Medium);
+      }
+      if (SizeLimit.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SizeLimit);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(EmptyDirVolumeSource other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Medium != global::Google.Cloud.Run.V2.EmptyDirVolumeSource.Types.Medium.Unspecified) {
+        Medium = other.Medium;
+      }
+      if (other.SizeLimit.Length != 0) {
+        SizeLimit = other.SizeLimit;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Medium = (global::Google.Cloud.Run.V2.EmptyDirVolumeSource.Types.Medium) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            SizeLimit = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Medium = (global::Google.Cloud.Run.V2.EmptyDirVolumeSource.Types.Medium) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            SizeLimit = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the EmptyDirVolumeSource message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The different types of medium supported for EmptyDir.
+      /// </summary>
+      public enum Medium {
+        /// <summary>
+        /// When not specified, falls back to the default implementation which
+        /// is currently in memory (this may change over time).
+        /// </summary>
+        [pbr::OriginalName("MEDIUM_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Explicitly set the EmptyDir to be in memory. Uses tmpfs.
+        /// </summary>
+        [pbr::OriginalName("MEMORY")] Memory = 1,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// Probe describes a health check to be performed against a container to
   /// determine whether it is alive or ready to receive traffic.
   /// </summary>
@@ -3356,7 +3717,7 @@ namespace Google.Cloud.Run.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3878,7 +4239,7 @@ namespace Google.Cloud.Run.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4144,7 +4505,7 @@ namespace Google.Cloud.Run.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4379,7 +4740,7 @@ namespace Google.Cloud.Run.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4576,7 +4937,7 @@ namespace Google.Cloud.Run.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4629,7 +4990,7 @@ namespace Google.Cloud.Run.V2 {
     private string service_ = "";
     /// <summary>
     /// Service is the name of the service to place in the gRPC HealthCheckRequest
-    /// (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md). If
+    /// (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md ). If
     /// this is not specified, the default behavior is defined by gRPC.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

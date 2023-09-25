@@ -38,61 +38,63 @@ namespace Google.Cloud.Run.V2 {
             "YXBpcy5jb20vVGFzaxIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tl",
             "bhgDIAEoCRIUCgxzaG93X2RlbGV0ZWQYBCABKAgiVgoRTGlzdFRhc2tzUmVz",
             "cG9uc2USKAoFdGFza3MYASADKAsyGS5nb29nbGUuY2xvdWQucnVuLnYyLlRh",
-            "c2sSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIv8LCgRUYXNrEhEKBG5hbWUY",
+            "c2sSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIrgMCgRUYXNrEhEKBG5hbWUY",
             "ASABKAlCA+BBAxIQCgN1aWQYAiABKAlCA+BBAxIXCgpnZW5lcmF0aW9uGAMg",
             "ASgDQgPgQQMSOgoGbGFiZWxzGAQgAygLMiUuZ29vZ2xlLmNsb3VkLnJ1bi52",
             "Mi5UYXNrLkxhYmVsc0VudHJ5QgPgQQMSRAoLYW5ub3RhdGlvbnMYBSADKAsy",
             "Ki5nb29nbGUuY2xvdWQucnVuLnYyLlRhc2suQW5ub3RhdGlvbnNFbnRyeUID",
             "4EEDEjQKC2NyZWF0ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcEID4EEDEjMKCnN0YXJ0X3RpbWUYGyABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wQgPgQQMSOAoPY29tcGxldGlvbl90aW1lGAcgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90",
-            "aW1lGAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQK",
-            "C2RlbGV0ZV90aW1lGAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cEID4EEDEjQKC2V4cGlyZV90aW1lGAogASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcEID4EEDEisKA2pvYhgMIAEoCUIe4EED+kEYChZydW4uZ29v",
-            "Z2xlYXBpcy5jb20vSm9iEjcKCWV4ZWN1dGlvbhgNIAEoCUIk4EED+kEeChxy",
-            "dW4uZ29vZ2xlYXBpcy5jb20vRXhlY3V0aW9uEjIKCmNvbnRhaW5lcnMYDiAD",
-            "KAsyHi5nb29nbGUuY2xvdWQucnVuLnYyLkNvbnRhaW5lchIsCgd2b2x1bWVz",
-            "GA8gAygLMhsuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5Wb2x1bWUSEwoLbWF4X3Jl",
-            "dHJpZXMYECABKAUSKgoHdGltZW91dBgRIAEoCzIZLmdvb2dsZS5wcm90b2J1",
-            "Zi5EdXJhdGlvbhIXCg9zZXJ2aWNlX2FjY291bnQYEiABKAkSSAoVZXhlY3V0",
-            "aW9uX2Vudmlyb25tZW50GBQgASgOMikuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5F",
-            "eGVjdXRpb25FbnZpcm9ubWVudBIYCgtyZWNvbmNpbGluZxgVIAEoCEID4EED",
-            "EjcKCmNvbmRpdGlvbnMYFiADKAsyHi5nb29nbGUuY2xvdWQucnVuLnYyLkNv",
-            "bmRpdGlvbkID4EEDEiAKE29ic2VydmVkX2dlbmVyYXRpb24YFyABKANCA+BB",
-            "AxISCgVpbmRleBgYIAEoBUID4EEDEhQKB3JldHJpZWQYGSABKAVCA+BBAxJI",
-            "ChNsYXN0X2F0dGVtcHRfcmVzdWx0GBogASgLMiYuZ29vZ2xlLmNsb3VkLnJ1",
-            "bi52Mi5UYXNrQXR0ZW1wdFJlc3VsdEID4EEDEkEKDmVuY3J5cHRpb25fa2V5",
-            "GBwgASgJQingQQP6QSMKIWNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0NyeXB0",
-            "b0tleRI3Cgp2cGNfYWNjZXNzGB0gASgLMh4uZ29vZ2xlLmNsb3VkLnJ1bi52",
-            "Mi5WcGNBY2Nlc3NCA+BBAxIUCgdsb2dfdXJpGCAgASgJQgPgQQMSGgoNc2F0",
-            "aXNmaWVzX3B6cxghIAEoCEID4EEDEhEKBGV0YWcYYyABKAlCA+BBAxotCgtM",
-            "YWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBGjIK",
-            "EEFubm90YXRpb25zRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJ",
-            "OgI4ATp36kF0ChdydW4uZ29vZ2xlYXBpcy5jb20vVGFzaxJWcHJvamVjdHMv",
-            "e3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2pvYnMve2pvYn0vZXhl",
-            "Y3V0aW9ucy97ZXhlY3V0aW9ufS90YXNrcy97dGFza31SAQEiVAoRVGFza0F0",
-            "dGVtcHRSZXN1bHQSJwoGc3RhdHVzGAEgASgLMhIuZ29vZ2xlLnJwYy5TdGF0",
-            "dXNCA+BBAxIWCglleGl0X2NvZGUYAiABKAVCA+BBAzKWAwoFVGFza3MSlwEK",
-            "B0dldFRhc2sSIy5nb29nbGUuY2xvdWQucnVuLnYyLkdldFRhc2tSZXF1ZXN0",
-            "GhkuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5UYXNrIkyC0+STAj8SPS92Mi97bmFt",
-            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2pvYnMvKi9leGVjdXRpb25zLyov",
-            "dGFza3MvKn3aQQRuYW1lEqoBCglMaXN0VGFza3MSJS5nb29nbGUuY2xvdWQu",
-            "cnVuLnYyLkxpc3RUYXNrc1JlcXVlc3QaJi5nb29nbGUuY2xvdWQucnVuLnYy",
-            "Lkxpc3RUYXNrc1Jlc3BvbnNlIk6C0+STAj8SPS92Mi97cGFyZW50PXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyovam9icy8qL2V4ZWN1dGlvbnMvKn0vdGFza3Pa",
-            "QQZwYXJlbnQaRspBEnJ1bi5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3",
-            "Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CUQoXY29tLmdv",
-            "b2dsZS5jbG91ZC5ydW4udjJCCVRhc2tQcm90b1ABWiljbG91ZC5nb29nbGUu",
-            "Y29tL2dvL3J1bi9hcGl2Mi9ydW5wYjtydW5wYmIGcHJvdG8z"));
+            "bWVzdGFtcEID4EEDEjcKDnNjaGVkdWxlZF90aW1lGCIgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjMKCnN0YXJ0X3RpbWUYGyABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSOAoPY29tcGxldGlv",
+            "bl90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EED",
+            "EjQKC3VwZGF0ZV90aW1lGAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcEID4EEDEjQKC2RlbGV0ZV90aW1lGAkgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEID4EEDEjQKC2V4cGlyZV90aW1lGAogASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEisKA2pvYhgMIAEoCUIe4EED",
+            "+kEYChZydW4uZ29vZ2xlYXBpcy5jb20vSm9iEjcKCWV4ZWN1dGlvbhgNIAEo",
+            "CUIk4EED+kEeChxydW4uZ29vZ2xlYXBpcy5jb20vRXhlY3V0aW9uEjIKCmNv",
+            "bnRhaW5lcnMYDiADKAsyHi5nb29nbGUuY2xvdWQucnVuLnYyLkNvbnRhaW5l",
+            "chIsCgd2b2x1bWVzGA8gAygLMhsuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5Wb2x1",
+            "bWUSEwoLbWF4X3JldHJpZXMYECABKAUSKgoHdGltZW91dBgRIAEoCzIZLmdv",
+            "b2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIXCg9zZXJ2aWNlX2FjY291bnQYEiAB",
+            "KAkSSAoVZXhlY3V0aW9uX2Vudmlyb25tZW50GBQgASgOMikuZ29vZ2xlLmNs",
+            "b3VkLnJ1bi52Mi5FeGVjdXRpb25FbnZpcm9ubWVudBIYCgtyZWNvbmNpbGlu",
+            "ZxgVIAEoCEID4EEDEjcKCmNvbmRpdGlvbnMYFiADKAsyHi5nb29nbGUuY2xv",
+            "dWQucnVuLnYyLkNvbmRpdGlvbkID4EEDEiAKE29ic2VydmVkX2dlbmVyYXRp",
+            "b24YFyABKANCA+BBAxISCgVpbmRleBgYIAEoBUID4EEDEhQKB3JldHJpZWQY",
+            "GSABKAVCA+BBAxJIChNsYXN0X2F0dGVtcHRfcmVzdWx0GBogASgLMiYuZ29v",
+            "Z2xlLmNsb3VkLnJ1bi52Mi5UYXNrQXR0ZW1wdFJlc3VsdEID4EEDEkEKDmVu",
+            "Y3J5cHRpb25fa2V5GBwgASgJQingQQP6QSMKIWNsb3Vka21zLmdvb2dsZWFw",
+            "aXMuY29tL0NyeXB0b0tleRI3Cgp2cGNfYWNjZXNzGB0gASgLMh4uZ29vZ2xl",
+            "LmNsb3VkLnJ1bi52Mi5WcGNBY2Nlc3NCA+BBAxIUCgdsb2dfdXJpGCAgASgJ",
+            "QgPgQQMSGgoNc2F0aXNmaWVzX3B6cxghIAEoCEID4EEDEhEKBGV0YWcYYyAB",
+            "KAlCA+BBAxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
+            "AiABKAk6AjgBGjIKEEFubm90YXRpb25zRW50cnkSCwoDa2V5GAEgASgJEg0K",
+            "BXZhbHVlGAIgASgJOgI4ATp36kF0ChdydW4uZ29vZ2xlYXBpcy5jb20vVGFz",
+            "axJWcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2pv",
+            "YnMve2pvYn0vZXhlY3V0aW9ucy97ZXhlY3V0aW9ufS90YXNrcy97dGFza31S",
+            "AQEiVAoRVGFza0F0dGVtcHRSZXN1bHQSJwoGc3RhdHVzGAEgASgLMhIuZ29v",
+            "Z2xlLnJwYy5TdGF0dXNCA+BBAxIWCglleGl0X2NvZGUYAiABKAVCA+BBAzKW",
+            "AwoFVGFza3MSlwEKB0dldFRhc2sSIy5nb29nbGUuY2xvdWQucnVuLnYyLkdl",
+            "dFRhc2tSZXF1ZXN0GhkuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5UYXNrIkyC0+ST",
+            "Aj8SPS92Mi97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2pvYnMvKi9l",
+            "eGVjdXRpb25zLyovdGFza3MvKn3aQQRuYW1lEqoBCglMaXN0VGFza3MSJS5n",
+            "b29nbGUuY2xvdWQucnVuLnYyLkxpc3RUYXNrc1JlcXVlc3QaJi5nb29nbGUu",
+            "Y2xvdWQucnVuLnYyLkxpc3RUYXNrc1Jlc3BvbnNlIk6C0+STAj8SPS92Mi97",
+            "cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovam9icy8qL2V4ZWN1dGlv",
+            "bnMvKn0vdGFza3PaQQZwYXJlbnQaRspBEnJ1bi5nb29nbGVhcGlzLmNvbdJB",
+            "Lmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZv",
+            "cm1CUQoXY29tLmdvb2dsZS5jbG91ZC5ydW4udjJCCVRhc2tQcm90b1ABWilj",
+            "bG91ZC5nb29nbGUuY29tL2dvL3J1bi9hcGl2Mi9ydW5wYjtydW5wYmIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Run.V2.ConditionReflection.Descriptor, global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor, global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.GetTaskRequest), global::Google.Cloud.Run.V2.GetTaskRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ListTasksRequest), global::Google.Cloud.Run.V2.ListTasksRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "ShowDeleted" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ListTasksResponse), global::Google.Cloud.Run.V2.ListTasksResponse.Parser, new[]{ "Tasks", "NextPageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Task), global::Google.Cloud.Run.V2.Task.Parser, new[]{ "Name", "Uid", "Generation", "Labels", "Annotations", "CreateTime", "StartTime", "CompletionTime", "UpdateTime", "DeleteTime", "ExpireTime", "Job", "Execution", "Containers", "Volumes", "MaxRetries", "Timeout", "ServiceAccount", "ExecutionEnvironment", "Reconciling", "Conditions", "ObservedGeneration", "Index", "Retried", "LastAttemptResult", "EncryptionKey", "VpcAccess", "LogUri", "SatisfiesPzs", "Etag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Task), global::Google.Cloud.Run.V2.Task.Parser, new[]{ "Name", "Uid", "Generation", "Labels", "Annotations", "CreateTime", "ScheduledTime", "StartTime", "CompletionTime", "UpdateTime", "DeleteTime", "ExpireTime", "Job", "Execution", "Containers", "Volumes", "MaxRetries", "Timeout", "ServiceAccount", "ExecutionEnvironment", "Reconciling", "Conditions", "ObservedGeneration", "Index", "Retried", "LastAttemptResult", "EncryptionKey", "VpcAccess", "LogUri", "SatisfiesPzs", "Etag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.TaskAttemptResult), global::Google.Cloud.Run.V2.TaskAttemptResult.Parser, new[]{ "Status", "ExitCode" }, null, null, null, null)
           }));
     }
@@ -884,6 +886,7 @@ namespace Google.Cloud.Run.V2 {
       labels_ = other.labels_.Clone();
       annotations_ = other.annotations_.Clone();
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      scheduledTime_ = other.scheduledTime_ != null ? other.scheduledTime_.Clone() : null;
       startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
       completionTime_ = other.completionTime_ != null ? other.completionTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
@@ -1005,9 +1008,9 @@ namespace Google.Cloud.Run.V2 {
     public const int CreateTimeFieldNumber = 6;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Output only. Represents time when the task was created by the job
-    /// controller. It is not guaranteed to be set in happens-before order across
-    /// separate operations.
+    /// Output only. Represents time when the task was created by the system.
+    /// It is not guaranteed to be set in happens-before order across separate
+    /// operations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1015,6 +1018,23 @@ namespace Google.Cloud.Run.V2 {
       get { return createTime_; }
       set {
         createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "scheduled_time" field.</summary>
+    public const int ScheduledTimeFieldNumber = 34;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp scheduledTime_;
+    /// <summary>
+    /// Output only. Represents time when the task was scheduled to run by the
+    /// system. It is not guaranteed to be set in happens-before order across
+    /// separate operations.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ScheduledTime {
+      get { return scheduledTime_; }
+      set {
+        scheduledTime_ = value;
       }
     }
 
@@ -1419,6 +1439,7 @@ namespace Google.Cloud.Run.V2 {
       if (!Labels.Equals(other.Labels)) return false;
       if (!Annotations.Equals(other.Annotations)) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(ScheduledTime, other.ScheduledTime)) return false;
       if (!object.Equals(StartTime, other.StartTime)) return false;
       if (!object.Equals(CompletionTime, other.CompletionTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
@@ -1456,6 +1477,7 @@ namespace Google.Cloud.Run.V2 {
       hash ^= Labels.GetHashCode();
       hash ^= Annotations.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (scheduledTime_ != null) hash ^= ScheduledTime.GetHashCode();
       if (startTime_ != null) hash ^= StartTime.GetHashCode();
       if (completionTime_ != null) hash ^= CompletionTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
@@ -1599,6 +1621,10 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(136, 2);
         output.WriteBool(SatisfiesPzs);
       }
+      if (scheduledTime_ != null) {
+        output.WriteRawTag(146, 2);
+        output.WriteMessage(ScheduledTime);
+      }
       if (Etag.Length != 0) {
         output.WriteRawTag(154, 6);
         output.WriteString(Etag);
@@ -1714,6 +1740,10 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(136, 2);
         output.WriteBool(SatisfiesPzs);
       }
+      if (scheduledTime_ != null) {
+        output.WriteRawTag(146, 2);
+        output.WriteMessage(ScheduledTime);
+      }
       if (Etag.Length != 0) {
         output.WriteRawTag(154, 6);
         output.WriteString(Etag);
@@ -1741,6 +1771,9 @@ namespace Google.Cloud.Run.V2 {
       size += annotations_.CalculateSize(_map_annotations_codec);
       if (createTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (scheduledTime_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ScheduledTime);
       }
       if (startTime_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
@@ -1836,6 +1869,12 @@ namespace Google.Cloud.Run.V2 {
           CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.scheduledTime_ != null) {
+        if (scheduledTime_ == null) {
+          ScheduledTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        ScheduledTime.MergeFrom(other.ScheduledTime);
       }
       if (other.startTime_ != null) {
         if (startTime_ == null) {
@@ -2085,6 +2124,13 @@ namespace Google.Cloud.Run.V2 {
             SatisfiesPzs = input.ReadBool();
             break;
           }
+          case 274: {
+            if (scheduledTime_ == null) {
+              ScheduledTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ScheduledTime);
+            break;
+          }
           case 794: {
             Etag = input.ReadString();
             break;
@@ -2245,6 +2291,13 @@ namespace Google.Cloud.Run.V2 {
           }
           case 264: {
             SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 274: {
+            if (scheduledTime_ == null) {
+              ScheduledTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ScheduledTime);
             break;
           }
           case 794: {
