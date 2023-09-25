@@ -75,85 +75,96 @@ namespace Google.Cloud.Asset.V1 {
             "ZXRfcmVzb3VyY2VfdHlwZRgCIAEoCRIOCgZhY3Rpb24YAyABKAk6AhgBIoUB",
             "CgxSZWxhdGVkQXNzZXQSMwoFYXNzZXQYASABKAlCJPpBIQofY2xvdWRhc3Nl",
             "dC5nb29nbGVhcGlzLmNvbS9Bc3NldBISCgphc3NldF90eXBlGAIgASgJEhEK",
-            "CWFuY2VzdG9ycxgDIAMoCRIZChFyZWxhdGlvbnNoaXBfdHlwZRgEIAEoCSLI",
-            "BwoUUmVzb3VyY2VTZWFyY2hSZXN1bHQSDAoEbmFtZRgBIAEoCRISCgphc3Nl",
-            "dF90eXBlGAIgASgJEg8KB3Byb2plY3QYAyABKAkSDwoHZm9sZGVycxgRIAMo",
-            "CRIUCgxvcmdhbml6YXRpb24YEiABKAkSFAoMZGlzcGxheV9uYW1lGAQgASgJ",
-            "EhMKC2Rlc2NyaXB0aW9uGAUgASgJEhAKCGxvY2F0aW9uGAYgASgJEkcKBmxh",
-            "YmVscxgHIAMoCzI3Lmdvb2dsZS5jbG91ZC5hc3NldC52MS5SZXNvdXJjZVNl",
-            "YXJjaFJlc3VsdC5MYWJlbHNFbnRyeRIUCgxuZXR3b3JrX3RhZ3MYCCADKAkS",
-            "EwoHa21zX2tleRgKIAEoCUICGAESEAoIa21zX2tleXMYHCADKAkSLwoLY3Jl",
-            "YXRlX3RpbWUYCyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8K",
-            "C3VwZGF0ZV90aW1lGAwgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cBINCgVzdGF0ZRgNIAEoCRI2ChVhZGRpdGlvbmFsX2F0dHJpYnV0ZXMYCSAB",
-            "KAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0EiEKGXBhcmVudF9mdWxsX3Jl",
-            "c291cmNlX25hbWUYEyABKAkSRQoTdmVyc2lvbmVkX3Jlc291cmNlcxgQIAMo",
-            "CzIoLmdvb2dsZS5jbG91ZC5hc3NldC52MS5WZXJzaW9uZWRSZXNvdXJjZRJD",
-            "ChJhdHRhY2hlZF9yZXNvdXJjZXMYFCADKAsyJy5nb29nbGUuY2xvdWQuYXNz",
-            "ZXQudjEuQXR0YWNoZWRSZXNvdXJjZRJVCg1yZWxhdGlvbnNoaXBzGBUgAygL",
-            "Mj4uZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLlJlc291cmNlU2VhcmNoUmVzdWx0",
-            "LlJlbGF0aW9uc2hpcHNFbnRyeRIQCgh0YWdfa2V5cxgXIAMoCRISCgp0YWdf",
-            "dmFsdWVzGBkgAygJEhUKDXRhZ192YWx1ZV9pZHMYGiADKAkSGQoRcGFyZW50",
-            "X2Fzc2V0X3R5cGUYZyABKAkaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJ",
-            "Eg0KBXZhbHVlGAIgASgJOgI4ARpdChJSZWxhdGlvbnNoaXBzRW50cnkSCwoD",
-            "a2V5GAEgASgJEjYKBXZhbHVlGAIgASgLMicuZ29vZ2xlLmNsb3VkLmFzc2V0",
-            "LnYxLlJlbGF0ZWRSZXNvdXJjZXM6AjgBIk8KEVZlcnNpb25lZFJlc291cmNl",
-            "Eg8KB3ZlcnNpb24YASABKAkSKQoIcmVzb3VyY2UYAiABKAsyFy5nb29nbGUu",
-            "cHJvdG9idWYuU3RydWN0Im0KEEF0dGFjaGVkUmVzb3VyY2USEgoKYXNzZXRf",
-            "dHlwZRgBIAEoCRJFChN2ZXJzaW9uZWRfcmVzb3VyY2VzGAMgAygLMiguZ29v",
-            "Z2xlLmNsb3VkLmFzc2V0LnYxLlZlcnNpb25lZFJlc291cmNlIlUKEFJlbGF0",
-            "ZWRSZXNvdXJjZXMSQQoRcmVsYXRlZF9yZXNvdXJjZXMYASADKAsyJi5nb29n",
-            "bGUuY2xvdWQuYXNzZXQudjEuUmVsYXRlZFJlc291cmNlIkEKD1JlbGF0ZWRS",
-            "ZXNvdXJjZRISCgphc3NldF90eXBlGAEgASgJEhoKEmZ1bGxfcmVzb3VyY2Vf",
-            "bmFtZRgCIAEoCSKPBAoVSWFtUG9saWN5U2VhcmNoUmVzdWx0EhAKCHJlc291",
-            "cmNlGAEgASgJEhIKCmFzc2V0X3R5cGUYBSABKAkSDwoHcHJvamVjdBgCIAEo",
-            "CRIPCgdmb2xkZXJzGAYgAygJEhQKDG9yZ2FuaXphdGlvbhgHIAEoCRIlCgZw",
-            "b2xpY3kYAyABKAsyFS5nb29nbGUuaWFtLnYxLlBvbGljeRJNCgtleHBsYW5h",
-            "dGlvbhgEIAEoCzI4Lmdvb2dsZS5jbG91ZC5hc3NldC52MS5JYW1Qb2xpY3lT",
-            "ZWFyY2hSZXN1bHQuRXhwbGFuYXRpb24aoQIKC0V4cGxhbmF0aW9uEm0KE21h",
-            "dGNoZWRfcGVybWlzc2lvbnMYASADKAsyUC5nb29nbGUuY2xvdWQuYXNzZXQu",
-            "djEuSWFtUG9saWN5U2VhcmNoUmVzdWx0LkV4cGxhbmF0aW9uLk1hdGNoZWRQ",
-            "ZXJtaXNzaW9uc0VudHJ5GiIKC1Blcm1pc3Npb25zEhMKC3Blcm1pc3Npb25z",
-            "GAEgAygJGn8KF01hdGNoZWRQZXJtaXNzaW9uc0VudHJ5EgsKA2tleRgBIAEo",
-            "CRJTCgV2YWx1ZRgCIAEoCzJELmdvb2dsZS5jbG91ZC5hc3NldC52MS5JYW1Q",
-            "b2xpY3lTZWFyY2hSZXN1bHQuRXhwbGFuYXRpb24uUGVybWlzc2lvbnM6AjgB",
-            "IkcKFklhbVBvbGljeUFuYWx5c2lzU3RhdGUSHgoEY29kZRgBIAEoDjIQLmdv",
-            "b2dsZS5ycGMuQ29kZRINCgVjYXVzZRgCIAEoCSLGAQoTQ29uZGl0aW9uRXZh",
-            "bHVhdGlvbhJUChBldmFsdWF0aW9uX3ZhbHVlGAEgASgOMjouZ29vZ2xlLmNs",
-            "b3VkLmFzc2V0LnYxLkNvbmRpdGlvbkV2YWx1YXRpb24uRXZhbHVhdGlvblZh",
-            "bHVlIlkKD0V2YWx1YXRpb25WYWx1ZRIgChxFVkFMVUFUSU9OX1ZBTFVFX1VO",
-            "U1BFQ0lGSUVEEAASCAoEVFJVRRABEgkKBUZBTFNFEAISDwoLQ09ORElUSU9O",
-            "QUwQAyKrCQoXSWFtUG9saWN5QW5hbHlzaXNSZXN1bHQSIwobYXR0YWNoZWRf",
-            "cmVzb3VyY2VfZnVsbF9uYW1lGAEgASgJEisKC2lhbV9iaW5kaW5nGAIgASgL",
-            "MhYuZ29vZ2xlLmlhbS52MS5CaW5kaW5nEl4KFGFjY2Vzc19jb250cm9sX2xp",
-            "c3RzGAMgAygLMkAuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLklhbVBvbGljeUFu",
-            "YWx5c2lzUmVzdWx0LkFjY2Vzc0NvbnRyb2xMaXN0ElIKDWlkZW50aXR5X2xp",
-            "c3QYBCABKAsyOy5nb29nbGUuY2xvdWQuYXNzZXQudjEuSWFtUG9saWN5QW5h",
-            "bHlzaXNSZXN1bHQuSWRlbnRpdHlMaXN0EhYKDmZ1bGx5X2V4cGxvcmVkGAUg",
-            "ASgIGm0KCFJlc291cmNlEhoKEmZ1bGxfcmVzb3VyY2VfbmFtZRgBIAEoCRJF",
-            "Cg5hbmFseXNpc19zdGF0ZRgCIAEoCzItLmdvb2dsZS5jbG91ZC5hc3NldC52",
-            "MS5JYW1Qb2xpY3lBbmFseXNpc1N0YXRlGoUBCgZBY2Nlc3MSDgoEcm9sZRgB",
-            "IAEoCUgAEhQKCnBlcm1pc3Npb24YAiABKAlIABJFCg5hbmFseXNpc19zdGF0",
-            "ZRgDIAEoCzItLmdvb2dsZS5jbG91ZC5hc3NldC52MS5JYW1Qb2xpY3lBbmFs",
-            "eXNpc1N0YXRlQg4KDG9uZW9mX2FjY2VzcxpfCghJZGVudGl0eRIMCgRuYW1l",
-            "GAEgASgJEkUKDmFuYWx5c2lzX3N0YXRlGAIgASgLMi0uZ29vZ2xlLmNsb3Vk",
-            "LmFzc2V0LnYxLklhbVBvbGljeUFuYWx5c2lzU3RhdGUaMAoERWRnZRITCgtz",
-            "b3VyY2Vfbm9kZRgBIAEoCRITCgt0YXJnZXRfbm9kZRgCIAEoCRq/AgoRQWNj",
-            "ZXNzQ29udHJvbExpc3QSSgoJcmVzb3VyY2VzGAEgAygLMjcuZ29vZ2xlLmNs",
-            "b3VkLmFzc2V0LnYxLklhbVBvbGljeUFuYWx5c2lzUmVzdWx0LlJlc291cmNl",
-            "EkcKCGFjY2Vzc2VzGAIgAygLMjUuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLklh",
-            "bVBvbGljeUFuYWx5c2lzUmVzdWx0LkFjY2VzcxJLCg5yZXNvdXJjZV9lZGdl",
-            "cxgDIAMoCzIzLmdvb2dsZS5jbG91ZC5hc3NldC52MS5JYW1Qb2xpY3lBbmFs",
-            "eXNpc1Jlc3VsdC5FZGdlEkgKFGNvbmRpdGlvbl9ldmFsdWF0aW9uGAQgASgL",
-            "MiouZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkNvbmRpdGlvbkV2YWx1YXRpb24a",
-            "pQEKDElkZW50aXR5TGlzdBJLCgppZGVudGl0aWVzGAEgAygLMjcuZ29vZ2xl",
-            "LmNsb3VkLmFzc2V0LnYxLklhbVBvbGljeUFuYWx5c2lzUmVzdWx0LklkZW50",
-            "aXR5EkgKC2dyb3VwX2VkZ2VzGAIgAygLMjMuZ29vZ2xlLmNsb3VkLmFzc2V0",
-            "LnYxLklhbVBvbGljeUFuYWx5c2lzUmVzdWx0LkVkZ2VCjQEKGWNvbS5nb29n",
-            "bGUuY2xvdWQuYXNzZXQudjFCCkFzc2V0UHJvdG9QAVovY2xvdWQuZ29vZ2xl",
-            "LmNvbS9nby9hc3NldC9hcGl2MS9hc3NldHBiO2Fzc2V0cGL4AQGqAhVHb29n",
-            "bGUuQ2xvdWQuQXNzZXQuVjHKAhVHb29nbGVcQ2xvdWRcQXNzZXRcVjFiBnBy",
-            "b3RvMw=="));
+            "CWFuY2VzdG9ycxgDIAMoCRIZChFyZWxhdGlvbnNoaXBfdHlwZRgEIAEoCSJ5",
+            "CgNUYWcSFAoHdGFnX2tleRgBIAEoCUgAiAEBEhYKCXRhZ192YWx1ZRgDIAEo",
+            "CUgBiAEBEhkKDHRhZ192YWx1ZV9pZBgEIAEoCUgCiAEBQgoKCF90YWdfa2V5",
+            "QgwKCl90YWdfdmFsdWVCDwoNX3RhZ192YWx1ZV9pZCJ/ChNFZmZlY3RpdmVU",
+            "YWdEZXRhaWxzEh4KEWF0dGFjaGVkX3Jlc291cmNlGAEgASgJSACIAQESMgoO",
+            "ZWZmZWN0aXZlX3RhZ3MYAiADKAsyGi5nb29nbGUuY2xvdWQuYXNzZXQudjEu",
+            "VGFnQhQKEl9hdHRhY2hlZF9yZXNvdXJjZSLaCQoUUmVzb3VyY2VTZWFyY2hS",
+            "ZXN1bHQSDAoEbmFtZRgBIAEoCRISCgphc3NldF90eXBlGAIgASgJEg8KB3By",
+            "b2plY3QYAyABKAkSDwoHZm9sZGVycxgRIAMoCRIUCgxvcmdhbml6YXRpb24Y",
+            "EiABKAkSFAoMZGlzcGxheV9uYW1lGAQgASgJEhMKC2Rlc2NyaXB0aW9uGAUg",
+            "ASgJEhAKCGxvY2F0aW9uGAYgASgJEkcKBmxhYmVscxgHIAMoCzI3Lmdvb2ds",
+            "ZS5jbG91ZC5hc3NldC52MS5SZXNvdXJjZVNlYXJjaFJlc3VsdC5MYWJlbHNF",
+            "bnRyeRIUCgxuZXR3b3JrX3RhZ3MYCCADKAkSEwoHa21zX2tleRgKIAEoCUIC",
+            "GAESEAoIa21zX2tleXMYHCADKAkSLwoLY3JlYXRlX3RpbWUYCyABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8KC3VwZGF0ZV90aW1lGAwgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBINCgVzdGF0ZRgNIAEoCRI2",
+            "ChVhZGRpdGlvbmFsX2F0dHJpYnV0ZXMYCSABKAsyFy5nb29nbGUucHJvdG9i",
+            "dWYuU3RydWN0EiEKGXBhcmVudF9mdWxsX3Jlc291cmNlX25hbWUYEyABKAkS",
+            "RQoTdmVyc2lvbmVkX3Jlc291cmNlcxgQIAMoCzIoLmdvb2dsZS5jbG91ZC5h",
+            "c3NldC52MS5WZXJzaW9uZWRSZXNvdXJjZRJDChJhdHRhY2hlZF9yZXNvdXJj",
+            "ZXMYFCADKAsyJy5nb29nbGUuY2xvdWQuYXNzZXQudjEuQXR0YWNoZWRSZXNv",
+            "dXJjZRJVCg1yZWxhdGlvbnNoaXBzGBUgAygLMj4uZ29vZ2xlLmNsb3VkLmFz",
+            "c2V0LnYxLlJlc291cmNlU2VhcmNoUmVzdWx0LlJlbGF0aW9uc2hpcHNFbnRy",
+            "eRIUCgh0YWdfa2V5cxgXIAMoCUICGAESFgoKdGFnX3ZhbHVlcxgZIAMoCUIC",
+            "GAESGQoNdGFnX3ZhbHVlX2lkcxgaIAMoCUICGAESKAoEdGFncxgdIAMoCzIa",
+            "Lmdvb2dsZS5jbG91ZC5hc3NldC52MS5UYWcSQgoOZWZmZWN0aXZlX3RhZ3MY",
+            "HiADKAsyKi5nb29nbGUuY2xvdWQuYXNzZXQudjEuRWZmZWN0aXZlVGFnRGV0",
+            "YWlscxIZChFwYXJlbnRfYXNzZXRfdHlwZRhnIAEoCRJdChJzY2Nfc2VjdXJp",
+            "dHlfbWFya3MYICADKAsyQS5nb29nbGUuY2xvdWQuYXNzZXQudjEuUmVzb3Vy",
+            "Y2VTZWFyY2hSZXN1bHQuU2NjU2VjdXJpdHlNYXJrc0VudHJ5Gi0KC0xhYmVs",
+            "c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaXQoSUmVs",
+            "YXRpb25zaGlwc0VudHJ5EgsKA2tleRgBIAEoCRI2CgV2YWx1ZRgCIAEoCzIn",
+            "Lmdvb2dsZS5jbG91ZC5hc3NldC52MS5SZWxhdGVkUmVzb3VyY2VzOgI4ARo3",
+            "ChVTY2NTZWN1cml0eU1hcmtzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVl",
+            "GAIgASgJOgI4ASJPChFWZXJzaW9uZWRSZXNvdXJjZRIPCgd2ZXJzaW9uGAEg",
+            "ASgJEikKCHJlc291cmNlGAIgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVj",
+            "dCJtChBBdHRhY2hlZFJlc291cmNlEhIKCmFzc2V0X3R5cGUYASABKAkSRQoT",
+            "dmVyc2lvbmVkX3Jlc291cmNlcxgDIAMoCzIoLmdvb2dsZS5jbG91ZC5hc3Nl",
+            "dC52MS5WZXJzaW9uZWRSZXNvdXJjZSJVChBSZWxhdGVkUmVzb3VyY2VzEkEK",
+            "EXJlbGF0ZWRfcmVzb3VyY2VzGAEgAygLMiYuZ29vZ2xlLmNsb3VkLmFzc2V0",
+            "LnYxLlJlbGF0ZWRSZXNvdXJjZSJBCg9SZWxhdGVkUmVzb3VyY2USEgoKYXNz",
+            "ZXRfdHlwZRgBIAEoCRIaChJmdWxsX3Jlc291cmNlX25hbWUYAiABKAkijwQK",
+            "FUlhbVBvbGljeVNlYXJjaFJlc3VsdBIQCghyZXNvdXJjZRgBIAEoCRISCgph",
+            "c3NldF90eXBlGAUgASgJEg8KB3Byb2plY3QYAiABKAkSDwoHZm9sZGVycxgG",
+            "IAMoCRIUCgxvcmdhbml6YXRpb24YByABKAkSJQoGcG9saWN5GAMgASgLMhUu",
+            "Z29vZ2xlLmlhbS52MS5Qb2xpY3kSTQoLZXhwbGFuYXRpb24YBCABKAsyOC5n",
+            "b29nbGUuY2xvdWQuYXNzZXQudjEuSWFtUG9saWN5U2VhcmNoUmVzdWx0LkV4",
+            "cGxhbmF0aW9uGqECCgtFeHBsYW5hdGlvbhJtChNtYXRjaGVkX3Blcm1pc3Np",
+            "b25zGAEgAygLMlAuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLklhbVBvbGljeVNl",
+            "YXJjaFJlc3VsdC5FeHBsYW5hdGlvbi5NYXRjaGVkUGVybWlzc2lvbnNFbnRy",
+            "eRoiCgtQZXJtaXNzaW9ucxITCgtwZXJtaXNzaW9ucxgBIAMoCRp/ChdNYXRj",
+            "aGVkUGVybWlzc2lvbnNFbnRyeRILCgNrZXkYASABKAkSUwoFdmFsdWUYAiAB",
+            "KAsyRC5nb29nbGUuY2xvdWQuYXNzZXQudjEuSWFtUG9saWN5U2VhcmNoUmVz",
+            "dWx0LkV4cGxhbmF0aW9uLlBlcm1pc3Npb25zOgI4ASJHChZJYW1Qb2xpY3lB",
+            "bmFseXNpc1N0YXRlEh4KBGNvZGUYASABKA4yEC5nb29nbGUucnBjLkNvZGUS",
+            "DQoFY2F1c2UYAiABKAkixgEKE0NvbmRpdGlvbkV2YWx1YXRpb24SVAoQZXZh",
+            "bHVhdGlvbl92YWx1ZRgBIAEoDjI6Lmdvb2dsZS5jbG91ZC5hc3NldC52MS5D",
+            "b25kaXRpb25FdmFsdWF0aW9uLkV2YWx1YXRpb25WYWx1ZSJZCg9FdmFsdWF0",
+            "aW9uVmFsdWUSIAocRVZBTFVBVElPTl9WQUxVRV9VTlNQRUNJRklFRBAAEggK",
+            "BFRSVUUQARIJCgVGQUxTRRACEg8KC0NPTkRJVElPTkFMEAMiqwkKF0lhbVBv",
+            "bGljeUFuYWx5c2lzUmVzdWx0EiMKG2F0dGFjaGVkX3Jlc291cmNlX2Z1bGxf",
+            "bmFtZRgBIAEoCRIrCgtpYW1fYmluZGluZxgCIAEoCzIWLmdvb2dsZS5pYW0u",
+            "djEuQmluZGluZxJeChRhY2Nlc3NfY29udHJvbF9saXN0cxgDIAMoCzJALmdv",
+            "b2dsZS5jbG91ZC5hc3NldC52MS5JYW1Qb2xpY3lBbmFseXNpc1Jlc3VsdC5B",
+            "Y2Nlc3NDb250cm9sTGlzdBJSCg1pZGVudGl0eV9saXN0GAQgASgLMjsuZ29v",
+            "Z2xlLmNsb3VkLmFzc2V0LnYxLklhbVBvbGljeUFuYWx5c2lzUmVzdWx0Lklk",
+            "ZW50aXR5TGlzdBIWCg5mdWxseV9leHBsb3JlZBgFIAEoCBptCghSZXNvdXJj",
+            "ZRIaChJmdWxsX3Jlc291cmNlX25hbWUYASABKAkSRQoOYW5hbHlzaXNfc3Rh",
+            "dGUYAiABKAsyLS5nb29nbGUuY2xvdWQuYXNzZXQudjEuSWFtUG9saWN5QW5h",
+            "bHlzaXNTdGF0ZRqFAQoGQWNjZXNzEg4KBHJvbGUYASABKAlIABIUCgpwZXJt",
+            "aXNzaW9uGAIgASgJSAASRQoOYW5hbHlzaXNfc3RhdGUYAyABKAsyLS5nb29n",
+            "bGUuY2xvdWQuYXNzZXQudjEuSWFtUG9saWN5QW5hbHlzaXNTdGF0ZUIOCgxv",
+            "bmVvZl9hY2Nlc3MaXwoISWRlbnRpdHkSDAoEbmFtZRgBIAEoCRJFCg5hbmFs",
+            "eXNpc19zdGF0ZRgCIAEoCzItLmdvb2dsZS5jbG91ZC5hc3NldC52MS5JYW1Q",
+            "b2xpY3lBbmFseXNpc1N0YXRlGjAKBEVkZ2USEwoLc291cmNlX25vZGUYASAB",
+            "KAkSEwoLdGFyZ2V0X25vZGUYAiABKAkavwIKEUFjY2Vzc0NvbnRyb2xMaXN0",
+            "EkoKCXJlc291cmNlcxgBIAMoCzI3Lmdvb2dsZS5jbG91ZC5hc3NldC52MS5J",
+            "YW1Qb2xpY3lBbmFseXNpc1Jlc3VsdC5SZXNvdXJjZRJHCghhY2Nlc3NlcxgC",
+            "IAMoCzI1Lmdvb2dsZS5jbG91ZC5hc3NldC52MS5JYW1Qb2xpY3lBbmFseXNp",
+            "c1Jlc3VsdC5BY2Nlc3MSSwoOcmVzb3VyY2VfZWRnZXMYAyADKAsyMy5nb29n",
+            "bGUuY2xvdWQuYXNzZXQudjEuSWFtUG9saWN5QW5hbHlzaXNSZXN1bHQuRWRn",
+            "ZRJIChRjb25kaXRpb25fZXZhbHVhdGlvbhgEIAEoCzIqLmdvb2dsZS5jbG91",
+            "ZC5hc3NldC52MS5Db25kaXRpb25FdmFsdWF0aW9uGqUBCgxJZGVudGl0eUxp",
+            "c3QSSwoKaWRlbnRpdGllcxgBIAMoCzI3Lmdvb2dsZS5jbG91ZC5hc3NldC52",
+            "MS5JYW1Qb2xpY3lBbmFseXNpc1Jlc3VsdC5JZGVudGl0eRJICgtncm91cF9l",
+            "ZGdlcxgCIAMoCzIzLmdvb2dsZS5jbG91ZC5hc3NldC52MS5JYW1Qb2xpY3lB",
+            "bmFseXNpc1Jlc3VsdC5FZGdlQo0BChljb20uZ29vZ2xlLmNsb3VkLmFzc2V0",
+            "LnYxQgpBc3NldFByb3RvUAFaL2Nsb3VkLmdvb2dsZS5jb20vZ28vYXNzZXQv",
+            "YXBpdjEvYXNzZXRwYjthc3NldHBi+AEBqgIVR29vZ2xlLkNsb3VkLkFzc2V0",
+            "LlYxygIVR29vZ2xlXENsb3VkXEFzc2V0XFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.OrgPolicy.V1.OrgpolicyReflection.Descriptor, global::Google.Cloud.OsConfig.V1.InventoryReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Identity.AccessContextManager.V1.AccessLevelReflection.Descriptor, global::Google.Identity.AccessContextManager.V1.AccessPolicyReflection.Descriptor, global::Google.Identity.AccessContextManager.V1.ServicePerimeterReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.CodeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -164,7 +175,9 @@ namespace Google.Cloud.Asset.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.RelatedAssets), global::Google.Cloud.Asset.V1.RelatedAssets.Parser, new[]{ "RelationshipAttributes", "Assets" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.RelationshipAttributes), global::Google.Cloud.Asset.V1.RelationshipAttributes.Parser, new[]{ "Type", "SourceResourceType", "TargetResourceType", "Action" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.RelatedAsset), global::Google.Cloud.Asset.V1.RelatedAsset.Parser, new[]{ "Asset", "AssetType", "Ancestors", "RelationshipType" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.ResourceSearchResult), global::Google.Cloud.Asset.V1.ResourceSearchResult.Parser, new[]{ "Name", "AssetType", "Project", "Folders", "Organization", "DisplayName", "Description", "Location", "Labels", "NetworkTags", "KmsKey", "KmsKeys", "CreateTime", "UpdateTime", "State", "AdditionalAttributes", "ParentFullResourceName", "VersionedResources", "AttachedResources", "Relationships", "TagKeys", "TagValues", "TagValueIds", "ParentAssetType" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.Tag), global::Google.Cloud.Asset.V1.Tag.Parser, new[]{ "TagKey", "TagValue", "TagValueId" }, new[]{ "TagKey", "TagValue", "TagValueId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.EffectiveTagDetails), global::Google.Cloud.Asset.V1.EffectiveTagDetails.Parser, new[]{ "AttachedResource", "EffectiveTags" }, new[]{ "AttachedResource" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.ResourceSearchResult), global::Google.Cloud.Asset.V1.ResourceSearchResult.Parser, new[]{ "Name", "AssetType", "Project", "Folders", "Organization", "DisplayName", "Description", "Location", "Labels", "NetworkTags", "KmsKey", "KmsKeys", "CreateTime", "UpdateTime", "State", "AdditionalAttributes", "ParentFullResourceName", "VersionedResources", "AttachedResources", "Relationships", "TagKeys", "TagValues", "TagValueIds", "Tags", "EffectiveTags", "ParentAssetType", "SccSecurityMarks" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.VersionedResource), global::Google.Cloud.Asset.V1.VersionedResource.Parser, new[]{ "Version", "Resource" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AttachedResource), global::Google.Cloud.Asset.V1.AttachedResource.Parser, new[]{ "AssetType", "VersionedResources" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.RelatedResources), global::Google.Cloud.Asset.V1.RelatedResources.Parser, new[]{ "RelatedResources_" }, null, null, null, null),
@@ -3041,8 +3054,576 @@ namespace Google.Cloud.Asset.V1 {
   }
 
   /// <summary>
+  /// The key and value for a
+  /// [tag](https://cloud.google.com/resource-manager/docs/tags/tags-overview),
+  /// </summary>
+  public sealed partial class Tag : pb::IMessage<Tag>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Tag> _parser = new pb::MessageParser<Tag>(() => new Tag());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Tag> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Asset.V1.AssetsReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Tag() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Tag(Tag other) : this() {
+      tagKey_ = other.tagKey_;
+      tagValue_ = other.tagValue_;
+      tagValueId_ = other.tagValueId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Tag Clone() {
+      return new Tag(this);
+    }
+
+    /// <summary>Field number for the "tag_key" field.</summary>
+    public const int TagKeyFieldNumber = 1;
+    private readonly static string TagKeyDefaultValue = "";
+
+    private string tagKey_;
+    /// <summary>
+    /// TagKey namespaced name, in the format of {ORG_ID}/{TAG_KEY_SHORT_NAME}.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TagKey {
+      get { return tagKey_ ?? TagKeyDefaultValue; }
+      set {
+        tagKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "tag_key" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTagKey {
+      get { return tagKey_ != null; }
+    }
+    /// <summary>Clears the value of the "tag_key" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTagKey() {
+      tagKey_ = null;
+    }
+
+    /// <summary>Field number for the "tag_value" field.</summary>
+    public const int TagValueFieldNumber = 3;
+    private readonly static string TagValueDefaultValue = "";
+
+    private string tagValue_;
+    /// <summary>
+    /// TagValue namespaced name, in the format of
+    /// {ORG_ID}/{TAG_KEY_SHORT_NAME}/{TAG_VALUE_SHORT_NAME}.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TagValue {
+      get { return tagValue_ ?? TagValueDefaultValue; }
+      set {
+        tagValue_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "tag_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTagValue {
+      get { return tagValue_ != null; }
+    }
+    /// <summary>Clears the value of the "tag_value" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTagValue() {
+      tagValue_ = null;
+    }
+
+    /// <summary>Field number for the "tag_value_id" field.</summary>
+    public const int TagValueIdFieldNumber = 4;
+    private readonly static string TagValueIdDefaultValue = "";
+
+    private string tagValueId_;
+    /// <summary>
+    /// TagValue ID, in the format of tagValues/{TAG_VALUE_ID}.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TagValueId {
+      get { return tagValueId_ ?? TagValueIdDefaultValue; }
+      set {
+        tagValueId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "tag_value_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTagValueId {
+      get { return tagValueId_ != null; }
+    }
+    /// <summary>Clears the value of the "tag_value_id" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTagValueId() {
+      tagValueId_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Tag);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Tag other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (TagKey != other.TagKey) return false;
+      if (TagValue != other.TagValue) return false;
+      if (TagValueId != other.TagValueId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasTagKey) hash ^= TagKey.GetHashCode();
+      if (HasTagValue) hash ^= TagValue.GetHashCode();
+      if (HasTagValueId) hash ^= TagValueId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasTagKey) {
+        output.WriteRawTag(10);
+        output.WriteString(TagKey);
+      }
+      if (HasTagValue) {
+        output.WriteRawTag(26);
+        output.WriteString(TagValue);
+      }
+      if (HasTagValueId) {
+        output.WriteRawTag(34);
+        output.WriteString(TagValueId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasTagKey) {
+        output.WriteRawTag(10);
+        output.WriteString(TagKey);
+      }
+      if (HasTagValue) {
+        output.WriteRawTag(26);
+        output.WriteString(TagValue);
+      }
+      if (HasTagValueId) {
+        output.WriteRawTag(34);
+        output.WriteString(TagValueId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasTagKey) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TagKey);
+      }
+      if (HasTagValue) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TagValue);
+      }
+      if (HasTagValueId) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TagValueId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Tag other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasTagKey) {
+        TagKey = other.TagKey;
+      }
+      if (other.HasTagValue) {
+        TagValue = other.TagValue;
+      }
+      if (other.HasTagValueId) {
+        TagValueId = other.TagValueId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            TagKey = input.ReadString();
+            break;
+          }
+          case 26: {
+            TagValue = input.ReadString();
+            break;
+          }
+          case 34: {
+            TagValueId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            TagKey = input.ReadString();
+            break;
+          }
+          case 26: {
+            TagValue = input.ReadString();
+            break;
+          }
+          case 34: {
+            TagValueId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The effective tags and the ancestor resources from which they were inherited.
+  /// </summary>
+  public sealed partial class EffectiveTagDetails : pb::IMessage<EffectiveTagDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<EffectiveTagDetails> _parser = new pb::MessageParser<EffectiveTagDetails>(() => new EffectiveTagDetails());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<EffectiveTagDetails> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Asset.V1.AssetsReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EffectiveTagDetails() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EffectiveTagDetails(EffectiveTagDetails other) : this() {
+      attachedResource_ = other.attachedResource_;
+      effectiveTags_ = other.effectiveTags_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EffectiveTagDetails Clone() {
+      return new EffectiveTagDetails(this);
+    }
+
+    /// <summary>Field number for the "attached_resource" field.</summary>
+    public const int AttachedResourceFieldNumber = 1;
+    private readonly static string AttachedResourceDefaultValue = "";
+
+    private string attachedResource_;
+    /// <summary>
+    /// The [full resource
+    /// name](https://cloud.google.com/asset-inventory/docs/resource-name-format)
+    /// of the ancestor from which an [effective_tag][] is inherited, according to
+    /// [tag
+    /// inheritance](https://cloud.google.com/resource-manager/docs/tags/tags-overview#inheritance).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AttachedResource {
+      get { return attachedResource_ ?? AttachedResourceDefaultValue; }
+      set {
+        attachedResource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "attached_resource" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAttachedResource {
+      get { return attachedResource_ != null; }
+    }
+    /// <summary>Clears the value of the "attached_resource" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAttachedResource() {
+      attachedResource_ = null;
+    }
+
+    /// <summary>Field number for the "effective_tags" field.</summary>
+    public const int EffectiveTagsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Asset.V1.Tag> _repeated_effectiveTags_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Asset.V1.Tag.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Asset.V1.Tag> effectiveTags_ = new pbc::RepeatedField<global::Google.Cloud.Asset.V1.Tag>();
+    /// <summary>
+    /// The effective tags inherited from the
+    /// [attached_resource][google.cloud.asset.v1.EffectiveTagDetails.attached_resource].
+    /// Note that tags with the same key but different values may attach to
+    /// resources at a different hierarchy levels. The lower hierarchy tag value
+    /// will overwrite the higher hierarchy tag value of the same tag key. In this
+    /// case, the tag value at the higher hierarchy level will be removed. For more
+    /// information, see [tag
+    /// inheritance](https://cloud.google.com/resource-manager/docs/tags/tags-overview#inheritance).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Asset.V1.Tag> EffectiveTags {
+      get { return effectiveTags_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as EffectiveTagDetails);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(EffectiveTagDetails other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (AttachedResource != other.AttachedResource) return false;
+      if(!effectiveTags_.Equals(other.effectiveTags_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasAttachedResource) hash ^= AttachedResource.GetHashCode();
+      hash ^= effectiveTags_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasAttachedResource) {
+        output.WriteRawTag(10);
+        output.WriteString(AttachedResource);
+      }
+      effectiveTags_.WriteTo(output, _repeated_effectiveTags_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasAttachedResource) {
+        output.WriteRawTag(10);
+        output.WriteString(AttachedResource);
+      }
+      effectiveTags_.WriteTo(ref output, _repeated_effectiveTags_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasAttachedResource) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AttachedResource);
+      }
+      size += effectiveTags_.CalculateSize(_repeated_effectiveTags_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(EffectiveTagDetails other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasAttachedResource) {
+        AttachedResource = other.AttachedResource;
+      }
+      effectiveTags_.Add(other.effectiveTags_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            AttachedResource = input.ReadString();
+            break;
+          }
+          case 18: {
+            effectiveTags_.AddEntriesFrom(input, _repeated_effectiveTags_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            AttachedResource = input.ReadString();
+            break;
+          }
+          case 18: {
+            effectiveTags_.AddEntriesFrom(ref input, _repeated_effectiveTags_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// A result of Resource Search, containing information of a cloud resource.
-  /// Next ID: 32
+  /// Next ID: 34
   /// </summary>
   public sealed partial class ResourceSearchResult : pb::IMessage<ResourceSearchResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3058,7 +3639,7 @@ namespace Google.Cloud.Asset.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Asset.V1.AssetsReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Asset.V1.AssetsReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3101,7 +3682,10 @@ namespace Google.Cloud.Asset.V1 {
       tagKeys_ = other.tagKeys_.Clone();
       tagValues_ = other.tagValues_.Clone();
       tagValueIds_ = other.tagValueIds_.Clone();
+      tags_ = other.tags_.Clone();
+      effectiveTags_ = other.effectiveTags_.Clone();
       parentAssetType_ = other.parentAssetType_;
+      sccSecurityMarks_ = other.sccSecurityMarks_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3597,6 +4181,9 @@ namespace Google.Cloud.Asset.V1 {
         = pb::FieldCodec.ForString(186);
     private readonly pbc::RepeatedField<string> tagKeys_ = new pbc::RepeatedField<string>();
     /// <summary>
+    /// This field is only present for the purpose of backward compatibility.
+    /// Please use the `tags` field instead.
+    ///
     /// TagKey namespaced names, in the format of {ORG_ID}/{TAG_KEY_SHORT_NAME}.
     /// To search against the `tagKeys`:
     ///
@@ -3608,6 +4195,7 @@ namespace Google.Cloud.Asset.V1 {
     /// * Use a free text query. Example:
     ///     - `env`
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> TagKeys {
@@ -3620,6 +4208,9 @@ namespace Google.Cloud.Asset.V1 {
         = pb::FieldCodec.ForString(202);
     private readonly pbc::RepeatedField<string> tagValues_ = new pbc::RepeatedField<string>();
     /// <summary>
+    /// This field is only present for the purpose of backward compatibility.
+    /// Please use the `tags` field instead.
+    ///
     /// TagValue namespaced names, in the format of
     /// {ORG_ID}/{TAG_KEY_SHORT_NAME}/{TAG_VALUE_SHORT_NAME}.
     /// To search against the `tagValues`:
@@ -3633,6 +4224,7 @@ namespace Google.Cloud.Asset.V1 {
     /// * Use a free text query. Example:
     ///     - `prod`
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> TagValues {
@@ -3645,20 +4237,81 @@ namespace Google.Cloud.Asset.V1 {
         = pb::FieldCodec.ForString(210);
     private readonly pbc::RepeatedField<string> tagValueIds_ = new pbc::RepeatedField<string>();
     /// <summary>
+    /// This field is only present for the purpose of backward compatibility.
+    /// Please use the `tags` field instead.
+    ///
     /// TagValue IDs, in the format of tagValues/{TAG_VALUE_ID}.
     /// To search against the `tagValueIds`:
     ///
     /// * Use a field query. Example:
-    ///     - `tagValueIds:"456"`
     ///     - `tagValueIds="tagValues/456"`
     ///
     /// * Use a free text query. Example:
     ///     - `456`
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> TagValueIds {
       get { return tagValueIds_; }
+    }
+
+    /// <summary>Field number for the "tags" field.</summary>
+    public const int TagsFieldNumber = 29;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Asset.V1.Tag> _repeated_tags_codec
+        = pb::FieldCodec.ForMessage(234, global::Google.Cloud.Asset.V1.Tag.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Asset.V1.Tag> tags_ = new pbc::RepeatedField<global::Google.Cloud.Asset.V1.Tag>();
+    /// <summary>
+    /// The tags directly attached to this resource.
+    ///
+    /// To search against the `tags`:
+    ///
+    /// * Use a field query. Example:
+    ///     - `tagKeys:"123456789/env*"`
+    ///     - `tagKeys="123456789/env"`
+    ///     - `tagKeys:"env"`
+    ///     - `tagValues:"env"`
+    ///     - `tagValues:"env/prod"`
+    ///     - `tagValues:"123456789/env/prod*"`
+    ///     - `tagValues="123456789/env/prod"`
+    ///     - `tagValueIds="tagValues/456"`
+    ///
+    /// * Use a free text query. Example:
+    ///     - `env/prod`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Asset.V1.Tag> Tags {
+      get { return tags_; }
+    }
+
+    /// <summary>Field number for the "effective_tags" field.</summary>
+    public const int EffectiveTagsFieldNumber = 30;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Asset.V1.EffectiveTagDetails> _repeated_effectiveTags_codec
+        = pb::FieldCodec.ForMessage(242, global::Google.Cloud.Asset.V1.EffectiveTagDetails.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Asset.V1.EffectiveTagDetails> effectiveTags_ = new pbc::RepeatedField<global::Google.Cloud.Asset.V1.EffectiveTagDetails>();
+    /// <summary>
+    /// The effective tags on this resource. All of the tags that are both attached
+    /// to and inherited by a resource are collectively called the effective
+    /// tags. For more information, see [tag
+    /// inheritance](https://cloud.google.com/resource-manager/docs/tags/tags-overview#inheritance).
+    ///
+    /// To search against the `effective_tags`:
+    ///
+    /// * Use a field query. Example:
+    ///     - `effectiveTagKeys:"123456789/env*"`
+    ///     - `effectiveTagKeys="123456789/env"`
+    ///     - `effectiveTagKeys:"env"`
+    ///     - `effectiveTagValues:"env"`
+    ///     - `effectiveTagValues:"env/prod"`
+    ///     - `effectiveTagValues:"123456789/env/prod*"`
+    ///     - `effectiveTagValues="123456789/env/prod"`
+    ///     - `effectiveTagValueIds="tagValues/456"`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Asset.V1.EffectiveTagDetails> EffectiveTags {
+      get { return effectiveTags_; }
     }
 
     /// <summary>Field number for the "parent_asset_type" field.</summary>
@@ -3681,6 +4334,31 @@ namespace Google.Cloud.Asset.V1 {
       set {
         parentAssetType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+
+    /// <summary>Field number for the "scc_security_marks" field.</summary>
+    public const int SccSecurityMarksFieldNumber = 32;
+    private static readonly pbc::MapField<string, string>.Codec _map_sccSecurityMarks_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 258);
+    private readonly pbc::MapField<string, string> sccSecurityMarks_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// The actual content of Security Command Center security marks associated
+    /// with the asset.
+    ///
+    /// Note that both staging &amp; prod SecurityMarks are attached on prod resources.
+    /// In CAS preprod/prod, both staging &amp; prod SecurityMarks are ingested and
+    /// returned in the following `security_marks` map. In that case, the prefix
+    /// "staging." will be added to the keys of all the staging marks.
+    /// To search against SCC SecurityMarks field:
+    ///
+    ///   * Use a field query:
+    ///     - query by a given key value pair. Example: `sccSecurityMarks.foo=bar`
+    ///     - query by a given key's existence. Example: `sccSecurityMarks.foo:*`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> SccSecurityMarks {
+      get { return sccSecurityMarks_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3721,7 +4399,10 @@ namespace Google.Cloud.Asset.V1 {
       if(!tagKeys_.Equals(other.tagKeys_)) return false;
       if(!tagValues_.Equals(other.tagValues_)) return false;
       if(!tagValueIds_.Equals(other.tagValueIds_)) return false;
+      if(!tags_.Equals(other.tags_)) return false;
+      if(!effectiveTags_.Equals(other.effectiveTags_)) return false;
       if (ParentAssetType != other.ParentAssetType) return false;
+      if (!SccSecurityMarks.Equals(other.SccSecurityMarks)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3752,7 +4433,10 @@ namespace Google.Cloud.Asset.V1 {
       hash ^= tagKeys_.GetHashCode();
       hash ^= tagValues_.GetHashCode();
       hash ^= tagValueIds_.GetHashCode();
+      hash ^= tags_.GetHashCode();
+      hash ^= effectiveTags_.GetHashCode();
       if (ParentAssetType.Length != 0) hash ^= ParentAssetType.GetHashCode();
+      hash ^= SccSecurityMarks.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3833,6 +4517,9 @@ namespace Google.Cloud.Asset.V1 {
       tagValues_.WriteTo(output, _repeated_tagValues_codec);
       tagValueIds_.WriteTo(output, _repeated_tagValueIds_codec);
       kmsKeys_.WriteTo(output, _repeated_kmsKeys_codec);
+      tags_.WriteTo(output, _repeated_tags_codec);
+      effectiveTags_.WriteTo(output, _repeated_effectiveTags_codec);
+      sccSecurityMarks_.WriteTo(output, _map_sccSecurityMarks_codec);
       if (ParentAssetType.Length != 0) {
         output.WriteRawTag(186, 6);
         output.WriteString(ParentAssetType);
@@ -3909,6 +4596,9 @@ namespace Google.Cloud.Asset.V1 {
       tagValues_.WriteTo(ref output, _repeated_tagValues_codec);
       tagValueIds_.WriteTo(ref output, _repeated_tagValueIds_codec);
       kmsKeys_.WriteTo(ref output, _repeated_kmsKeys_codec);
+      tags_.WriteTo(ref output, _repeated_tags_codec);
+      effectiveTags_.WriteTo(ref output, _repeated_effectiveTags_codec);
+      sccSecurityMarks_.WriteTo(ref output, _map_sccSecurityMarks_codec);
       if (ParentAssetType.Length != 0) {
         output.WriteRawTag(186, 6);
         output.WriteString(ParentAssetType);
@@ -3972,9 +4662,12 @@ namespace Google.Cloud.Asset.V1 {
       size += tagKeys_.CalculateSize(_repeated_tagKeys_codec);
       size += tagValues_.CalculateSize(_repeated_tagValues_codec);
       size += tagValueIds_.CalculateSize(_repeated_tagValueIds_codec);
+      size += tags_.CalculateSize(_repeated_tags_codec);
+      size += effectiveTags_.CalculateSize(_repeated_effectiveTags_codec);
       if (ParentAssetType.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(ParentAssetType);
       }
+      size += sccSecurityMarks_.CalculateSize(_map_sccSecurityMarks_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -4045,9 +4738,12 @@ namespace Google.Cloud.Asset.V1 {
       tagKeys_.Add(other.tagKeys_);
       tagValues_.Add(other.tagValues_);
       tagValueIds_.Add(other.tagValueIds_);
+      tags_.Add(other.tags_);
+      effectiveTags_.Add(other.effectiveTags_);
       if (other.ParentAssetType.Length != 0) {
         ParentAssetType = other.ParentAssetType;
       }
+      sccSecurityMarks_.MergeFrom(other.sccSecurityMarks_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -4162,6 +4858,18 @@ namespace Google.Cloud.Asset.V1 {
           }
           case 226: {
             kmsKeys_.AddEntriesFrom(input, _repeated_kmsKeys_codec);
+            break;
+          }
+          case 234: {
+            tags_.AddEntriesFrom(input, _repeated_tags_codec);
+            break;
+          }
+          case 242: {
+            effectiveTags_.AddEntriesFrom(input, _repeated_effectiveTags_codec);
+            break;
+          }
+          case 258: {
+            sccSecurityMarks_.AddEntriesFrom(input, _map_sccSecurityMarks_codec);
             break;
           }
           case 826: {
@@ -4284,6 +4992,18 @@ namespace Google.Cloud.Asset.V1 {
             kmsKeys_.AddEntriesFrom(ref input, _repeated_kmsKeys_codec);
             break;
           }
+          case 234: {
+            tags_.AddEntriesFrom(ref input, _repeated_tags_codec);
+            break;
+          }
+          case 242: {
+            effectiveTags_.AddEntriesFrom(ref input, _repeated_effectiveTags_codec);
+            break;
+          }
+          case 258: {
+            sccSecurityMarks_.AddEntriesFrom(ref input, _map_sccSecurityMarks_codec);
+            break;
+          }
           case 826: {
             ParentAssetType = input.ReadString();
             break;
@@ -4313,7 +5033,7 @@ namespace Google.Cloud.Asset.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Asset.V1.AssetsReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Asset.V1.AssetsReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4574,7 +5294,7 @@ namespace Google.Cloud.Asset.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Asset.V1.AssetsReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Asset.V1.AssetsReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4806,7 +5526,7 @@ namespace Google.Cloud.Asset.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Asset.V1.AssetsReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.Asset.V1.AssetsReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4990,7 +5710,7 @@ namespace Google.Cloud.Asset.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Asset.V1.AssetsReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Asset.V1.AssetsReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5226,7 +5946,7 @@ namespace Google.Cloud.Asset.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Asset.V1.AssetsReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Asset.V1.AssetsReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6111,7 +6831,7 @@ namespace Google.Cloud.Asset.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Asset.V1.AssetsReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.Asset.V1.AssetsReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6351,7 +7071,7 @@ namespace Google.Cloud.Asset.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Asset.V1.AssetsReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.Asset.V1.AssetsReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6579,7 +7299,7 @@ namespace Google.Cloud.Asset.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Asset.V1.AssetsReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.Asset.V1.AssetsReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7580,17 +8300,17 @@ namespace Google.Cloud.Asset.V1 {
         public const int NameFieldNumber = 1;
         private string name_ = "";
         /// <summary>
-        /// The identity name in any form of members appear in
+        /// The identity of members, formatted as appear in an
         /// [IAM policy
-        /// binding](https://cloud.google.com/iam/reference/rest/v1/Binding), such
-        /// as:
+        /// binding](https://cloud.google.com/iam/reference/rest/v1/Binding). For
+        /// example, they might be formatted like the following:
+        ///
         /// - user:foo@google.com
         /// - group:group1@google.com
         /// - serviceAccount:s1@prj1.iam.gserviceaccount.com
         /// - projectOwner:some_project_id
         /// - domain:google.com
         /// - allUsers
-        /// - etc.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

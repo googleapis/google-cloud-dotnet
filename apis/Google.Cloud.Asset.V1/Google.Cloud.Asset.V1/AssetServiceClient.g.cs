@@ -1461,49 +1461,73 @@ namespace Google.Cloud.Asset.V1
         /// Examples:
         /// 
         /// * `name:Important` to find Google Cloud resources whose name contains
-        /// "Important" as a word.
+        /// `Important` as a word.
         /// * `name=Important` to find the Google Cloud resource whose name is exactly
-        /// "Important".
+        /// `Important`.
         /// * `displayName:Impor*` to find Google Cloud resources whose display name
-        /// contains "Impor" as a prefix of any word in the field.
+        /// contains `Impor` as a prefix of any word in the field.
         /// * `location:us-west*` to find Google Cloud resources whose location
-        /// contains both "us" and "west" as prefixes.
-        /// * `labels:prod` to find Google Cloud resources whose labels contain "prod"
+        /// contains both `us` and `west` as prefixes.
+        /// * `labels:prod` to find Google Cloud resources whose labels contain `prod`
         /// as a key or value.
-        /// * `labels.env:prod` to find Google Cloud resources that have a label "env"
-        /// and its value is "prod".
-        /// * `labels.env:*` to find Google Cloud resources that have a label "env".
+        /// * `labels.env:prod` to find Google Cloud resources that have a label `env`
+        /// and its value is `prod`.
+        /// * `labels.env:*` to find Google Cloud resources that have a label `env`.
+        /// * `tagKeys:env` to find Google Cloud resources that have directly
+        /// attached tags where the
+        /// [`TagKey`](https://cloud.google.com/resource-manager/reference/rest/v3/tagKeys#resource:-tagkey)
+        /// .`namespacedName` contains `env`.
+        /// * `tagValues:prod*` to find Google Cloud resources that have directly
+        /// attached tags where the
+        /// [`TagValue`](https://cloud.google.com/resource-manager/reference/rest/v3/tagValues#resource:-tagvalue)
+        /// .`namespacedName` contains a word prefixed by `prod`.
+        /// * `tagValueIds=tagValues/123` to find Google Cloud resources that have
+        /// directly attached tags where the
+        /// [`TagValue`](https://cloud.google.com/resource-manager/reference/rest/v3/tagValues#resource:-tagvalue)
+        /// .`name` is exactly `tagValues/123`.
+        /// * `effectiveTagKeys:env` to find Google Cloud resources that have
+        /// directly attached or inherited tags where the
+        /// [`TagKey`](https://cloud.google.com/resource-manager/reference/rest/v3/tagKeys#resource:-tagkey)
+        /// .`namespacedName` contains `env`.
+        /// * `effectiveTagValues:prod*` to find Google Cloud resources that have
+        /// directly attached or inherited tags where the
+        /// [`TagValue`](https://cloud.google.com/resource-manager/reference/rest/v3/tagValues#resource:-tagvalue)
+        /// .`namespacedName` contains a word prefixed by `prod`.
+        /// * `effectiveTagValueIds=tagValues/123` to find Google Cloud resources that
+        /// have directly attached or inherited tags where the
+        /// [`TagValue`](https://cloud.google.com/resource-manager/reference/rest/v3/tagValues#resource:-tagvalue)
+        /// .`name` is exactly `tagValues/123`.
         /// * `kmsKey:key` to find Google Cloud resources encrypted with a
-        /// customer-managed encryption key whose name contains "key" as a word. This
+        /// customer-managed encryption key whose name contains `key` as a word. This
         /// field is deprecated. Please use the `kmsKeys` field to retrieve Cloud KMS
         /// key information.
         /// * `kmsKeys:key` to find Google Cloud resources encrypted with
-        /// customer-managed encryption keys whose name contains the word "key".
+        /// customer-managed encryption keys whose name contains the word `key`.
         /// * `relationships:instance-group-1` to find Google Cloud resources that have
-        /// relationships with "instance-group-1" in the related resource name.
+        /// relationships with `instance-group-1` in the related resource name.
         /// * `relationships:INSTANCE_TO_INSTANCEGROUP` to find Compute Engine
-        /// instances that have relationships of type "INSTANCE_TO_INSTANCEGROUP".
+        /// instances that have relationships of type `INSTANCE_TO_INSTANCEGROUP`.
         /// * `relationships.INSTANCE_TO_INSTANCEGROUP:instance-group-1` to find
-        /// Compute Engine instances that have relationships with "instance-group-1"
+        /// Compute Engine instances that have relationships with `instance-group-1`
         /// in the Compute Engine instance group resource name, for relationship type
-        /// "INSTANCE_TO_INSTANCEGROUP".
+        /// `INSTANCE_TO_INSTANCEGROUP`.
         /// * `state:ACTIVE` to find Google Cloud resources whose state contains
-        /// "ACTIVE" as a word.
+        /// `ACTIVE` as a word.
         /// * `NOT state:ACTIVE` to find Google Cloud resources whose state doesn't
-        /// contain "ACTIVE" as a word.
+        /// contain `ACTIVE` as a word.
         /// * `createTime&lt;1609459200` to find Google Cloud resources that were created
-        /// before "2021-01-01 00:00:00 UTC". 1609459200 is the epoch timestamp of
-        /// "2021-01-01 00:00:00 UTC" in seconds.
+        /// before `2021-01-01 00:00:00 UTC`. `1609459200` is the epoch timestamp of
+        /// `2021-01-01 00:00:00 UTC` in seconds.
         /// * `updateTime&gt;1609459200` to find Google Cloud resources that were updated
-        /// after "2021-01-01 00:00:00 UTC". 1609459200 is the epoch timestamp of
-        /// "2021-01-01 00:00:00 UTC" in seconds.
-        /// * `Important` to find Google Cloud resources that contain "Important" as a
+        /// after `2021-01-01 00:00:00 UTC`. `1609459200` is the epoch timestamp of
+        /// `2021-01-01 00:00:00 UTC` in seconds.
+        /// * `Important` to find Google Cloud resources that contain `Important` as a
         /// word in any of the searchable fields.
-        /// * `Impor*` to find Google Cloud resources that contain "Impor" as a prefix
+        /// * `Impor*` to find Google Cloud resources that contain `Impor` as a prefix
         /// of any word in any of the searchable fields.
         /// * `Important location:(us-west1 OR global)` to find Google Cloud
-        /// resources that contain "Important" as a word in any of the searchable
-        /// fields and are also located in the "us-west1" region or the "global"
+        /// resources that contain `Important` as a word in any of the searchable
+        /// fields and are also located in the `us-west1` region or the `global`
         /// location.
         /// </param>
         /// <param name="assetTypes">
@@ -1574,49 +1598,73 @@ namespace Google.Cloud.Asset.V1
         /// Examples:
         /// 
         /// * `name:Important` to find Google Cloud resources whose name contains
-        /// "Important" as a word.
+        /// `Important` as a word.
         /// * `name=Important` to find the Google Cloud resource whose name is exactly
-        /// "Important".
+        /// `Important`.
         /// * `displayName:Impor*` to find Google Cloud resources whose display name
-        /// contains "Impor" as a prefix of any word in the field.
+        /// contains `Impor` as a prefix of any word in the field.
         /// * `location:us-west*` to find Google Cloud resources whose location
-        /// contains both "us" and "west" as prefixes.
-        /// * `labels:prod` to find Google Cloud resources whose labels contain "prod"
+        /// contains both `us` and `west` as prefixes.
+        /// * `labels:prod` to find Google Cloud resources whose labels contain `prod`
         /// as a key or value.
-        /// * `labels.env:prod` to find Google Cloud resources that have a label "env"
-        /// and its value is "prod".
-        /// * `labels.env:*` to find Google Cloud resources that have a label "env".
+        /// * `labels.env:prod` to find Google Cloud resources that have a label `env`
+        /// and its value is `prod`.
+        /// * `labels.env:*` to find Google Cloud resources that have a label `env`.
+        /// * `tagKeys:env` to find Google Cloud resources that have directly
+        /// attached tags where the
+        /// [`TagKey`](https://cloud.google.com/resource-manager/reference/rest/v3/tagKeys#resource:-tagkey)
+        /// .`namespacedName` contains `env`.
+        /// * `tagValues:prod*` to find Google Cloud resources that have directly
+        /// attached tags where the
+        /// [`TagValue`](https://cloud.google.com/resource-manager/reference/rest/v3/tagValues#resource:-tagvalue)
+        /// .`namespacedName` contains a word prefixed by `prod`.
+        /// * `tagValueIds=tagValues/123` to find Google Cloud resources that have
+        /// directly attached tags where the
+        /// [`TagValue`](https://cloud.google.com/resource-manager/reference/rest/v3/tagValues#resource:-tagvalue)
+        /// .`name` is exactly `tagValues/123`.
+        /// * `effectiveTagKeys:env` to find Google Cloud resources that have
+        /// directly attached or inherited tags where the
+        /// [`TagKey`](https://cloud.google.com/resource-manager/reference/rest/v3/tagKeys#resource:-tagkey)
+        /// .`namespacedName` contains `env`.
+        /// * `effectiveTagValues:prod*` to find Google Cloud resources that have
+        /// directly attached or inherited tags where the
+        /// [`TagValue`](https://cloud.google.com/resource-manager/reference/rest/v3/tagValues#resource:-tagvalue)
+        /// .`namespacedName` contains a word prefixed by `prod`.
+        /// * `effectiveTagValueIds=tagValues/123` to find Google Cloud resources that
+        /// have directly attached or inherited tags where the
+        /// [`TagValue`](https://cloud.google.com/resource-manager/reference/rest/v3/tagValues#resource:-tagvalue)
+        /// .`name` is exactly `tagValues/123`.
         /// * `kmsKey:key` to find Google Cloud resources encrypted with a
-        /// customer-managed encryption key whose name contains "key" as a word. This
+        /// customer-managed encryption key whose name contains `key` as a word. This
         /// field is deprecated. Please use the `kmsKeys` field to retrieve Cloud KMS
         /// key information.
         /// * `kmsKeys:key` to find Google Cloud resources encrypted with
-        /// customer-managed encryption keys whose name contains the word "key".
+        /// customer-managed encryption keys whose name contains the word `key`.
         /// * `relationships:instance-group-1` to find Google Cloud resources that have
-        /// relationships with "instance-group-1" in the related resource name.
+        /// relationships with `instance-group-1` in the related resource name.
         /// * `relationships:INSTANCE_TO_INSTANCEGROUP` to find Compute Engine
-        /// instances that have relationships of type "INSTANCE_TO_INSTANCEGROUP".
+        /// instances that have relationships of type `INSTANCE_TO_INSTANCEGROUP`.
         /// * `relationships.INSTANCE_TO_INSTANCEGROUP:instance-group-1` to find
-        /// Compute Engine instances that have relationships with "instance-group-1"
+        /// Compute Engine instances that have relationships with `instance-group-1`
         /// in the Compute Engine instance group resource name, for relationship type
-        /// "INSTANCE_TO_INSTANCEGROUP".
+        /// `INSTANCE_TO_INSTANCEGROUP`.
         /// * `state:ACTIVE` to find Google Cloud resources whose state contains
-        /// "ACTIVE" as a word.
+        /// `ACTIVE` as a word.
         /// * `NOT state:ACTIVE` to find Google Cloud resources whose state doesn't
-        /// contain "ACTIVE" as a word.
+        /// contain `ACTIVE` as a word.
         /// * `createTime&lt;1609459200` to find Google Cloud resources that were created
-        /// before "2021-01-01 00:00:00 UTC". 1609459200 is the epoch timestamp of
-        /// "2021-01-01 00:00:00 UTC" in seconds.
+        /// before `2021-01-01 00:00:00 UTC`. `1609459200` is the epoch timestamp of
+        /// `2021-01-01 00:00:00 UTC` in seconds.
         /// * `updateTime&gt;1609459200` to find Google Cloud resources that were updated
-        /// after "2021-01-01 00:00:00 UTC". 1609459200 is the epoch timestamp of
-        /// "2021-01-01 00:00:00 UTC" in seconds.
-        /// * `Important` to find Google Cloud resources that contain "Important" as a
+        /// after `2021-01-01 00:00:00 UTC`. `1609459200` is the epoch timestamp of
+        /// `2021-01-01 00:00:00 UTC` in seconds.
+        /// * `Important` to find Google Cloud resources that contain `Important` as a
         /// word in any of the searchable fields.
-        /// * `Impor*` to find Google Cloud resources that contain "Impor" as a prefix
+        /// * `Impor*` to find Google Cloud resources that contain `Impor` as a prefix
         /// of any word in any of the searchable fields.
         /// * `Important location:(us-west1 OR global)` to find Google Cloud
-        /// resources that contain "Important" as a word in any of the searchable
-        /// fields and are also located in the "us-west1" region or the "global"
+        /// resources that contain `Important` as a word in any of the searchable
+        /// fields and are also located in the `us-west1` region or the `global`
         /// location.
         /// </param>
         /// <param name="assetTypes">
@@ -2000,8 +2048,7 @@ namespace Google.Cloud.Asset.V1
 
         /// <summary>
         /// Issue a job that queries assets using a SQL statement compatible with
-        /// [BigQuery Standard
-        /// SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql).
+        /// [BigQuery SQL](https://cloud.google.com/bigquery/docs/introduction-sql).
         /// 
         /// If the query execution finishes within timeout and there's no pagination,
         /// the full query results will be returned in the `QueryAssetsResponse`.
@@ -2010,9 +2057,8 @@ namespace Google.Cloud.Asset.V1
         /// with the `job_reference` from the a previous `QueryAssets` call.
         /// 
         /// Note, the query result has approximately 10 GB limitation enforced by
-        /// BigQuery
-        /// https://cloud.google.com/bigquery/docs/best-practices-performance-output,
-        /// queries return larger results will result in errors.
+        /// [BigQuery](https://cloud.google.com/bigquery/docs/best-practices-performance-output).
+        /// Queries return larger results will result in errors.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2022,8 +2068,7 @@ namespace Google.Cloud.Asset.V1
 
         /// <summary>
         /// Issue a job that queries assets using a SQL statement compatible with
-        /// [BigQuery Standard
-        /// SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql).
+        /// [BigQuery SQL](https://cloud.google.com/bigquery/docs/introduction-sql).
         /// 
         /// If the query execution finishes within timeout and there's no pagination,
         /// the full query results will be returned in the `QueryAssetsResponse`.
@@ -2032,9 +2077,8 @@ namespace Google.Cloud.Asset.V1
         /// with the `job_reference` from the a previous `QueryAssets` call.
         /// 
         /// Note, the query result has approximately 10 GB limitation enforced by
-        /// BigQuery
-        /// https://cloud.google.com/bigquery/docs/best-practices-performance-output,
-        /// queries return larger results will result in errors.
+        /// [BigQuery](https://cloud.google.com/bigquery/docs/best-practices-performance-output).
+        /// Queries return larger results will result in errors.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2044,8 +2088,7 @@ namespace Google.Cloud.Asset.V1
 
         /// <summary>
         /// Issue a job that queries assets using a SQL statement compatible with
-        /// [BigQuery Standard
-        /// SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql).
+        /// [BigQuery SQL](https://cloud.google.com/bigquery/docs/introduction-sql).
         /// 
         /// If the query execution finishes within timeout and there's no pagination,
         /// the full query results will be returned in the `QueryAssetsResponse`.
@@ -2054,9 +2097,8 @@ namespace Google.Cloud.Asset.V1
         /// with the `job_reference` from the a previous `QueryAssets` call.
         /// 
         /// Note, the query result has approximately 10 GB limitation enforced by
-        /// BigQuery
-        /// https://cloud.google.com/bigquery/docs/best-practices-performance-output,
-        /// queries return larger results will result in errors.
+        /// [BigQuery](https://cloud.google.com/bigquery/docs/best-practices-performance-output).
+        /// Queries return larger results will result in errors.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4179,8 +4221,7 @@ namespace Google.Cloud.Asset.V1
 
         /// <summary>
         /// Issue a job that queries assets using a SQL statement compatible with
-        /// [BigQuery Standard
-        /// SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql).
+        /// [BigQuery SQL](https://cloud.google.com/bigquery/docs/introduction-sql).
         /// 
         /// If the query execution finishes within timeout and there's no pagination,
         /// the full query results will be returned in the `QueryAssetsResponse`.
@@ -4189,9 +4230,8 @@ namespace Google.Cloud.Asset.V1
         /// with the `job_reference` from the a previous `QueryAssets` call.
         /// 
         /// Note, the query result has approximately 10 GB limitation enforced by
-        /// BigQuery
-        /// https://cloud.google.com/bigquery/docs/best-practices-performance-output,
-        /// queries return larger results will result in errors.
+        /// [BigQuery](https://cloud.google.com/bigquery/docs/best-practices-performance-output).
+        /// Queries return larger results will result in errors.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4204,8 +4244,7 @@ namespace Google.Cloud.Asset.V1
 
         /// <summary>
         /// Issue a job that queries assets using a SQL statement compatible with
-        /// [BigQuery Standard
-        /// SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql).
+        /// [BigQuery SQL](https://cloud.google.com/bigquery/docs/introduction-sql).
         /// 
         /// If the query execution finishes within timeout and there's no pagination,
         /// the full query results will be returned in the `QueryAssetsResponse`.
@@ -4214,9 +4253,8 @@ namespace Google.Cloud.Asset.V1
         /// with the `job_reference` from the a previous `QueryAssets` call.
         /// 
         /// Note, the query result has approximately 10 GB limitation enforced by
-        /// BigQuery
-        /// https://cloud.google.com/bigquery/docs/best-practices-performance-output,
-        /// queries return larger results will result in errors.
+        /// [BigQuery](https://cloud.google.com/bigquery/docs/best-practices-performance-output).
+        /// Queries return larger results will result in errors.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
