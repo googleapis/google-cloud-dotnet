@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.0.0-beta03, released 2023-09-25
+
+### New features
+
+- Added enum value for PG15 ([commit c4cb2c1](https://github.com/googleapis/google-cloud-dotnet/commit/c4cb2c151c4dc63b650dae9f5bf6c88ef910abe0))
+- Changed description for recovery_window_days in ContinuousBackupConfig ([commit c4cb2c1](https://github.com/googleapis/google-cloud-dotnet/commit/c4cb2c151c4dc63b650dae9f5bf6c88ef910abe0))
+- Deprecate network field in favor of network_config.network ([commit c4cb2c1](https://github.com/googleapis/google-cloud-dotnet/commit/c4cb2c151c4dc63b650dae9f5bf6c88ef910abe0))
+- Added ClientConnectionConfig ([commit c4cb2c1](https://github.com/googleapis/google-cloud-dotnet/commit/c4cb2c151c4dc63b650dae9f5bf6c88ef910abe0))
+- Added QuantityBasedExpiry ([commit c4cb2c1](https://github.com/googleapis/google-cloud-dotnet/commit/c4cb2c151c4dc63b650dae9f5bf6c88ef910abe0))
+- Added DatabaseVersion ([commit c4cb2c1](https://github.com/googleapis/google-cloud-dotnet/commit/c4cb2c151c4dc63b650dae9f5bf6c88ef910abe0))
+
 ## Version 1.0.0-beta02, released 2023-06-20
 
 ### Bug fixes

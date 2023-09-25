@@ -181,7 +181,7 @@
     },
     {
       "id": "Google.Cloud.AlloyDb.V1Beta",
-      "version": "1.0.0-beta02",
+      "version": "1.0.0-beta03",
       "type": "grpc",
       "productName": "AlloyDB",
       "productUrl": "https://cloud.google.com/alloydb/docs",
