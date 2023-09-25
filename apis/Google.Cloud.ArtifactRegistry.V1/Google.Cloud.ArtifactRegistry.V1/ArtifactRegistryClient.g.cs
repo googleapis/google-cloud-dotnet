@@ -1779,7 +1779,8 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// Lists repositories.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the parent resource whose repositories will be listed.
+        /// Required. The name of the parent resource whose repositories will be
+        /// listed.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1803,7 +1804,8 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// Lists repositories.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the parent resource whose repositories will be listed.
+        /// Required. The name of the parent resource whose repositories will be
+        /// listed.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1827,7 +1829,8 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// Lists repositories.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the parent resource whose repositories will be listed.
+        /// Required. The name of the parent resource whose repositories will be
+        /// listed.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1851,7 +1854,8 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// Lists repositories.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the parent resource whose repositories will be listed.
+        /// Required. The name of the parent resource whose repositories will be
+        /// listed.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2037,7 +2041,8 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// repository has been created. Its response will be the created Repository.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the parent resource where the repository will be created.
+        /// Required. The name of the parent resource where the repository will be
+        /// created.
         /// </param>
         /// <param name="repository">
         /// The repository to be created.
@@ -2051,8 +2056,8 @@ namespace Google.Cloud.ArtifactRegistry.V1
             CreateRepository(new CreateRepositoryRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                RepositoryId = repositoryId ?? "",
-                Repository = repository,
+                RepositoryId = gax::GaxPreconditions.CheckNotNullOrEmpty(repositoryId, nameof(repositoryId)),
+                Repository = gax::GaxPreconditions.CheckNotNull(repository, nameof(repository)),
             }, callSettings);
 
         /// <summary>
@@ -2060,7 +2065,8 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// repository has been created. Its response will be the created Repository.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the parent resource where the repository will be created.
+        /// Required. The name of the parent resource where the repository will be
+        /// created.
         /// </param>
         /// <param name="repository">
         /// The repository to be created.
@@ -2074,8 +2080,8 @@ namespace Google.Cloud.ArtifactRegistry.V1
             CreateRepositoryAsync(new CreateRepositoryRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                RepositoryId = repositoryId ?? "",
-                Repository = repository,
+                RepositoryId = gax::GaxPreconditions.CheckNotNullOrEmpty(repositoryId, nameof(repositoryId)),
+                Repository = gax::GaxPreconditions.CheckNotNull(repository, nameof(repository)),
             }, callSettings);
 
         /// <summary>
@@ -2083,7 +2089,8 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// repository has been created. Its response will be the created Repository.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the parent resource where the repository will be created.
+        /// Required. The name of the parent resource where the repository will be
+        /// created.
         /// </param>
         /// <param name="repository">
         /// The repository to be created.
@@ -2101,7 +2108,8 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// repository has been created. Its response will be the created Repository.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the parent resource where the repository will be created.
+        /// Required. The name of the parent resource where the repository will be
+        /// created.
         /// </param>
         /// <param name="repository">
         /// The repository to be created.
@@ -2115,8 +2123,8 @@ namespace Google.Cloud.ArtifactRegistry.V1
             CreateRepository(new CreateRepositoryRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                RepositoryId = repositoryId ?? "",
-                Repository = repository,
+                RepositoryId = gax::GaxPreconditions.CheckNotNullOrEmpty(repositoryId, nameof(repositoryId)),
+                Repository = gax::GaxPreconditions.CheckNotNull(repository, nameof(repository)),
             }, callSettings);
 
         /// <summary>
@@ -2124,7 +2132,8 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// repository has been created. Its response will be the created Repository.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the parent resource where the repository will be created.
+        /// Required. The name of the parent resource where the repository will be
+        /// created.
         /// </param>
         /// <param name="repository">
         /// The repository to be created.
@@ -2138,8 +2147,8 @@ namespace Google.Cloud.ArtifactRegistry.V1
             CreateRepositoryAsync(new CreateRepositoryRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                RepositoryId = repositoryId ?? "",
-                Repository = repository,
+                RepositoryId = gax::GaxPreconditions.CheckNotNullOrEmpty(repositoryId, nameof(repositoryId)),
+                Repository = gax::GaxPreconditions.CheckNotNull(repository, nameof(repository)),
             }, callSettings);
 
         /// <summary>
@@ -2147,7 +2156,8 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// repository has been created. Its response will be the created Repository.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the parent resource where the repository will be created.
+        /// Required. The name of the parent resource where the repository will be
+        /// created.
         /// </param>
         /// <param name="repository">
         /// The repository to be created.

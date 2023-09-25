@@ -57,22 +57,22 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             "ZXZ0b29scy5hcnRpZmFjdHJlZ2lzdHJ5LnYxLlJlcG9zaXRvcnkSFwoPbmV4",
             "dF9wYWdlX3Rva2VuGAIgASgJIlgKFEdldFJlcG9zaXRvcnlSZXF1ZXN0EkAK",
             "BG5hbWUYASABKAlCMuBBAvpBLAoqYXJ0aWZhY3RyZWdpc3RyeS5nb29nbGVh",
-            "cGlzLmNvbS9SZXBvc2l0b3J5IrkBChdDcmVhdGVSZXBvc2l0b3J5UmVxdWVz",
+            "cGlzLmNvbS9SZXBvc2l0b3J5IsMBChdDcmVhdGVSZXBvc2l0b3J5UmVxdWVz",
             "dBJCCgZwYXJlbnQYASABKAlCMuBBAvpBLBIqYXJ0aWZhY3RyZWdpc3RyeS5n",
-            "b29nbGVhcGlzLmNvbS9SZXBvc2l0b3J5EhUKDXJlcG9zaXRvcnlfaWQYAiAB",
-            "KAkSQwoKcmVwb3NpdG9yeRgDIAEoCzIvLmdvb2dsZS5kZXZ0b29scy5hcnRp",
-            "ZmFjdHJlZ2lzdHJ5LnYxLlJlcG9zaXRvcnkijwEKF1VwZGF0ZVJlcG9zaXRv",
-            "cnlSZXF1ZXN0EkMKCnJlcG9zaXRvcnkYASABKAsyLy5nb29nbGUuZGV2dG9v",
-            "bHMuYXJ0aWZhY3RyZWdpc3RyeS52MS5SZXBvc2l0b3J5Ei8KC3VwZGF0ZV9t",
-            "YXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayJbChdEZWxl",
-            "dGVSZXBvc2l0b3J5UmVxdWVzdBJACgRuYW1lGAEgASgJQjLgQQL6QSwKKmFy",
-            "dGlmYWN0cmVnaXN0cnkuZ29vZ2xlYXBpcy5jb20vUmVwb3NpdG9yeUL6AQon",
-            "Y29tLmdvb2dsZS5kZXZ0b29scy5hcnRpZmFjdHJlZ2lzdHJ5LnYxQg9SZXBv",
-            "c2l0b3J5UHJvdG9QAVpQY2xvdWQuZ29vZ2xlLmNvbS9nby9hcnRpZmFjdHJl",
-            "Z2lzdHJ5L2FwaXYxL2FydGlmYWN0cmVnaXN0cnlwYjthcnRpZmFjdHJlZ2lz",
-            "dHJ5cGKqAiBHb29nbGUuQ2xvdWQuQXJ0aWZhY3RSZWdpc3RyeS5WMcoCIEdv",
-            "b2dsZVxDbG91ZFxBcnRpZmFjdFJlZ2lzdHJ5XFYx6gIjR29vZ2xlOjpDbG91",
-            "ZDo6QXJ0aWZhY3RSZWdpc3RyeTo6VjFiBnByb3RvMw=="));
+            "b29nbGVhcGlzLmNvbS9SZXBvc2l0b3J5EhoKDXJlcG9zaXRvcnlfaWQYAiAB",
+            "KAlCA+BBAhJICgpyZXBvc2l0b3J5GAMgASgLMi8uZ29vZ2xlLmRldnRvb2xz",
+            "LmFydGlmYWN0cmVnaXN0cnkudjEuUmVwb3NpdG9yeUID4EECIo8BChdVcGRh",
+            "dGVSZXBvc2l0b3J5UmVxdWVzdBJDCgpyZXBvc2l0b3J5GAEgASgLMi8uZ29v",
+            "Z2xlLmRldnRvb2xzLmFydGlmYWN0cmVnaXN0cnkudjEuUmVwb3NpdG9yeRIv",
+            "Cgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1h",
+            "c2siWwoXRGVsZXRlUmVwb3NpdG9yeVJlcXVlc3QSQAoEbmFtZRgBIAEoCUIy",
+            "4EEC+kEsCiphcnRpZmFjdHJlZ2lzdHJ5Lmdvb2dsZWFwaXMuY29tL1JlcG9z",
+            "aXRvcnlC+gEKJ2NvbS5nb29nbGUuZGV2dG9vbHMuYXJ0aWZhY3RyZWdpc3Ry",
+            "eS52MUIPUmVwb3NpdG9yeVByb3RvUAFaUGNsb3VkLmdvb2dsZS5jb20vZ28v",
+            "YXJ0aWZhY3RyZWdpc3RyeS9hcGl2MS9hcnRpZmFjdHJlZ2lzdHJ5cGI7YXJ0",
+            "aWZhY3RyZWdpc3RyeXBiqgIgR29vZ2xlLkNsb3VkLkFydGlmYWN0UmVnaXN0",
+            "cnkuVjHKAiBHb29nbGVcQ2xvdWRcQXJ0aWZhY3RSZWdpc3RyeVxWMeoCI0dv",
+            "b2dsZTo6Q2xvdWQ6OkFydGlmYWN0UmVnaXN0cnk6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -985,7 +985,8 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The name of the parent resource whose repositories will be listed.
+    /// Required. The name of the parent resource whose repositories will be
+    /// listed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1680,7 +1681,8 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The name of the parent resource where the repository will be created.
+    /// Required. The name of the parent resource where the repository will be
+    /// created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
