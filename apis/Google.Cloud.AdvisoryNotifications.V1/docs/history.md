@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.2.0, released 2023-09-26
+
+### New features
+
+- Add new RPCs GetSettings, UpdateSettings and new messages Settings, NotificationSettings, GetSettingsRequest, UpdateSettingsRequest ([commit 881c034](https://github.com/googleapis/google-cloud-dotnet/commit/881c034c42c222894a705b52fb99d42cbe956327))
+
 ## Version 1.1.0, released 2023-08-04
 
 ### New features
