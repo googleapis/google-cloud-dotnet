@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.3.0, released 2023-09-26
+
+### Bug fixes
+
+- Make repository and repository_id in CreateRepository required ([commit b0752af](https://github.com/googleapis/google-cloud-dotnet/commit/b0752afb3c5a83bffb901743d9a8cd44d526d574))
+
 ## Version 2.2.0, released 2023-02-08
 
 ### Bug fixes
