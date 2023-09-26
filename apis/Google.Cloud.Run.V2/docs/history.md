@@ -1,5 +1,19 @@
 # Version history
 
+## Version 2.3.0, released 2023-09-26
+
+### New features
+
+- Adds support for cancel Execution ([commit 887dc16](https://github.com/googleapis/google-cloud-dotnet/commit/887dc168d55116c4969e7e7b66c5df9063b8a19a))
+- Adds support for Execution overrides ([commit 887dc16](https://github.com/googleapis/google-cloud-dotnet/commit/887dc168d55116c4969e7e7b66c5df9063b8a19a))
+- Adds support for Direct VPC egress setting ([commit 887dc16](https://github.com/googleapis/google-cloud-dotnet/commit/887dc168d55116c4969e7e7b66c5df9063b8a19a))
+- New fields for multi-container ([commit 887dc16](https://github.com/googleapis/google-cloud-dotnet/commit/887dc168d55116c4969e7e7b66c5df9063b8a19a))
+- New field for Task's scheduled timestamp ([commit 887dc16](https://github.com/googleapis/google-cloud-dotnet/commit/887dc168d55116c4969e7e7b66c5df9063b8a19a))
+
+### Documentation improvements
+
+- General documentation fixes. ([commit 887dc16](https://github.com/googleapis/google-cloud-dotnet/commit/887dc168d55116c4969e7e7b66c5df9063b8a19a))
+
 ## Version 2.2.0, released 2023-07-13
 
 ### New features
