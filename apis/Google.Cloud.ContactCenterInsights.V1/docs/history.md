@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.10.0, released 2023-09-26
+
+### New features
+
+- Add optional SpeechConfig to UploadConversationRequest ([commit d09e252](https://github.com/googleapis/google-cloud-dotnet/commit/d09e252125bbffaa2b42e4c43fd8c9b48c8888e3))
+
 ## Version 2.9.0, released 2023-07-13
 
 ### New features
