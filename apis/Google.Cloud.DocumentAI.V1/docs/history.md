@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.10.0, released 2023-09-26
+
+### Bug fixes
+
+- `OcrConfig.compute_style_info` is deprecated. Use `PremiumFeatures.compute_style_info` instead. ([commit 8f008d6](https://github.com/googleapis/google-cloud-dotnet/commit/8f008d65ca5544d9410bb45552dfaae735158419))
+
+### New features
+
+- [Google.Cloud.DocumentAI.V1] make `page_range` field public ([issue 11086](https://github.com/googleapis/google-cloud-dotnet/issues/11086)) ([commit 8f008d6](https://github.com/googleapis/google-cloud-dotnet/commit/8f008d65ca5544d9410bb45552dfaae735158419))
+
 ## Version 3.9.0, released 2023-09-25
 
 ### Bug fixes
