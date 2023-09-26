@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.6.0, released 2023-09-26
+
+### New features
+
+- Add support for directly attached and effective tags ([commit 46297c2](https://github.com/googleapis/google-cloud-dotnet/commit/46297c285809c35aba4e5cd0fc3a42eebac722eb))
+
+### Documentation improvements
+
+- Clarify comments for tags and effective tags ([commit 46297c2](https://github.com/googleapis/google-cloud-dotnet/commit/46297c285809c35aba4e5cd0fc3a42eebac722eb))
+
 ## Version 3.5.0, released 2023-04-12
 
 ### New features
