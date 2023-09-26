@@ -1,5 +1,16 @@
 # Version history
 
+## Version 2.0.0-beta13, released 2023-09-26
+
+### New features
+
+- Added `SummaryOptions` to `ProcessOptions` for the Summarizer processor ([commit 93462fd](https://github.com/googleapis/google-cloud-dotnet/commit/93462fdb28303e0a750b4388090881d2a90c1086))
+- Added `ListDocuments()` method for Document AI Workbench training documents ([commit 93462fd](https://github.com/googleapis/google-cloud-dotnet/commit/93462fdb28303e0a750b4388090881d2a90c1086))
+
+### Documentation improvements
+
+- Update client libraries for Enterprise OCR add-ons ([commit 2d30aa5](https://github.com/googleapis/google-cloud-dotnet/commit/2d30aa57756279103bfd46c9a8b19dba542cb047))
+
 ## Version 2.0.0-beta12, released 2023-08-04
 
 ### New features
