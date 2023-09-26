@@ -4148,7 +4148,9 @@ namespace Google.Cloud.Batch.V1Alpha {
         /// <summary>
         /// Local SSDs are available through both "SCSI" and "NVMe" interfaces.
         /// If not indicated, "NVMe" will be the default one for local ssds.
-        /// We only support "SCSI" for persistent disks now.
+        /// This field is ignored for persistent disks as the interface is chosen
+        /// automatically. See
+        /// https://cloud.google.com/compute/docs/disks/persistent-disks#choose_an_interface.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
