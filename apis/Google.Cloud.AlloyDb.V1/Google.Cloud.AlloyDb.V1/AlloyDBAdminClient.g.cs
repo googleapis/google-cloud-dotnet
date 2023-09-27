@@ -91,6 +91,8 @@ namespace Google.Cloud.AlloyDb.V1
             DeleteBackupSettings = existing.DeleteBackupSettings;
             DeleteBackupOperationsSettings = existing.DeleteBackupOperationsSettings.Clone();
             ListSupportedDatabaseFlagsSettings = existing.ListSupportedDatabaseFlagsSettings;
+            GenerateClientCertificateSettings = existing.GenerateClientCertificateSettings;
+            GetConnectionInfoSettings = existing.GetConnectionInfoSettings;
             ListUsersSettings = existing.ListUsersSettings;
             GetUserSettings = existing.GetUserSettings;
             CreateUserSettings = existing.CreateUserSettings;
@@ -740,6 +742,43 @@ namespace Google.Cloud.AlloyDb.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListSupportedDatabaseFlagsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AlloyDBAdminClient.GenerateClientCertificate</c> and <c>AlloyDBAdminClient.GenerateClientCertificateAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GenerateClientCertificateSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AlloyDBAdminClient.GetConnectionInfo</c> and <c>AlloyDBAdminClient.GetConnectionInfoAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetConnectionInfoSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -4236,6 +4275,264 @@ namespace Google.Cloud.AlloyDb.V1
             }, callSettings);
 
         /// <summary>
+        /// Generate a client certificate signed by a Cluster CA.
+        /// The sole purpose of this endpoint is to support AlloyDB connectors and the
+        /// Auth Proxy client. The endpoint's behavior is subject to change without
+        /// notice, so do not rely on its behavior remaining constant. Future changes
+        /// will not break AlloyDB connectors or the Auth Proxy client.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GenerateClientCertificateResponse GenerateClientCertificate(GenerateClientCertificateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generate a client certificate signed by a Cluster CA.
+        /// The sole purpose of this endpoint is to support AlloyDB connectors and the
+        /// Auth Proxy client. The endpoint's behavior is subject to change without
+        /// notice, so do not rely on its behavior remaining constant. Future changes
+        /// will not break AlloyDB connectors or the Auth Proxy client.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateClientCertificateResponse> GenerateClientCertificateAsync(GenerateClientCertificateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generate a client certificate signed by a Cluster CA.
+        /// The sole purpose of this endpoint is to support AlloyDB connectors and the
+        /// Auth Proxy client. The endpoint's behavior is subject to change without
+        /// notice, so do not rely on its behavior remaining constant. Future changes
+        /// will not break AlloyDB connectors or the Auth Proxy client.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateClientCertificateResponse> GenerateClientCertificateAsync(GenerateClientCertificateRequest request, st::CancellationToken cancellationToken) =>
+            GenerateClientCertificateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Generate a client certificate signed by a Cluster CA.
+        /// The sole purpose of this endpoint is to support AlloyDB connectors and the
+        /// Auth Proxy client. The endpoint's behavior is subject to change without
+        /// notice, so do not rely on its behavior remaining constant. Future changes
+        /// will not break AlloyDB connectors or the Auth Proxy client.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource. The required format is:
+        /// * projects/{project}/locations/{location}/clusters/{cluster}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GenerateClientCertificateResponse GenerateClientCertificate(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            GenerateClientCertificate(new GenerateClientCertificateRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Generate a client certificate signed by a Cluster CA.
+        /// The sole purpose of this endpoint is to support AlloyDB connectors and the
+        /// Auth Proxy client. The endpoint's behavior is subject to change without
+        /// notice, so do not rely on its behavior remaining constant. Future changes
+        /// will not break AlloyDB connectors or the Auth Proxy client.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource. The required format is:
+        /// * projects/{project}/locations/{location}/clusters/{cluster}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateClientCertificateResponse> GenerateClientCertificateAsync(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            GenerateClientCertificateAsync(new GenerateClientCertificateRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Generate a client certificate signed by a Cluster CA.
+        /// The sole purpose of this endpoint is to support AlloyDB connectors and the
+        /// Auth Proxy client. The endpoint's behavior is subject to change without
+        /// notice, so do not rely on its behavior remaining constant. Future changes
+        /// will not break AlloyDB connectors or the Auth Proxy client.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource. The required format is:
+        /// * projects/{project}/locations/{location}/clusters/{cluster}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateClientCertificateResponse> GenerateClientCertificateAsync(string parent, st::CancellationToken cancellationToken) =>
+            GenerateClientCertificateAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Generate a client certificate signed by a Cluster CA.
+        /// The sole purpose of this endpoint is to support AlloyDB connectors and the
+        /// Auth Proxy client. The endpoint's behavior is subject to change without
+        /// notice, so do not rely on its behavior remaining constant. Future changes
+        /// will not break AlloyDB connectors or the Auth Proxy client.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource. The required format is:
+        /// * projects/{project}/locations/{location}/clusters/{cluster}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GenerateClientCertificateResponse GenerateClientCertificate(ClusterName parent, gaxgrpc::CallSettings callSettings = null) =>
+            GenerateClientCertificate(new GenerateClientCertificateRequest
+            {
+                ParentAsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Generate a client certificate signed by a Cluster CA.
+        /// The sole purpose of this endpoint is to support AlloyDB connectors and the
+        /// Auth Proxy client. The endpoint's behavior is subject to change without
+        /// notice, so do not rely on its behavior remaining constant. Future changes
+        /// will not break AlloyDB connectors or the Auth Proxy client.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource. The required format is:
+        /// * projects/{project}/locations/{location}/clusters/{cluster}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateClientCertificateResponse> GenerateClientCertificateAsync(ClusterName parent, gaxgrpc::CallSettings callSettings = null) =>
+            GenerateClientCertificateAsync(new GenerateClientCertificateRequest
+            {
+                ParentAsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Generate a client certificate signed by a Cluster CA.
+        /// The sole purpose of this endpoint is to support AlloyDB connectors and the
+        /// Auth Proxy client. The endpoint's behavior is subject to change without
+        /// notice, so do not rely on its behavior remaining constant. Future changes
+        /// will not break AlloyDB connectors or the Auth Proxy client.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource. The required format is:
+        /// * projects/{project}/locations/{location}/clusters/{cluster}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateClientCertificateResponse> GenerateClientCertificateAsync(ClusterName parent, st::CancellationToken cancellationToken) =>
+            GenerateClientCertificateAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get instance metadata used for a connection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ConnectionInfo GetConnectionInfo(GetConnectionInfoRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get instance metadata used for a connection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ConnectionInfo> GetConnectionInfoAsync(GetConnectionInfoRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get instance metadata used for a connection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ConnectionInfo> GetConnectionInfoAsync(GetConnectionInfoRequest request, st::CancellationToken cancellationToken) =>
+            GetConnectionInfoAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get instance metadata used for a connection.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource. The required format is:
+        /// projects/{project}/locations/{location}/clusters/{cluster}/instances/{instance}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ConnectionInfo GetConnectionInfo(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            GetConnectionInfo(new GetConnectionInfoRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get instance metadata used for a connection.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource. The required format is:
+        /// projects/{project}/locations/{location}/clusters/{cluster}/instances/{instance}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ConnectionInfo> GetConnectionInfoAsync(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            GetConnectionInfoAsync(new GetConnectionInfoRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get instance metadata used for a connection.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource. The required format is:
+        /// projects/{project}/locations/{location}/clusters/{cluster}/instances/{instance}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ConnectionInfo> GetConnectionInfoAsync(string parent, st::CancellationToken cancellationToken) =>
+            GetConnectionInfoAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get instance metadata used for a connection.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource. The required format is:
+        /// projects/{project}/locations/{location}/clusters/{cluster}/instances/{instance}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ConnectionInfo GetConnectionInfo(InstanceName parent, gaxgrpc::CallSettings callSettings = null) =>
+            GetConnectionInfo(new GetConnectionInfoRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get instance metadata used for a connection.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource. The required format is:
+        /// projects/{project}/locations/{location}/clusters/{cluster}/instances/{instance}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ConnectionInfo> GetConnectionInfoAsync(InstanceName parent, gaxgrpc::CallSettings callSettings = null) =>
+            GetConnectionInfoAsync(new GetConnectionInfoRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get instance metadata used for a connection.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource. The required format is:
+        /// projects/{project}/locations/{location}/clusters/{cluster}/instances/{instance}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ConnectionInfo> GetConnectionInfoAsync(InstanceName parent, st::CancellationToken cancellationToken) =>
+            GetConnectionInfoAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Lists Users in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4864,6 +5161,10 @@ namespace Google.Cloud.AlloyDb.V1
 
         private readonly gaxgrpc::ApiCall<ListSupportedDatabaseFlagsRequest, ListSupportedDatabaseFlagsResponse> _callListSupportedDatabaseFlags;
 
+        private readonly gaxgrpc::ApiCall<GenerateClientCertificateRequest, GenerateClientCertificateResponse> _callGenerateClientCertificate;
+
+        private readonly gaxgrpc::ApiCall<GetConnectionInfoRequest, ConnectionInfo> _callGetConnectionInfo;
+
         private readonly gaxgrpc::ApiCall<ListUsersRequest, ListUsersResponse> _callListUsers;
 
         private readonly gaxgrpc::ApiCall<GetUserRequest, User> _callGetUser;
@@ -4976,6 +5277,12 @@ namespace Google.Cloud.AlloyDb.V1
             _callListSupportedDatabaseFlags = clientHelper.BuildApiCall<ListSupportedDatabaseFlagsRequest, ListSupportedDatabaseFlagsResponse>("ListSupportedDatabaseFlags", grpcClient.ListSupportedDatabaseFlagsAsync, grpcClient.ListSupportedDatabaseFlags, effectiveSettings.ListSupportedDatabaseFlagsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListSupportedDatabaseFlags);
             Modify_ListSupportedDatabaseFlagsApiCall(ref _callListSupportedDatabaseFlags);
+            _callGenerateClientCertificate = clientHelper.BuildApiCall<GenerateClientCertificateRequest, GenerateClientCertificateResponse>("GenerateClientCertificate", grpcClient.GenerateClientCertificateAsync, grpcClient.GenerateClientCertificate, effectiveSettings.GenerateClientCertificateSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callGenerateClientCertificate);
+            Modify_GenerateClientCertificateApiCall(ref _callGenerateClientCertificate);
+            _callGetConnectionInfo = clientHelper.BuildApiCall<GetConnectionInfoRequest, ConnectionInfo>("GetConnectionInfo", grpcClient.GetConnectionInfoAsync, grpcClient.GetConnectionInfo, effectiveSettings.GetConnectionInfoSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callGetConnectionInfo);
+            Modify_GetConnectionInfoApiCall(ref _callGetConnectionInfo);
             _callListUsers = clientHelper.BuildApiCall<ListUsersRequest, ListUsersResponse>("ListUsers", grpcClient.ListUsersAsync, grpcClient.ListUsers, effectiveSettings.ListUsersSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListUsers);
             Modify_ListUsersApiCall(ref _callListUsers);
@@ -5043,6 +5350,10 @@ namespace Google.Cloud.AlloyDb.V1
         partial void Modify_DeleteBackupApiCall(ref gaxgrpc::ApiCall<DeleteBackupRequest, lro::Operation> call);
 
         partial void Modify_ListSupportedDatabaseFlagsApiCall(ref gaxgrpc::ApiCall<ListSupportedDatabaseFlagsRequest, ListSupportedDatabaseFlagsResponse> call);
+
+        partial void Modify_GenerateClientCertificateApiCall(ref gaxgrpc::ApiCall<GenerateClientCertificateRequest, GenerateClientCertificateResponse> call);
+
+        partial void Modify_GetConnectionInfoApiCall(ref gaxgrpc::ApiCall<GetConnectionInfoRequest, ConnectionInfo> call);
 
         partial void Modify_ListUsersApiCall(ref gaxgrpc::ApiCall<ListUsersRequest, ListUsersResponse> call);
 
@@ -5112,6 +5423,10 @@ namespace Google.Cloud.AlloyDb.V1
         partial void Modify_DeleteBackupRequest(ref DeleteBackupRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListSupportedDatabaseFlagsRequest(ref ListSupportedDatabaseFlagsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GenerateClientCertificateRequest(ref GenerateClientCertificateRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetConnectionInfoRequest(ref GetConnectionInfoRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListUsersRequest(ref ListUsersRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -5786,6 +6101,62 @@ namespace Google.Cloud.AlloyDb.V1
         {
             Modify_ListSupportedDatabaseFlagsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListSupportedDatabaseFlagsRequest, ListSupportedDatabaseFlagsResponse, SupportedDatabaseFlag>(_callListSupportedDatabaseFlags, request, callSettings);
+        }
+
+        /// <summary>
+        /// Generate a client certificate signed by a Cluster CA.
+        /// The sole purpose of this endpoint is to support AlloyDB connectors and the
+        /// Auth Proxy client. The endpoint's behavior is subject to change without
+        /// notice, so do not rely on its behavior remaining constant. Future changes
+        /// will not break AlloyDB connectors or the Auth Proxy client.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override GenerateClientCertificateResponse GenerateClientCertificate(GenerateClientCertificateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GenerateClientCertificateRequest(ref request, ref callSettings);
+            return _callGenerateClientCertificate.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Generate a client certificate signed by a Cluster CA.
+        /// The sole purpose of this endpoint is to support AlloyDB connectors and the
+        /// Auth Proxy client. The endpoint's behavior is subject to change without
+        /// notice, so do not rely on its behavior remaining constant. Future changes
+        /// will not break AlloyDB connectors or the Auth Proxy client.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<GenerateClientCertificateResponse> GenerateClientCertificateAsync(GenerateClientCertificateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GenerateClientCertificateRequest(ref request, ref callSettings);
+            return _callGenerateClientCertificate.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get instance metadata used for a connection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ConnectionInfo GetConnectionInfo(GetConnectionInfoRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetConnectionInfoRequest(ref request, ref callSettings);
+            return _callGetConnectionInfo.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get instance metadata used for a connection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ConnectionInfo> GetConnectionInfoAsync(GetConnectionInfoRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetConnectionInfoRequest(ref request, ref callSettings);
+            return _callGetConnectionInfo.Async(request, callSettings);
         }
 
         /// <summary>

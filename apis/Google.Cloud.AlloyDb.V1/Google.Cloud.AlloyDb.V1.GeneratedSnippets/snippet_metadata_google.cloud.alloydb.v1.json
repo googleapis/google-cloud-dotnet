@@ -6562,6 +6562,580 @@
       ]
     },
     {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_GenerateClientCertificate_sync",
+      "title": "GenerateClientCertificateRequestObject",
+      "description": "Snippet for GenerateClientCertificate",
+      "file": "AlloyDBAdminClient.GenerateClientCertificateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateClientCertificate",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.GenerateClientCertificate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.GenerateClientCertificateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AlloyDb.V1.GenerateClientCertificateResponse",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "GenerateClientCertificate",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.GenerateClientCertificate",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_GenerateClientCertificate_async",
+      "title": "GenerateClientCertificateRequestObjectAsync",
+      "description": "Snippet for GenerateClientCertificateAsync",
+      "file": "AlloyDBAdminClient.GenerateClientCertificateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateClientCertificateAsync",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.GenerateClientCertificateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.GenerateClientCertificateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AlloyDb.V1.GenerateClientCertificateResponse>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "GenerateClientCertificate",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.GenerateClientCertificate",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_GenerateClientCertificate_sync_flattened",
+      "title": "GenerateClientCertificate",
+      "description": "Snippet for GenerateClientCertificate",
+      "file": "AlloyDBAdminClient.GenerateClientCertificateSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateClientCertificate",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.GenerateClientCertificate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AlloyDb.V1.GenerateClientCertificateResponse",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "GenerateClientCertificate",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.GenerateClientCertificate",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_GenerateClientCertificate_async_flattened",
+      "title": "GenerateClientCertificateAsync",
+      "description": "Snippet for GenerateClientCertificateAsync",
+      "file": "AlloyDBAdminClient.GenerateClientCertificateAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateClientCertificateAsync",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.GenerateClientCertificateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AlloyDb.V1.GenerateClientCertificateResponse>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "GenerateClientCertificate",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.GenerateClientCertificate",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_GenerateClientCertificate_sync_flattened_resourceNames",
+      "title": "GenerateClientCertificateResourceNames",
+      "description": "Snippet for GenerateClientCertificate",
+      "file": "AlloyDBAdminClient.GenerateClientCertificateResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateClientCertificate",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.GenerateClientCertificate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.ClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AlloyDb.V1.GenerateClientCertificateResponse",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "GenerateClientCertificate",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.GenerateClientCertificate",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_GenerateClientCertificate_async_flattened_resourceNames",
+      "title": "GenerateClientCertificateResourceNamesAsync",
+      "description": "Snippet for GenerateClientCertificateAsync",
+      "file": "AlloyDBAdminClient.GenerateClientCertificateResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateClientCertificateAsync",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.GenerateClientCertificateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.ClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AlloyDb.V1.GenerateClientCertificateResponse>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "GenerateClientCertificate",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.GenerateClientCertificate",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_GetConnectionInfo_sync",
+      "title": "GetConnectionInfoRequestObject",
+      "description": "Snippet for GetConnectionInfo",
+      "file": "AlloyDBAdminClient.GetConnectionInfoRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectionInfo",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.GetConnectionInfo",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.GetConnectionInfoRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AlloyDb.V1.ConnectionInfo",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "GetConnectionInfo",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.GetConnectionInfo",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_GetConnectionInfo_async",
+      "title": "GetConnectionInfoRequestObjectAsync",
+      "description": "Snippet for GetConnectionInfoAsync",
+      "file": "AlloyDBAdminClient.GetConnectionInfoRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectionInfoAsync",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.GetConnectionInfoAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.GetConnectionInfoRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AlloyDb.V1.ConnectionInfo>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "GetConnectionInfo",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.GetConnectionInfo",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_GetConnectionInfo_sync_flattened",
+      "title": "GetConnectionInfo",
+      "description": "Snippet for GetConnectionInfo",
+      "file": "AlloyDBAdminClient.GetConnectionInfoSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectionInfo",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.GetConnectionInfo",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AlloyDb.V1.ConnectionInfo",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "GetConnectionInfo",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.GetConnectionInfo",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_GetConnectionInfo_async_flattened",
+      "title": "GetConnectionInfoAsync",
+      "description": "Snippet for GetConnectionInfoAsync",
+      "file": "AlloyDBAdminClient.GetConnectionInfoAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectionInfoAsync",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.GetConnectionInfoAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AlloyDb.V1.ConnectionInfo>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "GetConnectionInfo",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.GetConnectionInfo",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_GetConnectionInfo_sync_flattened_resourceNames",
+      "title": "GetConnectionInfoResourceNames",
+      "description": "Snippet for GetConnectionInfo",
+      "file": "AlloyDBAdminClient.GetConnectionInfoResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectionInfo",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.GetConnectionInfo",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AlloyDb.V1.ConnectionInfo",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "GetConnectionInfo",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.GetConnectionInfo",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_GetConnectionInfo_async_flattened_resourceNames",
+      "title": "GetConnectionInfoResourceNamesAsync",
+      "description": "Snippet for GetConnectionInfoAsync",
+      "file": "AlloyDBAdminClient.GetConnectionInfoResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectionInfoAsync",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.GetConnectionInfoAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AlloyDb.V1.ConnectionInfo>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "GetConnectionInfo",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.GetConnectionInfo",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "alloydb_v1_generated_AlloyDBAdmin_ListUsers_sync",
       "title": "ListUsersRequestObject",
       "description": "Snippet for ListUsers",
