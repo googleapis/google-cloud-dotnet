@@ -361,10 +361,22 @@
                 "DeleteIntentAsync"
               ]
             },
+            "ExportIntents": {
+              "methods": [
+                "ExportIntents",
+                "ExportIntentsAsync"
+              ]
+            },
             "GetIntent": {
               "methods": [
                 "GetIntent",
                 "GetIntentAsync"
+              ]
+            },
+            "ImportIntents": {
+              "methods": [
+                "ImportIntents",
+                "ImportIntentsAsync"
               ]
             },
             "ListIntents": {

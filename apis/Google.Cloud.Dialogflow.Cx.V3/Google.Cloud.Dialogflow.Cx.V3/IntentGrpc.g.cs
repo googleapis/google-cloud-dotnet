@@ -79,6 +79,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.DeleteIntentRequest> __Marshaller_google_cloud_dialogflow_cx_v3_DeleteIntentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.DeleteIntentRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.ImportIntentsRequest> __Marshaller_google_cloud_dialogflow_cx_v3_ImportIntentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.ImportIntentsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.ExportIntentsRequest> __Marshaller_google_cloud_dialogflow_cx_v3_ExportIntentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.ExportIntentsRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.ListIntentsRequest, global::Google.Cloud.Dialogflow.Cx.V3.ListIntentsResponse> __Method_ListIntents = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.ListIntentsRequest, global::Google.Cloud.Dialogflow.Cx.V3.ListIntentsResponse>(
@@ -119,6 +125,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         "DeleteIntent",
         __Marshaller_google_cloud_dialogflow_cx_v3_DeleteIntentRequest,
         __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.ImportIntentsRequest, global::Google.LongRunning.Operation> __Method_ImportIntents = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.ImportIntentsRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ImportIntents",
+        __Marshaller_google_cloud_dialogflow_cx_v3_ImportIntentsRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.ExportIntentsRequest, global::Google.LongRunning.Operation> __Method_ExportIntents = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.ExportIntentsRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ExportIntents",
+        __Marshaller_google_cloud_dialogflow_cx_v3_ExportIntentsRequest,
+        __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -198,6 +220,48 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteIntent(global::Google.Cloud.Dialogflow.Cx.V3.DeleteIntentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Imports the specified intents into the agent.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`:
+      /// [ImportIntentsMetadata][google.cloud.dialogflow.cx.v3.ImportIntentsMetadata]
+      /// - `response`:
+      /// [ImportIntentsResponse][google.cloud.dialogflow.cx.v3.ImportIntentsResponse]
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ImportIntents(global::Google.Cloud.Dialogflow.Cx.V3.ImportIntentsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Exports the selected intents.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`:
+      /// [ExportIntentsMetadata][google.cloud.dialogflow.cx.v3.ExportIntentsMetadata]
+      /// - `response`:
+      /// [ExportIntentsResponse][google.cloud.dialogflow.cx.v3.ExportIntentsResponse]
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ExportIntents(global::Google.Cloud.Dialogflow.Cx.V3.ExportIntentsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -519,6 +583,174 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteIntent, null, options, request);
       }
+      /// <summary>
+      /// Imports the specified intents into the agent.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`:
+      /// [ImportIntentsMetadata][google.cloud.dialogflow.cx.v3.ImportIntentsMetadata]
+      /// - `response`:
+      /// [ImportIntentsResponse][google.cloud.dialogflow.cx.v3.ImportIntentsResponse]
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ImportIntents(global::Google.Cloud.Dialogflow.Cx.V3.ImportIntentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ImportIntents(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Imports the specified intents into the agent.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`:
+      /// [ImportIntentsMetadata][google.cloud.dialogflow.cx.v3.ImportIntentsMetadata]
+      /// - `response`:
+      /// [ImportIntentsResponse][google.cloud.dialogflow.cx.v3.ImportIntentsResponse]
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ImportIntents(global::Google.Cloud.Dialogflow.Cx.V3.ImportIntentsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ImportIntents, null, options, request);
+      }
+      /// <summary>
+      /// Imports the specified intents into the agent.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`:
+      /// [ImportIntentsMetadata][google.cloud.dialogflow.cx.v3.ImportIntentsMetadata]
+      /// - `response`:
+      /// [ImportIntentsResponse][google.cloud.dialogflow.cx.v3.ImportIntentsResponse]
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportIntentsAsync(global::Google.Cloud.Dialogflow.Cx.V3.ImportIntentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ImportIntentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Imports the specified intents into the agent.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`:
+      /// [ImportIntentsMetadata][google.cloud.dialogflow.cx.v3.ImportIntentsMetadata]
+      /// - `response`:
+      /// [ImportIntentsResponse][google.cloud.dialogflow.cx.v3.ImportIntentsResponse]
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportIntentsAsync(global::Google.Cloud.Dialogflow.Cx.V3.ImportIntentsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ImportIntents, null, options, request);
+      }
+      /// <summary>
+      /// Exports the selected intents.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`:
+      /// [ExportIntentsMetadata][google.cloud.dialogflow.cx.v3.ExportIntentsMetadata]
+      /// - `response`:
+      /// [ExportIntentsResponse][google.cloud.dialogflow.cx.v3.ExportIntentsResponse]
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ExportIntents(global::Google.Cloud.Dialogflow.Cx.V3.ExportIntentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExportIntents(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Exports the selected intents.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`:
+      /// [ExportIntentsMetadata][google.cloud.dialogflow.cx.v3.ExportIntentsMetadata]
+      /// - `response`:
+      /// [ExportIntentsResponse][google.cloud.dialogflow.cx.v3.ExportIntentsResponse]
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ExportIntents(global::Google.Cloud.Dialogflow.Cx.V3.ExportIntentsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ExportIntents, null, options, request);
+      }
+      /// <summary>
+      /// Exports the selected intents.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`:
+      /// [ExportIntentsMetadata][google.cloud.dialogflow.cx.v3.ExportIntentsMetadata]
+      /// - `response`:
+      /// [ExportIntentsResponse][google.cloud.dialogflow.cx.v3.ExportIntentsResponse]
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportIntentsAsync(global::Google.Cloud.Dialogflow.Cx.V3.ExportIntentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExportIntentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Exports the selected intents.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`:
+      /// [ExportIntentsMetadata][google.cloud.dialogflow.cx.v3.ExportIntentsMetadata]
+      /// - `response`:
+      /// [ExportIntentsResponse][google.cloud.dialogflow.cx.v3.ExportIntentsResponse]
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportIntentsAsync(global::Google.Cloud.Dialogflow.Cx.V3.ExportIntentsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ExportIntents, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override IntentsClient NewInstance(ClientBaseConfiguration configuration)
@@ -537,7 +769,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           .AddMethod(__Method_GetIntent, serviceImpl.GetIntent)
           .AddMethod(__Method_CreateIntent, serviceImpl.CreateIntent)
           .AddMethod(__Method_UpdateIntent, serviceImpl.UpdateIntent)
-          .AddMethod(__Method_DeleteIntent, serviceImpl.DeleteIntent).Build();
+          .AddMethod(__Method_DeleteIntent, serviceImpl.DeleteIntent)
+          .AddMethod(__Method_ImportIntents, serviceImpl.ImportIntents)
+          .AddMethod(__Method_ExportIntents, serviceImpl.ExportIntents).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -552,6 +786,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       serviceBinder.AddMethod(__Method_CreateIntent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.CreateIntentRequest, global::Google.Cloud.Dialogflow.Cx.V3.Intent>(serviceImpl.CreateIntent));
       serviceBinder.AddMethod(__Method_UpdateIntent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.UpdateIntentRequest, global::Google.Cloud.Dialogflow.Cx.V3.Intent>(serviceImpl.UpdateIntent));
       serviceBinder.AddMethod(__Method_DeleteIntent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.DeleteIntentRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteIntent));
+      serviceBinder.AddMethod(__Method_ImportIntents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.ImportIntentsRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportIntents));
+      serviceBinder.AddMethod(__Method_ExportIntents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.ExportIntentsRequest, global::Google.LongRunning.Operation>(serviceImpl.ExportIntents));
     }
 
   }

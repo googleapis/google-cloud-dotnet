@@ -324,4 +324,35 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class ImportIntentsRequest
+    {
+        /// <summary><see cref="AgentName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public AgentName ParentAsAgentName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : AgentName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ImportIntentsResponse
+    {
+        /// <summary>
+        /// <see cref="IntentName"/>-typed view over the <see cref="Intents"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<IntentName> IntentsAsIntentNames
+        {
+            get => new gax::ResourceNameList<IntentName>(Intents, s => string.IsNullOrEmpty(s) ? null : IntentName.Parse(s, allowUnparsed: true));
+        }
+    }
+
+    public partial class ExportIntentsRequest
+    {
+        /// <summary><see cref="AgentName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public AgentName ParentAsAgentName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : AgentName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
 }

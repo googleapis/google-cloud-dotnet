@@ -75,6 +75,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             yield return GcsReflection.Descriptor;
             yield return GenerativeSettingsReflection.Descriptor;
             yield return ImportStrategyReflection.Descriptor;
+            yield return InlineReflection.Descriptor;
             yield return IntentReflection.Descriptor;
             yield return PageReflection.Descriptor;
             yield return ResponseMessageReflection.Descriptor;
