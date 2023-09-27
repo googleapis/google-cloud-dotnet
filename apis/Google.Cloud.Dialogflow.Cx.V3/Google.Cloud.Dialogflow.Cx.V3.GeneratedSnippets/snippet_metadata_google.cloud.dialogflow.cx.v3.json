@@ -12933,6 +12933,200 @@
       ]
     },
     {
+      "regionTag": "dialogflow_v3_generated_Intents_ImportIntents_sync",
+      "title": "ImportIntentsRequestObject",
+      "description": "Snippet for ImportIntents",
+      "file": "IntentsClient.ImportIntentsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportIntents",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.IntentsClient.ImportIntents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.ImportIntentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dialogflow.Cx.V3.ImportIntentsResponse, Google.Cloud.Dialogflow.Cx.V3.ImportIntentsMetadata>",
+        "client": {
+          "shortName": "IntentsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.IntentsClient"
+        },
+        "method": {
+          "shortName": "ImportIntents",
+          "fullName": "google.cloud.dialogflow.cx.v3.Intents.ImportIntents",
+          "service": {
+            "shortName": "Intents",
+            "fullName": "google.cloud.dialogflow.cx.v3.Intents"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Intents_ImportIntents_async",
+      "title": "ImportIntentsRequestObjectAsync",
+      "description": "Snippet for ImportIntentsAsync",
+      "file": "IntentsClient.ImportIntentsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportIntentsAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.IntentsClient.ImportIntentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.ImportIntentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dialogflow.Cx.V3.ImportIntentsResponse, Google.Cloud.Dialogflow.Cx.V3.ImportIntentsMetadata>>",
+        "client": {
+          "shortName": "IntentsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.IntentsClient"
+        },
+        "method": {
+          "shortName": "ImportIntents",
+          "fullName": "google.cloud.dialogflow.cx.v3.Intents.ImportIntents",
+          "service": {
+            "shortName": "Intents",
+            "fullName": "google.cloud.dialogflow.cx.v3.Intents"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Intents_ExportIntents_sync",
+      "title": "ExportIntentsRequestObject",
+      "description": "Snippet for ExportIntents",
+      "file": "IntentsClient.ExportIntentsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportIntents",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.IntentsClient.ExportIntents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.ExportIntentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dialogflow.Cx.V3.ExportIntentsResponse, Google.Cloud.Dialogflow.Cx.V3.ExportIntentsMetadata>",
+        "client": {
+          "shortName": "IntentsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.IntentsClient"
+        },
+        "method": {
+          "shortName": "ExportIntents",
+          "fullName": "google.cloud.dialogflow.cx.v3.Intents.ExportIntents",
+          "service": {
+            "shortName": "Intents",
+            "fullName": "google.cloud.dialogflow.cx.v3.Intents"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Intents_ExportIntents_async",
+      "title": "ExportIntentsRequestObjectAsync",
+      "description": "Snippet for ExportIntentsAsync",
+      "file": "IntentsClient.ExportIntentsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportIntentsAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.IntentsClient.ExportIntentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.ExportIntentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dialogflow.Cx.V3.ExportIntentsResponse, Google.Cloud.Dialogflow.Cx.V3.ExportIntentsMetadata>>",
+        "client": {
+          "shortName": "IntentsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.IntentsClient"
+        },
+        "method": {
+          "shortName": "ExportIntents",
+          "fullName": "google.cloud.dialogflow.cx.v3.Intents.ExportIntents",
+          "service": {
+            "shortName": "Intents",
+            "fullName": "google.cloud.dialogflow.cx.v3.Intents"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "dialogflow_v3_generated_Pages_ListPages_sync",
       "title": "ListPagesRequestObject",
       "description": "Snippet for ListPages",

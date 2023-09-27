@@ -18,6 +18,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcl = Google.Cloud.Location;
+using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -52,6 +53,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             CreateIntentSettings = existing.CreateIntentSettings;
             UpdateIntentSettings = existing.UpdateIntentSettings;
             DeleteIntentSettings = existing.DeleteIntentSettings;
+            ImportIntentsSettings = existing.ImportIntentsSettings;
+            ImportIntentsOperationsSettings = existing.ImportIntentsOperationsSettings.Clone();
+            ExportIntentsSettings = existing.ExportIntentsSettings;
+            ExportIntentsOperationsSettings = existing.ExportIntentsOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -147,6 +152,78 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteIntentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>IntentsClient.ImportIntents</c>
+        ///  and <c>IntentsClient.ImportIntentsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ImportIntentsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>IntentsClient.ImportIntents</c> and
+        /// <c>IntentsClient.ImportIntentsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ImportIntentsOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>IntentsClient.ExportIntents</c>
+        ///  and <c>IntentsClient.ExportIntentsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ExportIntentsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>IntentsClient.ExportIntents</c> and
+        /// <c>IntentsClient.ExportIntentsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ExportIntentsOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -958,6 +1035,166 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeleteIntentAsync(IntentName name, st::CancellationToken cancellationToken) =>
             DeleteIntentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Imports the specified intents into the agent.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`:
+        /// [ImportIntentsMetadata][google.cloud.dialogflow.cx.v3.ImportIntentsMetadata]
+        /// - `response`:
+        /// [ImportIntentsResponse][google.cloud.dialogflow.cx.v3.ImportIntentsResponse]
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ImportIntentsResponse, ImportIntentsMetadata> ImportIntents(ImportIntentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Imports the specified intents into the agent.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`:
+        /// [ImportIntentsMetadata][google.cloud.dialogflow.cx.v3.ImportIntentsMetadata]
+        /// - `response`:
+        /// [ImportIntentsResponse][google.cloud.dialogflow.cx.v3.ImportIntentsResponse]
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportIntentsResponse, ImportIntentsMetadata>> ImportIntentsAsync(ImportIntentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Imports the specified intents into the agent.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`:
+        /// [ImportIntentsMetadata][google.cloud.dialogflow.cx.v3.ImportIntentsMetadata]
+        /// - `response`:
+        /// [ImportIntentsResponse][google.cloud.dialogflow.cx.v3.ImportIntentsResponse]
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportIntentsResponse, ImportIntentsMetadata>> ImportIntentsAsync(ImportIntentsRequest request, st::CancellationToken cancellationToken) =>
+            ImportIntentsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>ImportIntents</c>.</summary>
+        public virtual lro::OperationsClient ImportIntentsOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>ImportIntents</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ImportIntentsResponse, ImportIntentsMetadata> PollOnceImportIntents(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ImportIntentsResponse, ImportIntentsMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ImportIntentsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ImportIntents</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ImportIntentsResponse, ImportIntentsMetadata>> PollOnceImportIntentsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ImportIntentsResponse, ImportIntentsMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ImportIntentsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Exports the selected intents.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`:
+        /// [ExportIntentsMetadata][google.cloud.dialogflow.cx.v3.ExportIntentsMetadata]
+        /// - `response`:
+        /// [ExportIntentsResponse][google.cloud.dialogflow.cx.v3.ExportIntentsResponse]
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ExportIntentsResponse, ExportIntentsMetadata> ExportIntents(ExportIntentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Exports the selected intents.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`:
+        /// [ExportIntentsMetadata][google.cloud.dialogflow.cx.v3.ExportIntentsMetadata]
+        /// - `response`:
+        /// [ExportIntentsResponse][google.cloud.dialogflow.cx.v3.ExportIntentsResponse]
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExportIntentsResponse, ExportIntentsMetadata>> ExportIntentsAsync(ExportIntentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Exports the selected intents.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`:
+        /// [ExportIntentsMetadata][google.cloud.dialogflow.cx.v3.ExportIntentsMetadata]
+        /// - `response`:
+        /// [ExportIntentsResponse][google.cloud.dialogflow.cx.v3.ExportIntentsResponse]
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExportIntentsResponse, ExportIntentsMetadata>> ExportIntentsAsync(ExportIntentsRequest request, st::CancellationToken cancellationToken) =>
+            ExportIntentsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>ExportIntents</c>.</summary>
+        public virtual lro::OperationsClient ExportIntentsOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>ExportIntents</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ExportIntentsResponse, ExportIntentsMetadata> PollOnceExportIntents(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ExportIntentsResponse, ExportIntentsMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ExportIntentsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ExportIntents</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ExportIntentsResponse, ExportIntentsMetadata>> PollOnceExportIntentsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ExportIntentsResponse, ExportIntentsMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ExportIntentsOperationsClient, callSettings);
     }
 
     /// <summary>Intents client wrapper implementation, for convenient use.</summary>
@@ -976,6 +1213,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         private readonly gaxgrpc::ApiCall<DeleteIntentRequest, wkt::Empty> _callDeleteIntent;
 
+        private readonly gaxgrpc::ApiCall<ImportIntentsRequest, lro::Operation> _callImportIntents;
+
+        private readonly gaxgrpc::ApiCall<ExportIntentsRequest, lro::Operation> _callExportIntents;
+
         /// <summary>
         /// Constructs a client wrapper for the Intents service, with the specified gRPC client and settings.
         /// </summary>
@@ -987,6 +1228,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             GrpcClient = grpcClient;
             IntentsSettings effectiveSettings = settings ?? IntentsSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            ImportIntentsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportIntentsOperationsSettings, logger);
+            ExportIntentsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportIntentsOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListIntents = clientHelper.BuildApiCall<ListIntentsRequest, ListIntentsResponse>("ListIntents", grpcClient.ListIntentsAsync, grpcClient.ListIntents, effectiveSettings.ListIntentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListIntents);
@@ -1003,6 +1246,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             _callDeleteIntent = clientHelper.BuildApiCall<DeleteIntentRequest, wkt::Empty>("DeleteIntent", grpcClient.DeleteIntentAsync, grpcClient.DeleteIntent, effectiveSettings.DeleteIntentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteIntent);
             Modify_DeleteIntentApiCall(ref _callDeleteIntent);
+            _callImportIntents = clientHelper.BuildApiCall<ImportIntentsRequest, lro::Operation>("ImportIntents", grpcClient.ImportIntentsAsync, grpcClient.ImportIntents, effectiveSettings.ImportIntentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callImportIntents);
+            Modify_ImportIntentsApiCall(ref _callImportIntents);
+            _callExportIntents = clientHelper.BuildApiCall<ExportIntentsRequest, lro::Operation>("ExportIntents", grpcClient.ExportIntentsAsync, grpcClient.ExportIntents, effectiveSettings.ExportIntentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callExportIntents);
+            Modify_ExportIntentsApiCall(ref _callExportIntents);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1017,6 +1266,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         partial void Modify_UpdateIntentApiCall(ref gaxgrpc::ApiCall<UpdateIntentRequest, Intent> call);
 
         partial void Modify_DeleteIntentApiCall(ref gaxgrpc::ApiCall<DeleteIntentRequest, wkt::Empty> call);
+
+        partial void Modify_ImportIntentsApiCall(ref gaxgrpc::ApiCall<ImportIntentsRequest, lro::Operation> call);
+
+        partial void Modify_ExportIntentsApiCall(ref gaxgrpc::ApiCall<ExportIntentsRequest, lro::Operation> call);
 
         partial void OnConstruction(Intents.IntentsClient grpcClient, IntentsSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1035,6 +1288,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         partial void Modify_UpdateIntentRequest(ref UpdateIntentRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteIntentRequest(ref DeleteIntentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ImportIntentsRequest(ref ImportIntentsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ExportIntentsRequest(ref ExportIntentsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Returns the list of all intents in the specified agent.
@@ -1179,6 +1436,96 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             Modify_DeleteIntentRequest(ref request, ref callSettings);
             return _callDeleteIntent.Async(request, callSettings);
         }
+
+        /// <summary>The long-running operations client for <c>ImportIntents</c>.</summary>
+        public override lro::OperationsClient ImportIntentsOperationsClient { get; }
+
+        /// <summary>
+        /// Imports the specified intents into the agent.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`:
+        /// [ImportIntentsMetadata][google.cloud.dialogflow.cx.v3.ImportIntentsMetadata]
+        /// - `response`:
+        /// [ImportIntentsResponse][google.cloud.dialogflow.cx.v3.ImportIntentsResponse]
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ImportIntentsResponse, ImportIntentsMetadata> ImportIntents(ImportIntentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ImportIntentsRequest(ref request, ref callSettings);
+            return new lro::Operation<ImportIntentsResponse, ImportIntentsMetadata>(_callImportIntents.Sync(request, callSettings), ImportIntentsOperationsClient);
+        }
+
+        /// <summary>
+        /// Imports the specified intents into the agent.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`:
+        /// [ImportIntentsMetadata][google.cloud.dialogflow.cx.v3.ImportIntentsMetadata]
+        /// - `response`:
+        /// [ImportIntentsResponse][google.cloud.dialogflow.cx.v3.ImportIntentsResponse]
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ImportIntentsResponse, ImportIntentsMetadata>> ImportIntentsAsync(ImportIntentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ImportIntentsRequest(ref request, ref callSettings);
+            return new lro::Operation<ImportIntentsResponse, ImportIntentsMetadata>(await _callImportIntents.Async(request, callSettings).ConfigureAwait(false), ImportIntentsOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>ExportIntents</c>.</summary>
+        public override lro::OperationsClient ExportIntentsOperationsClient { get; }
+
+        /// <summary>
+        /// Exports the selected intents.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`:
+        /// [ExportIntentsMetadata][google.cloud.dialogflow.cx.v3.ExportIntentsMetadata]
+        /// - `response`:
+        /// [ExportIntentsResponse][google.cloud.dialogflow.cx.v3.ExportIntentsResponse]
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ExportIntentsResponse, ExportIntentsMetadata> ExportIntents(ExportIntentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExportIntentsRequest(ref request, ref callSettings);
+            return new lro::Operation<ExportIntentsResponse, ExportIntentsMetadata>(_callExportIntents.Sync(request, callSettings), ExportIntentsOperationsClient);
+        }
+
+        /// <summary>
+        /// Exports the selected intents.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`:
+        /// [ExportIntentsMetadata][google.cloud.dialogflow.cx.v3.ExportIntentsMetadata]
+        /// - `response`:
+        /// [ExportIntentsResponse][google.cloud.dialogflow.cx.v3.ExportIntentsResponse]
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ExportIntentsResponse, ExportIntentsMetadata>> ExportIntentsAsync(ExportIntentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExportIntentsRequest(ref request, ref callSettings);
+            return new lro::Operation<ExportIntentsResponse, ExportIntentsMetadata>(await _callExportIntents.Async(request, callSettings).ConfigureAwait(false), ExportIntentsOperationsClient);
+        }
     }
 
     public partial class ListIntentsRequest : gaxgrpc::IPageRequest
@@ -1191,6 +1538,20 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         public scg::IEnumerator<Intent> GetEnumerator() => Intents.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public static partial class Intents
+    {
+        public partial class IntentsClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>A new Operations client for the same target as this client.</returns>
+            public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
+                new lro::Operations.OperationsClient(CallInvoker);
+        }
     }
 
     public static partial class Intents

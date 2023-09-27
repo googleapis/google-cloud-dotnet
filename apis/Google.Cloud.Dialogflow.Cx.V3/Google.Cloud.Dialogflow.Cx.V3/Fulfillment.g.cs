@@ -26,36 +26,40 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           string.Concat(
             "Ci9nb29nbGUvY2xvdWQvZGlhbG9nZmxvdy9jeC92My9mdWxmaWxsbWVudC5w",
             "cm90bxIdZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMaGWdvb2dsZS9h",
-            "cGkvcmVzb3VyY2UucHJvdG8aNGdvb2dsZS9jbG91ZC9kaWFsb2dmbG93L2N4",
-            "L3YzL3Jlc3BvbnNlX21lc3NhZ2UucHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9z",
-            "dHJ1Y3QucHJvdG8i4wYKC0Z1bGZpbGxtZW50EkAKCG1lc3NhZ2VzGAEgAygL",
-            "Mi4uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuUmVzcG9uc2VNZXNz",
-            "YWdlEjcKB3dlYmhvb2sYAiABKAlCJvpBIwohZGlhbG9nZmxvdy5nb29nbGVh",
-            "cGlzLmNvbS9XZWJob29rEiAKGHJldHVybl9wYXJ0aWFsX3Jlc3BvbnNlcxgI",
-            "IAEoCBILCgN0YWcYAyABKAkSXAoVc2V0X3BhcmFtZXRlcl9hY3Rpb25zGAQg",
-            "AygLMj0uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuRnVsZmlsbG1l",
-            "bnQuU2V0UGFyYW1ldGVyQWN0aW9uElYKEWNvbmRpdGlvbmFsX2Nhc2VzGAUg",
-            "AygLMjsuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuRnVsZmlsbG1l",
-            "bnQuQ29uZGl0aW9uYWxDYXNlcxpOChJTZXRQYXJhbWV0ZXJBY3Rpb24SEQoJ",
-            "cGFyYW1ldGVyGAEgASgJEiUKBXZhbHVlGAIgASgLMhYuZ29vZ2xlLnByb3Rv",
-            "YnVmLlZhbHVlGqMDChBDb25kaXRpb25hbENhc2VzEk8KBWNhc2VzGAEgAygL",
-            "MkAuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuRnVsZmlsbG1lbnQu",
-            "Q29uZGl0aW9uYWxDYXNlcy5DYXNlGr0CCgRDYXNlEhEKCWNvbmRpdGlvbhgB",
-            "IAEoCRJiCgxjYXNlX2NvbnRlbnQYAiADKAsyTC5nb29nbGUuY2xvdWQuZGlh",
-            "bG9nZmxvdy5jeC52My5GdWxmaWxsbWVudC5Db25kaXRpb25hbENhc2VzLkNh",
-            "c2UuQ2FzZUNvbnRlbnQavQEKC0Nhc2VDb250ZW50EkEKB21lc3NhZ2UYASAB",
-            "KAsyLi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5SZXNwb25zZU1l",
-            "c3NhZ2VIABJXChBhZGRpdGlvbmFsX2Nhc2VzGAIgASgLMjsuZ29vZ2xlLmNs",
-            "b3VkLmRpYWxvZ2Zsb3cuY3gudjMuRnVsZmlsbG1lbnQuQ29uZGl0aW9uYWxD",
-            "YXNlc0gAQhIKEGNhc2VzX29yX21lc3NhZ2VCtgEKIWNvbS5nb29nbGUuY2xv",
-            "dWQuZGlhbG9nZmxvdy5jeC52M0IQRnVsZmlsbG1lbnRQcm90b1ABWjFjbG91",
-            "ZC5nb29nbGUuY29tL2dvL2RpYWxvZ2Zsb3cvY3gvYXBpdjMvY3hwYjtjeHBi",
-            "+AEBogICREaqAh1Hb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5DeC5WM+oCIUdv",
-            "b2dsZTo6Q2xvdWQ6OkRpYWxvZ2Zsb3c6OkNYOjpWM2IGcHJvdG8z"));
+            "cGkvcmVzb3VyY2UucHJvdG8aNWdvb2dsZS9jbG91ZC9kaWFsb2dmbG93L2N4",
+            "L3YzL2FkdmFuY2VkX3NldHRpbmdzLnByb3RvGjRnb29nbGUvY2xvdWQvZGlh",
+            "bG9nZmxvdy9jeC92My9yZXNwb25zZV9tZXNzYWdlLnByb3RvGhxnb29nbGUv",
+            "cHJvdG9idWYvc3RydWN0LnByb3RvItMHCgtGdWxmaWxsbWVudBJACghtZXNz",
+            "YWdlcxgBIAMoCzIuLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLlJl",
+            "c3BvbnNlTWVzc2FnZRI3Cgd3ZWJob29rGAIgASgJQib6QSMKIWRpYWxvZ2Zs",
+            "b3cuZ29vZ2xlYXBpcy5jb20vV2ViaG9vaxIgChhyZXR1cm5fcGFydGlhbF9y",
+            "ZXNwb25zZXMYCCABKAgSCwoDdGFnGAMgASgJElwKFXNldF9wYXJhbWV0ZXJf",
+            "YWN0aW9ucxgEIAMoCzI9Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYz",
+            "LkZ1bGZpbGxtZW50LlNldFBhcmFtZXRlckFjdGlvbhJWChFjb25kaXRpb25h",
+            "bF9jYXNlcxgFIAMoCzI7Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYz",
+            "LkZ1bGZpbGxtZW50LkNvbmRpdGlvbmFsQ2FzZXMSSgoRYWR2YW5jZWRfc2V0",
+            "dGluZ3MYByABKAsyLy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5B",
+            "ZHZhbmNlZFNldHRpbmdzEiIKGmVuYWJsZV9nZW5lcmF0aXZlX2ZhbGxiYWNr",
+            "GAwgASgIGk4KElNldFBhcmFtZXRlckFjdGlvbhIRCglwYXJhbWV0ZXIYASAB",
+            "KAkSJQoFdmFsdWUYAiABKAsyFi5nb29nbGUucHJvdG9idWYuVmFsdWUaowMK",
+            "EENvbmRpdGlvbmFsQ2FzZXMSTwoFY2FzZXMYASADKAsyQC5nb29nbGUuY2xv",
+            "dWQuZGlhbG9nZmxvdy5jeC52My5GdWxmaWxsbWVudC5Db25kaXRpb25hbENh",
+            "c2VzLkNhc2UavQIKBENhc2USEQoJY29uZGl0aW9uGAEgASgJEmIKDGNhc2Vf",
+            "Y29udGVudBgCIAMoCzJMLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYz",
+            "LkZ1bGZpbGxtZW50LkNvbmRpdGlvbmFsQ2FzZXMuQ2FzZS5DYXNlQ29udGVu",
+            "dBq9AQoLQ2FzZUNvbnRlbnQSQQoHbWVzc2FnZRgBIAEoCzIuLmdvb2dsZS5j",
+            "bG91ZC5kaWFsb2dmbG93LmN4LnYzLlJlc3BvbnNlTWVzc2FnZUgAElcKEGFk",
+            "ZGl0aW9uYWxfY2FzZXMYAiABKAsyOy5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
+            "dy5jeC52My5GdWxmaWxsbWVudC5Db25kaXRpb25hbENhc2VzSABCEgoQY2Fz",
+            "ZXNfb3JfbWVzc2FnZUK2AQohY29tLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93",
+            "LmN4LnYzQhBGdWxmaWxsbWVudFByb3RvUAFaMWNsb3VkLmdvb2dsZS5jb20v",
+            "Z28vZGlhbG9nZmxvdy9jeC9hcGl2My9jeHBiO2N4cGL4AQGiAgJERqoCHUdv",
+            "b2dsZS5DbG91ZC5EaWFsb2dmbG93LkN4LlYz6gIhR29vZ2xlOjpDbG91ZDo6",
+            "RGlhbG9nZmxvdzo6Q1g6OlYzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessageReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettingsReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessageReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.Fulfillment), global::Google.Cloud.Dialogflow.Cx.V3.Fulfillment.Parser, new[]{ "Messages", "Webhook", "ReturnPartialResponses", "Tag", "SetParameterActions", "ConditionalCases" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.Fulfillment.Types.SetParameterAction), global::Google.Cloud.Dialogflow.Cx.V3.Fulfillment.Types.SetParameterAction.Parser, new[]{ "Parameter", "Value" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.Fulfillment), global::Google.Cloud.Dialogflow.Cx.V3.Fulfillment.Parser, new[]{ "Messages", "Webhook", "ReturnPartialResponses", "Tag", "SetParameterActions", "ConditionalCases", "AdvancedSettings", "EnableGenerativeFallback" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.Fulfillment.Types.SetParameterAction), global::Google.Cloud.Dialogflow.Cx.V3.Fulfillment.Types.SetParameterAction.Parser, new[]{ "Parameter", "Value" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.Fulfillment.Types.ConditionalCases), global::Google.Cloud.Dialogflow.Cx.V3.Fulfillment.Types.ConditionalCases.Parser, new[]{ "Cases" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.Fulfillment.Types.ConditionalCases.Types.Case), global::Google.Cloud.Dialogflow.Cx.V3.Fulfillment.Types.ConditionalCases.Types.Case.Parser, new[]{ "Condition", "CaseContent" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.Fulfillment.Types.ConditionalCases.Types.Case.Types.CaseContent), global::Google.Cloud.Dialogflow.Cx.V3.Fulfillment.Types.ConditionalCases.Types.Case.Types.CaseContent.Parser, new[]{ "Message", "AdditionalCases" }, new[]{ "CasesOrMessage" }, null, null, null)})})})
           }));
     }
@@ -120,6 +124,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       tag_ = other.tag_;
       setParameterActions_ = other.setParameterActions_.Clone();
       conditionalCases_ = other.conditionalCases_.Clone();
+      advancedSettings_ = other.advancedSettings_ != null ? other.advancedSettings_.Clone() : null;
+      enableGenerativeFallback_ = other.enableGenerativeFallback_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -232,6 +238,41 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       get { return conditionalCases_; }
     }
 
+    /// <summary>Field number for the "advanced_settings" field.</summary>
+    public const int AdvancedSettingsFieldNumber = 7;
+    private global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettings advancedSettings_;
+    /// <summary>
+    /// Hierarchical advanced settings for this fulfillment. The settings exposed
+    /// at the lower level overrides the settings exposed at the higher level.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettings AdvancedSettings {
+      get { return advancedSettings_; }
+      set {
+        advancedSettings_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "enable_generative_fallback" field.</summary>
+    public const int EnableGenerativeFallbackFieldNumber = 12;
+    private bool enableGenerativeFallback_;
+    /// <summary>
+    /// If the flag is true, the agent will utilize LLM to generate a text
+    /// response. If LLM generation fails, the defined
+    /// [responses][google.cloud.dialogflow.cx.v3.Fulfillment.messages] in the
+    /// fulfillment will be respected. This flag is only useful for fulfillments
+    /// associated with no-match event handlers.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool EnableGenerativeFallback {
+      get { return enableGenerativeFallback_; }
+      set {
+        enableGenerativeFallback_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -253,6 +294,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (Tag != other.Tag) return false;
       if(!setParameterActions_.Equals(other.setParameterActions_)) return false;
       if(!conditionalCases_.Equals(other.conditionalCases_)) return false;
+      if (!object.Equals(AdvancedSettings, other.AdvancedSettings)) return false;
+      if (EnableGenerativeFallback != other.EnableGenerativeFallback) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -266,6 +309,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (Tag.Length != 0) hash ^= Tag.GetHashCode();
       hash ^= setParameterActions_.GetHashCode();
       hash ^= conditionalCases_.GetHashCode();
+      if (advancedSettings_ != null) hash ^= AdvancedSettings.GetHashCode();
+      if (EnableGenerativeFallback != false) hash ^= EnableGenerativeFallback.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -295,9 +340,17 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       setParameterActions_.WriteTo(output, _repeated_setParameterActions_codec);
       conditionalCases_.WriteTo(output, _repeated_conditionalCases_codec);
+      if (advancedSettings_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(AdvancedSettings);
+      }
       if (ReturnPartialResponses != false) {
         output.WriteRawTag(64);
         output.WriteBool(ReturnPartialResponses);
+      }
+      if (EnableGenerativeFallback != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(EnableGenerativeFallback);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -320,9 +373,17 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       setParameterActions_.WriteTo(ref output, _repeated_setParameterActions_codec);
       conditionalCases_.WriteTo(ref output, _repeated_conditionalCases_codec);
+      if (advancedSettings_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(AdvancedSettings);
+      }
       if (ReturnPartialResponses != false) {
         output.WriteRawTag(64);
         output.WriteBool(ReturnPartialResponses);
+      }
+      if (EnableGenerativeFallback != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(EnableGenerativeFallback);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -346,6 +407,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       size += setParameterActions_.CalculateSize(_repeated_setParameterActions_codec);
       size += conditionalCases_.CalculateSize(_repeated_conditionalCases_codec);
+      if (advancedSettings_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AdvancedSettings);
+      }
+      if (EnableGenerativeFallback != false) {
+        size += 1 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -370,6 +437,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       setParameterActions_.Add(other.setParameterActions_);
       conditionalCases_.Add(other.conditionalCases_);
+      if (other.advancedSettings_ != null) {
+        if (advancedSettings_ == null) {
+          AdvancedSettings = new global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettings();
+        }
+        AdvancedSettings.MergeFrom(other.AdvancedSettings);
+      }
+      if (other.EnableGenerativeFallback != false) {
+        EnableGenerativeFallback = other.EnableGenerativeFallback;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -405,8 +481,19 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             conditionalCases_.AddEntriesFrom(input, _repeated_conditionalCases_codec);
             break;
           }
+          case 58: {
+            if (advancedSettings_ == null) {
+              AdvancedSettings = new global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettings();
+            }
+            input.ReadMessage(AdvancedSettings);
+            break;
+          }
           case 64: {
             ReturnPartialResponses = input.ReadBool();
+            break;
+          }
+          case 96: {
+            EnableGenerativeFallback = input.ReadBool();
             break;
           }
         }
@@ -444,8 +531,19 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             conditionalCases_.AddEntriesFrom(ref input, _repeated_conditionalCases_codec);
             break;
           }
+          case 58: {
+            if (advancedSettings_ == null) {
+              AdvancedSettings = new global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettings();
+            }
+            input.ReadMessage(AdvancedSettings);
+            break;
+          }
           case 64: {
             ReturnPartialResponses = input.ReadBool();
+            break;
+          }
+          case 96: {
+            EnableGenerativeFallback = input.ReadBool();
             break;
           }
         }
