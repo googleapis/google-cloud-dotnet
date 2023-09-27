@@ -4275,6 +4275,188 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for GenerateClientCertificate</summary>
+        public void GenerateClientCertificateRequestObject()
+        {
+            // Snippet: GenerateClientCertificate(GenerateClientCertificateRequest, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            GenerateClientCertificateRequest request = new GenerateClientCertificateRequest
+            {
+                ParentAsClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
+                RequestId = "",
+                CertDuration = new Duration(),
+                PublicKey = "",
+            };
+            // Make the request
+            GenerateClientCertificateResponse response = alloyDBAdminClient.GenerateClientCertificate(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateClientCertificateAsync</summary>
+        public async Task GenerateClientCertificateRequestObjectAsync()
+        {
+            // Snippet: GenerateClientCertificateAsync(GenerateClientCertificateRequest, CallSettings)
+            // Additional: GenerateClientCertificateAsync(GenerateClientCertificateRequest, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            GenerateClientCertificateRequest request = new GenerateClientCertificateRequest
+            {
+                ParentAsClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
+                RequestId = "",
+                CertDuration = new Duration(),
+                PublicKey = "",
+            };
+            // Make the request
+            GenerateClientCertificateResponse response = await alloyDBAdminClient.GenerateClientCertificateAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateClientCertificate</summary>
+        public void GenerateClientCertificate()
+        {
+            // Snippet: GenerateClientCertificate(string, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]";
+            // Make the request
+            GenerateClientCertificateResponse response = alloyDBAdminClient.GenerateClientCertificate(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateClientCertificateAsync</summary>
+        public async Task GenerateClientCertificateAsync()
+        {
+            // Snippet: GenerateClientCertificateAsync(string, CallSettings)
+            // Additional: GenerateClientCertificateAsync(string, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]";
+            // Make the request
+            GenerateClientCertificateResponse response = await alloyDBAdminClient.GenerateClientCertificateAsync(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateClientCertificate</summary>
+        public void GenerateClientCertificateResourceNames()
+        {
+            // Snippet: GenerateClientCertificate(ClusterName, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            ClusterName parent = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]");
+            // Make the request
+            GenerateClientCertificateResponse response = alloyDBAdminClient.GenerateClientCertificate(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateClientCertificateAsync</summary>
+        public async Task GenerateClientCertificateResourceNamesAsync()
+        {
+            // Snippet: GenerateClientCertificateAsync(ClusterName, CallSettings)
+            // Additional: GenerateClientCertificateAsync(ClusterName, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ClusterName parent = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]");
+            // Make the request
+            GenerateClientCertificateResponse response = await alloyDBAdminClient.GenerateClientCertificateAsync(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetConnectionInfo</summary>
+        public void GetConnectionInfoRequestObject()
+        {
+            // Snippet: GetConnectionInfo(GetConnectionInfoRequest, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            GetConnectionInfoRequest request = new GetConnectionInfoRequest
+            {
+                ParentAsInstanceName = InstanceName.FromProjectLocationClusterInstance("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[INSTANCE]"),
+                RequestId = "",
+            };
+            // Make the request
+            ConnectionInfo response = alloyDBAdminClient.GetConnectionInfo(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetConnectionInfoAsync</summary>
+        public async Task GetConnectionInfoRequestObjectAsync()
+        {
+            // Snippet: GetConnectionInfoAsync(GetConnectionInfoRequest, CallSettings)
+            // Additional: GetConnectionInfoAsync(GetConnectionInfoRequest, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            GetConnectionInfoRequest request = new GetConnectionInfoRequest
+            {
+                ParentAsInstanceName = InstanceName.FromProjectLocationClusterInstance("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[INSTANCE]"),
+                RequestId = "",
+            };
+            // Make the request
+            ConnectionInfo response = await alloyDBAdminClient.GetConnectionInfoAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetConnectionInfo</summary>
+        public void GetConnectionInfo()
+        {
+            // Snippet: GetConnectionInfo(string, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]/instances/[INSTANCE]";
+            // Make the request
+            ConnectionInfo response = alloyDBAdminClient.GetConnectionInfo(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetConnectionInfoAsync</summary>
+        public async Task GetConnectionInfoAsync()
+        {
+            // Snippet: GetConnectionInfoAsync(string, CallSettings)
+            // Additional: GetConnectionInfoAsync(string, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]/instances/[INSTANCE]";
+            // Make the request
+            ConnectionInfo response = await alloyDBAdminClient.GetConnectionInfoAsync(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetConnectionInfo</summary>
+        public void GetConnectionInfoResourceNames()
+        {
+            // Snippet: GetConnectionInfo(InstanceName, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            InstanceName parent = InstanceName.FromProjectLocationClusterInstance("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[INSTANCE]");
+            // Make the request
+            ConnectionInfo response = alloyDBAdminClient.GetConnectionInfo(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetConnectionInfoAsync</summary>
+        public async Task GetConnectionInfoResourceNamesAsync()
+        {
+            // Snippet: GetConnectionInfoAsync(InstanceName, CallSettings)
+            // Additional: GetConnectionInfoAsync(InstanceName, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            InstanceName parent = InstanceName.FromProjectLocationClusterInstance("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[INSTANCE]");
+            // Make the request
+            ConnectionInfo response = await alloyDBAdminClient.GetConnectionInfoAsync(parent);
+            // End snippet
+        }
+
         /// <summary>Snippet for ListUsers</summary>
         public void ListUsersRequestObject()
         {

@@ -82,6 +82,12 @@
                 "FailoverInstanceAsync"
               ]
             },
+            "GenerateClientCertificate": {
+              "methods": [
+                "GenerateClientCertificate",
+                "GenerateClientCertificateAsync"
+              ]
+            },
             "GetBackup": {
               "methods": [
                 "GetBackup",
@@ -92,6 +98,12 @@
               "methods": [
                 "GetCluster",
                 "GetClusterAsync"
+              ]
+            },
+            "GetConnectionInfo": {
+              "methods": [
+                "GetConnectionInfo",
+                "GetConnectionInfoAsync"
               ]
             },
             "GetInstance": {
