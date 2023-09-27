@@ -87,7 +87,8 @@ used at all. This is rarely used outside low-level testing.
 
 ### Endpoint
 
-This is used to configure which server to send requests to. This is primarily used for APIs that support regional endpoints.
+This is used to configure which server to send requests to. For instance, it may be used for APIs that support regional endpoints
+or for [Private Service Connect](https://cloud.google.com/vpc/docs/configure-private-service-connect-apis#configure-p-dns).
 For example, in the [Google.Cloud.AIPlatform.V1 API](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.AIPlatform.V1/latest)
 you might configure a client like this:
 
