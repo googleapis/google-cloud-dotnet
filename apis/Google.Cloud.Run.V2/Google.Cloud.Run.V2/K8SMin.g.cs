@@ -1061,8 +1061,8 @@ namespace Google.Cloud.Run.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Name of the environment variable. Must be a C_IDENTIFIER, and
-    /// must not exceed 32768 characters.
+    /// Required. Name of the environment variable. Must not exceed 32768
+    /// characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

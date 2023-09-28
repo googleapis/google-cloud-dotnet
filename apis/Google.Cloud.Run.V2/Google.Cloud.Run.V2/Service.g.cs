@@ -51,7 +51,7 @@ namespace Google.Cloud.Run.V2 {
             "MAoEbmFtZRgBIAEoCUIi4EEC+kEcChpydW4uZ29vZ2xlYXBpcy5jb20vU2Vy",
             "dmljZSJtChREZWxldGVTZXJ2aWNlUmVxdWVzdBIwCgRuYW1lGAEgASgJQiLg",
             "QQL6QRwKGnJ1bi5nb29nbGVhcGlzLmNvbS9TZXJ2aWNlEhUKDXZhbGlkYXRl",
-            "X29ubHkYAiABKAgSDAoEZXRhZxgDIAEoCSL7CwoHU2VydmljZRIMCgRuYW1l",
+            "X29ubHkYAiABKAgSDAoEZXRhZxgDIAEoCSLOCwoHU2VydmljZRIMCgRuYW1l",
             "GAEgASgJEhMKC2Rlc2NyaXB0aW9uGAIgASgJEhAKA3VpZBgDIAEoCUID4EED",
             "EhcKCmdlbmVyYXRpb24YBCABKANCA+BBAxI4CgZsYWJlbHMYBSADKAsyKC5n",
             "b29nbGUuY2xvdWQucnVuLnYyLlNlcnZpY2UuTGFiZWxzRW50cnkSQgoLYW5u",
@@ -79,8 +79,7 @@ namespace Google.Cloud.Run.V2 {
             "c2lvbhJHChB0cmFmZmljX3N0YXR1c2VzGCMgAygLMiguZ29vZ2xlLmNsb3Vk",
             "LnJ1bi52Mi5UcmFmZmljVGFyZ2V0U3RhdHVzQgPgQQMSEAoDdXJpGCQgASgJ",
             "QgPgQQMSGAoQY3VzdG9tX2F1ZGllbmNlcxglIAMoCRIaCg1zYXRpc2ZpZXNf",
-            "cHpzGCYgASgIQgPgQQMSKwoedHJhZmZpY190YWdzX2NsZWFudXBfdGhyZXNo",
-            "b2xkGCcgASgDQgPgQQESGAoLcmVjb25jaWxpbmcYYiABKAhCA+BBAxIRCgRl",
+            "cHpzGCYgASgIQgPgQQMSGAoLcmVjb25jaWxpbmcYYiABKAhCA+BBAxIRCgRl",
             "dGFnGGMgASgJQgPgQQMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0K",
             "BXZhbHVlGAIgASgJOgI4ARoyChBBbm5vdGF0aW9uc0VudHJ5EgsKA2tleRgB",
             "IAEoCRINCgV2YWx1ZRgCIAEoCToCOAE6XupBWwoacnVuLmdvb2dsZWFwaXMu",
@@ -135,7 +134,7 @@ namespace Google.Cloud.Run.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ListServicesResponse), global::Google.Cloud.Run.V2.ListServicesResponse.Parser, new[]{ "Services", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.GetServiceRequest), global::Google.Cloud.Run.V2.GetServiceRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.DeleteServiceRequest), global::Google.Cloud.Run.V2.DeleteServiceRequest.Parser, new[]{ "Name", "ValidateOnly", "Etag" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Service), global::Google.Cloud.Run.V2.Service.Parser, new[]{ "Name", "Description", "Uid", "Generation", "Labels", "Annotations", "CreateTime", "UpdateTime", "DeleteTime", "ExpireTime", "Creator", "LastModifier", "Client", "ClientVersion", "Ingress", "LaunchStage", "BinaryAuthorization", "Template", "Traffic", "ObservedGeneration", "TerminalCondition", "Conditions", "LatestReadyRevision", "LatestCreatedRevision", "TrafficStatuses", "Uri", "CustomAudiences", "SatisfiesPzs", "TrafficTagsCleanupThreshold", "Reconciling", "Etag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Service), global::Google.Cloud.Run.V2.Service.Parser, new[]{ "Name", "Description", "Uid", "Generation", "Labels", "Annotations", "CreateTime", "UpdateTime", "DeleteTime", "ExpireTime", "Creator", "LastModifier", "Client", "ClientVersion", "Ingress", "LaunchStage", "BinaryAuthorization", "Template", "Traffic", "ObservedGeneration", "TerminalCondition", "Conditions", "LatestReadyRevision", "LatestCreatedRevision", "TrafficStatuses", "Uri", "CustomAudiences", "SatisfiesPzs", "Reconciling", "Etag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
           }));
     }
     #endregion
@@ -1847,7 +1846,6 @@ namespace Google.Cloud.Run.V2 {
       uri_ = other.uri_;
       customAudiences_ = other.customAudiences_.Clone();
       satisfiesPzs_ = other.satisfiesPzs_;
-      trafficTagsCleanupThreshold_ = other.trafficTagsCleanupThreshold_;
       reconciling_ = other.reconciling_;
       etag_ = other.etag_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -2339,23 +2337,6 @@ namespace Google.Cloud.Run.V2 {
       }
     }
 
-    /// <summary>Field number for the "traffic_tags_cleanup_threshold" field.</summary>
-    public const int TrafficTagsCleanupThresholdFieldNumber = 39;
-    private long trafficTagsCleanupThreshold_;
-    /// <summary>
-    /// Optional. Override the traffic tag threshold limit. Garbage collection will
-    /// start cleaning up non-serving tagged traffic targets based on creation
-    /// item. The default value is 2000.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long TrafficTagsCleanupThreshold {
-      get { return trafficTagsCleanupThreshold_; }
-      set {
-        trafficTagsCleanupThreshold_ = value;
-      }
-    }
-
     /// <summary>Field number for the "reconciling" field.</summary>
     public const int ReconcilingFieldNumber = 98;
     private bool reconciling_;
@@ -2451,7 +2432,6 @@ namespace Google.Cloud.Run.V2 {
       if (Uri != other.Uri) return false;
       if(!customAudiences_.Equals(other.customAudiences_)) return false;
       if (SatisfiesPzs != other.SatisfiesPzs) return false;
-      if (TrafficTagsCleanupThreshold != other.TrafficTagsCleanupThreshold) return false;
       if (Reconciling != other.Reconciling) return false;
       if (Etag != other.Etag) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -2489,7 +2469,6 @@ namespace Google.Cloud.Run.V2 {
       if (Uri.Length != 0) hash ^= Uri.GetHashCode();
       hash ^= customAudiences_.GetHashCode();
       if (SatisfiesPzs != false) hash ^= SatisfiesPzs.GetHashCode();
-      if (TrafficTagsCleanupThreshold != 0L) hash ^= TrafficTagsCleanupThreshold.GetHashCode();
       if (Reconciling != false) hash ^= Reconciling.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       if (_unknownFields != null) {
@@ -2604,10 +2583,6 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(176, 2);
         output.WriteBool(SatisfiesPzs);
       }
-      if (TrafficTagsCleanupThreshold != 0L) {
-        output.WriteRawTag(184, 2);
-        output.WriteInt64(TrafficTagsCleanupThreshold);
-      }
       if (Reconciling != false) {
         output.WriteRawTag(144, 6);
         output.WriteBool(Reconciling);
@@ -2720,10 +2695,6 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(176, 2);
         output.WriteBool(SatisfiesPzs);
       }
-      if (TrafficTagsCleanupThreshold != 0L) {
-        output.WriteRawTag(184, 2);
-        output.WriteInt64(TrafficTagsCleanupThreshold);
-      }
       if (Reconciling != false) {
         output.WriteRawTag(144, 6);
         output.WriteBool(Reconciling);
@@ -2813,9 +2784,6 @@ namespace Google.Cloud.Run.V2 {
       size += customAudiences_.CalculateSize(_repeated_customAudiences_codec);
       if (SatisfiesPzs != false) {
         size += 2 + 1;
-      }
-      if (TrafficTagsCleanupThreshold != 0L) {
-        size += 2 + pb::CodedOutputStream.ComputeInt64Size(TrafficTagsCleanupThreshold);
       }
       if (Reconciling != false) {
         size += 2 + 1;
@@ -2927,9 +2895,6 @@ namespace Google.Cloud.Run.V2 {
       customAudiences_.Add(other.customAudiences_);
       if (other.SatisfiesPzs != false) {
         SatisfiesPzs = other.SatisfiesPzs;
-      }
-      if (other.TrafficTagsCleanupThreshold != 0L) {
-        TrafficTagsCleanupThreshold = other.TrafficTagsCleanupThreshold;
       }
       if (other.Reconciling != false) {
         Reconciling = other.Reconciling;
@@ -3083,10 +3048,6 @@ namespace Google.Cloud.Run.V2 {
           }
           case 304: {
             SatisfiesPzs = input.ReadBool();
-            break;
-          }
-          case 312: {
-            TrafficTagsCleanupThreshold = input.ReadInt64();
             break;
           }
           case 784: {
@@ -3243,10 +3204,6 @@ namespace Google.Cloud.Run.V2 {
           }
           case 304: {
             SatisfiesPzs = input.ReadBool();
-            break;
-          }
-          case 312: {
-            TrafficTagsCleanupThreshold = input.ReadInt64();
             break;
           }
           case 784: {
