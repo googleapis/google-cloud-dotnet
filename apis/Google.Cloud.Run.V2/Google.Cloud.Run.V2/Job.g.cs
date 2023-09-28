@@ -2120,7 +2120,7 @@ namespace Google.Cloud.Run.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// RunJob Overrides that contains Execution fields to be overridden on the go.
+      /// RunJob Overrides that contains Execution fields to be overridden.
       /// </summary>
       public sealed partial class Overrides : pb::IMessage<Overrides>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2399,7 +2399,7 @@ namespace Google.Cloud.Run.V2 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
-          /// Per container override specification.
+          /// Per-container override specification.
           /// </summary>
           public sealed partial class ContainerOverride : pb::IMessage<ContainerOverride>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
