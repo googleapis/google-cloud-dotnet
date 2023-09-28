@@ -1,5 +1,22 @@
 # Version history
 
+## Version 2.4.0, released 2023-09-28
+
+BREAKING CHANGE: The removal of the TrafficTagsCleanupThreshold
+(introduced in 2.3.0 accidentally) is clearly a breaking change, but
+we hope we've released this update quickly enough to avoid any
+customers actually being affected. We believe that using a minor
+version is less disruptive to customers than using a major version
+bump in this particular case. We apologize for any inconvenience.
+
+### Bug fixes
+
+- Removes accidentally exposed field service.traffic_tags_cleanup_threshold in Cloud Run Service ([commit 6b18d1f](https://github.com/googleapis/google-cloud-dotnet/commit/6b18d1fdef57b8e2087a8a5e013e3a59bd4a7c94))
+
+### Documentation improvements
+
+- Minor comment fixes ([commit 6b18d1f](https://github.com/googleapis/google-cloud-dotnet/commit/6b18d1fdef57b8e2087a8a5e013e3a59bd4a7c94))
+
 ## Version 2.3.0, released 2023-09-26
 
 ### New features
