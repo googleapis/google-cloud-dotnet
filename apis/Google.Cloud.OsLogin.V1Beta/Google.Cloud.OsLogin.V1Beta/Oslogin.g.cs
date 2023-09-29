@@ -64,63 +64,64 @@ namespace Google.Cloud.OsLogin.V1Beta {
             "Z2xlYXBpcy5jb20vU3NoUHVibGljS2V5EkYKDnNzaF9wdWJsaWNfa2V5GAIg",
             "ASgLMikuZ29vZ2xlLmNsb3VkLm9zbG9naW4uY29tbW9uLlNzaFB1YmxpY0tl",
             "eUID4EECEi8KC3VwZGF0ZV9tYXNrGAMgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LkZpZWxkTWFzayLUAQoLU2VjdXJpdHlLZXkSEgoKcHVibGljX2tleRgBIAEo",
+            "LkZpZWxkTWFzayKGAgoLU2VjdXJpdHlLZXkSEgoKcHVibGljX2tleRgBIAEo",
             "CRITCgtwcml2YXRlX2tleRgCIAEoCRJPChR1bml2ZXJzYWxfdHdvX2ZhY3Rv",
             "chgDIAEoCzIvLmdvb2dsZS5jbG91ZC5vc2xvZ2luLnYxYmV0YS5Vbml2ZXJz",
             "YWxUd29GYWN0b3JIABI6Cgl3ZWJfYXV0aG4YBCABKAsyJS5nb29nbGUuY2xv",
-            "dWQub3Nsb2dpbi52MWJldGEuV2ViQXV0aG5IAEIPCg1wcm90b2NvbF90eXBl",
-            "IiQKElVuaXZlcnNhbFR3b0ZhY3RvchIOCgZhcHBfaWQYASABKAkiGQoIV2Vi",
-            "QXV0aG4SDQoFcnBfaWQYASABKAkiQQoXU2lnblNzaFB1YmxpY0tleVJlcXVl",
-            "c3QSFgoOc3NoX3B1YmxpY19rZXkYASABKAkSDgoGcGFyZW50GAIgASgJIjkK",
-            "GFNpZ25Tc2hQdWJsaWNLZXlSZXNwb25zZRIdChVzaWduZWRfc3NoX3B1Ymxp",
-            "Y19rZXkYASABKAkqUwoQTG9naW5Qcm9maWxlVmlldxIiCh5MT0dJTl9QUk9G",
-            "SUxFX1ZJRVdfVU5TUEVDSUZJRUQQABIJCgVCQVNJQxABEhAKDFNFQ1VSSVRZ",
-            "X0tFWRACMqkOCg5Pc0xvZ2luU2VydmljZRLPAQoSQ3JlYXRlU3NoUHVibGlj",
-            "S2V5EjYuZ29vZ2xlLmNsb3VkLm9zbG9naW4udjFiZXRhLkNyZWF0ZVNzaFB1",
-            "YmxpY0tleVJlcXVlc3QaKS5nb29nbGUuY2xvdWQub3Nsb2dpbi5jb21tb24u",
-            "U3NoUHVibGljS2V5IlaC0+STAjgiJi92MWJldGEve3BhcmVudD11c2Vycy8q",
-            "fS9zc2hQdWJsaWNLZXlzOg5zc2hfcHVibGljX2tledpBFXBhcmVudCxzc2hf",
-            "cHVibGljX2tleRKWAQoSRGVsZXRlUG9zaXhBY2NvdW50EjYuZ29vZ2xlLmNs",
-            "b3VkLm9zbG9naW4udjFiZXRhLkRlbGV0ZVBvc2l4QWNjb3VudFJlcXVlc3Qa",
-            "Fi5nb29nbGUucHJvdG9idWYuRW1wdHkiMILT5JMCIyohL3YxYmV0YS97bmFt",
-            "ZT11c2Vycy8qL3Byb2plY3RzLyp92kEEbmFtZRKbAQoSRGVsZXRlU3NoUHVi",
-            "bGljS2V5EjYuZ29vZ2xlLmNsb3VkLm9zbG9naW4udjFiZXRhLkRlbGV0ZVNz",
-            "aFB1YmxpY0tleVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiNYLT",
-            "5JMCKComL3YxYmV0YS97bmFtZT11c2Vycy8qL3NzaFB1YmxpY0tleXMvKn3a",
-            "QQRuYW1lEqUBCg9HZXRMb2dpblByb2ZpbGUSMy5nb29nbGUuY2xvdWQub3Ns",
-            "b2dpbi52MWJldGEuR2V0TG9naW5Qcm9maWxlUmVxdWVzdBopLmdvb2dsZS5j",
-            "bG91ZC5vc2xvZ2luLnYxYmV0YS5Mb2dpblByb2ZpbGUiMoLT5JMCJRIjL3Yx",
-            "YmV0YS97bmFtZT11c2Vycy8qfS9sb2dpblByb2ZpbGXaQQRuYW1lEqgBCg9H",
-            "ZXRTc2hQdWJsaWNLZXkSMy5nb29nbGUuY2xvdWQub3Nsb2dpbi52MWJldGEu",
-            "R2V0U3NoUHVibGljS2V5UmVxdWVzdBopLmdvb2dsZS5jbG91ZC5vc2xvZ2lu",
-            "LmNvbW1vbi5Tc2hQdWJsaWNLZXkiNYLT5JMCKBImL3YxYmV0YS97bmFtZT11",
-            "c2Vycy8qL3NzaFB1YmxpY0tleXMvKn3aQQRuYW1lEoUCChJJbXBvcnRTc2hQ",
-            "dWJsaWNLZXkSNi5nb29nbGUuY2xvdWQub3Nsb2dpbi52MWJldGEuSW1wb3J0",
-            "U3NoUHVibGljS2V5UmVxdWVzdBo3Lmdvb2dsZS5jbG91ZC5vc2xvZ2luLnYx",
-            "YmV0YS5JbXBvcnRTc2hQdWJsaWNLZXlSZXNwb25zZSJ+gtPkkwI9IisvdjFi",
-            "ZXRhL3twYXJlbnQ9dXNlcnMvKn06aW1wb3J0U3NoUHVibGljS2V5Og5zc2hf",
-            "cHVibGljX2tledpBFXBhcmVudCxzc2hfcHVibGljX2tledpBIHBhcmVudCxz",
-            "c2hfcHVibGljX2tleSxwcm9qZWN0X2lkEu8BChJVcGRhdGVTc2hQdWJsaWNL",
-            "ZXkSNi5nb29nbGUuY2xvdWQub3Nsb2dpbi52MWJldGEuVXBkYXRlU3NoUHVi",
-            "bGljS2V5UmVxdWVzdBopLmdvb2dsZS5jbG91ZC5vc2xvZ2luLmNvbW1vbi5T",
-            "c2hQdWJsaWNLZXkidoLT5JMCODImL3YxYmV0YS97bmFtZT11c2Vycy8qL3Nz",
-            "aFB1YmxpY0tleXMvKn06DnNzaF9wdWJsaWNfa2V52kETbmFtZSxzc2hfcHVi",
-            "bGljX2tledpBH25hbWUsc3NoX3B1YmxpY19rZXksdXBkYXRlX21hc2sS4AEK",
-            "EFNpZ25Tc2hQdWJsaWNLZXkSNC5nb29nbGUuY2xvdWQub3Nsb2dpbi52MWJl",
-            "dGEuU2lnblNzaFB1YmxpY0tleVJlcXVlc3QaNS5nb29nbGUuY2xvdWQub3Ns",
-            "b2dpbi52MWJldGEuU2lnblNzaFB1YmxpY0tleVJlc3BvbnNlIl+C0+STAkEi",
-            "PC92MWJldGEve3BhcmVudD11c2Vycy8qL3Byb2plY3RzLyovem9uZXMvKn06",
-            "c2lnblNzaFB1YmxpY0tleToBKtpBFXBhcmVudCxzc2hfcHVibGljX2tleRrd",
-            "AcpBFm9zbG9naW4uZ29vZ2xlYXBpcy5jb23SQcABaHR0cHM6Ly93d3cuZ29v",
-            "Z2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5n",
-            "b29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLnJlYWQtb25seSxo",
-            "dHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2NvbXB1dGUsaHR0cHM6",
-            "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jb21wdXRlLnJlYWRvbmx5QskB",
-            "Ch9jb20uZ29vZ2xlLmNsb3VkLm9zbG9naW4udjFiZXRhQgxPc0xvZ2luUHJv",
-            "dG9QAVo5Y2xvdWQuZ29vZ2xlLmNvbS9nby9vc2xvZ2luL2FwaXYxYmV0YS9v",
-            "c2xvZ2lucGI7b3Nsb2dpbnBiqgIbR29vZ2xlLkNsb3VkLk9zTG9naW4uVjFC",
-            "ZXRhygIbR29vZ2xlXENsb3VkXE9zTG9naW5cVjFiZXRh6gIeR29vZ2xlOjpD",
-            "bG91ZDo6T3NMb2dpbjo6VjFiZXRhYgZwcm90bzM="));
+            "dWQub3Nsb2dpbi52MWJldGEuV2ViQXV0aG5IABIcCg9kZXZpY2Vfbmlja25h",
+            "bWUYBSABKAlIAYgBAUIPCg1wcm90b2NvbF90eXBlQhIKEF9kZXZpY2Vfbmlj",
+            "a25hbWUiJAoSVW5pdmVyc2FsVHdvRmFjdG9yEg4KBmFwcF9pZBgBIAEoCSIZ",
+            "CghXZWJBdXRobhINCgVycF9pZBgBIAEoCSJBChdTaWduU3NoUHVibGljS2V5",
+            "UmVxdWVzdBIWCg5zc2hfcHVibGljX2tleRgBIAEoCRIOCgZwYXJlbnQYAiAB",
+            "KAkiOQoYU2lnblNzaFB1YmxpY0tleVJlc3BvbnNlEh0KFXNpZ25lZF9zc2hf",
+            "cHVibGljX2tleRgBIAEoCSpTChBMb2dpblByb2ZpbGVWaWV3EiIKHkxPR0lO",
+            "X1BST0ZJTEVfVklFV19VTlNQRUNJRklFRBAAEgkKBUJBU0lDEAESEAoMU0VD",
+            "VVJJVFlfS0VZEAIyqQ4KDk9zTG9naW5TZXJ2aWNlEs8BChJDcmVhdGVTc2hQ",
+            "dWJsaWNLZXkSNi5nb29nbGUuY2xvdWQub3Nsb2dpbi52MWJldGEuQ3JlYXRl",
+            "U3NoUHVibGljS2V5UmVxdWVzdBopLmdvb2dsZS5jbG91ZC5vc2xvZ2luLmNv",
+            "bW1vbi5Tc2hQdWJsaWNLZXkiVoLT5JMCOCImL3YxYmV0YS97cGFyZW50PXVz",
+            "ZXJzLyp9L3NzaFB1YmxpY0tleXM6DnNzaF9wdWJsaWNfa2V52kEVcGFyZW50",
+            "LHNzaF9wdWJsaWNfa2V5EpYBChJEZWxldGVQb3NpeEFjY291bnQSNi5nb29n",
+            "bGUuY2xvdWQub3Nsb2dpbi52MWJldGEuRGVsZXRlUG9zaXhBY2NvdW50UmVx",
+            "dWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIwgtPkkwIjKiEvdjFiZXRh",
+            "L3tuYW1lPXVzZXJzLyovcHJvamVjdHMvKn3aQQRuYW1lEpsBChJEZWxldGVT",
+            "c2hQdWJsaWNLZXkSNi5nb29nbGUuY2xvdWQub3Nsb2dpbi52MWJldGEuRGVs",
+            "ZXRlU3NoUHVibGljS2V5UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0",
+            "eSI1gtPkkwIoKiYvdjFiZXRhL3tuYW1lPXVzZXJzLyovc3NoUHVibGljS2V5",
+            "cy8qfdpBBG5hbWUSpQEKD0dldExvZ2luUHJvZmlsZRIzLmdvb2dsZS5jbG91",
+            "ZC5vc2xvZ2luLnYxYmV0YS5HZXRMb2dpblByb2ZpbGVSZXF1ZXN0GikuZ29v",
+            "Z2xlLmNsb3VkLm9zbG9naW4udjFiZXRhLkxvZ2luUHJvZmlsZSIygtPkkwIl",
+            "EiMvdjFiZXRhL3tuYW1lPXVzZXJzLyp9L2xvZ2luUHJvZmlsZdpBBG5hbWUS",
+            "qAEKD0dldFNzaFB1YmxpY0tleRIzLmdvb2dsZS5jbG91ZC5vc2xvZ2luLnYx",
+            "YmV0YS5HZXRTc2hQdWJsaWNLZXlSZXF1ZXN0GikuZ29vZ2xlLmNsb3VkLm9z",
+            "bG9naW4uY29tbW9uLlNzaFB1YmxpY0tleSI1gtPkkwIoEiYvdjFiZXRhL3tu",
+            "YW1lPXVzZXJzLyovc3NoUHVibGljS2V5cy8qfdpBBG5hbWUShQIKEkltcG9y",
+            "dFNzaFB1YmxpY0tleRI2Lmdvb2dsZS5jbG91ZC5vc2xvZ2luLnYxYmV0YS5J",
+            "bXBvcnRTc2hQdWJsaWNLZXlSZXF1ZXN0GjcuZ29vZ2xlLmNsb3VkLm9zbG9n",
+            "aW4udjFiZXRhLkltcG9ydFNzaFB1YmxpY0tleVJlc3BvbnNlIn6C0+STAj0i",
+            "Ky92MWJldGEve3BhcmVudD11c2Vycy8qfTppbXBvcnRTc2hQdWJsaWNLZXk6",
+            "DnNzaF9wdWJsaWNfa2V52kEVcGFyZW50LHNzaF9wdWJsaWNfa2V52kEgcGFy",
+            "ZW50LHNzaF9wdWJsaWNfa2V5LHByb2plY3RfaWQS7wEKElVwZGF0ZVNzaFB1",
+            "YmxpY0tleRI2Lmdvb2dsZS5jbG91ZC5vc2xvZ2luLnYxYmV0YS5VcGRhdGVT",
+            "c2hQdWJsaWNLZXlSZXF1ZXN0GikuZ29vZ2xlLmNsb3VkLm9zbG9naW4uY29t",
+            "bW9uLlNzaFB1YmxpY0tleSJ2gtPkkwI4MiYvdjFiZXRhL3tuYW1lPXVzZXJz",
+            "Lyovc3NoUHVibGljS2V5cy8qfToOc3NoX3B1YmxpY19rZXnaQRNuYW1lLHNz",
+            "aF9wdWJsaWNfa2V52kEfbmFtZSxzc2hfcHVibGljX2tleSx1cGRhdGVfbWFz",
+            "axLgAQoQU2lnblNzaFB1YmxpY0tleRI0Lmdvb2dsZS5jbG91ZC5vc2xvZ2lu",
+            "LnYxYmV0YS5TaWduU3NoUHVibGljS2V5UmVxdWVzdBo1Lmdvb2dsZS5jbG91",
+            "ZC5vc2xvZ2luLnYxYmV0YS5TaWduU3NoUHVibGljS2V5UmVzcG9uc2UiX4LT",
+            "5JMCQSI8L3YxYmV0YS97cGFyZW50PXVzZXJzLyovcHJvamVjdHMvKi96b25l",
+            "cy8qfTpzaWduU3NoUHVibGljS2V5OgEq2kEVcGFyZW50LHNzaF9wdWJsaWNf",
+            "a2V5Gt0BykEWb3Nsb2dpbi5nb29nbGVhcGlzLmNvbdJBwAFodHRwczovL3d3",
+            "dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8v",
+            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0ucmVhZC1v",
+            "bmx5LGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY29tcHV0ZSxo",
+            "dHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2NvbXB1dGUucmVhZG9u",
+            "bHlCyQEKH2NvbS5nb29nbGUuY2xvdWQub3Nsb2dpbi52MWJldGFCDE9zTG9n",
+            "aW5Qcm90b1ABWjljbG91ZC5nb29nbGUuY29tL2dvL29zbG9naW4vYXBpdjFi",
+            "ZXRhL29zbG9naW5wYjtvc2xvZ2lucGKqAhtHb29nbGUuQ2xvdWQuT3NMb2dp",
+            "bi5WMUJldGHKAhtHb29nbGVcQ2xvdWRcT3NMb2dpblxWMWJldGHqAh5Hb29n",
+            "bGU6OkNsb3VkOjpPc0xvZ2luOjpWMWJldGFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.OsLogin.Common.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.OsLogin.V1Beta.LoginProfileView), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -133,7 +134,7 @@ namespace Google.Cloud.OsLogin.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1Beta.ImportSshPublicKeyRequest), global::Google.Cloud.OsLogin.V1Beta.ImportSshPublicKeyRequest.Parser, new[]{ "Parent", "SshPublicKey", "ProjectId", "View" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1Beta.ImportSshPublicKeyResponse), global::Google.Cloud.OsLogin.V1Beta.ImportSshPublicKeyResponse.Parser, new[]{ "LoginProfile", "Details" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1Beta.UpdateSshPublicKeyRequest), global::Google.Cloud.OsLogin.V1Beta.UpdateSshPublicKeyRequest.Parser, new[]{ "Name", "SshPublicKey", "UpdateMask" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1Beta.SecurityKey), global::Google.Cloud.OsLogin.V1Beta.SecurityKey.Parser, new[]{ "PublicKey", "PrivateKey", "UniversalTwoFactor", "WebAuthn" }, new[]{ "ProtocolType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1Beta.SecurityKey), global::Google.Cloud.OsLogin.V1Beta.SecurityKey.Parser, new[]{ "PublicKey", "PrivateKey", "UniversalTwoFactor", "WebAuthn", "DeviceNickname" }, new[]{ "ProtocolType", "DeviceNickname" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1Beta.UniversalTwoFactor), global::Google.Cloud.OsLogin.V1Beta.UniversalTwoFactor.Parser, new[]{ "AppId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1Beta.WebAuthn), global::Google.Cloud.OsLogin.V1Beta.WebAuthn.Parser, new[]{ "RpId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1Beta.SignSshPublicKeyRequest), global::Google.Cloud.OsLogin.V1Beta.SignSshPublicKeyRequest.Parser, new[]{ "SshPublicKey", "Parent" }, null, null, null, null),
@@ -2500,6 +2501,7 @@ namespace Google.Cloud.OsLogin.V1Beta {
     public SecurityKey(SecurityKey other) : this() {
       publicKey_ = other.publicKey_;
       privateKey_ = other.privateKey_;
+      deviceNickname_ = other.deviceNickname_;
       switch (other.ProtocolTypeCase) {
         case ProtocolTypeOneofCase.UniversalTwoFactor:
           UniversalTwoFactor = other.UniversalTwoFactor.Clone();
@@ -2579,6 +2581,35 @@ namespace Google.Cloud.OsLogin.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "device_nickname" field.</summary>
+    public const int DeviceNicknameFieldNumber = 5;
+    private readonly static string DeviceNicknameDefaultValue = "";
+
+    private string deviceNickname_;
+    /// <summary>
+    /// The security key nickname explicitly set by the user.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DeviceNickname {
+      get { return deviceNickname_ ?? DeviceNicknameDefaultValue; }
+      set {
+        deviceNickname_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "device_nickname" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDeviceNickname {
+      get { return deviceNickname_ != null; }
+    }
+    /// <summary>Clears the value of the "device_nickname" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDeviceNickname() {
+      deviceNickname_ = null;
+    }
+
     private object protocolType_;
     /// <summary>Enum of possible cases for the "protocol_type" oneof.</summary>
     public enum ProtocolTypeOneofCase {
@@ -2619,6 +2650,7 @@ namespace Google.Cloud.OsLogin.V1Beta {
       if (PrivateKey != other.PrivateKey) return false;
       if (!object.Equals(UniversalTwoFactor, other.UniversalTwoFactor)) return false;
       if (!object.Equals(WebAuthn, other.WebAuthn)) return false;
+      if (DeviceNickname != other.DeviceNickname) return false;
       if (ProtocolTypeCase != other.ProtocolTypeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2631,6 +2663,7 @@ namespace Google.Cloud.OsLogin.V1Beta {
       if (PrivateKey.Length != 0) hash ^= PrivateKey.GetHashCode();
       if (protocolTypeCase_ == ProtocolTypeOneofCase.UniversalTwoFactor) hash ^= UniversalTwoFactor.GetHashCode();
       if (protocolTypeCase_ == ProtocolTypeOneofCase.WebAuthn) hash ^= WebAuthn.GetHashCode();
+      if (HasDeviceNickname) hash ^= DeviceNickname.GetHashCode();
       hash ^= (int) protocolTypeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2666,6 +2699,10 @@ namespace Google.Cloud.OsLogin.V1Beta {
         output.WriteRawTag(34);
         output.WriteMessage(WebAuthn);
       }
+      if (HasDeviceNickname) {
+        output.WriteRawTag(42);
+        output.WriteString(DeviceNickname);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2692,6 +2729,10 @@ namespace Google.Cloud.OsLogin.V1Beta {
         output.WriteRawTag(34);
         output.WriteMessage(WebAuthn);
       }
+      if (HasDeviceNickname) {
+        output.WriteRawTag(42);
+        output.WriteString(DeviceNickname);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2714,6 +2755,9 @@ namespace Google.Cloud.OsLogin.V1Beta {
       if (protocolTypeCase_ == ProtocolTypeOneofCase.WebAuthn) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(WebAuthn);
       }
+      if (HasDeviceNickname) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DeviceNickname);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2731,6 +2775,9 @@ namespace Google.Cloud.OsLogin.V1Beta {
       }
       if (other.PrivateKey.Length != 0) {
         PrivateKey = other.PrivateKey;
+      }
+      if (other.HasDeviceNickname) {
+        DeviceNickname = other.DeviceNickname;
       }
       switch (other.ProtocolTypeCase) {
         case ProtocolTypeOneofCase.UniversalTwoFactor:
@@ -2788,6 +2835,10 @@ namespace Google.Cloud.OsLogin.V1Beta {
             WebAuthn = subBuilder;
             break;
           }
+          case 42: {
+            DeviceNickname = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -2827,6 +2878,10 @@ namespace Google.Cloud.OsLogin.V1Beta {
             }
             input.ReadMessage(subBuilder);
             WebAuthn = subBuilder;
+            break;
+          }
+          case 42: {
+            DeviceNickname = input.ReadString();
             break;
           }
         }
