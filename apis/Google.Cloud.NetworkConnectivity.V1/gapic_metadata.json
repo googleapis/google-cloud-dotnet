@@ -10,6 +10,12 @@
         "grpc": {
           "libraryClient": "HubServiceClient",
           "rpcs": {
+            "AcceptHubSpoke": {
+              "methods": [
+                "AcceptHubSpoke",
+                "AcceptHubSpokeAsync"
+              ]
+            },
             "CreateHub": {
               "methods": [
                 "CreateHub",
@@ -34,10 +40,28 @@
                 "DeleteSpokeAsync"
               ]
             },
+            "GetGroup": {
+              "methods": [
+                "GetGroup",
+                "GetGroupAsync"
+              ]
+            },
             "GetHub": {
               "methods": [
                 "GetHub",
                 "GetHubAsync"
+              ]
+            },
+            "GetRoute": {
+              "methods": [
+                "GetRoute",
+                "GetRouteAsync"
+              ]
+            },
+            "GetRouteTable": {
+              "methods": [
+                "GetRouteTable",
+                "GetRouteTableAsync"
               ]
             },
             "GetSpoke": {
@@ -46,16 +70,46 @@
                 "GetSpokeAsync"
               ]
             },
+            "ListGroups": {
+              "methods": [
+                "ListGroups",
+                "ListGroupsAsync"
+              ]
+            },
+            "ListHubSpokes": {
+              "methods": [
+                "ListHubSpokes",
+                "ListHubSpokesAsync"
+              ]
+            },
             "ListHubs": {
               "methods": [
                 "ListHubs",
                 "ListHubsAsync"
               ]
             },
+            "ListRouteTables": {
+              "methods": [
+                "ListRouteTables",
+                "ListRouteTablesAsync"
+              ]
+            },
+            "ListRoutes": {
+              "methods": [
+                "ListRoutes",
+                "ListRoutesAsync"
+              ]
+            },
             "ListSpokes": {
               "methods": [
                 "ListSpokes",
                 "ListSpokesAsync"
+              ]
+            },
+            "RejectHubSpoke": {
+              "methods": [
+                "RejectHubSpoke",
+                "RejectHubSpokeAsync"
               ]
             },
             "UpdateHub": {
