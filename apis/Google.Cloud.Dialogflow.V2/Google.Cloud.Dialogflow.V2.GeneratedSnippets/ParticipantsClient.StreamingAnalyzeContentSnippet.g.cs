@@ -69,6 +69,7 @@ namespace GoogleCSharpSnippets
                     InputAudio = ByteString.Empty,
                     QueryParams = new QueryParameters(),
                     AssistQueryParams = new AssistQueryParameters(),
+                    EnableExtendedStreaming = false,
                     EnablePartialAutomatedAgentReply = false,
                     CxParameters = new Struct(),
                     EnableDebuggingInfo = false,
