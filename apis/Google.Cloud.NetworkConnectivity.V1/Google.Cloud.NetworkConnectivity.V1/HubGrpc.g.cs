@@ -3,7 +3,7 @@
 //     source: google/cloud/networkconnectivity/v1/hub.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2022 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -82,6 +82,10 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.DeleteHubRequest> __Marshaller_google_cloud_networkconnectivity_v1_DeleteHubRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.DeleteHubRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.ListHubSpokesRequest> __Marshaller_google_cloud_networkconnectivity_v1_ListHubSpokesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.ListHubSpokesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.ListHubSpokesResponse> __Marshaller_google_cloud_networkconnectivity_v1_ListHubSpokesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.ListHubSpokesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.ListSpokesRequest> __Marshaller_google_cloud_networkconnectivity_v1_ListSpokesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.ListSpokesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.ListSpokesResponse> __Marshaller_google_cloud_networkconnectivity_v1_ListSpokesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.ListSpokesResponse.Parser));
@@ -94,7 +98,35 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.UpdateSpokeRequest> __Marshaller_google_cloud_networkconnectivity_v1_UpdateSpokeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.UpdateSpokeRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.RejectHubSpokeRequest> __Marshaller_google_cloud_networkconnectivity_v1_RejectHubSpokeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.RejectHubSpokeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.AcceptHubSpokeRequest> __Marshaller_google_cloud_networkconnectivity_v1_AcceptHubSpokeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.AcceptHubSpokeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.DeleteSpokeRequest> __Marshaller_google_cloud_networkconnectivity_v1_DeleteSpokeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.DeleteSpokeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.GetRouteTableRequest> __Marshaller_google_cloud_networkconnectivity_v1_GetRouteTableRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.GetRouteTableRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.RouteTable> __Marshaller_google_cloud_networkconnectivity_v1_RouteTable = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.RouteTable.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.GetRouteRequest> __Marshaller_google_cloud_networkconnectivity_v1_GetRouteRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.GetRouteRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.Route> __Marshaller_google_cloud_networkconnectivity_v1_Route = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.Route.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.ListRoutesRequest> __Marshaller_google_cloud_networkconnectivity_v1_ListRoutesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.ListRoutesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.ListRoutesResponse> __Marshaller_google_cloud_networkconnectivity_v1_ListRoutesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.ListRoutesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.ListRouteTablesRequest> __Marshaller_google_cloud_networkconnectivity_v1_ListRouteTablesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.ListRouteTablesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.ListRouteTablesResponse> __Marshaller_google_cloud_networkconnectivity_v1_ListRouteTablesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.ListRouteTablesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.GetGroupRequest> __Marshaller_google_cloud_networkconnectivity_v1_GetGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.GetGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.Group> __Marshaller_google_cloud_networkconnectivity_v1_Group = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.Group.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.ListGroupsRequest> __Marshaller_google_cloud_networkconnectivity_v1_ListGroupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.ListGroupsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.ListGroupsResponse> __Marshaller_google_cloud_networkconnectivity_v1_ListGroupsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.ListGroupsResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.ListHubsRequest, global::Google.Cloud.NetworkConnectivity.V1.ListHubsResponse> __Method_ListHubs = new grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.ListHubsRequest, global::Google.Cloud.NetworkConnectivity.V1.ListHubsResponse>(
@@ -137,6 +169,14 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.ListHubSpokesRequest, global::Google.Cloud.NetworkConnectivity.V1.ListHubSpokesResponse> __Method_ListHubSpokes = new grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.ListHubSpokesRequest, global::Google.Cloud.NetworkConnectivity.V1.ListHubSpokesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListHubSpokes",
+        __Marshaller_google_cloud_networkconnectivity_v1_ListHubSpokesRequest,
+        __Marshaller_google_cloud_networkconnectivity_v1_ListHubSpokesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.ListSpokesRequest, global::Google.Cloud.NetworkConnectivity.V1.ListSpokesResponse> __Method_ListSpokes = new grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.ListSpokesRequest, global::Google.Cloud.NetworkConnectivity.V1.ListSpokesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -169,12 +209,76 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.RejectHubSpokeRequest, global::Google.LongRunning.Operation> __Method_RejectHubSpoke = new grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.RejectHubSpokeRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RejectHubSpoke",
+        __Marshaller_google_cloud_networkconnectivity_v1_RejectHubSpokeRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.AcceptHubSpokeRequest, global::Google.LongRunning.Operation> __Method_AcceptHubSpoke = new grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.AcceptHubSpokeRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AcceptHubSpoke",
+        __Marshaller_google_cloud_networkconnectivity_v1_AcceptHubSpokeRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.DeleteSpokeRequest, global::Google.LongRunning.Operation> __Method_DeleteSpoke = new grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.DeleteSpokeRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteSpoke",
         __Marshaller_google_cloud_networkconnectivity_v1_DeleteSpokeRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.GetRouteTableRequest, global::Google.Cloud.NetworkConnectivity.V1.RouteTable> __Method_GetRouteTable = new grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.GetRouteTableRequest, global::Google.Cloud.NetworkConnectivity.V1.RouteTable>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetRouteTable",
+        __Marshaller_google_cloud_networkconnectivity_v1_GetRouteTableRequest,
+        __Marshaller_google_cloud_networkconnectivity_v1_RouteTable);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.GetRouteRequest, global::Google.Cloud.NetworkConnectivity.V1.Route> __Method_GetRoute = new grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.GetRouteRequest, global::Google.Cloud.NetworkConnectivity.V1.Route>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetRoute",
+        __Marshaller_google_cloud_networkconnectivity_v1_GetRouteRequest,
+        __Marshaller_google_cloud_networkconnectivity_v1_Route);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.ListRoutesRequest, global::Google.Cloud.NetworkConnectivity.V1.ListRoutesResponse> __Method_ListRoutes = new grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.ListRoutesRequest, global::Google.Cloud.NetworkConnectivity.V1.ListRoutesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListRoutes",
+        __Marshaller_google_cloud_networkconnectivity_v1_ListRoutesRequest,
+        __Marshaller_google_cloud_networkconnectivity_v1_ListRoutesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.ListRouteTablesRequest, global::Google.Cloud.NetworkConnectivity.V1.ListRouteTablesResponse> __Method_ListRouteTables = new grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.ListRouteTablesRequest, global::Google.Cloud.NetworkConnectivity.V1.ListRouteTablesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListRouteTables",
+        __Marshaller_google_cloud_networkconnectivity_v1_ListRouteTablesRequest,
+        __Marshaller_google_cloud_networkconnectivity_v1_ListRouteTablesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.GetGroupRequest, global::Google.Cloud.NetworkConnectivity.V1.Group> __Method_GetGroup = new grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.GetGroupRequest, global::Google.Cloud.NetworkConnectivity.V1.Group>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetGroup",
+        __Marshaller_google_cloud_networkconnectivity_v1_GetGroupRequest,
+        __Marshaller_google_cloud_networkconnectivity_v1_Group);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.ListGroupsRequest, global::Google.Cloud.NetworkConnectivity.V1.ListGroupsResponse> __Method_ListGroups = new grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.ListGroupsRequest, global::Google.Cloud.NetworkConnectivity.V1.ListGroupsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListGroups",
+        __Marshaller_google_cloud_networkconnectivity_v1_ListGroupsRequest,
+        __Marshaller_google_cloud_networkconnectivity_v1_ListGroupsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -248,6 +352,20 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       }
 
       /// <summary>
+      /// Lists the Network Connectivity Center spokes associated with a
+      /// specified hub and location. The list includes both spokes that are attached
+      /// to the hub and spokes that have been proposed but not yet accepted.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetworkConnectivity.V1.ListHubSpokesResponse> ListHubSpokes(global::Google.Cloud.NetworkConnectivity.V1.ListHubSpokesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Lists the Network Connectivity Center spokes in a specified project and
       /// location.
       /// </summary>
@@ -297,6 +415,34 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       }
 
       /// <summary>
+      /// Rejects a Network Connectivity Center spoke from being attached to a hub.
+      /// If the spoke was previously in the `ACTIVE` state, it
+      /// transitions to the `INACTIVE` state and is no longer able to
+      /// connect to other spokes that are attached to the hub.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RejectHubSpoke(global::Google.Cloud.NetworkConnectivity.V1.RejectHubSpokeRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Accepts a proposal to attach a Network Connectivity Center spoke
+      /// to a hub.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> AcceptHubSpoke(global::Google.Cloud.NetworkConnectivity.V1.AcceptHubSpokeRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Deletes a Network Connectivity Center spoke.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -304,6 +450,78 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteSpoke(global::Google.Cloud.NetworkConnectivity.V1.DeleteSpokeRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details about a Network Connectivity Center route table.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetworkConnectivity.V1.RouteTable> GetRouteTable(global::Google.Cloud.NetworkConnectivity.V1.GetRouteTableRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details about the specified route.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetworkConnectivity.V1.Route> GetRoute(global::Google.Cloud.NetworkConnectivity.V1.GetRouteRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists routes in a given project.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetworkConnectivity.V1.ListRoutesResponse> ListRoutes(global::Google.Cloud.NetworkConnectivity.V1.ListRoutesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists route tables in a given project.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetworkConnectivity.V1.ListRouteTablesResponse> ListRouteTables(global::Google.Cloud.NetworkConnectivity.V1.ListRouteTablesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details about a Network Connectivity Center group.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetworkConnectivity.V1.Group> GetGroup(global::Google.Cloud.NetworkConnectivity.V1.GetGroupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists groups in a given hub.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetworkConnectivity.V1.ListGroupsResponse> ListGroups(global::Google.Cloud.NetworkConnectivity.V1.ListGroupsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -582,6 +800,62 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteHub, null, options, request);
       }
       /// <summary>
+      /// Lists the Network Connectivity Center spokes associated with a
+      /// specified hub and location. The list includes both spokes that are attached
+      /// to the hub and spokes that have been proposed but not yet accepted.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkConnectivity.V1.ListHubSpokesResponse ListHubSpokes(global::Google.Cloud.NetworkConnectivity.V1.ListHubSpokesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListHubSpokes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the Network Connectivity Center spokes associated with a
+      /// specified hub and location. The list includes both spokes that are attached
+      /// to the hub and spokes that have been proposed but not yet accepted.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkConnectivity.V1.ListHubSpokesResponse ListHubSpokes(global::Google.Cloud.NetworkConnectivity.V1.ListHubSpokesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListHubSpokes, null, options, request);
+      }
+      /// <summary>
+      /// Lists the Network Connectivity Center spokes associated with a
+      /// specified hub and location. The list includes both spokes that are attached
+      /// to the hub and spokes that have been proposed but not yet accepted.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkConnectivity.V1.ListHubSpokesResponse> ListHubSpokesAsync(global::Google.Cloud.NetworkConnectivity.V1.ListHubSpokesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListHubSpokesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the Network Connectivity Center spokes associated with a
+      /// specified hub and location. The list includes both spokes that are attached
+      /// to the hub and spokes that have been proposed but not yet accepted.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkConnectivity.V1.ListHubSpokesResponse> ListHubSpokesAsync(global::Google.Cloud.NetworkConnectivity.V1.ListHubSpokesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListHubSpokes, null, options, request);
+      }
+      /// <summary>
       /// Lists the Network Connectivity Center spokes in a specified project and
       /// location.
       /// </summary>
@@ -778,6 +1052,118 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateSpoke, null, options, request);
       }
       /// <summary>
+      /// Rejects a Network Connectivity Center spoke from being attached to a hub.
+      /// If the spoke was previously in the `ACTIVE` state, it
+      /// transitions to the `INACTIVE` state and is no longer able to
+      /// connect to other spokes that are attached to the hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RejectHubSpoke(global::Google.Cloud.NetworkConnectivity.V1.RejectHubSpokeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RejectHubSpoke(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Rejects a Network Connectivity Center spoke from being attached to a hub.
+      /// If the spoke was previously in the `ACTIVE` state, it
+      /// transitions to the `INACTIVE` state and is no longer able to
+      /// connect to other spokes that are attached to the hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RejectHubSpoke(global::Google.Cloud.NetworkConnectivity.V1.RejectHubSpokeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RejectHubSpoke, null, options, request);
+      }
+      /// <summary>
+      /// Rejects a Network Connectivity Center spoke from being attached to a hub.
+      /// If the spoke was previously in the `ACTIVE` state, it
+      /// transitions to the `INACTIVE` state and is no longer able to
+      /// connect to other spokes that are attached to the hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RejectHubSpokeAsync(global::Google.Cloud.NetworkConnectivity.V1.RejectHubSpokeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RejectHubSpokeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Rejects a Network Connectivity Center spoke from being attached to a hub.
+      /// If the spoke was previously in the `ACTIVE` state, it
+      /// transitions to the `INACTIVE` state and is no longer able to
+      /// connect to other spokes that are attached to the hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RejectHubSpokeAsync(global::Google.Cloud.NetworkConnectivity.V1.RejectHubSpokeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RejectHubSpoke, null, options, request);
+      }
+      /// <summary>
+      /// Accepts a proposal to attach a Network Connectivity Center spoke
+      /// to a hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation AcceptHubSpoke(global::Google.Cloud.NetworkConnectivity.V1.AcceptHubSpokeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AcceptHubSpoke(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Accepts a proposal to attach a Network Connectivity Center spoke
+      /// to a hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation AcceptHubSpoke(global::Google.Cloud.NetworkConnectivity.V1.AcceptHubSpokeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AcceptHubSpoke, null, options, request);
+      }
+      /// <summary>
+      /// Accepts a proposal to attach a Network Connectivity Center spoke
+      /// to a hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> AcceptHubSpokeAsync(global::Google.Cloud.NetworkConnectivity.V1.AcceptHubSpokeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AcceptHubSpokeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Accepts a proposal to attach a Network Connectivity Center spoke
+      /// to a hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> AcceptHubSpokeAsync(global::Google.Cloud.NetworkConnectivity.V1.AcceptHubSpokeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AcceptHubSpoke, null, options, request);
+      }
+      /// <summary>
       /// Deletes a Network Connectivity Center spoke.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -825,6 +1211,294 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteSpoke, null, options, request);
       }
+      /// <summary>
+      /// Gets details about a Network Connectivity Center route table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkConnectivity.V1.RouteTable GetRouteTable(global::Google.Cloud.NetworkConnectivity.V1.GetRouteTableRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetRouteTable(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details about a Network Connectivity Center route table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkConnectivity.V1.RouteTable GetRouteTable(global::Google.Cloud.NetworkConnectivity.V1.GetRouteTableRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetRouteTable, null, options, request);
+      }
+      /// <summary>
+      /// Gets details about a Network Connectivity Center route table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkConnectivity.V1.RouteTable> GetRouteTableAsync(global::Google.Cloud.NetworkConnectivity.V1.GetRouteTableRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetRouteTableAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details about a Network Connectivity Center route table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkConnectivity.V1.RouteTable> GetRouteTableAsync(global::Google.Cloud.NetworkConnectivity.V1.GetRouteTableRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetRouteTable, null, options, request);
+      }
+      /// <summary>
+      /// Gets details about the specified route.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkConnectivity.V1.Route GetRoute(global::Google.Cloud.NetworkConnectivity.V1.GetRouteRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetRoute(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details about the specified route.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkConnectivity.V1.Route GetRoute(global::Google.Cloud.NetworkConnectivity.V1.GetRouteRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetRoute, null, options, request);
+      }
+      /// <summary>
+      /// Gets details about the specified route.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkConnectivity.V1.Route> GetRouteAsync(global::Google.Cloud.NetworkConnectivity.V1.GetRouteRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetRouteAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details about the specified route.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkConnectivity.V1.Route> GetRouteAsync(global::Google.Cloud.NetworkConnectivity.V1.GetRouteRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetRoute, null, options, request);
+      }
+      /// <summary>
+      /// Lists routes in a given project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkConnectivity.V1.ListRoutesResponse ListRoutes(global::Google.Cloud.NetworkConnectivity.V1.ListRoutesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListRoutes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists routes in a given project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkConnectivity.V1.ListRoutesResponse ListRoutes(global::Google.Cloud.NetworkConnectivity.V1.ListRoutesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListRoutes, null, options, request);
+      }
+      /// <summary>
+      /// Lists routes in a given project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkConnectivity.V1.ListRoutesResponse> ListRoutesAsync(global::Google.Cloud.NetworkConnectivity.V1.ListRoutesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListRoutesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists routes in a given project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkConnectivity.V1.ListRoutesResponse> ListRoutesAsync(global::Google.Cloud.NetworkConnectivity.V1.ListRoutesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListRoutes, null, options, request);
+      }
+      /// <summary>
+      /// Lists route tables in a given project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkConnectivity.V1.ListRouteTablesResponse ListRouteTables(global::Google.Cloud.NetworkConnectivity.V1.ListRouteTablesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListRouteTables(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists route tables in a given project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkConnectivity.V1.ListRouteTablesResponse ListRouteTables(global::Google.Cloud.NetworkConnectivity.V1.ListRouteTablesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListRouteTables, null, options, request);
+      }
+      /// <summary>
+      /// Lists route tables in a given project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkConnectivity.V1.ListRouteTablesResponse> ListRouteTablesAsync(global::Google.Cloud.NetworkConnectivity.V1.ListRouteTablesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListRouteTablesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists route tables in a given project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkConnectivity.V1.ListRouteTablesResponse> ListRouteTablesAsync(global::Google.Cloud.NetworkConnectivity.V1.ListRouteTablesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListRouteTables, null, options, request);
+      }
+      /// <summary>
+      /// Gets details about a Network Connectivity Center group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkConnectivity.V1.Group GetGroup(global::Google.Cloud.NetworkConnectivity.V1.GetGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details about a Network Connectivity Center group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkConnectivity.V1.Group GetGroup(global::Google.Cloud.NetworkConnectivity.V1.GetGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetGroup, null, options, request);
+      }
+      /// <summary>
+      /// Gets details about a Network Connectivity Center group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkConnectivity.V1.Group> GetGroupAsync(global::Google.Cloud.NetworkConnectivity.V1.GetGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details about a Network Connectivity Center group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkConnectivity.V1.Group> GetGroupAsync(global::Google.Cloud.NetworkConnectivity.V1.GetGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetGroup, null, options, request);
+      }
+      /// <summary>
+      /// Lists groups in a given hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkConnectivity.V1.ListGroupsResponse ListGroups(global::Google.Cloud.NetworkConnectivity.V1.ListGroupsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListGroups(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists groups in a given hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkConnectivity.V1.ListGroupsResponse ListGroups(global::Google.Cloud.NetworkConnectivity.V1.ListGroupsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListGroups, null, options, request);
+      }
+      /// <summary>
+      /// Lists groups in a given hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkConnectivity.V1.ListGroupsResponse> ListGroupsAsync(global::Google.Cloud.NetworkConnectivity.V1.ListGroupsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListGroupsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists groups in a given hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkConnectivity.V1.ListGroupsResponse> ListGroupsAsync(global::Google.Cloud.NetworkConnectivity.V1.ListGroupsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListGroups, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override HubServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -844,11 +1518,20 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
           .AddMethod(__Method_CreateHub, serviceImpl.CreateHub)
           .AddMethod(__Method_UpdateHub, serviceImpl.UpdateHub)
           .AddMethod(__Method_DeleteHub, serviceImpl.DeleteHub)
+          .AddMethod(__Method_ListHubSpokes, serviceImpl.ListHubSpokes)
           .AddMethod(__Method_ListSpokes, serviceImpl.ListSpokes)
           .AddMethod(__Method_GetSpoke, serviceImpl.GetSpoke)
           .AddMethod(__Method_CreateSpoke, serviceImpl.CreateSpoke)
           .AddMethod(__Method_UpdateSpoke, serviceImpl.UpdateSpoke)
-          .AddMethod(__Method_DeleteSpoke, serviceImpl.DeleteSpoke).Build();
+          .AddMethod(__Method_RejectHubSpoke, serviceImpl.RejectHubSpoke)
+          .AddMethod(__Method_AcceptHubSpoke, serviceImpl.AcceptHubSpoke)
+          .AddMethod(__Method_DeleteSpoke, serviceImpl.DeleteSpoke)
+          .AddMethod(__Method_GetRouteTable, serviceImpl.GetRouteTable)
+          .AddMethod(__Method_GetRoute, serviceImpl.GetRoute)
+          .AddMethod(__Method_ListRoutes, serviceImpl.ListRoutes)
+          .AddMethod(__Method_ListRouteTables, serviceImpl.ListRouteTables)
+          .AddMethod(__Method_GetGroup, serviceImpl.GetGroup)
+          .AddMethod(__Method_ListGroups, serviceImpl.ListGroups).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -863,11 +1546,20 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       serviceBinder.AddMethod(__Method_CreateHub, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.CreateHubRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateHub));
       serviceBinder.AddMethod(__Method_UpdateHub, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.UpdateHubRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateHub));
       serviceBinder.AddMethod(__Method_DeleteHub, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.DeleteHubRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteHub));
+      serviceBinder.AddMethod(__Method_ListHubSpokes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.ListHubSpokesRequest, global::Google.Cloud.NetworkConnectivity.V1.ListHubSpokesResponse>(serviceImpl.ListHubSpokes));
       serviceBinder.AddMethod(__Method_ListSpokes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.ListSpokesRequest, global::Google.Cloud.NetworkConnectivity.V1.ListSpokesResponse>(serviceImpl.ListSpokes));
       serviceBinder.AddMethod(__Method_GetSpoke, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.GetSpokeRequest, global::Google.Cloud.NetworkConnectivity.V1.Spoke>(serviceImpl.GetSpoke));
       serviceBinder.AddMethod(__Method_CreateSpoke, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.CreateSpokeRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateSpoke));
       serviceBinder.AddMethod(__Method_UpdateSpoke, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.UpdateSpokeRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateSpoke));
+      serviceBinder.AddMethod(__Method_RejectHubSpoke, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.RejectHubSpokeRequest, global::Google.LongRunning.Operation>(serviceImpl.RejectHubSpoke));
+      serviceBinder.AddMethod(__Method_AcceptHubSpoke, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.AcceptHubSpokeRequest, global::Google.LongRunning.Operation>(serviceImpl.AcceptHubSpoke));
       serviceBinder.AddMethod(__Method_DeleteSpoke, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.DeleteSpokeRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteSpoke));
+      serviceBinder.AddMethod(__Method_GetRouteTable, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.GetRouteTableRequest, global::Google.Cloud.NetworkConnectivity.V1.RouteTable>(serviceImpl.GetRouteTable));
+      serviceBinder.AddMethod(__Method_GetRoute, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.GetRouteRequest, global::Google.Cloud.NetworkConnectivity.V1.Route>(serviceImpl.GetRoute));
+      serviceBinder.AddMethod(__Method_ListRoutes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.ListRoutesRequest, global::Google.Cloud.NetworkConnectivity.V1.ListRoutesResponse>(serviceImpl.ListRoutes));
+      serviceBinder.AddMethod(__Method_ListRouteTables, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.ListRouteTablesRequest, global::Google.Cloud.NetworkConnectivity.V1.ListRouteTablesResponse>(serviceImpl.ListRouteTables));
+      serviceBinder.AddMethod(__Method_GetGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.GetGroupRequest, global::Google.Cloud.NetworkConnectivity.V1.Group>(serviceImpl.GetGroup));
+      serviceBinder.AddMethod(__Method_ListGroups, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.ListGroupsRequest, global::Google.Cloud.NetworkConnectivity.V1.ListGroupsResponse>(serviceImpl.ListGroups));
     }
 
   }
