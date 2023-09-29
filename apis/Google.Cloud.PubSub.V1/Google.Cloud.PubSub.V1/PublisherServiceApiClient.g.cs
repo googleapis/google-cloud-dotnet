@@ -30,6 +30,10 @@ using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using System;
+using Google.Api.Gax;
+using Grpc.Core;
+using System.Threading.Tasks;
 
 namespace Google.Cloud.PubSub.V1
 {
@@ -289,18 +293,25 @@ namespace Google.Cloud.PubSub.V1
             return task ?? BuildAsyncImpl(cancellationToken);
         }
 
-        private PublisherServiceApiClient BuildImpl()
+        private PublisherServiceApiClient BuildImpl() => new PublisherServiceApiClientDeferred(() =>
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return PublisherServiceApiClient.Create(callInvoker, Settings, Logger);
-        }
+            return stt::Task.FromResult((PublisherServiceApiClient.Create(callInvoker, Settings, Logger), LastCreatedChannel));
+        });
 
-        private async stt::Task<PublisherServiceApiClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
+
+        private stt::Task<PublisherServiceApiClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
-            Validate();
-            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return PublisherServiceApiClient.Create(callInvoker, Settings, Logger);
+            // Note that we can now, maybe, deprecate client async building.
+            return stt::Task.FromResult((PublisherServiceApiClient) new PublisherServiceApiClientDeferred(BuildAsyncDeffered));
+
+            async stt::Task<(PublisherServiceApiClient, ChannelBase)> BuildAsyncDeffered()
+            {
+                Validate();
+                grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+                return (PublisherServiceApiClient.Create(callInvoker, Settings, Logger), LastCreatedChannel);
+            }
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -312,7 +323,7 @@ namespace Google.Cloud.PubSub.V1
     /// The service that an application uses to manipulate topics, and to send
     /// messages to a topic.
     /// </remarks>
-    public abstract partial class PublisherServiceApiClient
+    public abstract partial class PublisherServiceApiClient : IAsyncDisposable
     {
         /// <summary>
         /// The default endpoint for the PublisherServiceApi service, which is a host of "pubsub.googleapis.com" and a
@@ -1464,6 +1475,12 @@ namespace Google.Cloud.PubSub.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<DetachSubscriptionResponse> DetachSubscriptionAsync(DetachSubscriptionRequest request, st::CancellationToken cancellationToken) =>
             DetachSubscriptionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <inheritdoc/>
+        public virtual ValueTask DisposeAsync()
+        {
+            return new ValueTask(Task.CompletedTask);
+        }
     }
 
     /// <summary>PublisherServiceApi client wrapper implementation, for convenient use.</summary>
@@ -1822,6 +1839,54 @@ namespace Google.Cloud.PubSub.V1
         {
             Modify_DetachSubscriptionRequest(ref request, ref callSettings);
             return _callDetachSubscription.Async(request, callSettings);
+        }
+    }
+
+    /// <summary>PublisherServiceApi client wrapper implementation for deferring client creation.</summary>
+    internal sealed partial class PublisherServiceApiClientDeferred : PublisherServiceApiClient
+    {
+        private readonly Lazy<stt::Task<(PublisherServiceApiClient, ChannelBase)>> _publisherServiceApiClientTask;
+
+        internal PublisherServiceApiClientDeferred(Func<stt::Task<(PublisherServiceApiClient, ChannelBase)>> publisherServiceApiClientProvider) =>
+            _publisherServiceApiClientTask = new Lazy<stt.Task<(PublisherServiceApiClient, ChannelBase)>>(publisherServiceApiClientProvider);
+
+        /// <inheritdoc/>
+        public override Topic CreateTopic(Topic request, gaxgrpc::CallSettings callSettings = null)
+        {
+            // Note:  this is blocking if this is the first operation ever called on this client.
+            // But so is the sync call anyway.
+            var (client, _) = _publisherServiceApiClientTask.Value.ResultWithUnwrappedExceptions();
+            return client.CreateTopic(request, callSettings);
+        }
+
+        /// <inheritdoc/>
+        public override async stt::Task<Topic> CreateTopicAsync(Topic request, gaxgrpc::CallSettings callSettings = null)
+        {
+            var (client, _) = await _publisherServiceApiClientTask.Value.ConfigureAwait(false);
+            return await client.CreateTopicAsync(request, callSettings);
+        }
+
+        // and all the others
+
+        public override async ValueTask DisposeAsync()
+        {
+            if (!_publisherServiceApiClientTask.IsValueCreated)
+            {
+                return;
+            }
+
+            var (_, channel) = await _publisherServiceApiClientTask.Value.ConfigureAwait(false);
+
+            if (channel is null)
+            {
+                return;
+            }
+            if (channel is IDisposable disposable)
+            {
+                disposable.Dispose();
+            }
+
+            await channel.ShutdownAsync().ConfigureAwait(false);
         }
     }
 

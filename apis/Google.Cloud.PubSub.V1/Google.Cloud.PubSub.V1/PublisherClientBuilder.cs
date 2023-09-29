@@ -100,15 +100,13 @@ public sealed class PublisherClientBuilder : ClientBuilderBase<PublisherClient>
 
     /// <summary>Builds the resulting client.</summary>
     public override PublisherClient Build() =>
-        // With isAsync set to false, the returned task will already be completed(either successfully or faulted),
-        // so .ResultWithUnwrappedExceptions() will always return immediately.
-        BuildAsyncImpl(default, false).ResultWithUnwrappedExceptions();
+        BuildImpl();
 
     /// <summary>Builds the resulting client asynchronously.</summary>
     public override Task<PublisherClient> BuildAsync(CancellationToken cancellationToken = default) =>
-        BuildAsyncImpl(cancellationToken, true);
+        Task.FromResult(BuildImpl());
 
-    private async Task<PublisherClient> BuildAsyncImpl(CancellationToken cancellationToken, bool isAsync)
+    private PublisherClient BuildImpl()
     {
         Validate();
         var clientCount = ClientCount ?? Environment.ProcessorCount;
@@ -122,29 +120,13 @@ public sealed class PublisherClientBuilder : ClientBuilderBase<PublisherClient>
                 .WithCustomOption("sub-channel-separator", Guid.NewGuid().ToString());
 
             var builder = new PublisherServiceApiClientBuilder(this, grpcChannelOptions);
-            clients[i] = isAsync
-                ? await builder.BuildAsync(cancellationToken).ConfigureAwait(false)
-                : builder.Build();
-            var channel = builder.LastCreatedChannel;
-            shutdowns[i] = () => DisposeChannelAsync(channel);
+            // We don't need to make the sync/async distinction anymore because we know client creation is deferred.
+            clients[i] = builder.Build();
+            
+            shutdowns[i] = () => clients[i].DisposeAsync().AsTask() ;
         }
         Func<Task> shutdown = () => Task.WhenAll(shutdowns.Select(x => x()));
         return new PublisherClientImpl(TopicName, clients, settings, shutdown);
-
-        // TODO: Move this local method to a common place. We have it here and in SubscriberClientBuilder.
-        static Task DisposeChannelAsync(Grpc.Core.ChannelBase channel)
-        {
-            if (channel is null)
-            {
-                return Task.CompletedTask;
-            }
-            if (channel is IDisposable disposable)
-            {
-                disposable.Dispose();
-            }
-
-            return channel.ShutdownAsync();
-        }
     }
 
     /// <inheritdoc />
