@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.0.0-beta04, released 2023-10-02
+
+### New features
+
+- Added SecurityKey.device_nickname ([commit 37ff7f1](https://github.com/googleapis/google-cloud-dotnet/commit/37ff7f1392bd794af3bd44281df320f8ff4c0e91))
+
 ## Version 3.0.0-beta03, released 2023-08-16
 
 ### New features
