@@ -46,11 +46,16 @@ public class AggregateQueryTest
         Assert.Equal(2, snapshotWithLimit.Count);
     }
 
-    [Fact]
+    [SkippableFact]
     public async Task Sum_ResultTypes()
     {
+        Skip.If(_fixture.RunningOnEmulator);
+
         var db = _fixture.FirestoreDb;
         var collection = _fixture.CreateUniqueCollection();
+
+        await _fixture.CreateIndex(collection, _fixture.AscendingField("x"), _fixture.AscendingField("y"), _fixture.AscendingField("z"));
+
         var batch = db.StartBatch();
         batch.Set(collection.Document("a"), new { x = 1, y = 1L << 63, z = 1.0 });
         batch.Set(collection.Document("b"), new { x = 2, y = 1L << 63, z = 2.0 });

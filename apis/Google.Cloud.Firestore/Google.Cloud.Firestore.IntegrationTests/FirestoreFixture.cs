@@ -14,11 +14,15 @@
 
 using Google.Api.Gax;
 using Google.Cloud.ClientTesting;
+using Google.Cloud.Firestore.Admin.V1;
 using Google.Cloud.Firestore.IntegrationTests.Models;
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
+using static Google.Cloud.Firestore.Admin.V1.Index.Types;
+using static Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types;
 
 namespace Google.Cloud.Firestore.IntegrationTests
 {
@@ -61,17 +65,16 @@ namespace Google.Cloud.Firestore.IntegrationTests
         /// </summary>
         public CollectionReference CollectionGroupQueryCollection { get; }
 
+        internal bool RunningOnEmulator { get; }
+
+        private FirestoreAdminClient AdminClient { get; }
+
         private int _uniqueCollectionCounter = 0;
 
         public FirestoreFixture() : base(ProjectEnvironmentVariable)
         {
-#if NETCOREAPP3_1
-            // On .NET Core 3.1 (but not .NET 6) Grpc.Net.Client needs an additional switch
-            // to allow an insecure channel in HTTP/2.
-            // We can't trivially tell whether we're running on the emulator or not, but it doesn't
-            // really matter as we won't be trying to use an unencrypted channel in production.
-            AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
-#endif
+            RunningOnEmulator = !string.IsNullOrEmpty(Environment.GetEnvironmentVariable("FIRESTORE_EMULATOR_HOST"));
+            AdminClient = FirestoreAdminClient.Create();
             // Currently, only the default database is supported... so we create all our collections with a randomly-generated prefix.
             // When multiple databases are supported, we'll create a new one per test run.
             CollectionPrefix = IdGenerator.FromGuid(prefix: "test-");
@@ -86,9 +89,33 @@ namespace Google.Cloud.Firestore.IntegrationTests
 
         private async Task PopulateCollections()
         {
+            await CreateIndex(HighScoreCollection, AscendingField("Score"), AscendingField("Level"));
+            await CreateIndex(HighScoreCollection, AscendingField("Score"), DescendingField("Level"));
+            await CreateIndex(StudentCollection, AscendingField("EnglishScore"), AscendingField("Level"), AscendingField("MathScore"), AscendingField("Name"));
             await PopulateCollection(HighScoreCollection, HighScore.Data);
             await PopulateCollection(ArrayQueryCollection, ArrayDocument.Data);
             await PopulateCollection(StudentCollection, Student.Data);
+        }
+
+        internal async Task CreateIndex(CollectionReference collection, params IndexField[] fields)
+        {
+            // Tests which require an index should be skipped, as the emulator doesn't support the
+            // admin API.
+            if (RunningOnEmulator)
+            {
+                return;
+            }
+            var index = new Admin.V1.Index
+            {
+                Fields = { fields },
+                QueryScope = QueryScope.Collection
+            };
+            var job = await AdminClient.CreateIndexAsync(new CollectionGroupName(ProjectId, "(default)", collection.Id), index);
+            // Creating an index can take a while. We don't want to wait *forever* (which would be the behavior of default poll settings)
+            // but we need to have a timeout of more than a minute.
+            var expiration = Expiration.FromTimeout(TimeSpan.FromMinutes(5));
+            var delay = TimeSpan.FromSeconds(5);
+            await job.PollUntilCompletedAsync(new PollSettings(expiration, delay));
         }
 
         private async Task PopulateCollection(CollectionReference collection, IEnumerable<object> documents)
@@ -110,6 +137,10 @@ namespace Google.Cloud.Firestore.IntegrationTests
             int counter = Interlocked.Increment(ref _uniqueCollectionCounter);
             return FirestoreDb.Collection($"{CollectionPrefix}-unique-{counter}");
         }
+
+        // Convenience methods for creating fields for indexes.
+        internal IndexField AscendingField(string name) => new IndexField { FieldPath = name, Order = Order.Ascending };
+        internal IndexField DescendingField(string name) => new IndexField { FieldPath = name, Order = Order.Descending };
 
         // No clean-up for now. With multiple-database support, we'll create a database
         // on construction and delete it here.
