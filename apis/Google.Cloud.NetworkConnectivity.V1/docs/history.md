@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.5.0, released 2023-10-02
+
+### New features
+
+- Add Network Connectivity Center APIs related to VPC spokes ([commit f99d9ad](https://github.com/googleapis/google-cloud-dotnet/commit/f99d9ad52e49ae453e8b0007d6b2a2f6f6b85b31))
+
 ## Version 2.4.0, released 2023-09-18
 
 ### New features
