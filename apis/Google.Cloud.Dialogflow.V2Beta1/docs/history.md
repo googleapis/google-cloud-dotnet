@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.0.0-beta11, released 2023-10-02
+
+### New features
+
+- Add the enable_extended_streaming flag ([commit 68ba677](https://github.com/googleapis/google-cloud-dotnet/commit/68ba67718434f26f89829706f77c2297bb2a3f5d))
+- Remove backend API deadline ([commit 68ba677](https://github.com/googleapis/google-cloud-dotnet/commit/68ba67718434f26f89829706f77c2297bb2a3f5d))
+
 ## Version 1.0.0-beta10, released 2023-09-06
 
 ### New features
