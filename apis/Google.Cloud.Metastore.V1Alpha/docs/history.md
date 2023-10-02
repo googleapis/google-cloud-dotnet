@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.0.0-alpha07, released 2023-10-02
+
+### New features
+
+- Added EndpointLocation (v1, v1beta, v1alpha) ([commit 65fb54b](https://github.com/googleapis/google-cloud-dotnet/commit/65fb54b33ba9641ad02457b035df5a397f4dbaee))
+
 ## Version 2.0.0-alpha06, released 2023-07-13
 
 ### New features
