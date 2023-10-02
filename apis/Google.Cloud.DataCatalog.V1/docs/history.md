@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.7.0, released 2023-10-02
+
+### New features
+
+- Enable Vertex AI Ingestion on DataPlex ([commit af6cde6](https://github.com/googleapis/google-cloud-dotnet/commit/af6cde6b66d1a9054bc2353cd9a01105de6f36ee))
+
+### Documentation improvements
+
+- Fix typo ([commit 3924eff](https://github.com/googleapis/google-cloud-dotnet/commit/3924eff8ce3cd348873825d667b537da884c8f4a))
+
 ## Version 2.6.0, released 2023-08-04
 
 ### New features
