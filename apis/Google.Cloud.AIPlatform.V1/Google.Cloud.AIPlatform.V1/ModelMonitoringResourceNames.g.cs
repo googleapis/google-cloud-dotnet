@@ -263,4 +263,16 @@ namespace Google.Cloud.AIPlatform.V1
         /// <inheritdoc/>
         public static bool operator !=(NotificationChannelName a, NotificationChannelName b) => !(a == b);
     }
+
+    public partial class ModelMonitoringAlertConfig
+    {
+        /// <summary>
+        /// <see cref="NotificationChannelName"/>-typed view over the <see cref="NotificationChannels"/> resource name
+        /// property.
+        /// </summary>
+        public gax::ResourceNameList<NotificationChannelName> NotificationChannelsAsNotificationChannelNames
+        {
+            get => new gax::ResourceNameList<NotificationChannelName>(NotificationChannels, s => string.IsNullOrEmpty(s) ? null : NotificationChannelName.Parse(s, allowUnparsed: true));
+        }
+    }
 }

@@ -2013,6 +2013,1489 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1_generated_DatasetService_CreateDatasetVersion_sync",
+      "title": "CreateDatasetVersionRequestObject",
+      "description": "Snippet for CreateDatasetVersion",
+      "file": "DatasetServiceClient.CreateDatasetVersionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDatasetVersion",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.CreateDatasetVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.CreateDatasetVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.DatasetVersion, Google.Cloud.AIPlatform.V1.CreateDatasetVersionOperationMetadata>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDatasetVersion",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.CreateDatasetVersion",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_CreateDatasetVersion_async",
+      "title": "CreateDatasetVersionRequestObjectAsync",
+      "description": "Snippet for CreateDatasetVersionAsync",
+      "file": "DatasetServiceClient.CreateDatasetVersionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDatasetVersionAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.CreateDatasetVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.CreateDatasetVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.DatasetVersion, Google.Cloud.AIPlatform.V1.CreateDatasetVersionOperationMetadata>>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDatasetVersion",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.CreateDatasetVersion",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_CreateDatasetVersion_sync_flattened",
+      "title": "CreateDatasetVersion",
+      "description": "Snippet for CreateDatasetVersion",
+      "file": "DatasetServiceClient.CreateDatasetVersionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDatasetVersion",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.CreateDatasetVersion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DatasetVersion",
+            "name": "datasetVersion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.DatasetVersion, Google.Cloud.AIPlatform.V1.CreateDatasetVersionOperationMetadata>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDatasetVersion",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.CreateDatasetVersion",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_CreateDatasetVersion_async_flattened",
+      "title": "CreateDatasetVersionAsync",
+      "description": "Snippet for CreateDatasetVersionAsync",
+      "file": "DatasetServiceClient.CreateDatasetVersionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDatasetVersionAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.CreateDatasetVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DatasetVersion",
+            "name": "datasetVersion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.DatasetVersion, Google.Cloud.AIPlatform.V1.CreateDatasetVersionOperationMetadata>>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDatasetVersion",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.CreateDatasetVersion",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_CreateDatasetVersion_sync_flattened_resourceNames",
+      "title": "CreateDatasetVersionResourceNames",
+      "description": "Snippet for CreateDatasetVersion",
+      "file": "DatasetServiceClient.CreateDatasetVersionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDatasetVersion",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.CreateDatasetVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DatasetName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DatasetVersion",
+            "name": "datasetVersion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.DatasetVersion, Google.Cloud.AIPlatform.V1.CreateDatasetVersionOperationMetadata>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDatasetVersion",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.CreateDatasetVersion",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_CreateDatasetVersion_async_flattened_resourceNames",
+      "title": "CreateDatasetVersionResourceNamesAsync",
+      "description": "Snippet for CreateDatasetVersionAsync",
+      "file": "DatasetServiceClient.CreateDatasetVersionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDatasetVersionAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.CreateDatasetVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DatasetName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DatasetVersion",
+            "name": "datasetVersion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.DatasetVersion, Google.Cloud.AIPlatform.V1.CreateDatasetVersionOperationMetadata>>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDatasetVersion",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.CreateDatasetVersion",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_DeleteDatasetVersion_sync",
+      "title": "DeleteDatasetVersionRequestObject",
+      "description": "Snippet for DeleteDatasetVersion",
+      "file": "DatasetServiceClient.DeleteDatasetVersionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDatasetVersion",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.DeleteDatasetVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DeleteDatasetVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDatasetVersion",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.DeleteDatasetVersion",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_DeleteDatasetVersion_async",
+      "title": "DeleteDatasetVersionRequestObjectAsync",
+      "description": "Snippet for DeleteDatasetVersionAsync",
+      "file": "DatasetServiceClient.DeleteDatasetVersionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDatasetVersionAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.DeleteDatasetVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DeleteDatasetVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDatasetVersion",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.DeleteDatasetVersion",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_DeleteDatasetVersion_sync_flattened",
+      "title": "DeleteDatasetVersion",
+      "description": "Snippet for DeleteDatasetVersion",
+      "file": "DatasetServiceClient.DeleteDatasetVersionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDatasetVersion",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.DeleteDatasetVersion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDatasetVersion",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.DeleteDatasetVersion",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_DeleteDatasetVersion_async_flattened",
+      "title": "DeleteDatasetVersionAsync",
+      "description": "Snippet for DeleteDatasetVersionAsync",
+      "file": "DatasetServiceClient.DeleteDatasetVersionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDatasetVersionAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.DeleteDatasetVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDatasetVersion",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.DeleteDatasetVersion",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_DeleteDatasetVersion_sync_flattened_resourceNames",
+      "title": "DeleteDatasetVersionResourceNames",
+      "description": "Snippet for DeleteDatasetVersion",
+      "file": "DatasetServiceClient.DeleteDatasetVersionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDatasetVersion",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.DeleteDatasetVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DatasetVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDatasetVersion",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.DeleteDatasetVersion",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_DeleteDatasetVersion_async_flattened_resourceNames",
+      "title": "DeleteDatasetVersionResourceNamesAsync",
+      "description": "Snippet for DeleteDatasetVersionAsync",
+      "file": "DatasetServiceClient.DeleteDatasetVersionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDatasetVersionAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.DeleteDatasetVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DatasetVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDatasetVersion",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.DeleteDatasetVersion",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_GetDatasetVersion_sync",
+      "title": "GetDatasetVersionRequestObject",
+      "description": "Snippet for GetDatasetVersion",
+      "file": "DatasetServiceClient.GetDatasetVersionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDatasetVersion",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.GetDatasetVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.GetDatasetVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.DatasetVersion",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "GetDatasetVersion",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.GetDatasetVersion",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_GetDatasetVersion_async",
+      "title": "GetDatasetVersionRequestObjectAsync",
+      "description": "Snippet for GetDatasetVersionAsync",
+      "file": "DatasetServiceClient.GetDatasetVersionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDatasetVersionAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.GetDatasetVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.GetDatasetVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.DatasetVersion>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "GetDatasetVersion",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.GetDatasetVersion",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_GetDatasetVersion_sync_flattened",
+      "title": "GetDatasetVersion",
+      "description": "Snippet for GetDatasetVersion",
+      "file": "DatasetServiceClient.GetDatasetVersionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDatasetVersion",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.GetDatasetVersion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.DatasetVersion",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "GetDatasetVersion",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.GetDatasetVersion",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_GetDatasetVersion_async_flattened",
+      "title": "GetDatasetVersionAsync",
+      "description": "Snippet for GetDatasetVersionAsync",
+      "file": "DatasetServiceClient.GetDatasetVersionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDatasetVersionAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.GetDatasetVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.DatasetVersion>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "GetDatasetVersion",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.GetDatasetVersion",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_GetDatasetVersion_sync_flattened_resourceNames",
+      "title": "GetDatasetVersionResourceNames",
+      "description": "Snippet for GetDatasetVersion",
+      "file": "DatasetServiceClient.GetDatasetVersionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDatasetVersion",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.GetDatasetVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DatasetVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.DatasetVersion",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "GetDatasetVersion",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.GetDatasetVersion",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_GetDatasetVersion_async_flattened_resourceNames",
+      "title": "GetDatasetVersionResourceNamesAsync",
+      "description": "Snippet for GetDatasetVersionAsync",
+      "file": "DatasetServiceClient.GetDatasetVersionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDatasetVersionAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.GetDatasetVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DatasetVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.DatasetVersion>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "GetDatasetVersion",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.GetDatasetVersion",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_ListDatasetVersions_sync",
+      "title": "ListDatasetVersionsRequestObject",
+      "description": "Snippet for ListDatasetVersions",
+      "file": "DatasetServiceClient.ListDatasetVersionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatasetVersions",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.ListDatasetVersions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ListDatasetVersionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListDatasetVersionsResponse, Google.Cloud.AIPlatform.V1.DatasetVersion>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "ListDatasetVersions",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.ListDatasetVersions",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_ListDatasetVersions_async",
+      "title": "ListDatasetVersionsRequestObjectAsync",
+      "description": "Snippet for ListDatasetVersionsAsync",
+      "file": "DatasetServiceClient.ListDatasetVersionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatasetVersionsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.ListDatasetVersionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ListDatasetVersionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListDatasetVersionsResponse, Google.Cloud.AIPlatform.V1.DatasetVersion>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "ListDatasetVersions",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.ListDatasetVersions",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 84,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 82,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_ListDatasetVersions_sync_flattened",
+      "title": "ListDatasetVersions",
+      "description": "Snippet for ListDatasetVersions",
+      "file": "DatasetServiceClient.ListDatasetVersionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatasetVersions",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.ListDatasetVersions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListDatasetVersionsResponse, Google.Cloud.AIPlatform.V1.DatasetVersion>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "ListDatasetVersions",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.ListDatasetVersions",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_ListDatasetVersions_async_flattened",
+      "title": "ListDatasetVersionsAsync",
+      "description": "Snippet for ListDatasetVersionsAsync",
+      "file": "DatasetServiceClient.ListDatasetVersionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatasetVersionsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.ListDatasetVersionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListDatasetVersionsResponse, Google.Cloud.AIPlatform.V1.DatasetVersion>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "ListDatasetVersions",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.ListDatasetVersions",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_ListDatasetVersions_sync_flattened_resourceNames",
+      "title": "ListDatasetVersionsResourceNames",
+      "description": "Snippet for ListDatasetVersions",
+      "file": "DatasetServiceClient.ListDatasetVersionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatasetVersions",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.ListDatasetVersions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DatasetName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListDatasetVersionsResponse, Google.Cloud.AIPlatform.V1.DatasetVersion>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "ListDatasetVersions",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.ListDatasetVersions",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_ListDatasetVersions_async_flattened_resourceNames",
+      "title": "ListDatasetVersionsResourceNamesAsync",
+      "description": "Snippet for ListDatasetVersionsAsync",
+      "file": "DatasetServiceClient.ListDatasetVersionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatasetVersionsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.ListDatasetVersionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DatasetName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListDatasetVersionsResponse, Google.Cloud.AIPlatform.V1.DatasetVersion>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "ListDatasetVersions",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.ListDatasetVersions",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_RestoreDatasetVersion_sync",
+      "title": "RestoreDatasetVersionRequestObject",
+      "description": "Snippet for RestoreDatasetVersion",
+      "file": "DatasetServiceClient.RestoreDatasetVersionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RestoreDatasetVersion",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.RestoreDatasetVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.RestoreDatasetVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.DatasetVersion, Google.Cloud.AIPlatform.V1.RestoreDatasetVersionOperationMetadata>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "RestoreDatasetVersion",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.RestoreDatasetVersion",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_RestoreDatasetVersion_async",
+      "title": "RestoreDatasetVersionRequestObjectAsync",
+      "description": "Snippet for RestoreDatasetVersionAsync",
+      "file": "DatasetServiceClient.RestoreDatasetVersionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RestoreDatasetVersionAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.RestoreDatasetVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.RestoreDatasetVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.DatasetVersion, Google.Cloud.AIPlatform.V1.RestoreDatasetVersionOperationMetadata>>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "RestoreDatasetVersion",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.RestoreDatasetVersion",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_RestoreDatasetVersion_sync_flattened",
+      "title": "RestoreDatasetVersion",
+      "description": "Snippet for RestoreDatasetVersion",
+      "file": "DatasetServiceClient.RestoreDatasetVersionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RestoreDatasetVersion",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.RestoreDatasetVersion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.DatasetVersion, Google.Cloud.AIPlatform.V1.RestoreDatasetVersionOperationMetadata>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "RestoreDatasetVersion",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.RestoreDatasetVersion",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_RestoreDatasetVersion_async_flattened",
+      "title": "RestoreDatasetVersionAsync",
+      "description": "Snippet for RestoreDatasetVersionAsync",
+      "file": "DatasetServiceClient.RestoreDatasetVersionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RestoreDatasetVersionAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.RestoreDatasetVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.DatasetVersion, Google.Cloud.AIPlatform.V1.RestoreDatasetVersionOperationMetadata>>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "RestoreDatasetVersion",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.RestoreDatasetVersion",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_RestoreDatasetVersion_sync_flattened_resourceNames",
+      "title": "RestoreDatasetVersionResourceNames",
+      "description": "Snippet for RestoreDatasetVersion",
+      "file": "DatasetServiceClient.RestoreDatasetVersionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RestoreDatasetVersion",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.RestoreDatasetVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DatasetVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.DatasetVersion, Google.Cloud.AIPlatform.V1.RestoreDatasetVersionOperationMetadata>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "RestoreDatasetVersion",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.RestoreDatasetVersion",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_RestoreDatasetVersion_async_flattened_resourceNames",
+      "title": "RestoreDatasetVersionResourceNamesAsync",
+      "description": "Snippet for RestoreDatasetVersionAsync",
+      "file": "DatasetServiceClient.RestoreDatasetVersionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RestoreDatasetVersionAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.RestoreDatasetVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DatasetVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.DatasetVersion, Google.Cloud.AIPlatform.V1.RestoreDatasetVersionOperationMetadata>>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "RestoreDatasetVersion",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.RestoreDatasetVersion",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1_generated_DatasetService_ListDataItems_sync",
       "title": "ListDataItemsRequestObject",
       "description": "Snippet for ListDataItems",

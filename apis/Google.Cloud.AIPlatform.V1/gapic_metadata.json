@@ -16,10 +16,22 @@
                 "CreateDatasetAsync"
               ]
             },
+            "CreateDatasetVersion": {
+              "methods": [
+                "CreateDatasetVersion",
+                "CreateDatasetVersionAsync"
+              ]
+            },
             "DeleteDataset": {
               "methods": [
                 "DeleteDataset",
                 "DeleteDatasetAsync"
+              ]
+            },
+            "DeleteDatasetVersion": {
+              "methods": [
+                "DeleteDatasetVersion",
+                "DeleteDatasetVersionAsync"
               ]
             },
             "DeleteSavedQuery": {
@@ -46,6 +58,12 @@
                 "GetDatasetAsync"
               ]
             },
+            "GetDatasetVersion": {
+              "methods": [
+                "GetDatasetVersion",
+                "GetDatasetVersionAsync"
+              ]
+            },
             "ImportData": {
               "methods": [
                 "ImportData",
@@ -64,6 +82,12 @@
                 "ListDataItemsAsync"
               ]
             },
+            "ListDatasetVersions": {
+              "methods": [
+                "ListDatasetVersions",
+                "ListDatasetVersionsAsync"
+              ]
+            },
             "ListDatasets": {
               "methods": [
                 "ListDatasets",
@@ -74,6 +98,12 @@
               "methods": [
                 "ListSavedQueries",
                 "ListSavedQueriesAsync"
+              ]
+            },
+            "RestoreDatasetVersion": {
+              "methods": [
+                "RestoreDatasetVersion",
+                "RestoreDatasetVersionAsync"
               ]
             },
             "SearchDataItems": {

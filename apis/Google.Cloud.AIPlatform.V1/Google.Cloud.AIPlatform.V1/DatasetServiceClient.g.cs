@@ -61,6 +61,14 @@ namespace Google.Cloud.AIPlatform.V1
             ImportDataOperationsSettings = existing.ImportDataOperationsSettings.Clone();
             ExportDataSettings = existing.ExportDataSettings;
             ExportDataOperationsSettings = existing.ExportDataOperationsSettings.Clone();
+            CreateDatasetVersionSettings = existing.CreateDatasetVersionSettings;
+            CreateDatasetVersionOperationsSettings = existing.CreateDatasetVersionOperationsSettings.Clone();
+            DeleteDatasetVersionSettings = existing.DeleteDatasetVersionSettings;
+            DeleteDatasetVersionOperationsSettings = existing.DeleteDatasetVersionOperationsSettings.Clone();
+            GetDatasetVersionSettings = existing.GetDatasetVersionSettings;
+            ListDatasetVersionsSettings = existing.ListDatasetVersionsSettings;
+            RestoreDatasetVersionSettings = existing.RestoreDatasetVersionSettings;
+            RestoreDatasetVersionOperationsSettings = existing.RestoreDatasetVersionOperationsSettings.Clone();
             ListDataItemsSettings = existing.ListDataItemsSettings;
             SearchDataItemsSettings = existing.SearchDataItemsSettings;
             ListSavedQueriesSettings = existing.ListSavedQueriesSettings;
@@ -227,6 +235,121 @@ namespace Google.Cloud.AIPlatform.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings ExportDataOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DatasetServiceClient.CreateDatasetVersion</c> and <c>DatasetServiceClient.CreateDatasetVersionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateDatasetVersionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DatasetServiceClient.CreateDatasetVersion</c> and
+        /// <c>DatasetServiceClient.CreateDatasetVersionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateDatasetVersionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DatasetServiceClient.DeleteDatasetVersion</c> and <c>DatasetServiceClient.DeleteDatasetVersionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteDatasetVersionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DatasetServiceClient.DeleteDatasetVersion</c> and
+        /// <c>DatasetServiceClient.DeleteDatasetVersionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteDatasetVersionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DatasetServiceClient.GetDatasetVersion</c> and <c>DatasetServiceClient.GetDatasetVersionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetDatasetVersionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DatasetServiceClient.ListDatasetVersions</c> and <c>DatasetServiceClient.ListDatasetVersionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListDatasetVersionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DatasetServiceClient.RestoreDatasetVersion</c> and <c>DatasetServiceClient.RestoreDatasetVersionAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RestoreDatasetVersionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DatasetServiceClient.RestoreDatasetVersion</c> and
+        /// <c>DatasetServiceClient.RestoreDatasetVersionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings RestoreDatasetVersionOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -1447,6 +1570,711 @@ namespace Google.Cloud.AIPlatform.V1
             ExportDataAsync(name, exportConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Create a version from a Dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DatasetVersion, CreateDatasetVersionOperationMetadata> CreateDatasetVersion(CreateDatasetVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a version from a Dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DatasetVersion, CreateDatasetVersionOperationMetadata>> CreateDatasetVersionAsync(CreateDatasetVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a version from a Dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DatasetVersion, CreateDatasetVersionOperationMetadata>> CreateDatasetVersionAsync(CreateDatasetVersionRequest request, st::CancellationToken cancellationToken) =>
+            CreateDatasetVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateDatasetVersion</c>.</summary>
+        public virtual lro::OperationsClient CreateDatasetVersionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateDatasetVersion</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<DatasetVersion, CreateDatasetVersionOperationMetadata> PollOnceCreateDatasetVersion(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DatasetVersion, CreateDatasetVersionOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateDatasetVersionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateDatasetVersion</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<DatasetVersion, CreateDatasetVersionOperationMetadata>> PollOnceCreateDatasetVersionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DatasetVersion, CreateDatasetVersionOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateDatasetVersionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Create a version from a Dataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the Dataset resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}`
+        /// </param>
+        /// <param name="datasetVersion">
+        /// Required. The version to be created. The same CMEK policies with the
+        /// original Dataset will be applied the dataset version. So here we don't need
+        /// to specify the EncryptionSpecType here.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DatasetVersion, CreateDatasetVersionOperationMetadata> CreateDatasetVersion(string parent, DatasetVersion datasetVersion, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDatasetVersion(new CreateDatasetVersionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                DatasetVersion = gax::GaxPreconditions.CheckNotNull(datasetVersion, nameof(datasetVersion)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a version from a Dataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the Dataset resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}`
+        /// </param>
+        /// <param name="datasetVersion">
+        /// Required. The version to be created. The same CMEK policies with the
+        /// original Dataset will be applied the dataset version. So here we don't need
+        /// to specify the EncryptionSpecType here.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DatasetVersion, CreateDatasetVersionOperationMetadata>> CreateDatasetVersionAsync(string parent, DatasetVersion datasetVersion, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDatasetVersionAsync(new CreateDatasetVersionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                DatasetVersion = gax::GaxPreconditions.CheckNotNull(datasetVersion, nameof(datasetVersion)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a version from a Dataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the Dataset resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}`
+        /// </param>
+        /// <param name="datasetVersion">
+        /// Required. The version to be created. The same CMEK policies with the
+        /// original Dataset will be applied the dataset version. So here we don't need
+        /// to specify the EncryptionSpecType here.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DatasetVersion, CreateDatasetVersionOperationMetadata>> CreateDatasetVersionAsync(string parent, DatasetVersion datasetVersion, st::CancellationToken cancellationToken) =>
+            CreateDatasetVersionAsync(parent, datasetVersion, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create a version from a Dataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the Dataset resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}`
+        /// </param>
+        /// <param name="datasetVersion">
+        /// Required. The version to be created. The same CMEK policies with the
+        /// original Dataset will be applied the dataset version. So here we don't need
+        /// to specify the EncryptionSpecType here.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DatasetVersion, CreateDatasetVersionOperationMetadata> CreateDatasetVersion(DatasetName parent, DatasetVersion datasetVersion, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDatasetVersion(new CreateDatasetVersionRequest
+            {
+                ParentAsDatasetName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                DatasetVersion = gax::GaxPreconditions.CheckNotNull(datasetVersion, nameof(datasetVersion)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a version from a Dataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the Dataset resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}`
+        /// </param>
+        /// <param name="datasetVersion">
+        /// Required. The version to be created. The same CMEK policies with the
+        /// original Dataset will be applied the dataset version. So here we don't need
+        /// to specify the EncryptionSpecType here.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DatasetVersion, CreateDatasetVersionOperationMetadata>> CreateDatasetVersionAsync(DatasetName parent, DatasetVersion datasetVersion, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDatasetVersionAsync(new CreateDatasetVersionRequest
+            {
+                ParentAsDatasetName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                DatasetVersion = gax::GaxPreconditions.CheckNotNull(datasetVersion, nameof(datasetVersion)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a version from a Dataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the Dataset resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}`
+        /// </param>
+        /// <param name="datasetVersion">
+        /// Required. The version to be created. The same CMEK policies with the
+        /// original Dataset will be applied the dataset version. So here we don't need
+        /// to specify the EncryptionSpecType here.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DatasetVersion, CreateDatasetVersionOperationMetadata>> CreateDatasetVersionAsync(DatasetName parent, DatasetVersion datasetVersion, st::CancellationToken cancellationToken) =>
+            CreateDatasetVersionAsync(parent, datasetVersion, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a Dataset version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteOperationMetadata> DeleteDatasetVersion(DeleteDatasetVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a Dataset version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteDatasetVersionAsync(DeleteDatasetVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a Dataset version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteDatasetVersionAsync(DeleteDatasetVersionRequest request, st::CancellationToken cancellationToken) =>
+            DeleteDatasetVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteDatasetVersion</c>.</summary>
+        public virtual lro::OperationsClient DeleteDatasetVersionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteDatasetVersion</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteOperationMetadata> PollOnceDeleteDatasetVersion(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, DeleteOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteDatasetVersionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteDatasetVersion</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> PollOnceDeleteDatasetVersionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, DeleteOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteDatasetVersionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a Dataset version.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Dataset version to delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}/datasetVersions/{dataset_version}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteOperationMetadata> DeleteDatasetVersion(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDatasetVersion(new DeleteDatasetVersionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a Dataset version.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Dataset version to delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}/datasetVersions/{dataset_version}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteDatasetVersionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDatasetVersionAsync(new DeleteDatasetVersionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a Dataset version.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Dataset version to delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}/datasetVersions/{dataset_version}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteDatasetVersionAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteDatasetVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a Dataset version.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Dataset version to delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}/datasetVersions/{dataset_version}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteOperationMetadata> DeleteDatasetVersion(DatasetVersionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDatasetVersion(new DeleteDatasetVersionRequest
+            {
+                DatasetVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a Dataset version.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Dataset version to delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}/datasetVersions/{dataset_version}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteDatasetVersionAsync(DatasetVersionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDatasetVersionAsync(new DeleteDatasetVersionRequest
+            {
+                DatasetVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a Dataset version.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Dataset version to delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}/datasetVersions/{dataset_version}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteDatasetVersionAsync(DatasetVersionName name, st::CancellationToken cancellationToken) =>
+            DeleteDatasetVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a Dataset version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DatasetVersion GetDatasetVersion(GetDatasetVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a Dataset version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DatasetVersion> GetDatasetVersionAsync(GetDatasetVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a Dataset version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DatasetVersion> GetDatasetVersionAsync(GetDatasetVersionRequest request, st::CancellationToken cancellationToken) =>
+            GetDatasetVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a Dataset version.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Dataset version to delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}/datasetVersions/{dataset_version}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DatasetVersion GetDatasetVersion(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDatasetVersion(new GetDatasetVersionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a Dataset version.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Dataset version to delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}/datasetVersions/{dataset_version}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DatasetVersion> GetDatasetVersionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDatasetVersionAsync(new GetDatasetVersionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a Dataset version.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Dataset version to delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}/datasetVersions/{dataset_version}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DatasetVersion> GetDatasetVersionAsync(string name, st::CancellationToken cancellationToken) =>
+            GetDatasetVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a Dataset version.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Dataset version to delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}/datasetVersions/{dataset_version}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DatasetVersion GetDatasetVersion(DatasetVersionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDatasetVersion(new GetDatasetVersionRequest
+            {
+                DatasetVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a Dataset version.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Dataset version to delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}/datasetVersions/{dataset_version}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DatasetVersion> GetDatasetVersionAsync(DatasetVersionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDatasetVersionAsync(new GetDatasetVersionRequest
+            {
+                DatasetVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a Dataset version.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Dataset version to delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}/datasetVersions/{dataset_version}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DatasetVersion> GetDatasetVersionAsync(DatasetVersionName name, st::CancellationToken cancellationToken) =>
+            GetDatasetVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists DatasetVersions in a Dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DatasetVersion"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDatasetVersionsResponse, DatasetVersion> ListDatasetVersions(ListDatasetVersionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists DatasetVersions in a Dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DatasetVersion"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDatasetVersionsResponse, DatasetVersion> ListDatasetVersionsAsync(ListDatasetVersionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists DatasetVersions in a Dataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Dataset to list DatasetVersions from.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DatasetVersion"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDatasetVersionsResponse, DatasetVersion> ListDatasetVersions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDatasetVersions(new ListDatasetVersionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists DatasetVersions in a Dataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Dataset to list DatasetVersions from.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DatasetVersion"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDatasetVersionsResponse, DatasetVersion> ListDatasetVersionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDatasetVersionsAsync(new ListDatasetVersionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists DatasetVersions in a Dataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Dataset to list DatasetVersions from.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DatasetVersion"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDatasetVersionsResponse, DatasetVersion> ListDatasetVersions(DatasetName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDatasetVersions(new ListDatasetVersionsRequest
+            {
+                ParentAsDatasetName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists DatasetVersions in a Dataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Dataset to list DatasetVersions from.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DatasetVersion"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDatasetVersionsResponse, DatasetVersion> ListDatasetVersionsAsync(DatasetName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDatasetVersionsAsync(new ListDatasetVersionsRequest
+            {
+                ParentAsDatasetName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Restores a dataset version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DatasetVersion, RestoreDatasetVersionOperationMetadata> RestoreDatasetVersion(RestoreDatasetVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Restores a dataset version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DatasetVersion, RestoreDatasetVersionOperationMetadata>> RestoreDatasetVersionAsync(RestoreDatasetVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Restores a dataset version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DatasetVersion, RestoreDatasetVersionOperationMetadata>> RestoreDatasetVersionAsync(RestoreDatasetVersionRequest request, st::CancellationToken cancellationToken) =>
+            RestoreDatasetVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>RestoreDatasetVersion</c>.</summary>
+        public virtual lro::OperationsClient RestoreDatasetVersionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>RestoreDatasetVersion</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<DatasetVersion, RestoreDatasetVersionOperationMetadata> PollOnceRestoreDatasetVersion(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DatasetVersion, RestoreDatasetVersionOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RestoreDatasetVersionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RestoreDatasetVersion</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<DatasetVersion, RestoreDatasetVersionOperationMetadata>> PollOnceRestoreDatasetVersionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DatasetVersion, RestoreDatasetVersionOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RestoreDatasetVersionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Restores a dataset version.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DatasetVersion resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}/datasetVersions/{dataset_version}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DatasetVersion, RestoreDatasetVersionOperationMetadata> RestoreDatasetVersion(string name, gaxgrpc::CallSettings callSettings = null) =>
+            RestoreDatasetVersion(new RestoreDatasetVersionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Restores a dataset version.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DatasetVersion resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}/datasetVersions/{dataset_version}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DatasetVersion, RestoreDatasetVersionOperationMetadata>> RestoreDatasetVersionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            RestoreDatasetVersionAsync(new RestoreDatasetVersionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Restores a dataset version.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DatasetVersion resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}/datasetVersions/{dataset_version}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DatasetVersion, RestoreDatasetVersionOperationMetadata>> RestoreDatasetVersionAsync(string name, st::CancellationToken cancellationToken) =>
+            RestoreDatasetVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Restores a dataset version.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DatasetVersion resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}/datasetVersions/{dataset_version}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DatasetVersion, RestoreDatasetVersionOperationMetadata> RestoreDatasetVersion(DatasetVersionName name, gaxgrpc::CallSettings callSettings = null) =>
+            RestoreDatasetVersion(new RestoreDatasetVersionRequest
+            {
+                DatasetVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Restores a dataset version.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DatasetVersion resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}/datasetVersions/{dataset_version}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DatasetVersion, RestoreDatasetVersionOperationMetadata>> RestoreDatasetVersionAsync(DatasetVersionName name, gaxgrpc::CallSettings callSettings = null) =>
+            RestoreDatasetVersionAsync(new RestoreDatasetVersionRequest
+            {
+                DatasetVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Restores a dataset version.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DatasetVersion resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}/datasetVersions/{dataset_version}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DatasetVersion, RestoreDatasetVersionOperationMetadata>> RestoreDatasetVersionAsync(DatasetVersionName name, st::CancellationToken cancellationToken) =>
+            RestoreDatasetVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Lists DataItems in a Dataset.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2111,6 +2939,16 @@ namespace Google.Cloud.AIPlatform.V1
 
         private readonly gaxgrpc::ApiCall<ExportDataRequest, lro::Operation> _callExportData;
 
+        private readonly gaxgrpc::ApiCall<CreateDatasetVersionRequest, lro::Operation> _callCreateDatasetVersion;
+
+        private readonly gaxgrpc::ApiCall<DeleteDatasetVersionRequest, lro::Operation> _callDeleteDatasetVersion;
+
+        private readonly gaxgrpc::ApiCall<GetDatasetVersionRequest, DatasetVersion> _callGetDatasetVersion;
+
+        private readonly gaxgrpc::ApiCall<ListDatasetVersionsRequest, ListDatasetVersionsResponse> _callListDatasetVersions;
+
+        private readonly gaxgrpc::ApiCall<RestoreDatasetVersionRequest, lro::Operation> _callRestoreDatasetVersion;
+
         private readonly gaxgrpc::ApiCall<ListDataItemsRequest, ListDataItemsResponse> _callListDataItems;
 
         private readonly gaxgrpc::ApiCall<SearchDataItemsRequest, SearchDataItemsResponse> _callSearchDataItems;
@@ -2138,6 +2976,9 @@ namespace Google.Cloud.AIPlatform.V1
             DeleteDatasetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDatasetOperationsSettings, logger);
             ImportDataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportDataOperationsSettings, logger);
             ExportDataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportDataOperationsSettings, logger);
+            CreateDatasetVersionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateDatasetVersionOperationsSettings, logger);
+            DeleteDatasetVersionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDatasetVersionOperationsSettings, logger);
+            RestoreDatasetVersionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RestoreDatasetVersionOperationsSettings, logger);
             DeleteSavedQueryOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteSavedQueryOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
@@ -2162,6 +3003,21 @@ namespace Google.Cloud.AIPlatform.V1
             _callExportData = clientHelper.BuildApiCall<ExportDataRequest, lro::Operation>("ExportData", grpcClient.ExportDataAsync, grpcClient.ExportData, effectiveSettings.ExportDataSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callExportData);
             Modify_ExportDataApiCall(ref _callExportData);
+            _callCreateDatasetVersion = clientHelper.BuildApiCall<CreateDatasetVersionRequest, lro::Operation>("CreateDatasetVersion", grpcClient.CreateDatasetVersionAsync, grpcClient.CreateDatasetVersion, effectiveSettings.CreateDatasetVersionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateDatasetVersion);
+            Modify_CreateDatasetVersionApiCall(ref _callCreateDatasetVersion);
+            _callDeleteDatasetVersion = clientHelper.BuildApiCall<DeleteDatasetVersionRequest, lro::Operation>("DeleteDatasetVersion", grpcClient.DeleteDatasetVersionAsync, grpcClient.DeleteDatasetVersion, effectiveSettings.DeleteDatasetVersionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteDatasetVersion);
+            Modify_DeleteDatasetVersionApiCall(ref _callDeleteDatasetVersion);
+            _callGetDatasetVersion = clientHelper.BuildApiCall<GetDatasetVersionRequest, DatasetVersion>("GetDatasetVersion", grpcClient.GetDatasetVersionAsync, grpcClient.GetDatasetVersion, effectiveSettings.GetDatasetVersionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetDatasetVersion);
+            Modify_GetDatasetVersionApiCall(ref _callGetDatasetVersion);
+            _callListDatasetVersions = clientHelper.BuildApiCall<ListDatasetVersionsRequest, ListDatasetVersionsResponse>("ListDatasetVersions", grpcClient.ListDatasetVersionsAsync, grpcClient.ListDatasetVersions, effectiveSettings.ListDatasetVersionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListDatasetVersions);
+            Modify_ListDatasetVersionsApiCall(ref _callListDatasetVersions);
+            _callRestoreDatasetVersion = clientHelper.BuildApiCall<RestoreDatasetVersionRequest, lro::Operation>("RestoreDatasetVersion", grpcClient.RestoreDatasetVersionAsync, grpcClient.RestoreDatasetVersion, effectiveSettings.RestoreDatasetVersionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callRestoreDatasetVersion);
+            Modify_RestoreDatasetVersionApiCall(ref _callRestoreDatasetVersion);
             _callListDataItems = clientHelper.BuildApiCall<ListDataItemsRequest, ListDataItemsResponse>("ListDataItems", grpcClient.ListDataItemsAsync, grpcClient.ListDataItems, effectiveSettings.ListDataItemsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDataItems);
             Modify_ListDataItemsApiCall(ref _callListDataItems);
@@ -2199,6 +3055,16 @@ namespace Google.Cloud.AIPlatform.V1
 
         partial void Modify_ExportDataApiCall(ref gaxgrpc::ApiCall<ExportDataRequest, lro::Operation> call);
 
+        partial void Modify_CreateDatasetVersionApiCall(ref gaxgrpc::ApiCall<CreateDatasetVersionRequest, lro::Operation> call);
+
+        partial void Modify_DeleteDatasetVersionApiCall(ref gaxgrpc::ApiCall<DeleteDatasetVersionRequest, lro::Operation> call);
+
+        partial void Modify_GetDatasetVersionApiCall(ref gaxgrpc::ApiCall<GetDatasetVersionRequest, DatasetVersion> call);
+
+        partial void Modify_ListDatasetVersionsApiCall(ref gaxgrpc::ApiCall<ListDatasetVersionsRequest, ListDatasetVersionsResponse> call);
+
+        partial void Modify_RestoreDatasetVersionApiCall(ref gaxgrpc::ApiCall<RestoreDatasetVersionRequest, lro::Operation> call);
+
         partial void Modify_ListDataItemsApiCall(ref gaxgrpc::ApiCall<ListDataItemsRequest, ListDataItemsResponse> call);
 
         partial void Modify_SearchDataItemsApiCall(ref gaxgrpc::ApiCall<SearchDataItemsRequest, SearchDataItemsResponse> call);
@@ -2235,6 +3101,16 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_ImportDataRequest(ref ImportDataRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ExportDataRequest(ref ExportDataRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateDatasetVersionRequest(ref CreateDatasetVersionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteDatasetVersionRequest(ref DeleteDatasetVersionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetDatasetVersionRequest(ref GetDatasetVersionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListDatasetVersionsRequest(ref ListDatasetVersionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RestoreDatasetVersionRequest(ref RestoreDatasetVersionRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListDataItemsRequest(ref ListDataItemsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2428,6 +3304,135 @@ namespace Google.Cloud.AIPlatform.V1
             return new lro::Operation<ExportDataResponse, ExportDataOperationMetadata>(await _callExportData.Async(request, callSettings).ConfigureAwait(false), ExportDataOperationsClient);
         }
 
+        /// <summary>The long-running operations client for <c>CreateDatasetVersion</c>.</summary>
+        public override lro::OperationsClient CreateDatasetVersionOperationsClient { get; }
+
+        /// <summary>
+        /// Create a version from a Dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<DatasetVersion, CreateDatasetVersionOperationMetadata> CreateDatasetVersion(CreateDatasetVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateDatasetVersionRequest(ref request, ref callSettings);
+            return new lro::Operation<DatasetVersion, CreateDatasetVersionOperationMetadata>(_callCreateDatasetVersion.Sync(request, callSettings), CreateDatasetVersionOperationsClient);
+        }
+
+        /// <summary>
+        /// Create a version from a Dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<DatasetVersion, CreateDatasetVersionOperationMetadata>> CreateDatasetVersionAsync(CreateDatasetVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateDatasetVersionRequest(ref request, ref callSettings);
+            return new lro::Operation<DatasetVersion, CreateDatasetVersionOperationMetadata>(await _callCreateDatasetVersion.Async(request, callSettings).ConfigureAwait(false), CreateDatasetVersionOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteDatasetVersion</c>.</summary>
+        public override lro::OperationsClient DeleteDatasetVersionOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a Dataset version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, DeleteOperationMetadata> DeleteDatasetVersion(DeleteDatasetVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteDatasetVersionRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, DeleteOperationMetadata>(_callDeleteDatasetVersion.Sync(request, callSettings), DeleteDatasetVersionOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a Dataset version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteDatasetVersionAsync(DeleteDatasetVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteDatasetVersionRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, DeleteOperationMetadata>(await _callDeleteDatasetVersion.Async(request, callSettings).ConfigureAwait(false), DeleteDatasetVersionOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets a Dataset version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override DatasetVersion GetDatasetVersion(GetDatasetVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDatasetVersionRequest(ref request, ref callSettings);
+            return _callGetDatasetVersion.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a Dataset version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<DatasetVersion> GetDatasetVersionAsync(GetDatasetVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDatasetVersionRequest(ref request, ref callSettings);
+            return _callGetDatasetVersion.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists DatasetVersions in a Dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DatasetVersion"/> resources.</returns>
+        public override gax::PagedEnumerable<ListDatasetVersionsResponse, DatasetVersion> ListDatasetVersions(ListDatasetVersionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDatasetVersionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListDatasetVersionsRequest, ListDatasetVersionsResponse, DatasetVersion>(_callListDatasetVersions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists DatasetVersions in a Dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DatasetVersion"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListDatasetVersionsResponse, DatasetVersion> ListDatasetVersionsAsync(ListDatasetVersionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDatasetVersionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListDatasetVersionsRequest, ListDatasetVersionsResponse, DatasetVersion>(_callListDatasetVersions, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>RestoreDatasetVersion</c>.</summary>
+        public override lro::OperationsClient RestoreDatasetVersionOperationsClient { get; }
+
+        /// <summary>
+        /// Restores a dataset version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<DatasetVersion, RestoreDatasetVersionOperationMetadata> RestoreDatasetVersion(RestoreDatasetVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RestoreDatasetVersionRequest(ref request, ref callSettings);
+            return new lro::Operation<DatasetVersion, RestoreDatasetVersionOperationMetadata>(_callRestoreDatasetVersion.Sync(request, callSettings), RestoreDatasetVersionOperationsClient);
+        }
+
+        /// <summary>
+        /// Restores a dataset version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<DatasetVersion, RestoreDatasetVersionOperationMetadata>> RestoreDatasetVersionAsync(RestoreDatasetVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RestoreDatasetVersionRequest(ref request, ref callSettings);
+            return new lro::Operation<DatasetVersion, RestoreDatasetVersionOperationMetadata>(await _callRestoreDatasetVersion.Async(request, callSettings).ConfigureAwait(false), RestoreDatasetVersionOperationsClient);
+        }
+
         /// <summary>
         /// Lists DataItems in a Dataset.
         /// </summary>
@@ -2580,6 +3585,10 @@ namespace Google.Cloud.AIPlatform.V1
     {
     }
 
+    public partial class ListDatasetVersionsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListDataItemsRequest : gaxgrpc::IPageRequest
     {
     }
@@ -2600,6 +3609,14 @@ namespace Google.Cloud.AIPlatform.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Dataset> GetEnumerator() => Datasets.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListDatasetVersionsResponse : gaxgrpc::IPageResponse<DatasetVersion>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<DatasetVersion> GetEnumerator() => DatasetVersions.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

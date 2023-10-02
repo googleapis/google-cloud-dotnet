@@ -819,7 +819,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         [pbr::OriginalName("INDEX_UPDATE_METHOD_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
         /// BatchUpdate: user can call UpdateIndex with files on Cloud Storage of
-        /// datapoints to update.
+        /// Datapoints to update.
         /// </summary>
         [pbr::OriginalName("BATCH_UPDATE")] BatchUpdate = 1,
         /// <summary>
@@ -923,7 +923,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// Optional. List of Restrict of the datapoint, used to perform "restricted
     /// searches" where boolean rule are used to filter the subset of the database
-    /// eligible for matching. See:
+    /// eligible for matching. This uses categorical tokens. See:
     /// https://cloud.google.com/vertex-ai/docs/matching-engine/filtering
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1201,7 +1201,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         public const int NamespaceFieldNumber = 1;
         private string namespace_ = "";
         /// <summary>
-        /// The namespace of this restriction. eg: color.
+        /// The namespace of this restriction. e.g.: color.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1218,7 +1218,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             = pb::FieldCodec.ForString(18);
         private readonly pbc::RepeatedField<string> allowList_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// The attributes to allow in this namespace. eg: 'red'
+        /// The attributes to allow in this namespace. e.g.: 'red'
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1232,7 +1232,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             = pb::FieldCodec.ForString(26);
         private readonly pbc::RepeatedField<string> denyList_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// The attributes to deny in this namespace. eg: 'blue'
+        /// The attributes to deny in this namespace. e.g.: 'blue'
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

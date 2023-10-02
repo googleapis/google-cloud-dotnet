@@ -3275,7 +3275,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// final component of the Tensorboard experiment's resource name.
     ///
     /// This value should be 1-128 characters, and valid characters
-    /// are /[a-z][0-9]-/.
+    /// are `/[a-z][0-9]-/`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5282,7 +5282,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// component of the Tensorboard run's resource name.
     ///
     /// This value should be 1-128 characters, and valid characters
-    /// are /[a-z][0-9]-/.
+    /// are `/[a-z][0-9]-/`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
