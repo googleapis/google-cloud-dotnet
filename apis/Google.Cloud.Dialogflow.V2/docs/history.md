@@ -1,5 +1,11 @@
 # Version history
 
+## Version 4.14.0, released 2023-10-02
+
+### New features
+
+- Add the enable_extended_streaming flag ([commit 7db6a56](https://github.com/googleapis/google-cloud-dotnet/commit/7db6a5666de3ea07b6321f28e5df8dc42db2097d))
+
 ## Version 4.13.0, released 2023-09-06
 
 ### New features
