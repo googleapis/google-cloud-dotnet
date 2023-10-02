@@ -1,5 +1,13 @@
 # Version history
 
+## Version 2.13.0, released 2023-10-02
+
+### New features
+
+- Add support for AdvancedSettings ([commit adc32d3](https://github.com/googleapis/google-cloud-dotnet/commit/adc32d30748d6e97822a2add6d326e2618c2c0f7))
+- Add Intent import/export APIs ([commit adc32d3](https://github.com/googleapis/google-cloud-dotnet/commit/adc32d30748d6e97822a2add6d326e2618c2c0f7))
+- Add Inline destination ([commit adc32d3](https://github.com/googleapis/google-cloud-dotnet/commit/adc32d30748d6e97822a2add6d326e2618c2c0f7))
+
 ## Version 2.12.0, released 2023-09-18
 
 ### Bug fixes
