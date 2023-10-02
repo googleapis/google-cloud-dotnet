@@ -1691,7 +1691,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// generated.
     ///
     /// This value should be less than 128 characters, and valid characters
-    /// are /[a-z][0-9]-/.
+    /// are `/[a-z][0-9]-/`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

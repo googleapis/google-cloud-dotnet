@@ -88,24 +88,25 @@ namespace Google.Cloud.AIPlatform.V1 {
             "aWcuRXhwbGFuYXRpb25Db25maWcuRXhwbGFuYXRpb25CYXNlbGluZS5QcmVk",
             "aWN0aW9uRm9ybWF0Ik4KEFByZWRpY3Rpb25Gb3JtYXQSIQodUFJFRElDVElP",
             "Tl9GT1JNQVRfVU5TUEVDSUZJRUQQABIJCgVKU09OTBACEgwKCEJJR1FVRVJZ",
-            "EANCDQoLZGVzdGluYXRpb24izQEKGk1vZGVsTW9uaXRvcmluZ0FsZXJ0Q29u",
+            "EANCDQoLZGVzdGluYXRpb24ioAIKGk1vZGVsTW9uaXRvcmluZ0FsZXJ0Q29u",
             "ZmlnEmUKEmVtYWlsX2FsZXJ0X2NvbmZpZxgBIAEoCzJHLmdvb2dsZS5jbG91",
             "ZC5haXBsYXRmb3JtLnYxLk1vZGVsTW9uaXRvcmluZ0FsZXJ0Q29uZmlnLkVt",
-            "YWlsQWxlcnRDb25maWdIABIWCg5lbmFibGVfbG9nZ2luZxgCIAEoCBonChBF",
-            "bWFpbEFsZXJ0Q29uZmlnEhMKC3VzZXJfZW1haWxzGAEgAygJQgcKBWFsZXJ0",
-            "Ii8KD1RocmVzaG9sZENvbmZpZxIPCgV2YWx1ZRgBIAEoAUgAQgsKCXRocmVz",
-            "aG9sZCKcAQoQU2FtcGxpbmdTdHJhdGVneRJdChRyYW5kb21fc2FtcGxlX2Nv",
-            "bmZpZxgBIAEoCzI/Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlNhbXBs",
-            "aW5nU3RyYXRlZ3kuUmFuZG9tU2FtcGxlQ29uZmlnGikKElJhbmRvbVNhbXBs",
-            "ZUNvbmZpZxITCgtzYW1wbGVfcmF0ZRgBIAEoAULEAgoeY29tLmdvb2dsZS5j",
-            "bG91ZC5haXBsYXRmb3JtLnYxQhRNb2RlbE1vbml0b3JpbmdQcm90b1ABWj5j",
-            "bG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9y",
-            "bXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYx",
-            "ygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3Vk",
-            "OjpBSVBsYXRmb3JtOjpWMepBbwotbW9uaXRvcmluZy5nb29nbGVhcGlzLmNv",
-            "bS9Ob3RpZmljYXRpb25DaGFubmVsEj5wcm9qZWN0cy97cHJvamVjdH0vbm90",
-            "aWZpY2F0aW9uQ2hhbm5lbHMve25vdGlmaWNhdGlvbl9jaGFubmVsfWIGcHJv",
-            "dG8z"));
+            "YWlsQWxlcnRDb25maWdIABIWCg5lbmFibGVfbG9nZ2luZxgCIAEoCBJRChVu",
+            "b3RpZmljYXRpb25fY2hhbm5lbHMYAyADKAlCMvpBLwotbW9uaXRvcmluZy5n",
+            "b29nbGVhcGlzLmNvbS9Ob3RpZmljYXRpb25DaGFubmVsGicKEEVtYWlsQWxl",
+            "cnRDb25maWcSEwoLdXNlcl9lbWFpbHMYASADKAlCBwoFYWxlcnQiLwoPVGhy",
+            "ZXNob2xkQ29uZmlnEg8KBXZhbHVlGAEgASgBSABCCwoJdGhyZXNob2xkIpwB",
+            "ChBTYW1wbGluZ1N0cmF0ZWd5El0KFHJhbmRvbV9zYW1wbGVfY29uZmlnGAEg",
+            "ASgLMj8uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU2FtcGxpbmdTdHJh",
+            "dGVneS5SYW5kb21TYW1wbGVDb25maWcaKQoSUmFuZG9tU2FtcGxlQ29uZmln",
+            "EhMKC3NhbXBsZV9yYXRlGAEgASgBQsQCCh5jb20uZ29vZ2xlLmNsb3VkLmFp",
+            "cGxhdGZvcm0udjFCFE1vZGVsTW9uaXRvcmluZ1Byb3RvUAFaPmNsb3VkLmdv",
+            "b2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRmb3JtcGI7YWlw",
+            "bGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29n",
+            "bGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxh",
+            "dGZvcm06OlYx6kFvCi1tb25pdG9yaW5nLmdvb2dsZWFwaXMuY29tL05vdGlm",
+            "aWNhdGlvbkNoYW5uZWwSPnByb2plY3RzL3twcm9qZWN0fS9ub3RpZmljYXRp",
+            "b25DaGFubmVscy97bm90aWZpY2F0aW9uX2NoYW5uZWx9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -113,7 +114,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.TrainingPredictionSkewDetectionConfig), global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.TrainingPredictionSkewDetectionConfig.Parser, new[]{ "SkewThresholds", "AttributionScoreSkewThresholds", "DefaultSkewThreshold" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.PredictionDriftDetectionConfig), global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.PredictionDriftDetectionConfig.Parser, new[]{ "DriftThresholds", "AttributionScoreDriftThresholds", "DefaultDriftThreshold" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.ExplanationConfig), global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.ExplanationConfig.Parser, new[]{ "EnableFeatureAttributes", "ExplanationBaseline" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.ExplanationConfig.Types.ExplanationBaseline), global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.ExplanationConfig.Types.ExplanationBaseline.Parser, new[]{ "Gcs", "Bigquery", "PredictionFormat" }, new[]{ "Destination" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.ExplanationConfig.Types.ExplanationBaseline.Types.PredictionFormat) }, null, null)})}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringAlertConfig), global::Google.Cloud.AIPlatform.V1.ModelMonitoringAlertConfig.Parser, new[]{ "EmailAlertConfig", "EnableLogging" }, new[]{ "Alert" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringAlertConfig.Types.EmailAlertConfig), global::Google.Cloud.AIPlatform.V1.ModelMonitoringAlertConfig.Types.EmailAlertConfig.Parser, new[]{ "UserEmails" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringAlertConfig), global::Google.Cloud.AIPlatform.V1.ModelMonitoringAlertConfig.Parser, new[]{ "EmailAlertConfig", "EnableLogging", "NotificationChannels" }, new[]{ "Alert" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringAlertConfig.Types.EmailAlertConfig), global::Google.Cloud.AIPlatform.V1.ModelMonitoringAlertConfig.Types.EmailAlertConfig.Parser, new[]{ "UserEmails" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ThresholdConfig), global::Google.Cloud.AIPlatform.V1.ThresholdConfig.Parser, new[]{ "Value" }, new[]{ "Threshold" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SamplingStrategy), global::Google.Cloud.AIPlatform.V1.SamplingStrategy.Parser, new[]{ "RandomSampleConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SamplingStrategy.Types.RandomSampleConfig), global::Google.Cloud.AIPlatform.V1.SamplingStrategy.Types.RandomSampleConfig.Parser, new[]{ "SampleRate" }, null, null, null, null)})
           }));
@@ -2169,6 +2170,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ModelMonitoringAlertConfig(ModelMonitoringAlertConfig other) : this() {
       enableLogging_ = other.enableLogging_;
+      notificationChannels_ = other.notificationChannels_.Clone();
       switch (other.AlertCase) {
         case AlertOneofCase.EmailAlertConfig:
           EmailAlertConfig = other.EmailAlertConfig.Clone();
@@ -2218,6 +2220,22 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "notification_channels" field.</summary>
+    public const int NotificationChannelsFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_notificationChannels_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> notificationChannels_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Resource names of the NotificationChannels to send alert.
+    /// Must be of the format
+    /// `projects/&lt;project_id_or_number>/notificationChannels/&lt;channel_id>`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> NotificationChannels {
+      get { return notificationChannels_; }
+    }
+
     private object alert_;
     /// <summary>Enum of possible cases for the "alert" oneof.</summary>
     public enum AlertOneofCase {
@@ -2255,6 +2273,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (!object.Equals(EmailAlertConfig, other.EmailAlertConfig)) return false;
       if (EnableLogging != other.EnableLogging) return false;
+      if(!notificationChannels_.Equals(other.notificationChannels_)) return false;
       if (AlertCase != other.AlertCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2265,6 +2284,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       int hash = 1;
       if (alertCase_ == AlertOneofCase.EmailAlertConfig) hash ^= EmailAlertConfig.GetHashCode();
       if (EnableLogging != false) hash ^= EnableLogging.GetHashCode();
+      hash ^= notificationChannels_.GetHashCode();
       hash ^= (int) alertCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2292,6 +2312,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(16);
         output.WriteBool(EnableLogging);
       }
+      notificationChannels_.WriteTo(output, _repeated_notificationChannels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2310,6 +2331,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(16);
         output.WriteBool(EnableLogging);
       }
+      notificationChannels_.WriteTo(ref output, _repeated_notificationChannels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2326,6 +2348,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (EnableLogging != false) {
         size += 1 + 1;
       }
+      size += notificationChannels_.CalculateSize(_repeated_notificationChannels_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2341,6 +2364,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (other.EnableLogging != false) {
         EnableLogging = other.EnableLogging;
       }
+      notificationChannels_.Add(other.notificationChannels_);
       switch (other.AlertCase) {
         case AlertOneofCase.EmailAlertConfig:
           if (EmailAlertConfig == null) {
@@ -2378,6 +2402,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             EnableLogging = input.ReadBool();
             break;
           }
+          case 26: {
+            notificationChannels_.AddEntriesFrom(input, _repeated_notificationChannels_codec);
+            break;
+          }
         }
       }
     #endif
@@ -2404,6 +2432,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 16: {
             EnableLogging = input.ReadBool();
+            break;
+          }
+          case 26: {
+            notificationChannels_.AddEntriesFrom(ref input, _repeated_notificationChannels_codec);
             break;
           }
         }

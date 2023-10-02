@@ -1696,7 +1696,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// final component of the Tensorboard experiment's resource name.
         /// 
         /// This value should be 1-128 characters, and valid characters
-        /// are /[a-z][0-9]-/.
+        /// are `/[a-z][0-9]-/`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1724,7 +1724,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// final component of the Tensorboard experiment's resource name.
         /// 
         /// This value should be 1-128 characters, and valid characters
-        /// are /[a-z][0-9]-/.
+        /// are `/[a-z][0-9]-/`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1752,7 +1752,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// final component of the Tensorboard experiment's resource name.
         /// 
         /// This value should be 1-128 characters, and valid characters
-        /// are /[a-z][0-9]-/.
+        /// are `/[a-z][0-9]-/`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1775,7 +1775,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// final component of the Tensorboard experiment's resource name.
         /// 
         /// This value should be 1-128 characters, and valid characters
-        /// are /[a-z][0-9]-/.
+        /// are `/[a-z][0-9]-/`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1803,7 +1803,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// final component of the Tensorboard experiment's resource name.
         /// 
         /// This value should be 1-128 characters, and valid characters
-        /// are /[a-z][0-9]-/.
+        /// are `/[a-z][0-9]-/`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1831,7 +1831,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// final component of the Tensorboard experiment's resource name.
         /// 
         /// This value should be 1-128 characters, and valid characters
-        /// are /[a-z][0-9]-/.
+        /// are `/[a-z][0-9]-/`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2362,7 +2362,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// component of the Tensorboard run's resource name.
         /// 
         /// This value should be 1-128 characters, and valid characters
-        /// are /[a-z][0-9]-/.
+        /// are `/[a-z][0-9]-/`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2390,7 +2390,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// component of the Tensorboard run's resource name.
         /// 
         /// This value should be 1-128 characters, and valid characters
-        /// are /[a-z][0-9]-/.
+        /// are `/[a-z][0-9]-/`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2418,7 +2418,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// component of the Tensorboard run's resource name.
         /// 
         /// This value should be 1-128 characters, and valid characters
-        /// are /[a-z][0-9]-/.
+        /// are `/[a-z][0-9]-/`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2441,7 +2441,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// component of the Tensorboard run's resource name.
         /// 
         /// This value should be 1-128 characters, and valid characters
-        /// are /[a-z][0-9]-/.
+        /// are `/[a-z][0-9]-/`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2469,7 +2469,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// component of the Tensorboard run's resource name.
         /// 
         /// This value should be 1-128 characters, and valid characters
-        /// are /[a-z][0-9]-/.
+        /// are `/[a-z][0-9]-/`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2497,7 +2497,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// component of the Tensorboard run's resource name.
         /// 
         /// This value should be 1-128 characters, and valid characters
-        /// are /[a-z][0-9]-/.
+        /// are `/[a-z][0-9]-/`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

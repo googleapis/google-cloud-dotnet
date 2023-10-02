@@ -93,6 +93,66 @@ namespace Google.Cloud.AIPlatform.V1
         }
     }
 
+    public partial class CreateDatasetVersionRequest
+    {
+        /// <summary>
+        /// <see cref="DatasetName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public DatasetName ParentAsDatasetName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : DatasetName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteDatasetVersionRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::DatasetVersionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::DatasetVersionName DatasetVersionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::DatasetVersionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetDatasetVersionRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::DatasetVersionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::DatasetVersionName DatasetVersionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::DatasetVersionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListDatasetVersionsRequest
+    {
+        /// <summary>
+        /// <see cref="DatasetName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public DatasetName ParentAsDatasetName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : DatasetName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class RestoreDatasetVersionRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::DatasetVersionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::DatasetVersionName DatasetVersionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::DatasetVersionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ListDataItemsRequest
     {
         /// <summary>

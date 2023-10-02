@@ -966,7 +966,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Immutable. The ID of the DeployedModel. If not provided upon deployment,
     /// Vertex AI will generate a value for this ID.
     ///
-    /// This value should be 1-10 characters, and valid characters are /[0-9]/.
+    /// This value should be 1-10 characters, and valid characters are `/[0-9]/`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
