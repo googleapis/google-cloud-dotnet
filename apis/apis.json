@@ -2231,7 +2231,8 @@
         "Google.Api.Gax.Testing": "4.4.0",
         "Grpc.Core.Testing": "2.46.6",
         "System.ValueTuple": "4.5.0",
-        "Xunit.Combinatorial": "1.6.24"
+        "Xunit.Combinatorial": "1.6.24",
+        "Google.Cloud.Firestore.Admin.V1": "3.3.0"
       },
       "shortName": "firestore"
     },
