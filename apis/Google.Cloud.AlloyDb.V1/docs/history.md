@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.3.0, released 2023-10-02
+
+### New features
+
+- Add support to generate client certificate and get connection info for auth proxy in AlloyDB v1 ([commit 70f274b](https://github.com/googleapis/google-cloud-dotnet/commit/70f274b3403655350cb3db768ae678fda5543c22))
+
 ## Version 1.2.0, released 2023-09-25
 
 ### New features
