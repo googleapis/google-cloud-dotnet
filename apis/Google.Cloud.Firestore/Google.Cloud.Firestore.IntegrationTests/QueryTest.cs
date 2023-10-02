@@ -72,18 +72,20 @@ namespace Google.Cloud.Firestore.IntegrationTests
             Assert.Equal(orderedByReference, snapshot.Documents.Select(x => x.Id));
         }
 
-        [Fact(Skip = "Requires CreateIndex support")]
+        [SkippableFact]
         public async Task OrderBySecondaryAscending()
         {
+            Skip.If(_fixture.RunningOnEmulator);
             var query = _fixture.HighScoreCollection.OrderBy("Score").OrderBy("Level");
             var snapshot = await query.GetSnapshotAsync();
             var items = snapshot.Documents.Select(doc => doc.ConvertTo<HighScore>()).ToList();
             Assert.Equal(HighScore.Data.OrderBy(x => x.Score).ThenBy(x => x.Level), items);
         }
 
-        [Fact(Skip = "Requires CreateIndex support")]
+        [SkippableFact]
         public async Task OrderBySecondaryDescending()
         {
+            Skip.If(_fixture.RunningOnEmulator);
             var query = _fixture.HighScoreCollection.OrderBy("Score").OrderByDescending("Level");
             var snapshot = await query.GetSnapshotAsync();
             var items = snapshot.Documents.Select(doc => doc.ConvertTo<HighScore>()).ToList();
