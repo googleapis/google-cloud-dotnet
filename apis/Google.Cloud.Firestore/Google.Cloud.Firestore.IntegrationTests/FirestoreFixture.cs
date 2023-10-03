@@ -89,9 +89,13 @@ namespace Google.Cloud.Firestore.IntegrationTests
 
         private async Task PopulateCollections()
         {
-            await CreateIndex(HighScoreCollection, AscendingField("Score"), AscendingField("Level"));
-            await CreateIndex(HighScoreCollection, AscendingField("Score"), DescendingField("Level"));
-            await CreateIndex(StudentCollection, AscendingField("EnglishScore"), AscendingField("Level"), AscendingField("MathScore"), AscendingField("Name"));
+            var indexTasks = new[]
+            {
+                CreateIndex(HighScoreCollection, AscendingField("Score"), AscendingField("Level")),
+                CreateIndex(HighScoreCollection, AscendingField("Score"), DescendingField("Level")),
+                CreateIndex(StudentCollection, AscendingField("EnglishScore"), AscendingField("Level"), AscendingField("MathScore"), AscendingField("Name"))
+            };
+            await Task.WhenAll(indexTasks);
             await PopulateCollection(HighScoreCollection, HighScore.Data);
             await PopulateCollection(ArrayQueryCollection, ArrayDocument.Data);
             await PopulateCollection(StudentCollection, Student.Data);
