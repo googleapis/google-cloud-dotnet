@@ -2559,11 +2559,12 @@ namespace Google.Cloud.Firestore.V1 {
         public const int FieldPathFieldNumber = 2;
         private string fieldPath_ = "";
         /// <summary>
-        /// The relative path of the document being referenced.
+        /// A reference to a field in a document.
         ///
         /// Requires:
         ///
-        /// * Conform to [document field name][google.firestore.v1.Document.fields]
+        /// * MUST be a dot-delimited (`.`) string of segments, where each segment
+        /// conforms to [document field name][google.firestore.v1.Document.fields]
         /// limitations.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
