@@ -16,6 +16,7 @@ using Google.Cloud.ClientTesting;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xunit;
+using static Google.Cloud.Firestore.Admin.V1.Database.Types;
 
 namespace Google.Cloud.Firestore.IntegrationTests;
 
@@ -33,7 +34,7 @@ public class FirestoreMultipleDbTest
         string correctDbId = $"{dbIdPrefix}-correct";
         string incorrectDbId = $"{dbIdPrefix}-incorrect";
         string databaseLocationId = "us-east1";
-        string databaseType = "FIRESTORE_NATIVE";
+        DatabaseType databaseType = DatabaseType.FirestoreNative;
 
         // Create two databases one for reading and writing, one for reading to validate that correct database should be referenced.
         await _fixture.CreateDatabaseAsync(correctDbId, databaseLocationId, databaseType);
