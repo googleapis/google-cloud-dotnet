@@ -1,5 +1,21 @@
 # Version history
 
+## Version 3.4.0, released 2023-10-04
+
+### Bug fixes
+
+- Dispose of the gRPC call in the WatchStream even if non-RpcExceptions are thrown ([commit f89ba63](https://github.com/googleapis/google-cloud-dotnet/commit/f89ba6306059149d4d7a6ee4458d9e88c4c99761))
+- Dispose of gRPC streaming calls appropriately ([commit 541d439](https://github.com/googleapis/google-cloud-dotnet/commit/541d43955ebde4b536d70cfe70d802ddb6703e6a))
+- Simple disposals within Firestore ([commit cdc22d2](https://github.com/googleapis/google-cloud-dotnet/commit/cdc22d28a2605a43f2efec54c947f47c7e4adc24))
+
+### New features
+
+- Add sum and average aggregates ([commit 9a8bfd5](https://github.com/googleapis/google-cloud-dotnet/commit/9a8bfd50c29e8bd133e1f92cb62c9b5bb05ef436))
+
+### Documentation improvements
+
+- Change Google Cloud Platform to Google Cloud in handwritten code ([commit cef5f43](https://github.com/googleapis/google-cloud-dotnet/commit/cef5f43dd2dc2817d091a398ac4620a357d535c5))
+
 ## Version 3.3.0, released 2023-05-03
 
 No API surface changes; just dependency updates.

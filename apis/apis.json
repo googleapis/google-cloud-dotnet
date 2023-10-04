@@ -2210,7 +2210,7 @@
       "productName": "Firestore",
       "productUrl": "https://firebase.google.com/docs/firestore/",
       "listingDescription": "Firestore high-level library",
-      "version": "3.3.0",
+      "version": "3.4.0",
       "type": "other",
       "metadataType": "GAPIC_MANUAL",
       "targetFrameworks": "netstandard2.1;net462",
@@ -2229,10 +2229,10 @@
       "testDependencies": {
         "Google.Api.Gax.Grpc.Testing": "4.4.0",
         "Google.Api.Gax.Testing": "4.4.0",
+        "Google.Cloud.Firestore.Admin.V1": "3.3.0",
         "Grpc.Core.Testing": "2.46.6",
         "System.ValueTuple": "4.5.0",
-        "Xunit.Combinatorial": "1.6.24",
-        "Google.Cloud.Firestore.Admin.V1": "3.3.0"
+        "Xunit.Combinatorial": "1.6.24"
       },
       "shortName": "firestore"
     },
@@ -2243,7 +2243,7 @@
       "productName": "Firestore",
       "productUrl": "https://firebase.google.com",
       "listingDescription": "Firestore low-level API access",
-      "version": "3.3.0",
+      "version": "3.4.0",
       "type": "grpc",
       "targetFrameworks": "netstandard2.1;net462",
       "testTargetFrameworks": "net6.0;net462",
