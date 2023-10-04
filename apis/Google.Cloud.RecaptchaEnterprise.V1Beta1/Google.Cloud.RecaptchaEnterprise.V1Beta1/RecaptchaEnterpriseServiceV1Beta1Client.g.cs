@@ -260,7 +260,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project in which the assessment will be created,
-        /// in the format "projects/{project_number}".
+        /// in the format `projects/{project_number}`.
         /// </param>
         /// <param name="assessment">
         /// Required. The assessment details.
@@ -279,7 +279,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project in which the assessment will be created,
-        /// in the format "projects/{project_number}".
+        /// in the format `projects/{project_number}`.
         /// </param>
         /// <param name="assessment">
         /// Required. The assessment details.
@@ -298,7 +298,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project in which the assessment will be created,
-        /// in the format "projects/{project_number}".
+        /// in the format `projects/{project_number}`.
         /// </param>
         /// <param name="assessment">
         /// Required. The assessment details.
@@ -313,7 +313,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project in which the assessment will be created,
-        /// in the format "projects/{project_number}".
+        /// in the format `projects/{project_number}`.
         /// </param>
         /// <param name="assessment">
         /// Required. The assessment details.
@@ -332,7 +332,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project in which the assessment will be created,
-        /// in the format "projects/{project_number}".
+        /// in the format `projects/{project_number}`.
         /// </param>
         /// <param name="assessment">
         /// Required. The assessment details.
@@ -351,7 +351,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project in which the assessment will be created,
-        /// in the format "projects/{project_number}".
+        /// in the format `projects/{project_number}`.
         /// </param>
         /// <param name="assessment">
         /// Required. The assessment details.
@@ -397,7 +397,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Assessment, in the format
-        /// "projects/{project_number}/assessments/{assessment_id}".
+        /// `projects/{project_number}/assessments/{assessment_id}`.
         /// </param>
         /// <param name="annotation">
         /// Optional. The annotation that will be assigned to the Event. This field can
@@ -419,7 +419,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Assessment, in the format
-        /// "projects/{project_number}/assessments/{assessment_id}".
+        /// `projects/{project_number}/assessments/{assessment_id}`.
         /// </param>
         /// <param name="annotation">
         /// Optional. The annotation that will be assigned to the Event. This field can
@@ -441,7 +441,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Assessment, in the format
-        /// "projects/{project_number}/assessments/{assessment_id}".
+        /// `projects/{project_number}/assessments/{assessment_id}`.
         /// </param>
         /// <param name="annotation">
         /// Optional. The annotation that will be assigned to the Event. This field can
@@ -459,7 +459,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Assessment, in the format
-        /// "projects/{project_number}/assessments/{assessment_id}".
+        /// `projects/{project_number}/assessments/{assessment_id}`.
         /// </param>
         /// <param name="annotation">
         /// Optional. The annotation that will be assigned to the Event. This field can
@@ -481,7 +481,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Assessment, in the format
-        /// "projects/{project_number}/assessments/{assessment_id}".
+        /// `projects/{project_number}/assessments/{assessment_id}`.
         /// </param>
         /// <param name="annotation">
         /// Optional. The annotation that will be assigned to the Event. This field can
@@ -503,7 +503,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Assessment, in the format
-        /// "projects/{project_number}/assessments/{assessment_id}".
+        /// `projects/{project_number}/assessments/{assessment_id}`.
         /// </param>
         /// <param name="annotation">
         /// Optional. The annotation that will be assigned to the Event. This field can
