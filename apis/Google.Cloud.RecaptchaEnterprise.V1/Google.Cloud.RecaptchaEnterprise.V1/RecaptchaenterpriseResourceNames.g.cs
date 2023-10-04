@@ -655,6 +655,230 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         public static bool operator !=(KeyName a, KeyName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>FirewallPolicy</c> resource.</summary>
+    public sealed partial class FirewallPolicyName : gax::IResourceName, sys::IEquatable<FirewallPolicyName>
+    {
+        /// <summary>The possible contents of <see cref="FirewallPolicyName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/firewallpolicies/{firewallpolicy}</c>.
+            /// </summary>
+            ProjectFirewallpolicy = 1,
+        }
+
+        private static gax::PathTemplate s_projectFirewallpolicy = new gax::PathTemplate("projects/{project}/firewallpolicies/{firewallpolicy}");
+
+        /// <summary>Creates a <see cref="FirewallPolicyName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="FirewallPolicyName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static FirewallPolicyName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new FirewallPolicyName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="FirewallPolicyName"/> with the pattern
+        /// <c>projects/{project}/firewallpolicies/{firewallpolicy}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="firewallpolicyId">The <c>Firewallpolicy</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="FirewallPolicyName"/> constructed from the provided ids.</returns>
+        public static FirewallPolicyName FromProjectFirewallpolicy(string projectId, string firewallpolicyId) =>
+            new FirewallPolicyName(ResourceNameType.ProjectFirewallpolicy, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), firewallpolicyId: gax::GaxPreconditions.CheckNotNullOrEmpty(firewallpolicyId, nameof(firewallpolicyId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="FirewallPolicyName"/> with pattern
+        /// <c>projects/{project}/firewallpolicies/{firewallpolicy}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="firewallpolicyId">The <c>Firewallpolicy</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="FirewallPolicyName"/> with pattern
+        /// <c>projects/{project}/firewallpolicies/{firewallpolicy}</c>.
+        /// </returns>
+        public static string Format(string projectId, string firewallpolicyId) =>
+            FormatProjectFirewallpolicy(projectId, firewallpolicyId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="FirewallPolicyName"/> with pattern
+        /// <c>projects/{project}/firewallpolicies/{firewallpolicy}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="firewallpolicyId">The <c>Firewallpolicy</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="FirewallPolicyName"/> with pattern
+        /// <c>projects/{project}/firewallpolicies/{firewallpolicy}</c>.
+        /// </returns>
+        public static string FormatProjectFirewallpolicy(string projectId, string firewallpolicyId) =>
+            s_projectFirewallpolicy.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(firewallpolicyId, nameof(firewallpolicyId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="FirewallPolicyName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/firewallpolicies/{firewallpolicy}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="firewallPolicyName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="FirewallPolicyName"/> if successful.</returns>
+        public static FirewallPolicyName Parse(string firewallPolicyName) => Parse(firewallPolicyName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="FirewallPolicyName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/firewallpolicies/{firewallpolicy}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="firewallPolicyName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="FirewallPolicyName"/> if successful.</returns>
+        public static FirewallPolicyName Parse(string firewallPolicyName, bool allowUnparsed) =>
+            TryParse(firewallPolicyName, allowUnparsed, out FirewallPolicyName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="FirewallPolicyName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/firewallpolicies/{firewallpolicy}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="firewallPolicyName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="FirewallPolicyName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string firewallPolicyName, out FirewallPolicyName result) =>
+            TryParse(firewallPolicyName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="FirewallPolicyName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/firewallpolicies/{firewallpolicy}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="firewallPolicyName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="FirewallPolicyName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string firewallPolicyName, bool allowUnparsed, out FirewallPolicyName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(firewallPolicyName, nameof(firewallPolicyName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectFirewallpolicy.TryParseName(firewallPolicyName, out resourceName))
+            {
+                result = FromProjectFirewallpolicy(resourceName[0], resourceName[1]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(firewallPolicyName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private FirewallPolicyName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string firewallpolicyId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            FirewallpolicyId = firewallpolicyId;
+            ProjectId = projectId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="FirewallPolicyName"/> class from the component parts of pattern
+        /// <c>projects/{project}/firewallpolicies/{firewallpolicy}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="firewallpolicyId">The <c>Firewallpolicy</c> ID. Must not be <c>null</c> or empty.</param>
+        public FirewallPolicyName(string projectId, string firewallpolicyId) : this(ResourceNameType.ProjectFirewallpolicy, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), firewallpolicyId: gax::GaxPreconditions.CheckNotNullOrEmpty(firewallpolicyId, nameof(firewallpolicyId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Firewallpolicy</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string FirewallpolicyId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectFirewallpolicy: return s_projectFirewallpolicy.Expand(ProjectId, FirewallpolicyId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as FirewallPolicyName);
+
+        /// <inheritdoc/>
+        public bool Equals(FirewallPolicyName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(FirewallPolicyName a, FirewallPolicyName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(FirewallPolicyName a, FirewallPolicyName b) => !(a == b);
+    }
+
     /// <summary>Resource name for the <c>RelatedAccountGroupMembership</c> resource.</summary>
     public sealed partial class RelatedAccountGroupMembershipName : gax::IResourceName, sys::IEquatable<RelatedAccountGroupMembershipName>
     {
@@ -1268,6 +1492,54 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         }
     }
 
+    public partial class CreateFirewallPolicyRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::ProjectName ParentAsProjectName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListFirewallPoliciesRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::ProjectName ParentAsProjectName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetFirewallPolicyRequest
+    {
+        /// <summary>
+        /// <see cref="gcrv::FirewallPolicyName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcrv::FirewallPolicyName FirewallPolicyName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::FirewallPolicyName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteFirewallPolicyRequest
+    {
+        /// <summary>
+        /// <see cref="gcrv::FirewallPolicyName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcrv::FirewallPolicyName FirewallPolicyName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::FirewallPolicyName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class MigrateKeyRequest
     {
         /// <summary>
@@ -1312,6 +1584,18 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         public gcrv::KeyName KeyName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcrv::KeyName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class FirewallPolicy
+    {
+        /// <summary>
+        /// <see cref="gcrv::FirewallPolicyName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcrv::FirewallPolicyName FirewallPolicyName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::FirewallPolicyName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
