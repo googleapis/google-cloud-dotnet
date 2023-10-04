@@ -101,6 +101,28 @@ builder.Services
     .AddExampleClient();
 ```
 
+#### Dependency injection in high-load-at-startup environments.
+
+If your application uses Application Default Credentials while running in a Google runtime (Compute Engine,
+GKE, Cloud Functions, etc.) and you expect high request load on application startup you may run into a known
+issue that leads to thread starvation and high response latency. We are looking into a permanent fix,
+but in the meantime you can use the following workaround: make certain you request Application
+Default Credentials **during** startup configuration (you don't have to use them). For example:
+
+```csharp
+var builder = WebApplication.CreateBuilder(args);
+builder.Services
+    .AddRazorPages()
+    .AddExampleClient();
+// Workaround for possible thread starvation scenario.
+GoogleCredential.GetApplicationDefaultCredential();
+```
+
+Note that on runtimes where high request loads lead to scaling up, the newly spawned environments are likely to
+have high request load on startup which leads to this issue manifesting.
+
+Please see https://github.com/googleapis/google-cloud-dotnet/issues/11092 for fresh updates.
+
 ## Clean-up
 
 When a single client is used for an entire application lifecycle, there is no need to clean anything up.
