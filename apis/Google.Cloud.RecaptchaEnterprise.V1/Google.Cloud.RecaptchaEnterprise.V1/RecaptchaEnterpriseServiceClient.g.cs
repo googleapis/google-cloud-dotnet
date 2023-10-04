@@ -59,6 +59,11 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
             DeleteKeySettings = existing.DeleteKeySettings;
             MigrateKeySettings = existing.MigrateKeySettings;
             GetMetricsSettings = existing.GetMetricsSettings;
+            CreateFirewallPolicySettings = existing.CreateFirewallPolicySettings;
+            ListFirewallPoliciesSettings = existing.ListFirewallPoliciesSettings;
+            GetFirewallPolicySettings = existing.GetFirewallPolicySettings;
+            UpdateFirewallPolicySettings = existing.UpdateFirewallPolicySettings;
+            DeleteFirewallPolicySettings = existing.DeleteFirewallPolicySettings;
             ListRelatedAccountGroupsSettings = existing.ListRelatedAccountGroupsSettings;
             ListRelatedAccountGroupMembershipsSettings = existing.ListRelatedAccountGroupMembershipsSettings;
             SearchRelatedAccountGroupMembershipsSettings = existing.SearchRelatedAccountGroupMembershipsSettings;
@@ -194,6 +199,71 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetMetricsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RecaptchaEnterpriseServiceClient.CreateFirewallPolicy</c> and
+        /// <c>RecaptchaEnterpriseServiceClient.CreateFirewallPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateFirewallPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RecaptchaEnterpriseServiceClient.ListFirewallPolicies</c> and
+        /// <c>RecaptchaEnterpriseServiceClient.ListFirewallPoliciesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListFirewallPoliciesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RecaptchaEnterpriseServiceClient.GetFirewallPolicy</c> and
+        /// <c>RecaptchaEnterpriseServiceClient.GetFirewallPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetFirewallPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RecaptchaEnterpriseServiceClient.UpdateFirewallPolicy</c> and
+        /// <c>RecaptchaEnterpriseServiceClient.UpdateFirewallPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateFirewallPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RecaptchaEnterpriseServiceClient.DeleteFirewallPolicy</c> and
+        /// <c>RecaptchaEnterpriseServiceClient.DeleteFirewallPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteFirewallPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -410,7 +480,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project in which the assessment will be created,
-        /// in the format "projects/{project}".
+        /// in the format `projects/{project}`.
         /// </param>
         /// <param name="assessment">
         /// Required. The assessment details.
@@ -429,7 +499,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project in which the assessment will be created,
-        /// in the format "projects/{project}".
+        /// in the format `projects/{project}`.
         /// </param>
         /// <param name="assessment">
         /// Required. The assessment details.
@@ -448,7 +518,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project in which the assessment will be created,
-        /// in the format "projects/{project}".
+        /// in the format `projects/{project}`.
         /// </param>
         /// <param name="assessment">
         /// Required. The assessment details.
@@ -463,7 +533,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project in which the assessment will be created,
-        /// in the format "projects/{project}".
+        /// in the format `projects/{project}`.
         /// </param>
         /// <param name="assessment">
         /// Required. The assessment details.
@@ -482,7 +552,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project in which the assessment will be created,
-        /// in the format "projects/{project}".
+        /// in the format `projects/{project}`.
         /// </param>
         /// <param name="assessment">
         /// Required. The assessment details.
@@ -501,7 +571,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project in which the assessment will be created,
-        /// in the format "projects/{project}".
+        /// in the format `projects/{project}`.
         /// </param>
         /// <param name="assessment">
         /// Required. The assessment details.
@@ -547,7 +617,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Assessment, in the format
-        /// "projects/{project}/assessments/{assessment}".
+        /// `projects/{project}/assessments/{assessment}`.
         /// </param>
         /// <param name="annotation">
         /// Optional. The annotation that will be assigned to the Event. This field can
@@ -569,7 +639,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Assessment, in the format
-        /// "projects/{project}/assessments/{assessment}".
+        /// `projects/{project}/assessments/{assessment}`.
         /// </param>
         /// <param name="annotation">
         /// Optional. The annotation that will be assigned to the Event. This field can
@@ -591,7 +661,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Assessment, in the format
-        /// "projects/{project}/assessments/{assessment}".
+        /// `projects/{project}/assessments/{assessment}`.
         /// </param>
         /// <param name="annotation">
         /// Optional. The annotation that will be assigned to the Event. This field can
@@ -609,7 +679,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Assessment, in the format
-        /// "projects/{project}/assessments/{assessment}".
+        /// `projects/{project}/assessments/{assessment}`.
         /// </param>
         /// <param name="annotation">
         /// Optional. The annotation that will be assigned to the Event. This field can
@@ -631,7 +701,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Assessment, in the format
-        /// "projects/{project}/assessments/{assessment}".
+        /// `projects/{project}/assessments/{assessment}`.
         /// </param>
         /// <param name="annotation">
         /// Optional. The annotation that will be assigned to the Event. This field can
@@ -653,7 +723,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Assessment, in the format
-        /// "projects/{project}/assessments/{assessment}".
+        /// `projects/{project}/assessments/{assessment}`.
         /// </param>
         /// <param name="annotation">
         /// Optional. The annotation that will be assigned to the Event. This field can
@@ -697,7 +767,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project in which the key will be created, in the
-        /// format "projects/{project}".
+        /// format `projects/{project}`.
         /// </param>
         /// <param name="key">
         /// Required. Information to create a reCAPTCHA Enterprise key.
@@ -716,7 +786,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project in which the key will be created, in the
-        /// format "projects/{project}".
+        /// format `projects/{project}`.
         /// </param>
         /// <param name="key">
         /// Required. Information to create a reCAPTCHA Enterprise key.
@@ -735,7 +805,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project in which the key will be created, in the
-        /// format "projects/{project}".
+        /// format `projects/{project}`.
         /// </param>
         /// <param name="key">
         /// Required. Information to create a reCAPTCHA Enterprise key.
@@ -750,7 +820,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project in which the key will be created, in the
-        /// format "projects/{project}".
+        /// format `projects/{project}`.
         /// </param>
         /// <param name="key">
         /// Required. Information to create a reCAPTCHA Enterprise key.
@@ -769,7 +839,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project in which the key will be created, in the
-        /// format "projects/{project}".
+        /// format `projects/{project}`.
         /// </param>
         /// <param name="key">
         /// Required. Information to create a reCAPTCHA Enterprise key.
@@ -788,7 +858,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project in which the key will be created, in the
-        /// format "projects/{project}".
+        /// format `projects/{project}`.
         /// </param>
         /// <param name="key">
         /// Required. Information to create a reCAPTCHA Enterprise key.
@@ -821,7 +891,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project that contains the keys that will be
-        /// listed, in the format "projects/{project}".
+        /// listed, in the format `projects/{project}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -846,7 +916,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project that contains the keys that will be
-        /// listed, in the format "projects/{project}".
+        /// listed, in the format `projects/{project}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -871,7 +941,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project that contains the keys that will be
-        /// listed, in the format "projects/{project}".
+        /// listed, in the format `projects/{project}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -896,7 +966,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project that contains the keys that will be
-        /// listed, in the format "projects/{project}".
+        /// listed, in the format `projects/{project}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -956,7 +1026,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="key">
         /// Required. The public key name linked to the requested secret key in the
-        /// format "projects/{project}/keys/{key}".
+        /// format `projects/{project}/keys/{key}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -973,7 +1043,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="key">
         /// Required. The public key name linked to the requested secret key in the
-        /// format "projects/{project}/keys/{key}".
+        /// format `projects/{project}/keys/{key}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -990,7 +1060,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="key">
         /// Required. The public key name linked to the requested secret key in the
-        /// format "projects/{project}/keys/{key}".
+        /// format `projects/{project}/keys/{key}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1004,7 +1074,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="key">
         /// Required. The public key name linked to the requested secret key in the
-        /// format "projects/{project}/keys/{key}".
+        /// format `projects/{project}/keys/{key}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1021,7 +1091,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="key">
         /// Required. The public key name linked to the requested secret key in the
-        /// format "projects/{project}/keys/{key}".
+        /// format `projects/{project}/keys/{key}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1038,7 +1108,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="key">
         /// Required. The public key name linked to the requested secret key in the
-        /// format "projects/{project}/keys/{key}".
+        /// format `projects/{project}/keys/{key}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1077,7 +1147,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the requested key, in the format
-        /// "projects/{project}/keys/{key}".
+        /// `projects/{project}/keys/{key}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1092,7 +1162,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the requested key, in the format
-        /// "projects/{project}/keys/{key}".
+        /// `projects/{project}/keys/{key}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1107,7 +1177,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the requested key, in the format
-        /// "projects/{project}/keys/{key}".
+        /// `projects/{project}/keys/{key}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1119,7 +1189,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the requested key, in the format
-        /// "projects/{project}/keys/{key}".
+        /// `projects/{project}/keys/{key}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1134,7 +1204,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the requested key, in the format
-        /// "projects/{project}/keys/{key}".
+        /// `projects/{project}/keys/{key}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1149,7 +1219,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the requested key, in the format
-        /// "projects/{project}/keys/{key}".
+        /// `projects/{project}/keys/{key}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1268,7 +1338,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the key to be deleted, in the format
-        /// "projects/{project}/keys/{key}".
+        /// `projects/{project}/keys/{key}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1283,7 +1353,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the key to be deleted, in the format
-        /// "projects/{project}/keys/{key}".
+        /// `projects/{project}/keys/{key}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1298,7 +1368,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the key to be deleted, in the format
-        /// "projects/{project}/keys/{key}".
+        /// `projects/{project}/keys/{key}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1310,7 +1380,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the key to be deleted, in the format
-        /// "projects/{project}/keys/{key}".
+        /// `projects/{project}/keys/{key}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1325,7 +1395,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the key to be deleted, in the format
-        /// "projects/{project}/keys/{key}".
+        /// `projects/{project}/keys/{key}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1340,7 +1410,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the key to be deleted, in the format
-        /// "projects/{project}/keys/{key}".
+        /// `projects/{project}/keys/{key}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1351,7 +1421,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Migrates an existing key from reCAPTCHA to reCAPTCHA Enterprise.
         /// Once a key is migrated, it can be used from either product. SiteVerify
         /// requests are billed as CreateAssessment calls. You must be
-        /// authenticated as one of the current owners of the reCAPTCHA Site Key, and
+        /// authenticated as one of the current owners of the reCAPTCHA Key, and
         /// your user must have the reCAPTCHA Enterprise Admin IAM role in the
         /// destination project.
         /// </summary>
@@ -1365,7 +1435,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Migrates an existing key from reCAPTCHA to reCAPTCHA Enterprise.
         /// Once a key is migrated, it can be used from either product. SiteVerify
         /// requests are billed as CreateAssessment calls. You must be
-        /// authenticated as one of the current owners of the reCAPTCHA Site Key, and
+        /// authenticated as one of the current owners of the reCAPTCHA Key, and
         /// your user must have the reCAPTCHA Enterprise Admin IAM role in the
         /// destination project.
         /// </summary>
@@ -1379,7 +1449,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Migrates an existing key from reCAPTCHA to reCAPTCHA Enterprise.
         /// Once a key is migrated, it can be used from either product. SiteVerify
         /// requests are billed as CreateAssessment calls. You must be
-        /// authenticated as one of the current owners of the reCAPTCHA Site Key, and
+        /// authenticated as one of the current owners of the reCAPTCHA Key, and
         /// your user must have the reCAPTCHA Enterprise Admin IAM role in the
         /// destination project.
         /// </summary>
@@ -1425,7 +1495,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the requested metrics, in the format
-        /// "projects/{project}/keys/{key}/metrics".
+        /// `projects/{project}/keys/{key}/metrics`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1441,7 +1511,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the requested metrics, in the format
-        /// "projects/{project}/keys/{key}/metrics".
+        /// `projects/{project}/keys/{key}/metrics`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1457,7 +1527,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the requested metrics, in the format
-        /// "projects/{project}/keys/{key}/metrics".
+        /// `projects/{project}/keys/{key}/metrics`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1470,7 +1540,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the requested metrics, in the format
-        /// "projects/{project}/keys/{key}/metrics".
+        /// `projects/{project}/keys/{key}/metrics`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1486,7 +1556,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the requested metrics, in the format
-        /// "projects/{project}/keys/{key}/metrics".
+        /// `projects/{project}/keys/{key}/metrics`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1502,12 +1572,583 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the requested metrics, in the format
-        /// "projects/{project}/keys/{key}/metrics".
+        /// `projects/{project}/keys/{key}/metrics`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Metrics> GetMetricsAsync(MetricsName name, st::CancellationToken cancellationToken) =>
             GetMetricsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new FirewallPolicy, specifying conditions at which reCAPTCHA
+        /// Enterprise actions can be executed.
+        /// A project may have a maximum of 1000 policies.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FirewallPolicy CreateFirewallPolicy(CreateFirewallPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new FirewallPolicy, specifying conditions at which reCAPTCHA
+        /// Enterprise actions can be executed.
+        /// A project may have a maximum of 1000 policies.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FirewallPolicy> CreateFirewallPolicyAsync(CreateFirewallPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new FirewallPolicy, specifying conditions at which reCAPTCHA
+        /// Enterprise actions can be executed.
+        /// A project may have a maximum of 1000 policies.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FirewallPolicy> CreateFirewallPolicyAsync(CreateFirewallPolicyRequest request, st::CancellationToken cancellationToken) =>
+            CreateFirewallPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new FirewallPolicy, specifying conditions at which reCAPTCHA
+        /// Enterprise actions can be executed.
+        /// A project may have a maximum of 1000 policies.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project this policy will apply to, in the format
+        /// `projects/{project}`.
+        /// </param>
+        /// <param name="firewallPolicy">
+        /// Required. Information to create the policy.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FirewallPolicy CreateFirewallPolicy(string parent, FirewallPolicy firewallPolicy, gaxgrpc::CallSettings callSettings = null) =>
+            CreateFirewallPolicy(new CreateFirewallPolicyRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                FirewallPolicy = gax::GaxPreconditions.CheckNotNull(firewallPolicy, nameof(firewallPolicy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new FirewallPolicy, specifying conditions at which reCAPTCHA
+        /// Enterprise actions can be executed.
+        /// A project may have a maximum of 1000 policies.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project this policy will apply to, in the format
+        /// `projects/{project}`.
+        /// </param>
+        /// <param name="firewallPolicy">
+        /// Required. Information to create the policy.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FirewallPolicy> CreateFirewallPolicyAsync(string parent, FirewallPolicy firewallPolicy, gaxgrpc::CallSettings callSettings = null) =>
+            CreateFirewallPolicyAsync(new CreateFirewallPolicyRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                FirewallPolicy = gax::GaxPreconditions.CheckNotNull(firewallPolicy, nameof(firewallPolicy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new FirewallPolicy, specifying conditions at which reCAPTCHA
+        /// Enterprise actions can be executed.
+        /// A project may have a maximum of 1000 policies.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project this policy will apply to, in the format
+        /// `projects/{project}`.
+        /// </param>
+        /// <param name="firewallPolicy">
+        /// Required. Information to create the policy.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FirewallPolicy> CreateFirewallPolicyAsync(string parent, FirewallPolicy firewallPolicy, st::CancellationToken cancellationToken) =>
+            CreateFirewallPolicyAsync(parent, firewallPolicy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new FirewallPolicy, specifying conditions at which reCAPTCHA
+        /// Enterprise actions can be executed.
+        /// A project may have a maximum of 1000 policies.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project this policy will apply to, in the format
+        /// `projects/{project}`.
+        /// </param>
+        /// <param name="firewallPolicy">
+        /// Required. Information to create the policy.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FirewallPolicy CreateFirewallPolicy(gagr::ProjectName parent, FirewallPolicy firewallPolicy, gaxgrpc::CallSettings callSettings = null) =>
+            CreateFirewallPolicy(new CreateFirewallPolicyRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                FirewallPolicy = gax::GaxPreconditions.CheckNotNull(firewallPolicy, nameof(firewallPolicy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new FirewallPolicy, specifying conditions at which reCAPTCHA
+        /// Enterprise actions can be executed.
+        /// A project may have a maximum of 1000 policies.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project this policy will apply to, in the format
+        /// `projects/{project}`.
+        /// </param>
+        /// <param name="firewallPolicy">
+        /// Required. Information to create the policy.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FirewallPolicy> CreateFirewallPolicyAsync(gagr::ProjectName parent, FirewallPolicy firewallPolicy, gaxgrpc::CallSettings callSettings = null) =>
+            CreateFirewallPolicyAsync(new CreateFirewallPolicyRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                FirewallPolicy = gax::GaxPreconditions.CheckNotNull(firewallPolicy, nameof(firewallPolicy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new FirewallPolicy, specifying conditions at which reCAPTCHA
+        /// Enterprise actions can be executed.
+        /// A project may have a maximum of 1000 policies.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project this policy will apply to, in the format
+        /// `projects/{project}`.
+        /// </param>
+        /// <param name="firewallPolicy">
+        /// Required. Information to create the policy.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FirewallPolicy> CreateFirewallPolicyAsync(gagr::ProjectName parent, FirewallPolicy firewallPolicy, st::CancellationToken cancellationToken) =>
+            CreateFirewallPolicyAsync(parent, firewallPolicy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the list of all firewall policies that belong to a project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="FirewallPolicy"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListFirewallPoliciesResponse, FirewallPolicy> ListFirewallPolicies(ListFirewallPoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the list of all firewall policies that belong to a project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="FirewallPolicy"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListFirewallPoliciesResponse, FirewallPolicy> ListFirewallPoliciesAsync(ListFirewallPoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the list of all firewall policies that belong to a project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project to list the policies for, in the format
+        /// `projects/{project}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="FirewallPolicy"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListFirewallPoliciesResponse, FirewallPolicy> ListFirewallPolicies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListFirewallPolicies(new ListFirewallPoliciesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the list of all firewall policies that belong to a project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project to list the policies for, in the format
+        /// `projects/{project}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="FirewallPolicy"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListFirewallPoliciesResponse, FirewallPolicy> ListFirewallPoliciesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListFirewallPoliciesAsync(new ListFirewallPoliciesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the list of all firewall policies that belong to a project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project to list the policies for, in the format
+        /// `projects/{project}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="FirewallPolicy"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListFirewallPoliciesResponse, FirewallPolicy> ListFirewallPolicies(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListFirewallPolicies(new ListFirewallPoliciesRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the list of all firewall policies that belong to a project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project to list the policies for, in the format
+        /// `projects/{project}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="FirewallPolicy"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListFirewallPoliciesResponse, FirewallPolicy> ListFirewallPoliciesAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListFirewallPoliciesAsync(new ListFirewallPoliciesRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the specified firewall policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FirewallPolicy GetFirewallPolicy(GetFirewallPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the specified firewall policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FirewallPolicy> GetFirewallPolicyAsync(GetFirewallPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the specified firewall policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FirewallPolicy> GetFirewallPolicyAsync(GetFirewallPolicyRequest request, st::CancellationToken cancellationToken) =>
+            GetFirewallPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the specified firewall policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested policy, in the format
+        /// `projects/{project}/firewallpolicies/{firewallpolicy}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FirewallPolicy GetFirewallPolicy(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetFirewallPolicy(new GetFirewallPolicyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the specified firewall policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested policy, in the format
+        /// `projects/{project}/firewallpolicies/{firewallpolicy}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FirewallPolicy> GetFirewallPolicyAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetFirewallPolicyAsync(new GetFirewallPolicyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the specified firewall policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested policy, in the format
+        /// `projects/{project}/firewallpolicies/{firewallpolicy}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FirewallPolicy> GetFirewallPolicyAsync(string name, st::CancellationToken cancellationToken) =>
+            GetFirewallPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the specified firewall policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested policy, in the format
+        /// `projects/{project}/firewallpolicies/{firewallpolicy}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FirewallPolicy GetFirewallPolicy(FirewallPolicyName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetFirewallPolicy(new GetFirewallPolicyRequest
+            {
+                FirewallPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the specified firewall policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested policy, in the format
+        /// `projects/{project}/firewallpolicies/{firewallpolicy}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FirewallPolicy> GetFirewallPolicyAsync(FirewallPolicyName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetFirewallPolicyAsync(new GetFirewallPolicyRequest
+            {
+                FirewallPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the specified firewall policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested policy, in the format
+        /// `projects/{project}/firewallpolicies/{firewallpolicy}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FirewallPolicy> GetFirewallPolicyAsync(FirewallPolicyName name, st::CancellationToken cancellationToken) =>
+            GetFirewallPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the specified firewall policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FirewallPolicy UpdateFirewallPolicy(UpdateFirewallPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the specified firewall policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FirewallPolicy> UpdateFirewallPolicyAsync(UpdateFirewallPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the specified firewall policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FirewallPolicy> UpdateFirewallPolicyAsync(UpdateFirewallPolicyRequest request, st::CancellationToken cancellationToken) =>
+            UpdateFirewallPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the specified firewall policy.
+        /// </summary>
+        /// <param name="firewallPolicy">
+        /// Required. The policy to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The mask to control which fields of the policy get updated. If
+        /// the mask is not present, all fields will be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FirewallPolicy UpdateFirewallPolicy(FirewallPolicy firewallPolicy, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateFirewallPolicy(new UpdateFirewallPolicyRequest
+            {
+                FirewallPolicy = gax::GaxPreconditions.CheckNotNull(firewallPolicy, nameof(firewallPolicy)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the specified firewall policy.
+        /// </summary>
+        /// <param name="firewallPolicy">
+        /// Required. The policy to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The mask to control which fields of the policy get updated. If
+        /// the mask is not present, all fields will be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FirewallPolicy> UpdateFirewallPolicyAsync(FirewallPolicy firewallPolicy, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateFirewallPolicyAsync(new UpdateFirewallPolicyRequest
+            {
+                FirewallPolicy = gax::GaxPreconditions.CheckNotNull(firewallPolicy, nameof(firewallPolicy)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the specified firewall policy.
+        /// </summary>
+        /// <param name="firewallPolicy">
+        /// Required. The policy to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The mask to control which fields of the policy get updated. If
+        /// the mask is not present, all fields will be updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FirewallPolicy> UpdateFirewallPolicyAsync(FirewallPolicy firewallPolicy, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateFirewallPolicyAsync(firewallPolicy, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the specified firewall policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteFirewallPolicy(DeleteFirewallPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes the specified firewall policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteFirewallPolicyAsync(DeleteFirewallPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes the specified firewall policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteFirewallPolicyAsync(DeleteFirewallPolicyRequest request, st::CancellationToken cancellationToken) =>
+            DeleteFirewallPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the specified firewall policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the policy to be deleted, in the format
+        /// `projects/{project}/firewallpolicies/{firewallpolicy}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteFirewallPolicy(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteFirewallPolicy(new DeleteFirewallPolicyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified firewall policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the policy to be deleted, in the format
+        /// `projects/{project}/firewallpolicies/{firewallpolicy}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteFirewallPolicyAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteFirewallPolicyAsync(new DeleteFirewallPolicyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified firewall policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the policy to be deleted, in the format
+        /// `projects/{project}/firewallpolicies/{firewallpolicy}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteFirewallPolicyAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteFirewallPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the specified firewall policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the policy to be deleted, in the format
+        /// `projects/{project}/firewallpolicies/{firewallpolicy}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteFirewallPolicy(FirewallPolicyName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteFirewallPolicy(new DeleteFirewallPolicyRequest
+            {
+                FirewallPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified firewall policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the policy to be deleted, in the format
+        /// `projects/{project}/firewallpolicies/{firewallpolicy}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteFirewallPolicyAsync(FirewallPolicyName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteFirewallPolicyAsync(new DeleteFirewallPolicyRequest
+            {
+                FirewallPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified firewall policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the policy to be deleted, in the format
+        /// `projects/{project}/firewallpolicies/{firewallpolicy}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteFirewallPolicyAsync(FirewallPolicyName name, st::CancellationToken cancellationToken) =>
+            DeleteFirewallPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// List groups of related accounts.
@@ -1532,7 +2173,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project to list related account groups from, in
-        /// the format "projects/{project}".
+        /// the format `projects/{project}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1557,7 +2198,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project to list related account groups from, in
-        /// the format "projects/{project}".
+        /// the format `projects/{project}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1582,7 +2223,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project to list related account groups from, in
-        /// the format "projects/{project}".
+        /// the format `projects/{project}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1607,7 +2248,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project to list related account groups from, in
-        /// the format "projects/{project}".
+        /// the format `projects/{project}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1777,11 +2418,11 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// <param name="project">
         /// Required. The name of the project to search related account group
         /// memberships from. Specify the project name in the following format:
-        /// "projects/{project}".
+        /// `projects/{project}`.
         /// </param>
         /// <param name="hashedAccountId">
-        /// Optional. The unique stable hashed user identifier we should search
-        /// connections to. The identifier should correspond to a `hashed_account_id`
+        /// Optional. The unique stable hashed user identifier used to search
+        /// connections. The identifier should correspond to a `hashed_account_id`
         /// provided in a previous `CreateAssessment` or `AnnotateAssessment` call.
         /// </param>
         /// <param name="pageToken">
@@ -1809,11 +2450,11 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// <param name="project">
         /// Required. The name of the project to search related account group
         /// memberships from. Specify the project name in the following format:
-        /// "projects/{project}".
+        /// `projects/{project}`.
         /// </param>
         /// <param name="hashedAccountId">
-        /// Optional. The unique stable hashed user identifier we should search
-        /// connections to. The identifier should correspond to a `hashed_account_id`
+        /// Optional. The unique stable hashed user identifier used to search
+        /// connections. The identifier should correspond to a `hashed_account_id`
         /// provided in a previous `CreateAssessment` or `AnnotateAssessment` call.
         /// </param>
         /// <param name="pageToken">
@@ -1843,11 +2484,11 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// <param name="project">
         /// Required. The name of the project to search related account group
         /// memberships from. Specify the project name in the following format:
-        /// "projects/{project}".
+        /// `projects/{project}`.
         /// </param>
         /// <param name="hashedAccountId">
-        /// Optional. The unique stable hashed user identifier we should search
-        /// connections to. The identifier should correspond to a `hashed_account_id`
+        /// Optional. The unique stable hashed user identifier used to search
+        /// connections. The identifier should correspond to a `hashed_account_id`
         /// provided in a previous `CreateAssessment` or `AnnotateAssessment` call.
         /// </param>
         /// <param name="pageToken">
@@ -1875,11 +2516,11 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// <param name="project">
         /// Required. The name of the project to search related account group
         /// memberships from. Specify the project name in the following format:
-        /// "projects/{project}".
+        /// `projects/{project}`.
         /// </param>
         /// <param name="hashedAccountId">
-        /// Optional. The unique stable hashed user identifier we should search
-        /// connections to. The identifier should correspond to a `hashed_account_id`
+        /// Optional. The unique stable hashed user identifier used to search
+        /// connections. The identifier should correspond to a `hashed_account_id`
         /// provided in a previous `CreateAssessment` or `AnnotateAssessment` call.
         /// </param>
         /// <param name="pageToken">
@@ -1929,6 +2570,16 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         private readonly gaxgrpc::ApiCall<MigrateKeyRequest, Key> _callMigrateKey;
 
         private readonly gaxgrpc::ApiCall<GetMetricsRequest, Metrics> _callGetMetrics;
+
+        private readonly gaxgrpc::ApiCall<CreateFirewallPolicyRequest, FirewallPolicy> _callCreateFirewallPolicy;
+
+        private readonly gaxgrpc::ApiCall<ListFirewallPoliciesRequest, ListFirewallPoliciesResponse> _callListFirewallPolicies;
+
+        private readonly gaxgrpc::ApiCall<GetFirewallPolicyRequest, FirewallPolicy> _callGetFirewallPolicy;
+
+        private readonly gaxgrpc::ApiCall<UpdateFirewallPolicyRequest, FirewallPolicy> _callUpdateFirewallPolicy;
+
+        private readonly gaxgrpc::ApiCall<DeleteFirewallPolicyRequest, wkt::Empty> _callDeleteFirewallPolicy;
 
         private readonly gaxgrpc::ApiCall<ListRelatedAccountGroupsRequest, ListRelatedAccountGroupsResponse> _callListRelatedAccountGroups;
 
@@ -1980,6 +2631,21 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
             _callGetMetrics = clientHelper.BuildApiCall<GetMetricsRequest, Metrics>("GetMetrics", grpcClient.GetMetricsAsync, grpcClient.GetMetrics, effectiveSettings.GetMetricsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetMetrics);
             Modify_GetMetricsApiCall(ref _callGetMetrics);
+            _callCreateFirewallPolicy = clientHelper.BuildApiCall<CreateFirewallPolicyRequest, FirewallPolicy>("CreateFirewallPolicy", grpcClient.CreateFirewallPolicyAsync, grpcClient.CreateFirewallPolicy, effectiveSettings.CreateFirewallPolicySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateFirewallPolicy);
+            Modify_CreateFirewallPolicyApiCall(ref _callCreateFirewallPolicy);
+            _callListFirewallPolicies = clientHelper.BuildApiCall<ListFirewallPoliciesRequest, ListFirewallPoliciesResponse>("ListFirewallPolicies", grpcClient.ListFirewallPoliciesAsync, grpcClient.ListFirewallPolicies, effectiveSettings.ListFirewallPoliciesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListFirewallPolicies);
+            Modify_ListFirewallPoliciesApiCall(ref _callListFirewallPolicies);
+            _callGetFirewallPolicy = clientHelper.BuildApiCall<GetFirewallPolicyRequest, FirewallPolicy>("GetFirewallPolicy", grpcClient.GetFirewallPolicyAsync, grpcClient.GetFirewallPolicy, effectiveSettings.GetFirewallPolicySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetFirewallPolicy);
+            Modify_GetFirewallPolicyApiCall(ref _callGetFirewallPolicy);
+            _callUpdateFirewallPolicy = clientHelper.BuildApiCall<UpdateFirewallPolicyRequest, FirewallPolicy>("UpdateFirewallPolicy", grpcClient.UpdateFirewallPolicyAsync, grpcClient.UpdateFirewallPolicy, effectiveSettings.UpdateFirewallPolicySettings).WithGoogleRequestParam("firewall_policy.name", request => request.FirewallPolicy?.Name);
+            Modify_ApiCall(ref _callUpdateFirewallPolicy);
+            Modify_UpdateFirewallPolicyApiCall(ref _callUpdateFirewallPolicy);
+            _callDeleteFirewallPolicy = clientHelper.BuildApiCall<DeleteFirewallPolicyRequest, wkt::Empty>("DeleteFirewallPolicy", grpcClient.DeleteFirewallPolicyAsync, grpcClient.DeleteFirewallPolicy, effectiveSettings.DeleteFirewallPolicySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteFirewallPolicy);
+            Modify_DeleteFirewallPolicyApiCall(ref _callDeleteFirewallPolicy);
             _callListRelatedAccountGroups = clientHelper.BuildApiCall<ListRelatedAccountGroupsRequest, ListRelatedAccountGroupsResponse>("ListRelatedAccountGroups", grpcClient.ListRelatedAccountGroupsAsync, grpcClient.ListRelatedAccountGroups, effectiveSettings.ListRelatedAccountGroupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListRelatedAccountGroups);
             Modify_ListRelatedAccountGroupsApiCall(ref _callListRelatedAccountGroups);
@@ -2014,6 +2680,16 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
 
         partial void Modify_GetMetricsApiCall(ref gaxgrpc::ApiCall<GetMetricsRequest, Metrics> call);
 
+        partial void Modify_CreateFirewallPolicyApiCall(ref gaxgrpc::ApiCall<CreateFirewallPolicyRequest, FirewallPolicy> call);
+
+        partial void Modify_ListFirewallPoliciesApiCall(ref gaxgrpc::ApiCall<ListFirewallPoliciesRequest, ListFirewallPoliciesResponse> call);
+
+        partial void Modify_GetFirewallPolicyApiCall(ref gaxgrpc::ApiCall<GetFirewallPolicyRequest, FirewallPolicy> call);
+
+        partial void Modify_UpdateFirewallPolicyApiCall(ref gaxgrpc::ApiCall<UpdateFirewallPolicyRequest, FirewallPolicy> call);
+
+        partial void Modify_DeleteFirewallPolicyApiCall(ref gaxgrpc::ApiCall<DeleteFirewallPolicyRequest, wkt::Empty> call);
+
         partial void Modify_ListRelatedAccountGroupsApiCall(ref gaxgrpc::ApiCall<ListRelatedAccountGroupsRequest, ListRelatedAccountGroupsResponse> call);
 
         partial void Modify_ListRelatedAccountGroupMembershipsApiCall(ref gaxgrpc::ApiCall<ListRelatedAccountGroupMembershipsRequest, ListRelatedAccountGroupMembershipsResponse> call);
@@ -2044,6 +2720,16 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         partial void Modify_MigrateKeyRequest(ref MigrateKeyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetMetricsRequest(ref GetMetricsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateFirewallPolicyRequest(ref CreateFirewallPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListFirewallPoliciesRequest(ref ListFirewallPoliciesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetFirewallPolicyRequest(ref GetFirewallPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateFirewallPolicyRequest(ref UpdateFirewallPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteFirewallPolicyRequest(ref DeleteFirewallPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListRelatedAccountGroupsRequest(ref ListRelatedAccountGroupsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2253,7 +2939,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Migrates an existing key from reCAPTCHA to reCAPTCHA Enterprise.
         /// Once a key is migrated, it can be used from either product. SiteVerify
         /// requests are billed as CreateAssessment calls. You must be
-        /// authenticated as one of the current owners of the reCAPTCHA Site Key, and
+        /// authenticated as one of the current owners of the reCAPTCHA Key, and
         /// your user must have the reCAPTCHA Enterprise Admin IAM role in the
         /// destination project.
         /// </summary>
@@ -2270,7 +2956,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// Migrates an existing key from reCAPTCHA to reCAPTCHA Enterprise.
         /// Once a key is migrated, it can be used from either product. SiteVerify
         /// requests are billed as CreateAssessment calls. You must be
-        /// authenticated as one of the current owners of the reCAPTCHA Site Key, and
+        /// authenticated as one of the current owners of the reCAPTCHA Key, and
         /// your user must have the reCAPTCHA Enterprise Admin IAM role in the
         /// destination project.
         /// </summary>
@@ -2307,6 +2993,130 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         {
             Modify_GetMetricsRequest(ref request, ref callSettings);
             return _callGetMetrics.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new FirewallPolicy, specifying conditions at which reCAPTCHA
+        /// Enterprise actions can be executed.
+        /// A project may have a maximum of 1000 policies.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override FirewallPolicy CreateFirewallPolicy(CreateFirewallPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateFirewallPolicyRequest(ref request, ref callSettings);
+            return _callCreateFirewallPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new FirewallPolicy, specifying conditions at which reCAPTCHA
+        /// Enterprise actions can be executed.
+        /// A project may have a maximum of 1000 policies.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<FirewallPolicy> CreateFirewallPolicyAsync(CreateFirewallPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateFirewallPolicyRequest(ref request, ref callSettings);
+            return _callCreateFirewallPolicy.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the list of all firewall policies that belong to a project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="FirewallPolicy"/> resources.</returns>
+        public override gax::PagedEnumerable<ListFirewallPoliciesResponse, FirewallPolicy> ListFirewallPolicies(ListFirewallPoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListFirewallPoliciesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListFirewallPoliciesRequest, ListFirewallPoliciesResponse, FirewallPolicy>(_callListFirewallPolicies, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the list of all firewall policies that belong to a project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="FirewallPolicy"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListFirewallPoliciesResponse, FirewallPolicy> ListFirewallPoliciesAsync(ListFirewallPoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListFirewallPoliciesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListFirewallPoliciesRequest, ListFirewallPoliciesResponse, FirewallPolicy>(_callListFirewallPolicies, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the specified firewall policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override FirewallPolicy GetFirewallPolicy(GetFirewallPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetFirewallPolicyRequest(ref request, ref callSettings);
+            return _callGetFirewallPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the specified firewall policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<FirewallPolicy> GetFirewallPolicyAsync(GetFirewallPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetFirewallPolicyRequest(ref request, ref callSettings);
+            return _callGetFirewallPolicy.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the specified firewall policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override FirewallPolicy UpdateFirewallPolicy(UpdateFirewallPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateFirewallPolicyRequest(ref request, ref callSettings);
+            return _callUpdateFirewallPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the specified firewall policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<FirewallPolicy> UpdateFirewallPolicyAsync(UpdateFirewallPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateFirewallPolicyRequest(ref request, ref callSettings);
+            return _callUpdateFirewallPolicy.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes the specified firewall policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteFirewallPolicy(DeleteFirewallPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteFirewallPolicyRequest(ref request, ref callSettings);
+            _callDeleteFirewallPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes the specified firewall policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteFirewallPolicyAsync(DeleteFirewallPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteFirewallPolicyRequest(ref request, ref callSettings);
+            return _callDeleteFirewallPolicy.Async(request, callSettings);
         }
 
         /// <summary>
@@ -2390,6 +3200,10 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
     {
     }
 
+    public partial class ListFirewallPoliciesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListRelatedAccountGroupsRequest : gaxgrpc::IPageRequest
     {
     }
@@ -2406,6 +3220,14 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Key> GetEnumerator() => Keys.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListFirewallPoliciesResponse : gaxgrpc::IPageResponse<FirewallPolicy>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<FirewallPolicy> GetEnumerator() => FirewallPolicies.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

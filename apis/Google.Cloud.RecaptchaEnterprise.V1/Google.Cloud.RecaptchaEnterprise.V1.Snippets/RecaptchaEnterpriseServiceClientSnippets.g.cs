@@ -1042,6 +1042,613 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateFirewallPolicy</summary>
+        public void CreateFirewallPolicyRequestObject()
+        {
+            // Snippet: CreateFirewallPolicy(CreateFirewallPolicyRequest, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            CreateFirewallPolicyRequest request = new CreateFirewallPolicyRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                FirewallPolicy = new FirewallPolicy(),
+            };
+            // Make the request
+            FirewallPolicy response = recaptchaEnterpriseServiceClient.CreateFirewallPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFirewallPolicyAsync</summary>
+        public async Task CreateFirewallPolicyRequestObjectAsync()
+        {
+            // Snippet: CreateFirewallPolicyAsync(CreateFirewallPolicyRequest, CallSettings)
+            // Additional: CreateFirewallPolicyAsync(CreateFirewallPolicyRequest, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateFirewallPolicyRequest request = new CreateFirewallPolicyRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                FirewallPolicy = new FirewallPolicy(),
+            };
+            // Make the request
+            FirewallPolicy response = await recaptchaEnterpriseServiceClient.CreateFirewallPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFirewallPolicy</summary>
+        public void CreateFirewallPolicy()
+        {
+            // Snippet: CreateFirewallPolicy(string, FirewallPolicy, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            FirewallPolicy firewallPolicy = new FirewallPolicy();
+            // Make the request
+            FirewallPolicy response = recaptchaEnterpriseServiceClient.CreateFirewallPolicy(parent, firewallPolicy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFirewallPolicyAsync</summary>
+        public async Task CreateFirewallPolicyAsync()
+        {
+            // Snippet: CreateFirewallPolicyAsync(string, FirewallPolicy, CallSettings)
+            // Additional: CreateFirewallPolicyAsync(string, FirewallPolicy, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            FirewallPolicy firewallPolicy = new FirewallPolicy();
+            // Make the request
+            FirewallPolicy response = await recaptchaEnterpriseServiceClient.CreateFirewallPolicyAsync(parent, firewallPolicy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFirewallPolicy</summary>
+        public void CreateFirewallPolicyResourceNames()
+        {
+            // Snippet: CreateFirewallPolicy(ProjectName, FirewallPolicy, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            FirewallPolicy firewallPolicy = new FirewallPolicy();
+            // Make the request
+            FirewallPolicy response = recaptchaEnterpriseServiceClient.CreateFirewallPolicy(parent, firewallPolicy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFirewallPolicyAsync</summary>
+        public async Task CreateFirewallPolicyResourceNamesAsync()
+        {
+            // Snippet: CreateFirewallPolicyAsync(ProjectName, FirewallPolicy, CallSettings)
+            // Additional: CreateFirewallPolicyAsync(ProjectName, FirewallPolicy, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            FirewallPolicy firewallPolicy = new FirewallPolicy();
+            // Make the request
+            FirewallPolicy response = await recaptchaEnterpriseServiceClient.CreateFirewallPolicyAsync(parent, firewallPolicy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFirewallPolicies</summary>
+        public void ListFirewallPoliciesRequestObject()
+        {
+            // Snippet: ListFirewallPolicies(ListFirewallPoliciesRequest, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            ListFirewallPoliciesRequest request = new ListFirewallPoliciesRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+            };
+            // Make the request
+            PagedEnumerable<ListFirewallPoliciesResponse, FirewallPolicy> response = recaptchaEnterpriseServiceClient.ListFirewallPolicies(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (FirewallPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListFirewallPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FirewallPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FirewallPolicy> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FirewallPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFirewallPoliciesAsync</summary>
+        public async Task ListFirewallPoliciesRequestObjectAsync()
+        {
+            // Snippet: ListFirewallPoliciesAsync(ListFirewallPoliciesRequest, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListFirewallPoliciesRequest request = new ListFirewallPoliciesRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListFirewallPoliciesResponse, FirewallPolicy> response = recaptchaEnterpriseServiceClient.ListFirewallPoliciesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((FirewallPolicy item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListFirewallPoliciesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FirewallPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FirewallPolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FirewallPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFirewallPolicies</summary>
+        public void ListFirewallPolicies()
+        {
+            // Snippet: ListFirewallPolicies(string, string, int?, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            // Make the request
+            PagedEnumerable<ListFirewallPoliciesResponse, FirewallPolicy> response = recaptchaEnterpriseServiceClient.ListFirewallPolicies(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (FirewallPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListFirewallPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FirewallPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FirewallPolicy> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FirewallPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFirewallPoliciesAsync</summary>
+        public async Task ListFirewallPoliciesAsync()
+        {
+            // Snippet: ListFirewallPoliciesAsync(string, string, int?, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            // Make the request
+            PagedAsyncEnumerable<ListFirewallPoliciesResponse, FirewallPolicy> response = recaptchaEnterpriseServiceClient.ListFirewallPoliciesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((FirewallPolicy item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListFirewallPoliciesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FirewallPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FirewallPolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FirewallPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFirewallPolicies</summary>
+        public void ListFirewallPoliciesResourceNames()
+        {
+            // Snippet: ListFirewallPolicies(ProjectName, string, int?, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            // Make the request
+            PagedEnumerable<ListFirewallPoliciesResponse, FirewallPolicy> response = recaptchaEnterpriseServiceClient.ListFirewallPolicies(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (FirewallPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListFirewallPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FirewallPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FirewallPolicy> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FirewallPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFirewallPoliciesAsync</summary>
+        public async Task ListFirewallPoliciesResourceNamesAsync()
+        {
+            // Snippet: ListFirewallPoliciesAsync(ProjectName, string, int?, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            // Make the request
+            PagedAsyncEnumerable<ListFirewallPoliciesResponse, FirewallPolicy> response = recaptchaEnterpriseServiceClient.ListFirewallPoliciesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((FirewallPolicy item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListFirewallPoliciesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FirewallPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FirewallPolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FirewallPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFirewallPolicy</summary>
+        public void GetFirewallPolicyRequestObject()
+        {
+            // Snippet: GetFirewallPolicy(GetFirewallPolicyRequest, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            GetFirewallPolicyRequest request = new GetFirewallPolicyRequest
+            {
+                FirewallPolicyName = FirewallPolicyName.FromProjectFirewallpolicy("[PROJECT]", "[FIREWALLPOLICY]"),
+            };
+            // Make the request
+            FirewallPolicy response = recaptchaEnterpriseServiceClient.GetFirewallPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFirewallPolicyAsync</summary>
+        public async Task GetFirewallPolicyRequestObjectAsync()
+        {
+            // Snippet: GetFirewallPolicyAsync(GetFirewallPolicyRequest, CallSettings)
+            // Additional: GetFirewallPolicyAsync(GetFirewallPolicyRequest, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetFirewallPolicyRequest request = new GetFirewallPolicyRequest
+            {
+                FirewallPolicyName = FirewallPolicyName.FromProjectFirewallpolicy("[PROJECT]", "[FIREWALLPOLICY]"),
+            };
+            // Make the request
+            FirewallPolicy response = await recaptchaEnterpriseServiceClient.GetFirewallPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFirewallPolicy</summary>
+        public void GetFirewallPolicy()
+        {
+            // Snippet: GetFirewallPolicy(string, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/firewallpolicies/[FIREWALLPOLICY]";
+            // Make the request
+            FirewallPolicy response = recaptchaEnterpriseServiceClient.GetFirewallPolicy(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFirewallPolicyAsync</summary>
+        public async Task GetFirewallPolicyAsync()
+        {
+            // Snippet: GetFirewallPolicyAsync(string, CallSettings)
+            // Additional: GetFirewallPolicyAsync(string, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/firewallpolicies/[FIREWALLPOLICY]";
+            // Make the request
+            FirewallPolicy response = await recaptchaEnterpriseServiceClient.GetFirewallPolicyAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFirewallPolicy</summary>
+        public void GetFirewallPolicyResourceNames()
+        {
+            // Snippet: GetFirewallPolicy(FirewallPolicyName, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            FirewallPolicyName name = FirewallPolicyName.FromProjectFirewallpolicy("[PROJECT]", "[FIREWALLPOLICY]");
+            // Make the request
+            FirewallPolicy response = recaptchaEnterpriseServiceClient.GetFirewallPolicy(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFirewallPolicyAsync</summary>
+        public async Task GetFirewallPolicyResourceNamesAsync()
+        {
+            // Snippet: GetFirewallPolicyAsync(FirewallPolicyName, CallSettings)
+            // Additional: GetFirewallPolicyAsync(FirewallPolicyName, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FirewallPolicyName name = FirewallPolicyName.FromProjectFirewallpolicy("[PROJECT]", "[FIREWALLPOLICY]");
+            // Make the request
+            FirewallPolicy response = await recaptchaEnterpriseServiceClient.GetFirewallPolicyAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFirewallPolicy</summary>
+        public void UpdateFirewallPolicyRequestObject()
+        {
+            // Snippet: UpdateFirewallPolicy(UpdateFirewallPolicyRequest, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateFirewallPolicyRequest request = new UpdateFirewallPolicyRequest
+            {
+                FirewallPolicy = new FirewallPolicy(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            FirewallPolicy response = recaptchaEnterpriseServiceClient.UpdateFirewallPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFirewallPolicyAsync</summary>
+        public async Task UpdateFirewallPolicyRequestObjectAsync()
+        {
+            // Snippet: UpdateFirewallPolicyAsync(UpdateFirewallPolicyRequest, CallSettings)
+            // Additional: UpdateFirewallPolicyAsync(UpdateFirewallPolicyRequest, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateFirewallPolicyRequest request = new UpdateFirewallPolicyRequest
+            {
+                FirewallPolicy = new FirewallPolicy(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            FirewallPolicy response = await recaptchaEnterpriseServiceClient.UpdateFirewallPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFirewallPolicy</summary>
+        public void UpdateFirewallPolicy()
+        {
+            // Snippet: UpdateFirewallPolicy(FirewallPolicy, FieldMask, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            FirewallPolicy firewallPolicy = new FirewallPolicy();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            FirewallPolicy response = recaptchaEnterpriseServiceClient.UpdateFirewallPolicy(firewallPolicy, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFirewallPolicyAsync</summary>
+        public async Task UpdateFirewallPolicyAsync()
+        {
+            // Snippet: UpdateFirewallPolicyAsync(FirewallPolicy, FieldMask, CallSettings)
+            // Additional: UpdateFirewallPolicyAsync(FirewallPolicy, FieldMask, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FirewallPolicy firewallPolicy = new FirewallPolicy();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            FirewallPolicy response = await recaptchaEnterpriseServiceClient.UpdateFirewallPolicyAsync(firewallPolicy, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFirewallPolicy</summary>
+        public void DeleteFirewallPolicyRequestObject()
+        {
+            // Snippet: DeleteFirewallPolicy(DeleteFirewallPolicyRequest, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteFirewallPolicyRequest request = new DeleteFirewallPolicyRequest
+            {
+                FirewallPolicyName = FirewallPolicyName.FromProjectFirewallpolicy("[PROJECT]", "[FIREWALLPOLICY]"),
+            };
+            // Make the request
+            recaptchaEnterpriseServiceClient.DeleteFirewallPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFirewallPolicyAsync</summary>
+        public async Task DeleteFirewallPolicyRequestObjectAsync()
+        {
+            // Snippet: DeleteFirewallPolicyAsync(DeleteFirewallPolicyRequest, CallSettings)
+            // Additional: DeleteFirewallPolicyAsync(DeleteFirewallPolicyRequest, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteFirewallPolicyRequest request = new DeleteFirewallPolicyRequest
+            {
+                FirewallPolicyName = FirewallPolicyName.FromProjectFirewallpolicy("[PROJECT]", "[FIREWALLPOLICY]"),
+            };
+            // Make the request
+            await recaptchaEnterpriseServiceClient.DeleteFirewallPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFirewallPolicy</summary>
+        public void DeleteFirewallPolicy()
+        {
+            // Snippet: DeleteFirewallPolicy(string, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/firewallpolicies/[FIREWALLPOLICY]";
+            // Make the request
+            recaptchaEnterpriseServiceClient.DeleteFirewallPolicy(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFirewallPolicyAsync</summary>
+        public async Task DeleteFirewallPolicyAsync()
+        {
+            // Snippet: DeleteFirewallPolicyAsync(string, CallSettings)
+            // Additional: DeleteFirewallPolicyAsync(string, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/firewallpolicies/[FIREWALLPOLICY]";
+            // Make the request
+            await recaptchaEnterpriseServiceClient.DeleteFirewallPolicyAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFirewallPolicy</summary>
+        public void DeleteFirewallPolicyResourceNames()
+        {
+            // Snippet: DeleteFirewallPolicy(FirewallPolicyName, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            FirewallPolicyName name = FirewallPolicyName.FromProjectFirewallpolicy("[PROJECT]", "[FIREWALLPOLICY]");
+            // Make the request
+            recaptchaEnterpriseServiceClient.DeleteFirewallPolicy(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFirewallPolicyAsync</summary>
+        public async Task DeleteFirewallPolicyResourceNamesAsync()
+        {
+            // Snippet: DeleteFirewallPolicyAsync(FirewallPolicyName, CallSettings)
+            // Additional: DeleteFirewallPolicyAsync(FirewallPolicyName, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FirewallPolicyName name = FirewallPolicyName.FromProjectFirewallpolicy("[PROJECT]", "[FIREWALLPOLICY]");
+            // Make the request
+            await recaptchaEnterpriseServiceClient.DeleteFirewallPolicyAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for ListRelatedAccountGroups</summary>
         public void ListRelatedAccountGroupsRequestObject()
         {
