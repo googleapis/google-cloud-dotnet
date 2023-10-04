@@ -133,43 +133,47 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
             "KAkiqAEKDUludmFsaWRSZWFzb24SHgoaSU5WQUxJRF9SRUFTT05fVU5TUEVD",
             "SUZJRUQQABIaChZVTktOT1dOX0lOVkFMSURfUkVBU09OEAESDQoJTUFMRk9S",
             "TUVEEAISCwoHRVhQSVJFRBADEggKBERVUEUQBBIVCg1TSVRFX01JU01BVENI",
-            "EAUaAggBEgsKB01JU1NJTkcQBhIRCg1CUk9XU0VSX0VSUk9SEAci+AIKGUZy",
+            "EAUaAggBEgsKB01JU1NJTkcQBhIRCg1CUk9XU0VSX0VSUk9SEAcinwQKGUZy",
             "YXVkUHJldmVudGlvbkFzc2Vzc21lbnQSGAoQdHJhbnNhY3Rpb25fcmlzaxgB",
             "IAEoAhJ+ChlzdG9sZW5faW5zdHJ1bWVudF92ZXJkaWN0GAIgASgLMlsuZ29v",
             "Z2xlLmNsb3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjFiZXRhMS5GcmF1ZFBy",
             "ZXZlbnRpb25Bc3Nlc3NtZW50LlN0b2xlbkluc3RydW1lbnRWZXJkaWN0EnQK",
             "FGNhcmRfdGVzdGluZ192ZXJkaWN0GAMgASgLMlYuZ29vZ2xlLmNsb3VkLnJl",
             "Y2FwdGNoYWVudGVycHJpc2UudjFiZXRhMS5GcmF1ZFByZXZlbnRpb25Bc3Nl",
-            "c3NtZW50LkNhcmRUZXN0aW5nVmVyZGljdBonChdTdG9sZW5JbnN0cnVtZW50",
-            "VmVyZGljdBIMCgRyaXNrGAEgASgCGiIKEkNhcmRUZXN0aW5nVmVyZGljdBIM",
-            "CgRyaXNrGAEgASgCIrsCChlBY2NvdW50RGVmZW5kZXJBc3Nlc3NtZW50EmgK",
-            "BmxhYmVscxgBIAMoDjJYLmdvb2dsZS5jbG91ZC5yZWNhcHRjaGFlbnRlcnBy",
-            "aXNlLnYxYmV0YTEuQWNjb3VudERlZmVuZGVyQXNzZXNzbWVudC5BY2NvdW50",
-            "RGVmZW5kZXJMYWJlbCKzAQoUQWNjb3VudERlZmVuZGVyTGFiZWwSJgoiQUND",
-            "T1VOVF9ERUZFTkRFUl9MQUJFTF9VTlNQRUNJRklFRBAAEhEKDVBST0ZJTEVf",
-            "TUFUQ0gQARIdChlTVVNQSUNJT1VTX0xPR0lOX0FDVElWSVRZEAISHwobU1VT",
-            "UElDSU9VU19BQ0NPVU5UX0NSRUFUSU9OEAMSIAocUkVMQVRFRF9BQ0NPVU5U",
-            "U19OVU1CRVJfSElHSBAEMs0ECiFSZWNhcHRjaGFFbnRlcnByaXNlU2Vydmlj",
-            "ZVYxQmV0YTES3QEKEENyZWF0ZUFzc2Vzc21lbnQSQS5nb29nbGUuY2xvdWQu",
-            "cmVjYXB0Y2hhZW50ZXJwcmlzZS52MWJldGExLkNyZWF0ZUFzc2Vzc21lbnRS",
-            "ZXF1ZXN0GjQuZ29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjFi",
-            "ZXRhMS5Bc3Nlc3NtZW50IlCC0+STAjYiKC92MWJldGExL3twYXJlbnQ9cHJv",
-            "amVjdHMvKn0vYXNzZXNzbWVudHM6CmFzc2Vzc21lbnTaQRFwYXJlbnQsYXNz",
-            "ZXNzbWVudBLvAQoSQW5ub3RhdGVBc3Nlc3NtZW50EkMuZ29vZ2xlLmNsb3Vk",
-            "LnJlY2FwdGNoYWVudGVycHJpc2UudjFiZXRhMS5Bbm5vdGF0ZUFzc2Vzc21l",
-            "bnRSZXF1ZXN0GkQuZ29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVudGVycHJpc2Uu",
-            "djFiZXRhMS5Bbm5vdGF0ZUFzc2Vzc21lbnRSZXNwb25zZSJOgtPkkwI2IjEv",
-            "djFiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2Fzc2Vzc21lbnRzLyp9OmFubm90",
-            "YXRlOgEq2kEPbmFtZSxhbm5vdGF0aW9uGlbKQSJyZWNhcHRjaGFlbnRlcnBy",
-            "aXNlLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5j",
-            "b20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKyAgomY29tLmdvb2dsZS5yZWNhcHRj",
-            "aGFlbnRlcnByaXNlLnYxYmV0YTFCGFJlY2FwdGNoYUVudGVycHJpc2VQcm90",
-            "b1ABWmFjbG91ZC5nb29nbGUuY29tL2dvL3JlY2FwdGNoYWVudGVycHJpc2Uv",
-            "djIvYXBpdjFiZXRhMS9yZWNhcHRjaGFlbnRlcnByaXNlcGI7cmVjYXB0Y2hh",
-            "ZW50ZXJwcmlzZXBiogIER0NSRaoCKEdvb2dsZS5DbG91ZC5SZWNhcHRjaGFF",
-            "bnRlcnByaXNlLlYxQmV0YTHKAihHb29nbGVcQ2xvdWRcUmVjYXB0Y2hhRW50",
-            "ZXJwcmlzZVxWMWJldGEx6gIrR29vZ2xlOjpDbG91ZDo6UmVjYXB0Y2hhRW50",
-            "ZXJwcmlzZTo6VjFiZXRhMWIGcHJvdG8z"));
+            "c3NtZW50LkNhcmRUZXN0aW5nVmVyZGljdBJ8ChhiZWhhdmlvcmFsX3RydXN0",
+            "X3ZlcmRpY3QYBCABKAsyWi5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJw",
+            "cmlzZS52MWJldGExLkZyYXVkUHJldmVudGlvbkFzc2Vzc21lbnQuQmVoYXZp",
+            "b3JhbFRydXN0VmVyZGljdBonChdTdG9sZW5JbnN0cnVtZW50VmVyZGljdBIM",
+            "CgRyaXNrGAEgASgCGiIKEkNhcmRUZXN0aW5nVmVyZGljdBIMCgRyaXNrGAEg",
+            "ASgCGicKFkJlaGF2aW9yYWxUcnVzdFZlcmRpY3QSDQoFdHJ1c3QYASABKAIi",
+            "uwIKGUFjY291bnREZWZlbmRlckFzc2Vzc21lbnQSaAoGbGFiZWxzGAEgAygO",
+            "MlguZ29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjFiZXRhMS5B",
+            "Y2NvdW50RGVmZW5kZXJBc3Nlc3NtZW50LkFjY291bnREZWZlbmRlckxhYmVs",
+            "IrMBChRBY2NvdW50RGVmZW5kZXJMYWJlbBImCiJBQ0NPVU5UX0RFRkVOREVS",
+            "X0xBQkVMX1VOU1BFQ0lGSUVEEAASEQoNUFJPRklMRV9NQVRDSBABEh0KGVNV",
+            "U1BJQ0lPVVNfTE9HSU5fQUNUSVZJVFkQAhIfChtTVVNQSUNJT1VTX0FDQ09V",
+            "TlRfQ1JFQVRJT04QAxIgChxSRUxBVEVEX0FDQ09VTlRTX05VTUJFUl9ISUdI",
+            "EAQyzQQKIVJlY2FwdGNoYUVudGVycHJpc2VTZXJ2aWNlVjFCZXRhMRLdAQoQ",
+            "Q3JlYXRlQXNzZXNzbWVudBJBLmdvb2dsZS5jbG91ZC5yZWNhcHRjaGFlbnRl",
+            "cnByaXNlLnYxYmV0YTEuQ3JlYXRlQXNzZXNzbWVudFJlcXVlc3QaNC5nb29n",
+            "bGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlzZS52MWJldGExLkFzc2Vzc21l",
+            "bnQiUILT5JMCNiIoL3YxYmV0YTEve3BhcmVudD1wcm9qZWN0cy8qfS9hc3Nl",
+            "c3NtZW50czoKYXNzZXNzbWVudNpBEXBhcmVudCxhc3Nlc3NtZW50Eu8BChJB",
+            "bm5vdGF0ZUFzc2Vzc21lbnQSQy5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50",
+            "ZXJwcmlzZS52MWJldGExLkFubm90YXRlQXNzZXNzbWVudFJlcXVlc3QaRC5n",
+            "b29nbGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlzZS52MWJldGExLkFubm90",
+            "YXRlQXNzZXNzbWVudFJlc3BvbnNlIk6C0+STAjYiMS92MWJldGExL3tuYW1l",
+            "PXByb2plY3RzLyovYXNzZXNzbWVudHMvKn06YW5ub3RhdGU6ASraQQ9uYW1l",
+            "LGFubm90YXRpb24aVspBInJlY2FwdGNoYWVudGVycHJpc2UuZ29vZ2xlYXBp",
+            "cy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3Vk",
+            "LXBsYXRmb3JtQrICCiZjb20uZ29vZ2xlLnJlY2FwdGNoYWVudGVycHJpc2Uu",
+            "djFiZXRhMUIYUmVjYXB0Y2hhRW50ZXJwcmlzZVByb3RvUAFaYWNsb3VkLmdv",
+            "b2dsZS5jb20vZ28vcmVjYXB0Y2hhZW50ZXJwcmlzZS92Mi9hcGl2MWJldGEx",
+            "L3JlY2FwdGNoYWVudGVycHJpc2VwYjtyZWNhcHRjaGFlbnRlcnByaXNlcGKi",
+            "AgRHQ1JFqgIoR29vZ2xlLkNsb3VkLlJlY2FwdGNoYUVudGVycHJpc2UuVjFC",
+            "ZXRhMcoCKEdvb2dsZVxDbG91ZFxSZWNhcHRjaGFFbnRlcnByaXNlXFYxYmV0",
+            "YTHqAitHb29nbGU6OkNsb3VkOjpSZWNhcHRjaGFFbnRlcnByaXNlOjpWMWJl",
+            "dGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -185,8 +189,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.TransactionData.Types.Item), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.TransactionData.Types.Item.Parser, new[]{ "Name", "Value", "Quantity", "MerchantAccountId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.TransactionData.Types.GatewayInfo), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.TransactionData.Types.GatewayInfo.Parser, new[]{ "Name", "GatewayResponseCode", "AvsResponseCode", "CvvResponseCode" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.TokenProperties), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.TokenProperties.Parser, new[]{ "Valid", "InvalidReason", "CreateTime", "Hostname", "Action" }, null, new[]{ typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.TokenProperties.Types.InvalidReason) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.FraudPreventionAssessment), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.FraudPreventionAssessment.Parser, new[]{ "TransactionRisk", "StolenInstrumentVerdict", "CardTestingVerdict" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.FraudPreventionAssessment.Types.StolenInstrumentVerdict), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.FraudPreventionAssessment.Types.StolenInstrumentVerdict.Parser, new[]{ "Risk" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.FraudPreventionAssessment.Types.CardTestingVerdict), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.FraudPreventionAssessment.Types.CardTestingVerdict.Parser, new[]{ "Risk" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.FraudPreventionAssessment), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.FraudPreventionAssessment.Parser, new[]{ "TransactionRisk", "StolenInstrumentVerdict", "CardTestingVerdict", "BehavioralTrustVerdict" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.FraudPreventionAssessment.Types.StolenInstrumentVerdict), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.FraudPreventionAssessment.Types.StolenInstrumentVerdict.Parser, new[]{ "Risk" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.FraudPreventionAssessment.Types.CardTestingVerdict), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.FraudPreventionAssessment.Types.CardTestingVerdict.Parser, new[]{ "Risk" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.FraudPreventionAssessment.Types.BehavioralTrustVerdict), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.FraudPreventionAssessment.Types.BehavioralTrustVerdict.Parser, new[]{ "Trust" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AccountDefenderAssessment), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AccountDefenderAssessment.Parser, new[]{ "Labels" }, null, new[]{ typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AccountDefenderAssessment.Types.AccountDefenderLabel) }, null, null)
           }));
     }
@@ -247,7 +252,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The name of the project in which the assessment will be created,
-    /// in the format "projects/{project_number}".
+    /// in the format `projects/{project_number}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -952,7 +957,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
     private string name_ = "";
     /// <summary>
     /// Required. The resource name of the Assessment, in the format
-    /// "projects/{project_number}/assessments/{assessment_id}".
+    /// `projects/{project_number}/assessments/{assessment_id}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1876,7 +1881,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
     private string name_ = "";
     /// <summary>
     /// Output only. The resource name for the Assessment in the format
-    /// "projects/{project_number}/assessments/{assessment_id}".
+    /// `projects/{project_number}/assessments/{assessment_id}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5432,6 +5437,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       transactionRisk_ = other.transactionRisk_;
       stolenInstrumentVerdict_ = other.stolenInstrumentVerdict_ != null ? other.stolenInstrumentVerdict_.Clone() : null;
       cardTestingVerdict_ = other.cardTestingVerdict_ != null ? other.cardTestingVerdict_.Clone() : null;
+      behavioralTrustVerdict_ = other.behavioralTrustVerdict_ != null ? other.behavioralTrustVerdict_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5488,6 +5494,21 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "behavioral_trust_verdict" field.</summary>
+    public const int BehavioralTrustVerdictFieldNumber = 4;
+    private global::Google.Cloud.RecaptchaEnterprise.V1Beta1.FraudPreventionAssessment.Types.BehavioralTrustVerdict behavioralTrustVerdict_;
+    /// <summary>
+    /// Assessment of this transaction for behavioral trust.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.RecaptchaEnterprise.V1Beta1.FraudPreventionAssessment.Types.BehavioralTrustVerdict BehavioralTrustVerdict {
+      get { return behavioralTrustVerdict_; }
+      set {
+        behavioralTrustVerdict_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -5506,6 +5527,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(TransactionRisk, other.TransactionRisk)) return false;
       if (!object.Equals(StolenInstrumentVerdict, other.StolenInstrumentVerdict)) return false;
       if (!object.Equals(CardTestingVerdict, other.CardTestingVerdict)) return false;
+      if (!object.Equals(BehavioralTrustVerdict, other.BehavioralTrustVerdict)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5516,6 +5538,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       if (TransactionRisk != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(TransactionRisk);
       if (stolenInstrumentVerdict_ != null) hash ^= StolenInstrumentVerdict.GetHashCode();
       if (cardTestingVerdict_ != null) hash ^= CardTestingVerdict.GetHashCode();
+      if (behavioralTrustVerdict_ != null) hash ^= BehavioralTrustVerdict.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5546,6 +5569,10 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
         output.WriteRawTag(26);
         output.WriteMessage(CardTestingVerdict);
       }
+      if (behavioralTrustVerdict_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(BehavioralTrustVerdict);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5568,6 +5595,10 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
         output.WriteRawTag(26);
         output.WriteMessage(CardTestingVerdict);
       }
+      if (behavioralTrustVerdict_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(BehavioralTrustVerdict);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5586,6 +5617,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       }
       if (cardTestingVerdict_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CardTestingVerdict);
+      }
+      if (behavioralTrustVerdict_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BehavioralTrustVerdict);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5613,6 +5647,12 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
           CardTestingVerdict = new global::Google.Cloud.RecaptchaEnterprise.V1Beta1.FraudPreventionAssessment.Types.CardTestingVerdict();
         }
         CardTestingVerdict.MergeFrom(other.CardTestingVerdict);
+      }
+      if (other.behavioralTrustVerdict_ != null) {
+        if (behavioralTrustVerdict_ == null) {
+          BehavioralTrustVerdict = new global::Google.Cloud.RecaptchaEnterprise.V1Beta1.FraudPreventionAssessment.Types.BehavioralTrustVerdict();
+        }
+        BehavioralTrustVerdict.MergeFrom(other.BehavioralTrustVerdict);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -5647,6 +5687,13 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
             input.ReadMessage(CardTestingVerdict);
             break;
           }
+          case 34: {
+            if (behavioralTrustVerdict_ == null) {
+              BehavioralTrustVerdict = new global::Google.Cloud.RecaptchaEnterprise.V1Beta1.FraudPreventionAssessment.Types.BehavioralTrustVerdict();
+            }
+            input.ReadMessage(BehavioralTrustVerdict);
+            break;
+          }
         }
       }
     #endif
@@ -5678,6 +5725,13 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
               CardTestingVerdict = new global::Google.Cloud.RecaptchaEnterprise.V1Beta1.FraudPreventionAssessment.Types.CardTestingVerdict();
             }
             input.ReadMessage(CardTestingVerdict);
+            break;
+          }
+          case 34: {
+            if (behavioralTrustVerdict_ == null) {
+              BehavioralTrustVerdict = new global::Google.Cloud.RecaptchaEnterprise.V1Beta1.FraudPreventionAssessment.Types.BehavioralTrustVerdict();
+            }
+            input.ReadMessage(BehavioralTrustVerdict);
             break;
           }
         }
@@ -6075,6 +6129,202 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
                 break;
               case 13: {
                 Risk = input.ReadFloat();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Information about behavioral trust of the transaction.
+      /// </summary>
+      public sealed partial class BehavioralTrustVerdict : pb::IMessage<BehavioralTrustVerdict>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<BehavioralTrustVerdict> _parser = new pb::MessageParser<BehavioralTrustVerdict>(() => new BehavioralTrustVerdict());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<BehavioralTrustVerdict> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.RecaptchaEnterprise.V1Beta1.FraudPreventionAssessment.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public BehavioralTrustVerdict() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public BehavioralTrustVerdict(BehavioralTrustVerdict other) : this() {
+          trust_ = other.trust_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public BehavioralTrustVerdict Clone() {
+          return new BehavioralTrustVerdict(this);
+        }
+
+        /// <summary>Field number for the "trust" field.</summary>
+        public const int TrustFieldNumber = 1;
+        private float trust_;
+        /// <summary>
+        /// Probability (0-1) of this transaction attempt being executed in a
+        /// behaviorally trustworthy way.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public float Trust {
+          get { return trust_; }
+          set {
+            trust_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as BehavioralTrustVerdict);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(BehavioralTrustVerdict other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Trust, other.Trust)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Trust != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Trust);
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Trust != 0F) {
+            output.WriteRawTag(13);
+            output.WriteFloat(Trust);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Trust != 0F) {
+            output.WriteRawTag(13);
+            output.WriteFloat(Trust);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Trust != 0F) {
+            size += 1 + 4;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(BehavioralTrustVerdict other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Trust != 0F) {
+            Trust = other.Trust;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 13: {
+                Trust = input.ReadFloat();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 13: {
+                Trust = input.ReadFloat();
                 break;
               }
             }
