@@ -27,7 +27,7 @@ public class FirestoreMultipleDbTest
     public FirestoreMultipleDbTest(MultipleFirestoreDbFixture multipleFirestoreDbFixture) =>
         _fixture = multipleFirestoreDbFixture;
 
-    [Fact]
+    [Fact(Skip = "This is a preview feature and it's not yet stable.")]
     public async Task MultipleDbReadWriteTest()
     {
         string dbIdPrefix = IdGenerator.FromGuid(prefix: "db", separator: "-");
