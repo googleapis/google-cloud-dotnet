@@ -89,6 +89,10 @@ container provided by the [Microsoft.Extensions.DependencyInjection](https://www
 The `Google.Cloud.PubSub.V1` package provides extension methods to register the clients with the dependency
 injection container in the `Microsoft.Extensions.DependencyInjection` namespace.
 
+Please refer to the Google Cloud .NET libraries general purpose
+[dependency injection documentation](client-lifecycle.md#dependency-injection-in-high-load-at-startup-environments)
+for a workaround on a known issue that may lead to thread starvation and high latency.
+
 ### PublisherClient
 
 To register a singleton `PublisherClient` instance with default settings in the `IServiceCollection`, use the
