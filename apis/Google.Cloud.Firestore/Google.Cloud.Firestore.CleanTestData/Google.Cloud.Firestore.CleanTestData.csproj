@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Google.Cloud.Firestore.Admin.V1" Version="3.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Google.Cloud.Firestore\Google.Cloud.Firestore.csproj" />
   </ItemGroup>
 
