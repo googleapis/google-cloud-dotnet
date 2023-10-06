@@ -320,8 +320,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The unique name of the project in which to create the new instance.
-    /// Values are of the form `projects/{project}`.
+    /// Required. The unique name of the project in which to create the new
+    /// instance. Values are of the form `projects/{project}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -336,8 +336,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int InstanceIdFieldNumber = 2;
     private string instanceId_ = "";
     /// <summary>
-    /// Required. The ID to be used when referring to the new instance within its project,
-    /// e.g., just `myinstance` rather than
+    /// Required. The ID to be used when referring to the new instance within its
+    /// project, e.g., just `myinstance` rather than
     /// `projects/myproject/instances/myinstance`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -835,8 +835,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The unique name of the project for which a list of instances is requested.
-    /// Values are of the form `projects/{project}`.
+    /// Required. The unique name of the project for which a list of instances is
+    /// requested. Values are of the form `projects/{project}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1780,9 +1780,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The unique name of the instance in which to create the new cluster.
-    /// Values are of the form
-    /// `projects/{project}/instances/{instance}`.
+    /// Required. The unique name of the instance in which to create the new
+    /// cluster. Values are of the form `projects/{project}/instances/{instance}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1797,8 +1796,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int ClusterIdFieldNumber = 2;
     private string clusterId_ = "";
     /// <summary>
-    /// Required. The ID to be used when referring to the new cluster within its instance,
-    /// e.g., just `mycluster` rather than
+    /// Required. The ID to be used when referring to the new cluster within its
+    /// instance, e.g., just `mycluster` rather than
     /// `projects/myproject/instances/myinstance/clusters/mycluster`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2264,10 +2263,11 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The unique name of the instance for which a list of clusters is requested.
-    /// Values are of the form `projects/{project}/instances/{instance}`.
-    /// Use `{instance} = '-'` to list Clusters for all Instances in a project,
-    /// e.g., `projects/myproject/instances/-`.
+    /// Required. The unique name of the instance for which a list of clusters is
+    /// requested. Values are of the form
+    /// `projects/{project}/instances/{instance}`. Use `{instance} = '-'` to list
+    /// Clusters for all Instances in a project, e.g.,
+    /// `projects/myproject/instances/-`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2758,8 +2758,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The unique name of the cluster to be deleted. Values are of the form
-    /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
+    /// Required. The unique name of the cluster to be deleted. Values are of the
+    /// form `projects/{project}/instances/{instance}/clusters/{cluster}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4813,8 +4813,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int ClusterFieldNumber = 1;
     private global::Google.Cloud.Bigtable.Admin.V2.Cluster cluster_;
     /// <summary>
-    /// Required. The Cluster which contains the partial updates to be applied, subject to
-    /// the update_mask.
+    /// Required. The Cluster which contains the partial updates to be applied,
+    /// subject to the update_mask.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5069,9 +5069,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The unique name of the instance in which to create the new app profile.
-    /// Values are of the form
-    /// `projects/{project}/instances/{instance}`.
+    /// Required. The unique name of the instance in which to create the new app
+    /// profile. Values are of the form `projects/{project}/instances/{instance}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5086,8 +5085,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int AppProfileIdFieldNumber = 2;
     private string appProfileId_ = "";
     /// <summary>
-    /// Required. The ID to be used when referring to the new app profile within its
-    /// instance, e.g., just `myprofile` rather than
+    /// Required. The ID to be used when referring to the new app profile within
+    /// its instance, e.g., just `myprofile` rather than
     /// `projects/myproject/instances/myinstance/appProfiles/myprofile`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5395,8 +5394,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The unique name of the requested app profile. Values are of the form
-    /// `projects/{project}/instances/{instance}/appProfiles/{app_profile}`.
+    /// Required. The unique name of the requested app profile. Values are of the
+    /// form `projects/{project}/instances/{instance}/appProfiles/{app_profile}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5593,8 +5592,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The unique name of the instance for which a list of app profiles is
-    /// requested. Values are of the form
+    /// Required. The unique name of the instance for which a list of app profiles
+    /// is requested. Values are of the form
     /// `projects/{project}/instances/{instance}`.
     /// Use `{instance} = '-'` to list AppProfiles for all Instances in a project,
     /// e.g., `projects/myproject/instances/-`.
@@ -6431,7 +6430,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The unique name of the app profile to be deleted. Values are of the form
+    /// Required. The unique name of the app profile to be deleted. Values are of
+    /// the form
     /// `projects/{project}/instances/{instance}/appProfiles/{app_profile}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
