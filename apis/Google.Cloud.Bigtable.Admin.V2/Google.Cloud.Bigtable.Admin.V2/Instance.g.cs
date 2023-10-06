@@ -67,35 +67,43 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             "AhIMCghSRVNJWklORxADEgwKCERJU0FCTEVEEAQ6ZepBYgokYmlndGFibGVh",
             "ZG1pbi5nb29nbGVhcGlzLmNvbS9DbHVzdGVyEjpwcm9qZWN0cy97cHJvamVj",
             "dH0vaW5zdGFuY2VzL3tpbnN0YW5jZX0vY2x1c3RlcnMve2NsdXN0ZXJ9QggK",
-            "BmNvbmZpZyKIBAoKQXBwUHJvZmlsZRIMCgRuYW1lGAEgASgJEgwKBGV0YWcY",
+            "BmNvbmZpZyLoBgoKQXBwUHJvZmlsZRIMCgRuYW1lGAEgASgJEgwKBGV0YWcY",
             "AiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkSZwodbXVsdGlfY2x1c3Rlcl9y",
             "b3V0aW5nX3VzZV9hbnkYBSABKAsyPi5nb29nbGUuYmlndGFibGUuYWRtaW4u",
             "djIuQXBwUHJvZmlsZS5NdWx0aUNsdXN0ZXJSb3V0aW5nVXNlQW55SAASWwoW",
             "c2luZ2xlX2NsdXN0ZXJfcm91dGluZxgGIAEoCzI5Lmdvb2dsZS5iaWd0YWJs",
-            "ZS5hZG1pbi52Mi5BcHBQcm9maWxlLlNpbmdsZUNsdXN0ZXJSb3V0aW5nSAAa",
-            "MAoZTXVsdGlDbHVzdGVyUm91dGluZ1VzZUFueRITCgtjbHVzdGVyX2lkcxgB",
-            "IAMoCRpOChRTaW5nbGVDbHVzdGVyUm91dGluZxISCgpjbHVzdGVyX2lkGAEg",
-            "ASgJEiIKGmFsbG93X3RyYW5zYWN0aW9uYWxfd3JpdGVzGAIgASgIOm/qQWwK",
-            "J2JpZ3RhYmxlYWRtaW4uZ29vZ2xlYXBpcy5jb20vQXBwUHJvZmlsZRJBcHJv",
-            "amVjdHMve3Byb2plY3R9L2luc3RhbmNlcy97aW5zdGFuY2V9L2FwcFByb2Zp",
-            "bGVzL3thcHBfcHJvZmlsZX1CEAoOcm91dGluZ19wb2xpY3kiiAMKCUhvdFRh",
-            "YmxldBIMCgRuYW1lGAEgASgJEjsKCnRhYmxlX25hbWUYAiABKAlCJ/pBJAoi",
-            "YmlndGFibGVhZG1pbi5nb29nbGVhcGlzLmNvbS9UYWJsZRIzCgpzdGFydF90",
-            "aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjEK",
-            "CGVuZF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
-            "4EEDEhEKCXN0YXJ0X2tleRgFIAEoCRIPCgdlbmRfa2V5GAYgASgJEiMKFm5v",
-            "ZGVfY3B1X3VzYWdlX3BlcmNlbnQYByABKAJCA+BBAzp/6kF8CiZiaWd0YWJs",
-            "ZWFkbWluLmdvb2dsZWFwaXMuY29tL0hvdFRhYmxldBJScHJvamVjdHMve3By",
-            "b2plY3R9L2luc3RhbmNlcy97aW5zdGFuY2V9L2NsdXN0ZXJzL3tjbHVzdGVy",
-            "fS9ob3RUYWJsZXRzL3tob3RfdGFibGV0fULQAgocY29tLmdvb2dsZS5iaWd0",
-            "YWJsZS5hZG1pbi52MkINSW5zdGFuY2VQcm90b1ABWj1nb29nbGUuZ29sYW5n",
-            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2JpZ3RhYmxlL2FkbWluL3YyO2Fk",
-            "bWluqgIeR29vZ2xlLkNsb3VkLkJpZ3RhYmxlLkFkbWluLlYyygIeR29vZ2xl",
-            "XENsb3VkXEJpZ3RhYmxlXEFkbWluXFYy6gIiR29vZ2xlOjpDbG91ZDo6Qmln",
-            "dGFibGU6OkFkbWluOjpWMupBeAohY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20v",
-            "Q3J5cHRvS2V5ElNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2Nh",
-            "dGlvbn0va2V5UmluZ3Mve2tleV9yaW5nfS9jcnlwdG9LZXlzL3tjcnlwdG9f",
-            "a2V5fWIGcHJvdG8z"));
+            "ZS5hZG1pbi52Mi5BcHBQcm9maWxlLlNpbmdsZUNsdXN0ZXJSb3V0aW5nSAAS",
+            "RQoIcHJpb3JpdHkYByABKA4yLS5nb29nbGUuYmlndGFibGUuYWRtaW4udjIu",
+            "QXBwUHJvZmlsZS5Qcmlvcml0eUICGAFIARJUChJzdGFuZGFyZF9pc29sYXRp",
+            "b24YCyABKAsyNi5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuQXBwUHJvZmls",
+            "ZS5TdGFuZGFyZElzb2xhdGlvbkgBGjAKGU11bHRpQ2x1c3RlclJvdXRpbmdV",
+            "c2VBbnkSEwoLY2x1c3Rlcl9pZHMYASADKAkaTgoUU2luZ2xlQ2x1c3RlclJv",
+            "dXRpbmcSEgoKY2x1c3Rlcl9pZBgBIAEoCRIiChphbGxvd190cmFuc2FjdGlv",
+            "bmFsX3dyaXRlcxgCIAEoCBpUChFTdGFuZGFyZElzb2xhdGlvbhI/Cghwcmlv",
+            "cml0eRgBIAEoDjItLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5BcHBQcm9m",
+            "aWxlLlByaW9yaXR5Il4KCFByaW9yaXR5EhgKFFBSSU9SSVRZX1VOU1BFQ0lG",
+            "SUVEEAASEAoMUFJJT1JJVFlfTE9XEAESEwoPUFJJT1JJVFlfTUVESVVNEAIS",
+            "EQoNUFJJT1JJVFlfSElHSBADOm/qQWwKJ2JpZ3RhYmxlYWRtaW4uZ29vZ2xl",
+            "YXBpcy5jb20vQXBwUHJvZmlsZRJBcHJvamVjdHMve3Byb2plY3R9L2luc3Rh",
+            "bmNlcy97aW5zdGFuY2V9L2FwcFByb2ZpbGVzL3thcHBfcHJvZmlsZX1CEAoO",
+            "cm91dGluZ19wb2xpY3lCCwoJaXNvbGF0aW9uIogDCglIb3RUYWJsZXQSDAoE",
+            "bmFtZRgBIAEoCRI7Cgp0YWJsZV9uYW1lGAIgASgJQif6QSQKImJpZ3RhYmxl",
+            "YWRtaW4uZ29vZ2xlYXBpcy5jb20vVGFibGUSMwoKc3RhcnRfdGltZRgDIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIxCghlbmRfdGlt",
+            "ZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIRCglz",
+            "dGFydF9rZXkYBSABKAkSDwoHZW5kX2tleRgGIAEoCRIjChZub2RlX2NwdV91",
+            "c2FnZV9wZXJjZW50GAcgASgCQgPgQQM6f+pBfAomYmlndGFibGVhZG1pbi5n",
+            "b29nbGVhcGlzLmNvbS9Ib3RUYWJsZXQSUnByb2plY3RzL3twcm9qZWN0fS9p",
+            "bnN0YW5jZXMve2luc3RhbmNlfS9jbHVzdGVycy97Y2x1c3Rlcn0vaG90VGFi",
+            "bGV0cy97aG90X3RhYmxldH1C0AIKHGNvbS5nb29nbGUuYmlndGFibGUuYWRt",
+            "aW4udjJCDUluc3RhbmNlUHJvdG9QAVo9Z29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
+            "cHJvdG8vZ29vZ2xlYXBpcy9iaWd0YWJsZS9hZG1pbi92MjthZG1pbqoCHkdv",
+            "b2dsZS5DbG91ZC5CaWd0YWJsZS5BZG1pbi5WMsoCHkdvb2dsZVxDbG91ZFxC",
+            "aWd0YWJsZVxBZG1pblxWMuoCIkdvb2dsZTo6Q2xvdWQ6OkJpZ3RhYmxlOjpB",
+            "ZG1pbjo6VjLqQXgKIWNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tl",
+            "eRJTcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2tl",
+            "eVJpbmdzL3trZXlfcmluZ30vY3J5cHRvS2V5cy97Y3J5cHRvX2tleX1iBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Bigtable.Admin.V2.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -105,8 +113,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Parser, new[]{ "Name", "Location", "State", "ServeNodes", "ClusterConfig", "DefaultStorageType", "EncryptionConfig" }, new[]{ "Config" }, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterAutoscalingConfig), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterAutoscalingConfig.Parser, new[]{ "AutoscalingLimits", "AutoscalingTargets" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterConfig), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterConfig.Parser, new[]{ "ClusterAutoscalingConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.EncryptionConfig), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.EncryptionConfig.Parser, new[]{ "KmsKeyName" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Parser, new[]{ "Name", "Etag", "Description", "MultiClusterRoutingUseAny", "SingleClusterRouting" }, new[]{ "RoutingPolicy" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny.Parser, new[]{ "ClusterIds" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting.Parser, new[]{ "ClusterId", "AllowTransactionalWrites" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Parser, new[]{ "Name", "Etag", "Description", "MultiClusterRoutingUseAny", "SingleClusterRouting", "Priority", "StandardIsolation" }, new[]{ "RoutingPolicy", "Isolation" }, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.Priority) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny.Parser, new[]{ "ClusterIds" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting.Parser, new[]{ "ClusterId", "AllowTransactionalWrites" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.StandardIsolation), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.StandardIsolation.Parser, new[]{ "Priority" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.HotTablet), global::Google.Cloud.Bigtable.Admin.V2.HotTablet.Parser, new[]{ "Name", "TableName", "StartTime", "EndTime", "StartKey", "EndKey", "NodeCpuUsagePercent" }, null, null, null, null)
           }));
     }
@@ -264,9 +273,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int CreateTimeFieldNumber = 7;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Output only. A server-assigned timestamp representing when this Instance was created.
-    /// For instances created before this field was added (August 2021), this value
-    /// is `seconds: 0, nanos: 1`.
+    /// Output only. A server-assigned timestamp representing when this Instance
+    /// was created. For instances created before this field was added (August
+    /// 2021), this value is `seconds: 0, nanos: 1`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -705,7 +714,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     /// <summary>
     /// The storage utilization that the Autoscaler should be trying to achieve.
     /// This number is limited between 2560 (2.5TiB) and 5120 (5TiB) for a SSD
-    /// cluster and between 8192 (8TiB) and 16384 (16TiB) for an HDD cluster;
+    /// cluster and between 8192 (8TiB) and 16384 (16TiB) for an HDD cluster,
     /// otherwise it will return INVALID_ARGUMENT error. If this value is set to 0,
     /// it will be treated as if it were set to the default value: 2560 for SSD,
     /// 8192 for HDD.
@@ -1191,8 +1200,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int LocationFieldNumber = 2;
     private string location_ = "";
     /// <summary>
-    /// Immutable. The location where this cluster's nodes and storage reside. For best
-    /// performance, clients should be located as close as possible to this
+    /// Immutable. The location where this cluster's nodes and storage reside. For
+    /// best performance, clients should be located as close as possible to this
     /// cluster. Currently only zones are supported, so values should be of the
     /// form `projects/{project}/locations/{zone}`.
     /// </summary>
@@ -2359,6 +2368,15 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           break;
       }
 
+      switch (other.IsolationCase) {
+        case IsolationOneofCase.Priority:
+          Priority = other.Priority;
+          break;
+        case IsolationOneofCase.StandardIsolation:
+          StandardIsolation = other.StandardIsolation.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2451,6 +2469,57 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
     }
 
+    /// <summary>Field number for the "priority" field.</summary>
+    public const int PriorityFieldNumber = 7;
+    /// <summary>
+    /// This field has been deprecated in favor of `standard_isolation.priority`.
+    /// If you set this field, `standard_isolation.priority` will be set instead.
+    ///
+    /// The priority of requests sent using this app profile.
+    /// </summary>
+    [global::System.ObsoleteAttribute]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.Priority Priority {
+      get { return HasPriority ? (global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.Priority) isolation_ : global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.Priority.Unspecified; }
+      set {
+        isolation_ = value;
+        isolationCase_ = IsolationOneofCase.Priority;
+      }
+    }
+    /// <summary>Gets whether the "priority" field is set</summary>
+    [global::System.ObsoleteAttribute]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPriority {
+      get { return isolationCase_ == IsolationOneofCase.Priority; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "priority" </summary>
+    [global::System.ObsoleteAttribute]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPriority() {
+      if (HasPriority) {
+        ClearIsolation();
+      }
+    }
+
+    /// <summary>Field number for the "standard_isolation" field.</summary>
+    public const int StandardIsolationFieldNumber = 11;
+    /// <summary>
+    /// The standard options used for isolating this app profile's traffic from
+    /// other use cases.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.StandardIsolation StandardIsolation {
+      get { return isolationCase_ == IsolationOneofCase.StandardIsolation ? (global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.StandardIsolation) isolation_ : null; }
+      set {
+        isolation_ = value;
+        isolationCase_ = value == null ? IsolationOneofCase.None : IsolationOneofCase.StandardIsolation;
+      }
+    }
+
     private object routingPolicy_;
     /// <summary>Enum of possible cases for the "routing_policy" oneof.</summary>
     public enum RoutingPolicyOneofCase {
@@ -2470,6 +2539,27 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public void ClearRoutingPolicy() {
       routingPolicyCase_ = RoutingPolicyOneofCase.None;
       routingPolicy_ = null;
+    }
+
+    private object isolation_;
+    /// <summary>Enum of possible cases for the "isolation" oneof.</summary>
+    public enum IsolationOneofCase {
+      None = 0,
+      Priority = 7,
+      StandardIsolation = 11,
+    }
+    private IsolationOneofCase isolationCase_ = IsolationOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public IsolationOneofCase IsolationCase {
+      get { return isolationCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIsolation() {
+      isolationCase_ = IsolationOneofCase.None;
+      isolation_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2492,7 +2582,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (Description != other.Description) return false;
       if (!object.Equals(MultiClusterRoutingUseAny, other.MultiClusterRoutingUseAny)) return false;
       if (!object.Equals(SingleClusterRouting, other.SingleClusterRouting)) return false;
+      if (Priority != other.Priority) return false;
+      if (!object.Equals(StandardIsolation, other.StandardIsolation)) return false;
       if (RoutingPolicyCase != other.RoutingPolicyCase) return false;
+      if (IsolationCase != other.IsolationCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2505,7 +2598,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (routingPolicyCase_ == RoutingPolicyOneofCase.MultiClusterRoutingUseAny) hash ^= MultiClusterRoutingUseAny.GetHashCode();
       if (routingPolicyCase_ == RoutingPolicyOneofCase.SingleClusterRouting) hash ^= SingleClusterRouting.GetHashCode();
+      if (HasPriority) hash ^= Priority.GetHashCode();
+      if (isolationCase_ == IsolationOneofCase.StandardIsolation) hash ^= StandardIsolation.GetHashCode();
       hash ^= (int) routingPolicyCase_;
+      hash ^= (int) isolationCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2544,6 +2640,14 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         output.WriteRawTag(50);
         output.WriteMessage(SingleClusterRouting);
       }
+      if (HasPriority) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) Priority);
+      }
+      if (isolationCase_ == IsolationOneofCase.StandardIsolation) {
+        output.WriteRawTag(90);
+        output.WriteMessage(StandardIsolation);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2574,6 +2678,14 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         output.WriteRawTag(50);
         output.WriteMessage(SingleClusterRouting);
       }
+      if (HasPriority) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) Priority);
+      }
+      if (isolationCase_ == IsolationOneofCase.StandardIsolation) {
+        output.WriteRawTag(90);
+        output.WriteMessage(StandardIsolation);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2598,6 +2710,12 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       if (routingPolicyCase_ == RoutingPolicyOneofCase.SingleClusterRouting) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SingleClusterRouting);
+      }
+      if (HasPriority) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Priority);
+      }
+      if (isolationCase_ == IsolationOneofCase.StandardIsolation) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StandardIsolation);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2632,6 +2750,18 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             SingleClusterRouting = new global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting();
           }
           SingleClusterRouting.MergeFrom(other.SingleClusterRouting);
+          break;
+      }
+
+      switch (other.IsolationCase) {
+        case IsolationOneofCase.Priority:
+          Priority = other.Priority;
+          break;
+        case IsolationOneofCase.StandardIsolation:
+          if (StandardIsolation == null) {
+            StandardIsolation = new global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.StandardIsolation();
+          }
+          StandardIsolation.MergeFrom(other.StandardIsolation);
           break;
       }
 
@@ -2680,6 +2810,20 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             SingleClusterRouting = subBuilder;
             break;
           }
+          case 56: {
+            isolation_ = input.ReadEnum();
+            isolationCase_ = IsolationOneofCase.Priority;
+            break;
+          }
+          case 90: {
+            global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.StandardIsolation subBuilder = new global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.StandardIsolation();
+            if (isolationCase_ == IsolationOneofCase.StandardIsolation) {
+              subBuilder.MergeFrom(StandardIsolation);
+            }
+            input.ReadMessage(subBuilder);
+            StandardIsolation = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -2725,6 +2869,20 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             SingleClusterRouting = subBuilder;
             break;
           }
+          case 56: {
+            isolation_ = input.ReadEnum();
+            isolationCase_ = IsolationOneofCase.Priority;
+            break;
+          }
+          case 90: {
+            global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.StandardIsolation subBuilder = new global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.StandardIsolation();
+            if (isolationCase_ == IsolationOneofCase.StandardIsolation) {
+              subBuilder.MergeFrom(StandardIsolation);
+            }
+            input.ReadMessage(subBuilder);
+            StandardIsolation = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -2735,6 +2893,21 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      /// <summary>
+      /// Possible priorities for an app profile. Note that higher priority writes
+      /// can sometimes queue behind lower priority writes to the same tablet, as
+      /// writes must be strictly sequenced in the durability log.
+      /// </summary>
+      public enum Priority {
+        /// <summary>
+        /// Default value. Mapped to PRIORITY_HIGH (the legacy behavior) on creation.
+        /// </summary>
+        [pbr::OriginalName("PRIORITY_UNSPECIFIED")] Unspecified = 0,
+        [pbr::OriginalName("PRIORITY_LOW")] Low = 1,
+        [pbr::OriginalName("PRIORITY_MEDIUM")] Medium = 2,
+        [pbr::OriginalName("PRIORITY_HIGH")] High = 3,
+      }
+
       /// <summary>
       /// Read/write requests are routed to the nearest cluster in the instance, and
       /// will fail over to the nearest cluster that is available in the event of
@@ -3163,6 +3336,202 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
       }
 
+      /// <summary>
+      /// Standard options for isolating this app profile's traffic from other use
+      /// cases.
+      /// </summary>
+      public sealed partial class StandardIsolation : pb::IMessage<StandardIsolation>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<StandardIsolation> _parser = new pb::MessageParser<StandardIsolation>(() => new StandardIsolation());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<StandardIsolation> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StandardIsolation() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StandardIsolation(StandardIsolation other) : this() {
+          priority_ = other.priority_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StandardIsolation Clone() {
+          return new StandardIsolation(this);
+        }
+
+        /// <summary>Field number for the "priority" field.</summary>
+        public const int PriorityFieldNumber = 1;
+        private global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.Priority priority_ = global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.Priority.Unspecified;
+        /// <summary>
+        /// The priority of requests sent using this app profile.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.Priority Priority {
+          get { return priority_; }
+          set {
+            priority_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as StandardIsolation);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(StandardIsolation other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Priority != other.Priority) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Priority != global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.Priority.Unspecified) hash ^= Priority.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Priority != global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.Priority.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Priority);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Priority != global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.Priority.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Priority);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Priority != global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.Priority.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Priority);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(StandardIsolation other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Priority != global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.Priority.Unspecified) {
+            Priority = other.Priority;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                Priority = (global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.Priority) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                Priority = (global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.Priority) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
     }
     #endregion
 
@@ -3321,10 +3690,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int NodeCpuUsagePercentFieldNumber = 7;
     private float nodeCpuUsagePercent_;
     /// <summary>
-    /// Output only. The average CPU usage spent by a node on this tablet over the start_time to
-    /// end_time time range. The percentage is the amount of CPU used by the node
-    /// to serve the tablet, from 0% (tablet was not interacted with) to 100% (the
-    /// node spent all cycles serving the hot tablet).
+    /// Output only. The average CPU usage spent by a node on this tablet over the
+    /// start_time to end_time time range. The percentage is the amount of CPU used
+    /// by the node to serve the tablet, from 0% (tablet was not interacted with)
+    /// to 100% (the node spent all cycles serving the hot tablet).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
