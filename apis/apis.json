@@ -5265,6 +5265,21 @@
       "transport": "grpc+rest"
     },
     {
+      "id": "Google.Shopping.Type",
+      "version": "1.0.0-beta00",
+      "targetFrameworks": "netstandard2.1;net462",
+      "type": "other",
+      "description": "Version-agnostic types for Shopping APIs.",
+      "tags": [
+        "shopping"
+      ],
+      "dependencies": {
+        "Google.Api.CommonProtos": "2.10.0"
+      },
+      "generator": "proto",
+      "protoPath": "google/shopping/type"
+    },
+    {
       "id": "Grafeas.V1",
       "packageOwner": "google-cloud",
       "generator": "micro",
