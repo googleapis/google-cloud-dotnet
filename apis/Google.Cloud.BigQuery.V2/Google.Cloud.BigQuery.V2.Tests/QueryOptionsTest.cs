@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -39,7 +39,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 ParameterMode = BigQueryParameterMode.Positional,
                 DestinationEncryptionConfiguration = new EncryptionConfiguration { KmsKeyName = "projects/1/locations/us/keyRings/1/cryptoKeys/1" },
                 DestinationSchemaUpdateOptions = SchemaUpdateOption.AllowFieldAddition | SchemaUpdateOption.AllowFieldRelaxation,
-                TimePartitioning = TimePartition.CreateDailyPartitioning(TimeSpan.FromHours(1), "field")
+                TimePartitioning = TimePartition.CreateDailyPartitioning(TimeSpan.FromHours(1), "field"),
+                ConfigurationModifier = options => options.ETag = "test"
             };
 
             JobConfigurationQuery query = new JobConfigurationQuery();
@@ -63,6 +64,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal(60 * 60 * 1000, query.TimePartitioning.ExpirationMs);
             Assert.Equal("DAY", query.TimePartitioning.Type);
             Assert.Equal("field", query.TimePartitioning.Field);
+            Assert.Equal("test", query.ETag);
         }
     }
 }

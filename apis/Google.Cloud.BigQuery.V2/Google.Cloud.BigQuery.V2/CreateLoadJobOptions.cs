@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Apis.Bigquery.v2.Data;
+using System;
 using System.Collections.Generic;
 
 namespace Google.Cloud.BigQuery.V2
@@ -142,6 +143,11 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public bool? UseAvroLogicalTypes { get; set; }
 
+        /// <summary>
+        /// Delegate that is used to modify the underlying <see cref="JobConfigurationLoad"/>.
+        /// </summary>
+        public Action<JobConfigurationLoad> ConfigurationModifier { get; set; }
+
         internal void ModifyRequest(JobConfigurationLoad load)
         {
             if (SkipLeadingRows != null)
@@ -216,6 +222,7 @@ namespace Google.Cloud.BigQuery.V2
             {
                 load.Encoding = Encoding;
             }
+            ConfigurationModifier?.Invoke(load);
         }
     }
 }

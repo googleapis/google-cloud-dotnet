@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Apis.Bigquery.v2.Data;
+using System;
 using System.Collections.Generic;
 
 namespace Google.Cloud.BigQuery.V2
@@ -131,6 +132,11 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public TimePartitioning TimePartitioning { get; set; }
 
+        /// <summary>
+        /// Delegate that is used to modify the underlying <see cref="JobConfigurationQuery"/>.
+        /// </summary>
+        public Action<JobConfigurationQuery> ConfigurationModifier { get; set; }
+
         internal void ModifyRequest(JobConfigurationQuery query)
         {
             // Note: no validation of combinations (flatten results etc). Leave this to the server,
@@ -196,6 +202,7 @@ namespace Google.Cloud.BigQuery.V2
             {
                 query.TimePartitioning = TimePartitioning;
             }
+            ConfigurationModifier?.Invoke(query);
         }
     }
 }

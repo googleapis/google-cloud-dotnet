@@ -38,7 +38,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 TimePartitioning = TimePartition.CreateDailyPartitioning(expiration: null),
                 Encoding = "encoding-test",
                 DestinationEncryptionConfiguration = new EncryptionConfiguration { KmsKeyName = "projects/1/locations/us/keyRings/1/cryptoKeys/1" },
-                DestinationSchemaUpdateOptions = SchemaUpdateOption.AllowFieldAddition | SchemaUpdateOption.AllowFieldRelaxation
+                DestinationSchemaUpdateOptions = SchemaUpdateOption.AllowFieldAddition | SchemaUpdateOption.AllowFieldRelaxation,
+                ConfigurationModifier = options => options.ETag = "test"
             };
 
             JobConfigurationLoad config = new JobConfigurationLoad();
@@ -61,6 +62,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal("encoding-test", config.Encoding);
             Assert.Contains("ALLOW_FIELD_ADDITION", config.SchemaUpdateOptions);
             Assert.Contains("ALLOW_FIELD_RELAXATION", config.SchemaUpdateOptions);
+            Assert.Equal("test", config.ETag);
         }
     }
 }

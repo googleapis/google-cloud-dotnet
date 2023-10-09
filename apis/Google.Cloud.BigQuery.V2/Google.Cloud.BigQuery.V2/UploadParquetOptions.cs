@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Apis.Bigquery.v2.Data;
+using System;
 using System.Collections.Generic;
 
 namespace Google.Cloud.BigQuery.V2
@@ -69,6 +70,11 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public SchemaUpdateOption? DestinationSchemaUpdateOptions { get; set; }
 
+        /// <summary>
+        /// Delegate that is used to modify the underlying <see cref="JobConfigurationLoad"/>.
+        /// </summary>
+        public Action<JobConfigurationLoad> ConfigurationModifier { get; set; }
+
         internal void ModifyConfiguration(JobConfigurationLoad loadRequest)
         {
             if (AllowUnknownFields != null)
@@ -99,6 +105,7 @@ namespace Google.Cloud.BigQuery.V2
             {
                 loadRequest.SchemaUpdateOptions = new List<string>(EnumMap.ToApiValues(DestinationSchemaUpdateOptions.Value));
             }
+            ConfigurationModifier?.Invoke(loadRequest);
         }
     }
 }

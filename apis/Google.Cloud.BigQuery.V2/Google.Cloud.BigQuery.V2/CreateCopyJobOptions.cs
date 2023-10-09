@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Apis.Bigquery.v2.Data;
+using System;
 
 namespace Google.Cloud.BigQuery.V2
 {
@@ -43,6 +44,11 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public CopyOperationType? OperationType { get; set; }
 
+        /// <summary>
+        /// Delegate that is used to modify the underlying <see cref="JobConfigurationTableCopy"/>.
+        /// </summary>
+        public Action<JobConfigurationTableCopy> ConfigurationModifier { get; set; }
+
         internal void ModifyRequest(JobConfigurationTableCopy copy)
         {
             if (CreateDisposition != null)
@@ -61,6 +67,7 @@ namespace Google.Cloud.BigQuery.V2
             {
                 copy.OperationType = EnumMap.ToApiValue(OperationType.Value);
             }
+            ConfigurationModifier?.Invoke(copy);
         }
     }
 }
