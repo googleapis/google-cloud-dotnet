@@ -240,6 +240,7 @@
     "apis/Google.Maps.MapsPlatformDatasets.V1Alpha/Google.Maps.MapsPlatformDatasets.V1Alpha/**",
     "apis/Google.Maps.Places.V1/Google.Maps.Places.V1/**",
     "apis/Google.Maps.Routing.V2/Google.Maps.Routing.V2/**",
+    "apis/Google.Shopping.Type/Google.Shopping.Type/**",
     "apis/Grafeas.V1/Grafeas.V1/**"
   ],
   "ignoreDeps": [
