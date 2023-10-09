@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Api.Gax.ResourceNames;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Firestore.Admin.V1;
 using Google.Cloud.Firestore.IntegrationTests.Models;
@@ -21,14 +22,24 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
+using static Google.Cloud.Firestore.Admin.V1.Database.Types;
 using static Google.Cloud.Firestore.Admin.V1.Index.Types;
 using static Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types;
+using Index = Google.Cloud.Firestore.Admin.V1.Index;
 
 namespace Google.Cloud.Firestore.IntegrationTests
 {
     [CollectionDefinition(nameof(FirestoreFixture))]
     public class FirestoreFixture : CloudProjectFixtureBase, ICollectionFixture<FirestoreFixture>
     {
+        // Creating databases and indexes can take a while.
+        // We don't want to wait *forever* (which would be the behavior of default poll settings)
+        // but we need to have a timeout of more than a minute.
+        private static readonly PollSettings AdminOperationPollSettings =
+            new PollSettings(expiration: Expiration.FromTimeout(TimeSpan.FromMinutes(5)), delay: TimeSpan.FromSeconds(5));
+
+        private const string DatabaseLocation = "us-east1";
+
         // This is not the test project environment variable used by other integration tests,
         // as Datastore and Firestore can't both be active in the same project.
         private const string ProjectEnvironmentVariable = "FIRESTORE_TEST_PROJECT";
@@ -65,6 +76,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         /// </summary>
         public CollectionReference CollectionGroupQueryCollection { get; }
 
+        public string DatabaseId => FirestoreDb.DatabaseId;
         internal bool RunningOnEmulator { get; }
 
         private FirestoreAdminClient AdminClient { get; }
@@ -75,33 +87,48 @@ namespace Google.Cloud.Firestore.IntegrationTests
         {
             RunningOnEmulator = !string.IsNullOrEmpty(Environment.GetEnvironmentVariable("FIRESTORE_EMULATOR_HOST"));
             AdminClient = FirestoreAdminClient.Create();
-            // Currently, only the default database is supported... so we create all our collections with a randomly-generated prefix.
-            // When multiple databases are supported, we'll create a new one per test run.
-            CollectionPrefix = IdGenerator.FromGuid(prefix: "test-");
-            FirestoreDb = new FirestoreDbBuilder { ProjectId = ProjectId, EmulatorDetection = EmulatorDetection.EmulatorOrProduction }.Build();
-            NonQueryCollection = FirestoreDb.Collection(CollectionPrefix + "-non-query");
-            HighScoreCollection = FirestoreDb.Collection(CollectionPrefix + "-high-scores");
-            StudentCollection = FirestoreDb.Collection(CollectionPrefix + "-students");
-            ArrayQueryCollection = FirestoreDb.Collection(CollectionPrefix + "-array-query");
-            CollectionGroupQueryCollection = FirestoreDb.Collection(CollectionPrefix + "-collection-groups");
+
+            // On the emulator, we can't easily create a new database - so we just use the default.
+            // We expect each test run time be in a separate emulator session.
+            string databaseId = RunningOnEmulator ? null : IdGenerator.FromDateTime(prefix: "test-");
+            if (!RunningOnEmulator)
+            {
+                Task.Run(() => CreateDatabaseAsync(databaseId)).Wait();
+            }
+            FirestoreDb = new FirestoreDbBuilder
+            {
+                ProjectId = ProjectId,
+                DatabaseId = databaseId,
+                EmulatorDetection = EmulatorDetection.EmulatorOrProduction
+            }.Build();
+            CollectionPrefix = RunningOnEmulator ? IdGenerator.FromGuid(prefix: "test-", suffix: "-") : "";
+            NonQueryCollection = FirestoreDb.Collection(CollectionPrefix + "non-query");
+            HighScoreCollection = FirestoreDb.Collection(CollectionPrefix + "high-scores");
+            StudentCollection = FirestoreDb.Collection(CollectionPrefix + "students");
+            ArrayQueryCollection = FirestoreDb.Collection(CollectionPrefix + "array-query");
+            CollectionGroupQueryCollection = FirestoreDb.Collection(CollectionPrefix + "collection-groups");
             Task.Run(PopulateCollections).Wait();
         }
 
         private async Task PopulateCollections()
         {
+            // Note: we create the first index separately, to make sure the database is
+            // fully initialized for writing. After that point, we can parallelize the remaining
+            // index creation.
+            await CreateIndexAsync(StudentCollection, AscendingField("EnglishScore"), AscendingField("Level"), AscendingField("MathScore"), AscendingField("Name"));
             var indexTasks = new[]
             {
-                CreateIndex(HighScoreCollection, AscendingField("Score"), AscendingField("Level")),
-                CreateIndex(HighScoreCollection, AscendingField("Score"), DescendingField("Level")),
-                CreateIndex(StudentCollection, AscendingField("EnglishScore"), AscendingField("Level"), AscendingField("MathScore"), AscendingField("Name"))
+                CreateIndexAsync(HighScoreCollection, AscendingField("Score"), AscendingField("Level")),
+                CreateIndexAsync(HighScoreCollection, AscendingField("Score"), DescendingField("Level")),
             };
             await Task.WhenAll(indexTasks);
+
             await PopulateCollection(HighScoreCollection, HighScore.Data);
             await PopulateCollection(ArrayQueryCollection, ArrayDocument.Data);
             await PopulateCollection(StudentCollection, Student.Data);
         }
 
-        internal async Task CreateIndex(CollectionReference collection, params IndexField[] fields)
+        internal async Task CreateIndexAsync(CollectionReference collection, params IndexField[] fields)
         {
             // Tests which require an index should be skipped, as the emulator doesn't support the
             // admin API.
@@ -109,17 +136,13 @@ namespace Google.Cloud.Firestore.IntegrationTests
             {
                 return;
             }
-            var index = new Admin.V1.Index
+            var index = new Index
             {
                 Fields = { fields },
                 QueryScope = QueryScope.Collection
             };
-            var job = await AdminClient.CreateIndexAsync(new CollectionGroupName(ProjectId, "(default)", collection.Id), index);
-            // Creating an index can take a while. We don't want to wait *forever* (which would be the behavior of default poll settings)
-            // but we need to have a timeout of more than a minute.
-            var expiration = Expiration.FromTimeout(TimeSpan.FromMinutes(5));
-            var delay = TimeSpan.FromSeconds(5);
-            await job.PollUntilCompletedAsync(new PollSettings(expiration, delay));
+            var job = await AdminClient.CreateIndexAsync(new CollectionGroupName(ProjectId, DatabaseId, collection.Id), index);
+            await job.PollUntilCompletedAsync(AdminOperationPollSettings);
         }
 
         private async Task PopulateCollection(CollectionReference collection, IEnumerable<object> documents)
@@ -139,14 +162,28 @@ namespace Google.Cloud.Firestore.IntegrationTests
         public CollectionReference CreateUniqueCollection()
         {
             int counter = Interlocked.Increment(ref _uniqueCollectionCounter);
-            return FirestoreDb.Collection($"{CollectionPrefix}-unique-{counter}");
+            return FirestoreDb.Collection($"{CollectionPrefix}unique-{counter}");
         }
 
         // Convenience methods for creating fields for indexes.
         internal IndexField AscendingField(string name) => new IndexField { FieldPath = name, Order = Order.Ascending };
         internal IndexField DescendingField(string name) => new IndexField { FieldPath = name, Order = Order.Descending };
 
-        // No clean-up for now. With multiple-database support, we'll create a database
-        // on construction and delete it here.
+        /// <summary>
+        /// Creates a new Firestore database.
+        /// </summary>
+        public async Task CreateDatabaseAsync(string databaseId)
+        {
+            // Tests which require different databases should be skipped; this is protection against forgetting that.
+            Assert.False(RunningOnEmulator);
+            var client = FirestoreAdminClient.Create();
+            var operation = await client.CreateDatabaseAsync(
+                new ProjectName(ProjectId),
+                new Database { LocationId = DatabaseLocation, Type = DatabaseType.FirestoreNative },
+                databaseId);
+            await operation.PollUntilCompletedAsync(AdminOperationPollSettings);
+        }
+
+        // No clean-up here: CleanTestData deletes test collections, indexes and databases.
     }
 }

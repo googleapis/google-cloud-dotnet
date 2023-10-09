@@ -16,29 +16,27 @@ using Google.Cloud.ClientTesting;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xunit;
-using static Google.Cloud.Firestore.Admin.V1.Database.Types;
 
 namespace Google.Cloud.Firestore.IntegrationTests;
 
-[Collection(nameof(MultipleFirestoreDbFixture))]
+[Collection(nameof(FirestoreFixture))]
 public class FirestoreMultipleDbTest
 {
-    private readonly MultipleFirestoreDbFixture _fixture;
-    public FirestoreMultipleDbTest(MultipleFirestoreDbFixture multipleFirestoreDbFixture) =>
-        _fixture = multipleFirestoreDbFixture;
+    private readonly FirestoreFixture _fixture;
+    public FirestoreMultipleDbTest(FirestoreFixture fixture) =>
+        _fixture = fixture;
 
-    [Fact(Skip = "This is a preview feature and it's not yet stable.")]
+    [SkippableFact]
     public async Task MultipleDbReadWriteTest()
     {
-        string dbIdPrefix = IdGenerator.FromGuid(prefix: "db", separator: "-");
+        Skip.If(_fixture.RunningOnEmulator, "The emulator does not support the Admin API required for multi-db testing.");
+        string dbIdPrefix = IdGenerator.FromGuid(prefix: "test-multi-db", separator: "-");
         string correctDbId = $"{dbIdPrefix}-correct";
         string incorrectDbId = $"{dbIdPrefix}-incorrect";
-        string databaseLocationId = "us-east1";
-        DatabaseType databaseType = DatabaseType.FirestoreNative;
 
         // Create two databases one for reading and writing, one for reading to validate that correct database should be referenced.
-        await _fixture.CreateDatabaseAsync(correctDbId, databaseLocationId, databaseType);
-        await _fixture.CreateDatabaseAsync(incorrectDbId, databaseLocationId, databaseType);
+        await _fixture.CreateDatabaseAsync(correctDbId);
+        await _fixture.CreateDatabaseAsync(incorrectDbId);
 
         // Write data to the first database; referenced as correct database.
         FirestoreDb correctDbWriter = new FirestoreDbBuilder

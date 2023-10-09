@@ -1,4 +1,4 @@
-﻿// Copyright 2018, Google LLC
+// Copyright 2018, Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -70,7 +70,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         [Fact]
         public async Task LimitToLast()
         {
-            var collection = _fixture.FirestoreDb.Collection(_fixture.CollectionPrefix + "-WatchLimitToLast");
+            var collection = _fixture.FirestoreDb.Collection(_fixture.CollectionPrefix + "WatchLimitToLast");
             await collection.Document("doc1").CreateAsync(new { counter = 1 });
             await collection.Document("doc2").CreateAsync(new { counter = 2 });
             await collection.Document("doc3").CreateAsync(new { counter = 3 });
