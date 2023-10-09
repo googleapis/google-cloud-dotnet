@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -31,14 +31,17 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 // May not make any sense for JSON, but we don't validate...
                 FieldDelimiter = "gronkle",
                 // Again, doesn't make sense for JSON, but we don't validate.
-                UseAvroLogicalTypes = true
+                UseAvroLogicalTypes = true,
+                ConfigurationModifier = options => options.ETag = "test"
             };
+
             JobConfigurationExtract extract = new JobConfigurationExtract();
             options.ModifyRequest(extract);
             Assert.Equal("GZIP", extract.Compression);
             Assert.Equal(false, extract.PrintHeader);
             Assert.Equal("NEWLINE_DELIMITED_JSON", extract.DestinationFormat);
             Assert.Equal("gronkle", extract.FieldDelimiter);
+            Assert.Equal("test", extract.ETag);
             Assert.True(extract.UseAvroLogicalTypes);
         }
 

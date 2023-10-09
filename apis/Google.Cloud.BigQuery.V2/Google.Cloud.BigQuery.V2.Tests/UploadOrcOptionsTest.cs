@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -30,7 +30,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 TimePartitioning = TimePartition.CreateDailyPartitioning(expiration: null),
                 WriteDisposition = WriteDisposition.WriteAppend,
                 DestinationEncryptionConfiguration = new EncryptionConfiguration { KmsKeyName = "projects/1/locations/us/keyRings/1/cryptoKeys/1" },
-                DestinationSchemaUpdateOptions = SchemaUpdateOption.AllowFieldAddition | SchemaUpdateOption.AllowFieldRelaxation
+                DestinationSchemaUpdateOptions = SchemaUpdateOption.AllowFieldAddition | SchemaUpdateOption.AllowFieldRelaxation,
+                ConfigurationModifier = options => options.AllowJaggedRows = true
             };
 
             JobConfigurationLoad config = new JobConfigurationLoad();
@@ -43,6 +44,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal("WRITE_APPEND", config.WriteDisposition);
             Assert.Equal("projects/1/locations/us/keyRings/1/cryptoKeys/1", config.DestinationEncryptionConfiguration.KmsKeyName);
             Assert.Equal(2, config.SchemaUpdateOptions.Count);
+            Assert.Equal(true, config.AllowJaggedRows);
             Assert.Contains("ALLOW_FIELD_ADDITION", config.SchemaUpdateOptions);
             Assert.Contains("ALLOW_FIELD_RELAXATION", config.SchemaUpdateOptions);
         }

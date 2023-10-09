@@ -27,13 +27,15 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 CreateDisposition = CreateDisposition.CreateIfNeeded,
                 WriteDisposition = WriteDisposition.WriteIfEmpty,
                 DestinationEncryptionConfiguration = new EncryptionConfiguration { KmsKeyName = "projects/1/locations/us/keyRings/1/cryptoKeys/1" },
-                OperationType = CopyOperationType.Clone
+                OperationType = CopyOperationType.Clone,
+                ConfigurationModifier = options => options.ETag = "test"
             };
             JobConfigurationTableCopy request = new JobConfigurationTableCopy();
             options.ModifyRequest(request);
             Assert.Equal("CREATE_IF_NEEDED", request.CreateDisposition);
             Assert.Equal("WRITE_EMPTY", request.WriteDisposition);
             Assert.Equal("CLONE", request.OperationType);
+            Assert.Equal("test", request.ETag);
             Assert.Equal("projects/1/locations/us/keyRings/1/cryptoKeys/1", request.DestinationEncryptionConfiguration.KmsKeyName);
         }
     }

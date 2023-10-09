@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -52,6 +52,11 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public bool? UseAvroLogicalTypes { get; set; }
 
+        /// <summary>
+        /// Delegate that is used to modify the underlying <see cref="JobConfigurationExtract"/>.
+        /// </summary>
+        public Action<JobConfigurationExtract> ConfigurationModifier { get; set; }
+
         internal void ModifyRequest(JobConfigurationExtract extract)
         {
             if (DestinationFormat != null)
@@ -78,6 +83,7 @@ namespace Google.Cloud.BigQuery.V2
             {
                 extract.UseAvroLogicalTypes = UseAvroLogicalTypes;
             }
+            ConfigurationModifier?.Invoke(extract);
         }
     }
 }

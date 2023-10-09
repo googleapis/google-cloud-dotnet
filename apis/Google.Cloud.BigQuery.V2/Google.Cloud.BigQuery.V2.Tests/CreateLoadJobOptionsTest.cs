@@ -41,7 +41,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 DestinationEncryptionConfiguration = new EncryptionConfiguration { KmsKeyName = "projects/1/locations/us/keyRings/1/cryptoKeys/1" },
                 DestinationSchemaUpdateOptions = SchemaUpdateOption.AllowFieldAddition | SchemaUpdateOption.AllowFieldRelaxation,
                 UseAvroLogicalTypes = true,
-                Encoding = "encoding-test"
+                Encoding = "encoding-test",
+                ConfigurationModifier = options => options.ETag = "test"
             };
 
             JobConfigurationLoad load = new JobConfigurationLoad();
@@ -66,6 +67,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Contains("ALLOW_FIELD_ADDITION", load.SchemaUpdateOptions);
             Assert.Contains("ALLOW_FIELD_RELAXATION", load.SchemaUpdateOptions);
             Assert.True(load.UseAvroLogicalTypes);
+            Assert.Equal("test", load.ETag);
         }
     }
 }
