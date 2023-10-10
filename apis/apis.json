@@ -5265,6 +5265,26 @@
       "transport": "grpc+rest"
     },
     {
+      "id": "Google.Shopping.Merchant.Inventories.V1Beta",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Merchant Inventories",
+      "productUrl": "https://developers.google.com/merchant/api",
+      "description": "Recommended Google client library to access the Merchant Inventories API (v1beta) which allows developers to programmatically showcase products with local (in-store) or regional availability for free on Google.",
+      "tags": [
+        "shopping",
+        "inventory"
+      ],
+      "dependencies": {
+        "Google.Shopping.Type": "1.0.0-beta01"
+      },
+      "generator": "micro",
+      "protoPath": "google/shopping/merchant/inventories/v1beta",
+      "shortName": "merchantapi",
+      "serviceConfigFile": "merchantapi_v1beta.yaml",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Shopping.Type",
       "version": "1.0.0-beta01",
       "targetFrameworks": "netstandard2.1;net462",
