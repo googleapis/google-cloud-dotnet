@@ -486,8 +486,8 @@ namespace Google.Cloud.DocumentAI.V1 {
     /// <summary>Field number for the "from_start" field.</summary>
     public const int FromStartFieldNumber = 6;
     /// <summary>
-    /// Only process certain pages from the start. Process all if the document
-    /// has fewer pages.
+    /// Only process certain pages from the start, process all if the document
+    /// has less pages.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
