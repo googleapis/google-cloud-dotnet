@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/sdk:6.0.414-jammy
+FROM mcr.microsoft.com/dotnet/sdk:7.0.402-jammy
 
 RUN apt-get update
 RUN apt-get install -y git
