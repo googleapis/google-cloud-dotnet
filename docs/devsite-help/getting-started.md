@@ -22,7 +22,7 @@ API as a simple example; the steps required for other APIs are very similar.
 ## Prerequisites
 
 All Google Cloud APIs require a Google Cloud project. If you haven't set one up already,
-please [create one](https://cloud.devsite.corp.google.com/resource-manager/docs/creating-managing-projects).
+please [create one](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
 You'll also need to [enable your chosen API](https://console.cloud.google.com/apis/library) if it hasn't
 already been used within that Google Cloud project.
 
