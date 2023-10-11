@@ -16,6 +16,6 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="YamlDotNet" Version="13.5.2" />
+    <PackageReference Include="YamlDotNet" Version="13.7.0" />
   </ItemGroup>
 </Project>
