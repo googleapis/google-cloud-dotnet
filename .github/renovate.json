@@ -249,6 +249,20 @@
   ],
   "packageRules": [
     {
+      "matchPackagePrefixes": [
+        "Microsoft.Extensions.",
+        "mcr.microsoft.com/dotnet/"
+      ],
+      "allowedVersions": "<7.0.0"
+    },
+    {
+      "matchPackageNames": [
+        "System.Collections.Immutable",
+        "dotnet-sdk"
+      ],
+      "allowedVersions": "<7.0.0"
+    },
+    {
       "matchPaths": [
         "apis/Google.Cloud.Diagnostics.AspNetCore3/**"
       ],
