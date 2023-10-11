@@ -7,7 +7,7 @@ few different buckets, described below. Additionally, the
 [troubleshooting page](troubleshooting.md) has guides for logging and debugging.
 
 The Google Cloud Libraries for .NET follow the [Google Open Source .NET Support Policy]
-(https://opensource.devsite.corp.google.com/documentation/policies/dotnet-support).
+(https://opensource.google/documentation/policies/dotnet-support).
 
 ## Authentication issues
 
