@@ -33,10 +33,10 @@ namespace Google.Shopping.Type {
             "dHJpYnV0ZUIHCgVfbmFtZUIICgZfdmFsdWUqgQEKC0Rlc3RpbmF0aW9uEhsK",
             "F0RFU1RJTkFUSU9OX1VOU1BFQ0lGSUVEEAASEAoMU0hPUFBJTkdfQURTEAES",
             "FwoTTE9DQUxfSU5WRU5UT1JZX0FEUxACEhEKDUZSRUVfTElTVElOR1MQAxIX",
-            "ChNGUkVFX0xPQ0FMX0xJU1RJTkdTEARCgAEKGGNvbS5nb29nbGUuc2hvcHBp",
-            "bmcudHlwZUIKVHlwZXNQcm90b1ABWj9nb29nbGUuZ29sYW5nLm9yZy9nZW5w",
-            "cm90by9nb29nbGVhcGlzL3Nob3BwaW5nL3R5cGUvdHlwZXM7dHlwZXOqAhRH",
-            "b29nbGUuU2hvcHBpbmcuVHlwZWIGcHJvdG8z"));
+            "ChNGUkVFX0xPQ0FMX0xJU1RJTkdTEARCcAoYY29tLmdvb2dsZS5zaG9wcGlu",
+            "Zy50eXBlQgpUeXBlc1Byb3RvUAFaL2Nsb3VkLmdvb2dsZS5jb20vZ28vc2hv",
+            "cHBpbmcvdHlwZS90eXBlcGI7dHlwZXBiqgIUR29vZ2xlLlNob3BwaW5nLlR5",
+            "cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Shopping.Type.Destination), }, null, new pbr::GeneratedClrTypeInfo[] {
