@@ -30,55 +30,34 @@ namespace Google.Shopping.Type {
             "Y3Jvc0IQCg5fY3VycmVuY3lfY29kZSKIAQoPQ3VzdG9tQXR0cmlidXRlEhEK",
             "BG5hbWUYASABKAlIAIgBARISCgV2YWx1ZRgCIAEoCUgBiAEBEjsKDGdyb3Vw",
             "X3ZhbHVlcxgDIAMoCzIlLmdvb2dsZS5zaG9wcGluZy50eXBlLkN1c3RvbUF0",
-            "dHJpYnV0ZUIHCgVfbmFtZUIICgZfdmFsdWUqgQEKC0Rlc3RpbmF0aW9uEhsK",
-            "F0RFU1RJTkFUSU9OX1VOU1BFQ0lGSUVEEAASEAoMU0hPUFBJTkdfQURTEAES",
-            "FwoTTE9DQUxfSU5WRU5UT1JZX0FEUxACEhEKDUZSRUVfTElTVElOR1MQAxIX",
-            "ChNGUkVFX0xPQ0FMX0xJU1RJTkdTEARCcAoYY29tLmdvb2dsZS5zaG9wcGlu",
-            "Zy50eXBlQgpUeXBlc1Byb3RvUAFaL2Nsb3VkLmdvb2dsZS5jb20vZ28vc2hv",
-            "cHBpbmcvdHlwZS90eXBlcGI7dHlwZXBiqgIUR29vZ2xlLlNob3BwaW5nLlR5",
-            "cGViBnByb3RvMw=="));
+            "dHJpYnV0ZUIHCgVfbmFtZUIICgZfdmFsdWUiwQEKC0Rlc3RpbmF0aW9uIrEB",
+            "Cg9EZXN0aW5hdGlvbkVudW0SIAocREVTVElOQVRJT05fRU5VTV9VTlNQRUNJ",
+            "RklFRBAAEhAKDFNIT1BQSU5HX0FEUxABEg8KC0RJU1BMQVlfQURTEAISFwoT",
+            "TE9DQUxfSU5WRU5UT1JZX0FEUxADEhEKDUZSRUVfTElTVElOR1MQBBIXChNG",
+            "UkVFX0xPQ0FMX0xJU1RJTkdTEAUSFAoQWU9VVFVCRV9TSE9QUElORxAGItkC",
+            "ChBSZXBvcnRpbmdDb250ZXh0IsQCChRSZXBvcnRpbmdDb250ZXh0RW51bRIm",
+            "CiJSRVBPUlRJTkdfQ09OVEVYVF9FTlVNX1VOU1BFQ0lGSUVEEAASEAoMU0hP",
+            "UFBJTkdfQURTEAESEQoNRElTQ09WRVJZX0FEUxACEg0KCVZJREVPX0FEUxAD",
+            "Eg8KC0RJU1BMQVlfQURTEAQSFwoTTE9DQUxfSU5WRU5UT1JZX0FEUxAFEhkK",
+            "FVZFSElDTEVfSU5WRU5UT1JZX0FEUxAGEhEKDUZSRUVfTElTVElOR1MQBxIX",
+            "ChNGUkVFX0xPQ0FMX0xJU1RJTkdTEAgSHwobRlJFRV9MT0NBTF9WRUhJQ0xF",
+            "X0xJU1RJTkdTEAkSFAoQWU9VVFVCRV9TSE9QUElORxAKEhAKDENMT1VEX1JF",
+            "VEFJTBALEhYKEkxPQ0FMX0NMT1VEX1JFVEFJTBAMQnAKGGNvbS5nb29nbGUu",
+            "c2hvcHBpbmcudHlwZUIKVHlwZXNQcm90b1ABWi9jbG91ZC5nb29nbGUuY29t",
+            "L2dvL3Nob3BwaW5nL3R5cGUvdHlwZXBiO3R5cGVwYqoCFEdvb2dsZS5TaG9w",
+            "cGluZy5UeXBlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Shopping.Type.Destination), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Type.Price), global::Google.Shopping.Type.Price.Parser, new[]{ "AmountMicros", "CurrencyCode" }, new[]{ "AmountMicros", "CurrencyCode" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Type.CustomAttribute), global::Google.Shopping.Type.CustomAttribute.Parser, new[]{ "Name", "Value", "GroupValues" }, new[]{ "Name", "Value" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Type.CustomAttribute), global::Google.Shopping.Type.CustomAttribute.Parser, new[]{ "Name", "Value", "GroupValues" }, new[]{ "Name", "Value" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Type.Destination), global::Google.Shopping.Type.Destination.Parser, null, null, new[]{ typeof(global::Google.Shopping.Type.Destination.Types.DestinationEnum) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Type.ReportingContext), global::Google.Shopping.Type.ReportingContext.Parser, null, null, new[]{ typeof(global::Google.Shopping.Type.ReportingContext.Types.ReportingContextEnum) }, null, null)
           }));
     }
     #endregion
 
   }
-  #region Enums
-  /// <summary>
-  /// Destinations available for a product.
-  ///
-  /// Destinations are used in Merchant Center to allow you to control where the
-  /// products from your data feed should be displayed.
-  /// </summary>
-  public enum Destination {
-    /// <summary>
-    /// Not specified.
-    /// </summary>
-    [pbr::OriginalName("DESTINATION_UNSPECIFIED")] Unspecified = 0,
-    /// <summary>
-    /// Shopping ads.
-    /// </summary>
-    [pbr::OriginalName("SHOPPING_ADS")] ShoppingAds = 1,
-    /// <summary>
-    /// Local inventory ads.
-    /// </summary>
-    [pbr::OriginalName("LOCAL_INVENTORY_ADS")] LocalInventoryAds = 2,
-    /// <summary>
-    /// Free listings.
-    /// </summary>
-    [pbr::OriginalName("FREE_LISTINGS")] FreeListings = 3,
-    /// <summary>
-    /// Free local product listings.
-    /// </summary>
-    [pbr::OriginalName("FREE_LOCAL_LISTINGS")] FreeLocalListings = 4,
-  }
-
-  #endregion
-
   #region Messages
   /// <summary>
   /// The price represented as a number and currency.
@@ -641,6 +620,442 @@ namespace Google.Shopping.Type {
       }
     }
     #endif
+
+  }
+
+  /// <summary>
+  /// Destinations available for a product.
+  ///
+  /// Destinations are used in Merchant Center to allow you to control where the
+  /// products from your data feed should be displayed.
+  /// </summary>
+  public sealed partial class Destination : pb::IMessage<Destination>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Destination> _parser = new pb::MessageParser<Destination>(() => new Destination());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Destination> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Shopping.Type.TypesReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Destination() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Destination(Destination other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Destination Clone() {
+      return new Destination(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Destination);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Destination other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Destination other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Destination message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Destination values.
+      /// </summary>
+      public enum DestinationEnum {
+        /// <summary>
+        /// Not specified.
+        /// </summary>
+        [pbr::OriginalName("DESTINATION_ENUM_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// [Shopping ads](https://support.google.com/google-ads/answer/2454022).
+        /// </summary>
+        [pbr::OriginalName("SHOPPING_ADS")] ShoppingAds = 1,
+        /// <summary>
+        /// [Display ads](https://support.google.com/merchants/answer/6069387).
+        /// </summary>
+        [pbr::OriginalName("DISPLAY_ADS")] DisplayAds = 2,
+        /// <summary>
+        /// [Local inventory
+        /// ads](https://support.google.com/merchants/answer/3057972).
+        /// </summary>
+        [pbr::OriginalName("LOCAL_INVENTORY_ADS")] LocalInventoryAds = 3,
+        /// <summary>
+        /// [Free listings](https://support.google.com/merchants/answer/9199328).
+        /// </summary>
+        [pbr::OriginalName("FREE_LISTINGS")] FreeListings = 4,
+        /// <summary>
+        /// [Free local product
+        /// listings](https://support.google.com/merchants/answer/9825611).
+        /// </summary>
+        [pbr::OriginalName("FREE_LOCAL_LISTINGS")] FreeLocalListings = 5,
+        /// <summary>
+        /// [YouTube Shopping](https://support.google.com/merchants/answer/12362804).
+        /// </summary>
+        [pbr::OriginalName("YOUTUBE_SHOPPING")] YoutubeShopping = 6,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Reporting contexts that your account and product issues apply to.
+  ///
+  /// Reporting contexts are groups of surfaces and formats for product results on
+  /// Google. They can represent the entire destination (for example, [Shopping
+  /// ads](https://support.google.com/merchants/answer/6149970)) or a subset of
+  /// formats within a destination (for example, [Discovery
+  /// ads](https://support.google.com/merchants/answer/13389785)).
+  /// </summary>
+  public sealed partial class ReportingContext : pb::IMessage<ReportingContext>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ReportingContext> _parser = new pb::MessageParser<ReportingContext>(() => new ReportingContext());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ReportingContext> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Shopping.Type.TypesReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReportingContext() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReportingContext(ReportingContext other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReportingContext Clone() {
+      return new ReportingContext(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ReportingContext);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ReportingContext other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ReportingContext other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ReportingContext message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Reporting context values.
+      /// </summary>
+      public enum ReportingContextEnum {
+        /// <summary>
+        /// Not specified.
+        /// </summary>
+        [pbr::OriginalName("REPORTING_CONTEXT_ENUM_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// [Shopping ads](https://support.google.com/merchants/answer/6149970).
+        /// </summary>
+        [pbr::OriginalName("SHOPPING_ADS")] ShoppingAds = 1,
+        /// <summary>
+        /// [Discovery and Demand Gen
+        /// ads](https://support.google.com/merchants/answer/13389785).
+        /// </summary>
+        [pbr::OriginalName("DISCOVERY_ADS")] DiscoveryAds = 2,
+        /// <summary>
+        /// [Video ads](https://support.google.com/google-ads/answer/6340491).
+        /// </summary>
+        [pbr::OriginalName("VIDEO_ADS")] VideoAds = 3,
+        /// <summary>
+        /// [Display ads](https://support.google.com/merchants/answer/6069387).
+        /// </summary>
+        [pbr::OriginalName("DISPLAY_ADS")] DisplayAds = 4,
+        /// <summary>
+        /// [Local inventory
+        /// ads](https://support.google.com/merchants/answer/3271956).
+        /// </summary>
+        [pbr::OriginalName("LOCAL_INVENTORY_ADS")] LocalInventoryAds = 5,
+        /// <summary>
+        /// [Vehicle inventory
+        /// ads](https://support.google.com/merchants/answer/11544533).
+        /// </summary>
+        [pbr::OriginalName("VEHICLE_INVENTORY_ADS")] VehicleInventoryAds = 6,
+        /// <summary>
+        /// [Free product
+        /// listings](https://support.google.com/merchants/answer/9199328).
+        /// </summary>
+        [pbr::OriginalName("FREE_LISTINGS")] FreeListings = 7,
+        /// <summary>
+        /// [Free local product
+        /// listings](https://support.google.com/merchants/answer/9825611).
+        /// </summary>
+        [pbr::OriginalName("FREE_LOCAL_LISTINGS")] FreeLocalListings = 8,
+        /// <summary>
+        /// [Free local vehicle
+        /// listings](https://support.google.com/merchants/answer/11544533).
+        /// </summary>
+        [pbr::OriginalName("FREE_LOCAL_VEHICLE_LISTINGS")] FreeLocalVehicleListings = 9,
+        /// <summary>
+        /// [YouTube
+        /// Shopping](https://support.google.com/merchants/answer/13478370).
+        /// </summary>
+        [pbr::OriginalName("YOUTUBE_SHOPPING")] YoutubeShopping = 10,
+        /// <summary>
+        /// [Cloud retail](https://cloud.google.com/solutions/retail).
+        /// </summary>
+        [pbr::OriginalName("CLOUD_RETAIL")] CloudRetail = 11,
+        /// <summary>
+        /// [Local cloud retail](https://cloud.google.com/solutions/retail).
+        /// </summary>
+        [pbr::OriginalName("LOCAL_CLOUD_RETAIL")] LocalCloudRetail = 12,
+      }
+
+    }
+    #endregion
 
   }
 
