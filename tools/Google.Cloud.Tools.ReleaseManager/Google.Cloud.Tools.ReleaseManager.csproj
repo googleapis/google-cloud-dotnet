@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Google.Api.CommonProtos" Version="2.11.0" />
+    <PackageReference Include="Google.Api.CommonProtos" Version="2.12.0" />
     <PackageReference Include="LibGit2Sharp" Version="0.27.2" />
     <PackageReference Include="NuGet.Protocol" Version="6.7.0" />
     <PackageReference Include="Octokit" Version="8.0.1" />
