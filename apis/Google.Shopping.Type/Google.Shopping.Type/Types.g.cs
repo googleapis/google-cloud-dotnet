@@ -42,17 +42,20 @@ namespace Google.Shopping.Type {
             "FVZFSElDTEVfSU5WRU5UT1JZX0FEUxAGEhEKDUZSRUVfTElTVElOR1MQBxIX",
             "ChNGUkVFX0xPQ0FMX0xJU1RJTkdTEAgSHwobRlJFRV9MT0NBTF9WRUhJQ0xF",
             "X0xJU1RJTkdTEAkSFAoQWU9VVFVCRV9TSE9QUElORxAKEhAKDENMT1VEX1JF",
-            "VEFJTBALEhYKEkxPQ0FMX0NMT1VEX1JFVEFJTBAMQnAKGGNvbS5nb29nbGUu",
-            "c2hvcHBpbmcudHlwZUIKVHlwZXNQcm90b1ABWi9jbG91ZC5nb29nbGUuY29t",
-            "L2dvL3Nob3BwaW5nL3R5cGUvdHlwZXBiO3R5cGVwYqoCFEdvb2dsZS5TaG9w",
-            "cGluZy5UeXBlYgZwcm90bzM="));
+            "VEFJTBALEhYKEkxPQ0FMX0NMT1VEX1JFVEFJTBAMIk0KB0NoYW5uZWwiQgoL",
+            "Q2hhbm5lbEVudW0SHAoYQ0hBTk5FTF9FTlVNX1VOU1BFQ0lGSUVEEAASCgoG",
+            "T05MSU5FEAESCQoFTE9DQUwQAkJwChhjb20uZ29vZ2xlLnNob3BwaW5nLnR5",
+            "cGVCClR5cGVzUHJvdG9QAVovY2xvdWQuZ29vZ2xlLmNvbS9nby9zaG9wcGlu",
+            "Zy90eXBlL3R5cGVwYjt0eXBlcGKqAhRHb29nbGUuU2hvcHBpbmcuVHlwZWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Type.Price), global::Google.Shopping.Type.Price.Parser, new[]{ "AmountMicros", "CurrencyCode" }, new[]{ "AmountMicros", "CurrencyCode" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Type.CustomAttribute), global::Google.Shopping.Type.CustomAttribute.Parser, new[]{ "Name", "Value", "GroupValues" }, new[]{ "Name", "Value" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Type.Destination), global::Google.Shopping.Type.Destination.Parser, null, null, new[]{ typeof(global::Google.Shopping.Type.Destination.Types.DestinationEnum) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Type.ReportingContext), global::Google.Shopping.Type.ReportingContext.Parser, null, null, new[]{ typeof(global::Google.Shopping.Type.ReportingContext.Types.ReportingContextEnum) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Type.ReportingContext), global::Google.Shopping.Type.ReportingContext.Parser, null, null, new[]{ typeof(global::Google.Shopping.Type.ReportingContext.Types.ReportingContextEnum) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Type.Channel), global::Google.Shopping.Type.Channel.Parser, null, null, new[]{ typeof(global::Google.Shopping.Type.Channel.Types.ChannelEnum) }, null, null)
           }));
     }
     #endregion
@@ -118,6 +121,8 @@ namespace Google.Shopping.Type {
     /// The price represented as a number in micros (1 million micros is an
     /// equivalent to one's currency standard unit, for example, 1 USD = 1000000
     /// micros).
+    /// This field can also be set as infinity by setting to -1.
+    /// This field only support -1 and positive value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1052,6 +1057,189 @@ namespace Google.Shopping.Type {
         /// [Local cloud retail](https://cloud.google.com/solutions/retail).
         /// </summary>
         [pbr::OriginalName("LOCAL_CLOUD_RETAIL")] LocalCloudRetail = 12,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// [Channel](https://support.google.com/merchants/answer/7361332) of a product.
+  ///
+  /// Channel is used to distinguish between online and local products.
+  /// </summary>
+  public sealed partial class Channel : pb::IMessage<Channel>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Channel> _parser = new pb::MessageParser<Channel>(() => new Channel());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Channel> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Shopping.Type.TypesReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Channel() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Channel(Channel other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Channel Clone() {
+      return new Channel(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Channel);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Channel other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Channel other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Channel message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Channel values.
+      /// </summary>
+      public enum ChannelEnum {
+        /// <summary>
+        /// Not specified.
+        /// </summary>
+        [pbr::OriginalName("CHANNEL_ENUM_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Online product.
+        /// </summary>
+        [pbr::OriginalName("ONLINE")] Online = 1,
+        /// <summary>
+        /// Local product.
+        /// </summary>
+        [pbr::OriginalName("LOCAL")] Local = 2,
       }
 
     }
