@@ -107,8 +107,8 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
             { "Google.Cloud.ClientTesting", ProjectVersionValue }, // Needed for all snippets and some other tests - easiest to just default
             { "Microsoft.NET.Test.Sdk", "17.7.2" },
-            { "xunit", "2.5.1" },
-            { "xunit.runner.visualstudio", "2.5.1" },
+            { "xunit", "2.5.2" },
+            { "xunit.runner.visualstudio", "2.5.3" },
             { "Xunit.SkippableFact", "1.4.13" },
             { "NSubstitute", "5.1.0" },
             { "System.Linq.Async", "6.0.1" },
