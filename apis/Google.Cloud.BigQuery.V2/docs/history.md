@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.5.0, released 2023-10-13
+
+### New features
+
+- Adds config modifier to BigQuery job options ([commit fbacbb8](https://github.com/googleapis/google-cloud-dotnet/commit/fbacbb8315d62ac10b2960e18fe239e0754420c3))
+- Adds support for policy tags ([commit 730a30e](https://github.com/googleapis/google-cloud-dotnet/commit/730a30e2ae3a4e7e94877918df82641e527a4708))
+
 ## Version 3.4.0, released 2023-06-07
 
 ### New features
