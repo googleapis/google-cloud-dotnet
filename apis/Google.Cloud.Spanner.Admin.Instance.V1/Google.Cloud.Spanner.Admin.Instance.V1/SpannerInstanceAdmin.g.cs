@@ -57,169 +57,184 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
             "AiI3CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwKCENSRUFUSU5H",
             "EAESCQoFUkVBRFkQAjpg6kFdCiVzcGFubmVyLmdvb2dsZWFwaXMuY29tL0lu",
             "c3RhbmNlQ29uZmlnEjRwcm9qZWN0cy97cHJvamVjdH0vaW5zdGFuY2VDb25m",
-            "aWdzL3tpbnN0YW5jZV9jb25maWd9Iu0ECghJbnN0YW5jZRIRCgRuYW1lGAEg",
-            "ASgJQgPgQQISPQoGY29uZmlnGAIgASgJQi3gQQL6QScKJXNwYW5uZXIuZ29v",
-            "Z2xlYXBpcy5jb20vSW5zdGFuY2VDb25maWcSGQoMZGlzcGxheV9uYW1lGAMg",
-            "ASgJQgPgQQISEgoKbm9kZV9jb3VudBgFIAEoBRIYChBwcm9jZXNzaW5nX3Vu",
-            "aXRzGAkgASgFEkQKBXN0YXRlGAYgASgOMjAuZ29vZ2xlLnNwYW5uZXIuYWRt",
-            "aW4uaW5zdGFuY2UudjEuSW5zdGFuY2UuU3RhdGVCA+BBAxJGCgZsYWJlbHMY",
-            "ByADKAsyNi5nb29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5jZS52MS5JbnN0",
-            "YW5jZS5MYWJlbHNFbnRyeRIVCg1lbmRwb2ludF91cmlzGAggAygJEjQKC2Ny",
-            "ZWF0ZV90aW1lGAsgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
-            "4EEDEjQKC3VwZGF0ZV90aW1lGAwgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcEID4EEDGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2",
-            "YWx1ZRgCIAEoCToCOAEiNwoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQ",
-            "ABIMCghDUkVBVElORxABEgkKBVJFQURZEAI6TepBSgofc3Bhbm5lci5nb29n",
-            "bGVhcGlzLmNvbS9JbnN0YW5jZRIncHJvamVjdHMve3Byb2plY3R9L2luc3Rh",
-            "bmNlcy97aW5zdGFuY2V9IogBChpMaXN0SW5zdGFuY2VDb25maWdzUmVxdWVz",
-            "dBJDCgZwYXJlbnQYASABKAlCM+BBAvpBLQorY2xvdWRyZXNvdXJjZW1hbmFn",
-            "ZXIuZ29vZ2xlYXBpcy5jb20vUHJvamVjdBIRCglwYWdlX3NpemUYAiABKAUS",
-            "EgoKcGFnZV90b2tlbhgDIAEoCSKCAQobTGlzdEluc3RhbmNlQ29uZmlnc1Jl",
-            "c3BvbnNlEkoKEGluc3RhbmNlX2NvbmZpZ3MYASADKAsyMC5nb29nbGUuc3Bh",
-            "bm5lci5hZG1pbi5pbnN0YW5jZS52MS5JbnN0YW5jZUNvbmZpZxIXCg9uZXh0",
-            "X3BhZ2VfdG9rZW4YAiABKAkiVwoYR2V0SW5zdGFuY2VDb25maWdSZXF1ZXN0",
-            "EjsKBG5hbWUYASABKAlCLeBBAvpBJwolc3Bhbm5lci5nb29nbGVhcGlzLmNv",
-            "bS9JbnN0YW5jZUNvbmZpZyLqAQobQ3JlYXRlSW5zdGFuY2VDb25maWdSZXF1",
-            "ZXN0EkMKBnBhcmVudBgBIAEoCUIz4EEC+kEtCitjbG91ZHJlc291cmNlbWFu",
-            "YWdlci5nb29nbGVhcGlzLmNvbS9Qcm9qZWN0Eh8KEmluc3RhbmNlX2NvbmZp",
-            "Z19pZBgCIAEoCUID4EECEk4KD2luc3RhbmNlX2NvbmZpZxgDIAEoCzIwLmdv",
-            "b2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLkluc3RhbmNlQ29uZmln",
-            "QgPgQQISFQoNdmFsaWRhdGVfb25seRgEIAEoCCK6AQobVXBkYXRlSW5zdGFu",
-            "Y2VDb25maWdSZXF1ZXN0Ek4KD2luc3RhbmNlX2NvbmZpZxgBIAEoCzIwLmdv",
-            "b2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLkluc3RhbmNlQ29uZmln",
-            "QgPgQQISNAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "RmllbGRNYXNrQgPgQQISFQoNdmFsaWRhdGVfb25seRgDIAEoCCJ/ChtEZWxl",
-            "dGVJbnN0YW5jZUNvbmZpZ1JlcXVlc3QSOwoEbmFtZRgBIAEoCUIt4EEC+kEn",
-            "CiVzcGFubmVyLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlQ29uZmlnEgwKBGV0",
-            "YWcYAiABKAkSFQoNdmFsaWRhdGVfb25seRgDIAEoCCKhAQojTGlzdEluc3Rh",
-            "bmNlQ29uZmlnT3BlcmF0aW9uc1JlcXVlc3QSQwoGcGFyZW50GAEgASgJQjPg",
-            "QQL6QS0KK2Nsb3VkcmVzb3VyY2VtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1By",
-            "b2plY3QSDgoGZmlsdGVyGAIgASgJEhEKCXBhZ2Vfc2l6ZRgDIAEoBRISCgpw",
-            "YWdlX3Rva2VuGAQgASgJInIKJExpc3RJbnN0YW5jZUNvbmZpZ09wZXJhdGlv",
-            "bnNSZXNwb25zZRIxCgpvcGVyYXRpb25zGAEgAygLMh0uZ29vZ2xlLmxvbmdy",
-            "dW5uaW5nLk9wZXJhdGlvbhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiewoS",
-            "R2V0SW5zdGFuY2VSZXF1ZXN0EjUKBG5hbWUYASABKAlCJ+BBAvpBIQofc3Bh",
-            "bm5lci5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZRIuCgpmaWVsZF9tYXNrGAIg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayK5AQoVQ3JlYXRlSW5z",
-            "dGFuY2VSZXF1ZXN0EkMKBnBhcmVudBgBIAEoCUIz4EEC+kEtCitjbG91ZHJl",
-            "c291cmNlbWFuYWdlci5nb29nbGVhcGlzLmNvbS9Qcm9qZWN0EhgKC2luc3Rh",
-            "bmNlX2lkGAIgASgJQgPgQQISQQoIaW5zdGFuY2UYAyABKAsyKi5nb29nbGUu",
-            "c3Bhbm5lci5hZG1pbi5pbnN0YW5jZS52MS5JbnN0YW5jZUID4EECIpIBChRM",
-            "aXN0SW5zdGFuY2VzUmVxdWVzdBJDCgZwYXJlbnQYASABKAlCM+BBAvpBLQor",
-            "Y2xvdWRyZXNvdXJjZW1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vUHJvamVjdBIR",
-            "CglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRIOCgZmaWx0",
-            "ZXIYBCABKAkibwoVTGlzdEluc3RhbmNlc1Jlc3BvbnNlEj0KCWluc3RhbmNl",
-            "cxgBIAMoCzIqLmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLklu",
-            "c3RhbmNlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKPAQoVVXBkYXRlSW5z",
-            "dGFuY2VSZXF1ZXN0EkEKCGluc3RhbmNlGAEgASgLMiouZ29vZ2xlLnNwYW5u",
-            "ZXIuYWRtaW4uaW5zdGFuY2UudjEuSW5zdGFuY2VCA+BBAhIzCgpmaWVsZF9t",
-            "YXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EECIk4K",
-            "FURlbGV0ZUluc3RhbmNlUmVxdWVzdBI1CgRuYW1lGAEgASgJQifgQQL6QSEK",
-            "H3NwYW5uZXIuZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2Ui5QEKFkNyZWF0ZUlu",
-            "c3RhbmNlTWV0YWRhdGESPAoIaW5zdGFuY2UYASABKAsyKi5nb29nbGUuc3Bh",
-            "bm5lci5hZG1pbi5pbnN0YW5jZS52MS5JbnN0YW5jZRIuCgpzdGFydF90aW1l",
-            "GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgtjYW5jZWxf",
-            "dGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5k",
-            "X3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIuUBChZV",
-            "cGRhdGVJbnN0YW5jZU1ldGFkYXRhEjwKCGluc3RhbmNlGAEgASgLMiouZ29v",
-            "Z2xlLnNwYW5uZXIuYWRtaW4uaW5zdGFuY2UudjEuSW5zdGFuY2USLgoKc3Rh",
-            "cnRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoL",
-            "Y2FuY2VsX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "EiwKCGVuZF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cCLhAQocQ3JlYXRlSW5zdGFuY2VDb25maWdNZXRhZGF0YRJJCg9pbnN0YW5j",
-            "ZV9jb25maWcYASABKAsyMC5nb29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5j",
-            "ZS52MS5JbnN0YW5jZUNvbmZpZxJFCghwcm9ncmVzcxgCIAEoCzIzLmdvb2ds",
-            "ZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLk9wZXJhdGlvblByb2dyZXNz",
-            "Ei8KC2NhbmNlbF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcCLhAQocVXBkYXRlSW5zdGFuY2VDb25maWdNZXRhZGF0YRJJCg9pbnN0",
+            "aWdzL3tpbnN0YW5jZV9jb25maWd9IvMDChFBdXRvc2NhbGluZ0NvbmZpZxJm",
+            "ChJhdXRvc2NhbGluZ19saW1pdHMYASABKAsyRS5nb29nbGUuc3Bhbm5lci5h",
+            "ZG1pbi5pbnN0YW5jZS52MS5BdXRvc2NhbGluZ0NvbmZpZy5BdXRvc2NhbGlu",
+            "Z0xpbWl0c0ID4EECEmgKE2F1dG9zY2FsaW5nX3RhcmdldHMYAiABKAsyRi5n",
+            "b29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5jZS52MS5BdXRvc2NhbGluZ0Nv",
+            "bmZpZy5BdXRvc2NhbGluZ1RhcmdldHNCA+BBAhqXAQoRQXV0b3NjYWxpbmdM",
+            "aW1pdHMSEwoJbWluX25vZGVzGAEgASgFSAASHgoUbWluX3Byb2Nlc3Npbmdf",
+            "dW5pdHMYAiABKAVIABITCgltYXhfbm9kZXMYAyABKAVIARIeChRtYXhfcHJv",
+            "Y2Vzc2luZ191bml0cxgEIAEoBUgBQgsKCW1pbl9saW1pdEILCgltYXhfbGlt",
+            "aXQacgoSQXV0b3NjYWxpbmdUYXJnZXRzEjIKJWhpZ2hfcHJpb3JpdHlfY3B1",
+            "X3V0aWxpemF0aW9uX3BlcmNlbnQYASABKAVCA+BBAhIoChtzdG9yYWdlX3V0",
+            "aWxpemF0aW9uX3BlcmNlbnQYAiABKAVCA+BBAiLDBQoISW5zdGFuY2USEQoE",
+            "bmFtZRgBIAEoCUID4EECEj0KBmNvbmZpZxgCIAEoCUIt4EEC+kEnCiVzcGFu",
+            "bmVyLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlQ29uZmlnEhkKDGRpc3BsYXlf",
+            "bmFtZRgDIAEoCUID4EECEhIKCm5vZGVfY291bnQYBSABKAUSGAoQcHJvY2Vz",
+            "c2luZ191bml0cxgJIAEoBRJUChJhdXRvc2NhbGluZ19jb25maWcYESABKAsy",
+            "My5nb29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5jZS52MS5BdXRvc2NhbGlu",
+            "Z0NvbmZpZ0ID4EEBEkQKBXN0YXRlGAYgASgOMjAuZ29vZ2xlLnNwYW5uZXIu",
+            "YWRtaW4uaW5zdGFuY2UudjEuSW5zdGFuY2UuU3RhdGVCA+BBAxJGCgZsYWJl",
+            "bHMYByADKAsyNi5nb29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5jZS52MS5J",
+            "bnN0YW5jZS5MYWJlbHNFbnRyeRIVCg1lbmRwb2ludF91cmlzGAggAygJEjQK",
+            "C2NyZWF0ZV90aW1lGAsgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cEID4EEDEjQKC3VwZGF0ZV90aW1lGAwgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LlRpbWVzdGFtcEID4EEDGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRIN",
+            "CgV2YWx1ZRgCIAEoCToCOAEiNwoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJ",
+            "RUQQABIMCghDUkVBVElORxABEgkKBVJFQURZEAI6TepBSgofc3Bhbm5lci5n",
+            "b29nbGVhcGlzLmNvbS9JbnN0YW5jZRIncHJvamVjdHMve3Byb2plY3R9L2lu",
+            "c3RhbmNlcy97aW5zdGFuY2V9IogBChpMaXN0SW5zdGFuY2VDb25maWdzUmVx",
+            "dWVzdBJDCgZwYXJlbnQYASABKAlCM+BBAvpBLQorY2xvdWRyZXNvdXJjZW1h",
+            "bmFnZXIuZ29vZ2xlYXBpcy5jb20vUHJvamVjdBIRCglwYWdlX3NpemUYAiAB",
+            "KAUSEgoKcGFnZV90b2tlbhgDIAEoCSKCAQobTGlzdEluc3RhbmNlQ29uZmln",
+            "c1Jlc3BvbnNlEkoKEGluc3RhbmNlX2NvbmZpZ3MYASADKAsyMC5nb29nbGUu",
+            "c3Bhbm5lci5hZG1pbi5pbnN0YW5jZS52MS5JbnN0YW5jZUNvbmZpZxIXCg9u",
+            "ZXh0X3BhZ2VfdG9rZW4YAiABKAkiVwoYR2V0SW5zdGFuY2VDb25maWdSZXF1",
+            "ZXN0EjsKBG5hbWUYASABKAlCLeBBAvpBJwolc3Bhbm5lci5nb29nbGVhcGlz",
+            "LmNvbS9JbnN0YW5jZUNvbmZpZyLqAQobQ3JlYXRlSW5zdGFuY2VDb25maWdS",
+            "ZXF1ZXN0EkMKBnBhcmVudBgBIAEoCUIz4EEC+kEtCitjbG91ZHJlc291cmNl",
+            "bWFuYWdlci5nb29nbGVhcGlzLmNvbS9Qcm9qZWN0Eh8KEmluc3RhbmNlX2Nv",
+            "bmZpZ19pZBgCIAEoCUID4EECEk4KD2luc3RhbmNlX2NvbmZpZxgDIAEoCzIw",
+            "Lmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLkluc3RhbmNlQ29u",
+            "ZmlnQgPgQQISFQoNdmFsaWRhdGVfb25seRgEIAEoCCK6AQobVXBkYXRlSW5z",
+            "dGFuY2VDb25maWdSZXF1ZXN0Ek4KD2luc3RhbmNlX2NvbmZpZxgBIAEoCzIw",
+            "Lmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLkluc3RhbmNlQ29u",
+            "ZmlnQgPgQQISNAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuRmllbGRNYXNrQgPgQQISFQoNdmFsaWRhdGVfb25seRgDIAEoCCJ/ChtE",
+            "ZWxldGVJbnN0YW5jZUNvbmZpZ1JlcXVlc3QSOwoEbmFtZRgBIAEoCUIt4EEC",
+            "+kEnCiVzcGFubmVyLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlQ29uZmlnEgwK",
+            "BGV0YWcYAiABKAkSFQoNdmFsaWRhdGVfb25seRgDIAEoCCKhAQojTGlzdElu",
+            "c3RhbmNlQ29uZmlnT3BlcmF0aW9uc1JlcXVlc3QSQwoGcGFyZW50GAEgASgJ",
+            "QjPgQQL6QS0KK2Nsb3VkcmVzb3VyY2VtYW5hZ2VyLmdvb2dsZWFwaXMuY29t",
+            "L1Byb2plY3QSDgoGZmlsdGVyGAIgASgJEhEKCXBhZ2Vfc2l6ZRgDIAEoBRIS",
+            "CgpwYWdlX3Rva2VuGAQgASgJInIKJExpc3RJbnN0YW5jZUNvbmZpZ09wZXJh",
+            "dGlvbnNSZXNwb25zZRIxCgpvcGVyYXRpb25zGAEgAygLMh0uZ29vZ2xlLmxv",
+            "bmdydW5uaW5nLk9wZXJhdGlvbhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAki",
+            "ewoSR2V0SW5zdGFuY2VSZXF1ZXN0EjUKBG5hbWUYASABKAlCJ+BBAvpBIQof",
+            "c3Bhbm5lci5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZRIuCgpmaWVsZF9tYXNr",
+            "GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayK5AQoVQ3JlYXRl",
+            "SW5zdGFuY2VSZXF1ZXN0EkMKBnBhcmVudBgBIAEoCUIz4EEC+kEtCitjbG91",
+            "ZHJlc291cmNlbWFuYWdlci5nb29nbGVhcGlzLmNvbS9Qcm9qZWN0EhgKC2lu",
+            "c3RhbmNlX2lkGAIgASgJQgPgQQISQQoIaW5zdGFuY2UYAyABKAsyKi5nb29n",
+            "bGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5jZS52MS5JbnN0YW5jZUID4EECIpIB",
+            "ChRMaXN0SW5zdGFuY2VzUmVxdWVzdBJDCgZwYXJlbnQYASABKAlCM+BBAvpB",
+            "LQorY2xvdWRyZXNvdXJjZW1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vUHJvamVj",
+            "dBIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRIOCgZm",
+            "aWx0ZXIYBCABKAkibwoVTGlzdEluc3RhbmNlc1Jlc3BvbnNlEj0KCWluc3Rh",
+            "bmNlcxgBIAMoCzIqLmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYx",
+            "Lkluc3RhbmNlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKPAQoVVXBkYXRl",
+            "SW5zdGFuY2VSZXF1ZXN0EkEKCGluc3RhbmNlGAEgASgLMiouZ29vZ2xlLnNw",
+            "YW5uZXIuYWRtaW4uaW5zdGFuY2UudjEuSW5zdGFuY2VCA+BBAhIzCgpmaWVs",
+            "ZF9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EEC",
+            "Ik4KFURlbGV0ZUluc3RhbmNlUmVxdWVzdBI1CgRuYW1lGAEgASgJQifgQQL6",
+            "QSEKH3NwYW5uZXIuZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2Ui5QEKFkNyZWF0",
+            "ZUluc3RhbmNlTWV0YWRhdGESPAoIaW5zdGFuY2UYASABKAsyKi5nb29nbGUu",
+            "c3Bhbm5lci5hZG1pbi5pbnN0YW5jZS52MS5JbnN0YW5jZRIuCgpzdGFydF90",
+            "aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgtjYW5j",
+            "ZWxfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoI",
+            "ZW5kX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIuUB",
+            "ChZVcGRhdGVJbnN0YW5jZU1ldGFkYXRhEjwKCGluc3RhbmNlGAEgASgLMiou",
+            "Z29vZ2xlLnNwYW5uZXIuYWRtaW4uaW5zdGFuY2UudjEuSW5zdGFuY2USLgoK",
+            "c3RhcnRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
+            "LwoLY2FuY2VsX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wEiwKCGVuZF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcCLhAQocQ3JlYXRlSW5zdGFuY2VDb25maWdNZXRhZGF0YRJJCg9pbnN0",
             "YW5jZV9jb25maWcYASABKAsyMC5nb29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0",
             "YW5jZS52MS5JbnN0YW5jZUNvbmZpZxJFCghwcm9ncmVzcxgCIAEoCzIzLmdv",
             "b2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLk9wZXJhdGlvblByb2dy",
             "ZXNzEi8KC2NhbmNlbF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcDLyGAoNSW5zdGFuY2VBZG1pbhLMAQoTTGlzdEluc3RhbmNlQ29u",
-            "ZmlncxI8Lmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLkxpc3RJ",
-            "bnN0YW5jZUNvbmZpZ3NSZXF1ZXN0Gj0uZ29vZ2xlLnNwYW5uZXIuYWRtaW4u",
-            "aW5zdGFuY2UudjEuTGlzdEluc3RhbmNlQ29uZmlnc1Jlc3BvbnNlIjiC0+ST",
-            "AikSJy92MS97cGFyZW50PXByb2plY3RzLyp9L2luc3RhbmNlQ29uZmlnc9pB",
-            "BnBhcmVudBK5AQoRR2V0SW5zdGFuY2VDb25maWcSOi5nb29nbGUuc3Bhbm5l",
-            "ci5hZG1pbi5pbnN0YW5jZS52MS5HZXRJbnN0YW5jZUNvbmZpZ1JlcXVlc3Qa",
-            "MC5nb29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5jZS52MS5JbnN0YW5jZUNv",
-            "bmZpZyI2gtPkkwIpEicvdjEve25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZUNv",
-            "bmZpZ3MvKn3aQQRuYW1lEsgCChRDcmVhdGVJbnN0YW5jZUNvbmZpZxI9Lmdv",
-            "b2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLkNyZWF0ZUluc3RhbmNl",
-            "Q29uZmlnUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24i",
-            "0QGC0+STAiwiJy92MS97cGFyZW50PXByb2plY3RzLyp9L2luc3RhbmNlQ29u",
-            "ZmlnczoBKtpBKXBhcmVudCxpbnN0YW5jZV9jb25maWcsaW5zdGFuY2VfY29u",
-            "ZmlnX2lkykFwCi9nb29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5jZS52MS5J",
-            "bnN0YW5jZUNvbmZpZxI9Z29vZ2xlLnNwYW5uZXIuYWRtaW4uaW5zdGFuY2Uu",
-            "djEuQ3JlYXRlSW5zdGFuY2VDb25maWdNZXRhZGF0YRLKAgoUVXBkYXRlSW5z",
-            "dGFuY2VDb25maWcSPS5nb29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5jZS52",
-            "MS5VcGRhdGVJbnN0YW5jZUNvbmZpZ1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1",
-            "bm5pbmcuT3BlcmF0aW9uItMBgtPkkwI8MjcvdjEve2luc3RhbmNlX2NvbmZp",
-            "Zy5uYW1lPXByb2plY3RzLyovaW5zdGFuY2VDb25maWdzLyp9OgEq2kEbaW5z",
-            "dGFuY2VfY29uZmlnLHVwZGF0ZV9tYXNrykFwCi9nb29nbGUuc3Bhbm5lci5h",
-            "ZG1pbi5pbnN0YW5jZS52MS5JbnN0YW5jZUNvbmZpZxI9Z29vZ2xlLnNwYW5u",
-            "ZXIuYWRtaW4uaW5zdGFuY2UudjEuVXBkYXRlSW5zdGFuY2VDb25maWdNZXRh",
-            "ZGF0YRKlAQoURGVsZXRlSW5zdGFuY2VDb25maWcSPS5nb29nbGUuc3Bhbm5l",
-            "ci5hZG1pbi5pbnN0YW5jZS52MS5EZWxldGVJbnN0YW5jZUNvbmZpZ1JlcXVl",
-            "c3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiNoLT5JMCKSonL3YxL3tuYW1l",
-            "PXByb2plY3RzLyovaW5zdGFuY2VDb25maWdzLyp92kEEbmFtZRLwAQocTGlz",
-            "dEluc3RhbmNlQ29uZmlnT3BlcmF0aW9ucxJFLmdvb2dsZS5zcGFubmVyLmFk",
-            "bWluLmluc3RhbmNlLnYxLkxpc3RJbnN0YW5jZUNvbmZpZ09wZXJhdGlvbnNS",
-            "ZXF1ZXN0GkYuZ29vZ2xlLnNwYW5uZXIuYWRtaW4uaW5zdGFuY2UudjEuTGlz",
-            "dEluc3RhbmNlQ29uZmlnT3BlcmF0aW9uc1Jlc3BvbnNlIkGC0+STAjISMC92",
-            "MS97cGFyZW50PXByb2plY3RzLyp9L2luc3RhbmNlQ29uZmlnT3BlcmF0aW9u",
-            "c9pBBnBhcmVudBK0AQoNTGlzdEluc3RhbmNlcxI2Lmdvb2dsZS5zcGFubmVy",
-            "LmFkbWluLmluc3RhbmNlLnYxLkxpc3RJbnN0YW5jZXNSZXF1ZXN0GjcuZ29v",
-            "Z2xlLnNwYW5uZXIuYWRtaW4uaW5zdGFuY2UudjEuTGlzdEluc3RhbmNlc1Jl",
-            "c3BvbnNlIjKC0+STAiMSIS92MS97cGFyZW50PXByb2plY3RzLyp9L2luc3Rh",
-            "bmNlc9pBBnBhcmVudBKhAQoLR2V0SW5zdGFuY2USNC5nb29nbGUuc3Bhbm5l",
-            "ci5hZG1pbi5pbnN0YW5jZS52MS5HZXRJbnN0YW5jZVJlcXVlc3QaKi5nb29n",
-            "bGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5jZS52MS5JbnN0YW5jZSIwgtPkkwIj",
-            "EiEvdjEve25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKn3aQQRuYW1lEpwC",
-            "Cg5DcmVhdGVJbnN0YW5jZRI3Lmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3Rh",
-            "bmNlLnYxLkNyZWF0ZUluc3RhbmNlUmVxdWVzdBodLmdvb2dsZS5sb25ncnVu",
-            "bmluZy5PcGVyYXRpb24isQGC0+STAiYiIS92MS97cGFyZW50PXByb2plY3Rz",
-            "Lyp9L2luc3RhbmNlczoBKtpBG3BhcmVudCxpbnN0YW5jZV9pZCxpbnN0YW5j",
-            "ZcpBZAopZ29vZ2xlLnNwYW5uZXIuYWRtaW4uaW5zdGFuY2UudjEuSW5zdGFu",
-            "Y2USN2dvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLkNyZWF0ZUlu",
-            "c3RhbmNlTWV0YWRhdGESnQIKDlVwZGF0ZUluc3RhbmNlEjcuZ29vZ2xlLnNw",
-            "YW5uZXIuYWRtaW4uaW5zdGFuY2UudjEuVXBkYXRlSW5zdGFuY2VSZXF1ZXN0",
-            "Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKyAYLT5JMCLzIqL3Yx",
-            "L3tpbnN0YW5jZS5uYW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyp9OgEq2kET",
-            "aW5zdGFuY2UsZmllbGRfbWFza8pBZAopZ29vZ2xlLnNwYW5uZXIuYWRtaW4u",
-            "aW5zdGFuY2UudjEuSW5zdGFuY2USN2dvb2dsZS5zcGFubmVyLmFkbWluLmlu",
-            "c3RhbmNlLnYxLlVwZGF0ZUluc3RhbmNlTWV0YWRhdGESkwEKDkRlbGV0ZUlu",
-            "c3RhbmNlEjcuZ29vZ2xlLnNwYW5uZXIuYWRtaW4uaW5zdGFuY2UudjEuRGVs",
-            "ZXRlSW5zdGFuY2VSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IjCC",
-            "0+STAiMqIS92MS97bmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qfdpBBG5h",
-            "bWUSmgEKDFNldElhbVBvbGljeRIiLmdvb2dsZS5pYW0udjEuU2V0SWFtUG9s",
-            "aWN5UmVxdWVzdBoVLmdvb2dsZS5pYW0udjEuUG9saWN5Ik+C0+STAjciMi92",
-            "MS97cmVzb3VyY2U9cHJvamVjdHMvKi9pbnN0YW5jZXMvKn06c2V0SWFtUG9s",
-            "aWN5OgEq2kEPcmVzb3VyY2UscG9saWN5EpMBCgxHZXRJYW1Qb2xpY3kSIi5n",
-            "b29nbGUuaWFtLnYxLkdldElhbVBvbGljeVJlcXVlc3QaFS5nb29nbGUuaWFt",
-            "LnYxLlBvbGljeSJIgtPkkwI3IjIvdjEve3Jlc291cmNlPXByb2plY3RzLyov",
-            "aW5zdGFuY2VzLyp9OmdldElhbVBvbGljeToBKtpBCHJlc291cmNlEsUBChJU",
-            "ZXN0SWFtUGVybWlzc2lvbnMSKC5nb29nbGUuaWFtLnYxLlRlc3RJYW1QZXJt",
-            "aXNzaW9uc1JlcXVlc3QaKS5nb29nbGUuaWFtLnYxLlRlc3RJYW1QZXJtaXNz",
-            "aW9uc1Jlc3BvbnNlIlqC0+STAj0iOC92MS97cmVzb3VyY2U9cHJvamVjdHMv",
-            "Ki9pbnN0YW5jZXMvKn06dGVzdElhbVBlcm1pc3Npb25zOgEq2kEUcmVzb3Vy",
-            "Y2UscGVybWlzc2lvbnMaeMpBFnNwYW5uZXIuZ29vZ2xlYXBpcy5jb23SQVxo",
-            "dHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3Jt",
-            "LGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvc3Bhbm5lci5hZG1p",
-            "bkKLAgokY29tLmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxQhlT",
-            "cGFubmVySW5zdGFuY2VBZG1pblByb3RvUAFaRmNsb3VkLmdvb2dsZS5jb20v",
-            "Z28vc3Bhbm5lci9hZG1pbi9pbnN0YW5jZS9hcGl2MS9pbnN0YW5jZXBiO2lu",
-            "c3RhbmNlcGKqAiZHb29nbGUuQ2xvdWQuU3Bhbm5lci5BZG1pbi5JbnN0YW5j",
-            "ZS5WMcoCJkdvb2dsZVxDbG91ZFxTcGFubmVyXEFkbWluXEluc3RhbmNlXFYx",
-            "6gIrR29vZ2xlOjpDbG91ZDo6U3Bhbm5lcjo6QWRtaW46Okluc3RhbmNlOjpW",
-            "MWIGcHJvdG8z"));
+            "bWVzdGFtcCLhAQocVXBkYXRlSW5zdGFuY2VDb25maWdNZXRhZGF0YRJJCg9p",
+            "bnN0YW5jZV9jb25maWcYASABKAsyMC5nb29nbGUuc3Bhbm5lci5hZG1pbi5p",
+            "bnN0YW5jZS52MS5JbnN0YW5jZUNvbmZpZxJFCghwcm9ncmVzcxgCIAEoCzIz",
+            "Lmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLk9wZXJhdGlvblBy",
+            "b2dyZXNzEi8KC2NhbmNlbF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LlRpbWVzdGFtcDLyGAoNSW5zdGFuY2VBZG1pbhLMAQoTTGlzdEluc3RhbmNl",
+            "Q29uZmlncxI8Lmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLkxp",
+            "c3RJbnN0YW5jZUNvbmZpZ3NSZXF1ZXN0Gj0uZ29vZ2xlLnNwYW5uZXIuYWRt",
+            "aW4uaW5zdGFuY2UudjEuTGlzdEluc3RhbmNlQ29uZmlnc1Jlc3BvbnNlIjiC",
+            "0+STAikSJy92MS97cGFyZW50PXByb2plY3RzLyp9L2luc3RhbmNlQ29uZmln",
+            "c9pBBnBhcmVudBK5AQoRR2V0SW5zdGFuY2VDb25maWcSOi5nb29nbGUuc3Bh",
+            "bm5lci5hZG1pbi5pbnN0YW5jZS52MS5HZXRJbnN0YW5jZUNvbmZpZ1JlcXVl",
+            "c3QaMC5nb29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5jZS52MS5JbnN0YW5j",
+            "ZUNvbmZpZyI2gtPkkwIpEicvdjEve25hbWU9cHJvamVjdHMvKi9pbnN0YW5j",
+            "ZUNvbmZpZ3MvKn3aQQRuYW1lEsgCChRDcmVhdGVJbnN0YW5jZUNvbmZpZxI9",
+            "Lmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLkNyZWF0ZUluc3Rh",
+            "bmNlQ29uZmlnUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRp",
+            "b24i0QGC0+STAiwiJy92MS97cGFyZW50PXByb2plY3RzLyp9L2luc3RhbmNl",
+            "Q29uZmlnczoBKtpBKXBhcmVudCxpbnN0YW5jZV9jb25maWcsaW5zdGFuY2Vf",
+            "Y29uZmlnX2lkykFwCi9nb29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5jZS52",
+            "MS5JbnN0YW5jZUNvbmZpZxI9Z29vZ2xlLnNwYW5uZXIuYWRtaW4uaW5zdGFu",
+            "Y2UudjEuQ3JlYXRlSW5zdGFuY2VDb25maWdNZXRhZGF0YRLKAgoUVXBkYXRl",
+            "SW5zdGFuY2VDb25maWcSPS5nb29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5j",
+            "ZS52MS5VcGRhdGVJbnN0YW5jZUNvbmZpZ1JlcXVlc3QaHS5nb29nbGUubG9u",
+            "Z3J1bm5pbmcuT3BlcmF0aW9uItMBgtPkkwI8MjcvdjEve2luc3RhbmNlX2Nv",
+            "bmZpZy5uYW1lPXByb2plY3RzLyovaW5zdGFuY2VDb25maWdzLyp9OgEq2kEb",
+            "aW5zdGFuY2VfY29uZmlnLHVwZGF0ZV9tYXNrykFwCi9nb29nbGUuc3Bhbm5l",
+            "ci5hZG1pbi5pbnN0YW5jZS52MS5JbnN0YW5jZUNvbmZpZxI9Z29vZ2xlLnNw",
+            "YW5uZXIuYWRtaW4uaW5zdGFuY2UudjEuVXBkYXRlSW5zdGFuY2VDb25maWdN",
+            "ZXRhZGF0YRKlAQoURGVsZXRlSW5zdGFuY2VDb25maWcSPS5nb29nbGUuc3Bh",
+            "bm5lci5hZG1pbi5pbnN0YW5jZS52MS5EZWxldGVJbnN0YW5jZUNvbmZpZ1Jl",
+            "cXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiNoLT5JMCKSonL3YxL3tu",
+            "YW1lPXByb2plY3RzLyovaW5zdGFuY2VDb25maWdzLyp92kEEbmFtZRLwAQoc",
+            "TGlzdEluc3RhbmNlQ29uZmlnT3BlcmF0aW9ucxJFLmdvb2dsZS5zcGFubmVy",
+            "LmFkbWluLmluc3RhbmNlLnYxLkxpc3RJbnN0YW5jZUNvbmZpZ09wZXJhdGlv",
+            "bnNSZXF1ZXN0GkYuZ29vZ2xlLnNwYW5uZXIuYWRtaW4uaW5zdGFuY2UudjEu",
+            "TGlzdEluc3RhbmNlQ29uZmlnT3BlcmF0aW9uc1Jlc3BvbnNlIkGC0+STAjIS",
+            "MC92MS97cGFyZW50PXByb2plY3RzLyp9L2luc3RhbmNlQ29uZmlnT3BlcmF0",
+            "aW9uc9pBBnBhcmVudBK0AQoNTGlzdEluc3RhbmNlcxI2Lmdvb2dsZS5zcGFu",
+            "bmVyLmFkbWluLmluc3RhbmNlLnYxLkxpc3RJbnN0YW5jZXNSZXF1ZXN0Gjcu",
+            "Z29vZ2xlLnNwYW5uZXIuYWRtaW4uaW5zdGFuY2UudjEuTGlzdEluc3RhbmNl",
+            "c1Jlc3BvbnNlIjKC0+STAiMSIS92MS97cGFyZW50PXByb2plY3RzLyp9L2lu",
+            "c3RhbmNlc9pBBnBhcmVudBKhAQoLR2V0SW5zdGFuY2USNC5nb29nbGUuc3Bh",
+            "bm5lci5hZG1pbi5pbnN0YW5jZS52MS5HZXRJbnN0YW5jZVJlcXVlc3QaKi5n",
+            "b29nbGUuc3Bhbm5lci5hZG1pbi5pbnN0YW5jZS52MS5JbnN0YW5jZSIwgtPk",
+            "kwIjEiEvdjEve25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKn3aQQRuYW1l",
+            "EpwCCg5DcmVhdGVJbnN0YW5jZRI3Lmdvb2dsZS5zcGFubmVyLmFkbWluLmlu",
+            "c3RhbmNlLnYxLkNyZWF0ZUluc3RhbmNlUmVxdWVzdBodLmdvb2dsZS5sb25n",
+            "cnVubmluZy5PcGVyYXRpb24isQGC0+STAiYiIS92MS97cGFyZW50PXByb2pl",
+            "Y3RzLyp9L2luc3RhbmNlczoBKtpBG3BhcmVudCxpbnN0YW5jZV9pZCxpbnN0",
+            "YW5jZcpBZAopZ29vZ2xlLnNwYW5uZXIuYWRtaW4uaW5zdGFuY2UudjEuSW5z",
+            "dGFuY2USN2dvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLkNyZWF0",
+            "ZUluc3RhbmNlTWV0YWRhdGESnQIKDlVwZGF0ZUluc3RhbmNlEjcuZ29vZ2xl",
+            "LnNwYW5uZXIuYWRtaW4uaW5zdGFuY2UudjEuVXBkYXRlSW5zdGFuY2VSZXF1",
+            "ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKyAYLT5JMCLzIq",
+            "L3YxL3tpbnN0YW5jZS5uYW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyp9OgEq",
+            "2kETaW5zdGFuY2UsZmllbGRfbWFza8pBZAopZ29vZ2xlLnNwYW5uZXIuYWRt",
+            "aW4uaW5zdGFuY2UudjEuSW5zdGFuY2USN2dvb2dsZS5zcGFubmVyLmFkbWlu",
+            "Lmluc3RhbmNlLnYxLlVwZGF0ZUluc3RhbmNlTWV0YWRhdGESkwEKDkRlbGV0",
+            "ZUluc3RhbmNlEjcuZ29vZ2xlLnNwYW5uZXIuYWRtaW4uaW5zdGFuY2UudjEu",
+            "RGVsZXRlSW5zdGFuY2VSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5",
+            "IjCC0+STAiMqIS92MS97bmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qfdpB",
+            "BG5hbWUSmgEKDFNldElhbVBvbGljeRIiLmdvb2dsZS5pYW0udjEuU2V0SWFt",
+            "UG9saWN5UmVxdWVzdBoVLmdvb2dsZS5pYW0udjEuUG9saWN5Ik+C0+STAjci",
+            "Mi92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9pbnN0YW5jZXMvKn06c2V0SWFt",
+            "UG9saWN5OgEq2kEPcmVzb3VyY2UscG9saWN5EpMBCgxHZXRJYW1Qb2xpY3kS",
+            "Ii5nb29nbGUuaWFtLnYxLkdldElhbVBvbGljeVJlcXVlc3QaFS5nb29nbGUu",
+            "aWFtLnYxLlBvbGljeSJIgtPkkwI3IjIvdjEve3Jlc291cmNlPXByb2plY3Rz",
+            "LyovaW5zdGFuY2VzLyp9OmdldElhbVBvbGljeToBKtpBCHJlc291cmNlEsUB",
+            "ChJUZXN0SWFtUGVybWlzc2lvbnMSKC5nb29nbGUuaWFtLnYxLlRlc3RJYW1Q",
+            "ZXJtaXNzaW9uc1JlcXVlc3QaKS5nb29nbGUuaWFtLnYxLlRlc3RJYW1QZXJt",
+            "aXNzaW9uc1Jlc3BvbnNlIlqC0+STAj0iOC92MS97cmVzb3VyY2U9cHJvamVj",
+            "dHMvKi9pbnN0YW5jZXMvKn06dGVzdElhbVBlcm1pc3Npb25zOgEq2kEUcmVz",
+            "b3VyY2UscGVybWlzc2lvbnMaeMpBFnNwYW5uZXIuZ29vZ2xlYXBpcy5jb23S",
+            "QVxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRm",
+            "b3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvc3Bhbm5lci5h",
+            "ZG1pbkKLAgokY29tLmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYx",
+            "QhlTcGFubmVySW5zdGFuY2VBZG1pblByb3RvUAFaRmNsb3VkLmdvb2dsZS5j",
+            "b20vZ28vc3Bhbm5lci9hZG1pbi9pbnN0YW5jZS9hcGl2MS9pbnN0YW5jZXBi",
+            "O2luc3RhbmNlcGKqAiZHb29nbGUuQ2xvdWQuU3Bhbm5lci5BZG1pbi5JbnN0",
+            "YW5jZS5WMcoCJkdvb2dsZVxDbG91ZFxTcGFubmVyXEFkbWluXEluc3RhbmNl",
+            "XFYx6gIrR29vZ2xlOjpDbG91ZDo6U3Bhbm5lcjo6QWRtaW46Okluc3RhbmNl",
+            "OjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Cloud.Spanner.Admin.Instance.V1.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaInfo), global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaInfo.Parser, new[]{ "Location", "Type", "DefaultLeaderLocation" }, null, new[]{ typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.ReplicaInfo.Types.ReplicaType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig), global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Parser, new[]{ "Name", "DisplayName", "ConfigType", "Replicas", "OptionalReplicas", "BaseConfig", "Labels", "Etag", "LeaderOptions", "Reconciling", "State" }, null, new[]{ typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Types.Type), typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.Instance), global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Parser, new[]{ "Name", "Config", "DisplayName", "NodeCount", "ProcessingUnits", "State", "Labels", "EndpointUris", "CreateTime", "UpdateTime" }, null, new[]{ typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig), global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Parser, new[]{ "AutoscalingLimits", "AutoscalingTargets" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AutoscalingLimits), global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AutoscalingLimits.Parser, new[]{ "MinNodes", "MinProcessingUnits", "MaxNodes", "MaxProcessingUnits" }, new[]{ "MinLimit", "MaxLimit" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AutoscalingTargets), global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AutoscalingTargets.Parser, new[]{ "HighPriorityCpuUtilizationPercent", "StorageUtilizationPercent" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.Instance), global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Parser, new[]{ "Name", "Config", "DisplayName", "NodeCount", "ProcessingUnits", "AutoscalingConfig", "State", "Labels", "EndpointUris", "CreateTime", "UpdateTime" }, null, new[]{ typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse.Parser, new[]{ "InstanceConfigs", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest), global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest.Parser, new[]{ "Name" }, null, null, null, null),
@@ -1205,6 +1220,954 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
   }
 
   /// <summary>
+  /// Autoscaling config for an instance.
+  /// </summary>
+  public sealed partial class AutoscalingConfig : pb::IMessage<AutoscalingConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AutoscalingConfig> _parser = new pb::MessageParser<AutoscalingConfig>(() => new AutoscalingConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AutoscalingConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AutoscalingConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AutoscalingConfig(AutoscalingConfig other) : this() {
+      autoscalingLimits_ = other.autoscalingLimits_ != null ? other.autoscalingLimits_.Clone() : null;
+      autoscalingTargets_ = other.autoscalingTargets_ != null ? other.autoscalingTargets_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AutoscalingConfig Clone() {
+      return new AutoscalingConfig(this);
+    }
+
+    /// <summary>Field number for the "autoscaling_limits" field.</summary>
+    public const int AutoscalingLimitsFieldNumber = 1;
+    private global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AutoscalingLimits autoscalingLimits_;
+    /// <summary>
+    /// Required. Autoscaling limits for an instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AutoscalingLimits AutoscalingLimits {
+      get { return autoscalingLimits_; }
+      set {
+        autoscalingLimits_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "autoscaling_targets" field.</summary>
+    public const int AutoscalingTargetsFieldNumber = 2;
+    private global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AutoscalingTargets autoscalingTargets_;
+    /// <summary>
+    /// Required. The autoscaling targets for an instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AutoscalingTargets AutoscalingTargets {
+      get { return autoscalingTargets_; }
+      set {
+        autoscalingTargets_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AutoscalingConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AutoscalingConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(AutoscalingLimits, other.AutoscalingLimits)) return false;
+      if (!object.Equals(AutoscalingTargets, other.AutoscalingTargets)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (autoscalingLimits_ != null) hash ^= AutoscalingLimits.GetHashCode();
+      if (autoscalingTargets_ != null) hash ^= AutoscalingTargets.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (autoscalingLimits_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(AutoscalingLimits);
+      }
+      if (autoscalingTargets_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(AutoscalingTargets);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (autoscalingLimits_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(AutoscalingLimits);
+      }
+      if (autoscalingTargets_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(AutoscalingTargets);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (autoscalingLimits_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AutoscalingLimits);
+      }
+      if (autoscalingTargets_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AutoscalingTargets);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AutoscalingConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.autoscalingLimits_ != null) {
+        if (autoscalingLimits_ == null) {
+          AutoscalingLimits = new global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AutoscalingLimits();
+        }
+        AutoscalingLimits.MergeFrom(other.AutoscalingLimits);
+      }
+      if (other.autoscalingTargets_ != null) {
+        if (autoscalingTargets_ == null) {
+          AutoscalingTargets = new global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AutoscalingTargets();
+        }
+        AutoscalingTargets.MergeFrom(other.AutoscalingTargets);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (autoscalingLimits_ == null) {
+              AutoscalingLimits = new global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AutoscalingLimits();
+            }
+            input.ReadMessage(AutoscalingLimits);
+            break;
+          }
+          case 18: {
+            if (autoscalingTargets_ == null) {
+              AutoscalingTargets = new global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AutoscalingTargets();
+            }
+            input.ReadMessage(AutoscalingTargets);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (autoscalingLimits_ == null) {
+              AutoscalingLimits = new global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AutoscalingLimits();
+            }
+            input.ReadMessage(AutoscalingLimits);
+            break;
+          }
+          case 18: {
+            if (autoscalingTargets_ == null) {
+              AutoscalingTargets = new global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Types.AutoscalingTargets();
+            }
+            input.ReadMessage(AutoscalingTargets);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the AutoscalingConfig message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The autoscaling limits for the instance. Users can define the minimum and
+      /// maximum compute capacity allocated to the instance, and the autoscaler will
+      /// only scale within that range. Users can either use nodes or processing
+      /// units to specify the limits, but should use the same unit to set both the
+      /// min_limit and max_limit.
+      /// </summary>
+      public sealed partial class AutoscalingLimits : pb::IMessage<AutoscalingLimits>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<AutoscalingLimits> _parser = new pb::MessageParser<AutoscalingLimits>(() => new AutoscalingLimits());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<AutoscalingLimits> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AutoscalingLimits() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AutoscalingLimits(AutoscalingLimits other) : this() {
+          switch (other.MinLimitCase) {
+            case MinLimitOneofCase.MinNodes:
+              MinNodes = other.MinNodes;
+              break;
+            case MinLimitOneofCase.MinProcessingUnits:
+              MinProcessingUnits = other.MinProcessingUnits;
+              break;
+          }
+
+          switch (other.MaxLimitCase) {
+            case MaxLimitOneofCase.MaxNodes:
+              MaxNodes = other.MaxNodes;
+              break;
+            case MaxLimitOneofCase.MaxProcessingUnits:
+              MaxProcessingUnits = other.MaxProcessingUnits;
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AutoscalingLimits Clone() {
+          return new AutoscalingLimits(this);
+        }
+
+        /// <summary>Field number for the "min_nodes" field.</summary>
+        public const int MinNodesFieldNumber = 1;
+        /// <summary>
+        /// Minimum number of nodes allocated to the instance. If set, this number
+        /// should be greater than or equal to 1.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int MinNodes {
+          get { return HasMinNodes ? (int) minLimit_ : 0; }
+          set {
+            minLimit_ = value;
+            minLimitCase_ = MinLimitOneofCase.MinNodes;
+          }
+        }
+        /// <summary>Gets whether the "min_nodes" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasMinNodes {
+          get { return minLimitCase_ == MinLimitOneofCase.MinNodes; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "min_nodes" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearMinNodes() {
+          if (HasMinNodes) {
+            ClearMinLimit();
+          }
+        }
+
+        /// <summary>Field number for the "min_processing_units" field.</summary>
+        public const int MinProcessingUnitsFieldNumber = 2;
+        /// <summary>
+        /// Minimum number of processing units allocated to the instance. If set,
+        /// this number should be multiples of 1000.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int MinProcessingUnits {
+          get { return HasMinProcessingUnits ? (int) minLimit_ : 0; }
+          set {
+            minLimit_ = value;
+            minLimitCase_ = MinLimitOneofCase.MinProcessingUnits;
+          }
+        }
+        /// <summary>Gets whether the "min_processing_units" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasMinProcessingUnits {
+          get { return minLimitCase_ == MinLimitOneofCase.MinProcessingUnits; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "min_processing_units" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearMinProcessingUnits() {
+          if (HasMinProcessingUnits) {
+            ClearMinLimit();
+          }
+        }
+
+        /// <summary>Field number for the "max_nodes" field.</summary>
+        public const int MaxNodesFieldNumber = 3;
+        /// <summary>
+        /// Maximum number of nodes allocated to the instance. If set, this number
+        /// should be greater than or equal to min_nodes.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int MaxNodes {
+          get { return HasMaxNodes ? (int) maxLimit_ : 0; }
+          set {
+            maxLimit_ = value;
+            maxLimitCase_ = MaxLimitOneofCase.MaxNodes;
+          }
+        }
+        /// <summary>Gets whether the "max_nodes" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasMaxNodes {
+          get { return maxLimitCase_ == MaxLimitOneofCase.MaxNodes; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "max_nodes" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearMaxNodes() {
+          if (HasMaxNodes) {
+            ClearMaxLimit();
+          }
+        }
+
+        /// <summary>Field number for the "max_processing_units" field.</summary>
+        public const int MaxProcessingUnitsFieldNumber = 4;
+        /// <summary>
+        /// Maximum number of processing units allocated to the instance. If set,
+        /// this number should be multiples of 1000 and be greater than or equal to
+        /// min_processing_units.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int MaxProcessingUnits {
+          get { return HasMaxProcessingUnits ? (int) maxLimit_ : 0; }
+          set {
+            maxLimit_ = value;
+            maxLimitCase_ = MaxLimitOneofCase.MaxProcessingUnits;
+          }
+        }
+        /// <summary>Gets whether the "max_processing_units" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasMaxProcessingUnits {
+          get { return maxLimitCase_ == MaxLimitOneofCase.MaxProcessingUnits; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "max_processing_units" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearMaxProcessingUnits() {
+          if (HasMaxProcessingUnits) {
+            ClearMaxLimit();
+          }
+        }
+
+        private object minLimit_;
+        /// <summary>Enum of possible cases for the "min_limit" oneof.</summary>
+        public enum MinLimitOneofCase {
+          None = 0,
+          MinNodes = 1,
+          MinProcessingUnits = 2,
+        }
+        private MinLimitOneofCase minLimitCase_ = MinLimitOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MinLimitOneofCase MinLimitCase {
+          get { return minLimitCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearMinLimit() {
+          minLimitCase_ = MinLimitOneofCase.None;
+          minLimit_ = null;
+        }
+
+        private object maxLimit_;
+        /// <summary>Enum of possible cases for the "max_limit" oneof.</summary>
+        public enum MaxLimitOneofCase {
+          None = 0,
+          MaxNodes = 3,
+          MaxProcessingUnits = 4,
+        }
+        private MaxLimitOneofCase maxLimitCase_ = MaxLimitOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MaxLimitOneofCase MaxLimitCase {
+          get { return maxLimitCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearMaxLimit() {
+          maxLimitCase_ = MaxLimitOneofCase.None;
+          maxLimit_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as AutoscalingLimits);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(AutoscalingLimits other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (MinNodes != other.MinNodes) return false;
+          if (MinProcessingUnits != other.MinProcessingUnits) return false;
+          if (MaxNodes != other.MaxNodes) return false;
+          if (MaxProcessingUnits != other.MaxProcessingUnits) return false;
+          if (MinLimitCase != other.MinLimitCase) return false;
+          if (MaxLimitCase != other.MaxLimitCase) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (HasMinNodes) hash ^= MinNodes.GetHashCode();
+          if (HasMinProcessingUnits) hash ^= MinProcessingUnits.GetHashCode();
+          if (HasMaxNodes) hash ^= MaxNodes.GetHashCode();
+          if (HasMaxProcessingUnits) hash ^= MaxProcessingUnits.GetHashCode();
+          hash ^= (int) minLimitCase_;
+          hash ^= (int) maxLimitCase_;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (HasMinNodes) {
+            output.WriteRawTag(8);
+            output.WriteInt32(MinNodes);
+          }
+          if (HasMinProcessingUnits) {
+            output.WriteRawTag(16);
+            output.WriteInt32(MinProcessingUnits);
+          }
+          if (HasMaxNodes) {
+            output.WriteRawTag(24);
+            output.WriteInt32(MaxNodes);
+          }
+          if (HasMaxProcessingUnits) {
+            output.WriteRawTag(32);
+            output.WriteInt32(MaxProcessingUnits);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (HasMinNodes) {
+            output.WriteRawTag(8);
+            output.WriteInt32(MinNodes);
+          }
+          if (HasMinProcessingUnits) {
+            output.WriteRawTag(16);
+            output.WriteInt32(MinProcessingUnits);
+          }
+          if (HasMaxNodes) {
+            output.WriteRawTag(24);
+            output.WriteInt32(MaxNodes);
+          }
+          if (HasMaxProcessingUnits) {
+            output.WriteRawTag(32);
+            output.WriteInt32(MaxProcessingUnits);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (HasMinNodes) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(MinNodes);
+          }
+          if (HasMinProcessingUnits) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(MinProcessingUnits);
+          }
+          if (HasMaxNodes) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxNodes);
+          }
+          if (HasMaxProcessingUnits) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxProcessingUnits);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(AutoscalingLimits other) {
+          if (other == null) {
+            return;
+          }
+          switch (other.MinLimitCase) {
+            case MinLimitOneofCase.MinNodes:
+              MinNodes = other.MinNodes;
+              break;
+            case MinLimitOneofCase.MinProcessingUnits:
+              MinProcessingUnits = other.MinProcessingUnits;
+              break;
+          }
+
+          switch (other.MaxLimitCase) {
+            case MaxLimitOneofCase.MaxNodes:
+              MaxNodes = other.MaxNodes;
+              break;
+            case MaxLimitOneofCase.MaxProcessingUnits:
+              MaxProcessingUnits = other.MaxProcessingUnits;
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                MinNodes = input.ReadInt32();
+                break;
+              }
+              case 16: {
+                MinProcessingUnits = input.ReadInt32();
+                break;
+              }
+              case 24: {
+                MaxNodes = input.ReadInt32();
+                break;
+              }
+              case 32: {
+                MaxProcessingUnits = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                MinNodes = input.ReadInt32();
+                break;
+              }
+              case 16: {
+                MinProcessingUnits = input.ReadInt32();
+                break;
+              }
+              case 24: {
+                MaxNodes = input.ReadInt32();
+                break;
+              }
+              case 32: {
+                MaxProcessingUnits = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// The autoscaling targets for an instance.
+      /// </summary>
+      public sealed partial class AutoscalingTargets : pb::IMessage<AutoscalingTargets>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<AutoscalingTargets> _parser = new pb::MessageParser<AutoscalingTargets>(() => new AutoscalingTargets());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<AutoscalingTargets> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AutoscalingTargets() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AutoscalingTargets(AutoscalingTargets other) : this() {
+          highPriorityCpuUtilizationPercent_ = other.highPriorityCpuUtilizationPercent_;
+          storageUtilizationPercent_ = other.storageUtilizationPercent_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AutoscalingTargets Clone() {
+          return new AutoscalingTargets(this);
+        }
+
+        /// <summary>Field number for the "high_priority_cpu_utilization_percent" field.</summary>
+        public const int HighPriorityCpuUtilizationPercentFieldNumber = 1;
+        private int highPriorityCpuUtilizationPercent_;
+        /// <summary>
+        /// Required. The target high priority cpu utilization percentage that the
+        /// autoscaler should be trying to achieve for the instance. This number is
+        /// on a scale from 0 (no utilization) to 100 (full utilization). The valid
+        /// range is [10, 90] inclusive.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int HighPriorityCpuUtilizationPercent {
+          get { return highPriorityCpuUtilizationPercent_; }
+          set {
+            highPriorityCpuUtilizationPercent_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "storage_utilization_percent" field.</summary>
+        public const int StorageUtilizationPercentFieldNumber = 2;
+        private int storageUtilizationPercent_;
+        /// <summary>
+        /// Required. The target storage utilization percentage that the autoscaler
+        /// should be trying to achieve for the instance. This number is on a scale
+        /// from 0 (no utilization) to 100 (full utilization). The valid range is
+        /// [10, 100] inclusive.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int StorageUtilizationPercent {
+          get { return storageUtilizationPercent_; }
+          set {
+            storageUtilizationPercent_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as AutoscalingTargets);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(AutoscalingTargets other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (HighPriorityCpuUtilizationPercent != other.HighPriorityCpuUtilizationPercent) return false;
+          if (StorageUtilizationPercent != other.StorageUtilizationPercent) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (HighPriorityCpuUtilizationPercent != 0) hash ^= HighPriorityCpuUtilizationPercent.GetHashCode();
+          if (StorageUtilizationPercent != 0) hash ^= StorageUtilizationPercent.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (HighPriorityCpuUtilizationPercent != 0) {
+            output.WriteRawTag(8);
+            output.WriteInt32(HighPriorityCpuUtilizationPercent);
+          }
+          if (StorageUtilizationPercent != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(StorageUtilizationPercent);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (HighPriorityCpuUtilizationPercent != 0) {
+            output.WriteRawTag(8);
+            output.WriteInt32(HighPriorityCpuUtilizationPercent);
+          }
+          if (StorageUtilizationPercent != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(StorageUtilizationPercent);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (HighPriorityCpuUtilizationPercent != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(HighPriorityCpuUtilizationPercent);
+          }
+          if (StorageUtilizationPercent != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(StorageUtilizationPercent);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(AutoscalingTargets other) {
+          if (other == null) {
+            return;
+          }
+          if (other.HighPriorityCpuUtilizationPercent != 0) {
+            HighPriorityCpuUtilizationPercent = other.HighPriorityCpuUtilizationPercent;
+          }
+          if (other.StorageUtilizationPercent != 0) {
+            StorageUtilizationPercent = other.StorageUtilizationPercent;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                HighPriorityCpuUtilizationPercent = input.ReadInt32();
+                break;
+              }
+              case 16: {
+                StorageUtilizationPercent = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                HighPriorityCpuUtilizationPercent = input.ReadInt32();
+                break;
+              }
+              case 16: {
+                StorageUtilizationPercent = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// An isolated set of Cloud Spanner resources on which databases can be hosted.
   /// </summary>
   public sealed partial class Instance : pb::IMessage<Instance>
@@ -1221,7 +2184,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1246,6 +2209,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       displayName_ = other.displayName_;
       nodeCount_ = other.nodeCount_;
       processingUnits_ = other.processingUnits_;
+      autoscalingConfig_ = other.autoscalingConfig_ != null ? other.autoscalingConfig_.Clone() : null;
       state_ = other.state_;
       labels_ = other.labels_.Clone();
       endpointUris_ = other.endpointUris_.Clone();
@@ -1317,8 +2281,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     private int nodeCount_;
     /// <summary>
     /// The number of nodes allocated to this instance. At most one of either
-    /// node_count or processing_units should be present in the message. This
-    /// may be zero in API responses for instances that are not yet in state
+    /// node_count or processing_units should be present in the message.
+    ///
+    /// Users can set the node_count field to specify the target number of nodes
+    /// allocated to the instance.
+    ///
+    /// This may be zero in API responses for instances that are not yet in state
     /// `READY`.
     ///
     /// See [the
@@ -1339,8 +2307,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     private int processingUnits_;
     /// <summary>
     /// The number of processing units allocated to this instance. At most one of
-    /// processing_units or node_count should be present in the message. This may
-    /// be zero in API responses for instances that are not yet in state `READY`.
+    /// processing_units or node_count should be present in the message.
+    ///
+    /// Users can set the processing_units field to specify the target number of
+    /// processing units allocated to the instance.
+    ///
+    /// This may be zero in API responses for instances that are not yet in state
+    /// `READY`.
     ///
     /// See [the
     /// documentation](https://cloud.google.com/spanner/docs/compute-capacity)
@@ -1352,6 +2325,24 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       get { return processingUnits_; }
       set {
         processingUnits_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "autoscaling_config" field.</summary>
+    public const int AutoscalingConfigFieldNumber = 17;
+    private global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig autoscalingConfig_;
+    /// <summary>
+    /// Optional. The autoscaling configuration. Autoscaling is enabled if this
+    /// field is set. When autoscaling is enabled, node_count and processing_units
+    /// are treated as OUTPUT_ONLY fields and reflect the current compute capacity
+    /// allocated to the instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig AutoscalingConfig {
+      get { return autoscalingConfig_; }
+      set {
+        autoscalingConfig_ = value;
       }
     }
 
@@ -1472,6 +2463,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       if (DisplayName != other.DisplayName) return false;
       if (NodeCount != other.NodeCount) return false;
       if (ProcessingUnits != other.ProcessingUnits) return false;
+      if (!object.Equals(AutoscalingConfig, other.AutoscalingConfig)) return false;
       if (State != other.State) return false;
       if (!Labels.Equals(other.Labels)) return false;
       if(!endpointUris_.Equals(other.endpointUris_)) return false;
@@ -1489,6 +2481,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (NodeCount != 0) hash ^= NodeCount.GetHashCode();
       if (ProcessingUnits != 0) hash ^= ProcessingUnits.GetHashCode();
+      if (autoscalingConfig_ != null) hash ^= AutoscalingConfig.GetHashCode();
       if (State != global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.State.Unspecified) hash ^= State.GetHashCode();
       hash ^= Labels.GetHashCode();
       hash ^= endpointUris_.GetHashCode();
@@ -1546,6 +2539,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         output.WriteRawTag(98);
         output.WriteMessage(UpdateTime);
       }
+      if (autoscalingConfig_ != null) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(AutoscalingConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1590,6 +2587,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         output.WriteRawTag(98);
         output.WriteMessage(UpdateTime);
       }
+      if (autoscalingConfig_ != null) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(AutoscalingConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1614,6 +2615,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       }
       if (ProcessingUnits != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(ProcessingUnits);
+      }
+      if (autoscalingConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(AutoscalingConfig);
       }
       if (State != global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
@@ -1652,6 +2656,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       }
       if (other.ProcessingUnits != 0) {
         ProcessingUnits = other.ProcessingUnits;
+      }
+      if (other.autoscalingConfig_ != null) {
+        if (autoscalingConfig_ == null) {
+          AutoscalingConfig = new global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig();
+        }
+        AutoscalingConfig.MergeFrom(other.AutoscalingConfig);
       }
       if (other.State != global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.State.Unspecified) {
         State = other.State;
@@ -1731,6 +2741,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
             input.ReadMessage(UpdateTime);
             break;
           }
+          case 138: {
+            if (autoscalingConfig_ == null) {
+              AutoscalingConfig = new global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig();
+            }
+            input.ReadMessage(AutoscalingConfig);
+            break;
+          }
         }
       }
     #endif
@@ -1792,6 +2809,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
             input.ReadMessage(UpdateTime);
             break;
           }
+          case 138: {
+            if (autoscalingConfig_ == null) {
+              AutoscalingConfig = new global::Google.Cloud.Spanner.Admin.Instance.V1.AutoscalingConfig();
+            }
+            input.ReadMessage(AutoscalingConfig);
+            break;
+          }
         }
       }
     }
@@ -1846,7 +2870,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2128,7 +3152,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2355,7 +3379,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2552,7 +3576,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2886,7 +3910,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3191,7 +4215,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3476,7 +4500,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3840,7 +4864,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4071,7 +5095,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4320,7 +5344,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4609,7 +5633,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4948,7 +5972,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5175,7 +6199,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5436,7 +6460,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5633,7 +6657,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5989,7 +7013,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6345,7 +7369,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6650,7 +7674,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Cloud.Spanner.Admin.Instance.V1.SpannerInstanceAdminReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
