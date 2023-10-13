@@ -96,7 +96,7 @@ namespace Google.Cloud.Storage.V1.Tests
 
                 var expectedHeaders = ToExpectedEntries(headers);
                 Assert.NotSame(requestTemplate, newRequestTemplate);
-                AssertDictionariesEqual(expectedHeaders, newRequestTemplate.RequestHeaders);
+                Assert.Equal(expectedHeaders, newRequestTemplate.RequestHeaders);
             }
 
             [Fact]
@@ -113,7 +113,7 @@ namespace Google.Cloud.Storage.V1.Tests
 
                 var expectedHeaders = ToExpectedEntries(headers);
                 Assert.NotSame(requestTemplate, newRequestTemplate);
-                AssertDictionariesEqual(expectedHeaders, newRequestTemplate.ContentHeaders);
+                Assert.Equal(expectedHeaders, newRequestTemplate.ContentHeaders);
             }
 
             [Fact]
@@ -130,22 +130,7 @@ namespace Google.Cloud.Storage.V1.Tests
 
                 var expectedParameters = ToExpectedEntries(queryParameters);
                 Assert.NotSame(requestTemplate, newRequestTemplate);
-                AssertDictionariesEqual(expectedParameters, newRequestTemplate.QueryParameters);
-            }
-
-            private void AssertDictionariesEqual(
-                IReadOnlyDictionary<string, IReadOnlyCollection<string>> expected,
-                IReadOnlyDictionary<string, IReadOnlyCollection<string>> actual)
-            {
-                // xUnit 2.5.0 changed the behavior of Assert.Equal; previously we could just use
-                // Assert.Equal(expected, actual) for this.
-                Assert.Equal(
-                    expected.Keys.OrderBy(key => key, StringComparer.Ordinal),
-                    actual.Keys.OrderBy(key => key, StringComparer.Ordinal));
-                foreach (var key in expected.Keys)
-                {
-                    Assert.Equal(expected[key], actual[key]);
-                }
+                Assert.Equal(expectedParameters, newRequestTemplate.QueryParameters);
             }
 
             private IReadOnlyDictionary<string, IReadOnlyCollection<string>> ToExpectedEntries(
