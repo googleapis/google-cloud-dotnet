@@ -5299,7 +5299,7 @@
         "inventory"
       ],
       "dependencies": {
-        "Google.Shopping.Type": "1.0.0-beta01"
+        "Google.Shopping.Type": "1.0.0-beta02"
       },
       "generator": "micro",
       "protoPath": "google/shopping/merchant/inventories/v1beta",
