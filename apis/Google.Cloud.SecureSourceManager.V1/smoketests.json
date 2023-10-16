@@ -1,0 +1,19 @@
+[
+  {
+    "method": "ListLocations",
+    "client": "SecureSourceManagerClient",
+    "clientNavigationProperty": "LocationsClient",
+    "arguments": {
+      "request": {
+        "name": "projects/${PROJECT_ID}"
+      }
+    }
+  },
+  {
+    "method": "ListInstances",
+    "client": "SecureSourceManagerClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-central1"
+    }
+  }
+]
