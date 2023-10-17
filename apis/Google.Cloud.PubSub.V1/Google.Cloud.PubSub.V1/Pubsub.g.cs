@@ -431,11 +431,12 @@ namespace Google.Cloud.PubSub.V1 {
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> allowedPersistenceRegions_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// A list of IDs of GCP regions where messages that are published to the topic
-    /// may be persisted in storage. Messages published by publishers running in
-    /// non-allowed GCP regions (or running outside of GCP altogether) will be
-    /// routed for storage in one of the allowed regions. An empty list means that
-    /// no regions are allowed, and is not a valid configuration.
+    /// A list of IDs of Google Cloud regions where messages that are published
+    /// to the topic may be persisted in storage. Messages published by publishers
+    /// running in non-allowed Google Cloud regions (or running outside of Google
+    /// Cloud altogether) are routed for storage in one of the allowed regions.
+    /// An empty list means that no regions are allowed, and is not a valid
+    /// configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13181,8 +13182,8 @@ namespace Google.Cloud.PubSub.V1 {
     /// in the request, the server will assign a random name for this snapshot on
     /// the same project as the subscription. Note that for REST API requests, you
     /// must specify a name.  See the [resource name
-    /// rules](https://cloud.google.com/pubsub/docs/admin#resource_names). Format
-    /// is `projects/{project}/snapshots/{snap}`.
+    /// rules](https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
+    /// Format is `projects/{project}/snapshots/{snap}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
