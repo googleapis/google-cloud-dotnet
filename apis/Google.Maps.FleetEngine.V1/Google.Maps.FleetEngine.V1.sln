@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Maps.FleetEngine.V1", "Google.Maps.FleetEngine.V1\Google.Maps.FleetEngine.V1.csproj", "{7E6221DD-55C7-4CDB-85B6-A9E954644308}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Maps.FleetEngine.V1.GeneratedSnippets", "Google.Maps.FleetEngine.V1.GeneratedSnippets\Google.Maps.FleetEngine.V1.GeneratedSnippets.csproj", "{11830BE9-053C-44CD-8C03-EC2902B3AA03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{50A8FC41-5ED9-4C29-BCF9-B32A90A76701}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Maps.FleetEngine.V1.Snippets", "Google.Maps.FleetEngine.V1.Snippets\Google.Maps.FleetEngine.V1.Snippets.csproj", "{506FC060-FF06-4EA5-BEC6-16114E442239}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E6221DD-55C7-4CDB-85B6-A9E954644308}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E6221DD-55C7-4CDB-85B6-A9E954644308}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E6221DD-55C7-4CDB-85B6-A9E954644308}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E6221DD-55C7-4CDB-85B6-A9E954644308}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11830BE9-053C-44CD-8C03-EC2902B3AA03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11830BE9-053C-44CD-8C03-EC2902B3AA03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11830BE9-053C-44CD-8C03-EC2902B3AA03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11830BE9-053C-44CD-8C03-EC2902B3AA03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50A8FC41-5ED9-4C29-BCF9-B32A90A76701}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50A8FC41-5ED9-4C29-BCF9-B32A90A76701}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50A8FC41-5ED9-4C29-BCF9-B32A90A76701}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50A8FC41-5ED9-4C29-BCF9-B32A90A76701}.Release|Any CPU.Build.0 = Release|Any CPU
+		{506FC060-FF06-4EA5-BEC6-16114E442239}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{506FC060-FF06-4EA5-BEC6-16114E442239}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{506FC060-FF06-4EA5-BEC6-16114E442239}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{506FC060-FF06-4EA5-BEC6-16114E442239}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
