@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -e
+
+# Suppress deprecation warnings in generated gRPC code.
+# (If this becomes a common problem, we'll want a more robust fix.
+# It'll do for now.)
+
+sed -i 's/^#pragma warning disable 0414, 1591, 8981$/#pragma warning disable 0414, 1591, 8981, 0612/g' Google.Maps.FleetEngine.Delivery.V1/DeliveryApiGrpc.g.cs
