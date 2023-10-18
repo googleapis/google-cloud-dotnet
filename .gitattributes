@@ -1,1 +1,3 @@
 generateapis.sh eol=lf
+*.csproj text eol=lf
+*.cs text eol=lf
