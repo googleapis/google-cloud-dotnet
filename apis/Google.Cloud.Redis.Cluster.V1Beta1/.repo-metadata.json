@@ -1,0 +1,8 @@
+{
+  "distribution_name": "Google.Cloud.Redis.Cluster.V1Beta1",
+  "release_level": "unreleased",
+  "client_documentation": "https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Redis.Cluster.V1Beta1/latest",
+  "library_type": "GAPIC_AUTO",
+  "language": "dotnet",
+  "api_shortname": "redis"
+}
