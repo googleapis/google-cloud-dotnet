@@ -5230,6 +5230,29 @@
       "transport": "grpc"
     },
     {
+      "id": "Google.Maps.FleetEngine.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Local Rides and Deliveries",
+      "productUrl": "https://developers.google.com/maps/documentation/transportation-logistics/mobility",
+      "description": "Recommended Google client library to access the Google Maps Fleet Engine API (v1), which enables access to On Demand Rides and Deliveries and Last Mile Fleet Solutions.",
+      "tags": [
+        "on-demand",
+        "rides",
+        "deliveries",
+        "fleet"
+      ],
+      "dependencies": {
+        "Google.Geo.Type": "1.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/maps/fleetengine/v1",
+      "shortName": "fleetengine",
+      "serviceConfigFile": "fleetengine_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Maps.MapsPlatformDatasets.V1",
       "version": "1.0.0-beta01",
       "type": "grpc",
