@@ -25,14 +25,15 @@ namespace Google.Cloud.Deploy.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiZnb29nbGUvY2xvdWQvZGVwbG95L3YxL2xvZ19lbnVtcy5wcm90bxIWZ29v",
-            "Z2xlLmNsb3VkLmRlcGxveS52MSraAQoEVHlwZRIUChBUWVBFX1VOU1BFQ0lG",
+            "Z2xlLmNsb3VkLmRlcGxveS52MSrzAQoEVHlwZRIUChBUWVBFX1VOU1BFQ0lG",
             "SUVEEAASJAogVFlQRV9QVUJTVUJfTk9USUZJQ0FUSU9OX0ZBSUxVUkUQARIe",
             "ChpUWVBFX1JFU09VUkNFX1NUQVRFX0NIQU5HRRADEhgKFFRZUEVfUFJPQ0VT",
             "U19BQk9SVEVEEAQSHQoZVFlQRV9SRVNUUklDVElPTl9WSU9MQVRFRBAFEhkK",
-            "FVRZUEVfUkVTT1VSQ0VfREVMRVRFRBAGEiIKGlRZUEVfUkVOREVSX1NUQVRV",
-            "RVNfQ0hBTkdFEAIaAggBQmEKGmNvbS5nb29nbGUuY2xvdWQuZGVwbG95LnYx",
-            "Qg1Mb2dFbnVtc1Byb3RvUAFaMmNsb3VkLmdvb2dsZS5jb20vZ28vZGVwbG95",
-            "L2FwaXYxL2RlcGxveXBiO2RlcGxveXBiYgZwcm90bzM="));
+            "FVRZUEVfUkVTT1VSQ0VfREVMRVRFRBAGEhcKE1RZUEVfUk9MTE9VVF9VUERB",
+            "VEUQBxIiChpUWVBFX1JFTkRFUl9TVEFUVUVTX0NIQU5HRRACGgIIAUJhChpj",
+            "b20uZ29vZ2xlLmNsb3VkLmRlcGxveS52MUINTG9nRW51bXNQcm90b1ABWjJj",
+            "bG91ZC5nb29nbGUuY29tL2dvL2RlcGxveS9hcGl2MS9kZXBsb3lwYjtkZXBs",
+            "b3lwYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Deploy.V1.Type), }, null, null));
@@ -69,6 +70,10 @@ namespace Google.Cloud.Deploy.V1 {
     /// Resource deleted.
     /// </summary>
     [pbr::OriginalName("TYPE_RESOURCE_DELETED")] ResourceDeleted = 6,
+    /// <summary>
+    /// Rollout updated.
+    /// </summary>
+    [pbr::OriginalName("TYPE_ROLLOUT_UPDATE")] RolloutUpdate = 7,
     /// <summary>
     /// Deprecated: This field is never used. Use release_render log type instead.
     /// </summary>
