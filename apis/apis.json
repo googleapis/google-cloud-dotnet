@@ -5252,6 +5252,26 @@
       "transport": "grpc"
     },
     {
+      "id": "Google.Maps.FleetEngine.Delivery.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Last Mile Fleet Solution Delivery",
+      "productUrl": "https://developers.google.com/maps/documentation/transportation-logistics/mobility",
+      "description": "Recommended Google client library to access the Google Maps Fleet Engine Delivery API (v1), which enables access to Deliveries Solutions.",
+      "tags": [
+        "deliveries"
+      ],
+      "dependencies": {
+        "Google.Geo.Type": "1.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/maps/fleetengine/delivery/v1",
+      "shortName": "fleetengine",
+      "serviceConfigFile": "none",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Maps.FleetEngine.V1",
       "version": "1.0.0-beta00",
       "type": "grpc",
