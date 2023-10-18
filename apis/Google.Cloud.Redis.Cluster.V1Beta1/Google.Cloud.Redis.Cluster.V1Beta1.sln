@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Redis.Cluster.V1Beta1", "Google.Cloud.Redis.Cluster.V1Beta1\Google.Cloud.Redis.Cluster.V1Beta1.csproj", "{1B34FDE0-D737-4513-9A9E-726772441FD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Redis.Cluster.V1Beta1.GeneratedSnippets", "Google.Cloud.Redis.Cluster.V1Beta1.GeneratedSnippets\Google.Cloud.Redis.Cluster.V1Beta1.GeneratedSnippets.csproj", "{EBA43F0F-DA90-47BB-B98C-95902D7B052D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{6232AD83-04EA-4F60-A215-FF51B427E7D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Redis.Cluster.V1Beta1.Snippets", "Google.Cloud.Redis.Cluster.V1Beta1.Snippets\Google.Cloud.Redis.Cluster.V1Beta1.Snippets.csproj", "{A5C5B239-A34C-4E97-992D-E437C040697E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B34FDE0-D737-4513-9A9E-726772441FD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B34FDE0-D737-4513-9A9E-726772441FD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B34FDE0-D737-4513-9A9E-726772441FD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B34FDE0-D737-4513-9A9E-726772441FD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBA43F0F-DA90-47BB-B98C-95902D7B052D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBA43F0F-DA90-47BB-B98C-95902D7B052D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBA43F0F-DA90-47BB-B98C-95902D7B052D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBA43F0F-DA90-47BB-B98C-95902D7B052D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6232AD83-04EA-4F60-A215-FF51B427E7D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6232AD83-04EA-4F60-A215-FF51B427E7D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6232AD83-04EA-4F60-A215-FF51B427E7D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6232AD83-04EA-4F60-A215-FF51B427E7D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5C5B239-A34C-4E97-992D-E437C040697E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5C5B239-A34C-4E97-992D-E437C040697E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5C5B239-A34C-4E97-992D-E437C040697E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5C5B239-A34C-4E97-992D-E437C040697E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
