@@ -40,22 +40,10 @@
                 "ArchiveCustomMetricAsync"
               ]
             },
-            "AuditUserLinks": {
-              "methods": [
-                "AuditUserLinks",
-                "AuditUserLinksAsync"
-              ]
-            },
             "BatchCreateAccessBindings": {
               "methods": [
                 "BatchCreateAccessBindings",
                 "BatchCreateAccessBindingsAsync"
-              ]
-            },
-            "BatchCreateUserLinks": {
-              "methods": [
-                "BatchCreateUserLinks",
-                "BatchCreateUserLinksAsync"
               ]
             },
             "BatchDeleteAccessBindings": {
@@ -64,34 +52,16 @@
                 "BatchDeleteAccessBindingsAsync"
               ]
             },
-            "BatchDeleteUserLinks": {
-              "methods": [
-                "BatchDeleteUserLinks",
-                "BatchDeleteUserLinksAsync"
-              ]
-            },
             "BatchGetAccessBindings": {
               "methods": [
                 "BatchGetAccessBindings",
                 "BatchGetAccessBindingsAsync"
               ]
             },
-            "BatchGetUserLinks": {
-              "methods": [
-                "BatchGetUserLinks",
-                "BatchGetUserLinksAsync"
-              ]
-            },
             "BatchUpdateAccessBindings": {
               "methods": [
                 "BatchUpdateAccessBindings",
                 "BatchUpdateAccessBindingsAsync"
-              ]
-            },
-            "BatchUpdateUserLinks": {
-              "methods": [
-                "BatchUpdateUserLinks",
-                "BatchUpdateUserLinksAsync"
               ]
             },
             "CancelDisplayVideo360AdvertiserLinkProposal": {
@@ -202,6 +172,18 @@
                 "CreatePropertyAsync"
               ]
             },
+            "CreateRollupProperty": {
+              "methods": [
+                "CreateRollupProperty",
+                "CreateRollupPropertyAsync"
+              ]
+            },
+            "CreateRollupPropertySourceLink": {
+              "methods": [
+                "CreateRollupPropertySourceLink",
+                "CreateRollupPropertySourceLinkAsync"
+              ]
+            },
             "CreateSKAdNetworkConversionValueSchema": {
               "methods": [
                 "CreateSKAdNetworkConversionValueSchema",
@@ -214,10 +196,16 @@
                 "CreateSearchAds360LinkAsync"
               ]
             },
-            "CreateUserLink": {
+            "CreateSubproperty": {
               "methods": [
-                "CreateUserLink",
-                "CreateUserLinkAsync"
+                "CreateSubproperty",
+                "CreateSubpropertyAsync"
+              ]
+            },
+            "CreateSubpropertyEventFilter": {
+              "methods": [
+                "CreateSubpropertyEventFilter",
+                "CreateSubpropertyEventFilterAsync"
               ]
             },
             "DeleteAccessBinding": {
@@ -310,6 +298,12 @@
                 "DeletePropertyAsync"
               ]
             },
+            "DeleteRollupPropertySourceLink": {
+              "methods": [
+                "DeleteRollupPropertySourceLink",
+                "DeleteRollupPropertySourceLinkAsync"
+              ]
+            },
             "DeleteSKAdNetworkConversionValueSchema": {
               "methods": [
                 "DeleteSKAdNetworkConversionValueSchema",
@@ -322,10 +316,10 @@
                 "DeleteSearchAds360LinkAsync"
               ]
             },
-            "DeleteUserLink": {
+            "DeleteSubpropertyEventFilter": {
               "methods": [
-                "DeleteUserLink",
-                "DeleteUserLinkAsync"
+                "DeleteSubpropertyEventFilter",
+                "DeleteSubpropertyEventFilterAsync"
               ]
             },
             "FetchAutomatedGa4ConfigurationOptOut": {
@@ -400,6 +394,12 @@
                 "GetCustomMetricAsync"
               ]
             },
+            "GetDataRedactionSettings": {
+              "methods": [
+                "GetDataRedactionSettings",
+                "GetDataRedactionSettingsAsync"
+              ]
+            },
             "GetDataRetentionSettings": {
               "methods": [
                 "GetDataRetentionSettings",
@@ -472,6 +472,12 @@
                 "GetPropertyAsync"
               ]
             },
+            "GetRollupPropertySourceLink": {
+              "methods": [
+                "GetRollupPropertySourceLink",
+                "GetRollupPropertySourceLinkAsync"
+              ]
+            },
             "GetSKAdNetworkConversionValueSchema": {
               "methods": [
                 "GetSKAdNetworkConversionValueSchema",
@@ -482,12 +488,6 @@
               "methods": [
                 "GetSearchAds360Link",
                 "GetSearchAds360LinkAsync"
-              ]
-            },
-            "GetUserLink": {
-              "methods": [
-                "GetUserLink",
-                "GetUserLinkAsync"
               ]
             },
             "ListAccessBindings": {
@@ -610,6 +610,12 @@
                 "ListPropertiesAsync"
               ]
             },
+            "ListRollupPropertySourceLinks": {
+              "methods": [
+                "ListRollupPropertySourceLinks",
+                "ListRollupPropertySourceLinksAsync"
+              ]
+            },
             "ListSKAdNetworkConversionValueSchemas": {
               "methods": [
                 "ListSKAdNetworkConversionValueSchemas",
@@ -620,12 +626,6 @@
               "methods": [
                 "ListSearchAds360Links",
                 "ListSearchAds360LinksAsync"
-              ]
-            },
-            "ListUserLinks": {
-              "methods": [
-                "ListUserLinks",
-                "ListUserLinksAsync"
               ]
             },
             "ProvisionAccountTicket": {
@@ -700,6 +700,12 @@
                 "UpdateCustomMetricAsync"
               ]
             },
+            "UpdateDataRedactionSettings": {
+              "methods": [
+                "UpdateDataRedactionSettings",
+                "UpdateDataRedactionSettingsAsync"
+              ]
+            },
             "UpdateDataRetentionSettings": {
               "methods": [
                 "UpdateDataRetentionSettings",
@@ -770,12 +776,6 @@
               "methods": [
                 "UpdateSearchAds360Link",
                 "UpdateSearchAds360LinkAsync"
-              ]
-            },
-            "UpdateUserLink": {
-              "methods": [
-                "UpdateUserLink",
-                "UpdateUserLinkAsync"
               ]
             }
           }

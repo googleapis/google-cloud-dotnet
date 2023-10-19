@@ -37,6 +37,7 @@ namespace Google.Analytics.Admin.V1Alpha
             yield return EventCreateAndEditReflection.Descriptor;
             yield return ExpandedDataSetReflection.Descriptor;
             yield return ResourcesReflection.Descriptor;
+            yield return SubpropertyEventFilterReflection.Descriptor;
         }
     }
 }

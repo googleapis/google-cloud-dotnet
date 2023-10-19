@@ -2136,2089 +2136,6 @@
       ]
     },
     {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetUserLink_sync",
-      "title": "GetUserLinkRequestObject",
-      "description": "Snippet for GetUserLink",
-      "file": "AnalyticsAdminServiceClient.GetUserLinkRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "GetUserLink",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetUserLink",
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.GetUserLinkRequest",
-            "name": "request"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.Analytics.Admin.V1Alpha.UserLink",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "GetUserLink",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetUserLink",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 44,
-          "type": "FULL"
-        },
-        {
-          "start": 34,
-          "end": 42,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetUserLink_async",
-      "title": "GetUserLinkRequestObjectAsync",
-      "description": "Snippet for GetUserLinkAsync",
-      "file": "AnalyticsAdminServiceClient.GetUserLinkRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "GetUserLinkAsync",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetUserLinkAsync",
-        "async": true,
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.GetUserLinkRequest",
-            "name": "request"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.UserLink>",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "GetUserLink",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetUserLink",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 45,
-          "type": "FULL"
-        },
-        {
-          "start": 35,
-          "end": 43,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetUserLink_sync_flattened",
-      "title": "GetUserLink",
-      "description": "Snippet for GetUserLink",
-      "file": "AnalyticsAdminServiceClient.GetUserLinkSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "GetUserLink",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetUserLink",
-        "parameters": [
-          {
-            "type": "System.String",
-            "name": "name"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.Analytics.Admin.V1Alpha.UserLink",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "GetUserLink",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetUserLink",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 41,
-          "type": "FULL"
-        },
-        {
-          "start": 34,
-          "end": 39,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetUserLink_async_flattened",
-      "title": "GetUserLinkAsync",
-      "description": "Snippet for GetUserLinkAsync",
-      "file": "AnalyticsAdminServiceClient.GetUserLinkAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "GetUserLinkAsync",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetUserLinkAsync",
-        "async": true,
-        "parameters": [
-          {
-            "type": "System.String",
-            "name": "name"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.UserLink>",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "GetUserLink",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetUserLink",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 42,
-          "type": "FULL"
-        },
-        {
-          "start": 35,
-          "end": 40,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetUserLink_sync_flattened_resourceNames",
-      "title": "GetUserLinkResourceNames",
-      "description": "Snippet for GetUserLink",
-      "file": "AnalyticsAdminServiceClient.GetUserLinkResourceNamesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "GetUserLink",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetUserLink",
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.UserLinkName",
-            "name": "name"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.Analytics.Admin.V1Alpha.UserLink",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "GetUserLink",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetUserLink",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 41,
-          "type": "FULL"
-        },
-        {
-          "start": 34,
-          "end": 39,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetUserLink_async_flattened_resourceNames",
-      "title": "GetUserLinkResourceNamesAsync",
-      "description": "Snippet for GetUserLinkAsync",
-      "file": "AnalyticsAdminServiceClient.GetUserLinkResourceNamesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "GetUserLinkAsync",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetUserLinkAsync",
-        "async": true,
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.UserLinkName",
-            "name": "name"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.UserLink>",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "GetUserLink",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetUserLink",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 42,
-          "type": "FULL"
-        },
-        {
-          "start": 35,
-          "end": 40,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_BatchGetUserLinks_sync",
-      "title": "BatchGetUserLinksRequestObject",
-      "description": "Snippet for BatchGetUserLinks",
-      "file": "AnalyticsAdminServiceClient.BatchGetUserLinksRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "BatchGetUserLinks",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.BatchGetUserLinks",
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.BatchGetUserLinksRequest",
-            "name": "request"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.Analytics.Admin.V1Alpha.BatchGetUserLinksResponse",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "BatchGetUserLinks",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.BatchGetUserLinks",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 48,
-          "type": "FULL"
-        },
-        {
-          "start": 34,
-          "end": 46,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_BatchGetUserLinks_async",
-      "title": "BatchGetUserLinksRequestObjectAsync",
-      "description": "Snippet for BatchGetUserLinksAsync",
-      "file": "AnalyticsAdminServiceClient.BatchGetUserLinksRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "BatchGetUserLinksAsync",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.BatchGetUserLinksAsync",
-        "async": true,
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.BatchGetUserLinksRequest",
-            "name": "request"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.BatchGetUserLinksResponse>",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "BatchGetUserLinks",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.BatchGetUserLinks",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 49,
-          "type": "FULL"
-        },
-        {
-          "start": 35,
-          "end": 47,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListUserLinks_sync",
-      "title": "ListUserLinksRequestObject",
-      "description": "Snippet for ListUserLinks",
-      "file": "AnalyticsAdminServiceClient.ListUserLinksRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListUserLinks",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListUserLinks",
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.ListUserLinksRequest",
-            "name": "request"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.ListUserLinksResponse, Google.Analytics.Admin.V1Alpha.UserLink>",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "ListUserLinks",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListUserLinks",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 78,
-          "type": "FULL"
-        },
-        {
-          "start": 36,
-          "end": 76,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListUserLinks_async",
-      "title": "ListUserLinksRequestObjectAsync",
-      "description": "Snippet for ListUserLinksAsync",
-      "file": "AnalyticsAdminServiceClient.ListUserLinksRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListUserLinksAsync",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListUserLinksAsync",
-        "async": true,
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.ListUserLinksRequest",
-            "name": "request"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.ListUserLinksResponse, Google.Analytics.Admin.V1Alpha.UserLink>",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "ListUserLinks",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListUserLinks",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 80,
-          "type": "FULL"
-        },
-        {
-          "start": 38,
-          "end": 78,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListUserLinks_sync_flattened",
-      "title": "ListUserLinks",
-      "description": "Snippet for ListUserLinks",
-      "file": "AnalyticsAdminServiceClient.ListUserLinksSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListUserLinks",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListUserLinks",
-        "parameters": [
-          {
-            "type": "System.String",
-            "name": "parent"
-          },
-          {
-            "type": "System.String",
-            "name": "pageToken"
-          },
-          {
-            "type": "System.Nullable[System.Int32]",
-            "name": "pageSize"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.ListUserLinksResponse, Google.Analytics.Admin.V1Alpha.UserLink>",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "ListUserLinks",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListUserLinks",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 75,
-          "type": "FULL"
-        },
-        {
-          "start": 36,
-          "end": 73,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListUserLinks_async_flattened",
-      "title": "ListUserLinksAsync",
-      "description": "Snippet for ListUserLinksAsync",
-      "file": "AnalyticsAdminServiceClient.ListUserLinksAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListUserLinksAsync",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListUserLinksAsync",
-        "async": true,
-        "parameters": [
-          {
-            "type": "System.String",
-            "name": "parent"
-          },
-          {
-            "type": "System.String",
-            "name": "pageToken"
-          },
-          {
-            "type": "System.Nullable[System.Int32]",
-            "name": "pageSize"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.ListUserLinksResponse, Google.Analytics.Admin.V1Alpha.UserLink>",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "ListUserLinks",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListUserLinks",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 77,
-          "type": "FULL"
-        },
-        {
-          "start": 38,
-          "end": 75,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListUserLinks_sync_flattened_resourceNames1",
-      "title": "ListUserLinksResourceNames1",
-      "description": "Snippet for ListUserLinks",
-      "file": "AnalyticsAdminServiceClient.ListUserLinksResourceNames1Snippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListUserLinks",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListUserLinks",
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.AccountName",
-            "name": "parent"
-          },
-          {
-            "type": "System.String",
-            "name": "pageToken"
-          },
-          {
-            "type": "System.Nullable[System.Int32]",
-            "name": "pageSize"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.ListUserLinksResponse, Google.Analytics.Admin.V1Alpha.UserLink>",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "ListUserLinks",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListUserLinks",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 75,
-          "type": "FULL"
-        },
-        {
-          "start": 36,
-          "end": 73,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListUserLinks_async_flattened_resourceNames1",
-      "title": "ListUserLinksResourceNames1Async",
-      "description": "Snippet for ListUserLinksAsync",
-      "file": "AnalyticsAdminServiceClient.ListUserLinksResourceNames1AsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListUserLinksAsync",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListUserLinksAsync",
-        "async": true,
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.AccountName",
-            "name": "parent"
-          },
-          {
-            "type": "System.String",
-            "name": "pageToken"
-          },
-          {
-            "type": "System.Nullable[System.Int32]",
-            "name": "pageSize"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.ListUserLinksResponse, Google.Analytics.Admin.V1Alpha.UserLink>",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "ListUserLinks",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListUserLinks",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 77,
-          "type": "FULL"
-        },
-        {
-          "start": 38,
-          "end": 75,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListUserLinks_sync_flattened_resourceNames2",
-      "title": "ListUserLinksResourceNames2",
-      "description": "Snippet for ListUserLinks",
-      "file": "AnalyticsAdminServiceClient.ListUserLinksResourceNames2Snippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListUserLinks",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListUserLinks",
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.PropertyName",
-            "name": "parent"
-          },
-          {
-            "type": "System.String",
-            "name": "pageToken"
-          },
-          {
-            "type": "System.Nullable[System.Int32]",
-            "name": "pageSize"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.ListUserLinksResponse, Google.Analytics.Admin.V1Alpha.UserLink>",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "ListUserLinks",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListUserLinks",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 75,
-          "type": "FULL"
-        },
-        {
-          "start": 36,
-          "end": 73,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListUserLinks_async_flattened_resourceNames2",
-      "title": "ListUserLinksResourceNames2Async",
-      "description": "Snippet for ListUserLinksAsync",
-      "file": "AnalyticsAdminServiceClient.ListUserLinksResourceNames2AsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListUserLinksAsync",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListUserLinksAsync",
-        "async": true,
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.PropertyName",
-            "name": "parent"
-          },
-          {
-            "type": "System.String",
-            "name": "pageToken"
-          },
-          {
-            "type": "System.Nullable[System.Int32]",
-            "name": "pageSize"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.ListUserLinksResponse, Google.Analytics.Admin.V1Alpha.UserLink>",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "ListUserLinks",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListUserLinks",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 77,
-          "type": "FULL"
-        },
-        {
-          "start": 38,
-          "end": 75,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_AuditUserLinks_sync",
-      "title": "AuditUserLinksRequestObject",
-      "description": "Snippet for AuditUserLinks",
-      "file": "AnalyticsAdminServiceClient.AuditUserLinksRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "AuditUserLinks",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.AuditUserLinks",
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.AuditUserLinksRequest",
-            "name": "request"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.AuditUserLinksResponse, Google.Analytics.Admin.V1Alpha.AuditUserLink>",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "AuditUserLinks",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.AuditUserLinks",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 78,
-          "type": "FULL"
-        },
-        {
-          "start": 36,
-          "end": 76,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_AuditUserLinks_async",
-      "title": "AuditUserLinksRequestObjectAsync",
-      "description": "Snippet for AuditUserLinksAsync",
-      "file": "AnalyticsAdminServiceClient.AuditUserLinksRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "AuditUserLinksAsync",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.AuditUserLinksAsync",
-        "async": true,
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.AuditUserLinksRequest",
-            "name": "request"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.AuditUserLinksResponse, Google.Analytics.Admin.V1Alpha.AuditUserLink>",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "AuditUserLinks",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.AuditUserLinks",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 80,
-          "type": "FULL"
-        },
-        {
-          "start": 38,
-          "end": 78,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateUserLink_sync",
-      "title": "CreateUserLinkRequestObject",
-      "description": "Snippet for CreateUserLink",
-      "file": "AnalyticsAdminServiceClient.CreateUserLinkRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreateUserLink",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateUserLink",
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.CreateUserLinkRequest",
-            "name": "request"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.Analytics.Admin.V1Alpha.UserLink",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "CreateUserLink",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateUserLink",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 46,
-          "type": "FULL"
-        },
-        {
-          "start": 34,
-          "end": 44,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateUserLink_async",
-      "title": "CreateUserLinkRequestObjectAsync",
-      "description": "Snippet for CreateUserLinkAsync",
-      "file": "AnalyticsAdminServiceClient.CreateUserLinkRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreateUserLinkAsync",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateUserLinkAsync",
-        "async": true,
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.CreateUserLinkRequest",
-            "name": "request"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.UserLink>",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "CreateUserLink",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateUserLink",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 47,
-          "type": "FULL"
-        },
-        {
-          "start": 35,
-          "end": 45,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateUserLink_sync_flattened",
-      "title": "CreateUserLink",
-      "description": "Snippet for CreateUserLink",
-      "file": "AnalyticsAdminServiceClient.CreateUserLinkSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreateUserLink",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateUserLink",
-        "parameters": [
-          {
-            "type": "System.String",
-            "name": "parent"
-          },
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.UserLink",
-            "name": "userLink"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.Analytics.Admin.V1Alpha.UserLink",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "CreateUserLink",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateUserLink",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 42,
-          "type": "FULL"
-        },
-        {
-          "start": 34,
-          "end": 40,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateUserLink_async_flattened",
-      "title": "CreateUserLinkAsync",
-      "description": "Snippet for CreateUserLinkAsync",
-      "file": "AnalyticsAdminServiceClient.CreateUserLinkAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreateUserLinkAsync",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateUserLinkAsync",
-        "async": true,
-        "parameters": [
-          {
-            "type": "System.String",
-            "name": "parent"
-          },
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.UserLink",
-            "name": "userLink"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.UserLink>",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "CreateUserLink",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateUserLink",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 43,
-          "type": "FULL"
-        },
-        {
-          "start": 35,
-          "end": 41,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateUserLink_sync_flattened_resourceNames1",
-      "title": "CreateUserLinkResourceNames1",
-      "description": "Snippet for CreateUserLink",
-      "file": "AnalyticsAdminServiceClient.CreateUserLinkResourceNames1Snippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreateUserLink",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateUserLink",
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.AccountName",
-            "name": "parent"
-          },
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.UserLink",
-            "name": "userLink"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.Analytics.Admin.V1Alpha.UserLink",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "CreateUserLink",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateUserLink",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 42,
-          "type": "FULL"
-        },
-        {
-          "start": 34,
-          "end": 40,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateUserLink_async_flattened_resourceNames1",
-      "title": "CreateUserLinkResourceNames1Async",
-      "description": "Snippet for CreateUserLinkAsync",
-      "file": "AnalyticsAdminServiceClient.CreateUserLinkResourceNames1AsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreateUserLinkAsync",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateUserLinkAsync",
-        "async": true,
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.AccountName",
-            "name": "parent"
-          },
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.UserLink",
-            "name": "userLink"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.UserLink>",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "CreateUserLink",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateUserLink",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 43,
-          "type": "FULL"
-        },
-        {
-          "start": 35,
-          "end": 41,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateUserLink_sync_flattened_resourceNames2",
-      "title": "CreateUserLinkResourceNames2",
-      "description": "Snippet for CreateUserLink",
-      "file": "AnalyticsAdminServiceClient.CreateUserLinkResourceNames2Snippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreateUserLink",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateUserLink",
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.PropertyName",
-            "name": "parent"
-          },
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.UserLink",
-            "name": "userLink"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.Analytics.Admin.V1Alpha.UserLink",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "CreateUserLink",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateUserLink",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 42,
-          "type": "FULL"
-        },
-        {
-          "start": 34,
-          "end": 40,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateUserLink_async_flattened_resourceNames2",
-      "title": "CreateUserLinkResourceNames2Async",
-      "description": "Snippet for CreateUserLinkAsync",
-      "file": "AnalyticsAdminServiceClient.CreateUserLinkResourceNames2AsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "CreateUserLinkAsync",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateUserLinkAsync",
-        "async": true,
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.PropertyName",
-            "name": "parent"
-          },
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.UserLink",
-            "name": "userLink"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.UserLink>",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "CreateUserLink",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateUserLink",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 43,
-          "type": "FULL"
-        },
-        {
-          "start": 35,
-          "end": 41,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_BatchCreateUserLinks_sync",
-      "title": "BatchCreateUserLinksRequestObject",
-      "description": "Snippet for BatchCreateUserLinks",
-      "file": "AnalyticsAdminServiceClient.BatchCreateUserLinksRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "BatchCreateUserLinks",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.BatchCreateUserLinks",
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.BatchCreateUserLinksRequest",
-            "name": "request"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.Analytics.Admin.V1Alpha.BatchCreateUserLinksResponse",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "BatchCreateUserLinks",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.BatchCreateUserLinks",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 49,
-          "type": "FULL"
-        },
-        {
-          "start": 34,
-          "end": 47,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_BatchCreateUserLinks_async",
-      "title": "BatchCreateUserLinksRequestObjectAsync",
-      "description": "Snippet for BatchCreateUserLinksAsync",
-      "file": "AnalyticsAdminServiceClient.BatchCreateUserLinksRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "BatchCreateUserLinksAsync",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.BatchCreateUserLinksAsync",
-        "async": true,
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.BatchCreateUserLinksRequest",
-            "name": "request"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.BatchCreateUserLinksResponse>",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "BatchCreateUserLinks",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.BatchCreateUserLinks",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 50,
-          "type": "FULL"
-        },
-        {
-          "start": 35,
-          "end": 48,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateUserLink_sync",
-      "title": "UpdateUserLinkRequestObject",
-      "description": "Snippet for UpdateUserLink",
-      "file": "AnalyticsAdminServiceClient.UpdateUserLinkRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "UpdateUserLink",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateUserLink",
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.UpdateUserLinkRequest",
-            "name": "request"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.Analytics.Admin.V1Alpha.UserLink",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "UpdateUserLink",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateUserLink",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 44,
-          "type": "FULL"
-        },
-        {
-          "start": 34,
-          "end": 42,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateUserLink_async",
-      "title": "UpdateUserLinkRequestObjectAsync",
-      "description": "Snippet for UpdateUserLinkAsync",
-      "file": "AnalyticsAdminServiceClient.UpdateUserLinkRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "UpdateUserLinkAsync",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateUserLinkAsync",
-        "async": true,
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.UpdateUserLinkRequest",
-            "name": "request"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.UserLink>",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "UpdateUserLink",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateUserLink",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 45,
-          "type": "FULL"
-        },
-        {
-          "start": 35,
-          "end": 43,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateUserLink_sync_flattened",
-      "title": "UpdateUserLink",
-      "description": "Snippet for UpdateUserLink",
-      "file": "AnalyticsAdminServiceClient.UpdateUserLinkSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "UpdateUserLink",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateUserLink",
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.UserLink",
-            "name": "userLink"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.Analytics.Admin.V1Alpha.UserLink",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "UpdateUserLink",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateUserLink",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 41,
-          "type": "FULL"
-        },
-        {
-          "start": 34,
-          "end": 39,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateUserLink_async_flattened",
-      "title": "UpdateUserLinkAsync",
-      "description": "Snippet for UpdateUserLinkAsync",
-      "file": "AnalyticsAdminServiceClient.UpdateUserLinkAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "UpdateUserLinkAsync",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateUserLinkAsync",
-        "async": true,
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.UserLink",
-            "name": "userLink"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.UserLink>",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "UpdateUserLink",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateUserLink",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 42,
-          "type": "FULL"
-        },
-        {
-          "start": 35,
-          "end": 40,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_BatchUpdateUserLinks_sync",
-      "title": "BatchUpdateUserLinksRequestObject",
-      "description": "Snippet for BatchUpdateUserLinks",
-      "file": "AnalyticsAdminServiceClient.BatchUpdateUserLinksRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "BatchUpdateUserLinks",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.BatchUpdateUserLinks",
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.BatchUpdateUserLinksRequest",
-            "name": "request"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.Analytics.Admin.V1Alpha.BatchUpdateUserLinksResponse",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "BatchUpdateUserLinks",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.BatchUpdateUserLinks",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 48,
-          "type": "FULL"
-        },
-        {
-          "start": 34,
-          "end": 46,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_BatchUpdateUserLinks_async",
-      "title": "BatchUpdateUserLinksRequestObjectAsync",
-      "description": "Snippet for BatchUpdateUserLinksAsync",
-      "file": "AnalyticsAdminServiceClient.BatchUpdateUserLinksRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "BatchUpdateUserLinksAsync",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.BatchUpdateUserLinksAsync",
-        "async": true,
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.BatchUpdateUserLinksRequest",
-            "name": "request"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.BatchUpdateUserLinksResponse>",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "BatchUpdateUserLinks",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.BatchUpdateUserLinks",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 49,
-          "type": "FULL"
-        },
-        {
-          "start": 35,
-          "end": 47,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteUserLink_sync",
-      "title": "DeleteUserLinkRequestObject",
-      "description": "Snippet for DeleteUserLink",
-      "file": "AnalyticsAdminServiceClient.DeleteUserLinkRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteUserLink",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteUserLink",
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.DeleteUserLinkRequest",
-            "name": "request"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "DeleteUserLink",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteUserLink",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 44,
-          "type": "FULL"
-        },
-        {
-          "start": 34,
-          "end": 42,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteUserLink_async",
-      "title": "DeleteUserLinkRequestObjectAsync",
-      "description": "Snippet for DeleteUserLinkAsync",
-      "file": "AnalyticsAdminServiceClient.DeleteUserLinkRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteUserLinkAsync",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteUserLinkAsync",
-        "async": true,
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.DeleteUserLinkRequest",
-            "name": "request"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "System.Threading.Tasks.Task",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "DeleteUserLink",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteUserLink",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 45,
-          "type": "FULL"
-        },
-        {
-          "start": 35,
-          "end": 43,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteUserLink_sync_flattened",
-      "title": "DeleteUserLink",
-      "description": "Snippet for DeleteUserLink",
-      "file": "AnalyticsAdminServiceClient.DeleteUserLinkSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteUserLink",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteUserLink",
-        "parameters": [
-          {
-            "type": "System.String",
-            "name": "name"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "DeleteUserLink",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteUserLink",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 41,
-          "type": "FULL"
-        },
-        {
-          "start": 34,
-          "end": 39,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteUserLink_async_flattened",
-      "title": "DeleteUserLinkAsync",
-      "description": "Snippet for DeleteUserLinkAsync",
-      "file": "AnalyticsAdminServiceClient.DeleteUserLinkAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteUserLinkAsync",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteUserLinkAsync",
-        "async": true,
-        "parameters": [
-          {
-            "type": "System.String",
-            "name": "name"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "System.Threading.Tasks.Task",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "DeleteUserLink",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteUserLink",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 42,
-          "type": "FULL"
-        },
-        {
-          "start": 35,
-          "end": 40,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteUserLink_sync_flattened_resourceNames",
-      "title": "DeleteUserLinkResourceNames",
-      "description": "Snippet for DeleteUserLink",
-      "file": "AnalyticsAdminServiceClient.DeleteUserLinkResourceNamesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteUserLink",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteUserLink",
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.UserLinkName",
-            "name": "name"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "DeleteUserLink",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteUserLink",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 41,
-          "type": "FULL"
-        },
-        {
-          "start": 34,
-          "end": 39,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteUserLink_async_flattened_resourceNames",
-      "title": "DeleteUserLinkResourceNamesAsync",
-      "description": "Snippet for DeleteUserLinkAsync",
-      "file": "AnalyticsAdminServiceClient.DeleteUserLinkResourceNamesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteUserLinkAsync",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteUserLinkAsync",
-        "async": true,
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.UserLinkName",
-            "name": "name"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "System.Threading.Tasks.Task",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "DeleteUserLink",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteUserLink",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 42,
-          "type": "FULL"
-        },
-        {
-          "start": 35,
-          "end": 40,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_BatchDeleteUserLinks_sync",
-      "title": "BatchDeleteUserLinksRequestObject",
-      "description": "Snippet for BatchDeleteUserLinks",
-      "file": "AnalyticsAdminServiceClient.BatchDeleteUserLinksRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "BatchDeleteUserLinks",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.BatchDeleteUserLinks",
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.BatchDeleteUserLinksRequest",
-            "name": "request"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "BatchDeleteUserLinks",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.BatchDeleteUserLinks",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 48,
-          "type": "FULL"
-        },
-        {
-          "start": 34,
-          "end": 46,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_BatchDeleteUserLinks_async",
-      "title": "BatchDeleteUserLinksRequestObjectAsync",
-      "description": "Snippet for BatchDeleteUserLinksAsync",
-      "file": "AnalyticsAdminServiceClient.BatchDeleteUserLinksRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "BatchDeleteUserLinksAsync",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.BatchDeleteUserLinksAsync",
-        "async": true,
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.BatchDeleteUserLinksRequest",
-            "name": "request"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "System.Threading.Tasks.Task",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "BatchDeleteUserLinks",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.BatchDeleteUserLinks",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 49,
-          "type": "FULL"
-        },
-        {
-          "start": 35,
-          "end": 47,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
       "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateFirebaseLink_sync",
       "title": "CreateFirebaseLinkRequestObject",
       "description": "Snippet for CreateFirebaseLink",
@@ -22233,12 +20150,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 63,
+          "end": 65,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 61,
+          "end": 63,
           "type": "SHORT"
         }
       ]
@@ -22282,12 +20199,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 64,
+          "end": 66,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 62,
+          "end": 64,
           "type": "SHORT"
         }
       ]
@@ -31320,6 +29237,2467 @@
         {
           "start": 35,
           "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateDataRedactionSettings_sync",
+      "title": "UpdateDataRedactionSettingsRequestObject",
+      "description": "Snippet for UpdateDataRedactionSettings",
+      "file": "AnalyticsAdminServiceClient.UpdateDataRedactionSettingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataRedactionSettings",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateDataRedactionSettings",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.UpdateDataRedactionSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.DataRedactionSettings",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataRedactionSettings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateDataRedactionSettings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateDataRedactionSettings_async",
+      "title": "UpdateDataRedactionSettingsRequestObjectAsync",
+      "description": "Snippet for UpdateDataRedactionSettingsAsync",
+      "file": "AnalyticsAdminServiceClient.UpdateDataRedactionSettingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataRedactionSettingsAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateDataRedactionSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.UpdateDataRedactionSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.DataRedactionSettings>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataRedactionSettings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateDataRedactionSettings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateDataRedactionSettings_sync_flattened",
+      "title": "UpdateDataRedactionSettings",
+      "description": "Snippet for UpdateDataRedactionSettings",
+      "file": "AnalyticsAdminServiceClient.UpdateDataRedactionSettingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataRedactionSettings",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateDataRedactionSettings",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.DataRedactionSettings",
+            "name": "dataRedactionSettings"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.DataRedactionSettings",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataRedactionSettings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateDataRedactionSettings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateDataRedactionSettings_async_flattened",
+      "title": "UpdateDataRedactionSettingsAsync",
+      "description": "Snippet for UpdateDataRedactionSettingsAsync",
+      "file": "AnalyticsAdminServiceClient.UpdateDataRedactionSettingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataRedactionSettingsAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateDataRedactionSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.DataRedactionSettings",
+            "name": "dataRedactionSettings"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.DataRedactionSettings>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataRedactionSettings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateDataRedactionSettings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetDataRedactionSettings_sync",
+      "title": "GetDataRedactionSettingsRequestObject",
+      "description": "Snippet for GetDataRedactionSettings",
+      "file": "AnalyticsAdminServiceClient.GetDataRedactionSettingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataRedactionSettings",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetDataRedactionSettings",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.GetDataRedactionSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.DataRedactionSettings",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataRedactionSettings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetDataRedactionSettings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetDataRedactionSettings_async",
+      "title": "GetDataRedactionSettingsRequestObjectAsync",
+      "description": "Snippet for GetDataRedactionSettingsAsync",
+      "file": "AnalyticsAdminServiceClient.GetDataRedactionSettingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataRedactionSettingsAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetDataRedactionSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.GetDataRedactionSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.DataRedactionSettings>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataRedactionSettings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetDataRedactionSettings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetDataRedactionSettings_sync_flattened",
+      "title": "GetDataRedactionSettings",
+      "description": "Snippet for GetDataRedactionSettings",
+      "file": "AnalyticsAdminServiceClient.GetDataRedactionSettingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataRedactionSettings",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetDataRedactionSettings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.DataRedactionSettings",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataRedactionSettings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetDataRedactionSettings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetDataRedactionSettings_async_flattened",
+      "title": "GetDataRedactionSettingsAsync",
+      "description": "Snippet for GetDataRedactionSettingsAsync",
+      "file": "AnalyticsAdminServiceClient.GetDataRedactionSettingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataRedactionSettingsAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetDataRedactionSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.DataRedactionSettings>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataRedactionSettings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetDataRedactionSettings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetDataRedactionSettings_sync_flattened_resourceNames",
+      "title": "GetDataRedactionSettingsResourceNames",
+      "description": "Snippet for GetDataRedactionSettings",
+      "file": "AnalyticsAdminServiceClient.GetDataRedactionSettingsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataRedactionSettings",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetDataRedactionSettings",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.DataRedactionSettingsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.DataRedactionSettings",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataRedactionSettings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetDataRedactionSettings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetDataRedactionSettings_async_flattened_resourceNames",
+      "title": "GetDataRedactionSettingsResourceNamesAsync",
+      "description": "Snippet for GetDataRedactionSettingsAsync",
+      "file": "AnalyticsAdminServiceClient.GetDataRedactionSettingsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataRedactionSettingsAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetDataRedactionSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.DataRedactionSettingsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.DataRedactionSettings>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataRedactionSettings",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetDataRedactionSettings",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateRollupProperty_sync",
+      "title": "CreateRollupPropertyRequestObject",
+      "description": "Snippet for CreateRollupProperty",
+      "file": "AnalyticsAdminServiceClient.CreateRollupPropertyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRollupProperty",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateRollupProperty",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.CreateRollupPropertyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.CreateRollupPropertyResponse",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateRollupProperty",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateRollupProperty",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateRollupProperty_async",
+      "title": "CreateRollupPropertyRequestObjectAsync",
+      "description": "Snippet for CreateRollupPropertyAsync",
+      "file": "AnalyticsAdminServiceClient.CreateRollupPropertyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRollupPropertyAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateRollupPropertyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.CreateRollupPropertyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.CreateRollupPropertyResponse>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateRollupProperty",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateRollupProperty",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetRollupPropertySourceLink_sync",
+      "title": "GetRollupPropertySourceLinkRequestObject",
+      "description": "Snippet for GetRollupPropertySourceLink",
+      "file": "AnalyticsAdminServiceClient.GetRollupPropertySourceLinkRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRollupPropertySourceLink",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetRollupPropertySourceLink",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.GetRollupPropertySourceLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetRollupPropertySourceLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetRollupPropertySourceLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetRollupPropertySourceLink_async",
+      "title": "GetRollupPropertySourceLinkRequestObjectAsync",
+      "description": "Snippet for GetRollupPropertySourceLinkAsync",
+      "file": "AnalyticsAdminServiceClient.GetRollupPropertySourceLinkRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRollupPropertySourceLinkAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetRollupPropertySourceLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.GetRollupPropertySourceLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetRollupPropertySourceLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetRollupPropertySourceLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetRollupPropertySourceLink_sync_flattened",
+      "title": "GetRollupPropertySourceLink",
+      "description": "Snippet for GetRollupPropertySourceLink",
+      "file": "AnalyticsAdminServiceClient.GetRollupPropertySourceLinkSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRollupPropertySourceLink",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetRollupPropertySourceLink",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetRollupPropertySourceLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetRollupPropertySourceLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetRollupPropertySourceLink_async_flattened",
+      "title": "GetRollupPropertySourceLinkAsync",
+      "description": "Snippet for GetRollupPropertySourceLinkAsync",
+      "file": "AnalyticsAdminServiceClient.GetRollupPropertySourceLinkAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRollupPropertySourceLinkAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetRollupPropertySourceLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetRollupPropertySourceLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetRollupPropertySourceLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetRollupPropertySourceLink_sync_flattened_resourceNames",
+      "title": "GetRollupPropertySourceLinkResourceNames",
+      "description": "Snippet for GetRollupPropertySourceLink",
+      "file": "AnalyticsAdminServiceClient.GetRollupPropertySourceLinkResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRollupPropertySourceLink",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetRollupPropertySourceLink",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.RollupPropertySourceLinkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetRollupPropertySourceLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetRollupPropertySourceLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetRollupPropertySourceLink_async_flattened_resourceNames",
+      "title": "GetRollupPropertySourceLinkResourceNamesAsync",
+      "description": "Snippet for GetRollupPropertySourceLinkAsync",
+      "file": "AnalyticsAdminServiceClient.GetRollupPropertySourceLinkResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRollupPropertySourceLinkAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetRollupPropertySourceLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.RollupPropertySourceLinkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetRollupPropertySourceLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetRollupPropertySourceLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListRollupPropertySourceLinks_sync",
+      "title": "ListRollupPropertySourceLinksRequestObject",
+      "description": "Snippet for ListRollupPropertySourceLinks",
+      "file": "AnalyticsAdminServiceClient.ListRollupPropertySourceLinksRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRollupPropertySourceLinks",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListRollupPropertySourceLinks",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.ListRollupPropertySourceLinksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.ListRollupPropertySourceLinksResponse, Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListRollupPropertySourceLinks",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListRollupPropertySourceLinks",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListRollupPropertySourceLinks_async",
+      "title": "ListRollupPropertySourceLinksRequestObjectAsync",
+      "description": "Snippet for ListRollupPropertySourceLinksAsync",
+      "file": "AnalyticsAdminServiceClient.ListRollupPropertySourceLinksRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRollupPropertySourceLinksAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListRollupPropertySourceLinksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.ListRollupPropertySourceLinksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.ListRollupPropertySourceLinksResponse, Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListRollupPropertySourceLinks",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListRollupPropertySourceLinks",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListRollupPropertySourceLinks_sync_flattened",
+      "title": "ListRollupPropertySourceLinks",
+      "description": "Snippet for ListRollupPropertySourceLinks",
+      "file": "AnalyticsAdminServiceClient.ListRollupPropertySourceLinksSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRollupPropertySourceLinks",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListRollupPropertySourceLinks",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.ListRollupPropertySourceLinksResponse, Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListRollupPropertySourceLinks",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListRollupPropertySourceLinks",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListRollupPropertySourceLinks_async_flattened",
+      "title": "ListRollupPropertySourceLinksAsync",
+      "description": "Snippet for ListRollupPropertySourceLinksAsync",
+      "file": "AnalyticsAdminServiceClient.ListRollupPropertySourceLinksAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRollupPropertySourceLinksAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListRollupPropertySourceLinksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.ListRollupPropertySourceLinksResponse, Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListRollupPropertySourceLinks",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListRollupPropertySourceLinks",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListRollupPropertySourceLinks_sync_flattened_resourceNames",
+      "title": "ListRollupPropertySourceLinksResourceNames",
+      "description": "Snippet for ListRollupPropertySourceLinks",
+      "file": "AnalyticsAdminServiceClient.ListRollupPropertySourceLinksResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRollupPropertySourceLinks",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListRollupPropertySourceLinks",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.ListRollupPropertySourceLinksResponse, Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListRollupPropertySourceLinks",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListRollupPropertySourceLinks",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListRollupPropertySourceLinks_async_flattened_resourceNames",
+      "title": "ListRollupPropertySourceLinksResourceNamesAsync",
+      "description": "Snippet for ListRollupPropertySourceLinksAsync",
+      "file": "AnalyticsAdminServiceClient.ListRollupPropertySourceLinksResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRollupPropertySourceLinksAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListRollupPropertySourceLinksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.ListRollupPropertySourceLinksResponse, Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListRollupPropertySourceLinks",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListRollupPropertySourceLinks",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateRollupPropertySourceLink_sync",
+      "title": "CreateRollupPropertySourceLinkRequestObject",
+      "description": "Snippet for CreateRollupPropertySourceLink",
+      "file": "AnalyticsAdminServiceClient.CreateRollupPropertySourceLinkRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRollupPropertySourceLink",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateRollupPropertySourceLink",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.CreateRollupPropertySourceLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateRollupPropertySourceLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateRollupPropertySourceLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateRollupPropertySourceLink_async",
+      "title": "CreateRollupPropertySourceLinkRequestObjectAsync",
+      "description": "Snippet for CreateRollupPropertySourceLinkAsync",
+      "file": "AnalyticsAdminServiceClient.CreateRollupPropertySourceLinkRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRollupPropertySourceLinkAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateRollupPropertySourceLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.CreateRollupPropertySourceLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateRollupPropertySourceLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateRollupPropertySourceLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateRollupPropertySourceLink_sync_flattened",
+      "title": "CreateRollupPropertySourceLink",
+      "description": "Snippet for CreateRollupPropertySourceLink",
+      "file": "AnalyticsAdminServiceClient.CreateRollupPropertySourceLinkSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRollupPropertySourceLink",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateRollupPropertySourceLink",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink",
+            "name": "rollupPropertySourceLink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateRollupPropertySourceLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateRollupPropertySourceLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateRollupPropertySourceLink_async_flattened",
+      "title": "CreateRollupPropertySourceLinkAsync",
+      "description": "Snippet for CreateRollupPropertySourceLinkAsync",
+      "file": "AnalyticsAdminServiceClient.CreateRollupPropertySourceLinkAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRollupPropertySourceLinkAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateRollupPropertySourceLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink",
+            "name": "rollupPropertySourceLink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateRollupPropertySourceLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateRollupPropertySourceLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateRollupPropertySourceLink_sync_flattened_resourceNames",
+      "title": "CreateRollupPropertySourceLinkResourceNames",
+      "description": "Snippet for CreateRollupPropertySourceLink",
+      "file": "AnalyticsAdminServiceClient.CreateRollupPropertySourceLinkResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRollupPropertySourceLink",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateRollupPropertySourceLink",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink",
+            "name": "rollupPropertySourceLink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateRollupPropertySourceLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateRollupPropertySourceLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateRollupPropertySourceLink_async_flattened_resourceNames",
+      "title": "CreateRollupPropertySourceLinkResourceNamesAsync",
+      "description": "Snippet for CreateRollupPropertySourceLinkAsync",
+      "file": "AnalyticsAdminServiceClient.CreateRollupPropertySourceLinkResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRollupPropertySourceLinkAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateRollupPropertySourceLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink",
+            "name": "rollupPropertySourceLink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateRollupPropertySourceLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateRollupPropertySourceLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteRollupPropertySourceLink_sync",
+      "title": "DeleteRollupPropertySourceLinkRequestObject",
+      "description": "Snippet for DeleteRollupPropertySourceLink",
+      "file": "AnalyticsAdminServiceClient.DeleteRollupPropertySourceLinkRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRollupPropertySourceLink",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteRollupPropertySourceLink",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.DeleteRollupPropertySourceLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteRollupPropertySourceLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteRollupPropertySourceLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteRollupPropertySourceLink_async",
+      "title": "DeleteRollupPropertySourceLinkRequestObjectAsync",
+      "description": "Snippet for DeleteRollupPropertySourceLinkAsync",
+      "file": "AnalyticsAdminServiceClient.DeleteRollupPropertySourceLinkRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRollupPropertySourceLinkAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteRollupPropertySourceLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.DeleteRollupPropertySourceLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteRollupPropertySourceLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteRollupPropertySourceLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteRollupPropertySourceLink_sync_flattened",
+      "title": "DeleteRollupPropertySourceLink",
+      "description": "Snippet for DeleteRollupPropertySourceLink",
+      "file": "AnalyticsAdminServiceClient.DeleteRollupPropertySourceLinkSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRollupPropertySourceLink",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteRollupPropertySourceLink",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteRollupPropertySourceLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteRollupPropertySourceLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteRollupPropertySourceLink_async_flattened",
+      "title": "DeleteRollupPropertySourceLinkAsync",
+      "description": "Snippet for DeleteRollupPropertySourceLinkAsync",
+      "file": "AnalyticsAdminServiceClient.DeleteRollupPropertySourceLinkAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRollupPropertySourceLinkAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteRollupPropertySourceLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteRollupPropertySourceLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteRollupPropertySourceLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteRollupPropertySourceLink_sync_flattened_resourceNames",
+      "title": "DeleteRollupPropertySourceLinkResourceNames",
+      "description": "Snippet for DeleteRollupPropertySourceLink",
+      "file": "AnalyticsAdminServiceClient.DeleteRollupPropertySourceLinkResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRollupPropertySourceLink",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteRollupPropertySourceLink",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.RollupPropertySourceLinkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteRollupPropertySourceLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteRollupPropertySourceLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteRollupPropertySourceLink_async_flattened_resourceNames",
+      "title": "DeleteRollupPropertySourceLinkResourceNamesAsync",
+      "description": "Snippet for DeleteRollupPropertySourceLinkAsync",
+      "file": "AnalyticsAdminServiceClient.DeleteRollupPropertySourceLinkResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRollupPropertySourceLinkAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteRollupPropertySourceLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.RollupPropertySourceLinkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteRollupPropertySourceLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteRollupPropertySourceLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateSubproperty_sync",
+      "title": "CreateSubpropertyRequestObject",
+      "description": "Snippet for CreateSubproperty",
+      "file": "AnalyticsAdminServiceClient.CreateSubpropertyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSubproperty",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateSubproperty",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.CreateSubpropertyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.CreateSubpropertyResponse",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSubproperty",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateSubproperty",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateSubproperty_async",
+      "title": "CreateSubpropertyRequestObjectAsync",
+      "description": "Snippet for CreateSubpropertyAsync",
+      "file": "AnalyticsAdminServiceClient.CreateSubpropertyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSubpropertyAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateSubpropertyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.CreateSubpropertyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.CreateSubpropertyResponse>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSubproperty",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateSubproperty",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteSubpropertyEventFilter_sync",
+      "title": "DeleteSubpropertyEventFilterRequestObject",
+      "description": "Snippet for DeleteSubpropertyEventFilter",
+      "file": "AnalyticsAdminServiceClient.DeleteSubpropertyEventFilterRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSubpropertyEventFilter",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteSubpropertyEventFilter",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSubpropertyEventFilter",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteSubpropertyEventFilter",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteSubpropertyEventFilter_async",
+      "title": "DeleteSubpropertyEventFilterRequestObjectAsync",
+      "description": "Snippet for DeleteSubpropertyEventFilterAsync",
+      "file": "AnalyticsAdminServiceClient.DeleteSubpropertyEventFilterRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSubpropertyEventFilterAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteSubpropertyEventFilterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSubpropertyEventFilter",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteSubpropertyEventFilter",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteSubpropertyEventFilter_sync_flattened",
+      "title": "DeleteSubpropertyEventFilter",
+      "description": "Snippet for DeleteSubpropertyEventFilter",
+      "file": "AnalyticsAdminServiceClient.DeleteSubpropertyEventFilterSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSubpropertyEventFilter",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteSubpropertyEventFilter",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSubpropertyEventFilter",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteSubpropertyEventFilter",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteSubpropertyEventFilter_async_flattened",
+      "title": "DeleteSubpropertyEventFilterAsync",
+      "description": "Snippet for DeleteSubpropertyEventFilterAsync",
+      "file": "AnalyticsAdminServiceClient.DeleteSubpropertyEventFilterAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSubpropertyEventFilterAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteSubpropertyEventFilterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSubpropertyEventFilter",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteSubpropertyEventFilter",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteSubpropertyEventFilter_sync_flattened_resourceNames",
+      "title": "DeleteSubpropertyEventFilterResourceNames",
+      "description": "Snippet for DeleteSubpropertyEventFilter",
+      "file": "AnalyticsAdminServiceClient.DeleteSubpropertyEventFilterResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSubpropertyEventFilter",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteSubpropertyEventFilter",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.SubpropertyEventFilterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSubpropertyEventFilter",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteSubpropertyEventFilter",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteSubpropertyEventFilter_async_flattened_resourceNames",
+      "title": "DeleteSubpropertyEventFilterResourceNamesAsync",
+      "description": "Snippet for DeleteSubpropertyEventFilterAsync",
+      "file": "AnalyticsAdminServiceClient.DeleteSubpropertyEventFilterResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSubpropertyEventFilterAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteSubpropertyEventFilterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.SubpropertyEventFilterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSubpropertyEventFilter",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteSubpropertyEventFilter",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateSubpropertyEventFilter_sync",
+      "title": "CreateSubpropertyEventFilterRequestObject",
+      "description": "Snippet for CreateSubpropertyEventFilter",
+      "file": "AnalyticsAdminServiceClient.CreateSubpropertyEventFilterRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSubpropertyEventFilter",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateSubpropertyEventFilter",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.CreateSubpropertyEventFilterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSubpropertyEventFilter",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateSubpropertyEventFilter",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateSubpropertyEventFilter_async",
+      "title": "CreateSubpropertyEventFilterRequestObjectAsync",
+      "description": "Snippet for CreateSubpropertyEventFilterAsync",
+      "file": "AnalyticsAdminServiceClient.CreateSubpropertyEventFilterRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSubpropertyEventFilterAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateSubpropertyEventFilterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.CreateSubpropertyEventFilterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSubpropertyEventFilter",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateSubpropertyEventFilter",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateSubpropertyEventFilter_sync_flattened",
+      "title": "CreateSubpropertyEventFilter",
+      "description": "Snippet for CreateSubpropertyEventFilter",
+      "file": "AnalyticsAdminServiceClient.CreateSubpropertyEventFilterSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSubpropertyEventFilter",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateSubpropertyEventFilter",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter",
+            "name": "subpropertyEventFilter"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSubpropertyEventFilter",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateSubpropertyEventFilter",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateSubpropertyEventFilter_async_flattened",
+      "title": "CreateSubpropertyEventFilterAsync",
+      "description": "Snippet for CreateSubpropertyEventFilterAsync",
+      "file": "AnalyticsAdminServiceClient.CreateSubpropertyEventFilterAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSubpropertyEventFilterAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateSubpropertyEventFilterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter",
+            "name": "subpropertyEventFilter"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSubpropertyEventFilter",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateSubpropertyEventFilter",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateSubpropertyEventFilter_sync_flattened_resourceNames",
+      "title": "CreateSubpropertyEventFilterResourceNames",
+      "description": "Snippet for CreateSubpropertyEventFilter",
+      "file": "AnalyticsAdminServiceClient.CreateSubpropertyEventFilterResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSubpropertyEventFilter",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateSubpropertyEventFilter",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter",
+            "name": "subpropertyEventFilter"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSubpropertyEventFilter",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateSubpropertyEventFilter",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateSubpropertyEventFilter_async_flattened_resourceNames",
+      "title": "CreateSubpropertyEventFilterResourceNamesAsync",
+      "description": "Snippet for CreateSubpropertyEventFilterAsync",
+      "file": "AnalyticsAdminServiceClient.CreateSubpropertyEventFilterResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSubpropertyEventFilterAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateSubpropertyEventFilterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter",
+            "name": "subpropertyEventFilter"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSubpropertyEventFilter",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateSubpropertyEventFilter",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
           "type": "SHORT"
         }
       ]
