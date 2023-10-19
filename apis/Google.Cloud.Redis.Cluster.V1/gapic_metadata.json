@@ -28,12 +28,6 @@
                 "GetClusterAsync"
               ]
             },
-            "GetClusterCertificateAuthority": {
-              "methods": [
-                "GetClusterCertificateAuthority",
-                "GetClusterCertificateAuthorityAsync"
-              ]
-            },
             "ListClusters": {
               "methods": [
                 "ListClusters",
