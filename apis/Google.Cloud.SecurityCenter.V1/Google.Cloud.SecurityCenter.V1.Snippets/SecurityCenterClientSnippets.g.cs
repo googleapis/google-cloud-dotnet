@@ -5408,6 +5408,74 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for SimulateSecurityHealthAnalyticsCustomModule</summary>
+        public void SimulateSecurityHealthAnalyticsCustomModuleRequestObject()
+        {
+            // Snippet: SimulateSecurityHealthAnalyticsCustomModule(SimulateSecurityHealthAnalyticsCustomModuleRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            SimulateSecurityHealthAnalyticsCustomModuleRequest request = new SimulateSecurityHealthAnalyticsCustomModuleRequest
+            {
+                Parent = "",
+                CustomConfig = new CustomConfig(),
+                Resource = new SimulateSecurityHealthAnalyticsCustomModuleRequest.Types.SimulatedResource(),
+            };
+            // Make the request
+            SimulateSecurityHealthAnalyticsCustomModuleResponse response = securityCenterClient.SimulateSecurityHealthAnalyticsCustomModule(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SimulateSecurityHealthAnalyticsCustomModuleAsync</summary>
+        public async Task SimulateSecurityHealthAnalyticsCustomModuleRequestObjectAsync()
+        {
+            // Snippet: SimulateSecurityHealthAnalyticsCustomModuleAsync(SimulateSecurityHealthAnalyticsCustomModuleRequest, CallSettings)
+            // Additional: SimulateSecurityHealthAnalyticsCustomModuleAsync(SimulateSecurityHealthAnalyticsCustomModuleRequest, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            SimulateSecurityHealthAnalyticsCustomModuleRequest request = new SimulateSecurityHealthAnalyticsCustomModuleRequest
+            {
+                Parent = "",
+                CustomConfig = new CustomConfig(),
+                Resource = new SimulateSecurityHealthAnalyticsCustomModuleRequest.Types.SimulatedResource(),
+            };
+            // Make the request
+            SimulateSecurityHealthAnalyticsCustomModuleResponse response = await securityCenterClient.SimulateSecurityHealthAnalyticsCustomModuleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SimulateSecurityHealthAnalyticsCustomModule</summary>
+        public void SimulateSecurityHealthAnalyticsCustomModule()
+        {
+            // Snippet: SimulateSecurityHealthAnalyticsCustomModule(string, CustomConfig, SimulateSecurityHealthAnalyticsCustomModuleRequest.Types.SimulatedResource, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string parent = "";
+            CustomConfig customConfig = new CustomConfig();
+            SimulateSecurityHealthAnalyticsCustomModuleRequest.Types.SimulatedResource resource = new SimulateSecurityHealthAnalyticsCustomModuleRequest.Types.SimulatedResource();
+            // Make the request
+            SimulateSecurityHealthAnalyticsCustomModuleResponse response = securityCenterClient.SimulateSecurityHealthAnalyticsCustomModule(parent, customConfig, resource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SimulateSecurityHealthAnalyticsCustomModuleAsync</summary>
+        public async Task SimulateSecurityHealthAnalyticsCustomModuleAsync()
+        {
+            // Snippet: SimulateSecurityHealthAnalyticsCustomModuleAsync(string, CustomConfig, SimulateSecurityHealthAnalyticsCustomModuleRequest.Types.SimulatedResource, CallSettings)
+            // Additional: SimulateSecurityHealthAnalyticsCustomModuleAsync(string, CustomConfig, SimulateSecurityHealthAnalyticsCustomModuleRequest.Types.SimulatedResource, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "";
+            CustomConfig customConfig = new CustomConfig();
+            SimulateSecurityHealthAnalyticsCustomModuleRequest.Types.SimulatedResource resource = new SimulateSecurityHealthAnalyticsCustomModuleRequest.Types.SimulatedResource();
+            // Make the request
+            SimulateSecurityHealthAnalyticsCustomModuleResponse response = await securityCenterClient.SimulateSecurityHealthAnalyticsCustomModuleAsync(parent, customConfig, resource);
+            // End snippet
+        }
+
         /// <summary>Snippet for UpdateExternalSystem</summary>
         public void UpdateExternalSystemRequestObject()
         {
