@@ -79,7 +79,7 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                         ["src"] = new JObject
                         {
                             ["files"] = new JArray { $"{rootApi.Id}/{rootApi.Id}.csproj" },
-                            ["cwd"] = $"../../../apis/{rootApi.Id}"
+                            ["src"] = $"../../../apis/{rootApi.Id}"
                         },
                         ["dest"] = "obj/api",
                         ["filter"] = "filterConfig.yml",
@@ -136,7 +136,7 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                         ["src"] = new JObject
                         {
                             ["files"] = new JArray { $"{rootApi.Id}/{rootApi.Id}.csproj" },
-                            ["cwd"] = $"../../../apis/{rootApi.Id}"
+                            ["src"] = $"../../../apis/{rootApi.Id}"
                         },
                         ["dest"] = "obj/bareapi",
                         ["filter"] = "filterConfig.yml"
