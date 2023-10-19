@@ -3730,28 +3730,6 @@
       "restNumericEnums": true
     },
     {
-      "id": "Google.Cloud.Redis.Cluster.V1Beta1",
-      "version": "1.0.0-beta00",
-      "type": "grpc",
-      "productName": "Google Cloud Memorystore for Redis (cluster management)",
-      "productUrl": "https://cloud.google.com/redis/docs",
-      "description": "Recommended Google client library for the Redis Cluster API (v1beta1), which creates and manages Redis instances on the Google Cloud Platform.",
-      "tags": [
-        "Redis",
-        "Memorystore",
-        "Cluster"
-      ],
-      "dependencies": {
-        "Google.Cloud.Location": "2.0.0",
-        "Google.LongRunning": "3.0.0"
-      },
-      "generator": "micro",
-      "protoPath": "google/cloud/redis/cluster/v1beta1",
-      "shortName": "redis",
-      "serviceConfigFile": "redis_v1beta1.yaml",
-      "restNumericEnums": true
-    },
-    {
       "id": "Google.Cloud.Redis.V1",
       "generator": "micro",
       "protoPath": "google/cloud/redis/v1",
