@@ -83,6 +83,7 @@ namespace Google.Cloud.SecurityCenter.V1
             SetMuteSettings = existing.SetMuteSettings;
             SetIamPolicySettings = existing.SetIamPolicySettings;
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
+            SimulateSecurityHealthAnalyticsCustomModuleSettings = existing.SimulateSecurityHealthAnalyticsCustomModuleSettings;
             UpdateExternalSystemSettings = existing.UpdateExternalSystemSettings;
             UpdateFindingSettings = existing.UpdateFindingSettings;
             UpdateMuteConfigSettings = existing.UpdateMuteConfigSettings;
@@ -675,6 +676,19 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings TestIamPermissionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterClient.SimulateSecurityHealthAnalyticsCustomModule</c> and
+        /// <c>SecurityCenterClient.SimulateSecurityHealthAnalyticsCustomModuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SimulateSecurityHealthAnalyticsCustomModuleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -6414,6 +6428,106 @@ namespace Google.Cloud.SecurityCenter.V1
             TestIamPermissionsAsync(resource, permissions, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Simulates a given SecurityHealthAnalyticsCustomModule and Resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SimulateSecurityHealthAnalyticsCustomModuleResponse SimulateSecurityHealthAnalyticsCustomModule(SimulateSecurityHealthAnalyticsCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Simulates a given SecurityHealthAnalyticsCustomModule and Resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SimulateSecurityHealthAnalyticsCustomModuleResponse> SimulateSecurityHealthAnalyticsCustomModuleAsync(SimulateSecurityHealthAnalyticsCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Simulates a given SecurityHealthAnalyticsCustomModule and Resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SimulateSecurityHealthAnalyticsCustomModuleResponse> SimulateSecurityHealthAnalyticsCustomModuleAsync(SimulateSecurityHealthAnalyticsCustomModuleRequest request, st::CancellationToken cancellationToken) =>
+            SimulateSecurityHealthAnalyticsCustomModuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Simulates a given SecurityHealthAnalyticsCustomModule and Resource.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The relative resource name of the organization, project, or
+        /// folder. See:
+        /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
+        /// An example is:
+        /// "organizations/{organization_id}".
+        /// </param>
+        /// <param name="customConfig">
+        /// Required. The user specified custom configuration to test.
+        /// </param>
+        /// <param name="resource">
+        /// Required. Resource data to simulate custom module against.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SimulateSecurityHealthAnalyticsCustomModuleResponse SimulateSecurityHealthAnalyticsCustomModule(string parent, CustomConfig customConfig, SimulateSecurityHealthAnalyticsCustomModuleRequest.Types.SimulatedResource resource, gaxgrpc::CallSettings callSettings = null) =>
+            SimulateSecurityHealthAnalyticsCustomModule(new SimulateSecurityHealthAnalyticsCustomModuleRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                CustomConfig = gax::GaxPreconditions.CheckNotNull(customConfig, nameof(customConfig)),
+                Resource = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Simulates a given SecurityHealthAnalyticsCustomModule and Resource.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The relative resource name of the organization, project, or
+        /// folder. See:
+        /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
+        /// An example is:
+        /// "organizations/{organization_id}".
+        /// </param>
+        /// <param name="customConfig">
+        /// Required. The user specified custom configuration to test.
+        /// </param>
+        /// <param name="resource">
+        /// Required. Resource data to simulate custom module against.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SimulateSecurityHealthAnalyticsCustomModuleResponse> SimulateSecurityHealthAnalyticsCustomModuleAsync(string parent, CustomConfig customConfig, SimulateSecurityHealthAnalyticsCustomModuleRequest.Types.SimulatedResource resource, gaxgrpc::CallSettings callSettings = null) =>
+            SimulateSecurityHealthAnalyticsCustomModuleAsync(new SimulateSecurityHealthAnalyticsCustomModuleRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                CustomConfig = gax::GaxPreconditions.CheckNotNull(customConfig, nameof(customConfig)),
+                Resource = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Simulates a given SecurityHealthAnalyticsCustomModule and Resource.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The relative resource name of the organization, project, or
+        /// folder. See:
+        /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
+        /// An example is:
+        /// "organizations/{organization_id}".
+        /// </param>
+        /// <param name="customConfig">
+        /// Required. The user specified custom configuration to test.
+        /// </param>
+        /// <param name="resource">
+        /// Required. Resource data to simulate custom module against.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SimulateSecurityHealthAnalyticsCustomModuleResponse> SimulateSecurityHealthAnalyticsCustomModuleAsync(string parent, CustomConfig customConfig, SimulateSecurityHealthAnalyticsCustomModuleRequest.Types.SimulatedResource resource, st::CancellationToken cancellationToken) =>
+            SimulateSecurityHealthAnalyticsCustomModuleAsync(parent, customConfig, resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Updates external system. This is for a given finding.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -7964,6 +8078,8 @@ namespace Google.Cloud.SecurityCenter.V1
 
         private readonly gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> _callTestIamPermissions;
 
+        private readonly gaxgrpc::ApiCall<SimulateSecurityHealthAnalyticsCustomModuleRequest, SimulateSecurityHealthAnalyticsCustomModuleResponse> _callSimulateSecurityHealthAnalyticsCustomModule;
+
         private readonly gaxgrpc::ApiCall<UpdateExternalSystemRequest, ExternalSystem> _callUpdateExternalSystem;
 
         private readonly gaxgrpc::ApiCall<UpdateFindingRequest, Finding> _callUpdateFinding;
@@ -8103,6 +8219,9 @@ namespace Google.Cloud.SecurityCenter.V1
             _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callTestIamPermissions);
             Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
+            _callSimulateSecurityHealthAnalyticsCustomModule = clientHelper.BuildApiCall<SimulateSecurityHealthAnalyticsCustomModuleRequest, SimulateSecurityHealthAnalyticsCustomModuleResponse>("SimulateSecurityHealthAnalyticsCustomModule", grpcClient.SimulateSecurityHealthAnalyticsCustomModuleAsync, grpcClient.SimulateSecurityHealthAnalyticsCustomModule, effectiveSettings.SimulateSecurityHealthAnalyticsCustomModuleSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callSimulateSecurityHealthAnalyticsCustomModule);
+            Modify_SimulateSecurityHealthAnalyticsCustomModuleApiCall(ref _callSimulateSecurityHealthAnalyticsCustomModule);
             _callUpdateExternalSystem = clientHelper.BuildApiCall<UpdateExternalSystemRequest, ExternalSystem>("UpdateExternalSystem", grpcClient.UpdateExternalSystemAsync, grpcClient.UpdateExternalSystem, effectiveSettings.UpdateExternalSystemSettings).WithGoogleRequestParam("external_system.name", request => request.ExternalSystem?.Name);
             Modify_ApiCall(ref _callUpdateExternalSystem);
             Modify_UpdateExternalSystemApiCall(ref _callUpdateExternalSystem);
@@ -8208,6 +8327,8 @@ namespace Google.Cloud.SecurityCenter.V1
 
         partial void Modify_TestIamPermissionsApiCall(ref gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> call);
 
+        partial void Modify_SimulateSecurityHealthAnalyticsCustomModuleApiCall(ref gaxgrpc::ApiCall<SimulateSecurityHealthAnalyticsCustomModuleRequest, SimulateSecurityHealthAnalyticsCustomModuleResponse> call);
+
         partial void Modify_UpdateExternalSystemApiCall(ref gaxgrpc::ApiCall<UpdateExternalSystemRequest, ExternalSystem> call);
 
         partial void Modify_UpdateFindingApiCall(ref gaxgrpc::ApiCall<UpdateFindingRequest, Finding> call);
@@ -8300,6 +8421,8 @@ namespace Google.Cloud.SecurityCenter.V1
         partial void Modify_SetIamPolicyRequest(ref gciv::SetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_TestIamPermissionsRequest(ref gciv::TestIamPermissionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SimulateSecurityHealthAnalyticsCustomModuleRequest(ref SimulateSecurityHealthAnalyticsCustomModuleRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateExternalSystemRequest(ref UpdateExternalSystemRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -9173,6 +9296,30 @@ namespace Google.Cloud.SecurityCenter.V1
         {
             Modify_TestIamPermissionsRequest(ref request, ref callSettings);
             return _callTestIamPermissions.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Simulates a given SecurityHealthAnalyticsCustomModule and Resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SimulateSecurityHealthAnalyticsCustomModuleResponse SimulateSecurityHealthAnalyticsCustomModule(SimulateSecurityHealthAnalyticsCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SimulateSecurityHealthAnalyticsCustomModuleRequest(ref request, ref callSettings);
+            return _callSimulateSecurityHealthAnalyticsCustomModule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Simulates a given SecurityHealthAnalyticsCustomModule and Resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SimulateSecurityHealthAnalyticsCustomModuleResponse> SimulateSecurityHealthAnalyticsCustomModuleAsync(SimulateSecurityHealthAnalyticsCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SimulateSecurityHealthAnalyticsCustomModuleRequest(ref request, ref callSettings);
+            return _callSimulateSecurityHealthAnalyticsCustomModule.Async(request, callSettings);
         }
 
         /// <summary>

@@ -10998,6 +10998,214 @@
       ]
     },
     {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_SimulateSecurityHealthAnalyticsCustomModule_sync",
+      "title": "SimulateSecurityHealthAnalyticsCustomModuleRequestObject",
+      "description": "Snippet for SimulateSecurityHealthAnalyticsCustomModule",
+      "file": "SecurityCenterClient.SimulateSecurityHealthAnalyticsCustomModuleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SimulateSecurityHealthAnalyticsCustomModule",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.SimulateSecurityHealthAnalyticsCustomModule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.SimulateSecurityHealthAnalyticsCustomModuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.SecurityCenter.V1.SimulateSecurityHealthAnalyticsCustomModuleResponse",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "SimulateSecurityHealthAnalyticsCustomModule",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.SimulateSecurityHealthAnalyticsCustomModule",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_SimulateSecurityHealthAnalyticsCustomModule_async",
+      "title": "SimulateSecurityHealthAnalyticsCustomModuleRequestObjectAsync",
+      "description": "Snippet for SimulateSecurityHealthAnalyticsCustomModuleAsync",
+      "file": "SecurityCenterClient.SimulateSecurityHealthAnalyticsCustomModuleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SimulateSecurityHealthAnalyticsCustomModuleAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.SimulateSecurityHealthAnalyticsCustomModuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.SimulateSecurityHealthAnalyticsCustomModuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1.SimulateSecurityHealthAnalyticsCustomModuleResponse>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "SimulateSecurityHealthAnalyticsCustomModule",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.SimulateSecurityHealthAnalyticsCustomModule",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_SimulateSecurityHealthAnalyticsCustomModule_sync_flattened",
+      "title": "SimulateSecurityHealthAnalyticsCustomModule",
+      "description": "Snippet for SimulateSecurityHealthAnalyticsCustomModule",
+      "file": "SecurityCenterClient.SimulateSecurityHealthAnalyticsCustomModuleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SimulateSecurityHealthAnalyticsCustomModule",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.SimulateSecurityHealthAnalyticsCustomModule",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.CustomConfig",
+            "name": "customConfig"
+          },
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.SimulateSecurityHealthAnalyticsCustomModuleRequest+Types+SimulatedResource",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.SecurityCenter.V1.SimulateSecurityHealthAnalyticsCustomModuleResponse",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "SimulateSecurityHealthAnalyticsCustomModule",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.SimulateSecurityHealthAnalyticsCustomModule",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_SimulateSecurityHealthAnalyticsCustomModule_async_flattened",
+      "title": "SimulateSecurityHealthAnalyticsCustomModuleAsync",
+      "description": "Snippet for SimulateSecurityHealthAnalyticsCustomModuleAsync",
+      "file": "SecurityCenterClient.SimulateSecurityHealthAnalyticsCustomModuleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SimulateSecurityHealthAnalyticsCustomModuleAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.SimulateSecurityHealthAnalyticsCustomModuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.CustomConfig",
+            "name": "customConfig"
+          },
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.SimulateSecurityHealthAnalyticsCustomModuleRequest+Types+SimulatedResource",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1.SimulateSecurityHealthAnalyticsCustomModuleResponse>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "SimulateSecurityHealthAnalyticsCustomModule",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.SimulateSecurityHealthAnalyticsCustomModule",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "securitycenter_v1_generated_SecurityCenter_UpdateExternalSystem_sync",
       "title": "UpdateExternalSystemRequestObject",
       "description": "Snippet for UpdateExternalSystem",
