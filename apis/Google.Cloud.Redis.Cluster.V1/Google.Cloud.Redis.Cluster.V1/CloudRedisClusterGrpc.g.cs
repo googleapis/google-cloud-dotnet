@@ -99,10 +99,6 @@ namespace Google.Cloud.Redis.Cluster.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Redis.Cluster.V1.DeleteClusterRequest> __Marshaller_google_cloud_redis_cluster_v1_DeleteClusterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Redis.Cluster.V1.DeleteClusterRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Redis.Cluster.V1.CreateClusterRequest> __Marshaller_google_cloud_redis_cluster_v1_CreateClusterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Redis.Cluster.V1.CreateClusterRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Redis.Cluster.V1.GetClusterCertificateAuthorityRequest> __Marshaller_google_cloud_redis_cluster_v1_GetClusterCertificateAuthorityRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Redis.Cluster.V1.GetClusterCertificateAuthorityRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Redis.Cluster.V1.CertificateAuthority> __Marshaller_google_cloud_redis_cluster_v1_CertificateAuthority = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Redis.Cluster.V1.CertificateAuthority.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Redis.Cluster.V1.ListClustersRequest, global::Google.Cloud.Redis.Cluster.V1.ListClustersResponse> __Method_ListClusters = new grpc::Method<global::Google.Cloud.Redis.Cluster.V1.ListClustersRequest, global::Google.Cloud.Redis.Cluster.V1.ListClustersResponse>(
@@ -143,14 +139,6 @@ namespace Google.Cloud.Redis.Cluster.V1 {
         "CreateCluster",
         __Marshaller_google_cloud_redis_cluster_v1_CreateClusterRequest,
         __Marshaller_google_longrunning_Operation);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Cloud.Redis.Cluster.V1.GetClusterCertificateAuthorityRequest, global::Google.Cloud.Redis.Cluster.V1.CertificateAuthority> __Method_GetClusterCertificateAuthority = new grpc::Method<global::Google.Cloud.Redis.Cluster.V1.GetClusterCertificateAuthorityRequest, global::Google.Cloud.Redis.Cluster.V1.CertificateAuthority>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "GetClusterCertificateAuthority",
-        __Marshaller_google_cloud_redis_cluster_v1_GetClusterCertificateAuthorityRequest,
-        __Marshaller_google_cloud_redis_cluster_v1_CertificateAuthority);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -238,18 +226,6 @@ namespace Google.Cloud.Redis.Cluster.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateCluster(global::Google.Cloud.Redis.Cluster.V1.CreateClusterRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Gets the details of certificate authority information for Redis cluster.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Redis.Cluster.V1.CertificateAuthority> GetClusterCertificateAuthority(global::Google.Cloud.Redis.Cluster.V1.GetClusterCertificateAuthorityRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -603,54 +579,6 @@ namespace Google.Cloud.Redis.Cluster.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateCluster, null, options, request);
       }
-      /// <summary>
-      /// Gets the details of certificate authority information for Redis cluster.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Redis.Cluster.V1.CertificateAuthority GetClusterCertificateAuthority(global::Google.Cloud.Redis.Cluster.V1.GetClusterCertificateAuthorityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return GetClusterCertificateAuthority(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Gets the details of certificate authority information for Redis cluster.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Redis.Cluster.V1.CertificateAuthority GetClusterCertificateAuthority(global::Google.Cloud.Redis.Cluster.V1.GetClusterCertificateAuthorityRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_GetClusterCertificateAuthority, null, options, request);
-      }
-      /// <summary>
-      /// Gets the details of certificate authority information for Redis cluster.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Redis.Cluster.V1.CertificateAuthority> GetClusterCertificateAuthorityAsync(global::Google.Cloud.Redis.Cluster.V1.GetClusterCertificateAuthorityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return GetClusterCertificateAuthorityAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Gets the details of certificate authority information for Redis cluster.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Redis.Cluster.V1.CertificateAuthority> GetClusterCertificateAuthorityAsync(global::Google.Cloud.Redis.Cluster.V1.GetClusterCertificateAuthorityRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_GetClusterCertificateAuthority, null, options, request);
-      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override CloudRedisClusterClient NewInstance(ClientBaseConfiguration configuration)
@@ -669,8 +597,7 @@ namespace Google.Cloud.Redis.Cluster.V1 {
           .AddMethod(__Method_GetCluster, serviceImpl.GetCluster)
           .AddMethod(__Method_UpdateCluster, serviceImpl.UpdateCluster)
           .AddMethod(__Method_DeleteCluster, serviceImpl.DeleteCluster)
-          .AddMethod(__Method_CreateCluster, serviceImpl.CreateCluster)
-          .AddMethod(__Method_GetClusterCertificateAuthority, serviceImpl.GetClusterCertificateAuthority).Build();
+          .AddMethod(__Method_CreateCluster, serviceImpl.CreateCluster).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -685,7 +612,6 @@ namespace Google.Cloud.Redis.Cluster.V1 {
       serviceBinder.AddMethod(__Method_UpdateCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.Cluster.V1.UpdateClusterRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateCluster));
       serviceBinder.AddMethod(__Method_DeleteCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.Cluster.V1.DeleteClusterRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteCluster));
       serviceBinder.AddMethod(__Method_CreateCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.Cluster.V1.CreateClusterRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateCluster));
-      serviceBinder.AddMethod(__Method_GetClusterCertificateAuthority, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.Cluster.V1.GetClusterCertificateAuthorityRequest, global::Google.Cloud.Redis.Cluster.V1.CertificateAuthority>(serviceImpl.GetClusterCertificateAuthority));
     }
 
   }
