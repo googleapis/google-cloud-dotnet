@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+﻿// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License").
 // you may not use this file except in compliance with the License.
@@ -50,6 +50,7 @@ internal class Spdx
 internal class SpdxPackage
 {
     public string name { get; set; } = "";
+    public string packageFileName { get; set; } = "";
     public string SPDXID { get; set; } = "";
     public string versionInfo { get; set; } = "";
     public string description { get; set; } = "";
@@ -247,7 +248,8 @@ Usage:
                 System.Globalization.CultureInfo.InvariantCulture),
             packages = new List<SpdxPackage> {
                 new() {
-                    name = fileName,
+                    name = nuspecMetadata.Id,
+                    packageFileName = fileName,
                     SPDXID = "SPDXRef-Package-" + fileName + "-" + uuid,
                     versionInfo = nuspecMetadata.Version,
                     description = nuspecMetadata.Description,
