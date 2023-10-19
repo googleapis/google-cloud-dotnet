@@ -1,9 +1,0 @@
-[
-  {
-    "method": "ListClusters",
-    "client": "CloudRedisClusterClient",
-    "arguments": {
-      "parent": "projects/${PROJECT_ID}/locations/us-east1"
-    }
-  }
-]
