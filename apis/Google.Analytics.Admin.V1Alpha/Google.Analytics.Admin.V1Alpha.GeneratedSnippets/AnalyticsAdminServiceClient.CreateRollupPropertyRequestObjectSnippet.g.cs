@@ -16,12 +16,12 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START analyticsadmin_v1alpha_generated_AnalyticsAdminService_RunAccessReport_sync]
+    // [START analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateRollupProperty_sync]
     using Google.Analytics.Admin.V1Alpha;
 
     public sealed partial class GeneratedAnalyticsAdminServiceClientSnippets
     {
-        /// <summary>Snippet for RunAccessReport</summary>
+        /// <summary>Snippet for CreateRollupProperty</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,39 +29,19 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void RunAccessReportRequestObject()
+        public void CreateRollupPropertyRequestObject()
         {
             // Create client
             AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
             // Initialize request argument(s)
-            RunAccessReportRequest request = new RunAccessReportRequest
+            CreateRollupPropertyRequest request = new CreateRollupPropertyRequest
             {
-                Entity = "",
-                Dimensions =
-                {
-                    new AccessDimension(),
-                },
-                Metrics = { new AccessMetric(), },
-                DateRanges =
-                {
-                    new AccessDateRange(),
-                },
-                DimensionFilter = new AccessFilterExpression(),
-                MetricFilter = new AccessFilterExpression(),
-                Offset = 0L,
-                Limit = 0L,
-                TimeZone = "",
-                OrderBys =
-                {
-                    new AccessOrderBy(),
-                },
-                ReturnEntityQuota = false,
-                IncludeAllUsers = false,
-                ExpandGroups = false,
+                RollupProperty = new Property(),
+                SourceProperties = { "", },
             };
             // Make the request
-            RunAccessReportResponse response = analyticsAdminServiceClient.RunAccessReport(request);
+            CreateRollupPropertyResponse response = analyticsAdminServiceClient.CreateRollupProperty(request);
         }
     }
-    // [END analyticsadmin_v1alpha_generated_AnalyticsAdminService_RunAccessReport_sync]
+    // [END analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateRollupProperty_sync]
 }

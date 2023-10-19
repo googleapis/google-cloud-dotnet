@@ -875,992 +875,6 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
-        /// <summary>Snippet for GetUserLink</summary>
-        public void GetUserLinkRequestObject()
-        {
-            // Snippet: GetUserLink(GetUserLinkRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            GetUserLinkRequest request = new GetUserLinkRequest
-            {
-                UserLinkName = UserLinkName.FromAccountUserLink("[ACCOUNT]", "[USER_LINK]"),
-            };
-            // Make the request
-            UserLink response = analyticsAdminServiceClient.GetUserLink(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetUserLinkAsync</summary>
-        public async Task GetUserLinkRequestObjectAsync()
-        {
-            // Snippet: GetUserLinkAsync(GetUserLinkRequest, CallSettings)
-            // Additional: GetUserLinkAsync(GetUserLinkRequest, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            GetUserLinkRequest request = new GetUserLinkRequest
-            {
-                UserLinkName = UserLinkName.FromAccountUserLink("[ACCOUNT]", "[USER_LINK]"),
-            };
-            // Make the request
-            UserLink response = await analyticsAdminServiceClient.GetUserLinkAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetUserLink</summary>
-        public void GetUserLink()
-        {
-            // Snippet: GetUserLink(string, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            string name = "accounts/[ACCOUNT]/userLinks/[USER_LINK]";
-            // Make the request
-            UserLink response = analyticsAdminServiceClient.GetUserLink(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetUserLinkAsync</summary>
-        public async Task GetUserLinkAsync()
-        {
-            // Snippet: GetUserLinkAsync(string, CallSettings)
-            // Additional: GetUserLinkAsync(string, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            string name = "accounts/[ACCOUNT]/userLinks/[USER_LINK]";
-            // Make the request
-            UserLink response = await analyticsAdminServiceClient.GetUserLinkAsync(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetUserLink</summary>
-        public void GetUserLinkResourceNames()
-        {
-            // Snippet: GetUserLink(UserLinkName, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            UserLinkName name = UserLinkName.FromAccountUserLink("[ACCOUNT]", "[USER_LINK]");
-            // Make the request
-            UserLink response = analyticsAdminServiceClient.GetUserLink(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetUserLinkAsync</summary>
-        public async Task GetUserLinkResourceNamesAsync()
-        {
-            // Snippet: GetUserLinkAsync(UserLinkName, CallSettings)
-            // Additional: GetUserLinkAsync(UserLinkName, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            UserLinkName name = UserLinkName.FromAccountUserLink("[ACCOUNT]", "[USER_LINK]");
-            // Make the request
-            UserLink response = await analyticsAdminServiceClient.GetUserLinkAsync(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for BatchGetUserLinks</summary>
-        public void BatchGetUserLinksRequestObject()
-        {
-            // Snippet: BatchGetUserLinks(BatchGetUserLinksRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            BatchGetUserLinksRequest request = new BatchGetUserLinksRequest
-            {
-                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
-                UserLinkNames =
-                {
-                    UserLinkName.FromAccountUserLink("[ACCOUNT]", "[USER_LINK]"),
-                },
-            };
-            // Make the request
-            BatchGetUserLinksResponse response = analyticsAdminServiceClient.BatchGetUserLinks(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for BatchGetUserLinksAsync</summary>
-        public async Task BatchGetUserLinksRequestObjectAsync()
-        {
-            // Snippet: BatchGetUserLinksAsync(BatchGetUserLinksRequest, CallSettings)
-            // Additional: BatchGetUserLinksAsync(BatchGetUserLinksRequest, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            BatchGetUserLinksRequest request = new BatchGetUserLinksRequest
-            {
-                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
-                UserLinkNames =
-                {
-                    UserLinkName.FromAccountUserLink("[ACCOUNT]", "[USER_LINK]"),
-                },
-            };
-            // Make the request
-            BatchGetUserLinksResponse response = await analyticsAdminServiceClient.BatchGetUserLinksAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListUserLinks</summary>
-        public void ListUserLinksRequestObject()
-        {
-            // Snippet: ListUserLinks(ListUserLinksRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            ListUserLinksRequest request = new ListUserLinksRequest
-            {
-                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
-            };
-            // Make the request
-            PagedEnumerable<ListUserLinksResponse, UserLink> response = analyticsAdminServiceClient.ListUserLinks(request);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            foreach (UserLink item in response)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListUserLinksResponse page in response.AsRawResponses())
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (UserLink item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            }
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<UserLink> singlePage = response.ReadPage(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (UserLink item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListUserLinksAsync</summary>
-        public async Task ListUserLinksRequestObjectAsync()
-        {
-            // Snippet: ListUserLinksAsync(ListUserLinksRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            ListUserLinksRequest request = new ListUserLinksRequest
-            {
-                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
-            };
-            // Make the request
-            PagedAsyncEnumerable<ListUserLinksResponse, UserLink> response = analyticsAdminServiceClient.ListUserLinksAsync(request);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((UserLink item) =>
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            });
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListUserLinksResponse page) =>
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (UserLink item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            });
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<UserLink> singlePage = await response.ReadPageAsync(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (UserLink item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListUserLinks</summary>
-        public void ListUserLinks()
-        {
-            // Snippet: ListUserLinks(string, string, int?, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            string parent = "accounts/[ACCOUNT]";
-            // Make the request
-            PagedEnumerable<ListUserLinksResponse, UserLink> response = analyticsAdminServiceClient.ListUserLinks(parent);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            foreach (UserLink item in response)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListUserLinksResponse page in response.AsRawResponses())
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (UserLink item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            }
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<UserLink> singlePage = response.ReadPage(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (UserLink item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListUserLinksAsync</summary>
-        public async Task ListUserLinksAsync()
-        {
-            // Snippet: ListUserLinksAsync(string, string, int?, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            string parent = "accounts/[ACCOUNT]";
-            // Make the request
-            PagedAsyncEnumerable<ListUserLinksResponse, UserLink> response = analyticsAdminServiceClient.ListUserLinksAsync(parent);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((UserLink item) =>
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            });
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListUserLinksResponse page) =>
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (UserLink item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            });
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<UserLink> singlePage = await response.ReadPageAsync(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (UserLink item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListUserLinks</summary>
-        public void ListUserLinksResourceNames1()
-        {
-            // Snippet: ListUserLinks(AccountName, string, int?, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            AccountName parent = AccountName.FromAccount("[ACCOUNT]");
-            // Make the request
-            PagedEnumerable<ListUserLinksResponse, UserLink> response = analyticsAdminServiceClient.ListUserLinks(parent);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            foreach (UserLink item in response)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListUserLinksResponse page in response.AsRawResponses())
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (UserLink item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            }
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<UserLink> singlePage = response.ReadPage(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (UserLink item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListUserLinksAsync</summary>
-        public async Task ListUserLinksResourceNames1Async()
-        {
-            // Snippet: ListUserLinksAsync(AccountName, string, int?, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            AccountName parent = AccountName.FromAccount("[ACCOUNT]");
-            // Make the request
-            PagedAsyncEnumerable<ListUserLinksResponse, UserLink> response = analyticsAdminServiceClient.ListUserLinksAsync(parent);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((UserLink item) =>
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            });
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListUserLinksResponse page) =>
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (UserLink item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            });
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<UserLink> singlePage = await response.ReadPageAsync(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (UserLink item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListUserLinks</summary>
-        public void ListUserLinksResourceNames2()
-        {
-            // Snippet: ListUserLinks(PropertyName, string, int?, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
-            // Make the request
-            PagedEnumerable<ListUserLinksResponse, UserLink> response = analyticsAdminServiceClient.ListUserLinks(parent);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            foreach (UserLink item in response)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListUserLinksResponse page in response.AsRawResponses())
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (UserLink item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            }
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<UserLink> singlePage = response.ReadPage(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (UserLink item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListUserLinksAsync</summary>
-        public async Task ListUserLinksResourceNames2Async()
-        {
-            // Snippet: ListUserLinksAsync(PropertyName, string, int?, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
-            // Make the request
-            PagedAsyncEnumerable<ListUserLinksResponse, UserLink> response = analyticsAdminServiceClient.ListUserLinksAsync(parent);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((UserLink item) =>
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            });
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListUserLinksResponse page) =>
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (UserLink item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            });
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<UserLink> singlePage = await response.ReadPageAsync(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (UserLink item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for AuditUserLinks</summary>
-        public void AuditUserLinksRequestObject()
-        {
-            // Snippet: AuditUserLinks(AuditUserLinksRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            AuditUserLinksRequest request = new AuditUserLinksRequest
-            {
-                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
-            };
-            // Make the request
-            PagedEnumerable<AuditUserLinksResponse, AuditUserLink> response = analyticsAdminServiceClient.AuditUserLinks(request);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            foreach (AuditUserLink item in response)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (AuditUserLinksResponse page in response.AsRawResponses())
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (AuditUserLink item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            }
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<AuditUserLink> singlePage = response.ReadPage(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (AuditUserLink item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for AuditUserLinksAsync</summary>
-        public async Task AuditUserLinksRequestObjectAsync()
-        {
-            // Snippet: AuditUserLinksAsync(AuditUserLinksRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            AuditUserLinksRequest request = new AuditUserLinksRequest
-            {
-                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
-            };
-            // Make the request
-            PagedAsyncEnumerable<AuditUserLinksResponse, AuditUserLink> response = analyticsAdminServiceClient.AuditUserLinksAsync(request);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((AuditUserLink item) =>
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            });
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((AuditUserLinksResponse page) =>
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (AuditUserLink item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            });
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<AuditUserLink> singlePage = await response.ReadPageAsync(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (AuditUserLink item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateUserLink</summary>
-        public void CreateUserLinkRequestObject()
-        {
-            // Snippet: CreateUserLink(CreateUserLinkRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            CreateUserLinkRequest request = new CreateUserLinkRequest
-            {
-                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
-                NotifyNewUser = false,
-                UserLink = new UserLink(),
-            };
-            // Make the request
-            UserLink response = analyticsAdminServiceClient.CreateUserLink(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateUserLinkAsync</summary>
-        public async Task CreateUserLinkRequestObjectAsync()
-        {
-            // Snippet: CreateUserLinkAsync(CreateUserLinkRequest, CallSettings)
-            // Additional: CreateUserLinkAsync(CreateUserLinkRequest, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            CreateUserLinkRequest request = new CreateUserLinkRequest
-            {
-                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
-                NotifyNewUser = false,
-                UserLink = new UserLink(),
-            };
-            // Make the request
-            UserLink response = await analyticsAdminServiceClient.CreateUserLinkAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateUserLink</summary>
-        public void CreateUserLink()
-        {
-            // Snippet: CreateUserLink(string, UserLink, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            string parent = "accounts/[ACCOUNT]";
-            UserLink userLink = new UserLink();
-            // Make the request
-            UserLink response = analyticsAdminServiceClient.CreateUserLink(parent, userLink);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateUserLinkAsync</summary>
-        public async Task CreateUserLinkAsync()
-        {
-            // Snippet: CreateUserLinkAsync(string, UserLink, CallSettings)
-            // Additional: CreateUserLinkAsync(string, UserLink, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            string parent = "accounts/[ACCOUNT]";
-            UserLink userLink = new UserLink();
-            // Make the request
-            UserLink response = await analyticsAdminServiceClient.CreateUserLinkAsync(parent, userLink);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateUserLink</summary>
-        public void CreateUserLinkResourceNames1()
-        {
-            // Snippet: CreateUserLink(AccountName, UserLink, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            AccountName parent = AccountName.FromAccount("[ACCOUNT]");
-            UserLink userLink = new UserLink();
-            // Make the request
-            UserLink response = analyticsAdminServiceClient.CreateUserLink(parent, userLink);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateUserLinkAsync</summary>
-        public async Task CreateUserLinkResourceNames1Async()
-        {
-            // Snippet: CreateUserLinkAsync(AccountName, UserLink, CallSettings)
-            // Additional: CreateUserLinkAsync(AccountName, UserLink, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            AccountName parent = AccountName.FromAccount("[ACCOUNT]");
-            UserLink userLink = new UserLink();
-            // Make the request
-            UserLink response = await analyticsAdminServiceClient.CreateUserLinkAsync(parent, userLink);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateUserLink</summary>
-        public void CreateUserLinkResourceNames2()
-        {
-            // Snippet: CreateUserLink(PropertyName, UserLink, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
-            UserLink userLink = new UserLink();
-            // Make the request
-            UserLink response = analyticsAdminServiceClient.CreateUserLink(parent, userLink);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateUserLinkAsync</summary>
-        public async Task CreateUserLinkResourceNames2Async()
-        {
-            // Snippet: CreateUserLinkAsync(PropertyName, UserLink, CallSettings)
-            // Additional: CreateUserLinkAsync(PropertyName, UserLink, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
-            UserLink userLink = new UserLink();
-            // Make the request
-            UserLink response = await analyticsAdminServiceClient.CreateUserLinkAsync(parent, userLink);
-            // End snippet
-        }
-
-        /// <summary>Snippet for BatchCreateUserLinks</summary>
-        public void BatchCreateUserLinksRequestObject()
-        {
-            // Snippet: BatchCreateUserLinks(BatchCreateUserLinksRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            BatchCreateUserLinksRequest request = new BatchCreateUserLinksRequest
-            {
-                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
-                NotifyNewUsers = false,
-                Requests =
-                {
-                    new CreateUserLinkRequest(),
-                },
-            };
-            // Make the request
-            BatchCreateUserLinksResponse response = analyticsAdminServiceClient.BatchCreateUserLinks(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for BatchCreateUserLinksAsync</summary>
-        public async Task BatchCreateUserLinksRequestObjectAsync()
-        {
-            // Snippet: BatchCreateUserLinksAsync(BatchCreateUserLinksRequest, CallSettings)
-            // Additional: BatchCreateUserLinksAsync(BatchCreateUserLinksRequest, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            BatchCreateUserLinksRequest request = new BatchCreateUserLinksRequest
-            {
-                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
-                NotifyNewUsers = false,
-                Requests =
-                {
-                    new CreateUserLinkRequest(),
-                },
-            };
-            // Make the request
-            BatchCreateUserLinksResponse response = await analyticsAdminServiceClient.BatchCreateUserLinksAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateUserLink</summary>
-        public void UpdateUserLinkRequestObject()
-        {
-            // Snippet: UpdateUserLink(UpdateUserLinkRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            UpdateUserLinkRequest request = new UpdateUserLinkRequest
-            {
-                UserLink = new UserLink(),
-            };
-            // Make the request
-            UserLink response = analyticsAdminServiceClient.UpdateUserLink(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateUserLinkAsync</summary>
-        public async Task UpdateUserLinkRequestObjectAsync()
-        {
-            // Snippet: UpdateUserLinkAsync(UpdateUserLinkRequest, CallSettings)
-            // Additional: UpdateUserLinkAsync(UpdateUserLinkRequest, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            UpdateUserLinkRequest request = new UpdateUserLinkRequest
-            {
-                UserLink = new UserLink(),
-            };
-            // Make the request
-            UserLink response = await analyticsAdminServiceClient.UpdateUserLinkAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateUserLink</summary>
-        public void UpdateUserLink()
-        {
-            // Snippet: UpdateUserLink(UserLink, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            UserLink userLink = new UserLink();
-            // Make the request
-            UserLink response = analyticsAdminServiceClient.UpdateUserLink(userLink);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateUserLinkAsync</summary>
-        public async Task UpdateUserLinkAsync()
-        {
-            // Snippet: UpdateUserLinkAsync(UserLink, CallSettings)
-            // Additional: UpdateUserLinkAsync(UserLink, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            UserLink userLink = new UserLink();
-            // Make the request
-            UserLink response = await analyticsAdminServiceClient.UpdateUserLinkAsync(userLink);
-            // End snippet
-        }
-
-        /// <summary>Snippet for BatchUpdateUserLinks</summary>
-        public void BatchUpdateUserLinksRequestObject()
-        {
-            // Snippet: BatchUpdateUserLinks(BatchUpdateUserLinksRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            BatchUpdateUserLinksRequest request = new BatchUpdateUserLinksRequest
-            {
-                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
-                Requests =
-                {
-                    new UpdateUserLinkRequest(),
-                },
-            };
-            // Make the request
-            BatchUpdateUserLinksResponse response = analyticsAdminServiceClient.BatchUpdateUserLinks(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for BatchUpdateUserLinksAsync</summary>
-        public async Task BatchUpdateUserLinksRequestObjectAsync()
-        {
-            // Snippet: BatchUpdateUserLinksAsync(BatchUpdateUserLinksRequest, CallSettings)
-            // Additional: BatchUpdateUserLinksAsync(BatchUpdateUserLinksRequest, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            BatchUpdateUserLinksRequest request = new BatchUpdateUserLinksRequest
-            {
-                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
-                Requests =
-                {
-                    new UpdateUserLinkRequest(),
-                },
-            };
-            // Make the request
-            BatchUpdateUserLinksResponse response = await analyticsAdminServiceClient.BatchUpdateUserLinksAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteUserLink</summary>
-        public void DeleteUserLinkRequestObject()
-        {
-            // Snippet: DeleteUserLink(DeleteUserLinkRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            DeleteUserLinkRequest request = new DeleteUserLinkRequest
-            {
-                UserLinkName = UserLinkName.FromAccountUserLink("[ACCOUNT]", "[USER_LINK]"),
-            };
-            // Make the request
-            analyticsAdminServiceClient.DeleteUserLink(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteUserLinkAsync</summary>
-        public async Task DeleteUserLinkRequestObjectAsync()
-        {
-            // Snippet: DeleteUserLinkAsync(DeleteUserLinkRequest, CallSettings)
-            // Additional: DeleteUserLinkAsync(DeleteUserLinkRequest, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            DeleteUserLinkRequest request = new DeleteUserLinkRequest
-            {
-                UserLinkName = UserLinkName.FromAccountUserLink("[ACCOUNT]", "[USER_LINK]"),
-            };
-            // Make the request
-            await analyticsAdminServiceClient.DeleteUserLinkAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteUserLink</summary>
-        public void DeleteUserLink()
-        {
-            // Snippet: DeleteUserLink(string, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            string name = "accounts/[ACCOUNT]/userLinks/[USER_LINK]";
-            // Make the request
-            analyticsAdminServiceClient.DeleteUserLink(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteUserLinkAsync</summary>
-        public async Task DeleteUserLinkAsync()
-        {
-            // Snippet: DeleteUserLinkAsync(string, CallSettings)
-            // Additional: DeleteUserLinkAsync(string, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            string name = "accounts/[ACCOUNT]/userLinks/[USER_LINK]";
-            // Make the request
-            await analyticsAdminServiceClient.DeleteUserLinkAsync(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteUserLink</summary>
-        public void DeleteUserLinkResourceNames()
-        {
-            // Snippet: DeleteUserLink(UserLinkName, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            UserLinkName name = UserLinkName.FromAccountUserLink("[ACCOUNT]", "[USER_LINK]");
-            // Make the request
-            analyticsAdminServiceClient.DeleteUserLink(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteUserLinkAsync</summary>
-        public async Task DeleteUserLinkResourceNamesAsync()
-        {
-            // Snippet: DeleteUserLinkAsync(UserLinkName, CallSettings)
-            // Additional: DeleteUserLinkAsync(UserLinkName, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            UserLinkName name = UserLinkName.FromAccountUserLink("[ACCOUNT]", "[USER_LINK]");
-            // Make the request
-            await analyticsAdminServiceClient.DeleteUserLinkAsync(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for BatchDeleteUserLinks</summary>
-        public void BatchDeleteUserLinksRequestObject()
-        {
-            // Snippet: BatchDeleteUserLinks(BatchDeleteUserLinksRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            BatchDeleteUserLinksRequest request = new BatchDeleteUserLinksRequest
-            {
-                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
-                Requests =
-                {
-                    new DeleteUserLinkRequest(),
-                },
-            };
-            // Make the request
-            analyticsAdminServiceClient.BatchDeleteUserLinks(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for BatchDeleteUserLinksAsync</summary>
-        public async Task BatchDeleteUserLinksRequestObjectAsync()
-        {
-            // Snippet: BatchDeleteUserLinksAsync(BatchDeleteUserLinksRequest, CallSettings)
-            // Additional: BatchDeleteUserLinksAsync(BatchDeleteUserLinksRequest, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            BatchDeleteUserLinksRequest request = new BatchDeleteUserLinksRequest
-            {
-                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
-                Requests =
-                {
-                    new DeleteUserLinkRequest(),
-                },
-            };
-            // Make the request
-            await analyticsAdminServiceClient.BatchDeleteUserLinksAsync(request);
-            // End snippet
-        }
-
         /// <summary>Snippet for CreateFirebaseLink</summary>
         public void CreateFirebaseLinkRequestObject()
         {
@@ -9666,6 +8680,8 @@ namespace GoogleCSharpSnippets
                     new AccessOrderBy(),
                 },
                 ReturnEntityQuota = false,
+                IncludeAllUsers = false,
+                ExpandGroups = false,
             };
             // Make the request
             RunAccessReportResponse response = analyticsAdminServiceClient.RunAccessReport(request);
@@ -9702,6 +8718,8 @@ namespace GoogleCSharpSnippets
                     new AccessOrderBy(),
                 },
                 ReturnEntityQuota = false,
+                IncludeAllUsers = false,
+                ExpandGroups = false,
             };
             // Make the request
             RunAccessReportResponse response = await analyticsAdminServiceClient.RunAccessReportAsync(request);
@@ -13661,6 +12679,952 @@ namespace GoogleCSharpSnippets
             EventCreateRuleName name = EventCreateRuleName.FromPropertyDataStreamEventCreateRule("[PROPERTY]", "[DATA_STREAM]", "[EVENT_CREATE_RULE]");
             // Make the request
             await analyticsAdminServiceClient.DeleteEventCreateRuleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDataRedactionSettings</summary>
+        public void UpdateDataRedactionSettingsRequestObject()
+        {
+            // Snippet: UpdateDataRedactionSettings(UpdateDataRedactionSettingsRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateDataRedactionSettingsRequest request = new UpdateDataRedactionSettingsRequest
+            {
+                DataRedactionSettings = new DataRedactionSettings(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            DataRedactionSettings response = analyticsAdminServiceClient.UpdateDataRedactionSettings(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDataRedactionSettingsAsync</summary>
+        public async Task UpdateDataRedactionSettingsRequestObjectAsync()
+        {
+            // Snippet: UpdateDataRedactionSettingsAsync(UpdateDataRedactionSettingsRequest, CallSettings)
+            // Additional: UpdateDataRedactionSettingsAsync(UpdateDataRedactionSettingsRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateDataRedactionSettingsRequest request = new UpdateDataRedactionSettingsRequest
+            {
+                DataRedactionSettings = new DataRedactionSettings(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            DataRedactionSettings response = await analyticsAdminServiceClient.UpdateDataRedactionSettingsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDataRedactionSettings</summary>
+        public void UpdateDataRedactionSettings()
+        {
+            // Snippet: UpdateDataRedactionSettings(DataRedactionSettings, FieldMask, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            DataRedactionSettings dataRedactionSettings = new DataRedactionSettings();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            DataRedactionSettings response = analyticsAdminServiceClient.UpdateDataRedactionSettings(dataRedactionSettings, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDataRedactionSettingsAsync</summary>
+        public async Task UpdateDataRedactionSettingsAsync()
+        {
+            // Snippet: UpdateDataRedactionSettingsAsync(DataRedactionSettings, FieldMask, CallSettings)
+            // Additional: UpdateDataRedactionSettingsAsync(DataRedactionSettings, FieldMask, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DataRedactionSettings dataRedactionSettings = new DataRedactionSettings();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            DataRedactionSettings response = await analyticsAdminServiceClient.UpdateDataRedactionSettingsAsync(dataRedactionSettings, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDataRedactionSettings</summary>
+        public void GetDataRedactionSettingsRequestObject()
+        {
+            // Snippet: GetDataRedactionSettings(GetDataRedactionSettingsRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            GetDataRedactionSettingsRequest request = new GetDataRedactionSettingsRequest
+            {
+                DataRedactionSettingsName = DataRedactionSettingsName.FromPropertyDataStream("[PROPERTY]", "[DATA_STREAM]"),
+            };
+            // Make the request
+            DataRedactionSettings response = analyticsAdminServiceClient.GetDataRedactionSettings(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDataRedactionSettingsAsync</summary>
+        public async Task GetDataRedactionSettingsRequestObjectAsync()
+        {
+            // Snippet: GetDataRedactionSettingsAsync(GetDataRedactionSettingsRequest, CallSettings)
+            // Additional: GetDataRedactionSettingsAsync(GetDataRedactionSettingsRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetDataRedactionSettingsRequest request = new GetDataRedactionSettingsRequest
+            {
+                DataRedactionSettingsName = DataRedactionSettingsName.FromPropertyDataStream("[PROPERTY]", "[DATA_STREAM]"),
+            };
+            // Make the request
+            DataRedactionSettings response = await analyticsAdminServiceClient.GetDataRedactionSettingsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDataRedactionSettings</summary>
+        public void GetDataRedactionSettings()
+        {
+            // Snippet: GetDataRedactionSettings(string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/dataStreams/[DATA_STREAM]/dataRedactionSettings";
+            // Make the request
+            DataRedactionSettings response = analyticsAdminServiceClient.GetDataRedactionSettings(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDataRedactionSettingsAsync</summary>
+        public async Task GetDataRedactionSettingsAsync()
+        {
+            // Snippet: GetDataRedactionSettingsAsync(string, CallSettings)
+            // Additional: GetDataRedactionSettingsAsync(string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/dataStreams/[DATA_STREAM]/dataRedactionSettings";
+            // Make the request
+            DataRedactionSettings response = await analyticsAdminServiceClient.GetDataRedactionSettingsAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDataRedactionSettings</summary>
+        public void GetDataRedactionSettingsResourceNames()
+        {
+            // Snippet: GetDataRedactionSettings(DataRedactionSettingsName, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            DataRedactionSettingsName name = DataRedactionSettingsName.FromPropertyDataStream("[PROPERTY]", "[DATA_STREAM]");
+            // Make the request
+            DataRedactionSettings response = analyticsAdminServiceClient.GetDataRedactionSettings(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDataRedactionSettingsAsync</summary>
+        public async Task GetDataRedactionSettingsResourceNamesAsync()
+        {
+            // Snippet: GetDataRedactionSettingsAsync(DataRedactionSettingsName, CallSettings)
+            // Additional: GetDataRedactionSettingsAsync(DataRedactionSettingsName, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DataRedactionSettingsName name = DataRedactionSettingsName.FromPropertyDataStream("[PROPERTY]", "[DATA_STREAM]");
+            // Make the request
+            DataRedactionSettings response = await analyticsAdminServiceClient.GetDataRedactionSettingsAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRollupProperty</summary>
+        public void CreateRollupPropertyRequestObject()
+        {
+            // Snippet: CreateRollupProperty(CreateRollupPropertyRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            CreateRollupPropertyRequest request = new CreateRollupPropertyRequest
+            {
+                RollupProperty = new Property(),
+                SourceProperties = { "", },
+            };
+            // Make the request
+            CreateRollupPropertyResponse response = analyticsAdminServiceClient.CreateRollupProperty(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRollupPropertyAsync</summary>
+        public async Task CreateRollupPropertyRequestObjectAsync()
+        {
+            // Snippet: CreateRollupPropertyAsync(CreateRollupPropertyRequest, CallSettings)
+            // Additional: CreateRollupPropertyAsync(CreateRollupPropertyRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateRollupPropertyRequest request = new CreateRollupPropertyRequest
+            {
+                RollupProperty = new Property(),
+                SourceProperties = { "", },
+            };
+            // Make the request
+            CreateRollupPropertyResponse response = await analyticsAdminServiceClient.CreateRollupPropertyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRollupPropertySourceLink</summary>
+        public void GetRollupPropertySourceLinkRequestObject()
+        {
+            // Snippet: GetRollupPropertySourceLink(GetRollupPropertySourceLinkRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            GetRollupPropertySourceLinkRequest request = new GetRollupPropertySourceLinkRequest
+            {
+                RollupPropertySourceLinkName = RollupPropertySourceLinkName.FromPropertyRollupPropertySourceLink("[PROPERTY]", "[ROLLUP_PROPERTY_SOURCE_LINK]"),
+            };
+            // Make the request
+            RollupPropertySourceLink response = analyticsAdminServiceClient.GetRollupPropertySourceLink(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRollupPropertySourceLinkAsync</summary>
+        public async Task GetRollupPropertySourceLinkRequestObjectAsync()
+        {
+            // Snippet: GetRollupPropertySourceLinkAsync(GetRollupPropertySourceLinkRequest, CallSettings)
+            // Additional: GetRollupPropertySourceLinkAsync(GetRollupPropertySourceLinkRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetRollupPropertySourceLinkRequest request = new GetRollupPropertySourceLinkRequest
+            {
+                RollupPropertySourceLinkName = RollupPropertySourceLinkName.FromPropertyRollupPropertySourceLink("[PROPERTY]", "[ROLLUP_PROPERTY_SOURCE_LINK]"),
+            };
+            // Make the request
+            RollupPropertySourceLink response = await analyticsAdminServiceClient.GetRollupPropertySourceLinkAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRollupPropertySourceLink</summary>
+        public void GetRollupPropertySourceLink()
+        {
+            // Snippet: GetRollupPropertySourceLink(string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/rollupPropertySourceLinks/[ROLLUP_PROPERTY_SOURCE_LINK]";
+            // Make the request
+            RollupPropertySourceLink response = analyticsAdminServiceClient.GetRollupPropertySourceLink(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRollupPropertySourceLinkAsync</summary>
+        public async Task GetRollupPropertySourceLinkAsync()
+        {
+            // Snippet: GetRollupPropertySourceLinkAsync(string, CallSettings)
+            // Additional: GetRollupPropertySourceLinkAsync(string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/rollupPropertySourceLinks/[ROLLUP_PROPERTY_SOURCE_LINK]";
+            // Make the request
+            RollupPropertySourceLink response = await analyticsAdminServiceClient.GetRollupPropertySourceLinkAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRollupPropertySourceLink</summary>
+        public void GetRollupPropertySourceLinkResourceNames()
+        {
+            // Snippet: GetRollupPropertySourceLink(RollupPropertySourceLinkName, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            RollupPropertySourceLinkName name = RollupPropertySourceLinkName.FromPropertyRollupPropertySourceLink("[PROPERTY]", "[ROLLUP_PROPERTY_SOURCE_LINK]");
+            // Make the request
+            RollupPropertySourceLink response = analyticsAdminServiceClient.GetRollupPropertySourceLink(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRollupPropertySourceLinkAsync</summary>
+        public async Task GetRollupPropertySourceLinkResourceNamesAsync()
+        {
+            // Snippet: GetRollupPropertySourceLinkAsync(RollupPropertySourceLinkName, CallSettings)
+            // Additional: GetRollupPropertySourceLinkAsync(RollupPropertySourceLinkName, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RollupPropertySourceLinkName name = RollupPropertySourceLinkName.FromPropertyRollupPropertySourceLink("[PROPERTY]", "[ROLLUP_PROPERTY_SOURCE_LINK]");
+            // Make the request
+            RollupPropertySourceLink response = await analyticsAdminServiceClient.GetRollupPropertySourceLinkAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRollupPropertySourceLinks</summary>
+        public void ListRollupPropertySourceLinksRequestObject()
+        {
+            // Snippet: ListRollupPropertySourceLinks(ListRollupPropertySourceLinksRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            ListRollupPropertySourceLinksRequest request = new ListRollupPropertySourceLinksRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            PagedEnumerable<ListRollupPropertySourceLinksResponse, RollupPropertySourceLink> response = analyticsAdminServiceClient.ListRollupPropertySourceLinks(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (RollupPropertySourceLink item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListRollupPropertySourceLinksResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RollupPropertySourceLink item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RollupPropertySourceLink> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RollupPropertySourceLink item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRollupPropertySourceLinksAsync</summary>
+        public async Task ListRollupPropertySourceLinksRequestObjectAsync()
+        {
+            // Snippet: ListRollupPropertySourceLinksAsync(ListRollupPropertySourceLinksRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListRollupPropertySourceLinksRequest request = new ListRollupPropertySourceLinksRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListRollupPropertySourceLinksResponse, RollupPropertySourceLink> response = analyticsAdminServiceClient.ListRollupPropertySourceLinksAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((RollupPropertySourceLink item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListRollupPropertySourceLinksResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RollupPropertySourceLink item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RollupPropertySourceLink> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RollupPropertySourceLink item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRollupPropertySourceLinks</summary>
+        public void ListRollupPropertySourceLinks()
+        {
+            // Snippet: ListRollupPropertySourceLinks(string, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            // Make the request
+            PagedEnumerable<ListRollupPropertySourceLinksResponse, RollupPropertySourceLink> response = analyticsAdminServiceClient.ListRollupPropertySourceLinks(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (RollupPropertySourceLink item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListRollupPropertySourceLinksResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RollupPropertySourceLink item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RollupPropertySourceLink> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RollupPropertySourceLink item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRollupPropertySourceLinksAsync</summary>
+        public async Task ListRollupPropertySourceLinksAsync()
+        {
+            // Snippet: ListRollupPropertySourceLinksAsync(string, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            // Make the request
+            PagedAsyncEnumerable<ListRollupPropertySourceLinksResponse, RollupPropertySourceLink> response = analyticsAdminServiceClient.ListRollupPropertySourceLinksAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((RollupPropertySourceLink item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListRollupPropertySourceLinksResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RollupPropertySourceLink item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RollupPropertySourceLink> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RollupPropertySourceLink item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRollupPropertySourceLinks</summary>
+        public void ListRollupPropertySourceLinksResourceNames()
+        {
+            // Snippet: ListRollupPropertySourceLinks(PropertyName, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            // Make the request
+            PagedEnumerable<ListRollupPropertySourceLinksResponse, RollupPropertySourceLink> response = analyticsAdminServiceClient.ListRollupPropertySourceLinks(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (RollupPropertySourceLink item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListRollupPropertySourceLinksResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RollupPropertySourceLink item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RollupPropertySourceLink> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RollupPropertySourceLink item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRollupPropertySourceLinksAsync</summary>
+        public async Task ListRollupPropertySourceLinksResourceNamesAsync()
+        {
+            // Snippet: ListRollupPropertySourceLinksAsync(PropertyName, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            // Make the request
+            PagedAsyncEnumerable<ListRollupPropertySourceLinksResponse, RollupPropertySourceLink> response = analyticsAdminServiceClient.ListRollupPropertySourceLinksAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((RollupPropertySourceLink item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListRollupPropertySourceLinksResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RollupPropertySourceLink item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RollupPropertySourceLink> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RollupPropertySourceLink item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRollupPropertySourceLink</summary>
+        public void CreateRollupPropertySourceLinkRequestObject()
+        {
+            // Snippet: CreateRollupPropertySourceLink(CreateRollupPropertySourceLinkRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            CreateRollupPropertySourceLinkRequest request = new CreateRollupPropertySourceLinkRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                RollupPropertySourceLink = new RollupPropertySourceLink(),
+            };
+            // Make the request
+            RollupPropertySourceLink response = analyticsAdminServiceClient.CreateRollupPropertySourceLink(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRollupPropertySourceLinkAsync</summary>
+        public async Task CreateRollupPropertySourceLinkRequestObjectAsync()
+        {
+            // Snippet: CreateRollupPropertySourceLinkAsync(CreateRollupPropertySourceLinkRequest, CallSettings)
+            // Additional: CreateRollupPropertySourceLinkAsync(CreateRollupPropertySourceLinkRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateRollupPropertySourceLinkRequest request = new CreateRollupPropertySourceLinkRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                RollupPropertySourceLink = new RollupPropertySourceLink(),
+            };
+            // Make the request
+            RollupPropertySourceLink response = await analyticsAdminServiceClient.CreateRollupPropertySourceLinkAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRollupPropertySourceLink</summary>
+        public void CreateRollupPropertySourceLink()
+        {
+            // Snippet: CreateRollupPropertySourceLink(string, RollupPropertySourceLink, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            RollupPropertySourceLink rollupPropertySourceLink = new RollupPropertySourceLink();
+            // Make the request
+            RollupPropertySourceLink response = analyticsAdminServiceClient.CreateRollupPropertySourceLink(parent, rollupPropertySourceLink);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRollupPropertySourceLinkAsync</summary>
+        public async Task CreateRollupPropertySourceLinkAsync()
+        {
+            // Snippet: CreateRollupPropertySourceLinkAsync(string, RollupPropertySourceLink, CallSettings)
+            // Additional: CreateRollupPropertySourceLinkAsync(string, RollupPropertySourceLink, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            RollupPropertySourceLink rollupPropertySourceLink = new RollupPropertySourceLink();
+            // Make the request
+            RollupPropertySourceLink response = await analyticsAdminServiceClient.CreateRollupPropertySourceLinkAsync(parent, rollupPropertySourceLink);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRollupPropertySourceLink</summary>
+        public void CreateRollupPropertySourceLinkResourceNames()
+        {
+            // Snippet: CreateRollupPropertySourceLink(PropertyName, RollupPropertySourceLink, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            RollupPropertySourceLink rollupPropertySourceLink = new RollupPropertySourceLink();
+            // Make the request
+            RollupPropertySourceLink response = analyticsAdminServiceClient.CreateRollupPropertySourceLink(parent, rollupPropertySourceLink);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRollupPropertySourceLinkAsync</summary>
+        public async Task CreateRollupPropertySourceLinkResourceNamesAsync()
+        {
+            // Snippet: CreateRollupPropertySourceLinkAsync(PropertyName, RollupPropertySourceLink, CallSettings)
+            // Additional: CreateRollupPropertySourceLinkAsync(PropertyName, RollupPropertySourceLink, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            RollupPropertySourceLink rollupPropertySourceLink = new RollupPropertySourceLink();
+            // Make the request
+            RollupPropertySourceLink response = await analyticsAdminServiceClient.CreateRollupPropertySourceLinkAsync(parent, rollupPropertySourceLink);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRollupPropertySourceLink</summary>
+        public void DeleteRollupPropertySourceLinkRequestObject()
+        {
+            // Snippet: DeleteRollupPropertySourceLink(DeleteRollupPropertySourceLinkRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteRollupPropertySourceLinkRequest request = new DeleteRollupPropertySourceLinkRequest
+            {
+                RollupPropertySourceLinkName = RollupPropertySourceLinkName.FromPropertyRollupPropertySourceLink("[PROPERTY]", "[ROLLUP_PROPERTY_SOURCE_LINK]"),
+            };
+            // Make the request
+            analyticsAdminServiceClient.DeleteRollupPropertySourceLink(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRollupPropertySourceLinkAsync</summary>
+        public async Task DeleteRollupPropertySourceLinkRequestObjectAsync()
+        {
+            // Snippet: DeleteRollupPropertySourceLinkAsync(DeleteRollupPropertySourceLinkRequest, CallSettings)
+            // Additional: DeleteRollupPropertySourceLinkAsync(DeleteRollupPropertySourceLinkRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteRollupPropertySourceLinkRequest request = new DeleteRollupPropertySourceLinkRequest
+            {
+                RollupPropertySourceLinkName = RollupPropertySourceLinkName.FromPropertyRollupPropertySourceLink("[PROPERTY]", "[ROLLUP_PROPERTY_SOURCE_LINK]"),
+            };
+            // Make the request
+            await analyticsAdminServiceClient.DeleteRollupPropertySourceLinkAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRollupPropertySourceLink</summary>
+        public void DeleteRollupPropertySourceLink()
+        {
+            // Snippet: DeleteRollupPropertySourceLink(string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/rollupPropertySourceLinks/[ROLLUP_PROPERTY_SOURCE_LINK]";
+            // Make the request
+            analyticsAdminServiceClient.DeleteRollupPropertySourceLink(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRollupPropertySourceLinkAsync</summary>
+        public async Task DeleteRollupPropertySourceLinkAsync()
+        {
+            // Snippet: DeleteRollupPropertySourceLinkAsync(string, CallSettings)
+            // Additional: DeleteRollupPropertySourceLinkAsync(string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/rollupPropertySourceLinks/[ROLLUP_PROPERTY_SOURCE_LINK]";
+            // Make the request
+            await analyticsAdminServiceClient.DeleteRollupPropertySourceLinkAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRollupPropertySourceLink</summary>
+        public void DeleteRollupPropertySourceLinkResourceNames()
+        {
+            // Snippet: DeleteRollupPropertySourceLink(RollupPropertySourceLinkName, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            RollupPropertySourceLinkName name = RollupPropertySourceLinkName.FromPropertyRollupPropertySourceLink("[PROPERTY]", "[ROLLUP_PROPERTY_SOURCE_LINK]");
+            // Make the request
+            analyticsAdminServiceClient.DeleteRollupPropertySourceLink(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRollupPropertySourceLinkAsync</summary>
+        public async Task DeleteRollupPropertySourceLinkResourceNamesAsync()
+        {
+            // Snippet: DeleteRollupPropertySourceLinkAsync(RollupPropertySourceLinkName, CallSettings)
+            // Additional: DeleteRollupPropertySourceLinkAsync(RollupPropertySourceLinkName, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RollupPropertySourceLinkName name = RollupPropertySourceLinkName.FromPropertyRollupPropertySourceLink("[PROPERTY]", "[ROLLUP_PROPERTY_SOURCE_LINK]");
+            // Make the request
+            await analyticsAdminServiceClient.DeleteRollupPropertySourceLinkAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSubproperty</summary>
+        public void CreateSubpropertyRequestObject()
+        {
+            // Snippet: CreateSubproperty(CreateSubpropertyRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            CreateSubpropertyRequest request = new CreateSubpropertyRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                Subproperty = new Property(),
+                SubpropertyEventFilter = new SubpropertyEventFilter(),
+            };
+            // Make the request
+            CreateSubpropertyResponse response = analyticsAdminServiceClient.CreateSubproperty(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSubpropertyAsync</summary>
+        public async Task CreateSubpropertyRequestObjectAsync()
+        {
+            // Snippet: CreateSubpropertyAsync(CreateSubpropertyRequest, CallSettings)
+            // Additional: CreateSubpropertyAsync(CreateSubpropertyRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateSubpropertyRequest request = new CreateSubpropertyRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                Subproperty = new Property(),
+                SubpropertyEventFilter = new SubpropertyEventFilter(),
+            };
+            // Make the request
+            CreateSubpropertyResponse response = await analyticsAdminServiceClient.CreateSubpropertyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSubpropertyEventFilter</summary>
+        public void DeleteSubpropertyEventFilterRequestObject()
+        {
+            // Snippet: DeleteSubpropertyEventFilter(DeleteSubpropertyEventFilterRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteSubpropertyEventFilterRequest request = new DeleteSubpropertyEventFilterRequest
+            {
+                SubpropertyEventFilterName = SubpropertyEventFilterName.FromPropertySubPropertyEventFilter("[PROPERTY]", "[SUB_PROPERTY_EVENT_FILTER]"),
+            };
+            // Make the request
+            analyticsAdminServiceClient.DeleteSubpropertyEventFilter(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSubpropertyEventFilterAsync</summary>
+        public async Task DeleteSubpropertyEventFilterRequestObjectAsync()
+        {
+            // Snippet: DeleteSubpropertyEventFilterAsync(DeleteSubpropertyEventFilterRequest, CallSettings)
+            // Additional: DeleteSubpropertyEventFilterAsync(DeleteSubpropertyEventFilterRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteSubpropertyEventFilterRequest request = new DeleteSubpropertyEventFilterRequest
+            {
+                SubpropertyEventFilterName = SubpropertyEventFilterName.FromPropertySubPropertyEventFilter("[PROPERTY]", "[SUB_PROPERTY_EVENT_FILTER]"),
+            };
+            // Make the request
+            await analyticsAdminServiceClient.DeleteSubpropertyEventFilterAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSubpropertyEventFilter</summary>
+        public void DeleteSubpropertyEventFilter()
+        {
+            // Snippet: DeleteSubpropertyEventFilter(string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/subpropertyEventFilters/[SUB_PROPERTY_EVENT_FILTER]";
+            // Make the request
+            analyticsAdminServiceClient.DeleteSubpropertyEventFilter(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSubpropertyEventFilterAsync</summary>
+        public async Task DeleteSubpropertyEventFilterAsync()
+        {
+            // Snippet: DeleteSubpropertyEventFilterAsync(string, CallSettings)
+            // Additional: DeleteSubpropertyEventFilterAsync(string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/subpropertyEventFilters/[SUB_PROPERTY_EVENT_FILTER]";
+            // Make the request
+            await analyticsAdminServiceClient.DeleteSubpropertyEventFilterAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSubpropertyEventFilter</summary>
+        public void DeleteSubpropertyEventFilterResourceNames()
+        {
+            // Snippet: DeleteSubpropertyEventFilter(SubpropertyEventFilterName, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            SubpropertyEventFilterName name = SubpropertyEventFilterName.FromPropertySubPropertyEventFilter("[PROPERTY]", "[SUB_PROPERTY_EVENT_FILTER]");
+            // Make the request
+            analyticsAdminServiceClient.DeleteSubpropertyEventFilter(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSubpropertyEventFilterAsync</summary>
+        public async Task DeleteSubpropertyEventFilterResourceNamesAsync()
+        {
+            // Snippet: DeleteSubpropertyEventFilterAsync(SubpropertyEventFilterName, CallSettings)
+            // Additional: DeleteSubpropertyEventFilterAsync(SubpropertyEventFilterName, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SubpropertyEventFilterName name = SubpropertyEventFilterName.FromPropertySubPropertyEventFilter("[PROPERTY]", "[SUB_PROPERTY_EVENT_FILTER]");
+            // Make the request
+            await analyticsAdminServiceClient.DeleteSubpropertyEventFilterAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSubpropertyEventFilter</summary>
+        public void CreateSubpropertyEventFilterRequestObject()
+        {
+            // Snippet: CreateSubpropertyEventFilter(CreateSubpropertyEventFilterRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            CreateSubpropertyEventFilterRequest request = new CreateSubpropertyEventFilterRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                SubpropertyEventFilter = new SubpropertyEventFilter(),
+            };
+            // Make the request
+            SubpropertyEventFilter response = analyticsAdminServiceClient.CreateSubpropertyEventFilter(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSubpropertyEventFilterAsync</summary>
+        public async Task CreateSubpropertyEventFilterRequestObjectAsync()
+        {
+            // Snippet: CreateSubpropertyEventFilterAsync(CreateSubpropertyEventFilterRequest, CallSettings)
+            // Additional: CreateSubpropertyEventFilterAsync(CreateSubpropertyEventFilterRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateSubpropertyEventFilterRequest request = new CreateSubpropertyEventFilterRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                SubpropertyEventFilter = new SubpropertyEventFilter(),
+            };
+            // Make the request
+            SubpropertyEventFilter response = await analyticsAdminServiceClient.CreateSubpropertyEventFilterAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSubpropertyEventFilter</summary>
+        public void CreateSubpropertyEventFilter()
+        {
+            // Snippet: CreateSubpropertyEventFilter(string, SubpropertyEventFilter, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            SubpropertyEventFilter subpropertyEventFilter = new SubpropertyEventFilter();
+            // Make the request
+            SubpropertyEventFilter response = analyticsAdminServiceClient.CreateSubpropertyEventFilter(parent, subpropertyEventFilter);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSubpropertyEventFilterAsync</summary>
+        public async Task CreateSubpropertyEventFilterAsync()
+        {
+            // Snippet: CreateSubpropertyEventFilterAsync(string, SubpropertyEventFilter, CallSettings)
+            // Additional: CreateSubpropertyEventFilterAsync(string, SubpropertyEventFilter, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            SubpropertyEventFilter subpropertyEventFilter = new SubpropertyEventFilter();
+            // Make the request
+            SubpropertyEventFilter response = await analyticsAdminServiceClient.CreateSubpropertyEventFilterAsync(parent, subpropertyEventFilter);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSubpropertyEventFilter</summary>
+        public void CreateSubpropertyEventFilterResourceNames()
+        {
+            // Snippet: CreateSubpropertyEventFilter(PropertyName, SubpropertyEventFilter, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            SubpropertyEventFilter subpropertyEventFilter = new SubpropertyEventFilter();
+            // Make the request
+            SubpropertyEventFilter response = analyticsAdminServiceClient.CreateSubpropertyEventFilter(parent, subpropertyEventFilter);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSubpropertyEventFilterAsync</summary>
+        public async Task CreateSubpropertyEventFilterResourceNamesAsync()
+        {
+            // Snippet: CreateSubpropertyEventFilterAsync(PropertyName, SubpropertyEventFilter, CallSettings)
+            // Additional: CreateSubpropertyEventFilterAsync(PropertyName, SubpropertyEventFilter, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            SubpropertyEventFilter subpropertyEventFilter = new SubpropertyEventFilter();
+            // Make the request
+            SubpropertyEventFilter response = await analyticsAdminServiceClient.CreateSubpropertyEventFilterAsync(parent, subpropertyEventFilter);
             // End snippet
         }
     }

@@ -16,12 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START analyticsadmin_v1alpha_generated_AnalyticsAdminService_RunAccessReport_sync]
+    // [START analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteSubpropertyEventFilter_async_flattened]
     using Google.Analytics.Admin.V1Alpha;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedAnalyticsAdminServiceClientSnippets
     {
-        /// <summary>Snippet for RunAccessReport</summary>
+        /// <summary>Snippet for DeleteSubpropertyEventFilterAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,39 +30,15 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void RunAccessReportRequestObject()
+        public async Task DeleteSubpropertyEventFilterAsync()
         {
             // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
             // Initialize request argument(s)
-            RunAccessReportRequest request = new RunAccessReportRequest
-            {
-                Entity = "",
-                Dimensions =
-                {
-                    new AccessDimension(),
-                },
-                Metrics = { new AccessMetric(), },
-                DateRanges =
-                {
-                    new AccessDateRange(),
-                },
-                DimensionFilter = new AccessFilterExpression(),
-                MetricFilter = new AccessFilterExpression(),
-                Offset = 0L,
-                Limit = 0L,
-                TimeZone = "",
-                OrderBys =
-                {
-                    new AccessOrderBy(),
-                },
-                ReturnEntityQuota = false,
-                IncludeAllUsers = false,
-                ExpandGroups = false,
-            };
+            string name = "properties/[PROPERTY]/subpropertyEventFilters/[SUB_PROPERTY_EVENT_FILTER]";
             // Make the request
-            RunAccessReportResponse response = analyticsAdminServiceClient.RunAccessReport(request);
+            await analyticsAdminServiceClient.DeleteSubpropertyEventFilterAsync(name);
         }
     }
-    // [END analyticsadmin_v1alpha_generated_AnalyticsAdminService_RunAccessReport_sync]
+    // [END analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteSubpropertyEventFilter_async_flattened]
 }
