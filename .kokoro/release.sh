@@ -57,6 +57,10 @@ echo "Building with commit $COMMITTISH"
 
 if [[ $SKIP_NUGET_PUSH = "" ]]
 then
+  echo "Generating SBOMs"
+  nuget_dir = "$(pwd)/releasebuild/nuget"
+  $(cd tools/Google.Cloud.Tools.GenerateSBOM && dotnet run -- $nuget_dir)
+
   echo "Pushing NuGet packages"
   # Push the changes to nuget.
   cd ./releasebuild/nuget
