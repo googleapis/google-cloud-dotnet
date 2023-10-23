@@ -44,11 +44,26 @@ namespace Google.Maps.Places.V1
         private PlacesSettings(PlacesSettings existing) : base(existing)
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            SearchNearbySettings = existing.SearchNearbySettings;
             SearchTextSettings = existing.SearchTextSettings;
+            GetPhotoMediaSettings = existing.GetPhotoMediaSettings;
+            GetPlaceSettings = existing.GetPlaceSettings;
             OnCopy(existing);
         }
 
         partial void OnCopy(PlacesSettings existing);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>PlacesClient.SearchNearby</c>
+        ///  and <c>PlacesClient.SearchNearbyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SearchNearbySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>PlacesClient.SearchText</c>
@@ -61,6 +76,30 @@ namespace Google.Maps.Places.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings SearchTextSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>PlacesClient.GetPhotoMedia</c>
+        ///  and <c>PlacesClient.GetPhotoMediaAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetPhotoMediaSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>PlacesClient.GetPlace</c>
+        /// and <c>PlacesClient.GetPlaceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetPlaceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="PlacesSettings"/> object.</returns>
@@ -121,6 +160,10 @@ namespace Google.Maps.Places.V1
     /// <summary>Places client wrapper, for convenient use.</summary>
     /// <remarks>
     /// Service definition for the Places API.
+    /// Note: every request actually requires a field mask set outside of the request
+    /// proto (all/'*' is not assumed).  That can be set via either a side channel
+    /// (SystemParameterContext) over RPC, or a header (X-Goog-FieldMask) over HTTP.
+    /// See: https://cloud.google.com/apis/docs/system-parameters
     /// </remarks>
     public abstract partial class PlacesClient
     {
@@ -194,6 +237,33 @@ namespace Google.Maps.Places.V1
         public virtual Places.PlacesClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Search for places near locations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SearchNearbyResponse SearchNearby(SearchNearbyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Search for places near locations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchNearbyResponse> SearchNearbyAsync(SearchNearbyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Search for places near locations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchNearbyResponse> SearchNearbyAsync(SearchNearbyRequest request, st::CancellationToken cancellationToken) =>
+            SearchNearbyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Text query based place search.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -219,15 +289,253 @@ namespace Google.Maps.Places.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<SearchTextResponse> SearchTextAsync(SearchTextRequest request, st::CancellationToken cancellationToken) =>
             SearchTextAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a photo media with a photo reference string.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PhotoMedia GetPhotoMedia(GetPhotoMediaRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a photo media with a photo reference string.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PhotoMedia> GetPhotoMediaAsync(GetPhotoMediaRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a photo media with a photo reference string.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PhotoMedia> GetPhotoMediaAsync(GetPhotoMediaRequest request, st::CancellationToken cancellationToken) =>
+            GetPhotoMediaAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a photo media with a photo reference string.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of a photo. It is returned in Place's
+        /// photos.name field. Format:
+        /// places/&lt;place_id&gt;/photos/&lt;photo_reference&gt;/media.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PhotoMedia GetPhotoMedia(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPhotoMedia(new GetPhotoMediaRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a photo media with a photo reference string.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of a photo. It is returned in Place's
+        /// photos.name field. Format:
+        /// places/&lt;place_id&gt;/photos/&lt;photo_reference&gt;/media.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PhotoMedia> GetPhotoMediaAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPhotoMediaAsync(new GetPhotoMediaRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a photo media with a photo reference string.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of a photo. It is returned in Place's
+        /// photos.name field. Format:
+        /// places/&lt;place_id&gt;/photos/&lt;photo_reference&gt;/media.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PhotoMedia> GetPhotoMediaAsync(string name, st::CancellationToken cancellationToken) =>
+            GetPhotoMediaAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a photo media with a photo reference string.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of a photo. It is returned in Place's
+        /// photos.name field. Format:
+        /// places/&lt;place_id&gt;/photos/&lt;photo_reference&gt;/media.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PhotoMedia GetPhotoMedia(PhotoMediaName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPhotoMedia(new GetPhotoMediaRequest
+            {
+                PhotoMediaName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a photo media with a photo reference string.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of a photo. It is returned in Place's
+        /// photos.name field. Format:
+        /// places/&lt;place_id&gt;/photos/&lt;photo_reference&gt;/media.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PhotoMedia> GetPhotoMediaAsync(PhotoMediaName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPhotoMediaAsync(new GetPhotoMediaRequest
+            {
+                PhotoMediaName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a photo media with a photo reference string.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of a photo. It is returned in Place's
+        /// photos.name field. Format:
+        /// places/&lt;place_id&gt;/photos/&lt;photo_reference&gt;/media.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PhotoMedia> GetPhotoMediaAsync(PhotoMediaName name, st::CancellationToken cancellationToken) =>
+            GetPhotoMediaAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a Place with a place id (in a name) string.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Place GetPlace(GetPlaceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a Place with a place id (in a name) string.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Place> GetPlaceAsync(GetPlaceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a Place with a place id (in a name) string.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Place> GetPlaceAsync(GetPlaceRequest request, st::CancellationToken cancellationToken) =>
+            GetPlaceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a Place with a place id (in a name) string.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A place_id returned in a Place (with "places/" prefix), or
+        /// equivalently the name in the same Place. Format: places/&lt;place_id&gt;.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Place GetPlace(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPlace(new GetPlaceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a Place with a place id (in a name) string.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A place_id returned in a Place (with "places/" prefix), or
+        /// equivalently the name in the same Place. Format: places/&lt;place_id&gt;.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Place> GetPlaceAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPlaceAsync(new GetPlaceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a Place with a place id (in a name) string.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A place_id returned in a Place (with "places/" prefix), or
+        /// equivalently the name in the same Place. Format: places/&lt;place_id&gt;.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Place> GetPlaceAsync(string name, st::CancellationToken cancellationToken) =>
+            GetPlaceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a Place with a place id (in a name) string.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A place_id returned in a Place (with "places/" prefix), or
+        /// equivalently the name in the same Place. Format: places/&lt;place_id&gt;.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Place GetPlace(PlaceName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPlace(new GetPlaceRequest
+            {
+                PlaceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a Place with a place id (in a name) string.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A place_id returned in a Place (with "places/" prefix), or
+        /// equivalently the name in the same Place. Format: places/&lt;place_id&gt;.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Place> GetPlaceAsync(PlaceName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPlaceAsync(new GetPlaceRequest
+            {
+                PlaceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a Place with a place id (in a name) string.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A place_id returned in a Place (with "places/" prefix), or
+        /// equivalently the name in the same Place. Format: places/&lt;place_id&gt;.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Place> GetPlaceAsync(PlaceName name, st::CancellationToken cancellationToken) =>
+            GetPlaceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Places client wrapper implementation, for convenient use.</summary>
     /// <remarks>
     /// Service definition for the Places API.
+    /// Note: every request actually requires a field mask set outside of the request
+    /// proto (all/'*' is not assumed).  That can be set via either a side channel
+    /// (SystemParameterContext) over RPC, or a header (X-Goog-FieldMask) over HTTP.
+    /// See: https://cloud.google.com/apis/docs/system-parameters
     /// </remarks>
     public sealed partial class PlacesClientImpl : PlacesClient
     {
+        private readonly gaxgrpc::ApiCall<SearchNearbyRequest, SearchNearbyResponse> _callSearchNearby;
+
         private readonly gaxgrpc::ApiCall<SearchTextRequest, SearchTextResponse> _callSearchText;
+
+        private readonly gaxgrpc::ApiCall<GetPhotoMediaRequest, PhotoMedia> _callGetPhotoMedia;
+
+        private readonly gaxgrpc::ApiCall<GetPlaceRequest, Place> _callGetPlace;
 
         /// <summary>
         /// Constructs a client wrapper for the Places service, with the specified gRPC client and settings.
@@ -240,22 +548,67 @@ namespace Google.Maps.Places.V1
             GrpcClient = grpcClient;
             PlacesSettings effectiveSettings = settings ?? PlacesSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            _callSearchNearby = clientHelper.BuildApiCall<SearchNearbyRequest, SearchNearbyResponse>("SearchNearby", grpcClient.SearchNearbyAsync, grpcClient.SearchNearby, effectiveSettings.SearchNearbySettings);
+            Modify_ApiCall(ref _callSearchNearby);
+            Modify_SearchNearbyApiCall(ref _callSearchNearby);
             _callSearchText = clientHelper.BuildApiCall<SearchTextRequest, SearchTextResponse>("SearchText", grpcClient.SearchTextAsync, grpcClient.SearchText, effectiveSettings.SearchTextSettings);
             Modify_ApiCall(ref _callSearchText);
             Modify_SearchTextApiCall(ref _callSearchText);
+            _callGetPhotoMedia = clientHelper.BuildApiCall<GetPhotoMediaRequest, PhotoMedia>("GetPhotoMedia", grpcClient.GetPhotoMediaAsync, grpcClient.GetPhotoMedia, effectiveSettings.GetPhotoMediaSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetPhotoMedia);
+            Modify_GetPhotoMediaApiCall(ref _callGetPhotoMedia);
+            _callGetPlace = clientHelper.BuildApiCall<GetPlaceRequest, Place>("GetPlace", grpcClient.GetPlaceAsync, grpcClient.GetPlace, effectiveSettings.GetPlaceSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetPlace);
+            Modify_GetPlaceApiCall(ref _callGetPlace);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
+        partial void Modify_SearchNearbyApiCall(ref gaxgrpc::ApiCall<SearchNearbyRequest, SearchNearbyResponse> call);
+
         partial void Modify_SearchTextApiCall(ref gaxgrpc::ApiCall<SearchTextRequest, SearchTextResponse> call);
+
+        partial void Modify_GetPhotoMediaApiCall(ref gaxgrpc::ApiCall<GetPhotoMediaRequest, PhotoMedia> call);
+
+        partial void Modify_GetPlaceApiCall(ref gaxgrpc::ApiCall<GetPlaceRequest, Place> call);
 
         partial void OnConstruction(Places.PlacesClient grpcClient, PlacesSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC Places client</summary>
         public override Places.PlacesClient GrpcClient { get; }
 
+        partial void Modify_SearchNearbyRequest(ref SearchNearbyRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_SearchTextRequest(ref SearchTextRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetPhotoMediaRequest(ref GetPhotoMediaRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetPlaceRequest(ref GetPlaceRequest request, ref gaxgrpc::CallSettings settings);
+
+        /// <summary>
+        /// Search for places near locations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SearchNearbyResponse SearchNearby(SearchNearbyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchNearbyRequest(ref request, ref callSettings);
+            return _callSearchNearby.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Search for places near locations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SearchNearbyResponse> SearchNearbyAsync(SearchNearbyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchNearbyRequest(ref request, ref callSettings);
+            return _callSearchNearby.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Text query based place search.
@@ -279,6 +632,54 @@ namespace Google.Maps.Places.V1
         {
             Modify_SearchTextRequest(ref request, ref callSettings);
             return _callSearchText.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get a photo media with a photo reference string.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override PhotoMedia GetPhotoMedia(GetPhotoMediaRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetPhotoMediaRequest(ref request, ref callSettings);
+            return _callGetPhotoMedia.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get a photo media with a photo reference string.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<PhotoMedia> GetPhotoMediaAsync(GetPhotoMediaRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetPhotoMediaRequest(ref request, ref callSettings);
+            return _callGetPhotoMedia.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get a Place with a place id (in a name) string.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Place GetPlace(GetPlaceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetPlaceRequest(ref request, ref callSettings);
+            return _callGetPlace.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get a Place with a place id (in a name) string.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Place> GetPlaceAsync(GetPlaceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetPlaceRequest(ref request, ref callSettings);
+            return _callGetPlace.Async(request, callSettings);
         }
     }
 }

@@ -25,6 +25,10 @@ using grpc = global::Grpc.Core;
 namespace Google.Maps.Places.V1 {
   /// <summary>
   /// Service definition for the Places API.
+  /// Note: every request actually requires a field mask set outside of the request
+  /// proto (all/'*' is not assumed).  That can be set via either a side channel
+  /// (SystemParameterContext) over RPC, or a header (X-Goog-FieldMask) over HTTP.
+  /// See: https://cloud.google.com/apis/docs/system-parameters
   /// </summary>
   public static partial class Places
   {
@@ -64,9 +68,29 @@ namespace Google.Maps.Places.V1 {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Maps.Places.V1.SearchNearbyRequest> __Marshaller_google_maps_places_v1_SearchNearbyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Maps.Places.V1.SearchNearbyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Maps.Places.V1.SearchNearbyResponse> __Marshaller_google_maps_places_v1_SearchNearbyResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Maps.Places.V1.SearchNearbyResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Maps.Places.V1.SearchTextRequest> __Marshaller_google_maps_places_v1_SearchTextRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Maps.Places.V1.SearchTextRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Maps.Places.V1.SearchTextResponse> __Marshaller_google_maps_places_v1_SearchTextResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Maps.Places.V1.SearchTextResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Maps.Places.V1.GetPhotoMediaRequest> __Marshaller_google_maps_places_v1_GetPhotoMediaRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Maps.Places.V1.GetPhotoMediaRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Maps.Places.V1.PhotoMedia> __Marshaller_google_maps_places_v1_PhotoMedia = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Maps.Places.V1.PhotoMedia.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Maps.Places.V1.GetPlaceRequest> __Marshaller_google_maps_places_v1_GetPlaceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Maps.Places.V1.GetPlaceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Maps.Places.V1.Place> __Marshaller_google_maps_places_v1_Place = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Maps.Places.V1.Place.Parser));
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Maps.Places.V1.SearchNearbyRequest, global::Google.Maps.Places.V1.SearchNearbyResponse> __Method_SearchNearby = new grpc::Method<global::Google.Maps.Places.V1.SearchNearbyRequest, global::Google.Maps.Places.V1.SearchNearbyResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SearchNearby",
+        __Marshaller_google_maps_places_v1_SearchNearbyRequest,
+        __Marshaller_google_maps_places_v1_SearchNearbyResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Maps.Places.V1.SearchTextRequest, global::Google.Maps.Places.V1.SearchTextResponse> __Method_SearchText = new grpc::Method<global::Google.Maps.Places.V1.SearchTextRequest, global::Google.Maps.Places.V1.SearchTextResponse>(
@@ -75,6 +99,22 @@ namespace Google.Maps.Places.V1 {
         "SearchText",
         __Marshaller_google_maps_places_v1_SearchTextRequest,
         __Marshaller_google_maps_places_v1_SearchTextResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Maps.Places.V1.GetPhotoMediaRequest, global::Google.Maps.Places.V1.PhotoMedia> __Method_GetPhotoMedia = new grpc::Method<global::Google.Maps.Places.V1.GetPhotoMediaRequest, global::Google.Maps.Places.V1.PhotoMedia>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetPhotoMedia",
+        __Marshaller_google_maps_places_v1_GetPhotoMediaRequest,
+        __Marshaller_google_maps_places_v1_PhotoMedia);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Maps.Places.V1.GetPlaceRequest, global::Google.Maps.Places.V1.Place> __Method_GetPlace = new grpc::Method<global::Google.Maps.Places.V1.GetPlaceRequest, global::Google.Maps.Places.V1.Place>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetPlace",
+        __Marshaller_google_maps_places_v1_GetPlaceRequest,
+        __Marshaller_google_maps_places_v1_Place);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -87,6 +127,18 @@ namespace Google.Maps.Places.V1 {
     public abstract partial class PlacesBase
     {
       /// <summary>
+      /// Search for places near locations.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Maps.Places.V1.SearchNearbyResponse> SearchNearby(global::Google.Maps.Places.V1.SearchNearbyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Text query based place search.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -94,6 +146,30 @@ namespace Google.Maps.Places.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Maps.Places.V1.SearchTextResponse> SearchText(global::Google.Maps.Places.V1.SearchTextRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Get a photo media with a photo reference string.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Maps.Places.V1.PhotoMedia> GetPhotoMedia(global::Google.Maps.Places.V1.GetPhotoMediaRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Get a Place with a place id (in a name) string.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Maps.Places.V1.Place> GetPlace(global::Google.Maps.Places.V1.GetPlaceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -127,6 +203,54 @@ namespace Google.Maps.Places.V1 {
       {
       }
 
+      /// <summary>
+      /// Search for places near locations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Maps.Places.V1.SearchNearbyResponse SearchNearby(global::Google.Maps.Places.V1.SearchNearbyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SearchNearby(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Search for places near locations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Maps.Places.V1.SearchNearbyResponse SearchNearby(global::Google.Maps.Places.V1.SearchNearbyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SearchNearby, null, options, request);
+      }
+      /// <summary>
+      /// Search for places near locations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Maps.Places.V1.SearchNearbyResponse> SearchNearbyAsync(global::Google.Maps.Places.V1.SearchNearbyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SearchNearbyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Search for places near locations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Maps.Places.V1.SearchNearbyResponse> SearchNearbyAsync(global::Google.Maps.Places.V1.SearchNearbyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SearchNearby, null, options, request);
+      }
       /// <summary>
       /// Text query based place search.
       /// </summary>
@@ -175,6 +299,102 @@ namespace Google.Maps.Places.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_SearchText, null, options, request);
       }
+      /// <summary>
+      /// Get a photo media with a photo reference string.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Maps.Places.V1.PhotoMedia GetPhotoMedia(global::Google.Maps.Places.V1.GetPhotoMediaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetPhotoMedia(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get a photo media with a photo reference string.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Maps.Places.V1.PhotoMedia GetPhotoMedia(global::Google.Maps.Places.V1.GetPhotoMediaRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetPhotoMedia, null, options, request);
+      }
+      /// <summary>
+      /// Get a photo media with a photo reference string.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Maps.Places.V1.PhotoMedia> GetPhotoMediaAsync(global::Google.Maps.Places.V1.GetPhotoMediaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetPhotoMediaAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get a photo media with a photo reference string.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Maps.Places.V1.PhotoMedia> GetPhotoMediaAsync(global::Google.Maps.Places.V1.GetPhotoMediaRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetPhotoMedia, null, options, request);
+      }
+      /// <summary>
+      /// Get a Place with a place id (in a name) string.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Maps.Places.V1.Place GetPlace(global::Google.Maps.Places.V1.GetPlaceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetPlace(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get a Place with a place id (in a name) string.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Maps.Places.V1.Place GetPlace(global::Google.Maps.Places.V1.GetPlaceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetPlace, null, options, request);
+      }
+      /// <summary>
+      /// Get a Place with a place id (in a name) string.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Maps.Places.V1.Place> GetPlaceAsync(global::Google.Maps.Places.V1.GetPlaceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetPlaceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get a Place with a place id (in a name) string.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Maps.Places.V1.Place> GetPlaceAsync(global::Google.Maps.Places.V1.GetPlaceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetPlace, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override PlacesClient NewInstance(ClientBaseConfiguration configuration)
@@ -189,7 +409,10 @@ namespace Google.Maps.Places.V1 {
     public static grpc::ServerServiceDefinition BindService(PlacesBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_SearchText, serviceImpl.SearchText).Build();
+          .AddMethod(__Method_SearchNearby, serviceImpl.SearchNearby)
+          .AddMethod(__Method_SearchText, serviceImpl.SearchText)
+          .AddMethod(__Method_GetPhotoMedia, serviceImpl.GetPhotoMedia)
+          .AddMethod(__Method_GetPlace, serviceImpl.GetPlace).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -199,7 +422,10 @@ namespace Google.Maps.Places.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, PlacesBase serviceImpl)
     {
+      serviceBinder.AddMethod(__Method_SearchNearby, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Maps.Places.V1.SearchNearbyRequest, global::Google.Maps.Places.V1.SearchNearbyResponse>(serviceImpl.SearchNearby));
       serviceBinder.AddMethod(__Method_SearchText, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Maps.Places.V1.SearchTextRequest, global::Google.Maps.Places.V1.SearchTextResponse>(serviceImpl.SearchText));
+      serviceBinder.AddMethod(__Method_GetPhotoMedia, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Maps.Places.V1.GetPhotoMediaRequest, global::Google.Maps.Places.V1.PhotoMedia>(serviceImpl.GetPhotoMedia));
+      serviceBinder.AddMethod(__Method_GetPlace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Maps.Places.V1.GetPlaceRequest, global::Google.Maps.Places.V1.Place>(serviceImpl.GetPlace));
     }
 
   }

@@ -26,104 +26,152 @@ namespace Google.Maps.Places.V1 {
           string.Concat(
             "CiFnb29nbGUvbWFwcy9wbGFjZXMvdjEvcGxhY2UucHJvdG8SFWdvb2dsZS5t",
             "YXBzLnBsYWNlcy52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90",
-            "bxoeZ29vZ2xlL2dlby90eXBlL3ZpZXdwb3J0LnByb3RvGh9nb29nbGUvcHJv",
-            "dG9idWYvdGltZXN0YW1wLnByb3RvGhZnb29nbGUvdHlwZS9kYXRlLnByb3Rv",
-            "Ghhnb29nbGUvdHlwZS9sYXRsbmcucHJvdG8aIGdvb2dsZS90eXBlL2xvY2Fs",
-            "aXplZF90ZXh0LnByb3RvIrQbCgVQbGFjZRIPCgJpZBgCIAEoCUID4EECEjAK",
-            "DGRpc3BsYXlfbmFtZRgfIAEoCzIaLmdvb2dsZS50eXBlLkxvY2FsaXplZFRl",
-            "eHQSDQoFdHlwZXMYBSADKAkSHQoVbmF0aW9uYWxfcGhvbmVfbnVtYmVyGAcg",
-            "ASgJEiIKGmludGVybmF0aW9uYWxfcGhvbmVfbnVtYmVyGAggASgJEhkKEWZv",
-            "cm1hdHRlZF9hZGRyZXNzGAkgASgJEkkKEmFkZHJlc3NfY29tcG9uZW50cxgK",
-            "IAMoCzItLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5BZGRyZXNzQ29t",
-            "cG9uZW50EjgKCXBsdXNfY29kZRgLIAEoCzIlLmdvb2dsZS5tYXBzLnBsYWNl",
-            "cy52MS5QbGFjZS5QbHVzQ29kZRIlCghsb2NhdGlvbhgMIAEoCzITLmdvb2ds",
-            "ZS50eXBlLkxhdExuZxIrCgh2aWV3cG9ydBgNIAEoCzIZLmdvb2dsZS5nZW8u",
-            "dHlwZS5WaWV3cG9ydBIOCgZyYXRpbmcYDiABKAESFwoPZ29vZ2xlX21hcHNf",
-            "dXJpGA8gASgJEhMKC3dlYnNpdGVfdXJpGBAgASgJEjQKB3Jldmlld3MYFCAD",
-            "KAsyIy5nb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2UuUmV2aWV3EkAKDW9w",
-            "ZW5pbmdfaG91cnMYFSABKAsyKS5nb29nbGUubWFwcy5wbGFjZXMudjEuUGxh",
-            "Y2UuT3BlbmluZ0hvdXJzEhoKEnV0Y19vZmZzZXRfbWludXRlcxgWIAEoBRIa",
-            "ChJhZHJfZm9ybWF0X2FkZHJlc3MYGCABKAkSRAoPYnVzaW5lc3Nfc3RhdHVz",
-            "GBkgASgOMisuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLkJ1c2luZXNz",
-            "U3RhdHVzEjYKC3ByaWNlX2xldmVsGBogASgOMiEuZ29vZ2xlLm1hcHMucGxh",
-            "Y2VzLnYxLlByaWNlTGV2ZWwSPgoMYXR0cmlidXRpb25zGBsgAygLMiguZ29v",
-            "Z2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLkF0dHJpYnV0aW9uEhkKEXVzZXJf",
-            "cmF0aW5nX2NvdW50GBwgASgFEhoKEmljb25fbWFza19iYXNlX3VyaRgdIAEo",
-            "CRIdChVpY29uX2JhY2tncm91bmRfY29sb3IYHiABKAkSFAoHdGFrZW91dBgh",
-            "IAEoCEgAiAEBEhUKCGRlbGl2ZXJ5GCIgASgISAGIAQESFAoHZGluZV9pbhgj",
-            "IAEoCEgCiAEBEhwKD2N1cmJzaWRlX3BpY2t1cBgkIAEoCEgDiAEBEisKHndo",
-            "ZWVsY2hhaXJfYWNjZXNzaWJsZV9lbnRyYW5jZRglIAEoCEgEiAEBEhcKCnJl",
-            "c2VydmFibGUYJiABKAhIBYgBARIdChBzZXJ2ZXNfYnJlYWtmYXN0GCcgASgI",
-            "SAaIAQESGQoMc2VydmVzX2x1bmNoGCggASgISAeIAQESGgoNc2VydmVzX2Rp",
-            "bm5lchgpIAEoCEgIiAEBEhgKC3NlcnZlc19iZWVyGCogASgISAmIAQESGAoL",
-            "c2VydmVzX3dpbmUYKyABKAhICogBARIaCg1zZXJ2ZXNfYnJ1bmNoGCwgASgI",
-            "SAuIAQESIwoWc2VydmVzX3ZlZ2V0YXJpYW5fZm9vZBgtIAEoCEgMiAEBEkgK",
-            "FWN1cnJlbnRfb3BlbmluZ19ob3VycxguIAEoCzIpLmdvb2dsZS5tYXBzLnBs",
-            "YWNlcy52MS5QbGFjZS5PcGVuaW5nSG91cnMSUgofY3VycmVudF9zZWNvbmRh",
+            "bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxoeZ29vZ2xlL2dlby90eXBl",
+            "L3ZpZXdwb3J0LnByb3RvGidnb29nbGUvbWFwcy9wbGFjZXMvdjEvZXZfY2hh",
+            "cmdpbmcucHJvdG8aKGdvb2dsZS9tYXBzL3BsYWNlcy92MS9mdWVsX29wdGlv",
+            "bnMucHJvdG8aIWdvb2dsZS9tYXBzL3BsYWNlcy92MS9waG90by5wcm90bxoi",
+            "Z29vZ2xlL21hcHMvcGxhY2VzL3YxL3Jldmlldy5wcm90bxoWZ29vZ2xlL3R5",
+            "cGUvZGF0ZS5wcm90bxoYZ29vZ2xlL3R5cGUvbGF0bG5nLnByb3RvGiBnb29n",
+            "bGUvdHlwZS9sb2NhbGl6ZWRfdGV4dC5wcm90byL0KQoFUGxhY2USEQoEbmFt",
+            "ZRgBIAEoCUID4EEDEg8KAmlkGAIgASgJQgPgQQMSNQoMZGlzcGxheV9uYW1l",
+            "GB8gASgLMhouZ29vZ2xlLnR5cGUuTG9jYWxpemVkVGV4dEID4EEDEhIKBXR5",
+            "cGVzGAUgAygJQgPgQQMSIgoVbmF0aW9uYWxfcGhvbmVfbnVtYmVyGAcgASgJ",
+            "QgPgQQMSJwoaaW50ZXJuYXRpb25hbF9waG9uZV9udW1iZXIYCCABKAlCA+BB",
+            "AxIeChFmb3JtYXR0ZWRfYWRkcmVzcxgJIAEoCUID4EEDEk4KEmFkZHJlc3Nf",
+            "Y29tcG9uZW50cxgKIAMoCzItLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QbGFj",
+            "ZS5BZGRyZXNzQ29tcG9uZW50QgPgQQMSPQoJcGx1c19jb2RlGAsgASgLMiUu",
+            "Z29vZ2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLlBsdXNDb2RlQgPgQQMSKgoI",
+            "bG9jYXRpb24YDCABKAsyEy5nb29nbGUudHlwZS5MYXRMbmdCA+BBAxIwCgh2",
+            "aWV3cG9ydBgNIAEoCzIZLmdvb2dsZS5nZW8udHlwZS5WaWV3cG9ydEID4EED",
+            "EhMKBnJhdGluZxgOIAEoAUID4EEDEhwKD2dvb2dsZV9tYXBzX3VyaRgPIAEo",
+            "CUID4EEDEhgKC3dlYnNpdGVfdXJpGBAgASgJQgPgQQMSMwoHcmV2aWV3cxg1",
+            "IAMoCzIdLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5SZXZpZXdCA+BBAxJNChVy",
+            "ZWd1bGFyX29wZW5pbmdfaG91cnMYFSABKAsyKS5nb29nbGUubWFwcy5wbGFj",
+            "ZXMudjEuUGxhY2UuT3BlbmluZ0hvdXJzQgPgQQMSJAoSdXRjX29mZnNldF9t",
+            "aW51dGVzGBYgASgFQgPgQQNIAIgBARIxCgZwaG90b3MYNiADKAsyHC5nb29n",
+            "bGUubWFwcy5wbGFjZXMudjEuUGhvdG9CA+BBAxIfChJhZHJfZm9ybWF0X2Fk",
+            "ZHJlc3MYGCABKAlCA+BBAxJJCg9idXNpbmVzc19zdGF0dXMYGSABKA4yKy5n",
+            "b29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2UuQnVzaW5lc3NTdGF0dXNCA+BB",
+            "AxI7CgtwcmljZV9sZXZlbBgaIAEoDjIhLmdvb2dsZS5tYXBzLnBsYWNlcy52",
+            "MS5QcmljZUxldmVsQgPgQQMSQwoMYXR0cmlidXRpb25zGBsgAygLMiguZ29v",
+            "Z2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLkF0dHJpYnV0aW9uQgPgQQMSIwoR",
+            "dXNlcl9yYXRpbmdfY291bnQYHCABKAVCA+BBA0gBiAEBEh8KEmljb25fbWFz",
+            "a19iYXNlX3VyaRgdIAEoCUID4EEDEiIKFWljb25fYmFja2dyb3VuZF9jb2xv",
+            "chgeIAEoCUID4EEDEhkKB3Rha2VvdXQYISABKAhCA+BBA0gCiAEBEhoKCGRl",
+            "bGl2ZXJ5GCIgASgIQgPgQQNIA4gBARIZCgdkaW5lX2luGCMgASgIQgPgQQNI",
+            "BIgBARIhCg9jdXJic2lkZV9waWNrdXAYJCABKAhCA+BBA0gFiAEBEhwKCnJl",
+            "c2VydmFibGUYJiABKAhCA+BBA0gGiAEBEiIKEHNlcnZlc19icmVha2Zhc3QY",
+            "JyABKAhCA+BBA0gHiAEBEh4KDHNlcnZlc19sdW5jaBgoIAEoCEID4EEDSAiI",
+            "AQESHwoNc2VydmVzX2Rpbm5lchgpIAEoCEID4EEDSAmIAQESHQoLc2VydmVz",
+            "X2JlZXIYKiABKAhCA+BBA0gKiAEBEh0KC3NlcnZlc193aW5lGCsgASgIQgPg",
+            "QQNIC4gBARIfCg1zZXJ2ZXNfYnJ1bmNoGCwgASgIQgPgQQNIDIgBARIoChZz",
+            "ZXJ2ZXNfdmVnZXRhcmlhbl9mb29kGC0gASgIQgPgQQNIDYgBARJNChVjdXJy",
+            "ZW50X29wZW5pbmdfaG91cnMYLiABKAsyKS5nb29nbGUubWFwcy5wbGFjZXMu",
+            "djEuUGxhY2UuT3BlbmluZ0hvdXJzQgPgQQMSVwofY3VycmVudF9zZWNvbmRh",
             "cnlfb3BlbmluZ19ob3VycxgvIAMoCzIpLmdvb2dsZS5tYXBzLnBsYWNlcy52",
-            "MS5QbGFjZS5PcGVuaW5nSG91cnMSSgoXc2Vjb25kYXJ5X29wZW5pbmdfaG91",
-            "cnMYMSADKAsyKS5nb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2UuT3Blbmlu",
-            "Z0hvdXJzEkgKEWVkaXRvcmlhbF9zdW1tYXJ5GDAgASgLMi0uZ29vZ2xlLm1h",
-            "cHMucGxhY2VzLnYxLlBsYWNlLkVkaXRvcmlhbFN1bW1hcnkaXwoQQWRkcmVz",
-            "c0NvbXBvbmVudBIRCglsb25nX3RleHQYASABKAkSEgoKc2hvcnRfdGV4dBgC",
-            "IAEoCRINCgV0eXBlcxgDIAMoCRIVCg1sYW5ndWFnZV9jb2RlGAQgASgJGjYK",
-            "CFBsdXNDb2RlEhMKC2dsb2JhbF9jb2RlGAEgASgJEhUKDWNvbXBvdW5kX2Nv",
-            "ZGUYAiABKAkakQIKBlJldmlldxIwCgxwdWJsaXNoX3RpbWUYASABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wEikKIXJlbGF0aXZlX3B1Ymxpc2hf",
-            "dGltZV9kZXNjcmlwdGlvbhgCIAEoCRIoCgR0ZXh0GAkgASgLMhouZ29vZ2xl",
-            "LnR5cGUuTG9jYWxpemVkVGV4dBIOCgZhdXRob3IYBCABKAkSEgoKYXV0aG9y",
-            "X3VyaRgFIAEoCRIYChBhdXRob3JfcGhvdG9fdXJpGAYgASgJEg4KBnJhdGlu",
-            "ZxgHIAEoARIeChZvcmlnaW5hbF9sYW5ndWFnZV9jb2RlGAogASgJEhIKCnRy",
-            "YW5zbGF0ZWQYCyABKAga7wcKDE9wZW5pbmdIb3VycxIQCghvcGVuX25vdxgB",
-            "IAEoCBJNCgdwZXJpb2RzGAIgAygLMjwuZ29vZ2xlLm1hcHMucGxhY2VzLnYx",
-            "LlBsYWNlLk9wZW5pbmdIb3Vycy5PcGVuaW5nSG91cnNQZXJpb2QSHAoUd2Vl",
-            "a2RheV9kZXNjcmlwdGlvbnMYAyADKAkSWAoTc2Vjb25kYXJ5X2hvdXJfdHlw",
-            "ZRgEIAEoDjI7Lmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5PcGVuaW5n",
-            "SG91cnMuU2Vjb25kYXJ5SG91clR5cGUSSgoMc3BlY2lhbF9kYXlzGAUgAygL",
-            "MjQuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLk9wZW5pbmdIb3Vycy5T",
-            "cGVjaWFsRGF5Go4DChJPcGVuaW5nSG91cnNQZXJpb2QSXAoEb3BlbhgBIAEo",
-            "CzJOLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5PcGVuaW5nSG91cnMu",
-            "T3BlbmluZ0hvdXJzUGVyaW9kLk9wZW5pbmdIb3Vyc1BvaW50El0KBWNsb3Nl",
-            "GAIgASgLMk4uZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLk9wZW5pbmdI",
-            "b3Vycy5PcGVuaW5nSG91cnNQZXJpb2QuT3BlbmluZ0hvdXJzUG9pbnQaugEK",
-            "EU9wZW5pbmdIb3Vyc1BvaW50EhAKA2RheRgBIAEoBUgAiAEBEhEKBGhvdXIY",
-            "AiABKAVIAYgBARITCgZtaW51dGUYAyABKAVIAogBARIbCg9kYXRlX2RlcHJl",
-            "Y2F0ZWQYBCABKAlCAhgBEh8KBGRhdGUYBiABKAsyES5nb29nbGUudHlwZS5E",
-            "YXRlEhEKCXRydW5jYXRlZBgFIAEoCEIGCgRfZGF5QgcKBV9ob3VyQgkKB19t",
-            "aW51dGUaLQoKU3BlY2lhbERheRIfCgRkYXRlGAEgASgLMhEuZ29vZ2xlLnR5",
-            "cGUuRGF0ZSL5AQoRU2Vjb25kYXJ5SG91clR5cGUSIwofU0VDT05EQVJZX0hP",
-            "VVJfVFlQRV9VTlNQRUNJRklFRBAAEhEKDURSSVZFX1RIUk9VR0gQARIOCgpI",
-            "QVBQWV9IT1VSEAISDAoIREVMSVZFUlkQAxILCgdUQUtFT1VUEAQSCwoHS0lU",
-            "Q0hFThAFEg0KCUJSRUFLRkFTVBAGEgkKBUxVTkNIEAcSCgoGRElOTkVSEAgS",
-            "CgoGQlJVTkNIEAkSCgoGUElDS1VQEAoSCgoGQUNDRVNTEAsSEAoMU0VOSU9S",
-            "X0hPVVJTEAwSGAoUT05MSU5FX1NFUlZJQ0VfSE9VUlMQDRo1CgtBdHRyaWJ1",
-            "dGlvbhIQCghwcm92aWRlchgBIAEoCRIUCgxwcm92aWRlcl91cmkYAiABKAka",
-            "QAoQRWRpdG9yaWFsU3VtbWFyeRIsCghvdmVydmlldxgBIAEoCzIaLmdvb2ds",
-            "ZS50eXBlLkxvY2FsaXplZFRleHQicgoOQnVzaW5lc3NTdGF0dXMSHwobQlVT",
-            "SU5FU1NfU1RBVFVTX1VOU1BFQ0lGSUVEEAASDwoLT1BFUkFUSU9OQUwQARIW",
-            "ChJDTE9TRURfVEVNUE9SQVJJTFkQAhIWChJDTE9TRURfUEVSTUFORU5UTFkQ",
-            "A0IKCghfdGFrZW91dEILCglfZGVsaXZlcnlCCgoIX2RpbmVfaW5CEgoQX2N1",
-            "cmJzaWRlX3BpY2t1cEIhCh9fd2hlZWxjaGFpcl9hY2Nlc3NpYmxlX2VudHJh",
-            "bmNlQg0KC19yZXNlcnZhYmxlQhMKEV9zZXJ2ZXNfYnJlYWtmYXN0Qg8KDV9z",
-            "ZXJ2ZXNfbHVuY2hCEAoOX3NlcnZlc19kaW5uZXJCDgoMX3NlcnZlc19iZWVy",
-            "Qg4KDF9zZXJ2ZXNfd2luZUIQCg5fc2VydmVzX2JydW5jaEIZChdfc2VydmVz",
-            "X3ZlZ2V0YXJpYW5fZm9vZCp1CgpQcmljZUxldmVsEhsKF1BSSUNFX0xFVkVM",
-            "X1VOU1BFQ0lGSUVEEAASCAoERlJFRRABEg8KC0lORVhQRU5TSVZFEAISDAoI",
-            "TU9ERVJBVEUQAxINCglFWFBFTlNJVkUQBBISCg5WRVJZX0VYUEVOU0lWRRAF",
-            "Qp4BChljb20uZ29vZ2xlLm1hcHMucGxhY2VzLnYxQgpQbGFjZVByb3RvUAFa",
-            "N2Nsb3VkLmdvb2dsZS5jb20vZ28vbWFwcy9wbGFjZXMvYXBpdjEvcGxhY2Vz",
-            "cGI7cGxhY2VzcGL4AQGiAgZHTVBTVjGqAhVHb29nbGUuTWFwcy5QbGFjZXMu",
-            "VjHKAhVHb29nbGVcTWFwc1xQbGFjZXNcVjFiBnByb3RvMw=="));
+            "MS5QbGFjZS5PcGVuaW5nSG91cnNCA+BBAxJXCh9yZWd1bGFyX3NlY29uZGFy",
+            "eV9vcGVuaW5nX2hvdXJzGDEgAygLMikuZ29vZ2xlLm1hcHMucGxhY2VzLnYx",
+            "LlBsYWNlLk9wZW5pbmdIb3Vyc0ID4EEDEjoKEWVkaXRvcmlhbF9zdW1tYXJ5",
+            "GDQgASgLMhouZ29vZ2xlLnR5cGUuTG9jYWxpemVkVGV4dEID4EEDEiEKD291",
+            "dGRvb3Jfc2VhdGluZxg3IAEoCEID4EEDSA6IAQESHAoKbGl2ZV9tdXNpYxg4",
+            "IAEoCEID4EEDSA+IAQESIwoRbWVudV9mb3JfY2hpbGRyZW4YOSABKAhCA+BB",
+            "A0gQiAEBEiIKEHNlcnZlc19jb2NrdGFpbHMYOiABKAhCA+BBA0gRiAEBEiAK",
+            "DnNlcnZlc19kZXNzZXJ0GDsgASgIQgPgQQNIEogBARIfCg1zZXJ2ZXNfY29m",
+            "ZmVlGDwgASgIQgPgQQNIE4gBARIjChFnb29kX2Zvcl9jaGlsZHJlbhg+IAEo",
+            "CEID4EEDSBSIAQESHQoLYWxsb3dzX2RvZ3MYPyABKAhCA+BBA0gViAEBEhoK",
+            "CHJlc3Ryb29tGEAgASgIQgPgQQNIFogBARIhCg9nb29kX2Zvcl9ncm91cHMY",
+            "QSABKAhCA+BBA0gXiAEBEioKGGdvb2RfZm9yX3dhdGNoaW5nX3Nwb3J0cxhC",
+            "IAEoCEID4EEDSBiIAQESSQoPcGF5bWVudF9vcHRpb25zGEMgASgLMisuZ29v",
+            "Z2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLlBheW1lbnRPcHRpb25zQgPgQQMS",
+            "SQoPcGFya2luZ19vcHRpb25zGEYgASgLMisuZ29vZ2xlLm1hcHMucGxhY2Vz",
+            "LnYxLlBsYWNlLlBhcmtpbmdPcHRpb25zQgPgQQMSSgoQc3ViX2Rlc3RpbmF0",
+            "aW9ucxhHIAMoCzIrLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5TdWJE",
+            "ZXN0aW5hdGlvbkID4EEDEloKFWFjY2Vzc2liaWxpdHlfb3B0aW9ucxhIIAEo",
+            "CzIxLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5BY2Nlc3NpYmlsaXR5",
+            "T3B0aW9uc0ID4EEDSBmIAQESPQoMZnVlbF9vcHRpb25zGE4gASgLMiIuZ29v",
+            "Z2xlLm1hcHMucGxhY2VzLnYxLkZ1ZWxPcHRpb25zQgPgQQMSRgoRZXZfY2hh",
+            "cmdlX29wdGlvbnMYTyABKAsyJi5nb29nbGUubWFwcy5wbGFjZXMudjEuRVZD",
+            "aGFyZ2VPcHRpb25zQgPgQQMacwoQQWRkcmVzc0NvbXBvbmVudBIWCglsb25n",
+            "X3RleHQYASABKAlCA+BBAxIXCgpzaG9ydF90ZXh0GAIgASgJQgPgQQMSEgoF",
+            "dHlwZXMYAyADKAlCA+BBAxIaCg1sYW5ndWFnZV9jb2RlGAQgASgJQgPgQQMa",
+            "QAoIUGx1c0NvZGUSGAoLZ2xvYmFsX2NvZGUYASABKAlCA+BBAxIaCg1jb21w",
+            "b3VuZF9jb2RlGAIgASgJQgPgQQMa1QcKDE9wZW5pbmdIb3VycxIaCghvcGVu",
+            "X25vdxgBIAEoCEID4EEDSACIAQESRgoHcGVyaW9kcxgCIAMoCzIwLmdvb2ds",
+            "ZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5PcGVuaW5nSG91cnMuUGVyaW9kQgPg",
+            "QQMSIQoUd2Vla2RheV9kZXNjcmlwdGlvbnMYAyADKAlCA+BBAxJfChRzZWNv",
+            "bmRhcnlfaG91cnNfdHlwZRgEIAEoDjI8Lmdvb2dsZS5tYXBzLnBsYWNlcy52",
+            "MS5QbGFjZS5PcGVuaW5nSG91cnMuU2Vjb25kYXJ5SG91cnNUeXBlQgPgQQMS",
+            "TwoMc3BlY2lhbF9kYXlzGAUgAygLMjQuZ29vZ2xlLm1hcHMucGxhY2VzLnYx",
+            "LlBsYWNlLk9wZW5pbmdIb3Vycy5TcGVjaWFsRGF5QgPgQQMazAIKBlBlcmlv",
+            "ZBJJCgRvcGVuGAEgASgLMjYuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlBsYWNl",
+            "Lk9wZW5pbmdIb3Vycy5QZXJpb2QuUG9pbnRCA+BBAxJKCgVjbG9zZRgCIAEo",
+            "CzI2Lmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5PcGVuaW5nSG91cnMu",
+            "UGVyaW9kLlBvaW50QgPgQQMaqgEKBVBvaW50EhUKA2RheRgBIAEoBUID4EED",
+            "SACIAQESFgoEaG91chgCIAEoBUID4EEDSAGIAQESGAoGbWludXRlGAMgASgF",
+            "QgPgQQNIAogBARIkCgRkYXRlGAYgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZUID",
+            "4EEDEhYKCXRydW5jYXRlZBgFIAEoCEID4EEDQgYKBF9kYXlCBwoFX2hvdXJC",
+            "CQoHX21pbnV0ZRoyCgpTcGVjaWFsRGF5EiQKBGRhdGUYASABKAsyES5nb29n",
+            "bGUudHlwZS5EYXRlQgPgQQMi+wEKElNlY29uZGFyeUhvdXJzVHlwZRIkCiBT",
+            "RUNPTkRBUllfSE9VUlNfVFlQRV9VTlNQRUNJRklFRBAAEhEKDURSSVZFX1RI",
+            "Uk9VR0gQARIOCgpIQVBQWV9IT1VSEAISDAoIREVMSVZFUlkQAxILCgdUQUtF",
+            "T1VUEAQSCwoHS0lUQ0hFThAFEg0KCUJSRUFLRkFTVBAGEgkKBUxVTkNIEAcS",
+            "CgoGRElOTkVSEAgSCgoGQlJVTkNIEAkSCgoGUElDS1VQEAoSCgoGQUNDRVNT",
+            "EAsSEAoMU0VOSU9SX0hPVVJTEAwSGAoUT05MSU5FX1NFUlZJQ0VfSE9VUlMQ",
+            "DUILCglfb3Blbl9ub3caPwoLQXR0cmlidXRpb24SFQoIcHJvdmlkZXIYASAB",
+            "KAlCA+BBAxIZCgxwcm92aWRlcl91cmkYAiABKAlCA+BBAxrmAQoOUGF5bWVu",
+            "dE9wdGlvbnMSIQoUYWNjZXB0c19jcmVkaXRfY2FyZHMYASABKAhIAIgBARIg",
+            "ChNhY2NlcHRzX2RlYml0X2NhcmRzGAIgASgISAGIAQESHgoRYWNjZXB0c19j",
+            "YXNoX29ubHkYAyABKAhIAogBARIYCgthY2NlcHRzX25mYxgEIAEoCEgDiAEB",
+            "QhcKFV9hY2NlcHRzX2NyZWRpdF9jYXJkc0IWChRfYWNjZXB0c19kZWJpdF9j",
+            "YXJkc0IUChJfYWNjZXB0c19jYXNoX29ubHlCDgoMX2FjY2VwdHNfbmZjGo4D",
+            "Cg5QYXJraW5nT3B0aW9ucxIdChBmcmVlX3BhcmtpbmdfbG90GAEgASgISACI",
+            "AQESHQoQcGFpZF9wYXJraW5nX2xvdBgCIAEoCEgBiAEBEiAKE2ZyZWVfc3Ry",
+            "ZWV0X3BhcmtpbmcYAyABKAhIAogBARIgChNwYWlkX3N0cmVldF9wYXJraW5n",
+            "GAQgASgISAOIAQESGgoNdmFsZXRfcGFya2luZxgFIAEoCEgEiAEBEiAKE2Zy",
+            "ZWVfZ2FyYWdlX3BhcmtpbmcYBiABKAhIBYgBARIgChNwYWlkX2dhcmFnZV9w",
+            "YXJraW5nGAcgASgISAaIAQFCEwoRX2ZyZWVfcGFya2luZ19sb3RCEwoRX3Bh",
+            "aWRfcGFya2luZ19sb3RCFgoUX2ZyZWVfc3RyZWV0X3BhcmtpbmdCFgoUX3Bh",
+            "aWRfc3RyZWV0X3BhcmtpbmdCEAoOX3ZhbGV0X3BhcmtpbmdCFgoUX2ZyZWVf",
+            "Z2FyYWdlX3BhcmtpbmdCFgoUX3BhaWRfZ2FyYWdlX3BhcmtpbmcaTAoOU3Vi",
+            "RGVzdGluYXRpb24SLgoEbmFtZRgBIAEoCUIg+kEdChtwbGFjZXMuZ29vZ2xl",
+            "YXBpcy5jb20vUGxhY2USCgoCaWQYAiABKAkaZgoUQWNjZXNzaWJpbGl0eU9w",
+            "dGlvbnMSKwoed2hlZWxjaGFpcl9hY2Nlc3NpYmxlX2VudHJhbmNlGAIgASgI",
+            "SACIAQFCIQofX3doZWVsY2hhaXJfYWNjZXNzaWJsZV9lbnRyYW5jZSJyCg5C",
+            "dXNpbmVzc1N0YXR1cxIfChtCVVNJTkVTU19TVEFUVVNfVU5TUEVDSUZJRUQQ",
+            "ABIPCgtPUEVSQVRJT05BTBABEhYKEkNMT1NFRF9URU1QT1JBUklMWRACEhYK",
+            "EkNMT1NFRF9QRVJNQU5FTlRMWRADOkLqQT8KG3BsYWNlcy5nb29nbGVhcGlz",
+            "LmNvbS9QbGFjZRIRcGxhY2VzL3twbGFjZV9pZH0qBnBsYWNlczIFcGxhY2VC",
+            "FQoTX3V0Y19vZmZzZXRfbWludXRlc0IUChJfdXNlcl9yYXRpbmdfY291bnRC",
+            "CgoIX3Rha2VvdXRCCwoJX2RlbGl2ZXJ5QgoKCF9kaW5lX2luQhIKEF9jdXJi",
+            "c2lkZV9waWNrdXBCDQoLX3Jlc2VydmFibGVCEwoRX3NlcnZlc19icmVha2Zh",
+            "c3RCDwoNX3NlcnZlc19sdW5jaEIQCg5fc2VydmVzX2Rpbm5lckIOCgxfc2Vy",
+            "dmVzX2JlZXJCDgoMX3NlcnZlc193aW5lQhAKDl9zZXJ2ZXNfYnJ1bmNoQhkK",
+            "F19zZXJ2ZXNfdmVnZXRhcmlhbl9mb29kQhIKEF9vdXRkb29yX3NlYXRpbmdC",
+            "DQoLX2xpdmVfbXVzaWNCFAoSX21lbnVfZm9yX2NoaWxkcmVuQhMKEV9zZXJ2",
+            "ZXNfY29ja3RhaWxzQhEKD19zZXJ2ZXNfZGVzc2VydEIQCg5fc2VydmVzX2Nv",
+            "ZmZlZUIUChJfZ29vZF9mb3JfY2hpbGRyZW5CDgoMX2FsbG93c19kb2dzQgsK",
+            "CV9yZXN0cm9vbUISChBfZ29vZF9mb3JfZ3JvdXBzQhsKGV9nb29kX2Zvcl93",
+            "YXRjaGluZ19zcG9ydHNCGAoWX2FjY2Vzc2liaWxpdHlfb3B0aW9ucyqxAQoK",
+            "UHJpY2VMZXZlbBIbChdQUklDRV9MRVZFTF9VTlNQRUNJRklFRBAAEhQKEFBS",
+            "SUNFX0xFVkVMX0ZSRUUQARIbChdQUklDRV9MRVZFTF9JTkVYUEVOU0lWRRAC",
+            "EhgKFFBSSUNFX0xFVkVMX01PREVSQVRFEAMSGQoVUFJJQ0VfTEVWRUxfRVhQ",
+            "RU5TSVZFEAQSHgoaUFJJQ0VfTEVWRUxfVkVSWV9FWFBFTlNJVkUQBUKeAQoZ",
+            "Y29tLmdvb2dsZS5tYXBzLnBsYWNlcy52MUIKUGxhY2VQcm90b1ABWjdjbG91",
+            "ZC5nb29nbGUuY29tL2dvL21hcHMvcGxhY2VzL2FwaXYxL3BsYWNlc3BiO3Bs",
+            "YWNlc3Bi+AEBogIGR01QU1YxqgIVR29vZ2xlLk1hcHMuUGxhY2VzLlYxygIV",
+            "R29vZ2xlXE1hcHNcUGxhY2VzXFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Geo.Type.ViewportReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, global::Google.Type.LocalizedTextReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Geo.Type.ViewportReflection.Descriptor, global::Google.Maps.Places.V1.EvChargingReflection.Descriptor, global::Google.Maps.Places.V1.FuelOptionsReflection.Descriptor, global::Google.Maps.Places.V1.PhotoReflection.Descriptor, global::Google.Maps.Places.V1.ReviewReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, global::Google.Type.LocalizedTextReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Maps.Places.V1.PriceLevel), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place), global::Google.Maps.Places.V1.Place.Parser, new[]{ "Id", "DisplayName", "Types_", "NationalPhoneNumber", "InternationalPhoneNumber", "FormattedAddress", "AddressComponents", "PlusCode", "Location", "Viewport", "Rating", "GoogleMapsUri", "WebsiteUri", "Reviews", "OpeningHours", "UtcOffsetMinutes", "AdrFormatAddress", "BusinessStatus", "PriceLevel", "Attributions", "UserRatingCount", "IconMaskBaseUri", "IconBackgroundColor", "Takeout", "Delivery", "DineIn", "CurbsidePickup", "WheelchairAccessibleEntrance", "Reservable", "ServesBreakfast", "ServesLunch", "ServesDinner", "ServesBeer", "ServesWine", "ServesBrunch", "ServesVegetarianFood", "CurrentOpeningHours", "CurrentSecondaryOpeningHours", "SecondaryOpeningHours", "EditorialSummary" }, new[]{ "Takeout", "Delivery", "DineIn", "CurbsidePickup", "WheelchairAccessibleEntrance", "Reservable", "ServesBreakfast", "ServesLunch", "ServesDinner", "ServesBeer", "ServesWine", "ServesBrunch", "ServesVegetarianFood" }, new[]{ typeof(global::Google.Maps.Places.V1.Place.Types.BusinessStatus) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.AddressComponent), global::Google.Maps.Places.V1.Place.Types.AddressComponent.Parser, new[]{ "LongText", "ShortText", "Types_", "LanguageCode" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place), global::Google.Maps.Places.V1.Place.Parser, new[]{ "Name", "Id", "DisplayName", "Types_", "NationalPhoneNumber", "InternationalPhoneNumber", "FormattedAddress", "AddressComponents", "PlusCode", "Location", "Viewport", "Rating", "GoogleMapsUri", "WebsiteUri", "Reviews", "RegularOpeningHours", "UtcOffsetMinutes", "Photos", "AdrFormatAddress", "BusinessStatus", "PriceLevel", "Attributions", "UserRatingCount", "IconMaskBaseUri", "IconBackgroundColor", "Takeout", "Delivery", "DineIn", "CurbsidePickup", "Reservable", "ServesBreakfast", "ServesLunch", "ServesDinner", "ServesBeer", "ServesWine", "ServesBrunch", "ServesVegetarianFood", "CurrentOpeningHours", "CurrentSecondaryOpeningHours", "RegularSecondaryOpeningHours", "EditorialSummary", "OutdoorSeating", "LiveMusic", "MenuForChildren", "ServesCocktails", "ServesDessert", "ServesCoffee", "GoodForChildren", "AllowsDogs", "Restroom", "GoodForGroups", "GoodForWatchingSports", "PaymentOptions", "ParkingOptions", "SubDestinations", "AccessibilityOptions", "FuelOptions", "EvChargeOptions" }, new[]{ "UtcOffsetMinutes", "UserRatingCount", "Takeout", "Delivery", "DineIn", "CurbsidePickup", "Reservable", "ServesBreakfast", "ServesLunch", "ServesDinner", "ServesBeer", "ServesWine", "ServesBrunch", "ServesVegetarianFood", "OutdoorSeating", "LiveMusic", "MenuForChildren", "ServesCocktails", "ServesDessert", "ServesCoffee", "GoodForChildren", "AllowsDogs", "Restroom", "GoodForGroups", "GoodForWatchingSports", "AccessibilityOptions" }, new[]{ typeof(global::Google.Maps.Places.V1.Place.Types.BusinessStatus) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.AddressComponent), global::Google.Maps.Places.V1.Place.Types.AddressComponent.Parser, new[]{ "LongText", "ShortText", "Types_", "LanguageCode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.PlusCode), global::Google.Maps.Places.V1.Place.Types.PlusCode.Parser, new[]{ "GlobalCode", "CompoundCode" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.Review), global::Google.Maps.Places.V1.Place.Types.Review.Parser, new[]{ "PublishTime", "RelativePublishTimeDescription", "Text", "Author", "AuthorUri", "AuthorPhotoUri", "Rating", "OriginalLanguageCode", "Translated" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.OpeningHours), global::Google.Maps.Places.V1.Place.Types.OpeningHours.Parser, new[]{ "OpenNow", "Periods", "WeekdayDescriptions", "SecondaryHourType", "SpecialDays" }, null, new[]{ typeof(global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SecondaryHourType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.OpeningHoursPeriod), global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.OpeningHoursPeriod.Parser, new[]{ "Open", "Close" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.OpeningHoursPeriod.Types.OpeningHoursPoint), global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.OpeningHoursPeriod.Types.OpeningHoursPoint.Parser, new[]{ "Day", "Hour", "Minute", "DateDeprecated", "Date", "Truncated" }, new[]{ "Day", "Hour", "Minute" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.OpeningHours), global::Google.Maps.Places.V1.Place.Types.OpeningHours.Parser, new[]{ "OpenNow", "Periods", "WeekdayDescriptions", "SecondaryHoursType", "SpecialDays" }, new[]{ "OpenNow" }, new[]{ typeof(global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SecondaryHoursType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period), global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period.Parser, new[]{ "Open", "Close" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period.Types.Point), global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period.Types.Point.Parser, new[]{ "Day", "Hour", "Minute", "Date", "Truncated" }, new[]{ "Day", "Hour", "Minute" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SpecialDay), global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SpecialDay.Parser, new[]{ "Date" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.Attribution), global::Google.Maps.Places.V1.Place.Types.Attribution.Parser, new[]{ "Provider", "ProviderUri" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.EditorialSummary), global::Google.Maps.Places.V1.Place.Types.EditorialSummary.Parser, new[]{ "Overview" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.PaymentOptions), global::Google.Maps.Places.V1.Place.Types.PaymentOptions.Parser, new[]{ "AcceptsCreditCards", "AcceptsDebitCards", "AcceptsCashOnly", "AcceptsNfc" }, new[]{ "AcceptsCreditCards", "AcceptsDebitCards", "AcceptsCashOnly", "AcceptsNfc" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.ParkingOptions), global::Google.Maps.Places.V1.Place.Types.ParkingOptions.Parser, new[]{ "FreeParkingLot", "PaidParkingLot", "FreeStreetParking", "PaidStreetParking", "ValetParking", "FreeGarageParking", "PaidGarageParking" }, new[]{ "FreeParkingLot", "PaidParkingLot", "FreeStreetParking", "PaidStreetParking", "ValetParking", "FreeGarageParking", "PaidGarageParking" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.SubDestination), global::Google.Maps.Places.V1.Place.Types.SubDestination.Parser, new[]{ "Name", "Id" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.AccessibilityOptions), global::Google.Maps.Places.V1.Place.Types.AccessibilityOptions.Parser, new[]{ "WheelchairAccessibleEntrance" }, new[]{ "WheelchairAccessibleEntrance" }, null, null, null)})
           }));
     }
     #endregion
@@ -138,23 +186,26 @@ namespace Google.Maps.Places.V1 {
     /// Place price level is unspecified or unknown.
     /// </summary>
     [pbr::OriginalName("PRICE_LEVEL_UNSPECIFIED")] Unspecified = 0,
-    [pbr::OriginalName("FREE")] Free = 1,
+    /// <summary>
+    /// Place provides free services.
+    /// </summary>
+    [pbr::OriginalName("PRICE_LEVEL_FREE")] Free = 1,
     /// <summary>
     /// Place provides inexpensive services.
     /// </summary>
-    [pbr::OriginalName("INEXPENSIVE")] Inexpensive = 2,
+    [pbr::OriginalName("PRICE_LEVEL_INEXPENSIVE")] Inexpensive = 2,
     /// <summary>
     /// Place provides moderately priced services.
     /// </summary>
-    [pbr::OriginalName("MODERATE")] Moderate = 3,
+    [pbr::OriginalName("PRICE_LEVEL_MODERATE")] Moderate = 3,
     /// <summary>
     /// Place provides expensive services.
     /// </summary>
-    [pbr::OriginalName("EXPENSIVE")] Expensive = 4,
+    [pbr::OriginalName("PRICE_LEVEL_EXPENSIVE")] Expensive = 4,
     /// <summary>
-    /// Place provides very expensive services.
+    /// Place provides very expensive service s.
     /// </summary>
-    [pbr::OriginalName("VERY_EXPENSIVE")] VeryExpensive = 5,
+    [pbr::OriginalName("PRICE_LEVEL_VERY_EXPENSIVE")] VeryExpensive = 5,
   }
 
   #endregion
@@ -199,6 +250,7 @@ namespace Google.Maps.Places.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Place(Place other) : this() {
       _hasBits0 = other._hasBits0;
+      name_ = other.name_;
       id_ = other.id_;
       displayName_ = other.displayName_ != null ? other.displayName_.Clone() : null;
       types_ = other.types_.Clone();
@@ -213,8 +265,9 @@ namespace Google.Maps.Places.V1 {
       googleMapsUri_ = other.googleMapsUri_;
       websiteUri_ = other.websiteUri_;
       reviews_ = other.reviews_.Clone();
-      openingHours_ = other.openingHours_ != null ? other.openingHours_.Clone() : null;
+      regularOpeningHours_ = other.regularOpeningHours_ != null ? other.regularOpeningHours_.Clone() : null;
       utcOffsetMinutes_ = other.utcOffsetMinutes_;
+      photos_ = other.photos_.Clone();
       adrFormatAddress_ = other.adrFormatAddress_;
       businessStatus_ = other.businessStatus_;
       priceLevel_ = other.priceLevel_;
@@ -226,7 +279,6 @@ namespace Google.Maps.Places.V1 {
       delivery_ = other.delivery_;
       dineIn_ = other.dineIn_;
       curbsidePickup_ = other.curbsidePickup_;
-      wheelchairAccessibleEntrance_ = other.wheelchairAccessibleEntrance_;
       reservable_ = other.reservable_;
       servesBreakfast_ = other.servesBreakfast_;
       servesLunch_ = other.servesLunch_;
@@ -237,8 +289,25 @@ namespace Google.Maps.Places.V1 {
       servesVegetarianFood_ = other.servesVegetarianFood_;
       currentOpeningHours_ = other.currentOpeningHours_ != null ? other.currentOpeningHours_.Clone() : null;
       currentSecondaryOpeningHours_ = other.currentSecondaryOpeningHours_.Clone();
-      secondaryOpeningHours_ = other.secondaryOpeningHours_.Clone();
+      regularSecondaryOpeningHours_ = other.regularSecondaryOpeningHours_.Clone();
       editorialSummary_ = other.editorialSummary_ != null ? other.editorialSummary_.Clone() : null;
+      outdoorSeating_ = other.outdoorSeating_;
+      liveMusic_ = other.liveMusic_;
+      menuForChildren_ = other.menuForChildren_;
+      servesCocktails_ = other.servesCocktails_;
+      servesDessert_ = other.servesDessert_;
+      servesCoffee_ = other.servesCoffee_;
+      goodForChildren_ = other.goodForChildren_;
+      allowsDogs_ = other.allowsDogs_;
+      restroom_ = other.restroom_;
+      goodForGroups_ = other.goodForGroups_;
+      goodForWatchingSports_ = other.goodForWatchingSports_;
+      paymentOptions_ = other.paymentOptions_ != null ? other.paymentOptions_.Clone() : null;
+      parkingOptions_ = other.parkingOptions_ != null ? other.parkingOptions_.Clone() : null;
+      subDestinations_ = other.subDestinations_.Clone();
+      accessibilityOptions_ = other.accessibilityOptions_ != null ? other.accessibilityOptions_.Clone() : null;
+      fuelOptions_ = other.fuelOptions_ != null ? other.fuelOptions_.Clone() : null;
+      evChargeOptions_ = other.evChargeOptions_ != null ? other.evChargeOptions_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -248,11 +317,27 @@ namespace Google.Maps.Places.V1 {
       return new Place(this);
     }
 
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Output only. An ID representing this place which may be used to look up
+    /// this place again (a.k.a. the API "resource" name: places/&lt;place_id>).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 2;
     private string id_ = "";
     /// <summary>
-    /// Required. The unique identifier of a place.
+    /// Output only. The unique identifier of a place.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -267,8 +352,9 @@ namespace Google.Maps.Places.V1 {
     public const int DisplayNameFieldNumber = 31;
     private global::Google.Type.LocalizedText displayName_;
     /// <summary>
-    /// The localized name of the place, suitable as a short human-readable
-    /// description. For example, "Google Sydney", "Starbucks", "Pyrmont", etc.
+    /// Output only. The localized name of the place, suitable as a short
+    /// human-readable description. For example, "Google Sydney", "Starbucks",
+    /// "Pyrmont", etc.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -285,8 +371,8 @@ namespace Google.Maps.Places.V1 {
         = pb::FieldCodec.ForString(42);
     private readonly pbc::RepeatedField<string> types_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// A set of type tags for this result. For example, "political" and
-    /// "locality".
+    /// Output only. A set of type tags for this result. For example, "political"
+    /// and "locality".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -298,7 +384,8 @@ namespace Google.Maps.Places.V1 {
     public const int NationalPhoneNumberFieldNumber = 7;
     private string nationalPhoneNumber_ = "";
     /// <summary>
-    /// A human-readable phone number for the place, in national format.
+    /// Output only. A human-readable phone number for the place, in national
+    /// format.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -313,7 +400,8 @@ namespace Google.Maps.Places.V1 {
     public const int InternationalPhoneNumberFieldNumber = 8;
     private string internationalPhoneNumber_ = "";
     /// <summary>
-    /// A human-readable phone number for the place, in international format.
+    /// Output only. A human-readable phone number for the place, in international
+    /// format.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -328,7 +416,7 @@ namespace Google.Maps.Places.V1 {
     public const int FormattedAddressFieldNumber = 9;
     private string formattedAddress_ = "";
     /// <summary>
-    /// A full, human-readable address for this place.
+    /// Output only. A full, human-readable address for this place.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -345,7 +433,7 @@ namespace Google.Maps.Places.V1 {
         = pb::FieldCodec.ForMessage(82, global::Google.Maps.Places.V1.Place.Types.AddressComponent.Parser);
     private readonly pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.AddressComponent> addressComponents_ = new pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.AddressComponent>();
     /// <summary>
-    /// Repeated components for each locality level.
+    /// Output only. Repeated components for each locality level.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -357,7 +445,7 @@ namespace Google.Maps.Places.V1 {
     public const int PlusCodeFieldNumber = 11;
     private global::Google.Maps.Places.V1.Place.Types.PlusCode plusCode_;
     /// <summary>
-    /// Plus code of the place location lat/long.
+    /// Output only. Plus code of the place location lat/long.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -372,7 +460,7 @@ namespace Google.Maps.Places.V1 {
     public const int LocationFieldNumber = 12;
     private global::Google.Type.LatLng location_;
     /// <summary>
-    /// The position of this place.
+    /// Output only. The position of this place.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -387,7 +475,8 @@ namespace Google.Maps.Places.V1 {
     public const int ViewportFieldNumber = 13;
     private global::Google.Geo.Type.Viewport viewport_;
     /// <summary>
-    /// A viewport suitable for displaying the place on an average-sized map.
+    /// Output only. A viewport suitable for displaying the place on an
+    /// average-sized map.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -402,7 +491,8 @@ namespace Google.Maps.Places.V1 {
     public const int RatingFieldNumber = 14;
     private double rating_;
     /// <summary>
-    /// A rating between 1.0 and 5.0, based on user reviews of this place.
+    /// Output only. A rating between 1.0 and 5.0, based on user reviews of this
+    /// place.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -417,7 +507,7 @@ namespace Google.Maps.Places.V1 {
     public const int GoogleMapsUriFieldNumber = 15;
     private string googleMapsUri_ = "";
     /// <summary>
-    /// A URL providing more information about this place.
+    /// Output only. A URL providing more information about this place.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -432,10 +522,10 @@ namespace Google.Maps.Places.V1 {
     public const int WebsiteUriFieldNumber = 16;
     private string websiteUri_ = "";
     /// <summary>
-    /// The authoritative website for this place, e.g. a business' homepage.
-    /// Note that for places that are part of a chain (e.g. an IKEA store), this
-    /// will usually be the website for the individual store, not the overall
-    /// chain.
+    /// Output only. The authoritative website for this place, e.g. a business'
+    /// homepage. Note that for places that are part of a chain (e.g. an IKEA
+    /// store), this will usually be the website for the individual store, not the
+    /// overall chain.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -447,56 +537,86 @@ namespace Google.Maps.Places.V1 {
     }
 
     /// <summary>Field number for the "reviews" field.</summary>
-    public const int ReviewsFieldNumber = 20;
-    private static readonly pb::FieldCodec<global::Google.Maps.Places.V1.Place.Types.Review> _repeated_reviews_codec
-        = pb::FieldCodec.ForMessage(162, global::Google.Maps.Places.V1.Place.Types.Review.Parser);
-    private readonly pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.Review> reviews_ = new pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.Review>();
+    public const int ReviewsFieldNumber = 53;
+    private static readonly pb::FieldCodec<global::Google.Maps.Places.V1.Review> _repeated_reviews_codec
+        = pb::FieldCodec.ForMessage(426, global::Google.Maps.Places.V1.Review.Parser);
+    private readonly pbc::RepeatedField<global::Google.Maps.Places.V1.Review> reviews_ = new pbc::RepeatedField<global::Google.Maps.Places.V1.Review>();
     /// <summary>
-    /// List of reviews about this place.
+    /// Output only. List of reviews about this place.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.Review> Reviews {
+    public pbc::RepeatedField<global::Google.Maps.Places.V1.Review> Reviews {
       get { return reviews_; }
     }
 
-    /// <summary>Field number for the "opening_hours" field.</summary>
-    public const int OpeningHoursFieldNumber = 21;
-    private global::Google.Maps.Places.V1.Place.Types.OpeningHours openingHours_;
+    /// <summary>Field number for the "regular_opening_hours" field.</summary>
+    public const int RegularOpeningHoursFieldNumber = 21;
+    private global::Google.Maps.Places.V1.Place.Types.OpeningHours regularOpeningHours_;
     /// <summary>
-    /// The regular hours of operation.
+    /// Output only. The regular hours of operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Maps.Places.V1.Place.Types.OpeningHours OpeningHours {
-      get { return openingHours_; }
+    public global::Google.Maps.Places.V1.Place.Types.OpeningHours RegularOpeningHours {
+      get { return regularOpeningHours_; }
       set {
-        openingHours_ = value;
+        regularOpeningHours_ = value;
       }
     }
 
     /// <summary>Field number for the "utc_offset_minutes" field.</summary>
     public const int UtcOffsetMinutesFieldNumber = 22;
+    private readonly static int UtcOffsetMinutesDefaultValue = 0;
+
     private int utcOffsetMinutes_;
     /// <summary>
-    /// Number of minutes this place's timezone is currently offset from UTC.
-    /// This is expressed in minutes to support timezones that are offset by
-    /// fractions of an hour, e.g. X hours and 15 minutes.
+    /// Output only. Number of minutes this place's timezone is currently offset
+    /// from UTC. This is expressed in minutes to support timezones that are offset
+    /// by fractions of an hour, e.g. X hours and 15 minutes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int UtcOffsetMinutes {
-      get { return utcOffsetMinutes_; }
+      get { if ((_hasBits0 & 1) != 0) { return utcOffsetMinutes_; } else { return UtcOffsetMinutesDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         utcOffsetMinutes_ = value;
       }
+    }
+    /// <summary>Gets whether the "utc_offset_minutes" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUtcOffsetMinutes {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "utc_offset_minutes" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUtcOffsetMinutes() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "photos" field.</summary>
+    public const int PhotosFieldNumber = 54;
+    private static readonly pb::FieldCodec<global::Google.Maps.Places.V1.Photo> _repeated_photos_codec
+        = pb::FieldCodec.ForMessage(434, global::Google.Maps.Places.V1.Photo.Parser);
+    private readonly pbc::RepeatedField<global::Google.Maps.Places.V1.Photo> photos_ = new pbc::RepeatedField<global::Google.Maps.Places.V1.Photo>();
+    /// <summary>
+    /// Output only. Information (including references) about photos of this place.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Maps.Places.V1.Photo> Photos {
+      get { return photos_; }
     }
 
     /// <summary>Field number for the "adr_format_address" field.</summary>
     public const int AdrFormatAddressFieldNumber = 24;
     private string adrFormatAddress_ = "";
     /// <summary>
-    /// The place's address in adr microformat: http://microformats.org/wiki/adr.
+    /// Output only. The place's address in adr microformat:
+    /// http://microformats.org/wiki/adr.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -511,7 +631,7 @@ namespace Google.Maps.Places.V1 {
     public const int BusinessStatusFieldNumber = 25;
     private global::Google.Maps.Places.V1.Place.Types.BusinessStatus businessStatus_ = global::Google.Maps.Places.V1.Place.Types.BusinessStatus.Unspecified;
     /// <summary>
-    /// The business status for the place.
+    /// Output only. The business status for the place.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -526,7 +646,7 @@ namespace Google.Maps.Places.V1 {
     public const int PriceLevelFieldNumber = 26;
     private global::Google.Maps.Places.V1.PriceLevel priceLevel_ = global::Google.Maps.Places.V1.PriceLevel.Unspecified;
     /// <summary>
-    /// Price level of the place.
+    /// Output only. Price level of the place.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -543,7 +663,7 @@ namespace Google.Maps.Places.V1 {
         = pb::FieldCodec.ForMessage(218, global::Google.Maps.Places.V1.Place.Types.Attribution.Parser);
     private readonly pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.Attribution> attributions_ = new pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.Attribution>();
     /// <summary>
-    /// A set of data provider that must be shown with this result.
+    /// Output only. A set of data provider that must be shown with this result.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -553,25 +673,41 @@ namespace Google.Maps.Places.V1 {
 
     /// <summary>Field number for the "user_rating_count" field.</summary>
     public const int UserRatingCountFieldNumber = 28;
+    private readonly static int UserRatingCountDefaultValue = 0;
+
     private int userRatingCount_;
     /// <summary>
-    /// The total number of reviews (with or without text) for this place.
+    /// Output only. The total number of reviews (with or without text) for this
+    /// place.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int UserRatingCount {
-      get { return userRatingCount_; }
+      get { if ((_hasBits0 & 2) != 0) { return userRatingCount_; } else { return UserRatingCountDefaultValue; } }
       set {
+        _hasBits0 |= 2;
         userRatingCount_ = value;
       }
+    }
+    /// <summary>Gets whether the "user_rating_count" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUserRatingCount {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "user_rating_count" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUserRatingCount() {
+      _hasBits0 &= ~2;
     }
 
     /// <summary>Field number for the "icon_mask_base_uri" field.</summary>
     public const int IconMaskBaseUriFieldNumber = 29;
     private string iconMaskBaseUri_ = "";
     /// <summary>
-    /// A truncated URL to an v2 icon mask. User can access different icon type by
-    /// appending type suffix to the end (eg, ".svg" or ".png").
+    /// Output only. A truncated URL to an v2 icon mask. User can access different
+    /// icon type by appending type suffix to the end (eg, ".svg" or ".png").
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -586,7 +722,7 @@ namespace Google.Maps.Places.V1 {
     public const int IconBackgroundColorFieldNumber = 30;
     private string iconBackgroundColor_ = "";
     /// <summary>
-    /// Background color for icon_mask in hex format, e.g. #909CE1.
+    /// Output only. Background color for icon_mask in hex format, e.g. #909CE1.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -603,14 +739,14 @@ namespace Google.Maps.Places.V1 {
 
     private bool takeout_;
     /// <summary>
-    /// Specifies if the business supports takeout.
+    /// Output only. Specifies if the business supports takeout.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Takeout {
-      get { if ((_hasBits0 & 1) != 0) { return takeout_; } else { return TakeoutDefaultValue; } }
+      get { if ((_hasBits0 & 4) != 0) { return takeout_; } else { return TakeoutDefaultValue; } }
       set {
-        _hasBits0 |= 1;
+        _hasBits0 |= 4;
         takeout_ = value;
       }
     }
@@ -618,13 +754,13 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasTakeout {
-      get { return (_hasBits0 & 1) != 0; }
+      get { return (_hasBits0 & 4) != 0; }
     }
     /// <summary>Clears the value of the "takeout" field</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearTakeout() {
-      _hasBits0 &= ~1;
+      _hasBits0 &= ~4;
     }
 
     /// <summary>Field number for the "delivery" field.</summary>
@@ -633,14 +769,14 @@ namespace Google.Maps.Places.V1 {
 
     private bool delivery_;
     /// <summary>
-    /// Specifies if the business supports delivery.
+    /// Output only. Specifies if the business supports delivery.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Delivery {
-      get { if ((_hasBits0 & 2) != 0) { return delivery_; } else { return DeliveryDefaultValue; } }
+      get { if ((_hasBits0 & 8) != 0) { return delivery_; } else { return DeliveryDefaultValue; } }
       set {
-        _hasBits0 |= 2;
+        _hasBits0 |= 8;
         delivery_ = value;
       }
     }
@@ -648,13 +784,13 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasDelivery {
-      get { return (_hasBits0 & 2) != 0; }
+      get { return (_hasBits0 & 8) != 0; }
     }
     /// <summary>Clears the value of the "delivery" field</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearDelivery() {
-      _hasBits0 &= ~2;
+      _hasBits0 &= ~8;
     }
 
     /// <summary>Field number for the "dine_in" field.</summary>
@@ -663,14 +799,15 @@ namespace Google.Maps.Places.V1 {
 
     private bool dineIn_;
     /// <summary>
-    /// Specifies if the business supports indoor or outdoor seating options.
+    /// Output only. Specifies if the business supports indoor or outdoor seating
+    /// options.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool DineIn {
-      get { if ((_hasBits0 & 4) != 0) { return dineIn_; } else { return DineInDefaultValue; } }
+      get { if ((_hasBits0 & 16) != 0) { return dineIn_; } else { return DineInDefaultValue; } }
       set {
-        _hasBits0 |= 4;
+        _hasBits0 |= 16;
         dineIn_ = value;
       }
     }
@@ -678,13 +815,13 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasDineIn {
-      get { return (_hasBits0 & 4) != 0; }
+      get { return (_hasBits0 & 16) != 0; }
     }
     /// <summary>Clears the value of the "dine_in" field</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearDineIn() {
-      _hasBits0 &= ~4;
+      _hasBits0 &= ~16;
     }
 
     /// <summary>Field number for the "curbside_pickup" field.</summary>
@@ -693,14 +830,14 @@ namespace Google.Maps.Places.V1 {
 
     private bool curbsidePickup_;
     /// <summary>
-    /// Specifies if the business supports curbside pickup.
+    /// Output only. Specifies if the business supports curbside pickup.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool CurbsidePickup {
-      get { if ((_hasBits0 & 8) != 0) { return curbsidePickup_; } else { return CurbsidePickupDefaultValue; } }
+      get { if ((_hasBits0 & 32) != 0) { return curbsidePickup_; } else { return CurbsidePickupDefaultValue; } }
       set {
-        _hasBits0 |= 8;
+        _hasBits0 |= 32;
         curbsidePickup_ = value;
       }
     }
@@ -708,43 +845,13 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasCurbsidePickup {
-      get { return (_hasBits0 & 8) != 0; }
+      get { return (_hasBits0 & 32) != 0; }
     }
     /// <summary>Clears the value of the "curbside_pickup" field</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearCurbsidePickup() {
-      _hasBits0 &= ~8;
-    }
-
-    /// <summary>Field number for the "wheelchair_accessible_entrance" field.</summary>
-    public const int WheelchairAccessibleEntranceFieldNumber = 37;
-    private readonly static bool WheelchairAccessibleEntranceDefaultValue = false;
-
-    private bool wheelchairAccessibleEntrance_;
-    /// <summary>
-    /// Specifies if the place has an entrance that is wheelchair-accessible.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool WheelchairAccessibleEntrance {
-      get { if ((_hasBits0 & 16) != 0) { return wheelchairAccessibleEntrance_; } else { return WheelchairAccessibleEntranceDefaultValue; } }
-      set {
-        _hasBits0 |= 16;
-        wheelchairAccessibleEntrance_ = value;
-      }
-    }
-    /// <summary>Gets whether the "wheelchair_accessible_entrance" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasWheelchairAccessibleEntrance {
-      get { return (_hasBits0 & 16) != 0; }
-    }
-    /// <summary>Clears the value of the "wheelchair_accessible_entrance" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearWheelchairAccessibleEntrance() {
-      _hasBits0 &= ~16;
+      _hasBits0 &= ~32;
     }
 
     /// <summary>Field number for the "reservable" field.</summary>
@@ -753,14 +860,14 @@ namespace Google.Maps.Places.V1 {
 
     private bool reservable_;
     /// <summary>
-    /// Specifies if the place supports reservations.
+    /// Output only. Specifies if the place supports reservations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Reservable {
-      get { if ((_hasBits0 & 32) != 0) { return reservable_; } else { return ReservableDefaultValue; } }
+      get { if ((_hasBits0 & 64) != 0) { return reservable_; } else { return ReservableDefaultValue; } }
       set {
-        _hasBits0 |= 32;
+        _hasBits0 |= 64;
         reservable_ = value;
       }
     }
@@ -768,13 +875,13 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasReservable {
-      get { return (_hasBits0 & 32) != 0; }
+      get { return (_hasBits0 & 64) != 0; }
     }
     /// <summary>Clears the value of the "reservable" field</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearReservable() {
-      _hasBits0 &= ~32;
+      _hasBits0 &= ~64;
     }
 
     /// <summary>Field number for the "serves_breakfast" field.</summary>
@@ -783,14 +890,14 @@ namespace Google.Maps.Places.V1 {
 
     private bool servesBreakfast_;
     /// <summary>
-    /// Specifies if the place serves breakfast.
+    /// Output only. Specifies if the place serves breakfast.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ServesBreakfast {
-      get { if ((_hasBits0 & 64) != 0) { return servesBreakfast_; } else { return ServesBreakfastDefaultValue; } }
+      get { if ((_hasBits0 & 128) != 0) { return servesBreakfast_; } else { return ServesBreakfastDefaultValue; } }
       set {
-        _hasBits0 |= 64;
+        _hasBits0 |= 128;
         servesBreakfast_ = value;
       }
     }
@@ -798,13 +905,13 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasServesBreakfast {
-      get { return (_hasBits0 & 64) != 0; }
+      get { return (_hasBits0 & 128) != 0; }
     }
     /// <summary>Clears the value of the "serves_breakfast" field</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearServesBreakfast() {
-      _hasBits0 &= ~64;
+      _hasBits0 &= ~128;
     }
 
     /// <summary>Field number for the "serves_lunch" field.</summary>
@@ -813,14 +920,14 @@ namespace Google.Maps.Places.V1 {
 
     private bool servesLunch_;
     /// <summary>
-    /// Specifies if the place serves lunch.
+    /// Output only. Specifies if the place serves lunch.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ServesLunch {
-      get { if ((_hasBits0 & 128) != 0) { return servesLunch_; } else { return ServesLunchDefaultValue; } }
+      get { if ((_hasBits0 & 256) != 0) { return servesLunch_; } else { return ServesLunchDefaultValue; } }
       set {
-        _hasBits0 |= 128;
+        _hasBits0 |= 256;
         servesLunch_ = value;
       }
     }
@@ -828,13 +935,13 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasServesLunch {
-      get { return (_hasBits0 & 128) != 0; }
+      get { return (_hasBits0 & 256) != 0; }
     }
     /// <summary>Clears the value of the "serves_lunch" field</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearServesLunch() {
-      _hasBits0 &= ~128;
+      _hasBits0 &= ~256;
     }
 
     /// <summary>Field number for the "serves_dinner" field.</summary>
@@ -843,14 +950,14 @@ namespace Google.Maps.Places.V1 {
 
     private bool servesDinner_;
     /// <summary>
-    /// Specifies if the place serves dinner.
+    /// Output only. Specifies if the place serves dinner.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ServesDinner {
-      get { if ((_hasBits0 & 256) != 0) { return servesDinner_; } else { return ServesDinnerDefaultValue; } }
+      get { if ((_hasBits0 & 512) != 0) { return servesDinner_; } else { return ServesDinnerDefaultValue; } }
       set {
-        _hasBits0 |= 256;
+        _hasBits0 |= 512;
         servesDinner_ = value;
       }
     }
@@ -858,13 +965,13 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasServesDinner {
-      get { return (_hasBits0 & 256) != 0; }
+      get { return (_hasBits0 & 512) != 0; }
     }
     /// <summary>Clears the value of the "serves_dinner" field</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearServesDinner() {
-      _hasBits0 &= ~256;
+      _hasBits0 &= ~512;
     }
 
     /// <summary>Field number for the "serves_beer" field.</summary>
@@ -873,14 +980,14 @@ namespace Google.Maps.Places.V1 {
 
     private bool servesBeer_;
     /// <summary>
-    /// Specifies if the place serves beer.
+    /// Output only. Specifies if the place serves beer.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ServesBeer {
-      get { if ((_hasBits0 & 512) != 0) { return servesBeer_; } else { return ServesBeerDefaultValue; } }
+      get { if ((_hasBits0 & 1024) != 0) { return servesBeer_; } else { return ServesBeerDefaultValue; } }
       set {
-        _hasBits0 |= 512;
+        _hasBits0 |= 1024;
         servesBeer_ = value;
       }
     }
@@ -888,13 +995,13 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasServesBeer {
-      get { return (_hasBits0 & 512) != 0; }
+      get { return (_hasBits0 & 1024) != 0; }
     }
     /// <summary>Clears the value of the "serves_beer" field</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearServesBeer() {
-      _hasBits0 &= ~512;
+      _hasBits0 &= ~1024;
     }
 
     /// <summary>Field number for the "serves_wine" field.</summary>
@@ -903,14 +1010,14 @@ namespace Google.Maps.Places.V1 {
 
     private bool servesWine_;
     /// <summary>
-    /// Specifies if the place serves wine.
+    /// Output only. Specifies if the place serves wine.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ServesWine {
-      get { if ((_hasBits0 & 1024) != 0) { return servesWine_; } else { return ServesWineDefaultValue; } }
+      get { if ((_hasBits0 & 2048) != 0) { return servesWine_; } else { return ServesWineDefaultValue; } }
       set {
-        _hasBits0 |= 1024;
+        _hasBits0 |= 2048;
         servesWine_ = value;
       }
     }
@@ -918,13 +1025,13 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasServesWine {
-      get { return (_hasBits0 & 1024) != 0; }
+      get { return (_hasBits0 & 2048) != 0; }
     }
     /// <summary>Clears the value of the "serves_wine" field</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearServesWine() {
-      _hasBits0 &= ~1024;
+      _hasBits0 &= ~2048;
     }
 
     /// <summary>Field number for the "serves_brunch" field.</summary>
@@ -933,14 +1040,14 @@ namespace Google.Maps.Places.V1 {
 
     private bool servesBrunch_;
     /// <summary>
-    /// Specifies if the place serves brunch.
+    /// Output only. Specifies if the place serves brunch.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ServesBrunch {
-      get { if ((_hasBits0 & 2048) != 0) { return servesBrunch_; } else { return ServesBrunchDefaultValue; } }
+      get { if ((_hasBits0 & 4096) != 0) { return servesBrunch_; } else { return ServesBrunchDefaultValue; } }
       set {
-        _hasBits0 |= 2048;
+        _hasBits0 |= 4096;
         servesBrunch_ = value;
       }
     }
@@ -948,13 +1055,13 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasServesBrunch {
-      get { return (_hasBits0 & 2048) != 0; }
+      get { return (_hasBits0 & 4096) != 0; }
     }
     /// <summary>Clears the value of the "serves_brunch" field</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearServesBrunch() {
-      _hasBits0 &= ~2048;
+      _hasBits0 &= ~4096;
     }
 
     /// <summary>Field number for the "serves_vegetarian_food" field.</summary>
@@ -963,14 +1070,14 @@ namespace Google.Maps.Places.V1 {
 
     private bool servesVegetarianFood_;
     /// <summary>
-    /// Specifies if the place serves vegetarian food.
+    /// Output only. Specifies if the place serves vegetarian food.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ServesVegetarianFood {
-      get { if ((_hasBits0 & 4096) != 0) { return servesVegetarianFood_; } else { return ServesVegetarianFoodDefaultValue; } }
+      get { if ((_hasBits0 & 8192) != 0) { return servesVegetarianFood_; } else { return ServesVegetarianFoodDefaultValue; } }
       set {
-        _hasBits0 |= 4096;
+        _hasBits0 |= 8192;
         servesVegetarianFood_ = value;
       }
     }
@@ -978,23 +1085,23 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasServesVegetarianFood {
-      get { return (_hasBits0 & 4096) != 0; }
+      get { return (_hasBits0 & 8192) != 0; }
     }
     /// <summary>Clears the value of the "serves_vegetarian_food" field</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearServesVegetarianFood() {
-      _hasBits0 &= ~4096;
+      _hasBits0 &= ~8192;
     }
 
     /// <summary>Field number for the "current_opening_hours" field.</summary>
     public const int CurrentOpeningHoursFieldNumber = 46;
     private global::Google.Maps.Places.V1.Place.Types.OpeningHours currentOpeningHours_;
     /// <summary>
-    /// The hours of operation for the next seven days (including today). The time
-    /// period starts at midnight on the date of the request and ends at 11:59 pm
-    /// six days later. This field includes the special_days subfield of all hours,
-    /// set for dates that have exceptional hours.
+    /// Output only. The hours of operation for the next seven days (including
+    /// today). The time period starts at midnight on the date of the request and
+    /// ends at 11:59 pm six days later. This field includes the special_days
+    /// subfield of all hours, set for dates that have exceptional hours.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1011,14 +1118,14 @@ namespace Google.Maps.Places.V1 {
         = pb::FieldCodec.ForMessage(378, global::Google.Maps.Places.V1.Place.Types.OpeningHours.Parser);
     private readonly pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.OpeningHours> currentSecondaryOpeningHours_ = new pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.OpeningHours>();
     /// <summary>
-    /// Contains an array of entries for the next seven days including information
-    /// about secondary hours of a business. Secondary hours are different from a
-    /// business's main hours. For example, a restaurant can specify drive through
-    /// hours or delivery hours as its secondary hours. This field populates the
-    /// type subfield, which draws from a predefined list of opening hours types
-    /// (such as DRIVE_THROUGH, PICKUP, or TAKEOUT) based on the types of the
-    /// place. This field includes the special_days subfield of all hours, set for
-    /// dates that have exceptional hours.
+    /// Output only. Contains an array of entries for the next seven days including
+    /// information about secondary hours of a business. Secondary hours are
+    /// different from a business's main hours. For example, a restaurant can
+    /// specify drive through hours or delivery hours as its secondary hours. This
+    /// field populates the type subfield, which draws from a predefined list of
+    /// opening hours types (such as DRIVE_THROUGH, PICKUP, or TAKEOUT) based on
+    /// the types of the place. This field includes the special_days subfield of
+    /// all hours, set for dates that have exceptional hours.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1026,39 +1133,458 @@ namespace Google.Maps.Places.V1 {
       get { return currentSecondaryOpeningHours_; }
     }
 
-    /// <summary>Field number for the "secondary_opening_hours" field.</summary>
-    public const int SecondaryOpeningHoursFieldNumber = 49;
-    private static readonly pb::FieldCodec<global::Google.Maps.Places.V1.Place.Types.OpeningHours> _repeated_secondaryOpeningHours_codec
+    /// <summary>Field number for the "regular_secondary_opening_hours" field.</summary>
+    public const int RegularSecondaryOpeningHoursFieldNumber = 49;
+    private static readonly pb::FieldCodec<global::Google.Maps.Places.V1.Place.Types.OpeningHours> _repeated_regularSecondaryOpeningHours_codec
         = pb::FieldCodec.ForMessage(394, global::Google.Maps.Places.V1.Place.Types.OpeningHours.Parser);
-    private readonly pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.OpeningHours> secondaryOpeningHours_ = new pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.OpeningHours>();
+    private readonly pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.OpeningHours> regularSecondaryOpeningHours_ = new pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.OpeningHours>();
     /// <summary>
-    /// Contains an array of entries for information about regular secondary hours
-    /// of a business. Secondary hours are different from a business's main hours.
-    /// For example, a restaurant can specify drive through hours or delivery hours
-    /// as its secondary hours. This field populates the type subfield, which draws
-    /// from a predefined list of opening hours types (such as DRIVE_THROUGH,
-    /// PICKUP, or TAKEOUT) based on the types of the place.
+    /// Output only. Contains an array of entries for information about regular
+    /// secondary hours of a business. Secondary hours are different from a
+    /// business's main hours. For example, a restaurant can specify drive through
+    /// hours or delivery hours as its secondary hours. This field populates the
+    /// type subfield, which draws from a predefined list of opening hours types
+    /// (such as DRIVE_THROUGH, PICKUP, or TAKEOUT) based on the types of the
+    /// place.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.OpeningHours> SecondaryOpeningHours {
-      get { return secondaryOpeningHours_; }
+    public pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.OpeningHours> RegularSecondaryOpeningHours {
+      get { return regularSecondaryOpeningHours_; }
     }
 
     /// <summary>Field number for the "editorial_summary" field.</summary>
-    public const int EditorialSummaryFieldNumber = 48;
-    private global::Google.Maps.Places.V1.Place.Types.EditorialSummary editorialSummary_;
+    public const int EditorialSummaryFieldNumber = 52;
+    private global::Google.Type.LocalizedText editorialSummary_;
     /// <summary>
-    /// Contains a summary of the place. A summary is comprised of a textual
-    /// overview, and also includes the language code for these if applicable.
-    /// Summary text must be presented as-is and can not be modified or altered.
+    /// Output only. Contains a summary of the place. A summary is comprised of a
+    /// textual overview, and also includes the language code for these if
+    /// applicable. Summary text must be presented as-is and can not be modified or
+    /// altered.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Maps.Places.V1.Place.Types.EditorialSummary EditorialSummary {
+    public global::Google.Type.LocalizedText EditorialSummary {
       get { return editorialSummary_; }
       set {
         editorialSummary_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "outdoor_seating" field.</summary>
+    public const int OutdoorSeatingFieldNumber = 55;
+    private readonly static bool OutdoorSeatingDefaultValue = false;
+
+    private bool outdoorSeating_;
+    /// <summary>
+    /// Output only. Place provides outdoor seating.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool OutdoorSeating {
+      get { if ((_hasBits0 & 16384) != 0) { return outdoorSeating_; } else { return OutdoorSeatingDefaultValue; } }
+      set {
+        _hasBits0 |= 16384;
+        outdoorSeating_ = value;
+      }
+    }
+    /// <summary>Gets whether the "outdoor_seating" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasOutdoorSeating {
+      get { return (_hasBits0 & 16384) != 0; }
+    }
+    /// <summary>Clears the value of the "outdoor_seating" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearOutdoorSeating() {
+      _hasBits0 &= ~16384;
+    }
+
+    /// <summary>Field number for the "live_music" field.</summary>
+    public const int LiveMusicFieldNumber = 56;
+    private readonly static bool LiveMusicDefaultValue = false;
+
+    private bool liveMusic_;
+    /// <summary>
+    /// Output only. Place provides live music.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool LiveMusic {
+      get { if ((_hasBits0 & 32768) != 0) { return liveMusic_; } else { return LiveMusicDefaultValue; } }
+      set {
+        _hasBits0 |= 32768;
+        liveMusic_ = value;
+      }
+    }
+    /// <summary>Gets whether the "live_music" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasLiveMusic {
+      get { return (_hasBits0 & 32768) != 0; }
+    }
+    /// <summary>Clears the value of the "live_music" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearLiveMusic() {
+      _hasBits0 &= ~32768;
+    }
+
+    /// <summary>Field number for the "menu_for_children" field.</summary>
+    public const int MenuForChildrenFieldNumber = 57;
+    private readonly static bool MenuForChildrenDefaultValue = false;
+
+    private bool menuForChildren_;
+    /// <summary>
+    /// Output only. Place has a children's menu.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool MenuForChildren {
+      get { if ((_hasBits0 & 65536) != 0) { return menuForChildren_; } else { return MenuForChildrenDefaultValue; } }
+      set {
+        _hasBits0 |= 65536;
+        menuForChildren_ = value;
+      }
+    }
+    /// <summary>Gets whether the "menu_for_children" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMenuForChildren {
+      get { return (_hasBits0 & 65536) != 0; }
+    }
+    /// <summary>Clears the value of the "menu_for_children" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMenuForChildren() {
+      _hasBits0 &= ~65536;
+    }
+
+    /// <summary>Field number for the "serves_cocktails" field.</summary>
+    public const int ServesCocktailsFieldNumber = 58;
+    private readonly static bool ServesCocktailsDefaultValue = false;
+
+    private bool servesCocktails_;
+    /// <summary>
+    /// Output only. Place serves cocktails.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ServesCocktails {
+      get { if ((_hasBits0 & 131072) != 0) { return servesCocktails_; } else { return ServesCocktailsDefaultValue; } }
+      set {
+        _hasBits0 |= 131072;
+        servesCocktails_ = value;
+      }
+    }
+    /// <summary>Gets whether the "serves_cocktails" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasServesCocktails {
+      get { return (_hasBits0 & 131072) != 0; }
+    }
+    /// <summary>Clears the value of the "serves_cocktails" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearServesCocktails() {
+      _hasBits0 &= ~131072;
+    }
+
+    /// <summary>Field number for the "serves_dessert" field.</summary>
+    public const int ServesDessertFieldNumber = 59;
+    private readonly static bool ServesDessertDefaultValue = false;
+
+    private bool servesDessert_;
+    /// <summary>
+    /// Output only. Place serves dessert.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ServesDessert {
+      get { if ((_hasBits0 & 262144) != 0) { return servesDessert_; } else { return ServesDessertDefaultValue; } }
+      set {
+        _hasBits0 |= 262144;
+        servesDessert_ = value;
+      }
+    }
+    /// <summary>Gets whether the "serves_dessert" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasServesDessert {
+      get { return (_hasBits0 & 262144) != 0; }
+    }
+    /// <summary>Clears the value of the "serves_dessert" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearServesDessert() {
+      _hasBits0 &= ~262144;
+    }
+
+    /// <summary>Field number for the "serves_coffee" field.</summary>
+    public const int ServesCoffeeFieldNumber = 60;
+    private readonly static bool ServesCoffeeDefaultValue = false;
+
+    private bool servesCoffee_;
+    /// <summary>
+    /// Output only. Place serves coffee.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ServesCoffee {
+      get { if ((_hasBits0 & 524288) != 0) { return servesCoffee_; } else { return ServesCoffeeDefaultValue; } }
+      set {
+        _hasBits0 |= 524288;
+        servesCoffee_ = value;
+      }
+    }
+    /// <summary>Gets whether the "serves_coffee" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasServesCoffee {
+      get { return (_hasBits0 & 524288) != 0; }
+    }
+    /// <summary>Clears the value of the "serves_coffee" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearServesCoffee() {
+      _hasBits0 &= ~524288;
+    }
+
+    /// <summary>Field number for the "good_for_children" field.</summary>
+    public const int GoodForChildrenFieldNumber = 62;
+    private readonly static bool GoodForChildrenDefaultValue = false;
+
+    private bool goodForChildren_;
+    /// <summary>
+    /// Output only. Place is good for children.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool GoodForChildren {
+      get { if ((_hasBits0 & 1048576) != 0) { return goodForChildren_; } else { return GoodForChildrenDefaultValue; } }
+      set {
+        _hasBits0 |= 1048576;
+        goodForChildren_ = value;
+      }
+    }
+    /// <summary>Gets whether the "good_for_children" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGoodForChildren {
+      get { return (_hasBits0 & 1048576) != 0; }
+    }
+    /// <summary>Clears the value of the "good_for_children" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGoodForChildren() {
+      _hasBits0 &= ~1048576;
+    }
+
+    /// <summary>Field number for the "allows_dogs" field.</summary>
+    public const int AllowsDogsFieldNumber = 63;
+    private readonly static bool AllowsDogsDefaultValue = false;
+
+    private bool allowsDogs_;
+    /// <summary>
+    /// Output only. Place allows dogs.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AllowsDogs {
+      get { if ((_hasBits0 & 2097152) != 0) { return allowsDogs_; } else { return AllowsDogsDefaultValue; } }
+      set {
+        _hasBits0 |= 2097152;
+        allowsDogs_ = value;
+      }
+    }
+    /// <summary>Gets whether the "allows_dogs" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAllowsDogs {
+      get { return (_hasBits0 & 2097152) != 0; }
+    }
+    /// <summary>Clears the value of the "allows_dogs" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAllowsDogs() {
+      _hasBits0 &= ~2097152;
+    }
+
+    /// <summary>Field number for the "restroom" field.</summary>
+    public const int RestroomFieldNumber = 64;
+    private readonly static bool RestroomDefaultValue = false;
+
+    private bool restroom_;
+    /// <summary>
+    /// Output only. Place has restroom.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Restroom {
+      get { if ((_hasBits0 & 4194304) != 0) { return restroom_; } else { return RestroomDefaultValue; } }
+      set {
+        _hasBits0 |= 4194304;
+        restroom_ = value;
+      }
+    }
+    /// <summary>Gets whether the "restroom" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRestroom {
+      get { return (_hasBits0 & 4194304) != 0; }
+    }
+    /// <summary>Clears the value of the "restroom" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRestroom() {
+      _hasBits0 &= ~4194304;
+    }
+
+    /// <summary>Field number for the "good_for_groups" field.</summary>
+    public const int GoodForGroupsFieldNumber = 65;
+    private readonly static bool GoodForGroupsDefaultValue = false;
+
+    private bool goodForGroups_;
+    /// <summary>
+    /// Output only. Place accommodates groups.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool GoodForGroups {
+      get { if ((_hasBits0 & 8388608) != 0) { return goodForGroups_; } else { return GoodForGroupsDefaultValue; } }
+      set {
+        _hasBits0 |= 8388608;
+        goodForGroups_ = value;
+      }
+    }
+    /// <summary>Gets whether the "good_for_groups" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGoodForGroups {
+      get { return (_hasBits0 & 8388608) != 0; }
+    }
+    /// <summary>Clears the value of the "good_for_groups" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGoodForGroups() {
+      _hasBits0 &= ~8388608;
+    }
+
+    /// <summary>Field number for the "good_for_watching_sports" field.</summary>
+    public const int GoodForWatchingSportsFieldNumber = 66;
+    private readonly static bool GoodForWatchingSportsDefaultValue = false;
+
+    private bool goodForWatchingSports_;
+    /// <summary>
+    /// Output only. Place is suitable for watching sports.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool GoodForWatchingSports {
+      get { if ((_hasBits0 & 16777216) != 0) { return goodForWatchingSports_; } else { return GoodForWatchingSportsDefaultValue; } }
+      set {
+        _hasBits0 |= 16777216;
+        goodForWatchingSports_ = value;
+      }
+    }
+    /// <summary>Gets whether the "good_for_watching_sports" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGoodForWatchingSports {
+      get { return (_hasBits0 & 16777216) != 0; }
+    }
+    /// <summary>Clears the value of the "good_for_watching_sports" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGoodForWatchingSports() {
+      _hasBits0 &= ~16777216;
+    }
+
+    /// <summary>Field number for the "payment_options" field.</summary>
+    public const int PaymentOptionsFieldNumber = 67;
+    private global::Google.Maps.Places.V1.Place.Types.PaymentOptions paymentOptions_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.Places.V1.Place.Types.PaymentOptions PaymentOptions {
+      get { return paymentOptions_; }
+      set {
+        paymentOptions_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "parking_options" field.</summary>
+    public const int ParkingOptionsFieldNumber = 70;
+    private global::Google.Maps.Places.V1.Place.Types.ParkingOptions parkingOptions_;
+    /// <summary>
+    /// Output only. Options of parking provided by the place.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.Places.V1.Place.Types.ParkingOptions ParkingOptions {
+      get { return parkingOptions_; }
+      set {
+        parkingOptions_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "sub_destinations" field.</summary>
+    public const int SubDestinationsFieldNumber = 71;
+    private static readonly pb::FieldCodec<global::Google.Maps.Places.V1.Place.Types.SubDestination> _repeated_subDestinations_codec
+        = pb::FieldCodec.ForMessage(570, global::Google.Maps.Places.V1.Place.Types.SubDestination.Parser);
+    private readonly pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.SubDestination> subDestinations_ = new pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.SubDestination>();
+    /// <summary>
+    /// Output only. A list of sub destinations related to the place.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.SubDestination> SubDestinations {
+      get { return subDestinations_; }
+    }
+
+    /// <summary>Field number for the "accessibility_options" field.</summary>
+    public const int AccessibilityOptionsFieldNumber = 72;
+    private global::Google.Maps.Places.V1.Place.Types.AccessibilityOptions accessibilityOptions_;
+    /// <summary>
+    /// Output only. Information about the accessibility options a place offers.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.Places.V1.Place.Types.AccessibilityOptions AccessibilityOptions {
+      get { return accessibilityOptions_; }
+      set {
+        accessibilityOptions_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "fuel_options" field.</summary>
+    public const int FuelOptionsFieldNumber = 78;
+    private global::Google.Maps.Places.V1.FuelOptions fuelOptions_;
+    /// <summary>
+    /// Output only. The most recent information about fuel options in a gas
+    /// station. This information is updated regularly.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.Places.V1.FuelOptions FuelOptions {
+      get { return fuelOptions_; }
+      set {
+        fuelOptions_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ev_charge_options" field.</summary>
+    public const int EvChargeOptionsFieldNumber = 79;
+    private global::Google.Maps.Places.V1.EVChargeOptions evChargeOptions_;
+    /// <summary>
+    /// Output only. Information of ev charging options.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.Places.V1.EVChargeOptions EvChargeOptions {
+      get { return evChargeOptions_; }
+      set {
+        evChargeOptions_ = value;
       }
     }
 
@@ -1077,6 +1603,7 @@ namespace Google.Maps.Places.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (Name != other.Name) return false;
       if (Id != other.Id) return false;
       if (!object.Equals(DisplayName, other.DisplayName)) return false;
       if(!types_.Equals(other.types_)) return false;
@@ -1091,8 +1618,9 @@ namespace Google.Maps.Places.V1 {
       if (GoogleMapsUri != other.GoogleMapsUri) return false;
       if (WebsiteUri != other.WebsiteUri) return false;
       if(!reviews_.Equals(other.reviews_)) return false;
-      if (!object.Equals(OpeningHours, other.OpeningHours)) return false;
+      if (!object.Equals(RegularOpeningHours, other.RegularOpeningHours)) return false;
       if (UtcOffsetMinutes != other.UtcOffsetMinutes) return false;
+      if(!photos_.Equals(other.photos_)) return false;
       if (AdrFormatAddress != other.AdrFormatAddress) return false;
       if (BusinessStatus != other.BusinessStatus) return false;
       if (PriceLevel != other.PriceLevel) return false;
@@ -1104,7 +1632,6 @@ namespace Google.Maps.Places.V1 {
       if (Delivery != other.Delivery) return false;
       if (DineIn != other.DineIn) return false;
       if (CurbsidePickup != other.CurbsidePickup) return false;
-      if (WheelchairAccessibleEntrance != other.WheelchairAccessibleEntrance) return false;
       if (Reservable != other.Reservable) return false;
       if (ServesBreakfast != other.ServesBreakfast) return false;
       if (ServesLunch != other.ServesLunch) return false;
@@ -1115,8 +1642,25 @@ namespace Google.Maps.Places.V1 {
       if (ServesVegetarianFood != other.ServesVegetarianFood) return false;
       if (!object.Equals(CurrentOpeningHours, other.CurrentOpeningHours)) return false;
       if(!currentSecondaryOpeningHours_.Equals(other.currentSecondaryOpeningHours_)) return false;
-      if(!secondaryOpeningHours_.Equals(other.secondaryOpeningHours_)) return false;
+      if(!regularSecondaryOpeningHours_.Equals(other.regularSecondaryOpeningHours_)) return false;
       if (!object.Equals(EditorialSummary, other.EditorialSummary)) return false;
+      if (OutdoorSeating != other.OutdoorSeating) return false;
+      if (LiveMusic != other.LiveMusic) return false;
+      if (MenuForChildren != other.MenuForChildren) return false;
+      if (ServesCocktails != other.ServesCocktails) return false;
+      if (ServesDessert != other.ServesDessert) return false;
+      if (ServesCoffee != other.ServesCoffee) return false;
+      if (GoodForChildren != other.GoodForChildren) return false;
+      if (AllowsDogs != other.AllowsDogs) return false;
+      if (Restroom != other.Restroom) return false;
+      if (GoodForGroups != other.GoodForGroups) return false;
+      if (GoodForWatchingSports != other.GoodForWatchingSports) return false;
+      if (!object.Equals(PaymentOptions, other.PaymentOptions)) return false;
+      if (!object.Equals(ParkingOptions, other.ParkingOptions)) return false;
+      if(!subDestinations_.Equals(other.subDestinations_)) return false;
+      if (!object.Equals(AccessibilityOptions, other.AccessibilityOptions)) return false;
+      if (!object.Equals(FuelOptions, other.FuelOptions)) return false;
+      if (!object.Equals(EvChargeOptions, other.EvChargeOptions)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1124,6 +1668,7 @@ namespace Google.Maps.Places.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (displayName_ != null) hash ^= DisplayName.GetHashCode();
       hash ^= types_.GetHashCode();
@@ -1138,20 +1683,20 @@ namespace Google.Maps.Places.V1 {
       if (GoogleMapsUri.Length != 0) hash ^= GoogleMapsUri.GetHashCode();
       if (WebsiteUri.Length != 0) hash ^= WebsiteUri.GetHashCode();
       hash ^= reviews_.GetHashCode();
-      if (openingHours_ != null) hash ^= OpeningHours.GetHashCode();
-      if (UtcOffsetMinutes != 0) hash ^= UtcOffsetMinutes.GetHashCode();
+      if (regularOpeningHours_ != null) hash ^= RegularOpeningHours.GetHashCode();
+      if (HasUtcOffsetMinutes) hash ^= UtcOffsetMinutes.GetHashCode();
+      hash ^= photos_.GetHashCode();
       if (AdrFormatAddress.Length != 0) hash ^= AdrFormatAddress.GetHashCode();
       if (BusinessStatus != global::Google.Maps.Places.V1.Place.Types.BusinessStatus.Unspecified) hash ^= BusinessStatus.GetHashCode();
       if (PriceLevel != global::Google.Maps.Places.V1.PriceLevel.Unspecified) hash ^= PriceLevel.GetHashCode();
       hash ^= attributions_.GetHashCode();
-      if (UserRatingCount != 0) hash ^= UserRatingCount.GetHashCode();
+      if (HasUserRatingCount) hash ^= UserRatingCount.GetHashCode();
       if (IconMaskBaseUri.Length != 0) hash ^= IconMaskBaseUri.GetHashCode();
       if (IconBackgroundColor.Length != 0) hash ^= IconBackgroundColor.GetHashCode();
       if (HasTakeout) hash ^= Takeout.GetHashCode();
       if (HasDelivery) hash ^= Delivery.GetHashCode();
       if (HasDineIn) hash ^= DineIn.GetHashCode();
       if (HasCurbsidePickup) hash ^= CurbsidePickup.GetHashCode();
-      if (HasWheelchairAccessibleEntrance) hash ^= WheelchairAccessibleEntrance.GetHashCode();
       if (HasReservable) hash ^= Reservable.GetHashCode();
       if (HasServesBreakfast) hash ^= ServesBreakfast.GetHashCode();
       if (HasServesLunch) hash ^= ServesLunch.GetHashCode();
@@ -1162,8 +1707,25 @@ namespace Google.Maps.Places.V1 {
       if (HasServesVegetarianFood) hash ^= ServesVegetarianFood.GetHashCode();
       if (currentOpeningHours_ != null) hash ^= CurrentOpeningHours.GetHashCode();
       hash ^= currentSecondaryOpeningHours_.GetHashCode();
-      hash ^= secondaryOpeningHours_.GetHashCode();
+      hash ^= regularSecondaryOpeningHours_.GetHashCode();
       if (editorialSummary_ != null) hash ^= EditorialSummary.GetHashCode();
+      if (HasOutdoorSeating) hash ^= OutdoorSeating.GetHashCode();
+      if (HasLiveMusic) hash ^= LiveMusic.GetHashCode();
+      if (HasMenuForChildren) hash ^= MenuForChildren.GetHashCode();
+      if (HasServesCocktails) hash ^= ServesCocktails.GetHashCode();
+      if (HasServesDessert) hash ^= ServesDessert.GetHashCode();
+      if (HasServesCoffee) hash ^= ServesCoffee.GetHashCode();
+      if (HasGoodForChildren) hash ^= GoodForChildren.GetHashCode();
+      if (HasAllowsDogs) hash ^= AllowsDogs.GetHashCode();
+      if (HasRestroom) hash ^= Restroom.GetHashCode();
+      if (HasGoodForGroups) hash ^= GoodForGroups.GetHashCode();
+      if (HasGoodForWatchingSports) hash ^= GoodForWatchingSports.GetHashCode();
+      if (paymentOptions_ != null) hash ^= PaymentOptions.GetHashCode();
+      if (parkingOptions_ != null) hash ^= ParkingOptions.GetHashCode();
+      hash ^= subDestinations_.GetHashCode();
+      if (accessibilityOptions_ != null) hash ^= AccessibilityOptions.GetHashCode();
+      if (fuelOptions_ != null) hash ^= FuelOptions.GetHashCode();
+      if (evChargeOptions_ != null) hash ^= EvChargeOptions.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1182,6 +1744,10 @@ namespace Google.Maps.Places.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
       if (Id.Length != 0) {
         output.WriteRawTag(18);
         output.WriteString(Id);
@@ -1224,12 +1790,11 @@ namespace Google.Maps.Places.V1 {
         output.WriteRawTag(130, 1);
         output.WriteString(WebsiteUri);
       }
-      reviews_.WriteTo(output, _repeated_reviews_codec);
-      if (openingHours_ != null) {
+      if (regularOpeningHours_ != null) {
         output.WriteRawTag(170, 1);
-        output.WriteMessage(OpeningHours);
+        output.WriteMessage(RegularOpeningHours);
       }
-      if (UtcOffsetMinutes != 0) {
+      if (HasUtcOffsetMinutes) {
         output.WriteRawTag(176, 1);
         output.WriteInt32(UtcOffsetMinutes);
       }
@@ -1246,7 +1811,7 @@ namespace Google.Maps.Places.V1 {
         output.WriteEnum((int) PriceLevel);
       }
       attributions_.WriteTo(output, _repeated_attributions_codec);
-      if (UserRatingCount != 0) {
+      if (HasUserRatingCount) {
         output.WriteRawTag(224, 1);
         output.WriteInt32(UserRatingCount);
       }
@@ -1277,10 +1842,6 @@ namespace Google.Maps.Places.V1 {
       if (HasCurbsidePickup) {
         output.WriteRawTag(160, 2);
         output.WriteBool(CurbsidePickup);
-      }
-      if (HasWheelchairAccessibleEntrance) {
-        output.WriteRawTag(168, 2);
-        output.WriteBool(WheelchairAccessibleEntrance);
       }
       if (HasReservable) {
         output.WriteRawTag(176, 2);
@@ -1319,11 +1880,78 @@ namespace Google.Maps.Places.V1 {
         output.WriteMessage(CurrentOpeningHours);
       }
       currentSecondaryOpeningHours_.WriteTo(output, _repeated_currentSecondaryOpeningHours_codec);
+      regularSecondaryOpeningHours_.WriteTo(output, _repeated_regularSecondaryOpeningHours_codec);
       if (editorialSummary_ != null) {
-        output.WriteRawTag(130, 3);
+        output.WriteRawTag(162, 3);
         output.WriteMessage(EditorialSummary);
       }
-      secondaryOpeningHours_.WriteTo(output, _repeated_secondaryOpeningHours_codec);
+      reviews_.WriteTo(output, _repeated_reviews_codec);
+      photos_.WriteTo(output, _repeated_photos_codec);
+      if (HasOutdoorSeating) {
+        output.WriteRawTag(184, 3);
+        output.WriteBool(OutdoorSeating);
+      }
+      if (HasLiveMusic) {
+        output.WriteRawTag(192, 3);
+        output.WriteBool(LiveMusic);
+      }
+      if (HasMenuForChildren) {
+        output.WriteRawTag(200, 3);
+        output.WriteBool(MenuForChildren);
+      }
+      if (HasServesCocktails) {
+        output.WriteRawTag(208, 3);
+        output.WriteBool(ServesCocktails);
+      }
+      if (HasServesDessert) {
+        output.WriteRawTag(216, 3);
+        output.WriteBool(ServesDessert);
+      }
+      if (HasServesCoffee) {
+        output.WriteRawTag(224, 3);
+        output.WriteBool(ServesCoffee);
+      }
+      if (HasGoodForChildren) {
+        output.WriteRawTag(240, 3);
+        output.WriteBool(GoodForChildren);
+      }
+      if (HasAllowsDogs) {
+        output.WriteRawTag(248, 3);
+        output.WriteBool(AllowsDogs);
+      }
+      if (HasRestroom) {
+        output.WriteRawTag(128, 4);
+        output.WriteBool(Restroom);
+      }
+      if (HasGoodForGroups) {
+        output.WriteRawTag(136, 4);
+        output.WriteBool(GoodForGroups);
+      }
+      if (HasGoodForWatchingSports) {
+        output.WriteRawTag(144, 4);
+        output.WriteBool(GoodForWatchingSports);
+      }
+      if (paymentOptions_ != null) {
+        output.WriteRawTag(154, 4);
+        output.WriteMessage(PaymentOptions);
+      }
+      if (parkingOptions_ != null) {
+        output.WriteRawTag(178, 4);
+        output.WriteMessage(ParkingOptions);
+      }
+      subDestinations_.WriteTo(output, _repeated_subDestinations_codec);
+      if (accessibilityOptions_ != null) {
+        output.WriteRawTag(194, 4);
+        output.WriteMessage(AccessibilityOptions);
+      }
+      if (fuelOptions_ != null) {
+        output.WriteRawTag(242, 4);
+        output.WriteMessage(FuelOptions);
+      }
+      if (evChargeOptions_ != null) {
+        output.WriteRawTag(250, 4);
+        output.WriteMessage(EvChargeOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1334,6 +1962,10 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
       if (Id.Length != 0) {
         output.WriteRawTag(18);
         output.WriteString(Id);
@@ -1376,12 +2008,11 @@ namespace Google.Maps.Places.V1 {
         output.WriteRawTag(130, 1);
         output.WriteString(WebsiteUri);
       }
-      reviews_.WriteTo(ref output, _repeated_reviews_codec);
-      if (openingHours_ != null) {
+      if (regularOpeningHours_ != null) {
         output.WriteRawTag(170, 1);
-        output.WriteMessage(OpeningHours);
+        output.WriteMessage(RegularOpeningHours);
       }
-      if (UtcOffsetMinutes != 0) {
+      if (HasUtcOffsetMinutes) {
         output.WriteRawTag(176, 1);
         output.WriteInt32(UtcOffsetMinutes);
       }
@@ -1398,7 +2029,7 @@ namespace Google.Maps.Places.V1 {
         output.WriteEnum((int) PriceLevel);
       }
       attributions_.WriteTo(ref output, _repeated_attributions_codec);
-      if (UserRatingCount != 0) {
+      if (HasUserRatingCount) {
         output.WriteRawTag(224, 1);
         output.WriteInt32(UserRatingCount);
       }
@@ -1429,10 +2060,6 @@ namespace Google.Maps.Places.V1 {
       if (HasCurbsidePickup) {
         output.WriteRawTag(160, 2);
         output.WriteBool(CurbsidePickup);
-      }
-      if (HasWheelchairAccessibleEntrance) {
-        output.WriteRawTag(168, 2);
-        output.WriteBool(WheelchairAccessibleEntrance);
       }
       if (HasReservable) {
         output.WriteRawTag(176, 2);
@@ -1471,11 +2098,78 @@ namespace Google.Maps.Places.V1 {
         output.WriteMessage(CurrentOpeningHours);
       }
       currentSecondaryOpeningHours_.WriteTo(ref output, _repeated_currentSecondaryOpeningHours_codec);
+      regularSecondaryOpeningHours_.WriteTo(ref output, _repeated_regularSecondaryOpeningHours_codec);
       if (editorialSummary_ != null) {
-        output.WriteRawTag(130, 3);
+        output.WriteRawTag(162, 3);
         output.WriteMessage(EditorialSummary);
       }
-      secondaryOpeningHours_.WriteTo(ref output, _repeated_secondaryOpeningHours_codec);
+      reviews_.WriteTo(ref output, _repeated_reviews_codec);
+      photos_.WriteTo(ref output, _repeated_photos_codec);
+      if (HasOutdoorSeating) {
+        output.WriteRawTag(184, 3);
+        output.WriteBool(OutdoorSeating);
+      }
+      if (HasLiveMusic) {
+        output.WriteRawTag(192, 3);
+        output.WriteBool(LiveMusic);
+      }
+      if (HasMenuForChildren) {
+        output.WriteRawTag(200, 3);
+        output.WriteBool(MenuForChildren);
+      }
+      if (HasServesCocktails) {
+        output.WriteRawTag(208, 3);
+        output.WriteBool(ServesCocktails);
+      }
+      if (HasServesDessert) {
+        output.WriteRawTag(216, 3);
+        output.WriteBool(ServesDessert);
+      }
+      if (HasServesCoffee) {
+        output.WriteRawTag(224, 3);
+        output.WriteBool(ServesCoffee);
+      }
+      if (HasGoodForChildren) {
+        output.WriteRawTag(240, 3);
+        output.WriteBool(GoodForChildren);
+      }
+      if (HasAllowsDogs) {
+        output.WriteRawTag(248, 3);
+        output.WriteBool(AllowsDogs);
+      }
+      if (HasRestroom) {
+        output.WriteRawTag(128, 4);
+        output.WriteBool(Restroom);
+      }
+      if (HasGoodForGroups) {
+        output.WriteRawTag(136, 4);
+        output.WriteBool(GoodForGroups);
+      }
+      if (HasGoodForWatchingSports) {
+        output.WriteRawTag(144, 4);
+        output.WriteBool(GoodForWatchingSports);
+      }
+      if (paymentOptions_ != null) {
+        output.WriteRawTag(154, 4);
+        output.WriteMessage(PaymentOptions);
+      }
+      if (parkingOptions_ != null) {
+        output.WriteRawTag(178, 4);
+        output.WriteMessage(ParkingOptions);
+      }
+      subDestinations_.WriteTo(ref output, _repeated_subDestinations_codec);
+      if (accessibilityOptions_ != null) {
+        output.WriteRawTag(194, 4);
+        output.WriteMessage(AccessibilityOptions);
+      }
+      if (fuelOptions_ != null) {
+        output.WriteRawTag(242, 4);
+        output.WriteMessage(FuelOptions);
+      }
+      if (evChargeOptions_ != null) {
+        output.WriteRawTag(250, 4);
+        output.WriteMessage(EvChargeOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1486,6 +2180,9 @@ namespace Google.Maps.Places.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
       if (Id.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
       }
@@ -1522,12 +2219,13 @@ namespace Google.Maps.Places.V1 {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(WebsiteUri);
       }
       size += reviews_.CalculateSize(_repeated_reviews_codec);
-      if (openingHours_ != null) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(OpeningHours);
+      if (regularOpeningHours_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(RegularOpeningHours);
       }
-      if (UtcOffsetMinutes != 0) {
+      if (HasUtcOffsetMinutes) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(UtcOffsetMinutes);
       }
+      size += photos_.CalculateSize(_repeated_photos_codec);
       if (AdrFormatAddress.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(AdrFormatAddress);
       }
@@ -1538,7 +2236,7 @@ namespace Google.Maps.Places.V1 {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) PriceLevel);
       }
       size += attributions_.CalculateSize(_repeated_attributions_codec);
-      if (UserRatingCount != 0) {
+      if (HasUserRatingCount) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(UserRatingCount);
       }
       if (IconMaskBaseUri.Length != 0) {
@@ -1557,9 +2255,6 @@ namespace Google.Maps.Places.V1 {
         size += 2 + 1;
       }
       if (HasCurbsidePickup) {
-        size += 2 + 1;
-      }
-      if (HasWheelchairAccessibleEntrance) {
         size += 2 + 1;
       }
       if (HasReservable) {
@@ -1590,9 +2285,58 @@ namespace Google.Maps.Places.V1 {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(CurrentOpeningHours);
       }
       size += currentSecondaryOpeningHours_.CalculateSize(_repeated_currentSecondaryOpeningHours_codec);
-      size += secondaryOpeningHours_.CalculateSize(_repeated_secondaryOpeningHours_codec);
+      size += regularSecondaryOpeningHours_.CalculateSize(_repeated_regularSecondaryOpeningHours_codec);
       if (editorialSummary_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(EditorialSummary);
+      }
+      if (HasOutdoorSeating) {
+        size += 2 + 1;
+      }
+      if (HasLiveMusic) {
+        size += 2 + 1;
+      }
+      if (HasMenuForChildren) {
+        size += 2 + 1;
+      }
+      if (HasServesCocktails) {
+        size += 2 + 1;
+      }
+      if (HasServesDessert) {
+        size += 2 + 1;
+      }
+      if (HasServesCoffee) {
+        size += 2 + 1;
+      }
+      if (HasGoodForChildren) {
+        size += 2 + 1;
+      }
+      if (HasAllowsDogs) {
+        size += 2 + 1;
+      }
+      if (HasRestroom) {
+        size += 2 + 1;
+      }
+      if (HasGoodForGroups) {
+        size += 2 + 1;
+      }
+      if (HasGoodForWatchingSports) {
+        size += 2 + 1;
+      }
+      if (paymentOptions_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(PaymentOptions);
+      }
+      if (parkingOptions_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ParkingOptions);
+      }
+      size += subDestinations_.CalculateSize(_repeated_subDestinations_codec);
+      if (accessibilityOptions_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(AccessibilityOptions);
+      }
+      if (fuelOptions_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(FuelOptions);
+      }
+      if (evChargeOptions_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(EvChargeOptions);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1605,6 +2349,9 @@ namespace Google.Maps.Places.V1 {
     public void MergeFrom(Place other) {
       if (other == null) {
         return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
       }
       if (other.Id.Length != 0) {
         Id = other.Id;
@@ -1654,15 +2401,16 @@ namespace Google.Maps.Places.V1 {
         WebsiteUri = other.WebsiteUri;
       }
       reviews_.Add(other.reviews_);
-      if (other.openingHours_ != null) {
-        if (openingHours_ == null) {
-          OpeningHours = new global::Google.Maps.Places.V1.Place.Types.OpeningHours();
+      if (other.regularOpeningHours_ != null) {
+        if (regularOpeningHours_ == null) {
+          RegularOpeningHours = new global::Google.Maps.Places.V1.Place.Types.OpeningHours();
         }
-        OpeningHours.MergeFrom(other.OpeningHours);
+        RegularOpeningHours.MergeFrom(other.RegularOpeningHours);
       }
-      if (other.UtcOffsetMinutes != 0) {
+      if (other.HasUtcOffsetMinutes) {
         UtcOffsetMinutes = other.UtcOffsetMinutes;
       }
+      photos_.Add(other.photos_);
       if (other.AdrFormatAddress.Length != 0) {
         AdrFormatAddress = other.AdrFormatAddress;
       }
@@ -1673,7 +2421,7 @@ namespace Google.Maps.Places.V1 {
         PriceLevel = other.PriceLevel;
       }
       attributions_.Add(other.attributions_);
-      if (other.UserRatingCount != 0) {
+      if (other.HasUserRatingCount) {
         UserRatingCount = other.UserRatingCount;
       }
       if (other.IconMaskBaseUri.Length != 0) {
@@ -1693,9 +2441,6 @@ namespace Google.Maps.Places.V1 {
       }
       if (other.HasCurbsidePickup) {
         CurbsidePickup = other.CurbsidePickup;
-      }
-      if (other.HasWheelchairAccessibleEntrance) {
-        WheelchairAccessibleEntrance = other.WheelchairAccessibleEntrance;
       }
       if (other.HasReservable) {
         Reservable = other.Reservable;
@@ -1728,12 +2473,76 @@ namespace Google.Maps.Places.V1 {
         CurrentOpeningHours.MergeFrom(other.CurrentOpeningHours);
       }
       currentSecondaryOpeningHours_.Add(other.currentSecondaryOpeningHours_);
-      secondaryOpeningHours_.Add(other.secondaryOpeningHours_);
+      regularSecondaryOpeningHours_.Add(other.regularSecondaryOpeningHours_);
       if (other.editorialSummary_ != null) {
         if (editorialSummary_ == null) {
-          EditorialSummary = new global::Google.Maps.Places.V1.Place.Types.EditorialSummary();
+          EditorialSummary = new global::Google.Type.LocalizedText();
         }
         EditorialSummary.MergeFrom(other.EditorialSummary);
+      }
+      if (other.HasOutdoorSeating) {
+        OutdoorSeating = other.OutdoorSeating;
+      }
+      if (other.HasLiveMusic) {
+        LiveMusic = other.LiveMusic;
+      }
+      if (other.HasMenuForChildren) {
+        MenuForChildren = other.MenuForChildren;
+      }
+      if (other.HasServesCocktails) {
+        ServesCocktails = other.ServesCocktails;
+      }
+      if (other.HasServesDessert) {
+        ServesDessert = other.ServesDessert;
+      }
+      if (other.HasServesCoffee) {
+        ServesCoffee = other.ServesCoffee;
+      }
+      if (other.HasGoodForChildren) {
+        GoodForChildren = other.GoodForChildren;
+      }
+      if (other.HasAllowsDogs) {
+        AllowsDogs = other.AllowsDogs;
+      }
+      if (other.HasRestroom) {
+        Restroom = other.Restroom;
+      }
+      if (other.HasGoodForGroups) {
+        GoodForGroups = other.GoodForGroups;
+      }
+      if (other.HasGoodForWatchingSports) {
+        GoodForWatchingSports = other.GoodForWatchingSports;
+      }
+      if (other.paymentOptions_ != null) {
+        if (paymentOptions_ == null) {
+          PaymentOptions = new global::Google.Maps.Places.V1.Place.Types.PaymentOptions();
+        }
+        PaymentOptions.MergeFrom(other.PaymentOptions);
+      }
+      if (other.parkingOptions_ != null) {
+        if (parkingOptions_ == null) {
+          ParkingOptions = new global::Google.Maps.Places.V1.Place.Types.ParkingOptions();
+        }
+        ParkingOptions.MergeFrom(other.ParkingOptions);
+      }
+      subDestinations_.Add(other.subDestinations_);
+      if (other.accessibilityOptions_ != null) {
+        if (accessibilityOptions_ == null) {
+          AccessibilityOptions = new global::Google.Maps.Places.V1.Place.Types.AccessibilityOptions();
+        }
+        AccessibilityOptions.MergeFrom(other.AccessibilityOptions);
+      }
+      if (other.fuelOptions_ != null) {
+        if (fuelOptions_ == null) {
+          FuelOptions = new global::Google.Maps.Places.V1.FuelOptions();
+        }
+        FuelOptions.MergeFrom(other.FuelOptions);
+      }
+      if (other.evChargeOptions_ != null) {
+        if (evChargeOptions_ == null) {
+          EvChargeOptions = new global::Google.Maps.Places.V1.EVChargeOptions();
+        }
+        EvChargeOptions.MergeFrom(other.EvChargeOptions);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1750,6 +2559,10 @@ namespace Google.Maps.Places.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
           case 18: {
             Id = input.ReadString();
             break;
@@ -1807,15 +2620,11 @@ namespace Google.Maps.Places.V1 {
             WebsiteUri = input.ReadString();
             break;
           }
-          case 162: {
-            reviews_.AddEntriesFrom(input, _repeated_reviews_codec);
-            break;
-          }
           case 170: {
-            if (openingHours_ == null) {
-              OpeningHours = new global::Google.Maps.Places.V1.Place.Types.OpeningHours();
+            if (regularOpeningHours_ == null) {
+              RegularOpeningHours = new global::Google.Maps.Places.V1.Place.Types.OpeningHours();
             }
-            input.ReadMessage(OpeningHours);
+            input.ReadMessage(RegularOpeningHours);
             break;
           }
           case 176: {
@@ -1873,10 +2682,6 @@ namespace Google.Maps.Places.V1 {
             CurbsidePickup = input.ReadBool();
             break;
           }
-          case 296: {
-            WheelchairAccessibleEntrance = input.ReadBool();
-            break;
-          }
           case 304: {
             Reservable = input.ReadBool();
             break;
@@ -1920,15 +2725,106 @@ namespace Google.Maps.Places.V1 {
             currentSecondaryOpeningHours_.AddEntriesFrom(input, _repeated_currentSecondaryOpeningHours_codec);
             break;
           }
-          case 386: {
+          case 394: {
+            regularSecondaryOpeningHours_.AddEntriesFrom(input, _repeated_regularSecondaryOpeningHours_codec);
+            break;
+          }
+          case 418: {
             if (editorialSummary_ == null) {
-              EditorialSummary = new global::Google.Maps.Places.V1.Place.Types.EditorialSummary();
+              EditorialSummary = new global::Google.Type.LocalizedText();
             }
             input.ReadMessage(EditorialSummary);
             break;
           }
-          case 394: {
-            secondaryOpeningHours_.AddEntriesFrom(input, _repeated_secondaryOpeningHours_codec);
+          case 426: {
+            reviews_.AddEntriesFrom(input, _repeated_reviews_codec);
+            break;
+          }
+          case 434: {
+            photos_.AddEntriesFrom(input, _repeated_photos_codec);
+            break;
+          }
+          case 440: {
+            OutdoorSeating = input.ReadBool();
+            break;
+          }
+          case 448: {
+            LiveMusic = input.ReadBool();
+            break;
+          }
+          case 456: {
+            MenuForChildren = input.ReadBool();
+            break;
+          }
+          case 464: {
+            ServesCocktails = input.ReadBool();
+            break;
+          }
+          case 472: {
+            ServesDessert = input.ReadBool();
+            break;
+          }
+          case 480: {
+            ServesCoffee = input.ReadBool();
+            break;
+          }
+          case 496: {
+            GoodForChildren = input.ReadBool();
+            break;
+          }
+          case 504: {
+            AllowsDogs = input.ReadBool();
+            break;
+          }
+          case 512: {
+            Restroom = input.ReadBool();
+            break;
+          }
+          case 520: {
+            GoodForGroups = input.ReadBool();
+            break;
+          }
+          case 528: {
+            GoodForWatchingSports = input.ReadBool();
+            break;
+          }
+          case 538: {
+            if (paymentOptions_ == null) {
+              PaymentOptions = new global::Google.Maps.Places.V1.Place.Types.PaymentOptions();
+            }
+            input.ReadMessage(PaymentOptions);
+            break;
+          }
+          case 562: {
+            if (parkingOptions_ == null) {
+              ParkingOptions = new global::Google.Maps.Places.V1.Place.Types.ParkingOptions();
+            }
+            input.ReadMessage(ParkingOptions);
+            break;
+          }
+          case 570: {
+            subDestinations_.AddEntriesFrom(input, _repeated_subDestinations_codec);
+            break;
+          }
+          case 578: {
+            if (accessibilityOptions_ == null) {
+              AccessibilityOptions = new global::Google.Maps.Places.V1.Place.Types.AccessibilityOptions();
+            }
+            input.ReadMessage(AccessibilityOptions);
+            break;
+          }
+          case 626: {
+            if (fuelOptions_ == null) {
+              FuelOptions = new global::Google.Maps.Places.V1.FuelOptions();
+            }
+            input.ReadMessage(FuelOptions);
+            break;
+          }
+          case 634: {
+            if (evChargeOptions_ == null) {
+              EvChargeOptions = new global::Google.Maps.Places.V1.EVChargeOptions();
+            }
+            input.ReadMessage(EvChargeOptions);
             break;
           }
         }
@@ -1946,6 +2842,10 @@ namespace Google.Maps.Places.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
           case 18: {
             Id = input.ReadString();
             break;
@@ -2003,15 +2903,11 @@ namespace Google.Maps.Places.V1 {
             WebsiteUri = input.ReadString();
             break;
           }
-          case 162: {
-            reviews_.AddEntriesFrom(ref input, _repeated_reviews_codec);
-            break;
-          }
           case 170: {
-            if (openingHours_ == null) {
-              OpeningHours = new global::Google.Maps.Places.V1.Place.Types.OpeningHours();
+            if (regularOpeningHours_ == null) {
+              RegularOpeningHours = new global::Google.Maps.Places.V1.Place.Types.OpeningHours();
             }
-            input.ReadMessage(OpeningHours);
+            input.ReadMessage(RegularOpeningHours);
             break;
           }
           case 176: {
@@ -2069,10 +2965,6 @@ namespace Google.Maps.Places.V1 {
             CurbsidePickup = input.ReadBool();
             break;
           }
-          case 296: {
-            WheelchairAccessibleEntrance = input.ReadBool();
-            break;
-          }
           case 304: {
             Reservable = input.ReadBool();
             break;
@@ -2116,15 +3008,106 @@ namespace Google.Maps.Places.V1 {
             currentSecondaryOpeningHours_.AddEntriesFrom(ref input, _repeated_currentSecondaryOpeningHours_codec);
             break;
           }
-          case 386: {
+          case 394: {
+            regularSecondaryOpeningHours_.AddEntriesFrom(ref input, _repeated_regularSecondaryOpeningHours_codec);
+            break;
+          }
+          case 418: {
             if (editorialSummary_ == null) {
-              EditorialSummary = new global::Google.Maps.Places.V1.Place.Types.EditorialSummary();
+              EditorialSummary = new global::Google.Type.LocalizedText();
             }
             input.ReadMessage(EditorialSummary);
             break;
           }
-          case 394: {
-            secondaryOpeningHours_.AddEntriesFrom(ref input, _repeated_secondaryOpeningHours_codec);
+          case 426: {
+            reviews_.AddEntriesFrom(ref input, _repeated_reviews_codec);
+            break;
+          }
+          case 434: {
+            photos_.AddEntriesFrom(ref input, _repeated_photos_codec);
+            break;
+          }
+          case 440: {
+            OutdoorSeating = input.ReadBool();
+            break;
+          }
+          case 448: {
+            LiveMusic = input.ReadBool();
+            break;
+          }
+          case 456: {
+            MenuForChildren = input.ReadBool();
+            break;
+          }
+          case 464: {
+            ServesCocktails = input.ReadBool();
+            break;
+          }
+          case 472: {
+            ServesDessert = input.ReadBool();
+            break;
+          }
+          case 480: {
+            ServesCoffee = input.ReadBool();
+            break;
+          }
+          case 496: {
+            GoodForChildren = input.ReadBool();
+            break;
+          }
+          case 504: {
+            AllowsDogs = input.ReadBool();
+            break;
+          }
+          case 512: {
+            Restroom = input.ReadBool();
+            break;
+          }
+          case 520: {
+            GoodForGroups = input.ReadBool();
+            break;
+          }
+          case 528: {
+            GoodForWatchingSports = input.ReadBool();
+            break;
+          }
+          case 538: {
+            if (paymentOptions_ == null) {
+              PaymentOptions = new global::Google.Maps.Places.V1.Place.Types.PaymentOptions();
+            }
+            input.ReadMessage(PaymentOptions);
+            break;
+          }
+          case 562: {
+            if (parkingOptions_ == null) {
+              ParkingOptions = new global::Google.Maps.Places.V1.Place.Types.ParkingOptions();
+            }
+            input.ReadMessage(ParkingOptions);
+            break;
+          }
+          case 570: {
+            subDestinations_.AddEntriesFrom(ref input, _repeated_subDestinations_codec);
+            break;
+          }
+          case 578: {
+            if (accessibilityOptions_ == null) {
+              AccessibilityOptions = new global::Google.Maps.Places.V1.Place.Types.AccessibilityOptions();
+            }
+            input.ReadMessage(AccessibilityOptions);
+            break;
+          }
+          case 626: {
+            if (fuelOptions_ == null) {
+              FuelOptions = new global::Google.Maps.Places.V1.FuelOptions();
+            }
+            input.ReadMessage(FuelOptions);
+            break;
+          }
+          case 634: {
+            if (evChargeOptions_ == null) {
+              EvChargeOptions = new global::Google.Maps.Places.V1.EVChargeOptions();
+            }
+            input.ReadMessage(EvChargeOptions);
             break;
           }
         }
@@ -2214,9 +3197,9 @@ namespace Google.Maps.Places.V1 {
         public const int LongTextFieldNumber = 1;
         private string longText_ = "";
         /// <summary>
-        /// The full text description or name of the address component. For example,
-        /// an address component for the country Australia may have a long_name of
-        /// "Australia".
+        /// Output only. The full text description or name of the address component.
+        /// For example, an address component for the country Australia may have a
+        /// long_name of "Australia".
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2231,9 +3214,9 @@ namespace Google.Maps.Places.V1 {
         public const int ShortTextFieldNumber = 2;
         private string shortText_ = "";
         /// <summary>
-        /// An abbreviated textual name for the address component, if available. For
-        /// example, an address component for the country of Australia may have a
-        /// short_name of "AU".
+        /// Output only. An abbreviated textual name for the address component, if
+        /// available. For example, an address component for the country of Australia
+        /// may have a short_name of "AU".
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2250,7 +3233,7 @@ namespace Google.Maps.Places.V1 {
             = pb::FieldCodec.ForString(26);
         private readonly pbc::RepeatedField<string> types_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// An array indicating the type(s) of the address component.
+        /// Output only. An array indicating the type(s) of the address component.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2262,7 +3245,8 @@ namespace Google.Maps.Places.V1 {
         public const int LanguageCodeFieldNumber = 4;
         private string languageCode_ = "";
         /// <summary>
-        /// The language used to format this components, in CLDR notation.
+        /// Output only. The language used to format this components, in CLDR
+        /// notation.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2522,8 +3506,8 @@ namespace Google.Maps.Places.V1 {
         public const int GlobalCodeFieldNumber = 1;
         private string globalCode_ = "";
         /// <summary>
-        /// Place's global (full) code, such as `9FWM33GV+HQ`, representing an
-        /// 1/8000 by 1/8000 degree area (~14 by 14 meters).
+        /// Output only. Place's global (full) code, such as "9FWM33GV+HQ",
+        /// representing an 1/8000 by 1/8000 degree area (~14 by 14 meters).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2538,9 +3522,9 @@ namespace Google.Maps.Places.V1 {
         public const int CompoundCodeFieldNumber = 2;
         private string compoundCode_ = "";
         /// <summary>
-        /// Place's compound code, such as `33GV+HQ, Ramberg, Norway`, containing
-        /// the suffix of the global code and replacing the prefix with a formatted
-        /// name of a reference entity.
+        /// Output only. Place's compound code, such as "33GV+HQ, Ramberg, Norway",
+        /// containing the suffix of the global code and replacing the prefix with a
+        /// formatted name of a reference entity.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2709,549 +3693,6 @@ namespace Google.Maps.Places.V1 {
       }
 
       /// <summary>
-      /// Information about a review of the place.
-      /// </summary>
-      public sealed partial class Review : pb::IMessage<Review>
-      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          , pb::IBufferMessage
-      #endif
-      {
-        private static readonly pb::MessageParser<Review> _parser = new pb::MessageParser<Review>(() => new Review());
-        private pb::UnknownFieldSet _unknownFields;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public static pb::MessageParser<Review> Parser { get { return _parser; } }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Maps.Places.V1.Place.Descriptor.NestedTypes[2]; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        pbr::MessageDescriptor pb::IMessage.Descriptor {
-          get { return Descriptor; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public Review() {
-          OnConstruction();
-        }
-
-        partial void OnConstruction();
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public Review(Review other) : this() {
-          publishTime_ = other.publishTime_ != null ? other.publishTime_.Clone() : null;
-          relativePublishTimeDescription_ = other.relativePublishTimeDescription_;
-          text_ = other.text_ != null ? other.text_.Clone() : null;
-          author_ = other.author_;
-          authorUri_ = other.authorUri_;
-          authorPhotoUri_ = other.authorPhotoUri_;
-          rating_ = other.rating_;
-          originalLanguageCode_ = other.originalLanguageCode_;
-          translated_ = other.translated_;
-          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public Review Clone() {
-          return new Review(this);
-        }
-
-        /// <summary>Field number for the "publish_time" field.</summary>
-        public const int PublishTimeFieldNumber = 1;
-        private global::Google.Protobuf.WellKnownTypes.Timestamp publishTime_;
-        /// <summary>
-        /// Timestamp for the review, expressed in seconds since epoch.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public global::Google.Protobuf.WellKnownTypes.Timestamp PublishTime {
-          get { return publishTime_; }
-          set {
-            publishTime_ = value;
-          }
-        }
-
-        /// <summary>Field number for the "relative_publish_time_description" field.</summary>
-        public const int RelativePublishTimeDescriptionFieldNumber = 2;
-        private string relativePublishTimeDescription_ = "";
-        /// <summary>
-        /// A string of formatted recent time, expressing the review time relative
-        /// to the current time in a form appropriate for the language and country.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public string RelativePublishTimeDescription {
-          get { return relativePublishTimeDescription_; }
-          set {
-            relativePublishTimeDescription_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
-        /// <summary>Field number for the "text" field.</summary>
-        public const int TextFieldNumber = 9;
-        private global::Google.Type.LocalizedText text_;
-        /// <summary>
-        /// The localized text of the review.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public global::Google.Type.LocalizedText Text {
-          get { return text_; }
-          set {
-            text_ = value;
-          }
-        }
-
-        /// <summary>Field number for the "author" field.</summary>
-        public const int AuthorFieldNumber = 4;
-        private string author_ = "";
-        /// <summary>
-        /// The name of the review author.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public string Author {
-          get { return author_; }
-          set {
-            author_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
-        /// <summary>Field number for the "author_uri" field.</summary>
-        public const int AuthorUriFieldNumber = 5;
-        private string authorUri_ = "";
-        /// <summary>
-        /// A link to the review author's profile.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public string AuthorUri {
-          get { return authorUri_; }
-          set {
-            authorUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
-        /// <summary>Field number for the "author_photo_uri" field.</summary>
-        public const int AuthorPhotoUriFieldNumber = 6;
-        private string authorPhotoUri_ = "";
-        /// <summary>
-        /// The author's profile photo.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public string AuthorPhotoUri {
-          get { return authorPhotoUri_; }
-          set {
-            authorPhotoUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
-        /// <summary>Field number for the "rating" field.</summary>
-        public const int RatingFieldNumber = 7;
-        private double rating_;
-        /// <summary>
-        /// A whole number between 1.0 and 5.0, a.k.a. the number of stars.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public double Rating {
-          get { return rating_; }
-          set {
-            rating_ = value;
-          }
-        }
-
-        /// <summary>Field number for the "original_language_code" field.</summary>
-        public const int OriginalLanguageCodeFieldNumber = 10;
-        private string originalLanguageCode_ = "";
-        /// <summary>
-        /// A BCP-47 language code indicating the original language of the review.
-        /// If the review has been translated, then original_language != language.
-        /// This field contains the main language tag only, and not the secondary tag
-        /// indicating country or region. For example, all the English reviews are
-        /// tagged as 'en', and not 'en-AU' or 'en-UK' and so on.This field is empty
-        /// if there is only a rating with no review text.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public string OriginalLanguageCode {
-          get { return originalLanguageCode_; }
-          set {
-            originalLanguageCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
-        /// <summary>Field number for the "translated" field.</summary>
-        public const int TranslatedFieldNumber = 11;
-        private bool translated_;
-        /// <summary>
-        /// A boolean value indicating if the review was translated from the original
-        /// language it was written in. If a review has been translated,
-        /// corresponding to a value of true, Google recommends that you indicate
-        /// this to your users. For example, you can add the following string,
-        /// “Translated by Google”, to the review.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public bool Translated {
-          get { return translated_; }
-          set {
-            translated_ = value;
-          }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public override bool Equals(object other) {
-          return Equals(other as Review);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public bool Equals(Review other) {
-          if (ReferenceEquals(other, null)) {
-            return false;
-          }
-          if (ReferenceEquals(other, this)) {
-            return true;
-          }
-          if (!object.Equals(PublishTime, other.PublishTime)) return false;
-          if (RelativePublishTimeDescription != other.RelativePublishTimeDescription) return false;
-          if (!object.Equals(Text, other.Text)) return false;
-          if (Author != other.Author) return false;
-          if (AuthorUri != other.AuthorUri) return false;
-          if (AuthorPhotoUri != other.AuthorPhotoUri) return false;
-          if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Rating, other.Rating)) return false;
-          if (OriginalLanguageCode != other.OriginalLanguageCode) return false;
-          if (Translated != other.Translated) return false;
-          return Equals(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public override int GetHashCode() {
-          int hash = 1;
-          if (publishTime_ != null) hash ^= PublishTime.GetHashCode();
-          if (RelativePublishTimeDescription.Length != 0) hash ^= RelativePublishTimeDescription.GetHashCode();
-          if (text_ != null) hash ^= Text.GetHashCode();
-          if (Author.Length != 0) hash ^= Author.GetHashCode();
-          if (AuthorUri.Length != 0) hash ^= AuthorUri.GetHashCode();
-          if (AuthorPhotoUri.Length != 0) hash ^= AuthorPhotoUri.GetHashCode();
-          if (Rating != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Rating);
-          if (OriginalLanguageCode.Length != 0) hash ^= OriginalLanguageCode.GetHashCode();
-          if (Translated != false) hash ^= Translated.GetHashCode();
-          if (_unknownFields != null) {
-            hash ^= _unknownFields.GetHashCode();
-          }
-          return hash;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public override string ToString() {
-          return pb::JsonFormatter.ToDiagnosticString(this);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public void WriteTo(pb::CodedOutputStream output) {
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          output.WriteRawMessage(this);
-        #else
-          if (publishTime_ != null) {
-            output.WriteRawTag(10);
-            output.WriteMessage(PublishTime);
-          }
-          if (RelativePublishTimeDescription.Length != 0) {
-            output.WriteRawTag(18);
-            output.WriteString(RelativePublishTimeDescription);
-          }
-          if (Author.Length != 0) {
-            output.WriteRawTag(34);
-            output.WriteString(Author);
-          }
-          if (AuthorUri.Length != 0) {
-            output.WriteRawTag(42);
-            output.WriteString(AuthorUri);
-          }
-          if (AuthorPhotoUri.Length != 0) {
-            output.WriteRawTag(50);
-            output.WriteString(AuthorPhotoUri);
-          }
-          if (Rating != 0D) {
-            output.WriteRawTag(57);
-            output.WriteDouble(Rating);
-          }
-          if (text_ != null) {
-            output.WriteRawTag(74);
-            output.WriteMessage(Text);
-          }
-          if (OriginalLanguageCode.Length != 0) {
-            output.WriteRawTag(82);
-            output.WriteString(OriginalLanguageCode);
-          }
-          if (Translated != false) {
-            output.WriteRawTag(88);
-            output.WriteBool(Translated);
-          }
-          if (_unknownFields != null) {
-            _unknownFields.WriteTo(output);
-          }
-        #endif
-        }
-
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          if (publishTime_ != null) {
-            output.WriteRawTag(10);
-            output.WriteMessage(PublishTime);
-          }
-          if (RelativePublishTimeDescription.Length != 0) {
-            output.WriteRawTag(18);
-            output.WriteString(RelativePublishTimeDescription);
-          }
-          if (Author.Length != 0) {
-            output.WriteRawTag(34);
-            output.WriteString(Author);
-          }
-          if (AuthorUri.Length != 0) {
-            output.WriteRawTag(42);
-            output.WriteString(AuthorUri);
-          }
-          if (AuthorPhotoUri.Length != 0) {
-            output.WriteRawTag(50);
-            output.WriteString(AuthorPhotoUri);
-          }
-          if (Rating != 0D) {
-            output.WriteRawTag(57);
-            output.WriteDouble(Rating);
-          }
-          if (text_ != null) {
-            output.WriteRawTag(74);
-            output.WriteMessage(Text);
-          }
-          if (OriginalLanguageCode.Length != 0) {
-            output.WriteRawTag(82);
-            output.WriteString(OriginalLanguageCode);
-          }
-          if (Translated != false) {
-            output.WriteRawTag(88);
-            output.WriteBool(Translated);
-          }
-          if (_unknownFields != null) {
-            _unknownFields.WriteTo(ref output);
-          }
-        }
-        #endif
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public int CalculateSize() {
-          int size = 0;
-          if (publishTime_ != null) {
-            size += 1 + pb::CodedOutputStream.ComputeMessageSize(PublishTime);
-          }
-          if (RelativePublishTimeDescription.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(RelativePublishTimeDescription);
-          }
-          if (text_ != null) {
-            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Text);
-          }
-          if (Author.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(Author);
-          }
-          if (AuthorUri.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(AuthorUri);
-          }
-          if (AuthorPhotoUri.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(AuthorPhotoUri);
-          }
-          if (Rating != 0D) {
-            size += 1 + 8;
-          }
-          if (OriginalLanguageCode.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(OriginalLanguageCode);
-          }
-          if (Translated != false) {
-            size += 1 + 1;
-          }
-          if (_unknownFields != null) {
-            size += _unknownFields.CalculateSize();
-          }
-          return size;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public void MergeFrom(Review other) {
-          if (other == null) {
-            return;
-          }
-          if (other.publishTime_ != null) {
-            if (publishTime_ == null) {
-              PublishTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            PublishTime.MergeFrom(other.PublishTime);
-          }
-          if (other.RelativePublishTimeDescription.Length != 0) {
-            RelativePublishTimeDescription = other.RelativePublishTimeDescription;
-          }
-          if (other.text_ != null) {
-            if (text_ == null) {
-              Text = new global::Google.Type.LocalizedText();
-            }
-            Text.MergeFrom(other.Text);
-          }
-          if (other.Author.Length != 0) {
-            Author = other.Author;
-          }
-          if (other.AuthorUri.Length != 0) {
-            AuthorUri = other.AuthorUri;
-          }
-          if (other.AuthorPhotoUri.Length != 0) {
-            AuthorPhotoUri = other.AuthorPhotoUri;
-          }
-          if (other.Rating != 0D) {
-            Rating = other.Rating;
-          }
-          if (other.OriginalLanguageCode.Length != 0) {
-            OriginalLanguageCode = other.OriginalLanguageCode;
-          }
-          if (other.Translated != false) {
-            Translated = other.Translated;
-          }
-          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public void MergeFrom(pb::CodedInputStream input) {
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          input.ReadRawMessage(this);
-        #else
-          uint tag;
-          while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
-              default:
-                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-                break;
-              case 10: {
-                if (publishTime_ == null) {
-                  PublishTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-                }
-                input.ReadMessage(PublishTime);
-                break;
-              }
-              case 18: {
-                RelativePublishTimeDescription = input.ReadString();
-                break;
-              }
-              case 34: {
-                Author = input.ReadString();
-                break;
-              }
-              case 42: {
-                AuthorUri = input.ReadString();
-                break;
-              }
-              case 50: {
-                AuthorPhotoUri = input.ReadString();
-                break;
-              }
-              case 57: {
-                Rating = input.ReadDouble();
-                break;
-              }
-              case 74: {
-                if (text_ == null) {
-                  Text = new global::Google.Type.LocalizedText();
-                }
-                input.ReadMessage(Text);
-                break;
-              }
-              case 82: {
-                OriginalLanguageCode = input.ReadString();
-                break;
-              }
-              case 88: {
-                Translated = input.ReadBool();
-                break;
-              }
-            }
-          }
-        #endif
-        }
-
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-          uint tag;
-          while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
-              default:
-                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-                break;
-              case 10: {
-                if (publishTime_ == null) {
-                  PublishTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-                }
-                input.ReadMessage(PublishTime);
-                break;
-              }
-              case 18: {
-                RelativePublishTimeDescription = input.ReadString();
-                break;
-              }
-              case 34: {
-                Author = input.ReadString();
-                break;
-              }
-              case 42: {
-                AuthorUri = input.ReadString();
-                break;
-              }
-              case 50: {
-                AuthorPhotoUri = input.ReadString();
-                break;
-              }
-              case 57: {
-                Rating = input.ReadDouble();
-                break;
-              }
-              case 74: {
-                if (text_ == null) {
-                  Text = new global::Google.Type.LocalizedText();
-                }
-                input.ReadMessage(Text);
-                break;
-              }
-              case 82: {
-                OriginalLanguageCode = input.ReadString();
-                break;
-              }
-              case 88: {
-                Translated = input.ReadBool();
-                break;
-              }
-            }
-          }
-        }
-        #endif
-
-      }
-
-      /// <summary>
       /// Information about business hour of the place.
       /// </summary>
       public sealed partial class OpeningHours : pb::IMessage<OpeningHours>
@@ -3261,6 +3702,7 @@ namespace Google.Maps.Places.V1 {
       {
         private static readonly pb::MessageParser<OpeningHours> _parser = new pb::MessageParser<OpeningHours>(() => new OpeningHours());
         private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<OpeningHours> Parser { get { return _parser; } }
@@ -3268,7 +3710,7 @@ namespace Google.Maps.Places.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Maps.Places.V1.Place.Descriptor.NestedTypes[3]; }
+          get { return global::Google.Maps.Places.V1.Place.Descriptor.NestedTypes[2]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3288,10 +3730,11 @@ namespace Google.Maps.Places.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public OpeningHours(OpeningHours other) : this() {
+          _hasBits0 = other._hasBits0;
           openNow_ = other.openNow_;
           periods_ = other.periods_.Clone();
           weekdayDescriptions_ = other.weekdayDescriptions_.Clone();
-          secondaryHourType_ = other.secondaryHourType_;
+          secondaryHoursType_ = other.secondaryHoursType_;
           specialDays_ = other.specialDays_.Clone();
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
@@ -3304,34 +3747,50 @@ namespace Google.Maps.Places.V1 {
 
         /// <summary>Field number for the "open_now" field.</summary>
         public const int OpenNowFieldNumber = 1;
+        private readonly static bool OpenNowDefaultValue = false;
+
         private bool openNow_;
         /// <summary>
-        /// Is this place open right now?  Always present unless we lack time-of-day
-        /// or timezone data for these opening hours.
+        /// Output only. Is this place open right now?  Always present unless we lack
+        /// time-of-day or timezone data for these opening hours.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool OpenNow {
-          get { return openNow_; }
+          get { if ((_hasBits0 & 1) != 0) { return openNow_; } else { return OpenNowDefaultValue; } }
           set {
+            _hasBits0 |= 1;
             openNow_ = value;
           }
+        }
+        /// <summary>Gets whether the "open_now" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasOpenNow {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "open_now" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearOpenNow() {
+          _hasBits0 &= ~1;
         }
 
         /// <summary>Field number for the "periods" field.</summary>
         public const int PeriodsFieldNumber = 2;
-        private static readonly pb::FieldCodec<global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.OpeningHoursPeriod> _repeated_periods_codec
-            = pb::FieldCodec.ForMessage(18, global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.OpeningHoursPeriod.Parser);
-        private readonly pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.OpeningHoursPeriod> periods_ = new pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.OpeningHoursPeriod>();
+        private static readonly pb::FieldCodec<global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period> _repeated_periods_codec
+            = pb::FieldCodec.ForMessage(18, global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period.Parser);
+        private readonly pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period> periods_ = new pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period>();
         /// <summary>
-        /// The periods that this place is open during the week. The periods are in
-        /// chronological order, starting with Sunday in the place-local timezone. An
-        /// empty (but not absent) value indicates a place that is never open, e.g.
-        /// because it is closed temporarily for renovations.
+        /// Output only. The periods that this place is open during the week. The
+        /// periods are in chronological order, starting with Sunday in the
+        /// place-local timezone. An empty (but not absent) value indicates a place
+        /// that is never open, e.g. because it is closed temporarily for
+        /// renovations.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.OpeningHoursPeriod> Periods {
+        public pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period> Periods {
           get { return periods_; }
         }
 
@@ -3341,9 +3800,10 @@ namespace Google.Maps.Places.V1 {
             = pb::FieldCodec.ForString(26);
         private readonly pbc::RepeatedField<string> weekdayDescriptions_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// Localized strings describing the opening hours of this place, one string
-        /// for each day of the week.  Will be empty if the hours are unknown or
-        /// could not be converted to localized text. Example: "Sun: 18:00–06:00"
+        /// Output only. Localized strings describing the opening hours of this
+        /// place, one string for each day of the week.  Will be empty if the hours
+        /// are unknown or could not be converted to localized text. Example: "Sun:
+        /// 18:00–06:00"
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3351,18 +3811,18 @@ namespace Google.Maps.Places.V1 {
           get { return weekdayDescriptions_; }
         }
 
-        /// <summary>Field number for the "secondary_hour_type" field.</summary>
-        public const int SecondaryHourTypeFieldNumber = 4;
-        private global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SecondaryHourType secondaryHourType_ = global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SecondaryHourType.Unspecified;
+        /// <summary>Field number for the "secondary_hours_type" field.</summary>
+        public const int SecondaryHoursTypeFieldNumber = 4;
+        private global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SecondaryHoursType secondaryHoursType_ = global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SecondaryHoursType.Unspecified;
         /// <summary>
-        /// A type string used to identify the type of secondary hours.
+        /// Output only. A type string used to identify the type of secondary hours.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SecondaryHourType SecondaryHourType {
-          get { return secondaryHourType_; }
+        public global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SecondaryHoursType SecondaryHoursType {
+          get { return secondaryHoursType_; }
           set {
-            secondaryHourType_ = value;
+            secondaryHoursType_ = value;
           }
         }
 
@@ -3372,9 +3832,9 @@ namespace Google.Maps.Places.V1 {
             = pb::FieldCodec.ForMessage(42, global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SpecialDay.Parser);
         private readonly pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SpecialDay> specialDays_ = new pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SpecialDay>();
         /// <summary>
-        /// Structured information for special days that fall within the period that
-        /// the returned opening hours cover. Special days are days that could impact
-        /// the business hours of a place, e.g. Christmas day. Set for
+        /// Output only. Structured information for special days that fall within the
+        /// period that the returned opening hours cover. Special days are days that
+        /// could impact the business hours of a place, e.g. Christmas day. Set for
         /// current_opening_hours and current_secondary_opening_hours if there are
         /// exceptional hours.
         /// </summary>
@@ -3402,7 +3862,7 @@ namespace Google.Maps.Places.V1 {
           if (OpenNow != other.OpenNow) return false;
           if(!periods_.Equals(other.periods_)) return false;
           if(!weekdayDescriptions_.Equals(other.weekdayDescriptions_)) return false;
-          if (SecondaryHourType != other.SecondaryHourType) return false;
+          if (SecondaryHoursType != other.SecondaryHoursType) return false;
           if(!specialDays_.Equals(other.specialDays_)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -3411,10 +3871,10 @@ namespace Google.Maps.Places.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
-          if (OpenNow != false) hash ^= OpenNow.GetHashCode();
+          if (HasOpenNow) hash ^= OpenNow.GetHashCode();
           hash ^= periods_.GetHashCode();
           hash ^= weekdayDescriptions_.GetHashCode();
-          if (SecondaryHourType != global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SecondaryHourType.Unspecified) hash ^= SecondaryHourType.GetHashCode();
+          if (SecondaryHoursType != global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SecondaryHoursType.Unspecified) hash ^= SecondaryHoursType.GetHashCode();
           hash ^= specialDays_.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -3434,15 +3894,15 @@ namespace Google.Maps.Places.V1 {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
         #else
-          if (OpenNow != false) {
+          if (HasOpenNow) {
             output.WriteRawTag(8);
             output.WriteBool(OpenNow);
           }
           periods_.WriteTo(output, _repeated_periods_codec);
           weekdayDescriptions_.WriteTo(output, _repeated_weekdayDescriptions_codec);
-          if (SecondaryHourType != global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SecondaryHourType.Unspecified) {
+          if (SecondaryHoursType != global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SecondaryHoursType.Unspecified) {
             output.WriteRawTag(32);
-            output.WriteEnum((int) SecondaryHourType);
+            output.WriteEnum((int) SecondaryHoursType);
           }
           specialDays_.WriteTo(output, _repeated_specialDays_codec);
           if (_unknownFields != null) {
@@ -3455,15 +3915,15 @@ namespace Google.Maps.Places.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          if (OpenNow != false) {
+          if (HasOpenNow) {
             output.WriteRawTag(8);
             output.WriteBool(OpenNow);
           }
           periods_.WriteTo(ref output, _repeated_periods_codec);
           weekdayDescriptions_.WriteTo(ref output, _repeated_weekdayDescriptions_codec);
-          if (SecondaryHourType != global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SecondaryHourType.Unspecified) {
+          if (SecondaryHoursType != global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SecondaryHoursType.Unspecified) {
             output.WriteRawTag(32);
-            output.WriteEnum((int) SecondaryHourType);
+            output.WriteEnum((int) SecondaryHoursType);
           }
           specialDays_.WriteTo(ref output, _repeated_specialDays_codec);
           if (_unknownFields != null) {
@@ -3476,13 +3936,13 @@ namespace Google.Maps.Places.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
-          if (OpenNow != false) {
+          if (HasOpenNow) {
             size += 1 + 1;
           }
           size += periods_.CalculateSize(_repeated_periods_codec);
           size += weekdayDescriptions_.CalculateSize(_repeated_weekdayDescriptions_codec);
-          if (SecondaryHourType != global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SecondaryHourType.Unspecified) {
-            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SecondaryHourType);
+          if (SecondaryHoursType != global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SecondaryHoursType.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SecondaryHoursType);
           }
           size += specialDays_.CalculateSize(_repeated_specialDays_codec);
           if (_unknownFields != null) {
@@ -3497,13 +3957,13 @@ namespace Google.Maps.Places.V1 {
           if (other == null) {
             return;
           }
-          if (other.OpenNow != false) {
+          if (other.HasOpenNow) {
             OpenNow = other.OpenNow;
           }
           periods_.Add(other.periods_);
           weekdayDescriptions_.Add(other.weekdayDescriptions_);
-          if (other.SecondaryHourType != global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SecondaryHourType.Unspecified) {
-            SecondaryHourType = other.SecondaryHourType;
+          if (other.SecondaryHoursType != global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SecondaryHoursType.Unspecified) {
+            SecondaryHoursType = other.SecondaryHoursType;
           }
           specialDays_.Add(other.specialDays_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -3534,7 +3994,7 @@ namespace Google.Maps.Places.V1 {
                 break;
               }
               case 32: {
-                SecondaryHourType = (global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SecondaryHourType) input.ReadEnum();
+                SecondaryHoursType = (global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SecondaryHoursType) input.ReadEnum();
                 break;
               }
               case 42: {
@@ -3569,7 +4029,7 @@ namespace Google.Maps.Places.V1 {
                 break;
               }
               case 32: {
-                SecondaryHourType = (global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SecondaryHourType) input.ReadEnum();
+                SecondaryHoursType = (global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SecondaryHoursType) input.ReadEnum();
                 break;
               }
               case 42: {
@@ -3589,11 +4049,11 @@ namespace Google.Maps.Places.V1 {
           /// <summary>
           /// A type used to identify the type of secondary hours.
           /// </summary>
-          public enum SecondaryHourType {
+          public enum SecondaryHoursType {
             /// <summary>
             /// Default value when secondary hour type is not specified.
             /// </summary>
-            [pbr::OriginalName("SECONDARY_HOUR_TYPE_UNSPECIFIED")] Unspecified = 0,
+            [pbr::OriginalName("SECONDARY_HOURS_TYPE_UNSPECIFIED")] Unspecified = 0,
             /// <summary>
             /// The drive-through hour for banks, restaurants, or pharmacies.
             /// </summary>
@@ -3651,16 +4111,16 @@ namespace Google.Maps.Places.V1 {
           /// <summary>
           /// A period the place remains in open_now status.
           /// </summary>
-          public sealed partial class OpeningHoursPeriod : pb::IMessage<OpeningHoursPeriod>
+          public sealed partial class Period : pb::IMessage<Period>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
           #endif
           {
-            private static readonly pb::MessageParser<OpeningHoursPeriod> _parser = new pb::MessageParser<OpeningHoursPeriod>(() => new OpeningHoursPeriod());
+            private static readonly pb::MessageParser<Period> _parser = new pb::MessageParser<Period>(() => new Period());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public static pb::MessageParser<OpeningHoursPeriod> Parser { get { return _parser; } }
+            public static pb::MessageParser<Period> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3676,7 +4136,7 @@ namespace Google.Maps.Places.V1 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public OpeningHoursPeriod() {
+            public Period() {
               OnConstruction();
             }
 
@@ -3684,7 +4144,7 @@ namespace Google.Maps.Places.V1 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public OpeningHoursPeriod(OpeningHoursPeriod other) : this() {
+            public Period(Period other) : this() {
               open_ = other.open_ != null ? other.open_.Clone() : null;
               close_ = other.close_ != null ? other.close_.Clone() : null;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -3692,19 +4152,19 @@ namespace Google.Maps.Places.V1 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public OpeningHoursPeriod Clone() {
-              return new OpeningHoursPeriod(this);
+            public Period Clone() {
+              return new Period(this);
             }
 
             /// <summary>Field number for the "open" field.</summary>
             public const int OpenFieldNumber = 1;
-            private global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.OpeningHoursPeriod.Types.OpeningHoursPoint open_;
+            private global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period.Types.Point open_;
             /// <summary>
-            /// The time that the place starts to be open.
+            /// Output only. The time that the place starts to be open.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.OpeningHoursPeriod.Types.OpeningHoursPoint Open {
+            public global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period.Types.Point Open {
               get { return open_; }
               set {
                 open_ = value;
@@ -3713,13 +4173,13 @@ namespace Google.Maps.Places.V1 {
 
             /// <summary>Field number for the "close" field.</summary>
             public const int CloseFieldNumber = 2;
-            private global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.OpeningHoursPeriod.Types.OpeningHoursPoint close_;
+            private global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period.Types.Point close_;
             /// <summary>
-            /// The time that the place starts to be closed.
+            /// Output only. The time that the place starts to be closed.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.OpeningHoursPeriod.Types.OpeningHoursPoint Close {
+            public global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period.Types.Point Close {
               get { return close_; }
               set {
                 close_ = value;
@@ -3729,12 +4189,12 @@ namespace Google.Maps.Places.V1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
-              return Equals(other as OpeningHoursPeriod);
+              return Equals(other as Period);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public bool Equals(OpeningHoursPeriod other) {
+            public bool Equals(Period other) {
               if (ReferenceEquals(other, null)) {
                 return false;
               }
@@ -3820,19 +4280,19 @@ namespace Google.Maps.Places.V1 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public void MergeFrom(OpeningHoursPeriod other) {
+            public void MergeFrom(Period other) {
               if (other == null) {
                 return;
               }
               if (other.open_ != null) {
                 if (open_ == null) {
-                  Open = new global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.OpeningHoursPeriod.Types.OpeningHoursPoint();
+                  Open = new global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period.Types.Point();
                 }
                 Open.MergeFrom(other.Open);
               }
               if (other.close_ != null) {
                 if (close_ == null) {
-                  Close = new global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.OpeningHoursPeriod.Types.OpeningHoursPoint();
+                  Close = new global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period.Types.Point();
                 }
                 Close.MergeFrom(other.Close);
               }
@@ -3853,14 +4313,14 @@ namespace Google.Maps.Places.V1 {
                     break;
                   case 10: {
                     if (open_ == null) {
-                      Open = new global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.OpeningHoursPeriod.Types.OpeningHoursPoint();
+                      Open = new global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period.Types.Point();
                     }
                     input.ReadMessage(Open);
                     break;
                   }
                   case 18: {
                     if (close_ == null) {
-                      Close = new global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.OpeningHoursPeriod.Types.OpeningHoursPoint();
+                      Close = new global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period.Types.Point();
                     }
                     input.ReadMessage(Close);
                     break;
@@ -3882,14 +4342,14 @@ namespace Google.Maps.Places.V1 {
                     break;
                   case 10: {
                     if (open_ == null) {
-                      Open = new global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.OpeningHoursPeriod.Types.OpeningHoursPoint();
+                      Open = new global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period.Types.Point();
                     }
                     input.ReadMessage(Open);
                     break;
                   }
                   case 18: {
                     if (close_ == null) {
-                      Close = new global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.OpeningHoursPeriod.Types.OpeningHoursPoint();
+                      Close = new global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period.Types.Point();
                     }
                     input.ReadMessage(Close);
                     break;
@@ -3900,29 +4360,29 @@ namespace Google.Maps.Places.V1 {
             #endif
 
             #region Nested types
-            /// <summary>Container for nested types declared in the OpeningHoursPeriod message type.</summary>
+            /// <summary>Container for nested types declared in the Period message type.</summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static partial class Types {
               /// <summary>
               /// Status changing points.
               /// </summary>
-              public sealed partial class OpeningHoursPoint : pb::IMessage<OpeningHoursPoint>
+              public sealed partial class Point : pb::IMessage<Point>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   , pb::IBufferMessage
               #endif
               {
-                private static readonly pb::MessageParser<OpeningHoursPoint> _parser = new pb::MessageParser<OpeningHoursPoint>(() => new OpeningHoursPoint());
+                private static readonly pb::MessageParser<Point> _parser = new pb::MessageParser<Point>(() => new Point());
                 private pb::UnknownFieldSet _unknownFields;
                 private int _hasBits0;
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-                public static pb::MessageParser<OpeningHoursPoint> Parser { get { return _parser; } }
+                public static pb::MessageParser<Point> Parser { get { return _parser; } }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public static pbr::MessageDescriptor Descriptor {
-                  get { return global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.OpeningHoursPeriod.Descriptor.NestedTypes[0]; }
+                  get { return global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period.Descriptor.NestedTypes[0]; }
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3933,7 +4393,7 @@ namespace Google.Maps.Places.V1 {
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-                public OpeningHoursPoint() {
+                public Point() {
                   OnConstruction();
                 }
 
@@ -3941,12 +4401,11 @@ namespace Google.Maps.Places.V1 {
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-                public OpeningHoursPoint(OpeningHoursPoint other) : this() {
+                public Point(Point other) : this() {
                   _hasBits0 = other._hasBits0;
                   day_ = other.day_;
                   hour_ = other.hour_;
                   minute_ = other.minute_;
-                  dateDeprecated_ = other.dateDeprecated_;
                   date_ = other.date_ != null ? other.date_.Clone() : null;
                   truncated_ = other.truncated_;
                   _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -3954,8 +4413,8 @@ namespace Google.Maps.Places.V1 {
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-                public OpeningHoursPoint Clone() {
-                  return new OpeningHoursPoint(this);
+                public Point Clone() {
+                  return new Point(this);
                 }
 
                 /// <summary>Field number for the "day" field.</summary>
@@ -3964,8 +4423,8 @@ namespace Google.Maps.Places.V1 {
 
                 private int day_;
                 /// <summary>
-                /// A day of the week, as an integer in the range 0-6.  0 is Sunday, 1 is
-                /// Monday, etc.
+                /// Output only. A day of the week, as an integer in the range 0-6.  0 is
+                /// Sunday, 1 is Monday, etc.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3995,7 +4454,7 @@ namespace Google.Maps.Places.V1 {
 
                 private int hour_;
                 /// <summary>
-                /// The hour in 2 digits. Ranges from 00 to 23.
+                /// Output only. The hour in 2 digits. Ranges from 00 to 23.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4025,7 +4484,7 @@ namespace Google.Maps.Places.V1 {
 
                 private int minute_;
                 /// <summary>
-                /// The minute in 2 digits. Ranges from 00 to 59.
+                /// Output only. The minute in 2 digits. Ranges from 00 to 59.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4049,28 +4508,11 @@ namespace Google.Maps.Places.V1 {
                   _hasBits0 &= ~4;
                 }
 
-                /// <summary>Field number for the "date_deprecated" field.</summary>
-                public const int DateDeprecatedFieldNumber = 4;
-                private string dateDeprecated_ = "";
-                /// <summary>
-                /// Date of the endpoint expressed in `RFC3339` format in the local
-                /// timezone for the place. For example 2010-12-31.
-                /// </summary>
-                [global::System.ObsoleteAttribute]
-                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-                public string DateDeprecated {
-                  get { return dateDeprecated_; }
-                  set {
-                    dateDeprecated_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-                  }
-                }
-
                 /// <summary>Field number for the "date" field.</summary>
                 public const int DateFieldNumber = 6;
                 private global::Google.Type.Date date_;
                 /// <summary>
-                /// Date in the local timezone for the place.
+                /// Output only. Date in the local timezone for the place.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4085,11 +4527,11 @@ namespace Google.Maps.Places.V1 {
                 public const int TruncatedFieldNumber = 5;
                 private bool truncated_;
                 /// <summary>
-                /// Whether or not this endpoint was truncated. Truncation occurs when
-                /// the real hours are outside the times we are willing to return hours
-                /// between, so we truncate the hours back to these boundaries. This
-                /// ensures that at most `24 * 7` hours from midnight of the day of the
-                /// request are returned.
+                /// Output only. Whether or not this endpoint was truncated. Truncation
+                /// occurs when the real hours are outside the times we are willing to
+                /// return hours between, so we truncate the hours back to these
+                /// boundaries. This ensures that at most 24 * 7 hours from midnight of
+                /// the day of the request are returned.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4103,12 +4545,12 @@ namespace Google.Maps.Places.V1 {
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override bool Equals(object other) {
-                  return Equals(other as OpeningHoursPoint);
+                  return Equals(other as Point);
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-                public bool Equals(OpeningHoursPoint other) {
+                public bool Equals(Point other) {
                   if (ReferenceEquals(other, null)) {
                     return false;
                   }
@@ -4118,7 +4560,6 @@ namespace Google.Maps.Places.V1 {
                   if (Day != other.Day) return false;
                   if (Hour != other.Hour) return false;
                   if (Minute != other.Minute) return false;
-                  if (DateDeprecated != other.DateDeprecated) return false;
                   if (!object.Equals(Date, other.Date)) return false;
                   if (Truncated != other.Truncated) return false;
                   return Equals(_unknownFields, other._unknownFields);
@@ -4131,7 +4572,6 @@ namespace Google.Maps.Places.V1 {
                   if (HasDay) hash ^= Day.GetHashCode();
                   if (HasHour) hash ^= Hour.GetHashCode();
                   if (HasMinute) hash ^= Minute.GetHashCode();
-                  if (DateDeprecated.Length != 0) hash ^= DateDeprecated.GetHashCode();
                   if (date_ != null) hash ^= Date.GetHashCode();
                   if (Truncated != false) hash ^= Truncated.GetHashCode();
                   if (_unknownFields != null) {
@@ -4164,10 +4604,6 @@ namespace Google.Maps.Places.V1 {
                     output.WriteRawTag(24);
                     output.WriteInt32(Minute);
                   }
-                  if (DateDeprecated.Length != 0) {
-                    output.WriteRawTag(34);
-                    output.WriteString(DateDeprecated);
-                  }
                   if (Truncated != false) {
                     output.WriteRawTag(40);
                     output.WriteBool(Truncated);
@@ -4198,10 +4634,6 @@ namespace Google.Maps.Places.V1 {
                     output.WriteRawTag(24);
                     output.WriteInt32(Minute);
                   }
-                  if (DateDeprecated.Length != 0) {
-                    output.WriteRawTag(34);
-                    output.WriteString(DateDeprecated);
-                  }
                   if (Truncated != false) {
                     output.WriteRawTag(40);
                     output.WriteBool(Truncated);
@@ -4229,9 +4661,6 @@ namespace Google.Maps.Places.V1 {
                   if (HasMinute) {
                     size += 1 + pb::CodedOutputStream.ComputeInt32Size(Minute);
                   }
-                  if (DateDeprecated.Length != 0) {
-                    size += 1 + pb::CodedOutputStream.ComputeStringSize(DateDeprecated);
-                  }
                   if (date_ != null) {
                     size += 1 + pb::CodedOutputStream.ComputeMessageSize(Date);
                   }
@@ -4246,7 +4675,7 @@ namespace Google.Maps.Places.V1 {
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-                public void MergeFrom(OpeningHoursPoint other) {
+                public void MergeFrom(Point other) {
                   if (other == null) {
                     return;
                   }
@@ -4258,9 +4687,6 @@ namespace Google.Maps.Places.V1 {
                   }
                   if (other.HasMinute) {
                     Minute = other.Minute;
-                  }
-                  if (other.DateDeprecated.Length != 0) {
-                    DateDeprecated = other.DateDeprecated;
                   }
                   if (other.date_ != null) {
                     if (date_ == null) {
@@ -4296,10 +4722,6 @@ namespace Google.Maps.Places.V1 {
                       }
                       case 24: {
                         Minute = input.ReadInt32();
-                        break;
-                      }
-                      case 34: {
-                        DateDeprecated = input.ReadString();
                         break;
                       }
                       case 40: {
@@ -4338,10 +4760,6 @@ namespace Google.Maps.Places.V1 {
                       }
                       case 24: {
                         Minute = input.ReadInt32();
-                        break;
-                      }
-                      case 34: {
-                        DateDeprecated = input.ReadString();
                         break;
                       }
                       case 40: {
@@ -4420,7 +4838,7 @@ namespace Google.Maps.Places.V1 {
             public const int DateFieldNumber = 1;
             private global::Google.Type.Date date_;
             /// <summary>
-            /// The date of this special day.
+            /// Output only. The date of this special day.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4595,7 +5013,7 @@ namespace Google.Maps.Places.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Maps.Places.V1.Place.Descriptor.NestedTypes[4]; }
+          get { return global::Google.Maps.Places.V1.Place.Descriptor.NestedTypes[3]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4630,7 +5048,7 @@ namespace Google.Maps.Places.V1 {
         public const int ProviderFieldNumber = 1;
         private string provider_ = "";
         /// <summary>
-        /// Name of the Place's data provider.
+        /// Output only. Name of the Place's data provider.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4645,7 +5063,7 @@ namespace Google.Maps.Places.V1 {
         public const int ProviderUriFieldNumber = 2;
         private string providerUri_ = "";
         /// <summary>
-        /// URI to the Place's data provider.
+        /// Output only. URI to the Place's data provider.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4814,23 +5232,24 @@ namespace Google.Maps.Places.V1 {
       }
 
       /// <summary>
-      /// Contains a summary of the place.
+      /// Payment options the place accepts.
       /// </summary>
-      public sealed partial class EditorialSummary : pb::IMessage<EditorialSummary>
+      public sealed partial class PaymentOptions : pb::IMessage<PaymentOptions>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
       #endif
       {
-        private static readonly pb::MessageParser<EditorialSummary> _parser = new pb::MessageParser<EditorialSummary>(() => new EditorialSummary());
+        private static readonly pb::MessageParser<PaymentOptions> _parser = new pb::MessageParser<PaymentOptions>(() => new PaymentOptions());
         private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public static pb::MessageParser<EditorialSummary> Parser { get { return _parser; } }
+        public static pb::MessageParser<PaymentOptions> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Maps.Places.V1.Place.Descriptor.NestedTypes[5]; }
+          get { return global::Google.Maps.Places.V1.Place.Descriptor.NestedTypes[4]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4841,7 +5260,7 @@ namespace Google.Maps.Places.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public EditorialSummary() {
+        public PaymentOptions() {
           OnConstruction();
         }
 
@@ -4849,50 +5268,161 @@ namespace Google.Maps.Places.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public EditorialSummary(EditorialSummary other) : this() {
-          overview_ = other.overview_ != null ? other.overview_.Clone() : null;
+        public PaymentOptions(PaymentOptions other) : this() {
+          _hasBits0 = other._hasBits0;
+          acceptsCreditCards_ = other.acceptsCreditCards_;
+          acceptsDebitCards_ = other.acceptsDebitCards_;
+          acceptsCashOnly_ = other.acceptsCashOnly_;
+          acceptsNfc_ = other.acceptsNfc_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public EditorialSummary Clone() {
-          return new EditorialSummary(this);
+        public PaymentOptions Clone() {
+          return new PaymentOptions(this);
         }
 
-        /// <summary>Field number for the "overview" field.</summary>
-        public const int OverviewFieldNumber = 1;
-        private global::Google.Type.LocalizedText overview_;
+        /// <summary>Field number for the "accepts_credit_cards" field.</summary>
+        public const int AcceptsCreditCardsFieldNumber = 1;
+        private readonly static bool AcceptsCreditCardsDefaultValue = false;
+
+        private bool acceptsCreditCards_;
         /// <summary>
-        /// A summary is comprised of a textual overview, and also includes the
-        /// language code for these if applicable. Summary text must be presented
-        /// as-is and can not be modified or altered.
+        /// Place accepts credit cards as payment.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public global::Google.Type.LocalizedText Overview {
-          get { return overview_; }
+        public bool AcceptsCreditCards {
+          get { if ((_hasBits0 & 1) != 0) { return acceptsCreditCards_; } else { return AcceptsCreditCardsDefaultValue; } }
           set {
-            overview_ = value;
+            _hasBits0 |= 1;
+            acceptsCreditCards_ = value;
           }
+        }
+        /// <summary>Gets whether the "accepts_credit_cards" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasAcceptsCreditCards {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "accepts_credit_cards" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearAcceptsCreditCards() {
+          _hasBits0 &= ~1;
+        }
+
+        /// <summary>Field number for the "accepts_debit_cards" field.</summary>
+        public const int AcceptsDebitCardsFieldNumber = 2;
+        private readonly static bool AcceptsDebitCardsDefaultValue = false;
+
+        private bool acceptsDebitCards_;
+        /// <summary>
+        /// Place accepts debit cards as payment.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool AcceptsDebitCards {
+          get { if ((_hasBits0 & 2) != 0) { return acceptsDebitCards_; } else { return AcceptsDebitCardsDefaultValue; } }
+          set {
+            _hasBits0 |= 2;
+            acceptsDebitCards_ = value;
+          }
+        }
+        /// <summary>Gets whether the "accepts_debit_cards" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasAcceptsDebitCards {
+          get { return (_hasBits0 & 2) != 0; }
+        }
+        /// <summary>Clears the value of the "accepts_debit_cards" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearAcceptsDebitCards() {
+          _hasBits0 &= ~2;
+        }
+
+        /// <summary>Field number for the "accepts_cash_only" field.</summary>
+        public const int AcceptsCashOnlyFieldNumber = 3;
+        private readonly static bool AcceptsCashOnlyDefaultValue = false;
+
+        private bool acceptsCashOnly_;
+        /// <summary>
+        /// Place accepts cash only as payment. Places with this attribute may still
+        /// accept other payment methods.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool AcceptsCashOnly {
+          get { if ((_hasBits0 & 4) != 0) { return acceptsCashOnly_; } else { return AcceptsCashOnlyDefaultValue; } }
+          set {
+            _hasBits0 |= 4;
+            acceptsCashOnly_ = value;
+          }
+        }
+        /// <summary>Gets whether the "accepts_cash_only" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasAcceptsCashOnly {
+          get { return (_hasBits0 & 4) != 0; }
+        }
+        /// <summary>Clears the value of the "accepts_cash_only" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearAcceptsCashOnly() {
+          _hasBits0 &= ~4;
+        }
+
+        /// <summary>Field number for the "accepts_nfc" field.</summary>
+        public const int AcceptsNfcFieldNumber = 4;
+        private readonly static bool AcceptsNfcDefaultValue = false;
+
+        private bool acceptsNfc_;
+        /// <summary>
+        /// Place accepts NFC payments.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool AcceptsNfc {
+          get { if ((_hasBits0 & 8) != 0) { return acceptsNfc_; } else { return AcceptsNfcDefaultValue; } }
+          set {
+            _hasBits0 |= 8;
+            acceptsNfc_ = value;
+          }
+        }
+        /// <summary>Gets whether the "accepts_nfc" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasAcceptsNfc {
+          get { return (_hasBits0 & 8) != 0; }
+        }
+        /// <summary>Clears the value of the "accepts_nfc" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearAcceptsNfc() {
+          _hasBits0 &= ~8;
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
-          return Equals(other as EditorialSummary);
+          return Equals(other as PaymentOptions);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public bool Equals(EditorialSummary other) {
+        public bool Equals(PaymentOptions other) {
           if (ReferenceEquals(other, null)) {
             return false;
           }
           if (ReferenceEquals(other, this)) {
             return true;
           }
-          if (!object.Equals(Overview, other.Overview)) return false;
+          if (AcceptsCreditCards != other.AcceptsCreditCards) return false;
+          if (AcceptsDebitCards != other.AcceptsDebitCards) return false;
+          if (AcceptsCashOnly != other.AcceptsCashOnly) return false;
+          if (AcceptsNfc != other.AcceptsNfc) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -4900,7 +5430,10 @@ namespace Google.Maps.Places.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
-          if (overview_ != null) hash ^= Overview.GetHashCode();
+          if (HasAcceptsCreditCards) hash ^= AcceptsCreditCards.GetHashCode();
+          if (HasAcceptsDebitCards) hash ^= AcceptsDebitCards.GetHashCode();
+          if (HasAcceptsCashOnly) hash ^= AcceptsCashOnly.GetHashCode();
+          if (HasAcceptsNfc) hash ^= AcceptsNfc.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -4919,9 +5452,21 @@ namespace Google.Maps.Places.V1 {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
         #else
-          if (overview_ != null) {
-            output.WriteRawTag(10);
-            output.WriteMessage(Overview);
+          if (HasAcceptsCreditCards) {
+            output.WriteRawTag(8);
+            output.WriteBool(AcceptsCreditCards);
+          }
+          if (HasAcceptsDebitCards) {
+            output.WriteRawTag(16);
+            output.WriteBool(AcceptsDebitCards);
+          }
+          if (HasAcceptsCashOnly) {
+            output.WriteRawTag(24);
+            output.WriteBool(AcceptsCashOnly);
+          }
+          if (HasAcceptsNfc) {
+            output.WriteRawTag(32);
+            output.WriteBool(AcceptsNfc);
           }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
@@ -4933,9 +5478,21 @@ namespace Google.Maps.Places.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          if (overview_ != null) {
-            output.WriteRawTag(10);
-            output.WriteMessage(Overview);
+          if (HasAcceptsCreditCards) {
+            output.WriteRawTag(8);
+            output.WriteBool(AcceptsCreditCards);
+          }
+          if (HasAcceptsDebitCards) {
+            output.WriteRawTag(16);
+            output.WriteBool(AcceptsDebitCards);
+          }
+          if (HasAcceptsCashOnly) {
+            output.WriteRawTag(24);
+            output.WriteBool(AcceptsCashOnly);
+          }
+          if (HasAcceptsNfc) {
+            output.WriteRawTag(32);
+            output.WriteBool(AcceptsNfc);
           }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
@@ -4947,8 +5504,17 @@ namespace Google.Maps.Places.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
-          if (overview_ != null) {
-            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Overview);
+          if (HasAcceptsCreditCards) {
+            size += 1 + 1;
+          }
+          if (HasAcceptsDebitCards) {
+            size += 1 + 1;
+          }
+          if (HasAcceptsCashOnly) {
+            size += 1 + 1;
+          }
+          if (HasAcceptsNfc) {
+            size += 1 + 1;
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -4958,15 +5524,816 @@ namespace Google.Maps.Places.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public void MergeFrom(EditorialSummary other) {
+        public void MergeFrom(PaymentOptions other) {
           if (other == null) {
             return;
           }
-          if (other.overview_ != null) {
-            if (overview_ == null) {
-              Overview = new global::Google.Type.LocalizedText();
+          if (other.HasAcceptsCreditCards) {
+            AcceptsCreditCards = other.AcceptsCreditCards;
+          }
+          if (other.HasAcceptsDebitCards) {
+            AcceptsDebitCards = other.AcceptsDebitCards;
+          }
+          if (other.HasAcceptsCashOnly) {
+            AcceptsCashOnly = other.AcceptsCashOnly;
+          }
+          if (other.HasAcceptsNfc) {
+            AcceptsNfc = other.AcceptsNfc;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                AcceptsCreditCards = input.ReadBool();
+                break;
+              }
+              case 16: {
+                AcceptsDebitCards = input.ReadBool();
+                break;
+              }
+              case 24: {
+                AcceptsCashOnly = input.ReadBool();
+                break;
+              }
+              case 32: {
+                AcceptsNfc = input.ReadBool();
+                break;
+              }
             }
-            Overview.MergeFrom(other.Overview);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                AcceptsCreditCards = input.ReadBool();
+                break;
+              }
+              case 16: {
+                AcceptsDebitCards = input.ReadBool();
+                break;
+              }
+              case 24: {
+                AcceptsCashOnly = input.ReadBool();
+                break;
+              }
+              case 32: {
+                AcceptsNfc = input.ReadBool();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Information about parking options for the place. A parking lot could
+      /// support more than one option at the same time.
+      /// </summary>
+      public sealed partial class ParkingOptions : pb::IMessage<ParkingOptions>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ParkingOptions> _parser = new pb::MessageParser<ParkingOptions>(() => new ParkingOptions());
+        private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ParkingOptions> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Maps.Places.V1.Place.Descriptor.NestedTypes[5]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ParkingOptions() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ParkingOptions(ParkingOptions other) : this() {
+          _hasBits0 = other._hasBits0;
+          freeParkingLot_ = other.freeParkingLot_;
+          paidParkingLot_ = other.paidParkingLot_;
+          freeStreetParking_ = other.freeStreetParking_;
+          paidStreetParking_ = other.paidStreetParking_;
+          valetParking_ = other.valetParking_;
+          freeGarageParking_ = other.freeGarageParking_;
+          paidGarageParking_ = other.paidGarageParking_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ParkingOptions Clone() {
+          return new ParkingOptions(this);
+        }
+
+        /// <summary>Field number for the "free_parking_lot" field.</summary>
+        public const int FreeParkingLotFieldNumber = 1;
+        private readonly static bool FreeParkingLotDefaultValue = false;
+
+        private bool freeParkingLot_;
+        /// <summary>
+        /// Place offers free parking lots.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool FreeParkingLot {
+          get { if ((_hasBits0 & 1) != 0) { return freeParkingLot_; } else { return FreeParkingLotDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            freeParkingLot_ = value;
+          }
+        }
+        /// <summary>Gets whether the "free_parking_lot" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasFreeParkingLot {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "free_parking_lot" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearFreeParkingLot() {
+          _hasBits0 &= ~1;
+        }
+
+        /// <summary>Field number for the "paid_parking_lot" field.</summary>
+        public const int PaidParkingLotFieldNumber = 2;
+        private readonly static bool PaidParkingLotDefaultValue = false;
+
+        private bool paidParkingLot_;
+        /// <summary>
+        /// Place offers paid parking lots.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool PaidParkingLot {
+          get { if ((_hasBits0 & 2) != 0) { return paidParkingLot_; } else { return PaidParkingLotDefaultValue; } }
+          set {
+            _hasBits0 |= 2;
+            paidParkingLot_ = value;
+          }
+        }
+        /// <summary>Gets whether the "paid_parking_lot" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasPaidParkingLot {
+          get { return (_hasBits0 & 2) != 0; }
+        }
+        /// <summary>Clears the value of the "paid_parking_lot" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearPaidParkingLot() {
+          _hasBits0 &= ~2;
+        }
+
+        /// <summary>Field number for the "free_street_parking" field.</summary>
+        public const int FreeStreetParkingFieldNumber = 3;
+        private readonly static bool FreeStreetParkingDefaultValue = false;
+
+        private bool freeStreetParking_;
+        /// <summary>
+        /// Place offers free street parking.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool FreeStreetParking {
+          get { if ((_hasBits0 & 4) != 0) { return freeStreetParking_; } else { return FreeStreetParkingDefaultValue; } }
+          set {
+            _hasBits0 |= 4;
+            freeStreetParking_ = value;
+          }
+        }
+        /// <summary>Gets whether the "free_street_parking" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasFreeStreetParking {
+          get { return (_hasBits0 & 4) != 0; }
+        }
+        /// <summary>Clears the value of the "free_street_parking" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearFreeStreetParking() {
+          _hasBits0 &= ~4;
+        }
+
+        /// <summary>Field number for the "paid_street_parking" field.</summary>
+        public const int PaidStreetParkingFieldNumber = 4;
+        private readonly static bool PaidStreetParkingDefaultValue = false;
+
+        private bool paidStreetParking_;
+        /// <summary>
+        /// Place offers paid street parking.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool PaidStreetParking {
+          get { if ((_hasBits0 & 8) != 0) { return paidStreetParking_; } else { return PaidStreetParkingDefaultValue; } }
+          set {
+            _hasBits0 |= 8;
+            paidStreetParking_ = value;
+          }
+        }
+        /// <summary>Gets whether the "paid_street_parking" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasPaidStreetParking {
+          get { return (_hasBits0 & 8) != 0; }
+        }
+        /// <summary>Clears the value of the "paid_street_parking" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearPaidStreetParking() {
+          _hasBits0 &= ~8;
+        }
+
+        /// <summary>Field number for the "valet_parking" field.</summary>
+        public const int ValetParkingFieldNumber = 5;
+        private readonly static bool ValetParkingDefaultValue = false;
+
+        private bool valetParking_;
+        /// <summary>
+        /// Place offers valet parking.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool ValetParking {
+          get { if ((_hasBits0 & 16) != 0) { return valetParking_; } else { return ValetParkingDefaultValue; } }
+          set {
+            _hasBits0 |= 16;
+            valetParking_ = value;
+          }
+        }
+        /// <summary>Gets whether the "valet_parking" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasValetParking {
+          get { return (_hasBits0 & 16) != 0; }
+        }
+        /// <summary>Clears the value of the "valet_parking" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearValetParking() {
+          _hasBits0 &= ~16;
+        }
+
+        /// <summary>Field number for the "free_garage_parking" field.</summary>
+        public const int FreeGarageParkingFieldNumber = 6;
+        private readonly static bool FreeGarageParkingDefaultValue = false;
+
+        private bool freeGarageParking_;
+        /// <summary>
+        /// Place offers free garage parking.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool FreeGarageParking {
+          get { if ((_hasBits0 & 32) != 0) { return freeGarageParking_; } else { return FreeGarageParkingDefaultValue; } }
+          set {
+            _hasBits0 |= 32;
+            freeGarageParking_ = value;
+          }
+        }
+        /// <summary>Gets whether the "free_garage_parking" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasFreeGarageParking {
+          get { return (_hasBits0 & 32) != 0; }
+        }
+        /// <summary>Clears the value of the "free_garage_parking" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearFreeGarageParking() {
+          _hasBits0 &= ~32;
+        }
+
+        /// <summary>Field number for the "paid_garage_parking" field.</summary>
+        public const int PaidGarageParkingFieldNumber = 7;
+        private readonly static bool PaidGarageParkingDefaultValue = false;
+
+        private bool paidGarageParking_;
+        /// <summary>
+        /// Place offers paid garage parking.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool PaidGarageParking {
+          get { if ((_hasBits0 & 64) != 0) { return paidGarageParking_; } else { return PaidGarageParkingDefaultValue; } }
+          set {
+            _hasBits0 |= 64;
+            paidGarageParking_ = value;
+          }
+        }
+        /// <summary>Gets whether the "paid_garage_parking" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasPaidGarageParking {
+          get { return (_hasBits0 & 64) != 0; }
+        }
+        /// <summary>Clears the value of the "paid_garage_parking" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearPaidGarageParking() {
+          _hasBits0 &= ~64;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ParkingOptions);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ParkingOptions other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (FreeParkingLot != other.FreeParkingLot) return false;
+          if (PaidParkingLot != other.PaidParkingLot) return false;
+          if (FreeStreetParking != other.FreeStreetParking) return false;
+          if (PaidStreetParking != other.PaidStreetParking) return false;
+          if (ValetParking != other.ValetParking) return false;
+          if (FreeGarageParking != other.FreeGarageParking) return false;
+          if (PaidGarageParking != other.PaidGarageParking) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (HasFreeParkingLot) hash ^= FreeParkingLot.GetHashCode();
+          if (HasPaidParkingLot) hash ^= PaidParkingLot.GetHashCode();
+          if (HasFreeStreetParking) hash ^= FreeStreetParking.GetHashCode();
+          if (HasPaidStreetParking) hash ^= PaidStreetParking.GetHashCode();
+          if (HasValetParking) hash ^= ValetParking.GetHashCode();
+          if (HasFreeGarageParking) hash ^= FreeGarageParking.GetHashCode();
+          if (HasPaidGarageParking) hash ^= PaidGarageParking.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (HasFreeParkingLot) {
+            output.WriteRawTag(8);
+            output.WriteBool(FreeParkingLot);
+          }
+          if (HasPaidParkingLot) {
+            output.WriteRawTag(16);
+            output.WriteBool(PaidParkingLot);
+          }
+          if (HasFreeStreetParking) {
+            output.WriteRawTag(24);
+            output.WriteBool(FreeStreetParking);
+          }
+          if (HasPaidStreetParking) {
+            output.WriteRawTag(32);
+            output.WriteBool(PaidStreetParking);
+          }
+          if (HasValetParking) {
+            output.WriteRawTag(40);
+            output.WriteBool(ValetParking);
+          }
+          if (HasFreeGarageParking) {
+            output.WriteRawTag(48);
+            output.WriteBool(FreeGarageParking);
+          }
+          if (HasPaidGarageParking) {
+            output.WriteRawTag(56);
+            output.WriteBool(PaidGarageParking);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (HasFreeParkingLot) {
+            output.WriteRawTag(8);
+            output.WriteBool(FreeParkingLot);
+          }
+          if (HasPaidParkingLot) {
+            output.WriteRawTag(16);
+            output.WriteBool(PaidParkingLot);
+          }
+          if (HasFreeStreetParking) {
+            output.WriteRawTag(24);
+            output.WriteBool(FreeStreetParking);
+          }
+          if (HasPaidStreetParking) {
+            output.WriteRawTag(32);
+            output.WriteBool(PaidStreetParking);
+          }
+          if (HasValetParking) {
+            output.WriteRawTag(40);
+            output.WriteBool(ValetParking);
+          }
+          if (HasFreeGarageParking) {
+            output.WriteRawTag(48);
+            output.WriteBool(FreeGarageParking);
+          }
+          if (HasPaidGarageParking) {
+            output.WriteRawTag(56);
+            output.WriteBool(PaidGarageParking);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (HasFreeParkingLot) {
+            size += 1 + 1;
+          }
+          if (HasPaidParkingLot) {
+            size += 1 + 1;
+          }
+          if (HasFreeStreetParking) {
+            size += 1 + 1;
+          }
+          if (HasPaidStreetParking) {
+            size += 1 + 1;
+          }
+          if (HasValetParking) {
+            size += 1 + 1;
+          }
+          if (HasFreeGarageParking) {
+            size += 1 + 1;
+          }
+          if (HasPaidGarageParking) {
+            size += 1 + 1;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ParkingOptions other) {
+          if (other == null) {
+            return;
+          }
+          if (other.HasFreeParkingLot) {
+            FreeParkingLot = other.FreeParkingLot;
+          }
+          if (other.HasPaidParkingLot) {
+            PaidParkingLot = other.PaidParkingLot;
+          }
+          if (other.HasFreeStreetParking) {
+            FreeStreetParking = other.FreeStreetParking;
+          }
+          if (other.HasPaidStreetParking) {
+            PaidStreetParking = other.PaidStreetParking;
+          }
+          if (other.HasValetParking) {
+            ValetParking = other.ValetParking;
+          }
+          if (other.HasFreeGarageParking) {
+            FreeGarageParking = other.FreeGarageParking;
+          }
+          if (other.HasPaidGarageParking) {
+            PaidGarageParking = other.PaidGarageParking;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                FreeParkingLot = input.ReadBool();
+                break;
+              }
+              case 16: {
+                PaidParkingLot = input.ReadBool();
+                break;
+              }
+              case 24: {
+                FreeStreetParking = input.ReadBool();
+                break;
+              }
+              case 32: {
+                PaidStreetParking = input.ReadBool();
+                break;
+              }
+              case 40: {
+                ValetParking = input.ReadBool();
+                break;
+              }
+              case 48: {
+                FreeGarageParking = input.ReadBool();
+                break;
+              }
+              case 56: {
+                PaidGarageParking = input.ReadBool();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                FreeParkingLot = input.ReadBool();
+                break;
+              }
+              case 16: {
+                PaidParkingLot = input.ReadBool();
+                break;
+              }
+              case 24: {
+                FreeStreetParking = input.ReadBool();
+                break;
+              }
+              case 32: {
+                PaidStreetParking = input.ReadBool();
+                break;
+              }
+              case 40: {
+                ValetParking = input.ReadBool();
+                break;
+              }
+              case 48: {
+                FreeGarageParking = input.ReadBool();
+                break;
+              }
+              case 56: {
+                PaidGarageParking = input.ReadBool();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Place resource name and id of sub destinations that relate to the place.
+      /// For example, different terminals are different destinations of an airport.
+      /// </summary>
+      public sealed partial class SubDestination : pb::IMessage<SubDestination>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<SubDestination> _parser = new pb::MessageParser<SubDestination>(() => new SubDestination());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<SubDestination> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Maps.Places.V1.Place.Descriptor.NestedTypes[6]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SubDestination() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SubDestination(SubDestination other) : this() {
+          name_ = other.name_;
+          id_ = other.id_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SubDestination Clone() {
+          return new SubDestination(this);
+        }
+
+        /// <summary>Field number for the "name" field.</summary>
+        public const int NameFieldNumber = 1;
+        private string name_ = "";
+        /// <summary>
+        /// The resource name of the sub destination.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Name {
+          get { return name_; }
+          set {
+            name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "id" field.</summary>
+        public const int IdFieldNumber = 2;
+        private string id_ = "";
+        /// <summary>
+        /// The place id of the sub destination.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Id {
+          get { return id_; }
+          set {
+            id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as SubDestination);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(SubDestination other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Name != other.Name) return false;
+          if (Id != other.Id) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Name.Length != 0) hash ^= Name.GetHashCode();
+          if (Id.Length != 0) hash ^= Id.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Name.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Name);
+          }
+          if (Id.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Id);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Name.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Name);
+          }
+          if (Id.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Id);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Name.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+          }
+          if (Id.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(SubDestination other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Name.Length != 0) {
+            Name = other.Name;
+          }
+          if (other.Id.Length != 0) {
+            Id = other.Id;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -4984,10 +6351,11 @@ namespace Google.Maps.Places.V1 {
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
               case 10: {
-                if (overview_ == null) {
-                  Overview = new global::Google.Type.LocalizedText();
-                }
-                input.ReadMessage(Overview);
+                Name = input.ReadString();
+                break;
+              }
+              case 18: {
+                Id = input.ReadString();
                 break;
               }
             }
@@ -5006,10 +6374,223 @@ namespace Google.Maps.Places.V1 {
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
                 break;
               case 10: {
-                if (overview_ == null) {
-                  Overview = new global::Google.Type.LocalizedText();
-                }
-                input.ReadMessage(Overview);
+                Name = input.ReadString();
+                break;
+              }
+              case 18: {
+                Id = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Information about the accessibility options a place offers.
+      /// </summary>
+      public sealed partial class AccessibilityOptions : pb::IMessage<AccessibilityOptions>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<AccessibilityOptions> _parser = new pb::MessageParser<AccessibilityOptions>(() => new AccessibilityOptions());
+        private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<AccessibilityOptions> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Maps.Places.V1.Place.Descriptor.NestedTypes[7]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AccessibilityOptions() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AccessibilityOptions(AccessibilityOptions other) : this() {
+          _hasBits0 = other._hasBits0;
+          wheelchairAccessibleEntrance_ = other.wheelchairAccessibleEntrance_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AccessibilityOptions Clone() {
+          return new AccessibilityOptions(this);
+        }
+
+        /// <summary>Field number for the "wheelchair_accessible_entrance" field.</summary>
+        public const int WheelchairAccessibleEntranceFieldNumber = 2;
+        private readonly static bool WheelchairAccessibleEntranceDefaultValue = false;
+
+        private bool wheelchairAccessibleEntrance_;
+        /// <summary>
+        /// Places has wheelchair accessible entrance.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool WheelchairAccessibleEntrance {
+          get { if ((_hasBits0 & 1) != 0) { return wheelchairAccessibleEntrance_; } else { return WheelchairAccessibleEntranceDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            wheelchairAccessibleEntrance_ = value;
+          }
+        }
+        /// <summary>Gets whether the "wheelchair_accessible_entrance" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasWheelchairAccessibleEntrance {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "wheelchair_accessible_entrance" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearWheelchairAccessibleEntrance() {
+          _hasBits0 &= ~1;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as AccessibilityOptions);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(AccessibilityOptions other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (WheelchairAccessibleEntrance != other.WheelchairAccessibleEntrance) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (HasWheelchairAccessibleEntrance) hash ^= WheelchairAccessibleEntrance.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (HasWheelchairAccessibleEntrance) {
+            output.WriteRawTag(16);
+            output.WriteBool(WheelchairAccessibleEntrance);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (HasWheelchairAccessibleEntrance) {
+            output.WriteRawTag(16);
+            output.WriteBool(WheelchairAccessibleEntrance);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (HasWheelchairAccessibleEntrance) {
+            size += 1 + 1;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(AccessibilityOptions other) {
+          if (other == null) {
+            return;
+          }
+          if (other.HasWheelchairAccessibleEntrance) {
+            WheelchairAccessibleEntrance = other.WheelchairAccessibleEntrance;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 16: {
+                WheelchairAccessibleEntrance = input.ReadBool();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 16: {
+                WheelchairAccessibleEntrance = input.ReadBool();
                 break;
               }
             }
