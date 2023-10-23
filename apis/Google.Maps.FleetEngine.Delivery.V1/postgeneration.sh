@@ -2,9 +2,6 @@
 
 set -e
 
-# Remove the pre-generation-copied gRPC service config file.
-rm $GOOGLEAPIS/google/maps/fleetengine/delivery/v1/fleetengine_delivery_grpc_service_config.json
-
 # Suppress deprecation warnings in generated gRPC code.
 # (If this becomes a common problem, we'll want a more robust fix.
 # It'll do for now.)
