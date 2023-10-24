@@ -1213,6 +1213,25 @@
       "restNumericEnums": true
     },
     {
+      "id": "Google.Cloud.CloudQuotas.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Cloud Quotas",
+      "productUrl": "https://cloud.google.com/cloudquotas/docs/overview",
+      "description": "Recommended Google client library to access the Google Cloud Quotas API, which provides GCP service consumers with management and observability for resource usage, quotas, and restrictions of the services they consume.",
+      "tags": [
+        "usage",
+        "monitoring",
+        "resources"
+      ],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/api/cloudquotas/v1",
+      "shortName": "cloudquotas",
+      "serviceConfigFile": "cloudquotas_v1.yaml",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.Commerce.Consumer.Procurement.V1",
       "version": "1.0.0-beta02",
       "type": "grpc",
