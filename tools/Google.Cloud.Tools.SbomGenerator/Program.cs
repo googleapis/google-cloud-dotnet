@@ -11,15 +11,10 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and 
 // limitations under the License.
-using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Net;
 using System.Security.Cryptography;
 using System.Text.Json;
 using System.Xml;
-
-namespace GenerateSBOM;
 
 // The classes below are not general purpose Spdx classes.  Their single
 // purpose is to generate json SBOMs for nupkgs generated from this repository,
