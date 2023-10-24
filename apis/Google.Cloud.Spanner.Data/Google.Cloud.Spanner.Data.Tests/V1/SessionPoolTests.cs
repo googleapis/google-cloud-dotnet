@@ -51,7 +51,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             var session = pool.CreateDetachedSession(s_sampleSessionName, s_sampleTransactionId, mode);
             Assert.Equal(s_sampleSessionName, session.SessionName);
             Assert.Equal(s_sampleTransactionId, session.TransactionId);
-            Assert.Equal(mode, session.TransactionMode);
+            Assert.Equal(TransactionOptions.ModeOneofCase.ReadOnly, session.TransactionMode);
             logger.AssertNoWarningsOrErrors();
         }
 

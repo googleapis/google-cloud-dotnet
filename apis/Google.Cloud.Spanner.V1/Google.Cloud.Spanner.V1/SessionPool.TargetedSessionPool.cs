@@ -14,7 +14,6 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Cloud.Spanner.Common.V1;
 using Google.Protobuf;
 using Grpc.Core;
 using System;
@@ -179,14 +178,14 @@ namespace Google.Cloud.Spanner.V1
                 if (transactionMode == ModeOneofCase.ReadWrite)
                 {
                     Interlocked.Increment(ref _rwTransactionRequests);
-                    if (session.TransactionMode == transactionMode)
+                    if (session.TransactionOptions.ModeCase == transactionMode)
                     {
                         Interlocked.Increment(ref _rwTransactionRequestsPrewarmed);
                     }
                 }
 
                 // If we've already got the right transaction mode, we're done.
-                if (session.TransactionMode == transactionMode)
+                if (session.TransactionOptions.ModeCase == transactionMode)
                 {
                     return session;
                 }
@@ -198,7 +197,7 @@ namespace Google.Cloud.Spanner.V1
                     // no transaction ID.
                     if (transactionMode == ModeOneofCase.None)
                     {
-                        return session.WithTransaction(null, ModeOneofCase.None);
+                        return session.WithTransaction(null, PooledSession.NoTransactionOptions);
                     }
                     else
                     {
@@ -336,7 +335,7 @@ namespace Google.Cloud.Spanner.V1
 
                             // If the session already has a read/write transaction, add it to the read/write pool immediately.
                             // Otherwise, work out whether we *want* it to be read/write.
-                            if (session.TransactionMode == ModeOneofCase.ReadWrite)
+                            if (session.TransactionOptions.ModeCase == ModeOneofCase.ReadWrite)
                             {
                                 stack = _readWriteSessions;
                             }
@@ -411,7 +410,7 @@ namespace Google.Cloud.Spanner.V1
                     Interlocked.Decrement(ref _inFlightSessionCreationCount);
                 }
                 // We now definitely don't have a transaction.
-                ReleaseInactiveSession(session.WithTransaction(null, ModeOneofCase.None), maybeCreateReadWriteTransaction: true);
+                ReleaseInactiveSession(session.WithTransaction(null, PooledSession.NoTransactionOptions), maybeCreateReadWriteTransaction: true);
             }
 
             private async Task TryCreateReadWriteTransactionAndReturnToPool(PooledSession session)
@@ -448,7 +447,7 @@ namespace Google.Cloud.Spanner.V1
                         .WithExpiration(Expiration.FromTimeout(Options.Timeout))
                         .WithCancellationToken(cancellationToken);
                     var transaction = await session.BeginTransactionAsync(request, callSettings).ConfigureAwait(false);
-                    return session.WithTransaction(transaction.Id, options.ModeCase, transaction.ReadTimestamp);
+                    return session.WithTransaction(transaction.Id, options, transaction.ReadTimestamp);
                 }
                 finally
                 {
