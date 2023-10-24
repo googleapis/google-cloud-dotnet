@@ -1,4 +1,4 @@
-﻿// Copyright 2023 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License").
 // you may not use this file except in compliance with the License.
@@ -54,8 +54,8 @@ internal class SpdxPackage
     public string SPDXID { get; set; } = "";
     public string versionInfo { get; set; } = "";
     public string description { get; set; } = "";
-    public string supplier { get; set; } = "Person: Google LLC";
-    public string originator { get; set; } = "Person: Google LLC";
+    public string supplier { get; set; } = "Organization: Google LLC";
+    public string originator { get; set; } = "Organization: Google LLC";
     public string downloadLocation { get; set; }
         = "https://github.com/googleapis/google-cloud-dotnet.git";
     public string licenseConcluded { get; set; } = "Apache-2.0";
@@ -201,15 +201,15 @@ Usage:
     /// </exception>
     private static Spdx SpdxFrom(string nupkgPath)
     {
-        // Compute the SHA1 hash of the .nupkg file.
-        var sha1 = SHA1.Create();
+        // Compute the SHA-256 hash of the .nupkg file.
+        using var sha256 = SHA256.Create();
         byte[]? hash = null;
         using (var file = File.OpenRead(nupkgPath))
         {
-            hash = sha1.ComputeHash(file);
+            hash = sha256.ComputeHash(file);
         }
 
-        // Use the SHA1 hash to create a deterministic uuid.
+        // Use the SHA-256 hash to create a deterministic uuid.
         var uuid = Uuid5FromHash(hash);
 
         // Find the .nuspec metadata in the .nupkg and collect the fields we
@@ -255,7 +255,7 @@ Usage:
                     description = nuspecMetadata.Description,
                     checksums = new List<SpdxChecksum> {
                         new() {
-                            algorithm = "SHA1",
+                            algorithm = "SHA256",
                             checksumValue = BitConverter.ToString(hash)
                                 .Replace("-","")
                         }
