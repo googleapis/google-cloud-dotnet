@@ -100,11 +100,14 @@ generate_microgenerator() {
 
   # Only specify common resource protos for GCP APIs.
   # Don't include the file for the ResourceManager API, which genuinely defines these resources.
+  # Also don't include Cloud Quotas, which has currently-unusual (but long-term-standard)
+  # common resource definitions.
   COMMON_RESOURCES_PROTO=
   if [[ ( $PACKAGE_ID == Google.Cloud.* || $PACKAGE_ID == Google.Identity.* || \
           $PACKAGE_ID == Google.Maps.MapsPlatformDatasets.V1Alpha || \
           $PACKAGE_ID == Google.Maps.MapsPlatformDatasets.V1) \
-        && $PACKAGE_ID != Google.Cloud.ResourceManager.V3 ]]
+        && $PACKAGE_ID != Google.Cloud.ResourceManager.V3 \
+        && $PACKAGE_ID != Google.Cloud.CloudQuotas.V1 ]]
   then
     COMMON_RESOURCES_PROTO=$GOOGLEAPIS/google/cloud/common_resources.proto
   fi
