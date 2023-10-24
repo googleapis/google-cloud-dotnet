@@ -227,7 +227,17 @@ namespace Google.Cloud.Spanner.V1
         {
             GaxPreconditions.CheckNotNull(sessionName, nameof(sessionName));
             GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId));
-            return PooledSession.FromSessionName(_detachedSessionPool, sessionName).WithTransaction(transactionId, transactionMode, readTimestamp);
+            return PooledSession.FromSessionName(_detachedSessionPool, sessionName).WithTransaction(transactionId, BuildTransactionOptions(), readTimestamp);
+
+            // TODO: Maybe just consider the breaking change and directly receive TransactionOptions.
+            TransactionOptions BuildTransactionOptions() => transactionMode switch
+            {
+                ModeOneofCase.None => new TransactionOptions (),
+                ModeOneofCase.PartitionedDml => new TransactionOptions { PartitionedDml = new() },
+                ModeOneofCase.ReadWrite => new TransactionOptions { ReadWrite = new() },
+                ModeOneofCase.ReadOnly => new TransactionOptions() { ReadOnly = new() },
+                _ => throw new ArgumentException(nameof(transactionMode), $"Unknown {typeof(ModeOneofCase).FullName}: {transactionMode}")
+            };
         }
 
         /// <summary>

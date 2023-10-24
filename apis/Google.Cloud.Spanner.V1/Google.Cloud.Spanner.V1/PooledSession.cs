@@ -18,7 +18,6 @@ using Google.Cloud.Spanner.V1.Internal;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using System;
-using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
 using static Google.Cloud.Spanner.V1.TransactionOptions;
@@ -55,14 +54,28 @@ namespace Google.Cloud.Spanner.V1
         public ByteString TransactionId { get; }
 
         /// <summary>
-        /// The mode of the transaction. (Always None iff TransactionId is null.)
+        /// The options for the transaction that is or will be associated with this session. Won't be null.
         /// </summary>
-        internal ModeOneofCase TransactionMode { get; }
+        /// <remarks>
+        /// Will be <see cref="TransactionOptions.ModeOneofCase.None"/> if <see cref="TransactionId"/>
+        /// is null.
+        /// </remarks>
+        private TransactionOptions TransactionOptions { get; }
 
         /// <summary>
-        /// The read timestamp of the transaction. (Always <c>null</c> if
-        /// ReturnReadTimestamp = false or if TransactionMode != ReadOnly.)
+        /// The transaction mode for the transaction that is or may be associated with this session.
+        /// Available for testing.
         /// </summary>
+        internal TransactionOptions.ModeOneofCase TransactionMode => TransactionOptions.ModeCase;
+
+        /// <summary>
+        /// The read timestamp of the transaction. May be null.
+        /// </summary>
+        /// <remarks>
+        /// Will be set iif <see cref="TransactionOptions"/> represents read-only options with <see cref="Types.ReadOnly.ReturnReadTimestamp"/>
+        /// set to true or if this session was created using <see cref="SessionPool.CreateDetachedSession(SessionName, ByteString, ModeOneofCase, Timestamp)"/>
+        /// and a value was provided for the <see cref="Timestamp"/> parameter.
+        /// </remarks>
         public Timestamp ReadTimestamp { get; }
 
         /// <summary>
@@ -91,16 +104,16 @@ namespace Google.Cloud.Spanner.V1
         private int _disposed;
         private int _committedOrRolledBack;
 
-        private PooledSession(SessionPool.ISessionPool pool, SessionName sessionName, ByteString transactionId, ModeOneofCase transactionMode, Timestamp readTimestamp, DateTime evictionTime, long refreshTicks)
+        private PooledSession(SessionPool.ISessionPool pool, SessionName sessionName, ByteString transactionId, TransactionOptions transactionOptions, Timestamp readTimestamp, DateTime evictionTime, long refreshTicks)
         {
+            TransactionOptions = transactionOptions?.Clone() ?? new TransactionOptions();
             GaxPreconditions.CheckArgument(
-                (transactionId == null) == (transactionMode == ModeOneofCase.None),
-                nameof(transactionMode),
+                (transactionId == null) == (TransactionOptions.ModeCase == ModeOneofCase.None),
+                nameof(transactionOptions),
                 "Transaction mode and ID don't match.");
             _pool = pool;
             SessionName = GaxPreconditions.CheckNotNull(sessionName, nameof(sessionName));
             TransactionId = transactionId;
-            TransactionMode = transactionMode;
             ReadTimestamp = readTimestamp;
             _session = new Session { SessionName = SessionName };
             _evictionTime = evictionTime;
@@ -116,23 +129,29 @@ namespace Google.Cloud.Spanner.V1
             var now = pool.Clock.GetCurrentDateTimeUtc();
             var refreshDelay = options.SessionRefreshJitter.GetDelay(options.IdleSessionRefreshDelay);
             var evictionDelay = options.SessionEvictionJitter.GetDelay(options.PoolEvictionDelay);
-            return new PooledSession(pool, sessionName, transactionId: null, ModeOneofCase.None, readTimestamp: null, now + evictionDelay, now.Ticks + refreshDelay.Ticks);
+            return new PooledSession(pool, sessionName, transactionId: null, transactionOptions: null, readTimestamp: null, now + evictionDelay, now.Ticks + refreshDelay.Ticks);
         }
 
         /// <summary>
-        /// Returns a PooledSession for the same session as this one, but not disposed, and with no transaction associated with it.
+        /// Returns a PooledSession for the same session as this one with <see cref="TransactionMode"/> set to <see cref="TransactionOptions.ModeOneofCase.None"/>.
         /// The refresh and eviction times are the same as this instance.
+        /// This instance will be <see cref="MarkAsDisposed"/> to ensure that all operations with the underlying session are done through the new instance.
         /// </summary>
         private PooledSession AfterReset()
         {
             MarkAsDisposed();
-            return new PooledSession(_pool, SessionName, null, ModeOneofCase.None, null, _evictionTime, RefreshTicks);
+            return new PooledSession(_pool, SessionName, transactionId: null, transactionOptions: null, readTimestamp: null, _evictionTime, RefreshTicks);
         }
 
-        internal PooledSession WithTransaction(ByteString transactionId, ModeOneofCase transactionMode, Timestamp readTimestamp = null)
+        /// <summary>
+        /// Returns a PooledSession for the same session as this one with the given transaction related values.
+        /// The refresh and eviction times are the same as this instance.
+        /// This instance will be <see cref="MarkAsDisposed"/> to ensure that all operations with the underlying session are done through the new instance.
+        /// </summary>
+        internal PooledSession WithTransaction(ByteString transactionId, TransactionOptions transactionOptions, Timestamp readTimestamp = null)
         {
             MarkAsDisposed();
-            return new PooledSession(_pool, SessionName, transactionId, transactionMode, readTimestamp, _evictionTime, _refreshTicks);
+            return new PooledSession(_pool, SessionName, transactionId, transactionOptions, readTimestamp, _evictionTime, _refreshTicks);
         }
 
         /// <summary>
@@ -152,18 +171,13 @@ namespace Google.Cloud.Spanner.V1
         /// session. For instance, when retrying aborted commits it is better if the transaction work and commit
         /// are retried with the same session, because after each abort the sessions' lock priority increments.
         /// </remarks>
-        /// <returns>A new instance of <see cref="PooledSession"/>.</returns>
-        /// <exception cref="InvalidOperationException">If this <see cref="PooledSession.TransactionMode"/>
-        /// is <see cref="ModeOneofCase.None"/>.</exception>
-        public Task<PooledSession> WithFreshTransactionOrNewAsync(TransactionOptions transactionOptions, CancellationToken cancellationToken)
+        public Task<PooledSession> WithFreshTransactionOrNewAsync(CancellationToken cancellationToken)
         {
             CheckNotDisposed();
-            GaxPreconditions.CheckNotNull(transactionOptions, nameof(transactionOptions));
-            GaxPreconditions.CheckArgument(transactionOptions.ModeCase == TransactionMode, nameof(transactionOptions), $"{nameof(TransactionOptions)} should be of the same type as this session's {nameof(TransactionMode)} which is {TransactionMode}");
 
             // Calling AfterReset() will mark this instance as disposed.
             // The pool will take care of releasing back to the pool if needed.
-            return _pool.WithFreshTransactionOrNewAsync(AfterReset(), transactionOptions, cancellationToken);
+            return _pool.WithFreshTransactionOrNewAsync(AfterReset(), TransactionOptions, cancellationToken);
         }
 
         /// <summary>
@@ -222,7 +236,7 @@ namespace Google.Cloud.Spanner.V1
             {
                 // A read/write transaction that hasn't been committed or rolled back might have taken out a database lock: roll it
                 // back as part of releasing the session. (We don't block on the rollback happening though.)
-                ByteString transactionToRollback = TransactionMode == ModeOneofCase.ReadWrite && !IsCommittedOrRolledBack() ? TransactionId : null;
+                ByteString transactionToRollback = TransactionOptions.ModeCase == ModeOneofCase.ReadWrite && !IsCommittedOrRolledBack() ? TransactionId : null;
                 _pool.Release(AfterReset(), transactionToRollback, forceDelete || ServerExpired || ShouldBeEvicted);
             }
             else
@@ -421,7 +435,7 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         /// <remarks>
         /// This method does not affect <see cref="TransactionId"/> of this object. Instead, typical usage will be to call this method followed
-        /// by <see cref="WithTransaction(ByteString, ModeOneofCase, Timestamp)"/> to create a new <see cref="PooledSession"/> using the transaction.
+        /// by <see cref="WithTransaction(ByteString, TransactionOptions, Timestamp)"/> to create a new <see cref="PooledSession"/> using the transaction.
         /// </remarks>
         /// <param name="request">The begin-transaction request. Must not be null. The request will be modified with session details
         /// from this object.</param>

@@ -25,7 +25,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
-using static Google.Cloud.Spanner.V1.TransactionOptions.ModeOneofCase;
+using static Google.Cloud.Spanner.V1.TransactionOptions;
 using ResourceInfo = Google.Rpc.ResourceInfo;
 
 namespace Google.Cloud.Spanner.V1.Tests
@@ -35,6 +35,9 @@ namespace Google.Cloud.Spanner.V1.Tests
         private static readonly SessionName s_sampleSessionName = new SessionName("project", "instance", "database", "session");
         // In various tests we don't care whether things are evicted "on" or "after" a particular tick, so add one tick.
         private static readonly TimeSpan OneTick = TimeSpan.FromTicks(1);
+        private static readonly TransactionOptions s_readWriteOptions = new TransactionOptions { ReadWrite = new() };
+        private static readonly TransactionOptions s_readOnlyOptions = new TransactionOptions { ReadOnly = new() };
+        private static readonly TransactionOptions s_partitionedDml = new TransactionOptions { PartitionedDml = new() };
 
         [Fact]
         public void FromSessionName_BasicProperties()
@@ -48,7 +51,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             Assert.False(pooledSession.RequiresRefresh);
             Assert.False(pooledSession.ServerExpired);
             Assert.Null(pooledSession.TransactionId);
-            Assert.Equal(TransactionOptions.ModeOneofCase.None, pooledSession.TransactionMode);
+            Assert.Equal(ModeOneofCase.None, pooledSession.TransactionMode);
         }
 
         [Fact]
@@ -150,9 +153,8 @@ namespace Google.Cloud.Spanner.V1.Tests
             var pool = new FakeSessionPool();
             var pooledSession = PooledSession.FromSessionName(pool, s_sampleSessionName);
             var transactionId = ByteString.CopyFromUtf8("transaction");
-            var mode = TransactionOptions.ModeOneofCase.PartitionedDml;
-            var sessionWithTransaction = pooledSession.WithTransaction(transactionId, mode);
-            Assert.Equal(mode, sessionWithTransaction.TransactionMode);
+            var sessionWithTransaction = pooledSession.WithTransaction(transactionId, s_partitionedDml);
+            Assert.Equal(s_partitionedDml, sessionWithTransaction.TransactionOptions);
             Assert.Equal(transactionId, sessionWithTransaction.TransactionId);
             Assert.Equal(s_sampleSessionName, sessionWithTransaction.SessionName);
         }
@@ -162,9 +164,8 @@ namespace Google.Cloud.Spanner.V1.Tests
         {
             var pool = new FakeSessionPool();
             var transactionId = ByteString.CopyFromUtf8("transaction");
-            var mode = TransactionOptions.ModeOneofCase.ReadWrite;
             var pooledSession = PooledSession.FromSessionName(pool, s_sampleSessionName);
-            var sessionWithTransaction = pooledSession.WithTransaction(transactionId, mode);
+            var sessionWithTransaction = pooledSession.WithTransaction(transactionId, s_readWriteOptions);
 
             // Make a successful request
             var request = new CommitRequest();
@@ -186,9 +187,8 @@ namespace Google.Cloud.Spanner.V1.Tests
         {
             var pool = new FakeSessionPool();
             var transactionId = ByteString.CopyFromUtf8("transaction");
-            var mode = TransactionOptions.ModeOneofCase.ReadWrite;
             var pooledSession = PooledSession.FromSessionName(pool, s_sampleSessionName);
-            var sessionWithTransaction = pooledSession.WithTransaction(transactionId, mode);
+            var sessionWithTransaction = pooledSession.WithTransaction(transactionId, s_readWriteOptions);
 
             // Make a successful request
             var request = new ExecuteSqlRequest();
@@ -210,7 +210,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             var pooledSession = PooledSession.FromSessionName(pool, s_sampleSessionName);
 
             // Make a successful request
-            var request = new ExecuteSqlRequest { Transaction = new TransactionSelector { Begin = new TransactionOptions { ReadOnly = new TransactionOptions.Types.ReadOnly() } } };
+            var request = new ExecuteSqlRequest { Transaction = new TransactionSelector { Begin = s_readOnlyOptions } };
             pool.Client.Configure().ExecuteSqlAsync(request, Arg.Any<CallSettings>())
                 .Returns(Task.FromResult(new ResultSet()));
             await pooledSession.ExecuteSqlAsync(request, null);
@@ -218,7 +218,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             // The call modifies the request's session, but not transaction.
             Assert.Equal(s_sampleSessionName, request.SessionAsSessionName);
             Assert.Equal(TransactionSelector.SelectorOneofCase.Begin, request.Transaction.SelectorCase);
-            Assert.Equal(new TransactionOptions.Types.ReadOnly(), request.Transaction.Begin.ReadOnly);
+            Assert.Equal(s_readOnlyOptions, request.Transaction.Begin);
 
             _ = pool.Client.Received(1).ExecuteSqlAsync(request, Arg.Any<CallSettings>());
         }
@@ -229,7 +229,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             var pool = new FakeSessionPool();
             var transactionId = ByteString.CopyFromUtf8("transaction");
             var pooledSession = PooledSession.FromSessionName(pool, s_sampleSessionName);
-            var sessionWithTransaction = pooledSession.WithTransaction(transactionId, ReadWrite);
+            var sessionWithTransaction = pooledSession.WithTransaction(transactionId, s_readWriteOptions);
 
             // Make a successful request
             var request = new ExecuteBatchDmlRequest();
@@ -251,7 +251,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             var pooledSession = PooledSession.FromSessionName(pool, s_sampleSessionName);
 
             // Make a successful request
-            var request = new ExecuteBatchDmlRequest { Transaction = new TransactionSelector { Begin = new TransactionOptions { ReadOnly = new TransactionOptions.Types.ReadOnly() } } };
+            var request = new ExecuteBatchDmlRequest { Transaction = new TransactionSelector { Begin = s_readOnlyOptions } };
             pool.Client.Configure().ExecuteBatchDmlAsync(request, Arg.Any<CallSettings>())
                 .Returns(Task.FromResult(new ExecuteBatchDmlResponse()));
             await pooledSession.ExecuteBatchDmlAsync(request, null);
@@ -259,7 +259,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             // The call modifies the request's session, but not transaction.
             Assert.Equal(s_sampleSessionName, request.SessionAsSessionName);
             Assert.Equal(TransactionSelector.SelectorOneofCase.Begin, request.Transaction.SelectorCase);
-            Assert.Equal(new TransactionOptions.Types.ReadOnly(), request.Transaction.Begin.ReadOnly);
+            Assert.Equal(s_readOnlyOptions, request.Transaction.Begin);
 
             _ = pool.Client.Received(1).ExecuteBatchDmlAsync(request, Arg.Any<CallSettings>());
         }
@@ -339,7 +339,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         public void ReleaseToPool_ReadOnlyTransactionNotRolledBack()
         {
             var pool = new FakeSessionPool();
-            var pooledSession = CreateWithTransaction(pool, ReadOnly);
+            var pooledSession = CreateWithTransaction(pool, s_readOnlyOptions);
             pooledSession.ReleaseToPool(false);
             Assert.Null(pool.RolledBackTransaction);
         }
@@ -348,7 +348,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         public void ReleaseToPool_PartitionedDmlTransactionNotRolledBack()
         {
             var pool = new FakeSessionPool();
-            var pooledSession = CreateWithTransaction(pool, PartitionedDml);
+            var pooledSession = CreateWithTransaction(pool, s_partitionedDml);
             pooledSession.ReleaseToPool(false);
             Assert.Null(pool.RolledBackTransaction);
         }
@@ -360,7 +360,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             pool.Client.Configure().CommitAsync(Arg.Any<CommitRequest>(), Arg.Any<CallSettings>())
                 .Returns(Task.FromResult(new CommitResponse()));
 
-            var pooledSession = CreateWithTransaction(pool, ReadWrite);
+            var pooledSession = CreateWithTransaction(pool, s_readWriteOptions);
             await pooledSession.CommitAsync(new CommitRequest(), null);
             pooledSession.ReleaseToPool(false);
             Assert.Null(pool.RolledBackTransaction);
@@ -373,7 +373,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             pool.Client.Configure().RollbackAsync(Arg.Any<RollbackRequest>(), Arg.Any<CallSettings>())
                 .Returns(Task.CompletedTask);
 
-            var pooledSession = CreateWithTransaction(pool, ReadWrite);
+            var pooledSession = CreateWithTransaction(pool, s_readWriteOptions);
             await pooledSession.RollbackAsync(new RollbackRequest(), null);
             pooledSession.ReleaseToPool(false);
             Assert.Null(pool.RolledBackTransaction);
@@ -383,7 +383,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         public void ReleaseToPool_ReadWriteUncommittedTransactionRolledBack()
         {
             var pool = new FakeSessionPool();
-            var pooledSession = CreateWithTransaction(pool, ReadWrite);
+            var pooledSession = CreateWithTransaction(pool, s_readWriteOptions);
             pooledSession.ReleaseToPool(false);
             Assert.Equal(pool.RolledBackTransaction, pooledSession.TransactionId);
         }
@@ -392,10 +392,10 @@ namespace Google.Cloud.Spanner.V1.Tests
             new RpcException(new Status(StatusCode.NotFound, "Session not found"),
                 new Metadata { { ExecuteHelper.ResourceInfoMetadataKey, new ResourceInfo { ResourceType = ExecuteHelper.SessionResourceType }.ToByteArray() } });
 
-        private PooledSession CreateWithTransaction(SessionPool.ISessionPool pool, TransactionOptions.ModeOneofCase mode)
+        private PooledSession CreateWithTransaction(SessionPool.ISessionPool pool, TransactionOptions options)
         {
             ByteString transactionId = ByteString.CopyFromUtf8(Guid.NewGuid().ToString());
-            return PooledSession.FromSessionName(pool, s_sampleSessionName).WithTransaction(transactionId, mode);
+            return PooledSession.FromSessionName(pool, s_sampleSessionName).WithTransaction(transactionId, options);
         }
 
         private class FakeSessionPool : SessionPool.ISessionPool

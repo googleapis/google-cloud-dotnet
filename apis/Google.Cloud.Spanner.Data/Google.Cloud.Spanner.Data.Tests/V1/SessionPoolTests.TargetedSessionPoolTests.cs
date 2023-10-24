@@ -225,7 +225,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                     var sessions = await AcquireAllSessionsAsync(pool);
 
                     var transactionId = ByteString.CopyFromUtf8("sample transaction");
-                    var firstSession = sessions[0].WithTransaction(transactionId, TransactionOptions.ModeOneofCase.ReadWrite);
+                    var firstSession = sessions[0].WithTransaction(transactionId, new TransactionOptions { ReadWrite = new TransactionOptions.Types.ReadWrite()});
 
                     var timeBeforeRelease = client.Clock.GetCurrentDateTimeUtc();
                     firstSession.ReleaseToPool(false);
@@ -548,38 +548,21 @@ namespace Google.Cloud.Spanner.V1.Tests
             }
 
             [Fact(Timeout = TestTimeoutMilliseconds)]
-            public async Task RefreshTransaction_FailsForDifferentTransactionTypes()
-            {
-                var pool = CreatePool(false);
-                var client = (SessionTestingSpannerClient)pool.Client;
-
-                await client.Scheduler.RunAsync(async () =>
-                {
-                    var originalSession = await pool.AcquireSessionAsync(
-                        new TransactionOptions { ReadOnly = new TransactionOptions.Types.ReadOnly() },
-                        CancellationToken.None);
-
-                    await Assert.ThrowsAsync<ArgumentException>(() => originalSession.WithFreshTransactionOrNewAsync(new TransactionOptions { ReadWrite = new TransactionOptions.Types.ReadWrite() }, CancellationToken.None));
-                });
-            }
-
-            [Fact(Timeout = TestTimeoutMilliseconds)]
             public async Task RefreshTransaction_WithFreshSession()
             {
                 var pool = CreatePool(false);
-                var client = (SessionTestingSpannerClient)pool.Client;
-                var transactionOptions = new TransactionOptions { ReadWrite = new TransactionOptions.Types.ReadWrite() };
+                var client = (SessionTestingSpannerClient) pool.Client;
                 await client.Scheduler.RunAsync(async () =>
                 {
                     var originalSession = await pool.AcquireSessionAsync(
-                        transactionOptions,
+                        new TransactionOptions { ReadWrite = new TransactionOptions.Types.ReadWrite() },
                         CancellationToken.None);
                     var originalSessionName = originalSession.SessionName;
                     var originalTransactionId = originalSession.TransactionId;
                     // This session hasn't had time to be stale.
                     // Refreshing the transaction should return a new instance of PooledSession
                     // with the same session name and different transaction ID.
-                    var newSession = await originalSession.WithFreshTransactionOrNewAsync(transactionOptions, CancellationToken.None);
+                    var newSession = await originalSession.WithFreshTransactionOrNewAsync(CancellationToken.None);
 
                     Assert.NotSame(originalSession, newSession);
                     Assert.Equal(originalSessionName, newSession.SessionName);
@@ -591,12 +574,13 @@ namespace Google.Cloud.Spanner.V1.Tests
             public async Task RefreshTransaction_WithStaleSession()
             {
                 var pool = CreatePool(false);
-                var client = (SessionTestingSpannerClient)pool.Client;
-                var transactionOptions = new TransactionOptions { ReadWrite = new TransactionOptions.Types.ReadWrite() };
+                var client = (SessionTestingSpannerClient) pool.Client;
 
                 await client.Scheduler.RunAsync(async () =>
                 {
-                    var originalSession = await pool.AcquireSessionAsync(transactionOptions, CancellationToken.None);
+                    var originalSession = await pool.AcquireSessionAsync(
+                        new TransactionOptions { ReadWrite = new TransactionOptions.Types.ReadWrite() },
+                        CancellationToken.None);
                     var originalSessionName = originalSession.SessionName;
                     var originalTransactionId = originalSession.TransactionId;
 
@@ -604,7 +588,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                     // This session is now stale.
                     // Refreshing the transaction should return a new instance of PooledSession
                     // with a different session name and different transaction ID.
-                    var newSessionTask = originalSession.WithFreshTransactionOrNewAsync(transactionOptions, CancellationToken.None);
+                    var newSessionTask = originalSession.WithFreshTransactionOrNewAsync(CancellationToken.None);
                     // Let's make sure that our original session was refreshed and returned back to the pool.
                     // We have one session already so we can only acquire the rest.
                     var allSessionsTask = AcquireSessionTasks(pool, pool.Options.MaximumActiveSessions - 1);
