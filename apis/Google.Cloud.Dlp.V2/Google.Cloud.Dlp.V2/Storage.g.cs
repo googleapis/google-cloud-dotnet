@@ -26,133 +26,136 @@ namespace Google.Cloud.Dlp.V2 {
           string.Concat(
             "CiNnb29nbGUvcHJpdmFjeS9kbHAvdjIvc3RvcmFnZS5wcm90bxIVZ29vZ2xl",
             "LnByaXZhY3kuZGxwLnYyGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGh9n",
-            "b29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIikKCEluZm9UeXBlEgwK",
-            "BG5hbWUYASABKAkSDwoHdmVyc2lvbhgCIAEoCSLhAQoQU2Vuc2l0aXZpdHlT",
-            "Y29yZRJMCgVzY29yZRgBIAEoDjI9Lmdvb2dsZS5wcml2YWN5LmRscC52Mi5T",
-            "ZW5zaXRpdml0eVNjb3JlLlNlbnNpdGl2aXR5U2NvcmVMZXZlbCJ/ChVTZW5z",
-            "aXRpdml0eVNjb3JlTGV2ZWwSIQodU0VOU0lUSVZJVFlfU0NPUkVfVU5TUEVD",
-            "SUZJRUQQABITCg9TRU5TSVRJVklUWV9MT1cQChIYChRTRU5TSVRJVklUWV9N",
-            "T0RFUkFURRAUEhQKEFNFTlNJVElWSVRZX0hJR0gQHiJLCgpTdG9yZWRUeXBl",
-            "EgwKBG5hbWUYASABKAkSLwoLY3JlYXRlX3RpbWUYAiABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wIsgLCg5DdXN0b21JbmZvVHlwZRIyCglpbmZv",
-            "X3R5cGUYASABKAsyHy5nb29nbGUucHJpdmFjeS5kbHAudjIuSW5mb1R5cGUS",
-            "NQoKbGlrZWxpaG9vZBgGIAEoDjIhLmdvb2dsZS5wcml2YWN5LmRscC52Mi5M",
-            "aWtlbGlob29kEkYKCmRpY3Rpb25hcnkYAiABKAsyMC5nb29nbGUucHJpdmFj",
-            "eS5kbHAudjIuQ3VzdG9tSW5mb1R5cGUuRGljdGlvbmFyeUgAEjwKBXJlZ2V4",
-            "GAMgASgLMisuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkN1c3RvbUluZm9UeXBl",
-            "LlJlZ2V4SAASTQoOc3Vycm9nYXRlX3R5cGUYBCABKAsyMy5nb29nbGUucHJp",
-            "dmFjeS5kbHAudjIuQ3VzdG9tSW5mb1R5cGUuU3Vycm9nYXRlVHlwZUgAEjgK",
-            "C3N0b3JlZF90eXBlGAUgASgLMiEuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLlN0",
-            "b3JlZFR5cGVIABJMCg9kZXRlY3Rpb25fcnVsZXMYByADKAsyMy5nb29nbGUu",
-            "cHJpdmFjeS5kbHAudjIuQ3VzdG9tSW5mb1R5cGUuRGV0ZWN0aW9uUnVsZRJL",
-            "Cg5leGNsdXNpb25fdHlwZRgIIAEoDjIzLmdvb2dsZS5wcml2YWN5LmRscC52",
-            "Mi5DdXN0b21JbmZvVHlwZS5FeGNsdXNpb25UeXBlGsgBCgpEaWN0aW9uYXJ5",
-            "Ek4KCXdvcmRfbGlzdBgBIAEoCzI5Lmdvb2dsZS5wcml2YWN5LmRscC52Mi5D",
-            "dXN0b21JbmZvVHlwZS5EaWN0aW9uYXJ5LldvcmRMaXN0SAASRQoSY2xvdWRf",
-            "c3RvcmFnZV9wYXRoGAMgASgLMicuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkNs",
-            "b3VkU3RvcmFnZVBhdGhIABoZCghXb3JkTGlzdBINCgV3b3JkcxgBIAMoCUII",
-            "CgZzb3VyY2UaLwoFUmVnZXgSDwoHcGF0dGVybhgBIAEoCRIVCg1ncm91cF9p",
-            "bmRleGVzGAIgAygFGg8KDVN1cnJvZ2F0ZVR5cGUavgQKDURldGVjdGlvblJ1",
-            "bGUSVwoMaG90d29yZF9ydWxlGAEgASgLMj8uZ29vZ2xlLnByaXZhY3kuZGxw",
-            "LnYyLkN1c3RvbUluZm9UeXBlLkRldGVjdGlvblJ1bGUuSG90d29yZFJ1bGVI",
-            "ABo4CglQcm94aW1pdHkSFQoNd2luZG93X2JlZm9yZRgBIAEoBRIUCgx3aW5k",
-            "b3dfYWZ0ZXIYAiABKAUaggEKFExpa2VsaWhvb2RBZGp1c3RtZW50Ej0KEGZp",
-            "eGVkX2xpa2VsaWhvb2QYASABKA4yIS5nb29nbGUucHJpdmFjeS5kbHAudjIu",
-            "TGlrZWxpaG9vZEgAEh0KE3JlbGF0aXZlX2xpa2VsaWhvb2QYAiABKAVIAEIM",
-            "CgphZGp1c3RtZW50GowCCgtIb3R3b3JkUnVsZRJCCg1ob3R3b3JkX3JlZ2V4",
-            "GAEgASgLMisuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkN1c3RvbUluZm9UeXBl",
-            "LlJlZ2V4ElAKCXByb3hpbWl0eRgCIAEoCzI9Lmdvb2dsZS5wcml2YWN5LmRs",
-            "cC52Mi5DdXN0b21JbmZvVHlwZS5EZXRlY3Rpb25SdWxlLlByb3hpbWl0eRJn",
-            "ChVsaWtlbGlob29kX2FkanVzdG1lbnQYAyABKAsySC5nb29nbGUucHJpdmFj",
-            "eS5kbHAudjIuQ3VzdG9tSW5mb1R5cGUuRGV0ZWN0aW9uUnVsZS5MaWtlbGlo",
-            "b29kQWRqdXN0bWVudEIGCgR0eXBlIksKDUV4Y2x1c2lvblR5cGUSHgoaRVhD",
-            "TFVTSU9OX1RZUEVfVU5TUEVDSUZJRUQQABIaChZFWENMVVNJT05fVFlQRV9F",
-            "WENMVURFEAFCBgoEdHlwZSIXCgdGaWVsZElkEgwKBG5hbWUYASABKAkiNwoL",
-            "UGFydGl0aW9uSWQSEgoKcHJvamVjdF9pZBgCIAEoCRIUCgxuYW1lc3BhY2Vf",
-            "aWQYBCABKAkiHgoOS2luZEV4cHJlc3Npb24SDAoEbmFtZRgBIAEoCSKBAQoQ",
-            "RGF0YXN0b3JlT3B0aW9ucxI4CgxwYXJ0aXRpb25faWQYASABKAsyIi5nb29n",
-            "bGUucHJpdmFjeS5kbHAudjIuUGFydGl0aW9uSWQSMwoEa2luZBgCIAEoCzIl",
-            "Lmdvb2dsZS5wcml2YWN5LmRscC52Mi5LaW5kRXhwcmVzc2lvbiJdChhDbG91",
-            "ZFN0b3JhZ2VSZWdleEZpbGVTZXQSEwoLYnVja2V0X25hbWUYASABKAkSFQoN",
-            "aW5jbHVkZV9yZWdleBgCIAMoCRIVCg1leGNsdWRlX3JlZ2V4GAMgAygJIuwD",
-            "ChNDbG91ZFN0b3JhZ2VPcHRpb25zEkQKCGZpbGVfc2V0GAEgASgLMjIuZ29v",
-            "Z2xlLnByaXZhY3kuZGxwLnYyLkNsb3VkU3RvcmFnZU9wdGlvbnMuRmlsZVNl",
-            "dBIcChRieXRlc19saW1pdF9wZXJfZmlsZRgEIAEoAxIkChxieXRlc19saW1p",
-            "dF9wZXJfZmlsZV9wZXJjZW50GAggASgFEjMKCmZpbGVfdHlwZXMYBSADKA4y",
-            "Hy5nb29nbGUucHJpdmFjeS5kbHAudjIuRmlsZVR5cGUSTgoNc2FtcGxlX21l",
-            "dGhvZBgGIAEoDjI3Lmdvb2dsZS5wcml2YWN5LmRscC52Mi5DbG91ZFN0b3Jh",
-            "Z2VPcHRpb25zLlNhbXBsZU1ldGhvZBIbChNmaWxlc19saW1pdF9wZXJjZW50",
-            "GAcgASgFGl8KB0ZpbGVTZXQSCwoDdXJsGAEgASgJEkcKDnJlZ2V4X2ZpbGVf",
-            "c2V0GAIgASgLMi8uZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkNsb3VkU3RvcmFn",
-            "ZVJlZ2V4RmlsZVNldCJICgxTYW1wbGVNZXRob2QSHQoZU0FNUExFX01FVEhP",
-            "RF9VTlNQRUNJRklFRBAAEgcKA1RPUBABEhAKDFJBTkRPTV9TVEFSVBACIiIK",
-            "E0Nsb3VkU3RvcmFnZUZpbGVTZXQSCwoDdXJsGAEgASgJIiAKEENsb3VkU3Rv",
-            "cmFnZVBhdGgSDAoEcGF0aBgBIAEoCSLEAwoPQmlnUXVlcnlPcHRpb25zEj0K",
+            "b29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIm0KCEluZm9UeXBlEgwK",
+            "BG5hbWUYASABKAkSDwoHdmVyc2lvbhgCIAEoCRJCChFzZW5zaXRpdml0eV9z",
+            "Y29yZRgDIAEoCzInLmdvb2dsZS5wcml2YWN5LmRscC52Mi5TZW5zaXRpdml0",
+            "eVNjb3JlIuEBChBTZW5zaXRpdml0eVNjb3JlEkwKBXNjb3JlGAEgASgOMj0u",
+            "Z29vZ2xlLnByaXZhY3kuZGxwLnYyLlNlbnNpdGl2aXR5U2NvcmUuU2Vuc2l0",
+            "aXZpdHlTY29yZUxldmVsIn8KFVNlbnNpdGl2aXR5U2NvcmVMZXZlbBIhCh1T",
+            "RU5TSVRJVklUWV9TQ09SRV9VTlNQRUNJRklFRBAAEhMKD1NFTlNJVElWSVRZ",
+            "X0xPVxAKEhgKFFNFTlNJVElWSVRZX01PREVSQVRFEBQSFAoQU0VOU0lUSVZJ",
+            "VFlfSElHSBAeIksKClN0b3JlZFR5cGUSDAoEbmFtZRgBIAEoCRIvCgtjcmVh",
+            "dGVfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAijAwK",
+            "DkN1c3RvbUluZm9UeXBlEjIKCWluZm9fdHlwZRgBIAEoCzIfLmdvb2dsZS5w",
+            "cml2YWN5LmRscC52Mi5JbmZvVHlwZRI1CgpsaWtlbGlob29kGAYgASgOMiEu",
+            "Z29vZ2xlLnByaXZhY3kuZGxwLnYyLkxpa2VsaWhvb2QSRgoKZGljdGlvbmFy",
+            "eRgCIAEoCzIwLmdvb2dsZS5wcml2YWN5LmRscC52Mi5DdXN0b21JbmZvVHlw",
+            "ZS5EaWN0aW9uYXJ5SAASPAoFcmVnZXgYAyABKAsyKy5nb29nbGUucHJpdmFj",
+            "eS5kbHAudjIuQ3VzdG9tSW5mb1R5cGUuUmVnZXhIABJNCg5zdXJyb2dhdGVf",
+            "dHlwZRgEIAEoCzIzLmdvb2dsZS5wcml2YWN5LmRscC52Mi5DdXN0b21JbmZv",
+            "VHlwZS5TdXJyb2dhdGVUeXBlSAASOAoLc3RvcmVkX3R5cGUYBSABKAsyIS5n",
+            "b29nbGUucHJpdmFjeS5kbHAudjIuU3RvcmVkVHlwZUgAEkwKD2RldGVjdGlv",
+            "bl9ydWxlcxgHIAMoCzIzLmdvb2dsZS5wcml2YWN5LmRscC52Mi5DdXN0b21J",
+            "bmZvVHlwZS5EZXRlY3Rpb25SdWxlEksKDmV4Y2x1c2lvbl90eXBlGAggASgO",
+            "MjMuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkN1c3RvbUluZm9UeXBlLkV4Y2x1",
+            "c2lvblR5cGUSQgoRc2Vuc2l0aXZpdHlfc2NvcmUYCSABKAsyJy5nb29nbGUu",
+            "cHJpdmFjeS5kbHAudjIuU2Vuc2l0aXZpdHlTY29yZRrIAQoKRGljdGlvbmFy",
+            "eRJOCgl3b3JkX2xpc3QYASABKAsyOS5nb29nbGUucHJpdmFjeS5kbHAudjIu",
+            "Q3VzdG9tSW5mb1R5cGUuRGljdGlvbmFyeS5Xb3JkTGlzdEgAEkUKEmNsb3Vk",
+            "X3N0b3JhZ2VfcGF0aBgDIAEoCzInLmdvb2dsZS5wcml2YWN5LmRscC52Mi5D",
+            "bG91ZFN0b3JhZ2VQYXRoSAAaGQoIV29yZExpc3QSDQoFd29yZHMYASADKAlC",
+            "CAoGc291cmNlGi8KBVJlZ2V4Eg8KB3BhdHRlcm4YASABKAkSFQoNZ3JvdXBf",
+            "aW5kZXhlcxgCIAMoBRoPCg1TdXJyb2dhdGVUeXBlGr4ECg1EZXRlY3Rpb25S",
+            "dWxlElcKDGhvdHdvcmRfcnVsZRgBIAEoCzI/Lmdvb2dsZS5wcml2YWN5LmRs",
+            "cC52Mi5DdXN0b21JbmZvVHlwZS5EZXRlY3Rpb25SdWxlLkhvdHdvcmRSdWxl",
+            "SAAaOAoJUHJveGltaXR5EhUKDXdpbmRvd19iZWZvcmUYASABKAUSFAoMd2lu",
+            "ZG93X2FmdGVyGAIgASgFGoIBChRMaWtlbGlob29kQWRqdXN0bWVudBI9ChBm",
+            "aXhlZF9saWtlbGlob29kGAEgASgOMiEuZ29vZ2xlLnByaXZhY3kuZGxwLnYy",
+            "Lkxpa2VsaWhvb2RIABIdChNyZWxhdGl2ZV9saWtlbGlob29kGAIgASgFSABC",
+            "DAoKYWRqdXN0bWVudBqMAgoLSG90d29yZFJ1bGUSQgoNaG90d29yZF9yZWdl",
+            "eBgBIAEoCzIrLmdvb2dsZS5wcml2YWN5LmRscC52Mi5DdXN0b21JbmZvVHlw",
+            "ZS5SZWdleBJQCglwcm94aW1pdHkYAiABKAsyPS5nb29nbGUucHJpdmFjeS5k",
+            "bHAudjIuQ3VzdG9tSW5mb1R5cGUuRGV0ZWN0aW9uUnVsZS5Qcm94aW1pdHkS",
+            "ZwoVbGlrZWxpaG9vZF9hZGp1c3RtZW50GAMgASgLMkguZ29vZ2xlLnByaXZh",
+            "Y3kuZGxwLnYyLkN1c3RvbUluZm9UeXBlLkRldGVjdGlvblJ1bGUuTGlrZWxp",
+            "aG9vZEFkanVzdG1lbnRCBgoEdHlwZSJLCg1FeGNsdXNpb25UeXBlEh4KGkVY",
+            "Q0xVU0lPTl9UWVBFX1VOU1BFQ0lGSUVEEAASGgoWRVhDTFVTSU9OX1RZUEVf",
+            "RVhDTFVERRABQgYKBHR5cGUiFwoHRmllbGRJZBIMCgRuYW1lGAEgASgJIjcK",
+            "C1BhcnRpdGlvbklkEhIKCnByb2plY3RfaWQYAiABKAkSFAoMbmFtZXNwYWNl",
+            "X2lkGAQgASgJIh4KDktpbmRFeHByZXNzaW9uEgwKBG5hbWUYASABKAkigQEK",
+            "EERhdGFzdG9yZU9wdGlvbnMSOAoMcGFydGl0aW9uX2lkGAEgASgLMiIuZ29v",
+            "Z2xlLnByaXZhY3kuZGxwLnYyLlBhcnRpdGlvbklkEjMKBGtpbmQYAiABKAsy",
+            "JS5nb29nbGUucHJpdmFjeS5kbHAudjIuS2luZEV4cHJlc3Npb24iXQoYQ2xv",
+            "dWRTdG9yYWdlUmVnZXhGaWxlU2V0EhMKC2J1Y2tldF9uYW1lGAEgASgJEhUK",
+            "DWluY2x1ZGVfcmVnZXgYAiADKAkSFQoNZXhjbHVkZV9yZWdleBgDIAMoCSLs",
+            "AwoTQ2xvdWRTdG9yYWdlT3B0aW9ucxJECghmaWxlX3NldBgBIAEoCzIyLmdv",
+            "b2dsZS5wcml2YWN5LmRscC52Mi5DbG91ZFN0b3JhZ2VPcHRpb25zLkZpbGVT",
+            "ZXQSHAoUYnl0ZXNfbGltaXRfcGVyX2ZpbGUYBCABKAMSJAocYnl0ZXNfbGlt",
+            "aXRfcGVyX2ZpbGVfcGVyY2VudBgIIAEoBRIzCgpmaWxlX3R5cGVzGAUgAygO",
+            "Mh8uZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkZpbGVUeXBlEk4KDXNhbXBsZV9t",
+            "ZXRob2QYBiABKA4yNy5nb29nbGUucHJpdmFjeS5kbHAudjIuQ2xvdWRTdG9y",
+            "YWdlT3B0aW9ucy5TYW1wbGVNZXRob2QSGwoTZmlsZXNfbGltaXRfcGVyY2Vu",
+            "dBgHIAEoBRpfCgdGaWxlU2V0EgsKA3VybBgBIAEoCRJHCg5yZWdleF9maWxl",
+            "X3NldBgCIAEoCzIvLmdvb2dsZS5wcml2YWN5LmRscC52Mi5DbG91ZFN0b3Jh",
+            "Z2VSZWdleEZpbGVTZXQiSAoMU2FtcGxlTWV0aG9kEh0KGVNBTVBMRV9NRVRI",
+            "T0RfVU5TUEVDSUZJRUQQABIHCgNUT1AQARIQCgxSQU5ET01fU1RBUlQQAiIi",
+            "ChNDbG91ZFN0b3JhZ2VGaWxlU2V0EgsKA3VybBgBIAEoCSIgChBDbG91ZFN0",
+            "b3JhZ2VQYXRoEgwKBHBhdGgYASABKAkixAMKD0JpZ1F1ZXJ5T3B0aW9ucxI9",
+            "Cg90YWJsZV9yZWZlcmVuY2UYASABKAsyJC5nb29nbGUucHJpdmFjeS5kbHAu",
+            "djIuQmlnUXVlcnlUYWJsZRI6ChJpZGVudGlmeWluZ19maWVsZHMYAiADKAsy",
+            "Hi5nb29nbGUucHJpdmFjeS5kbHAudjIuRmllbGRJZBISCgpyb3dzX2xpbWl0",
+            "GAMgASgDEhoKEnJvd3NfbGltaXRfcGVyY2VudBgGIAEoBRJKCg1zYW1wbGVf",
+            "bWV0aG9kGAQgASgOMjMuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkJpZ1F1ZXJ5",
+            "T3B0aW9ucy5TYW1wbGVNZXRob2QSNwoPZXhjbHVkZWRfZmllbGRzGAUgAygL",
+            "Mh4uZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkZpZWxkSWQSNwoPaW5jbHVkZWRf",
+            "ZmllbGRzGAcgAygLMh4uZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkZpZWxkSWQi",
+            "SAoMU2FtcGxlTWV0aG9kEh0KGVNBTVBMRV9NRVRIT0RfVU5TUEVDSUZJRUQQ",
+            "ABIHCgNUT1AQARIQCgxSQU5ET01fU1RBUlQQAiLaBAoNU3RvcmFnZUNvbmZp",
+            "ZxJEChFkYXRhc3RvcmVfb3B0aW9ucxgCIAEoCzInLmdvb2dsZS5wcml2YWN5",
+            "LmRscC52Mi5EYXRhc3RvcmVPcHRpb25zSAASSwoVY2xvdWRfc3RvcmFnZV9v",
+            "cHRpb25zGAMgASgLMiouZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkNsb3VkU3Rv",
+            "cmFnZU9wdGlvbnNIABJDChFiaWdfcXVlcnlfb3B0aW9ucxgEIAEoCzImLmdv",
+            "b2dsZS5wcml2YWN5LmRscC52Mi5CaWdRdWVyeU9wdGlvbnNIABI+Cg5oeWJy",
+            "aWRfb3B0aW9ucxgJIAEoCzIkLmdvb2dsZS5wcml2YWN5LmRscC52Mi5IeWJy",
+            "aWRPcHRpb25zSAASTAoPdGltZXNwYW5fY29uZmlnGAYgASgLMjMuZ29vZ2xl",
+            "LnByaXZhY3kuZGxwLnYyLlN0b3JhZ2VDb25maWcuVGltZXNwYW5Db25maWca",
+            "2gEKDlRpbWVzcGFuQ29uZmlnEi4KCnN0YXJ0X3RpbWUYASABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVuZF90aW1lGAIgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBI3Cg90aW1lc3RhbXBfZmllbGQYAyAB",
+            "KAsyHi5nb29nbGUucHJpdmFjeS5kbHAudjIuRmllbGRJZBIxCillbmFibGVf",
+            "YXV0b19wb3B1bGF0aW9uX29mX3RpbWVzcGFuX2NvbmZpZxgEIAEoCEIGCgR0",
+            "eXBlIvYBCg1IeWJyaWRPcHRpb25zEhMKC2Rlc2NyaXB0aW9uGAEgASgJEiMK",
+            "G3JlcXVpcmVkX2ZpbmRpbmdfbGFiZWxfa2V5cxgCIAMoCRJACgZsYWJlbHMY",
+            "AyADKAsyMC5nb29nbGUucHJpdmFjeS5kbHAudjIuSHlicmlkT3B0aW9ucy5M",
+            "YWJlbHNFbnRyeRI6Cg10YWJsZV9vcHRpb25zGAQgASgLMiMuZ29vZ2xlLnBy",
+            "aXZhY3kuZGxwLnYyLlRhYmxlT3B0aW9ucxotCgtMYWJlbHNFbnRyeRILCgNr",
+            "ZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBImAKC0JpZ1F1ZXJ5S2V5Ej0K",
             "D3RhYmxlX3JlZmVyZW5jZRgBIAEoCzIkLmdvb2dsZS5wcml2YWN5LmRscC52",
-            "Mi5CaWdRdWVyeVRhYmxlEjoKEmlkZW50aWZ5aW5nX2ZpZWxkcxgCIAMoCzIe",
-            "Lmdvb2dsZS5wcml2YWN5LmRscC52Mi5GaWVsZElkEhIKCnJvd3NfbGltaXQY",
-            "AyABKAMSGgoScm93c19saW1pdF9wZXJjZW50GAYgASgFEkoKDXNhbXBsZV9t",
-            "ZXRob2QYBCABKA4yMy5nb29nbGUucHJpdmFjeS5kbHAudjIuQmlnUXVlcnlP",
-            "cHRpb25zLlNhbXBsZU1ldGhvZBI3Cg9leGNsdWRlZF9maWVsZHMYBSADKAsy",
-            "Hi5nb29nbGUucHJpdmFjeS5kbHAudjIuRmllbGRJZBI3Cg9pbmNsdWRlZF9m",
-            "aWVsZHMYByADKAsyHi5nb29nbGUucHJpdmFjeS5kbHAudjIuRmllbGRJZCJI",
-            "CgxTYW1wbGVNZXRob2QSHQoZU0FNUExFX01FVEhPRF9VTlNQRUNJRklFRBAA",
-            "EgcKA1RPUBABEhAKDFJBTkRPTV9TVEFSVBACItoECg1TdG9yYWdlQ29uZmln",
-            "EkQKEWRhdGFzdG9yZV9vcHRpb25zGAIgASgLMicuZ29vZ2xlLnByaXZhY3ku",
-            "ZGxwLnYyLkRhdGFzdG9yZU9wdGlvbnNIABJLChVjbG91ZF9zdG9yYWdlX29w",
-            "dGlvbnMYAyABKAsyKi5nb29nbGUucHJpdmFjeS5kbHAudjIuQ2xvdWRTdG9y",
-            "YWdlT3B0aW9uc0gAEkMKEWJpZ19xdWVyeV9vcHRpb25zGAQgASgLMiYuZ29v",
-            "Z2xlLnByaXZhY3kuZGxwLnYyLkJpZ1F1ZXJ5T3B0aW9uc0gAEj4KDmh5YnJp",
-            "ZF9vcHRpb25zGAkgASgLMiQuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkh5YnJp",
-            "ZE9wdGlvbnNIABJMCg90aW1lc3Bhbl9jb25maWcYBiABKAsyMy5nb29nbGUu",
-            "cHJpdmFjeS5kbHAudjIuU3RvcmFnZUNvbmZpZy5UaW1lc3BhbkNvbmZpZxra",
-            "AQoOVGltZXNwYW5Db25maWcSLgoKc3RhcnRfdGltZRgBIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYAiABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wEjcKD3RpbWVzdGFtcF9maWVsZBgDIAEo",
-            "CzIeLmdvb2dsZS5wcml2YWN5LmRscC52Mi5GaWVsZElkEjEKKWVuYWJsZV9h",
-            "dXRvX3BvcHVsYXRpb25fb2ZfdGltZXNwYW5fY29uZmlnGAQgASgIQgYKBHR5",
-            "cGUi9gEKDUh5YnJpZE9wdGlvbnMSEwoLZGVzY3JpcHRpb24YASABKAkSIwob",
-            "cmVxdWlyZWRfZmluZGluZ19sYWJlbF9rZXlzGAIgAygJEkAKBmxhYmVscxgD",
-            "IAMoCzIwLmdvb2dsZS5wcml2YWN5LmRscC52Mi5IeWJyaWRPcHRpb25zLkxh",
-            "YmVsc0VudHJ5EjoKDXRhYmxlX29wdGlvbnMYBCABKAsyIy5nb29nbGUucHJp",
-            "dmFjeS5kbHAudjIuVGFibGVPcHRpb25zGi0KC0xhYmVsc0VudHJ5EgsKA2tl",
-            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiYAoLQmlnUXVlcnlLZXkSPQoP",
-            "dGFibGVfcmVmZXJlbmNlGAEgASgLMiQuZ29vZ2xlLnByaXZhY3kuZGxwLnYy",
-            "LkJpZ1F1ZXJ5VGFibGUSEgoKcm93X251bWJlchgCIAEoAyI+CgxEYXRhc3Rv",
-            "cmVLZXkSLgoKZW50aXR5X2tleRgBIAEoCzIaLmdvb2dsZS5wcml2YWN5LmRs",
-            "cC52Mi5LZXkiuwEKA0tleRI4CgxwYXJ0aXRpb25faWQYASABKAsyIi5nb29n",
-            "bGUucHJpdmFjeS5kbHAudjIuUGFydGl0aW9uSWQSNAoEcGF0aBgCIAMoCzIm",
-            "Lmdvb2dsZS5wcml2YWN5LmRscC52Mi5LZXkuUGF0aEVsZW1lbnQaRAoLUGF0",
-            "aEVsZW1lbnQSDAoEa2luZBgBIAEoCRIMCgJpZBgCIAEoA0gAEg4KBG5hbWUY",
-            "AyABKAlIAEIJCgdpZF90eXBlIqEBCglSZWNvcmRLZXkSPAoNZGF0YXN0b3Jl",
-            "X2tleRgCIAEoCzIjLmdvb2dsZS5wcml2YWN5LmRscC52Mi5EYXRhc3RvcmVL",
-            "ZXlIABI7Cg1iaWdfcXVlcnlfa2V5GAMgASgLMiIuZ29vZ2xlLnByaXZhY3ku",
-            "ZGxwLnYyLkJpZ1F1ZXJ5S2V5SAASEQoJaWRfdmFsdWVzGAUgAygJQgYKBHR5",
-            "cGUiSQoNQmlnUXVlcnlUYWJsZRISCgpwcm9qZWN0X2lkGAEgASgJEhIKCmRh",
-            "dGFzZXRfaWQYAiABKAkSEAoIdGFibGVfaWQYAyABKAkicwoNQmlnUXVlcnlG",
-            "aWVsZBIzCgV0YWJsZRgBIAEoCzIkLmdvb2dsZS5wcml2YWN5LmRscC52Mi5C",
-            "aWdRdWVyeVRhYmxlEi0KBWZpZWxkGAIgASgLMh4uZ29vZ2xlLnByaXZhY3ku",
-            "ZGxwLnYyLkZpZWxkSWQiOQoIRW50aXR5SWQSLQoFZmllbGQYASABKAsyHi5n",
-            "b29nbGUucHJpdmFjeS5kbHAudjIuRmllbGRJZCJKCgxUYWJsZU9wdGlvbnMS",
-            "OgoSaWRlbnRpZnlpbmdfZmllbGRzGAEgAygLMh4uZ29vZ2xlLnByaXZhY3ku",
-            "ZGxwLnYyLkZpZWxkSWQqdAoKTGlrZWxpaG9vZBIaChZMSUtFTElIT09EX1VO",
-            "U1BFQ0lGSUVEEAASEQoNVkVSWV9VTkxJS0VMWRABEgwKCFVOTElLRUxZEAIS",
-            "DAoIUE9TU0lCTEUQAxIKCgZMSUtFTFkQBBIPCgtWRVJZX0xJS0VMWRAFKpoB",
-            "CghGaWxlVHlwZRIZChVGSUxFX1RZUEVfVU5TUEVDSUZJRUQQABIPCgtCSU5B",
-            "UllfRklMRRABEg0KCVRFWFRfRklMRRACEgkKBUlNQUdFEAMSCAoEV09SRBAF",
-            "EgcKA1BERhAGEggKBEFWUk8QBxIHCgNDU1YQCBIHCgNUU1YQCRIOCgpQT1dF",
-            "UlBPSU5UEAsSCQoFRVhDRUwQDEKZAQoZY29tLmdvb2dsZS5wcml2YWN5LmRs",
-            "cC52MkIKRGxwU3RvcmFnZVABWiljbG91ZC5nb29nbGUuY29tL2dvL2RscC9h",
-            "cGl2Mi9kbHBwYjtkbHBwYqoCE0dvb2dsZS5DbG91ZC5EbHAuVjLKAhNHb29n",
-            "bGVcQ2xvdWRcRGxwXFYy6gIWR29vZ2xlOjpDbG91ZDo6RGxwOjpWMmIGcHJv",
-            "dG8z"));
+            "Mi5CaWdRdWVyeVRhYmxlEhIKCnJvd19udW1iZXIYAiABKAMiPgoMRGF0YXN0",
+            "b3JlS2V5Ei4KCmVudGl0eV9rZXkYASABKAsyGi5nb29nbGUucHJpdmFjeS5k",
+            "bHAudjIuS2V5IrsBCgNLZXkSOAoMcGFydGl0aW9uX2lkGAEgASgLMiIuZ29v",
+            "Z2xlLnByaXZhY3kuZGxwLnYyLlBhcnRpdGlvbklkEjQKBHBhdGgYAiADKAsy",
+            "Ji5nb29nbGUucHJpdmFjeS5kbHAudjIuS2V5LlBhdGhFbGVtZW50GkQKC1Bh",
+            "dGhFbGVtZW50EgwKBGtpbmQYASABKAkSDAoCaWQYAiABKANIABIOCgRuYW1l",
+            "GAMgASgJSABCCQoHaWRfdHlwZSKhAQoJUmVjb3JkS2V5EjwKDWRhdGFzdG9y",
+            "ZV9rZXkYAiABKAsyIy5nb29nbGUucHJpdmFjeS5kbHAudjIuRGF0YXN0b3Jl",
+            "S2V5SAASOwoNYmlnX3F1ZXJ5X2tleRgDIAEoCzIiLmdvb2dsZS5wcml2YWN5",
+            "LmRscC52Mi5CaWdRdWVyeUtleUgAEhEKCWlkX3ZhbHVlcxgFIAMoCUIGCgR0",
+            "eXBlIkkKDUJpZ1F1ZXJ5VGFibGUSEgoKcHJvamVjdF9pZBgBIAEoCRISCgpk",
+            "YXRhc2V0X2lkGAIgASgJEhAKCHRhYmxlX2lkGAMgASgJInMKDUJpZ1F1ZXJ5",
+            "RmllbGQSMwoFdGFibGUYASABKAsyJC5nb29nbGUucHJpdmFjeS5kbHAudjIu",
+            "QmlnUXVlcnlUYWJsZRItCgVmaWVsZBgCIAEoCzIeLmdvb2dsZS5wcml2YWN5",
+            "LmRscC52Mi5GaWVsZElkIjkKCEVudGl0eUlkEi0KBWZpZWxkGAEgASgLMh4u",
+            "Z29vZ2xlLnByaXZhY3kuZGxwLnYyLkZpZWxkSWQiSgoMVGFibGVPcHRpb25z",
+            "EjoKEmlkZW50aWZ5aW5nX2ZpZWxkcxgBIAMoCzIeLmdvb2dsZS5wcml2YWN5",
+            "LmRscC52Mi5GaWVsZElkKnQKCkxpa2VsaWhvb2QSGgoWTElLRUxJSE9PRF9V",
+            "TlNQRUNJRklFRBAAEhEKDVZFUllfVU5MSUtFTFkQARIMCghVTkxJS0VMWRAC",
+            "EgwKCFBPU1NJQkxFEAMSCgoGTElLRUxZEAQSDwoLVkVSWV9MSUtFTFkQBSqa",
+            "AQoIRmlsZVR5cGUSGQoVRklMRV9UWVBFX1VOU1BFQ0lGSUVEEAASDwoLQklO",
+            "QVJZX0ZJTEUQARINCglURVhUX0ZJTEUQAhIJCgVJTUFHRRADEggKBFdPUkQQ",
+            "BRIHCgNQREYQBhIICgRBVlJPEAcSBwoDQ1NWEAgSBwoDVFNWEAkSDgoKUE9X",
+            "RVJQT0lOVBALEgkKBUVYQ0VMEAxCmQEKGWNvbS5nb29nbGUucHJpdmFjeS5k",
+            "bHAudjJCCkRscFN0b3JhZ2VQAVopY2xvdWQuZ29vZ2xlLmNvbS9nby9kbHAv",
+            "YXBpdjIvZGxwcGI7ZGxwcGKqAhNHb29nbGUuQ2xvdWQuRGxwLlYyygITR29v",
+            "Z2xlXENsb3VkXERscFxWMuoCFkdvb2dsZTo6Q2xvdWQ6OkRscDo6VjJiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dlp.V2.Likelihood), typeof(global::Google.Cloud.Dlp.V2.FileType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InfoType), global::Google.Cloud.Dlp.V2.InfoType.Parser, new[]{ "Name", "Version" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InfoType), global::Google.Cloud.Dlp.V2.InfoType.Parser, new[]{ "Name", "Version", "SensitivityScore" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.SensitivityScore), global::Google.Cloud.Dlp.V2.SensitivityScore.Parser, new[]{ "Score" }, null, new[]{ typeof(global::Google.Cloud.Dlp.V2.SensitivityScore.Types.SensitivityScoreLevel) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.StoredType), global::Google.Cloud.Dlp.V2.StoredType.Parser, new[]{ "Name", "CreateTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType), global::Google.Cloud.Dlp.V2.CustomInfoType.Parser, new[]{ "InfoType", "Likelihood", "Dictionary", "Regex", "SurrogateType", "StoredType", "DetectionRules", "ExclusionType" }, new[]{ "Type" }, new[]{ typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.ExclusionType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Parser, new[]{ "WordList", "CloudStoragePath" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Types.WordList), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Types.WordList.Parser, new[]{ "Words" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType), global::Google.Cloud.Dlp.V2.CustomInfoType.Parser, new[]{ "InfoType", "Likelihood", "Dictionary", "Regex", "SurrogateType", "StoredType", "DetectionRules", "ExclusionType", "SensitivityScore" }, new[]{ "Type" }, new[]{ typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.ExclusionType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Parser, new[]{ "WordList", "CloudStoragePath" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Types.WordList), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Types.WordList.Parser, new[]{ "Words" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Regex), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Regex.Parser, new[]{ "Pattern", "GroupIndexes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.SurrogateType), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.SurrogateType.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Parser, new[]{ "HotwordRule" }, new[]{ "Type" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Types.Proximity), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Types.Proximity.Parser, new[]{ "WindowBefore", "WindowAfter" }, null, null, null, null),
@@ -184,8 +187,21 @@ namespace Google.Cloud.Dlp.V2 {
   }
   #region Enums
   /// <summary>
-  /// Categorization of results based on how likely they are to represent a match,
-  /// based on the number of elements they contain which imply a match.
+  /// Coarse-grained confidence level of how well a particular finding
+  /// satisfies the criteria to match a particular infoType.
+  ///
+  /// Likelihood is calculated based on the number of signals a
+  /// finding has that implies that the finding matches the infoType. For
+  /// example, a string that has an '@' and a '.com' is more likely to be a
+  /// match for an email address than a string that only has an '@'.
+  ///
+  /// In general, the highest likelihood level has the strongest signals that
+  /// indicate a match. That is, a finding with a high likelihood has a low chance
+  /// of being a false positive.
+  ///
+  /// For more information about each likelihood level
+  /// and how likelihood works, see [Match
+  /// likelihood](https://cloud.google.com/dlp/docs/likelihood).
   /// </summary>
   public enum Likelihood {
     /// <summary>
@@ -193,17 +209,23 @@ namespace Google.Cloud.Dlp.V2 {
     /// </summary>
     [pbr::OriginalName("LIKELIHOOD_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// Few matching elements.
+    /// Highest chance of a false positive.
     /// </summary>
     [pbr::OriginalName("VERY_UNLIKELY")] VeryUnlikely = 1,
+    /// <summary>
+    /// High chance of a false positive.
+    /// </summary>
     [pbr::OriginalName("UNLIKELY")] Unlikely = 2,
     /// <summary>
-    /// Some matching elements.
+    /// Some matching signals. The default value.
     /// </summary>
     [pbr::OriginalName("POSSIBLE")] Possible = 3,
+    /// <summary>
+    /// Low chance of a false positive.
+    /// </summary>
     [pbr::OriginalName("LIKELY")] Likely = 4,
     /// <summary>
-    /// Many matching elements.
+    /// Confidence level is high. Lowest chance of a false positive.
     /// </summary>
     [pbr::OriginalName("VERY_LIKELY")] VeryLikely = 5,
   }
@@ -222,7 +244,7 @@ namespace Google.Cloud.Dlp.V2 {
     /// scanning attempts to convert the content of the file to utf_8 to scan
     /// the file.
     /// If you wish to avoid this fall back, specify one or more of the other
-    /// FileType's in your storage scan.
+    /// file types in your storage scan.
     /// </summary>
     [pbr::OriginalName("BINARY_FILE")] BinaryFile = 1,
     /// <summary>
@@ -237,21 +259,26 @@ namespace Google.Cloud.Dlp.V2 {
     [pbr::OriginalName("TEXT_FILE")] TextFile = 2,
     /// <summary>
     /// Included file extensions:
-    ///   bmp, gif, jpg, jpeg, jpe, png.
-    /// bytes_limit_per_file has no effect on image files.
-    /// Image inspection is restricted to 'global', 'us', 'asia', and 'europe'.
+    ///   bmp, gif, jpg, jpeg, jpe, png. Setting
+    /// [bytes_limit_per_file][google.privacy.dlp.v2.CloudStorageOptions.bytes_limit_per_file]
+    /// or
+    /// [bytes_limit_per_file_percent][google.privacy.dlp.v2.CloudStorageOptions.bytes_limit_per_file]
+    /// has no effect on image files. Image inspection is restricted to the
+    /// `global`, `us`, `asia`, and `europe` regions.
     /// </summary>
     [pbr::OriginalName("IMAGE")] Image = 3,
     /// <summary>
-    /// Word files >30 MB will be scanned as binary files.
+    /// Microsoft Word files larger than 30 MB will be scanned as binary files.
     /// Included file extensions:
-    ///   docx, dotx, docm, dotm
+    ///   docx, dotx, docm, dotm. Setting `bytes_limit_per_file` or
+    ///   `bytes_limit_per_file_percent` has no effect on Word files.
     /// </summary>
     [pbr::OriginalName("WORD")] Word = 5,
     /// <summary>
-    /// PDF files >30 MB will be scanned as binary files.
+    /// PDF files larger than 30 MB will be scanned as binary files.
     /// Included file extensions:
-    ///   pdf
+    ///   pdf. Setting `bytes_limit_per_file` or `bytes_limit_per_file_percent`
+    /// has no effect on PDF files.
     /// </summary>
     [pbr::OriginalName("PDF")] Pdf = 6,
     /// <summary>
@@ -270,15 +297,17 @@ namespace Google.Cloud.Dlp.V2 {
     /// </summary>
     [pbr::OriginalName("TSV")] Tsv = 9,
     /// <summary>
-    /// Powerpoint files >30 MB will be scanned as binary files.
-    /// Included file extensions:
-    ///   pptx, pptm, potx, potm, pot
+    /// Microsoft PowerPoint files larger than 30 MB will be scanned as binary
+    /// files. Included file extensions:
+    ///   pptx, pptm, potx, potm, pot. Setting `bytes_limit_per_file` or
+    ///   `bytes_limit_per_file_percent` has no effect on PowerPoint files.
     /// </summary>
     [pbr::OriginalName("POWERPOINT")] Powerpoint = 11,
     /// <summary>
-    /// Excel files >30 MB will be scanned as binary files.
+    /// Microsoft Excel files larger than 30 MB will be scanned as binary files.
     /// Included file extensions:
-    ///   xlsx, xlsm, xltx, xltm
+    ///   xlsx, xlsm, xltx, xltm. Setting `bytes_limit_per_file` or
+    ///   `bytes_limit_per_file_percent` has no effect on Excel files.
     /// </summary>
     [pbr::OriginalName("EXCEL")] Excel = 12,
   }
@@ -325,6 +354,7 @@ namespace Google.Cloud.Dlp.V2 {
     public InfoType(InfoType other) : this() {
       name_ = other.name_;
       version_ = other.version_;
+      sensitivityScore_ = other.sensitivityScore_ != null ? other.sensitivityScore_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -368,6 +398,22 @@ namespace Google.Cloud.Dlp.V2 {
       }
     }
 
+    /// <summary>Field number for the "sensitivity_score" field.</summary>
+    public const int SensitivityScoreFieldNumber = 3;
+    private global::Google.Cloud.Dlp.V2.SensitivityScore sensitivityScore_;
+    /// <summary>
+    /// Optional custom sensitivity for this InfoType.
+    /// This only applies to data profiling.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dlp.V2.SensitivityScore SensitivityScore {
+      get { return sensitivityScore_; }
+      set {
+        sensitivityScore_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -385,6 +431,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (Name != other.Name) return false;
       if (Version != other.Version) return false;
+      if (!object.Equals(SensitivityScore, other.SensitivityScore)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -394,6 +441,7 @@ namespace Google.Cloud.Dlp.V2 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Version.Length != 0) hash ^= Version.GetHashCode();
+      if (sensitivityScore_ != null) hash ^= SensitivityScore.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -420,6 +468,10 @@ namespace Google.Cloud.Dlp.V2 {
         output.WriteRawTag(18);
         output.WriteString(Version);
       }
+      if (sensitivityScore_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(SensitivityScore);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -438,6 +490,10 @@ namespace Google.Cloud.Dlp.V2 {
         output.WriteRawTag(18);
         output.WriteString(Version);
       }
+      if (sensitivityScore_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(SensitivityScore);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -453,6 +509,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (Version.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Version);
+      }
+      if (sensitivityScore_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SensitivityScore);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -471,6 +530,12 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.Version.Length != 0) {
         Version = other.Version;
+      }
+      if (other.sensitivityScore_ != null) {
+        if (sensitivityScore_ == null) {
+          SensitivityScore = new global::Google.Cloud.Dlp.V2.SensitivityScore();
+        }
+        SensitivityScore.MergeFrom(other.SensitivityScore);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -493,6 +558,13 @@ namespace Google.Cloud.Dlp.V2 {
           }
           case 18: {
             Version = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (sensitivityScore_ == null) {
+              SensitivityScore = new global::Google.Cloud.Dlp.V2.SensitivityScore();
+            }
+            input.ReadMessage(SensitivityScore);
             break;
           }
         }
@@ -518,6 +590,13 @@ namespace Google.Cloud.Dlp.V2 {
             Version = input.ReadString();
             break;
           }
+          case 26: {
+            if (sensitivityScore_ == null) {
+              SensitivityScore = new global::Google.Cloud.Dlp.V2.SensitivityScore();
+            }
+            input.ReadMessage(SensitivityScore);
+            break;
+          }
         }
       }
     }
@@ -526,8 +605,8 @@ namespace Google.Cloud.Dlp.V2 {
   }
 
   /// <summary>
-  /// Score is a summary of all elements in the data profile.
-  /// A higher number means more sensitive.
+  /// Score is calculated from of all elements in the data profile.
+  /// A higher level means the data is more sensitive.
   /// </summary>
   public sealed partial class SensitivityScore : pb::IMessage<SensitivityScore>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -577,7 +656,7 @@ namespace Google.Cloud.Dlp.V2 {
     public const int ScoreFieldNumber = 1;
     private global::Google.Cloud.Dlp.V2.SensitivityScore.Types.SensitivityScoreLevel score_ = global::Google.Cloud.Dlp.V2.SensitivityScore.Types.SensitivityScoreLevel.SensitivityScoreUnspecified;
     /// <summary>
-    /// The score applied to the resource.
+    /// The sensitivity score applied to the resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -725,7 +804,7 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// Various score levels for resources.
+      /// Various sensitivity score levels for resources.
       /// </summary>
       public enum SensitivityScoreLevel {
         /// <summary>
@@ -733,19 +812,22 @@ namespace Google.Cloud.Dlp.V2 {
         /// </summary>
         [pbr::OriginalName("SENSITIVITY_SCORE_UNSPECIFIED")] SensitivityScoreUnspecified = 0,
         /// <summary>
-        /// No sensitive information detected. Limited access.
+        /// No sensitive information detected. The resource isn't publicly
+        /// accessible.
         /// </summary>
         [pbr::OriginalName("SENSITIVITY_LOW")] SensitivityLow = 10,
         /// <summary>
-        /// Medium risk - PII, potentially sensitive data, or fields with free-text
-        /// data that are at higher risk of having intermittent sensitive data.
-        /// Consider limiting access.
+        /// Medium risk. Contains personally identifiable information (PII),
+        /// potentially sensitive data, or fields with free-text data that are at a
+        /// higher risk of having intermittent sensitive data. Consider limiting
+        /// access.
         /// </summary>
         [pbr::OriginalName("SENSITIVITY_MODERATE")] SensitivityModerate = 20,
         /// <summary>
-        /// High risk – SPII may be present. Exfiltration of data may lead to user
-        /// data loss. Re-identification of users may be possible. Consider limiting
-        /// usage and or removing SPII.
+        /// High risk. Sensitive personally identifiable information (SPII) can be
+        /// present. Exfiltration of data can lead to user data loss.
+        /// Re-identification of users might be possible. Consider limiting usage and
+        /// or removing SPII.
         /// </summary>
         [pbr::OriginalName("SENSITIVITY_HIGH")] SensitivityHigh = 30,
       }
@@ -1044,6 +1126,7 @@ namespace Google.Cloud.Dlp.V2 {
       likelihood_ = other.likelihood_;
       detectionRules_ = other.detectionRules_.Clone();
       exclusionType_ = other.exclusionType_;
+      sensitivityScore_ = other.sensitivityScore_ != null ? other.sensitivityScore_.Clone() : null;
       switch (other.TypeCase) {
         case TypeOneofCase.Dictionary:
           Dictionary = other.Dictionary.Clone();
@@ -1199,6 +1282,25 @@ namespace Google.Cloud.Dlp.V2 {
       }
     }
 
+    /// <summary>Field number for the "sensitivity_score" field.</summary>
+    public const int SensitivityScoreFieldNumber = 9;
+    private global::Google.Cloud.Dlp.V2.SensitivityScore sensitivityScore_;
+    /// <summary>
+    /// Sensitivity for this CustomInfoType. If this CustomInfoType extends an
+    /// existing InfoType, the sensitivity here will take precedence over that of
+    /// the original InfoType. If unset for a CustomInfoType, it will default to
+    /// HIGH.
+    /// This only applies to data profiling.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dlp.V2.SensitivityScore SensitivityScore {
+      get { return sensitivityScore_; }
+      set {
+        sensitivityScore_ = value;
+      }
+    }
+
     private object type_;
     /// <summary>Enum of possible cases for the "type" oneof.</summary>
     public enum TypeOneofCase {
@@ -1245,6 +1347,7 @@ namespace Google.Cloud.Dlp.V2 {
       if (!object.Equals(StoredType, other.StoredType)) return false;
       if(!detectionRules_.Equals(other.detectionRules_)) return false;
       if (ExclusionType != other.ExclusionType) return false;
+      if (!object.Equals(SensitivityScore, other.SensitivityScore)) return false;
       if (TypeCase != other.TypeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1261,6 +1364,7 @@ namespace Google.Cloud.Dlp.V2 {
       if (typeCase_ == TypeOneofCase.StoredType) hash ^= StoredType.GetHashCode();
       hash ^= detectionRules_.GetHashCode();
       if (ExclusionType != global::Google.Cloud.Dlp.V2.CustomInfoType.Types.ExclusionType.Unspecified) hash ^= ExclusionType.GetHashCode();
+      if (sensitivityScore_ != null) hash ^= SensitivityScore.GetHashCode();
       hash ^= (int) typeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1309,6 +1413,10 @@ namespace Google.Cloud.Dlp.V2 {
         output.WriteRawTag(64);
         output.WriteEnum((int) ExclusionType);
       }
+      if (sensitivityScore_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(SensitivityScore);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1348,6 +1456,10 @@ namespace Google.Cloud.Dlp.V2 {
         output.WriteRawTag(64);
         output.WriteEnum((int) ExclusionType);
       }
+      if (sensitivityScore_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(SensitivityScore);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1380,6 +1492,9 @@ namespace Google.Cloud.Dlp.V2 {
       if (ExclusionType != global::Google.Cloud.Dlp.V2.CustomInfoType.Types.ExclusionType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ExclusionType);
       }
+      if (sensitivityScore_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SensitivityScore);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1404,6 +1519,12 @@ namespace Google.Cloud.Dlp.V2 {
       detectionRules_.Add(other.detectionRules_);
       if (other.ExclusionType != global::Google.Cloud.Dlp.V2.CustomInfoType.Types.ExclusionType.Unspecified) {
         ExclusionType = other.ExclusionType;
+      }
+      if (other.sensitivityScore_ != null) {
+        if (sensitivityScore_ == null) {
+          SensitivityScore = new global::Google.Cloud.Dlp.V2.SensitivityScore();
+        }
+        SensitivityScore.MergeFrom(other.SensitivityScore);
       }
       switch (other.TypeCase) {
         case TypeOneofCase.Dictionary:
@@ -1502,6 +1623,13 @@ namespace Google.Cloud.Dlp.V2 {
             ExclusionType = (global::Google.Cloud.Dlp.V2.CustomInfoType.Types.ExclusionType) input.ReadEnum();
             break;
           }
+          case 74: {
+            if (sensitivityScore_ == null) {
+              SensitivityScore = new global::Google.Cloud.Dlp.V2.SensitivityScore();
+            }
+            input.ReadMessage(SensitivityScore);
+            break;
+          }
         }
       }
     #endif
@@ -1570,6 +1698,13 @@ namespace Google.Cloud.Dlp.V2 {
           }
           case 64: {
             ExclusionType = (global::Google.Cloud.Dlp.V2.CustomInfoType.Types.ExclusionType) input.ReadEnum();
+            break;
+          }
+          case 74: {
+            if (sensitivityScore_ == null) {
+              SensitivityScore = new global::Google.Cloud.Dlp.V2.SensitivityScore();
+            }
+            input.ReadMessage(SensitivityScore);
             break;
           }
         }
@@ -4866,9 +5001,12 @@ namespace Google.Cloud.Dlp.V2 {
     private long bytesLimitPerFile_;
     /// <summary>
     /// Max number of bytes to scan from a file. If a scanned file's size is bigger
-    /// than this value then the rest of the bytes are omitted. Only one
-    /// of bytes_limit_per_file and bytes_limit_per_file_percent can be specified.
-    /// Cannot be set if de-identification is requested.
+    /// than this value then the rest of the bytes are omitted. Only one of
+    /// `bytes_limit_per_file` and `bytes_limit_per_file_percent` can be specified.
+    /// This field can't be set if de-identification is requested. For certain file
+    /// types, setting this field has no effect. For more information, see [Limits
+    /// on bytes scanned per
+    /// file](https://cloud.google.com/dlp/docs/supported-file-types#max-byte-size-per-file).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4885,9 +5023,12 @@ namespace Google.Cloud.Dlp.V2 {
     /// <summary>
     /// Max percentage of bytes to scan from a file. The rest are omitted. The
     /// number of bytes scanned is rounded down. Must be between 0 and 100,
-    /// inclusively. Both 0 and 100 means no limit. Defaults to 0. Only one
-    /// of bytes_limit_per_file and bytes_limit_per_file_percent can be specified.
-    /// Cannot be set if de-identification is requested.
+    /// inclusively. Both 0 and 100 means no limit. Defaults to 0. Only one of
+    /// bytes_limit_per_file and bytes_limit_per_file_percent can be specified.
+    /// This field can't be set if de-identification is requested. For certain file
+    /// types, setting this field has no effect. For more information, see [Limits
+    /// on bytes scanned per
+    /// file](https://cloud.google.com/dlp/docs/supported-file-types#max-byte-size-per-file).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6016,6 +6157,9 @@ namespace Google.Cloud.Dlp.V2 {
     /// <summary>
     /// References to fields excluded from scanning. This allows you to skip
     /// inspection of entire columns which you know have no findings.
+    /// When inspecting a table, we recommend that you inspect all columns.
+    /// Otherwise, findings might be affected because hints from excluded columns
+    /// will not be used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6030,6 +6174,9 @@ namespace Google.Cloud.Dlp.V2 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Dlp.V2.FieldId> includedFields_ = new pbc::RepeatedField<global::Google.Cloud.Dlp.V2.FieldId>();
     /// <summary>
     /// Limit scanning only to these fields.
+    /// When inspecting a table, we recommend that you inspect all columns.
+    /// Otherwise, findings might be affected because hints from excluded columns
+    /// will not be used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

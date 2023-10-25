@@ -70,6 +70,11 @@ namespace Google.Cloud.Dlp.V2
             ListJobTriggersSettings = existing.ListJobTriggersSettings;
             DeleteJobTriggerSettings = existing.DeleteJobTriggerSettings;
             ActivateJobTriggerSettings = existing.ActivateJobTriggerSettings;
+            CreateDiscoveryConfigSettings = existing.CreateDiscoveryConfigSettings;
+            UpdateDiscoveryConfigSettings = existing.UpdateDiscoveryConfigSettings;
+            GetDiscoveryConfigSettings = existing.GetDiscoveryConfigSettings;
+            ListDiscoveryConfigsSettings = existing.ListDiscoveryConfigsSettings;
+            DeleteDiscoveryConfigSettings = existing.DeleteDiscoveryConfigSettings;
             CreateDlpJobSettings = existing.CreateDlpJobSettings;
             ListDlpJobsSettings = existing.ListDlpJobsSettings;
             GetDlpJobSettings = existing.GetDlpJobSettings;
@@ -477,6 +482,93 @@ namespace Google.Cloud.Dlp.V2
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ActivateJobTriggerSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DlpServiceClient.CreateDiscoveryConfig</c> and <c>DlpServiceClient.CreateDiscoveryConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 300 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateDiscoveryConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DlpServiceClient.UpdateDiscoveryConfig</c> and <c>DlpServiceClient.UpdateDiscoveryConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 300 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateDiscoveryConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DlpServiceClient.GetDiscoveryConfig</c> and <c>DlpServiceClient.GetDiscoveryConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 300 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetDiscoveryConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DlpServiceClient.ListDiscoveryConfigs</c> and <c>DlpServiceClient.ListDiscoveryConfigsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 300 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListDiscoveryConfigsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DlpServiceClient.DeleteDiscoveryConfig</c> and <c>DlpServiceClient.DeleteDiscoveryConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 300 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteDiscoveryConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1731,8 +1823,8 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of organization and inspectTemplate to be updated, for
-        /// example `organizations/433245324/inspectTemplates/432452342` or
+        /// Required. Resource name of organization and inspectTemplate to be updated,
+        /// for example `organizations/433245324/inspectTemplates/432452342` or
         /// projects/project-id/inspectTemplates/432452342.
         /// </param>
         /// <param name="inspectTemplate">
@@ -1756,8 +1848,8 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of organization and inspectTemplate to be updated, for
-        /// example `organizations/433245324/inspectTemplates/432452342` or
+        /// Required. Resource name of organization and inspectTemplate to be updated,
+        /// for example `organizations/433245324/inspectTemplates/432452342` or
         /// projects/project-id/inspectTemplates/432452342.
         /// </param>
         /// <param name="inspectTemplate">
@@ -1781,8 +1873,8 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of organization and inspectTemplate to be updated, for
-        /// example `organizations/433245324/inspectTemplates/432452342` or
+        /// Required. Resource name of organization and inspectTemplate to be updated,
+        /// for example `organizations/433245324/inspectTemplates/432452342` or
         /// projects/project-id/inspectTemplates/432452342.
         /// </param>
         /// <param name="inspectTemplate">
@@ -1801,8 +1893,8 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of organization and inspectTemplate to be updated, for
-        /// example `organizations/433245324/inspectTemplates/432452342` or
+        /// Required. Resource name of organization and inspectTemplate to be updated,
+        /// for example `organizations/433245324/inspectTemplates/432452342` or
         /// projects/project-id/inspectTemplates/432452342.
         /// </param>
         /// <param name="inspectTemplate">
@@ -1826,8 +1918,8 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of organization and inspectTemplate to be updated, for
-        /// example `organizations/433245324/inspectTemplates/432452342` or
+        /// Required. Resource name of organization and inspectTemplate to be updated,
+        /// for example `organizations/433245324/inspectTemplates/432452342` or
         /// projects/project-id/inspectTemplates/432452342.
         /// </param>
         /// <param name="inspectTemplate">
@@ -1851,8 +1943,8 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of organization and inspectTemplate to be updated, for
-        /// example `organizations/433245324/inspectTemplates/432452342` or
+        /// Required. Resource name of organization and inspectTemplate to be updated,
+        /// for example `organizations/433245324/inspectTemplates/432452342` or
         /// projects/project-id/inspectTemplates/432452342.
         /// </param>
         /// <param name="inspectTemplate">
@@ -1901,8 +1993,8 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and inspectTemplate to be read, for
-        /// example `organizations/433245324/inspectTemplates/432452342` or
+        /// Required. Resource name of the organization and inspectTemplate to be read,
+        /// for example `organizations/433245324/inspectTemplates/432452342` or
         /// projects/project-id/inspectTemplates/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1918,8 +2010,8 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and inspectTemplate to be read, for
-        /// example `organizations/433245324/inspectTemplates/432452342` or
+        /// Required. Resource name of the organization and inspectTemplate to be read,
+        /// for example `organizations/433245324/inspectTemplates/432452342` or
         /// projects/project-id/inspectTemplates/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1935,8 +2027,8 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and inspectTemplate to be read, for
-        /// example `organizations/433245324/inspectTemplates/432452342` or
+        /// Required. Resource name of the organization and inspectTemplate to be read,
+        /// for example `organizations/433245324/inspectTemplates/432452342` or
         /// projects/project-id/inspectTemplates/432452342.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1949,8 +2041,8 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and inspectTemplate to be read, for
-        /// example `organizations/433245324/inspectTemplates/432452342` or
+        /// Required. Resource name of the organization and inspectTemplate to be read,
+        /// for example `organizations/433245324/inspectTemplates/432452342` or
         /// projects/project-id/inspectTemplates/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1966,8 +2058,8 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and inspectTemplate to be read, for
-        /// example `organizations/433245324/inspectTemplates/432452342` or
+        /// Required. Resource name of the organization and inspectTemplate to be read,
+        /// for example `organizations/433245324/inspectTemplates/432452342` or
         /// projects/project-id/inspectTemplates/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1983,8 +2075,8 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and inspectTemplate to be read, for
-        /// example `organizations/433245324/inspectTemplates/432452342` or
+        /// Required. Resource name of the organization and inspectTemplate to be read,
+        /// for example `organizations/433245324/inspectTemplates/432452342` or
         /// projects/project-id/inspectTemplates/432452342.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2487,9 +2579,9 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and inspectTemplate to be deleted, for
-        /// example `organizations/433245324/inspectTemplates/432452342` or
-        /// projects/project-id/inspectTemplates/432452342.
+        /// Required. Resource name of the organization and inspectTemplate to be
+        /// deleted, for example `organizations/433245324/inspectTemplates/432452342`
+        /// or projects/project-id/inspectTemplates/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2504,9 +2596,9 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and inspectTemplate to be deleted, for
-        /// example `organizations/433245324/inspectTemplates/432452342` or
-        /// projects/project-id/inspectTemplates/432452342.
+        /// Required. Resource name of the organization and inspectTemplate to be
+        /// deleted, for example `organizations/433245324/inspectTemplates/432452342`
+        /// or projects/project-id/inspectTemplates/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2521,9 +2613,9 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and inspectTemplate to be deleted, for
-        /// example `organizations/433245324/inspectTemplates/432452342` or
-        /// projects/project-id/inspectTemplates/432452342.
+        /// Required. Resource name of the organization and inspectTemplate to be
+        /// deleted, for example `organizations/433245324/inspectTemplates/432452342`
+        /// or projects/project-id/inspectTemplates/432452342.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2535,9 +2627,9 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and inspectTemplate to be deleted, for
-        /// example `organizations/433245324/inspectTemplates/432452342` or
-        /// projects/project-id/inspectTemplates/432452342.
+        /// Required. Resource name of the organization and inspectTemplate to be
+        /// deleted, for example `organizations/433245324/inspectTemplates/432452342`
+        /// or projects/project-id/inspectTemplates/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2552,9 +2644,9 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and inspectTemplate to be deleted, for
-        /// example `organizations/433245324/inspectTemplates/432452342` or
-        /// projects/project-id/inspectTemplates/432452342.
+        /// Required. Resource name of the organization and inspectTemplate to be
+        /// deleted, for example `organizations/433245324/inspectTemplates/432452342`
+        /// or projects/project-id/inspectTemplates/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2569,9 +2661,9 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and inspectTemplate to be deleted, for
-        /// example `organizations/433245324/inspectTemplates/432452342` or
-        /// projects/project-id/inspectTemplates/432452342.
+        /// Required. Resource name of the organization and inspectTemplate to be
+        /// deleted, for example `organizations/433245324/inspectTemplates/432452342`
+        /// or projects/project-id/inspectTemplates/432452342.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3233,8 +3325,9 @@ namespace Google.Cloud.Dlp.V2
         /// more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of organization and deidentify template to be updated, for
-        /// example `organizations/433245324/deidentifyTemplates/432452342` or
+        /// Required. Resource name of organization and deidentify template to be
+        /// updated, for example
+        /// `organizations/433245324/deidentifyTemplates/432452342` or
         /// projects/project-id/deidentifyTemplates/432452342.
         /// </param>
         /// <param name="deidentifyTemplate">
@@ -3259,8 +3352,9 @@ namespace Google.Cloud.Dlp.V2
         /// more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of organization and deidentify template to be updated, for
-        /// example `organizations/433245324/deidentifyTemplates/432452342` or
+        /// Required. Resource name of organization and deidentify template to be
+        /// updated, for example
+        /// `organizations/433245324/deidentifyTemplates/432452342` or
         /// projects/project-id/deidentifyTemplates/432452342.
         /// </param>
         /// <param name="deidentifyTemplate">
@@ -3285,8 +3379,9 @@ namespace Google.Cloud.Dlp.V2
         /// more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of organization and deidentify template to be updated, for
-        /// example `organizations/433245324/deidentifyTemplates/432452342` or
+        /// Required. Resource name of organization and deidentify template to be
+        /// updated, for example
+        /// `organizations/433245324/deidentifyTemplates/432452342` or
         /// projects/project-id/deidentifyTemplates/432452342.
         /// </param>
         /// <param name="deidentifyTemplate">
@@ -3306,8 +3401,9 @@ namespace Google.Cloud.Dlp.V2
         /// more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of organization and deidentify template to be updated, for
-        /// example `organizations/433245324/deidentifyTemplates/432452342` or
+        /// Required. Resource name of organization and deidentify template to be
+        /// updated, for example
+        /// `organizations/433245324/deidentifyTemplates/432452342` or
         /// projects/project-id/deidentifyTemplates/432452342.
         /// </param>
         /// <param name="deidentifyTemplate">
@@ -3332,8 +3428,9 @@ namespace Google.Cloud.Dlp.V2
         /// more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of organization and deidentify template to be updated, for
-        /// example `organizations/433245324/deidentifyTemplates/432452342` or
+        /// Required. Resource name of organization and deidentify template to be
+        /// updated, for example
+        /// `organizations/433245324/deidentifyTemplates/432452342` or
         /// projects/project-id/deidentifyTemplates/432452342.
         /// </param>
         /// <param name="deidentifyTemplate">
@@ -3358,8 +3455,9 @@ namespace Google.Cloud.Dlp.V2
         /// more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of organization and deidentify template to be updated, for
-        /// example `organizations/433245324/deidentifyTemplates/432452342` or
+        /// Required. Resource name of organization and deidentify template to be
+        /// updated, for example
+        /// `organizations/433245324/deidentifyTemplates/432452342` or
         /// projects/project-id/deidentifyTemplates/432452342.
         /// </param>
         /// <param name="deidentifyTemplate">
@@ -3412,9 +3510,9 @@ namespace Google.Cloud.Dlp.V2
         /// more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and deidentify template to be read, for
-        /// example `organizations/433245324/deidentifyTemplates/432452342` or
-        /// projects/project-id/deidentifyTemplates/432452342.
+        /// Required. Resource name of the organization and deidentify template to be
+        /// read, for example `organizations/433245324/deidentifyTemplates/432452342`
+        /// or projects/project-id/deidentifyTemplates/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3430,9 +3528,9 @@ namespace Google.Cloud.Dlp.V2
         /// more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and deidentify template to be read, for
-        /// example `organizations/433245324/deidentifyTemplates/432452342` or
-        /// projects/project-id/deidentifyTemplates/432452342.
+        /// Required. Resource name of the organization and deidentify template to be
+        /// read, for example `organizations/433245324/deidentifyTemplates/432452342`
+        /// or projects/project-id/deidentifyTemplates/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3448,9 +3546,9 @@ namespace Google.Cloud.Dlp.V2
         /// more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and deidentify template to be read, for
-        /// example `organizations/433245324/deidentifyTemplates/432452342` or
-        /// projects/project-id/deidentifyTemplates/432452342.
+        /// Required. Resource name of the organization and deidentify template to be
+        /// read, for example `organizations/433245324/deidentifyTemplates/432452342`
+        /// or projects/project-id/deidentifyTemplates/432452342.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3463,9 +3561,9 @@ namespace Google.Cloud.Dlp.V2
         /// more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and deidentify template to be read, for
-        /// example `organizations/433245324/deidentifyTemplates/432452342` or
-        /// projects/project-id/deidentifyTemplates/432452342.
+        /// Required. Resource name of the organization and deidentify template to be
+        /// read, for example `organizations/433245324/deidentifyTemplates/432452342`
+        /// or projects/project-id/deidentifyTemplates/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3481,9 +3579,9 @@ namespace Google.Cloud.Dlp.V2
         /// more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and deidentify template to be read, for
-        /// example `organizations/433245324/deidentifyTemplates/432452342` or
-        /// projects/project-id/deidentifyTemplates/432452342.
+        /// Required. Resource name of the organization and deidentify template to be
+        /// read, for example `organizations/433245324/deidentifyTemplates/432452342`
+        /// or projects/project-id/deidentifyTemplates/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3499,9 +3597,9 @@ namespace Google.Cloud.Dlp.V2
         /// more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and deidentify template to be read, for
-        /// example `organizations/433245324/deidentifyTemplates/432452342` or
-        /// projects/project-id/deidentifyTemplates/432452342.
+        /// Required. Resource name of the organization and deidentify template to be
+        /// read, for example `organizations/433245324/deidentifyTemplates/432452342`
+        /// or projects/project-id/deidentifyTemplates/432452342.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4019,8 +4117,9 @@ namespace Google.Cloud.Dlp.V2
         /// more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and deidentify template to be deleted,
-        /// for example `organizations/433245324/deidentifyTemplates/432452342` or
+        /// Required. Resource name of the organization and deidentify template to be
+        /// deleted, for example
+        /// `organizations/433245324/deidentifyTemplates/432452342` or
         /// projects/project-id/deidentifyTemplates/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4037,8 +4136,9 @@ namespace Google.Cloud.Dlp.V2
         /// more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and deidentify template to be deleted,
-        /// for example `organizations/433245324/deidentifyTemplates/432452342` or
+        /// Required. Resource name of the organization and deidentify template to be
+        /// deleted, for example
+        /// `organizations/433245324/deidentifyTemplates/432452342` or
         /// projects/project-id/deidentifyTemplates/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4055,8 +4155,9 @@ namespace Google.Cloud.Dlp.V2
         /// more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and deidentify template to be deleted,
-        /// for example `organizations/433245324/deidentifyTemplates/432452342` or
+        /// Required. Resource name of the organization and deidentify template to be
+        /// deleted, for example
+        /// `organizations/433245324/deidentifyTemplates/432452342` or
         /// projects/project-id/deidentifyTemplates/432452342.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4070,8 +4171,9 @@ namespace Google.Cloud.Dlp.V2
         /// more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and deidentify template to be deleted,
-        /// for example `organizations/433245324/deidentifyTemplates/432452342` or
+        /// Required. Resource name of the organization and deidentify template to be
+        /// deleted, for example
+        /// `organizations/433245324/deidentifyTemplates/432452342` or
         /// projects/project-id/deidentifyTemplates/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4088,8 +4190,9 @@ namespace Google.Cloud.Dlp.V2
         /// more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and deidentify template to be deleted,
-        /// for example `organizations/433245324/deidentifyTemplates/432452342` or
+        /// Required. Resource name of the organization and deidentify template to be
+        /// deleted, for example
+        /// `organizations/433245324/deidentifyTemplates/432452342` or
         /// projects/project-id/deidentifyTemplates/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4106,8 +4209,9 @@ namespace Google.Cloud.Dlp.V2
         /// more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and deidentify template to be deleted,
-        /// for example `organizations/433245324/deidentifyTemplates/432452342` or
+        /// Required. Resource name of the organization and deidentify template to be
+        /// deleted, for example
+        /// `organizations/433245324/deidentifyTemplates/432452342` or
         /// projects/project-id/deidentifyTemplates/432452342.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4654,8 +4758,8 @@ namespace Google.Cloud.Dlp.V2
         /// jobs within the trigger.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the trigger to execute a hybrid inspect on, for example
-        /// `projects/dlp-test-project/jobTriggers/53234423`.
+        /// Required. Resource name of the trigger to execute a hybrid inspect on, for
+        /// example `projects/dlp-test-project/jobTriggers/53234423`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4671,8 +4775,8 @@ namespace Google.Cloud.Dlp.V2
         /// jobs within the trigger.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the trigger to execute a hybrid inspect on, for example
-        /// `projects/dlp-test-project/jobTriggers/53234423`.
+        /// Required. Resource name of the trigger to execute a hybrid inspect on, for
+        /// example `projects/dlp-test-project/jobTriggers/53234423`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4688,8 +4792,8 @@ namespace Google.Cloud.Dlp.V2
         /// jobs within the trigger.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the trigger to execute a hybrid inspect on, for example
-        /// `projects/dlp-test-project/jobTriggers/53234423`.
+        /// Required. Resource name of the trigger to execute a hybrid inspect on, for
+        /// example `projects/dlp-test-project/jobTriggers/53234423`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4702,8 +4806,8 @@ namespace Google.Cloud.Dlp.V2
         /// jobs within the trigger.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the trigger to execute a hybrid inspect on, for example
-        /// `projects/dlp-test-project/jobTriggers/53234423`.
+        /// Required. Resource name of the trigger to execute a hybrid inspect on, for
+        /// example `projects/dlp-test-project/jobTriggers/53234423`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4719,8 +4823,8 @@ namespace Google.Cloud.Dlp.V2
         /// jobs within the trigger.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the trigger to execute a hybrid inspect on, for example
-        /// `projects/dlp-test-project/jobTriggers/53234423`.
+        /// Required. Resource name of the trigger to execute a hybrid inspect on, for
+        /// example `projects/dlp-test-project/jobTriggers/53234423`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4736,8 +4840,8 @@ namespace Google.Cloud.Dlp.V2
         /// jobs within the trigger.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the trigger to execute a hybrid inspect on, for example
-        /// `projects/dlp-test-project/jobTriggers/53234423`.
+        /// Required. Resource name of the trigger to execute a hybrid inspect on, for
+        /// example `projects/dlp-test-project/jobTriggers/53234423`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5273,6 +5377,714 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<DlpJob> ActivateJobTriggerAsync(ActivateJobTriggerRequest request, st::CancellationToken cancellationToken) =>
             ActivateJobTriggerAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a config for discovery to scan and profile storage.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DiscoveryConfig CreateDiscoveryConfig(CreateDiscoveryConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a config for discovery to scan and profile storage.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DiscoveryConfig> CreateDiscoveryConfigAsync(CreateDiscoveryConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a config for discovery to scan and profile storage.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DiscoveryConfig> CreateDiscoveryConfigAsync(CreateDiscoveryConfigRequest request, st::CancellationToken cancellationToken) =>
+            CreateDiscoveryConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a config for discovery to scan and profile storage.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name.
+        /// 
+        /// The format of this value is as follows:
+        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
+        /// 
+        /// The following example `parent` string specifies a parent project with the
+        /// identifier `example-project`, and specifies the `europe-west3` location
+        /// for processing data:
+        /// 
+        /// parent=projects/example-project/locations/europe-west3
+        /// </param>
+        /// <param name="discoveryConfig">
+        /// Required. The DiscoveryConfig to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DiscoveryConfig CreateDiscoveryConfig(string parent, DiscoveryConfig discoveryConfig, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDiscoveryConfig(new CreateDiscoveryConfigRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                DiscoveryConfig = gax::GaxPreconditions.CheckNotNull(discoveryConfig, nameof(discoveryConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a config for discovery to scan and profile storage.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name.
+        /// 
+        /// The format of this value is as follows:
+        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
+        /// 
+        /// The following example `parent` string specifies a parent project with the
+        /// identifier `example-project`, and specifies the `europe-west3` location
+        /// for processing data:
+        /// 
+        /// parent=projects/example-project/locations/europe-west3
+        /// </param>
+        /// <param name="discoveryConfig">
+        /// Required. The DiscoveryConfig to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DiscoveryConfig> CreateDiscoveryConfigAsync(string parent, DiscoveryConfig discoveryConfig, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDiscoveryConfigAsync(new CreateDiscoveryConfigRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                DiscoveryConfig = gax::GaxPreconditions.CheckNotNull(discoveryConfig, nameof(discoveryConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a config for discovery to scan and profile storage.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name.
+        /// 
+        /// The format of this value is as follows:
+        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
+        /// 
+        /// The following example `parent` string specifies a parent project with the
+        /// identifier `example-project`, and specifies the `europe-west3` location
+        /// for processing data:
+        /// 
+        /// parent=projects/example-project/locations/europe-west3
+        /// </param>
+        /// <param name="discoveryConfig">
+        /// Required. The DiscoveryConfig to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DiscoveryConfig> CreateDiscoveryConfigAsync(string parent, DiscoveryConfig discoveryConfig, st::CancellationToken cancellationToken) =>
+            CreateDiscoveryConfigAsync(parent, discoveryConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a config for discovery to scan and profile storage.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name.
+        /// 
+        /// The format of this value is as follows:
+        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
+        /// 
+        /// The following example `parent` string specifies a parent project with the
+        /// identifier `example-project`, and specifies the `europe-west3` location
+        /// for processing data:
+        /// 
+        /// parent=projects/example-project/locations/europe-west3
+        /// </param>
+        /// <param name="discoveryConfig">
+        /// Required. The DiscoveryConfig to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DiscoveryConfig CreateDiscoveryConfig(gagr::LocationName parent, DiscoveryConfig discoveryConfig, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDiscoveryConfig(new CreateDiscoveryConfigRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                DiscoveryConfig = gax::GaxPreconditions.CheckNotNull(discoveryConfig, nameof(discoveryConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a config for discovery to scan and profile storage.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name.
+        /// 
+        /// The format of this value is as follows:
+        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
+        /// 
+        /// The following example `parent` string specifies a parent project with the
+        /// identifier `example-project`, and specifies the `europe-west3` location
+        /// for processing data:
+        /// 
+        /// parent=projects/example-project/locations/europe-west3
+        /// </param>
+        /// <param name="discoveryConfig">
+        /// Required. The DiscoveryConfig to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DiscoveryConfig> CreateDiscoveryConfigAsync(gagr::LocationName parent, DiscoveryConfig discoveryConfig, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDiscoveryConfigAsync(new CreateDiscoveryConfigRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                DiscoveryConfig = gax::GaxPreconditions.CheckNotNull(discoveryConfig, nameof(discoveryConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a config for discovery to scan and profile storage.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name.
+        /// 
+        /// The format of this value is as follows:
+        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
+        /// 
+        /// The following example `parent` string specifies a parent project with the
+        /// identifier `example-project`, and specifies the `europe-west3` location
+        /// for processing data:
+        /// 
+        /// parent=projects/example-project/locations/europe-west3
+        /// </param>
+        /// <param name="discoveryConfig">
+        /// Required. The DiscoveryConfig to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DiscoveryConfig> CreateDiscoveryConfigAsync(gagr::LocationName parent, DiscoveryConfig discoveryConfig, st::CancellationToken cancellationToken) =>
+            CreateDiscoveryConfigAsync(parent, discoveryConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a discovery configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DiscoveryConfig UpdateDiscoveryConfig(UpdateDiscoveryConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a discovery configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DiscoveryConfig> UpdateDiscoveryConfigAsync(UpdateDiscoveryConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a discovery configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DiscoveryConfig> UpdateDiscoveryConfigAsync(UpdateDiscoveryConfigRequest request, st::CancellationToken cancellationToken) =>
+            UpdateDiscoveryConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a discovery configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the project and the configuration, for example
+        /// `projects/dlp-test-project/discoveryConfigs/53234423`.
+        /// </param>
+        /// <param name="discoveryConfig">
+        /// Required. New DiscoveryConfig value.
+        /// </param>
+        /// <param name="updateMask">
+        /// Mask to control which fields get updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DiscoveryConfig UpdateDiscoveryConfig(string name, DiscoveryConfig discoveryConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateDiscoveryConfig(new UpdateDiscoveryConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                DiscoveryConfig = gax::GaxPreconditions.CheckNotNull(discoveryConfig, nameof(discoveryConfig)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a discovery configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the project and the configuration, for example
+        /// `projects/dlp-test-project/discoveryConfigs/53234423`.
+        /// </param>
+        /// <param name="discoveryConfig">
+        /// Required. New DiscoveryConfig value.
+        /// </param>
+        /// <param name="updateMask">
+        /// Mask to control which fields get updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DiscoveryConfig> UpdateDiscoveryConfigAsync(string name, DiscoveryConfig discoveryConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateDiscoveryConfigAsync(new UpdateDiscoveryConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                DiscoveryConfig = gax::GaxPreconditions.CheckNotNull(discoveryConfig, nameof(discoveryConfig)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a discovery configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the project and the configuration, for example
+        /// `projects/dlp-test-project/discoveryConfigs/53234423`.
+        /// </param>
+        /// <param name="discoveryConfig">
+        /// Required. New DiscoveryConfig value.
+        /// </param>
+        /// <param name="updateMask">
+        /// Mask to control which fields get updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DiscoveryConfig> UpdateDiscoveryConfigAsync(string name, DiscoveryConfig discoveryConfig, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateDiscoveryConfigAsync(name, discoveryConfig, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a discovery configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the project and the configuration, for example
+        /// `projects/dlp-test-project/discoveryConfigs/53234423`.
+        /// </param>
+        /// <param name="discoveryConfig">
+        /// Required. New DiscoveryConfig value.
+        /// </param>
+        /// <param name="updateMask">
+        /// Mask to control which fields get updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DiscoveryConfig UpdateDiscoveryConfig(DiscoveryConfigName name, DiscoveryConfig discoveryConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateDiscoveryConfig(new UpdateDiscoveryConfigRequest
+            {
+                DiscoveryConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                DiscoveryConfig = gax::GaxPreconditions.CheckNotNull(discoveryConfig, nameof(discoveryConfig)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a discovery configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the project and the configuration, for example
+        /// `projects/dlp-test-project/discoveryConfigs/53234423`.
+        /// </param>
+        /// <param name="discoveryConfig">
+        /// Required. New DiscoveryConfig value.
+        /// </param>
+        /// <param name="updateMask">
+        /// Mask to control which fields get updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DiscoveryConfig> UpdateDiscoveryConfigAsync(DiscoveryConfigName name, DiscoveryConfig discoveryConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateDiscoveryConfigAsync(new UpdateDiscoveryConfigRequest
+            {
+                DiscoveryConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                DiscoveryConfig = gax::GaxPreconditions.CheckNotNull(discoveryConfig, nameof(discoveryConfig)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a discovery configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the project and the configuration, for example
+        /// `projects/dlp-test-project/discoveryConfigs/53234423`.
+        /// </param>
+        /// <param name="discoveryConfig">
+        /// Required. New DiscoveryConfig value.
+        /// </param>
+        /// <param name="updateMask">
+        /// Mask to control which fields get updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DiscoveryConfig> UpdateDiscoveryConfigAsync(DiscoveryConfigName name, DiscoveryConfig discoveryConfig, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateDiscoveryConfigAsync(name, discoveryConfig, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a discovery configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DiscoveryConfig GetDiscoveryConfig(GetDiscoveryConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a discovery configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DiscoveryConfig> GetDiscoveryConfigAsync(GetDiscoveryConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a discovery configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DiscoveryConfig> GetDiscoveryConfigAsync(GetDiscoveryConfigRequest request, st::CancellationToken cancellationToken) =>
+            GetDiscoveryConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a discovery configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the project and the configuration, for example
+        /// `projects/dlp-test-project/discoveryConfigs/53234423`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DiscoveryConfig GetDiscoveryConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDiscoveryConfig(new GetDiscoveryConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a discovery configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the project and the configuration, for example
+        /// `projects/dlp-test-project/discoveryConfigs/53234423`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DiscoveryConfig> GetDiscoveryConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDiscoveryConfigAsync(new GetDiscoveryConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a discovery configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the project and the configuration, for example
+        /// `projects/dlp-test-project/discoveryConfigs/53234423`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DiscoveryConfig> GetDiscoveryConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            GetDiscoveryConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a discovery configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the project and the configuration, for example
+        /// `projects/dlp-test-project/discoveryConfigs/53234423`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DiscoveryConfig GetDiscoveryConfig(DiscoveryConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDiscoveryConfig(new GetDiscoveryConfigRequest
+            {
+                DiscoveryConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a discovery configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the project and the configuration, for example
+        /// `projects/dlp-test-project/discoveryConfigs/53234423`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DiscoveryConfig> GetDiscoveryConfigAsync(DiscoveryConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDiscoveryConfigAsync(new GetDiscoveryConfigRequest
+            {
+                DiscoveryConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a discovery configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the project and the configuration, for example
+        /// `projects/dlp-test-project/discoveryConfigs/53234423`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DiscoveryConfig> GetDiscoveryConfigAsync(DiscoveryConfigName name, st::CancellationToken cancellationToken) =>
+            GetDiscoveryConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists discovery configurations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DiscoveryConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDiscoveryConfigsResponse, DiscoveryConfig> ListDiscoveryConfigs(ListDiscoveryConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists discovery configurations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DiscoveryConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDiscoveryConfigsResponse, DiscoveryConfig> ListDiscoveryConfigsAsync(ListDiscoveryConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists discovery configurations.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name.
+        /// 
+        /// The format of this value is as follows:
+        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
+        /// 
+        /// The following example `parent` string specifies a parent project with the
+        /// identifier `example-project`, and specifies the `europe-west3` location
+        /// for processing data:
+        /// 
+        /// parent=projects/example-project/locations/europe-west3
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DiscoveryConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDiscoveryConfigsResponse, DiscoveryConfig> ListDiscoveryConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDiscoveryConfigs(new ListDiscoveryConfigsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists discovery configurations.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name.
+        /// 
+        /// The format of this value is as follows:
+        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
+        /// 
+        /// The following example `parent` string specifies a parent project with the
+        /// identifier `example-project`, and specifies the `europe-west3` location
+        /// for processing data:
+        /// 
+        /// parent=projects/example-project/locations/europe-west3
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DiscoveryConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDiscoveryConfigsResponse, DiscoveryConfig> ListDiscoveryConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDiscoveryConfigsAsync(new ListDiscoveryConfigsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists discovery configurations.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name.
+        /// 
+        /// The format of this value is as follows:
+        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
+        /// 
+        /// The following example `parent` string specifies a parent project with the
+        /// identifier `example-project`, and specifies the `europe-west3` location
+        /// for processing data:
+        /// 
+        /// parent=projects/example-project/locations/europe-west3
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DiscoveryConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDiscoveryConfigsResponse, DiscoveryConfig> ListDiscoveryConfigs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDiscoveryConfigs(new ListDiscoveryConfigsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists discovery configurations.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name.
+        /// 
+        /// The format of this value is as follows:
+        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
+        /// 
+        /// The following example `parent` string specifies a parent project with the
+        /// identifier `example-project`, and specifies the `europe-west3` location
+        /// for processing data:
+        /// 
+        /// parent=projects/example-project/locations/europe-west3
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DiscoveryConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDiscoveryConfigsResponse, DiscoveryConfig> ListDiscoveryConfigsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDiscoveryConfigsAsync(new ListDiscoveryConfigsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a discovery configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteDiscoveryConfig(DeleteDiscoveryConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a discovery configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteDiscoveryConfigAsync(DeleteDiscoveryConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a discovery configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteDiscoveryConfigAsync(DeleteDiscoveryConfigRequest request, st::CancellationToken cancellationToken) =>
+            DeleteDiscoveryConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a discovery configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the project and the config, for example
+        /// `projects/dlp-test-project/discoveryConfigs/53234423`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteDiscoveryConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDiscoveryConfig(new DeleteDiscoveryConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a discovery configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the project and the config, for example
+        /// `projects/dlp-test-project/discoveryConfigs/53234423`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteDiscoveryConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDiscoveryConfigAsync(new DeleteDiscoveryConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a discovery configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the project and the config, for example
+        /// `projects/dlp-test-project/discoveryConfigs/53234423`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteDiscoveryConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteDiscoveryConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a discovery configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the project and the config, for example
+        /// `projects/dlp-test-project/discoveryConfigs/53234423`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteDiscoveryConfig(DiscoveryConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDiscoveryConfig(new DeleteDiscoveryConfigRequest
+            {
+                DiscoveryConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a discovery configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the project and the config, for example
+        /// `projects/dlp-test-project/discoveryConfigs/53234423`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteDiscoveryConfigAsync(DiscoveryConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDiscoveryConfigAsync(new DeleteDiscoveryConfigRequest
+            {
+                DiscoveryConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a discovery configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the project and the config, for example
+        /// `projects/dlp-test-project/discoveryConfigs/53234423`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteDiscoveryConfigAsync(DiscoveryConfigName name, st::CancellationToken cancellationToken) =>
+            DeleteDiscoveryConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a new job to inspect storage or calculate risk metrics.
@@ -7218,8 +8030,8 @@ namespace Google.Cloud.Dlp.V2
         /// learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of organization and storedInfoType to be updated, for
-        /// example `organizations/433245324/storedInfoTypes/432452342` or
+        /// Required. Resource name of organization and storedInfoType to be updated,
+        /// for example `organizations/433245324/storedInfoTypes/432452342` or
         /// projects/project-id/storedInfoTypes/432452342.
         /// </param>
         /// <param name="config">
@@ -7247,8 +8059,8 @@ namespace Google.Cloud.Dlp.V2
         /// learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of organization and storedInfoType to be updated, for
-        /// example `organizations/433245324/storedInfoTypes/432452342` or
+        /// Required. Resource name of organization and storedInfoType to be updated,
+        /// for example `organizations/433245324/storedInfoTypes/432452342` or
         /// projects/project-id/storedInfoTypes/432452342.
         /// </param>
         /// <param name="config">
@@ -7276,8 +8088,8 @@ namespace Google.Cloud.Dlp.V2
         /// learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of organization and storedInfoType to be updated, for
-        /// example `organizations/433245324/storedInfoTypes/432452342` or
+        /// Required. Resource name of organization and storedInfoType to be updated,
+        /// for example `organizations/433245324/storedInfoTypes/432452342` or
         /// projects/project-id/storedInfoTypes/432452342.
         /// </param>
         /// <param name="config">
@@ -7300,8 +8112,8 @@ namespace Google.Cloud.Dlp.V2
         /// learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of organization and storedInfoType to be updated, for
-        /// example `organizations/433245324/storedInfoTypes/432452342` or
+        /// Required. Resource name of organization and storedInfoType to be updated,
+        /// for example `organizations/433245324/storedInfoTypes/432452342` or
         /// projects/project-id/storedInfoTypes/432452342.
         /// </param>
         /// <param name="config">
@@ -7329,8 +8141,8 @@ namespace Google.Cloud.Dlp.V2
         /// learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of organization and storedInfoType to be updated, for
-        /// example `organizations/433245324/storedInfoTypes/432452342` or
+        /// Required. Resource name of organization and storedInfoType to be updated,
+        /// for example `organizations/433245324/storedInfoTypes/432452342` or
         /// projects/project-id/storedInfoTypes/432452342.
         /// </param>
         /// <param name="config">
@@ -7358,8 +8170,8 @@ namespace Google.Cloud.Dlp.V2
         /// learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of organization and storedInfoType to be updated, for
-        /// example `organizations/433245324/storedInfoTypes/432452342` or
+        /// Required. Resource name of organization and storedInfoType to be updated,
+        /// for example `organizations/433245324/storedInfoTypes/432452342` or
         /// projects/project-id/storedInfoTypes/432452342.
         /// </param>
         /// <param name="config">
@@ -7414,8 +8226,8 @@ namespace Google.Cloud.Dlp.V2
         /// learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and storedInfoType to be read, for
-        /// example `organizations/433245324/storedInfoTypes/432452342` or
+        /// Required. Resource name of the organization and storedInfoType to be read,
+        /// for example `organizations/433245324/storedInfoTypes/432452342` or
         /// projects/project-id/storedInfoTypes/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7432,8 +8244,8 @@ namespace Google.Cloud.Dlp.V2
         /// learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and storedInfoType to be read, for
-        /// example `organizations/433245324/storedInfoTypes/432452342` or
+        /// Required. Resource name of the organization and storedInfoType to be read,
+        /// for example `organizations/433245324/storedInfoTypes/432452342` or
         /// projects/project-id/storedInfoTypes/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7450,8 +8262,8 @@ namespace Google.Cloud.Dlp.V2
         /// learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and storedInfoType to be read, for
-        /// example `organizations/433245324/storedInfoTypes/432452342` or
+        /// Required. Resource name of the organization and storedInfoType to be read,
+        /// for example `organizations/433245324/storedInfoTypes/432452342` or
         /// projects/project-id/storedInfoTypes/432452342.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -7465,8 +8277,8 @@ namespace Google.Cloud.Dlp.V2
         /// learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and storedInfoType to be read, for
-        /// example `organizations/433245324/storedInfoTypes/432452342` or
+        /// Required. Resource name of the organization and storedInfoType to be read,
+        /// for example `organizations/433245324/storedInfoTypes/432452342` or
         /// projects/project-id/storedInfoTypes/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7483,8 +8295,8 @@ namespace Google.Cloud.Dlp.V2
         /// learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and storedInfoType to be read, for
-        /// example `organizations/433245324/storedInfoTypes/432452342` or
+        /// Required. Resource name of the organization and storedInfoType to be read,
+        /// for example `organizations/433245324/storedInfoTypes/432452342` or
         /// projects/project-id/storedInfoTypes/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7501,8 +8313,8 @@ namespace Google.Cloud.Dlp.V2
         /// learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and storedInfoType to be read, for
-        /// example `organizations/433245324/storedInfoTypes/432452342` or
+        /// Required. Resource name of the organization and storedInfoType to be read,
+        /// for example `organizations/433245324/storedInfoTypes/432452342` or
         /// projects/project-id/storedInfoTypes/432452342.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -7981,8 +8793,8 @@ namespace Google.Cloud.Dlp.V2
         /// learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and storedInfoType to be deleted, for
-        /// example `organizations/433245324/storedInfoTypes/432452342` or
+        /// Required. Resource name of the organization and storedInfoType to be
+        /// deleted, for example `organizations/433245324/storedInfoTypes/432452342` or
         /// projects/project-id/storedInfoTypes/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7999,8 +8811,8 @@ namespace Google.Cloud.Dlp.V2
         /// learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and storedInfoType to be deleted, for
-        /// example `organizations/433245324/storedInfoTypes/432452342` or
+        /// Required. Resource name of the organization and storedInfoType to be
+        /// deleted, for example `organizations/433245324/storedInfoTypes/432452342` or
         /// projects/project-id/storedInfoTypes/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8017,8 +8829,8 @@ namespace Google.Cloud.Dlp.V2
         /// learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and storedInfoType to be deleted, for
-        /// example `organizations/433245324/storedInfoTypes/432452342` or
+        /// Required. Resource name of the organization and storedInfoType to be
+        /// deleted, for example `organizations/433245324/storedInfoTypes/432452342` or
         /// projects/project-id/storedInfoTypes/432452342.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -8032,8 +8844,8 @@ namespace Google.Cloud.Dlp.V2
         /// learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and storedInfoType to be deleted, for
-        /// example `organizations/433245324/storedInfoTypes/432452342` or
+        /// Required. Resource name of the organization and storedInfoType to be
+        /// deleted, for example `organizations/433245324/storedInfoTypes/432452342` or
         /// projects/project-id/storedInfoTypes/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8050,8 +8862,8 @@ namespace Google.Cloud.Dlp.V2
         /// learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and storedInfoType to be deleted, for
-        /// example `organizations/433245324/storedInfoTypes/432452342` or
+        /// Required. Resource name of the organization and storedInfoType to be
+        /// deleted, for example `organizations/433245324/storedInfoTypes/432452342` or
         /// projects/project-id/storedInfoTypes/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8068,8 +8880,8 @@ namespace Google.Cloud.Dlp.V2
         /// learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and storedInfoType to be deleted, for
-        /// example `organizations/433245324/storedInfoTypes/432452342` or
+        /// Required. Resource name of the organization and storedInfoType to be
+        /// deleted, for example `organizations/433245324/storedInfoTypes/432452342` or
         /// projects/project-id/storedInfoTypes/432452342.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -8116,8 +8928,8 @@ namespace Google.Cloud.Dlp.V2
         /// asynchronously.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the job to execute a hybrid inspect on, for example
-        /// `projects/dlp-test-project/dlpJob/53234423`.
+        /// Required. Resource name of the job to execute a hybrid inspect on, for
+        /// example `projects/dlp-test-project/dlpJob/53234423`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -8133,8 +8945,8 @@ namespace Google.Cloud.Dlp.V2
         /// asynchronously.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the job to execute a hybrid inspect on, for example
-        /// `projects/dlp-test-project/dlpJob/53234423`.
+        /// Required. Resource name of the job to execute a hybrid inspect on, for
+        /// example `projects/dlp-test-project/dlpJob/53234423`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -8150,8 +8962,8 @@ namespace Google.Cloud.Dlp.V2
         /// asynchronously.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the job to execute a hybrid inspect on, for example
-        /// `projects/dlp-test-project/dlpJob/53234423`.
+        /// Required. Resource name of the job to execute a hybrid inspect on, for
+        /// example `projects/dlp-test-project/dlpJob/53234423`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -8164,8 +8976,8 @@ namespace Google.Cloud.Dlp.V2
         /// asynchronously.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the job to execute a hybrid inspect on, for example
-        /// `projects/dlp-test-project/dlpJob/53234423`.
+        /// Required. Resource name of the job to execute a hybrid inspect on, for
+        /// example `projects/dlp-test-project/dlpJob/53234423`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -8181,8 +8993,8 @@ namespace Google.Cloud.Dlp.V2
         /// asynchronously.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the job to execute a hybrid inspect on, for example
-        /// `projects/dlp-test-project/dlpJob/53234423`.
+        /// Required. Resource name of the job to execute a hybrid inspect on, for
+        /// example `projects/dlp-test-project/dlpJob/53234423`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -8198,8 +9010,8 @@ namespace Google.Cloud.Dlp.V2
         /// asynchronously.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the job to execute a hybrid inspect on, for example
-        /// `projects/dlp-test-project/dlpJob/53234423`.
+        /// Required. Resource name of the job to execute a hybrid inspect on, for
+        /// example `projects/dlp-test-project/dlpJob/53234423`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -8294,6 +9106,16 @@ namespace Google.Cloud.Dlp.V2
         private readonly gaxgrpc::ApiCall<DeleteJobTriggerRequest, wkt::Empty> _callDeleteJobTrigger;
 
         private readonly gaxgrpc::ApiCall<ActivateJobTriggerRequest, DlpJob> _callActivateJobTrigger;
+
+        private readonly gaxgrpc::ApiCall<CreateDiscoveryConfigRequest, DiscoveryConfig> _callCreateDiscoveryConfig;
+
+        private readonly gaxgrpc::ApiCall<UpdateDiscoveryConfigRequest, DiscoveryConfig> _callUpdateDiscoveryConfig;
+
+        private readonly gaxgrpc::ApiCall<GetDiscoveryConfigRequest, DiscoveryConfig> _callGetDiscoveryConfig;
+
+        private readonly gaxgrpc::ApiCall<ListDiscoveryConfigsRequest, ListDiscoveryConfigsResponse> _callListDiscoveryConfigs;
+
+        private readonly gaxgrpc::ApiCall<DeleteDiscoveryConfigRequest, wkt::Empty> _callDeleteDiscoveryConfig;
 
         private readonly gaxgrpc::ApiCall<CreateDlpJobRequest, DlpJob> _callCreateDlpJob;
 
@@ -8397,6 +9219,21 @@ namespace Google.Cloud.Dlp.V2
             _callActivateJobTrigger = clientHelper.BuildApiCall<ActivateJobTriggerRequest, DlpJob>("ActivateJobTrigger", grpcClient.ActivateJobTriggerAsync, grpcClient.ActivateJobTrigger, effectiveSettings.ActivateJobTriggerSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callActivateJobTrigger);
             Modify_ActivateJobTriggerApiCall(ref _callActivateJobTrigger);
+            _callCreateDiscoveryConfig = clientHelper.BuildApiCall<CreateDiscoveryConfigRequest, DiscoveryConfig>("CreateDiscoveryConfig", grpcClient.CreateDiscoveryConfigAsync, grpcClient.CreateDiscoveryConfig, effectiveSettings.CreateDiscoveryConfigSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateDiscoveryConfig);
+            Modify_CreateDiscoveryConfigApiCall(ref _callCreateDiscoveryConfig);
+            _callUpdateDiscoveryConfig = clientHelper.BuildApiCall<UpdateDiscoveryConfigRequest, DiscoveryConfig>("UpdateDiscoveryConfig", grpcClient.UpdateDiscoveryConfigAsync, grpcClient.UpdateDiscoveryConfig, effectiveSettings.UpdateDiscoveryConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callUpdateDiscoveryConfig);
+            Modify_UpdateDiscoveryConfigApiCall(ref _callUpdateDiscoveryConfig);
+            _callGetDiscoveryConfig = clientHelper.BuildApiCall<GetDiscoveryConfigRequest, DiscoveryConfig>("GetDiscoveryConfig", grpcClient.GetDiscoveryConfigAsync, grpcClient.GetDiscoveryConfig, effectiveSettings.GetDiscoveryConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetDiscoveryConfig);
+            Modify_GetDiscoveryConfigApiCall(ref _callGetDiscoveryConfig);
+            _callListDiscoveryConfigs = clientHelper.BuildApiCall<ListDiscoveryConfigsRequest, ListDiscoveryConfigsResponse>("ListDiscoveryConfigs", grpcClient.ListDiscoveryConfigsAsync, grpcClient.ListDiscoveryConfigs, effectiveSettings.ListDiscoveryConfigsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListDiscoveryConfigs);
+            Modify_ListDiscoveryConfigsApiCall(ref _callListDiscoveryConfigs);
+            _callDeleteDiscoveryConfig = clientHelper.BuildApiCall<DeleteDiscoveryConfigRequest, wkt::Empty>("DeleteDiscoveryConfig", grpcClient.DeleteDiscoveryConfigAsync, grpcClient.DeleteDiscoveryConfig, effectiveSettings.DeleteDiscoveryConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteDiscoveryConfig);
+            Modify_DeleteDiscoveryConfigApiCall(ref _callDeleteDiscoveryConfig);
             _callCreateDlpJob = clientHelper.BuildApiCall<CreateDlpJobRequest, DlpJob>("CreateDlpJob", grpcClient.CreateDlpJobAsync, grpcClient.CreateDlpJob, effectiveSettings.CreateDlpJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateDlpJob);
             Modify_CreateDlpJobApiCall(ref _callCreateDlpJob);
@@ -8482,6 +9319,16 @@ namespace Google.Cloud.Dlp.V2
 
         partial void Modify_ActivateJobTriggerApiCall(ref gaxgrpc::ApiCall<ActivateJobTriggerRequest, DlpJob> call);
 
+        partial void Modify_CreateDiscoveryConfigApiCall(ref gaxgrpc::ApiCall<CreateDiscoveryConfigRequest, DiscoveryConfig> call);
+
+        partial void Modify_UpdateDiscoveryConfigApiCall(ref gaxgrpc::ApiCall<UpdateDiscoveryConfigRequest, DiscoveryConfig> call);
+
+        partial void Modify_GetDiscoveryConfigApiCall(ref gaxgrpc::ApiCall<GetDiscoveryConfigRequest, DiscoveryConfig> call);
+
+        partial void Modify_ListDiscoveryConfigsApiCall(ref gaxgrpc::ApiCall<ListDiscoveryConfigsRequest, ListDiscoveryConfigsResponse> call);
+
+        partial void Modify_DeleteDiscoveryConfigApiCall(ref gaxgrpc::ApiCall<DeleteDiscoveryConfigRequest, wkt::Empty> call);
+
         partial void Modify_CreateDlpJobApiCall(ref gaxgrpc::ApiCall<CreateDlpJobRequest, DlpJob> call);
 
         partial void Modify_ListDlpJobsApiCall(ref gaxgrpc::ApiCall<ListDlpJobsRequest, ListDlpJobsResponse> call);
@@ -8557,6 +9404,16 @@ namespace Google.Cloud.Dlp.V2
         partial void Modify_DeleteJobTriggerRequest(ref DeleteJobTriggerRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ActivateJobTriggerRequest(ref ActivateJobTriggerRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateDiscoveryConfigRequest(ref CreateDiscoveryConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateDiscoveryConfigRequest(ref UpdateDiscoveryConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetDiscoveryConfigRequest(ref GetDiscoveryConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListDiscoveryConfigsRequest(ref ListDiscoveryConfigsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteDiscoveryConfigRequest(ref DeleteDiscoveryConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateDlpJobRequest(ref CreateDlpJobRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -9217,6 +10074,126 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
+        /// Creates a config for discovery to scan and profile storage.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override DiscoveryConfig CreateDiscoveryConfig(CreateDiscoveryConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateDiscoveryConfigRequest(ref request, ref callSettings);
+            return _callCreateDiscoveryConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a config for discovery to scan and profile storage.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<DiscoveryConfig> CreateDiscoveryConfigAsync(CreateDiscoveryConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateDiscoveryConfigRequest(ref request, ref callSettings);
+            return _callCreateDiscoveryConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a discovery configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override DiscoveryConfig UpdateDiscoveryConfig(UpdateDiscoveryConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateDiscoveryConfigRequest(ref request, ref callSettings);
+            return _callUpdateDiscoveryConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a discovery configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<DiscoveryConfig> UpdateDiscoveryConfigAsync(UpdateDiscoveryConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateDiscoveryConfigRequest(ref request, ref callSettings);
+            return _callUpdateDiscoveryConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a discovery configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override DiscoveryConfig GetDiscoveryConfig(GetDiscoveryConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDiscoveryConfigRequest(ref request, ref callSettings);
+            return _callGetDiscoveryConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a discovery configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<DiscoveryConfig> GetDiscoveryConfigAsync(GetDiscoveryConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDiscoveryConfigRequest(ref request, ref callSettings);
+            return _callGetDiscoveryConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists discovery configurations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DiscoveryConfig"/> resources.</returns>
+        public override gax::PagedEnumerable<ListDiscoveryConfigsResponse, DiscoveryConfig> ListDiscoveryConfigs(ListDiscoveryConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDiscoveryConfigsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListDiscoveryConfigsRequest, ListDiscoveryConfigsResponse, DiscoveryConfig>(_callListDiscoveryConfigs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists discovery configurations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DiscoveryConfig"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListDiscoveryConfigsResponse, DiscoveryConfig> ListDiscoveryConfigsAsync(ListDiscoveryConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDiscoveryConfigsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListDiscoveryConfigsRequest, ListDiscoveryConfigsResponse, DiscoveryConfig>(_callListDiscoveryConfigs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a discovery configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteDiscoveryConfig(DeleteDiscoveryConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteDiscoveryConfigRequest(ref request, ref callSettings);
+            _callDeleteDiscoveryConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a discovery configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteDiscoveryConfigAsync(DeleteDiscoveryConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteDiscoveryConfigRequest(ref request, ref callSettings);
+            return _callDeleteDiscoveryConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Creates a new job to inspect storage or calculate risk metrics.
         /// See https://cloud.google.com/dlp/docs/inspecting-storage and
         /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
@@ -9581,6 +10558,10 @@ namespace Google.Cloud.Dlp.V2
     {
     }
 
+    public partial class ListDiscoveryConfigsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListDlpJobsRequest : gaxgrpc::IPageRequest
     {
     }
@@ -9609,6 +10590,14 @@ namespace Google.Cloud.Dlp.V2
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<JobTrigger> GetEnumerator() => JobTriggers.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListDiscoveryConfigsResponse : gaxgrpc::IPageResponse<DiscoveryConfig>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<DiscoveryConfig> GetEnumerator() => DiscoveryConfigs.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
