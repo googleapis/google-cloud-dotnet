@@ -1,5 +1,19 @@
 # Version history
 
+## Version 2.0.0-alpha14, released 2023-10-25
+
+### Bug fixes
+
+- **BREAKING CHANGE** Delete `BatchDeleteUserLinks`, `DeleteUserLink`, `BatchUpdateUserLinks`, `UpdateUserLink`, `BatchCreateUserLinks`, `CreateUserLink`, `AuditUserLinks`, `ListUserLinks`, `BatchGetUserLinks`, `GetUserLink` from the Admin API v1 alpha as per the announcement in https://bit.ly/46yBIDt ([commit 5948499](https://github.com/googleapis/google-cloud-dotnet/commit/5948499acbe3711fe1e3a05c691a41918b26ea1c))
+
+### New features
+
+- Add `UpdateDataRedactionSettings`, `CreateRollupProperty`, `GetRollupPropertySourceLink`, `ListRollupPropertySourceLinks`, `CreateRollupPropertySourceLink`, `DeleteRollupPropertySourceLink`, `CreateSubproperty`, `CreateSubpropertyEventFilter`, `CreateSubpropertyEventFilter`, `ListSubpropertyEventFilters`, `UpdateSubpropertyEventFilter`, `DeleteSubpropertyEventFilter` methods to the Admin API v1 alpha ([commit 5948499](https://github.com/googleapis/google-cloud-dotnet/commit/5948499acbe3711fe1e3a05c691a41918b26ea1c))
+- Add `include_all_users`, `expand_groups` fields to `RunAccessReportRequest` ([commit 5948499](https://github.com/googleapis/google-cloud-dotnet/commit/5948499acbe3711fe1e3a05c691a41918b26ea1c))
+- Add `DataRedactionSettings`, `RollupPropertySourceLink`, `SubpropertyEventFilterCondition`, `SubpropertyEventFilterExpression`, `SubpropertyEventFilterExpressionList`, `SubpropertyEventFilterClause`, `SubpropertyEventFilter` types ([commit 5948499](https://github.com/googleapis/google-cloud-dotnet/commit/5948499acbe3711fe1e3a05c691a41918b26ea1c))
+- Add the `DATA_REDACTION_SETTINGS` option to the `ChangeHistoryResourceType` enum ([commit 5948499](https://github.com/googleapis/google-cloud-dotnet/commit/5948499acbe3711fe1e3a05c691a41918b26ea1c))
+- Add the `data_redaction_settings` field to the `ChangeHistoryResource.resource` oneof field ([commit 5948499](https://github.com/googleapis/google-cloud-dotnet/commit/5948499acbe3711fe1e3a05c691a41918b26ea1c))
+
 ## Version 2.0.0-alpha13, released 2023-09-01
 
 ### Bug fixes
