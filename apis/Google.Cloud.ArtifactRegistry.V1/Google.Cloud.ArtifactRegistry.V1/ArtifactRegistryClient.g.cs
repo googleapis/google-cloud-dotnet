@@ -77,6 +77,8 @@ namespace Google.Cloud.ArtifactRegistry.V1
             GetVersionSettings = existing.GetVersionSettings;
             DeleteVersionSettings = existing.DeleteVersionSettings;
             DeleteVersionOperationsSettings = existing.DeleteVersionOperationsSettings.Clone();
+            BatchDeleteVersionsSettings = existing.BatchDeleteVersionsSettings;
+            BatchDeleteVersionsOperationsSettings = existing.BatchDeleteVersionsOperationsSettings.Clone();
             ListFilesSettings = existing.ListFilesSettings;
             GetFileSettings = existing.GetFileSettings;
             ListTagsSettings = existing.ListTagsSettings;
@@ -453,6 +455,37 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings DeleteVersionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ArtifactRegistryClient.BatchDeleteVersions</c> and <c>ArtifactRegistryClient.BatchDeleteVersionsAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchDeleteVersionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ArtifactRegistryClient.BatchDeleteVersions</c> and
+        /// <c>ArtifactRegistryClient.BatchDeleteVersionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings BatchDeleteVersionsOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -2045,10 +2078,10 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// created.
         /// </param>
         /// <param name="repository">
-        /// The repository to be created.
+        /// Required. The repository to be created.
         /// </param>
         /// <param name="repositoryId">
-        /// The repository id to use for this repository.
+        /// Required. The repository id to use for this repository.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2069,10 +2102,10 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// created.
         /// </param>
         /// <param name="repository">
-        /// The repository to be created.
+        /// Required. The repository to be created.
         /// </param>
         /// <param name="repositoryId">
-        /// The repository id to use for this repository.
+        /// Required. The repository id to use for this repository.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2093,10 +2126,10 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// created.
         /// </param>
         /// <param name="repository">
-        /// The repository to be created.
+        /// Required. The repository to be created.
         /// </param>
         /// <param name="repositoryId">
-        /// The repository id to use for this repository.
+        /// Required. The repository id to use for this repository.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2112,10 +2145,10 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// created.
         /// </param>
         /// <param name="repository">
-        /// The repository to be created.
+        /// Required. The repository to be created.
         /// </param>
         /// <param name="repositoryId">
-        /// The repository id to use for this repository.
+        /// Required. The repository id to use for this repository.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2136,10 +2169,10 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// created.
         /// </param>
         /// <param name="repository">
-        /// The repository to be created.
+        /// Required. The repository to be created.
         /// </param>
         /// <param name="repositoryId">
-        /// The repository id to use for this repository.
+        /// Required. The repository id to use for this repository.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2160,10 +2193,10 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// created.
         /// </param>
         /// <param name="repository">
-        /// The repository to be created.
+        /// Required. The repository to be created.
         /// </param>
         /// <param name="repositoryId">
-        /// The repository id to use for this repository.
+        /// Required. The repository id to use for this repository.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2980,6 +3013,187 @@ namespace Google.Cloud.ArtifactRegistry.V1
             DeleteVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deletes multiple versions across a repository. The returned operation will
+        /// complete once the versions have been deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, BatchDeleteVersionsMetadata> BatchDeleteVersions(BatchDeleteVersionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes multiple versions across a repository. The returned operation will
+        /// complete once the versions have been deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, BatchDeleteVersionsMetadata>> BatchDeleteVersionsAsync(BatchDeleteVersionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes multiple versions across a repository. The returned operation will
+        /// complete once the versions have been deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, BatchDeleteVersionsMetadata>> BatchDeleteVersionsAsync(BatchDeleteVersionsRequest request, st::CancellationToken cancellationToken) =>
+            BatchDeleteVersionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>BatchDeleteVersions</c>.</summary>
+        public virtual lro::OperationsClient BatchDeleteVersionsOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>BatchDeleteVersions</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, BatchDeleteVersionsMetadata> PollOnceBatchDeleteVersions(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, BatchDeleteVersionsMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BatchDeleteVersionsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>BatchDeleteVersions</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, BatchDeleteVersionsMetadata>> PollOnceBatchDeleteVersionsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, BatchDeleteVersionsMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BatchDeleteVersionsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes multiple versions across a repository. The returned operation will
+        /// complete once the versions have been deleted.
+        /// </summary>
+        /// <param name="parent">
+        /// The name of the repository holding all requested versions.
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the versions to delete.
+        /// A maximum of 10000 versions can be deleted in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, BatchDeleteVersionsMetadata> BatchDeleteVersions(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeleteVersions(new BatchDeleteVersionsRequest
+            {
+                Parent = parent ?? "",
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes multiple versions across a repository. The returned operation will
+        /// complete once the versions have been deleted.
+        /// </summary>
+        /// <param name="parent">
+        /// The name of the repository holding all requested versions.
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the versions to delete.
+        /// A maximum of 10000 versions can be deleted in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, BatchDeleteVersionsMetadata>> BatchDeleteVersionsAsync(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeleteVersionsAsync(new BatchDeleteVersionsRequest
+            {
+                Parent = parent ?? "",
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes multiple versions across a repository. The returned operation will
+        /// complete once the versions have been deleted.
+        /// </summary>
+        /// <param name="parent">
+        /// The name of the repository holding all requested versions.
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the versions to delete.
+        /// A maximum of 10000 versions can be deleted in a batch.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, BatchDeleteVersionsMetadata>> BatchDeleteVersionsAsync(string parent, scg::IEnumerable<string> names, st::CancellationToken cancellationToken) =>
+            BatchDeleteVersionsAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes multiple versions across a repository. The returned operation will
+        /// complete once the versions have been deleted.
+        /// </summary>
+        /// <param name="parent">
+        /// The name of the repository holding all requested versions.
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the versions to delete.
+        /// A maximum of 10000 versions can be deleted in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, BatchDeleteVersionsMetadata> BatchDeleteVersions(PackageName parent, scg::IEnumerable<VersionName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeleteVersions(new BatchDeleteVersionsRequest
+            {
+                ParentAsPackageName = parent,
+                VersionNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes multiple versions across a repository. The returned operation will
+        /// complete once the versions have been deleted.
+        /// </summary>
+        /// <param name="parent">
+        /// The name of the repository holding all requested versions.
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the versions to delete.
+        /// A maximum of 10000 versions can be deleted in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, BatchDeleteVersionsMetadata>> BatchDeleteVersionsAsync(PackageName parent, scg::IEnumerable<VersionName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeleteVersionsAsync(new BatchDeleteVersionsRequest
+            {
+                ParentAsPackageName = parent,
+                VersionNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes multiple versions across a repository. The returned operation will
+        /// complete once the versions have been deleted.
+        /// </summary>
+        /// <param name="parent">
+        /// The name of the repository holding all requested versions.
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the versions to delete.
+        /// A maximum of 10000 versions can be deleted in a batch.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, BatchDeleteVersionsMetadata>> BatchDeleteVersionsAsync(PackageName parent, scg::IEnumerable<VersionName> names, st::CancellationToken cancellationToken) =>
+            BatchDeleteVersionsAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Lists files.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3224,7 +3438,9 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// Lists tags.
         /// </summary>
         /// <param name="parent">
-        /// The name of the parent resource whose tags will be listed.
+        /// The name of the parent package whose tags will be listed.
+        /// For example:
+        /// `projects/p1/locations/us-central1/repositories/repo1/packages/pkg1`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3248,7 +3464,9 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// Lists tags.
         /// </summary>
         /// <param name="parent">
-        /// The name of the parent resource whose tags will be listed.
+        /// The name of the parent package whose tags will be listed.
+        /// For example:
+        /// `projects/p1/locations/us-central1/repositories/repo1/packages/pkg1`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4065,6 +4283,8 @@ namespace Google.Cloud.ArtifactRegistry.V1
 
         private readonly gaxgrpc::ApiCall<DeleteVersionRequest, lro::Operation> _callDeleteVersion;
 
+        private readonly gaxgrpc::ApiCall<BatchDeleteVersionsRequest, lro::Operation> _callBatchDeleteVersions;
+
         private readonly gaxgrpc::ApiCall<ListFilesRequest, ListFilesResponse> _callListFiles;
 
         private readonly gaxgrpc::ApiCall<GetFileRequest, File> _callGetFile;
@@ -4110,6 +4330,7 @@ namespace Google.Cloud.ArtifactRegistry.V1
             DeleteRepositoryOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRepositoryOperationsSettings, logger);
             DeletePackageOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeletePackageOperationsSettings, logger);
             DeleteVersionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteVersionOperationsSettings, logger);
+            BatchDeleteVersionsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchDeleteVersionsOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListDockerImages = clientHelper.BuildApiCall<ListDockerImagesRequest, ListDockerImagesResponse>("ListDockerImages", grpcClient.ListDockerImagesAsync, grpcClient.ListDockerImages, effectiveSettings.ListDockerImagesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDockerImages);
@@ -4174,6 +4395,9 @@ namespace Google.Cloud.ArtifactRegistry.V1
             _callDeleteVersion = clientHelper.BuildApiCall<DeleteVersionRequest, lro::Operation>("DeleteVersion", grpcClient.DeleteVersionAsync, grpcClient.DeleteVersion, effectiveSettings.DeleteVersionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteVersion);
             Modify_DeleteVersionApiCall(ref _callDeleteVersion);
+            _callBatchDeleteVersions = clientHelper.BuildApiCall<BatchDeleteVersionsRequest, lro::Operation>("BatchDeleteVersions", grpcClient.BatchDeleteVersionsAsync, grpcClient.BatchDeleteVersions, effectiveSettings.BatchDeleteVersionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchDeleteVersions);
+            Modify_BatchDeleteVersionsApiCall(ref _callBatchDeleteVersions);
             _callListFiles = clientHelper.BuildApiCall<ListFilesRequest, ListFilesResponse>("ListFiles", grpcClient.ListFilesAsync, grpcClient.ListFiles, effectiveSettings.ListFilesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListFiles);
             Modify_ListFilesApiCall(ref _callListFiles);
@@ -4263,6 +4487,8 @@ namespace Google.Cloud.ArtifactRegistry.V1
 
         partial void Modify_DeleteVersionApiCall(ref gaxgrpc::ApiCall<DeleteVersionRequest, lro::Operation> call);
 
+        partial void Modify_BatchDeleteVersionsApiCall(ref gaxgrpc::ApiCall<BatchDeleteVersionsRequest, lro::Operation> call);
+
         partial void Modify_ListFilesApiCall(ref gaxgrpc::ApiCall<ListFilesRequest, ListFilesResponse> call);
 
         partial void Modify_GetFileApiCall(ref gaxgrpc::ApiCall<GetFileRequest, File> call);
@@ -4340,6 +4566,8 @@ namespace Google.Cloud.ArtifactRegistry.V1
         partial void Modify_GetVersionRequest(ref GetVersionRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteVersionRequest(ref DeleteVersionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchDeleteVersionsRequest(ref BatchDeleteVersionsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListFilesRequest(ref ListFilesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4911,6 +5139,35 @@ namespace Google.Cloud.ArtifactRegistry.V1
         {
             Modify_DeleteVersionRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteVersion.Async(request, callSettings).ConfigureAwait(false), DeleteVersionOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>BatchDeleteVersions</c>.</summary>
+        public override lro::OperationsClient BatchDeleteVersionsOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes multiple versions across a repository. The returned operation will
+        /// complete once the versions have been deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, BatchDeleteVersionsMetadata> BatchDeleteVersions(BatchDeleteVersionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchDeleteVersionsRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, BatchDeleteVersionsMetadata>(_callBatchDeleteVersions.Sync(request, callSettings), BatchDeleteVersionsOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes multiple versions across a repository. The returned operation will
+        /// complete once the versions have been deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, BatchDeleteVersionsMetadata>> BatchDeleteVersionsAsync(BatchDeleteVersionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchDeleteVersionsRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, BatchDeleteVersionsMetadata>(await _callBatchDeleteVersions.Async(request, callSettings).ConfigureAwait(false), BatchDeleteVersionsOperationsClient);
         }
 
         /// <summary>

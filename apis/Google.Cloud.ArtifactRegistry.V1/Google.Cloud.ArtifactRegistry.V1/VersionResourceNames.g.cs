@@ -305,4 +305,22 @@ namespace Google.Cloud.ArtifactRegistry.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class BatchDeleteVersionsRequest
+    {
+        /// <summary>
+        /// <see cref="PackageName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PackageName ParentAsPackageName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PackageName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary><see cref="VersionName"/>-typed view over the <see cref="Names"/> resource name property.</summary>
+        public gax::ResourceNameList<VersionName> VersionNames
+        {
+            get => new gax::ResourceNameList<VersionName>(Names, s => string.IsNullOrEmpty(s) ? null : VersionName.Parse(s, allowUnparsed: true));
+        }
+    }
 }

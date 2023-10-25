@@ -24,6 +24,7 @@ namespace GoogleCSharpSnippets
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
+    using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
     using gcav = Google.Cloud.ArtifactRegistry.V1;
@@ -3249,6 +3250,215 @@ namespace GoogleCSharpSnippets
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
             Operation<Empty, gcav::OperationMetadata> retrievedResponse = await artifactRegistryClient.PollOnceDeleteVersionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeleteVersions</summary>
+        public void BatchDeleteVersionsRequestObject()
+        {
+            // Snippet: BatchDeleteVersions(BatchDeleteVersionsRequest, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            gcav::BatchDeleteVersionsRequest request = new gcav::BatchDeleteVersionsRequest
+            {
+                ParentAsPackageName = gcav::PackageName.FromProjectLocationRepositoryPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PACKAGE]"),
+                VersionNames =
+                {
+                    gcav::VersionName.FromProjectLocationRepositoryPackageVersion("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PACKAGE]", "[VERSION]"),
+                },
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<Empty, gcav::BatchDeleteVersionsMetadata> response = artifactRegistryClient.BatchDeleteVersions(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcav::BatchDeleteVersionsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcav::BatchDeleteVersionsMetadata> retrievedResponse = artifactRegistryClient.PollOnceBatchDeleteVersions(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeleteVersionsAsync</summary>
+        public async Task BatchDeleteVersionsRequestObjectAsync()
+        {
+            // Snippet: BatchDeleteVersionsAsync(BatchDeleteVersionsRequest, CallSettings)
+            // Additional: BatchDeleteVersionsAsync(BatchDeleteVersionsRequest, CancellationToken)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::BatchDeleteVersionsRequest request = new gcav::BatchDeleteVersionsRequest
+            {
+                ParentAsPackageName = gcav::PackageName.FromProjectLocationRepositoryPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PACKAGE]"),
+                VersionNames =
+                {
+                    gcav::VersionName.FromProjectLocationRepositoryPackageVersion("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PACKAGE]", "[VERSION]"),
+                },
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<Empty, gcav::BatchDeleteVersionsMetadata> response = await artifactRegistryClient.BatchDeleteVersionsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcav::BatchDeleteVersionsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcav::BatchDeleteVersionsMetadata> retrievedResponse = await artifactRegistryClient.PollOnceBatchDeleteVersionsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeleteVersions</summary>
+        public void BatchDeleteVersions()
+        {
+            // Snippet: BatchDeleteVersions(string, IEnumerable<string>, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/packages/[PACKAGE]";
+            IEnumerable<string> names = new string[]
+            {
+                "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/packages/[PACKAGE]/versions/[VERSION]",
+            };
+            // Make the request
+            Operation<Empty, gcav::BatchDeleteVersionsMetadata> response = artifactRegistryClient.BatchDeleteVersions(parent, names);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcav::BatchDeleteVersionsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcav::BatchDeleteVersionsMetadata> retrievedResponse = artifactRegistryClient.PollOnceBatchDeleteVersions(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeleteVersionsAsync</summary>
+        public async Task BatchDeleteVersionsAsync()
+        {
+            // Snippet: BatchDeleteVersionsAsync(string, IEnumerable<string>, CallSettings)
+            // Additional: BatchDeleteVersionsAsync(string, IEnumerable<string>, CancellationToken)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/packages/[PACKAGE]";
+            IEnumerable<string> names = new string[]
+            {
+                "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/packages/[PACKAGE]/versions/[VERSION]",
+            };
+            // Make the request
+            Operation<Empty, gcav::BatchDeleteVersionsMetadata> response = await artifactRegistryClient.BatchDeleteVersionsAsync(parent, names);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcav::BatchDeleteVersionsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcav::BatchDeleteVersionsMetadata> retrievedResponse = await artifactRegistryClient.PollOnceBatchDeleteVersionsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeleteVersions</summary>
+        public void BatchDeleteVersionsResourceNames()
+        {
+            // Snippet: BatchDeleteVersions(PackageName, IEnumerable<VersionName>, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            gcav::PackageName parent = gcav::PackageName.FromProjectLocationRepositoryPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PACKAGE]");
+            IEnumerable<gcav::VersionName> names = new gcav::VersionName[]
+            {
+                gcav::VersionName.FromProjectLocationRepositoryPackageVersion("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PACKAGE]", "[VERSION]"),
+            };
+            // Make the request
+            Operation<Empty, gcav::BatchDeleteVersionsMetadata> response = artifactRegistryClient.BatchDeleteVersions(parent, names);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcav::BatchDeleteVersionsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcav::BatchDeleteVersionsMetadata> retrievedResponse = artifactRegistryClient.PollOnceBatchDeleteVersions(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeleteVersionsAsync</summary>
+        public async Task BatchDeleteVersionsResourceNamesAsync()
+        {
+            // Snippet: BatchDeleteVersionsAsync(PackageName, IEnumerable<VersionName>, CallSettings)
+            // Additional: BatchDeleteVersionsAsync(PackageName, IEnumerable<VersionName>, CancellationToken)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::PackageName parent = gcav::PackageName.FromProjectLocationRepositoryPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PACKAGE]");
+            IEnumerable<gcav::VersionName> names = new gcav::VersionName[]
+            {
+                gcav::VersionName.FromProjectLocationRepositoryPackageVersion("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PACKAGE]", "[VERSION]"),
+            };
+            // Make the request
+            Operation<Empty, gcav::BatchDeleteVersionsMetadata> response = await artifactRegistryClient.BatchDeleteVersionsAsync(parent, names);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcav::BatchDeleteVersionsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcav::BatchDeleteVersionsMetadata> retrievedResponse = await artifactRegistryClient.PollOnceBatchDeleteVersionsAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {

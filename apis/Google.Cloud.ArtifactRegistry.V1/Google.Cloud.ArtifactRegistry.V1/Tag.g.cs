@@ -361,7 +361,9 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// The name of the parent resource whose tags will be listed.
+    /// The name of the parent package whose tags will be listed.
+    /// For example:
+    /// `projects/p1/locations/us-central1/repositories/repo1/packages/pkg1`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
