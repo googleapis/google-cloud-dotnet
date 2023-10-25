@@ -55,6 +55,11 @@ echo "Building with commit $COMMITTISH"
 # Build the release and run the tests.
 ./buildrelease.sh $COMMITTISH
 
+# Restore tools just in case we haven't done so already.
+# (If we're using autorelease, this should have happened, but
+# doing it again is harmless.) This will make the SBOM generator available.
+dotnet tool restore
+
 if [[ $SKIP_NUGET_PUSH = "" ]]
 then
   echo "Pushing NuGet packages"
@@ -87,7 +92,8 @@ then
        echo "No NuGet API key found for package owner $package_owner"
        exit 1
     esac
-    
+
+    dotnet generate-sbom $pkg
     dotnet nuget push -s https://api.nuget.org/v3/index.json -k $pkg_nuget_api_key $pkg
   done
   cd ../..

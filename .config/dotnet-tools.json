@@ -19,6 +19,12 @@
       "commands": [
         "release-progress-reporter"
       ]
+    },
+    "Google.Cloud.Tools.SbomGenerator": {
+      "version": "0.2.0",
+      "commands": [
+        "generate-sbom"
+      ]
     }
   }
 }
