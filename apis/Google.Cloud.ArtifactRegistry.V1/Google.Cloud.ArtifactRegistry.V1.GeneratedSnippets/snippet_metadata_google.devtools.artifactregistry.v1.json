@@ -5415,6 +5415,309 @@
       ]
     },
     {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_BatchDeleteVersions_sync",
+      "title": "BatchDeleteVersionsRequestObject",
+      "description": "Snippet for BatchDeleteVersions",
+      "file": "ArtifactRegistryClient.BatchDeleteVersionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeleteVersions",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.BatchDeleteVersions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.BatchDeleteVersionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ArtifactRegistry.V1.BatchDeleteVersionsMetadata>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "BatchDeleteVersions",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.BatchDeleteVersions",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_BatchDeleteVersions_async",
+      "title": "BatchDeleteVersionsRequestObjectAsync",
+      "description": "Snippet for BatchDeleteVersionsAsync",
+      "file": "ArtifactRegistryClient.BatchDeleteVersionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeleteVersionsAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.BatchDeleteVersionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.BatchDeleteVersionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ArtifactRegistry.V1.BatchDeleteVersionsMetadata>>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "BatchDeleteVersions",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.BatchDeleteVersions",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 68,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 66,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_BatchDeleteVersions_sync_flattened",
+      "title": "BatchDeleteVersions",
+      "description": "Snippet for BatchDeleteVersions",
+      "file": "ArtifactRegistryClient.BatchDeleteVersionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeleteVersions",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.BatchDeleteVersions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ArtifactRegistry.V1.BatchDeleteVersionsMetadata>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "BatchDeleteVersions",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.BatchDeleteVersions",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_BatchDeleteVersions_async_flattened",
+      "title": "BatchDeleteVersionsAsync",
+      "description": "Snippet for BatchDeleteVersionsAsync",
+      "file": "ArtifactRegistryClient.BatchDeleteVersionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeleteVersionsAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.BatchDeleteVersionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ArtifactRegistry.V1.BatchDeleteVersionsMetadata>>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "BatchDeleteVersions",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.BatchDeleteVersions",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_BatchDeleteVersions_sync_flattened_resourceNames",
+      "title": "BatchDeleteVersionsResourceNames",
+      "description": "Snippet for BatchDeleteVersions",
+      "file": "ArtifactRegistryClient.BatchDeleteVersionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeleteVersions",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.BatchDeleteVersions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.PackageName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.VersionName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ArtifactRegistry.V1.BatchDeleteVersionsMetadata>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "BatchDeleteVersions",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.BatchDeleteVersions",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_BatchDeleteVersions_async_flattened_resourceNames",
+      "title": "BatchDeleteVersionsResourceNamesAsync",
+      "description": "Snippet for BatchDeleteVersionsAsync",
+      "file": "ArtifactRegistryClient.BatchDeleteVersionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeleteVersionsAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.BatchDeleteVersionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.PackageName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.VersionName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ArtifactRegistry.V1.BatchDeleteVersionsMetadata>>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "BatchDeleteVersions",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.BatchDeleteVersions",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_ListFiles_sync",
       "title": "ListFilesRequestObject",
       "description": "Snippet for ListFiles",

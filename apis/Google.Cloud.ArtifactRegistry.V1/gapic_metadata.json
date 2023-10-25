@@ -10,6 +10,12 @@
         "grpc": {
           "libraryClient": "ArtifactRegistryClient",
           "rpcs": {
+            "BatchDeleteVersions": {
+              "methods": [
+                "BatchDeleteVersions",
+                "BatchDeleteVersionsAsync"
+              ]
+            },
             "CreateRepository": {
               "methods": [
                 "CreateRepository",
