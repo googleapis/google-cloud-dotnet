@@ -28,6 +28,12 @@
                 "CreateDeidentifyTemplateAsync"
               ]
             },
+            "CreateDiscoveryConfig": {
+              "methods": [
+                "CreateDiscoveryConfig",
+                "CreateDiscoveryConfigAsync"
+              ]
+            },
             "CreateDlpJob": {
               "methods": [
                 "CreateDlpJob",
@@ -64,6 +70,12 @@
                 "DeleteDeidentifyTemplateAsync"
               ]
             },
+            "DeleteDiscoveryConfig": {
+              "methods": [
+                "DeleteDiscoveryConfig",
+                "DeleteDiscoveryConfigAsync"
+              ]
+            },
             "DeleteDlpJob": {
               "methods": [
                 "DeleteDlpJob",
@@ -98,6 +110,12 @@
               "methods": [
                 "GetDeidentifyTemplate",
                 "GetDeidentifyTemplateAsync"
+              ]
+            },
+            "GetDiscoveryConfig": {
+              "methods": [
+                "GetDiscoveryConfig",
+                "GetDiscoveryConfigAsync"
               ]
             },
             "GetDlpJob": {
@@ -148,6 +166,12 @@
                 "ListDeidentifyTemplatesAsync"
               ]
             },
+            "ListDiscoveryConfigs": {
+              "methods": [
+                "ListDiscoveryConfigs",
+                "ListDiscoveryConfigsAsync"
+              ]
+            },
             "ListDlpJobs": {
               "methods": [
                 "ListDlpJobs",
@@ -194,6 +218,12 @@
               "methods": [
                 "UpdateDeidentifyTemplate",
                 "UpdateDeidentifyTemplateAsync"
+              ]
+            },
+            "UpdateDiscoveryConfig": {
+              "methods": [
+                "UpdateDiscoveryConfig",
+                "UpdateDiscoveryConfigAsync"
               ]
             },
             "UpdateInspectTemplate": {

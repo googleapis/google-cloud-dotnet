@@ -3,7 +3,7 @@
 //     source: google/privacy/dlp/v2/dlp.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2022 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -143,6 +143,20 @@ namespace Google.Cloud.Dlp.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ActivateJobTriggerRequest> __Marshaller_google_privacy_dlp_v2_ActivateJobTriggerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.ActivateJobTriggerRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DlpJob> __Marshaller_google_privacy_dlp_v2_DlpJob = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.DlpJob.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.CreateDiscoveryConfigRequest> __Marshaller_google_privacy_dlp_v2_CreateDiscoveryConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.CreateDiscoveryConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DiscoveryConfig> __Marshaller_google_privacy_dlp_v2_DiscoveryConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.DiscoveryConfig.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.UpdateDiscoveryConfigRequest> __Marshaller_google_privacy_dlp_v2_UpdateDiscoveryConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.UpdateDiscoveryConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.GetDiscoveryConfigRequest> __Marshaller_google_privacy_dlp_v2_GetDiscoveryConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.GetDiscoveryConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListDiscoveryConfigsRequest> __Marshaller_google_privacy_dlp_v2_ListDiscoveryConfigsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.ListDiscoveryConfigsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListDiscoveryConfigsResponse> __Marshaller_google_privacy_dlp_v2_ListDiscoveryConfigsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.ListDiscoveryConfigsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DeleteDiscoveryConfigRequest> __Marshaller_google_privacy_dlp_v2_DeleteDiscoveryConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.DeleteDiscoveryConfigRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.CreateDlpJobRequest> __Marshaller_google_privacy_dlp_v2_CreateDlpJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.CreateDlpJobRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -349,6 +363,46 @@ namespace Google.Cloud.Dlp.V2 {
         "ActivateJobTrigger",
         __Marshaller_google_privacy_dlp_v2_ActivateJobTriggerRequest,
         __Marshaller_google_privacy_dlp_v2_DlpJob);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dlp.V2.CreateDiscoveryConfigRequest, global::Google.Cloud.Dlp.V2.DiscoveryConfig> __Method_CreateDiscoveryConfig = new grpc::Method<global::Google.Cloud.Dlp.V2.CreateDiscoveryConfigRequest, global::Google.Cloud.Dlp.V2.DiscoveryConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateDiscoveryConfig",
+        __Marshaller_google_privacy_dlp_v2_CreateDiscoveryConfigRequest,
+        __Marshaller_google_privacy_dlp_v2_DiscoveryConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dlp.V2.UpdateDiscoveryConfigRequest, global::Google.Cloud.Dlp.V2.DiscoveryConfig> __Method_UpdateDiscoveryConfig = new grpc::Method<global::Google.Cloud.Dlp.V2.UpdateDiscoveryConfigRequest, global::Google.Cloud.Dlp.V2.DiscoveryConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateDiscoveryConfig",
+        __Marshaller_google_privacy_dlp_v2_UpdateDiscoveryConfigRequest,
+        __Marshaller_google_privacy_dlp_v2_DiscoveryConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dlp.V2.GetDiscoveryConfigRequest, global::Google.Cloud.Dlp.V2.DiscoveryConfig> __Method_GetDiscoveryConfig = new grpc::Method<global::Google.Cloud.Dlp.V2.GetDiscoveryConfigRequest, global::Google.Cloud.Dlp.V2.DiscoveryConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetDiscoveryConfig",
+        __Marshaller_google_privacy_dlp_v2_GetDiscoveryConfigRequest,
+        __Marshaller_google_privacy_dlp_v2_DiscoveryConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dlp.V2.ListDiscoveryConfigsRequest, global::Google.Cloud.Dlp.V2.ListDiscoveryConfigsResponse> __Method_ListDiscoveryConfigs = new grpc::Method<global::Google.Cloud.Dlp.V2.ListDiscoveryConfigsRequest, global::Google.Cloud.Dlp.V2.ListDiscoveryConfigsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListDiscoveryConfigs",
+        __Marshaller_google_privacy_dlp_v2_ListDiscoveryConfigsRequest,
+        __Marshaller_google_privacy_dlp_v2_ListDiscoveryConfigsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dlp.V2.DeleteDiscoveryConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteDiscoveryConfig = new grpc::Method<global::Google.Cloud.Dlp.V2.DeleteDiscoveryConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteDiscoveryConfig",
+        __Marshaller_google_privacy_dlp_v2_DeleteDiscoveryConfigRequest,
+        __Marshaller_google_protobuf_Empty);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.CreateDlpJobRequest, global::Google.Cloud.Dlp.V2.DlpJob> __Method_CreateDlpJob = new grpc::Method<global::Google.Cloud.Dlp.V2.CreateDlpJobRequest, global::Google.Cloud.Dlp.V2.DlpJob>(
@@ -769,6 +823,66 @@ namespace Google.Cloud.Dlp.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.DlpJob> ActivateJobTrigger(global::Google.Cloud.Dlp.V2.ActivateJobTriggerRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a config for discovery to scan and profile storage.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.DiscoveryConfig> CreateDiscoveryConfig(global::Google.Cloud.Dlp.V2.CreateDiscoveryConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a discovery configuration.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.DiscoveryConfig> UpdateDiscoveryConfig(global::Google.Cloud.Dlp.V2.UpdateDiscoveryConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a discovery configuration.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.DiscoveryConfig> GetDiscoveryConfig(global::Google.Cloud.Dlp.V2.GetDiscoveryConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists discovery configurations.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.ListDiscoveryConfigsResponse> ListDiscoveryConfigs(global::Google.Cloud.Dlp.V2.ListDiscoveryConfigsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a discovery configuration.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDiscoveryConfig(global::Google.Cloud.Dlp.V2.DeleteDiscoveryConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2247,6 +2361,246 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_ActivateJobTrigger, null, options, request);
       }
       /// <summary>
+      /// Creates a config for discovery to scan and profile storage.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dlp.V2.DiscoveryConfig CreateDiscoveryConfig(global::Google.Cloud.Dlp.V2.CreateDiscoveryConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateDiscoveryConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a config for discovery to scan and profile storage.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dlp.V2.DiscoveryConfig CreateDiscoveryConfig(global::Google.Cloud.Dlp.V2.CreateDiscoveryConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateDiscoveryConfig, null, options, request);
+      }
+      /// <summary>
+      /// Creates a config for discovery to scan and profile storage.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.DiscoveryConfig> CreateDiscoveryConfigAsync(global::Google.Cloud.Dlp.V2.CreateDiscoveryConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateDiscoveryConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a config for discovery to scan and profile storage.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.DiscoveryConfig> CreateDiscoveryConfigAsync(global::Google.Cloud.Dlp.V2.CreateDiscoveryConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateDiscoveryConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates a discovery configuration.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dlp.V2.DiscoveryConfig UpdateDiscoveryConfig(global::Google.Cloud.Dlp.V2.UpdateDiscoveryConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateDiscoveryConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a discovery configuration.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dlp.V2.DiscoveryConfig UpdateDiscoveryConfig(global::Google.Cloud.Dlp.V2.UpdateDiscoveryConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateDiscoveryConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates a discovery configuration.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.DiscoveryConfig> UpdateDiscoveryConfigAsync(global::Google.Cloud.Dlp.V2.UpdateDiscoveryConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateDiscoveryConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a discovery configuration.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.DiscoveryConfig> UpdateDiscoveryConfigAsync(global::Google.Cloud.Dlp.V2.UpdateDiscoveryConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateDiscoveryConfig, null, options, request);
+      }
+      /// <summary>
+      /// Gets a discovery configuration.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dlp.V2.DiscoveryConfig GetDiscoveryConfig(global::Google.Cloud.Dlp.V2.GetDiscoveryConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDiscoveryConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a discovery configuration.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dlp.V2.DiscoveryConfig GetDiscoveryConfig(global::Google.Cloud.Dlp.V2.GetDiscoveryConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetDiscoveryConfig, null, options, request);
+      }
+      /// <summary>
+      /// Gets a discovery configuration.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.DiscoveryConfig> GetDiscoveryConfigAsync(global::Google.Cloud.Dlp.V2.GetDiscoveryConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDiscoveryConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a discovery configuration.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.DiscoveryConfig> GetDiscoveryConfigAsync(global::Google.Cloud.Dlp.V2.GetDiscoveryConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetDiscoveryConfig, null, options, request);
+      }
+      /// <summary>
+      /// Lists discovery configurations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dlp.V2.ListDiscoveryConfigsResponse ListDiscoveryConfigs(global::Google.Cloud.Dlp.V2.ListDiscoveryConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDiscoveryConfigs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists discovery configurations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dlp.V2.ListDiscoveryConfigsResponse ListDiscoveryConfigs(global::Google.Cloud.Dlp.V2.ListDiscoveryConfigsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListDiscoveryConfigs, null, options, request);
+      }
+      /// <summary>
+      /// Lists discovery configurations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ListDiscoveryConfigsResponse> ListDiscoveryConfigsAsync(global::Google.Cloud.Dlp.V2.ListDiscoveryConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDiscoveryConfigsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists discovery configurations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ListDiscoveryConfigsResponse> ListDiscoveryConfigsAsync(global::Google.Cloud.Dlp.V2.ListDiscoveryConfigsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListDiscoveryConfigs, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a discovery configuration.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteDiscoveryConfig(global::Google.Cloud.Dlp.V2.DeleteDiscoveryConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteDiscoveryConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a discovery configuration.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteDiscoveryConfig(global::Google.Cloud.Dlp.V2.DeleteDiscoveryConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteDiscoveryConfig, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a discovery configuration.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDiscoveryConfigAsync(global::Google.Cloud.Dlp.V2.DeleteDiscoveryConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteDiscoveryConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a discovery configuration.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDiscoveryConfigAsync(global::Google.Cloud.Dlp.V2.DeleteDiscoveryConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteDiscoveryConfig, null, options, request);
+      }
+      /// <summary>
       /// Creates a new job to inspect storage or calculate risk metrics.
       /// See https://cloud.google.com/dlp/docs/inspecting-storage and
       /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
@@ -2986,6 +3340,11 @@ namespace Google.Cloud.Dlp.V2 {
           .AddMethod(__Method_ListJobTriggers, serviceImpl.ListJobTriggers)
           .AddMethod(__Method_DeleteJobTrigger, serviceImpl.DeleteJobTrigger)
           .AddMethod(__Method_ActivateJobTrigger, serviceImpl.ActivateJobTrigger)
+          .AddMethod(__Method_CreateDiscoveryConfig, serviceImpl.CreateDiscoveryConfig)
+          .AddMethod(__Method_UpdateDiscoveryConfig, serviceImpl.UpdateDiscoveryConfig)
+          .AddMethod(__Method_GetDiscoveryConfig, serviceImpl.GetDiscoveryConfig)
+          .AddMethod(__Method_ListDiscoveryConfigs, serviceImpl.ListDiscoveryConfigs)
+          .AddMethod(__Method_DeleteDiscoveryConfig, serviceImpl.DeleteDiscoveryConfig)
           .AddMethod(__Method_CreateDlpJob, serviceImpl.CreateDlpJob)
           .AddMethod(__Method_ListDlpJobs, serviceImpl.ListDlpJobs)
           .AddMethod(__Method_GetDlpJob, serviceImpl.GetDlpJob)
@@ -3029,6 +3388,11 @@ namespace Google.Cloud.Dlp.V2 {
       serviceBinder.AddMethod(__Method_ListJobTriggers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.ListJobTriggersRequest, global::Google.Cloud.Dlp.V2.ListJobTriggersResponse>(serviceImpl.ListJobTriggers));
       serviceBinder.AddMethod(__Method_DeleteJobTrigger, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.DeleteJobTriggerRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteJobTrigger));
       serviceBinder.AddMethod(__Method_ActivateJobTrigger, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.ActivateJobTriggerRequest, global::Google.Cloud.Dlp.V2.DlpJob>(serviceImpl.ActivateJobTrigger));
+      serviceBinder.AddMethod(__Method_CreateDiscoveryConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.CreateDiscoveryConfigRequest, global::Google.Cloud.Dlp.V2.DiscoveryConfig>(serviceImpl.CreateDiscoveryConfig));
+      serviceBinder.AddMethod(__Method_UpdateDiscoveryConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.UpdateDiscoveryConfigRequest, global::Google.Cloud.Dlp.V2.DiscoveryConfig>(serviceImpl.UpdateDiscoveryConfig));
+      serviceBinder.AddMethod(__Method_GetDiscoveryConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.GetDiscoveryConfigRequest, global::Google.Cloud.Dlp.V2.DiscoveryConfig>(serviceImpl.GetDiscoveryConfig));
+      serviceBinder.AddMethod(__Method_ListDiscoveryConfigs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.ListDiscoveryConfigsRequest, global::Google.Cloud.Dlp.V2.ListDiscoveryConfigsResponse>(serviceImpl.ListDiscoveryConfigs));
+      serviceBinder.AddMethod(__Method_DeleteDiscoveryConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.DeleteDiscoveryConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteDiscoveryConfig));
       serviceBinder.AddMethod(__Method_CreateDlpJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.CreateDlpJobRequest, global::Google.Cloud.Dlp.V2.DlpJob>(serviceImpl.CreateDlpJob));
       serviceBinder.AddMethod(__Method_ListDlpJobs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.ListDlpJobsRequest, global::Google.Cloud.Dlp.V2.ListDlpJobsResponse>(serviceImpl.ListDlpJobs));
       serviceBinder.AddMethod(__Method_GetDlpJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.GetDlpJobRequest, global::Google.Cloud.Dlp.V2.DlpJob>(serviceImpl.GetDlpJob));

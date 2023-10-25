@@ -7009,6 +7009,1518 @@
       ]
     },
     {
+      "regionTag": "dlp_v2_generated_DlpService_CreateDiscoveryConfig_sync",
+      "title": "CreateDiscoveryConfigRequestObject",
+      "description": "Snippet for CreateDiscoveryConfig",
+      "file": "DlpServiceClient.CreateDiscoveryConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDiscoveryConfig",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.CreateDiscoveryConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.CreateDiscoveryConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dlp.V2.DiscoveryConfig",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDiscoveryConfig",
+          "fullName": "google.privacy.dlp.v2.DlpService.CreateDiscoveryConfig",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_CreateDiscoveryConfig_async",
+      "title": "CreateDiscoveryConfigRequestObjectAsync",
+      "description": "Snippet for CreateDiscoveryConfigAsync",
+      "file": "DlpServiceClient.CreateDiscoveryConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDiscoveryConfigAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.CreateDiscoveryConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.CreateDiscoveryConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dlp.V2.DiscoveryConfig>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDiscoveryConfig",
+          "fullName": "google.privacy.dlp.v2.DlpService.CreateDiscoveryConfig",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_CreateDiscoveryConfig_sync_flattened",
+      "title": "CreateDiscoveryConfig",
+      "description": "Snippet for CreateDiscoveryConfig",
+      "file": "DlpServiceClient.CreateDiscoveryConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDiscoveryConfig",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.CreateDiscoveryConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dlp.V2.DiscoveryConfig",
+            "name": "discoveryConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dlp.V2.DiscoveryConfig",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDiscoveryConfig",
+          "fullName": "google.privacy.dlp.v2.DlpService.CreateDiscoveryConfig",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_CreateDiscoveryConfig_async_flattened",
+      "title": "CreateDiscoveryConfigAsync",
+      "description": "Snippet for CreateDiscoveryConfigAsync",
+      "file": "DlpServiceClient.CreateDiscoveryConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDiscoveryConfigAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.CreateDiscoveryConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dlp.V2.DiscoveryConfig",
+            "name": "discoveryConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dlp.V2.DiscoveryConfig>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDiscoveryConfig",
+          "fullName": "google.privacy.dlp.v2.DlpService.CreateDiscoveryConfig",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_CreateDiscoveryConfig_sync_flattened_resourceNames",
+      "title": "CreateDiscoveryConfigResourceNames",
+      "description": "Snippet for CreateDiscoveryConfig",
+      "file": "DlpServiceClient.CreateDiscoveryConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDiscoveryConfig",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.CreateDiscoveryConfig",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dlp.V2.DiscoveryConfig",
+            "name": "discoveryConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dlp.V2.DiscoveryConfig",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDiscoveryConfig",
+          "fullName": "google.privacy.dlp.v2.DlpService.CreateDiscoveryConfig",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_CreateDiscoveryConfig_async_flattened_resourceNames",
+      "title": "CreateDiscoveryConfigResourceNamesAsync",
+      "description": "Snippet for CreateDiscoveryConfigAsync",
+      "file": "DlpServiceClient.CreateDiscoveryConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDiscoveryConfigAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.CreateDiscoveryConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dlp.V2.DiscoveryConfig",
+            "name": "discoveryConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dlp.V2.DiscoveryConfig>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDiscoveryConfig",
+          "fullName": "google.privacy.dlp.v2.DlpService.CreateDiscoveryConfig",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_UpdateDiscoveryConfig_sync",
+      "title": "UpdateDiscoveryConfigRequestObject",
+      "description": "Snippet for UpdateDiscoveryConfig",
+      "file": "DlpServiceClient.UpdateDiscoveryConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDiscoveryConfig",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.UpdateDiscoveryConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.UpdateDiscoveryConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dlp.V2.DiscoveryConfig",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDiscoveryConfig",
+          "fullName": "google.privacy.dlp.v2.DlpService.UpdateDiscoveryConfig",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_UpdateDiscoveryConfig_async",
+      "title": "UpdateDiscoveryConfigRequestObjectAsync",
+      "description": "Snippet for UpdateDiscoveryConfigAsync",
+      "file": "DlpServiceClient.UpdateDiscoveryConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDiscoveryConfigAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.UpdateDiscoveryConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.UpdateDiscoveryConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dlp.V2.DiscoveryConfig>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDiscoveryConfig",
+          "fullName": "google.privacy.dlp.v2.DlpService.UpdateDiscoveryConfig",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_UpdateDiscoveryConfig_sync_flattened",
+      "title": "UpdateDiscoveryConfig",
+      "description": "Snippet for UpdateDiscoveryConfig",
+      "file": "DlpServiceClient.UpdateDiscoveryConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDiscoveryConfig",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.UpdateDiscoveryConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Dlp.V2.DiscoveryConfig",
+            "name": "discoveryConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dlp.V2.DiscoveryConfig",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDiscoveryConfig",
+          "fullName": "google.privacy.dlp.v2.DlpService.UpdateDiscoveryConfig",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_UpdateDiscoveryConfig_async_flattened",
+      "title": "UpdateDiscoveryConfigAsync",
+      "description": "Snippet for UpdateDiscoveryConfigAsync",
+      "file": "DlpServiceClient.UpdateDiscoveryConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDiscoveryConfigAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.UpdateDiscoveryConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Dlp.V2.DiscoveryConfig",
+            "name": "discoveryConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dlp.V2.DiscoveryConfig>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDiscoveryConfig",
+          "fullName": "google.privacy.dlp.v2.DlpService.UpdateDiscoveryConfig",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_UpdateDiscoveryConfig_sync_flattened_resourceNames",
+      "title": "UpdateDiscoveryConfigResourceNames",
+      "description": "Snippet for UpdateDiscoveryConfig",
+      "file": "DlpServiceClient.UpdateDiscoveryConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDiscoveryConfig",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.UpdateDiscoveryConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.DiscoveryConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Dlp.V2.DiscoveryConfig",
+            "name": "discoveryConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dlp.V2.DiscoveryConfig",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDiscoveryConfig",
+          "fullName": "google.privacy.dlp.v2.DlpService.UpdateDiscoveryConfig",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_UpdateDiscoveryConfig_async_flattened_resourceNames",
+      "title": "UpdateDiscoveryConfigResourceNamesAsync",
+      "description": "Snippet for UpdateDiscoveryConfigAsync",
+      "file": "DlpServiceClient.UpdateDiscoveryConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDiscoveryConfigAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.UpdateDiscoveryConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.DiscoveryConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Dlp.V2.DiscoveryConfig",
+            "name": "discoveryConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dlp.V2.DiscoveryConfig>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDiscoveryConfig",
+          "fullName": "google.privacy.dlp.v2.DlpService.UpdateDiscoveryConfig",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_GetDiscoveryConfig_sync",
+      "title": "GetDiscoveryConfigRequestObject",
+      "description": "Snippet for GetDiscoveryConfig",
+      "file": "DlpServiceClient.GetDiscoveryConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDiscoveryConfig",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.GetDiscoveryConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.GetDiscoveryConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dlp.V2.DiscoveryConfig",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "GetDiscoveryConfig",
+          "fullName": "google.privacy.dlp.v2.DlpService.GetDiscoveryConfig",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_GetDiscoveryConfig_async",
+      "title": "GetDiscoveryConfigRequestObjectAsync",
+      "description": "Snippet for GetDiscoveryConfigAsync",
+      "file": "DlpServiceClient.GetDiscoveryConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDiscoveryConfigAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.GetDiscoveryConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.GetDiscoveryConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dlp.V2.DiscoveryConfig>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "GetDiscoveryConfig",
+          "fullName": "google.privacy.dlp.v2.DlpService.GetDiscoveryConfig",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_GetDiscoveryConfig_sync_flattened",
+      "title": "GetDiscoveryConfig",
+      "description": "Snippet for GetDiscoveryConfig",
+      "file": "DlpServiceClient.GetDiscoveryConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDiscoveryConfig",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.GetDiscoveryConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dlp.V2.DiscoveryConfig",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "GetDiscoveryConfig",
+          "fullName": "google.privacy.dlp.v2.DlpService.GetDiscoveryConfig",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_GetDiscoveryConfig_async_flattened",
+      "title": "GetDiscoveryConfigAsync",
+      "description": "Snippet for GetDiscoveryConfigAsync",
+      "file": "DlpServiceClient.GetDiscoveryConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDiscoveryConfigAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.GetDiscoveryConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dlp.V2.DiscoveryConfig>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "GetDiscoveryConfig",
+          "fullName": "google.privacy.dlp.v2.DlpService.GetDiscoveryConfig",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_GetDiscoveryConfig_sync_flattened_resourceNames",
+      "title": "GetDiscoveryConfigResourceNames",
+      "description": "Snippet for GetDiscoveryConfig",
+      "file": "DlpServiceClient.GetDiscoveryConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDiscoveryConfig",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.GetDiscoveryConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.DiscoveryConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dlp.V2.DiscoveryConfig",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "GetDiscoveryConfig",
+          "fullName": "google.privacy.dlp.v2.DlpService.GetDiscoveryConfig",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_GetDiscoveryConfig_async_flattened_resourceNames",
+      "title": "GetDiscoveryConfigResourceNamesAsync",
+      "description": "Snippet for GetDiscoveryConfigAsync",
+      "file": "DlpServiceClient.GetDiscoveryConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDiscoveryConfigAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.GetDiscoveryConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.DiscoveryConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dlp.V2.DiscoveryConfig>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "GetDiscoveryConfig",
+          "fullName": "google.privacy.dlp.v2.DlpService.GetDiscoveryConfig",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListDiscoveryConfigs_sync",
+      "title": "ListDiscoveryConfigsRequestObject",
+      "description": "Snippet for ListDiscoveryConfigs",
+      "file": "DlpServiceClient.ListDiscoveryConfigsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDiscoveryConfigs",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListDiscoveryConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.ListDiscoveryConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dlp.V2.ListDiscoveryConfigsResponse, Google.Cloud.Dlp.V2.DiscoveryConfig>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListDiscoveryConfigs",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListDiscoveryConfigs",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListDiscoveryConfigs_async",
+      "title": "ListDiscoveryConfigsRequestObjectAsync",
+      "description": "Snippet for ListDiscoveryConfigsAsync",
+      "file": "DlpServiceClient.ListDiscoveryConfigsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDiscoveryConfigsAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListDiscoveryConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.ListDiscoveryConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dlp.V2.ListDiscoveryConfigsResponse, Google.Cloud.Dlp.V2.DiscoveryConfig>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListDiscoveryConfigs",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListDiscoveryConfigs",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListDiscoveryConfigs_sync_flattened",
+      "title": "ListDiscoveryConfigs",
+      "description": "Snippet for ListDiscoveryConfigs",
+      "file": "DlpServiceClient.ListDiscoveryConfigsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDiscoveryConfigs",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListDiscoveryConfigs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dlp.V2.ListDiscoveryConfigsResponse, Google.Cloud.Dlp.V2.DiscoveryConfig>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListDiscoveryConfigs",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListDiscoveryConfigs",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListDiscoveryConfigs_async_flattened",
+      "title": "ListDiscoveryConfigsAsync",
+      "description": "Snippet for ListDiscoveryConfigsAsync",
+      "file": "DlpServiceClient.ListDiscoveryConfigsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDiscoveryConfigsAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListDiscoveryConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dlp.V2.ListDiscoveryConfigsResponse, Google.Cloud.Dlp.V2.DiscoveryConfig>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListDiscoveryConfigs",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListDiscoveryConfigs",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListDiscoveryConfigs_sync_flattened_resourceNames",
+      "title": "ListDiscoveryConfigsResourceNames",
+      "description": "Snippet for ListDiscoveryConfigs",
+      "file": "DlpServiceClient.ListDiscoveryConfigsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDiscoveryConfigs",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListDiscoveryConfigs",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dlp.V2.ListDiscoveryConfigsResponse, Google.Cloud.Dlp.V2.DiscoveryConfig>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListDiscoveryConfigs",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListDiscoveryConfigs",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListDiscoveryConfigs_async_flattened_resourceNames",
+      "title": "ListDiscoveryConfigsResourceNamesAsync",
+      "description": "Snippet for ListDiscoveryConfigsAsync",
+      "file": "DlpServiceClient.ListDiscoveryConfigsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDiscoveryConfigsAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListDiscoveryConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dlp.V2.ListDiscoveryConfigsResponse, Google.Cloud.Dlp.V2.DiscoveryConfig>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListDiscoveryConfigs",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListDiscoveryConfigs",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_DeleteDiscoveryConfig_sync",
+      "title": "DeleteDiscoveryConfigRequestObject",
+      "description": "Snippet for DeleteDiscoveryConfig",
+      "file": "DlpServiceClient.DeleteDiscoveryConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDiscoveryConfig",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.DeleteDiscoveryConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.DeleteDiscoveryConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDiscoveryConfig",
+          "fullName": "google.privacy.dlp.v2.DlpService.DeleteDiscoveryConfig",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_DeleteDiscoveryConfig_async",
+      "title": "DeleteDiscoveryConfigRequestObjectAsync",
+      "description": "Snippet for DeleteDiscoveryConfigAsync",
+      "file": "DlpServiceClient.DeleteDiscoveryConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDiscoveryConfigAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.DeleteDiscoveryConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.DeleteDiscoveryConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDiscoveryConfig",
+          "fullName": "google.privacy.dlp.v2.DlpService.DeleteDiscoveryConfig",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_DeleteDiscoveryConfig_sync_flattened",
+      "title": "DeleteDiscoveryConfig",
+      "description": "Snippet for DeleteDiscoveryConfig",
+      "file": "DlpServiceClient.DeleteDiscoveryConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDiscoveryConfig",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.DeleteDiscoveryConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDiscoveryConfig",
+          "fullName": "google.privacy.dlp.v2.DlpService.DeleteDiscoveryConfig",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_DeleteDiscoveryConfig_async_flattened",
+      "title": "DeleteDiscoveryConfigAsync",
+      "description": "Snippet for DeleteDiscoveryConfigAsync",
+      "file": "DlpServiceClient.DeleteDiscoveryConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDiscoveryConfigAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.DeleteDiscoveryConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDiscoveryConfig",
+          "fullName": "google.privacy.dlp.v2.DlpService.DeleteDiscoveryConfig",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_DeleteDiscoveryConfig_sync_flattened_resourceNames",
+      "title": "DeleteDiscoveryConfigResourceNames",
+      "description": "Snippet for DeleteDiscoveryConfig",
+      "file": "DlpServiceClient.DeleteDiscoveryConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDiscoveryConfig",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.DeleteDiscoveryConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.DiscoveryConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDiscoveryConfig",
+          "fullName": "google.privacy.dlp.v2.DlpService.DeleteDiscoveryConfig",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_DeleteDiscoveryConfig_async_flattened_resourceNames",
+      "title": "DeleteDiscoveryConfigResourceNamesAsync",
+      "description": "Snippet for DeleteDiscoveryConfigAsync",
+      "file": "DlpServiceClient.DeleteDiscoveryConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDiscoveryConfigAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.DeleteDiscoveryConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.DiscoveryConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDiscoveryConfig",
+          "fullName": "google.privacy.dlp.v2.DlpService.DeleteDiscoveryConfig",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "dlp_v2_generated_DlpService_CreateDlpJob_sync",
       "title": "CreateDlpJobRequestObject",
       "description": "Snippet for CreateDlpJob",

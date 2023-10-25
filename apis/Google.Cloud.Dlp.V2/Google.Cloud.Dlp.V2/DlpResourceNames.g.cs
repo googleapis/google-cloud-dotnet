@@ -1352,6 +1352,257 @@ namespace Google.Cloud.Dlp.V2
         public static bool operator !=(JobTriggerName a, JobTriggerName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>DiscoveryConfig</c> resource.</summary>
+    public sealed partial class DiscoveryConfigName : gax::IResourceName, sys::IEquatable<DiscoveryConfigName>
+    {
+        /// <summary>The possible contents of <see cref="DiscoveryConfigName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/discoveryConfigs/{discovery_config}</c>.
+            /// </summary>
+            ProjectLocationDiscoveryConfig = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationDiscoveryConfig = new gax::PathTemplate("projects/{project}/locations/{location}/discoveryConfigs/{discovery_config}");
+
+        /// <summary>Creates a <see cref="DiscoveryConfigName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="DiscoveryConfigName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static DiscoveryConfigName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new DiscoveryConfigName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="DiscoveryConfigName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/discoveryConfigs/{discovery_config}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="discoveryConfigId">The <c>DiscoveryConfig</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="DiscoveryConfigName"/> constructed from the provided ids.</returns>
+        public static DiscoveryConfigName FromProjectLocationDiscoveryConfig(string projectId, string locationId, string discoveryConfigId) =>
+            new DiscoveryConfigName(ResourceNameType.ProjectLocationDiscoveryConfig, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), discoveryConfigId: gax::GaxPreconditions.CheckNotNullOrEmpty(discoveryConfigId, nameof(discoveryConfigId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="DiscoveryConfigName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/discoveryConfigs/{discovery_config}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="discoveryConfigId">The <c>DiscoveryConfig</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="DiscoveryConfigName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/discoveryConfigs/{discovery_config}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string discoveryConfigId) =>
+            FormatProjectLocationDiscoveryConfig(projectId, locationId, discoveryConfigId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="DiscoveryConfigName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/discoveryConfigs/{discovery_config}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="discoveryConfigId">The <c>DiscoveryConfig</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="DiscoveryConfigName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/discoveryConfigs/{discovery_config}</c>.
+        /// </returns>
+        public static string FormatProjectLocationDiscoveryConfig(string projectId, string locationId, string discoveryConfigId) =>
+            s_projectLocationDiscoveryConfig.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(discoveryConfigId, nameof(discoveryConfigId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="DiscoveryConfigName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/discoveryConfigs/{discovery_config}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="discoveryConfigName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="DiscoveryConfigName"/> if successful.</returns>
+        public static DiscoveryConfigName Parse(string discoveryConfigName) => Parse(discoveryConfigName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="DiscoveryConfigName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/discoveryConfigs/{discovery_config}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="discoveryConfigName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="DiscoveryConfigName"/> if successful.</returns>
+        public static DiscoveryConfigName Parse(string discoveryConfigName, bool allowUnparsed) =>
+            TryParse(discoveryConfigName, allowUnparsed, out DiscoveryConfigName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="DiscoveryConfigName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/discoveryConfigs/{discovery_config}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="discoveryConfigName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="DiscoveryConfigName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string discoveryConfigName, out DiscoveryConfigName result) =>
+            TryParse(discoveryConfigName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="DiscoveryConfigName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/discoveryConfigs/{discovery_config}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="discoveryConfigName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="DiscoveryConfigName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string discoveryConfigName, bool allowUnparsed, out DiscoveryConfigName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(discoveryConfigName, nameof(discoveryConfigName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationDiscoveryConfig.TryParseName(discoveryConfigName, out resourceName))
+            {
+                result = FromProjectLocationDiscoveryConfig(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(discoveryConfigName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private DiscoveryConfigName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string discoveryConfigId = null, string locationId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            DiscoveryConfigId = discoveryConfigId;
+            LocationId = locationId;
+            ProjectId = projectId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="DiscoveryConfigName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/discoveryConfigs/{discovery_config}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="discoveryConfigId">The <c>DiscoveryConfig</c> ID. Must not be <c>null</c> or empty.</param>
+        public DiscoveryConfigName(string projectId, string locationId, string discoveryConfigId) : this(ResourceNameType.ProjectLocationDiscoveryConfig, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), discoveryConfigId: gax::GaxPreconditions.CheckNotNullOrEmpty(discoveryConfigId, nameof(discoveryConfigId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>DiscoveryConfig</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string DiscoveryConfigId { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationDiscoveryConfig: return s_projectLocationDiscoveryConfig.Expand(ProjectId, LocationId, DiscoveryConfigId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as DiscoveryConfigName);
+
+        /// <inheritdoc/>
+        public bool Equals(DiscoveryConfigName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(DiscoveryConfigName a, DiscoveryConfigName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(DiscoveryConfigName a, DiscoveryConfigName b) => !(a == b);
+    }
+
     /// <summary>Resource name for the <c>DlpJob</c> resource.</summary>
     public sealed partial class DlpJobName : gax::IResourceName, sys::IEquatable<DlpJobName>
     {
@@ -3014,6 +3265,66 @@ namespace Google.Cloud.Dlp.V2
         }
     }
 
+    public partial class CreateDiscoveryConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class UpdateDiscoveryConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::DiscoveryConfigName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::DiscoveryConfigName DiscoveryConfigName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::DiscoveryConfigName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetDiscoveryConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::DiscoveryConfigName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::DiscoveryConfigName DiscoveryConfigName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::DiscoveryConfigName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListDiscoveryConfigsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteDiscoveryConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::DiscoveryConfigName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::DiscoveryConfigName DiscoveryConfigName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::DiscoveryConfigName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class CreateDlpJobRequest
     {
         /// <summary>
@@ -3112,6 +3423,18 @@ namespace Google.Cloud.Dlp.V2
         public gcdv::JobTriggerName JobTriggerName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcdv::JobTriggerName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DiscoveryConfig
+    {
+        /// <summary>
+        /// <see cref="gcdv::DiscoveryConfigName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::DiscoveryConfigName DiscoveryConfigName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::DiscoveryConfigName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

@@ -3182,6 +3182,652 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateDiscoveryConfig</summary>
+        public void CreateDiscoveryConfigRequestObject()
+        {
+            // Snippet: CreateDiscoveryConfig(CreateDiscoveryConfigRequest, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            CreateDiscoveryConfigRequest request = new CreateDiscoveryConfigRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                DiscoveryConfig = new DiscoveryConfig(),
+                ConfigId = "",
+            };
+            // Make the request
+            DiscoveryConfig response = dlpServiceClient.CreateDiscoveryConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDiscoveryConfigAsync</summary>
+        public async Task CreateDiscoveryConfigRequestObjectAsync()
+        {
+            // Snippet: CreateDiscoveryConfigAsync(CreateDiscoveryConfigRequest, CallSettings)
+            // Additional: CreateDiscoveryConfigAsync(CreateDiscoveryConfigRequest, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateDiscoveryConfigRequest request = new CreateDiscoveryConfigRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                DiscoveryConfig = new DiscoveryConfig(),
+                ConfigId = "",
+            };
+            // Make the request
+            DiscoveryConfig response = await dlpServiceClient.CreateDiscoveryConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDiscoveryConfig</summary>
+        public void CreateDiscoveryConfig()
+        {
+            // Snippet: CreateDiscoveryConfig(string, DiscoveryConfig, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            DiscoveryConfig discoveryConfig = new DiscoveryConfig();
+            // Make the request
+            DiscoveryConfig response = dlpServiceClient.CreateDiscoveryConfig(parent, discoveryConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDiscoveryConfigAsync</summary>
+        public async Task CreateDiscoveryConfigAsync()
+        {
+            // Snippet: CreateDiscoveryConfigAsync(string, DiscoveryConfig, CallSettings)
+            // Additional: CreateDiscoveryConfigAsync(string, DiscoveryConfig, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            DiscoveryConfig discoveryConfig = new DiscoveryConfig();
+            // Make the request
+            DiscoveryConfig response = await dlpServiceClient.CreateDiscoveryConfigAsync(parent, discoveryConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDiscoveryConfig</summary>
+        public void CreateDiscoveryConfigResourceNames()
+        {
+            // Snippet: CreateDiscoveryConfig(LocationName, DiscoveryConfig, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            DiscoveryConfig discoveryConfig = new DiscoveryConfig();
+            // Make the request
+            DiscoveryConfig response = dlpServiceClient.CreateDiscoveryConfig(parent, discoveryConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDiscoveryConfigAsync</summary>
+        public async Task CreateDiscoveryConfigResourceNamesAsync()
+        {
+            // Snippet: CreateDiscoveryConfigAsync(LocationName, DiscoveryConfig, CallSettings)
+            // Additional: CreateDiscoveryConfigAsync(LocationName, DiscoveryConfig, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            DiscoveryConfig discoveryConfig = new DiscoveryConfig();
+            // Make the request
+            DiscoveryConfig response = await dlpServiceClient.CreateDiscoveryConfigAsync(parent, discoveryConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDiscoveryConfig</summary>
+        public void UpdateDiscoveryConfigRequestObject()
+        {
+            // Snippet: UpdateDiscoveryConfig(UpdateDiscoveryConfigRequest, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateDiscoveryConfigRequest request = new UpdateDiscoveryConfigRequest
+            {
+                DiscoveryConfigName = DiscoveryConfigName.FromProjectLocationDiscoveryConfig("[PROJECT]", "[LOCATION]", "[DISCOVERY_CONFIG]"),
+                DiscoveryConfig = new DiscoveryConfig(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            DiscoveryConfig response = dlpServiceClient.UpdateDiscoveryConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDiscoveryConfigAsync</summary>
+        public async Task UpdateDiscoveryConfigRequestObjectAsync()
+        {
+            // Snippet: UpdateDiscoveryConfigAsync(UpdateDiscoveryConfigRequest, CallSettings)
+            // Additional: UpdateDiscoveryConfigAsync(UpdateDiscoveryConfigRequest, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateDiscoveryConfigRequest request = new UpdateDiscoveryConfigRequest
+            {
+                DiscoveryConfigName = DiscoveryConfigName.FromProjectLocationDiscoveryConfig("[PROJECT]", "[LOCATION]", "[DISCOVERY_CONFIG]"),
+                DiscoveryConfig = new DiscoveryConfig(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            DiscoveryConfig response = await dlpServiceClient.UpdateDiscoveryConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDiscoveryConfig</summary>
+        public void UpdateDiscoveryConfig()
+        {
+            // Snippet: UpdateDiscoveryConfig(string, DiscoveryConfig, FieldMask, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/discoveryConfigs/[DISCOVERY_CONFIG]";
+            DiscoveryConfig discoveryConfig = new DiscoveryConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            DiscoveryConfig response = dlpServiceClient.UpdateDiscoveryConfig(name, discoveryConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDiscoveryConfigAsync</summary>
+        public async Task UpdateDiscoveryConfigAsync()
+        {
+            // Snippet: UpdateDiscoveryConfigAsync(string, DiscoveryConfig, FieldMask, CallSettings)
+            // Additional: UpdateDiscoveryConfigAsync(string, DiscoveryConfig, FieldMask, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/discoveryConfigs/[DISCOVERY_CONFIG]";
+            DiscoveryConfig discoveryConfig = new DiscoveryConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            DiscoveryConfig response = await dlpServiceClient.UpdateDiscoveryConfigAsync(name, discoveryConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDiscoveryConfig</summary>
+        public void UpdateDiscoveryConfigResourceNames()
+        {
+            // Snippet: UpdateDiscoveryConfig(DiscoveryConfigName, DiscoveryConfig, FieldMask, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            DiscoveryConfigName name = DiscoveryConfigName.FromProjectLocationDiscoveryConfig("[PROJECT]", "[LOCATION]", "[DISCOVERY_CONFIG]");
+            DiscoveryConfig discoveryConfig = new DiscoveryConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            DiscoveryConfig response = dlpServiceClient.UpdateDiscoveryConfig(name, discoveryConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDiscoveryConfigAsync</summary>
+        public async Task UpdateDiscoveryConfigResourceNamesAsync()
+        {
+            // Snippet: UpdateDiscoveryConfigAsync(DiscoveryConfigName, DiscoveryConfig, FieldMask, CallSettings)
+            // Additional: UpdateDiscoveryConfigAsync(DiscoveryConfigName, DiscoveryConfig, FieldMask, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DiscoveryConfigName name = DiscoveryConfigName.FromProjectLocationDiscoveryConfig("[PROJECT]", "[LOCATION]", "[DISCOVERY_CONFIG]");
+            DiscoveryConfig discoveryConfig = new DiscoveryConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            DiscoveryConfig response = await dlpServiceClient.UpdateDiscoveryConfigAsync(name, discoveryConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDiscoveryConfig</summary>
+        public void GetDiscoveryConfigRequestObject()
+        {
+            // Snippet: GetDiscoveryConfig(GetDiscoveryConfigRequest, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            GetDiscoveryConfigRequest request = new GetDiscoveryConfigRequest
+            {
+                DiscoveryConfigName = DiscoveryConfigName.FromProjectLocationDiscoveryConfig("[PROJECT]", "[LOCATION]", "[DISCOVERY_CONFIG]"),
+            };
+            // Make the request
+            DiscoveryConfig response = dlpServiceClient.GetDiscoveryConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDiscoveryConfigAsync</summary>
+        public async Task GetDiscoveryConfigRequestObjectAsync()
+        {
+            // Snippet: GetDiscoveryConfigAsync(GetDiscoveryConfigRequest, CallSettings)
+            // Additional: GetDiscoveryConfigAsync(GetDiscoveryConfigRequest, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetDiscoveryConfigRequest request = new GetDiscoveryConfigRequest
+            {
+                DiscoveryConfigName = DiscoveryConfigName.FromProjectLocationDiscoveryConfig("[PROJECT]", "[LOCATION]", "[DISCOVERY_CONFIG]"),
+            };
+            // Make the request
+            DiscoveryConfig response = await dlpServiceClient.GetDiscoveryConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDiscoveryConfig</summary>
+        public void GetDiscoveryConfig()
+        {
+            // Snippet: GetDiscoveryConfig(string, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/discoveryConfigs/[DISCOVERY_CONFIG]";
+            // Make the request
+            DiscoveryConfig response = dlpServiceClient.GetDiscoveryConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDiscoveryConfigAsync</summary>
+        public async Task GetDiscoveryConfigAsync()
+        {
+            // Snippet: GetDiscoveryConfigAsync(string, CallSettings)
+            // Additional: GetDiscoveryConfigAsync(string, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/discoveryConfigs/[DISCOVERY_CONFIG]";
+            // Make the request
+            DiscoveryConfig response = await dlpServiceClient.GetDiscoveryConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDiscoveryConfig</summary>
+        public void GetDiscoveryConfigResourceNames()
+        {
+            // Snippet: GetDiscoveryConfig(DiscoveryConfigName, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            DiscoveryConfigName name = DiscoveryConfigName.FromProjectLocationDiscoveryConfig("[PROJECT]", "[LOCATION]", "[DISCOVERY_CONFIG]");
+            // Make the request
+            DiscoveryConfig response = dlpServiceClient.GetDiscoveryConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDiscoveryConfigAsync</summary>
+        public async Task GetDiscoveryConfigResourceNamesAsync()
+        {
+            // Snippet: GetDiscoveryConfigAsync(DiscoveryConfigName, CallSettings)
+            // Additional: GetDiscoveryConfigAsync(DiscoveryConfigName, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DiscoveryConfigName name = DiscoveryConfigName.FromProjectLocationDiscoveryConfig("[PROJECT]", "[LOCATION]", "[DISCOVERY_CONFIG]");
+            // Make the request
+            DiscoveryConfig response = await dlpServiceClient.GetDiscoveryConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDiscoveryConfigs</summary>
+        public void ListDiscoveryConfigsRequestObject()
+        {
+            // Snippet: ListDiscoveryConfigs(ListDiscoveryConfigsRequest, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            ListDiscoveryConfigsRequest request = new ListDiscoveryConfigsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListDiscoveryConfigsResponse, DiscoveryConfig> response = dlpServiceClient.ListDiscoveryConfigs(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DiscoveryConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDiscoveryConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DiscoveryConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DiscoveryConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DiscoveryConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDiscoveryConfigsAsync</summary>
+        public async Task ListDiscoveryConfigsRequestObjectAsync()
+        {
+            // Snippet: ListDiscoveryConfigsAsync(ListDiscoveryConfigsRequest, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListDiscoveryConfigsRequest request = new ListDiscoveryConfigsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListDiscoveryConfigsResponse, DiscoveryConfig> response = dlpServiceClient.ListDiscoveryConfigsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DiscoveryConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDiscoveryConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DiscoveryConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DiscoveryConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DiscoveryConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDiscoveryConfigs</summary>
+        public void ListDiscoveryConfigs()
+        {
+            // Snippet: ListDiscoveryConfigs(string, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListDiscoveryConfigsResponse, DiscoveryConfig> response = dlpServiceClient.ListDiscoveryConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DiscoveryConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDiscoveryConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DiscoveryConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DiscoveryConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DiscoveryConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDiscoveryConfigsAsync</summary>
+        public async Task ListDiscoveryConfigsAsync()
+        {
+            // Snippet: ListDiscoveryConfigsAsync(string, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListDiscoveryConfigsResponse, DiscoveryConfig> response = dlpServiceClient.ListDiscoveryConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DiscoveryConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDiscoveryConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DiscoveryConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DiscoveryConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DiscoveryConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDiscoveryConfigs</summary>
+        public void ListDiscoveryConfigsResourceNames()
+        {
+            // Snippet: ListDiscoveryConfigs(LocationName, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListDiscoveryConfigsResponse, DiscoveryConfig> response = dlpServiceClient.ListDiscoveryConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DiscoveryConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDiscoveryConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DiscoveryConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DiscoveryConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DiscoveryConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDiscoveryConfigsAsync</summary>
+        public async Task ListDiscoveryConfigsResourceNamesAsync()
+        {
+            // Snippet: ListDiscoveryConfigsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListDiscoveryConfigsResponse, DiscoveryConfig> response = dlpServiceClient.ListDiscoveryConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DiscoveryConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDiscoveryConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DiscoveryConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DiscoveryConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DiscoveryConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDiscoveryConfig</summary>
+        public void DeleteDiscoveryConfigRequestObject()
+        {
+            // Snippet: DeleteDiscoveryConfig(DeleteDiscoveryConfigRequest, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteDiscoveryConfigRequest request = new DeleteDiscoveryConfigRequest
+            {
+                DiscoveryConfigName = DiscoveryConfigName.FromProjectLocationDiscoveryConfig("[PROJECT]", "[LOCATION]", "[DISCOVERY_CONFIG]"),
+            };
+            // Make the request
+            dlpServiceClient.DeleteDiscoveryConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDiscoveryConfigAsync</summary>
+        public async Task DeleteDiscoveryConfigRequestObjectAsync()
+        {
+            // Snippet: DeleteDiscoveryConfigAsync(DeleteDiscoveryConfigRequest, CallSettings)
+            // Additional: DeleteDiscoveryConfigAsync(DeleteDiscoveryConfigRequest, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteDiscoveryConfigRequest request = new DeleteDiscoveryConfigRequest
+            {
+                DiscoveryConfigName = DiscoveryConfigName.FromProjectLocationDiscoveryConfig("[PROJECT]", "[LOCATION]", "[DISCOVERY_CONFIG]"),
+            };
+            // Make the request
+            await dlpServiceClient.DeleteDiscoveryConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDiscoveryConfig</summary>
+        public void DeleteDiscoveryConfig()
+        {
+            // Snippet: DeleteDiscoveryConfig(string, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/discoveryConfigs/[DISCOVERY_CONFIG]";
+            // Make the request
+            dlpServiceClient.DeleteDiscoveryConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDiscoveryConfigAsync</summary>
+        public async Task DeleteDiscoveryConfigAsync()
+        {
+            // Snippet: DeleteDiscoveryConfigAsync(string, CallSettings)
+            // Additional: DeleteDiscoveryConfigAsync(string, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/discoveryConfigs/[DISCOVERY_CONFIG]";
+            // Make the request
+            await dlpServiceClient.DeleteDiscoveryConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDiscoveryConfig</summary>
+        public void DeleteDiscoveryConfigResourceNames()
+        {
+            // Snippet: DeleteDiscoveryConfig(DiscoveryConfigName, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            DiscoveryConfigName name = DiscoveryConfigName.FromProjectLocationDiscoveryConfig("[PROJECT]", "[LOCATION]", "[DISCOVERY_CONFIG]");
+            // Make the request
+            dlpServiceClient.DeleteDiscoveryConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDiscoveryConfigAsync</summary>
+        public async Task DeleteDiscoveryConfigResourceNamesAsync()
+        {
+            // Snippet: DeleteDiscoveryConfigAsync(DiscoveryConfigName, CallSettings)
+            // Additional: DeleteDiscoveryConfigAsync(DiscoveryConfigName, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DiscoveryConfigName name = DiscoveryConfigName.FromProjectLocationDiscoveryConfig("[PROJECT]", "[LOCATION]", "[DISCOVERY_CONFIG]");
+            // Make the request
+            await dlpServiceClient.DeleteDiscoveryConfigAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for CreateDlpJob</summary>
         public void CreateDlpJobRequestObject()
         {
