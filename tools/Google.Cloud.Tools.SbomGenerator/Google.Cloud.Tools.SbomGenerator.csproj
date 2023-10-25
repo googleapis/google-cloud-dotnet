@@ -7,7 +7,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
-    <Version>0.1.0</Version>
+    <Version>0.2.0</Version>
     <Description>Tool used by Google .NET release processes to generate SBOMs. While there is nothing "secret" in this package, it is unlikely to be useful to other developers. (It currently hardcodes a Google organization, amongst other things.) It is only published as a matter of convenience for other Google .NET repositories.</Description>
     <ToolCommandName>generate-sbom</ToolCommandName>
   </PropertyGroup>
