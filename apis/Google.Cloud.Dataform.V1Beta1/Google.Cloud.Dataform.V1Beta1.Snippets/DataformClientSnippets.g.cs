@@ -647,6 +647,323 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for CommitRepositoryChanges</summary>
+        public void CommitRepositoryChangesRequestObject()
+        {
+            // Snippet: CommitRepositoryChanges(CommitRepositoryChangesRequest, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            CommitRepositoryChangesRequest request = new CommitRepositoryChangesRequest
+            {
+                RepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                CommitMetadata = new CommitMetadata(),
+                FileOperations =
+                {
+                    {
+                        "",
+                        new CommitRepositoryChangesRequest.Types.FileOperation()
+                    },
+                },
+                RequiredHeadCommitSha = "",
+            };
+            // Make the request
+            dataformClient.CommitRepositoryChanges(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CommitRepositoryChangesAsync</summary>
+        public async Task CommitRepositoryChangesRequestObjectAsync()
+        {
+            // Snippet: CommitRepositoryChangesAsync(CommitRepositoryChangesRequest, CallSettings)
+            // Additional: CommitRepositoryChangesAsync(CommitRepositoryChangesRequest, CancellationToken)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            CommitRepositoryChangesRequest request = new CommitRepositoryChangesRequest
+            {
+                RepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                CommitMetadata = new CommitMetadata(),
+                FileOperations =
+                {
+                    {
+                        "",
+                        new CommitRepositoryChangesRequest.Types.FileOperation()
+                    },
+                },
+                RequiredHeadCommitSha = "",
+            };
+            // Make the request
+            await dataformClient.CommitRepositoryChangesAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReadRepositoryFile</summary>
+        public void ReadRepositoryFileRequestObject()
+        {
+            // Snippet: ReadRepositoryFile(ReadRepositoryFileRequest, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            ReadRepositoryFileRequest request = new ReadRepositoryFileRequest
+            {
+                RepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                CommitSha = "",
+                Path = "",
+            };
+            // Make the request
+            ReadRepositoryFileResponse response = dataformClient.ReadRepositoryFile(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReadRepositoryFileAsync</summary>
+        public async Task ReadRepositoryFileRequestObjectAsync()
+        {
+            // Snippet: ReadRepositoryFileAsync(ReadRepositoryFileRequest, CallSettings)
+            // Additional: ReadRepositoryFileAsync(ReadRepositoryFileRequest, CancellationToken)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            ReadRepositoryFileRequest request = new ReadRepositoryFileRequest
+            {
+                RepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                CommitSha = "",
+                Path = "",
+            };
+            // Make the request
+            ReadRepositoryFileResponse response = await dataformClient.ReadRepositoryFileAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryRepositoryDirectoryContents</summary>
+        public void QueryRepositoryDirectoryContentsRequestObject()
+        {
+            // Snippet: QueryRepositoryDirectoryContents(QueryRepositoryDirectoryContentsRequest, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            QueryRepositoryDirectoryContentsRequest request = new QueryRepositoryDirectoryContentsRequest
+            {
+                RepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                CommitSha = "",
+                Path = "",
+            };
+            // Make the request
+            PagedEnumerable<QueryRepositoryDirectoryContentsResponse, DirectoryEntry> response = dataformClient.QueryRepositoryDirectoryContents(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DirectoryEntry item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (QueryRepositoryDirectoryContentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DirectoryEntry item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DirectoryEntry> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DirectoryEntry item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryRepositoryDirectoryContentsAsync</summary>
+        public async Task QueryRepositoryDirectoryContentsRequestObjectAsync()
+        {
+            // Snippet: QueryRepositoryDirectoryContentsAsync(QueryRepositoryDirectoryContentsRequest, CallSettings)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            QueryRepositoryDirectoryContentsRequest request = new QueryRepositoryDirectoryContentsRequest
+            {
+                RepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                CommitSha = "",
+                Path = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<QueryRepositoryDirectoryContentsResponse, DirectoryEntry> response = dataformClient.QueryRepositoryDirectoryContentsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DirectoryEntry item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((QueryRepositoryDirectoryContentsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DirectoryEntry item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DirectoryEntry> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DirectoryEntry item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchRepositoryHistory</summary>
+        public void FetchRepositoryHistoryRequestObject()
+        {
+            // Snippet: FetchRepositoryHistory(FetchRepositoryHistoryRequest, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            FetchRepositoryHistoryRequest request = new FetchRepositoryHistoryRequest
+            {
+                RepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+            };
+            // Make the request
+            PagedEnumerable<FetchRepositoryHistoryResponse, CommitLogEntry> response = dataformClient.FetchRepositoryHistory(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (CommitLogEntry item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (FetchRepositoryHistoryResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CommitLogEntry item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CommitLogEntry> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CommitLogEntry item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchRepositoryHistoryAsync</summary>
+        public async Task FetchRepositoryHistoryRequestObjectAsync()
+        {
+            // Snippet: FetchRepositoryHistoryAsync(FetchRepositoryHistoryRequest, CallSettings)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            FetchRepositoryHistoryRequest request = new FetchRepositoryHistoryRequest
+            {
+                RepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<FetchRepositoryHistoryResponse, CommitLogEntry> response = dataformClient.FetchRepositoryHistoryAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((CommitLogEntry item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((FetchRepositoryHistoryResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CommitLogEntry item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CommitLogEntry> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CommitLogEntry item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ComputeRepositoryAccessTokenStatus</summary>
+        public void ComputeRepositoryAccessTokenStatusRequestObject()
+        {
+            // Snippet: ComputeRepositoryAccessTokenStatus(ComputeRepositoryAccessTokenStatusRequest, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            ComputeRepositoryAccessTokenStatusRequest request = new ComputeRepositoryAccessTokenStatusRequest
+            {
+                RepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+            };
+            // Make the request
+            ComputeRepositoryAccessTokenStatusResponse response = dataformClient.ComputeRepositoryAccessTokenStatus(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ComputeRepositoryAccessTokenStatusAsync</summary>
+        public async Task ComputeRepositoryAccessTokenStatusRequestObjectAsync()
+        {
+            // Snippet: ComputeRepositoryAccessTokenStatusAsync(ComputeRepositoryAccessTokenStatusRequest, CallSettings)
+            // Additional: ComputeRepositoryAccessTokenStatusAsync(ComputeRepositoryAccessTokenStatusRequest, CancellationToken)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            ComputeRepositoryAccessTokenStatusRequest request = new ComputeRepositoryAccessTokenStatusRequest
+            {
+                RepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+            };
+            // Make the request
+            ComputeRepositoryAccessTokenStatusResponse response = await dataformClient.ComputeRepositoryAccessTokenStatusAsync(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for FetchRemoteBranches</summary>
         public void FetchRemoteBranchesRequestObject()
         {
@@ -1530,10 +1847,10 @@ namespace GoogleCSharpSnippets
                 Path = "",
             };
             // Make the request
-            PagedEnumerable<QueryDirectoryContentsResponse, QueryDirectoryContentsResponse.Types.DirectoryEntry> response = dataformClient.QueryDirectoryContents(request);
+            PagedEnumerable<QueryDirectoryContentsResponse, DirectoryEntry> response = dataformClient.QueryDirectoryContents(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (QueryDirectoryContentsResponse.Types.DirectoryEntry item in response)
+            foreach (DirectoryEntry item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1544,7 +1861,7 @@ namespace GoogleCSharpSnippets
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (QueryDirectoryContentsResponse.Types.DirectoryEntry item in page)
+                foreach (DirectoryEntry item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1553,10 +1870,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<QueryDirectoryContentsResponse.Types.DirectoryEntry> singlePage = response.ReadPage(pageSize);
+            Page<DirectoryEntry> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (QueryDirectoryContentsResponse.Types.DirectoryEntry item in singlePage)
+            foreach (DirectoryEntry item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1579,10 +1896,10 @@ namespace GoogleCSharpSnippets
                 Path = "",
             };
             // Make the request
-            PagedAsyncEnumerable<QueryDirectoryContentsResponse, QueryDirectoryContentsResponse.Types.DirectoryEntry> response = dataformClient.QueryDirectoryContentsAsync(request);
+            PagedAsyncEnumerable<QueryDirectoryContentsResponse, DirectoryEntry> response = dataformClient.QueryDirectoryContentsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((QueryDirectoryContentsResponse.Types.DirectoryEntry item) =>
+            await response.ForEachAsync((DirectoryEntry item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1593,7 +1910,7 @@ namespace GoogleCSharpSnippets
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (QueryDirectoryContentsResponse.Types.DirectoryEntry item in page)
+                foreach (DirectoryEntry item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1602,10 +1919,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<QueryDirectoryContentsResponse.Types.DirectoryEntry> singlePage = await response.ReadPageAsync(pageSize);
+            Page<DirectoryEntry> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (QueryDirectoryContentsResponse.Types.DirectoryEntry item in singlePage)
+            foreach (DirectoryEntry item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1863,6 +2180,619 @@ namespace GoogleCSharpSnippets
             };
             // Make the request
             WriteFileResponse response = await dataformClient.WriteFileAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListReleaseConfigs</summary>
+        public void ListReleaseConfigsRequestObject()
+        {
+            // Snippet: ListReleaseConfigs(ListReleaseConfigsRequest, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            ListReleaseConfigsRequest request = new ListReleaseConfigsRequest
+            {
+                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+            };
+            // Make the request
+            PagedEnumerable<ListReleaseConfigsResponse, ReleaseConfig> response = dataformClient.ListReleaseConfigs(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ReleaseConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListReleaseConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ReleaseConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ReleaseConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ReleaseConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListReleaseConfigsAsync</summary>
+        public async Task ListReleaseConfigsRequestObjectAsync()
+        {
+            // Snippet: ListReleaseConfigsAsync(ListReleaseConfigsRequest, CallSettings)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            ListReleaseConfigsRequest request = new ListReleaseConfigsRequest
+            {
+                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListReleaseConfigsResponse, ReleaseConfig> response = dataformClient.ListReleaseConfigsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ReleaseConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListReleaseConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ReleaseConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ReleaseConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ReleaseConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListReleaseConfigs</summary>
+        public void ListReleaseConfigs()
+        {
+            // Snippet: ListReleaseConfigs(string, string, int?, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
+            // Make the request
+            PagedEnumerable<ListReleaseConfigsResponse, ReleaseConfig> response = dataformClient.ListReleaseConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ReleaseConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListReleaseConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ReleaseConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ReleaseConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ReleaseConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListReleaseConfigsAsync</summary>
+        public async Task ListReleaseConfigsAsync()
+        {
+            // Snippet: ListReleaseConfigsAsync(string, string, int?, CallSettings)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
+            // Make the request
+            PagedAsyncEnumerable<ListReleaseConfigsResponse, ReleaseConfig> response = dataformClient.ListReleaseConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ReleaseConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListReleaseConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ReleaseConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ReleaseConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ReleaseConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListReleaseConfigs</summary>
+        public void ListReleaseConfigsResourceNames()
+        {
+            // Snippet: ListReleaseConfigs(RepositoryName, string, int?, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            // Make the request
+            PagedEnumerable<ListReleaseConfigsResponse, ReleaseConfig> response = dataformClient.ListReleaseConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ReleaseConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListReleaseConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ReleaseConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ReleaseConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ReleaseConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListReleaseConfigsAsync</summary>
+        public async Task ListReleaseConfigsResourceNamesAsync()
+        {
+            // Snippet: ListReleaseConfigsAsync(RepositoryName, string, int?, CallSettings)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            // Make the request
+            PagedAsyncEnumerable<ListReleaseConfigsResponse, ReleaseConfig> response = dataformClient.ListReleaseConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ReleaseConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListReleaseConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ReleaseConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ReleaseConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ReleaseConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetReleaseConfig</summary>
+        public void GetReleaseConfigRequestObject()
+        {
+            // Snippet: GetReleaseConfig(GetReleaseConfigRequest, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            GetReleaseConfigRequest request = new GetReleaseConfigRequest
+            {
+                ReleaseConfigName = ReleaseConfigName.FromProjectLocationRepositoryReleaseConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[RELEASE_CONFIG]"),
+            };
+            // Make the request
+            ReleaseConfig response = dataformClient.GetReleaseConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetReleaseConfigAsync</summary>
+        public async Task GetReleaseConfigRequestObjectAsync()
+        {
+            // Snippet: GetReleaseConfigAsync(GetReleaseConfigRequest, CallSettings)
+            // Additional: GetReleaseConfigAsync(GetReleaseConfigRequest, CancellationToken)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            GetReleaseConfigRequest request = new GetReleaseConfigRequest
+            {
+                ReleaseConfigName = ReleaseConfigName.FromProjectLocationRepositoryReleaseConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[RELEASE_CONFIG]"),
+            };
+            // Make the request
+            ReleaseConfig response = await dataformClient.GetReleaseConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetReleaseConfig</summary>
+        public void GetReleaseConfig()
+        {
+            // Snippet: GetReleaseConfig(string, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/releaseConfigs/[RELEASE_CONFIG]";
+            // Make the request
+            ReleaseConfig response = dataformClient.GetReleaseConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetReleaseConfigAsync</summary>
+        public async Task GetReleaseConfigAsync()
+        {
+            // Snippet: GetReleaseConfigAsync(string, CallSettings)
+            // Additional: GetReleaseConfigAsync(string, CancellationToken)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/releaseConfigs/[RELEASE_CONFIG]";
+            // Make the request
+            ReleaseConfig response = await dataformClient.GetReleaseConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetReleaseConfig</summary>
+        public void GetReleaseConfigResourceNames()
+        {
+            // Snippet: GetReleaseConfig(ReleaseConfigName, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            ReleaseConfigName name = ReleaseConfigName.FromProjectLocationRepositoryReleaseConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[RELEASE_CONFIG]");
+            // Make the request
+            ReleaseConfig response = dataformClient.GetReleaseConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetReleaseConfigAsync</summary>
+        public async Task GetReleaseConfigResourceNamesAsync()
+        {
+            // Snippet: GetReleaseConfigAsync(ReleaseConfigName, CallSettings)
+            // Additional: GetReleaseConfigAsync(ReleaseConfigName, CancellationToken)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            ReleaseConfigName name = ReleaseConfigName.FromProjectLocationRepositoryReleaseConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[RELEASE_CONFIG]");
+            // Make the request
+            ReleaseConfig response = await dataformClient.GetReleaseConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateReleaseConfig</summary>
+        public void CreateReleaseConfigRequestObject()
+        {
+            // Snippet: CreateReleaseConfig(CreateReleaseConfigRequest, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            CreateReleaseConfigRequest request = new CreateReleaseConfigRequest
+            {
+                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                ReleaseConfig = new ReleaseConfig(),
+                ReleaseConfigId = "",
+            };
+            // Make the request
+            ReleaseConfig response = dataformClient.CreateReleaseConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateReleaseConfigAsync</summary>
+        public async Task CreateReleaseConfigRequestObjectAsync()
+        {
+            // Snippet: CreateReleaseConfigAsync(CreateReleaseConfigRequest, CallSettings)
+            // Additional: CreateReleaseConfigAsync(CreateReleaseConfigRequest, CancellationToken)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateReleaseConfigRequest request = new CreateReleaseConfigRequest
+            {
+                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                ReleaseConfig = new ReleaseConfig(),
+                ReleaseConfigId = "",
+            };
+            // Make the request
+            ReleaseConfig response = await dataformClient.CreateReleaseConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateReleaseConfig</summary>
+        public void CreateReleaseConfig()
+        {
+            // Snippet: CreateReleaseConfig(string, ReleaseConfig, string, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
+            ReleaseConfig releaseConfig = new ReleaseConfig();
+            string releaseConfigId = "";
+            // Make the request
+            ReleaseConfig response = dataformClient.CreateReleaseConfig(parent, releaseConfig, releaseConfigId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateReleaseConfigAsync</summary>
+        public async Task CreateReleaseConfigAsync()
+        {
+            // Snippet: CreateReleaseConfigAsync(string, ReleaseConfig, string, CallSettings)
+            // Additional: CreateReleaseConfigAsync(string, ReleaseConfig, string, CancellationToken)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
+            ReleaseConfig releaseConfig = new ReleaseConfig();
+            string releaseConfigId = "";
+            // Make the request
+            ReleaseConfig response = await dataformClient.CreateReleaseConfigAsync(parent, releaseConfig, releaseConfigId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateReleaseConfig</summary>
+        public void CreateReleaseConfigResourceNames()
+        {
+            // Snippet: CreateReleaseConfig(RepositoryName, ReleaseConfig, string, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            ReleaseConfig releaseConfig = new ReleaseConfig();
+            string releaseConfigId = "";
+            // Make the request
+            ReleaseConfig response = dataformClient.CreateReleaseConfig(parent, releaseConfig, releaseConfigId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateReleaseConfigAsync</summary>
+        public async Task CreateReleaseConfigResourceNamesAsync()
+        {
+            // Snippet: CreateReleaseConfigAsync(RepositoryName, ReleaseConfig, string, CallSettings)
+            // Additional: CreateReleaseConfigAsync(RepositoryName, ReleaseConfig, string, CancellationToken)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            ReleaseConfig releaseConfig = new ReleaseConfig();
+            string releaseConfigId = "";
+            // Make the request
+            ReleaseConfig response = await dataformClient.CreateReleaseConfigAsync(parent, releaseConfig, releaseConfigId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateReleaseConfig</summary>
+        public void UpdateReleaseConfigRequestObject()
+        {
+            // Snippet: UpdateReleaseConfig(UpdateReleaseConfigRequest, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            UpdateReleaseConfigRequest request = new UpdateReleaseConfigRequest
+            {
+                UpdateMask = new FieldMask(),
+                ReleaseConfig = new ReleaseConfig(),
+            };
+            // Make the request
+            ReleaseConfig response = dataformClient.UpdateReleaseConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateReleaseConfigAsync</summary>
+        public async Task UpdateReleaseConfigRequestObjectAsync()
+        {
+            // Snippet: UpdateReleaseConfigAsync(UpdateReleaseConfigRequest, CallSettings)
+            // Additional: UpdateReleaseConfigAsync(UpdateReleaseConfigRequest, CancellationToken)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateReleaseConfigRequest request = new UpdateReleaseConfigRequest
+            {
+                UpdateMask = new FieldMask(),
+                ReleaseConfig = new ReleaseConfig(),
+            };
+            // Make the request
+            ReleaseConfig response = await dataformClient.UpdateReleaseConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateReleaseConfig</summary>
+        public void UpdateReleaseConfig()
+        {
+            // Snippet: UpdateReleaseConfig(ReleaseConfig, FieldMask, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            ReleaseConfig releaseConfig = new ReleaseConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            ReleaseConfig response = dataformClient.UpdateReleaseConfig(releaseConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateReleaseConfigAsync</summary>
+        public async Task UpdateReleaseConfigAsync()
+        {
+            // Snippet: UpdateReleaseConfigAsync(ReleaseConfig, FieldMask, CallSettings)
+            // Additional: UpdateReleaseConfigAsync(ReleaseConfig, FieldMask, CancellationToken)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            ReleaseConfig releaseConfig = new ReleaseConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            ReleaseConfig response = await dataformClient.UpdateReleaseConfigAsync(releaseConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteReleaseConfig</summary>
+        public void DeleteReleaseConfigRequestObject()
+        {
+            // Snippet: DeleteReleaseConfig(DeleteReleaseConfigRequest, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            DeleteReleaseConfigRequest request = new DeleteReleaseConfigRequest
+            {
+                ReleaseConfigName = ReleaseConfigName.FromProjectLocationRepositoryReleaseConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[RELEASE_CONFIG]"),
+            };
+            // Make the request
+            dataformClient.DeleteReleaseConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteReleaseConfigAsync</summary>
+        public async Task DeleteReleaseConfigRequestObjectAsync()
+        {
+            // Snippet: DeleteReleaseConfigAsync(DeleteReleaseConfigRequest, CallSettings)
+            // Additional: DeleteReleaseConfigAsync(DeleteReleaseConfigRequest, CancellationToken)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteReleaseConfigRequest request = new DeleteReleaseConfigRequest
+            {
+                ReleaseConfigName = ReleaseConfigName.FromProjectLocationRepositoryReleaseConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[RELEASE_CONFIG]"),
+            };
+            // Make the request
+            await dataformClient.DeleteReleaseConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteReleaseConfig</summary>
+        public void DeleteReleaseConfig()
+        {
+            // Snippet: DeleteReleaseConfig(string, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/releaseConfigs/[RELEASE_CONFIG]";
+            // Make the request
+            dataformClient.DeleteReleaseConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteReleaseConfigAsync</summary>
+        public async Task DeleteReleaseConfigAsync()
+        {
+            // Snippet: DeleteReleaseConfigAsync(string, CallSettings)
+            // Additional: DeleteReleaseConfigAsync(string, CancellationToken)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/releaseConfigs/[RELEASE_CONFIG]";
+            // Make the request
+            await dataformClient.DeleteReleaseConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteReleaseConfig</summary>
+        public void DeleteReleaseConfigResourceNames()
+        {
+            // Snippet: DeleteReleaseConfig(ReleaseConfigName, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            ReleaseConfigName name = ReleaseConfigName.FromProjectLocationRepositoryReleaseConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[RELEASE_CONFIG]");
+            // Make the request
+            dataformClient.DeleteReleaseConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteReleaseConfigAsync</summary>
+        public async Task DeleteReleaseConfigResourceNamesAsync()
+        {
+            // Snippet: DeleteReleaseConfigAsync(ReleaseConfigName, CallSettings)
+            // Additional: DeleteReleaseConfigAsync(ReleaseConfigName, CancellationToken)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            ReleaseConfigName name = ReleaseConfigName.FromProjectLocationRepositoryReleaseConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[RELEASE_CONFIG]");
+            // Make the request
+            await dataformClient.DeleteReleaseConfigAsync(name);
             // End snippet
         }
 
@@ -2420,6 +3350,619 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListWorkflowConfigs</summary>
+        public void ListWorkflowConfigsRequestObject()
+        {
+            // Snippet: ListWorkflowConfigs(ListWorkflowConfigsRequest, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            ListWorkflowConfigsRequest request = new ListWorkflowConfigsRequest
+            {
+                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+            };
+            // Make the request
+            PagedEnumerable<ListWorkflowConfigsResponse, WorkflowConfig> response = dataformClient.ListWorkflowConfigs(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (WorkflowConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListWorkflowConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (WorkflowConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<WorkflowConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (WorkflowConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListWorkflowConfigsAsync</summary>
+        public async Task ListWorkflowConfigsRequestObjectAsync()
+        {
+            // Snippet: ListWorkflowConfigsAsync(ListWorkflowConfigsRequest, CallSettings)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            ListWorkflowConfigsRequest request = new ListWorkflowConfigsRequest
+            {
+                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListWorkflowConfigsResponse, WorkflowConfig> response = dataformClient.ListWorkflowConfigsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((WorkflowConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListWorkflowConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (WorkflowConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<WorkflowConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (WorkflowConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListWorkflowConfigs</summary>
+        public void ListWorkflowConfigs()
+        {
+            // Snippet: ListWorkflowConfigs(string, string, int?, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
+            // Make the request
+            PagedEnumerable<ListWorkflowConfigsResponse, WorkflowConfig> response = dataformClient.ListWorkflowConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (WorkflowConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListWorkflowConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (WorkflowConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<WorkflowConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (WorkflowConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListWorkflowConfigsAsync</summary>
+        public async Task ListWorkflowConfigsAsync()
+        {
+            // Snippet: ListWorkflowConfigsAsync(string, string, int?, CallSettings)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
+            // Make the request
+            PagedAsyncEnumerable<ListWorkflowConfigsResponse, WorkflowConfig> response = dataformClient.ListWorkflowConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((WorkflowConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListWorkflowConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (WorkflowConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<WorkflowConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (WorkflowConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListWorkflowConfigs</summary>
+        public void ListWorkflowConfigsResourceNames()
+        {
+            // Snippet: ListWorkflowConfigs(RepositoryName, string, int?, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            // Make the request
+            PagedEnumerable<ListWorkflowConfigsResponse, WorkflowConfig> response = dataformClient.ListWorkflowConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (WorkflowConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListWorkflowConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (WorkflowConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<WorkflowConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (WorkflowConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListWorkflowConfigsAsync</summary>
+        public async Task ListWorkflowConfigsResourceNamesAsync()
+        {
+            // Snippet: ListWorkflowConfigsAsync(RepositoryName, string, int?, CallSettings)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            // Make the request
+            PagedAsyncEnumerable<ListWorkflowConfigsResponse, WorkflowConfig> response = dataformClient.ListWorkflowConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((WorkflowConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListWorkflowConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (WorkflowConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<WorkflowConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (WorkflowConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetWorkflowConfig</summary>
+        public void GetWorkflowConfigRequestObject()
+        {
+            // Snippet: GetWorkflowConfig(GetWorkflowConfigRequest, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            GetWorkflowConfigRequest request = new GetWorkflowConfigRequest
+            {
+                WorkflowConfigName = WorkflowConfigName.FromProjectLocationRepositoryWorkflowConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_CONFIG]"),
+            };
+            // Make the request
+            WorkflowConfig response = dataformClient.GetWorkflowConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetWorkflowConfigAsync</summary>
+        public async Task GetWorkflowConfigRequestObjectAsync()
+        {
+            // Snippet: GetWorkflowConfigAsync(GetWorkflowConfigRequest, CallSettings)
+            // Additional: GetWorkflowConfigAsync(GetWorkflowConfigRequest, CancellationToken)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            GetWorkflowConfigRequest request = new GetWorkflowConfigRequest
+            {
+                WorkflowConfigName = WorkflowConfigName.FromProjectLocationRepositoryWorkflowConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_CONFIG]"),
+            };
+            // Make the request
+            WorkflowConfig response = await dataformClient.GetWorkflowConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetWorkflowConfig</summary>
+        public void GetWorkflowConfig()
+        {
+            // Snippet: GetWorkflowConfig(string, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/workflowConfigs/[WORKFLOW_CONFIG]";
+            // Make the request
+            WorkflowConfig response = dataformClient.GetWorkflowConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetWorkflowConfigAsync</summary>
+        public async Task GetWorkflowConfigAsync()
+        {
+            // Snippet: GetWorkflowConfigAsync(string, CallSettings)
+            // Additional: GetWorkflowConfigAsync(string, CancellationToken)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/workflowConfigs/[WORKFLOW_CONFIG]";
+            // Make the request
+            WorkflowConfig response = await dataformClient.GetWorkflowConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetWorkflowConfig</summary>
+        public void GetWorkflowConfigResourceNames()
+        {
+            // Snippet: GetWorkflowConfig(WorkflowConfigName, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            WorkflowConfigName name = WorkflowConfigName.FromProjectLocationRepositoryWorkflowConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_CONFIG]");
+            // Make the request
+            WorkflowConfig response = dataformClient.GetWorkflowConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetWorkflowConfigAsync</summary>
+        public async Task GetWorkflowConfigResourceNamesAsync()
+        {
+            // Snippet: GetWorkflowConfigAsync(WorkflowConfigName, CallSettings)
+            // Additional: GetWorkflowConfigAsync(WorkflowConfigName, CancellationToken)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            WorkflowConfigName name = WorkflowConfigName.FromProjectLocationRepositoryWorkflowConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_CONFIG]");
+            // Make the request
+            WorkflowConfig response = await dataformClient.GetWorkflowConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateWorkflowConfig</summary>
+        public void CreateWorkflowConfigRequestObject()
+        {
+            // Snippet: CreateWorkflowConfig(CreateWorkflowConfigRequest, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            CreateWorkflowConfigRequest request = new CreateWorkflowConfigRequest
+            {
+                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                WorkflowConfig = new WorkflowConfig(),
+                WorkflowConfigId = "",
+            };
+            // Make the request
+            WorkflowConfig response = dataformClient.CreateWorkflowConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateWorkflowConfigAsync</summary>
+        public async Task CreateWorkflowConfigRequestObjectAsync()
+        {
+            // Snippet: CreateWorkflowConfigAsync(CreateWorkflowConfigRequest, CallSettings)
+            // Additional: CreateWorkflowConfigAsync(CreateWorkflowConfigRequest, CancellationToken)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateWorkflowConfigRequest request = new CreateWorkflowConfigRequest
+            {
+                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                WorkflowConfig = new WorkflowConfig(),
+                WorkflowConfigId = "",
+            };
+            // Make the request
+            WorkflowConfig response = await dataformClient.CreateWorkflowConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateWorkflowConfig</summary>
+        public void CreateWorkflowConfig()
+        {
+            // Snippet: CreateWorkflowConfig(string, WorkflowConfig, string, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
+            WorkflowConfig workflowConfig = new WorkflowConfig();
+            string workflowConfigId = "";
+            // Make the request
+            WorkflowConfig response = dataformClient.CreateWorkflowConfig(parent, workflowConfig, workflowConfigId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateWorkflowConfigAsync</summary>
+        public async Task CreateWorkflowConfigAsync()
+        {
+            // Snippet: CreateWorkflowConfigAsync(string, WorkflowConfig, string, CallSettings)
+            // Additional: CreateWorkflowConfigAsync(string, WorkflowConfig, string, CancellationToken)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
+            WorkflowConfig workflowConfig = new WorkflowConfig();
+            string workflowConfigId = "";
+            // Make the request
+            WorkflowConfig response = await dataformClient.CreateWorkflowConfigAsync(parent, workflowConfig, workflowConfigId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateWorkflowConfig</summary>
+        public void CreateWorkflowConfigResourceNames()
+        {
+            // Snippet: CreateWorkflowConfig(RepositoryName, WorkflowConfig, string, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            WorkflowConfig workflowConfig = new WorkflowConfig();
+            string workflowConfigId = "";
+            // Make the request
+            WorkflowConfig response = dataformClient.CreateWorkflowConfig(parent, workflowConfig, workflowConfigId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateWorkflowConfigAsync</summary>
+        public async Task CreateWorkflowConfigResourceNamesAsync()
+        {
+            // Snippet: CreateWorkflowConfigAsync(RepositoryName, WorkflowConfig, string, CallSettings)
+            // Additional: CreateWorkflowConfigAsync(RepositoryName, WorkflowConfig, string, CancellationToken)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            WorkflowConfig workflowConfig = new WorkflowConfig();
+            string workflowConfigId = "";
+            // Make the request
+            WorkflowConfig response = await dataformClient.CreateWorkflowConfigAsync(parent, workflowConfig, workflowConfigId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateWorkflowConfig</summary>
+        public void UpdateWorkflowConfigRequestObject()
+        {
+            // Snippet: UpdateWorkflowConfig(UpdateWorkflowConfigRequest, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            UpdateWorkflowConfigRequest request = new UpdateWorkflowConfigRequest
+            {
+                UpdateMask = new FieldMask(),
+                WorkflowConfig = new WorkflowConfig(),
+            };
+            // Make the request
+            WorkflowConfig response = dataformClient.UpdateWorkflowConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateWorkflowConfigAsync</summary>
+        public async Task UpdateWorkflowConfigRequestObjectAsync()
+        {
+            // Snippet: UpdateWorkflowConfigAsync(UpdateWorkflowConfigRequest, CallSettings)
+            // Additional: UpdateWorkflowConfigAsync(UpdateWorkflowConfigRequest, CancellationToken)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateWorkflowConfigRequest request = new UpdateWorkflowConfigRequest
+            {
+                UpdateMask = new FieldMask(),
+                WorkflowConfig = new WorkflowConfig(),
+            };
+            // Make the request
+            WorkflowConfig response = await dataformClient.UpdateWorkflowConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateWorkflowConfig</summary>
+        public void UpdateWorkflowConfig()
+        {
+            // Snippet: UpdateWorkflowConfig(WorkflowConfig, FieldMask, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            WorkflowConfig workflowConfig = new WorkflowConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            WorkflowConfig response = dataformClient.UpdateWorkflowConfig(workflowConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateWorkflowConfigAsync</summary>
+        public async Task UpdateWorkflowConfigAsync()
+        {
+            // Snippet: UpdateWorkflowConfigAsync(WorkflowConfig, FieldMask, CallSettings)
+            // Additional: UpdateWorkflowConfigAsync(WorkflowConfig, FieldMask, CancellationToken)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            WorkflowConfig workflowConfig = new WorkflowConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            WorkflowConfig response = await dataformClient.UpdateWorkflowConfigAsync(workflowConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteWorkflowConfig</summary>
+        public void DeleteWorkflowConfigRequestObject()
+        {
+            // Snippet: DeleteWorkflowConfig(DeleteWorkflowConfigRequest, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            DeleteWorkflowConfigRequest request = new DeleteWorkflowConfigRequest
+            {
+                WorkflowConfigName = WorkflowConfigName.FromProjectLocationRepositoryWorkflowConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_CONFIG]"),
+            };
+            // Make the request
+            dataformClient.DeleteWorkflowConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteWorkflowConfigAsync</summary>
+        public async Task DeleteWorkflowConfigRequestObjectAsync()
+        {
+            // Snippet: DeleteWorkflowConfigAsync(DeleteWorkflowConfigRequest, CallSettings)
+            // Additional: DeleteWorkflowConfigAsync(DeleteWorkflowConfigRequest, CancellationToken)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteWorkflowConfigRequest request = new DeleteWorkflowConfigRequest
+            {
+                WorkflowConfigName = WorkflowConfigName.FromProjectLocationRepositoryWorkflowConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_CONFIG]"),
+            };
+            // Make the request
+            await dataformClient.DeleteWorkflowConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteWorkflowConfig</summary>
+        public void DeleteWorkflowConfig()
+        {
+            // Snippet: DeleteWorkflowConfig(string, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/workflowConfigs/[WORKFLOW_CONFIG]";
+            // Make the request
+            dataformClient.DeleteWorkflowConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteWorkflowConfigAsync</summary>
+        public async Task DeleteWorkflowConfigAsync()
+        {
+            // Snippet: DeleteWorkflowConfigAsync(string, CallSettings)
+            // Additional: DeleteWorkflowConfigAsync(string, CancellationToken)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/workflowConfigs/[WORKFLOW_CONFIG]";
+            // Make the request
+            await dataformClient.DeleteWorkflowConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteWorkflowConfig</summary>
+        public void DeleteWorkflowConfigResourceNames()
+        {
+            // Snippet: DeleteWorkflowConfig(WorkflowConfigName, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            WorkflowConfigName name = WorkflowConfigName.FromProjectLocationRepositoryWorkflowConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_CONFIG]");
+            // Make the request
+            dataformClient.DeleteWorkflowConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteWorkflowConfigAsync</summary>
+        public async Task DeleteWorkflowConfigResourceNamesAsync()
+        {
+            // Snippet: DeleteWorkflowConfigAsync(WorkflowConfigName, CallSettings)
+            // Additional: DeleteWorkflowConfigAsync(WorkflowConfigName, CancellationToken)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            WorkflowConfigName name = WorkflowConfigName.FromProjectLocationRepositoryWorkflowConfig("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_CONFIG]");
+            // Make the request
+            await dataformClient.DeleteWorkflowConfigAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for ListWorkflowInvocations</summary>
         public void ListWorkflowInvocationsRequestObject()
         {
@@ -2430,6 +3973,8 @@ namespace GoogleCSharpSnippets
             ListWorkflowInvocationsRequest request = new ListWorkflowInvocationsRequest
             {
                 ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                OrderBy = "",
+                Filter = "",
             };
             // Make the request
             PagedEnumerable<ListWorkflowInvocationsResponse, WorkflowInvocation> response = dataformClient.ListWorkflowInvocations(request);
@@ -2478,6 +4023,8 @@ namespace GoogleCSharpSnippets
             ListWorkflowInvocationsRequest request = new ListWorkflowInvocationsRequest
             {
                 ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                OrderBy = "",
+                Filter = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListWorkflowInvocationsResponse, WorkflowInvocation> response = dataformClient.ListWorkflowInvocationsAsync(request);
