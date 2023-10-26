@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.20.0, released 2023-10-26
+
+### New features
+
+- Add DatasetVersion and dataset version RPCs to DatasetService ([commit fe2818c](https://github.com/googleapis/google-cloud-dotnet/commit/fe2818c21082a33ec5a8ee8f74e99628bee9333e))
+- Add PersistentDiskSpec ([commit fe2818c](https://github.com/googleapis/google-cloud-dotnet/commit/fe2818c21082a33ec5a8ee8f74e99628bee9333e))
+
 ## Version 2.19.0, released 2023-09-11
 
 ### New features
