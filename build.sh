@@ -14,6 +14,9 @@ unset APPVEYOR_API_URL
 # match anything, e.g. when looking for tests.
 shopt -s nullglob
 
+# Enable testing for Storage.V2
+export STORAGE_V2_IS_NOT_FOR_PRODUCTION_USE_IN_DOTNET=true
+
 # Command line arguments are the APIs to build. Each argument
 # should be the name of a directory, either relative to the location
 # of this script, or under apis.
