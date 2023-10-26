@@ -518,6 +518,268 @@ namespace Google.Cloud.Dataform.V1Beta1
         public static bool operator !=(WorkspaceName a, WorkspaceName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>ReleaseConfig</c> resource.</summary>
+    public sealed partial class ReleaseConfigName : gax::IResourceName, sys::IEquatable<ReleaseConfigName>
+    {
+        /// <summary>The possible contents of <see cref="ReleaseConfigName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/repositories/{repository}/releaseConfigs/{release_config}</c>
+            /// .
+            /// </summary>
+            ProjectLocationRepositoryReleaseConfig = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationRepositoryReleaseConfig = new gax::PathTemplate("projects/{project}/locations/{location}/repositories/{repository}/releaseConfigs/{release_config}");
+
+        /// <summary>Creates a <see cref="ReleaseConfigName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="ReleaseConfigName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static ReleaseConfigName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new ReleaseConfigName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="ReleaseConfigName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/repositories/{repository}/releaseConfigs/{release_config}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="repositoryId">The <c>Repository</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="releaseConfigId">The <c>ReleaseConfig</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="ReleaseConfigName"/> constructed from the provided ids.</returns>
+        public static ReleaseConfigName FromProjectLocationRepositoryReleaseConfig(string projectId, string locationId, string repositoryId, string releaseConfigId) =>
+            new ReleaseConfigName(ResourceNameType.ProjectLocationRepositoryReleaseConfig, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), repositoryId: gax::GaxPreconditions.CheckNotNullOrEmpty(repositoryId, nameof(repositoryId)), releaseConfigId: gax::GaxPreconditions.CheckNotNullOrEmpty(releaseConfigId, nameof(releaseConfigId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="ReleaseConfigName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/repositories/{repository}/releaseConfigs/{release_config}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="repositoryId">The <c>Repository</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="releaseConfigId">The <c>ReleaseConfig</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="ReleaseConfigName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/repositories/{repository}/releaseConfigs/{release_config}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string repositoryId, string releaseConfigId) =>
+            FormatProjectLocationRepositoryReleaseConfig(projectId, locationId, repositoryId, releaseConfigId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="ReleaseConfigName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/repositories/{repository}/releaseConfigs/{release_config}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="repositoryId">The <c>Repository</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="releaseConfigId">The <c>ReleaseConfig</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="ReleaseConfigName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/repositories/{repository}/releaseConfigs/{release_config}</c>.
+        /// </returns>
+        public static string FormatProjectLocationRepositoryReleaseConfig(string projectId, string locationId, string repositoryId, string releaseConfigId) =>
+            s_projectLocationRepositoryReleaseConfig.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(repositoryId, nameof(repositoryId)), gax::GaxPreconditions.CheckNotNullOrEmpty(releaseConfigId, nameof(releaseConfigId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="ReleaseConfigName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/repositories/{repository}/releaseConfigs/{release_config}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="releaseConfigName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="ReleaseConfigName"/> if successful.</returns>
+        public static ReleaseConfigName Parse(string releaseConfigName) => Parse(releaseConfigName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="ReleaseConfigName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/repositories/{repository}/releaseConfigs/{release_config}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="releaseConfigName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="ReleaseConfigName"/> if successful.</returns>
+        public static ReleaseConfigName Parse(string releaseConfigName, bool allowUnparsed) =>
+            TryParse(releaseConfigName, allowUnparsed, out ReleaseConfigName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="ReleaseConfigName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/repositories/{repository}/releaseConfigs/{release_config}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="releaseConfigName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="ReleaseConfigName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string releaseConfigName, out ReleaseConfigName result) =>
+            TryParse(releaseConfigName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="ReleaseConfigName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/repositories/{repository}/releaseConfigs/{release_config}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="releaseConfigName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="ReleaseConfigName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string releaseConfigName, bool allowUnparsed, out ReleaseConfigName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(releaseConfigName, nameof(releaseConfigName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationRepositoryReleaseConfig.TryParseName(releaseConfigName, out resourceName))
+            {
+                result = FromProjectLocationRepositoryReleaseConfig(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(releaseConfigName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private ReleaseConfigName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string projectId = null, string releaseConfigId = null, string repositoryId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            LocationId = locationId;
+            ProjectId = projectId;
+            ReleaseConfigId = releaseConfigId;
+            RepositoryId = repositoryId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="ReleaseConfigName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/repositories/{repository}/releaseConfigs/{release_config}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="repositoryId">The <c>Repository</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="releaseConfigId">The <c>ReleaseConfig</c> ID. Must not be <c>null</c> or empty.</param>
+        public ReleaseConfigName(string projectId, string locationId, string repositoryId, string releaseConfigId) : this(ResourceNameType.ProjectLocationRepositoryReleaseConfig, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), repositoryId: gax::GaxPreconditions.CheckNotNullOrEmpty(repositoryId, nameof(repositoryId)), releaseConfigId: gax::GaxPreconditions.CheckNotNullOrEmpty(releaseConfigId, nameof(releaseConfigId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The <c>ReleaseConfig</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string ReleaseConfigId { get; }
+
+        /// <summary>
+        /// The <c>Repository</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string RepositoryId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationRepositoryReleaseConfig: return s_projectLocationRepositoryReleaseConfig.Expand(ProjectId, LocationId, RepositoryId, ReleaseConfigId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as ReleaseConfigName);
+
+        /// <inheritdoc/>
+        public bool Equals(ReleaseConfigName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(ReleaseConfigName a, ReleaseConfigName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(ReleaseConfigName a, ReleaseConfigName b) => !(a == b);
+    }
+
     /// <summary>Resource name for the <c>CompilationResult</c> resource.</summary>
     public sealed partial class CompilationResultName : gax::IResourceName, sys::IEquatable<CompilationResultName>
     {
@@ -784,6 +1046,268 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         /// <inheritdoc/>
         public static bool operator !=(CompilationResultName a, CompilationResultName b) => !(a == b);
+    }
+
+    /// <summary>Resource name for the <c>WorkflowConfig</c> resource.</summary>
+    public sealed partial class WorkflowConfigName : gax::IResourceName, sys::IEquatable<WorkflowConfigName>
+    {
+        /// <summary>The possible contents of <see cref="WorkflowConfigName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/repositories/{repository}/workflowConfigs/{workflow_config}</c>
+            /// .
+            /// </summary>
+            ProjectLocationRepositoryWorkflowConfig = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationRepositoryWorkflowConfig = new gax::PathTemplate("projects/{project}/locations/{location}/repositories/{repository}/workflowConfigs/{workflow_config}");
+
+        /// <summary>Creates a <see cref="WorkflowConfigName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="WorkflowConfigName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static WorkflowConfigName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new WorkflowConfigName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="WorkflowConfigName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/repositories/{repository}/workflowConfigs/{workflow_config}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="repositoryId">The <c>Repository</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="workflowConfigId">The <c>WorkflowConfig</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="WorkflowConfigName"/> constructed from the provided ids.</returns>
+        public static WorkflowConfigName FromProjectLocationRepositoryWorkflowConfig(string projectId, string locationId, string repositoryId, string workflowConfigId) =>
+            new WorkflowConfigName(ResourceNameType.ProjectLocationRepositoryWorkflowConfig, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), repositoryId: gax::GaxPreconditions.CheckNotNullOrEmpty(repositoryId, nameof(repositoryId)), workflowConfigId: gax::GaxPreconditions.CheckNotNullOrEmpty(workflowConfigId, nameof(workflowConfigId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="WorkflowConfigName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/repositories/{repository}/workflowConfigs/{workflow_config}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="repositoryId">The <c>Repository</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="workflowConfigId">The <c>WorkflowConfig</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="WorkflowConfigName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/repositories/{repository}/workflowConfigs/{workflow_config}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string repositoryId, string workflowConfigId) =>
+            FormatProjectLocationRepositoryWorkflowConfig(projectId, locationId, repositoryId, workflowConfigId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="WorkflowConfigName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/repositories/{repository}/workflowConfigs/{workflow_config}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="repositoryId">The <c>Repository</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="workflowConfigId">The <c>WorkflowConfig</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="WorkflowConfigName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/repositories/{repository}/workflowConfigs/{workflow_config}</c>.
+        /// </returns>
+        public static string FormatProjectLocationRepositoryWorkflowConfig(string projectId, string locationId, string repositoryId, string workflowConfigId) =>
+            s_projectLocationRepositoryWorkflowConfig.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(repositoryId, nameof(repositoryId)), gax::GaxPreconditions.CheckNotNullOrEmpty(workflowConfigId, nameof(workflowConfigId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="WorkflowConfigName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/repositories/{repository}/workflowConfigs/{workflow_config}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="workflowConfigName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="WorkflowConfigName"/> if successful.</returns>
+        public static WorkflowConfigName Parse(string workflowConfigName) => Parse(workflowConfigName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="WorkflowConfigName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/repositories/{repository}/workflowConfigs/{workflow_config}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="workflowConfigName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="WorkflowConfigName"/> if successful.</returns>
+        public static WorkflowConfigName Parse(string workflowConfigName, bool allowUnparsed) =>
+            TryParse(workflowConfigName, allowUnparsed, out WorkflowConfigName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="WorkflowConfigName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/repositories/{repository}/workflowConfigs/{workflow_config}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="workflowConfigName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="WorkflowConfigName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string workflowConfigName, out WorkflowConfigName result) =>
+            TryParse(workflowConfigName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="WorkflowConfigName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/repositories/{repository}/workflowConfigs/{workflow_config}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="workflowConfigName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="WorkflowConfigName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string workflowConfigName, bool allowUnparsed, out WorkflowConfigName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(workflowConfigName, nameof(workflowConfigName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationRepositoryWorkflowConfig.TryParseName(workflowConfigName, out resourceName))
+            {
+                result = FromProjectLocationRepositoryWorkflowConfig(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(workflowConfigName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private WorkflowConfigName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string projectId = null, string repositoryId = null, string workflowConfigId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            LocationId = locationId;
+            ProjectId = projectId;
+            RepositoryId = repositoryId;
+            WorkflowConfigId = workflowConfigId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="WorkflowConfigName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/repositories/{repository}/workflowConfigs/{workflow_config}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="repositoryId">The <c>Repository</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="workflowConfigId">The <c>WorkflowConfig</c> ID. Must not be <c>null</c> or empty.</param>
+        public WorkflowConfigName(string projectId, string locationId, string repositoryId, string workflowConfigId) : this(ResourceNameType.ProjectLocationRepositoryWorkflowConfig, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), repositoryId: gax::GaxPreconditions.CheckNotNullOrEmpty(repositoryId, nameof(repositoryId)), workflowConfigId: gax::GaxPreconditions.CheckNotNullOrEmpty(workflowConfigId, nameof(workflowConfigId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The <c>Repository</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string RepositoryId { get; }
+
+        /// <summary>
+        /// The <c>WorkflowConfig</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string WorkflowConfigId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationRepositoryWorkflowConfig: return s_projectLocationRepositoryWorkflowConfig.Expand(ProjectId, LocationId, RepositoryId, WorkflowConfigId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as WorkflowConfigName);
+
+        /// <inheritdoc/>
+        public bool Equals(WorkflowConfigName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(WorkflowConfigName a, WorkflowConfigName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(WorkflowConfigName a, WorkflowConfigName b) => !(a == b);
     }
 
     /// <summary>Resource name for the <c>WorkflowInvocation</c> resource.</summary>
@@ -1316,6 +1840,16 @@ namespace Google.Cloud.Dataform.V1Beta1
             get => string.IsNullOrEmpty(Name) ? null : gcdv::RepositoryName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="SecretVersionName"/>-typed view over the <see cref="NpmrcEnvironmentVariablesSecretVersion"/>
+        /// resource name property.
+        /// </summary>
+        public SecretVersionName NpmrcEnvironmentVariablesSecretVersionAsSecretVersionName
+        {
+            get => string.IsNullOrEmpty(NpmrcEnvironmentVariablesSecretVersion) ? null : SecretVersionName.Parse(NpmrcEnvironmentVariablesSecretVersion, allowUnparsed: true);
+            set => NpmrcEnvironmentVariablesSecretVersion = value?.ToString() ?? "";
+        }
     }
 
     public partial class ListRepositoriesRequest
@@ -1355,6 +1889,66 @@ namespace Google.Cloud.Dataform.V1Beta1
     }
 
     public partial class DeleteRepositoryRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::RepositoryName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::RepositoryName RepositoryName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::RepositoryName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CommitRepositoryChangesRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::RepositoryName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::RepositoryName RepositoryName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::RepositoryName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ReadRepositoryFileRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::RepositoryName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::RepositoryName RepositoryName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::RepositoryName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class QueryRepositoryDirectoryContentsRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::RepositoryName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::RepositoryName RepositoryName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::RepositoryName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class FetchRepositoryHistoryRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::RepositoryName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::RepositoryName RepositoryName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::RepositoryName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ComputeRepositoryAccessTokenStatusRequest
     {
         /// <summary>
         /// <see cref="gcdv::RepositoryName"/>-typed view over the <see cref="Name"/> resource name property.
@@ -1630,6 +2224,76 @@ namespace Google.Cloud.Dataform.V1Beta1
         }
     }
 
+    public partial class ReleaseConfig
+    {
+        /// <summary>
+        /// <see cref="gcdv::ReleaseConfigName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::ReleaseConfigName ReleaseConfigName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::ReleaseConfigName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="CompilationResultName"/>-typed view over the <see cref="ReleaseCompilationResult"/> resource name
+        /// property.
+        /// </summary>
+        public CompilationResultName ReleaseCompilationResultAsCompilationResultName
+        {
+            get => string.IsNullOrEmpty(ReleaseCompilationResult) ? null : CompilationResultName.Parse(ReleaseCompilationResult, allowUnparsed: true);
+            set => ReleaseCompilationResult = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListReleaseConfigsRequest
+    {
+        /// <summary>
+        /// <see cref="RepositoryName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public RepositoryName ParentAsRepositoryName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : RepositoryName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetReleaseConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::ReleaseConfigName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::ReleaseConfigName ReleaseConfigName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::ReleaseConfigName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateReleaseConfigRequest
+    {
+        /// <summary>
+        /// <see cref="RepositoryName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public RepositoryName ParentAsRepositoryName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : RepositoryName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteReleaseConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::ReleaseConfigName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::ReleaseConfigName ReleaseConfigName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::ReleaseConfigName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class CompilationResult
     {
         /// <summary>
@@ -1648,6 +2312,15 @@ namespace Google.Cloud.Dataform.V1Beta1
         {
             get => string.IsNullOrEmpty(Workspace) ? null : WorkspaceName.Parse(Workspace, allowUnparsed: true);
             set => Workspace = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="ReleaseConfigName"/>-typed view over the <see cref="ReleaseConfig"/> resource name property.
+        /// </summary>
+        public ReleaseConfigName ReleaseConfigAsReleaseConfigName
+        {
+            get => string.IsNullOrEmpty(ReleaseConfig) ? null : ReleaseConfigName.Parse(ReleaseConfig, allowUnparsed: true);
+            set => ReleaseConfig = value?.ToString() ?? "";
         }
     }
 
@@ -1699,6 +2372,75 @@ namespace Google.Cloud.Dataform.V1Beta1
         }
     }
 
+    public partial class WorkflowConfig
+    {
+        /// <summary>
+        /// <see cref="gcdv::WorkflowConfigName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::WorkflowConfigName WorkflowConfigName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::WorkflowConfigName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="ReleaseConfigName"/>-typed view over the <see cref="ReleaseConfig"/> resource name property.
+        /// </summary>
+        public ReleaseConfigName ReleaseConfigAsReleaseConfigName
+        {
+            get => string.IsNullOrEmpty(ReleaseConfig) ? null : ReleaseConfigName.Parse(ReleaseConfig, allowUnparsed: true);
+            set => ReleaseConfig = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListWorkflowConfigsRequest
+    {
+        /// <summary>
+        /// <see cref="RepositoryName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public RepositoryName ParentAsRepositoryName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : RepositoryName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetWorkflowConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::WorkflowConfigName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::WorkflowConfigName WorkflowConfigName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::WorkflowConfigName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateWorkflowConfigRequest
+    {
+        /// <summary>
+        /// <see cref="RepositoryName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public RepositoryName ParentAsRepositoryName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : RepositoryName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteWorkflowConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::WorkflowConfigName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::WorkflowConfigName WorkflowConfigName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::WorkflowConfigName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class WorkflowInvocation
     {
         /// <summary>
@@ -1718,6 +2460,15 @@ namespace Google.Cloud.Dataform.V1Beta1
         {
             get => string.IsNullOrEmpty(CompilationResult) ? null : CompilationResultName.Parse(CompilationResult, allowUnparsed: true);
             set => CompilationResult = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="WorkflowConfigName"/>-typed view over the <see cref="WorkflowConfig"/> resource name property.
+        /// </summary>
+        public WorkflowConfigName WorkflowConfigAsWorkflowConfigName
+        {
+            get => string.IsNullOrEmpty(WorkflowConfig) ? null : WorkflowConfigName.Parse(WorkflowConfig, allowUnparsed: true);
+            set => WorkflowConfig = value?.ToString() ?? "";
         }
     }
 

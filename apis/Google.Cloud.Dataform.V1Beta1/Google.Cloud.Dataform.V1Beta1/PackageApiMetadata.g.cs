@@ -42,6 +42,21 @@ namespace Google.Cloud.Dataform.V1Beta1
                     // { "get": "/v1beta1/{name=projects/*}/locations" }
                     proto::ByteString.FromBase64("EiQvdjFiZXRhMS97bmFtZT1wcm9qZWN0cy8qfS9sb2NhdGlvbnM=")
                 },
+                {
+                    "google.iam.v1.IAMPolicy.GetIamPolicy",
+                    // { "get": "/v1beta1/{resource=projects/*/locations/*/repositories/*}:getIamPolicy", "additionalBindings": [ { "get": "/v1beta1/{resource=projects/*/locations/*/collections/*}:getIamPolicy" }, { "get": "/v1beta1/{resource=projects/*/locations/*/repositories/*/workspaces/*}:getIamPolicy" } ] }
+                    proto::ByteString.FromBase64("EkYvdjFiZXRhMS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9yZXBvc2l0b3JpZXMvKn06Z2V0SWFtUG9saWN5WkcSRS92MWJldGExL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbGxlY3Rpb25zLyp9OmdldElhbVBvbGljeVpVElMvdjFiZXRhMS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9yZXBvc2l0b3JpZXMvKi93b3Jrc3BhY2VzLyp9OmdldElhbVBvbGljeQ==")
+                },
+                {
+                    "google.iam.v1.IAMPolicy.SetIamPolicy",
+                    // { "post": "/v1beta1/{resource=projects/*/locations/*/repositories/*}:setIamPolicy", "body": "*", "additionalBindings": [ { "post": "/v1beta1/{resource=projects/*/locations/*/repositories/*/workspaces/*}:setIamPolicy", "body": "*" }, { "post": "/v1beta1/{resource=projects/*/locations/*/collections/*}:setIamPolicy", "body": "*" } ] }
+                    proto::ByteString.FromBase64("IkYvdjFiZXRhMS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9yZXBvc2l0b3JpZXMvKn06c2V0SWFtUG9saWN5OgEqWlgiUy92MWJldGExL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3JlcG9zaXRvcmllcy8qL3dvcmtzcGFjZXMvKn06c2V0SWFtUG9saWN5OgEqWkoiRS92MWJldGExL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbGxlY3Rpb25zLyp9OnNldElhbVBvbGljeToBKg==")
+                },
+                {
+                    "google.iam.v1.IAMPolicy.TestIamPermissions",
+                    // { "post": "/v1beta1/{resource=projects/*/locations/*/repositories/*}:testIamPermissions", "body": "*", "additionalBindings": [ { "post": "/v1beta1/{resource=projects/*/locations/*/collections/*}:testIamPermissions", "body": "*" }, { "post": "/v1beta1/{resource=projects/*/locations/*/repositories/*/workspaces/*}:testIamPermissions", "body": "*" } ] }
+                    proto::ByteString.FromBase64("IkwvdjFiZXRhMS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9yZXBvc2l0b3JpZXMvKn06dGVzdElhbVBlcm1pc3Npb25zOgEqWlAiSy92MWJldGExL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbGxlY3Rpb25zLyp9OnRlc3RJYW1QZXJtaXNzaW9uczoBKlpeIlkvdjFiZXRhMS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9yZXBvc2l0b3JpZXMvKi93b3Jrc3BhY2VzLyp9OnRlc3RJYW1QZXJtaXNzaW9uczoBKg==")
+                },
             });
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()

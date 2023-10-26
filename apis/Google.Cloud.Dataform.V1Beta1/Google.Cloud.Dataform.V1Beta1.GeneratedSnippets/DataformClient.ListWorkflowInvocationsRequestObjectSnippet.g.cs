@@ -39,6 +39,8 @@ namespace GoogleCSharpSnippets
             ListWorkflowInvocationsRequest request = new ListWorkflowInvocationsRequest
             {
                 ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                OrderBy = "",
+                Filter = "",
             };
             // Make the request
             PagedEnumerable<ListWorkflowInvocationsResponse, WorkflowInvocation> response = dataformClient.ListWorkflowInvocations(request);

@@ -44,10 +44,10 @@ namespace GoogleCSharpSnippets
                 Path = "",
             };
             // Make the request
-            PagedAsyncEnumerable<QueryDirectoryContentsResponse, QueryDirectoryContentsResponse.Types.DirectoryEntry> response = dataformClient.QueryDirectoryContentsAsync(request);
+            PagedAsyncEnumerable<QueryDirectoryContentsResponse, DirectoryEntry> response = dataformClient.QueryDirectoryContentsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((QueryDirectoryContentsResponse.Types.DirectoryEntry item) =>
+            await response.ForEachAsync((DirectoryEntry item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -58,7 +58,7 @@ namespace GoogleCSharpSnippets
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (QueryDirectoryContentsResponse.Types.DirectoryEntry item in page)
+                foreach (DirectoryEntry item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -67,10 +67,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<QueryDirectoryContentsResponse.Types.DirectoryEntry> singlePage = await response.ReadPageAsync(pageSize);
+            Page<DirectoryEntry> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (QueryDirectoryContentsResponse.Types.DirectoryEntry item in singlePage)
+            foreach (DirectoryEntry item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);

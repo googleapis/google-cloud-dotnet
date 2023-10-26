@@ -42,10 +42,10 @@ namespace GoogleCSharpSnippets
                 Path = "",
             };
             // Make the request
-            PagedEnumerable<QueryDirectoryContentsResponse, QueryDirectoryContentsResponse.Types.DirectoryEntry> response = dataformClient.QueryDirectoryContents(request);
+            PagedEnumerable<QueryDirectoryContentsResponse, DirectoryEntry> response = dataformClient.QueryDirectoryContents(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (QueryDirectoryContentsResponse.Types.DirectoryEntry item in response)
+            foreach (DirectoryEntry item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -56,7 +56,7 @@ namespace GoogleCSharpSnippets
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (QueryDirectoryContentsResponse.Types.DirectoryEntry item in page)
+                foreach (DirectoryEntry item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -65,10 +65,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<QueryDirectoryContentsResponse.Types.DirectoryEntry> singlePage = response.ReadPage(pageSize);
+            Page<DirectoryEntry> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (QueryDirectoryContentsResponse.Types.DirectoryEntry item in singlePage)
+            foreach (DirectoryEntry item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
