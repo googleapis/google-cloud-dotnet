@@ -6,6 +6,9 @@
 set -e
 source toolversions.sh
 
+# Enable testing for Storage.V2
+export STORAGE_V2_IS_NOT_FOR_PRODUCTION_USE_IN_DOTNET=true
+
 SCRIPT=$(readlink -f "$0")
 ROOT_DIR=$(dirname "$SCRIPT")
 
