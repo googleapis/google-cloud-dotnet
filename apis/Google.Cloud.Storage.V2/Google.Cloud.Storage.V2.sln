@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Storage.V2.Snippets", "Google.Cloud.Storage.V2.Snippets\Google.Cloud.Storage.V2.Snippets.csproj", "{E73BB4A8-3B38-4FD9-AE75-CE75F06F0854}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Storage.V2.IntegrationTests", "Google.Cloud.Storage.V2.IntegrationTests\Google.Cloud.Storage.V2.IntegrationTests.csproj", "{27E75672-70D4-4DC7-A240-FD1775A3BBAF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{E73BB4A8-3B38-4FD9-AE75-CE75F06F0854}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E73BB4A8-3B38-4FD9-AE75-CE75F06F0854}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E73BB4A8-3B38-4FD9-AE75-CE75F06F0854}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27E75672-70D4-4DC7-A240-FD1775A3BBAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27E75672-70D4-4DC7-A240-FD1775A3BBAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27E75672-70D4-4DC7-A240-FD1775A3BBAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27E75672-70D4-4DC7-A240-FD1775A3BBAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
