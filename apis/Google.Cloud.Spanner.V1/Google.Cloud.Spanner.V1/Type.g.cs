@@ -37,13 +37,13 @@ namespace Google.Cloud.Spanner.V1 {
             "EhkKFVRZUEVfQ09ERV9VTlNQRUNJRklFRBAAEggKBEJPT0wQARIJCgVJTlQ2",
             "NBACEgsKB0ZMT0FUNjQQAxINCglUSU1FU1RBTVAQBBIICgREQVRFEAUSCgoG",
             "U1RSSU5HEAYSCQoFQllURVMQBxIJCgVBUlJBWRAIEgoKBlNUUlVDVBAJEgsK",
-            "B05VTUVSSUMQChIICgRKU09OEAsqWAoSVHlwZUFubm90YXRpb25Db2RlEiQK",
+            "B05VTUVSSUMQChIICgRKU09OEAsqZAoSVHlwZUFubm90YXRpb25Db2RlEiQK",
             "IFRZUEVfQU5OT1RBVElPTl9DT0RFX1VOU1BFQ0lGSUVEEAASDgoKUEdfTlVN",
-            "RVJJQxACEgwKCFBHX0pTT05CEANCrAEKFWNvbS5nb29nbGUuc3Bhbm5lci52",
-            "MUIJVHlwZVByb3RvUAFaNWNsb3VkLmdvb2dsZS5jb20vZ28vc3Bhbm5lci9h",
-            "cGl2MS9zcGFubmVycGI7c3Bhbm5lcnBiqgIXR29vZ2xlLkNsb3VkLlNwYW5u",
-            "ZXIuVjHKAhdHb29nbGVcQ2xvdWRcU3Bhbm5lclxWMeoCGkdvb2dsZTo6Q2xv",
-            "dWQ6OlNwYW5uZXI6OlYxYgZwcm90bzM="));
+            "RVJJQxACEgwKCFBHX0pTT05CEAMSCgoGUEdfT0lEEARCrAEKFWNvbS5nb29n",
+            "bGUuc3Bhbm5lci52MUIJVHlwZVByb3RvUAFaNWNsb3VkLmdvb2dsZS5jb20v",
+            "Z28vc3Bhbm5lci9hcGl2MS9zcGFubmVycGI7c3Bhbm5lcnBiqgIXR29vZ2xl",
+            "LkNsb3VkLlNwYW5uZXIuVjHKAhdHb29nbGVcQ2xvdWRcU3Bhbm5lclxWMeoC",
+            "Gkdvb2dsZTo6Q2xvdWQ6OlNwYW5uZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Spanner.V1.TypeCode), typeof(global::Google.Cloud.Spanner.V1.TypeAnnotationCode), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -172,6 +172,12 @@ namespace Google.Cloud.Spanner.V1 {
     /// Spanner databases.
     /// </summary>
     [pbr::OriginalName("PG_JSONB")] PgJsonb = 3,
+    /// <summary>
+    /// PostgreSQL compatible OID type. This annotation can be used by a client
+    /// interacting with PostgreSQL-enabled Spanner database to specify that a
+    /// value should be treated using the semantics of the OID type.
+    /// </summary>
+    [pbr::OriginalName("PG_OID")] PgOid = 4,
   }
 
   #endregion
