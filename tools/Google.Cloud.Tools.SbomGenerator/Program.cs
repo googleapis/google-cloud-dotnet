@@ -11,104 +11,14 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and 
 // limitations under the License.
+
+using System.IO.Compression;
 using System.Net;
 using System.Security.Cryptography;
 using System.Text.Json;
-using System.Xml;
+using System.Xml.Serialization;
 
-// The classes below are not general purpose Spdx classes.  Their single
-// purpose is to generate json SBOMs for nupkgs generated from this repository,
-// so they have default values convenient for that purpose.
-// Reusing these classes for any other purpose would require a refactor.
-
-/// <summary>
-/// SPDX format.
-/// See https://github.com/spdx/spdx-spec/blob/development/v2.3.1/schemas/spdx-schema.json
-/// </summary>
-internal class Spdx
-{
-    public string spdxVersion { get; } = "SPDX-2.3";
-    public string dataLicense { get; } = "CC0-1.0";
-    public string SPDXID { get; } = "SPDXRef-Document";
-    public string name { get; set; } = "";
-
-    public string documentNamespace { get; set; } = "";
-    public List<string> creators { get; set; } = new List<string>();
-    public string created { get; set; } = "";
-
-    public List<SpdxPackage> packages { get; set; } = new List<SpdxPackage>();
-
-    public List<SpdxRelationship> relationships { get; set; }
-        = new List<SpdxRelationship> { new() };
-}
-
-internal class SpdxPackage
-{
-    public string name { get; set; } = "";
-    public string packageFileName { get; set; } = "";
-    public string SPDXID { get; set; } = "";
-    public string versionInfo { get; set; } = "";
-    public string description { get; set; } = "";
-    public string supplier { get; set; } = "Organization: Google LLC";
-    public string originator { get; set; } = "Organization: Google LLC";
-    public string downloadLocation { get; set; }
-        = "https://github.com/googleapis/google-cloud-dotnet.git";
-    public string licenseConcluded { get; set; } = "Apache-2.0";
-    public string licenseDeclared { get; set; } = "Apache-2.0";
-    public string copyrightText { get; set; } = "NOASSERTION";
-    public List<SpdxChecksum> checksums { get; set; }
-        = new List<SpdxChecksum>();
-    public List<SpdxPackageExternalRef> externalRefs { get; set; }
-        = new List<SpdxPackageExternalRef>();
-}
-
-internal class SpdxPackageExternalRef
-{
-    public string referenceType { get; set; } = "purl";
-    public string referenceCategory { get; set; } = "PACKAGE-MANAGER";
-    public string referenceLocator { get; set; } = "";
-}
-
-internal class SpdxRelationship
-{
-    public string spdxElementId { get; set; } = "SPDXRef-DOCUMENT";
-    public string relatedSpdxElement { get; set; } = "SPDXRef-DOCUMENT";
-    public string relationshipType { get; set; } = "DESCRIBES";
-}
-
-internal class SpdxChecksum
-{
-    public string algorithm { get; set; } = "";
-    public string checksumValue { get; set; } = "";
-}
-
-/// <summary>
-/// Metadata collected from a nupkg's XML nuspec.
-/// </summary>
-internal class NuspecMetadata
-{
-    public string Id { get; set; } = "";
-    public string Version { get; set; } = "";
-    public string Description { get; set; } = "";
-}
-
-public class MissingNuspecError : Exception
-{
-    public MissingNuspecError(string filename)
-        : base($"No .nuspec file found in ${filename}")
-    {
-    }
-}
-
-public class MultipleNuspecError : Exception
-{
-    public MultipleNuspecError(string filename)
-        : base("Found multiple .nuspec files in " + filename
-            + ".  I don't know which one to use.")
-    {
-    }
-}
-
+namespace Google.Cloud.Tools.SbomGenerator;
 
 public class Program
 {
@@ -122,65 +32,31 @@ public class Program
 
     public static void Main(string[] args)
     {
-        if (0 == args.Length)
+        if (args.Length != 1)
         {
-            Console.WriteLine(@"GenerateSBOM
-
-Examines .nupkg files and writes SPDX SBOM json files next to them.
-
-Usage:
-    dotnet run -- <path-to-.nupkg> <dir> ...");
+            Console.WriteLine(@"generate-sbom tool examines a .nupkg file and writes an SPDX SBOM JSON file next to it.");
+            Console.WriteLine("Usage:");
+            Console.WriteLine("dotnet generate-sbom <path-to-.nupkg>");
             return;
         }
-        foreach (var arg in args)
-        {
-            var attrs = File.GetAttributes(arg);
-            if (attrs.HasFlag(FileAttributes.Directory))
-            {
-                Console.WriteLine("Looking for .nupkgs in " + arg);
-                // Recurse into subdirectories looking for .nupkg files.
-                var directories = new Queue<string>();
-                string? dir = arg;
-                while (dir != null)
-                {
-                    foreach (var filePath in Directory
-                        .EnumerateFiles(dir, "*.nupkg"))
-                    {
-                        WriteSpdx(filePath);
-                    }
-                    foreach (var subDir in Directory.EnumerateDirectories(dir))
-                    {
-                        directories.Enqueue(subDir);
-                    }
-                    if (!directories.TryDequeue(out dir))
-                    {
-                        dir = null;
-                    }
-                }
-            }
-            else
-            {
-                WriteSpdx(arg);
-            }
-        }
+        string nupkgPath = args[0];
+        WriteSpdx(nupkgPath);
     }
 
     /// <summary>
     /// Examines a .nupkg file and writes an SPDX SBOM json file next to it.
     /// </summary>
     /// <param name="nupkgPath">Path to .nupkg file.</param>
-    /// <returns>Path to generated SPDX SBOM json file.</returns>
     private static void WriteSpdx(string nupkgPath)
     {
-        Console.WriteLine("Examining " + nupkgPath);
-        var spdx = SpdxFrom(nupkgPath);
-        var sbomPath = nupkgPath + "-sbom.spdx.json";
-        using (var file = File.Open(sbomPath, FileMode.OpenOrCreate,
-            FileAccess.Write))
-        {
-            JsonSerializer.Serialize(file, spdx, s_indented);
-        }
-        Console.WriteLine("Wrote " + sbomPath);
+        Console.WriteLine($"Generating SBOM for {nupkgPath}.");
+
+        var spdx = GenerateSpdx(nupkgPath);
+        var sbomPath = $"{nupkgPath}-sbom.spdx.json";
+
+        File.WriteAllText(sbomPath, JsonSerializer.Serialize(spdx, s_indented));
+        
+        Console.WriteLine($"SBOM written to {sbomPath}.");
     }
 
     /// <summary>
@@ -194,72 +70,43 @@ Usage:
     /// <exception cref="MissingNuspecError">
     ///     When the .nupkg contains no .nuspec files.
     /// </exception>
-    private static Spdx SpdxFrom(string nupkgPath)
+    private static Spdx GenerateSpdx(string nupkgPath)
     {
-        // Compute the SHA-256 hash of the .nupkg file.
-        using var sha256 = SHA256.Create();
-        byte[]? hash = null;
-        using (var file = File.OpenRead(nupkgPath))
-        {
-            hash = sha256.ComputeHash(file);
-        }
+        // Get a hash and a uuid for the Nuget package.
+        var (hash, uuid) = GetSha256AndGuid(nupkgPath);
 
-        // Use the SHA-256 hash to create a deterministic uuid.
-        var uuid = Uuid5FromHash(hash);
+        // Get information from the .nuspec file.
+        var nuspecPackage = GetNuspecMetadata(nupkgPath);
 
-        // Find the .nuspec metadata in the .nupkg and collect the fields we
-        // need.
-        NuspecMetadata? nuspecMetadata = null;
-        using (var zipFile = System.IO.Compression.ZipFile.OpenRead(nupkgPath))
-        {
-            foreach (var entry in zipFile.Entries)
-            {
-                if (Path.GetExtension(entry.Name).ToLower() == ".nuspec")
-                {
-                    if (nuspecMetadata == null)
-                    {
-                        nuspecMetadata = GetMetadata(entry.Open());
-                    }
-                    else
-                    {
-                        throw new MultipleNuspecError(nupkgPath);
-                    }
-                }
-            }
-        }
-        if (nuspecMetadata == null)
-        {
-            throw new MissingNuspecError(nupkgPath);
-        }
+        var nupkgFileName = Path.GetFileName(nupkgPath);
 
         // Assemble a SPDX SBOM.
-        var fileName = Path.GetFileName(nupkgPath);
         var spdx = new Spdx
         {
-            name = nuspecMetadata.Id + "@" + nuspecMetadata.Version,
-            documentNamespace = "https://spdx.google/" + uuid,
-            creators = new List<string> { "Organization: Google LLC" },
-            created = DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ssZ",
-                System.Globalization.CultureInfo.InvariantCulture),
-            packages = new List<SpdxPackage> {
-                new() {
-                    name = nuspecMetadata.Id,
-                    packageFileName = fileName,
-                    SPDXID = "SPDXRef-Package-" + fileName + "-" + uuid,
-                    versionInfo = nuspecMetadata.Version,
-                    description = nuspecMetadata.Description,
-                    checksums = new List<SpdxChecksum> {
-                        new() {
-                            algorithm = "SHA256",
-                            checksumValue = BitConverter.ToString(hash)
-                                .Replace("-","")
+            Name = nuspecPackage.Metadata.NameWithVersion,
+            DocumentNamespace = $"https://spdx.google/{uuid}",
+            Packages = new List<Spdx.SpdxPackage>
+            {
+                new Spdx.SpdxPackage
+                {
+                    Name = nuspecPackage.Metadata.Id,
+                    FileName = nupkgFileName,
+                    SpdxId = $"SPDXRef-Package-{nupkgFileName}-{uuid}",
+                    Version = nuspecPackage.Metadata.Version,
+                    Description = nuspecPackage.Metadata.Description,
+                    Checksums = new List<Spdx.SpdxPackage.SpdxChecksum>
+                    {
+                        new Spdx.SpdxPackage.SpdxChecksum
+                        {
+                            Algorithm = "SHA256",
+                            Value = hash
                         }
                     },
-                    externalRefs = new List<SpdxPackageExternalRef> {
-                        new() {
-                            referenceLocator = "pkg:nuget/"
-                                + nuspecMetadata.Id + "@"
-                                + nuspecMetadata.Version
+                    ExternalReferences = new List<Spdx.SpdxPackage.SpdxPackageExternalReference>
+                    {
+                        new Spdx.SpdxPackage.SpdxPackageExternalReference
+                        {
+                            Locator = $"pkg:nuget/{nuspecPackage.Metadata.NameWithVersion}"
                         }
                     }
                 }
@@ -273,23 +120,26 @@ Usage:
     /// </summary>
     /// <param name="nuspecXmlStream">xml content</param>
     /// <returns>metadata</returns>
-    private static NuspecMetadata GetMetadata(Stream nuspecXmlStream)
+    private static NuspecPackage GetNuspecMetadata(string nupkgPath)
     {
-        var doc = new XmlDocument();
-        var xmlReader = new XmlTextReader(nuspecXmlStream)
-        {
-            Namespaces = false
-        };
-        doc.Load(xmlReader);
-        var metadata = doc.DocumentElement?
-            .SelectSingleNode("/package/metadata");
-        return new NuspecMetadata
-        {
-            Id = metadata?.SelectSingleNode("id")?.InnerText ?? "",
-            Version = metadata?.SelectSingleNode("version")?.InnerText ?? "",
-            Description = metadata?.SelectSingleNode("description")?.InnerText
-                ?? "",
-        };
+        XmlSerializer xmlSerializer = new XmlSerializer(typeof(NuspecPackage));
+        using var zipFile = ZipFile.OpenRead(nupkgPath);
+        using var nuspecStream = zipFile.Entries.Single(entry => Path.GetExtension(entry.Name).ToLower() == ".nuspec").Open();
+        return xmlSerializer.Deserialize(nuspecStream) as NuspecPackage;
+    }
+
+    private static (string hash, string uuid) GetSha256AndGuid(string nupkgPath)
+    {
+        // Compute the SHA-256 hash of the .nupkg file.
+        using var sha256 = SHA256.Create();
+        using var file = File.OpenRead(nupkgPath);
+
+        var hashBytes = sha256.ComputeHash(file);
+
+        // Use the SHA-256 hash to create a deterministic uuid.
+        var uuid = Uuid5FromHash(hashBytes);
+
+        return (BitConverter.ToString(hashBytes).Replace("-", ""), uuid.ToString());
     }
 
     /// <summary>
