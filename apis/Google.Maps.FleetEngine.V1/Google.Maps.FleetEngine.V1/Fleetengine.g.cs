@@ -2411,7 +2411,7 @@ namespace Google.Maps.FleetEngine.V1 {
     public const int RawLocationSensorFieldNumber = 28;
     private global::Google.Maps.FleetEngine.V1.LocationSensor rawLocationSensor_ = global::Google.Maps.FleetEngine.V1.LocationSensor.UnknownSensor;
     /// <summary>
-    /// Source of the raw location.
+    /// Source of the raw location. Defaults to `GPS`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2473,7 +2473,8 @@ namespace Google.Maps.FleetEngine.V1 {
     public const int SupplementalLocationSensorFieldNumber = 20;
     private global::Google.Maps.FleetEngine.V1.LocationSensor supplementalLocationSensor_ = global::Google.Maps.FleetEngine.V1.LocationSensor.UnknownSensor;
     /// <summary>
-    /// Source of the supplemental location.
+    /// Source of the supplemental location. Defaults to
+    /// `CUSTOMER_SUPPLIED_LOCATION`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
