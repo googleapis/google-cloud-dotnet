@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.8.0, released 2023-10-30
+
+### New features
+
+- DataQualityDimension is now part of the DataQualityDimensionResult message ([commit 67025d5](https://github.com/googleapis/google-cloud-dotnet/commit/67025d5655432b841e329fcae10f15a2afebeba1))
+
 ## Version 2.7.0, released 2023-09-25
 
 ### New features
