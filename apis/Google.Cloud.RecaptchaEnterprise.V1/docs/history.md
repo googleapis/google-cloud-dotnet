@@ -1,5 +1,19 @@
 # Version history
 
+## Version 2.5.0, released 2023-10-30
+
+### New features
+
+- FirewallPolicy CRUD API ([commit 0eea6bd](https://github.com/googleapis/google-cloud-dotnet/commit/0eea6bd16c906a211c836ec4b7b62e1a3a215d2b))
+- Added Assessment.firewall_policy_assessment, fraud_signals ([commit 0eea6bd](https://github.com/googleapis/google-cloud-dotnet/commit/0eea6bd16c906a211c836ec4b7b62e1a3a215d2b))
+- Added new fields to Event message ([commit 0eea6bd](https://github.com/googleapis/google-cloud-dotnet/commit/0eea6bd16c906a211c836ec4b7b62e1a3a215d2b))
+- Added RiskAnalysis.extended_verdict_reasons ([commit 0eea6bd](https://github.com/googleapis/google-cloud-dotnet/commit/0eea6bd16c906a211c836ec4b7b62e1a3a215d2b))
+- Added FraudPreventionAssessment.behavioral_trust_verdict ([commit 0eea6bd](https://github.com/googleapis/google-cloud-dotnet/commit/0eea6bd16c906a211c836ec4b7b62e1a3a215d2b))
+- Added AndroidKeySettings.support_non_google_app_store_distribution ([commit 0eea6bd](https://github.com/googleapis/google-cloud-dotnet/commit/0eea6bd16c906a211c836ec4b7b62e1a3a215d2b))
+- Added IOSKeySettings.apple_developer_id ([commit 0eea6bd](https://github.com/googleapis/google-cloud-dotnet/commit/0eea6bd16c906a211c836ec4b7b62e1a3a215d2b))
+- Added WafFeature.EXPRESS enum value ([commit 0eea6bd](https://github.com/googleapis/google-cloud-dotnet/commit/0eea6bd16c906a211c836ec4b7b62e1a3a215d2b))
+- Added WafService.FASTLY enum value ([commit 0eea6bd](https://github.com/googleapis/google-cloud-dotnet/commit/0eea6bd16c906a211c836ec4b7b62e1a3a215d2b))
+
 ## Version 2.4.0, released 2023-03-20
 
 ### New features
