@@ -60,6 +60,7 @@ namespace GoogleCSharpSnippets
                 MachineType = "",
                 DiskType = "",
                 DiskSizeGb = 0L,
+                ResourceManagerTags = new ResourceManagerTags(),
             };
             // Make the request
             Operation response = await clusterManagerClient.UpdateNodePoolAsync(request);
