@@ -1,0 +1,46 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-Document",
+  "name": "Google.Cloud.OsLogin.V1Beta@3.0.0-beta05",
+  "documentNamespace": "https://spdx.google/82fc0700-3f13-5248-bdbd-cb101fd9dd52",
+  "creators": [
+    "Organization: Google LLC"
+  ],
+  "created": "2023-10-30T17:03:33Z",
+  "packages": [
+    {
+      "name": "Google.Cloud.OsLogin.V1Beta",
+      "packageFileName": "Google.Cloud.OsLogin.V1Beta.3.0.0-beta05.nupkg",
+      "SPDXID": "SPDXRef-Package-Google.Cloud.OsLogin.V1Beta.3.0.0-beta05.nupkg-82fc0700-3f13-5248-bdbd-cb101fd9dd52",
+      "versionInfo": "3.0.0-beta05",
+      "description": "Recommended Google client library to manages OS login configuration for Google account users.",
+      "supplier": "Organization: Google LLC",
+      "originator": "Organization: Google LLC",
+      "downloadLocation": "https://github.com/googleapis/google-cloud-dotnet.git",
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "Apache-2.0",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "82FC07003F133248BDBDCB101FD9DD52F9029AE5095A51232BE05611F245D94A"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceType": "purl",
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:nuget/Google.Cloud.OsLogin.V1Beta@3.0.0-beta05"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

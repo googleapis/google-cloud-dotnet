@@ -27,7 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.ReleaseP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.DocUploader", "Google.Cloud.Tools.DocUploader\Google.Cloud.Tools.DocUploader.csproj", "{B030F102-7CC2-49DF-9F56-42AE9F88F2E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Tools.SbomGenerator", "Google.Cloud.Tools.SbomGenerator\Google.Cloud.Tools.SbomGenerator.csproj", "{43524700-D0D9-4F3E-BF6D-B36513F15D7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.SbomGenerator", "Google.Cloud.Tools.SbomGenerator\Google.Cloud.Tools.SbomGenerator.csproj", "{43524700-D0D9-4F3E-BF6D-B36513F15D7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Tools.SbomGenerator.Tests", "Google.Cloud.Tools.SbomGenerator.Tests\Google.Cloud.Tools.SbomGenerator.Tests.csproj", "{AFAB7D20-EDBD-460B-A209-BB5C797AD8E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -195,6 +197,18 @@ Global
 		{43524700-D0D9-4F3E-BF6D-B36513F15D7E}.Release|x64.Build.0 = Release|Any CPU
 		{43524700-D0D9-4F3E-BF6D-B36513F15D7E}.Release|x86.ActiveCfg = Release|Any CPU
 		{43524700-D0D9-4F3E-BF6D-B36513F15D7E}.Release|x86.Build.0 = Release|Any CPU
+		{AFAB7D20-EDBD-460B-A209-BB5C797AD8E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFAB7D20-EDBD-460B-A209-BB5C797AD8E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFAB7D20-EDBD-460B-A209-BB5C797AD8E1}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{AFAB7D20-EDBD-460B-A209-BB5C797AD8E1}.Debug|x64.Build.0 = Debug|Any CPU
+		{AFAB7D20-EDBD-460B-A209-BB5C797AD8E1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AFAB7D20-EDBD-460B-A209-BB5C797AD8E1}.Debug|x86.Build.0 = Debug|Any CPU
+		{AFAB7D20-EDBD-460B-A209-BB5C797AD8E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFAB7D20-EDBD-460B-A209-BB5C797AD8E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFAB7D20-EDBD-460B-A209-BB5C797AD8E1}.Release|x64.ActiveCfg = Release|Any CPU
+		{AFAB7D20-EDBD-460B-A209-BB5C797AD8E1}.Release|x64.Build.0 = Release|Any CPU
+		{AFAB7D20-EDBD-460B-A209-BB5C797AD8E1}.Release|x86.ActiveCfg = Release|Any CPU
+		{AFAB7D20-EDBD-460B-A209-BB5C797AD8E1}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
