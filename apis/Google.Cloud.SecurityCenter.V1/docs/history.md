@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.13.0, released 2023-10-30
+
+### New features
+
+- Add SimulateSecurityHealthAnalyticsCustomModule API for testing SHA custom module ([commit bdb2a81](https://github.com/googleapis/google-cloud-dotnet/commit/bdb2a813c2b0d35f40beeabfd5524ac52d536e01))
+
 ## Version 3.12.0, released 2023-06-27
 
 ### New features
