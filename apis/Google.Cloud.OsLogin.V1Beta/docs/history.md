@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.0.0-beta05, released 2023-10-30
+
+### New features
+
+- Location-based HTTP binding for SignSshPublicKey ([commit ff031f2](https://github.com/googleapis/google-cloud-dotnet/commit/ff031f2f1d40c147ad8c078f09b3fe09c7a23615))
+
 ## Version 3.0.0-beta04, released 2023-10-02
 
 ### New features
