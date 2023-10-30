@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.9.0, released 2023-10-30
+
+### New features
+
+- Added platform log RolloutUpdateEvent ([commit 13c15ec](https://github.com/googleapis/google-cloud-dotnet/commit/13c15ec88b53fa95cc4cb4732d21f5b9be443ba9))
+
 ## Version 2.8.0, released 2023-08-04
 
 ### New features
