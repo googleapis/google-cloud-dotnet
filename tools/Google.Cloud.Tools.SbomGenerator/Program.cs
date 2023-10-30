@@ -94,6 +94,9 @@ public class Program
                     SpdxId = $"SPDXRef-Package-{nupkgFileName}-{uuid}",
                     Version = nuspecPackage.Metadata.Version,
                     Description = nuspecPackage.Metadata.Description,
+                    DownloadLocation = $"{nuspecPackage.Metadata.ProjectUrl}.git",
+                    LicenseDeclared = nuspecPackage.Metadata.License,
+                    LicenseConcluded = nuspecPackage.Metadata.License,
                     Checksums = new List<Spdx.SpdxPackage.SpdxChecksum>
                     {
                         new Spdx.SpdxPackage.SpdxChecksum
