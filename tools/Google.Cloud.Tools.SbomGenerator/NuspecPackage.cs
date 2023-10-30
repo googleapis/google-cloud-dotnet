@@ -38,5 +38,11 @@ public class NuspecPackage
 
         [XmlElement("description")]
         public string Description { get; set; }
+
+        [XmlElement("projectUrl")]
+        public string ProjectUrl { get; set; }
+
+        [XmlElement("license")]
+        public string License { get; set; }
     }
 }

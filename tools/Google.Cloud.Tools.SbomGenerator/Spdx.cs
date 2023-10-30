@@ -74,13 +74,13 @@ internal class Spdx
         public string Originator => "Organization: Google LLC";
 
         [JsonPropertyName("downloadLocation")]
-        public string DownloadLocation => "https://github.com/googleapis/google-cloud-dotnet.git";
+        public string DownloadLocation { get; set; }
 
         [JsonPropertyName("licenseConcluded")]
-        public string LicenseConcluded => "Apache-2.0";
+        public string LicenseConcluded { get; set; }
 
         [JsonPropertyName("licenseDeclared")]
-        public string LicenseDeclared => "Apache-2.0";
+        public string LicenseDeclared { get; set; }
 
         [JsonPropertyName("copyrightText")]
         public string CopyrightText => "NOASSERTION";
