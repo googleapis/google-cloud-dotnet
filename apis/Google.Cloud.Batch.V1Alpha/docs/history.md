@@ -1,5 +1,18 @@
 # Version history
 
+## Version 1.0.0-alpha18, released 2023-10-30
+
+### New features
+
+- Add the support for the batch hpc rocky linux image ([commit 2821fdb](https://github.com/googleapis/google-cloud-dotnet/commit/2821fdbe30d5f5030011276ea83f76001e10d59d))
+- Add InstancePolicy.reservation field for restricting jobs to a specific reservation ([commit 2821fdb](https://github.com/googleapis/google-cloud-dotnet/commit/2821fdbe30d5f5030011276ea83f76001e10d59d))
+
+### Documentation improvements
+
+- Elaborate the usage of Container.volumes proto field ([commit 2821fdb](https://github.com/googleapis/google-cloud-dotnet/commit/2821fdbe30d5f5030011276ea83f76001e10d59d))
+- Update batch PD interface support ([commit cf83a21](https://github.com/googleapis/google-cloud-dotnet/commit/cf83a21bdfaf242ee61fb316e7bc2c02e7418586))
+- Update description on size_gb in disk field ([commit 1e2a648](https://github.com/googleapis/google-cloud-dotnet/commit/1e2a648469ff791f36da3e9018fcecab529c177c))
+
 ## Version 1.0.0-alpha17, released 2023-08-23
 
 ### New features
