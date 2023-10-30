@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.0.0-beta04, released 2023-10-30
+
+### New features
+
+- Added FraudPreventionAssessment.behavioral_trust_verdict ([commit 3173b55](https://github.com/googleapis/google-cloud-dotnet/commit/3173b555a518bf91958a460ad0f5577fe7488595))
+
+### Documentation improvements
+
+- Formatting of resource names ([commit 3173b55](https://github.com/googleapis/google-cloud-dotnet/commit/3173b555a518bf91958a460ad0f5577fe7488595))
+
 ## Version 2.0.0-beta03, released 2023-03-20
 
 ### New features
