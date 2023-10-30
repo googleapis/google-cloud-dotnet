@@ -1,5 +1,21 @@
 # Version history
 
+## Version 2.5.0, released 2023-10-30
+
+### New features
+
+- Expose display_name to batch v1 API ([commit 86e0579](https://github.com/googleapis/google-cloud-dotnet/commit/86e05791a54db2eb17b2ffc3df5b6798dad19346))
+- Add InstancePolicy.reservation field for restricting jobs to a specific reservation ([commit 10652c4](https://github.com/googleapis/google-cloud-dotnet/commit/10652c4c689519e9441ea1afce46fbd07c81c456))
+
+### Documentation improvements
+
+- Elaborate the usage of Container.volumes proto field ([commit 10652c4](https://github.com/googleapis/google-cloud-dotnet/commit/10652c4c689519e9441ea1afce46fbd07c81c456))
+- Update batch PD interface support ([commit 0ab1964](https://github.com/googleapis/google-cloud-dotnet/commit/0ab196479719787fdec7819d6e621171bb108027))
+- Update description on size_gb in disk field ([commit d78ee5c](https://github.com/googleapis/google-cloud-dotnet/commit/d78ee5ccdfa976242867f5c6d48d47119a648f46))
+- Revert HTML formats in comments ([commit 0700ba4](https://github.com/googleapis/google-cloud-dotnet/commit/0700ba4b0f246ae6622cf8249eecbbc3ecf13495))
+- Expand compute resource API docs to match with VM's machine type field ([commit 0700ba4](https://github.com/googleapis/google-cloud-dotnet/commit/0700ba4b0f246ae6622cf8249eecbbc3ecf13495))
+- Clarify Batch API proto doc about pubsub notifications ([commit 0700ba4](https://github.com/googleapis/google-cloud-dotnet/commit/0700ba4b0f246ae6622cf8249eecbbc3ecf13495))
+
 ## Version 2.4.0, released 2023-08-16
 
 ### New features
