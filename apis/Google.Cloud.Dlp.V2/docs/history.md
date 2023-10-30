@@ -1,5 +1,15 @@
 # Version history
 
+## Version 4.6.0, released 2023-10-30
+
+### New features
+
+- Introduce Discovery API protos and methods ([commit 89da231](https://github.com/googleapis/google-cloud-dotnet/commit/89da231f9973f8f481d10251f598e44b8c9e50cf))
+
+### Documentation improvements
+
+- Update comments for many messages. ([commit 89da231](https://github.com/googleapis/google-cloud-dotnet/commit/89da231f9973f8f481d10251f598e44b8c9e50cf))
+
 ## Version 4.5.0, released 2023-01-17
 
 ### New features
