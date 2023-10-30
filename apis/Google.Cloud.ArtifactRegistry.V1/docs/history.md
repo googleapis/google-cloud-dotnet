@@ -1,5 +1,22 @@
 # Version history
 
+## Version 2.4.0, released 2023-10-30
+
+### New features
+
+- Add support for virtual and remote repositories ([commit 766f731](https://github.com/googleapis/google-cloud-dotnet/commit/766f731eafdcded59f327e962976d35f5cb1d791))
+- Add support for cleanup policies ([commit 766f731](https://github.com/googleapis/google-cloud-dotnet/commit/766f731eafdcded59f327e962976d35f5cb1d791))
+- Add support for Docker immutable tags ([commit 766f731](https://github.com/googleapis/google-cloud-dotnet/commit/766f731eafdcded59f327e962976d35f5cb1d791))
+- Add support for Go and KFP repositories ([commit 766f731](https://github.com/googleapis/google-cloud-dotnet/commit/766f731eafdcded59f327e962976d35f5cb1d791))
+- Add support for Physical Zone Separation ([commit 766f731](https://github.com/googleapis/google-cloud-dotnet/commit/766f731eafdcded59f327e962976d35f5cb1d791))
+- Expose the size of the Repository resource ([commit 766f731](https://github.com/googleapis/google-cloud-dotnet/commit/766f731eafdcded59f327e962976d35f5cb1d791))
+
+### Documentation improvements
+
+- Use code font for resource name references ([commit 766f731](https://github.com/googleapis/google-cloud-dotnet/commit/766f731eafdcded59f327e962976d35f5cb1d791))
+- Mark the create_time and update_time in the Repository resource as output only fields ([commit 766f731](https://github.com/googleapis/google-cloud-dotnet/commit/766f731eafdcded59f327e962976d35f5cb1d791))
+- Mark the repository_id and repository fields in the CreateRepository request as required fields ([commit 766f731](https://github.com/googleapis/google-cloud-dotnet/commit/766f731eafdcded59f327e962976d35f5cb1d791))
+
 ## Version 2.3.0, released 2023-09-26
 
 ### Bug fixes
