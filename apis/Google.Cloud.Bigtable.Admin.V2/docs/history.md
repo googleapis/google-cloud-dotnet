@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.7.0, released 2023-10-30
+
+### New features
+
+- Add support for Cloud Bigtable Request Priorities in App Profiles ([commit d59310f](https://github.com/googleapis/google-cloud-dotnet/commit/d59310fbcc59fbb633048d6188841e43dd59a946))
+
 ## Version 3.6.0, released 2023-08-16
 
 ### New features
