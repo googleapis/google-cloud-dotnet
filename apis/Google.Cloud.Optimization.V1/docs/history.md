@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.3.0, released 2023-10-30
+
+### New features
+
+- Added the route modifiers ([commit a7431da](https://github.com/googleapis/google-cloud-dotnet/commit/a7431dad485ead7d2e60dbcd4cff258d0898611f))
+
 ## Version 2.2.0, released 2023-09-11
 
 ### New features
