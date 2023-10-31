@@ -2212,7 +2212,7 @@ namespace Google.Cloud.DocumentAI.V1 {
     private bool disableCharacterBoxesDetection_;
     /// <summary>
     /// Turn off character box detector in OCR engine. Character box detection is
-    /// enabled by default in OCR 2.0+ processors.
+    /// enabled by default in OCR 2.0 (and later) processors.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2792,8 +2792,8 @@ namespace Google.Cloud.DocumentAI.V1 {
         public const int EnableSelectionMarkDetectionFieldNumber = 3;
         private bool enableSelectionMarkDetection_;
         /// <summary>
-        /// Turn on selection mark detector in OCR engine. Only available in OCR 2.0+
-        /// processors.
+        /// Turn on selection mark detector in OCR engine. Only available in OCR 2.0
+        /// (and later) processors.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
