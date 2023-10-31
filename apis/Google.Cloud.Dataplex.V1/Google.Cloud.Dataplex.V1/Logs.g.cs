@@ -85,75 +85,93 @@ namespace Google.Cloud.Dataplex.V1 {
             "EhYKEkVOR0lORV9VTlNQRUNJRklFRBAAEg0KCVNQQVJLX1NRTBABEgwKCEJJ",
             "R1FVRVJZEAIiUwoJRXZlbnRUeXBlEhoKFkVWRU5UX1RZUEVfVU5TUEVDSUZJ",
             "RUQQABIJCgVTVEFSVBABEggKBFNUT1AQAhIJCgVRVUVSWRADEgoKBkNSRUFU",
-            "RRAEQggKBmRldGFpbCKvEAoNRGF0YVNjYW5FdmVudBITCgtkYXRhX3NvdXJj",
-            "ZRgBIAEoCRIOCgZqb2JfaWQYAiABKAkSLwoLY3JlYXRlX3RpbWUYDCABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi4KCnN0YXJ0X3RpbWUYAyAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVuZF90aW1lGAQg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI+CgR0eXBlGAUgASgO",
-            "MjAuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFTY2FuRXZlbnQuU2Nh",
-            "blR5cGUSPAoFc3RhdGUYBiABKA4yLS5nb29nbGUuY2xvdWQuZGF0YXBsZXgu",
-            "djEuRGF0YVNjYW5FdmVudC5TdGF0ZRIPCgdtZXNzYWdlGAcgASgJEhQKDHNw",
-            "ZWNfdmVyc2lvbhgIIAEoCRJACgd0cmlnZ2VyGAkgASgOMi8uZ29vZ2xlLmNs",
-            "b3VkLmRhdGFwbGV4LnYxLkRhdGFTY2FuRXZlbnQuVHJpZ2dlchI8CgVzY29w",
-            "ZRgKIAEoDjItLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhU2NhbkV2",
-            "ZW50LlNjb3BlElEKDGRhdGFfcHJvZmlsZRhlIAEoCzI5Lmdvb2dsZS5jbG91",
-            "ZC5kYXRhcGxleC52MS5EYXRhU2NhbkV2ZW50LkRhdGFQcm9maWxlUmVzdWx0",
-            "SAASUQoMZGF0YV9xdWFsaXR5GGYgASgLMjkuZ29vZ2xlLmNsb3VkLmRhdGFw",
-            "bGV4LnYxLkRhdGFTY2FuRXZlbnQuRGF0YVF1YWxpdHlSZXN1bHRIABJiChRk",
-            "YXRhX3Byb2ZpbGVfY29uZmlncxjJASABKAsyQS5nb29nbGUuY2xvdWQuZGF0",
-            "YXBsZXgudjEuRGF0YVNjYW5FdmVudC5EYXRhUHJvZmlsZUFwcGxpZWRDb25m",
-            "aWdzSAESYgoUZGF0YV9xdWFsaXR5X2NvbmZpZ3MYygEgASgLMkEuZ29vZ2xl",
-            "LmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFTY2FuRXZlbnQuRGF0YVF1YWxpdHlB",
-            "cHBsaWVkQ29uZmlnc0gBEl8KGHBvc3Rfc2Nhbl9hY3Rpb25zX3Jlc3VsdBgL",
-            "IAEoCzI9Lmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhU2NhbkV2ZW50",
-            "LlBvc3RTY2FuQWN0aW9uc1Jlc3VsdBomChFEYXRhUHJvZmlsZVJlc3VsdBIR",
-            "Cglyb3dfY291bnQYASABKAMa2AEKEURhdGFRdWFsaXR5UmVzdWx0EhEKCXJv",
-            "d19jb3VudBgBIAEoAxIOCgZwYXNzZWQYAiABKAgSaAoQZGltZW5zaW9uX3Bh",
-            "c3NlZBgDIAMoCzJOLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhU2Nh",
-            "bkV2ZW50LkRhdGFRdWFsaXR5UmVzdWx0LkRpbWVuc2lvblBhc3NlZEVudHJ5",
-            "GjYKFERpbWVuc2lvblBhc3NlZEVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
-            "ZRgCIAEoCDoCOAEacAoZRGF0YVByb2ZpbGVBcHBsaWVkQ29uZmlncxIYChBz",
-            "YW1wbGluZ19wZXJjZW50GAEgASgCEhoKEnJvd19maWx0ZXJfYXBwbGllZBgC",
-            "IAEoCBIdChVjb2x1bW5fZmlsdGVyX2FwcGxpZWQYAyABKAgaUQoZRGF0YVF1",
-            "YWxpdHlBcHBsaWVkQ29uZmlncxIYChBzYW1wbGluZ19wZXJjZW50GAEgASgC",
-            "EhoKEnJvd19maWx0ZXJfYXBwbGllZBgCIAEoCBrmAgoVUG9zdFNjYW5BY3Rp",
-            "b25zUmVzdWx0EnIKFmJpZ3F1ZXJ5X2V4cG9ydF9yZXN1bHQYASABKAsyUi5n",
-            "b29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVNjYW5FdmVudC5Qb3N0U2Nh",
-            "bkFjdGlvbnNSZXN1bHQuQmlnUXVlcnlFeHBvcnRSZXN1bHQa2AEKFEJpZ1F1",
-            "ZXJ5RXhwb3J0UmVzdWx0EmcKBXN0YXRlGAEgASgOMlguZ29vZ2xlLmNsb3Vk",
-            "LmRhdGFwbGV4LnYxLkRhdGFTY2FuRXZlbnQuUG9zdFNjYW5BY3Rpb25zUmVz",
-            "dWx0LkJpZ1F1ZXJ5RXhwb3J0UmVzdWx0LlN0YXRlEg8KB21lc3NhZ2UYAiAB",
-            "KAkiRgoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABINCglTVUNDRUVE",
-            "RUQQARIKCgZGQUlMRUQQAhILCgdTS0lQUEVEEAMiSQoIU2NhblR5cGUSGQoV",
-            "U0NBTl9UWVBFX1VOU1BFQ0lGSUVEEAASEAoMREFUQV9QUk9GSUxFEAESEAoM",
-            "REFUQV9RVUFMSVRZEAIiYgoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQ",
-            "ABILCgdTVEFSVEVEEAESDQoJU1VDQ0VFREVEEAISCgoGRkFJTEVEEAMSDQoJ",
-            "Q0FOQ0VMTEVEEAQSCwoHQ1JFQVRFRBAFIj8KB1RyaWdnZXISFwoTVFJJR0dF",
-            "Ul9VTlNQRUNJRklFRBAAEg0KCU9OX0RFTUFORBABEgwKCFNDSEVEVUxFEAIi",
-            "OQoFU2NvcGUSFQoRU0NPUEVfVU5TUEVDSUZJRUQQABIICgRGVUxMEAESDwoL",
-            "SU5DUkVNRU5UQUwQAkIICgZyZXN1bHRCEAoOYXBwbGllZENvbmZpZ3Mi6QYK",
-            "GURhdGFRdWFsaXR5U2NhblJ1bGVSZXN1bHQSDgoGam9iX2lkGAEgASgJEhMK",
-            "C2RhdGFfc291cmNlGAIgASgJEg4KBmNvbHVtbhgDIAEoCRIRCglydWxlX25h",
-            "bWUYBCABKAkSTwoJcnVsZV90eXBlGAUgASgOMjwuZ29vZ2xlLmNsb3VkLmRh",
-            "dGFwbGV4LnYxLkRhdGFRdWFsaXR5U2NhblJ1bGVSZXN1bHQuUnVsZVR5cGUS",
-            "WgoOZXZhbHV0aW9uX3R5cGUYBiABKA4yQi5nb29nbGUuY2xvdWQuZGF0YXBs",
-            "ZXgudjEuRGF0YVF1YWxpdHlTY2FuUnVsZVJlc3VsdC5FdmFsdWF0aW9uVHlw",
-            "ZRIWCg5ydWxlX2RpbWVuc2lvbhgHIAEoCRIZChF0aHJlc2hvbGRfcGVyY2Vu",
-            "dBgIIAEoARJKCgZyZXN1bHQYCSABKA4yOi5nb29nbGUuY2xvdWQuZGF0YXBs",
-            "ZXgudjEuRGF0YVF1YWxpdHlTY2FuUnVsZVJlc3VsdC5SZXN1bHQSGwoTZXZh",
-            "bHVhdGVkX3Jvd19jb3VudBgKIAEoAxIYChBwYXNzZWRfcm93X2NvdW50GAsg",
-            "ASgDEhYKDm51bGxfcm93X2NvdW50GAwgASgDIv8BCghSdWxlVHlwZRIZChVS",
-            "VUxFX1RZUEVfVU5TUEVDSUZJRUQQABIYChROT05fTlVMTF9FWFBFQ1RBVElP",
-            "ThABEhUKEVJBTkdFX0VYUEVDVEFUSU9OEAISFQoRUkVHRVhfRVhQRUNUQVRJ",
-            "T04QAxIdChlST1dfQ09ORElUSU9OX0VYUEVDVEFUSU9OEAQSEwoPU0VUX0VY",
-            "UEVDVEFUSU9OEAUSHwobU1RBVElTVElDX1JBTkdFX0VYUEVDVEFUSU9OEAYS",
-            "HwobVEFCTEVfQ09ORElUSU9OX0VYUEVDVEFUSU9OEAcSGgoWVU5JUVVFTkVT",
-            "U19FWFBFQ1RBVElPThAIIk0KDkV2YWx1YXRpb25UeXBlEh8KG0VWQUxVQVRJ",
-            "T05fVFlQRV9VTlNQRUNJRklFRBAAEgsKB1BFUl9ST1cQARINCglBR0dSRUdB",
-            "VEUQAiI4CgZSZXN1bHQSFgoSUkVTVUxUX1VOU1BFQ0lGSUVEEAASCgoGUEFT",
-            "U0VEEAESCgoGRkFJTEVEEAJCZQocY29tLmdvb2dsZS5jbG91ZC5kYXRhcGxl",
-            "eC52MUIJTG9nc1Byb3RvUAFaOGNsb3VkLmdvb2dsZS5jb20vZ28vZGF0YXBs",
-            "ZXgvYXBpdjEvZGF0YXBsZXhwYjtkYXRhcGxleHBiYgZwcm90bzM="));
+            "RRAEQggKBmRldGFpbCKtBgoPR292ZXJuYW5jZUV2ZW50Eg8KB21lc3NhZ2UY",
+            "ASABKAkSRwoKZXZlbnRfdHlwZRgCIAEoDjIzLmdvb2dsZS5jbG91ZC5kYXRh",
+            "cGxleC52MS5Hb3Zlcm5hbmNlRXZlbnQuRXZlbnRUeXBlEkUKBmVudGl0eRgD",
+            "IAEoCzIwLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5Hb3Zlcm5hbmNlRXZl",
+            "bnQuRW50aXR5SACIAQEa0gEKBkVudGl0eRIzCgZlbnRpdHkYASABKAlCI/pB",
+            "IAoeZGF0YXBsZXguZ29vZ2xlYXBpcy5jb20vRW50aXR5ElAKC2VudGl0eV90",
+            "eXBlGAIgASgOMjsuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkdvdmVybmFu",
+            "Y2VFdmVudC5FbnRpdHkuRW50aXR5VHlwZSJBCgpFbnRpdHlUeXBlEhsKF0VO",
+            "VElUWV9UWVBFX1VOU1BFQ0lGSUVEEAASCQoFVEFCTEUQARILCgdGSUxFU0VU",
+            "EAIimAMKCUV2ZW50VHlwZRIaChZFVkVOVF9UWVBFX1VOU1BFQ0lGSUVEEAAS",
+            "HgoaUkVTT1VSQ0VfSUFNX1BPTElDWV9VUERBVEUQARIZChVCSUdRVUVSWV9U",
+            "QUJMRV9DUkVBVEUQAhIZChVCSUdRVUVSWV9UQUJMRV9VUERBVEUQAxIZChVC",
+            "SUdRVUVSWV9UQUJMRV9ERUxFVEUQBBIeChpCSUdRVUVSWV9DT05ORUNUSU9O",
+            "X0NSRUFURRAFEh4KGkJJR1FVRVJZX0NPTk5FQ1RJT05fVVBEQVRFEAYSHgoa",
+            "QklHUVVFUllfQ09OTkVDVElPTl9ERUxFVEUQBxIcChhCSUdRVUVSWV9UQVhP",
+            "Tk9NWV9DUkVBVEUQChIeChpCSUdRVUVSWV9QT0xJQ1lfVEFHX0NSRUFURRAL",
+            "Eh4KGkJJR1FVRVJZX1BPTElDWV9UQUdfREVMRVRFEAwSJgoiQklHUVVFUllf",
+            "UE9MSUNZX1RBR19TRVRfSUFNX1BPTElDWRANEhgKFEFDQ0VTU19QT0xJQ1lf",
+            "VVBEQVRFEA5CCQoHX2VudGl0eSKvEAoNRGF0YVNjYW5FdmVudBITCgtkYXRh",
+            "X3NvdXJjZRgBIAEoCRIOCgZqb2JfaWQYAiABKAkSLwoLY3JlYXRlX3RpbWUY",
+            "DCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi4KCnN0YXJ0X3Rp",
+            "bWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVuZF90",
+            "aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI+CgR0eXBl",
+            "GAUgASgOMjAuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFTY2FuRXZl",
+            "bnQuU2NhblR5cGUSPAoFc3RhdGUYBiABKA4yLS5nb29nbGUuY2xvdWQuZGF0",
+            "YXBsZXgudjEuRGF0YVNjYW5FdmVudC5TdGF0ZRIPCgdtZXNzYWdlGAcgASgJ",
+            "EhQKDHNwZWNfdmVyc2lvbhgIIAEoCRJACgd0cmlnZ2VyGAkgASgOMi8uZ29v",
+            "Z2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFTY2FuRXZlbnQuVHJpZ2dlchI8",
+            "CgVzY29wZRgKIAEoDjItLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRh",
+            "U2NhbkV2ZW50LlNjb3BlElEKDGRhdGFfcHJvZmlsZRhlIAEoCzI5Lmdvb2ds",
+            "ZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhU2NhbkV2ZW50LkRhdGFQcm9maWxl",
+            "UmVzdWx0SAASUQoMZGF0YV9xdWFsaXR5GGYgASgLMjkuZ29vZ2xlLmNsb3Vk",
+            "LmRhdGFwbGV4LnYxLkRhdGFTY2FuRXZlbnQuRGF0YVF1YWxpdHlSZXN1bHRI",
+            "ABJiChRkYXRhX3Byb2ZpbGVfY29uZmlncxjJASABKAsyQS5nb29nbGUuY2xv",
+            "dWQuZGF0YXBsZXgudjEuRGF0YVNjYW5FdmVudC5EYXRhUHJvZmlsZUFwcGxp",
+            "ZWRDb25maWdzSAESYgoUZGF0YV9xdWFsaXR5X2NvbmZpZ3MYygEgASgLMkEu",
+            "Z29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFTY2FuRXZlbnQuRGF0YVF1",
+            "YWxpdHlBcHBsaWVkQ29uZmlnc0gBEl8KGHBvc3Rfc2Nhbl9hY3Rpb25zX3Jl",
+            "c3VsdBgLIAEoCzI9Lmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhU2Nh",
+            "bkV2ZW50LlBvc3RTY2FuQWN0aW9uc1Jlc3VsdBomChFEYXRhUHJvZmlsZVJl",
+            "c3VsdBIRCglyb3dfY291bnQYASABKAMa2AEKEURhdGFRdWFsaXR5UmVzdWx0",
+            "EhEKCXJvd19jb3VudBgBIAEoAxIOCgZwYXNzZWQYAiABKAgSaAoQZGltZW5z",
+            "aW9uX3Bhc3NlZBgDIAMoCzJOLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5E",
+            "YXRhU2NhbkV2ZW50LkRhdGFRdWFsaXR5UmVzdWx0LkRpbWVuc2lvblBhc3Nl",
+            "ZEVudHJ5GjYKFERpbWVuc2lvblBhc3NlZEVudHJ5EgsKA2tleRgBIAEoCRIN",
+            "CgV2YWx1ZRgCIAEoCDoCOAEacAoZRGF0YVByb2ZpbGVBcHBsaWVkQ29uZmln",
+            "cxIYChBzYW1wbGluZ19wZXJjZW50GAEgASgCEhoKEnJvd19maWx0ZXJfYXBw",
+            "bGllZBgCIAEoCBIdChVjb2x1bW5fZmlsdGVyX2FwcGxpZWQYAyABKAgaUQoZ",
+            "RGF0YVF1YWxpdHlBcHBsaWVkQ29uZmlncxIYChBzYW1wbGluZ19wZXJjZW50",
+            "GAEgASgCEhoKEnJvd19maWx0ZXJfYXBwbGllZBgCIAEoCBrmAgoVUG9zdFNj",
+            "YW5BY3Rpb25zUmVzdWx0EnIKFmJpZ3F1ZXJ5X2V4cG9ydF9yZXN1bHQYASAB",
+            "KAsyUi5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVNjYW5FdmVudC5Q",
+            "b3N0U2NhbkFjdGlvbnNSZXN1bHQuQmlnUXVlcnlFeHBvcnRSZXN1bHQa2AEK",
+            "FEJpZ1F1ZXJ5RXhwb3J0UmVzdWx0EmcKBXN0YXRlGAEgASgOMlguZ29vZ2xl",
+            "LmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFTY2FuRXZlbnQuUG9zdFNjYW5BY3Rp",
+            "b25zUmVzdWx0LkJpZ1F1ZXJ5RXhwb3J0UmVzdWx0LlN0YXRlEg8KB21lc3Nh",
+            "Z2UYAiABKAkiRgoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABINCglT",
+            "VUNDRUVERUQQARIKCgZGQUlMRUQQAhILCgdTS0lQUEVEEAMiSQoIU2NhblR5",
+            "cGUSGQoVU0NBTl9UWVBFX1VOU1BFQ0lGSUVEEAASEAoMREFUQV9QUk9GSUxF",
+            "EAESEAoMREFUQV9RVUFMSVRZEAIiYgoFU3RhdGUSFQoRU1RBVEVfVU5TUEVD",
+            "SUZJRUQQABILCgdTVEFSVEVEEAESDQoJU1VDQ0VFREVEEAISCgoGRkFJTEVE",
+            "EAMSDQoJQ0FOQ0VMTEVEEAQSCwoHQ1JFQVRFRBAFIj8KB1RyaWdnZXISFwoT",
+            "VFJJR0dFUl9VTlNQRUNJRklFRBAAEg0KCU9OX0RFTUFORBABEgwKCFNDSEVE",
+            "VUxFEAIiOQoFU2NvcGUSFQoRU0NPUEVfVU5TUEVDSUZJRUQQABIICgRGVUxM",
+            "EAESDwoLSU5DUkVNRU5UQUwQAkIICgZyZXN1bHRCEAoOYXBwbGllZENvbmZp",
+            "Z3Mi6QYKGURhdGFRdWFsaXR5U2NhblJ1bGVSZXN1bHQSDgoGam9iX2lkGAEg",
+            "ASgJEhMKC2RhdGFfc291cmNlGAIgASgJEg4KBmNvbHVtbhgDIAEoCRIRCgly",
+            "dWxlX25hbWUYBCABKAkSTwoJcnVsZV90eXBlGAUgASgOMjwuZ29vZ2xlLmNs",
+            "b3VkLmRhdGFwbGV4LnYxLkRhdGFRdWFsaXR5U2NhblJ1bGVSZXN1bHQuUnVs",
+            "ZVR5cGUSWgoOZXZhbHV0aW9uX3R5cGUYBiABKA4yQi5nb29nbGUuY2xvdWQu",
+            "ZGF0YXBsZXgudjEuRGF0YVF1YWxpdHlTY2FuUnVsZVJlc3VsdC5FdmFsdWF0",
+            "aW9uVHlwZRIWCg5ydWxlX2RpbWVuc2lvbhgHIAEoCRIZChF0aHJlc2hvbGRf",
+            "cGVyY2VudBgIIAEoARJKCgZyZXN1bHQYCSABKA4yOi5nb29nbGUuY2xvdWQu",
+            "ZGF0YXBsZXgudjEuRGF0YVF1YWxpdHlTY2FuUnVsZVJlc3VsdC5SZXN1bHQS",
+            "GwoTZXZhbHVhdGVkX3Jvd19jb3VudBgKIAEoAxIYChBwYXNzZWRfcm93X2Nv",
+            "dW50GAsgASgDEhYKDm51bGxfcm93X2NvdW50GAwgASgDIv8BCghSdWxlVHlw",
+            "ZRIZChVSVUxFX1RZUEVfVU5TUEVDSUZJRUQQABIYChROT05fTlVMTF9FWFBF",
+            "Q1RBVElPThABEhUKEVJBTkdFX0VYUEVDVEFUSU9OEAISFQoRUkVHRVhfRVhQ",
+            "RUNUQVRJT04QAxIdChlST1dfQ09ORElUSU9OX0VYUEVDVEFUSU9OEAQSEwoP",
+            "U0VUX0VYUEVDVEFUSU9OEAUSHwobU1RBVElTVElDX1JBTkdFX0VYUEVDVEFU",
+            "SU9OEAYSHwobVEFCTEVfQ09ORElUSU9OX0VYUEVDVEFUSU9OEAcSGgoWVU5J",
+            "UVVFTkVTU19FWFBFQ1RBVElPThAIIk0KDkV2YWx1YXRpb25UeXBlEh8KG0VW",
+            "QUxVQVRJT05fVFlQRV9VTlNQRUNJRklFRBAAEgsKB1BFUl9ST1cQARINCglB",
+            "R0dSRUdBVEUQAiI4CgZSZXN1bHQSFgoSUkVTVUxUX1VOU1BFQ0lGSUVEEAAS",
+            "CgoGUEFTU0VEEAESCgoGRkFJTEVEEAJCZQocY29tLmdvb2dsZS5jbG91ZC5k",
+            "YXRhcGxleC52MUIJTG9nc1Byb3RvUAFaOGNsb3VkLmdvb2dsZS5jb20vZ28v",
+            "ZGF0YXBsZXgvYXBpdjEvZGF0YXBsZXhwYjtkYXRhcGxleHBiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -163,6 +181,7 @@ namespace Google.Cloud.Dataplex.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DiscoveryEvent.Types.ActionDetails), global::Google.Cloud.Dataplex.V1.DiscoveryEvent.Types.ActionDetails.Parser, new[]{ "Type" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.JobEvent), global::Google.Cloud.Dataplex.V1.JobEvent.Parser, new[]{ "Message", "JobId", "StartTime", "EndTime", "State", "Retries", "Type", "Service", "ServiceJob", "ExecutionTrigger" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.JobEvent.Types.Type), typeof(global::Google.Cloud.Dataplex.V1.JobEvent.Types.State), typeof(global::Google.Cloud.Dataplex.V1.JobEvent.Types.Service), typeof(global::Google.Cloud.Dataplex.V1.JobEvent.Types.ExecutionTrigger) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.SessionEvent), global::Google.Cloud.Dataplex.V1.SessionEvent.Parser, new[]{ "Message", "UserId", "SessionId", "Type", "Query", "EventSucceeded", "FastStartupEnabled", "UnassignedDuration" }, new[]{ "Detail" }, new[]{ typeof(global::Google.Cloud.Dataplex.V1.SessionEvent.Types.EventType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.SessionEvent.Types.QueryDetail), global::Google.Cloud.Dataplex.V1.SessionEvent.Types.QueryDetail.Parser, new[]{ "QueryId", "QueryText", "Engine", "Duration", "ResultSizeBytes", "DataProcessedBytes" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.SessionEvent.Types.QueryDetail.Types.Engine) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.GovernanceEvent), global::Google.Cloud.Dataplex.V1.GovernanceEvent.Parser, new[]{ "Message", "EventType", "Entity" }, new[]{ "Entity" }, new[]{ typeof(global::Google.Cloud.Dataplex.V1.GovernanceEvent.Types.EventType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.GovernanceEvent.Types.Entity), global::Google.Cloud.Dataplex.V1.GovernanceEvent.Types.Entity.Parser, new[]{ "Entity_", "EntityType" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.GovernanceEvent.Types.Entity.Types.EntityType) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataScanEvent), global::Google.Cloud.Dataplex.V1.DataScanEvent.Parser, new[]{ "DataSource", "JobId", "CreateTime", "StartTime", "EndTime", "Type", "State", "Message", "SpecVersion", "Trigger", "Scope", "DataProfile", "DataQuality", "DataProfileConfigs", "DataQualityConfigs", "PostScanActionsResult" }, new[]{ "Result", "AppliedConfigs" }, new[]{ typeof(global::Google.Cloud.Dataplex.V1.DataScanEvent.Types.ScanType), typeof(global::Google.Cloud.Dataplex.V1.DataScanEvent.Types.State), typeof(global::Google.Cloud.Dataplex.V1.DataScanEvent.Types.Trigger), typeof(global::Google.Cloud.Dataplex.V1.DataScanEvent.Types.Scope) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataScanEvent.Types.DataProfileResult), global::Google.Cloud.Dataplex.V1.DataScanEvent.Types.DataProfileResult.Parser, new[]{ "RowCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataScanEvent.Types.DataQualityResult), global::Google.Cloud.Dataplex.V1.DataScanEvent.Types.DataQualityResult.Parser, new[]{ "RowCount", "Passed", "DimensionPassed" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataScanEvent.Types.DataProfileAppliedConfigs), global::Google.Cloud.Dataplex.V1.DataScanEvent.Types.DataProfileAppliedConfigs.Parser, new[]{ "SamplingPercent", "RowFilterApplied", "ColumnFilterApplied" }, null, null, null, null),
@@ -3466,6 +3485,620 @@ namespace Google.Cloud.Dataplex.V1 {
   }
 
   /// <summary>
+  /// Payload associated with Governance related log events.
+  /// </summary>
+  public sealed partial class GovernanceEvent : pb::IMessage<GovernanceEvent>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GovernanceEvent> _parser = new pb::MessageParser<GovernanceEvent>(() => new GovernanceEvent());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GovernanceEvent> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataplex.V1.LogsReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GovernanceEvent() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GovernanceEvent(GovernanceEvent other) : this() {
+      message_ = other.message_;
+      eventType_ = other.eventType_;
+      entity_ = other.entity_ != null ? other.entity_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GovernanceEvent Clone() {
+      return new GovernanceEvent(this);
+    }
+
+    /// <summary>Field number for the "message" field.</summary>
+    public const int MessageFieldNumber = 1;
+    private string message_ = "";
+    /// <summary>
+    /// The log message.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Message {
+      get { return message_; }
+      set {
+        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "event_type" field.</summary>
+    public const int EventTypeFieldNumber = 2;
+    private global::Google.Cloud.Dataplex.V1.GovernanceEvent.Types.EventType eventType_ = global::Google.Cloud.Dataplex.V1.GovernanceEvent.Types.EventType.Unspecified;
+    /// <summary>
+    /// The type of the event.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataplex.V1.GovernanceEvent.Types.EventType EventType {
+      get { return eventType_; }
+      set {
+        eventType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "entity" field.</summary>
+    public const int EntityFieldNumber = 3;
+    private global::Google.Cloud.Dataplex.V1.GovernanceEvent.Types.Entity entity_;
+    /// <summary>
+    /// Entity resource information if the log event is associated with a
+    /// specific entity.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataplex.V1.GovernanceEvent.Types.Entity Entity {
+      get { return entity_; }
+      set {
+        entity_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GovernanceEvent);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GovernanceEvent other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Message != other.Message) return false;
+      if (EventType != other.EventType) return false;
+      if (!object.Equals(Entity, other.Entity)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Message.Length != 0) hash ^= Message.GetHashCode();
+      if (EventType != global::Google.Cloud.Dataplex.V1.GovernanceEvent.Types.EventType.Unspecified) hash ^= EventType.GetHashCode();
+      if (entity_ != null) hash ^= Entity.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Message.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Message);
+      }
+      if (EventType != global::Google.Cloud.Dataplex.V1.GovernanceEvent.Types.EventType.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) EventType);
+      }
+      if (entity_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Entity);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Message.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Message);
+      }
+      if (EventType != global::Google.Cloud.Dataplex.V1.GovernanceEvent.Types.EventType.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) EventType);
+      }
+      if (entity_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Entity);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Message.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+      }
+      if (EventType != global::Google.Cloud.Dataplex.V1.GovernanceEvent.Types.EventType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EventType);
+      }
+      if (entity_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Entity);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GovernanceEvent other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Message.Length != 0) {
+        Message = other.Message;
+      }
+      if (other.EventType != global::Google.Cloud.Dataplex.V1.GovernanceEvent.Types.EventType.Unspecified) {
+        EventType = other.EventType;
+      }
+      if (other.entity_ != null) {
+        if (entity_ == null) {
+          Entity = new global::Google.Cloud.Dataplex.V1.GovernanceEvent.Types.Entity();
+        }
+        Entity.MergeFrom(other.Entity);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Message = input.ReadString();
+            break;
+          }
+          case 16: {
+            EventType = (global::Google.Cloud.Dataplex.V1.GovernanceEvent.Types.EventType) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            if (entity_ == null) {
+              Entity = new global::Google.Cloud.Dataplex.V1.GovernanceEvent.Types.Entity();
+            }
+            input.ReadMessage(Entity);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Message = input.ReadString();
+            break;
+          }
+          case 16: {
+            EventType = (global::Google.Cloud.Dataplex.V1.GovernanceEvent.Types.EventType) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            if (entity_ == null) {
+              Entity = new global::Google.Cloud.Dataplex.V1.GovernanceEvent.Types.Entity();
+            }
+            input.ReadMessage(Entity);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the GovernanceEvent message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Type of governance log event.
+      /// </summary>
+      public enum EventType {
+        /// <summary>
+        /// An unspecified event type.
+        /// </summary>
+        [pbr::OriginalName("EVENT_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Resource IAM policy update event.
+        /// </summary>
+        [pbr::OriginalName("RESOURCE_IAM_POLICY_UPDATE")] ResourceIamPolicyUpdate = 1,
+        /// <summary>
+        /// BigQuery table create event.
+        /// </summary>
+        [pbr::OriginalName("BIGQUERY_TABLE_CREATE")] BigqueryTableCreate = 2,
+        /// <summary>
+        /// BigQuery table update event.
+        /// </summary>
+        [pbr::OriginalName("BIGQUERY_TABLE_UPDATE")] BigqueryTableUpdate = 3,
+        /// <summary>
+        /// BigQuery table delete event.
+        /// </summary>
+        [pbr::OriginalName("BIGQUERY_TABLE_DELETE")] BigqueryTableDelete = 4,
+        /// <summary>
+        /// BigQuery connection create event.
+        /// </summary>
+        [pbr::OriginalName("BIGQUERY_CONNECTION_CREATE")] BigqueryConnectionCreate = 5,
+        /// <summary>
+        /// BigQuery connection update event.
+        /// </summary>
+        [pbr::OriginalName("BIGQUERY_CONNECTION_UPDATE")] BigqueryConnectionUpdate = 6,
+        /// <summary>
+        /// BigQuery connection delete event.
+        /// </summary>
+        [pbr::OriginalName("BIGQUERY_CONNECTION_DELETE")] BigqueryConnectionDelete = 7,
+        /// <summary>
+        /// BigQuery taxonomy created.
+        /// </summary>
+        [pbr::OriginalName("BIGQUERY_TAXONOMY_CREATE")] BigqueryTaxonomyCreate = 10,
+        /// <summary>
+        /// BigQuery policy tag created.
+        /// </summary>
+        [pbr::OriginalName("BIGQUERY_POLICY_TAG_CREATE")] BigqueryPolicyTagCreate = 11,
+        /// <summary>
+        /// BigQuery policy tag deleted.
+        /// </summary>
+        [pbr::OriginalName("BIGQUERY_POLICY_TAG_DELETE")] BigqueryPolicyTagDelete = 12,
+        /// <summary>
+        /// BigQuery set iam policy for policy tag.
+        /// </summary>
+        [pbr::OriginalName("BIGQUERY_POLICY_TAG_SET_IAM_POLICY")] BigqueryPolicyTagSetIamPolicy = 13,
+        /// <summary>
+        /// Access policy update event.
+        /// </summary>
+        [pbr::OriginalName("ACCESS_POLICY_UPDATE")] AccessPolicyUpdate = 14,
+      }
+
+      /// <summary>
+      /// Information about Entity resource that the log event is associated with.
+      /// </summary>
+      public sealed partial class Entity : pb::IMessage<Entity>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Entity> _parser = new pb::MessageParser<Entity>(() => new Entity());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Entity> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dataplex.V1.GovernanceEvent.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Entity() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Entity(Entity other) : this() {
+          entity_ = other.entity_;
+          entityType_ = other.entityType_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Entity Clone() {
+          return new Entity(this);
+        }
+
+        /// <summary>Field number for the "entity" field.</summary>
+        public const int Entity_FieldNumber = 1;
+        private string entity_ = "";
+        /// <summary>
+        /// The Entity resource the log event is associated with.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}`
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Entity_ {
+          get { return entity_; }
+          set {
+            entity_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "entity_type" field.</summary>
+        public const int EntityTypeFieldNumber = 2;
+        private global::Google.Cloud.Dataplex.V1.GovernanceEvent.Types.Entity.Types.EntityType entityType_ = global::Google.Cloud.Dataplex.V1.GovernanceEvent.Types.Entity.Types.EntityType.Unspecified;
+        /// <summary>
+        /// Type of entity.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Dataplex.V1.GovernanceEvent.Types.Entity.Types.EntityType EntityType {
+          get { return entityType_; }
+          set {
+            entityType_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Entity);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Entity other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Entity_ != other.Entity_) return false;
+          if (EntityType != other.EntityType) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Entity_.Length != 0) hash ^= Entity_.GetHashCode();
+          if (EntityType != global::Google.Cloud.Dataplex.V1.GovernanceEvent.Types.Entity.Types.EntityType.Unspecified) hash ^= EntityType.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Entity_.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Entity_);
+          }
+          if (EntityType != global::Google.Cloud.Dataplex.V1.GovernanceEvent.Types.Entity.Types.EntityType.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) EntityType);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Entity_.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Entity_);
+          }
+          if (EntityType != global::Google.Cloud.Dataplex.V1.GovernanceEvent.Types.Entity.Types.EntityType.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) EntityType);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Entity_.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Entity_);
+          }
+          if (EntityType != global::Google.Cloud.Dataplex.V1.GovernanceEvent.Types.Entity.Types.EntityType.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EntityType);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Entity other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Entity_.Length != 0) {
+            Entity_ = other.Entity_;
+          }
+          if (other.EntityType != global::Google.Cloud.Dataplex.V1.GovernanceEvent.Types.Entity.Types.EntityType.Unspecified) {
+            EntityType = other.EntityType;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Entity_ = input.ReadString();
+                break;
+              }
+              case 16: {
+                EntityType = (global::Google.Cloud.Dataplex.V1.GovernanceEvent.Types.Entity.Types.EntityType) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Entity_ = input.ReadString();
+                break;
+              }
+              case 16: {
+                EntityType = (global::Google.Cloud.Dataplex.V1.GovernanceEvent.Types.Entity.Types.EntityType) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the Entity message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Type of entity.
+          /// </summary>
+          public enum EntityType {
+            /// <summary>
+            /// An unspecified Entity type.
+            /// </summary>
+            [pbr::OriginalName("ENTITY_TYPE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Table entity type.
+            /// </summary>
+            [pbr::OriginalName("TABLE")] Table = 1,
+            /// <summary>
+            /// Fileset entity type.
+            /// </summary>
+            [pbr::OriginalName("FILESET")] Fileset = 2,
+          }
+
+        }
+        #endregion
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// These messages contain information about the execution of a datascan.
   /// The monitored resource is 'DataScan'
   /// Next ID: 13
@@ -3484,7 +4117,7 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataplex.V1.LogsReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.Dataplex.V1.LogsReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5983,7 +6616,7 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataplex.V1.LogsReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.Dataplex.V1.LogsReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
