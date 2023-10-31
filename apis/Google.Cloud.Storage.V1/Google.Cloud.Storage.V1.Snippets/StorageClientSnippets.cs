@@ -391,7 +391,7 @@ namespace Google.Cloud.Storage.V1.Snippets
             Console.WriteLine($"Name: {obj.Name}");
             Console.WriteLine($"Size: {obj.Size}");
             Console.WriteLine($"ContentType: {obj.ContentType}");
-            Console.WriteLine($"TimeCreated: {obj.TimeCreated}");
+            Console.WriteLine($"TimeCreated: {obj.TimeCreatedDateTimeOffset}");
             // End snippet
         }
 
@@ -539,7 +539,7 @@ namespace Google.Cloud.Storage.V1.Snippets
 
             var bucket = client.GetBucket(bucketName);
             Console.WriteLine($"Name: {bucket.Name}");
-            Console.WriteLine($"TimeCreated: {bucket.TimeCreated}");
+            Console.WriteLine($"TimeCreated: {bucket.TimeCreatedDateTimeOffset}");
             // End snippet
         }
 

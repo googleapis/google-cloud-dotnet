@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -48,14 +48,14 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             // Fetch the bucket again to check it was set.
             bucket = client.GetBucket(bucketName);
             Assert.Equal(5L, bucket.RetentionPolicy.RetentionPeriod);
-            Assert.NotNull(bucket.RetentionPolicy.EffectiveTime);
+            Assert.NotNull(bucket.RetentionPolicy.EffectiveTimeDateTimeOffset);
 
             // Create an object, which should have a retention expiration.
             string objectName = "object.txt";
             CreateObject(bucketName, objectName);
 
             var obj = client.GetObject(bucketName, objectName);
-            Assert.NotNull(obj.RetentionExpirationTime);
+            Assert.NotNull(obj.RetentionExpirationTimeDateTimeOffset);
 
             Assert.Throws<GoogleApiException>(() => client.DeleteObject(bucketName, objectName));
         }

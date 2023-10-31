@@ -52,7 +52,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             // If we ask for versions, we get the deleted object
             var allVersions = ListObjects(bucket, name, true);
             Assert.Equal(1, allVersions.Count);
-            Assert.NotNull(allVersions[0].TimeDeleted);
+            Assert.NotNull(allVersions[0].TimeDeletedDateTimeOffset);
         }
 
         [Theory]
