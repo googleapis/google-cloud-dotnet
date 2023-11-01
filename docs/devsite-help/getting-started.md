@@ -76,7 +76,7 @@ we're using, there's just `TranslationServiceClient`.
 
 Clients can be configured in a number of ways, but in many cases the defaults are fine. The most
 common reason to use explicit configuration is to use specific credentials for
-[authentication](https://cloud.google.com/docs/authentication/getting-started). For this example, we'll just use the
+[authentication](https://cloud.google.com/docs/authentication/use-cases). For this example, we'll just use the
 [application default credentials](https://cloud.google.com/docs/authentication/production#automatically).
 
 Each client class has static `Create` and `CreateAsync` methods to create clients using all the default settings.
