@@ -322,7 +322,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     cmd.Parameters.Add("p", structParam.GetSpannerDbType(), structParam);
                     using (var reader = await cmd.ExecuteReaderAsync())
                     {
-                        await Assert.ThrowsAsync<SpannerException>(async () => await reader.ReadAsync());
+                        await Assert.ThrowsAsync<SpannerException>(reader.ReadAsync);
                     }
                 }
             }
@@ -348,7 +348,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
                     using (var reader = await cmd.ExecuteReaderAsync())
                     {
-                        await Assert.ThrowsAsync<SpannerException>(async () => await reader.ReadAsync());
+                        await Assert.ThrowsAsync<SpannerException>(reader.ReadAsync);
                     }
                 }
             }
@@ -369,7 +369,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     cmd.Parameters.Add("p", structParam.GetSpannerDbType(), structParam);
                     using (var reader = await cmd.ExecuteReaderAsync())
                     {
-                        await Assert.ThrowsAsync<SpannerException>(async () => await reader.ReadAsync());
+                        await Assert.ThrowsAsync<SpannerException>(reader.ReadAsync);
                     }
                 }
             }

@@ -225,7 +225,7 @@ namespace Google.Cloud.Firestore.Tests
             var docRef1 = db.Document("col1/doc1");
             var docRef2 = db.Document("col2/doc2");
 
-            await Assert.ThrowsAsync<InvalidOperationException>(async () => await db.GetAllSnapshotsAsync(new[] { docRef1, docRef2 }));
+            await Assert.ThrowsAsync<InvalidOperationException>(() => db.GetAllSnapshotsAsync(new[] { docRef1, docRef2 }));
         }
 
         [Fact]

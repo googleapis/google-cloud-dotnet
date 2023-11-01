@@ -188,14 +188,15 @@ namespace Google.Cloud.Diagnostics.Common.Snippets
 
             try
             {
-                var exception = await Assert.ThrowsAsync<AggregateException>(async () =>
+                Func<Task> work = async () =>
                 {
                     host = PropagateExceptionsHostBuilder.CreateHostBuilder().Build();
                     await host.StartAsync();
 
                     ILogger logger = host.Services.GetRequiredService<ILogger<Program>>();
                     logger.LogInformation(_testId);
-                });
+                };
+                var exception = await Assert.ThrowsAsync<AggregateException>(work);
 
                 var rpcException = Assert.Single(exception.InnerExceptions.OfType<RpcException>());
                 Assert.Equal(StatusCode.NotFound, rpcException.StatusCode);

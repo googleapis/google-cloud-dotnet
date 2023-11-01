@@ -545,7 +545,7 @@ namespace Google.Cloud.Firestore.Tests
             private List<string> MapKeysInOrder => Map.Keys.OrderBy(k => k).ToList();
             private List<string> MapValuesInKeyOrder => Map.OrderBy(pair => pair.Key).Select(pair => pair.Value).ToList();
 
-            public override bool Equals(object obj) => Equals(obj as TupleModel);
+            public override bool Equals(object obj) => Equals(obj as InterfaceProperties);
 
             public override int GetHashCode() => GaxEqualityHelpers.GetListHashCode(List.ToList())
                 ^ GaxEqualityHelpers.GetListHashCode(MapKeysInOrder)

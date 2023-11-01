@@ -429,7 +429,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     cmd.Parameters.Add("value", SpannerDbType.String, "");
                     using (var reader = await cmd.ExecuteReaderAsync())
                     {
-                        var exception = await Assert.ThrowsAsync<SpannerException>(async () => await reader.ReadAsync());
+                        var exception = await Assert.ThrowsAsync<SpannerException>(reader.ReadAsync);
                         Assert.Equal(ErrorCode.OutOfRange, exception.ErrorCode);
                         Assert.Contains("Cannot parse regular expression", exception.InnerException.Message);
                     }
@@ -447,7 +447,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     cmd.Parameters.Add("other", SpannerDbType.String, "hello");
                     using (var reader = await cmd.ExecuteReaderAsync())
                     {
-                        var exception = await Assert.ThrowsAsync<SpannerException>(async () => await reader.ReadAsync());
+                        var exception = await Assert.ThrowsAsync<SpannerException>(reader.ReadAsync);
                         Assert.Equal(ErrorCode.InvalidArgument, exception.ErrorCode);
 
                     }

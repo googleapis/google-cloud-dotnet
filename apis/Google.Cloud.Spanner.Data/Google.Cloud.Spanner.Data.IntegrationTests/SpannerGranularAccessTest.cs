@@ -52,7 +52,7 @@ public class SpannerGranularAccessTest
             { "StringValue", SpannerDbType.String, "value1" }
         });
 
-        var e = await Assert.ThrowsAsync<SpannerException>(async () => await insertCmd.ExecuteNonQueryAsync());
+        var e = await Assert.ThrowsAsync<SpannerException>(insertCmd.ExecuteNonQueryAsync);
         Assert.Equal(ErrorCode.PermissionDenied, e.ErrorCode);
         Assert.Contains("does not have required privileges", e.InnerException.Message);
     }
