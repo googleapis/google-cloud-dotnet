@@ -44,15 +44,20 @@ namespace Google.Cloud.Speech.V1 {
             "b2dsZS5jbG91ZC5zcGVlY2gudjEuQ3VzdG9tQ2xhc3MSSgoMYWJuZl9ncmFt",
             "bWFyGAQgASgLMjQuZ29vZ2xlLmNsb3VkLnNwZWVjaC52MS5TcGVlY2hBZGFw",
             "dGF0aW9uLkFCTkZHcmFtbWFyGiMKC0FCTkZHcmFtbWFyEhQKDGFibmZfc3Ry",
-            "aW5ncxgBIAMoCUJwChpjb20uZ29vZ2xlLmNsb3VkLnNwZWVjaC52MUITU3Bl",
-            "ZWNoUmVzb3VyY2VQcm90b1ABWjJjbG91ZC5nb29nbGUuY29tL2dvL3NwZWVj",
-            "aC9hcGl2MS9zcGVlY2hwYjtzcGVlY2hwYvgBAaICA0dDU2IGcHJvdG8z"));
+            "aW5ncxgBIAMoCSKjAQoXVHJhbnNjcmlwdE5vcm1hbGl6YXRpb24SRgoHZW50",
+            "cmllcxgBIAMoCzI1Lmdvb2dsZS5jbG91ZC5zcGVlY2gudjEuVHJhbnNjcmlw",
+            "dE5vcm1hbGl6YXRpb24uRW50cnkaQAoFRW50cnkSDgoGc2VhcmNoGAEgASgJ",
+            "Eg8KB3JlcGxhY2UYAiABKAkSFgoOY2FzZV9zZW5zaXRpdmUYAyABKAhCcAoa",
+            "Y29tLmdvb2dsZS5jbG91ZC5zcGVlY2gudjFCE1NwZWVjaFJlc291cmNlUHJv",
+            "dG9QAVoyY2xvdWQuZ29vZ2xlLmNvbS9nby9zcGVlY2gvYXBpdjEvc3BlZWNo",
+            "cGI7c3BlZWNocGL4AQGiAgNHQ1NiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.CustomClass), global::Google.Cloud.Speech.V1.CustomClass.Parser, new[]{ "Name", "CustomClassId", "Items" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.CustomClass.Types.ClassItem), global::Google.Cloud.Speech.V1.CustomClass.Types.ClassItem.Parser, new[]{ "Value" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.PhraseSet), global::Google.Cloud.Speech.V1.PhraseSet.Parser, new[]{ "Name", "Phrases", "Boost" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.PhraseSet.Types.Phrase), global::Google.Cloud.Speech.V1.PhraseSet.Types.Phrase.Parser, new[]{ "Value", "Boost" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.SpeechAdaptation), global::Google.Cloud.Speech.V1.SpeechAdaptation.Parser, new[]{ "PhraseSets", "PhraseSetReferences", "CustomClasses", "AbnfGrammar" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.SpeechAdaptation.Types.ABNFGrammar), global::Google.Cloud.Speech.V1.SpeechAdaptation.Types.ABNFGrammar.Parser, new[]{ "AbnfStrings" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.SpeechAdaptation), global::Google.Cloud.Speech.V1.SpeechAdaptation.Parser, new[]{ "PhraseSets", "PhraseSetReferences", "CustomClasses", "AbnfGrammar" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.SpeechAdaptation.Types.ABNFGrammar), global::Google.Cloud.Speech.V1.SpeechAdaptation.Types.ABNFGrammar.Parser, new[]{ "AbnfStrings" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.TranscriptNormalization), global::Google.Cloud.Speech.V1.TranscriptNormalization.Parser, new[]{ "Entries" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.TranscriptNormalization.Types.Entry), global::Google.Cloud.Speech.V1.TranscriptNormalization.Types.Entry.Parser, new[]{ "Search", "Replace", "CaseSensitive" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -1551,6 +1556,479 @@ namespace Google.Cloud.Speech.V1 {
                 break;
               case 10: {
                 abnfStrings_.AddEntriesFrom(ref input, _repeated_abnfStrings_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Transcription normalization configuration. Use transcription normalization
+  /// to automatically replace parts of the transcript with phrases of your
+  /// choosing. For StreamingRecognize, this normalization only applies to stable
+  /// partial transcripts (stability > 0.8) and final transcripts.
+  /// </summary>
+  public sealed partial class TranscriptNormalization : pb::IMessage<TranscriptNormalization>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TranscriptNormalization> _parser = new pb::MessageParser<TranscriptNormalization>(() => new TranscriptNormalization());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<TranscriptNormalization> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Speech.V1.ResourceReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TranscriptNormalization() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TranscriptNormalization(TranscriptNormalization other) : this() {
+      entries_ = other.entries_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TranscriptNormalization Clone() {
+      return new TranscriptNormalization(this);
+    }
+
+    /// <summary>Field number for the "entries" field.</summary>
+    public const int EntriesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Speech.V1.TranscriptNormalization.Types.Entry> _repeated_entries_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Speech.V1.TranscriptNormalization.Types.Entry.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Speech.V1.TranscriptNormalization.Types.Entry> entries_ = new pbc::RepeatedField<global::Google.Cloud.Speech.V1.TranscriptNormalization.Types.Entry>();
+    /// <summary>
+    /// A list of replacement entries. We will perform replacement with one entry
+    /// at a time. For example, the second entry in ["cat" => "dog", "mountain cat"
+    /// => "mountain dog"] will never be applied because we will always process the
+    /// first entry before it. At most 100 entries.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Speech.V1.TranscriptNormalization.Types.Entry> Entries {
+      get { return entries_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as TranscriptNormalization);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(TranscriptNormalization other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!entries_.Equals(other.entries_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= entries_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      entries_.WriteTo(output, _repeated_entries_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      entries_.WriteTo(ref output, _repeated_entries_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += entries_.CalculateSize(_repeated_entries_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(TranscriptNormalization other) {
+      if (other == null) {
+        return;
+      }
+      entries_.Add(other.entries_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            entries_.AddEntriesFrom(input, _repeated_entries_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            entries_.AddEntriesFrom(ref input, _repeated_entries_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the TranscriptNormalization message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// A single replacement configuration.
+      /// </summary>
+      public sealed partial class Entry : pb::IMessage<Entry>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Entry> _parser = new pb::MessageParser<Entry>(() => new Entry());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Entry> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Speech.V1.TranscriptNormalization.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Entry() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Entry(Entry other) : this() {
+          search_ = other.search_;
+          replace_ = other.replace_;
+          caseSensitive_ = other.caseSensitive_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Entry Clone() {
+          return new Entry(this);
+        }
+
+        /// <summary>Field number for the "search" field.</summary>
+        public const int SearchFieldNumber = 1;
+        private string search_ = "";
+        /// <summary>
+        /// What to replace. Max length is 100 characters.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Search {
+          get { return search_; }
+          set {
+            search_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "replace" field.</summary>
+        public const int ReplaceFieldNumber = 2;
+        private string replace_ = "";
+        /// <summary>
+        /// What to replace with. Max length is 100 characters.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Replace {
+          get { return replace_; }
+          set {
+            replace_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "case_sensitive" field.</summary>
+        public const int CaseSensitiveFieldNumber = 3;
+        private bool caseSensitive_;
+        /// <summary>
+        /// Whether the search is case sensitive.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool CaseSensitive {
+          get { return caseSensitive_; }
+          set {
+            caseSensitive_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Entry);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Entry other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Search != other.Search) return false;
+          if (Replace != other.Replace) return false;
+          if (CaseSensitive != other.CaseSensitive) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Search.Length != 0) hash ^= Search.GetHashCode();
+          if (Replace.Length != 0) hash ^= Replace.GetHashCode();
+          if (CaseSensitive != false) hash ^= CaseSensitive.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Search.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Search);
+          }
+          if (Replace.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Replace);
+          }
+          if (CaseSensitive != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(CaseSensitive);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Search.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Search);
+          }
+          if (Replace.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Replace);
+          }
+          if (CaseSensitive != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(CaseSensitive);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Search.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Search);
+          }
+          if (Replace.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Replace);
+          }
+          if (CaseSensitive != false) {
+            size += 1 + 1;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Entry other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Search.Length != 0) {
+            Search = other.Search;
+          }
+          if (other.Replace.Length != 0) {
+            Replace = other.Replace;
+          }
+          if (other.CaseSensitive != false) {
+            CaseSensitive = other.CaseSensitive;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Search = input.ReadString();
+                break;
+              }
+              case 18: {
+                Replace = input.ReadString();
+                break;
+              }
+              case 24: {
+                CaseSensitive = input.ReadBool();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Search = input.ReadString();
+                break;
+              }
+              case 18: {
+                Replace = input.ReadString();
+                break;
+              }
+              case 24: {
+                CaseSensitive = input.ReadBool();
                 break;
               }
             }
