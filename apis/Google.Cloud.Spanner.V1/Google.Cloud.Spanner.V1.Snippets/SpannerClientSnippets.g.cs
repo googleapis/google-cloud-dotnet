@@ -694,6 +694,7 @@ namespace GoogleCSharpSnippets
                 Seqno = 0L,
                 QueryOptions = new gcsv::ExecuteSqlRequest.Types.QueryOptions(),
                 RequestOptions = new gcsv::RequestOptions(),
+                DirectedReadOptions = new gcsv::DirectedReadOptions(),
                 DataBoostEnabled = false,
             };
             // Make the request
@@ -728,6 +729,7 @@ namespace GoogleCSharpSnippets
                 Seqno = 0L,
                 QueryOptions = new gcsv::ExecuteSqlRequest.Types.QueryOptions(),
                 RequestOptions = new gcsv::RequestOptions(),
+                DirectedReadOptions = new gcsv::DirectedReadOptions(),
                 DataBoostEnabled = false,
             };
             // Make the request
@@ -761,6 +763,7 @@ namespace GoogleCSharpSnippets
                 Seqno = 0L,
                 QueryOptions = new gcsv::ExecuteSqlRequest.Types.QueryOptions(),
                 RequestOptions = new gcsv::RequestOptions(),
+                DirectedReadOptions = new gcsv::DirectedReadOptions(),
                 DataBoostEnabled = false,
             };
             // Make the request, returning a streaming response
@@ -844,6 +847,7 @@ namespace GoogleCSharpSnippets
                 ResumeToken = ByteString.Empty,
                 PartitionToken = ByteString.Empty,
                 RequestOptions = new gcsv::RequestOptions(),
+                DirectedReadOptions = new gcsv::DirectedReadOptions(),
                 DataBoostEnabled = false,
             };
             // Make the request
@@ -871,6 +875,7 @@ namespace GoogleCSharpSnippets
                 ResumeToken = ByteString.Empty,
                 PartitionToken = ByteString.Empty,
                 RequestOptions = new gcsv::RequestOptions(),
+                DirectedReadOptions = new gcsv::DirectedReadOptions(),
                 DataBoostEnabled = false,
             };
             // Make the request
@@ -897,6 +902,7 @@ namespace GoogleCSharpSnippets
                 ResumeToken = ByteString.Empty,
                 PartitionToken = ByteString.Empty,
                 RequestOptions = new gcsv::RequestOptions(),
+                DirectedReadOptions = new gcsv::DirectedReadOptions(),
                 DataBoostEnabled = false,
             };
             // Make the request, returning a streaming response

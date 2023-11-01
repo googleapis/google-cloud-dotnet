@@ -58,6 +58,7 @@ namespace GoogleCSharpSnippets
                 Seqno = 0L,
                 QueryOptions = new gcsv::ExecuteSqlRequest.Types.QueryOptions(),
                 RequestOptions = new gcsv::RequestOptions(),
+                DirectedReadOptions = new gcsv::DirectedReadOptions(),
                 DataBoostEnabled = false,
             };
             // Make the request
