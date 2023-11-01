@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0, released 2023-11-01
+
+In addition to the documentation changes listed below, this library
+has dependency updates and promotion to GA.
+
+### Documentation improvements
+
+- Update description of the postal address ([commit d9df4cc](https://github.com/googleapis/google-cloud-dotnet/commit/d9df4cc64da874403d34f1c2a56a3939958b3ff0))
+- Update some Address Validation API proto descriptions to improve clarity ([commit 0169b44](https://github.com/googleapis/google-cloud-dotnet/commit/0169b44ade5f8a98089d0da7fb3ac43ceff557b9))
+
 ## Version 1.0.0-beta03, released 2023-01-20
 
 ### Documentation improvements
