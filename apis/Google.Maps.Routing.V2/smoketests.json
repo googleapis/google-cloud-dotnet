@@ -1,0 +1,18 @@
+[
+  {
+    "method": "ComputeRoutes",
+    "client": "RoutesClient",
+    "fieldMask": "*",
+    "transports": [ "Grpc" ],
+    "arguments": {
+      "request": {
+        "origin": {
+          "address": "255 W Tasman Dr, San Jose, CA 95134"
+        },
+        "destination": {
+          "address": "1600 Amphitheatre Parkway, Mountain View, CA 94043"
+        }
+      }
+    }
+  }
+]
