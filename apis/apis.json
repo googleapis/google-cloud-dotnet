@@ -4521,7 +4521,7 @@
     },
     {
       "id": "Google.Cloud.Support.V2",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "Google Cloud Support",
       "productUrl": "https://cloud.google.com/support/docs/reference/support-api",
@@ -4529,7 +4529,10 @@
       "tags": [
         "support"
       ],
-      "dependencies": {},
+      "dependencies": {
+        "Google.Api.Gax.Grpc": "4.4.0",
+        "Grpc.Core": "2.46.6"
+      },
       "generator": "micro",
       "protoPath": "google/cloud/support/v2",
       "shortName": "cloudsupport",
