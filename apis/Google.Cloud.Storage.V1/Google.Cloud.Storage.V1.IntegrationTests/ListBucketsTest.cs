@@ -56,7 +56,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var cts = new CancellationTokenSource();
             var task = _fixture.Client.ListBucketsAsync(_fixture.ProjectId).ToListAsync(cts.Token);
             cts.Cancel();
-            await Assert.ThrowsAnyAsync<OperationCanceledException>(async () => await task);
+            await Assert.ThrowsAnyAsync<OperationCanceledException>(task.AsTask);
         }
 
         [Fact]
