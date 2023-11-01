@@ -25,13 +25,13 @@ namespace Google.Cloud.Spanner.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9nb29nbGUvc3Bhbm5lci92MS9zcGFubmVyLnByb3RvEhFnb29nbGUuc3Bh",
-            "bm5lci52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxoXZ29vZ2xl",
-            "L2FwaS9jbGllbnQucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3Iu",
-            "cHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aG2dvb2dsZS9wcm90",
-            "b2J1Zi9lbXB0eS5wcm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90",
-            "bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoXZ29vZ2xlL3Jw",
-            "Yy9zdGF0dXMucHJvdG8aJ2dvb2dsZS9zcGFubmVyL3YxL2NvbW1pdF9yZXNw",
-            "b25zZS5wcm90bxocZ29vZ2xlL3NwYW5uZXIvdjEva2V5cy5wcm90bxogZ29v",
+            "bm5lci52MRonZ29vZ2xlL3NwYW5uZXIvdjEvY29tbWl0X3Jlc3BvbnNlLnBy",
+            "b3RvGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGhdnb29nbGUvYXBp",
+            "L2NsaWVudC5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90",
+            "bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxobZ29vZ2xlL3Byb3RvYnVm",
+            "L2VtcHR5LnByb3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvGh9n",
+            "b29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhdnb29nbGUvcnBjL3N0",
+            "YXR1cy5wcm90bxocZ29vZ2xlL3NwYW5uZXIvdjEva2V5cy5wcm90bxogZ29v",
             "Z2xlL3NwYW5uZXIvdjEvbXV0YXRpb24ucHJvdG8aImdvb2dsZS9zcGFubmVy",
             "L3YxL3Jlc3VsdF9zZXQucHJvdG8aI2dvb2dsZS9zcGFubmVyL3YxL3RyYW5z",
             "YWN0aW9uLnByb3RvGhxnb29nbGUvc3Bhbm5lci92MS90eXBlLnByb3RvIoMB",
@@ -65,170 +65,187 @@ namespace Google.Cloud.Spanner.V1 {
             "LnYxLlJlcXVlc3RPcHRpb25zLlByaW9yaXR5EhMKC3JlcXVlc3RfdGFnGAIg",
             "ASgJEhcKD3RyYW5zYWN0aW9uX3RhZxgDIAEoCSJeCghQcmlvcml0eRIYChRQ",
             "UklPUklUWV9VTlNQRUNJRklFRBAAEhAKDFBSSU9SSVRZX0xPVxABEhMKD1BS",
-            "SU9SSVRZX01FRElVTRACEhEKDVBSSU9SSVRZX0hJR0gQAyKABgoRRXhlY3V0",
-            "ZVNxbFJlcXVlc3QSNwoHc2Vzc2lvbhgBIAEoCUIm4EEC+kEgCh5zcGFubmVy",
-            "Lmdvb2dsZWFwaXMuY29tL1Nlc3Npb24SOwoLdHJhbnNhY3Rpb24YAiABKAsy",
-            "Ji5nb29nbGUuc3Bhbm5lci52MS5UcmFuc2FjdGlvblNlbGVjdG9yEhAKA3Nx",
-            "bBgDIAEoCUID4EECEicKBnBhcmFtcxgEIAEoCzIXLmdvb2dsZS5wcm90b2J1",
-            "Zi5TdHJ1Y3QSSQoLcGFyYW1fdHlwZXMYBSADKAsyNC5nb29nbGUuc3Bhbm5l",
-            "ci52MS5FeGVjdXRlU3FsUmVxdWVzdC5QYXJhbVR5cGVzRW50cnkSFAoMcmVz",
-            "dW1lX3Rva2VuGAYgASgMEkIKCnF1ZXJ5X21vZGUYByABKA4yLi5nb29nbGUu",
-            "c3Bhbm5lci52MS5FeGVjdXRlU3FsUmVxdWVzdC5RdWVyeU1vZGUSFwoPcGFy",
-            "dGl0aW9uX3Rva2VuGAggASgMEg0KBXNlcW5vGAkgASgDEkgKDXF1ZXJ5X29w",
-            "dGlvbnMYCiABKAsyMS5nb29nbGUuc3Bhbm5lci52MS5FeGVjdXRlU3FsUmVx",
-            "dWVzdC5RdWVyeU9wdGlvbnMSOgoPcmVxdWVzdF9vcHRpb25zGAsgASgLMiEu",
-            "Z29vZ2xlLnNwYW5uZXIudjEuUmVxdWVzdE9wdGlvbnMSGgoSZGF0YV9ib29z",
-            "dF9lbmFibGVkGBAgASgIGk8KDFF1ZXJ5T3B0aW9ucxIZChFvcHRpbWl6ZXJf",
-            "dmVyc2lvbhgBIAEoCRIkChxvcHRpbWl6ZXJfc3RhdGlzdGljc19wYWNrYWdl",
-            "GAIgASgJGkoKD1BhcmFtVHlwZXNFbnRyeRILCgNrZXkYASABKAkSJgoFdmFs",
-            "dWUYAiABKAsyFy5nb29nbGUuc3Bhbm5lci52MS5UeXBlOgI4ASIuCglRdWVy",
-            "eU1vZGUSCgoGTk9STUFMEAASCAoEUExBThABEgsKB1BST0ZJTEUQAiKgBAoW",
-            "RXhlY3V0ZUJhdGNoRG1sUmVxdWVzdBI3CgdzZXNzaW9uGAEgASgJQibgQQL6",
-            "QSAKHnNwYW5uZXIuZ29vZ2xlYXBpcy5jb20vU2Vzc2lvbhJACgt0cmFuc2Fj",
-            "dGlvbhgCIAEoCzImLmdvb2dsZS5zcGFubmVyLnYxLlRyYW5zYWN0aW9uU2Vs",
-            "ZWN0b3JCA+BBAhJMCgpzdGF0ZW1lbnRzGAMgAygLMjMuZ29vZ2xlLnNwYW5u",
-            "ZXIudjEuRXhlY3V0ZUJhdGNoRG1sUmVxdWVzdC5TdGF0ZW1lbnRCA+BBAhIS",
-            "CgVzZXFubxgEIAEoA0ID4EECEjoKD3JlcXVlc3Rfb3B0aW9ucxgFIAEoCzIh",
-            "Lmdvb2dsZS5zcGFubmVyLnYxLlJlcXVlc3RPcHRpb25zGuwBCglTdGF0ZW1l",
-            "bnQSEAoDc3FsGAEgASgJQgPgQQISJwoGcGFyYW1zGAIgASgLMhcuZ29vZ2xl",
-            "LnByb3RvYnVmLlN0cnVjdBJYCgtwYXJhbV90eXBlcxgDIAMoCzJDLmdvb2ds",
-            "ZS5zcGFubmVyLnYxLkV4ZWN1dGVCYXRjaERtbFJlcXVlc3QuU3RhdGVtZW50",
-            "LlBhcmFtVHlwZXNFbnRyeRpKCg9QYXJhbVR5cGVzRW50cnkSCwoDa2V5GAEg",
-            "ASgJEiYKBXZhbHVlGAIgASgLMhcuZ29vZ2xlLnNwYW5uZXIudjEuVHlwZToC",
-            "OAEicAoXRXhlY3V0ZUJhdGNoRG1sUmVzcG9uc2USMQoLcmVzdWx0X3NldHMY",
-            "ASADKAsyHC5nb29nbGUuc3Bhbm5lci52MS5SZXN1bHRTZXQSIgoGc3RhdHVz",
-            "GAIgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXMiSAoQUGFydGl0aW9uT3B0aW9u",
-            "cxIcChRwYXJ0aXRpb25fc2l6ZV9ieXRlcxgBIAEoAxIWCg5tYXhfcGFydGl0",
-            "aW9ucxgCIAEoAyKjAwoVUGFydGl0aW9uUXVlcnlSZXF1ZXN0EjcKB3Nlc3Np",
-            "b24YASABKAlCJuBBAvpBIAoec3Bhbm5lci5nb29nbGVhcGlzLmNvbS9TZXNz",
-            "aW9uEjsKC3RyYW5zYWN0aW9uGAIgASgLMiYuZ29vZ2xlLnNwYW5uZXIudjEu",
-            "VHJhbnNhY3Rpb25TZWxlY3RvchIQCgNzcWwYAyABKAlCA+BBAhInCgZwYXJh",
-            "bXMYBCABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0Ek0KC3BhcmFtX3R5",
-            "cGVzGAUgAygLMjguZ29vZ2xlLnNwYW5uZXIudjEuUGFydGl0aW9uUXVlcnlS",
-            "ZXF1ZXN0LlBhcmFtVHlwZXNFbnRyeRI+ChFwYXJ0aXRpb25fb3B0aW9ucxgG",
-            "IAEoCzIjLmdvb2dsZS5zcGFubmVyLnYxLlBhcnRpdGlvbk9wdGlvbnMaSgoP",
-            "UGFyYW1UeXBlc0VudHJ5EgsKA2tleRgBIAEoCRImCgV2YWx1ZRgCIAEoCzIX",
-            "Lmdvb2dsZS5zcGFubmVyLnYxLlR5cGU6AjgBIrECChRQYXJ0aXRpb25SZWFk",
-            "UmVxdWVzdBI3CgdzZXNzaW9uGAEgASgJQibgQQL6QSAKHnNwYW5uZXIuZ29v",
-            "Z2xlYXBpcy5jb20vU2Vzc2lvbhI7Cgt0cmFuc2FjdGlvbhgCIAEoCzImLmdv",
-            "b2dsZS5zcGFubmVyLnYxLlRyYW5zYWN0aW9uU2VsZWN0b3ISEgoFdGFibGUY",
-            "AyABKAlCA+BBAhINCgVpbmRleBgEIAEoCRIPCgdjb2x1bW5zGAUgAygJEi8K",
-            "B2tleV9zZXQYBiABKAsyGS5nb29nbGUuc3Bhbm5lci52MS5LZXlTZXRCA+BB",
-            "AhI+ChFwYXJ0aXRpb25fb3B0aW9ucxgJIAEoCzIjLmdvb2dsZS5zcGFubmVy",
-            "LnYxLlBhcnRpdGlvbk9wdGlvbnMiJAoJUGFydGl0aW9uEhcKD3BhcnRpdGlv",
-            "bl90b2tlbhgBIAEoDCJ6ChFQYXJ0aXRpb25SZXNwb25zZRIwCgpwYXJ0aXRp",
-            "b25zGAEgAygLMhwuZ29vZ2xlLnNwYW5uZXIudjEuUGFydGl0aW9uEjMKC3Ry",
-            "YW5zYWN0aW9uGAIgASgLMh4uZ29vZ2xlLnNwYW5uZXIudjEuVHJhbnNhY3Rp",
-            "b24igwMKC1JlYWRSZXF1ZXN0EjcKB3Nlc3Npb24YASABKAlCJuBBAvpBIAoe",
-            "c3Bhbm5lci5nb29nbGVhcGlzLmNvbS9TZXNzaW9uEjsKC3RyYW5zYWN0aW9u",
-            "GAIgASgLMiYuZ29vZ2xlLnNwYW5uZXIudjEuVHJhbnNhY3Rpb25TZWxlY3Rv",
-            "chISCgV0YWJsZRgDIAEoCUID4EECEg0KBWluZGV4GAQgASgJEhQKB2NvbHVt",
-            "bnMYBSADKAlCA+BBAhIvCgdrZXlfc2V0GAYgASgLMhkuZ29vZ2xlLnNwYW5u",
-            "ZXIudjEuS2V5U2V0QgPgQQISDQoFbGltaXQYCCABKAMSFAoMcmVzdW1lX3Rv",
-            "a2VuGAkgASgMEhcKD3BhcnRpdGlvbl90b2tlbhgKIAEoDBI6Cg9yZXF1ZXN0",
-            "X29wdGlvbnMYCyABKAsyIS5nb29nbGUuc3Bhbm5lci52MS5SZXF1ZXN0T3B0",
-            "aW9ucxIaChJkYXRhX2Jvb3N0X2VuYWJsZWQYDyABKAgiywEKF0JlZ2luVHJh",
-            "bnNhY3Rpb25SZXF1ZXN0EjcKB3Nlc3Npb24YASABKAlCJuBBAvpBIAoec3Bh",
-            "bm5lci5nb29nbGVhcGlzLmNvbS9TZXNzaW9uEjsKB29wdGlvbnMYAiABKAsy",
-            "JS5nb29nbGUuc3Bhbm5lci52MS5UcmFuc2FjdGlvbk9wdGlvbnNCA+BBAhI6",
-            "Cg9yZXF1ZXN0X29wdGlvbnMYAyABKAsyIS5nb29nbGUuc3Bhbm5lci52MS5S",
-            "ZXF1ZXN0T3B0aW9ucyLDAgoNQ29tbWl0UmVxdWVzdBI3CgdzZXNzaW9uGAEg",
-            "ASgJQibgQQL6QSAKHnNwYW5uZXIuZ29vZ2xlYXBpcy5jb20vU2Vzc2lvbhIY",
-            "Cg50cmFuc2FjdGlvbl9pZBgCIAEoDEgAEkcKFnNpbmdsZV91c2VfdHJhbnNh",
-            "Y3Rpb24YAyABKAsyJS5nb29nbGUuc3Bhbm5lci52MS5UcmFuc2FjdGlvbk9w",
-            "dGlvbnNIABIuCgltdXRhdGlvbnMYBCADKAsyGy5nb29nbGUuc3Bhbm5lci52",
-            "MS5NdXRhdGlvbhIbChNyZXR1cm5fY29tbWl0X3N0YXRzGAUgASgIEjoKD3Jl",
-            "cXVlc3Rfb3B0aW9ucxgGIAEoCzIhLmdvb2dsZS5zcGFubmVyLnYxLlJlcXVl",
-            "c3RPcHRpb25zQg0KC3RyYW5zYWN0aW9uImcKD1JvbGxiYWNrUmVxdWVzdBI3",
-            "CgdzZXNzaW9uGAEgASgJQibgQQL6QSAKHnNwYW5uZXIuZ29vZ2xlYXBpcy5j",
-            "b20vU2Vzc2lvbhIbCg50cmFuc2FjdGlvbl9pZBgCIAEoDEID4EECIqACChFC",
-            "YXRjaFdyaXRlUmVxdWVzdBI3CgdzZXNzaW9uGAEgASgJQibgQQL6QSAKHnNw",
-            "YW5uZXIuZ29vZ2xlYXBpcy5jb20vU2Vzc2lvbhI6Cg9yZXF1ZXN0X29wdGlv",
-            "bnMYAyABKAsyIS5nb29nbGUuc3Bhbm5lci52MS5SZXF1ZXN0T3B0aW9ucxJQ",
-            "Cg9tdXRhdGlvbl9ncm91cHMYBCADKAsyMi5nb29nbGUuc3Bhbm5lci52MS5C",
-            "YXRjaFdyaXRlUmVxdWVzdC5NdXRhdGlvbkdyb3VwQgPgQQIaRAoNTXV0YXRp",
-            "b25Hcm91cBIzCgltdXRhdGlvbnMYASADKAsyGy5nb29nbGUuc3Bhbm5lci52",
-            "MS5NdXRhdGlvbkID4EECIn8KEkJhdGNoV3JpdGVSZXNwb25zZRIPCgdpbmRl",
-            "eGVzGAEgAygFEiIKBnN0YXR1cxgCIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVz",
-            "EjQKEGNvbW1pdF90aW1lc3RhbXAYAyABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wMosYCgdTcGFubmVyEqYBCg1DcmVhdGVTZXNzaW9uEicuZ29v",
-            "Z2xlLnNwYW5uZXIudjEuQ3JlYXRlU2Vzc2lvblJlcXVlc3QaGi5nb29nbGUu",
-            "c3Bhbm5lci52MS5TZXNzaW9uIlCC0+STAj8iOi92MS97ZGF0YWJhc2U9cHJv",
-            "amVjdHMvKi9pbnN0YW5jZXMvKi9kYXRhYmFzZXMvKn0vc2Vzc2lvbnM6ASra",
-            "QQhkYXRhYmFzZRLgAQoTQmF0Y2hDcmVhdGVTZXNzaW9ucxItLmdvb2dsZS5z",
-            "cGFubmVyLnYxLkJhdGNoQ3JlYXRlU2Vzc2lvbnNSZXF1ZXN0Gi4uZ29vZ2xl",
-            "LnNwYW5uZXIudjEuQmF0Y2hDcmVhdGVTZXNzaW9uc1Jlc3BvbnNlImqC0+ST",
-            "AksiRi92MS97ZGF0YWJhc2U9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9kYXRh",
-            "YmFzZXMvKn0vc2Vzc2lvbnM6YmF0Y2hDcmVhdGU6ASraQRZkYXRhYmFzZSxz",
-            "ZXNzaW9uX2NvdW50EpcBCgpHZXRTZXNzaW9uEiQuZ29vZ2xlLnNwYW5uZXIu",
-            "djEuR2V0U2Vzc2lvblJlcXVlc3QaGi5nb29nbGUuc3Bhbm5lci52MS5TZXNz",
-            "aW9uIkeC0+STAjoSOC92MS97bmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8q",
-            "L2RhdGFiYXNlcy8qL3Nlc3Npb25zLyp92kEEbmFtZRKuAQoMTGlzdFNlc3Np",
-            "b25zEiYuZ29vZ2xlLnNwYW5uZXIudjEuTGlzdFNlc3Npb25zUmVxdWVzdBon",
-            "Lmdvb2dsZS5zcGFubmVyLnYxLkxpc3RTZXNzaW9uc1Jlc3BvbnNlIk2C0+ST",
-            "AjwSOi92MS97ZGF0YWJhc2U9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9kYXRh",
-            "YmFzZXMvKn0vc2Vzc2lvbnPaQQhkYXRhYmFzZRKZAQoNRGVsZXRlU2Vzc2lv",
-            "bhInLmdvb2dsZS5zcGFubmVyLnYxLkRlbGV0ZVNlc3Npb25SZXF1ZXN0GhYu",
-            "Z29vZ2xlLnByb3RvYnVmLkVtcHR5IkeC0+STAjoqOC92MS97bmFtZT1wcm9q",
-            "ZWN0cy8qL2luc3RhbmNlcy8qL2RhdGFiYXNlcy8qL3Nlc3Npb25zLyp92kEE",
-            "bmFtZRKjAQoKRXhlY3V0ZVNxbBIkLmdvb2dsZS5zcGFubmVyLnYxLkV4ZWN1",
-            "dGVTcWxSZXF1ZXN0GhwuZ29vZ2xlLnNwYW5uZXIudjEuUmVzdWx0U2V0IlGC",
-            "0+STAksiRi92MS97c2Vzc2lvbj1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL2Rh",
-            "dGFiYXNlcy8qL3Nlc3Npb25zLyp9OmV4ZWN1dGVTcWw6ASoSvgEKE0V4ZWN1",
-            "dGVTdHJlYW1pbmdTcWwSJC5nb29nbGUuc3Bhbm5lci52MS5FeGVjdXRlU3Fs",
-            "UmVxdWVzdBojLmdvb2dsZS5zcGFubmVyLnYxLlBhcnRpYWxSZXN1bHRTZXQi",
-            "WoLT5JMCVCJPL3YxL3tzZXNzaW9uPXByb2plY3RzLyovaW5zdGFuY2VzLyov",
-            "ZGF0YWJhc2VzLyovc2Vzc2lvbnMvKn06ZXhlY3V0ZVN0cmVhbWluZ1NxbDoB",
-            "KjABEsABCg9FeGVjdXRlQmF0Y2hEbWwSKS5nb29nbGUuc3Bhbm5lci52MS5F",
-            "eGVjdXRlQmF0Y2hEbWxSZXF1ZXN0GiouZ29vZ2xlLnNwYW5uZXIudjEuRXhl",
-            "Y3V0ZUJhdGNoRG1sUmVzcG9uc2UiVoLT5JMCUCJLL3YxL3tzZXNzaW9uPXBy",
-            "b2plY3RzLyovaW5zdGFuY2VzLyovZGF0YWJhc2VzLyovc2Vzc2lvbnMvKn06",
-            "ZXhlY3V0ZUJhdGNoRG1sOgEqEpEBCgRSZWFkEh4uZ29vZ2xlLnNwYW5uZXIu",
-            "djEuUmVhZFJlcXVlc3QaHC5nb29nbGUuc3Bhbm5lci52MS5SZXN1bHRTZXQi",
-            "S4LT5JMCRSJAL3YxL3tzZXNzaW9uPXByb2plY3RzLyovaW5zdGFuY2VzLyov",
-            "ZGF0YWJhc2VzLyovc2Vzc2lvbnMvKn06cmVhZDoBKhKsAQoNU3RyZWFtaW5n",
-            "UmVhZBIeLmdvb2dsZS5zcGFubmVyLnYxLlJlYWRSZXF1ZXN0GiMuZ29vZ2xl",
-            "LnNwYW5uZXIudjEuUGFydGlhbFJlc3VsdFNldCJUgtPkkwJOIkkvdjEve3Nl",
-            "c3Npb249cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9kYXRhYmFzZXMvKi9zZXNz",
-            "aW9ucy8qfTpzdHJlYW1pbmdSZWFkOgEqMAESyQEKEEJlZ2luVHJhbnNhY3Rp",
-            "b24SKi5nb29nbGUuc3Bhbm5lci52MS5CZWdpblRyYW5zYWN0aW9uUmVxdWVz",
-            "dBoeLmdvb2dsZS5zcGFubmVyLnYxLlRyYW5zYWN0aW9uImmC0+STAlEiTC92",
-            "MS97c2Vzc2lvbj1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL2RhdGFiYXNlcy8q",
-            "L3Nlc3Npb25zLyp9OmJlZ2luVHJhbnNhY3Rpb246ASraQQ9zZXNzaW9uLG9w",
-            "dGlvbnMS6wEKBkNvbW1pdBIgLmdvb2dsZS5zcGFubmVyLnYxLkNvbW1pdFJl",
-            "cXVlc3QaIS5nb29nbGUuc3Bhbm5lci52MS5Db21taXRSZXNwb25zZSKbAYLT",
-            "5JMCRyJCL3YxL3tzZXNzaW9uPXByb2plY3RzLyovaW5zdGFuY2VzLyovZGF0",
-            "YWJhc2VzLyovc2Vzc2lvbnMvKn06Y29tbWl0OgEq2kEgc2Vzc2lvbix0cmFu",
-            "c2FjdGlvbl9pZCxtdXRhdGlvbnPaQShzZXNzaW9uLHNpbmdsZV91c2VfdHJh",
-            "bnNhY3Rpb24sbXV0YXRpb25zErABCghSb2xsYmFjaxIiLmdvb2dsZS5zcGFu",
-            "bmVyLnYxLlJvbGxiYWNrUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0",
-            "eSJogtPkkwJJIkQvdjEve3Nlc3Npb249cHJvamVjdHMvKi9pbnN0YW5jZXMv",
-            "Ki9kYXRhYmFzZXMvKi9zZXNzaW9ucy8qfTpyb2xsYmFjazoBKtpBFnNlc3Np",
-            "b24sdHJhbnNhY3Rpb25faWQStwEKDlBhcnRpdGlvblF1ZXJ5EiguZ29vZ2xl",
-            "LnNwYW5uZXIudjEuUGFydGl0aW9uUXVlcnlSZXF1ZXN0GiQuZ29vZ2xlLnNw",
-            "YW5uZXIudjEuUGFydGl0aW9uUmVzcG9uc2UiVYLT5JMCTyJKL3YxL3tzZXNz",
+            "SU9SSVRZX01FRElVTRACEhEKDVBSSU9SSVRZX0hJR0gQAyLqBAoTRGlyZWN0",
+            "ZWRSZWFkT3B0aW9ucxJSChBpbmNsdWRlX3JlcGxpY2FzGAEgASgLMjYuZ29v",
+            "Z2xlLnNwYW5uZXIudjEuRGlyZWN0ZWRSZWFkT3B0aW9ucy5JbmNsdWRlUmVw",
+            "bGljYXNIABJSChBleGNsdWRlX3JlcGxpY2FzGAIgASgLMjYuZ29vZ2xlLnNw",
+            "YW5uZXIudjEuRGlyZWN0ZWRSZWFkT3B0aW9ucy5FeGNsdWRlUmVwbGljYXNI",
+            "ABqtAQoQUmVwbGljYVNlbGVjdGlvbhIQCghsb2NhdGlvbhgBIAEoCRJKCgR0",
+            "eXBlGAIgASgOMjwuZ29vZ2xlLnNwYW5uZXIudjEuRGlyZWN0ZWRSZWFkT3B0",
+            "aW9ucy5SZXBsaWNhU2VsZWN0aW9uLlR5cGUiOwoEVHlwZRIUChBUWVBFX1VO",
+            "U1BFQ0lGSUVEEAASDgoKUkVBRF9XUklURRABEg0KCVJFQURfT05MWRACGoYB",
+            "Cg9JbmNsdWRlUmVwbGljYXMSUwoScmVwbGljYV9zZWxlY3Rpb25zGAEgAygL",
+            "MjcuZ29vZ2xlLnNwYW5uZXIudjEuRGlyZWN0ZWRSZWFkT3B0aW9ucy5SZXBs",
+            "aWNhU2VsZWN0aW9uEh4KFmF1dG9fZmFpbG92ZXJfZGlzYWJsZWQYAiABKAga",
+            "ZgoPRXhjbHVkZVJlcGxpY2FzElMKEnJlcGxpY2Ffc2VsZWN0aW9ucxgBIAMo",
+            "CzI3Lmdvb2dsZS5zcGFubmVyLnYxLkRpcmVjdGVkUmVhZE9wdGlvbnMuUmVw",
+            "bGljYVNlbGVjdGlvbkIKCghyZXBsaWNhcyLHBgoRRXhlY3V0ZVNxbFJlcXVl",
+            "c3QSNwoHc2Vzc2lvbhgBIAEoCUIm4EEC+kEgCh5zcGFubmVyLmdvb2dsZWFw",
+            "aXMuY29tL1Nlc3Npb24SOwoLdHJhbnNhY3Rpb24YAiABKAsyJi5nb29nbGUu",
+            "c3Bhbm5lci52MS5UcmFuc2FjdGlvblNlbGVjdG9yEhAKA3NxbBgDIAEoCUID",
+            "4EECEicKBnBhcmFtcxgEIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3QS",
+            "SQoLcGFyYW1fdHlwZXMYBSADKAsyNC5nb29nbGUuc3Bhbm5lci52MS5FeGVj",
+            "dXRlU3FsUmVxdWVzdC5QYXJhbVR5cGVzRW50cnkSFAoMcmVzdW1lX3Rva2Vu",
+            "GAYgASgMEkIKCnF1ZXJ5X21vZGUYByABKA4yLi5nb29nbGUuc3Bhbm5lci52",
+            "MS5FeGVjdXRlU3FsUmVxdWVzdC5RdWVyeU1vZGUSFwoPcGFydGl0aW9uX3Rv",
+            "a2VuGAggASgMEg0KBXNlcW5vGAkgASgDEkgKDXF1ZXJ5X29wdGlvbnMYCiAB",
+            "KAsyMS5nb29nbGUuc3Bhbm5lci52MS5FeGVjdXRlU3FsUmVxdWVzdC5RdWVy",
+            "eU9wdGlvbnMSOgoPcmVxdWVzdF9vcHRpb25zGAsgASgLMiEuZ29vZ2xlLnNw",
+            "YW5uZXIudjEuUmVxdWVzdE9wdGlvbnMSRQoVZGlyZWN0ZWRfcmVhZF9vcHRp",
+            "b25zGA8gASgLMiYuZ29vZ2xlLnNwYW5uZXIudjEuRGlyZWN0ZWRSZWFkT3B0",
+            "aW9ucxIaChJkYXRhX2Jvb3N0X2VuYWJsZWQYECABKAgaTwoMUXVlcnlPcHRp",
+            "b25zEhkKEW9wdGltaXplcl92ZXJzaW9uGAEgASgJEiQKHG9wdGltaXplcl9z",
+            "dGF0aXN0aWNzX3BhY2thZ2UYAiABKAkaSgoPUGFyYW1UeXBlc0VudHJ5EgsK",
+            "A2tleRgBIAEoCRImCgV2YWx1ZRgCIAEoCzIXLmdvb2dsZS5zcGFubmVyLnYx",
+            "LlR5cGU6AjgBIi4KCVF1ZXJ5TW9kZRIKCgZOT1JNQUwQABIICgRQTEFOEAES",
+            "CwoHUFJPRklMRRACIqAEChZFeGVjdXRlQmF0Y2hEbWxSZXF1ZXN0EjcKB3Nl",
+            "c3Npb24YASABKAlCJuBBAvpBIAoec3Bhbm5lci5nb29nbGVhcGlzLmNvbS9T",
+            "ZXNzaW9uEkAKC3RyYW5zYWN0aW9uGAIgASgLMiYuZ29vZ2xlLnNwYW5uZXIu",
+            "djEuVHJhbnNhY3Rpb25TZWxlY3RvckID4EECEkwKCnN0YXRlbWVudHMYAyAD",
+            "KAsyMy5nb29nbGUuc3Bhbm5lci52MS5FeGVjdXRlQmF0Y2hEbWxSZXF1ZXN0",
+            "LlN0YXRlbWVudEID4EECEhIKBXNlcW5vGAQgASgDQgPgQQISOgoPcmVxdWVz",
+            "dF9vcHRpb25zGAUgASgLMiEuZ29vZ2xlLnNwYW5uZXIudjEuUmVxdWVzdE9w",
+            "dGlvbnMa7AEKCVN0YXRlbWVudBIQCgNzcWwYASABKAlCA+BBAhInCgZwYXJh",
+            "bXMYAiABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0ElgKC3BhcmFtX3R5",
+            "cGVzGAMgAygLMkMuZ29vZ2xlLnNwYW5uZXIudjEuRXhlY3V0ZUJhdGNoRG1s",
+            "UmVxdWVzdC5TdGF0ZW1lbnQuUGFyYW1UeXBlc0VudHJ5GkoKD1BhcmFtVHlw",
+            "ZXNFbnRyeRILCgNrZXkYASABKAkSJgoFdmFsdWUYAiABKAsyFy5nb29nbGUu",
+            "c3Bhbm5lci52MS5UeXBlOgI4ASJwChdFeGVjdXRlQmF0Y2hEbWxSZXNwb25z",
+            "ZRIxCgtyZXN1bHRfc2V0cxgBIAMoCzIcLmdvb2dsZS5zcGFubmVyLnYxLlJl",
+            "c3VsdFNldBIiCgZzdGF0dXMYAiABKAsyEi5nb29nbGUucnBjLlN0YXR1cyJI",
+            "ChBQYXJ0aXRpb25PcHRpb25zEhwKFHBhcnRpdGlvbl9zaXplX2J5dGVzGAEg",
+            "ASgDEhYKDm1heF9wYXJ0aXRpb25zGAIgASgDIqMDChVQYXJ0aXRpb25RdWVy",
+            "eVJlcXVlc3QSNwoHc2Vzc2lvbhgBIAEoCUIm4EEC+kEgCh5zcGFubmVyLmdv",
+            "b2dsZWFwaXMuY29tL1Nlc3Npb24SOwoLdHJhbnNhY3Rpb24YAiABKAsyJi5n",
+            "b29nbGUuc3Bhbm5lci52MS5UcmFuc2FjdGlvblNlbGVjdG9yEhAKA3NxbBgD",
+            "IAEoCUID4EECEicKBnBhcmFtcxgEIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5T",
+            "dHJ1Y3QSTQoLcGFyYW1fdHlwZXMYBSADKAsyOC5nb29nbGUuc3Bhbm5lci52",
+            "MS5QYXJ0aXRpb25RdWVyeVJlcXVlc3QuUGFyYW1UeXBlc0VudHJ5Ej4KEXBh",
+            "cnRpdGlvbl9vcHRpb25zGAYgASgLMiMuZ29vZ2xlLnNwYW5uZXIudjEuUGFy",
+            "dGl0aW9uT3B0aW9ucxpKCg9QYXJhbVR5cGVzRW50cnkSCwoDa2V5GAEgASgJ",
+            "EiYKBXZhbHVlGAIgASgLMhcuZ29vZ2xlLnNwYW5uZXIudjEuVHlwZToCOAEi",
+            "sQIKFFBhcnRpdGlvblJlYWRSZXF1ZXN0EjcKB3Nlc3Npb24YASABKAlCJuBB",
+            "AvpBIAoec3Bhbm5lci5nb29nbGVhcGlzLmNvbS9TZXNzaW9uEjsKC3RyYW5z",
+            "YWN0aW9uGAIgASgLMiYuZ29vZ2xlLnNwYW5uZXIudjEuVHJhbnNhY3Rpb25T",
+            "ZWxlY3RvchISCgV0YWJsZRgDIAEoCUID4EECEg0KBWluZGV4GAQgASgJEg8K",
+            "B2NvbHVtbnMYBSADKAkSLwoHa2V5X3NldBgGIAEoCzIZLmdvb2dsZS5zcGFu",
+            "bmVyLnYxLktleVNldEID4EECEj4KEXBhcnRpdGlvbl9vcHRpb25zGAkgASgL",
+            "MiMuZ29vZ2xlLnNwYW5uZXIudjEuUGFydGl0aW9uT3B0aW9ucyIkCglQYXJ0",
+            "aXRpb24SFwoPcGFydGl0aW9uX3Rva2VuGAEgASgMInoKEVBhcnRpdGlvblJl",
+            "c3BvbnNlEjAKCnBhcnRpdGlvbnMYASADKAsyHC5nb29nbGUuc3Bhbm5lci52",
+            "MS5QYXJ0aXRpb24SMwoLdHJhbnNhY3Rpb24YAiABKAsyHi5nb29nbGUuc3Bh",
+            "bm5lci52MS5UcmFuc2FjdGlvbiLKAwoLUmVhZFJlcXVlc3QSNwoHc2Vzc2lv",
+            "bhgBIAEoCUIm4EEC+kEgCh5zcGFubmVyLmdvb2dsZWFwaXMuY29tL1Nlc3Np",
+            "b24SOwoLdHJhbnNhY3Rpb24YAiABKAsyJi5nb29nbGUuc3Bhbm5lci52MS5U",
+            "cmFuc2FjdGlvblNlbGVjdG9yEhIKBXRhYmxlGAMgASgJQgPgQQISDQoFaW5k",
+            "ZXgYBCABKAkSFAoHY29sdW1ucxgFIAMoCUID4EECEi8KB2tleV9zZXQYBiAB",
+            "KAsyGS5nb29nbGUuc3Bhbm5lci52MS5LZXlTZXRCA+BBAhINCgVsaW1pdBgI",
+            "IAEoAxIUCgxyZXN1bWVfdG9rZW4YCSABKAwSFwoPcGFydGl0aW9uX3Rva2Vu",
+            "GAogASgMEjoKD3JlcXVlc3Rfb3B0aW9ucxgLIAEoCzIhLmdvb2dsZS5zcGFu",
+            "bmVyLnYxLlJlcXVlc3RPcHRpb25zEkUKFWRpcmVjdGVkX3JlYWRfb3B0aW9u",
+            "cxgOIAEoCzImLmdvb2dsZS5zcGFubmVyLnYxLkRpcmVjdGVkUmVhZE9wdGlv",
+            "bnMSGgoSZGF0YV9ib29zdF9lbmFibGVkGA8gASgIIssBChdCZWdpblRyYW5z",
+            "YWN0aW9uUmVxdWVzdBI3CgdzZXNzaW9uGAEgASgJQibgQQL6QSAKHnNwYW5u",
+            "ZXIuZ29vZ2xlYXBpcy5jb20vU2Vzc2lvbhI7CgdvcHRpb25zGAIgASgLMiUu",
+            "Z29vZ2xlLnNwYW5uZXIudjEuVHJhbnNhY3Rpb25PcHRpb25zQgPgQQISOgoP",
+            "cmVxdWVzdF9vcHRpb25zGAMgASgLMiEuZ29vZ2xlLnNwYW5uZXIudjEuUmVx",
+            "dWVzdE9wdGlvbnMiwwIKDUNvbW1pdFJlcXVlc3QSNwoHc2Vzc2lvbhgBIAEo",
+            "CUIm4EEC+kEgCh5zcGFubmVyLmdvb2dsZWFwaXMuY29tL1Nlc3Npb24SGAoO",
+            "dHJhbnNhY3Rpb25faWQYAiABKAxIABJHChZzaW5nbGVfdXNlX3RyYW5zYWN0",
+            "aW9uGAMgASgLMiUuZ29vZ2xlLnNwYW5uZXIudjEuVHJhbnNhY3Rpb25PcHRp",
+            "b25zSAASLgoJbXV0YXRpb25zGAQgAygLMhsuZ29vZ2xlLnNwYW5uZXIudjEu",
+            "TXV0YXRpb24SGwoTcmV0dXJuX2NvbW1pdF9zdGF0cxgFIAEoCBI6Cg9yZXF1",
+            "ZXN0X29wdGlvbnMYBiABKAsyIS5nb29nbGUuc3Bhbm5lci52MS5SZXF1ZXN0",
+            "T3B0aW9uc0INCgt0cmFuc2FjdGlvbiJnCg9Sb2xsYmFja1JlcXVlc3QSNwoH",
+            "c2Vzc2lvbhgBIAEoCUIm4EEC+kEgCh5zcGFubmVyLmdvb2dsZWFwaXMuY29t",
+            "L1Nlc3Npb24SGwoOdHJhbnNhY3Rpb25faWQYAiABKAxCA+BBAiKgAgoRQmF0",
+            "Y2hXcml0ZVJlcXVlc3QSNwoHc2Vzc2lvbhgBIAEoCUIm4EEC+kEgCh5zcGFu",
+            "bmVyLmdvb2dsZWFwaXMuY29tL1Nlc3Npb24SOgoPcmVxdWVzdF9vcHRpb25z",
+            "GAMgASgLMiEuZ29vZ2xlLnNwYW5uZXIudjEuUmVxdWVzdE9wdGlvbnMSUAoP",
+            "bXV0YXRpb25fZ3JvdXBzGAQgAygLMjIuZ29vZ2xlLnNwYW5uZXIudjEuQmF0",
+            "Y2hXcml0ZVJlcXVlc3QuTXV0YXRpb25Hcm91cEID4EECGkQKDU11dGF0aW9u",
+            "R3JvdXASMwoJbXV0YXRpb25zGAEgAygLMhsuZ29vZ2xlLnNwYW5uZXIudjEu",
+            "TXV0YXRpb25CA+BBAiJ/ChJCYXRjaFdyaXRlUmVzcG9uc2USDwoHaW5kZXhl",
+            "cxgBIAMoBRIiCgZzdGF0dXMYAiABKAsyEi5nb29nbGUucnBjLlN0YXR1cxI0",
+            "ChBjb21taXRfdGltZXN0YW1wGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
+            "bWVzdGFtcDKLGAoHU3Bhbm5lchKmAQoNQ3JlYXRlU2Vzc2lvbhInLmdvb2ds",
+            "ZS5zcGFubmVyLnYxLkNyZWF0ZVNlc3Npb25SZXF1ZXN0GhouZ29vZ2xlLnNw",
+            "YW5uZXIudjEuU2Vzc2lvbiJQgtPkkwI/IjovdjEve2RhdGFiYXNlPXByb2pl",
+            "Y3RzLyovaW5zdGFuY2VzLyovZGF0YWJhc2VzLyp9L3Nlc3Npb25zOgEq2kEI",
+            "ZGF0YWJhc2US4AEKE0JhdGNoQ3JlYXRlU2Vzc2lvbnMSLS5nb29nbGUuc3Bh",
+            "bm5lci52MS5CYXRjaENyZWF0ZVNlc3Npb25zUmVxdWVzdBouLmdvb2dsZS5z",
+            "cGFubmVyLnYxLkJhdGNoQ3JlYXRlU2Vzc2lvbnNSZXNwb25zZSJqgtPkkwJL",
+            "IkYvdjEve2RhdGFiYXNlPXByb2plY3RzLyovaW5zdGFuY2VzLyovZGF0YWJh",
+            "c2VzLyp9L3Nlc3Npb25zOmJhdGNoQ3JlYXRlOgEq2kEWZGF0YWJhc2Usc2Vz",
+            "c2lvbl9jb3VudBKXAQoKR2V0U2Vzc2lvbhIkLmdvb2dsZS5zcGFubmVyLnYx",
+            "LkdldFNlc3Npb25SZXF1ZXN0GhouZ29vZ2xlLnNwYW5uZXIudjEuU2Vzc2lv",
+            "biJHgtPkkwI6EjgvdjEve25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9k",
+            "YXRhYmFzZXMvKi9zZXNzaW9ucy8qfdpBBG5hbWUSrgEKDExpc3RTZXNzaW9u",
+            "cxImLmdvb2dsZS5zcGFubmVyLnYxLkxpc3RTZXNzaW9uc1JlcXVlc3QaJy5n",
+            "b29nbGUuc3Bhbm5lci52MS5MaXN0U2Vzc2lvbnNSZXNwb25zZSJNgtPkkwI8",
+            "EjovdjEve2RhdGFiYXNlPXByb2plY3RzLyovaW5zdGFuY2VzLyovZGF0YWJh",
+            "c2VzLyp9L3Nlc3Npb25z2kEIZGF0YWJhc2USmQEKDURlbGV0ZVNlc3Npb24S",
+            "Jy5nb29nbGUuc3Bhbm5lci52MS5EZWxldGVTZXNzaW9uUmVxdWVzdBoWLmdv",
+            "b2dsZS5wcm90b2J1Zi5FbXB0eSJHgtPkkwI6KjgvdjEve25hbWU9cHJvamVj",
+            "dHMvKi9pbnN0YW5jZXMvKi9kYXRhYmFzZXMvKi9zZXNzaW9ucy8qfdpBBG5h",
+            "bWUSowEKCkV4ZWN1dGVTcWwSJC5nb29nbGUuc3Bhbm5lci52MS5FeGVjdXRl",
+            "U3FsUmVxdWVzdBocLmdvb2dsZS5zcGFubmVyLnYxLlJlc3VsdFNldCJRgtPk",
+            "kwJLIkYvdjEve3Nlc3Npb249cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9kYXRh",
+            "YmFzZXMvKi9zZXNzaW9ucy8qfTpleGVjdXRlU3FsOgEqEr4BChNFeGVjdXRl",
+            "U3RyZWFtaW5nU3FsEiQuZ29vZ2xlLnNwYW5uZXIudjEuRXhlY3V0ZVNxbFJl",
+            "cXVlc3QaIy5nb29nbGUuc3Bhbm5lci52MS5QYXJ0aWFsUmVzdWx0U2V0IlqC",
+            "0+STAlQiTy92MS97c2Vzc2lvbj1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL2Rh",
+            "dGFiYXNlcy8qL3Nlc3Npb25zLyp9OmV4ZWN1dGVTdHJlYW1pbmdTcWw6ASow",
+            "ARLAAQoPRXhlY3V0ZUJhdGNoRG1sEikuZ29vZ2xlLnNwYW5uZXIudjEuRXhl",
+            "Y3V0ZUJhdGNoRG1sUmVxdWVzdBoqLmdvb2dsZS5zcGFubmVyLnYxLkV4ZWN1",
+            "dGVCYXRjaERtbFJlc3BvbnNlIlaC0+STAlAiSy92MS97c2Vzc2lvbj1wcm9q",
+            "ZWN0cy8qL2luc3RhbmNlcy8qL2RhdGFiYXNlcy8qL3Nlc3Npb25zLyp9OmV4",
+            "ZWN1dGVCYXRjaERtbDoBKhKRAQoEUmVhZBIeLmdvb2dsZS5zcGFubmVyLnYx",
+            "LlJlYWRSZXF1ZXN0GhwuZ29vZ2xlLnNwYW5uZXIudjEuUmVzdWx0U2V0IkuC",
+            "0+STAkUiQC92MS97c2Vzc2lvbj1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL2Rh",
+            "dGFiYXNlcy8qL3Nlc3Npb25zLyp9OnJlYWQ6ASoSrAEKDVN0cmVhbWluZ1Jl",
+            "YWQSHi5nb29nbGUuc3Bhbm5lci52MS5SZWFkUmVxdWVzdBojLmdvb2dsZS5z",
+            "cGFubmVyLnYxLlBhcnRpYWxSZXN1bHRTZXQiVILT5JMCTiJJL3YxL3tzZXNz",
             "aW9uPXByb2plY3RzLyovaW5zdGFuY2VzLyovZGF0YWJhc2VzLyovc2Vzc2lv",
-            "bnMvKn06cGFydGl0aW9uUXVlcnk6ASoStAEKDVBhcnRpdGlvblJlYWQSJy5n",
-            "b29nbGUuc3Bhbm5lci52MS5QYXJ0aXRpb25SZWFkUmVxdWVzdBokLmdvb2ds",
-            "ZS5zcGFubmVyLnYxLlBhcnRpdGlvblJlc3BvbnNlIlSC0+STAk4iSS92MS97",
-            "c2Vzc2lvbj1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL2RhdGFiYXNlcy8qL3Nl",
-            "c3Npb25zLyp9OnBhcnRpdGlvblJlYWQ6ASoSyAEKCkJhdGNoV3JpdGUSJC5n",
-            "b29nbGUuc3Bhbm5lci52MS5CYXRjaFdyaXRlUmVxdWVzdBolLmdvb2dsZS5z",
-            "cGFubmVyLnYxLkJhdGNoV3JpdGVSZXNwb25zZSJrgtPkkwJLIkYvdjEve3Nl",
+            "bnMvKn06c3RyZWFtaW5nUmVhZDoBKjABEskBChBCZWdpblRyYW5zYWN0aW9u",
+            "EiouZ29vZ2xlLnNwYW5uZXIudjEuQmVnaW5UcmFuc2FjdGlvblJlcXVlc3Qa",
+            "Hi5nb29nbGUuc3Bhbm5lci52MS5UcmFuc2FjdGlvbiJpgtPkkwJRIkwvdjEv",
+            "e3Nlc3Npb249cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9kYXRhYmFzZXMvKi9z",
+            "ZXNzaW9ucy8qfTpiZWdpblRyYW5zYWN0aW9uOgEq2kEPc2Vzc2lvbixvcHRp",
+            "b25zEusBCgZDb21taXQSIC5nb29nbGUuc3Bhbm5lci52MS5Db21taXRSZXF1",
+            "ZXN0GiEuZ29vZ2xlLnNwYW5uZXIudjEuQ29tbWl0UmVzcG9uc2UimwGC0+ST",
+            "AkciQi92MS97c2Vzc2lvbj1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL2RhdGFi",
+            "YXNlcy8qL3Nlc3Npb25zLyp9OmNvbW1pdDoBKtpBIHNlc3Npb24sdHJhbnNh",
+            "Y3Rpb25faWQsbXV0YXRpb25z2kEoc2Vzc2lvbixzaW5nbGVfdXNlX3RyYW5z",
+            "YWN0aW9uLG11dGF0aW9ucxKwAQoIUm9sbGJhY2sSIi5nb29nbGUuc3Bhbm5l",
+            "ci52MS5Sb2xsYmFja1JlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHki",
+            "aILT5JMCSSJEL3YxL3tzZXNzaW9uPXByb2plY3RzLyovaW5zdGFuY2VzLyov",
+            "ZGF0YWJhc2VzLyovc2Vzc2lvbnMvKn06cm9sbGJhY2s6ASraQRZzZXNzaW9u",
+            "LHRyYW5zYWN0aW9uX2lkErcBCg5QYXJ0aXRpb25RdWVyeRIoLmdvb2dsZS5z",
+            "cGFubmVyLnYxLlBhcnRpdGlvblF1ZXJ5UmVxdWVzdBokLmdvb2dsZS5zcGFu",
+            "bmVyLnYxLlBhcnRpdGlvblJlc3BvbnNlIlWC0+STAk8iSi92MS97c2Vzc2lv",
+            "bj1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL2RhdGFiYXNlcy8qL3Nlc3Npb25z",
+            "Lyp9OnBhcnRpdGlvblF1ZXJ5OgEqErQBCg1QYXJ0aXRpb25SZWFkEicuZ29v",
+            "Z2xlLnNwYW5uZXIudjEuUGFydGl0aW9uUmVhZFJlcXVlc3QaJC5nb29nbGUu",
+            "c3Bhbm5lci52MS5QYXJ0aXRpb25SZXNwb25zZSJUgtPkkwJOIkkvdjEve3Nl",
             "c3Npb249cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9kYXRhYmFzZXMvKi9zZXNz",
-            "aW9ucy8qfTpiYXRjaFdyaXRlOgEq2kEXc2Vzc2lvbixtdXRhdGlvbl9ncm91",
-            "cHMwARp3ykEWc3Bhbm5lci5nb29nbGVhcGlzLmNvbdJBW2h0dHBzOi8vd3d3",
-            "Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93",
-            "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9zcGFubmVyLmRhdGFCkQIKFWNvbS5n",
-            "b29nbGUuc3Bhbm5lci52MUIMU3Bhbm5lclByb3RvUAFaNWNsb3VkLmdvb2ds",
-            "ZS5jb20vZ28vc3Bhbm5lci9hcGl2MS9zcGFubmVycGI7c3Bhbm5lcnBiqgIX",
-            "R29vZ2xlLkNsb3VkLlNwYW5uZXIuVjHKAhdHb29nbGVcQ2xvdWRcU3Bhbm5l",
-            "clxWMeoCGkdvb2dsZTo6Q2xvdWQ6OlNwYW5uZXI6OlYx6kFfCh9zcGFubmVy",
-            "Lmdvb2dsZWFwaXMuY29tL0RhdGFiYXNlEjxwcm9qZWN0cy97cHJvamVjdH0v",
-            "aW5zdGFuY2VzL3tpbnN0YW5jZX0vZGF0YWJhc2VzL3tkYXRhYmFzZX1QCGIG",
-            "cHJvdG8z"));
+            "aW9ucy8qfTpwYXJ0aXRpb25SZWFkOgEqEsgBCgpCYXRjaFdyaXRlEiQuZ29v",
+            "Z2xlLnNwYW5uZXIudjEuQmF0Y2hXcml0ZVJlcXVlc3QaJS5nb29nbGUuc3Bh",
+            "bm5lci52MS5CYXRjaFdyaXRlUmVzcG9uc2Uia4LT5JMCSyJGL3YxL3tzZXNz",
+            "aW9uPXByb2plY3RzLyovaW5zdGFuY2VzLyovZGF0YWJhc2VzLyovc2Vzc2lv",
+            "bnMvKn06YmF0Y2hXcml0ZToBKtpBF3Nlc3Npb24sbXV0YXRpb25fZ3JvdXBz",
+            "MAEad8pBFnNwYW5uZXIuZ29vZ2xlYXBpcy5jb23SQVtodHRwczovL3d3dy5n",
+            "b29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3",
+            "Lmdvb2dsZWFwaXMuY29tL2F1dGgvc3Bhbm5lci5kYXRhQpECChVjb20uZ29v",
+            "Z2xlLnNwYW5uZXIudjFCDFNwYW5uZXJQcm90b1ABWjVjbG91ZC5nb29nbGUu",
+            "Y29tL2dvL3NwYW5uZXIvYXBpdjEvc3Bhbm5lcnBiO3NwYW5uZXJwYqoCF0dv",
+            "b2dsZS5DbG91ZC5TcGFubmVyLlYxygIXR29vZ2xlXENsb3VkXFNwYW5uZXJc",
+            "VjHqAhpHb29nbGU6OkNsb3VkOjpTcGFubmVyOjpWMepBXwofc3Bhbm5lci5n",
+            "b29nbGVhcGlzLmNvbS9EYXRhYmFzZRI8cHJvamVjdHMve3Byb2plY3R9L2lu",
+            "c3RhbmNlcy97aW5zdGFuY2V9L2RhdGFiYXNlcy97ZGF0YWJhc2V9UABiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Cloud.Spanner.V1.CommitResponseReflection.Descriptor, global::Google.Cloud.Spanner.V1.KeysReflection.Descriptor, global::Google.Cloud.Spanner.V1.MutationReflection.Descriptor, global::Google.Cloud.Spanner.V1.ResultSetReflection.Descriptor, global::Google.Cloud.Spanner.V1.TransactionReflection.Descriptor, global::Google.Cloud.Spanner.V1.TypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Cloud.Spanner.V1.CommitResponseReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Cloud.Spanner.V1.KeysReflection.Descriptor, global::Google.Cloud.Spanner.V1.MutationReflection.Descriptor, global::Google.Cloud.Spanner.V1.ResultSetReflection.Descriptor, global::Google.Cloud.Spanner.V1.TransactionReflection.Descriptor, global::Google.Cloud.Spanner.V1.TypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.CreateSessionRequest), global::Google.Cloud.Spanner.V1.CreateSessionRequest.Parser, new[]{ "Database", "Session" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.BatchCreateSessionsRequest), global::Google.Cloud.Spanner.V1.BatchCreateSessionsRequest.Parser, new[]{ "Database", "SessionTemplate", "SessionCount" }, null, null, null, null),
@@ -239,7 +256,10 @@ namespace Google.Cloud.Spanner.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ListSessionsResponse), global::Google.Cloud.Spanner.V1.ListSessionsResponse.Parser, new[]{ "Sessions", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.DeleteSessionRequest), global::Google.Cloud.Spanner.V1.DeleteSessionRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.RequestOptions), global::Google.Cloud.Spanner.V1.RequestOptions.Parser, new[]{ "Priority", "RequestTag", "TransactionTag" }, null, new[]{ typeof(global::Google.Cloud.Spanner.V1.RequestOptions.Types.Priority) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ExecuteSqlRequest), global::Google.Cloud.Spanner.V1.ExecuteSqlRequest.Parser, new[]{ "Session", "Transaction", "Sql", "Params", "ParamTypes", "ResumeToken", "QueryMode", "PartitionToken", "Seqno", "QueryOptions", "RequestOptions", "DataBoostEnabled" }, null, new[]{ typeof(global::Google.Cloud.Spanner.V1.ExecuteSqlRequest.Types.QueryMode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ExecuteSqlRequest.Types.QueryOptions), global::Google.Cloud.Spanner.V1.ExecuteSqlRequest.Types.QueryOptions.Parser, new[]{ "OptimizerVersion", "OptimizerStatisticsPackage" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.DirectedReadOptions), global::Google.Cloud.Spanner.V1.DirectedReadOptions.Parser, new[]{ "IncludeReplicas", "ExcludeReplicas" }, new[]{ "Replicas" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.ReplicaSelection), global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.ReplicaSelection.Parser, new[]{ "Location", "Type" }, null, new[]{ typeof(global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.ReplicaSelection.Types.Type) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.IncludeReplicas), global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.IncludeReplicas.Parser, new[]{ "ReplicaSelections", "AutoFailoverDisabled" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.ExcludeReplicas), global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.ExcludeReplicas.Parser, new[]{ "ReplicaSelections" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ExecuteSqlRequest), global::Google.Cloud.Spanner.V1.ExecuteSqlRequest.Parser, new[]{ "Session", "Transaction", "Sql", "Params", "ParamTypes", "ResumeToken", "QueryMode", "PartitionToken", "Seqno", "QueryOptions", "RequestOptions", "DirectedReadOptions", "DataBoostEnabled" }, null, new[]{ typeof(global::Google.Cloud.Spanner.V1.ExecuteSqlRequest.Types.QueryMode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ExecuteSqlRequest.Types.QueryOptions), global::Google.Cloud.Spanner.V1.ExecuteSqlRequest.Types.QueryOptions.Parser, new[]{ "OptimizerVersion", "OptimizerStatisticsPackage" }, null, null, null, null),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest), global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest.Parser, new[]{ "Session", "Transaction", "Statements", "Seqno", "RequestOptions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest.Types.Statement), global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest.Types.Statement.Parser, new[]{ "Sql", "Params", "ParamTypes" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ExecuteBatchDmlResponse), global::Google.Cloud.Spanner.V1.ExecuteBatchDmlResponse.Parser, new[]{ "ResultSets", "Status" }, null, null, null, null),
@@ -248,7 +268,7 @@ namespace Google.Cloud.Spanner.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.PartitionReadRequest), global::Google.Cloud.Spanner.V1.PartitionReadRequest.Parser, new[]{ "Session", "Transaction", "Table", "Index", "Columns", "KeySet", "PartitionOptions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.Partition), global::Google.Cloud.Spanner.V1.Partition.Parser, new[]{ "PartitionToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.PartitionResponse), global::Google.Cloud.Spanner.V1.PartitionResponse.Parser, new[]{ "Partitions", "Transaction" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ReadRequest), global::Google.Cloud.Spanner.V1.ReadRequest.Parser, new[]{ "Session", "Transaction", "Table", "Index", "Columns", "KeySet", "Limit", "ResumeToken", "PartitionToken", "RequestOptions", "DataBoostEnabled" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ReadRequest), global::Google.Cloud.Spanner.V1.ReadRequest.Parser, new[]{ "Session", "Transaction", "Table", "Index", "Columns", "KeySet", "Limit", "ResumeToken", "PartitionToken", "RequestOptions", "DirectedReadOptions", "DataBoostEnabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.BeginTransactionRequest), global::Google.Cloud.Spanner.V1.BeginTransactionRequest.Parser, new[]{ "Session", "Options", "RequestOptions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.CommitRequest), global::Google.Cloud.Spanner.V1.CommitRequest.Parser, new[]{ "Session", "TransactionId", "SingleUseTransaction", "Mutations", "ReturnCommitStats", "RequestOptions" }, new[]{ "Transaction" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.RollbackRequest), global::Google.Cloud.Spanner.V1.RollbackRequest.Parser, new[]{ "Session", "TransactionId" }, null, null, null, null),
@@ -505,7 +525,8 @@ namespace Google.Cloud.Spanner.V1 {
   }
 
   /// <summary>
-  /// The request for [BatchCreateSessions][google.spanner.v1.Spanner.BatchCreateSessions].
+  /// The request for
+  /// [BatchCreateSessions][google.spanner.v1.Spanner.BatchCreateSessions].
   /// </summary>
   public sealed partial class BatchCreateSessionsRequest : pb::IMessage<BatchCreateSessionsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -591,7 +612,8 @@ namespace Google.Cloud.Spanner.V1 {
     /// The API may return fewer than the requested number of sessions. If a
     /// specific number of sessions are desired, the client can make additional
     /// calls to BatchCreateSessions (adjusting
-    /// [session_count][google.spanner.v1.BatchCreateSessionsRequest.session_count] as necessary).
+    /// [session_count][google.spanner.v1.BatchCreateSessionsRequest.session_count]
+    /// as necessary).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -793,7 +815,8 @@ namespace Google.Cloud.Spanner.V1 {
   }
 
   /// <summary>
-  /// The response for [BatchCreateSessions][google.spanner.v1.Spanner.BatchCreateSessions].
+  /// The response for
+  /// [BatchCreateSessions][google.spanner.v1.Spanner.BatchCreateSessions].
   /// </summary>
   public sealed partial class BatchCreateSessionsResponse : pb::IMessage<BatchCreateSessionsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1628,7 +1651,8 @@ namespace Google.Cloud.Spanner.V1 {
     private string pageToken_ = "";
     /// <summary>
     /// If non-empty, `page_token` should contain a
-    /// [next_page_token][google.spanner.v1.ListSessionsResponse.next_page_token] from a previous
+    /// [next_page_token][google.spanner.v1.ListSessionsResponse.next_page_token]
+    /// from a previous
     /// [ListSessionsResponse][google.spanner.v1.ListSessionsResponse].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1936,8 +1960,8 @@ namespace Google.Cloud.Spanner.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// `next_page_token` can be sent in a subsequent
-    /// [ListSessions][google.spanner.v1.Spanner.ListSessions] call to fetch more of the matching
-    /// sessions.
+    /// [ListSessions][google.spanner.v1.Spanner.ListSessions] call to fetch more
+    /// of the matching sessions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2630,6 +2654,1007 @@ namespace Google.Cloud.Spanner.V1 {
   }
 
   /// <summary>
+  /// The DirectedReadOptions can be used to indicate which replicas or regions
+  /// should be used for non-transactional reads or queries.
+  ///
+  /// DirectedReadOptions may only be specified for a read-only transaction,
+  /// otherwise the API will return an `INVALID_ARGUMENT` error.
+  /// </summary>
+  public sealed partial class DirectedReadOptions : pb::IMessage<DirectedReadOptions>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DirectedReadOptions> _parser = new pb::MessageParser<DirectedReadOptions>(() => new DirectedReadOptions());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DirectedReadOptions> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DirectedReadOptions() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DirectedReadOptions(DirectedReadOptions other) : this() {
+      switch (other.ReplicasCase) {
+        case ReplicasOneofCase.IncludeReplicas:
+          IncludeReplicas = other.IncludeReplicas.Clone();
+          break;
+        case ReplicasOneofCase.ExcludeReplicas:
+          ExcludeReplicas = other.ExcludeReplicas.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DirectedReadOptions Clone() {
+      return new DirectedReadOptions(this);
+    }
+
+    /// <summary>Field number for the "include_replicas" field.</summary>
+    public const int IncludeReplicasFieldNumber = 1;
+    /// <summary>
+    /// Include_replicas indicates the order of replicas (as they appear in
+    /// this list) to process the request. If auto_failover_disabled is set to
+    /// true and all replicas are exhausted without finding a healthy replica,
+    /// Spanner will wait for a replica in the list to become available, requests
+    /// may fail due to `DEADLINE_EXCEEDED` errors.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.IncludeReplicas IncludeReplicas {
+      get { return replicasCase_ == ReplicasOneofCase.IncludeReplicas ? (global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.IncludeReplicas) replicas_ : null; }
+      set {
+        replicas_ = value;
+        replicasCase_ = value == null ? ReplicasOneofCase.None : ReplicasOneofCase.IncludeReplicas;
+      }
+    }
+
+    /// <summary>Field number for the "exclude_replicas" field.</summary>
+    public const int ExcludeReplicasFieldNumber = 2;
+    /// <summary>
+    /// Exclude_replicas indicates that should be excluded from serving
+    /// requests. Spanner will not route requests to the replicas in this list.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.ExcludeReplicas ExcludeReplicas {
+      get { return replicasCase_ == ReplicasOneofCase.ExcludeReplicas ? (global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.ExcludeReplicas) replicas_ : null; }
+      set {
+        replicas_ = value;
+        replicasCase_ = value == null ? ReplicasOneofCase.None : ReplicasOneofCase.ExcludeReplicas;
+      }
+    }
+
+    private object replicas_;
+    /// <summary>Enum of possible cases for the "replicas" oneof.</summary>
+    public enum ReplicasOneofCase {
+      None = 0,
+      IncludeReplicas = 1,
+      ExcludeReplicas = 2,
+    }
+    private ReplicasOneofCase replicasCase_ = ReplicasOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReplicasOneofCase ReplicasCase {
+      get { return replicasCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearReplicas() {
+      replicasCase_ = ReplicasOneofCase.None;
+      replicas_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DirectedReadOptions);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DirectedReadOptions other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(IncludeReplicas, other.IncludeReplicas)) return false;
+      if (!object.Equals(ExcludeReplicas, other.ExcludeReplicas)) return false;
+      if (ReplicasCase != other.ReplicasCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (replicasCase_ == ReplicasOneofCase.IncludeReplicas) hash ^= IncludeReplicas.GetHashCode();
+      if (replicasCase_ == ReplicasOneofCase.ExcludeReplicas) hash ^= ExcludeReplicas.GetHashCode();
+      hash ^= (int) replicasCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (replicasCase_ == ReplicasOneofCase.IncludeReplicas) {
+        output.WriteRawTag(10);
+        output.WriteMessage(IncludeReplicas);
+      }
+      if (replicasCase_ == ReplicasOneofCase.ExcludeReplicas) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ExcludeReplicas);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (replicasCase_ == ReplicasOneofCase.IncludeReplicas) {
+        output.WriteRawTag(10);
+        output.WriteMessage(IncludeReplicas);
+      }
+      if (replicasCase_ == ReplicasOneofCase.ExcludeReplicas) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ExcludeReplicas);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (replicasCase_ == ReplicasOneofCase.IncludeReplicas) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(IncludeReplicas);
+      }
+      if (replicasCase_ == ReplicasOneofCase.ExcludeReplicas) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExcludeReplicas);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DirectedReadOptions other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.ReplicasCase) {
+        case ReplicasOneofCase.IncludeReplicas:
+          if (IncludeReplicas == null) {
+            IncludeReplicas = new global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.IncludeReplicas();
+          }
+          IncludeReplicas.MergeFrom(other.IncludeReplicas);
+          break;
+        case ReplicasOneofCase.ExcludeReplicas:
+          if (ExcludeReplicas == null) {
+            ExcludeReplicas = new global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.ExcludeReplicas();
+          }
+          ExcludeReplicas.MergeFrom(other.ExcludeReplicas);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.IncludeReplicas subBuilder = new global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.IncludeReplicas();
+            if (replicasCase_ == ReplicasOneofCase.IncludeReplicas) {
+              subBuilder.MergeFrom(IncludeReplicas);
+            }
+            input.ReadMessage(subBuilder);
+            IncludeReplicas = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.ExcludeReplicas subBuilder = new global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.ExcludeReplicas();
+            if (replicasCase_ == ReplicasOneofCase.ExcludeReplicas) {
+              subBuilder.MergeFrom(ExcludeReplicas);
+            }
+            input.ReadMessage(subBuilder);
+            ExcludeReplicas = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.IncludeReplicas subBuilder = new global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.IncludeReplicas();
+            if (replicasCase_ == ReplicasOneofCase.IncludeReplicas) {
+              subBuilder.MergeFrom(IncludeReplicas);
+            }
+            input.ReadMessage(subBuilder);
+            IncludeReplicas = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.ExcludeReplicas subBuilder = new global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.ExcludeReplicas();
+            if (replicasCase_ == ReplicasOneofCase.ExcludeReplicas) {
+              subBuilder.MergeFrom(ExcludeReplicas);
+            }
+            input.ReadMessage(subBuilder);
+            ExcludeReplicas = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the DirectedReadOptions message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The directed read replica selector.
+      /// Callers must provide one or more of the following fields for replica
+      /// selection:
+      ///
+      ///   * `location` - The location must be one of the regions within the
+      ///      multi-region configuration of your database.
+      ///   * `type` - The type of the replica.
+      ///
+      /// Some examples of using replica_selectors are:
+      ///
+      ///   * `location:us-east1` --> The "us-east1" replica(s) of any available type
+      ///                             will be used to process the request.
+      ///   * `type:READ_ONLY`    --> The "READ_ONLY" type replica(s) in nearest
+      /// .                            available location will be used to process the
+      ///                             request.
+      ///   * `location:us-east1 type:READ_ONLY` --> The "READ_ONLY" type replica(s)
+      ///                          in location "us-east1" will be used to process
+      ///                          the request.
+      /// </summary>
+      public sealed partial class ReplicaSelection : pb::IMessage<ReplicaSelection>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ReplicaSelection> _parser = new pb::MessageParser<ReplicaSelection>(() => new ReplicaSelection());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ReplicaSelection> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Spanner.V1.DirectedReadOptions.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ReplicaSelection() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ReplicaSelection(ReplicaSelection other) : this() {
+          location_ = other.location_;
+          type_ = other.type_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ReplicaSelection Clone() {
+          return new ReplicaSelection(this);
+        }
+
+        /// <summary>Field number for the "location" field.</summary>
+        public const int LocationFieldNumber = 1;
+        private string location_ = "";
+        /// <summary>
+        /// The location or region of the serving requests, e.g. "us-east1".
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Location {
+          get { return location_; }
+          set {
+            location_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "type" field.</summary>
+        public const int TypeFieldNumber = 2;
+        private global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.ReplicaSelection.Types.Type type_ = global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.ReplicaSelection.Types.Type.Unspecified;
+        /// <summary>
+        /// The type of replica.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.ReplicaSelection.Types.Type Type {
+          get { return type_; }
+          set {
+            type_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ReplicaSelection);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ReplicaSelection other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Location != other.Location) return false;
+          if (Type != other.Type) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Location.Length != 0) hash ^= Location.GetHashCode();
+          if (Type != global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.ReplicaSelection.Types.Type.Unspecified) hash ^= Type.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Location.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Location);
+          }
+          if (Type != global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.ReplicaSelection.Types.Type.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) Type);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Location.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Location);
+          }
+          if (Type != global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.ReplicaSelection.Types.Type.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) Type);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Location.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Location);
+          }
+          if (Type != global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.ReplicaSelection.Types.Type.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ReplicaSelection other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Location.Length != 0) {
+            Location = other.Location;
+          }
+          if (other.Type != global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.ReplicaSelection.Types.Type.Unspecified) {
+            Type = other.Type;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Location = input.ReadString();
+                break;
+              }
+              case 16: {
+                Type = (global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.ReplicaSelection.Types.Type) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Location = input.ReadString();
+                break;
+              }
+              case 16: {
+                Type = (global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.ReplicaSelection.Types.Type) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the ReplicaSelection message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Indicates the type of replica.
+          /// </summary>
+          public enum Type {
+            /// <summary>
+            /// Not specified.
+            /// </summary>
+            [pbr::OriginalName("TYPE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Read-write replicas support both reads and writes.
+            /// </summary>
+            [pbr::OriginalName("READ_WRITE")] ReadWrite = 1,
+            /// <summary>
+            /// Read-only replicas only support reads (not writes).
+            /// </summary>
+            [pbr::OriginalName("READ_ONLY")] ReadOnly = 2,
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
+      /// An IncludeReplicas contains a repeated set of ReplicaSelection which
+      /// indicates the order in which replicas should be considered.
+      /// </summary>
+      public sealed partial class IncludeReplicas : pb::IMessage<IncludeReplicas>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<IncludeReplicas> _parser = new pb::MessageParser<IncludeReplicas>(() => new IncludeReplicas());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<IncludeReplicas> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Spanner.V1.DirectedReadOptions.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public IncludeReplicas() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public IncludeReplicas(IncludeReplicas other) : this() {
+          replicaSelections_ = other.replicaSelections_.Clone();
+          autoFailoverDisabled_ = other.autoFailoverDisabled_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public IncludeReplicas Clone() {
+          return new IncludeReplicas(this);
+        }
+
+        /// <summary>Field number for the "replica_selections" field.</summary>
+        public const int ReplicaSelectionsFieldNumber = 1;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.ReplicaSelection> _repeated_replicaSelections_codec
+            = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.ReplicaSelection.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.ReplicaSelection> replicaSelections_ = new pbc::RepeatedField<global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.ReplicaSelection>();
+        /// <summary>
+        /// The directed read replica selector.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.ReplicaSelection> ReplicaSelections {
+          get { return replicaSelections_; }
+        }
+
+        /// <summary>Field number for the "auto_failover_disabled" field.</summary>
+        public const int AutoFailoverDisabledFieldNumber = 2;
+        private bool autoFailoverDisabled_;
+        /// <summary>
+        /// If true, Spanner will not route requests to a replica outside the
+        /// include_replicas list when all of the specified replicas are unavailable
+        /// or unhealthy. Default value is `false`.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool AutoFailoverDisabled {
+          get { return autoFailoverDisabled_; }
+          set {
+            autoFailoverDisabled_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as IncludeReplicas);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(IncludeReplicas other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!replicaSelections_.Equals(other.replicaSelections_)) return false;
+          if (AutoFailoverDisabled != other.AutoFailoverDisabled) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= replicaSelections_.GetHashCode();
+          if (AutoFailoverDisabled != false) hash ^= AutoFailoverDisabled.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          replicaSelections_.WriteTo(output, _repeated_replicaSelections_codec);
+          if (AutoFailoverDisabled != false) {
+            output.WriteRawTag(16);
+            output.WriteBool(AutoFailoverDisabled);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          replicaSelections_.WriteTo(ref output, _repeated_replicaSelections_codec);
+          if (AutoFailoverDisabled != false) {
+            output.WriteRawTag(16);
+            output.WriteBool(AutoFailoverDisabled);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += replicaSelections_.CalculateSize(_repeated_replicaSelections_codec);
+          if (AutoFailoverDisabled != false) {
+            size += 1 + 1;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(IncludeReplicas other) {
+          if (other == null) {
+            return;
+          }
+          replicaSelections_.Add(other.replicaSelections_);
+          if (other.AutoFailoverDisabled != false) {
+            AutoFailoverDisabled = other.AutoFailoverDisabled;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                replicaSelections_.AddEntriesFrom(input, _repeated_replicaSelections_codec);
+                break;
+              }
+              case 16: {
+                AutoFailoverDisabled = input.ReadBool();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                replicaSelections_.AddEntriesFrom(ref input, _repeated_replicaSelections_codec);
+                break;
+              }
+              case 16: {
+                AutoFailoverDisabled = input.ReadBool();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// An ExcludeReplicas contains a repeated set of ReplicaSelection that should
+      /// be excluded from serving requests.
+      /// </summary>
+      public sealed partial class ExcludeReplicas : pb::IMessage<ExcludeReplicas>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ExcludeReplicas> _parser = new pb::MessageParser<ExcludeReplicas>(() => new ExcludeReplicas());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ExcludeReplicas> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Spanner.V1.DirectedReadOptions.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ExcludeReplicas() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ExcludeReplicas(ExcludeReplicas other) : this() {
+          replicaSelections_ = other.replicaSelections_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ExcludeReplicas Clone() {
+          return new ExcludeReplicas(this);
+        }
+
+        /// <summary>Field number for the "replica_selections" field.</summary>
+        public const int ReplicaSelectionsFieldNumber = 1;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.ReplicaSelection> _repeated_replicaSelections_codec
+            = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.ReplicaSelection.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.ReplicaSelection> replicaSelections_ = new pbc::RepeatedField<global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.ReplicaSelection>();
+        /// <summary>
+        /// The directed read replica selector.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.Spanner.V1.DirectedReadOptions.Types.ReplicaSelection> ReplicaSelections {
+          get { return replicaSelections_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ExcludeReplicas);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ExcludeReplicas other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!replicaSelections_.Equals(other.replicaSelections_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= replicaSelections_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          replicaSelections_.WriteTo(output, _repeated_replicaSelections_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          replicaSelections_.WriteTo(ref output, _repeated_replicaSelections_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += replicaSelections_.CalculateSize(_repeated_replicaSelections_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ExcludeReplicas other) {
+          if (other == null) {
+            return;
+          }
+          replicaSelections_.Add(other.replicaSelections_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                replicaSelections_.AddEntriesFrom(input, _repeated_replicaSelections_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                replicaSelections_.AddEntriesFrom(ref input, _repeated_replicaSelections_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// The request for [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
   /// [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql].
   /// </summary>
@@ -2647,7 +3672,7 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2678,6 +3703,7 @@ namespace Google.Cloud.Spanner.V1 {
       seqno_ = other.seqno_;
       queryOptions_ = other.queryOptions_ != null ? other.queryOptions_.Clone() : null;
       requestOptions_ = other.requestOptions_ != null ? other.requestOptions_.Clone() : null;
+      directedReadOptions_ = other.directedReadOptions_ != null ? other.directedReadOptions_.Clone() : null;
       dataBoostEnabled_ = other.dataBoostEnabled_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -2777,7 +3803,8 @@ namespace Google.Cloud.Spanner.V1 {
     /// <summary>
     /// It is not always possible for Cloud Spanner to infer the right SQL type
     /// from a JSON value.  For example, values of type `BYTES` and values
-    /// of type `STRING` both appear in [params][google.spanner.v1.ExecuteSqlRequest.params] as JSON strings.
+    /// of type `STRING` both appear in
+    /// [params][google.spanner.v1.ExecuteSqlRequest.params] as JSON strings.
     ///
     /// In these cases, `param_types` can be used to specify the exact
     /// SQL type for some or all of the SQL statement parameters. See the
@@ -2796,10 +3823,10 @@ namespace Google.Cloud.Spanner.V1 {
     /// <summary>
     /// If this request is resuming a previously interrupted SQL statement
     /// execution, `resume_token` should be copied from the last
-    /// [PartialResultSet][google.spanner.v1.PartialResultSet] yielded before the interruption. Doing this
-    /// enables the new SQL statement execution to resume where the last one left
-    /// off. The rest of the request parameters must exactly match the
-    /// request that yielded this token.
+    /// [PartialResultSet][google.spanner.v1.PartialResultSet] yielded before the
+    /// interruption. Doing this enables the new SQL statement execution to resume
+    /// where the last one left off. The rest of the request parameters must
+    /// exactly match the request that yielded this token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2815,8 +3842,11 @@ namespace Google.Cloud.Spanner.V1 {
     private global::Google.Cloud.Spanner.V1.ExecuteSqlRequest.Types.QueryMode queryMode_ = global::Google.Cloud.Spanner.V1.ExecuteSqlRequest.Types.QueryMode.Normal;
     /// <summary>
     /// Used to control the amount of debugging information returned in
-    /// [ResultSetStats][google.spanner.v1.ResultSetStats]. If [partition_token][google.spanner.v1.ExecuteSqlRequest.partition_token] is set, [query_mode][google.spanner.v1.ExecuteSqlRequest.query_mode] can only
-    /// be set to [QueryMode.NORMAL][google.spanner.v1.ExecuteSqlRequest.QueryMode.NORMAL].
+    /// [ResultSetStats][google.spanner.v1.ResultSetStats]. If
+    /// [partition_token][google.spanner.v1.ExecuteSqlRequest.partition_token] is
+    /// set, [query_mode][google.spanner.v1.ExecuteSqlRequest.query_mode] can only
+    /// be set to
+    /// [QueryMode.NORMAL][google.spanner.v1.ExecuteSqlRequest.QueryMode.NORMAL].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2899,15 +3929,30 @@ namespace Google.Cloud.Spanner.V1 {
       }
     }
 
+    /// <summary>Field number for the "directed_read_options" field.</summary>
+    public const int DirectedReadOptionsFieldNumber = 15;
+    private global::Google.Cloud.Spanner.V1.DirectedReadOptions directedReadOptions_;
+    /// <summary>
+    /// Directed read options for this request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.V1.DirectedReadOptions DirectedReadOptions {
+      get { return directedReadOptions_; }
+      set {
+        directedReadOptions_ = value;
+      }
+    }
+
     /// <summary>Field number for the "data_boost_enabled" field.</summary>
     public const int DataBoostEnabledFieldNumber = 16;
     private bool dataBoostEnabled_;
     /// <summary>
     /// If this is for a partitioned query and this field is set to `true`, the
-    /// request will be executed via Spanner independent compute resources.
+    /// request is executed with Spanner Data Boost independent compute resources.
     ///
     /// If the field is set to `true` but the request does not set
-    /// `partition_token`, the API will return an `INVALID_ARGUMENT` error.
+    /// `partition_token`, the API returns an `INVALID_ARGUMENT` error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2944,6 +3989,7 @@ namespace Google.Cloud.Spanner.V1 {
       if (Seqno != other.Seqno) return false;
       if (!object.Equals(QueryOptions, other.QueryOptions)) return false;
       if (!object.Equals(RequestOptions, other.RequestOptions)) return false;
+      if (!object.Equals(DirectedReadOptions, other.DirectedReadOptions)) return false;
       if (DataBoostEnabled != other.DataBoostEnabled) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2963,6 +4009,7 @@ namespace Google.Cloud.Spanner.V1 {
       if (Seqno != 0L) hash ^= Seqno.GetHashCode();
       if (queryOptions_ != null) hash ^= QueryOptions.GetHashCode();
       if (requestOptions_ != null) hash ^= RequestOptions.GetHashCode();
+      if (directedReadOptions_ != null) hash ^= DirectedReadOptions.GetHashCode();
       if (DataBoostEnabled != false) hash ^= DataBoostEnabled.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3023,6 +4070,10 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(90);
         output.WriteMessage(RequestOptions);
       }
+      if (directedReadOptions_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(DirectedReadOptions);
+      }
       if (DataBoostEnabled != false) {
         output.WriteRawTag(128, 1);
         output.WriteBool(DataBoostEnabled);
@@ -3078,6 +4129,10 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(90);
         output.WriteMessage(RequestOptions);
       }
+      if (directedReadOptions_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(DirectedReadOptions);
+      }
       if (DataBoostEnabled != false) {
         output.WriteRawTag(128, 1);
         output.WriteBool(DataBoostEnabled);
@@ -3122,6 +4177,9 @@ namespace Google.Cloud.Spanner.V1 {
       }
       if (requestOptions_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RequestOptions);
+      }
+      if (directedReadOptions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DirectedReadOptions);
       }
       if (DataBoostEnabled != false) {
         size += 2 + 1;
@@ -3180,6 +4238,12 @@ namespace Google.Cloud.Spanner.V1 {
           RequestOptions = new global::Google.Cloud.Spanner.V1.RequestOptions();
         }
         RequestOptions.MergeFrom(other.RequestOptions);
+      }
+      if (other.directedReadOptions_ != null) {
+        if (directedReadOptions_ == null) {
+          DirectedReadOptions = new global::Google.Cloud.Spanner.V1.DirectedReadOptions();
+        }
+        DirectedReadOptions.MergeFrom(other.DirectedReadOptions);
       }
       if (other.DataBoostEnabled != false) {
         DataBoostEnabled = other.DataBoostEnabled;
@@ -3255,6 +4319,13 @@ namespace Google.Cloud.Spanner.V1 {
             input.ReadMessage(RequestOptions);
             break;
           }
+          case 122: {
+            if (directedReadOptions_ == null) {
+              DirectedReadOptions = new global::Google.Cloud.Spanner.V1.DirectedReadOptions();
+            }
+            input.ReadMessage(DirectedReadOptions);
+            break;
+          }
           case 128: {
             DataBoostEnabled = input.ReadBool();
             break;
@@ -3328,6 +4399,13 @@ namespace Google.Cloud.Spanner.V1 {
               RequestOptions = new global::Google.Cloud.Spanner.V1.RequestOptions();
             }
             input.ReadMessage(RequestOptions);
+            break;
+          }
+          case 122: {
+            if (directedReadOptions_ == null) {
+              DirectedReadOptions = new global::Google.Cloud.Spanner.V1.DirectedReadOptions();
+            }
+            input.ReadMessage(DirectedReadOptions);
             break;
           }
           case 128: {
@@ -3665,7 +4743,7 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3739,10 +4817,10 @@ namespace Google.Cloud.Spanner.V1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest.Types.Statement.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest.Types.Statement> statements_ = new pbc::RepeatedField<global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest.Types.Statement>();
     /// <summary>
-    /// Required. The list of statements to execute in this batch. Statements are executed
-    /// serially, such that the effects of statement `i` are visible to statement
-    /// `i+1`. Each statement must be a DML statement. Execution stops at the
-    /// first failed statement; the remaining statements are not executed.
+    /// Required. The list of statements to execute in this batch. Statements are
+    /// executed serially, such that the effects of statement `i` are visible to
+    /// statement `i+1`. Each statement must be a DML statement. Execution stops at
+    /// the first failed statement; the remaining statements are not executed.
     ///
     /// Callers must provide at least one statement.
     /// </summary>
@@ -3756,9 +4834,9 @@ namespace Google.Cloud.Spanner.V1 {
     public const int SeqnoFieldNumber = 4;
     private long seqno_;
     /// <summary>
-    /// Required. A per-transaction sequence number used to identify this request. This field
-    /// makes each request idempotent such that if the request is received multiple
-    /// times, at most one will succeed.
+    /// Required. A per-transaction sequence number used to identify this request.
+    /// This field makes each request idempotent such that if the request is
+    /// received multiple times, at most one will succeed.
     ///
     /// The sequence number must be monotonically increasing within the
     /// transaction. If a request arrives for the first time with an out-of-order
@@ -4127,7 +5205,9 @@ namespace Google.Cloud.Spanner.V1 {
         /// <summary>
         /// It is not always possible for Cloud Spanner to infer the right SQL type
         /// from a JSON value.  For example, values of type `BYTES` and values
-        /// of type `STRING` both appear in [params][google.spanner.v1.ExecuteBatchDmlRequest.Statement.params] as JSON strings.
+        /// of type `STRING` both appear in
+        /// [params][google.spanner.v1.ExecuteBatchDmlRequest.Statement.params] as
+        /// JSON strings.
         ///
         /// In these cases, `param_types` can be used to specify the exact
         /// SQL type for some or all of the SQL statement parameters. See the
@@ -4326,30 +5406,37 @@ namespace Google.Cloud.Spanner.V1 {
   }
 
   /// <summary>
-  /// The response for [ExecuteBatchDml][google.spanner.v1.Spanner.ExecuteBatchDml]. Contains a list
-  /// of [ResultSet][google.spanner.v1.ResultSet] messages, one for each DML statement that has successfully
-  /// executed, in the same order as the statements in the request. If a statement
-  /// fails, the status in the response body identifies the cause of the failure.
+  /// The response for
+  /// [ExecuteBatchDml][google.spanner.v1.Spanner.ExecuteBatchDml]. Contains a list
+  /// of [ResultSet][google.spanner.v1.ResultSet] messages, one for each DML
+  /// statement that has successfully executed, in the same order as the statements
+  /// in the request. If a statement fails, the status in the response body
+  /// identifies the cause of the failure.
   ///
   /// To check for DML statements that failed, use the following approach:
   ///
-  /// 1. Check the status in the response message. The [google.rpc.Code][google.rpc.Code] enum
+  /// 1. Check the status in the response message. The
+  /// [google.rpc.Code][google.rpc.Code] enum
   ///    value `OK` indicates that all statements were executed successfully.
   /// 2. If the status was not `OK`, check the number of result sets in the
-  ///    response. If the response contains `N` [ResultSet][google.spanner.v1.ResultSet] messages, then
-  ///    statement `N+1` in the request failed.
+  ///    response. If the response contains `N`
+  ///    [ResultSet][google.spanner.v1.ResultSet] messages, then statement `N+1` in
+  ///    the request failed.
   ///
   /// Example 1:
   ///
   /// * Request: 5 DML statements, all executed successfully.
-  /// * Response: 5 [ResultSet][google.spanner.v1.ResultSet] messages, with the status `OK`.
+  /// * Response: 5 [ResultSet][google.spanner.v1.ResultSet] messages, with the
+  /// status `OK`.
   ///
   /// Example 2:
   ///
   /// * Request: 5 DML statements. The third statement has a syntax error.
-  /// * Response: 2 [ResultSet][google.spanner.v1.ResultSet] messages, and a syntax error (`INVALID_ARGUMENT`)
-  ///   status. The number of [ResultSet][google.spanner.v1.ResultSet] messages indicates that the third
-  ///   statement failed, and the fourth and fifth statements were not executed.
+  /// * Response: 2 [ResultSet][google.spanner.v1.ResultSet] messages, and a syntax
+  /// error (`INVALID_ARGUMENT`)
+  ///   status. The number of [ResultSet][google.spanner.v1.ResultSet] messages
+  ///   indicates that the third statement failed, and the fourth and fifth
+  ///   statements were not executed.
   /// </summary>
   public sealed partial class ExecuteBatchDmlResponse : pb::IMessage<ExecuteBatchDmlResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4365,7 +5452,7 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4402,13 +5489,15 @@ namespace Google.Cloud.Spanner.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Spanner.V1.ResultSet.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Spanner.V1.ResultSet> resultSets_ = new pbc::RepeatedField<global::Google.Cloud.Spanner.V1.ResultSet>();
     /// <summary>
-    /// One [ResultSet][google.spanner.v1.ResultSet] for each statement in the request that ran successfully,
-    /// in the same order as the statements in the request. Each [ResultSet][google.spanner.v1.ResultSet] does
-    /// not contain any rows. The [ResultSetStats][google.spanner.v1.ResultSetStats] in each [ResultSet][google.spanner.v1.ResultSet] contain
-    /// the number of rows modified by the statement.
+    /// One [ResultSet][google.spanner.v1.ResultSet] for each statement in the
+    /// request that ran successfully, in the same order as the statements in the
+    /// request. Each [ResultSet][google.spanner.v1.ResultSet] does not contain any
+    /// rows. The [ResultSetStats][google.spanner.v1.ResultSetStats] in each
+    /// [ResultSet][google.spanner.v1.ResultSet] contain the number of rows
+    /// modified by the statement.
     ///
-    /// Only the first [ResultSet][google.spanner.v1.ResultSet] in the response contains valid
-    /// [ResultSetMetadata][google.spanner.v1.ResultSetMetadata].
+    /// Only the first [ResultSet][google.spanner.v1.ResultSet] in the response
+    /// contains valid [ResultSetMetadata][google.spanner.v1.ResultSetMetadata].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4606,7 +5695,7 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4853,7 +5942,7 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4923,15 +6012,16 @@ namespace Google.Cloud.Spanner.V1 {
     public const int SqlFieldNumber = 3;
     private string sql_ = "";
     /// <summary>
-    /// Required. The query request to generate partitions for. The request will fail if
-    /// the query is not root partitionable. The query plan of a root
-    /// partitionable query has a single distributed union operator. A distributed
-    /// union operator conceptually divides one or more tables into multiple
-    /// splits, remotely evaluates a subquery independently on each split, and
-    /// then unions all results.
+    /// Required. The query request to generate partitions for. The request will
+    /// fail if the query is not root partitionable. For a query to be root
+    /// partitionable, it needs to satisfy a few conditions. For example, the first
+    /// operator in the query execution plan must be a distributed union operator.
+    /// For more information about other conditions, see [Read data in
+    /// parallel](https://cloud.google.com/spanner/docs/reads#read_data_in_parallel).
     ///
-    /// This must not contain DML commands, such as INSERT, UPDATE, or
-    /// DELETE. Use [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] with a
+    /// The query request must not contain DML commands, such as INSERT, UPDATE, or
+    /// DELETE. Use
+    /// [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] with a
     /// PartitionedDml transaction for large, partition-friendly DML operations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4977,7 +6067,8 @@ namespace Google.Cloud.Spanner.V1 {
     /// <summary>
     /// It is not always possible for Cloud Spanner to infer the right SQL type
     /// from a JSON value.  For example, values of type `BYTES` and values
-    /// of type `STRING` both appear in [params][google.spanner.v1.PartitionQueryRequest.params] as JSON strings.
+    /// of type `STRING` both appear in
+    /// [params][google.spanner.v1.PartitionQueryRequest.params] as JSON strings.
     ///
     /// In these cases, `param_types` can be used to specify the exact
     /// SQL type for some or all of the SQL query parameters. See the
@@ -5292,7 +6383,7 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5378,9 +6469,12 @@ namespace Google.Cloud.Spanner.V1 {
     public const int IndexFieldNumber = 4;
     private string index_ = "";
     /// <summary>
-    /// If non-empty, the name of an index on [table][google.spanner.v1.PartitionReadRequest.table]. This index is
-    /// used instead of the table primary key when interpreting [key_set][google.spanner.v1.PartitionReadRequest.key_set]
-    /// and sorting result rows. See [key_set][google.spanner.v1.PartitionReadRequest.key_set] for further information.
+    /// If non-empty, the name of an index on
+    /// [table][google.spanner.v1.PartitionReadRequest.table]. This index is used
+    /// instead of the table primary key when interpreting
+    /// [key_set][google.spanner.v1.PartitionReadRequest.key_set] and sorting
+    /// result rows. See [key_set][google.spanner.v1.PartitionReadRequest.key_set]
+    /// for further information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5397,8 +6491,8 @@ namespace Google.Cloud.Spanner.V1 {
         = pb::FieldCodec.ForString(42);
     private readonly pbc::RepeatedField<string> columns_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// The columns of [table][google.spanner.v1.PartitionReadRequest.table] to be returned for each row matching
-    /// this request.
+    /// The columns of [table][google.spanner.v1.PartitionReadRequest.table] to be
+    /// returned for each row matching this request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5411,8 +6505,11 @@ namespace Google.Cloud.Spanner.V1 {
     private global::Google.Cloud.Spanner.V1.KeySet keySet_;
     /// <summary>
     /// Required. `key_set` identifies the rows to be yielded. `key_set` names the
-    /// primary keys of the rows in [table][google.spanner.v1.PartitionReadRequest.table] to be yielded, unless [index][google.spanner.v1.PartitionReadRequest.index]
-    /// is present. If [index][google.spanner.v1.PartitionReadRequest.index] is present, then [key_set][google.spanner.v1.PartitionReadRequest.key_set] instead names
+    /// primary keys of the rows in
+    /// [table][google.spanner.v1.PartitionReadRequest.table] to be yielded, unless
+    /// [index][google.spanner.v1.PartitionReadRequest.index] is present. If
+    /// [index][google.spanner.v1.PartitionReadRequest.index] is present, then
+    /// [key_set][google.spanner.v1.PartitionReadRequest.key_set] instead names
     /// index keys in [index][google.spanner.v1.PartitionReadRequest.index].
     ///
     /// It is not an error for the `key_set` to name rows that do not
@@ -5754,7 +6851,7 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5952,7 +7049,7 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6186,7 +7283,7 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6216,6 +7313,7 @@ namespace Google.Cloud.Spanner.V1 {
       resumeToken_ = other.resumeToken_;
       partitionToken_ = other.partitionToken_;
       requestOptions_ = other.requestOptions_ != null ? other.requestOptions_.Clone() : null;
+      directedReadOptions_ = other.directedReadOptions_ != null ? other.directedReadOptions_.Clone() : null;
       dataBoostEnabled_ = other.dataBoostEnabled_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -6276,9 +7374,12 @@ namespace Google.Cloud.Spanner.V1 {
     public const int IndexFieldNumber = 4;
     private string index_ = "";
     /// <summary>
-    /// If non-empty, the name of an index on [table][google.spanner.v1.ReadRequest.table]. This index is
-    /// used instead of the table primary key when interpreting [key_set][google.spanner.v1.ReadRequest.key_set]
-    /// and sorting result rows. See [key_set][google.spanner.v1.ReadRequest.key_set] for further information.
+    /// If non-empty, the name of an index on
+    /// [table][google.spanner.v1.ReadRequest.table]. This index is used instead of
+    /// the table primary key when interpreting
+    /// [key_set][google.spanner.v1.ReadRequest.key_set] and sorting result rows.
+    /// See [key_set][google.spanner.v1.ReadRequest.key_set] for further
+    /// information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6295,8 +7396,8 @@ namespace Google.Cloud.Spanner.V1 {
         = pb::FieldCodec.ForString(42);
     private readonly pbc::RepeatedField<string> columns_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Required. The columns of [table][google.spanner.v1.ReadRequest.table] to be returned for each row matching
-    /// this request.
+    /// Required. The columns of [table][google.spanner.v1.ReadRequest.table] to be
+    /// returned for each row matching this request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6309,14 +7410,18 @@ namespace Google.Cloud.Spanner.V1 {
     private global::Google.Cloud.Spanner.V1.KeySet keySet_;
     /// <summary>
     /// Required. `key_set` identifies the rows to be yielded. `key_set` names the
-    /// primary keys of the rows in [table][google.spanner.v1.ReadRequest.table] to be yielded, unless [index][google.spanner.v1.ReadRequest.index]
-    /// is present. If [index][google.spanner.v1.ReadRequest.index] is present, then [key_set][google.spanner.v1.ReadRequest.key_set] instead names
-    /// index keys in [index][google.spanner.v1.ReadRequest.index].
+    /// primary keys of the rows in [table][google.spanner.v1.ReadRequest.table] to
+    /// be yielded, unless [index][google.spanner.v1.ReadRequest.index] is present.
+    /// If [index][google.spanner.v1.ReadRequest.index] is present, then
+    /// [key_set][google.spanner.v1.ReadRequest.key_set] instead names index keys
+    /// in [index][google.spanner.v1.ReadRequest.index].
     ///
-    /// If the [partition_token][google.spanner.v1.ReadRequest.partition_token] field is empty, rows are yielded
-    /// in table primary key order (if [index][google.spanner.v1.ReadRequest.index] is empty) or index key order
-    /// (if [index][google.spanner.v1.ReadRequest.index] is non-empty).  If the [partition_token][google.spanner.v1.ReadRequest.partition_token] field is not
-    /// empty, rows will be yielded in an unspecified order.
+    /// If the [partition_token][google.spanner.v1.ReadRequest.partition_token]
+    /// field is empty, rows are yielded in table primary key order (if
+    /// [index][google.spanner.v1.ReadRequest.index] is empty) or index key order
+    /// (if [index][google.spanner.v1.ReadRequest.index] is non-empty).  If the
+    /// [partition_token][google.spanner.v1.ReadRequest.partition_token] field is
+    /// not empty, rows will be yielded in an unspecified order.
     ///
     /// It is not an error for the `key_set` to name rows that do not
     /// exist in the database. Read yields nothing for nonexistent rows.
@@ -6353,9 +7458,9 @@ namespace Google.Cloud.Spanner.V1 {
     /// <summary>
     /// If this request is resuming a previously interrupted read,
     /// `resume_token` should be copied from the last
-    /// [PartialResultSet][google.spanner.v1.PartialResultSet] yielded before the interruption. Doing this
-    /// enables the new read to resume where the last read left off. The
-    /// rest of the request parameters must exactly match the request
+    /// [PartialResultSet][google.spanner.v1.PartialResultSet] yielded before the
+    /// interruption. Doing this enables the new read to resume where the last read
+    /// left off. The rest of the request parameters must exactly match the request
     /// that yielded this token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6400,15 +7505,30 @@ namespace Google.Cloud.Spanner.V1 {
       }
     }
 
+    /// <summary>Field number for the "directed_read_options" field.</summary>
+    public const int DirectedReadOptionsFieldNumber = 14;
+    private global::Google.Cloud.Spanner.V1.DirectedReadOptions directedReadOptions_;
+    /// <summary>
+    /// Directed read options for this request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.V1.DirectedReadOptions DirectedReadOptions {
+      get { return directedReadOptions_; }
+      set {
+        directedReadOptions_ = value;
+      }
+    }
+
     /// <summary>Field number for the "data_boost_enabled" field.</summary>
     public const int DataBoostEnabledFieldNumber = 15;
     private bool dataBoostEnabled_;
     /// <summary>
     /// If this is for a partitioned read and this field is set to `true`, the
-    /// request will be executed via Spanner independent compute resources.
+    /// request is executed with Spanner Data Boost independent compute resources.
     ///
     /// If the field is set to `true` but the request does not set
-    /// `partition_token`, the API will return an `INVALID_ARGUMENT` error.
+    /// `partition_token`, the API returns an `INVALID_ARGUMENT` error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6444,6 +7564,7 @@ namespace Google.Cloud.Spanner.V1 {
       if (ResumeToken != other.ResumeToken) return false;
       if (PartitionToken != other.PartitionToken) return false;
       if (!object.Equals(RequestOptions, other.RequestOptions)) return false;
+      if (!object.Equals(DirectedReadOptions, other.DirectedReadOptions)) return false;
       if (DataBoostEnabled != other.DataBoostEnabled) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -6462,6 +7583,7 @@ namespace Google.Cloud.Spanner.V1 {
       if (ResumeToken.Length != 0) hash ^= ResumeToken.GetHashCode();
       if (PartitionToken.Length != 0) hash ^= PartitionToken.GetHashCode();
       if (requestOptions_ != null) hash ^= RequestOptions.GetHashCode();
+      if (directedReadOptions_ != null) hash ^= DirectedReadOptions.GetHashCode();
       if (DataBoostEnabled != false) hash ^= DataBoostEnabled.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -6518,6 +7640,10 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(90);
         output.WriteMessage(RequestOptions);
       }
+      if (directedReadOptions_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(DirectedReadOptions);
+      }
       if (DataBoostEnabled != false) {
         output.WriteRawTag(120);
         output.WriteBool(DataBoostEnabled);
@@ -6569,6 +7695,10 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(90);
         output.WriteMessage(RequestOptions);
       }
+      if (directedReadOptions_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(DirectedReadOptions);
+      }
       if (DataBoostEnabled != false) {
         output.WriteRawTag(120);
         output.WriteBool(DataBoostEnabled);
@@ -6610,6 +7740,9 @@ namespace Google.Cloud.Spanner.V1 {
       }
       if (requestOptions_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RequestOptions);
+      }
+      if (directedReadOptions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DirectedReadOptions);
       }
       if (DataBoostEnabled != false) {
         size += 1 + 1;
@@ -6662,6 +7795,12 @@ namespace Google.Cloud.Spanner.V1 {
           RequestOptions = new global::Google.Cloud.Spanner.V1.RequestOptions();
         }
         RequestOptions.MergeFrom(other.RequestOptions);
+      }
+      if (other.directedReadOptions_ != null) {
+        if (directedReadOptions_ == null) {
+          DirectedReadOptions = new global::Google.Cloud.Spanner.V1.DirectedReadOptions();
+        }
+        DirectedReadOptions.MergeFrom(other.DirectedReadOptions);
       }
       if (other.DataBoostEnabled != false) {
         DataBoostEnabled = other.DataBoostEnabled;
@@ -6728,6 +7867,13 @@ namespace Google.Cloud.Spanner.V1 {
               RequestOptions = new global::Google.Cloud.Spanner.V1.RequestOptions();
             }
             input.ReadMessage(RequestOptions);
+            break;
+          }
+          case 114: {
+            if (directedReadOptions_ == null) {
+              DirectedReadOptions = new global::Google.Cloud.Spanner.V1.DirectedReadOptions();
+            }
+            input.ReadMessage(DirectedReadOptions);
             break;
           }
           case 120: {
@@ -6798,6 +7944,13 @@ namespace Google.Cloud.Spanner.V1 {
             input.ReadMessage(RequestOptions);
             break;
           }
+          case 114: {
+            if (directedReadOptions_ == null) {
+              DirectedReadOptions = new global::Google.Cloud.Spanner.V1.DirectedReadOptions();
+            }
+            input.ReadMessage(DirectedReadOptions);
+            break;
+          }
           case 120: {
             DataBoostEnabled = input.ReadBool();
             break;
@@ -6810,7 +7963,8 @@ namespace Google.Cloud.Spanner.V1 {
   }
 
   /// <summary>
-  /// The request for [BeginTransaction][google.spanner.v1.Spanner.BeginTransaction].
+  /// The request for
+  /// [BeginTransaction][google.spanner.v1.Spanner.BeginTransaction].
   /// </summary>
   public sealed partial class BeginTransactionRequest : pb::IMessage<BeginTransactionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6826,7 +7980,7 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7123,7 +8277,7 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7253,8 +8407,8 @@ namespace Google.Cloud.Spanner.V1 {
     private bool returnCommitStats_;
     /// <summary>
     /// If `true`, then statistics related to the transaction will be included in
-    /// the [CommitResponse][google.spanner.v1.CommitResponse.commit_stats]. Default value is
-    /// `false`.
+    /// the [CommitResponse][google.spanner.v1.CommitResponse.commit_stats].
+    /// Default value is `false`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7588,7 +8742,7 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7823,7 +8977,7 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8290,7 +9444,7 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

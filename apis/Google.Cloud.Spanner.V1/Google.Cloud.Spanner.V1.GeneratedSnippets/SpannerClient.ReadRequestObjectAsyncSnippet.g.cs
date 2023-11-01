@@ -48,6 +48,7 @@ namespace GoogleCSharpSnippets
                 ResumeToken = ByteString.Empty,
                 PartitionToken = ByteString.Empty,
                 RequestOptions = new RequestOptions(),
+                DirectedReadOptions = new DirectedReadOptions(),
                 DataBoostEnabled = false,
             };
             // Make the request
