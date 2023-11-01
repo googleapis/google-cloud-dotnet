@@ -31,8 +31,10 @@ public class GoldenTest
             Program.Main(new[] { packageFilePath });
             Assert.True(File.Exists(actualSbomFilePath));
 
-            string expected = File.ReadAllText(expectedSbomFilePath);
-            string actual = File.ReadAllText(actualSbomFilePath);
+            // Replace line endings in case we have run tests in environments different to those in which we generated
+            // the golden test data.
+            string expected = File.ReadAllText(expectedSbomFilePath).ReplaceLineEndings();
+            string actual = File.ReadAllText(actualSbomFilePath).ReplaceLineEndings();
 
             // Ugly hack to skip the created date comparison.
             // This is a sanity check test on a tool so this is OK.
