@@ -25,7 +25,7 @@
     <PackageReference Include="Apache.Avro" Version="1.11.3" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.7.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.5.3" />
-    <PackageReference Include="xunit" Version="2.5.3" />
+    <PackageReference Include="xunit" Version="2.6.0" />
   </ItemGroup>
 
   <ItemGroup>
