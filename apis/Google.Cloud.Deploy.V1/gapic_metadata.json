@@ -28,10 +28,22 @@
                 "ApproveRolloutAsync"
               ]
             },
+            "CancelAutomationRun": {
+              "methods": [
+                "CancelAutomationRun",
+                "CancelAutomationRunAsync"
+              ]
+            },
             "CancelRollout": {
               "methods": [
                 "CancelRollout",
                 "CancelRolloutAsync"
+              ]
+            },
+            "CreateAutomation": {
+              "methods": [
+                "CreateAutomation",
+                "CreateAutomationAsync"
               ]
             },
             "CreateDeliveryPipeline": {
@@ -58,6 +70,12 @@
                 "CreateTargetAsync"
               ]
             },
+            "DeleteAutomation": {
+              "methods": [
+                "DeleteAutomation",
+                "DeleteAutomationAsync"
+              ]
+            },
             "DeleteDeliveryPipeline": {
               "methods": [
                 "DeleteDeliveryPipeline",
@@ -68,6 +86,18 @@
               "methods": [
                 "DeleteTarget",
                 "DeleteTargetAsync"
+              ]
+            },
+            "GetAutomation": {
+              "methods": [
+                "GetAutomation",
+                "GetAutomationAsync"
+              ]
+            },
+            "GetAutomationRun": {
+              "methods": [
+                "GetAutomationRun",
+                "GetAutomationRunAsync"
               ]
             },
             "GetConfig": {
@@ -112,6 +142,18 @@
                 "IgnoreJobAsync"
               ]
             },
+            "ListAutomationRuns": {
+              "methods": [
+                "ListAutomationRuns",
+                "ListAutomationRunsAsync"
+              ]
+            },
+            "ListAutomations": {
+              "methods": [
+                "ListAutomations",
+                "ListAutomationsAsync"
+              ]
+            },
             "ListDeliveryPipelines": {
               "methods": [
                 "ListDeliveryPipelines",
@@ -148,10 +190,22 @@
                 "RetryJobAsync"
               ]
             },
+            "RollbackTarget": {
+              "methods": [
+                "RollbackTarget",
+                "RollbackTargetAsync"
+              ]
+            },
             "TerminateJobRun": {
               "methods": [
                 "TerminateJobRun",
                 "TerminateJobRunAsync"
+              ]
+            },
+            "UpdateAutomation": {
+              "methods": [
+                "UpdateAutomation",
+                "UpdateAutomationAsync"
               ]
             },
             "UpdateDeliveryPipeline": {

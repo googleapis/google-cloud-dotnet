@@ -82,6 +82,8 @@ namespace Google.Cloud.Deploy.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return AutomationPayloadReflection.Descriptor;
+            yield return AutomationrunPayloadReflection.Descriptor;
             yield return CloudDeployReflection.Descriptor;
             yield return DeliverypipelineNotificationPayloadReflection.Descriptor;
             yield return JobrunNotificationPayloadReflection.Descriptor;
@@ -89,6 +91,7 @@ namespace Google.Cloud.Deploy.V1
             yield return ReleaseNotificationPayloadReflection.Descriptor;
             yield return ReleaseRenderPayloadReflection.Descriptor;
             yield return RolloutNotificationPayloadReflection.Descriptor;
+            yield return RolloutUpdatePayloadReflection.Descriptor;
             yield return TargetNotificationPayloadReflection.Descriptor;
             yield return gciv::IamPolicyReflection.Descriptor;
             yield return gciv::OptionsReflection.Descriptor;

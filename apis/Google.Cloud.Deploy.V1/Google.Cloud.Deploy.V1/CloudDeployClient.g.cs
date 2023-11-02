@@ -59,6 +59,7 @@ namespace Google.Cloud.Deploy.V1
             DeleteDeliveryPipelineSettings = existing.DeleteDeliveryPipelineSettings;
             DeleteDeliveryPipelineOperationsSettings = existing.DeleteDeliveryPipelineOperationsSettings.Clone();
             ListTargetsSettings = existing.ListTargetsSettings;
+            RollbackTargetSettings = existing.RollbackTargetSettings;
             GetTargetSettings = existing.GetTargetSettings;
             CreateTargetSettings = existing.CreateTargetSettings;
             CreateTargetOperationsSettings = existing.CreateTargetOperationsSettings.Clone();
@@ -84,6 +85,17 @@ namespace Google.Cloud.Deploy.V1
             GetJobRunSettings = existing.GetJobRunSettings;
             TerminateJobRunSettings = existing.TerminateJobRunSettings;
             GetConfigSettings = existing.GetConfigSettings;
+            CreateAutomationSettings = existing.CreateAutomationSettings;
+            CreateAutomationOperationsSettings = existing.CreateAutomationOperationsSettings.Clone();
+            UpdateAutomationSettings = existing.UpdateAutomationSettings;
+            UpdateAutomationOperationsSettings = existing.UpdateAutomationOperationsSettings.Clone();
+            DeleteAutomationSettings = existing.DeleteAutomationSettings;
+            DeleteAutomationOperationsSettings = existing.DeleteAutomationOperationsSettings.Clone();
+            GetAutomationSettings = existing.GetAutomationSettings;
+            ListAutomationsSettings = existing.ListAutomationsSettings;
+            GetAutomationRunSettings = existing.GetAutomationRunSettings;
+            ListAutomationRunsSettings = existing.ListAutomationRunsSettings;
+            CancelAutomationRunSettings = existing.CancelAutomationRunSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -234,6 +246,18 @@ namespace Google.Cloud.Deploy.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListTargetsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudDeployClient.RollbackTarget</c> and <c>CloudDeployClient.RollbackTargetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RollbackTargetSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>CloudDeployClient.GetTarget</c>
@@ -614,6 +638,180 @@ namespace Google.Cloud.Deploy.V1
         public gaxgrpc::CallSettings GetConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudDeployClient.CreateAutomation</c> and <c>CloudDeployClient.CreateAutomationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateAutomationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>CloudDeployClient.CreateAutomation</c> and
+        /// <c>CloudDeployClient.CreateAutomationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateAutomationOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudDeployClient.UpdateAutomation</c> and <c>CloudDeployClient.UpdateAutomationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateAutomationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>CloudDeployClient.UpdateAutomation</c> and
+        /// <c>CloudDeployClient.UpdateAutomationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateAutomationOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudDeployClient.DeleteAutomation</c> and <c>CloudDeployClient.DeleteAutomationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteAutomationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>CloudDeployClient.DeleteAutomation</c> and
+        /// <c>CloudDeployClient.DeleteAutomationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteAutomationOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudDeployClient.GetAutomation</c> and <c>CloudDeployClient.GetAutomationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAutomationSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudDeployClient.ListAutomations</c> and <c>CloudDeployClient.ListAutomationsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListAutomationsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudDeployClient.GetAutomationRun</c> and <c>CloudDeployClient.GetAutomationRunAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAutomationRunSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudDeployClient.ListAutomationRuns</c> and <c>CloudDeployClient.ListAutomationRunsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListAutomationRunsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudDeployClient.CancelAutomationRun</c> and <c>CloudDeployClient.CancelAutomationRunAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CancelAutomationRunSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
         /// </summary>
         public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
@@ -793,7 +991,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of pipelines. Format must
-        /// be projects/{project_id}/locations/{location_name}.
+        /// be `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -818,7 +1016,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of pipelines. Format must
-        /// be projects/{project_id}/locations/{location_name}.
+        /// be `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -843,7 +1041,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of pipelines. Format must
-        /// be projects/{project_id}/locations/{location_name}.
+        /// be `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -868,7 +1066,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of pipelines. Format must
-        /// be projects/{project_id}/locations/{location_name}.
+        /// be `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -920,7 +1118,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `DeliveryPipeline`. Format must be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -935,7 +1133,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `DeliveryPipeline`. Format must be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -950,7 +1148,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `DeliveryPipeline`. Format must be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -962,7 +1160,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `DeliveryPipeline`. Format must be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -977,7 +1175,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `DeliveryPipeline`. Format must be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -992,7 +1190,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `DeliveryPipeline`. Format must be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1058,7 +1256,8 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent collection in which the `DeliveryPipeline` should be
-        /// created. Format should be projects/{project_id}/locations/{location_name}.
+        /// created. Format should be
+        /// `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="deliveryPipeline">
         /// Required. The `DeliveryPipeline` to create.
@@ -1081,7 +1280,8 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent collection in which the `DeliveryPipeline` should be
-        /// created. Format should be projects/{project_id}/locations/{location_name}.
+        /// created. Format should be
+        /// `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="deliveryPipeline">
         /// Required. The `DeliveryPipeline` to create.
@@ -1104,7 +1304,8 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent collection in which the `DeliveryPipeline` should be
-        /// created. Format should be projects/{project_id}/locations/{location_name}.
+        /// created. Format should be
+        /// `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="deliveryPipeline">
         /// Required. The `DeliveryPipeline` to create.
@@ -1122,7 +1323,8 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent collection in which the `DeliveryPipeline` should be
-        /// created. Format should be projects/{project_id}/locations/{location_name}.
+        /// created. Format should be
+        /// `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="deliveryPipeline">
         /// Required. The `DeliveryPipeline` to create.
@@ -1145,7 +1347,8 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent collection in which the `DeliveryPipeline` should be
-        /// created. Format should be projects/{project_id}/locations/{location_name}.
+        /// created. Format should be
+        /// `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="deliveryPipeline">
         /// Required. The `DeliveryPipeline` to create.
@@ -1168,7 +1371,8 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent collection in which the `DeliveryPipeline` should be
-        /// created. Format should be projects/{project_id}/locations/{location_name}.
+        /// created. Format should be
+        /// `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="deliveryPipeline">
         /// Required. The `DeliveryPipeline` to create.
@@ -1356,7 +1560,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the `DeliveryPipeline` to delete. Format should be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1371,7 +1575,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the `DeliveryPipeline` to delete. Format should be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1386,7 +1590,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the `DeliveryPipeline` to delete. Format should be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1398,7 +1602,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the `DeliveryPipeline` to delete. Format should be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1413,7 +1617,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the `DeliveryPipeline` to delete. Format should be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1428,7 +1632,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the `DeliveryPipeline` to delete. Format should be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1458,7 +1662,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of targets. Format must be
-        /// projects/{project_id}/locations/{location_name}.
+        /// `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1483,7 +1687,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of targets. Format must be
-        /// projects/{project_id}/locations/{location_name}.
+        /// `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1508,7 +1712,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of targets. Format must be
-        /// projects/{project_id}/locations/{location_name}.
+        /// `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1533,7 +1737,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of targets. Format must be
-        /// projects/{project_id}/locations/{location_name}.
+        /// `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1552,6 +1756,167 @@ namespace Google.Cloud.Deploy.V1
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
+
+        /// <summary>
+        /// Creates a `Rollout` to roll back the specified target.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RollbackTargetResponse RollbackTarget(RollbackTargetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a `Rollout` to roll back the specified target.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RollbackTargetResponse> RollbackTargetAsync(RollbackTargetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a `Rollout` to roll back the specified target.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RollbackTargetResponse> RollbackTargetAsync(RollbackTargetRequest request, st::CancellationToken cancellationToken) =>
+            RollbackTargetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a `Rollout` to roll back the specified target.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The `DeliveryPipeline` for which the rollback `Rollout` should be
+        /// created. Format should be
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
+        /// </param>
+        /// <param name="targetId">
+        /// Required. ID of the `Target` that is being rolled back.
+        /// </param>
+        /// <param name="rolloutId">
+        /// Required. ID of the rollback `Rollout` to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RollbackTargetResponse RollbackTarget(string name, string targetId, string rolloutId, gaxgrpc::CallSettings callSettings = null) =>
+            RollbackTarget(new RollbackTargetRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                TargetId = gax::GaxPreconditions.CheckNotNullOrEmpty(targetId, nameof(targetId)),
+                RolloutId = gax::GaxPreconditions.CheckNotNullOrEmpty(rolloutId, nameof(rolloutId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a `Rollout` to roll back the specified target.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The `DeliveryPipeline` for which the rollback `Rollout` should be
+        /// created. Format should be
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
+        /// </param>
+        /// <param name="targetId">
+        /// Required. ID of the `Target` that is being rolled back.
+        /// </param>
+        /// <param name="rolloutId">
+        /// Required. ID of the rollback `Rollout` to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RollbackTargetResponse> RollbackTargetAsync(string name, string targetId, string rolloutId, gaxgrpc::CallSettings callSettings = null) =>
+            RollbackTargetAsync(new RollbackTargetRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                TargetId = gax::GaxPreconditions.CheckNotNullOrEmpty(targetId, nameof(targetId)),
+                RolloutId = gax::GaxPreconditions.CheckNotNullOrEmpty(rolloutId, nameof(rolloutId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a `Rollout` to roll back the specified target.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The `DeliveryPipeline` for which the rollback `Rollout` should be
+        /// created. Format should be
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
+        /// </param>
+        /// <param name="targetId">
+        /// Required. ID of the `Target` that is being rolled back.
+        /// </param>
+        /// <param name="rolloutId">
+        /// Required. ID of the rollback `Rollout` to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RollbackTargetResponse> RollbackTargetAsync(string name, string targetId, string rolloutId, st::CancellationToken cancellationToken) =>
+            RollbackTargetAsync(name, targetId, rolloutId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a `Rollout` to roll back the specified target.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The `DeliveryPipeline` for which the rollback `Rollout` should be
+        /// created. Format should be
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
+        /// </param>
+        /// <param name="targetId">
+        /// Required. ID of the `Target` that is being rolled back.
+        /// </param>
+        /// <param name="rolloutId">
+        /// Required. ID of the rollback `Rollout` to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RollbackTargetResponse RollbackTarget(DeliveryPipelineName name, string targetId, string rolloutId, gaxgrpc::CallSettings callSettings = null) =>
+            RollbackTarget(new RollbackTargetRequest
+            {
+                DeliveryPipelineName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                TargetId = gax::GaxPreconditions.CheckNotNullOrEmpty(targetId, nameof(targetId)),
+                RolloutId = gax::GaxPreconditions.CheckNotNullOrEmpty(rolloutId, nameof(rolloutId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a `Rollout` to roll back the specified target.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The `DeliveryPipeline` for which the rollback `Rollout` should be
+        /// created. Format should be
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
+        /// </param>
+        /// <param name="targetId">
+        /// Required. ID of the `Target` that is being rolled back.
+        /// </param>
+        /// <param name="rolloutId">
+        /// Required. ID of the rollback `Rollout` to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RollbackTargetResponse> RollbackTargetAsync(DeliveryPipelineName name, string targetId, string rolloutId, gaxgrpc::CallSettings callSettings = null) =>
+            RollbackTargetAsync(new RollbackTargetRequest
+            {
+                DeliveryPipelineName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                TargetId = gax::GaxPreconditions.CheckNotNullOrEmpty(targetId, nameof(targetId)),
+                RolloutId = gax::GaxPreconditions.CheckNotNullOrEmpty(rolloutId, nameof(rolloutId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a `Rollout` to roll back the specified target.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The `DeliveryPipeline` for which the rollback `Rollout` should be
+        /// created. Format should be
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
+        /// </param>
+        /// <param name="targetId">
+        /// Required. ID of the `Target` that is being rolled back.
+        /// </param>
+        /// <param name="rolloutId">
+        /// Required. ID of the rollback `Rollout` to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RollbackTargetResponse> RollbackTargetAsync(DeliveryPipelineName name, string targetId, string rolloutId, st::CancellationToken cancellationToken) =>
+            RollbackTargetAsync(name, targetId, rolloutId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets details of a single Target.
@@ -1585,7 +1950,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `Target`. Format must be
-        /// projects/{project_id}/locations/{location_name}/targets/{target_name}.
+        /// `projects/{project_id}/locations/{location_name}/targets/{target_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1600,7 +1965,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `Target`. Format must be
-        /// projects/{project_id}/locations/{location_name}/targets/{target_name}.
+        /// `projects/{project_id}/locations/{location_name}/targets/{target_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1615,7 +1980,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `Target`. Format must be
-        /// projects/{project_id}/locations/{location_name}/targets/{target_name}.
+        /// `projects/{project_id}/locations/{location_name}/targets/{target_name}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1627,7 +1992,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `Target`. Format must be
-        /// projects/{project_id}/locations/{location_name}/targets/{target_name}.
+        /// `projects/{project_id}/locations/{location_name}/targets/{target_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1642,7 +2007,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `Target`. Format must be
-        /// projects/{project_id}/locations/{location_name}/targets/{target_name}.
+        /// `projects/{project_id}/locations/{location_name}/targets/{target_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1657,7 +2022,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `Target`. Format must be
-        /// projects/{project_id}/locations/{location_name}/targets/{target_name}.
+        /// `projects/{project_id}/locations/{location_name}/targets/{target_name}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1723,7 +2088,7 @@ namespace Google.Cloud.Deploy.V1
         /// <param name="parent">
         /// Required. The parent collection in which the `Target` should be created.
         /// Format should be
-        /// projects/{project_id}/locations/{location_name}.
+        /// `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="target">
         /// Required. The `Target` to create.
@@ -1747,7 +2112,7 @@ namespace Google.Cloud.Deploy.V1
         /// <param name="parent">
         /// Required. The parent collection in which the `Target` should be created.
         /// Format should be
-        /// projects/{project_id}/locations/{location_name}.
+        /// `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="target">
         /// Required. The `Target` to create.
@@ -1771,7 +2136,7 @@ namespace Google.Cloud.Deploy.V1
         /// <param name="parent">
         /// Required. The parent collection in which the `Target` should be created.
         /// Format should be
-        /// projects/{project_id}/locations/{location_name}.
+        /// `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="target">
         /// Required. The `Target` to create.
@@ -1790,7 +2155,7 @@ namespace Google.Cloud.Deploy.V1
         /// <param name="parent">
         /// Required. The parent collection in which the `Target` should be created.
         /// Format should be
-        /// projects/{project_id}/locations/{location_name}.
+        /// `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="target">
         /// Required. The `Target` to create.
@@ -1814,7 +2179,7 @@ namespace Google.Cloud.Deploy.V1
         /// <param name="parent">
         /// Required. The parent collection in which the `Target` should be created.
         /// Format should be
-        /// projects/{project_id}/locations/{location_name}.
+        /// `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="target">
         /// Required. The `Target` to create.
@@ -1838,7 +2203,7 @@ namespace Google.Cloud.Deploy.V1
         /// <param name="parent">
         /// Required. The parent collection in which the `Target` should be created.
         /// Format should be
-        /// projects/{project_id}/locations/{location_name}.
+        /// `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="target">
         /// Required. The `Target` to create.
@@ -2024,7 +2389,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the `Target` to delete. Format should be
-        /// projects/{project_id}/locations/{location_name}/targets/{target_name}.
+        /// `projects/{project_id}/locations/{location_name}/targets/{target_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2039,7 +2404,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the `Target` to delete. Format should be
-        /// projects/{project_id}/locations/{location_name}/targets/{target_name}.
+        /// `projects/{project_id}/locations/{location_name}/targets/{target_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2054,7 +2419,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the `Target` to delete. Format should be
-        /// projects/{project_id}/locations/{location_name}/targets/{target_name}.
+        /// `projects/{project_id}/locations/{location_name}/targets/{target_name}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2066,7 +2431,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the `Target` to delete. Format should be
-        /// projects/{project_id}/locations/{location_name}/targets/{target_name}.
+        /// `projects/{project_id}/locations/{location_name}/targets/{target_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2081,7 +2446,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the `Target` to delete. Format should be
-        /// projects/{project_id}/locations/{location_name}/targets/{target_name}.
+        /// `projects/{project_id}/locations/{location_name}/targets/{target_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2096,7 +2461,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the `Target` to delete. Format should be
-        /// projects/{project_id}/locations/{location_name}/targets/{target_name}.
+        /// `projects/{project_id}/locations/{location_name}/targets/{target_name}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2253,7 +2618,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `Release`. Format must be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2268,7 +2633,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `Release`. Format must be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2283,7 +2648,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `Release`. Format must be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2295,7 +2660,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `Release`. Format must be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2310,7 +2675,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `Release`. Format must be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2325,7 +2690,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `Release`. Format must be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2391,7 +2756,7 @@ namespace Google.Cloud.Deploy.V1
         /// <param name="parent">
         /// Required. The parent collection in which the `Release` should be created.
         /// Format should be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="release">
         /// Required. The `Release` to create.
@@ -2415,7 +2780,7 @@ namespace Google.Cloud.Deploy.V1
         /// <param name="parent">
         /// Required. The parent collection in which the `Release` should be created.
         /// Format should be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="release">
         /// Required. The `Release` to create.
@@ -2439,7 +2804,7 @@ namespace Google.Cloud.Deploy.V1
         /// <param name="parent">
         /// Required. The parent collection in which the `Release` should be created.
         /// Format should be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="release">
         /// Required. The `Release` to create.
@@ -2458,7 +2823,7 @@ namespace Google.Cloud.Deploy.V1
         /// <param name="parent">
         /// Required. The parent collection in which the `Release` should be created.
         /// Format should be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="release">
         /// Required. The `Release` to create.
@@ -2482,7 +2847,7 @@ namespace Google.Cloud.Deploy.V1
         /// <param name="parent">
         /// Required. The parent collection in which the `Release` should be created.
         /// Format should be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="release">
         /// Required. The `Release` to create.
@@ -2506,7 +2871,7 @@ namespace Google.Cloud.Deploy.V1
         /// <param name="parent">
         /// Required. The parent collection in which the `Release` should be created.
         /// Format should be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="release">
         /// Required. The `Release` to create.
@@ -2551,8 +2916,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the Release. Format is
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2567,8 +2931,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the Release. Format is
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2583,8 +2946,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the Release. Format is
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2596,8 +2958,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the Release. Format is
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2612,8 +2973,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the Release. Format is
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2628,8 +2988,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the Release. Format is
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2668,8 +3027,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the Rollout. Format is
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}/rollouts/{rollout}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2684,8 +3042,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the Rollout. Format is
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}/rollouts/{rollout}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2700,8 +3057,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the Rollout. Format is
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}/rollouts/{rollout}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2713,8 +3069,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the Rollout. Format is
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}/rollouts/{rollout}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2729,8 +3084,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the Rollout. Format is
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}/rollouts/{rollout}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2745,8 +3099,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the Rollout. Format is
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}/rollouts/{rollout}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2785,8 +3138,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the Rollout. Format is
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}/rollouts/{rollout}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
         /// </param>
         /// <param name="phaseId">
         /// Required. The phase ID to advance the `Rollout` to.
@@ -2805,8 +3157,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the Rollout. Format is
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}/rollouts/{rollout}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
         /// </param>
         /// <param name="phaseId">
         /// Required. The phase ID to advance the `Rollout` to.
@@ -2825,8 +3176,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the Rollout. Format is
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}/rollouts/{rollout}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
         /// </param>
         /// <param name="phaseId">
         /// Required. The phase ID to advance the `Rollout` to.
@@ -2841,8 +3191,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the Rollout. Format is
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}/rollouts/{rollout}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
         /// </param>
         /// <param name="phaseId">
         /// Required. The phase ID to advance the `Rollout` to.
@@ -2861,8 +3210,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the Rollout. Format is
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}/rollouts/{rollout}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
         /// </param>
         /// <param name="phaseId">
         /// Required. The phase ID to advance the `Rollout` to.
@@ -2881,8 +3229,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the Rollout. Format is
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}/rollouts/{rollout}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
         /// </param>
         /// <param name="phaseId">
         /// Required. The phase ID to advance the `Rollout` to.
@@ -2924,8 +3271,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the Rollout. Format is
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}/rollouts/{rollout}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2940,8 +3286,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the Rollout. Format is
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}/rollouts/{rollout}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2956,8 +3301,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the Rollout. Format is
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}/rollouts/{rollout}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2969,8 +3313,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the Rollout. Format is
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}/rollouts/{rollout}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2985,8 +3328,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the Rollout. Format is
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}/rollouts/{rollout}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3001,8 +3343,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the Rollout. Format is
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}/rollouts/{rollout}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3155,7 +3496,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `Rollout`. Format must be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3170,7 +3511,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `Rollout`. Format must be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3185,7 +3526,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `Rollout`. Format must be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3197,7 +3538,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `Rollout`. Format must be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3212,7 +3553,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `Rollout`. Format must be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3227,7 +3568,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `Rollout`. Format must be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3293,7 +3634,7 @@ namespace Google.Cloud.Deploy.V1
         /// <param name="parent">
         /// Required. The parent collection in which the `Rollout` should be created.
         /// Format should be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}`.
         /// </param>
         /// <param name="rollout">
         /// Required. The `Rollout` to create.
@@ -3317,7 +3658,7 @@ namespace Google.Cloud.Deploy.V1
         /// <param name="parent">
         /// Required. The parent collection in which the `Rollout` should be created.
         /// Format should be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}`.
         /// </param>
         /// <param name="rollout">
         /// Required. The `Rollout` to create.
@@ -3341,7 +3682,7 @@ namespace Google.Cloud.Deploy.V1
         /// <param name="parent">
         /// Required. The parent collection in which the `Rollout` should be created.
         /// Format should be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}`.
         /// </param>
         /// <param name="rollout">
         /// Required. The `Rollout` to create.
@@ -3360,7 +3701,7 @@ namespace Google.Cloud.Deploy.V1
         /// <param name="parent">
         /// Required. The parent collection in which the `Rollout` should be created.
         /// Format should be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}`.
         /// </param>
         /// <param name="rollout">
         /// Required. The `Rollout` to create.
@@ -3384,7 +3725,7 @@ namespace Google.Cloud.Deploy.V1
         /// <param name="parent">
         /// Required. The parent collection in which the `Rollout` should be created.
         /// Format should be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}`.
         /// </param>
         /// <param name="rollout">
         /// Required. The `Rollout` to create.
@@ -3408,7 +3749,7 @@ namespace Google.Cloud.Deploy.V1
         /// <param name="parent">
         /// Required. The parent collection in which the `Rollout` should be created.
         /// Format should be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}`.
         /// </param>
         /// <param name="rollout">
         /// Required. The `Rollout` to create.
@@ -3453,8 +3794,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="rollout">
         /// Required. Name of the Rollout. Format is
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}/rollouts/{rollout}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
         /// </param>
         /// <param name="phaseId">
         /// Required. The phase ID the Job to ignore belongs to.
@@ -3477,8 +3817,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="rollout">
         /// Required. Name of the Rollout. Format is
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}/rollouts/{rollout}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
         /// </param>
         /// <param name="phaseId">
         /// Required. The phase ID the Job to ignore belongs to.
@@ -3501,8 +3840,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="rollout">
         /// Required. Name of the Rollout. Format is
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}/rollouts/{rollout}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
         /// </param>
         /// <param name="phaseId">
         /// Required. The phase ID the Job to ignore belongs to.
@@ -3520,8 +3858,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="rollout">
         /// Required. Name of the Rollout. Format is
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}/rollouts/{rollout}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
         /// </param>
         /// <param name="phaseId">
         /// Required. The phase ID the Job to ignore belongs to.
@@ -3544,8 +3881,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="rollout">
         /// Required. Name of the Rollout. Format is
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}/rollouts/{rollout}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
         /// </param>
         /// <param name="phaseId">
         /// Required. The phase ID the Job to ignore belongs to.
@@ -3568,8 +3904,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="rollout">
         /// Required. Name of the Rollout. Format is
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}/rollouts/{rollout}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
         /// </param>
         /// <param name="phaseId">
         /// Required. The phase ID the Job to ignore belongs to.
@@ -3614,8 +3949,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="rollout">
         /// Required. Name of the Rollout. Format is
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}/rollouts/{rollout}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
         /// </param>
         /// <param name="phaseId">
         /// Required. The phase ID the Job to retry belongs to.
@@ -3638,8 +3972,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="rollout">
         /// Required. Name of the Rollout. Format is
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}/rollouts/{rollout}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
         /// </param>
         /// <param name="phaseId">
         /// Required. The phase ID the Job to retry belongs to.
@@ -3662,8 +3995,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="rollout">
         /// Required. Name of the Rollout. Format is
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}/rollouts/{rollout}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
         /// </param>
         /// <param name="phaseId">
         /// Required. The phase ID the Job to retry belongs to.
@@ -3681,8 +4013,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="rollout">
         /// Required. Name of the Rollout. Format is
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}/rollouts/{rollout}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
         /// </param>
         /// <param name="phaseId">
         /// Required. The phase ID the Job to retry belongs to.
@@ -3705,8 +4036,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="rollout">
         /// Required. Name of the Rollout. Format is
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}/rollouts/{rollout}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
         /// </param>
         /// <param name="phaseId">
         /// Required. The phase ID the Job to retry belongs to.
@@ -3729,8 +4059,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="rollout">
         /// Required. Name of the Rollout. Format is
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}/rollouts/{rollout}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
         /// </param>
         /// <param name="phaseId">
         /// Required. The phase ID the Job to retry belongs to.
@@ -3889,7 +4218,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `JobRun`. Format must be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}/jobRuns/{job_run_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}/jobRuns/{job_run_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3904,7 +4233,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `JobRun`. Format must be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}/jobRuns/{job_run_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}/jobRuns/{job_run_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3919,7 +4248,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `JobRun`. Format must be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}/jobRuns/{job_run_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}/jobRuns/{job_run_name}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3931,7 +4260,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `JobRun`. Format must be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}/jobRuns/{job_run_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}/jobRuns/{job_run_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3946,7 +4275,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `JobRun`. Format must be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}/jobRuns/{job_run_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}/jobRuns/{job_run_name}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3961,7 +4290,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `JobRun`. Format must be
-        /// projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}/jobRuns/{job_run_name}.
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}/jobRuns/{job_run_name}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4000,8 +4329,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `JobRun`. Format must be
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}/rollouts/{rollout}/jobRuns/{jobRun}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}/jobRuns/{jobRun}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4016,8 +4344,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `JobRun`. Format must be
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}/rollouts/{rollout}/jobRuns/{jobRun}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}/jobRuns/{jobRun}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4032,8 +4359,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `JobRun`. Format must be
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}/rollouts/{rollout}/jobRuns/{jobRun}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}/jobRuns/{jobRun}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4045,8 +4371,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `JobRun`. Format must be
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}/rollouts/{rollout}/jobRuns/{jobRun}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}/jobRuns/{jobRun}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4061,8 +4386,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `JobRun`. Format must be
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}/rollouts/{rollout}/jobRuns/{jobRun}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}/jobRuns/{jobRun}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4077,8 +4401,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the `JobRun`. Format must be
-        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-        /// releases/{release}/rollouts/{rollout}/jobRuns/{jobRun}.
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}/jobRuns/{jobRun}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4189,6 +4512,1049 @@ namespace Google.Cloud.Deploy.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Config> GetConfigAsync(ConfigName name, st::CancellationToken cancellationToken) =>
             GetConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new Automation in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Automation, OperationMetadata> CreateAutomation(CreateAutomationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new Automation in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Automation, OperationMetadata>> CreateAutomationAsync(CreateAutomationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new Automation in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Automation, OperationMetadata>> CreateAutomationAsync(CreateAutomationRequest request, st::CancellationToken cancellationToken) =>
+            CreateAutomationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateAutomation</c>.</summary>
+        public virtual lro::OperationsClient CreateAutomationOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateAutomation</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Automation, OperationMetadata> PollOnceCreateAutomation(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Automation, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAutomationOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateAutomation</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Automation, OperationMetadata>> PollOnceCreateAutomationAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Automation, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAutomationOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new Automation in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which the `Automation` should be
+        /// created. Format should be
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
+        /// </param>
+        /// <param name="automation">
+        /// Required. The `Automation` to create.
+        /// </param>
+        /// <param name="automationId">
+        /// Required. ID of the `Automation`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Automation, OperationMetadata> CreateAutomation(string parent, Automation automation, string automationId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAutomation(new CreateAutomationRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AutomationId = gax::GaxPreconditions.CheckNotNullOrEmpty(automationId, nameof(automationId)),
+                Automation = gax::GaxPreconditions.CheckNotNull(automation, nameof(automation)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Automation in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which the `Automation` should be
+        /// created. Format should be
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
+        /// </param>
+        /// <param name="automation">
+        /// Required. The `Automation` to create.
+        /// </param>
+        /// <param name="automationId">
+        /// Required. ID of the `Automation`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Automation, OperationMetadata>> CreateAutomationAsync(string parent, Automation automation, string automationId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAutomationAsync(new CreateAutomationRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AutomationId = gax::GaxPreconditions.CheckNotNullOrEmpty(automationId, nameof(automationId)),
+                Automation = gax::GaxPreconditions.CheckNotNull(automation, nameof(automation)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Automation in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which the `Automation` should be
+        /// created. Format should be
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
+        /// </param>
+        /// <param name="automation">
+        /// Required. The `Automation` to create.
+        /// </param>
+        /// <param name="automationId">
+        /// Required. ID of the `Automation`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Automation, OperationMetadata>> CreateAutomationAsync(string parent, Automation automation, string automationId, st::CancellationToken cancellationToken) =>
+            CreateAutomationAsync(parent, automation, automationId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new Automation in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which the `Automation` should be
+        /// created. Format should be
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
+        /// </param>
+        /// <param name="automation">
+        /// Required. The `Automation` to create.
+        /// </param>
+        /// <param name="automationId">
+        /// Required. ID of the `Automation`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Automation, OperationMetadata> CreateAutomation(DeliveryPipelineName parent, Automation automation, string automationId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAutomation(new CreateAutomationRequest
+            {
+                ParentAsDeliveryPipelineName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AutomationId = gax::GaxPreconditions.CheckNotNullOrEmpty(automationId, nameof(automationId)),
+                Automation = gax::GaxPreconditions.CheckNotNull(automation, nameof(automation)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Automation in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which the `Automation` should be
+        /// created. Format should be
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
+        /// </param>
+        /// <param name="automation">
+        /// Required. The `Automation` to create.
+        /// </param>
+        /// <param name="automationId">
+        /// Required. ID of the `Automation`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Automation, OperationMetadata>> CreateAutomationAsync(DeliveryPipelineName parent, Automation automation, string automationId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAutomationAsync(new CreateAutomationRequest
+            {
+                ParentAsDeliveryPipelineName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AutomationId = gax::GaxPreconditions.CheckNotNullOrEmpty(automationId, nameof(automationId)),
+                Automation = gax::GaxPreconditions.CheckNotNull(automation, nameof(automation)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Automation in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which the `Automation` should be
+        /// created. Format should be
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
+        /// </param>
+        /// <param name="automation">
+        /// Required. The `Automation` to create.
+        /// </param>
+        /// <param name="automationId">
+        /// Required. ID of the `Automation`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Automation, OperationMetadata>> CreateAutomationAsync(DeliveryPipelineName parent, Automation automation, string automationId, st::CancellationToken cancellationToken) =>
+            CreateAutomationAsync(parent, automation, automationId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the parameters of a single Automation resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Automation, OperationMetadata> UpdateAutomation(UpdateAutomationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of a single Automation resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Automation, OperationMetadata>> UpdateAutomationAsync(UpdateAutomationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of a single Automation resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Automation, OperationMetadata>> UpdateAutomationAsync(UpdateAutomationRequest request, st::CancellationToken cancellationToken) =>
+            UpdateAutomationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateAutomation</c>.</summary>
+        public virtual lro::OperationsClient UpdateAutomationOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateAutomation</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Automation, OperationMetadata> PollOnceUpdateAutomation(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Automation, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateAutomationOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateAutomation</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Automation, OperationMetadata>> PollOnceUpdateAutomationAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Automation, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateAutomationOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single Automation resource.
+        /// </summary>
+        /// <param name="automation">
+        /// Required. The `Automation` to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `Automation` resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Automation, OperationMetadata> UpdateAutomation(Automation automation, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAutomation(new UpdateAutomationRequest
+            {
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                Automation = gax::GaxPreconditions.CheckNotNull(automation, nameof(automation)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single Automation resource.
+        /// </summary>
+        /// <param name="automation">
+        /// Required. The `Automation` to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `Automation` resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Automation, OperationMetadata>> UpdateAutomationAsync(Automation automation, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAutomationAsync(new UpdateAutomationRequest
+            {
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                Automation = gax::GaxPreconditions.CheckNotNull(automation, nameof(automation)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single Automation resource.
+        /// </summary>
+        /// <param name="automation">
+        /// Required. The `Automation` to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `Automation` resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Automation, OperationMetadata>> UpdateAutomationAsync(Automation automation, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateAutomationAsync(automation, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single Automation resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAutomation(DeleteAutomationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single Automation resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAutomationAsync(DeleteAutomationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single Automation resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAutomationAsync(DeleteAutomationRequest request, st::CancellationToken cancellationToken) =>
+            DeleteAutomationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteAutomation</c>.</summary>
+        public virtual lro::OperationsClient DeleteAutomationOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteAutomation</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteAutomation(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAutomationOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteAutomation</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteAutomationAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAutomationOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a single Automation resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `Automation` to delete. Format should be
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAutomation(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAutomation(new DeleteAutomationRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single Automation resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `Automation` to delete. Format should be
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAutomationAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAutomationAsync(new DeleteAutomationRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single Automation resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `Automation` to delete. Format should be
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAutomationAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteAutomationAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single Automation resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `Automation` to delete. Format should be
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAutomation(AutomationName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAutomation(new DeleteAutomationRequest
+            {
+                AutomationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single Automation resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `Automation` to delete. Format should be
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAutomationAsync(AutomationName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAutomationAsync(new DeleteAutomationRequest
+            {
+                AutomationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single Automation resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `Automation` to delete. Format should be
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAutomationAsync(AutomationName name, st::CancellationToken cancellationToken) =>
+            DeleteAutomationAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single Automation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Automation GetAutomation(GetAutomationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single Automation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Automation> GetAutomationAsync(GetAutomationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single Automation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Automation> GetAutomationAsync(GetAutomationRequest request, st::CancellationToken cancellationToken) =>
+            GetAutomationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single Automation.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the `Automation`. Format must be
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Automation GetAutomation(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAutomation(new GetAutomationRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single Automation.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the `Automation`. Format must be
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Automation> GetAutomationAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAutomationAsync(new GetAutomationRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single Automation.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the `Automation`. Format must be
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Automation> GetAutomationAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAutomationAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single Automation.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the `Automation`. Format must be
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Automation GetAutomation(AutomationName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAutomation(new GetAutomationRequest
+            {
+                AutomationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single Automation.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the `Automation`. Format must be
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Automation> GetAutomationAsync(AutomationName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAutomationAsync(new GetAutomationRequest
+            {
+                AutomationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single Automation.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the `Automation`. Format must be
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Automation> GetAutomationAsync(AutomationName name, st::CancellationToken cancellationToken) =>
+            GetAutomationAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists Automations in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Automation"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAutomationsResponse, Automation> ListAutomations(ListAutomationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists Automations in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Automation"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAutomationsResponse, Automation> ListAutomationsAsync(ListAutomationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists Automations in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of automations. Format
+        /// must be
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Automation"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAutomationsResponse, Automation> ListAutomations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAutomations(new ListAutomationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists Automations in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of automations. Format
+        /// must be
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Automation"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAutomationsResponse, Automation> ListAutomationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAutomationsAsync(new ListAutomationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists Automations in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of automations. Format
+        /// must be
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Automation"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAutomationsResponse, Automation> ListAutomations(DeliveryPipelineName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAutomations(new ListAutomationsRequest
+            {
+                ParentAsDeliveryPipelineName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists Automations in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of automations. Format
+        /// must be
+        /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Automation"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAutomationsResponse, Automation> ListAutomationsAsync(DeliveryPipelineName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAutomationsAsync(new ListAutomationsRequest
+            {
+                ParentAsDeliveryPipelineName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single AutomationRun.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AutomationRun GetAutomationRun(GetAutomationRunRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single AutomationRun.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutomationRun> GetAutomationRunAsync(GetAutomationRunRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single AutomationRun.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutomationRun> GetAutomationRunAsync(GetAutomationRunRequest request, st::CancellationToken cancellationToken) =>
+            GetAutomationRunAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single AutomationRun.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the `AutomationRun`. Format must be
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}/automationRuns/{automation_run}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AutomationRun GetAutomationRun(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAutomationRun(new GetAutomationRunRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single AutomationRun.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the `AutomationRun`. Format must be
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}/automationRuns/{automation_run}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutomationRun> GetAutomationRunAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAutomationRunAsync(new GetAutomationRunRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single AutomationRun.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the `AutomationRun`. Format must be
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}/automationRuns/{automation_run}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutomationRun> GetAutomationRunAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAutomationRunAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single AutomationRun.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the `AutomationRun`. Format must be
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}/automationRuns/{automation_run}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AutomationRun GetAutomationRun(AutomationRunName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAutomationRun(new GetAutomationRunRequest
+            {
+                AutomationRunName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single AutomationRun.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the `AutomationRun`. Format must be
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}/automationRuns/{automation_run}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutomationRun> GetAutomationRunAsync(AutomationRunName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAutomationRunAsync(new GetAutomationRunRequest
+            {
+                AutomationRunName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single AutomationRun.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the `AutomationRun`. Format must be
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}/automationRuns/{automation_run}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutomationRun> GetAutomationRunAsync(AutomationRunName name, st::CancellationToken cancellationToken) =>
+            GetAutomationRunAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists AutomationRuns in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AutomationRun"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAutomationRunsResponse, AutomationRun> ListAutomationRuns(ListAutomationRunsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists AutomationRuns in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AutomationRun"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAutomationRunsResponse, AutomationRun> ListAutomationRunsAsync(ListAutomationRunsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists AutomationRuns in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of automationRuns. Format
+        /// must be
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AutomationRun"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAutomationRunsResponse, AutomationRun> ListAutomationRuns(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAutomationRuns(new ListAutomationRunsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists AutomationRuns in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of automationRuns. Format
+        /// must be
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AutomationRun"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAutomationRunsResponse, AutomationRun> ListAutomationRunsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAutomationRunsAsync(new ListAutomationRunsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists AutomationRuns in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of automationRuns. Format
+        /// must be
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AutomationRun"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAutomationRunsResponse, AutomationRun> ListAutomationRuns(DeliveryPipelineName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAutomationRuns(new ListAutomationRunsRequest
+            {
+                ParentAsDeliveryPipelineName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists AutomationRuns in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of automationRuns. Format
+        /// must be
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AutomationRun"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAutomationRunsResponse, AutomationRun> ListAutomationRunsAsync(DeliveryPipelineName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAutomationRunsAsync(new ListAutomationRunsRequest
+            {
+                ParentAsDeliveryPipelineName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Cancels an AutomationRun. The `state` of the `AutomationRun` after
+        /// cancelling is `CANCELLED`. `CancelAutomationRun` can be called on
+        /// AutomationRun in the state `IN_PROGRESS` and `PENDING`; AutomationRun
+        /// in a different state returns an `FAILED_PRECONDITION` error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CancelAutomationRunResponse CancelAutomationRun(CancelAutomationRunRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Cancels an AutomationRun. The `state` of the `AutomationRun` after
+        /// cancelling is `CANCELLED`. `CancelAutomationRun` can be called on
+        /// AutomationRun in the state `IN_PROGRESS` and `PENDING`; AutomationRun
+        /// in a different state returns an `FAILED_PRECONDITION` error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CancelAutomationRunResponse> CancelAutomationRunAsync(CancelAutomationRunRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Cancels an AutomationRun. The `state` of the `AutomationRun` after
+        /// cancelling is `CANCELLED`. `CancelAutomationRun` can be called on
+        /// AutomationRun in the state `IN_PROGRESS` and `PENDING`; AutomationRun
+        /// in a different state returns an `FAILED_PRECONDITION` error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CancelAutomationRunResponse> CancelAutomationRunAsync(CancelAutomationRunRequest request, st::CancellationToken cancellationToken) =>
+            CancelAutomationRunAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Cancels an AutomationRun. The `state` of the `AutomationRun` after
+        /// cancelling is `CANCELLED`. `CancelAutomationRun` can be called on
+        /// AutomationRun in the state `IN_PROGRESS` and `PENDING`; AutomationRun
+        /// in a different state returns an `FAILED_PRECONDITION` error.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the `AutomationRun`. Format is
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}/automationRuns/{automation_run}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CancelAutomationRunResponse CancelAutomationRun(string name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelAutomationRun(new CancelAutomationRunRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Cancels an AutomationRun. The `state` of the `AutomationRun` after
+        /// cancelling is `CANCELLED`. `CancelAutomationRun` can be called on
+        /// AutomationRun in the state `IN_PROGRESS` and `PENDING`; AutomationRun
+        /// in a different state returns an `FAILED_PRECONDITION` error.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the `AutomationRun`. Format is
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}/automationRuns/{automation_run}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CancelAutomationRunResponse> CancelAutomationRunAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelAutomationRunAsync(new CancelAutomationRunRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Cancels an AutomationRun. The `state` of the `AutomationRun` after
+        /// cancelling is `CANCELLED`. `CancelAutomationRun` can be called on
+        /// AutomationRun in the state `IN_PROGRESS` and `PENDING`; AutomationRun
+        /// in a different state returns an `FAILED_PRECONDITION` error.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the `AutomationRun`. Format is
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}/automationRuns/{automation_run}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CancelAutomationRunResponse> CancelAutomationRunAsync(string name, st::CancellationToken cancellationToken) =>
+            CancelAutomationRunAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Cancels an AutomationRun. The `state` of the `AutomationRun` after
+        /// cancelling is `CANCELLED`. `CancelAutomationRun` can be called on
+        /// AutomationRun in the state `IN_PROGRESS` and `PENDING`; AutomationRun
+        /// in a different state returns an `FAILED_PRECONDITION` error.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the `AutomationRun`. Format is
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}/automationRuns/{automation_run}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CancelAutomationRunResponse CancelAutomationRun(AutomationRunName name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelAutomationRun(new CancelAutomationRunRequest
+            {
+                AutomationRunName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Cancels an AutomationRun. The `state` of the `AutomationRun` after
+        /// cancelling is `CANCELLED`. `CancelAutomationRun` can be called on
+        /// AutomationRun in the state `IN_PROGRESS` and `PENDING`; AutomationRun
+        /// in a different state returns an `FAILED_PRECONDITION` error.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the `AutomationRun`. Format is
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}/automationRuns/{automation_run}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CancelAutomationRunResponse> CancelAutomationRunAsync(AutomationRunName name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelAutomationRunAsync(new CancelAutomationRunRequest
+            {
+                AutomationRunName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Cancels an AutomationRun. The `state` of the `AutomationRun` after
+        /// cancelling is `CANCELLED`. `CancelAutomationRun` can be called on
+        /// AutomationRun in the state `IN_PROGRESS` and `PENDING`; AutomationRun
+        /// in a different state returns an `FAILED_PRECONDITION` error.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the `AutomationRun`. Format is
+        /// `projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}/automationRuns/{automation_run}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CancelAutomationRunResponse> CancelAutomationRunAsync(AutomationRunName name, st::CancellationToken cancellationToken) =>
+            CancelAutomationRunAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>CloudDeploy client wrapper implementation, for convenient use.</summary>
@@ -4209,6 +5575,8 @@ namespace Google.Cloud.Deploy.V1
         private readonly gaxgrpc::ApiCall<DeleteDeliveryPipelineRequest, lro::Operation> _callDeleteDeliveryPipeline;
 
         private readonly gaxgrpc::ApiCall<ListTargetsRequest, ListTargetsResponse> _callListTargets;
+
+        private readonly gaxgrpc::ApiCall<RollbackTargetRequest, RollbackTargetResponse> _callRollbackTarget;
 
         private readonly gaxgrpc::ApiCall<GetTargetRequest, Target> _callGetTarget;
 
@@ -4250,6 +5618,22 @@ namespace Google.Cloud.Deploy.V1
 
         private readonly gaxgrpc::ApiCall<GetConfigRequest, Config> _callGetConfig;
 
+        private readonly gaxgrpc::ApiCall<CreateAutomationRequest, lro::Operation> _callCreateAutomation;
+
+        private readonly gaxgrpc::ApiCall<UpdateAutomationRequest, lro::Operation> _callUpdateAutomation;
+
+        private readonly gaxgrpc::ApiCall<DeleteAutomationRequest, lro::Operation> _callDeleteAutomation;
+
+        private readonly gaxgrpc::ApiCall<GetAutomationRequest, Automation> _callGetAutomation;
+
+        private readonly gaxgrpc::ApiCall<ListAutomationsRequest, ListAutomationsResponse> _callListAutomations;
+
+        private readonly gaxgrpc::ApiCall<GetAutomationRunRequest, AutomationRun> _callGetAutomationRun;
+
+        private readonly gaxgrpc::ApiCall<ListAutomationRunsRequest, ListAutomationRunsResponse> _callListAutomationRuns;
+
+        private readonly gaxgrpc::ApiCall<CancelAutomationRunRequest, CancelAutomationRunResponse> _callCancelAutomationRun;
+
         /// <summary>
         /// Constructs a client wrapper for the CloudDeploy service, with the specified gRPC client and settings.
         /// </summary>
@@ -4269,6 +5653,9 @@ namespace Google.Cloud.Deploy.V1
             DeleteTargetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTargetOperationsSettings, logger);
             CreateReleaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateReleaseOperationsSettings, logger);
             CreateRolloutOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateRolloutOperationsSettings, logger);
+            CreateAutomationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAutomationOperationsSettings, logger);
+            UpdateAutomationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAutomationOperationsSettings, logger);
+            DeleteAutomationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAutomationOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callListDeliveryPipelines = clientHelper.BuildApiCall<ListDeliveryPipelinesRequest, ListDeliveryPipelinesResponse>("ListDeliveryPipelines", grpcClient.ListDeliveryPipelinesAsync, grpcClient.ListDeliveryPipelines, effectiveSettings.ListDeliveryPipelinesSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -4289,6 +5676,9 @@ namespace Google.Cloud.Deploy.V1
             _callListTargets = clientHelper.BuildApiCall<ListTargetsRequest, ListTargetsResponse>("ListTargets", grpcClient.ListTargetsAsync, grpcClient.ListTargets, effectiveSettings.ListTargetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListTargets);
             Modify_ListTargetsApiCall(ref _callListTargets);
+            _callRollbackTarget = clientHelper.BuildApiCall<RollbackTargetRequest, RollbackTargetResponse>("RollbackTarget", grpcClient.RollbackTargetAsync, grpcClient.RollbackTarget, effectiveSettings.RollbackTargetSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callRollbackTarget);
+            Modify_RollbackTargetApiCall(ref _callRollbackTarget);
             _callGetTarget = clientHelper.BuildApiCall<GetTargetRequest, Target>("GetTarget", grpcClient.GetTargetAsync, grpcClient.GetTarget, effectiveSettings.GetTargetSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetTarget);
             Modify_GetTargetApiCall(ref _callGetTarget);
@@ -4349,6 +5739,30 @@ namespace Google.Cloud.Deploy.V1
             _callGetConfig = clientHelper.BuildApiCall<GetConfigRequest, Config>("GetConfig", grpcClient.GetConfigAsync, grpcClient.GetConfig, effectiveSettings.GetConfigSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetConfig);
             Modify_GetConfigApiCall(ref _callGetConfig);
+            _callCreateAutomation = clientHelper.BuildApiCall<CreateAutomationRequest, lro::Operation>("CreateAutomation", grpcClient.CreateAutomationAsync, grpcClient.CreateAutomation, effectiveSettings.CreateAutomationSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateAutomation);
+            Modify_CreateAutomationApiCall(ref _callCreateAutomation);
+            _callUpdateAutomation = clientHelper.BuildApiCall<UpdateAutomationRequest, lro::Operation>("UpdateAutomation", grpcClient.UpdateAutomationAsync, grpcClient.UpdateAutomation, effectiveSettings.UpdateAutomationSettings).WithGoogleRequestParam("automation.name", request => request.Automation?.Name);
+            Modify_ApiCall(ref _callUpdateAutomation);
+            Modify_UpdateAutomationApiCall(ref _callUpdateAutomation);
+            _callDeleteAutomation = clientHelper.BuildApiCall<DeleteAutomationRequest, lro::Operation>("DeleteAutomation", grpcClient.DeleteAutomationAsync, grpcClient.DeleteAutomation, effectiveSettings.DeleteAutomationSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteAutomation);
+            Modify_DeleteAutomationApiCall(ref _callDeleteAutomation);
+            _callGetAutomation = clientHelper.BuildApiCall<GetAutomationRequest, Automation>("GetAutomation", grpcClient.GetAutomationAsync, grpcClient.GetAutomation, effectiveSettings.GetAutomationSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetAutomation);
+            Modify_GetAutomationApiCall(ref _callGetAutomation);
+            _callListAutomations = clientHelper.BuildApiCall<ListAutomationsRequest, ListAutomationsResponse>("ListAutomations", grpcClient.ListAutomationsAsync, grpcClient.ListAutomations, effectiveSettings.ListAutomationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListAutomations);
+            Modify_ListAutomationsApiCall(ref _callListAutomations);
+            _callGetAutomationRun = clientHelper.BuildApiCall<GetAutomationRunRequest, AutomationRun>("GetAutomationRun", grpcClient.GetAutomationRunAsync, grpcClient.GetAutomationRun, effectiveSettings.GetAutomationRunSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetAutomationRun);
+            Modify_GetAutomationRunApiCall(ref _callGetAutomationRun);
+            _callListAutomationRuns = clientHelper.BuildApiCall<ListAutomationRunsRequest, ListAutomationRunsResponse>("ListAutomationRuns", grpcClient.ListAutomationRunsAsync, grpcClient.ListAutomationRuns, effectiveSettings.ListAutomationRunsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListAutomationRuns);
+            Modify_ListAutomationRunsApiCall(ref _callListAutomationRuns);
+            _callCancelAutomationRun = clientHelper.BuildApiCall<CancelAutomationRunRequest, CancelAutomationRunResponse>("CancelAutomationRun", grpcClient.CancelAutomationRunAsync, grpcClient.CancelAutomationRun, effectiveSettings.CancelAutomationRunSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callCancelAutomationRun);
+            Modify_CancelAutomationRunApiCall(ref _callCancelAutomationRun);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -4365,6 +5779,8 @@ namespace Google.Cloud.Deploy.V1
         partial void Modify_DeleteDeliveryPipelineApiCall(ref gaxgrpc::ApiCall<DeleteDeliveryPipelineRequest, lro::Operation> call);
 
         partial void Modify_ListTargetsApiCall(ref gaxgrpc::ApiCall<ListTargetsRequest, ListTargetsResponse> call);
+
+        partial void Modify_RollbackTargetApiCall(ref gaxgrpc::ApiCall<RollbackTargetRequest, RollbackTargetResponse> call);
 
         partial void Modify_GetTargetApiCall(ref gaxgrpc::ApiCall<GetTargetRequest, Target> call);
 
@@ -4406,6 +5822,22 @@ namespace Google.Cloud.Deploy.V1
 
         partial void Modify_GetConfigApiCall(ref gaxgrpc::ApiCall<GetConfigRequest, Config> call);
 
+        partial void Modify_CreateAutomationApiCall(ref gaxgrpc::ApiCall<CreateAutomationRequest, lro::Operation> call);
+
+        partial void Modify_UpdateAutomationApiCall(ref gaxgrpc::ApiCall<UpdateAutomationRequest, lro::Operation> call);
+
+        partial void Modify_DeleteAutomationApiCall(ref gaxgrpc::ApiCall<DeleteAutomationRequest, lro::Operation> call);
+
+        partial void Modify_GetAutomationApiCall(ref gaxgrpc::ApiCall<GetAutomationRequest, Automation> call);
+
+        partial void Modify_ListAutomationsApiCall(ref gaxgrpc::ApiCall<ListAutomationsRequest, ListAutomationsResponse> call);
+
+        partial void Modify_GetAutomationRunApiCall(ref gaxgrpc::ApiCall<GetAutomationRunRequest, AutomationRun> call);
+
+        partial void Modify_ListAutomationRunsApiCall(ref gaxgrpc::ApiCall<ListAutomationRunsRequest, ListAutomationRunsResponse> call);
+
+        partial void Modify_CancelAutomationRunApiCall(ref gaxgrpc::ApiCall<CancelAutomationRunRequest, CancelAutomationRunResponse> call);
+
         partial void OnConstruction(CloudDeploy.CloudDeployClient grpcClient, CloudDeploySettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC CloudDeploy client</summary>
@@ -4428,6 +5860,8 @@ namespace Google.Cloud.Deploy.V1
         partial void Modify_DeleteDeliveryPipelineRequest(ref DeleteDeliveryPipelineRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListTargetsRequest(ref ListTargetsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RollbackTargetRequest(ref RollbackTargetRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetTargetRequest(ref GetTargetRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4468,6 +5902,22 @@ namespace Google.Cloud.Deploy.V1
         partial void Modify_TerminateJobRunRequest(ref TerminateJobRunRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetConfigRequest(ref GetConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateAutomationRequest(ref CreateAutomationRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateAutomationRequest(ref UpdateAutomationRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteAutomationRequest(ref DeleteAutomationRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAutomationRequest(ref GetAutomationRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListAutomationsRequest(ref ListAutomationsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAutomationRunRequest(ref GetAutomationRunRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListAutomationRunsRequest(ref ListAutomationRunsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CancelAutomationRunRequest(ref CancelAutomationRunRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists DeliveryPipelines in a given project and location.
@@ -4620,6 +6070,30 @@ namespace Google.Cloud.Deploy.V1
         {
             Modify_ListTargetsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListTargetsRequest, ListTargetsResponse, Target>(_callListTargets, request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a `Rollout` to roll back the specified target.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RollbackTargetResponse RollbackTarget(RollbackTargetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RollbackTargetRequest(ref request, ref callSettings);
+            return _callRollbackTarget.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a `Rollout` to roll back the specified target.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RollbackTargetResponse> RollbackTargetAsync(RollbackTargetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RollbackTargetRequest(ref request, ref callSettings);
+            return _callRollbackTarget.Async(request, callSettings);
         }
 
         /// <summary>
@@ -5116,6 +6590,213 @@ namespace Google.Cloud.Deploy.V1
             Modify_GetConfigRequest(ref request, ref callSettings);
             return _callGetConfig.Async(request, callSettings);
         }
+
+        /// <summary>The long-running operations client for <c>CreateAutomation</c>.</summary>
+        public override lro::OperationsClient CreateAutomationOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new Automation in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Automation, OperationMetadata> CreateAutomation(CreateAutomationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAutomationRequest(ref request, ref callSettings);
+            return new lro::Operation<Automation, OperationMetadata>(_callCreateAutomation.Sync(request, callSettings), CreateAutomationOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new Automation in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Automation, OperationMetadata>> CreateAutomationAsync(CreateAutomationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAutomationRequest(ref request, ref callSettings);
+            return new lro::Operation<Automation, OperationMetadata>(await _callCreateAutomation.Async(request, callSettings).ConfigureAwait(false), CreateAutomationOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateAutomation</c>.</summary>
+        public override lro::OperationsClient UpdateAutomationOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the parameters of a single Automation resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Automation, OperationMetadata> UpdateAutomation(UpdateAutomationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAutomationRequest(ref request, ref callSettings);
+            return new lro::Operation<Automation, OperationMetadata>(_callUpdateAutomation.Sync(request, callSettings), UpdateAutomationOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the parameters of a single Automation resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Automation, OperationMetadata>> UpdateAutomationAsync(UpdateAutomationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAutomationRequest(ref request, ref callSettings);
+            return new lro::Operation<Automation, OperationMetadata>(await _callUpdateAutomation.Async(request, callSettings).ConfigureAwait(false), UpdateAutomationOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteAutomation</c>.</summary>
+        public override lro::OperationsClient DeleteAutomationOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a single Automation resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteAutomation(DeleteAutomationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAutomationRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteAutomation.Sync(request, callSettings), DeleteAutomationOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a single Automation resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAutomationAsync(DeleteAutomationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAutomationRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteAutomation.Async(request, callSettings).ConfigureAwait(false), DeleteAutomationOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets details of a single Automation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Automation GetAutomation(GetAutomationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAutomationRequest(ref request, ref callSettings);
+            return _callGetAutomation.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single Automation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Automation> GetAutomationAsync(GetAutomationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAutomationRequest(ref request, ref callSettings);
+            return _callGetAutomation.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Automations in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Automation"/> resources.</returns>
+        public override gax::PagedEnumerable<ListAutomationsResponse, Automation> ListAutomations(ListAutomationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAutomationsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListAutomationsRequest, ListAutomationsResponse, Automation>(_callListAutomations, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Automations in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Automation"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListAutomationsResponse, Automation> ListAutomationsAsync(ListAutomationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAutomationsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAutomationsRequest, ListAutomationsResponse, Automation>(_callListAutomations, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single AutomationRun.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AutomationRun GetAutomationRun(GetAutomationRunRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAutomationRunRequest(ref request, ref callSettings);
+            return _callGetAutomationRun.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single AutomationRun.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AutomationRun> GetAutomationRunAsync(GetAutomationRunRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAutomationRunRequest(ref request, ref callSettings);
+            return _callGetAutomationRun.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists AutomationRuns in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AutomationRun"/> resources.</returns>
+        public override gax::PagedEnumerable<ListAutomationRunsResponse, AutomationRun> ListAutomationRuns(ListAutomationRunsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAutomationRunsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListAutomationRunsRequest, ListAutomationRunsResponse, AutomationRun>(_callListAutomationRuns, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists AutomationRuns in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AutomationRun"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListAutomationRunsResponse, AutomationRun> ListAutomationRunsAsync(ListAutomationRunsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAutomationRunsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAutomationRunsRequest, ListAutomationRunsResponse, AutomationRun>(_callListAutomationRuns, request, callSettings);
+        }
+
+        /// <summary>
+        /// Cancels an AutomationRun. The `state` of the `AutomationRun` after
+        /// cancelling is `CANCELLED`. `CancelAutomationRun` can be called on
+        /// AutomationRun in the state `IN_PROGRESS` and `PENDING`; AutomationRun
+        /// in a different state returns an `FAILED_PRECONDITION` error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CancelAutomationRunResponse CancelAutomationRun(CancelAutomationRunRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CancelAutomationRunRequest(ref request, ref callSettings);
+            return _callCancelAutomationRun.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Cancels an AutomationRun. The `state` of the `AutomationRun` after
+        /// cancelling is `CANCELLED`. `CancelAutomationRun` can be called on
+        /// AutomationRun in the state `IN_PROGRESS` and `PENDING`; AutomationRun
+        /// in a different state returns an `FAILED_PRECONDITION` error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CancelAutomationRunResponse> CancelAutomationRunAsync(CancelAutomationRunRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CancelAutomationRunRequest(ref request, ref callSettings);
+            return _callCancelAutomationRun.Async(request, callSettings);
+        }
     }
 
     public partial class ListDeliveryPipelinesRequest : gaxgrpc::IPageRequest
@@ -5135,6 +6816,14 @@ namespace Google.Cloud.Deploy.V1
     }
 
     public partial class ListJobRunsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListAutomationsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListAutomationRunsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -5174,6 +6863,22 @@ namespace Google.Cloud.Deploy.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<JobRun> GetEnumerator() => JobRuns.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListAutomationsResponse : gaxgrpc::IPageResponse<Automation>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Automation> GetEnumerator() => Automations.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListAutomationRunsResponse : gaxgrpc::IPageResponse<AutomationRun>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<AutomationRun> GetEnumerator() => AutomationRuns.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
