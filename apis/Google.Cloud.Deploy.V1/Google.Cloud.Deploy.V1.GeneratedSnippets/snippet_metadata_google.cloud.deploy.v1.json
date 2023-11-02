@@ -1742,6 +1742,325 @@
       ]
     },
     {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_RollbackTarget_sync",
+      "title": "RollbackTargetRequestObject",
+      "description": "Snippet for RollbackTarget",
+      "file": "CloudDeployClient.RollbackTargetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RollbackTarget",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.RollbackTarget",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.RollbackTargetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Deploy.V1.RollbackTargetResponse",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "RollbackTarget",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.RollbackTarget",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 50,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 48,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_RollbackTarget_async",
+      "title": "RollbackTargetRequestObjectAsync",
+      "description": "Snippet for RollbackTargetAsync",
+      "file": "CloudDeployClient.RollbackTargetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RollbackTargetAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.RollbackTargetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.RollbackTargetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.RollbackTargetResponse>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "RollbackTarget",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.RollbackTarget",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 51,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 49,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_RollbackTarget_sync_flattened",
+      "title": "RollbackTarget",
+      "description": "Snippet for RollbackTarget",
+      "file": "CloudDeployClient.RollbackTargetSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RollbackTarget",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.RollbackTarget",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "targetId"
+          },
+          {
+            "type": "System.String",
+            "name": "rolloutId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Deploy.V1.RollbackTargetResponse",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "RollbackTarget",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.RollbackTarget",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_RollbackTarget_async_flattened",
+      "title": "RollbackTargetAsync",
+      "description": "Snippet for RollbackTargetAsync",
+      "file": "CloudDeployClient.RollbackTargetAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RollbackTargetAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.RollbackTargetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "targetId"
+          },
+          {
+            "type": "System.String",
+            "name": "rolloutId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.RollbackTargetResponse>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "RollbackTarget",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.RollbackTarget",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_RollbackTarget_sync_flattened_resourceNames",
+      "title": "RollbackTargetResourceNames",
+      "description": "Snippet for RollbackTarget",
+      "file": "CloudDeployClient.RollbackTargetResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RollbackTarget",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.RollbackTarget",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.DeliveryPipelineName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "targetId"
+          },
+          {
+            "type": "System.String",
+            "name": "rolloutId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Deploy.V1.RollbackTargetResponse",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "RollbackTarget",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.RollbackTarget",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_RollbackTarget_async_flattened_resourceNames",
+      "title": "RollbackTargetResourceNamesAsync",
+      "description": "Snippet for RollbackTargetAsync",
+      "file": "CloudDeployClient.RollbackTargetResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RollbackTargetAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.RollbackTargetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.DeliveryPipelineName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "targetId"
+          },
+          {
+            "type": "System.String",
+            "name": "rolloutId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.RollbackTargetResponse>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "RollbackTarget",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.RollbackTarget",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "clouddeploy_v1_generated_CloudDeploy_GetTarget_sync",
       "title": "GetTargetRequestObject",
       "description": "Snippet for GetTarget",
@@ -7646,6 +7965,2311 @@
         "method": {
           "shortName": "GetConfig",
           "fullName": "google.cloud.deploy.v1.CloudDeploy.GetConfig",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_CreateAutomation_sync",
+      "title": "CreateAutomationRequestObject",
+      "description": "Snippet for CreateAutomation",
+      "file": "CloudDeployClient.CreateAutomationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAutomation",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CreateAutomation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.CreateAutomationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Deploy.V1.Automation, Google.Cloud.Deploy.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "CreateAutomation",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.CreateAutomation",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_CreateAutomation_async",
+      "title": "CreateAutomationRequestObjectAsync",
+      "description": "Snippet for CreateAutomationAsync",
+      "file": "CloudDeployClient.CreateAutomationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAutomationAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CreateAutomationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.CreateAutomationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Deploy.V1.Automation, Google.Cloud.Deploy.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "CreateAutomation",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.CreateAutomation",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_CreateAutomation_sync_flattened",
+      "title": "CreateAutomation",
+      "description": "Snippet for CreateAutomation",
+      "file": "CloudDeployClient.CreateAutomationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAutomation",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CreateAutomation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Deploy.V1.Automation",
+            "name": "automation"
+          },
+          {
+            "type": "System.String",
+            "name": "automationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Deploy.V1.Automation, Google.Cloud.Deploy.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "CreateAutomation",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.CreateAutomation",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_CreateAutomation_async_flattened",
+      "title": "CreateAutomationAsync",
+      "description": "Snippet for CreateAutomationAsync",
+      "file": "CloudDeployClient.CreateAutomationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAutomationAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CreateAutomationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Deploy.V1.Automation",
+            "name": "automation"
+          },
+          {
+            "type": "System.String",
+            "name": "automationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Deploy.V1.Automation, Google.Cloud.Deploy.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "CreateAutomation",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.CreateAutomation",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_CreateAutomation_sync_flattened_resourceNames",
+      "title": "CreateAutomationResourceNames",
+      "description": "Snippet for CreateAutomation",
+      "file": "CloudDeployClient.CreateAutomationResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAutomation",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CreateAutomation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.DeliveryPipelineName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Deploy.V1.Automation",
+            "name": "automation"
+          },
+          {
+            "type": "System.String",
+            "name": "automationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Deploy.V1.Automation, Google.Cloud.Deploy.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "CreateAutomation",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.CreateAutomation",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_CreateAutomation_async_flattened_resourceNames",
+      "title": "CreateAutomationResourceNamesAsync",
+      "description": "Snippet for CreateAutomationAsync",
+      "file": "CloudDeployClient.CreateAutomationResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAutomationAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CreateAutomationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.DeliveryPipelineName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Deploy.V1.Automation",
+            "name": "automation"
+          },
+          {
+            "type": "System.String",
+            "name": "automationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Deploy.V1.Automation, Google.Cloud.Deploy.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "CreateAutomation",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.CreateAutomation",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_UpdateAutomation_sync",
+      "title": "UpdateAutomationRequestObject",
+      "description": "Snippet for UpdateAutomation",
+      "file": "CloudDeployClient.UpdateAutomationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAutomation",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.UpdateAutomation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.UpdateAutomationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Deploy.V1.Automation, Google.Cloud.Deploy.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "UpdateAutomation",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.UpdateAutomation",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_UpdateAutomation_async",
+      "title": "UpdateAutomationRequestObjectAsync",
+      "description": "Snippet for UpdateAutomationAsync",
+      "file": "CloudDeployClient.UpdateAutomationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAutomationAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.UpdateAutomationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.UpdateAutomationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Deploy.V1.Automation, Google.Cloud.Deploy.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "UpdateAutomation",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.UpdateAutomation",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_UpdateAutomation_sync_flattened",
+      "title": "UpdateAutomation",
+      "description": "Snippet for UpdateAutomation",
+      "file": "CloudDeployClient.UpdateAutomationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAutomation",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.UpdateAutomation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.Automation",
+            "name": "automation"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Deploy.V1.Automation, Google.Cloud.Deploy.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "UpdateAutomation",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.UpdateAutomation",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_UpdateAutomation_async_flattened",
+      "title": "UpdateAutomationAsync",
+      "description": "Snippet for UpdateAutomationAsync",
+      "file": "CloudDeployClient.UpdateAutomationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAutomationAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.UpdateAutomationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.Automation",
+            "name": "automation"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Deploy.V1.Automation, Google.Cloud.Deploy.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "UpdateAutomation",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.UpdateAutomation",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_DeleteAutomation_sync",
+      "title": "DeleteAutomationRequestObject",
+      "description": "Snippet for DeleteAutomation",
+      "file": "CloudDeployClient.DeleteAutomationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAutomation",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.DeleteAutomation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.DeleteAutomationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Deploy.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "DeleteAutomation",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.DeleteAutomation",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_DeleteAutomation_async",
+      "title": "DeleteAutomationRequestObjectAsync",
+      "description": "Snippet for DeleteAutomationAsync",
+      "file": "CloudDeployClient.DeleteAutomationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAutomationAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.DeleteAutomationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.DeleteAutomationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Deploy.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "DeleteAutomation",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.DeleteAutomation",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_DeleteAutomation_sync_flattened",
+      "title": "DeleteAutomation",
+      "description": "Snippet for DeleteAutomation",
+      "file": "CloudDeployClient.DeleteAutomationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAutomation",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.DeleteAutomation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Deploy.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "DeleteAutomation",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.DeleteAutomation",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_DeleteAutomation_async_flattened",
+      "title": "DeleteAutomationAsync",
+      "description": "Snippet for DeleteAutomationAsync",
+      "file": "CloudDeployClient.DeleteAutomationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAutomationAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.DeleteAutomationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Deploy.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "DeleteAutomation",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.DeleteAutomation",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_DeleteAutomation_sync_flattened_resourceNames",
+      "title": "DeleteAutomationResourceNames",
+      "description": "Snippet for DeleteAutomation",
+      "file": "CloudDeployClient.DeleteAutomationResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAutomation",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.DeleteAutomation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.AutomationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Deploy.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "DeleteAutomation",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.DeleteAutomation",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_DeleteAutomation_async_flattened_resourceNames",
+      "title": "DeleteAutomationResourceNamesAsync",
+      "description": "Snippet for DeleteAutomationAsync",
+      "file": "CloudDeployClient.DeleteAutomationResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAutomationAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.DeleteAutomationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.AutomationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Deploy.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "DeleteAutomation",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.DeleteAutomation",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_GetAutomation_sync",
+      "title": "GetAutomationRequestObject",
+      "description": "Snippet for GetAutomation",
+      "file": "CloudDeployClient.GetAutomationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutomation",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetAutomation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.GetAutomationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Deploy.V1.Automation",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "GetAutomation",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.GetAutomation",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_GetAutomation_async",
+      "title": "GetAutomationRequestObjectAsync",
+      "description": "Snippet for GetAutomationAsync",
+      "file": "CloudDeployClient.GetAutomationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutomationAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetAutomationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.GetAutomationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.Automation>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "GetAutomation",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.GetAutomation",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_GetAutomation_sync_flattened",
+      "title": "GetAutomation",
+      "description": "Snippet for GetAutomation",
+      "file": "CloudDeployClient.GetAutomationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutomation",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetAutomation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Deploy.V1.Automation",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "GetAutomation",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.GetAutomation",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_GetAutomation_async_flattened",
+      "title": "GetAutomationAsync",
+      "description": "Snippet for GetAutomationAsync",
+      "file": "CloudDeployClient.GetAutomationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutomationAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetAutomationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.Automation>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "GetAutomation",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.GetAutomation",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_GetAutomation_sync_flattened_resourceNames",
+      "title": "GetAutomationResourceNames",
+      "description": "Snippet for GetAutomation",
+      "file": "CloudDeployClient.GetAutomationResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutomation",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetAutomation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.AutomationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Deploy.V1.Automation",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "GetAutomation",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.GetAutomation",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_GetAutomation_async_flattened_resourceNames",
+      "title": "GetAutomationResourceNamesAsync",
+      "description": "Snippet for GetAutomationAsync",
+      "file": "CloudDeployClient.GetAutomationResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutomationAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetAutomationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.AutomationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.Automation>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "GetAutomation",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.GetAutomation",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_ListAutomations_sync",
+      "title": "ListAutomationsRequestObject",
+      "description": "Snippet for ListAutomations",
+      "file": "CloudDeployClient.ListAutomationsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAutomations",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListAutomations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.ListAutomationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Deploy.V1.ListAutomationsResponse, Google.Cloud.Deploy.V1.Automation>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "ListAutomations",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.ListAutomations",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_ListAutomations_async",
+      "title": "ListAutomationsRequestObjectAsync",
+      "description": "Snippet for ListAutomationsAsync",
+      "file": "CloudDeployClient.ListAutomationsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAutomationsAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListAutomationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.ListAutomationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Deploy.V1.ListAutomationsResponse, Google.Cloud.Deploy.V1.Automation>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "ListAutomations",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.ListAutomations",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_ListAutomations_sync_flattened",
+      "title": "ListAutomations",
+      "description": "Snippet for ListAutomations",
+      "file": "CloudDeployClient.ListAutomationsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAutomations",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListAutomations",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Deploy.V1.ListAutomationsResponse, Google.Cloud.Deploy.V1.Automation>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "ListAutomations",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.ListAutomations",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_ListAutomations_async_flattened",
+      "title": "ListAutomationsAsync",
+      "description": "Snippet for ListAutomationsAsync",
+      "file": "CloudDeployClient.ListAutomationsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAutomationsAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListAutomationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Deploy.V1.ListAutomationsResponse, Google.Cloud.Deploy.V1.Automation>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "ListAutomations",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.ListAutomations",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_ListAutomations_sync_flattened_resourceNames",
+      "title": "ListAutomationsResourceNames",
+      "description": "Snippet for ListAutomations",
+      "file": "CloudDeployClient.ListAutomationsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAutomations",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListAutomations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.DeliveryPipelineName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Deploy.V1.ListAutomationsResponse, Google.Cloud.Deploy.V1.Automation>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "ListAutomations",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.ListAutomations",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_ListAutomations_async_flattened_resourceNames",
+      "title": "ListAutomationsResourceNamesAsync",
+      "description": "Snippet for ListAutomationsAsync",
+      "file": "CloudDeployClient.ListAutomationsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAutomationsAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListAutomationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.DeliveryPipelineName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Deploy.V1.ListAutomationsResponse, Google.Cloud.Deploy.V1.Automation>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "ListAutomations",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.ListAutomations",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_GetAutomationRun_sync",
+      "title": "GetAutomationRunRequestObject",
+      "description": "Snippet for GetAutomationRun",
+      "file": "CloudDeployClient.GetAutomationRunRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutomationRun",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetAutomationRun",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.GetAutomationRunRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Deploy.V1.AutomationRun",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "GetAutomationRun",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.GetAutomationRun",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_GetAutomationRun_async",
+      "title": "GetAutomationRunRequestObjectAsync",
+      "description": "Snippet for GetAutomationRunAsync",
+      "file": "CloudDeployClient.GetAutomationRunRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutomationRunAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetAutomationRunAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.GetAutomationRunRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.AutomationRun>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "GetAutomationRun",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.GetAutomationRun",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_GetAutomationRun_sync_flattened",
+      "title": "GetAutomationRun",
+      "description": "Snippet for GetAutomationRun",
+      "file": "CloudDeployClient.GetAutomationRunSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutomationRun",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetAutomationRun",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Deploy.V1.AutomationRun",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "GetAutomationRun",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.GetAutomationRun",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_GetAutomationRun_async_flattened",
+      "title": "GetAutomationRunAsync",
+      "description": "Snippet for GetAutomationRunAsync",
+      "file": "CloudDeployClient.GetAutomationRunAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutomationRunAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetAutomationRunAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.AutomationRun>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "GetAutomationRun",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.GetAutomationRun",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_GetAutomationRun_sync_flattened_resourceNames",
+      "title": "GetAutomationRunResourceNames",
+      "description": "Snippet for GetAutomationRun",
+      "file": "CloudDeployClient.GetAutomationRunResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutomationRun",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetAutomationRun",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.AutomationRunName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Deploy.V1.AutomationRun",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "GetAutomationRun",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.GetAutomationRun",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_GetAutomationRun_async_flattened_resourceNames",
+      "title": "GetAutomationRunResourceNamesAsync",
+      "description": "Snippet for GetAutomationRunAsync",
+      "file": "CloudDeployClient.GetAutomationRunResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutomationRunAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetAutomationRunAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.AutomationRunName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.AutomationRun>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "GetAutomationRun",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.GetAutomationRun",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_ListAutomationRuns_sync",
+      "title": "ListAutomationRunsRequestObject",
+      "description": "Snippet for ListAutomationRuns",
+      "file": "CloudDeployClient.ListAutomationRunsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAutomationRuns",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListAutomationRuns",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.ListAutomationRunsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Deploy.V1.ListAutomationRunsResponse, Google.Cloud.Deploy.V1.AutomationRun>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "ListAutomationRuns",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.ListAutomationRuns",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_ListAutomationRuns_async",
+      "title": "ListAutomationRunsRequestObjectAsync",
+      "description": "Snippet for ListAutomationRunsAsync",
+      "file": "CloudDeployClient.ListAutomationRunsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAutomationRunsAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListAutomationRunsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.ListAutomationRunsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Deploy.V1.ListAutomationRunsResponse, Google.Cloud.Deploy.V1.AutomationRun>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "ListAutomationRuns",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.ListAutomationRuns",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_ListAutomationRuns_sync_flattened",
+      "title": "ListAutomationRuns",
+      "description": "Snippet for ListAutomationRuns",
+      "file": "CloudDeployClient.ListAutomationRunsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAutomationRuns",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListAutomationRuns",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Deploy.V1.ListAutomationRunsResponse, Google.Cloud.Deploy.V1.AutomationRun>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "ListAutomationRuns",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.ListAutomationRuns",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_ListAutomationRuns_async_flattened",
+      "title": "ListAutomationRunsAsync",
+      "description": "Snippet for ListAutomationRunsAsync",
+      "file": "CloudDeployClient.ListAutomationRunsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAutomationRunsAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListAutomationRunsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Deploy.V1.ListAutomationRunsResponse, Google.Cloud.Deploy.V1.AutomationRun>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "ListAutomationRuns",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.ListAutomationRuns",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_ListAutomationRuns_sync_flattened_resourceNames",
+      "title": "ListAutomationRunsResourceNames",
+      "description": "Snippet for ListAutomationRuns",
+      "file": "CloudDeployClient.ListAutomationRunsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAutomationRuns",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListAutomationRuns",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.DeliveryPipelineName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Deploy.V1.ListAutomationRunsResponse, Google.Cloud.Deploy.V1.AutomationRun>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "ListAutomationRuns",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.ListAutomationRuns",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_ListAutomationRuns_async_flattened_resourceNames",
+      "title": "ListAutomationRunsResourceNamesAsync",
+      "description": "Snippet for ListAutomationRunsAsync",
+      "file": "CloudDeployClient.ListAutomationRunsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAutomationRunsAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListAutomationRunsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.DeliveryPipelineName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Deploy.V1.ListAutomationRunsResponse, Google.Cloud.Deploy.V1.AutomationRun>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "ListAutomationRuns",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.ListAutomationRuns",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_CancelAutomationRun_sync",
+      "title": "CancelAutomationRunRequestObject",
+      "description": "Snippet for CancelAutomationRun",
+      "file": "CloudDeployClient.CancelAutomationRunRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelAutomationRun",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CancelAutomationRun",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.CancelAutomationRunRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Deploy.V1.CancelAutomationRunResponse",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "CancelAutomationRun",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.CancelAutomationRun",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_CancelAutomationRun_async",
+      "title": "CancelAutomationRunRequestObjectAsync",
+      "description": "Snippet for CancelAutomationRunAsync",
+      "file": "CloudDeployClient.CancelAutomationRunRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelAutomationRunAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CancelAutomationRunAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.CancelAutomationRunRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.CancelAutomationRunResponse>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "CancelAutomationRun",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.CancelAutomationRun",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_CancelAutomationRun_sync_flattened",
+      "title": "CancelAutomationRun",
+      "description": "Snippet for CancelAutomationRun",
+      "file": "CloudDeployClient.CancelAutomationRunSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelAutomationRun",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CancelAutomationRun",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Deploy.V1.CancelAutomationRunResponse",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "CancelAutomationRun",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.CancelAutomationRun",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_CancelAutomationRun_async_flattened",
+      "title": "CancelAutomationRunAsync",
+      "description": "Snippet for CancelAutomationRunAsync",
+      "file": "CloudDeployClient.CancelAutomationRunAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelAutomationRunAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CancelAutomationRunAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.CancelAutomationRunResponse>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "CancelAutomationRun",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.CancelAutomationRun",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_CancelAutomationRun_sync_flattened_resourceNames",
+      "title": "CancelAutomationRunResourceNames",
+      "description": "Snippet for CancelAutomationRun",
+      "file": "CloudDeployClient.CancelAutomationRunResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelAutomationRun",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CancelAutomationRun",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.AutomationRunName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Deploy.V1.CancelAutomationRunResponse",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "CancelAutomationRun",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.CancelAutomationRun",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_CancelAutomationRun_async_flattened_resourceNames",
+      "title": "CancelAutomationRunResourceNamesAsync",
+      "description": "Snippet for CancelAutomationRunAsync",
+      "file": "CloudDeployClient.CancelAutomationRunResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelAutomationRunAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CancelAutomationRunAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.AutomationRunName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.CancelAutomationRunResponse>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "CancelAutomationRun",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.CancelAutomationRun",
           "service": {
             "shortName": "CloudDeploy",
             "fullName": "google.cloud.deploy.v1.CloudDeploy"

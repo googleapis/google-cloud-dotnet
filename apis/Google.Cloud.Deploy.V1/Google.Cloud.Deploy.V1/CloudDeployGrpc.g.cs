@@ -85,6 +85,10 @@ namespace Google.Cloud.Deploy.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.ListTargetsResponse> __Marshaller_google_cloud_deploy_v1_ListTargetsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.ListTargetsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.RollbackTargetRequest> __Marshaller_google_cloud_deploy_v1_RollbackTargetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.RollbackTargetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.RollbackTargetResponse> __Marshaller_google_cloud_deploy_v1_RollbackTargetResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.RollbackTargetResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.GetTargetRequest> __Marshaller_google_cloud_deploy_v1_GetTargetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.GetTargetRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.Target> __Marshaller_google_cloud_deploy_v1_Target = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.Target.Parser));
@@ -154,6 +158,32 @@ namespace Google.Cloud.Deploy.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.GetConfigRequest> __Marshaller_google_cloud_deploy_v1_GetConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.GetConfigRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.Config> __Marshaller_google_cloud_deploy_v1_Config = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.Config.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.CreateAutomationRequest> __Marshaller_google_cloud_deploy_v1_CreateAutomationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.CreateAutomationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.UpdateAutomationRequest> __Marshaller_google_cloud_deploy_v1_UpdateAutomationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.UpdateAutomationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.DeleteAutomationRequest> __Marshaller_google_cloud_deploy_v1_DeleteAutomationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.DeleteAutomationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.GetAutomationRequest> __Marshaller_google_cloud_deploy_v1_GetAutomationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.GetAutomationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.Automation> __Marshaller_google_cloud_deploy_v1_Automation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.Automation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.ListAutomationsRequest> __Marshaller_google_cloud_deploy_v1_ListAutomationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.ListAutomationsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.ListAutomationsResponse> __Marshaller_google_cloud_deploy_v1_ListAutomationsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.ListAutomationsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.GetAutomationRunRequest> __Marshaller_google_cloud_deploy_v1_GetAutomationRunRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.GetAutomationRunRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.AutomationRun> __Marshaller_google_cloud_deploy_v1_AutomationRun = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.AutomationRun.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.ListAutomationRunsRequest> __Marshaller_google_cloud_deploy_v1_ListAutomationRunsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.ListAutomationRunsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.ListAutomationRunsResponse> __Marshaller_google_cloud_deploy_v1_ListAutomationRunsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.ListAutomationRunsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.CancelAutomationRunRequest> __Marshaller_google_cloud_deploy_v1_CancelAutomationRunRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.CancelAutomationRunRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.CancelAutomationRunResponse> __Marshaller_google_cloud_deploy_v1_CancelAutomationRunResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.CancelAutomationRunResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Deploy.V1.ListDeliveryPipelinesRequest, global::Google.Cloud.Deploy.V1.ListDeliveryPipelinesResponse> __Method_ListDeliveryPipelines = new grpc::Method<global::Google.Cloud.Deploy.V1.ListDeliveryPipelinesRequest, global::Google.Cloud.Deploy.V1.ListDeliveryPipelinesResponse>(
@@ -202,6 +232,14 @@ namespace Google.Cloud.Deploy.V1 {
         "ListTargets",
         __Marshaller_google_cloud_deploy_v1_ListTargetsRequest,
         __Marshaller_google_cloud_deploy_v1_ListTargetsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Deploy.V1.RollbackTargetRequest, global::Google.Cloud.Deploy.V1.RollbackTargetResponse> __Method_RollbackTarget = new grpc::Method<global::Google.Cloud.Deploy.V1.RollbackTargetRequest, global::Google.Cloud.Deploy.V1.RollbackTargetResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RollbackTarget",
+        __Marshaller_google_cloud_deploy_v1_RollbackTargetRequest,
+        __Marshaller_google_cloud_deploy_v1_RollbackTargetResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Deploy.V1.GetTargetRequest, global::Google.Cloud.Deploy.V1.Target> __Method_GetTarget = new grpc::Method<global::Google.Cloud.Deploy.V1.GetTargetRequest, global::Google.Cloud.Deploy.V1.Target>(
@@ -363,6 +401,70 @@ namespace Google.Cloud.Deploy.V1 {
         __Marshaller_google_cloud_deploy_v1_GetConfigRequest,
         __Marshaller_google_cloud_deploy_v1_Config);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Deploy.V1.CreateAutomationRequest, global::Google.LongRunning.Operation> __Method_CreateAutomation = new grpc::Method<global::Google.Cloud.Deploy.V1.CreateAutomationRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateAutomation",
+        __Marshaller_google_cloud_deploy_v1_CreateAutomationRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Deploy.V1.UpdateAutomationRequest, global::Google.LongRunning.Operation> __Method_UpdateAutomation = new grpc::Method<global::Google.Cloud.Deploy.V1.UpdateAutomationRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateAutomation",
+        __Marshaller_google_cloud_deploy_v1_UpdateAutomationRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Deploy.V1.DeleteAutomationRequest, global::Google.LongRunning.Operation> __Method_DeleteAutomation = new grpc::Method<global::Google.Cloud.Deploy.V1.DeleteAutomationRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteAutomation",
+        __Marshaller_google_cloud_deploy_v1_DeleteAutomationRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Deploy.V1.GetAutomationRequest, global::Google.Cloud.Deploy.V1.Automation> __Method_GetAutomation = new grpc::Method<global::Google.Cloud.Deploy.V1.GetAutomationRequest, global::Google.Cloud.Deploy.V1.Automation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAutomation",
+        __Marshaller_google_cloud_deploy_v1_GetAutomationRequest,
+        __Marshaller_google_cloud_deploy_v1_Automation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Deploy.V1.ListAutomationsRequest, global::Google.Cloud.Deploy.V1.ListAutomationsResponse> __Method_ListAutomations = new grpc::Method<global::Google.Cloud.Deploy.V1.ListAutomationsRequest, global::Google.Cloud.Deploy.V1.ListAutomationsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListAutomations",
+        __Marshaller_google_cloud_deploy_v1_ListAutomationsRequest,
+        __Marshaller_google_cloud_deploy_v1_ListAutomationsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Deploy.V1.GetAutomationRunRequest, global::Google.Cloud.Deploy.V1.AutomationRun> __Method_GetAutomationRun = new grpc::Method<global::Google.Cloud.Deploy.V1.GetAutomationRunRequest, global::Google.Cloud.Deploy.V1.AutomationRun>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAutomationRun",
+        __Marshaller_google_cloud_deploy_v1_GetAutomationRunRequest,
+        __Marshaller_google_cloud_deploy_v1_AutomationRun);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Deploy.V1.ListAutomationRunsRequest, global::Google.Cloud.Deploy.V1.ListAutomationRunsResponse> __Method_ListAutomationRuns = new grpc::Method<global::Google.Cloud.Deploy.V1.ListAutomationRunsRequest, global::Google.Cloud.Deploy.V1.ListAutomationRunsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListAutomationRuns",
+        __Marshaller_google_cloud_deploy_v1_ListAutomationRunsRequest,
+        __Marshaller_google_cloud_deploy_v1_ListAutomationRunsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Deploy.V1.CancelAutomationRunRequest, global::Google.Cloud.Deploy.V1.CancelAutomationRunResponse> __Method_CancelAutomationRun = new grpc::Method<global::Google.Cloud.Deploy.V1.CancelAutomationRunRequest, global::Google.Cloud.Deploy.V1.CancelAutomationRunResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CancelAutomationRun",
+        __Marshaller_google_cloud_deploy_v1_CancelAutomationRunRequest,
+        __Marshaller_google_cloud_deploy_v1_CancelAutomationRunResponse);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -441,6 +543,18 @@ namespace Google.Cloud.Deploy.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Deploy.V1.ListTargetsResponse> ListTargets(global::Google.Cloud.Deploy.V1.ListTargetsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a `Rollout` to roll back the specified target.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Deploy.V1.RollbackTargetResponse> RollbackTarget(global::Google.Cloud.Deploy.V1.RollbackTargetRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -681,6 +795,105 @@ namespace Google.Cloud.Deploy.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Deploy.V1.Config> GetConfig(global::Google.Cloud.Deploy.V1.GetConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new Automation in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateAutomation(global::Google.Cloud.Deploy.V1.CreateAutomationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the parameters of a single Automation resource.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateAutomation(global::Google.Cloud.Deploy.V1.UpdateAutomationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a single Automation resource.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteAutomation(global::Google.Cloud.Deploy.V1.DeleteAutomationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a single Automation.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Deploy.V1.Automation> GetAutomation(global::Google.Cloud.Deploy.V1.GetAutomationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists Automations in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Deploy.V1.ListAutomationsResponse> ListAutomations(global::Google.Cloud.Deploy.V1.ListAutomationsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a single AutomationRun.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Deploy.V1.AutomationRun> GetAutomationRun(global::Google.Cloud.Deploy.V1.GetAutomationRunRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists AutomationRuns in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Deploy.V1.ListAutomationRunsResponse> ListAutomationRuns(global::Google.Cloud.Deploy.V1.ListAutomationRunsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Cancels an AutomationRun. The `state` of the `AutomationRun` after
+      /// cancelling is `CANCELLED`. `CancelAutomationRun` can be called on
+      /// AutomationRun in the state `IN_PROGRESS` and `PENDING`; AutomationRun
+      /// in a different state returns an `FAILED_PRECONDITION` error.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Deploy.V1.CancelAutomationRunResponse> CancelAutomationRun(global::Google.Cloud.Deploy.V1.CancelAutomationRunRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1001,6 +1214,54 @@ namespace Google.Cloud.Deploy.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Deploy.V1.ListTargetsResponse> ListTargetsAsync(global::Google.Cloud.Deploy.V1.ListTargetsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListTargets, null, options, request);
+      }
+      /// <summary>
+      /// Creates a `Rollout` to roll back the specified target.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Deploy.V1.RollbackTargetResponse RollbackTarget(global::Google.Cloud.Deploy.V1.RollbackTargetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RollbackTarget(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a `Rollout` to roll back the specified target.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Deploy.V1.RollbackTargetResponse RollbackTarget(global::Google.Cloud.Deploy.V1.RollbackTargetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RollbackTarget, null, options, request);
+      }
+      /// <summary>
+      /// Creates a `Rollout` to roll back the specified target.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Deploy.V1.RollbackTargetResponse> RollbackTargetAsync(global::Google.Cloud.Deploy.V1.RollbackTargetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RollbackTargetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a `Rollout` to roll back the specified target.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Deploy.V1.RollbackTargetResponse> RollbackTargetAsync(global::Google.Cloud.Deploy.V1.RollbackTargetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RollbackTarget, null, options, request);
       }
       /// <summary>
       /// Gets details of a single Target.
@@ -1962,6 +2223,402 @@ namespace Google.Cloud.Deploy.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetConfig, null, options, request);
       }
+      /// <summary>
+      /// Creates a new Automation in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateAutomation(global::Google.Cloud.Deploy.V1.CreateAutomationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAutomation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new Automation in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateAutomation(global::Google.Cloud.Deploy.V1.CreateAutomationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateAutomation, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new Automation in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateAutomationAsync(global::Google.Cloud.Deploy.V1.CreateAutomationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAutomationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new Automation in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateAutomationAsync(global::Google.Cloud.Deploy.V1.CreateAutomationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateAutomation, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of a single Automation resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateAutomation(global::Google.Cloud.Deploy.V1.UpdateAutomationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAutomation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single Automation resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateAutomation(global::Google.Cloud.Deploy.V1.UpdateAutomationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateAutomation, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of a single Automation resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateAutomationAsync(global::Google.Cloud.Deploy.V1.UpdateAutomationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAutomationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single Automation resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateAutomationAsync(global::Google.Cloud.Deploy.V1.UpdateAutomationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateAutomation, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single Automation resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteAutomation(global::Google.Cloud.Deploy.V1.DeleteAutomationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAutomation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single Automation resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteAutomation(global::Google.Cloud.Deploy.V1.DeleteAutomationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteAutomation, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single Automation resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteAutomationAsync(global::Google.Cloud.Deploy.V1.DeleteAutomationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAutomationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single Automation resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteAutomationAsync(global::Google.Cloud.Deploy.V1.DeleteAutomationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteAutomation, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single Automation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Deploy.V1.Automation GetAutomation(global::Google.Cloud.Deploy.V1.GetAutomationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAutomation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single Automation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Deploy.V1.Automation GetAutomation(global::Google.Cloud.Deploy.V1.GetAutomationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAutomation, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single Automation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Deploy.V1.Automation> GetAutomationAsync(global::Google.Cloud.Deploy.V1.GetAutomationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAutomationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single Automation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Deploy.V1.Automation> GetAutomationAsync(global::Google.Cloud.Deploy.V1.GetAutomationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAutomation, null, options, request);
+      }
+      /// <summary>
+      /// Lists Automations in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Deploy.V1.ListAutomationsResponse ListAutomations(global::Google.Cloud.Deploy.V1.ListAutomationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAutomations(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists Automations in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Deploy.V1.ListAutomationsResponse ListAutomations(global::Google.Cloud.Deploy.V1.ListAutomationsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListAutomations, null, options, request);
+      }
+      /// <summary>
+      /// Lists Automations in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Deploy.V1.ListAutomationsResponse> ListAutomationsAsync(global::Google.Cloud.Deploy.V1.ListAutomationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAutomationsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists Automations in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Deploy.V1.ListAutomationsResponse> ListAutomationsAsync(global::Google.Cloud.Deploy.V1.ListAutomationsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListAutomations, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single AutomationRun.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Deploy.V1.AutomationRun GetAutomationRun(global::Google.Cloud.Deploy.V1.GetAutomationRunRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAutomationRun(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single AutomationRun.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Deploy.V1.AutomationRun GetAutomationRun(global::Google.Cloud.Deploy.V1.GetAutomationRunRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAutomationRun, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single AutomationRun.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Deploy.V1.AutomationRun> GetAutomationRunAsync(global::Google.Cloud.Deploy.V1.GetAutomationRunRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAutomationRunAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single AutomationRun.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Deploy.V1.AutomationRun> GetAutomationRunAsync(global::Google.Cloud.Deploy.V1.GetAutomationRunRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAutomationRun, null, options, request);
+      }
+      /// <summary>
+      /// Lists AutomationRuns in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Deploy.V1.ListAutomationRunsResponse ListAutomationRuns(global::Google.Cloud.Deploy.V1.ListAutomationRunsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAutomationRuns(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists AutomationRuns in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Deploy.V1.ListAutomationRunsResponse ListAutomationRuns(global::Google.Cloud.Deploy.V1.ListAutomationRunsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListAutomationRuns, null, options, request);
+      }
+      /// <summary>
+      /// Lists AutomationRuns in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Deploy.V1.ListAutomationRunsResponse> ListAutomationRunsAsync(global::Google.Cloud.Deploy.V1.ListAutomationRunsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAutomationRunsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists AutomationRuns in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Deploy.V1.ListAutomationRunsResponse> ListAutomationRunsAsync(global::Google.Cloud.Deploy.V1.ListAutomationRunsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListAutomationRuns, null, options, request);
+      }
+      /// <summary>
+      /// Cancels an AutomationRun. The `state` of the `AutomationRun` after
+      /// cancelling is `CANCELLED`. `CancelAutomationRun` can be called on
+      /// AutomationRun in the state `IN_PROGRESS` and `PENDING`; AutomationRun
+      /// in a different state returns an `FAILED_PRECONDITION` error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Deploy.V1.CancelAutomationRunResponse CancelAutomationRun(global::Google.Cloud.Deploy.V1.CancelAutomationRunRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CancelAutomationRun(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Cancels an AutomationRun. The `state` of the `AutomationRun` after
+      /// cancelling is `CANCELLED`. `CancelAutomationRun` can be called on
+      /// AutomationRun in the state `IN_PROGRESS` and `PENDING`; AutomationRun
+      /// in a different state returns an `FAILED_PRECONDITION` error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Deploy.V1.CancelAutomationRunResponse CancelAutomationRun(global::Google.Cloud.Deploy.V1.CancelAutomationRunRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CancelAutomationRun, null, options, request);
+      }
+      /// <summary>
+      /// Cancels an AutomationRun. The `state` of the `AutomationRun` after
+      /// cancelling is `CANCELLED`. `CancelAutomationRun` can be called on
+      /// AutomationRun in the state `IN_PROGRESS` and `PENDING`; AutomationRun
+      /// in a different state returns an `FAILED_PRECONDITION` error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Deploy.V1.CancelAutomationRunResponse> CancelAutomationRunAsync(global::Google.Cloud.Deploy.V1.CancelAutomationRunRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CancelAutomationRunAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Cancels an AutomationRun. The `state` of the `AutomationRun` after
+      /// cancelling is `CANCELLED`. `CancelAutomationRun` can be called on
+      /// AutomationRun in the state `IN_PROGRESS` and `PENDING`; AutomationRun
+      /// in a different state returns an `FAILED_PRECONDITION` error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Deploy.V1.CancelAutomationRunResponse> CancelAutomationRunAsync(global::Google.Cloud.Deploy.V1.CancelAutomationRunRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CancelAutomationRun, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override CloudDeployClient NewInstance(ClientBaseConfiguration configuration)
@@ -1982,6 +2639,7 @@ namespace Google.Cloud.Deploy.V1 {
           .AddMethod(__Method_UpdateDeliveryPipeline, serviceImpl.UpdateDeliveryPipeline)
           .AddMethod(__Method_DeleteDeliveryPipeline, serviceImpl.DeleteDeliveryPipeline)
           .AddMethod(__Method_ListTargets, serviceImpl.ListTargets)
+          .AddMethod(__Method_RollbackTarget, serviceImpl.RollbackTarget)
           .AddMethod(__Method_GetTarget, serviceImpl.GetTarget)
           .AddMethod(__Method_CreateTarget, serviceImpl.CreateTarget)
           .AddMethod(__Method_UpdateTarget, serviceImpl.UpdateTarget)
@@ -2001,7 +2659,15 @@ namespace Google.Cloud.Deploy.V1 {
           .AddMethod(__Method_ListJobRuns, serviceImpl.ListJobRuns)
           .AddMethod(__Method_GetJobRun, serviceImpl.GetJobRun)
           .AddMethod(__Method_TerminateJobRun, serviceImpl.TerminateJobRun)
-          .AddMethod(__Method_GetConfig, serviceImpl.GetConfig).Build();
+          .AddMethod(__Method_GetConfig, serviceImpl.GetConfig)
+          .AddMethod(__Method_CreateAutomation, serviceImpl.CreateAutomation)
+          .AddMethod(__Method_UpdateAutomation, serviceImpl.UpdateAutomation)
+          .AddMethod(__Method_DeleteAutomation, serviceImpl.DeleteAutomation)
+          .AddMethod(__Method_GetAutomation, serviceImpl.GetAutomation)
+          .AddMethod(__Method_ListAutomations, serviceImpl.ListAutomations)
+          .AddMethod(__Method_GetAutomationRun, serviceImpl.GetAutomationRun)
+          .AddMethod(__Method_ListAutomationRuns, serviceImpl.ListAutomationRuns)
+          .AddMethod(__Method_CancelAutomationRun, serviceImpl.CancelAutomationRun).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -2017,6 +2683,7 @@ namespace Google.Cloud.Deploy.V1 {
       serviceBinder.AddMethod(__Method_UpdateDeliveryPipeline, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.UpdateDeliveryPipelineRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateDeliveryPipeline));
       serviceBinder.AddMethod(__Method_DeleteDeliveryPipeline, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.DeleteDeliveryPipelineRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteDeliveryPipeline));
       serviceBinder.AddMethod(__Method_ListTargets, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.ListTargetsRequest, global::Google.Cloud.Deploy.V1.ListTargetsResponse>(serviceImpl.ListTargets));
+      serviceBinder.AddMethod(__Method_RollbackTarget, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.RollbackTargetRequest, global::Google.Cloud.Deploy.V1.RollbackTargetResponse>(serviceImpl.RollbackTarget));
       serviceBinder.AddMethod(__Method_GetTarget, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.GetTargetRequest, global::Google.Cloud.Deploy.V1.Target>(serviceImpl.GetTarget));
       serviceBinder.AddMethod(__Method_CreateTarget, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.CreateTargetRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateTarget));
       serviceBinder.AddMethod(__Method_UpdateTarget, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.UpdateTargetRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateTarget));
@@ -2037,6 +2704,14 @@ namespace Google.Cloud.Deploy.V1 {
       serviceBinder.AddMethod(__Method_GetJobRun, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.GetJobRunRequest, global::Google.Cloud.Deploy.V1.JobRun>(serviceImpl.GetJobRun));
       serviceBinder.AddMethod(__Method_TerminateJobRun, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.TerminateJobRunRequest, global::Google.Cloud.Deploy.V1.TerminateJobRunResponse>(serviceImpl.TerminateJobRun));
       serviceBinder.AddMethod(__Method_GetConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.GetConfigRequest, global::Google.Cloud.Deploy.V1.Config>(serviceImpl.GetConfig));
+      serviceBinder.AddMethod(__Method_CreateAutomation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.CreateAutomationRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateAutomation));
+      serviceBinder.AddMethod(__Method_UpdateAutomation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.UpdateAutomationRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateAutomation));
+      serviceBinder.AddMethod(__Method_DeleteAutomation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.DeleteAutomationRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteAutomation));
+      serviceBinder.AddMethod(__Method_GetAutomation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.GetAutomationRequest, global::Google.Cloud.Deploy.V1.Automation>(serviceImpl.GetAutomation));
+      serviceBinder.AddMethod(__Method_ListAutomations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.ListAutomationsRequest, global::Google.Cloud.Deploy.V1.ListAutomationsResponse>(serviceImpl.ListAutomations));
+      serviceBinder.AddMethod(__Method_GetAutomationRun, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.GetAutomationRunRequest, global::Google.Cloud.Deploy.V1.AutomationRun>(serviceImpl.GetAutomationRun));
+      serviceBinder.AddMethod(__Method_ListAutomationRuns, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.ListAutomationRunsRequest, global::Google.Cloud.Deploy.V1.ListAutomationRunsResponse>(serviceImpl.ListAutomationRuns));
+      serviceBinder.AddMethod(__Method_CancelAutomationRun, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.CancelAutomationRunRequest, global::Google.Cloud.Deploy.V1.CancelAutomationRunResponse>(serviceImpl.CancelAutomationRun));
     }
 
   }
