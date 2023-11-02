@@ -33,6 +33,8 @@ namespace Google.Cloud.PubSub.V1;
 
 public sealed partial class SubscriberClientImpl
 {
+    private const string XGoogRequestParamsHeaderKey = "x-goog-request-params";
+
     /// <summary>
     /// Controls a single <see cref="ChannelBase"/>/<see cref="SubscriberClient"/> within this
     /// <see cref="SubscriberClientImpl"/>. This class controls the pulling of messages, and
@@ -310,7 +312,8 @@ public sealed partial class SubscriberClientImpl
         // Backoff delay (if present) has already been done; no need to delay here.
         private void HandleStartStreamingPullWithoutBackoff()
         {
-            _pull = _client.StreamingPull(CallSettings.FromCancellationToken(_softStopCts.Token));
+            var callSettings = CallSettings.FromHeader(XGoogRequestParamsHeaderKey, string.Format("subscription={0}", _subscriptionName));
+            _pull = _client.StreamingPull(callSettings.MergedWith(CallSettings.FromCancellationToken(_softStopCts.Token)));
             // Cancellation not needed in this WriteAsync call. The StreamingPull() cancellation
             // (above) will cause this call to cancel if _softStopCts is cancelled.
             Task initTask = _pull.WriteAsync(new StreamingPullRequest
