@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.8.0, released 2023-11-03
+
+### Bug fixes
+
+- Set x-goog-request-params for streaming pull requests from SubscriberClient ([commit 7b6ec74](https://github.com/googleapis/google-cloud-dotnet/commit/7b6ec741956745af04950cd60a2eb83270f6136c))
+
+### Documentation improvements
+
+- Modified some descriptions ([commit 1dd516c](https://github.com/googleapis/google-cloud-dotnet/commit/1dd516c0c949db896d898808457a4b1e97013499))
+
 ## Version 3.7.0, released 2023-09-06
 
 ### Bug fixes
