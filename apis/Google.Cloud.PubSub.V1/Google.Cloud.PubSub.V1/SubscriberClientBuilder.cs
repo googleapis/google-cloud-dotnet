@@ -144,6 +144,30 @@ public sealed class SubscriberClientBuilder : ClientBuilderBase<SubscriberClient
 
             return channel.ShutdownAsync();
         }
+
+    }
+
+    /// <summary>
+    /// Returns the *effective* API settings to use, with any additional CallSettings applied.
+    /// </summary>
+    internal SubscriberServiceApiSettings GetEffectiveApiSettings()
+    {
+        // We should never end up being called without a subscription name, but let's
+        // be careful anyway. If we don't have a subscription name, we don't need to modify
+        // the settings.
+        if (SubscriptionName is not SubscriptionName subscriptionName)
+        {
+            return ApiSettings;
+        }
+
+        // We never modify a settings object that the user code has specified explicitly.
+        var settingsToModify = ApiSettings?.Clone() ?? new SubscriberServiceApiSettings();
+
+        // TODO: Use CallSettings.FromGoogleRequestParamsHeader when
+        // https://github.com/googleapis/gax-dotnet/issues/733 is fixed and released.
+        settingsToModify.StreamingPullSettings = settingsToModify.StreamingPullSettings
+            .WithHeader("x-goog-request-params", $"subscription={Uri.EscapeDataString(subscriptionName.ToString())}");
+        return settingsToModify;        
     }
 
     /// <inheritdoc />

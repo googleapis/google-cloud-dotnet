@@ -25,7 +25,7 @@ public abstract partial class SubscriberClient
     /// This type is now obsolete; please use <see cref="SubscriberClientBuilder"/> which provides an
     /// API surface consistent with other clients (as well as additional Pub/Sub-specific properties such as <see cref="SubscriberClientBuilder.ClientCount"/>).
     /// </summary>
-    [Obsolete("Use PublisherClientBuilder to customize client settings.")]
+    [Obsolete("Use SubscriberClientBuilder to customize client settings.")]
     public sealed class ClientCreationSettings
     {
         /// <summary>
