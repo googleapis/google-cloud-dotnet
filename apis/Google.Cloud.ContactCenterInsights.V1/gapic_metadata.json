@@ -16,6 +16,12 @@
                 "BulkAnalyzeConversationsAsync"
               ]
             },
+            "BulkDeleteConversations": {
+              "methods": [
+                "BulkDeleteConversations",
+                "BulkDeleteConversationsAsync"
+              ]
+            },
             "CalculateIssueModelStats": {
               "methods": [
                 "CalculateIssueModelStats",

@@ -18841,7 +18841,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
             /// </summary>
             [pbr::OriginalName("SUMMARIZATION_MODEL_UNSPECIFIED")] Unspecified = 0,
             /// <summary>
-            /// The Insights baseline model.
+            /// The CCAI baseline model.
             /// </summary>
             [pbr::OriginalName("BASELINE_MODEL")] BaselineModel = 1,
           }

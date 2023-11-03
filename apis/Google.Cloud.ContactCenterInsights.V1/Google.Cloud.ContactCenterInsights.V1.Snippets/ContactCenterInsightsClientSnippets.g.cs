@@ -1560,6 +1560,199 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for BulkDeleteConversations</summary>
+        public void BulkDeleteConversationsRequestObject()
+        {
+            // Snippet: BulkDeleteConversations(BulkDeleteConversationsRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            BulkDeleteConversationsRequest request = new BulkDeleteConversationsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                MaxDeleteCount = 0,
+                Force = false,
+            };
+            // Make the request
+            Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata> response = contactCenterInsightsClient.BulkDeleteConversations(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BulkDeleteConversationsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceBulkDeleteConversations(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BulkDeleteConversationsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkDeleteConversationsAsync</summary>
+        public async Task BulkDeleteConversationsRequestObjectAsync()
+        {
+            // Snippet: BulkDeleteConversationsAsync(BulkDeleteConversationsRequest, CallSettings)
+            // Additional: BulkDeleteConversationsAsync(BulkDeleteConversationsRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            BulkDeleteConversationsRequest request = new BulkDeleteConversationsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                MaxDeleteCount = 0,
+                Force = false,
+            };
+            // Make the request
+            Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata> response = await contactCenterInsightsClient.BulkDeleteConversationsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BulkDeleteConversationsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceBulkDeleteConversationsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BulkDeleteConversationsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkDeleteConversations</summary>
+        public void BulkDeleteConversations()
+        {
+            // Snippet: BulkDeleteConversations(string, string, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            string filter = "";
+            // Make the request
+            Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata> response = contactCenterInsightsClient.BulkDeleteConversations(parent, filter);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BulkDeleteConversationsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceBulkDeleteConversations(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BulkDeleteConversationsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkDeleteConversationsAsync</summary>
+        public async Task BulkDeleteConversationsAsync()
+        {
+            // Snippet: BulkDeleteConversationsAsync(string, string, CallSettings)
+            // Additional: BulkDeleteConversationsAsync(string, string, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            string filter = "";
+            // Make the request
+            Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata> response = await contactCenterInsightsClient.BulkDeleteConversationsAsync(parent, filter);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BulkDeleteConversationsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceBulkDeleteConversationsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BulkDeleteConversationsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkDeleteConversations</summary>
+        public void BulkDeleteConversationsResourceNames()
+        {
+            // Snippet: BulkDeleteConversations(LocationName, string, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            string filter = "";
+            // Make the request
+            Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata> response = contactCenterInsightsClient.BulkDeleteConversations(parent, filter);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BulkDeleteConversationsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceBulkDeleteConversations(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BulkDeleteConversationsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkDeleteConversationsAsync</summary>
+        public async Task BulkDeleteConversationsResourceNamesAsync()
+        {
+            // Snippet: BulkDeleteConversationsAsync(LocationName, string, CallSettings)
+            // Additional: BulkDeleteConversationsAsync(LocationName, string, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            string filter = "";
+            // Make the request
+            Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata> response = await contactCenterInsightsClient.BulkDeleteConversationsAsync(parent, filter);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BulkDeleteConversationsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceBulkDeleteConversationsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BulkDeleteConversationsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for IngestConversations</summary>
         public void IngestConversationsRequestObject()
         {
@@ -1573,6 +1766,8 @@ namespace GoogleCSharpSnippets
                 GcsSource = new IngestConversationsRequest.Types.GcsSource(),
                 TranscriptObjectConfig = new IngestConversationsRequest.Types.TranscriptObjectConfig(),
                 ConversationConfig = new IngestConversationsRequest.Types.ConversationConfig(),
+                RedactionConfig = new RedactionConfig(),
+                SpeechConfig = new SpeechConfig(),
             };
             // Make the request
             Operation<IngestConversationsResponse, IngestConversationsMetadata> response = contactCenterInsightsClient.IngestConversations(request);
@@ -1609,6 +1804,8 @@ namespace GoogleCSharpSnippets
                 GcsSource = new IngestConversationsRequest.Types.GcsSource(),
                 TranscriptObjectConfig = new IngestConversationsRequest.Types.TranscriptObjectConfig(),
                 ConversationConfig = new IngestConversationsRequest.Types.ConversationConfig(),
+                RedactionConfig = new RedactionConfig(),
+                SpeechConfig = new SpeechConfig(),
             };
             // Make the request
             Operation<IngestConversationsResponse, IngestConversationsMetadata> response = await contactCenterInsightsClient.IngestConversationsAsync(request);
