@@ -56,7 +56,7 @@ namespace Google.Cloud.PubSub.V1
         internal SubscriberServiceApiClientBuilder(SubscriberClientBuilder otherBuilder, GrpcChannelOptions extraChannelOptions) : this()
         {
             CopyCommonSettings(otherBuilder);
-            Settings = otherBuilder.ApiSettings;
+            Settings = otherBuilder.GetEffectiveApiSettings();
             ChannelPoolDisabled = true;
             ChannelOptions = extraChannelOptions;
         }
