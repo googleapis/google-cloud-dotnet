@@ -43,6 +43,8 @@ namespace GoogleCSharpSnippets
                 GcsSource = new IngestConversationsRequest.Types.GcsSource(),
                 TranscriptObjectConfig = new IngestConversationsRequest.Types.TranscriptObjectConfig(),
                 ConversationConfig = new IngestConversationsRequest.Types.ConversationConfig(),
+                RedactionConfig = new RedactionConfig(),
+                SpeechConfig = new SpeechConfig(),
             };
             // Make the request
             Operation<IngestConversationsResponse, IngestConversationsMetadata> response = await contactCenterInsightsClient.IngestConversationsAsync(request);

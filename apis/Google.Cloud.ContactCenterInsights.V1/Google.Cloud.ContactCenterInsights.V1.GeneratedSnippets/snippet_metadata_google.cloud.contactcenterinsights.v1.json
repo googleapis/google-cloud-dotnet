@@ -3029,6 +3029,309 @@
       ]
     },
     {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_BulkDeleteConversations_sync",
+      "title": "BulkDeleteConversationsRequestObject",
+      "description": "Snippet for BulkDeleteConversations",
+      "file": "ContactCenterInsightsClient.BulkDeleteConversationsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkDeleteConversations",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.BulkDeleteConversations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.BulkDeleteConversationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.BulkDeleteConversationsResponse, Google.Cloud.ContactCenterInsights.V1.BulkDeleteConversationsMetadata>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "BulkDeleteConversations",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.BulkDeleteConversations",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_BulkDeleteConversations_async",
+      "title": "BulkDeleteConversationsRequestObjectAsync",
+      "description": "Snippet for BulkDeleteConversationsAsync",
+      "file": "ContactCenterInsightsClient.BulkDeleteConversationsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkDeleteConversationsAsync",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.BulkDeleteConversationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.BulkDeleteConversationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.BulkDeleteConversationsResponse, Google.Cloud.ContactCenterInsights.V1.BulkDeleteConversationsMetadata>>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "BulkDeleteConversations",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.BulkDeleteConversations",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_BulkDeleteConversations_sync_flattened",
+      "title": "BulkDeleteConversations",
+      "description": "Snippet for BulkDeleteConversations",
+      "file": "ContactCenterInsightsClient.BulkDeleteConversationsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkDeleteConversations",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.BulkDeleteConversations",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.BulkDeleteConversationsResponse, Google.Cloud.ContactCenterInsights.V1.BulkDeleteConversationsMetadata>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "BulkDeleteConversations",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.BulkDeleteConversations",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_BulkDeleteConversations_async_flattened",
+      "title": "BulkDeleteConversationsAsync",
+      "description": "Snippet for BulkDeleteConversationsAsync",
+      "file": "ContactCenterInsightsClient.BulkDeleteConversationsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkDeleteConversationsAsync",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.BulkDeleteConversationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.BulkDeleteConversationsResponse, Google.Cloud.ContactCenterInsights.V1.BulkDeleteConversationsMetadata>>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "BulkDeleteConversations",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.BulkDeleteConversations",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_BulkDeleteConversations_sync_flattened_resourceNames",
+      "title": "BulkDeleteConversationsResourceNames",
+      "description": "Snippet for BulkDeleteConversations",
+      "file": "ContactCenterInsightsClient.BulkDeleteConversationsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkDeleteConversations",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.BulkDeleteConversations",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.BulkDeleteConversationsResponse, Google.Cloud.ContactCenterInsights.V1.BulkDeleteConversationsMetadata>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "BulkDeleteConversations",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.BulkDeleteConversations",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_BulkDeleteConversations_async_flattened_resourceNames",
+      "title": "BulkDeleteConversationsResourceNamesAsync",
+      "description": "Snippet for BulkDeleteConversationsAsync",
+      "file": "ContactCenterInsightsClient.BulkDeleteConversationsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BulkDeleteConversationsAsync",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.BulkDeleteConversationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.BulkDeleteConversationsResponse, Google.Cloud.ContactCenterInsights.V1.BulkDeleteConversationsMetadata>>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "BulkDeleteConversations",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.BulkDeleteConversations",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_IngestConversations_sync",
       "title": "IngestConversationsRequestObject",
       "description": "Snippet for IngestConversations",
@@ -3066,12 +3369,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 65,
+          "end": 67,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 63,
+          "end": 65,
           "type": "SHORT"
         }
       ]
@@ -3115,12 +3418,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 66,
+          "end": 68,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 64,
+          "end": 66,
           "type": "SHORT"
         }
       ]

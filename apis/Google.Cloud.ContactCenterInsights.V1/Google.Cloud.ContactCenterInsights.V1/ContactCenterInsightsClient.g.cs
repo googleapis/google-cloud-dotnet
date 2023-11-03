@@ -64,6 +64,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
             DeleteAnalysisSettings = existing.DeleteAnalysisSettings;
             BulkAnalyzeConversationsSettings = existing.BulkAnalyzeConversationsSettings;
             BulkAnalyzeConversationsOperationsSettings = existing.BulkAnalyzeConversationsOperationsSettings.Clone();
+            BulkDeleteConversationsSettings = existing.BulkDeleteConversationsSettings;
+            BulkDeleteConversationsOperationsSettings = existing.BulkDeleteConversationsOperationsSettings.Clone();
             IngestConversationsSettings = existing.IngestConversationsSettings;
             IngestConversationsOperationsSettings = existing.IngestConversationsOperationsSettings.Clone();
             ExportInsightsDataSettings = existing.ExportInsightsDataSettings;
@@ -359,6 +361,43 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings BulkAnalyzeConversationsOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.BulkDeleteConversations</c> and
+        /// <c>ContactCenterInsightsClient.BulkDeleteConversationsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BulkDeleteConversationsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ContactCenterInsightsClient.BulkDeleteConversations</c> and
+        /// <c>ContactCenterInsightsClient.BulkDeleteConversationsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings BulkDeleteConversationsOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -2424,6 +2463,172 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata>> BulkAnalyzeConversationsAsync(gagr::LocationName parent, string filter, float analysisPercentage, st::CancellationToken cancellationToken) =>
             BulkAnalyzeConversationsAsync(parent, filter, analysisPercentage, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes multiple conversations in a single request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata> BulkDeleteConversations(BulkDeleteConversationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes multiple conversations in a single request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata>> BulkDeleteConversationsAsync(BulkDeleteConversationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes multiple conversations in a single request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata>> BulkDeleteConversationsAsync(BulkDeleteConversationsRequest request, st::CancellationToken cancellationToken) =>
+            BulkDeleteConversationsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>BulkDeleteConversations</c>.</summary>
+        public virtual lro::OperationsClient BulkDeleteConversationsOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>BulkDeleteConversations</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata> PollOnceBulkDeleteConversations(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BulkDeleteConversationsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>BulkDeleteConversations</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata>> PollOnceBulkDeleteConversationsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BulkDeleteConversationsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes multiple conversations in a single request.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource to create analyses in.
+        /// Format:
+        /// projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="filter">
+        /// Filter used to select the subset of conversations to analyze.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata> BulkDeleteConversations(string parent, string filter, gaxgrpc::CallSettings callSettings = null) =>
+            BulkDeleteConversations(new BulkDeleteConversationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Filter = filter ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes multiple conversations in a single request.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource to create analyses in.
+        /// Format:
+        /// projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="filter">
+        /// Filter used to select the subset of conversations to analyze.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata>> BulkDeleteConversationsAsync(string parent, string filter, gaxgrpc::CallSettings callSettings = null) =>
+            BulkDeleteConversationsAsync(new BulkDeleteConversationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Filter = filter ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes multiple conversations in a single request.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource to create analyses in.
+        /// Format:
+        /// projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="filter">
+        /// Filter used to select the subset of conversations to analyze.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata>> BulkDeleteConversationsAsync(string parent, string filter, st::CancellationToken cancellationToken) =>
+            BulkDeleteConversationsAsync(parent, filter, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes multiple conversations in a single request.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource to create analyses in.
+        /// Format:
+        /// projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="filter">
+        /// Filter used to select the subset of conversations to analyze.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata> BulkDeleteConversations(gagr::LocationName parent, string filter, gaxgrpc::CallSettings callSettings = null) =>
+            BulkDeleteConversations(new BulkDeleteConversationsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Filter = filter ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes multiple conversations in a single request.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource to create analyses in.
+        /// Format:
+        /// projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="filter">
+        /// Filter used to select the subset of conversations to analyze.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata>> BulkDeleteConversationsAsync(gagr::LocationName parent, string filter, gaxgrpc::CallSettings callSettings = null) =>
+            BulkDeleteConversationsAsync(new BulkDeleteConversationsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Filter = filter ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes multiple conversations in a single request.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource to create analyses in.
+        /// Format:
+        /// projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="filter">
+        /// Filter used to select the subset of conversations to analyze.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata>> BulkDeleteConversationsAsync(gagr::LocationName parent, string filter, st::CancellationToken cancellationToken) =>
+            BulkDeleteConversationsAsync(parent, filter, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Imports conversations and processes them according to the user's
@@ -5455,6 +5660,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         private readonly gaxgrpc::ApiCall<BulkAnalyzeConversationsRequest, lro::Operation> _callBulkAnalyzeConversations;
 
+        private readonly gaxgrpc::ApiCall<BulkDeleteConversationsRequest, lro::Operation> _callBulkDeleteConversations;
+
         private readonly gaxgrpc::ApiCall<IngestConversationsRequest, lro::Operation> _callIngestConversations;
 
         private readonly gaxgrpc::ApiCall<ExportInsightsDataRequest, lro::Operation> _callExportInsightsData;
@@ -5524,6 +5731,7 @@ namespace Google.Cloud.ContactCenterInsights.V1
             UploadConversationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UploadConversationOperationsSettings, logger);
             CreateAnalysisOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAnalysisOperationsSettings, logger);
             BulkAnalyzeConversationsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BulkAnalyzeConversationsOperationsSettings, logger);
+            BulkDeleteConversationsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BulkDeleteConversationsOperationsSettings, logger);
             IngestConversationsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.IngestConversationsOperationsSettings, logger);
             ExportInsightsDataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportInsightsDataOperationsSettings, logger);
             CreateIssueModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateIssueModelOperationsSettings, logger);
@@ -5563,6 +5771,9 @@ namespace Google.Cloud.ContactCenterInsights.V1
             _callBulkAnalyzeConversations = clientHelper.BuildApiCall<BulkAnalyzeConversationsRequest, lro::Operation>("BulkAnalyzeConversations", grpcClient.BulkAnalyzeConversationsAsync, grpcClient.BulkAnalyzeConversations, effectiveSettings.BulkAnalyzeConversationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBulkAnalyzeConversations);
             Modify_BulkAnalyzeConversationsApiCall(ref _callBulkAnalyzeConversations);
+            _callBulkDeleteConversations = clientHelper.BuildApiCall<BulkDeleteConversationsRequest, lro::Operation>("BulkDeleteConversations", grpcClient.BulkDeleteConversationsAsync, grpcClient.BulkDeleteConversations, effectiveSettings.BulkDeleteConversationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBulkDeleteConversations);
+            Modify_BulkDeleteConversationsApiCall(ref _callBulkDeleteConversations);
             _callIngestConversations = clientHelper.BuildApiCall<IngestConversationsRequest, lro::Operation>("IngestConversations", grpcClient.IngestConversationsAsync, grpcClient.IngestConversations, effectiveSettings.IngestConversationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callIngestConversations);
             Modify_IngestConversationsApiCall(ref _callIngestConversations);
@@ -5671,6 +5882,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         partial void Modify_BulkAnalyzeConversationsApiCall(ref gaxgrpc::ApiCall<BulkAnalyzeConversationsRequest, lro::Operation> call);
 
+        partial void Modify_BulkDeleteConversationsApiCall(ref gaxgrpc::ApiCall<BulkDeleteConversationsRequest, lro::Operation> call);
+
         partial void Modify_IngestConversationsApiCall(ref gaxgrpc::ApiCall<IngestConversationsRequest, lro::Operation> call);
 
         partial void Modify_ExportInsightsDataApiCall(ref gaxgrpc::ApiCall<ExportInsightsDataRequest, lro::Operation> call);
@@ -5751,6 +5964,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
         partial void Modify_DeleteAnalysisRequest(ref DeleteAnalysisRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_BulkAnalyzeConversationsRequest(ref BulkAnalyzeConversationsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BulkDeleteConversationsRequest(ref BulkDeleteConversationsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_IngestConversationsRequest(ref IngestConversationsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -6083,6 +6298,33 @@ namespace Google.Cloud.ContactCenterInsights.V1
         {
             Modify_BulkAnalyzeConversationsRequest(ref request, ref callSettings);
             return new lro::Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata>(await _callBulkAnalyzeConversations.Async(request, callSettings).ConfigureAwait(false), BulkAnalyzeConversationsOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>BulkDeleteConversations</c>.</summary>
+        public override lro::OperationsClient BulkDeleteConversationsOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes multiple conversations in a single request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata> BulkDeleteConversations(BulkDeleteConversationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BulkDeleteConversationsRequest(ref request, ref callSettings);
+            return new lro::Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata>(_callBulkDeleteConversations.Sync(request, callSettings), BulkDeleteConversationsOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes multiple conversations in a single request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata>> BulkDeleteConversationsAsync(BulkDeleteConversationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BulkDeleteConversationsRequest(ref request, ref callSettings);
+            return new lro::Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata>(await _callBulkDeleteConversations.Async(request, callSettings).ConfigureAwait(false), BulkDeleteConversationsOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>IngestConversations</c>.</summary>
