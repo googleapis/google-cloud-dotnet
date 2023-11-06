@@ -18,6 +18,7 @@ using Google.Api.Gax.Testing;
 using Google.Cloud.Spanner.V1.Internal;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf;
+using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using NSubstitute;
 using NSubstitute.Extensions;
@@ -100,16 +101,16 @@ namespace Google.Cloud.Spanner.V1.Tests
             clock.Advance(halfRefresh);
 
             // Make a successful request
-            var request = new BeginTransactionRequest();
             var response = new Transaction();
-            pool.Client.Configure().BeginTransactionAsync(request, Arg.Any<CallSettings>())
+            pool.Client.Configure()
+                .BeginTransactionAsync(Arg.Any<BeginTransactionRequest>(), Arg.Any<CallSettings>())
                 .Returns(Task.FromResult(response));
-            await pooledSession.BeginTransactionAsync(request, null);
+            await pooledSession.WithFreshTransactionAsync(s_readOnlyOptions, default);
 
             // The request will have extended the refresh time.
             Assert.Equal(clock.GetCurrentDateTimeUtc() + options.IdleSessionRefreshDelay, pooledSession.RefreshTimeForTest);
 
-            _ = pool.Client.Received(1).BeginTransactionAsync(request, Arg.Any<CallSettings>());
+            _ = pool.Client.Received(1).BeginTransactionAsync(Arg.Any<BeginTransactionRequest>(), Arg.Any<CallSettings>());
         }
 
         [Fact]
@@ -119,15 +120,50 @@ namespace Google.Cloud.Spanner.V1.Tests
             var pooledSession = PooledSession.FromSessionName(pool, s_sampleSessionName);
 
             // Make a request which fails due to the session not being found (because it has expired).
-            var request = new BeginTransactionRequest();
             var exception = CreateSessionExpiredException();
-            pool.Client.Configure().BeginTransactionAsync(request, Arg.Any<CallSettings>())
+            pool.Client.Configure()
+                .BeginTransactionAsync(Arg.Any<BeginTransactionRequest>(), Arg.Any<CallSettings>())
                 .Returns(Task.FromException<Transaction>(exception));
-            await Assert.ThrowsAsync<RpcException>(() => pooledSession.BeginTransactionAsync(request, null));
+
+            await Assert.ThrowsAsync<RpcException>(() => pooledSession.WithFreshTransactionAsync(s_readOnlyOptions, default));
             Assert.True(pooledSession.ServerExpired);
 
-            _ = pool.Client.Received(1).BeginTransactionAsync(request, Arg.Any<CallSettings>());
+            _ = pool.Client.Received(1).BeginTransactionAsync(Arg.Any<BeginTransactionRequest>(), Arg.Any<CallSettings>());
         }
+
+        [Fact]
+        public async Task WithFreshTransactionAsync()
+        {
+            var pool = new FakeSessionPool();
+            var pooledSession = PooledSession.FromSessionName(pool, s_sampleSessionName);
+            var expectedTransaction = new Transaction
+            {
+                Id = ByteString.CopyFromUtf8("transaction"),
+                ReadTimestamp = DateTimeOffset.UtcNow.ToTimestamp()
+            };
+
+            // Make a successful request
+            pool.Client.Configure()
+                .BeginTransactionAsync(Arg.Any<BeginTransactionRequest>(), Arg.Any<CallSettings>())
+                .Returns(Task.FromResult(expectedTransaction));
+
+            var newSession = await pooledSession.WithFreshTransactionAsync(s_readOnlyOptions, default);
+
+            _ = pool.Client.Received(1).BeginTransactionAsync(
+                Arg.Do<BeginTransactionRequest>(request =>
+                {
+                    Assert.Equal(s_sampleSessionName, request.SessionAsSessionName);
+                    Assert.Equal(ModeOneofCase.ReadOnly, request.Options.ModeCase);
+                }),
+                Arg.Any<CallSettings>());
+
+            Assert.NotSame(newSession, pooledSession);
+            Assert.Equal(pooledSession.SessionName, newSession.SessionName);
+            Assert.Equal(s_readOnlyOptions, newSession.TransactionOptions);
+            Assert.Equal(expectedTransaction.Id, newSession.TransactionId);
+            Assert.Equal(expectedTransaction.ReadTimestamp, newSession.ReadTimestamp);
+        }
+
 
         [Fact]
         public async Task RequestSessionIsPopulated()
@@ -136,15 +172,15 @@ namespace Google.Cloud.Spanner.V1.Tests
             var pooledSession = PooledSession.FromSessionName(pool, s_sampleSessionName);
 
             // Make a successful request
-            var request = new BeginTransactionRequest();
-            pool.Client.Configure().BeginTransactionAsync(request, Arg.Any<CallSettings>())
+            pool.Client.Configure()
+                .BeginTransactionAsync(Arg.Any<BeginTransactionRequest>(), Arg.Any<CallSettings>())
                 .Returns(Task.FromResult(new Transaction()));
-            await pooledSession.BeginTransactionAsync(request, null);
 
-            // The call modifies the request. (We can't easily check that it was modified before the RPC)
-            Assert.Equal(s_sampleSessionName, request.SessionAsSessionName);
+            await pooledSession.WithFreshTransactionAsync(s_readOnlyOptions, default);
 
-            _ = pool.Client.Received(1).BeginTransactionAsync(request, Arg.Any<CallSettings>());
+            _ = pool.Client.Received(1).BeginTransactionAsync(
+                Arg.Do<BeginTransactionRequest>(request => Assert.Equal(s_sampleSessionName, request.SessionAsSessionName)),
+                Arg.Any<CallSettings>());
         }
 
         [Fact]
@@ -291,18 +327,18 @@ namespace Google.Cloud.Spanner.V1.Tests
             var pooledSession = PooledSession.FromSessionName(pool, s_sampleSessionName);
 
             // Make a request which fails due to the session not being found (because it has expired).
-            var request = new BeginTransactionRequest();
             var exception = CreateSessionExpiredException();
-            pool.Client.Configure().BeginTransactionAsync(request, Arg.Any<CallSettings>())
+            pool.Client.Configure()
+                .BeginTransactionAsync(Arg.Any<BeginTransactionRequest>(), Arg.Any<CallSettings>())
                 .Returns(Task.FromException<Transaction>(exception));
-            await Assert.ThrowsAsync<RpcException>(() => pooledSession.BeginTransactionAsync(request, null));
+            await Assert.ThrowsAsync<RpcException>(() => pooledSession.WithFreshTransactionAsync(s_readOnlyOptions, default));
 
             // When we release the session, the pool should delete it even if we didn't ask it to.
             pooledSession.ReleaseToPool(false);
             Assert.True(pool.ReleasedSessionDeleted);
             Assert.Null(pool.RolledBackTransaction);
 
-            _ = pool.Client.Received(1).BeginTransactionAsync(request, Arg.Any<CallSettings>());
+            _ = pool.Client.Received(1).BeginTransactionAsync(Arg.Any<BeginTransactionRequest>(), Arg.Any<CallSettings>());
         }
 
         [Fact]
@@ -332,7 +368,7 @@ namespace Google.Cloud.Spanner.V1.Tests
 
             // We now can't make RPCs
             await Assert.ThrowsAsync<ObjectDisposedException>(
-                () => pooledSession.BeginTransactionAsync(new BeginTransactionRequest(), null));
+                () => pooledSession.WithFreshTransactionAsync(pooledSession.TransactionOptions, default));
         }
 
         [Fact]

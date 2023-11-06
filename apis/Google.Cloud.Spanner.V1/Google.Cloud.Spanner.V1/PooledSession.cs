@@ -144,6 +144,32 @@ namespace Google.Cloud.Spanner.V1
         }
 
         /// <summary>
+        /// Returns a PooledSession for the same session as this one with the given transaction options and a newly created transaction.
+        /// The refresh and eviction times are the same as this instance.
+        /// This instance will be <see cref="MarkAsDisposed"/> to ensure that all operations with the underlying session are done through the new instance.
+        /// </summary>
+        internal async Task<PooledSession> WithFreshTransactionAsync(TransactionOptions transactionOptions, CancellationToken cancellationToken)
+        {
+            CheckNotDisposed();
+            GaxPreconditions.CheckNotNull(transactionOptions, nameof(transactionOptions));
+            var transaction = await BeginTransactionAsync(cancellationToken).ConfigureAwait(false);
+            return WithTransaction(transaction.Id, transactionOptions, transaction.ReadTimestamp);
+
+            Task<Transaction> BeginTransactionAsync(CancellationToken cancellationToken)
+            {
+                var request = new BeginTransactionRequest
+                {
+                    Options = transactionOptions,
+                    SessionAsSessionName = SessionName,
+                };
+                var callSettings = Client.Settings.BeginTransactionSettings
+                    .WithExpiration(Expiration.FromTimeout(_pool.Options.Timeout))
+                    .WithCancellationToken(cancellationToken);
+                return RecordSuccessAndExpiredSessions(Client.BeginTransactionAsync(request, callSettings));
+            }
+        }
+
+        /// <summary>
         /// Returns a PooledSession for the same session as this one with the given transaction related values.
         /// The refresh and eviction times are the same as this instance.
         /// This instance will be <see cref="MarkAsDisposed"/> to ensure that all operations with the underlying session are done through the new instance.
@@ -428,25 +454,6 @@ namespace Google.Cloud.Spanner.V1
                 request.Transaction = new TransactionSelector { Id = TransactionId };
             }
             return RecordSuccessAndExpiredSessions(Client.ExecuteBatchDmlAsync(request, callSettings));
-        }
-
-        /// <summary>
-        /// Executes a BeginTransaction RPC asynchronously.
-        /// </summary>
-        /// <remarks>
-        /// This method does not affect <see cref="TransactionId"/> of this object. Instead, typical usage will be to call this method followed
-        /// by <see cref="WithTransaction(ByteString, TransactionOptions, Timestamp)"/> to create a new <see cref="PooledSession"/> using the transaction.
-        /// </remarks>
-        /// <param name="request">The begin-transaction request. Must not be null. The request will be modified with session details
-        /// from this object.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A task representing the asynchronous operation. When the task completes, the result is the response from the RPC.</returns>
-        internal Task<Transaction> BeginTransactionAsync(BeginTransactionRequest request, CallSettings callSettings)
-        {
-            CheckNotDisposed();
-            GaxPreconditions.CheckNotNull(request, nameof(request));
-            request.SessionAsSessionName = SessionName;
-            return RecordSuccessAndExpiredSessions(Client.BeginTransactionAsync(request, callSettings));
         }
 
         private async Task<T> RecordSuccessAndExpiredSessions<T>(Task<T> task)
