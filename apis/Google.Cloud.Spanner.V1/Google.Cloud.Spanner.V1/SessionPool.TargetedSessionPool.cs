@@ -440,14 +440,9 @@ namespace Google.Cloud.Spanner.V1
                 {
                     Interlocked.Increment(ref _inFlightSessionCreationCount);
                 }
-                var request = new BeginTransactionRequest { Options = options };
                 try
                 {
-                    var callSettings = Client.Settings.BeginTransactionSettings
-                        .WithExpiration(Expiration.FromTimeout(Options.Timeout))
-                        .WithCancellationToken(cancellationToken);
-                    var transaction = await session.BeginTransactionAsync(request, callSettings).ConfigureAwait(false);
-                    return session.WithTransaction(transaction.Id, options, transaction.ReadTimestamp);
+                    return await session.WithFreshTransactionAsync(options, cancellationToken).ConfigureAwait(false);
                 }
                 finally
                 {
