@@ -1,0 +1,7 @@
+{
+    "distribution_name": "Google.Cloud.AspNetCore.DataProtection.SecretManager",
+    "release_level": "stable",
+    "client_documentation": "",
+    "library_type": "INTEGRATION",
+    "language": "dotnet",
+}
