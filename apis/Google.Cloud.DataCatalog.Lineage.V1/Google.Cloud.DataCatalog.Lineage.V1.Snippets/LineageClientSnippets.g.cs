@@ -28,6 +28,72 @@ namespace GoogleCSharpSnippets
     /// <summary>Generated snippets.</summary>
     public sealed class AllGeneratedLineageClientSnippets
     {
+        /// <summary>Snippet for ProcessOpenLineageRunEvent</summary>
+        public void ProcessOpenLineageRunEventRequestObject()
+        {
+            // Snippet: ProcessOpenLineageRunEvent(ProcessOpenLineageRunEventRequest, CallSettings)
+            // Create client
+            LineageClient lineageClient = LineageClient.Create();
+            // Initialize request argument(s)
+            ProcessOpenLineageRunEventRequest request = new ProcessOpenLineageRunEventRequest
+            {
+                Parent = "",
+                OpenLineage = new Struct(),
+                RequestId = "",
+            };
+            // Make the request
+            ProcessOpenLineageRunEventResponse response = lineageClient.ProcessOpenLineageRunEvent(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ProcessOpenLineageRunEventAsync</summary>
+        public async Task ProcessOpenLineageRunEventRequestObjectAsync()
+        {
+            // Snippet: ProcessOpenLineageRunEventAsync(ProcessOpenLineageRunEventRequest, CallSettings)
+            // Additional: ProcessOpenLineageRunEventAsync(ProcessOpenLineageRunEventRequest, CancellationToken)
+            // Create client
+            LineageClient lineageClient = await LineageClient.CreateAsync();
+            // Initialize request argument(s)
+            ProcessOpenLineageRunEventRequest request = new ProcessOpenLineageRunEventRequest
+            {
+                Parent = "",
+                OpenLineage = new Struct(),
+                RequestId = "",
+            };
+            // Make the request
+            ProcessOpenLineageRunEventResponse response = await lineageClient.ProcessOpenLineageRunEventAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ProcessOpenLineageRunEvent</summary>
+        public void ProcessOpenLineageRunEvent()
+        {
+            // Snippet: ProcessOpenLineageRunEvent(string, Struct, CallSettings)
+            // Create client
+            LineageClient lineageClient = LineageClient.Create();
+            // Initialize request argument(s)
+            string parent = "";
+            Struct openLineage = new Struct();
+            // Make the request
+            ProcessOpenLineageRunEventResponse response = lineageClient.ProcessOpenLineageRunEvent(parent, openLineage);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ProcessOpenLineageRunEventAsync</summary>
+        public async Task ProcessOpenLineageRunEventAsync()
+        {
+            // Snippet: ProcessOpenLineageRunEventAsync(string, Struct, CallSettings)
+            // Additional: ProcessOpenLineageRunEventAsync(string, Struct, CancellationToken)
+            // Create client
+            LineageClient lineageClient = await LineageClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "";
+            Struct openLineage = new Struct();
+            // Make the request
+            ProcessOpenLineageRunEventResponse response = await lineageClient.ProcessOpenLineageRunEventAsync(parent, openLineage);
+            // End snippet
+        }
+
         /// <summary>Snippet for CreateProcess</summary>
         public void CreateProcessRequestObject()
         {
@@ -843,6 +909,7 @@ namespace GoogleCSharpSnippets
             {
                 Run = new Run(),
                 UpdateMask = new FieldMask(),
+                AllowMissing = false,
             };
             // Make the request
             Run response = lineageClient.UpdateRun(request);
@@ -861,6 +928,7 @@ namespace GoogleCSharpSnippets
             {
                 Run = new Run(),
                 UpdateMask = new FieldMask(),
+                AllowMissing = false,
             };
             // Make the request
             Run response = await lineageClient.UpdateRunAsync(request);

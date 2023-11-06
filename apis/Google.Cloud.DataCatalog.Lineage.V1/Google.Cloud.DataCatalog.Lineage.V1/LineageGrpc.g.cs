@@ -3,7 +3,7 @@
 //     source: google/cloud/datacatalog/lineage/v1/lineage.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2022 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -67,6 +67,10 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.Lineage.V1.ProcessOpenLineageRunEventRequest> __Marshaller_google_cloud_datacatalog_lineage_v1_ProcessOpenLineageRunEventRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.Lineage.V1.ProcessOpenLineageRunEventRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.Lineage.V1.ProcessOpenLineageRunEventResponse> __Marshaller_google_cloud_datacatalog_lineage_v1_ProcessOpenLineageRunEventResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.Lineage.V1.ProcessOpenLineageRunEventResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.Lineage.V1.CreateProcessRequest> __Marshaller_google_cloud_datacatalog_lineage_v1_CreateProcessRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.Lineage.V1.CreateProcessRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.Lineage.V1.Process> __Marshaller_google_cloud_datacatalog_lineage_v1_Process = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.Lineage.V1.Process.Parser));
@@ -118,6 +122,14 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.Lineage.V1.BatchSearchLinkProcessesRequest> __Marshaller_google_cloud_datacatalog_lineage_v1_BatchSearchLinkProcessesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.Lineage.V1.BatchSearchLinkProcessesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.Lineage.V1.BatchSearchLinkProcessesResponse> __Marshaller_google_cloud_datacatalog_lineage_v1_BatchSearchLinkProcessesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.Lineage.V1.BatchSearchLinkProcessesResponse.Parser));
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DataCatalog.Lineage.V1.ProcessOpenLineageRunEventRequest, global::Google.Cloud.DataCatalog.Lineage.V1.ProcessOpenLineageRunEventResponse> __Method_ProcessOpenLineageRunEvent = new grpc::Method<global::Google.Cloud.DataCatalog.Lineage.V1.ProcessOpenLineageRunEventRequest, global::Google.Cloud.DataCatalog.Lineage.V1.ProcessOpenLineageRunEventResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ProcessOpenLineageRunEvent",
+        __Marshaller_google_cloud_datacatalog_lineage_v1_ProcessOpenLineageRunEventRequest,
+        __Marshaller_google_cloud_datacatalog_lineage_v1_ProcessOpenLineageRunEventResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataCatalog.Lineage.V1.CreateProcessRequest, global::Google.Cloud.DataCatalog.Lineage.V1.Process> __Method_CreateProcess = new grpc::Method<global::Google.Cloud.DataCatalog.Lineage.V1.CreateProcessRequest, global::Google.Cloud.DataCatalog.Lineage.V1.Process>(
@@ -257,6 +269,21 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     [grpc::BindServiceMethod(typeof(Lineage), "BindService")]
     public abstract partial class LineageBase
     {
+      /// <summary>
+      /// Creates new lineage events together with their parents: process and run.
+      /// Updates the process and run if they already exist.
+      /// Mapped from Open Lineage specification:
+      /// https://github.com/OpenLineage/OpenLineage/blob/main/spec/OpenLineage.json.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.Lineage.V1.ProcessOpenLineageRunEventResponse> ProcessOpenLineageRunEvent(global::Google.Cloud.DataCatalog.Lineage.V1.ProcessOpenLineageRunEventRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
       /// <summary>
       /// Creates a new process.
       /// </summary>
@@ -502,6 +529,66 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
       {
       }
 
+      /// <summary>
+      /// Creates new lineage events together with their parents: process and run.
+      /// Updates the process and run if they already exist.
+      /// Mapped from Open Lineage specification:
+      /// https://github.com/OpenLineage/OpenLineage/blob/main/spec/OpenLineage.json.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DataCatalog.Lineage.V1.ProcessOpenLineageRunEventResponse ProcessOpenLineageRunEvent(global::Google.Cloud.DataCatalog.Lineage.V1.ProcessOpenLineageRunEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ProcessOpenLineageRunEvent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates new lineage events together with their parents: process and run.
+      /// Updates the process and run if they already exist.
+      /// Mapped from Open Lineage specification:
+      /// https://github.com/OpenLineage/OpenLineage/blob/main/spec/OpenLineage.json.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DataCatalog.Lineage.V1.ProcessOpenLineageRunEventResponse ProcessOpenLineageRunEvent(global::Google.Cloud.DataCatalog.Lineage.V1.ProcessOpenLineageRunEventRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ProcessOpenLineageRunEvent, null, options, request);
+      }
+      /// <summary>
+      /// Creates new lineage events together with their parents: process and run.
+      /// Updates the process and run if they already exist.
+      /// Mapped from Open Lineage specification:
+      /// https://github.com/OpenLineage/OpenLineage/blob/main/spec/OpenLineage.json.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.Lineage.V1.ProcessOpenLineageRunEventResponse> ProcessOpenLineageRunEventAsync(global::Google.Cloud.DataCatalog.Lineage.V1.ProcessOpenLineageRunEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ProcessOpenLineageRunEventAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates new lineage events together with their parents: process and run.
+      /// Updates the process and run if they already exist.
+      /// Mapped from Open Lineage specification:
+      /// https://github.com/OpenLineage/OpenLineage/blob/main/spec/OpenLineage.json.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.Lineage.V1.ProcessOpenLineageRunEventResponse> ProcessOpenLineageRunEventAsync(global::Google.Cloud.DataCatalog.Lineage.V1.ProcessOpenLineageRunEventRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ProcessOpenLineageRunEvent, null, options, request);
+      }
       /// <summary>
       /// Creates a new process.
       /// </summary>
@@ -1380,6 +1467,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     public static grpc::ServerServiceDefinition BindService(LineageBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
+          .AddMethod(__Method_ProcessOpenLineageRunEvent, serviceImpl.ProcessOpenLineageRunEvent)
           .AddMethod(__Method_CreateProcess, serviceImpl.CreateProcess)
           .AddMethod(__Method_UpdateProcess, serviceImpl.UpdateProcess)
           .AddMethod(__Method_GetProcess, serviceImpl.GetProcess)
@@ -1405,6 +1493,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, LineageBase serviceImpl)
     {
+      serviceBinder.AddMethod(__Method_ProcessOpenLineageRunEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.Lineage.V1.ProcessOpenLineageRunEventRequest, global::Google.Cloud.DataCatalog.Lineage.V1.ProcessOpenLineageRunEventResponse>(serviceImpl.ProcessOpenLineageRunEvent));
       serviceBinder.AddMethod(__Method_CreateProcess, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.Lineage.V1.CreateProcessRequest, global::Google.Cloud.DataCatalog.Lineage.V1.Process>(serviceImpl.CreateProcess));
       serviceBinder.AddMethod(__Method_UpdateProcess, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.Lineage.V1.UpdateProcessRequest, global::Google.Cloud.DataCatalog.Lineage.V1.Process>(serviceImpl.UpdateProcess));
       serviceBinder.AddMethod(__Method_GetProcess, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.Lineage.V1.GetProcessRequest, global::Google.Cloud.DataCatalog.Lineage.V1.Process>(serviceImpl.GetProcess));
