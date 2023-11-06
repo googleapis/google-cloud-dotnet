@@ -16,14 +16,14 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START datalineage_v1_generated_Lineage_UpdateRun_async]
+    // [START datalineage_v1_generated_Lineage_ProcessOpenLineageRunEvent_async_flattened]
     using Google.Cloud.DataCatalog.Lineage.V1;
     using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedLineageClientSnippets
     {
-        /// <summary>Snippet for UpdateRunAsync</summary>
+        /// <summary>Snippet for ProcessOpenLineageRunEventAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -31,20 +31,16 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task UpdateRunRequestObjectAsync()
+        public async Task ProcessOpenLineageRunEventAsync()
         {
             // Create client
             LineageClient lineageClient = await LineageClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateRunRequest request = new UpdateRunRequest
-            {
-                Run = new Run(),
-                UpdateMask = new FieldMask(),
-                AllowMissing = false,
-            };
+            string parent = "";
+            Struct openLineage = new Struct();
             // Make the request
-            Run response = await lineageClient.UpdateRunAsync(request);
+            ProcessOpenLineageRunEventResponse response = await lineageClient.ProcessOpenLineageRunEventAsync(parent, openLineage);
         }
     }
-    // [END datalineage_v1_generated_Lineage_UpdateRun_async]
+    // [END datalineage_v1_generated_Lineage_ProcessOpenLineageRunEvent_async_flattened]
 }

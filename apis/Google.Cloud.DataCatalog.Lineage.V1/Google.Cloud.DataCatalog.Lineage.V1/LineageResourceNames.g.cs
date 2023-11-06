@@ -803,6 +803,33 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         }
     }
 
+    public partial class ProcessOpenLineageRunEventResponse
+    {
+        /// <summary>
+        /// <see cref="ProcessName"/>-typed view over the <see cref="Process"/> resource name property.
+        /// </summary>
+        public ProcessName ProcessAsProcessName
+        {
+            get => string.IsNullOrEmpty(Process) ? null : ProcessName.Parse(Process, allowUnparsed: true);
+            set => Process = value?.ToString() ?? "";
+        }
+
+        /// <summary><see cref="RunName"/>-typed view over the <see cref="Run"/> resource name property.</summary>
+        public RunName RunAsRunName
+        {
+            get => string.IsNullOrEmpty(Run) ? null : RunName.Parse(Run, allowUnparsed: true);
+            set => Run = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="LineageEventName"/>-typed view over the <see cref="LineageEvents"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<LineageEventName> LineageEventsAsLineageEventNames
+        {
+            get => new gax::ResourceNameList<LineageEventName>(LineageEvents, s => string.IsNullOrEmpty(s) ? null : LineageEventName.Parse(s, allowUnparsed: true));
+        }
+    }
+
     public partial class CreateProcessRequest
     {
         /// <summary>

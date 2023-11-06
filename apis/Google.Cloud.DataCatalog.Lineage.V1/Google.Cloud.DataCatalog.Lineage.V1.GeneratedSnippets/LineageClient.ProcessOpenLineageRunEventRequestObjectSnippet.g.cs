@@ -16,14 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START datalineage_v1_generated_Lineage_UpdateRun_async]
+    // [START datalineage_v1_generated_Lineage_ProcessOpenLineageRunEvent_sync]
     using Google.Cloud.DataCatalog.Lineage.V1;
     using Google.Protobuf.WellKnownTypes;
-    using System.Threading.Tasks;
 
     public sealed partial class GeneratedLineageClientSnippets
     {
-        /// <summary>Snippet for UpdateRunAsync</summary>
+        /// <summary>Snippet for ProcessOpenLineageRunEvent</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -31,20 +30,20 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task UpdateRunRequestObjectAsync()
+        public void ProcessOpenLineageRunEventRequestObject()
         {
             // Create client
-            LineageClient lineageClient = await LineageClient.CreateAsync();
+            LineageClient lineageClient = LineageClient.Create();
             // Initialize request argument(s)
-            UpdateRunRequest request = new UpdateRunRequest
+            ProcessOpenLineageRunEventRequest request = new ProcessOpenLineageRunEventRequest
             {
-                Run = new Run(),
-                UpdateMask = new FieldMask(),
-                AllowMissing = false,
+                Parent = "",
+                OpenLineage = new Struct(),
+                RequestId = "",
             };
             // Make the request
-            Run response = await lineageClient.UpdateRunAsync(request);
+            ProcessOpenLineageRunEventResponse response = lineageClient.ProcessOpenLineageRunEvent(request);
         }
     }
-    // [END datalineage_v1_generated_Lineage_UpdateRun_async]
+    // [END datalineage_v1_generated_Lineage_ProcessOpenLineageRunEvent_sync]
 }

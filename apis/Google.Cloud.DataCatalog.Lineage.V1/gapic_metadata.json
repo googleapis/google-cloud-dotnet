@@ -88,6 +88,12 @@
                 "ListRunsAsync"
               ]
             },
+            "ProcessOpenLineageRunEvent": {
+              "methods": [
+                "ProcessOpenLineageRunEvent",
+                "ProcessOpenLineageRunEventAsync"
+              ]
+            },
             "SearchLinks": {
               "methods": [
                 "SearchLinks",

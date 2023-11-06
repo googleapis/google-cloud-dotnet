@@ -39,6 +39,7 @@ namespace GoogleCSharpSnippets
             {
                 Run = new Run(),
                 UpdateMask = new FieldMask(),
+                AllowMissing = false,
             };
             // Make the request
             Run response = lineageClient.UpdateRun(request);

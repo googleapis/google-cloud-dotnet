@@ -11,6 +11,206 @@
   },
   "snippets": [
     {
+      "regionTag": "datalineage_v1_generated_Lineage_ProcessOpenLineageRunEvent_sync",
+      "title": "ProcessOpenLineageRunEventRequestObject",
+      "description": "Snippet for ProcessOpenLineageRunEvent",
+      "file": "LineageClient.ProcessOpenLineageRunEventRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ProcessOpenLineageRunEvent",
+        "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.ProcessOpenLineageRunEvent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.ProcessOpenLineageRunEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DataCatalog.Lineage.V1.ProcessOpenLineageRunEventResponse",
+        "client": {
+          "shortName": "LineageClient",
+          "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient"
+        },
+        "method": {
+          "shortName": "ProcessOpenLineageRunEvent",
+          "fullName": "google.cloud.datacatalog.lineage.v1.Lineage.ProcessOpenLineageRunEvent",
+          "service": {
+            "shortName": "Lineage",
+            "fullName": "google.cloud.datacatalog.lineage.v1.Lineage"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datalineage_v1_generated_Lineage_ProcessOpenLineageRunEvent_async",
+      "title": "ProcessOpenLineageRunEventRequestObjectAsync",
+      "description": "Snippet for ProcessOpenLineageRunEventAsync",
+      "file": "LineageClient.ProcessOpenLineageRunEventRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ProcessOpenLineageRunEventAsync",
+        "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.ProcessOpenLineageRunEventAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.ProcessOpenLineageRunEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.Lineage.V1.ProcessOpenLineageRunEventResponse>",
+        "client": {
+          "shortName": "LineageClient",
+          "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient"
+        },
+        "method": {
+          "shortName": "ProcessOpenLineageRunEvent",
+          "fullName": "google.cloud.datacatalog.lineage.v1.Lineage.ProcessOpenLineageRunEvent",
+          "service": {
+            "shortName": "Lineage",
+            "fullName": "google.cloud.datacatalog.lineage.v1.Lineage"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datalineage_v1_generated_Lineage_ProcessOpenLineageRunEvent_sync_flattened",
+      "title": "ProcessOpenLineageRunEvent",
+      "description": "Snippet for ProcessOpenLineageRunEvent",
+      "file": "LineageClient.ProcessOpenLineageRunEventSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ProcessOpenLineageRunEvent",
+        "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.ProcessOpenLineageRunEvent",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Struct",
+            "name": "openLineage"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DataCatalog.Lineage.V1.ProcessOpenLineageRunEventResponse",
+        "client": {
+          "shortName": "LineageClient",
+          "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient"
+        },
+        "method": {
+          "shortName": "ProcessOpenLineageRunEvent",
+          "fullName": "google.cloud.datacatalog.lineage.v1.Lineage.ProcessOpenLineageRunEvent",
+          "service": {
+            "shortName": "Lineage",
+            "fullName": "google.cloud.datacatalog.lineage.v1.Lineage"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datalineage_v1_generated_Lineage_ProcessOpenLineageRunEvent_async_flattened",
+      "title": "ProcessOpenLineageRunEventAsync",
+      "description": "Snippet for ProcessOpenLineageRunEventAsync",
+      "file": "LineageClient.ProcessOpenLineageRunEventAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ProcessOpenLineageRunEventAsync",
+        "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.ProcessOpenLineageRunEventAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Struct",
+            "name": "openLineage"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.Lineage.V1.ProcessOpenLineageRunEventResponse>",
+        "client": {
+          "shortName": "LineageClient",
+          "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient"
+        },
+        "method": {
+          "shortName": "ProcessOpenLineageRunEvent",
+          "fullName": "google.cloud.datacatalog.lineage.v1.Lineage.ProcessOpenLineageRunEvent",
+          "service": {
+            "shortName": "Lineage",
+            "fullName": "google.cloud.datacatalog.lineage.v1.Lineage"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "datalineage_v1_generated_Lineage_CreateProcess_sync",
       "title": "CreateProcessRequestObject",
       "description": "Snippet for CreateProcess",
@@ -1747,12 +1947,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 46,
+          "end": 47,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 44,
+          "end": 45,
           "type": "SHORT"
         }
       ]
@@ -1796,12 +1996,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 47,
+          "end": 48,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 45,
+          "end": 46,
           "type": "SHORT"
         }
       ]
