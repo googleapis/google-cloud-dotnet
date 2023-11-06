@@ -940,6 +940,9 @@ namespace Google.Cloud.Dataplex.V1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.DataQualityDimensionResult> dimensions_ = new pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.DataQualityDimensionResult>();
     /// <summary>
     /// A list of results at the dimension level.
+    ///
+    /// A dimension will have a corresponding `DataQualityDimensionResult` if and
+    /// only if there is at least one rule with the 'dimension' field set to it.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
