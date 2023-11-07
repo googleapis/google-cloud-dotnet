@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.5.0, released 2023-11-07
+
+### New features
+
+- Support MP3, TranscriptNormalization and SpeakerLabels in STT V1 API ([commit f2cb8d6](https://github.com/googleapis/google-cloud-dotnet/commit/f2cb8d6e29b3fbe498e83e4d5ac38837387cc4d8))
+
+### Documentation improvements
+
+- Fix the resource name format in comment for CreatePhraseSetRequest ([commit af90271](https://github.com/googleapis/google-cloud-dotnet/commit/af90271586531102fb7433bd36df8566f3a6ca01))
+
 ## Version 3.4.0, released 2023-03-06
 
 ### New features
