@@ -184,11 +184,28 @@ namespace Google.Cloud.Spanner.V1
         /// this value is no longer used, so modifications to the object will not affect the transaction. May be null.</param>
         /// <param name="cancellationToken">An optional token for canceling the call.</param>
         /// <returns>The <see cref="PooledSession"/> representing the client, session and transaction.</returns>
-        public Task<PooledSession> AcquireSessionAsync(SessionPoolSegmentKey key, TransactionOptions transactionOptions, CancellationToken cancellationToken)
+        public Task<PooledSession> AcquireSessionAsync(SessionPoolSegmentKey key, TransactionOptions transactionOptions, CancellationToken cancellationToken) =>
+            AcquireSessionAsync(key, transactionOptions, singleUseTransaction: false, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously acquires a session using the given <see cref="SessionPoolSegmentKey"/>, potentially associated with a transaction.
+        /// </summary>
+        /// <param name="key">The <see cref="SessionPoolSegmentKey"/> to acquire the session.</param>
+        /// <param name="transactionOptions">The transaction options required for the session. After the operation completes,
+        /// this value is no longer used, so modifications to the object will not affect the transaction. May be null.</param>
+        /// <param name="singleUseTransaction">Whether the transaction used by this session is single use or not. May only be true if
+        /// <paramref name="transactionOptions"/> is <see cref="TransactionOptions.ModeOneofCase.ReadOnly"/>.</param>
+        /// <param name="cancellationToken">An optional token for canceling the call.</param>
+        /// <returns>The <see cref="PooledSession"/> representing the client, session and transaction.</returns>
+        public Task<PooledSession> AcquireSessionAsync(SessionPoolSegmentKey key, TransactionOptions transactionOptions, bool singleUseTransaction, CancellationToken cancellationToken)
         {
             GaxPreconditions.CheckNotNull(key, nameof(key));
+            GaxPreconditions.CheckArgument(
+                transactionOptions?.ModeCase == ModeOneofCase.ReadOnly || !singleUseTransaction,
+                nameof(singleUseTransaction),
+                "Single use transactions are only supported for read-only transaction.");
             var targetedPool = _targetedPools.GetOrAdd(key, key => new TargetedSessionPool(this, key, acquireSessionsImmediately: true));
-            return targetedPool.AcquireSessionAsync(transactionOptions, cancellationToken);
+            return targetedPool.AcquireSessionAsync(transactionOptions, singleUseTransaction, cancellationToken);
         }
 
         /// <summary>
@@ -227,7 +244,7 @@ namespace Google.Cloud.Spanner.V1
         {
             GaxPreconditions.CheckNotNull(sessionName, nameof(sessionName));
             GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId));
-            return PooledSession.FromSessionName(_detachedSessionPool, sessionName).WithTransaction(transactionId, BuildTransactionOptions(), readTimestamp);
+            return PooledSession.FromSessionName(_detachedSessionPool, sessionName).WithTransaction(transactionId, BuildTransactionOptions(), singleUseTransaction: false, readTimestamp);
 
             // TODO: Maybe just consider the breaking change and directly receive TransactionOptions.
             TransactionOptions BuildTransactionOptions() => transactionMode switch

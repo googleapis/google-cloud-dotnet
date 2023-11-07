@@ -143,7 +143,7 @@ namespace Google.Cloud.Spanner.V1.Tests
 
                     firstSession.ReleaseToPool(false);
 
-                    var reacquiredSession = await pool.AcquireSessionAsync(new TransactionOptions(), default);
+                    var reacquiredSession = await pool.AcquireSessionAsync(new TransactionOptions(), singleUseTransaction: false, default);
                     Assert.Equal(firstSession.SessionName, reacquiredSession.SessionName);
 
                     // The only request is the one we sent
@@ -174,7 +174,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                     var timeBeforeRelease = client.Clock.GetCurrentDateTimeUtc();
                     firstSession.ReleaseToPool(false);
 
-                    var refreshedSession = await pool.AcquireSessionAsync(new TransactionOptions(), default);
+                    var refreshedSession = await pool.AcquireSessionAsync(new TransactionOptions(), singleUseTransaction: false, default);
                     Assert.Equal(firstSession.SessionName, refreshedSession.SessionName);
                     Assert.Equal(1, client.ExecuteSqlRequests.Count);
                     Assert.True(client.ExecuteSqlRequests.TryDequeue(out var refreshRequest));
@@ -198,14 +198,14 @@ namespace Google.Cloud.Spanner.V1.Tests
                     var sessions = new List<PooledSession>();
                     for (int i = 0; i < 100; i++)
                     {
-                        sessions.Add(await pool.AcquireSessionAsync(new TransactionOptions(), default));
+                        sessions.Add(await pool.AcquireSessionAsync(new TransactionOptions(), singleUseTransaction: false, default));
                     }
 
                     var firstSession = sessions[0];
                     await client.Scheduler.Delay(TimeSpan.FromMinutes(150)); // So it should be evicted
                     firstSession.ReleaseToPool(false);
 
-                    var laterSession = await pool.AcquireSessionAsync(new TransactionOptions(), default);
+                    var laterSession = await pool.AcquireSessionAsync(new TransactionOptions(), singleUseTransaction: false, default);
                     Assert.NotEqual(firstSession.SessionName, laterSession.SessionName);
                     Assert.Equal(101, client.SessionsCreated);
                     Assert.Equal(1, client.SessionsDeleted);
@@ -225,12 +225,12 @@ namespace Google.Cloud.Spanner.V1.Tests
                     var sessions = await AcquireAllSessionsAsync(pool);
 
                     var transactionId = ByteString.CopyFromUtf8("sample transaction");
-                    var firstSession = sessions[0].WithTransaction(transactionId, new TransactionOptions { ReadWrite = new TransactionOptions.Types.ReadWrite()});
+                    var firstSession = sessions[0].WithTransaction(transactionId, new TransactionOptions { ReadWrite = new TransactionOptions.Types.ReadWrite()}, singleUseTransaction: false);
 
                     var timeBeforeRelease = client.Clock.GetCurrentDateTimeUtc();
                     firstSession.ReleaseToPool(false);
 
-                    var reacquiredSession = await pool.AcquireSessionAsync(new TransactionOptions(), default);
+                    var reacquiredSession = await pool.AcquireSessionAsync(new TransactionOptions(), singleUseTransaction: false, default);
                     Assert.Equal(firstSession.SessionName, reacquiredSession.SessionName);
 
                     // The only rollback request is the one we sent
@@ -269,7 +269,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 {
                     for (int i = 0; i < pool.Options.MaximumActiveSessions; i++)
                     {
-                        await pool.AcquireSessionAsync(new TransactionOptions(), default);
+                        await pool.AcquireSessionAsync(new TransactionOptions(), singleUseTransaction: false, default);
                     }
                 });
                 var stats = pool.GetStatisticsSnapshot();
@@ -309,7 +309,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                     await AcquireAllSessionsAsync(pool);
                     Assert.Equal(pool.Options.MaximumActiveSessions, pool.ActiveSessionCount);
 
-                    var exception = await Assert.ThrowsAsync<RpcException>(() => pool.AcquireSessionAsync(new TransactionOptions(), default));
+                    var exception = await Assert.ThrowsAsync<RpcException>(() => pool.AcquireSessionAsync(new TransactionOptions(), singleUseTransaction: false, default));
                     Assert.Equal(StatusCode.ResourceExhausted, exception.StatusCode);
                 });
             }
@@ -327,7 +327,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                     Assert.Equal(pool.Options.MaximumActiveSessions, pool.ActiveSessionCount);
 
                     // We can't exceed the maximum active session count
-                    var acquisitionTask = pool.AcquireSessionAsync(new TransactionOptions(), default);
+                    var acquisitionTask = pool.AcquireSessionAsync(new TransactionOptions(), singleUseTransaction: false, default);
                     await client.Scheduler.Delay(TimeSpan.FromMinutes(1));
                     Assert.False(acquisitionTask.IsCompleted);
 
@@ -348,7 +348,7 @@ namespace Google.Cloud.Spanner.V1.Tests
 
                 await client.Scheduler.RunAsync(async () =>
                 {
-                    var exception = await Assert.ThrowsAsync<RpcException>(() => pool.AcquireSessionAsync(new TransactionOptions(), default));
+                    var exception = await Assert.ThrowsAsync<RpcException>(() => pool.AcquireSessionAsync(new TransactionOptions(), singleUseTransaction: false, default));
                     var stats = pool.GetStatisticsSnapshot();
                     Assert.False(stats.Healthy);
                     Assert.Equal(0, stats.ActiveSessionCount);
@@ -440,7 +440,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 // in batches of CreateSessionMaximumBatchSize or less. The pool is still healthy
                 // but no sessions have been created so the pool will try to create as many as necessary
                 // to satisfy this caller and the MinimumSizePool.
-                var acquisitionTask = pool.AcquireSessionAsync(new TransactionOptions(), default);
+                var acquisitionTask = pool.AcquireSessionAsync(new TransactionOptions(), singleUseTransaction: false, default);
 
                 // Give the pool time to go unhealthy
                 await client.Scheduler.RunAsync(TimeSpan.FromSeconds(5));
@@ -501,7 +501,7 @@ namespace Google.Cloud.Spanner.V1.Tests
 
                 // In total MinimumSizePool + 1 sessions will be created (or tried to in our case)
                 // in batches of CreateSessionMaximumBatchSize or less.
-                var acquisitionTask = pool.AcquireSessionAsync(new TransactionOptions(), default);
+                var acquisitionTask = pool.AcquireSessionAsync(new TransactionOptions(), singleUseTransaction: false, default);
 
                 // Give the pool time to go unhealthy.
                 await client.Scheduler.RunAsync(TimeSpan.FromSeconds(5));
@@ -516,7 +516,7 @@ namespace Google.Cloud.Spanner.V1.Tests
 
                 // This caller will start the nursing, the rest will just wait for the nursing to be done.
                 var cancellationTokenSource = new CancellationTokenSource();
-                var nursingAcquisition = pool.AcquireSessionAsync(new TransactionOptions(), cancellationTokenSource.Token);
+                var nursingAcquisition = pool.AcquireSessionAsync(new TransactionOptions(), singleUseTransaction: false, cancellationTokenSource.Token);
                 // Wait a little in real time to make sure that nursing has started.
                 // Nursing is done in a (controlled) fire and forget way, that's why
                 // we need to wait a little in real time.
@@ -556,6 +556,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 {
                     var originalSession = await pool.AcquireSessionAsync(
                         new TransactionOptions { ReadWrite = new TransactionOptions.Types.ReadWrite() },
+                        singleUseTransaction: false,
                         CancellationToken.None);
                     var originalSessionName = originalSession.SessionName;
                     var originalTransactionId = originalSession.TransactionId;
@@ -580,6 +581,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 {
                     var originalSession = await pool.AcquireSessionAsync(
                         new TransactionOptions { ReadWrite = new TransactionOptions.Types.ReadWrite() },
+                        singleUseTransaction: false,
                         CancellationToken.None);
                     var originalSessionName = originalSession.SessionName;
                     var originalTransactionId = originalSession.TransactionId;
@@ -646,7 +648,7 @@ namespace Google.Cloud.Spanner.V1.Tests
 
                 await client.Scheduler.RunAsync(async () =>
                 {
-                    var session = await pool.AcquireSessionAsync(new TransactionOptions(), default);
+                    var session = await pool.AcquireSessionAsync(new TransactionOptions(), singleUseTransaction: false, default);
                     Assert.InRange(session.RefreshTimeForTest, timeBeforeMaintenance.AddMinutes(15), client.Clock.GetCurrentDateTimeUtc().AddMinutes(15));
 
                     // We shouldn't have asked for any more sessions from the client, because the refreshing tasks
@@ -682,7 +684,7 @@ namespace Google.Cloud.Spanner.V1.Tests
 
                 // The newly created session should have an appropriate refresh time.
                 // (We don't need to let the scheduler run, as we're getting it from the pool.)
-                var session = await pool.AcquireSessionAsync(new TransactionOptions(), default);
+                var session = await pool.AcquireSessionAsync(new TransactionOptions(), singleUseTransaction: false, default);
                 Assert.InRange(session.RefreshTimeForTest, timeBeforeMaintenance.AddMinutes(15), client.Clock.GetCurrentDateTimeUtc().AddMinutes(15));
 
                 // All the previous sessions should have been evicted, so in total we've created 20 sessions.
@@ -830,7 +832,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 pool.Options.MaximumActiveSessions = 10; // Same as minimum pool size
                 var client = (SessionTestingSpannerClient)pool.Client;
 
-                var sessionTask = pool.AcquireSessionAsync(new TransactionOptions(), default);
+                var sessionTask = pool.AcquireSessionAsync(new TransactionOptions(), singleUseTransaction: false, default);
                 var waitTask = pool.WhenPoolReady(default);
 
                 // Even if we wait for a minute, the WhenPoolReady task can't complete due to
@@ -857,7 +859,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 await client.Scheduler.RunAsync(async () =>
                 {
                     await pool.WhenPoolReady(default);
-                    var session = await pool.AcquireSessionAsync(new TransactionOptions(), default);
+                    var session = await pool.AcquireSessionAsync(new TransactionOptions(), singleUseTransaction: false, default);
 
                     // Shut down the pool, but keep one active session for now
                     Task task = pool.ShutdownPoolAsync(default);
@@ -891,7 +893,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 {
                     // Make sure we won't be able to get any more sessions immediately.
                     var sessions = await AcquireAllSessionsAsync(pool);
-                    var acquisitionTask = pool.AcquireSessionAsync(new TransactionOptions(), default);
+                    var acquisitionTask = pool.AcquireSessionAsync(new TransactionOptions(), singleUseTransaction: false, default);
                     var shutdownTask = pool.ShutdownPoolAsync(default);
 
                     // The existing acquisition task should fail.
@@ -911,7 +913,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 {
                     await pool.WhenPoolReady(default);
                     await pool.ShutdownPoolAsync(default);
-                    await Assert.ThrowsAsync<InvalidOperationException>(() => pool.AcquireSessionAsync(new TransactionOptions(), default));
+                    await Assert.ThrowsAsync<InvalidOperationException>(() => pool.AcquireSessionAsync(new TransactionOptions(), singleUseTransaction: false, default));
                 });
             }
 
@@ -941,7 +943,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             private List<Task<PooledSession>> AcquireSessionTasks(TargetedSessionPool pool, int sessionsToAcquiere) =>
                 Enumerable
                 .Range(0, sessionsToAcquiere)
-                .Select(_ => pool.AcquireSessionAsync(new TransactionOptions(), default))
+                .Select(_ => pool.AcquireSessionAsync(new TransactionOptions(), singleUseTransaction: false, default))
                 .ToList();
         }
     }

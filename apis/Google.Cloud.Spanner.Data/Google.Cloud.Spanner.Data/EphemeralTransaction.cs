@@ -29,11 +29,13 @@ namespace Google.Cloud.Spanner.Data
     {
         private readonly SpannerConnection _connection;
         private readonly Priority _commitPriority;
+        private readonly TransactionOptions _singleUseTransactionOptions;
 
-        internal EphemeralTransaction(SpannerConnection connection, Priority commitPriority)
+        internal EphemeralTransaction(SpannerConnection connection, Priority commitPriority, TransactionOptions singleUseTransactionOptions)
         {
             _connection = GaxPreconditions.CheckNotNull(connection, nameof(connection));
             _commitPriority = commitPriority;
+            _singleUseTransactionOptions = singleUseTransactionOptions;
         }
 
         public Task<long> ExecuteDmlAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
@@ -160,7 +162,7 @@ namespace Google.Cloud.Spanner.Data
 
             async Task<ReliableStreamReader> Impl()
             {
-                PooledSession session = await _connection.AcquireSessionAsync(null, cancellationToken).ConfigureAwait(false);
+                PooledSession session = await _connection.AcquireSessionAsync(_singleUseTransactionOptions, singleUse: _singleUseTransactionOptions is not null, cancellationToken).ConfigureAwait(false);
                 var callSettings = _connection.CreateCallSettings(
                     request.GetCallSettings,
                     cancellationToken);

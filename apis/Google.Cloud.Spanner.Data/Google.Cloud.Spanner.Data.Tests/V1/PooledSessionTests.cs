@@ -189,7 +189,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             var pool = new FakeSessionPool();
             var pooledSession = PooledSession.FromSessionName(pool, s_sampleSessionName);
             var transactionId = ByteString.CopyFromUtf8("transaction");
-            var sessionWithTransaction = pooledSession.WithTransaction(transactionId, s_partitionedDml);
+            var sessionWithTransaction = pooledSession.WithTransaction(transactionId, s_partitionedDml, singleUseTransaction: false);
             Assert.Equal(s_partitionedDml, sessionWithTransaction.TransactionOptions);
             Assert.Equal(transactionId, sessionWithTransaction.TransactionId);
             Assert.Equal(s_sampleSessionName, sessionWithTransaction.SessionName);
@@ -201,7 +201,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             var pool = new FakeSessionPool();
             var transactionId = ByteString.CopyFromUtf8("transaction");
             var pooledSession = PooledSession.FromSessionName(pool, s_sampleSessionName);
-            var sessionWithTransaction = pooledSession.WithTransaction(transactionId, s_readWriteOptions);
+            var sessionWithTransaction = pooledSession.WithTransaction(transactionId, s_readWriteOptions, singleUseTransaction: false);
 
             // Make a successful request
             var request = new CommitRequest();
@@ -224,7 +224,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             var pool = new FakeSessionPool();
             var transactionId = ByteString.CopyFromUtf8("transaction");
             var pooledSession = PooledSession.FromSessionName(pool, s_sampleSessionName);
-            var sessionWithTransaction = pooledSession.WithTransaction(transactionId, s_readWriteOptions);
+            var sessionWithTransaction = pooledSession.WithTransaction(transactionId, s_readWriteOptions, singleUseTransaction: false);
 
             // Make a successful request
             var request = new ExecuteSqlRequest();
@@ -265,7 +265,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             var pool = new FakeSessionPool();
             var transactionId = ByteString.CopyFromUtf8("transaction");
             var pooledSession = PooledSession.FromSessionName(pool, s_sampleSessionName);
-            var sessionWithTransaction = pooledSession.WithTransaction(transactionId, s_readWriteOptions);
+            var sessionWithTransaction = pooledSession.WithTransaction(transactionId, s_readWriteOptions, singleUseTransaction: false);
 
             // Make a successful request
             var request = new ExecuteBatchDmlRequest();
@@ -431,7 +431,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         private PooledSession CreateWithTransaction(SessionPool.ISessionPool pool, TransactionOptions options)
         {
             ByteString transactionId = ByteString.CopyFromUtf8(Guid.NewGuid().ToString());
-            return PooledSession.FromSessionName(pool, s_sampleSessionName).WithTransaction(transactionId, options);
+            return PooledSession.FromSessionName(pool, s_sampleSessionName).WithTransaction(transactionId, options, singleUseTransaction: false);
         }
 
         private class FakeSessionPool : SessionPool.ISessionPool
