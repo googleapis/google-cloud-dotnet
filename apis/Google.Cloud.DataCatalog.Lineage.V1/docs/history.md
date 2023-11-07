@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.1.0, released 2023-11-07
+
+### Bug fixes
+
+- Change `start_time` in message `.google.cloud.datacatalog.lineage.v1.LineageEvent` to `required` as intended by api ([commit 05e8e92](https://github.com/googleapis/google-cloud-dotnet/commit/05e8e92352afedb7dc08a3b6a5ae60001b2462df))
+
+### New features
+
+- Add open lineage support ([commit 05e8e92](https://github.com/googleapis/google-cloud-dotnet/commit/05e8e92352afedb7dc08a3b6a5ae60001b2462df))
+
 ## Version 1.0.0, released 2023-03-27
 
 Initial GA release.
