@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.4.0, released 2023-11-07
+
+### New features
+
+- Add new field in `GenerateClientCertificate` v1 API to allow AlloyDB connectors request client certs with metadata exchange support ([commit adc660e](https://github.com/googleapis/google-cloud-dotnet/commit/adc660e37b842eac165982bd8d1c8e479a11ba65))
+
+### Documentation improvements
+
+- Clarify that `readPoolConfig` is required under certain circumstances, and fix doc formatting on `allocatedIpRange`. ([commit adc660e](https://github.com/googleapis/google-cloud-dotnet/commit/adc660e37b842eac165982bd8d1c8e479a11ba65))
+
 ## Version 1.3.0, released 2023-10-02
 
 ### New features
