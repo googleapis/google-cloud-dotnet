@@ -1,5 +1,11 @@
 # Version history
 
+## Version 5.8.0, released 2023-11-07
+
+### New features
+
+- Support required_registration_fraction for secondary workers ([commit cccf5b6](https://github.com/googleapis/google-cloud-dotnet/commit/cccf5b636972ff9efa55d5af9032db957957f3a7))
+
 ## Version 5.7.0, released 2023-09-18
 
 ### New features
