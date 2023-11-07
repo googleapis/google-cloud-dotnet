@@ -124,7 +124,7 @@ namespace Google.Cloud.Spanner.V1
                 }
             }
 
-            public async Task<PooledSession> AcquireSessionAsync(TransactionOptions transactionOptions, CancellationToken cancellationToken)
+            public async Task<PooledSession> AcquireSessionAsync(TransactionOptions transactionOptions, bool singleUseTransaction, CancellationToken cancellationToken)
             {
                 bool success = false;
                 try
@@ -145,7 +145,7 @@ namespace Google.Cloud.Spanner.V1
                         throw new InvalidOperationException("Session pool has already been shut down");
                     }
 
-                    PooledSession session = await AcquireSessionImplAsync(transactionOptions, cancellationToken).ConfigureAwait(false);
+                    PooledSession session = await AcquireSessionImplAsync(transactionOptions, singleUseTransaction, cancellationToken).ConfigureAwait(false);
                     success = true;
                     return session;
                 }
@@ -158,9 +158,11 @@ namespace Google.Cloud.Spanner.V1
                 }
             }
 
-            private async Task<PooledSession> AcquireSessionImplAsync(TransactionOptions transactionOptions, CancellationToken cancellationToken)
+            private async Task<PooledSession> AcquireSessionImplAsync(TransactionOptions transactionOptions, bool singleUseTransaction, CancellationToken cancellationToken)
             {
-                var transactionMode = transactionOptions?.ModeCase ?? ModeOneofCase.None;
+                // If it's a single use transaction, we really want a session with no transaction.
+                // The transaction options are included directly on the request.
+                var transactionMode = transactionOptions?.ModeCase is null || singleUseTransaction ? ModeOneofCase.None : transactionOptions.ModeCase;
                 var sessionAcquisitionTask = GetSessionAcquisitionTask(transactionMode, cancellationToken);
 
                 // We've either fetched a task from the pool, or registered that a caller is waiting for one.
@@ -184,6 +186,15 @@ namespace Google.Cloud.Spanner.V1
                     }
                 }
 
+                // If this is for a single use transaction, then whatever we got is not right. We got one of:
+                // - A session with None options and no transaction ID. This is what we requested.
+                // - A session with ReadOnly, ReadWrite or PartiotionedDml options and a transaction ID.
+                // We need a session with the options we received as parameter and no transaction ID.
+                if (singleUseTransaction)
+                {
+                    return session.WithTransaction(null, transactionOptions, singleUseTransaction: true);
+                }
+
                 // If we've already got the right transaction mode, we're done.
                 if (session.TransactionOptions.ModeCase == transactionMode)
                 {
@@ -197,7 +208,7 @@ namespace Google.Cloud.Spanner.V1
                     // no transaction ID.
                     if (transactionMode == ModeOneofCase.None)
                     {
-                        return session.WithTransaction(null, PooledSession.NoTransactionOptions);
+                        return session.WithTransaction(null, PooledSession.NoTransactionOptions, singleUseTransaction: false);
                     }
                     else
                     {
@@ -410,7 +421,7 @@ namespace Google.Cloud.Spanner.V1
                     Interlocked.Decrement(ref _inFlightSessionCreationCount);
                 }
                 // We now definitely don't have a transaction.
-                ReleaseInactiveSession(session.WithTransaction(null, PooledSession.NoTransactionOptions), maybeCreateReadWriteTransaction: true);
+                ReleaseInactiveSession(session.WithTransaction(null, PooledSession.NoTransactionOptions, singleUseTransaction: false), maybeCreateReadWriteTransaction: true);
             }
 
             private async Task TryCreateReadWriteTransactionAndReturnToPool(PooledSession session)
@@ -477,7 +488,7 @@ namespace Google.Cloud.Spanner.V1
                     }
                 }
                 // If we are here we need to acquire a new session.
-                return AcquireSessionAsync(transactionOptions, cancellationToken);
+                return AcquireSessionAsync(transactionOptions, singleUseTransaction: false, cancellationToken);
             }
 
             /// <summary>

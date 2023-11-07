@@ -69,6 +69,13 @@ namespace Google.Cloud.Spanner.V1
         internal TransactionOptions.ModeOneofCase TransactionMode => TransactionOptions.ModeCase;
 
         /// <summary>
+        /// Whether the transaction associated to this session is single use or not.
+        /// If this is true then <see cref="TransactionOptions"/> will be <see cref="TransactionOptions.ModeOneofCase.ReadOnly"/>
+        /// and <see cref="TransactionId"/> will be null.
+        /// </summary>
+        internal bool SingleUseTransaction { get; }
+
+        /// <summary>
         /// The read timestamp of the transaction. May be null.
         /// </summary>
         /// <remarks>
@@ -104,15 +111,22 @@ namespace Google.Cloud.Spanner.V1
         private int _disposed;
         private int _committedOrRolledBack;
 
-        private PooledSession(SessionPool.ISessionPool pool, SessionName sessionName, ByteString transactionId, TransactionOptions transactionOptions, Timestamp readTimestamp, DateTime evictionTime, long refreshTicks)
+        private PooledSession(SessionPool.ISessionPool pool, SessionName sessionName, ByteString transactionId, TransactionOptions transactionOptions, bool singleUseTransaction, Timestamp readTimestamp, DateTime evictionTime, long refreshTicks)
         {
-            TransactionOptions = transactionOptions?.Clone() ?? new TransactionOptions();
-            GaxPreconditions.CheckArgument(
-                (transactionId == null) == (TransactionOptions.ModeCase == ModeOneofCase.None),
-                nameof(transactionOptions),
-                "Transaction mode and ID don't match.");
             _pool = pool;
             SessionName = GaxPreconditions.CheckNotNull(sessionName, nameof(sessionName));
+            TransactionOptions = transactionOptions?.Clone() ?? new TransactionOptions();
+
+            GaxPreconditions.CheckArgument(
+                TransactionOptions.ModeCase == ModeOneofCase.ReadOnly || !singleUseTransaction,
+                nameof(singleUseTransaction),
+                "Single use transactions are only supported for read-only transaction.");
+            GaxPreconditions.CheckArgument(
+                singleUseTransaction || TransactionOptions.ModeCase == ModeOneofCase.None || transactionId is not null,
+                nameof(transactionOptions),
+                "No transaction options were specified for the given transasaction ID.");
+
+            SingleUseTransaction = singleUseTransaction;
             TransactionId = transactionId;
             ReadTimestamp = readTimestamp;
             _session = new Session { SessionName = SessionName };
@@ -129,7 +143,7 @@ namespace Google.Cloud.Spanner.V1
             var now = pool.Clock.GetCurrentDateTimeUtc();
             var refreshDelay = options.SessionRefreshJitter.GetDelay(options.IdleSessionRefreshDelay);
             var evictionDelay = options.SessionEvictionJitter.GetDelay(options.PoolEvictionDelay);
-            return new PooledSession(pool, sessionName, transactionId: null, transactionOptions: null, readTimestamp: null, now + evictionDelay, now.Ticks + refreshDelay.Ticks);
+            return new PooledSession(pool, sessionName, transactionId: null, transactionOptions: null, singleUseTransaction: false, readTimestamp: null, now + evictionDelay, now.Ticks + refreshDelay.Ticks);
         }
 
         /// <summary>
@@ -140,7 +154,7 @@ namespace Google.Cloud.Spanner.V1
         private PooledSession AfterReset()
         {
             MarkAsDisposed();
-            return new PooledSession(_pool, SessionName, transactionId: null, transactionOptions: null, readTimestamp: null, _evictionTime, RefreshTicks);
+            return new PooledSession(_pool, SessionName, transactionId: null, transactionOptions: null, singleUseTransaction: false, readTimestamp: null, _evictionTime, RefreshTicks);
         }
 
         /// <summary>
@@ -153,7 +167,7 @@ namespace Google.Cloud.Spanner.V1
             CheckNotDisposed();
             GaxPreconditions.CheckNotNull(transactionOptions, nameof(transactionOptions));
             var transaction = await BeginTransactionAsync(cancellationToken).ConfigureAwait(false);
-            return WithTransaction(transaction.Id, transactionOptions, transaction.ReadTimestamp);
+            return WithTransaction(transaction.Id, transactionOptions, singleUseTransaction:false, transaction.ReadTimestamp);
 
             Task<Transaction> BeginTransactionAsync(CancellationToken cancellationToken)
             {
@@ -174,10 +188,10 @@ namespace Google.Cloud.Spanner.V1
         /// The refresh and eviction times are the same as this instance.
         /// This instance will be <see cref="MarkAsDisposed"/> to ensure that all operations with the underlying session are done through the new instance.
         /// </summary>
-        internal PooledSession WithTransaction(ByteString transactionId, TransactionOptions transactionOptions, Timestamp readTimestamp = null)
+        internal PooledSession WithTransaction(ByteString transactionId, TransactionOptions transactionOptions, bool singleUseTransaction, Timestamp readTimestamp = null)
         {
             MarkAsDisposed();
-            return new PooledSession(_pool, SessionName, transactionId, transactionOptions, readTimestamp, _evictionTime, _refreshTicks);
+            return new PooledSession(_pool, SessionName, transactionId, transactionOptions, singleUseTransaction, readTimestamp, _evictionTime, _refreshTicks);
         }
 
         /// <summary>
@@ -410,6 +424,10 @@ namespace Google.Cloud.Spanner.V1
             if (TransactionId != null)
             {
                 request.Transaction = new TransactionSelector { Id = TransactionId };
+            }
+            else if (SingleUseTransaction)
+            {
+                request.Transaction = new TransactionSelector { SingleUse = TransactionOptions };
             }
             request.SessionAsSessionName = SessionName;
             SpannerClientImpl.ApplyResourcePrefixHeaderFromSession(ref callSettings, request.Session);

@@ -832,9 +832,9 @@ namespace Google.Cloud.Spanner.Data
         }
 
         internal async Task<PooledSession> AcquireReadWriteSessionAsync(CancellationToken cancellationToken) =>
-            await AcquireSessionAsync(ReadWriteTransactionOptions, cancellationToken).ConfigureAwait(false);
+            await AcquireSessionAsync(ReadWriteTransactionOptions, singleUse: false, cancellationToken).ConfigureAwait(false);
 
-        internal Task<PooledSession> AcquireSessionAsync(TransactionOptions options, CancellationToken cancellationToken)
+        internal Task<PooledSession> AcquireSessionAsync(TransactionOptions options, bool singleUse, CancellationToken cancellationToken)
         {
             SessionPool pool;
             DatabaseName databaseName;
@@ -849,7 +849,7 @@ namespace Google.Cloud.Spanner.Data
                 throw new InvalidOperationException("Unable to acquire session on connection with no database name");
             }
             var sessionPoolSegmentKey = GetSessionPoolSegmentKey(nameof(AcquireSessionAsync));
-            return pool.AcquireSessionAsync(sessionPoolSegmentKey, options, cancellationToken);
+            return pool.AcquireSessionAsync(sessionPoolSegmentKey, options, singleUse, cancellationToken);
         }
 
         internal Task<SpannerTransaction> BeginTransactionImplAsync(
@@ -862,7 +862,7 @@ namespace Google.Cloud.Spanner.Data
                 async () =>
                 {
                     await OpenAsync(cancellationToken).ConfigureAwait(false);
-                    var session = await AcquireSessionAsync(transactionOptions, cancellationToken).ConfigureAwait(false);
+                    var session = await AcquireSessionAsync(transactionOptions, singleUse: false, cancellationToken).ConfigureAwait(false);
                     return new SpannerTransaction(this, transactionMode, session, targetReadTimestamp, false);
                 }, "SpannerConnection.BeginTransaction", Logger);
         }
