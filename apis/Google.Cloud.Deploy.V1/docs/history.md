@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.10.0, released 2023-11-07
+
+### New features
+
+- Add Automation API and Rollback API ([commit 3d46ee1](https://github.com/googleapis/google-cloud-dotnet/commit/3d46ee1790e0e402d6c053fe58dc04f2cdfc1ac7))
+
+### Documentation improvements
+
+- Small documentation updates ([commit 3d46ee1](https://github.com/googleapis/google-cloud-dotnet/commit/3d46ee1790e0e402d6c053fe58dc04f2cdfc1ac7))
+
 ## Version 2.9.0, released 2023-10-30
 
 ### New features
