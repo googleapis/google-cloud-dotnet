@@ -4415,7 +4415,7 @@
     },
     {
       "id": "Google.Cloud.Speech.V2",
-      "version": "1.0.0-beta06",
+      "version": "1.0.0-beta07",
       "type": "grpc",
       "productName": "Cloud Speech-to-Text",
       "productUrl": "https://cloud.google.com/speech",

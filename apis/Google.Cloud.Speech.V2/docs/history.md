@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.0.0-beta07, released 2023-11-07
+
+### New features
+
+- Add transcript normalization + m4a audio format support ([commit 368d1e1](https://github.com/googleapis/google-cloud-dotnet/commit/368d1e1643c80b968fb5eab8d5db9b00fa05725c))
+- Deprecate `BatchRecognizeFileResult.uri` in favor of `cloud_storage_result.native_format_uri` ([commit 368d1e1](https://github.com/googleapis/google-cloud-dotnet/commit/368d1e1643c80b968fb5eab8d5db9b00fa05725c))
+- Deprecate `BatchRecognizeFileResult.transcript` in favor of `inline_result.transcript` ([commit 368d1e1](https://github.com/googleapis/google-cloud-dotnet/commit/368d1e1643c80b968fb5eab8d5db9b00fa05725c))
+
+### Documentation improvements
+
+- Clarify alternatives for deprecated fields ([commit 368d1e1](https://github.com/googleapis/google-cloud-dotnet/commit/368d1e1643c80b968fb5eab8d5db9b00fa05725c))
+
 ## Version 1.0.0-beta06, released 2023-07-13
 
 ### New features
