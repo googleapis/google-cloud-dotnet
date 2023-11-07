@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.7.0, released 2023-11-07
+
+### New features
+
+- Add optional field "SourceFetcher" to choose source fetcher tool ([commit 5740cd2](https://github.com/googleapis/google-cloud-dotnet/commit/5740cd23080c15d0d2c7e872cc2c3e55307a7a27))
+
 ## Version 2.6.0, released 2023-08-04
 
 ### New features
