@@ -14,6 +14,7 @@
 
 using Google.Rpc;
 using Grpc.Core;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Google.Cloud.Spanner.V1.Internal
@@ -87,6 +88,56 @@ namespace Google.Cloud.Spanner.V1.Internal
             catch
             {
                 return null;
+            }
+        }
+
+        /// <summary>
+        /// Returns a task which can be cancelled by the given cancellation token, but otherwise observes the original
+        /// task's state. This does *not* cancel any work that the original task was doing, and should be used carefully.
+        /// </summary>
+        internal static Task WithCancellationToken(this Task task, CancellationToken cancellationToken)
+        {
+            if (!cancellationToken.CanBeCanceled)
+            {
+                return task;
+            }
+
+            return ImplAsync();
+
+            // Separate async method to allow the above optimization to avoid creating any new state machines etc.
+            async Task ImplAsync()
+            {
+                var cts = new TaskCompletionSource<int>();
+                using (cancellationToken.Register(() => cts.TrySetCanceled()))
+                {
+                    var completedTask = await Task.WhenAny(task, cts.Task).ConfigureAwait(false);
+                    await completedTask.ConfigureAwait(false);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Returns a task which can be cancelled by the given cancellation token, but otherwise observes the original
+        /// task's state. This does *not* cancel any work that the original task was doing, and should be used carefully.
+        /// </summary>
+        internal static Task<TResult> WithCancellationToken<TResult>(this Task<TResult> task, CancellationToken cancellationToken)
+        {
+            if (!cancellationToken.CanBeCanceled)
+            {
+                return task;
+            }
+
+            return ImplAsync();
+
+            // Separate async method to allow the above optimization to avoid creating any new state machines etc.
+            async Task<TResult> ImplAsync()
+            {
+                var cts = new TaskCompletionSource<TResult>();
+                using (cancellationToken.Register(() => cts.TrySetCanceled()))
+                {
+                    var completedTask = await Task.WhenAny(task, cts.Task).ConfigureAwait(false);
+                    return await completedTask.ConfigureAwait(false);
+                }
             }
         }
     }
