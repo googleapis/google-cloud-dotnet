@@ -22,6 +22,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using static Google.Cloud.Spanner.V1.Internal.ExecuteHelper;
 using static Google.Cloud.Spanner.V1.TransactionOptions;
 
 namespace Google.Cloud.Spanner.V1
@@ -669,7 +670,7 @@ namespace Google.Cloud.Spanner.V1
                 var previousTcs = Interlocked.CompareExchange(ref _nurseBackToHealthTask, newTcs, null);
                 if (previousTcs != null)
                 {
-                    return WithCancellationTokenAsync(previousTcs.Task, cancellationToken);
+                    return previousTcs.Task.WithCancellationToken<int>(cancellationToken);
                 }
 
                 // We want to try and nurse the pool back to health even if the (first) caller cancels the call.
@@ -715,17 +716,7 @@ namespace Google.Cloud.Spanner.V1
 
                 // Use the cancellation token now, if the caller cancels, the task they are waiting on will be canceled,
                 // but not the nursing.
-                return WithCancellationTokenAsync(newTcs.Task, cancellationToken);
-
-                async Task<TTaskResult> WithCancellationTokenAsync<TTaskResult>(Task<TTaskResult> underlying, CancellationToken token)
-                {
-                    TaskCompletionSource<TTaskResult> cancellable = new TaskCompletionSource<TTaskResult>();
-                    using (token.Register(() => cancellable.TrySetCanceled()))
-                    {
-                        Task<TTaskResult> completedTask = await Task.WhenAny(underlying, cancellable.Task).ConfigureAwait(false);
-                        return await completedTask.ConfigureAwait(false);
-                    }
-                }
+                return newTcs.Task.WithCancellationToken(cancellationToken);
             }
 
             private async Task<IList<PooledSession>> CreatePooledSessionsAsync(CancellationToken cancellationToken)
