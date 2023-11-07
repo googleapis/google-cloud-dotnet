@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.11.0, released 2023-11-07
+
+### New features
+
+- Launch BulkDelete API, and bulk audio import via the IngestConversations API ([commit 0b9a453](https://github.com/googleapis/google-cloud-dotnet/commit/0b9a45328ae585feaa5e5ece93f2dcb3f9859582))
+
 ## Version 2.10.0, released 2023-09-26
 
 ### New features
