@@ -1,5 +1,16 @@
 # Version history
 
+## Version 2.9.0, released 2023-11-07
+
+### New features
+
+- DataQualityDimension is now part of the DataQualityDimensionResult message ([commit a879994](https://github.com/googleapis/google-cloud-dotnet/commit/a879994e8fce714e0e43135849dd392ebdd35741))
+- Add relativeResourceName and linkedResourceName to search result ([commit a879994](https://github.com/googleapis/google-cloud-dotnet/commit/a879994e8fce714e0e43135849dd392ebdd35741))
+
+### Documentation improvements
+
+- Updated comments for `DataQualityResult.dimensions` field ([commit 51657c7](https://github.com/googleapis/google-cloud-dotnet/commit/51657c71b91c57aee2c8ca95bd06eb81a4887dad))
+
 ## Version 2.8.0, released 2023-10-30
 
 ### New features
