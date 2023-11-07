@@ -1,5 +1,18 @@
 # Version history
 
+## Version 3.19.0, released 2023-11-07
+
+### New features
+
+- Added EnterpriseConfig ([commit 1b8f34d](https://github.com/googleapis/google-cloud-dotnet/commit/1b8f34d75719dd07a01fd491bbd586074399b168))
+- Add a new cluster field for the cluster tier of GKE clusters ([commit 1b8f34d](https://github.com/googleapis/google-cloud-dotnet/commit/1b8f34d75719dd07a01fd491bbd586074399b168))
+- Add ResourceManagerTags API to attach tags on the underlying Compute Engine VMs of GKE Nodes which can be used to selectively enforce Cloud Firewall network firewall policies ([commit bae6344](https://github.com/googleapis/google-cloud-dotnet/commit/bae634446d206a97a5c25801c938427ffc963175))
+- Add CompleteConvertToAutopilot API to commit Autopilot conversion operation ([commit bae6344](https://github.com/googleapis/google-cloud-dotnet/commit/bae634446d206a97a5c25801c938427ffc963175))
+
+### Documentation improvements
+
+- Updated comments ([commit bae6344](https://github.com/googleapis/google-cloud-dotnet/commit/bae634446d206a97a5c25801c938427ffc963175))
+
 ## Version 3.18.0, released 2023-09-04
 
 ### New features
