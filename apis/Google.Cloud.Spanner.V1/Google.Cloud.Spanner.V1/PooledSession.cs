@@ -42,15 +42,19 @@ namespace Google.Cloud.Spanner.V1
     /// </remarks>
     public sealed class PooledSession : IDisposable
     {
-        private readonly Session _session;
-
         private readonly object _transactionCreationTaskLock = new object();
         private Task _transactionCreationTask;
 
         /// <summary>
         /// The name of the session. This is never null.
         /// </summary>
-        public SessionName SessionName { get; }
+        public SessionName SessionName => Session.SessionName;
+
+        /// <summary>
+        /// The Spanner session resource associated to this pooled session.
+        /// Won't be null.
+        /// </summary>
+        internal Session Session { get; }
 
         private Transaction _transaction;
         /// <summary>
@@ -115,7 +119,7 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Indicates whether the server has told us that the session has expired.
         /// </summary>
-        internal bool ServerExpired => _session.Expired;
+        internal bool ServerExpired => Session.Expired;
 
         /// <summary>
         /// The time (in ticks since 0001-01-01T00:00:00Z) at which to refresh this session.
@@ -143,7 +147,10 @@ namespace Google.Cloud.Spanner.V1
         private PooledSession(SessionPool.ISessionPool pool, SessionName sessionName, ByteString transactionId, TransactionOptions transactionOptions, bool singleUseTransaction, Timestamp readTimestamp, DateTime evictionTime, long refreshTicks)
         {
             _pool = pool;
-            SessionName = GaxPreconditions.CheckNotNull(sessionName, nameof(sessionName));
+            Session = new Session
+            {
+                SessionName = GaxPreconditions.CheckNotNull(sessionName, nameof(sessionName))
+            };
             TransactionOptions = transactionOptions?.Clone() ?? new TransactionOptions();
 
             GaxPreconditions.CheckArgument(
@@ -169,7 +176,6 @@ namespace Google.Cloud.Spanner.V1
                     ReadTimestamp = readTimestamp,
                 };
             }
-            _session = new Session { SessionName = SessionName };
             _evictionTime = evictionTime;
             _refreshTicks = refreshTicks;
         }
@@ -191,7 +197,7 @@ namespace Google.Cloud.Spanner.V1
         /// should set this parameter to false.</param>
         /// <param name="cancellationToken">The cancellation token for the operation.</param>
         /// <returns>A task whose result will be the result from having executed <paramref name="commandAsync"/>.</returns>
-        private async Task<TResponse> ExecuteMaybeWithTransactionSelectorAsync<TResponse>(
+        internal async Task<TResponse> ExecuteMaybeWithTransactionSelectorAsync<TResponse>(
             Action<TransactionSelector> transactionSelectorSetter,
             Func<Task<TResponse>> commandAsync,
             Func<TResponse, Transaction> inlinedTransactionExtractor,
@@ -767,18 +773,11 @@ namespace Google.Cloud.Spanner.V1
         {
             CheckNotDisposed();
             GaxPreconditions.CheckNotNull(request, nameof(request));
-            if (TransactionId != null)
-            {
-                request.Transaction = new TransactionSelector { Id = TransactionId };
-            }
-            else if (SingleUseTransaction)
-            {
-                request.Transaction = new TransactionSelector { SingleUse = TransactionOptions };
-            }
+
             request.SessionAsSessionName = SessionName;
             SpannerClientImpl.ApplyResourcePrefixHeaderFromSession(ref callSettings, request.Session);
 
-            ResultStream stream = new ResultStream(Client, request, _session, callSettings);
+            ResultStream stream = new ResultStream(Client, request, this, callSettings);
             return new ReliableStreamReader(stream, Client.Settings.Logger);
         }
 
@@ -840,14 +839,14 @@ namespace Google.Cloud.Spanner.V1
 
         private async Task<T> RecordSuccessAndExpiredSessions<T>(Task<T> task)
         {
-            var result = await task.WithSessionExpiryChecking(_session).ConfigureAwait(false);
+            var result = await task.WithSessionExpiryChecking(Session).ConfigureAwait(false);
             UpdateRefreshTime();
             return result;
         }
 
         private async Task RecordSuccessAndExpiredSessions(Task task)
         {
-            await task.WithSessionExpiryChecking(_session).ConfigureAwait(false);
+            await task.WithSessionExpiryChecking(Session).ConfigureAwait(false);
             UpdateRefreshTime();
         }
 

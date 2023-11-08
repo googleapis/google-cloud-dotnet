@@ -50,7 +50,7 @@ namespace Google.Cloud.Spanner.V1
         private readonly LinkedList<PartialResultSet> _buffer;
         private readonly SpannerClient _client;
         private readonly ReadOrQueryRequest _request;
-        private readonly Session _session;
+        private readonly PooledSession _pooledSession;
         private readonly CallSettings _callSettings;
         private readonly RetrySettings _retrySettings;
         private readonly int _maxBufferSize;
@@ -66,8 +66,8 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Constructor for normal usage, with default buffer size, backoff settings and jitter.
         /// </summary>
-        internal ResultStream(SpannerClient client, ReadOrQueryRequest request, Session session, CallSettings callSettings)
-            : this(client, request, session, callSettings, DefaultMaxBufferSize, s_defaultRetrySettings)
+        internal ResultStream(SpannerClient client, ReadOrQueryRequest request, PooledSession pooledSession, CallSettings callSettings)
+            : this(client, request, pooledSession, callSettings, DefaultMaxBufferSize, s_defaultRetrySettings)
         {
         }
 
@@ -77,7 +77,7 @@ namespace Google.Cloud.Spanner.V1
         internal ResultStream(
             SpannerClient client,
             ReadOrQueryRequest request,
-            Session session,
+            PooledSession pooledSession,
             CallSettings callSettings,
             int maxBufferSize,
             RetrySettings retrySettings)
@@ -85,7 +85,7 @@ namespace Google.Cloud.Spanner.V1
             _buffer = new LinkedList<PartialResultSet>();
             _client = GaxPreconditions.CheckNotNull(client, nameof(client));
             _request = GaxPreconditions.CheckNotNull(request, nameof(request));
-            _session = GaxPreconditions.CheckNotNull(session, nameof(session));
+            _pooledSession = GaxPreconditions.CheckNotNull(pooledSession, nameof(pooledSession));
             _callSettings = callSettings;
             _maxBufferSize = GaxPreconditions.CheckArgumentRange(maxBufferSize, nameof(maxBufferSize), 1, 10_000);
             _retrySettings = GaxPreconditions.CheckNotNull(retrySettings, nameof(retrySettings));
@@ -131,16 +131,50 @@ namespace Google.Cloud.Spanner.V1
 
                 try
                 {
-                    if (_grpcCall == null)
+                    bool hasNext = false;
+                    if (_grpcCall is null)
                     {
-                        // Note: no cancellation token here; if we've been given a short cancellation token,
-                        // it ought to apply to just the MoveNext call, not the original request.
-                        _grpcCall = _request.ExecuteStreaming(_client, _callSettings);
+                        // Whenever we have to execute the gRPC streaming call we ask the pooled session
+                        // for the transaction. Only the first time the gRPC streaming call is executed
+                        // the transaction will be inlined, if there's not a transaction already. Subsequent
+                        // times will just get the same transacton ID. So in principle, we only need to ask
+                        // for the transaction the first and second times the gRPC streaming call is executed,
+                        // but doing it every time simplifies implementation and adds little overhead, because
+                        // once there's a transaction ID, ExecuteMaybeWithTransactionSelectorAsync returns
+                        // inmediately.
+                        await _pooledSession.ExecuteMaybeWithTransactionSelectorAsync(
+                            transactionSelectorSetter: SetCommandTransaction,
+                            commandAsync: ExecuteStreamingAsync,
+                            inlinedTransactionExtractor: GetInlinedTransaction,
+                            skipTransactionCreation: false,
+                            cancellationToken).ConfigureAwait(false);
+
+                        void SetCommandTransaction(TransactionSelector transactionSelector) => _request.Transaction = transactionSelector;
+
+                        async Task<Transaction> ExecuteStreamingAsync()
+                        {
+                            // Note: no cancellation token here; if we've been given a short cancellation token,
+                            // it ought to apply to just the MoveNext call, not the original request.
+                            _grpcCall = _request.ExecuteStreaming(_client, _callSettings);
+                            hasNext = await MoveNextAsync().ConfigureAwait(false);
+                            // We don't need to buble Current here, that's done elsewhere if hasNext is true.
+                            // But we do need to bubble the possibly inlined transaction so that the PooledSession
+                            // can extract it.
+                            return hasNext ? _grpcCall.ResponseStream.Current.Metadata?.Transaction : null;
+                        }
+
+                        // This will be called at most once, if the first streaming call needed to inline
+                        // the transaction, and after that first streaming call plus the first MoveNext have
+                        // completed succesfully.
+                        Transaction GetInlinedTransaction(Transaction transaction) => transaction;
                     }
-                    bool hasNext = await _grpcCall.ResponseStream
-                        .MoveNext(cancellationToken)
-                        .WithSessionExpiryChecking(_session)
-                        .ConfigureAwait(false);
+                    else
+                    {
+                        hasNext = await MoveNextAsync().ConfigureAwait(false);
+                    }
+
+                    Task<bool> MoveNextAsync() => _grpcCall.ResponseStream.MoveNext(cancellationToken).WithSessionExpiryChecking(_pooledSession.Session);
+
                     retryState.Reset();
 
                     if (hasNext)
@@ -186,7 +220,7 @@ namespace Google.Cloud.Spanner.V1
 
                     // Clear anything we've received since the previous response that contained a resume token
                     _buffer.Clear();
-                    _grpcCall.Dispose();
+                    _grpcCall?.Dispose();
                     _grpcCall = null;
                 }
             }

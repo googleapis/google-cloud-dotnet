@@ -26,6 +26,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
+using Xunit.Abstractions;
 using static Google.Cloud.Spanner.V1.SpannerClientImpl;
 
 namespace Google.Cloud.Spanner.V1.Tests
@@ -43,6 +44,10 @@ namespace Google.Cloud.Spanner.V1.Tests
             backoffMultiplier: 2.0,
             retryFilter: ignored => false,
             RetrySettings.NoJitter);
+
+        private readonly ITestOutputHelper _output;
+
+        public SqlResultStreamTests(ITestOutputHelper output) => _output = output;
 
         [InlineData(typeof(ReadRequest))]
         [InlineData(typeof(ExecuteSqlRequest))]
@@ -308,15 +313,19 @@ namespace Google.Cloud.Spanner.V1.Tests
             };
         }
 
-        private static ResultStream CreateResultStream(
+        private ResultStream CreateResultStream(
             System.Type type,
             SpannerClient client,
             int maxBufferSize = 10,
             CallSettings callSettings = null,
             RetrySettings retrySettings = null)
-            => new ResultStream(client,
+            => new ResultStream(
+                client,
                 ReadOrQueryRequest.FromRequest(type == typeof(ExecuteSqlRequest) ? new ExecuteSqlRequest() : new ReadRequest() as IReadOrQueryRequest),
-                new Session(), callSettings ?? s_simpleCallSettings, maxBufferSize, retrySettings ?? s_retrySettings);
+                PooledSession.FromSessionName(new PooledSessionTests.FakeSessionPool(_output), SessionName.FromProjectInstanceDatabaseSession("projectId", "instanceId", "databaseId", "sessionId")),
+                callSettings ?? s_simpleCallSettings,
+                maxBufferSize,
+                retrySettings ?? s_retrySettings);
 
         private static List<PartialResultSet> CreateResultSets(params string[] resumeTokens) =>
             resumeTokens

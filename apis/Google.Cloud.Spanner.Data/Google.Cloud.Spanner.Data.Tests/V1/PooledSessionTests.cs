@@ -47,7 +47,7 @@ namespace Google.Cloud.Spanner.V1.Tests
 
             var pooledSession = PooledSession.FromSessionName(pool, s_sampleSessionName);
 
-            Assert.Same(s_sampleSessionName, pooledSession.SessionName);
+            Assert.Equal(s_sampleSessionName, pooledSession.SessionName);
             Assert.False(pooledSession.ShouldBeEvicted);
             Assert.False(pooledSession.RequiresRefresh);
             Assert.False(pooledSession.ServerExpired);
@@ -434,7 +434,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             return PooledSession.FromSessionName(pool, s_sampleSessionName).WithTransaction(transactionId, options, singleUseTransaction: false);
         }
 
-        private class FakeSessionPool : SessionPool.ISessionPool
+        internal class FakeSessionPool : SessionPool.ISessionPool
         {
             public SpannerClient Client { get; }
             public SessionPoolOptions Options { get; }
