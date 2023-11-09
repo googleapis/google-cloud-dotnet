@@ -118,10 +118,11 @@ namespace Google.Cloud.Redis.Cluster.V1 {
             "dHMvKi9sb2NhdGlvbnMvKn0vY2x1c3RlcnM6B2NsdXN0ZXLaQRlwYXJlbnQs",
             "Y2x1c3RlcixjbHVzdGVyX2lkykEeCgdDbHVzdGVyEhNnb29nbGUucHJvdG9i",
             "dWYuQW55GkjKQRRyZWRpcy5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3",
-            "Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CegohY29tLmdv",
-            "b2dsZS5jbG91ZC5yZWRpcy5jbHVzdGVyLnYxQhZDbG91ZFJlZGlzQ2x1c3Rl",
-            "clByb3RvUAFaO2Nsb3VkLmdvb2dsZS5jb20vZ28vcmVkaXMvY2x1c3Rlci9h",
-            "cGl2MS9jbHVzdGVycGI7Y2x1c3RlcnBiYgZwcm90bzM="));
+            "Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CngEKIWNvbS5n",
+            "b29nbGUuY2xvdWQucmVkaXMuY2x1c3Rlci52MUIWQ2xvdWRSZWRpc0NsdXN0",
+            "ZXJQcm90b1ABWjtjbG91ZC5nb29nbGUuY29tL2dvL3JlZGlzL2NsdXN0ZXIv",
+            "YXBpdjEvY2x1c3RlcnBiO2NsdXN0ZXJwYuoCIUdvb2dsZTo6Q2xvdWQ6OlJl",
+            "ZGlzOjpDbHVzdGVyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Redis.Cluster.V1.AuthorizationMode), typeof(global::Google.Cloud.Redis.Cluster.V1.TransitEncryptionMode), }, null, new pbr::GeneratedClrTypeInfo[] {
