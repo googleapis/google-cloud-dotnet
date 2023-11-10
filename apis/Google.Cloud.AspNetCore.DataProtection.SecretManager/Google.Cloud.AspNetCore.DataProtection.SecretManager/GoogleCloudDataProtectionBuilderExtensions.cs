@@ -22,7 +22,7 @@ using Microsoft.Extensions.Options;
 namespace Google.Cloud.AspNetCore.DataProtection.SecretManager;
 
 /// <summary>
-/// Contains extension methods for modifying a <see cref="IDataProtectionBuilder"/> to work with Google Cloud Secret Manager.
+/// Static class to provide extension methods for modifying a <see cref="IDataProtectionBuilder"/> to work with Google Cloud Secret Manager.
 /// </summary>
 public static class GoogleCloudDataProtectionBuilderExtensions
 {
@@ -37,7 +37,7 @@ public static class GoogleCloudDataProtectionBuilderExtensions
             PersistKeysToGoogleCloudSecretManager(builder, projectName, secretName, null);
 
     /// <summary>
-    /// Configures data protection system to persist keys in Google Cloud Secret Manager.
+    /// Configures data protection builder <see cref="IDataProtectionBuilder"/> to persist keys in Google Cloud Secret Manager.
     /// </summary>
     /// <remarks>
     /// <para>

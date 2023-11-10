@@ -54,9 +54,6 @@ public class CloudSecretManagerXmlRepositoryTest
         Assert.Equal("id2", element.Attribute("id")?.Value);
     }
 
-    private CloudSecretManagerXmlRepository CreateXmlRepository(string secretName)
-    {
-        var client = SecretManagerServiceClient.Create();
-        return new CloudSecretManagerXmlRepository(client, secretName, _secretManagerFixture.ProjectId);
-    }
+    private CloudSecretManagerXmlRepository CreateXmlRepository(string secretName) =>
+        new CloudSecretManagerXmlRepository(SecretManagerServiceClient.Create(), secretName, _secretManagerFixture.ProjectId);
 }

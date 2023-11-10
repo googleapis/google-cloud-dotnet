@@ -58,7 +58,7 @@ internal class CloudSecretManagerXmlRepository : IXmlRepository
     /// <inheritdoc />
     public IReadOnlyCollection<XElement> GetAllElements()
     {
-        if (!IsSecretExists())
+        if (!SecretExists())
         {
             return Array.Empty<XElement>();
         }
@@ -68,8 +68,8 @@ internal class CloudSecretManagerXmlRepository : IXmlRepository
         {
             var secretPayload = accessSecretVersionResponse.Payload.Data.ToStringUtf8();
             XDocument document = XDocument.Parse(secretPayload);
-            var res = document?.Root?.Elements().ToList();
-            return res ?? (IReadOnlyCollection<XElement>) Array.Empty<XElement>();
+            var xElements = document.Root.Elements().ToList();
+            return xElements ?? (IReadOnlyCollection<XElement>) Array.Empty<XElement>();
         }
         return Array.Empty<XElement>();
 
@@ -83,7 +83,7 @@ internal class CloudSecretManagerXmlRepository : IXmlRepository
     /// <inheritdoc />
     public void StoreElement(XElement element, string friendlyName)
     {
-        if (!IsSecretExists())
+        if (!SecretExists())
         {
             CreateSecret();
         }
@@ -113,11 +113,11 @@ internal class CloudSecretManagerXmlRepository : IXmlRepository
         _secretManagerServiceClient.CreateSecret(createSecretRequest, _callSettings);
     }
 
-    private bool IsSecretExists()
+    private bool SecretExists()
     {
         try
         {
-            var res = _secretManagerServiceClient.GetSecret(_secretName);
+            _secretManagerServiceClient.GetSecret(_secretName);
             return true;
         }
         catch (RpcException ex) when (ex.StatusCode == StatusCode.NotFound)

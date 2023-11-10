@@ -19,6 +19,23 @@
       "transport": "grpc+rest"
     },
     {
+      "id": "Google.Cloud.AspNetCore.DataProtection.SecretManager",
+      "version": "1.0.0-alpha01",
+      "targetFrameworks": "netstandard2.1",
+      "type": "other",
+      "description": "Recommended Google client library to use Google Cloud Secret Manager to store data protection keys for ASP.NET Core.",
+      "tags": [
+        "Secret Manager",
+        "Google",
+        "Cloud",
+        "Security"
+      ],
+      "dependencies": {
+          "Google.Cloud.SecretManager.V1": "2.1.0",
+          "Microsoft.AspNetCore.DataProtection": "6.0.0"
+      }
+    },
+    {
       "id": "Google.Analytics.Admin.V1Beta",
       "version": "1.0.0-beta04",
       "type": "grpc",
