@@ -459,7 +459,7 @@ namespace Google.Cloud.Spanner.Data
         public TransactionId TransactionId => new TransactionId(
             SpannerConnection.ConnectionString,
             _session.SessionName.ToString(),
-            _session.TransactionId.ToBase64(),
+            _session.TransactionId?.ToBase64(),
             TimestampBound);
 
         /// <summary>

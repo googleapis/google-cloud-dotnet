@@ -28,7 +28,7 @@ namespace Google.Cloud.Spanner.V1
         {
             SpannerClient Client { get; }
             IClock Clock { get; }
-            Task<PooledSession> WithFreshTransactionOrNewAsync(PooledSession session, TransactionOptions transactionOptions, CancellationToken cancellationToken);
+            Task<PooledSession> RefreshedOrNewAsync(PooledSession session, TransactionOptions transactionOptions, bool singleUseTransaction, CancellationToken cancellationToken);
             void Release(PooledSession session, ByteString transactionToRollback, bool deleteSession);
             /// <summary>
             /// Detaches the given session from the pool, meaning the pool stops tracking this session as active,

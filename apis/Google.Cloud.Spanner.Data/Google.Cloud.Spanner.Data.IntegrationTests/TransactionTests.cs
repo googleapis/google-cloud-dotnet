@@ -120,7 +120,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     {
                         // Because Cloud Spanner does not have "read your writes"
                         // to test any leaks, we must commit the transaction and then read it.
-                        await tx.CommitAsync();
+                        var exception = await Assert.ThrowsAsync<InvalidOperationException>(() => tx.CommitAsync());
+                        Assert.Contains("no command execution has been attempted", exception.Message);
                     }
                 });
 

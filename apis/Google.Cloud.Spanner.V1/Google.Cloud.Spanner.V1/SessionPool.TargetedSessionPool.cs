@@ -101,8 +101,7 @@ namespace Google.Cloud.Spanner.V1
             /// </summary>
             internal int LiveOrRequestedSessionCount => Interlocked.CompareExchange(ref _liveOrRequestedSessionCount, 0, 0);
 
-            // Statistics maintained purely for diagnostic purposes. This lets us evaluate
-            // how effective transaction pre-warming is.
+            // Statistics maintained purely for diagnostic purposes.
             private long _rwTransactionRequests;
             private long _rwTransactionRequestsPrewarmed;
 
@@ -161,10 +160,9 @@ namespace Google.Cloud.Spanner.V1
 
             private async Task<PooledSession> AcquireSessionImplAsync(TransactionOptions transactionOptions, bool singleUseTransaction, CancellationToken cancellationToken)
             {
-                // If it's a single use transaction, we really want a session with no transaction.
-                // The transaction options are included directly on the request.
-                var transactionMode = transactionOptions?.ModeCase is null || singleUseTransaction ? ModeOneofCase.None : transactionOptions.ModeCase;
-                var sessionAcquisitionTask = GetSessionAcquisitionTask(transactionMode, cancellationToken);
+                transactionOptions ??= new TransactionOptions();
+                var transactionMode = transactionOptions.ModeCase;
+                var sessionAcquisitionTask = GetSessionAcquisitionTask(cancellationToken);
 
                 // We've either fetched a task from the pool, or registered that a caller is waiting for one.
                 // We may want to start creation tasks, either to replenish the pool or (if there were no pool entries)
@@ -177,8 +175,8 @@ namespace Google.Cloud.Spanner.V1
                 // We do this when a session is released, and in the maintenance task.
                 // These happen frequently enough that we shouldn't need to worry about them here.
 
-                // Update statistics for prewarming - only after we've already acquired the session.
-                if (transactionMode == ModeOneofCase.ReadWrite)
+                // Update statistics for sessions with read/write transaction options - only after we've already acquired the session.
+                if (transactionOptions.ModeCase == ModeOneofCase.ReadWrite)
                 {
                     Interlocked.Increment(ref _rwTransactionRequests);
                     if (session.TransactionOptions.ModeCase == transactionMode)
@@ -187,69 +185,15 @@ namespace Google.Cloud.Spanner.V1
                     }
                 }
 
-                // If this is for a single use transaction, then whatever we got is not right. We got one of:
-                // - A session with None options and no transaction ID. This is what we requested.
-                // - A session with ReadOnly, ReadWrite or PartiotionedDml options and a transaction ID.
-                // We need a session with the options we received as parameter and no transaction ID.
-                if (singleUseTransaction)
-                {
-                    return session.WithTransaction(null, transactionOptions, singleUseTransaction: true);
-                }
-
-                // If we've already got the right transaction mode, we're done.
-                if (session.TransactionOptions.ModeCase == transactionMode)
-                {
-                    return session;
-                }
-                // Otherwise, we may need to forget an existing transaction, or request a new one.
-                else
-                {
-                    // If we asked for a session with no transaction but we got one *with* a tranasction,
-                    // we don't need to perform any RPCs - but we do need to return a PooledSession with
-                    // no transaction ID.
-                    if (transactionMode == ModeOneofCase.None)
-                    {
-                        return session.WithTransaction(null, PooledSession.NoTransactionOptions, singleUseTransaction: false);
-                    }
-                    else
-                    {
-                        bool success = false;
-                        try
-                        {
-                            session = await BeginTransactionAsync(session, transactionOptions, cancellationToken).ConfigureAwait(false);
-                            success = true;
-                            return session;
-                        }
-                        finally
-                        {
-                            // If we succeeded in getting a session but not a transaction, we can reuse the session later, but still fail this call.
-                            // It counts as "inactive" because the failure will decrement the active session count already.
-                            // Note that the only way success is false is if we're throwing an exception, so we'll never release it
-                            // *and* then return it.
-                            if (!success)
-                            {
-                                ReleaseInactiveSession(session, maybeCreateReadWriteTransaction: false);
-                            }
-                        }
-                    }
-                }
+                // Whatever session we got it either has vanilla transaction options or the wrong ones.
+                return session.WithTransactionOptions(transactionOptions, singleUseTransaction);
             }
 
-            private Task<PooledSession> GetSessionAcquisitionTask(ModeOneofCase transactionMode, CancellationToken cancellationToken)
+            private Task<PooledSession> GetSessionAcquisitionTask(CancellationToken cancellationToken)
             {
-                // Three scenarios for initial session picking:
-                // - No transaction options: take a read-only session as-is
-                // - Read/write transaction options: take a read/write session as-is
-                // - Other options (a non-single-use read-only bound, or PDML): take a read-only session, but fetch a transaction with it before returning it.
-                // If there's no session of the appropriate type, take the other kind instead - at the cost of either wasting an existing read/write
-                // transaction, or having to acquire a read/write transaction.
                 ConcurrentStack<PooledSession> preferredStack = _readOnlySessions;
                 ConcurrentStack<PooledSession> alternateStack = _readWriteSessions;
-                if (transactionMode == ModeOneofCase.ReadWrite)
-                {
-                    preferredStack = _readWriteSessions;
-                    alternateStack = _readOnlySessions;
-                }
+
                 lock (_lock)
                 {
                     // First try the pool.
@@ -284,7 +228,7 @@ namespace Google.Cloud.Spanner.V1
                     await GetNursePoolBackToHealthTask(cancellationToken).ConfigureAwait(false);
 
                     // If we reached this point the nursing task succeeded and the pool is healthy.
-                    var acquisitionTask = GetSessionAcquisitionTask(transactionMode, cancellationToken);
+                    var acquisitionTask = GetSessionAcquisitionTask(cancellationToken);
                     // Although the pool is back to being healthy, it might be depleted, since for making it healthy
                     // we only created the last failed batch worth of sessions. Let's try and make it ready again.
                     StartSessionCreationTasksIfNecessary();
@@ -302,11 +246,7 @@ namespace Google.Cloud.Spanner.V1
             /// Release a session back to the pool (or refresh) but don't change the number of active sessions.
             /// </summary>
             /// <param name="session">The session to stack. Should be "active" (i.e. not disposed)</param>
-            /// <param name="maybeCreateReadWriteTransaction">Whether to allow the session to go through a cycle of acquiring a read/write transaction.
-            /// This is true unless we've just come from attempting to create a read/write transaction, in which case either we succeeded (no need
-            /// to create a new one) or failed (in which case we should just keep it read-only).
-            /// </param>
-            private void ReleaseInactiveSession(PooledSession session, bool maybeCreateReadWriteTransaction)
+            private void ReleaseInactiveSession(PooledSession session)
             {
                 if (Shutdown)
                 {
@@ -316,22 +256,19 @@ namespace Google.Cloud.Spanner.V1
 
                 if (session.RequiresRefresh)
                 {
-                    // RefreshAsync will then release the refreshed session itself - which
-                    // may trigger a transaction request as well. But eventually, it'll get
+                    // RefreshAsync will then release the refreshed session itself and it'll get
                     // back to the pool (or a waiting consumer).
                     Parent.ConsumeBackgroundTask(RefreshAsync(session), "session refresh");
                     return;
                 }
 
-                // There are a couple of cases where we need to take an action outside the lock after breaking
-                // out of the loop. It's simplest to remember that in a delegate.
+                // We may need to take action outside the lock after breaking out of the loop.
+                // It's simplest to remember that in a delegate.
                 Action outsideLockAction = null;
 
                 // We need to atomically (within the lock) decide between:
                 // - Adding the session to a pool stack (adding performed within the lock)
                 // - Providing the session to a waiting caller (setting the result peformed outside the lock)
-                // - If it's currently not got a transaction but we need more read/write transactions, starting a transaction
-                // In the last case, we will come back to this code to make another decision later.
                 while (true)
                 {
                     TaskCompletionSource<PooledSession> pendingAquisition;
@@ -340,13 +277,9 @@ namespace Google.Cloud.Spanner.V1
                         // Only add a session to a stack if there are no pending acquisitions.
                         if (!_pendingAcquisitions.TryDequeue(out pendingAquisition))
                         {
-                            // Options:
-                            // - Decide to create a new read/write transaction (will get back here later)
-                            // - Push the current session as read-only or read/write depending on its mode
                             ConcurrentStack<PooledSession> stack;
 
-                            // If the session already has a read/write transaction, add it to the read/write pool immediately.
-                            // Otherwise, work out whether we *want* it to be read/write.
+                            // Add the session to the correct stack.
                             if (session.TransactionOptions.ModeCase == ModeOneofCase.ReadWrite)
                             {
                                 stack = _readWriteSessions;
@@ -357,17 +290,13 @@ namespace Google.Cloud.Spanner.V1
                                 var writeCount = _readWriteSessions.Count;
                                 // Avoid division by zero by including the new session in the denominator.
                                 var writeProportion = writeCount / (writeCount + readCount + 1.0);
-                                bool createReadWriteTransaction = maybeCreateReadWriteTransaction && writeProportion < Options.WriteSessionsFraction;
-                                if (createReadWriteTransaction)
+                                if (writeProportion < Options.WriteSessionsFraction)
                                 {
-                                    // Exit the loop, and acquire a read/write transaction
-                                    outsideLockAction = () => Parent.ConsumeBackgroundTask(TryCreateReadWriteTransactionAndReturnToPool(session), "transaction creation");
-                                    break;
+                                    session = session.WithTransactionOptions(s_readWriteOptions, singleUseTransaction: false);
+                                    stack = _readWriteSessions;
                                 }
                                 else
                                 {
-                                    // At this point we didn't already have a r/w transaction, and we don't want to
-                                    // create one, so add it to the pool of read-only sessions.
                                     stack = _readOnlySessions;
                                 }
                             }
@@ -398,7 +327,7 @@ namespace Google.Cloud.Spanner.V1
             }
 
             /// <summary>
-            /// Refreshes a session by setting executing a trivial SELECT SQL statement.
+            /// Refreshes a session by executing a trivial SELECT SQL statement.
             /// This is performed via the client session itself so it can update its next refresh time.
             /// </summary>
             private async Task RefreshAsync(PooledSession session)
@@ -421,75 +350,22 @@ namespace Google.Cloud.Spanner.V1
                 {
                     Interlocked.Decrement(ref _inFlightSessionCreationCount);
                 }
-                // We now definitely don't have a transaction.
-                ReleaseInactiveSession(session.WithTransaction(null, PooledSession.NoTransactionOptions, singleUseTransaction: false), maybeCreateReadWriteTransaction: true);
+
+                ReleaseInactiveSession(session.WithTransactionOptions(new TransactionOptions(), singleUseTransaction: false));
             }
 
-            private async Task TryCreateReadWriteTransactionAndReturnToPool(PooledSession session)
-            {
-                try
-                {
-                    session = await BeginTransactionAsync(session, s_readWriteOptions, CancellationToken.None).ConfigureAwait(false);
-                }
-                catch (RpcException e)
-                {
-                    // Failed to create a read/write transaction; release this back to the pool, but making
-                    // sure we don't come back here.
-                    Parent._logger.Warn("Failed to create read/write transaction for pooled session", e);
-                }
-                ReleaseInactiveSession(session, maybeCreateReadWriteTransaction: false);
-            }
-
-            private async Task<PooledSession> BeginTransactionAsync(PooledSession session, TransactionOptions options, CancellationToken cancellationToken, bool isSessionAcquired = false)
-            {
-                // While we're creating a transaction, it's as if we're preparing a new session - it's a period of time
-                // where there's already an RPC in flight, and when it completes a session will be available.
-                // But if that session is being held by calling code already, and we are here because client code
-                // requested a transaction refresh then we can't count the session as if it were being prepared
-                // because after the transaction is refreshed the session won't be release back to the pool, it will still
-                // be held by calling code.
-                if (!isSessionAcquired)
-                {
-                    Interlocked.Increment(ref _inFlightSessionCreationCount);
-                }
-                try
-                {
-                    return await session.WithFreshTransactionAsync(options, cancellationToken).ConfigureAwait(false);
-                }
-                finally
-                {
-                    if (!isSessionAcquired)
-                    {
-                        Interlocked.Decrement(ref _inFlightSessionCreationCount);
-                    }
-                }
-            }
-
-            public override Task<PooledSession> WithFreshTransactionOrNewAsync(PooledSession session, TransactionOptions transactionOptions, CancellationToken cancellationToken)
+            public override async Task<PooledSession> RefreshedOrNewAsync(PooledSession session, TransactionOptions transactionOptions, bool singleUseTransaction, CancellationToken cancellationToken)
             {
                 if (session.RequiresRefresh)
                 {
                     // Let's just release it back to the pool, that will handle the refreshing etc.
                     session.ReleaseToPool(false);
+                    return await AcquireSessionAsync(transactionOptions, singleUseTransaction, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    try
-                    {
-                        // Let's try to begin a new transaction for this same session.
-                        return BeginTransactionAsync(session, transactionOptions, cancellationToken, true);
-                    }
-                    catch(RpcException e)
-                    {
-                        Parent._logger.Warn("Failed to create transaction for acquired session", e);
-                        // Failed to create the transaction for the session.
-                        // Release the session back to the pool.
-                        // We'll try to acquire a new session now.
-                        session.ReleaseToPool(false);
-                    }
+                    return session.WithTransactionOptions(transactionOptions, singleUseTransaction);
                 }
-                // If we are here we need to acquire a new session.
-                return AcquireSessionAsync(transactionOptions, singleUseTransaction: false, cancellationToken);
             }
 
             /// <summary>
@@ -503,7 +379,7 @@ namespace Google.Cloud.Spanner.V1
             {
                 Interlocked.Decrement(ref _activeSessionCount);
                 // If we've got a transaction to rollback, do that first.
-                if (transactionId is object)
+                if (transactionId is not null)
                 {
                     var request = new RollbackRequest { SessionAsSessionName = session.SessionName, TransactionId = transactionId };
                     try
@@ -523,7 +399,7 @@ namespace Google.Cloud.Spanner.V1
                 }
                 else
                 {
-                    ReleaseInactiveSession(session, maybeCreateReadWriteTransaction: true);
+                    ReleaseInactiveSession(session);
                 }
             }
 
@@ -631,7 +507,7 @@ namespace Google.Cloud.Spanner.V1
                         var sessions = await CreatePooledSessionsAsync(CancellationToken.None).ConfigureAwait(false);
                         foreach (var session in sessions)
                         {
-                            ReleaseInactiveSession(session, maybeCreateReadWriteTransaction: true);
+                            ReleaseInactiveSession(session);
                         }
                     }
                     // Note: we expect this to always actually be an RpcException, but we don't want to end up unhealthy
@@ -684,7 +560,7 @@ namespace Google.Cloud.Spanner.V1
                         var sessions = await CreatePooledSessionsAsync(CancellationToken.None).ConfigureAwait(false);
                         foreach (var session in sessions)
                         {
-                            ReleaseInactiveSession(session, maybeCreateReadWriteTransaction: true);
+                            ReleaseInactiveSession(session);
                         }
 
                         // We have succesfully nursed the pool back to health.

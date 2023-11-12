@@ -158,8 +158,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
-                .SetupBatchCreateSessionsAsync()
-                .SetupBeginTransactionAsync();
+                .SetupBatchCreateSessionsAsync();
             SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
             SpannerTransaction transaction = connection.BeginTransaction();
             var command = transaction.CreateBatchDmlCommand();
@@ -173,7 +172,6 @@ namespace Google.Cloud.Spanner.Data.Tests
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
-                .SetupBeginTransactionAsync()
                 .SetupExecuteBatchDmlAsync()
                 .SetupCommitAsync();
             SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
@@ -197,7 +195,6 @@ namespace Google.Cloud.Spanner.Data.Tests
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
-                .SetupBeginTransactionAsync()
                 .SetupExecuteBatchDmlAsync()
                 .SetupCommitAsync();
             SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
@@ -223,7 +220,6 @@ namespace Google.Cloud.Spanner.Data.Tests
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
-                .SetupBeginTransactionAsync()
                 .SetupExecuteBatchDmlAsync()
                 .SetupCommitAsync();
             SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
@@ -252,7 +248,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             public void Release(PooledSession session, ByteString transactionId, bool deleteSession) =>  throw new NotImplementedException();
             public void Detach(PooledSession session) => throw new NotImplementedException();
 
-            public Task<PooledSession> WithFreshTransactionOrNewAsync(PooledSession session, TransactionOptions transactionOptions, CancellationToken cancellationToken) =>
+            public Task<PooledSession> RefreshedOrNewAsync(PooledSession session, TransactionOptions transactionOptions, bool singleUseTransaction, CancellationToken cancellationToken) =>
                 throw new NotImplementedException();
         }
     }

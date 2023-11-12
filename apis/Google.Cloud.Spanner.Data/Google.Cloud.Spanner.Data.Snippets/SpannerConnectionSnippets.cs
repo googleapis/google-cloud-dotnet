@@ -326,9 +326,8 @@ namespace Google.Cloud.Spanner.Data.Snippets
                 // retry the whole unit of work with a fresh transaction each time.
                 // Please be aware that the whole unit of work needs to be prepared
                 // to be called more than once.
-                await connection.RunWithRetriableTransactionAsync(async (transaction) =>
+                await connection.RunWithRetriableTransactionAsync(async transaction =>
                 {
-
                     // Read the first two keys in the database.
                     List<string> keys = new List<string>();
                     SpannerCommand selectCmd = connection.CreateSelectCommand("SELECT * FROM TestTable");
