@@ -47,7 +47,6 @@ namespace Google.Cloud.Spanner.Data.Tests
             {
                 SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger)
                     .SetupBatchCreateSessionsAsync()
-                    .SetupBeginTransactionAsync()
                     .SetupExecuteBatchDmlAsync()
                     .SetupCommitAsync();
                 SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
@@ -71,7 +70,6 @@ namespace Google.Cloud.Spanner.Data.Tests
             {
                 SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger)
                     .SetupBatchCreateSessionsAsync()
-                    .SetupBeginTransactionAsync()
                     .SetupExecuteBatchDmlAsync()
                     .SetupCommitAsync_Fails(failures: 2, statusCode: StatusCode.Aborted)
                     .SetupRollbackAsync();
@@ -99,7 +97,12 @@ namespace Google.Cloud.Spanner.Data.Tests
                 SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger)
                     .SetupBatchCreateSessionsAsync()
                     .SetupBeginTransactionAsync()
-                    .SetupExecuteBatchDmlAsync_Fails(failures: 2, statusCode: StatusCode.Aborted)
+                    // With transaction inlining we need batch DML to fail 4 times to get the retriable transaction
+                    // to abort twice. That is because on each run of the retriable transaction the batch DML command
+                    // is executed twice, once with inline transaction, and since that fails, with an explicit transaction.
+                    // So the fifth time it will succeed with an inlined transaction, which matches the third retriable transaction
+                    // attempt.
+                    .SetupExecuteBatchDmlAsync_Fails(failures: 4, statusCode: StatusCode.Aborted)
                     .SetupCommitAsync()
                     .SetupRollbackAsync();
 
@@ -124,7 +127,6 @@ namespace Google.Cloud.Spanner.Data.Tests
             {
                 SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger)
                     .SetupBatchCreateSessionsAsync()
-                    .SetupBeginTransactionAsync()
                     .SetupExecuteBatchDmlAsync()
                     .SetupCommitAsync_Fails(failures: 2, statusCode: StatusCode.Aborted, exceptionRetryDelay: TimeSpan.FromMilliseconds(ExceptionRetryDelayMs))
                     .SetupRollbackAsync();
@@ -150,7 +152,6 @@ namespace Google.Cloud.Spanner.Data.Tests
             {
                 SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger)
                     .SetupBatchCreateSessionsAsync()
-                    .SetupBeginTransactionAsync()
                     .SetupExecuteBatchDmlAsync()
                     .SetupCommitAsync_FailsAlways(statusCode: StatusCode.Aborted)
                     .SetupRollbackAsync();
@@ -186,7 +187,6 @@ namespace Google.Cloud.Spanner.Data.Tests
             {
                 SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger)
                     .SetupBatchCreateSessionsAsync()
-                    .SetupBeginTransactionAsync()
                     .SetupExecuteBatchDmlAsync()
                     .SetupCommitAsync_Fails(failures: 1, StatusCode.Unknown)
                     .SetupRollbackAsync();
@@ -213,9 +213,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             public async Task WorkFails()
             {
                 SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger)
-                    .SetupBatchCreateSessionsAsync()
-                    .SetupBeginTransactionAsync()
-                    .SetupRollbackAsync();
+                    .SetupBatchCreateSessionsAsync();
 
                 SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
 

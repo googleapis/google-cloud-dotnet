@@ -48,7 +48,7 @@ namespace Google.Cloud.Spanner.V1
                 // No-op: We are already in the detached session pool which doesn't keep track of sessions.
             }
 
-            public override Task<PooledSession> WithFreshTransactionOrNewAsync(PooledSession session, TransactionOptions transactionOptions, CancellationToken cancellationToken) =>
+            public override Task<PooledSession> RefreshedOrNewAsync(PooledSession session, TransactionOptions transactionOptions, bool singleUseTransaction, CancellationToken cancellationToken) =>
                 throw new InvalidOperationException(
                     $"{nameof(session)} is a detached session. Its transaction can't be refreshed and it can't be substituted by a new session.");
         }

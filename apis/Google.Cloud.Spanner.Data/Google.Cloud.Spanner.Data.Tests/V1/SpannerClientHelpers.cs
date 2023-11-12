@@ -109,17 +109,23 @@ namespace Google.Cloud.Spanner.V1.Tests
                 .Returns(args => Task.FromResult(
                     new PartitionResponse
                     {
-                        Partitions = { Enumerable.Range(0, (int) ((PartitionReadRequest) args[0]).PartitionOptions.MaxPartitions)
-                            .Select(token => new Partition { PartitionToken = ByteString.CopyFromUtf8(token.ToString())}) }
+                        Partitions = { BuildPartitions((int) args.Arg<PartitionReadRequest>().PartitionOptions.MaxPartitions) },
+                        Transaction = MaybeGetTransaction(args.Arg<PartitionReadRequest>().Transaction)
                     }));
             return spannerClientMock;
+
+            static IEnumerable<Partition> BuildPartitions(int partitionsCount) =>
+                Enumerable.Range(0, partitionsCount).Select(token => new Partition
+                {
+                    PartitionToken = ByteString.CopyFromUtf8(token.ToString())
+                });
         }
 
         internal static SpannerClient SetupExecuteBatchDmlAsync(this SpannerClient spannerClientMock)
         {
             spannerClientMock.Configure()
                 .ExecuteBatchDmlAsync(Arg.Is<ExecuteBatchDmlRequest>(x => x != null), Arg.Any<CallSettings>())
-                .Returns(Task.FromResult(
+                .Returns(args => Task.FromResult(
                     new ExecuteBatchDmlResponse
                     {
                         Status = new Rpc.Status
@@ -133,6 +139,10 @@ namespace Google.Cloud.Spanner.V1.Tests
                                 Stats = new ResultSetStats
                                 {
                                     RowCountExact = 10
+                                },
+                                Metadata = new ResultSetMetadata
+                                {
+                                    Transaction = MaybeGetTransaction(args.Arg<ExecuteBatchDmlRequest>().Transaction)
                                 }
                             }
                         }
@@ -148,7 +158,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             {
                 returns.Add(_ => throw exception);
             }
-            returns.Add(_ => Task.FromResult(
+            returns.Add(args => Task.FromResult(
                     new ExecuteBatchDmlResponse
                     {
                         Status = new Rpc.Status
@@ -162,6 +172,10 @@ namespace Google.Cloud.Spanner.V1.Tests
                                 Stats = new ResultSetStats
                                 {
                                     RowCountExact = 10
+                                },
+                                Metadata = new ResultSetMetadata
+                                {
+                                    Transaction = MaybeGetTransaction(args.Arg<ExecuteBatchDmlRequest>().Transaction)
                                 }
                             }
                         }
@@ -229,14 +243,15 @@ namespace Google.Cloud.Spanner.V1.Tests
                 .ExecuteStreamingSql(Arg.Any<ExecuteSqlRequest>(), Arg.Any<CallSettings>())
                 .Returns(args =>
                 {
-                    var request = (ExecuteSqlRequest) args[0];
+                    var request = args.Arg<ExecuteSqlRequest>();
                     // Copy the executed request into the receiver so that callers can perform further checking later.
                     requestReceiver.MergeFrom(request);
                     IEnumerable<PartialResultSet> results = new string[] {"token1", "token2", "token3"}
                     .Select((resumeToken, index) => new PartialResultSet
                     {
                         ResumeToken = ByteString.CopyFromUtf8(resumeToken),
-                        Values = { Value.ForNumber(index) }
+                        Values = { Value.ForNumber(index) },
+                        Metadata = index == 0 ? new ResultSetMetadata { Transaction = MaybeGetTransaction(request.Transaction) } : null
                     })
                     .ToList();
                     IEnumerable<PartialResultSet> callResults = request.ResumeToken.IsEmpty
@@ -260,14 +275,15 @@ namespace Google.Cloud.Spanner.V1.Tests
                 .StreamingRead(Arg.Any<ReadRequest>(), Arg.Any<CallSettings>())
                 .Returns(args =>
                 {
-                    var request = (ReadRequest) args[0];
+                    var request = args.Arg<ReadRequest>();
                     // Copy the executed request into the receiver so that callers can perform further checking later.
                     readRequestReceiver.MergeFrom(request);
                     IEnumerable<PartialResultSet> results = new string[] {"token1", "token2", "token3"}
                         .Select((resumeToken, index) => new PartialResultSet
                         {
                             ResumeToken = ByteString.CopyFromUtf8(resumeToken),
-                            Values = { Value.ForNumber(index) }
+                            Values = { Value.ForNumber(index) },
+                            Metadata = index == 0 ? new ResultSetMetadata { Transaction = MaybeGetTransaction(request.Transaction) } : null
                         })
                         .ToList();
                     IEnumerable<PartialResultSet> callResults = request.ResumeToken.IsEmpty
@@ -301,7 +317,8 @@ namespace Google.Cloud.Spanner.V1.Tests
                     .Select((resumeToken, index) => new PartialResultSet
                     {
                         ResumeToken = ByteString.CopyFromUtf8(resumeToken),
-                        Stats = stats
+                        Stats = stats,
+                        Metadata = index == 0 ? new ResultSetMetadata { Transaction = MaybeGetTransaction(args.Arg<ExecuteSqlRequest>().Transaction)} : null
                     })
                     .ToList();
                     var asyncResults = new AsyncStreamAdapter<PartialResultSet>(results.ToAsyncEnumerable().GetAsyncEnumerator(default));
@@ -329,7 +346,8 @@ namespace Google.Cloud.Spanner.V1.Tests
                             Stats = new ResultSetStats
                             {
                                 RowCountExact = 10
-                            }
+                            },
+                            Metadata = index == 0 ? new ResultSetMetadata { Transaction = MaybeGetTransaction(args.Arg<ExecuteSqlRequest>().Transaction) } : null
                         })
                         .ToList();
                         var asyncResults = new AsyncStreamAdapter<PartialResultSet>(results.ToAsyncEnumerable().GetAsyncEnumerator(default));
@@ -363,5 +381,11 @@ namespace Google.Cloud.Spanner.V1.Tests
             var clock = spannerClientMock.Settings.Clock;
             return Timestamp.FromDateTime(clock.GetCurrentDateTimeUtc());
         }
+
+        internal static Transaction MaybeGetTransaction(TransactionSelector selector) => selector?.SelectorCase switch
+        {
+            TransactionSelector.SelectorOneofCase.Begin => new Transaction { Id = ByteString.CopyFromUtf8("transaction") },
+            _ => null
+        };
     }
 }

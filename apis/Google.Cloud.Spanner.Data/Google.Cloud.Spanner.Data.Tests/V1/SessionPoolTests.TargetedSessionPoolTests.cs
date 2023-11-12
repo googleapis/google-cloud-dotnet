@@ -548,7 +548,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             }
 
             [Fact(Timeout = TestTimeoutMilliseconds)]
-            public async Task RefreshTransaction_WithFreshSession()
+            public async Task RefreshSession_WithFreshSession()
             {
                 var pool = CreatePool(false);
                 var client = (SessionTestingSpannerClient) pool.Client;
@@ -559,20 +559,18 @@ namespace Google.Cloud.Spanner.V1.Tests
                         singleUseTransaction: false,
                         CancellationToken.None);
                     var originalSessionName = originalSession.SessionName;
-                    var originalTransactionId = originalSession.TransactionId;
                     // This session hasn't had time to be stale.
                     // Refreshing the transaction should return a new instance of PooledSession
-                    // with the same session name and different transaction ID.
-                    var newSession = await originalSession.WithFreshTransactionOrNewAsync(CancellationToken.None);
+                    // with the same session name.
+                    var newSession = await originalSession.RefreshedOrNewAsync(CancellationToken.None);
 
                     Assert.NotSame(originalSession, newSession);
                     Assert.Equal(originalSessionName, newSession.SessionName);
-                    Assert.NotEqual(originalTransactionId, newSession.TransactionId);
                 });
             }
 
             [Fact(Timeout = TestTimeoutMilliseconds)]
-            public async Task RefreshTransaction_WithStaleSession()
+            public async Task RefreshSession_WithStaleSession()
             {
                 var pool = CreatePool(false);
                 var client = (SessionTestingSpannerClient) pool.Client;
@@ -584,13 +582,12 @@ namespace Google.Cloud.Spanner.V1.Tests
                         singleUseTransaction: false,
                         CancellationToken.None);
                     var originalSessionName = originalSession.SessionName;
-                    var originalTransactionId = originalSession.TransactionId;
 
                     await client.Scheduler.Delay(TimeSpan.FromMinutes(20)); // So a refresh is required
                     // This session is now stale.
                     // Refreshing the transaction should return a new instance of PooledSession
                     // with a different session name and different transaction ID.
-                    var newSessionTask = originalSession.WithFreshTransactionOrNewAsync(CancellationToken.None);
+                    var newSessionTask = originalSession.RefreshedOrNewAsync(CancellationToken.None);
                     // Let's make sure that our original session was refreshed and returned back to the pool.
                     // We have one session already so we can only acquire the rest.
                     var allSessionsTask = AcquireSessionTasks(pool, pool.Options.MaximumActiveSessions - 1);
@@ -598,11 +595,9 @@ namespace Google.Cloud.Spanner.V1.Tests
                     var newSession = await newSessionTask;
                     Assert.NotSame(originalSession, newSession);
                     Assert.NotEqual(originalSessionName, newSession.SessionName);
-                    Assert.NotEqual(originalTransactionId, newSession.TransactionId);
 
                     var allSessions = await Task.WhenAll(allSessionsTask);
                     Assert.Contains(allSessions, s => originalSessionName.Equals(s.SessionName));
-                    Assert.DoesNotContain(allSessions, s => originalTransactionId.Equals(s.TransactionId));
                 });
             }
 
@@ -633,7 +628,7 @@ namespace Google.Cloud.Spanner.V1.Tests
 
                 // Give the pool a minute to fill up
                 await client.Scheduler.RunForSecondsAsync(60);
-                Assert.Equal(10, pool.GetStatisticsSnapshot().ReadWritePoolCount);
+                Assert.Equal(2, pool.GetStatisticsSnapshot().ReadWritePoolCount);
 
                 // Let all the sessions idle out over 20 minutes.
                 await client.Scheduler.RunForSecondsAsync(60 * 20);
@@ -665,7 +660,10 @@ namespace Google.Cloud.Spanner.V1.Tests
 
                 // Give the pool a minute to fill up
                 await client.Scheduler.RunForSecondsAsync(60);
-                Assert.Equal(10, pool.GetStatisticsSnapshot().ReadWritePoolCount);
+                // There are 10 sessions in total with a 0.2 write/read proportion.
+                var stats = pool.GetStatisticsSnapshot();
+                Assert.Equal(10, stats.ReadPoolCount + stats.ReadWritePoolCount);
+                Assert.Equal(2, stats.ReadWritePoolCount);
 
                 // Let all the sessions go beyond their eviction time.
                 await client.Scheduler.RunForSecondsAsync(60 * 101); // 100 minute eviction
@@ -676,11 +674,10 @@ namespace Google.Cloud.Spanner.V1.Tests
 
                 // Give the eviction and reacquisition tasks time to run.
                 await client.Scheduler.RunForSecondsAsync(60);
-                Assert.Equal(10, pool.GetStatisticsSnapshot().ReadWritePoolCount);
-
+                stats = pool.GetStatisticsSnapshot();
                 // Pool should be full aagain
-                var stats = pool.GetStatisticsSnapshot();
                 Assert.Equal(10, stats.ReadPoolCount + stats.ReadWritePoolCount);
+                Assert.Equal(2, stats.ReadWritePoolCount);
 
                 // The newly created session should have an appropriate refresh time.
                 // (We don't need to let the scheduler run, as we're getting it from the pool.)
@@ -706,14 +703,12 @@ namespace Google.Cloud.Spanner.V1.Tests
                     await pool.WhenPoolReady(default);
 
                     // We allow 20 session creates at a time, and each takes 5 seconds.
-                    // We'll need at least 6 read/write sessions too. In reality, all 20 initially-created
-                    // sessions will have read/write transactions created for them, because they'll all check that
-                    // before any transactions are created.
+                    // We'll need at least 6 read/write sessions too.
                     // We check the most important part first: that we actually have the required sessions.
                     var stats = pool.GetStatisticsSnapshot();
                     Assert.Equal(30, stats.ReadWritePoolCount + stats.ReadPoolCount);
-                    // Implicitly checks that we have 10 read-only sessions
-                    Assert.Equal(20, stats.ReadWritePoolCount);
+                    // Implicitly checks that we have 24 read-only sessions
+                    Assert.Equal(6, stats.ReadWritePoolCount);
 
                     // We're loose when checking the elapsed time, as on slow CI machines it can take around half
                     // a second for a released SemaphoreSlim to be acquired again, which means we don't start the second

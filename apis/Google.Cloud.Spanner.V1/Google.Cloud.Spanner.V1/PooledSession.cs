@@ -158,7 +158,7 @@ namespace Google.Cloud.Spanner.V1
                 nameof(singleUseTransaction),
                 "Single use transactions are only supported for read-only transactions.");
             GaxPreconditions.CheckArgument(
-                singleUseTransaction || TransactionOptions.ModeCase == ModeOneofCase.None || transactionId is not null,
+                transactionId is null || TransactionOptions.ModeCase != ModeOneofCase.None,
                 nameof(transactionOptions),
                 "No transaction options were specified for the given transasaction ID.");
             GaxPreconditions.CheckArgument(
@@ -407,29 +407,16 @@ namespace Google.Cloud.Spanner.V1
         }
 
         /// <summary>
-        /// Returns a PooledSession for the same session as this one with the given transaction options and a newly created transaction.
+        /// Returns a PooledSession for the same session as this with the given <paramref name="transactionOptions"/> and no associated transaction.
         /// The refresh and eviction times are the same as this instance.
         /// This instance will be <see cref="MarkAsDisposed"/> to ensure that all operations with the underlying session are done through the new instance.
         /// </summary>
-        internal async Task<PooledSession> WithFreshTransactionAsync(TransactionOptions transactionOptions, CancellationToken cancellationToken)
+        internal PooledSession WithTransactionOptions(TransactionOptions transactionOptions, bool singleUseTransaction)
         {
             CheckNotDisposed();
             GaxPreconditions.CheckNotNull(transactionOptions, nameof(transactionOptions));
-            var transaction = await BeginTransactionAsync(cancellationToken).ConfigureAwait(false);
-            return WithTransaction(transaction.Id, transactionOptions, singleUseTransaction:false, transaction.ReadTimestamp);
-
-            Task<Transaction> BeginTransactionAsync(CancellationToken cancellationToken)
-            {
-                var request = new BeginTransactionRequest
-                {
-                    Options = transactionOptions,
-                    SessionAsSessionName = SessionName,
-                };
-                var callSettings = Client.Settings.BeginTransactionSettings
-                    .WithExpiration(Expiration.FromTimeout(_pool.Options.Timeout))
-                    .WithCancellationToken(cancellationToken);
-                return RecordSuccessAndExpiredSessions(Client.BeginTransactionAsync(request, callSettings));
-            }
+            MarkAsDisposed();
+            return new PooledSession(_pool, SessionName, transactionId: null, transactionOptions, singleUseTransaction, readTimestamp: null, _evictionTime, RefreshTicks);
         }
 
         /// <summary>
@@ -445,13 +432,11 @@ namespace Google.Cloud.Spanner.V1
 
         /// <summary>
         /// Always returns a new instance of <see cref="PooledSession"/>. The new instance can:
-        /// 1. represent the same session as this one, but will have a fresh transaction of the
-        /// same type as this <see cref="PooledSession"/> did.
-        /// 2. represent an entirely different session with a fresh transaction of the same type
-        /// as this <see cref="PooledSession"/> did.
-        /// This method will always try to get a fresh transaction for this session.
-        /// If the session has expired or it fails to get a fresh transaction, then it will
-        /// acquire a session in the normal way.
+        /// 1. represent the same session as this one, with the same transaction options,
+        /// but it won't have a transaction associated to it
+        /// 2. represent an entirely different session with the same transaction options
+        /// as this <see cref="PooledSession"/> did and no transaction associated to it
+        /// If this session has expired then this method will acquire a new session in the normal way.
         /// This <see cref="PooledSession"/> instance will be disposed of to ensure that all operations
         /// with the underlying session are done through the new instance.
         /// </summary>
@@ -460,13 +445,13 @@ namespace Google.Cloud.Spanner.V1
         /// session. For instance, when retrying aborted commits it is better if the transaction work and commit
         /// are retried with the same session, because after each abort the sessions' lock priority increments.
         /// </remarks>
-        public Task<PooledSession> WithFreshTransactionOrNewAsync(CancellationToken cancellationToken)
+        public Task<PooledSession> RefreshedOrNewAsync(CancellationToken cancellationToken)
         {
             CheckNotDisposed();
 
             // Calling AfterReset() will mark this instance as disposed.
             // The pool will take care of releasing back to the pool if needed.
-            return _pool.WithFreshTransactionOrNewAsync(AfterReset(), TransactionOptions, cancellationToken);
+            return _pool.RefreshedOrNewAsync(AfterReset(), TransactionOptions, SingleUseTransaction, cancellationToken);
         }
 
         /// <summary>
@@ -806,7 +791,7 @@ namespace Google.Cloud.Spanner.V1
 
             Task<ResultSet> ExecuteSqlAsync() => RecordSuccessAndExpiredSessions(Client.ExecuteSqlAsync(request, callSettings));
 
-            Transaction GetInlinedTransaction(ResultSet response) => response?.Metadata.Transaction;
+            Transaction GetInlinedTransaction(ResultSet response) => response?.Metadata?.Transaction;
         }
 
         /// <summary>

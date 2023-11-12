@@ -18,7 +18,6 @@ using Google.Api.Gax.Testing;
 using Google.Cloud.Spanner.V1.Internal;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf;
-using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using NSubstitute;
 using NSubstitute.Extensions;
@@ -101,16 +100,15 @@ namespace Google.Cloud.Spanner.V1.Tests
             clock.Advance(halfRefresh);
 
             // Make a successful request
-            var response = new Transaction();
             pool.Client.Configure()
-                .BeginTransactionAsync(Arg.Any<BeginTransactionRequest>(), Arg.Any<CallSettings>())
-                .Returns(Task.FromResult(response));
-            await pooledSession.WithFreshTransactionAsync(s_readOnlyOptions, default);
+                .ExecuteSqlAsync(Arg.Any<ExecuteSqlRequest>(), Arg.Any<CallSettings>())
+                .Returns(Task.FromResult(new ResultSet()));
+            await pooledSession.ExecuteSqlAsync(new ExecuteSqlRequest(), default);
 
             // The request will have extended the refresh time.
             Assert.Equal(clock.GetCurrentDateTimeUtc() + options.IdleSessionRefreshDelay, pooledSession.RefreshTimeForTest);
 
-            _ = pool.Client.Received(1).BeginTransactionAsync(Arg.Any<BeginTransactionRequest>(), Arg.Any<CallSettings>());
+            _ = pool.Client.Received(1).ExecuteSqlAsync(Arg.Any<ExecuteSqlRequest>(), Arg.Any<CallSettings>());
         }
 
         [Fact]
@@ -122,64 +120,110 @@ namespace Google.Cloud.Spanner.V1.Tests
             // Make a request which fails due to the session not being found (because it has expired).
             var exception = CreateSessionExpiredException();
             pool.Client.Configure()
-                .BeginTransactionAsync(Arg.Any<BeginTransactionRequest>(), Arg.Any<CallSettings>())
-                .Returns(Task.FromException<Transaction>(exception));
+                .ExecuteSqlAsync(Arg.Any<ExecuteSqlRequest>(), Arg.Any<CallSettings>())
+                .Returns(Task.FromException<ResultSet>(exception));
 
-            await Assert.ThrowsAsync<RpcException>(() => pooledSession.WithFreshTransactionAsync(s_readOnlyOptions, default));
+            await Assert.ThrowsAsync<RpcException>(() => pooledSession.ExecuteSqlAsync(new ExecuteSqlRequest(), default));
             Assert.True(pooledSession.ServerExpired);
 
-            _ = pool.Client.Received(1).BeginTransactionAsync(Arg.Any<BeginTransactionRequest>(), Arg.Any<CallSettings>());
+            _ = pool.Client.Received(1).ExecuteSqlAsync(Arg.Any<ExecuteSqlRequest>(), Arg.Any<CallSettings>());
         }
 
         [Fact]
-        public async Task WithFreshTransactionAsync()
+        public async Task NoTransactionOptions()
         {
             var pool = new FakeSessionPool();
             var pooledSession = PooledSession.FromSessionName(pool, s_sampleSessionName);
-            var expectedTransaction = new Transaction
-            {
-                Id = ByteString.CopyFromUtf8("transaction"),
-                ReadTimestamp = DateTimeOffset.UtcNow.ToTimestamp()
-            };
 
             // Make a successful request
             pool.Client.Configure()
-                .BeginTransactionAsync(Arg.Any<BeginTransactionRequest>(), Arg.Any<CallSettings>())
-                .Returns(Task.FromResult(expectedTransaction));
+                .ExecuteSqlAsync(Arg.Any<ExecuteSqlRequest>(), Arg.Any<CallSettings>())
+                .Returns(Task.FromResult(new ResultSet()));
 
-            var newSession = await pooledSession.WithFreshTransactionAsync(s_readOnlyOptions, default);
+            await pooledSession.ExecuteSqlAsync(new ExecuteSqlRequest(), default);
 
-            _ = pool.Client.Received(1).BeginTransactionAsync(
-                Arg.Do<BeginTransactionRequest>(request =>
+            _ = pool.Client.Received(1).ExecuteSqlAsync(
+                Arg.Do<ExecuteSqlRequest>(request =>
                 {
                     Assert.Equal(s_sampleSessionName, request.SessionAsSessionName);
-                    Assert.Equal(ModeOneofCase.ReadOnly, request.Options.ModeCase);
+                    Assert.Null(request.Transaction);
                 }),
                 Arg.Any<CallSettings>());
-
-            Assert.NotSame(newSession, pooledSession);
-            Assert.Equal(pooledSession.SessionName, newSession.SessionName);
-            Assert.Equal(s_readOnlyOptions, newSession.TransactionOptions);
-            Assert.Equal(expectedTransaction.Id, newSession.TransactionId);
-            Assert.Equal(expectedTransaction.ReadTimestamp, newSession.ReadTimestamp);
         }
 
-
         [Fact]
-        public async Task RequestSessionIsPopulated()
+        public async Task SingleUseTransactionOptions()
         {
             var pool = new FakeSessionPool();
-            var pooledSession = PooledSession.FromSessionName(pool, s_sampleSessionName);
+            var pooledSession = PooledSession.FromSessionName(pool, s_sampleSessionName).WithTransactionOptions(s_readOnlyOptions, true);
 
             // Make a successful request
             pool.Client.Configure()
-                .BeginTransactionAsync(Arg.Any<BeginTransactionRequest>(), Arg.Any<CallSettings>())
-                .Returns(Task.FromResult(new Transaction()));
+                .ExecuteSqlAsync(Arg.Any<ExecuteSqlRequest>(), Arg.Any<CallSettings>())
+                .Returns(Task.FromResult(new ResultSet()));
 
-            await pooledSession.WithFreshTransactionAsync(s_readOnlyOptions, default);
+            await pooledSession.ExecuteSqlAsync(new ExecuteSqlRequest(), default);
 
-            _ = pool.Client.Received(1).BeginTransactionAsync(
-                Arg.Do<BeginTransactionRequest>(request => Assert.Equal(s_sampleSessionName, request.SessionAsSessionName)),
+            _ = pool.Client.Received(1).ExecuteSqlAsync(
+                Arg.Do<ExecuteSqlRequest>(request =>
+                {
+                    Assert.Equal(s_sampleSessionName, request.SessionAsSessionName);
+                    Assert.Equal(s_readOnlyOptions, request.Transaction.SingleUse);
+                }),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public async Task ExplicitTransaction()
+        {
+            var transactionId = ByteString.CopyFromUtf8("transaction");
+            var pool = new FakeSessionPool();
+            var pooledSession = PooledSession.FromSessionName(pool, s_sampleSessionName).WithTransaction(transactionId, s_readWriteOptions, false);
+
+            // Make a successful request
+            pool.Client.Configure()
+                .ExecuteSqlAsync(Arg.Any<ExecuteSqlRequest>(), Arg.Any<CallSettings>())
+                .Returns(Task.FromResult(new ResultSet()));
+
+            await pooledSession.ExecuteSqlAsync(new ExecuteSqlRequest(), default);
+
+            _ = pool.Client.Received(1).ExecuteSqlAsync(
+                Arg.Do<ExecuteSqlRequest>(request =>
+                {
+                    Assert.Equal(s_sampleSessionName, request.SessionAsSessionName);
+                    Assert.Equal(transactionId, request.Transaction.Id);
+                }),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public async Task InlinedTransaction()
+        {
+            var transactionId = ByteString.CopyFromUtf8("transaction");
+            var pool = new FakeSessionPool();
+            var pooledSession = PooledSession.FromSessionName(pool, s_sampleSessionName).WithTransactionOptions(s_readWriteOptions, false);
+
+            // Make a successful request
+            pool.Client.Configure()
+                .ExecuteSqlAsync(Arg.Any<ExecuteSqlRequest>(), Arg.Any<CallSettings>())
+                .Returns(Task.FromResult(new ResultSet
+                {
+                    Metadata = new ResultSetMetadata
+                    {
+                        Transaction = new Transaction { Id = transactionId }
+                    }
+                }));
+
+            await pooledSession.ExecuteSqlAsync(new ExecuteSqlRequest(), default);
+
+            Assert.Equal(transactionId, pooledSession.TransactionId);
+
+            _ = pool.Client.Received(1).ExecuteSqlAsync(
+                Arg.Do<ExecuteSqlRequest>(request =>
+                {
+                    Assert.Equal(s_sampleSessionName, request.SessionAsSessionName);
+                    Assert.Equal(s_readWriteOptions, request.Transaction.Begin);
+                }),
                 Arg.Any<CallSettings>());
         }
 
@@ -190,114 +234,9 @@ namespace Google.Cloud.Spanner.V1.Tests
             var pooledSession = PooledSession.FromSessionName(pool, s_sampleSessionName);
             var transactionId = ByteString.CopyFromUtf8("transaction");
             var sessionWithTransaction = pooledSession.WithTransaction(transactionId, s_partitionedDml, singleUseTransaction: false);
-            Assert.Equal(s_partitionedDml, sessionWithTransaction.TransactionOptions);
+            Assert.Equal(s_partitionedDml.ModeCase, sessionWithTransaction.TransactionMode);
             Assert.Equal(transactionId, sessionWithTransaction.TransactionId);
             Assert.Equal(s_sampleSessionName, sessionWithTransaction.SessionName);
-        }
-
-        [Fact]
-        public async Task RequestTransactionIsPopulated()
-        {
-            var pool = new FakeSessionPool();
-            var transactionId = ByteString.CopyFromUtf8("transaction");
-            var pooledSession = PooledSession.FromSessionName(pool, s_sampleSessionName);
-            var sessionWithTransaction = pooledSession.WithTransaction(transactionId, s_readWriteOptions, singleUseTransaction: false);
-
-            // Make a successful request
-            var request = new CommitRequest();
-            pool.Client.Configure().CommitAsync(request, Arg.Any<CallSettings>())
-                .Returns(Task.FromResult(new CommitResponse()));
-            await sessionWithTransaction.CommitAsync(request, null);
-
-            // The call modifies the request. (We can't easily check that it was modified before the RPC)
-            Assert.Equal(s_sampleSessionName, request.SessionAsSessionName);
-            Assert.Equal(transactionId, request.TransactionId);
-
-            _ = pool.Client.Received(1).CommitAsync(request, Arg.Any<CallSettings>());
-        }
-
-        // TODO: Revisit the names of the following 4 tests.
-
-        [Fact]
-        public async Task ExecuteSqlAsync_RequestTransactionIsPopulatedWhenNotPresent()
-        {
-            var pool = new FakeSessionPool();
-            var transactionId = ByteString.CopyFromUtf8("transaction");
-            var pooledSession = PooledSession.FromSessionName(pool, s_sampleSessionName);
-            var sessionWithTransaction = pooledSession.WithTransaction(transactionId, s_readWriteOptions, singleUseTransaction: false);
-
-            // Make a successful request
-            var request = new ExecuteSqlRequest();
-            pool.Client.Configure().ExecuteSqlAsync(request, Arg.Any<CallSettings>())
-                .Returns(Task.FromResult(new ResultSet()));
-            await sessionWithTransaction.ExecuteSqlAsync(request, null);
-
-            // The call modifies the request. (We can't easily check that it was modified before the RPC)
-            Assert.Equal(s_sampleSessionName, request.SessionAsSessionName);
-            Assert.Equal(transactionId, request.Transaction.Id);
-
-            _ = pool.Client.Received(1).ExecuteSqlAsync(request, Arg.Any<CallSettings>());
-        }
-
-        [Fact]
-        public async Task ExecuteSqlAsync_RequestTransactionIsLeftAloneWhenPresent()
-        {
-            var pool = new FakeSessionPool();
-            var pooledSession = PooledSession.FromSessionName(pool, s_sampleSessionName);
-
-            // Make a successful request
-            var request = new ExecuteSqlRequest { Transaction = new TransactionSelector { Begin = s_readOnlyOptions } };
-            pool.Client.Configure().ExecuteSqlAsync(request, Arg.Any<CallSettings>())
-                .Returns(Task.FromResult(new ResultSet()));
-            await pooledSession.ExecuteSqlAsync(request, null);
-
-            // The call modifies the request's session, but not transaction.
-            Assert.Equal(s_sampleSessionName, request.SessionAsSessionName);
-            Assert.Equal(TransactionSelector.SelectorOneofCase.Begin, request.Transaction.SelectorCase);
-            Assert.Equal(s_readOnlyOptions, request.Transaction.Begin);
-
-            _ = pool.Client.Received(1).ExecuteSqlAsync(request, Arg.Any<CallSettings>());
-        }
-
-        [Fact]
-        public async Task ExecuteBatchDmlAsync_RequestTransactionIsPopulatedWhenNotPresent()
-        {
-            var pool = new FakeSessionPool();
-            var transactionId = ByteString.CopyFromUtf8("transaction");
-            var pooledSession = PooledSession.FromSessionName(pool, s_sampleSessionName);
-            var sessionWithTransaction = pooledSession.WithTransaction(transactionId, s_readWriteOptions, singleUseTransaction: false);
-
-            // Make a successful request
-            var request = new ExecuteBatchDmlRequest();
-            pool.Client.Configure().ExecuteBatchDmlAsync(request, Arg.Any<CallSettings>())
-                .Returns(Task.FromResult(new ExecuteBatchDmlResponse()));
-            await sessionWithTransaction.ExecuteBatchDmlAsync(request, null);
-
-            // The call modifies the request. (We can't easily check that it was modified before the RPC)
-            Assert.Equal(s_sampleSessionName, request.SessionAsSessionName);
-            Assert.Equal(transactionId, request.Transaction.Id);
-
-            _ = pool.Client.Received(1).ExecuteBatchDmlAsync(request, Arg.Any<CallSettings>());
-        }
-
-        [Fact]
-        public async Task ExecuteBatchDmlAsync_RequestTransactionIsLeftAloneWhenPresent()
-        {
-            var pool = new FakeSessionPool();
-            var pooledSession = PooledSession.FromSessionName(pool, s_sampleSessionName);
-
-            // Make a successful request
-            var request = new ExecuteBatchDmlRequest { Transaction = new TransactionSelector { Begin = s_readOnlyOptions } };
-            pool.Client.Configure().ExecuteBatchDmlAsync(request, Arg.Any<CallSettings>())
-                .Returns(Task.FromResult(new ExecuteBatchDmlResponse()));
-            await pooledSession.ExecuteBatchDmlAsync(request, null);
-
-            // The call modifies the request's session, but not transaction.
-            Assert.Equal(s_sampleSessionName, request.SessionAsSessionName);
-            Assert.Equal(TransactionSelector.SelectorOneofCase.Begin, request.Transaction.SelectorCase);
-            Assert.Equal(s_readOnlyOptions, request.Transaction.Begin);
-
-            _ = pool.Client.Received(1).ExecuteBatchDmlAsync(request, Arg.Any<CallSettings>());
         }
 
         [Fact]
@@ -329,16 +268,17 @@ namespace Google.Cloud.Spanner.V1.Tests
             // Make a request which fails due to the session not being found (because it has expired).
             var exception = CreateSessionExpiredException();
             pool.Client.Configure()
-                .BeginTransactionAsync(Arg.Any<BeginTransactionRequest>(), Arg.Any<CallSettings>())
-                .Returns(Task.FromException<Transaction>(exception));
-            await Assert.ThrowsAsync<RpcException>(() => pooledSession.WithFreshTransactionAsync(s_readOnlyOptions, default));
+                .ExecuteSqlAsync(Arg.Any<ExecuteSqlRequest>(), Arg.Any<CallSettings>())
+                .Returns(Task.FromException<ResultSet>(exception));
+
+            await Assert.ThrowsAsync<RpcException>(() => pooledSession.ExecuteSqlAsync(new ExecuteSqlRequest(), default));
 
             // When we release the session, the pool should delete it even if we didn't ask it to.
             pooledSession.ReleaseToPool(false);
             Assert.True(pool.ReleasedSessionDeleted);
             Assert.Null(pool.RolledBackTransaction);
 
-            _ = pool.Client.Received(1).BeginTransactionAsync(Arg.Any<BeginTransactionRequest>(), Arg.Any<CallSettings>());
+            _ = pool.Client.Received(1).ExecuteSqlAsync(Arg.Any<ExecuteSqlRequest>(), Arg.Any<CallSettings>());
         }
 
         [Fact]
@@ -368,7 +308,7 @@ namespace Google.Cloud.Spanner.V1.Tests
 
             // We now can't make RPCs
             await Assert.ThrowsAsync<ObjectDisposedException>(
-                () => pooledSession.WithFreshTransactionAsync(pooledSession.TransactionOptions, default));
+                () => pooledSession.ExecuteSqlAsync(new ExecuteSqlRequest(), default));
         }
 
         [Fact]
@@ -463,7 +403,7 @@ namespace Google.Cloud.Spanner.V1.Tests
 
             public void Detach(PooledSession session) => throw new NotImplementedException();
 
-            public Task<PooledSession> WithFreshTransactionOrNewAsync(PooledSession session, TransactionOptions transactionOptions, CancellationToken cancellationToken) =>
+            public Task<PooledSession> RefreshedOrNewAsync(PooledSession session, TransactionOptions transactionOptions, bool singleUseTransaction, CancellationToken cancellationToken) =>
                 throw new NotImplementedException();
         }
     }
