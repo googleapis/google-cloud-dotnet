@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.6.0, released 2023-11-13
+
+### Documentation improvements
+
+- Updated comments explaining if a field is optional or required ([commit 91d1b84](https://github.com/googleapis/google-cloud-dotnet/commit/91d1b8400e4200f791e33b65a1521a87bf13625d))
+
 ## Version 2.5.0, released 2023-10-30
 
 ### New features
