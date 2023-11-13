@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.1.0, released 2023-11-13
+
+### New features
+
+- Add a new field `token_type` to `TokenOptions` message proto ([commit e15fa62](https://github.com/googleapis/google-cloud-dotnet/commit/e15fa62d37e78fb4d17f9431af1453836bb58d4f))
+
 ## Version 1.0.0, released 2023-11-01
 
 No API surface changes; just dependency updates and promotion to GA.
