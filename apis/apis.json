@@ -2083,6 +2083,28 @@
       "transport": "grpc+rest"
     },
     {
+      "id": "Google.Cloud.EdgeNetwork.V1",
+      "version": "1.0.0-beta01",
+      "type": "grpc",
+      "productName": "Distributed Cloud Edge Network",
+      "productUrl": "https://cloud.google.com/distributed-cloud/edge/latest/docs/overview",
+      "description": "Recommended Google client library to access the Google Distributed Cloud Edge Network API, which enables a management for Distributed Cloud Edge.",
+      "tags": [
+        "management",
+        "networks",
+        "distributed"
+      ],
+      "dependencies": {
+        "Google.Cloud.Location": "2.0.0",
+        "Google.LongRunning": "3.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/edgenetwork/v1",
+      "shortName": "edgenetwork",
+      "serviceConfigFile": "edgenetwork_v1.yaml",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.EnterpriseKnowledgeGraph.V1",
       "version": "1.0.0-beta01",
       "type": "grpc",
