@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
 using Google.Api.Gax.ResourceNames;
 using Google.Cloud.SecretManager.V1;
 using Google.Protobuf;
@@ -39,20 +38,19 @@ internal class CloudSecretManagerXmlRepository : IXmlRepository
     private readonly SecretName _secretName;
     private readonly ProjectName _projectName;
     private readonly SecretVersionName _version;
-    private readonly CallSettings _callSettings = CallSettingsExtensions.WithRetry(CallSettings.FromExpiration(Expiration.FromTimeout(TimeSpan.FromMilliseconds(10000))), RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: TimeSpan.FromMilliseconds(0.2), maxBackoff: TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.5, retryFilter: RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Unavailable)));
 
-    internal CloudSecretManagerXmlRepository(SecretManagerServiceClient client, string secretName, string projectName)
+    internal CloudSecretManagerXmlRepository(SecretManagerServiceClient client, string secretName, string projectId)
     {
         _secretManagerServiceClient = GaxPreconditions.CheckNotNull(client, nameof(client));
         GaxPreconditions.CheckNotNull(secretName, nameof(secretName));
-        GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
-        _projectName = new ProjectName(projectName);
-        _secretName = new SecretName(projectName, secretName);
+        GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+        _projectName = new ProjectName(projectId);
+        _secretName = new SecretName(projectId, secretName);
 
         // Version is populated in such a way that it always refers to the most latest version.
         // For more information on version naming refer to
         // https://cloud.google.com/dotnet/docs/reference/Google.Cloud.SecretManager.V1/latest/Google.Cloud.SecretManager.V1.AccessSecretVersionRequest#Google_Cloud_SecretManager_V1_AccessSecretVersionRequest_Name
-        _version = SecretVersionName.FromProjectSecretSecretVersion(projectName, secretName, "latest");
+        _version = SecretVersionName.FromProjectSecretSecretVersion(projectId, secretName, "latest");
     }
 
     /// <inheritdoc />
@@ -62,22 +60,16 @@ internal class CloudSecretManagerXmlRepository : IXmlRepository
         {
             return Array.Empty<XElement>();
         }
-        var accessSecretVersionResponse = GetSecretVersionResponse();
+        var accessSecretVersionResponse = _secretManagerServiceClient.AccessSecretVersion(_version);
 
         if (accessSecretVersionResponse != null)
         {
             var secretPayload = accessSecretVersionResponse.Payload.Data.ToStringUtf8();
             XDocument document = XDocument.Parse(secretPayload);
             var xElements = document.Root.Elements().ToList();
-            return xElements ?? (IReadOnlyCollection<XElement>) Array.Empty<XElement>();
+            return xElements;
         }
         return Array.Empty<XElement>();
-
-        AccessSecretVersionResponse GetSecretVersionResponse()
-        {
-            var response = _secretManagerServiceClient.AccessSecretVersion(_version, _callSettings);
-            return response;
-        }
     }
 
     /// <inheritdoc />
@@ -93,7 +85,7 @@ internal class CloudSecretManagerXmlRepository : IXmlRepository
         {
             Data = ByteString.CopyFrom(document.ToString(), Encoding.UTF8)
         };
-        _secretManagerServiceClient.AddSecretVersion(_secretName, payload, _callSettings);
+        _secretManagerServiceClient.AddSecretVersion(_secretName, payload);
     }
 
     private void CreateSecret()
@@ -110,7 +102,7 @@ internal class CloudSecretManagerXmlRepository : IXmlRepository
             ParentAsProjectName = _projectName,
             SecretId = _secretName.SecretId
         };
-        _secretManagerServiceClient.CreateSecret(createSecretRequest, _callSettings);
+        _secretManagerServiceClient.CreateSecret(createSecretRequest);
     }
 
     private bool SecretExists()

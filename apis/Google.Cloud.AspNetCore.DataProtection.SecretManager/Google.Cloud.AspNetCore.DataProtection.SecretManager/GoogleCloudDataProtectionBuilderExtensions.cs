@@ -30,11 +30,11 @@ public static class GoogleCloudDataProtectionBuilderExtensions
     /// Configures data protection system to persist keys in Google Cloud Secret Manager.
     /// </summary>
     /// <param name="builder">The data protection builder to configure. Must not be null.</param>
-    /// <param name="projectName">The project id in which the keys are stored. Must not be null</param>
+    /// <param name="projectId">The project id in which the keys are stored. Must not be null</param>
     /// <param name="secretName">The name of the secret in which to store the keys. Must not be null.</param>
     public static IDataProtectionBuilder PersistKeysToGoogleCloudSecretManager(
-            this IDataProtectionBuilder builder, string projectName, string secretName) =>
-            PersistKeysToGoogleCloudSecretManager(builder, projectName, secretName, null);
+            this IDataProtectionBuilder builder, string projectId, string secretName) =>
+            PersistKeysToGoogleCloudSecretManager(builder, projectId, secretName, null);
 
     /// <summary>
     /// Configures data protection builder <see cref="IDataProtectionBuilder"/> to persist keys in Google Cloud Secret Manager.
@@ -50,13 +50,13 @@ public static class GoogleCloudDataProtectionBuilderExtensions
     /// </para>
     /// </remarks>
     /// <param name="builder">The data protection builder to configure. Must not be null.</param>
-    /// <param name="projectName">The project id in which the keys are stored. Must not be null</param>
+    /// <param name="projectId">The project id in which the keys are stored. Must not be null</param>
     /// <param name="secretName">The name of the secret in which to store the keys. Must not be null.</param>
     /// <param name="client">The Google Cloud Secret Manager client to use for requests. May be null in which case the client will
     /// be fetched from dependency injection or created with the default credentials.</param>
     /// <returns>The same builder, for chaining purposes</returns>
     public static IDataProtectionBuilder PersistKeysToGoogleCloudSecretManager(
-            this IDataProtectionBuilder builder, string projectName, string secretName, SecretManagerServiceClient client)
+            this IDataProtectionBuilder builder, string projectId, string secretName, SecretManagerServiceClient client)
     {
         builder.Services.AddSingleton<IConfigureOptions<KeyManagementOptions>>(services =>
         {
@@ -71,7 +71,7 @@ public static class GoogleCloudDataProtectionBuilderExtensions
                 }
             }
             return new ConfigureOptions<KeyManagementOptions>(options =>
-                options.XmlRepository = new CloudSecretManagerXmlRepository(client, secretName, projectName));
+                options.XmlRepository = new CloudSecretManagerXmlRepository(client, secretName, projectId));
         });
         return builder;
     }
