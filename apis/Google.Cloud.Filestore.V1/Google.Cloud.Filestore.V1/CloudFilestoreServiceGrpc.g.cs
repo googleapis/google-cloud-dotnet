@@ -98,6 +98,8 @@ namespace Google.Cloud.Filestore.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Filestore.V1.RestoreInstanceRequest> __Marshaller_google_cloud_filestore_v1_RestoreInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Filestore.V1.RestoreInstanceRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Filestore.V1.RevertInstanceRequest> __Marshaller_google_cloud_filestore_v1_RevertInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Filestore.V1.RevertInstanceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Filestore.V1.DeleteInstanceRequest> __Marshaller_google_cloud_filestore_v1_DeleteInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Filestore.V1.DeleteInstanceRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Filestore.V1.ListSnapshotsRequest> __Marshaller_google_cloud_filestore_v1_ListSnapshotsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Filestore.V1.ListSnapshotsRequest.Parser));
@@ -166,6 +168,14 @@ namespace Google.Cloud.Filestore.V1 {
         __ServiceName,
         "RestoreInstance",
         __Marshaller_google_cloud_filestore_v1_RestoreInstanceRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Filestore.V1.RevertInstanceRequest, global::Google.LongRunning.Operation> __Method_RevertInstance = new grpc::Method<global::Google.Cloud.Filestore.V1.RevertInstanceRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RevertInstance",
+        __Marshaller_google_cloud_filestore_v1_RevertInstanceRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -330,6 +340,18 @@ namespace Google.Cloud.Filestore.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RestoreInstance(global::Google.Cloud.Filestore.V1.RestoreInstanceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Revert an existing instance's file system to a specified snapshot.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RevertInstance(global::Google.Cloud.Filestore.V1.RevertInstanceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -768,6 +790,54 @@ namespace Google.Cloud.Filestore.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RestoreInstanceAsync(global::Google.Cloud.Filestore.V1.RestoreInstanceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RestoreInstance, null, options, request);
+      }
+      /// <summary>
+      /// Revert an existing instance's file system to a specified snapshot.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RevertInstance(global::Google.Cloud.Filestore.V1.RevertInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RevertInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Revert an existing instance's file system to a specified snapshot.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RevertInstance(global::Google.Cloud.Filestore.V1.RevertInstanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RevertInstance, null, options, request);
+      }
+      /// <summary>
+      /// Revert an existing instance's file system to a specified snapshot.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RevertInstanceAsync(global::Google.Cloud.Filestore.V1.RevertInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RevertInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Revert an existing instance's file system to a specified snapshot.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RevertInstanceAsync(global::Google.Cloud.Filestore.V1.RevertInstanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RevertInstance, null, options, request);
       }
       /// <summary>
       /// Deletes an instance.
@@ -1324,6 +1394,7 @@ namespace Google.Cloud.Filestore.V1 {
           .AddMethod(__Method_CreateInstance, serviceImpl.CreateInstance)
           .AddMethod(__Method_UpdateInstance, serviceImpl.UpdateInstance)
           .AddMethod(__Method_RestoreInstance, serviceImpl.RestoreInstance)
+          .AddMethod(__Method_RevertInstance, serviceImpl.RevertInstance)
           .AddMethod(__Method_DeleteInstance, serviceImpl.DeleteInstance)
           .AddMethod(__Method_ListSnapshots, serviceImpl.ListSnapshots)
           .AddMethod(__Method_GetSnapshot, serviceImpl.GetSnapshot)
@@ -1349,6 +1420,7 @@ namespace Google.Cloud.Filestore.V1 {
       serviceBinder.AddMethod(__Method_CreateInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Filestore.V1.CreateInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateInstance));
       serviceBinder.AddMethod(__Method_UpdateInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Filestore.V1.UpdateInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateInstance));
       serviceBinder.AddMethod(__Method_RestoreInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Filestore.V1.RestoreInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.RestoreInstance));
+      serviceBinder.AddMethod(__Method_RevertInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Filestore.V1.RevertInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.RevertInstance));
       serviceBinder.AddMethod(__Method_DeleteInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Filestore.V1.DeleteInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteInstance));
       serviceBinder.AddMethod(__Method_ListSnapshots, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Filestore.V1.ListSnapshotsRequest, global::Google.Cloud.Filestore.V1.ListSnapshotsResponse>(serviceImpl.ListSnapshots));
       serviceBinder.AddMethod(__Method_GetSnapshot, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Filestore.V1.GetSnapshotRequest, global::Google.Cloud.Filestore.V1.Snapshot>(serviceImpl.GetSnapshot));

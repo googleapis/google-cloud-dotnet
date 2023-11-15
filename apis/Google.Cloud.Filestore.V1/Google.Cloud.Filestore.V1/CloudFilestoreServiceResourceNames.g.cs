@@ -807,6 +807,18 @@ namespace Google.Cloud.Filestore.V1
         }
     }
 
+    public partial class RevertInstanceRequest
+    {
+        /// <summary>
+        /// <see cref="gcfv::InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcfv::InstanceName InstanceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcfv::InstanceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class DeleteInstanceRequest
     {
         /// <summary>
