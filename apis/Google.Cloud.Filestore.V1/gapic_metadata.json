@@ -88,6 +88,12 @@
                 "RestoreInstanceAsync"
               ]
             },
+            "RevertInstance": {
+              "methods": [
+                "RevertInstance",
+                "RevertInstanceAsync"
+              ]
+            },
             "UpdateBackup": {
               "methods": [
                 "UpdateBackup",

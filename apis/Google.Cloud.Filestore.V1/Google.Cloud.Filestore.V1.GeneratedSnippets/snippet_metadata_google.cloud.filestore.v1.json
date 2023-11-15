@@ -1233,6 +1233,103 @@
       ]
     },
     {
+      "regionTag": "file_v1_generated_CloudFilestoreManager_RevertInstance_sync",
+      "title": "RevertInstanceRequestObject",
+      "description": "Snippet for RevertInstance",
+      "file": "CloudFilestoreManagerClient.RevertInstanceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RevertInstance",
+        "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient.RevertInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Filestore.V1.RevertInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Filestore.V1.Instance, Google.Cloud.Common.OperationMetadata>",
+        "client": {
+          "shortName": "CloudFilestoreManagerClient",
+          "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient"
+        },
+        "method": {
+          "shortName": "RevertInstance",
+          "fullName": "google.cloud.filestore.v1.CloudFilestoreManager.RevertInstance",
+          "service": {
+            "shortName": "CloudFilestoreManager",
+            "fullName": "google.cloud.filestore.v1.CloudFilestoreManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "file_v1_generated_CloudFilestoreManager_RevertInstance_async",
+      "title": "RevertInstanceRequestObjectAsync",
+      "description": "Snippet for RevertInstanceAsync",
+      "file": "CloudFilestoreManagerClient.RevertInstanceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RevertInstanceAsync",
+        "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient.RevertInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Filestore.V1.RevertInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Filestore.V1.Instance, Google.Cloud.Common.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudFilestoreManagerClient",
+          "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient"
+        },
+        "method": {
+          "shortName": "RevertInstance",
+          "fullName": "google.cloud.filestore.v1.CloudFilestoreManager.RevertInstance",
+          "service": {
+            "shortName": "CloudFilestoreManager",
+            "fullName": "google.cloud.filestore.v1.CloudFilestoreManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "file_v1_generated_CloudFilestoreManager_DeleteInstance_sync",
       "title": "DeleteInstanceRequestObject",
       "description": "Snippet for DeleteInstance",
