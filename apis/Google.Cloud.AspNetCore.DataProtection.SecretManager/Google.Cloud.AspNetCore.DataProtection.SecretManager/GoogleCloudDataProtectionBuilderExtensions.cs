@@ -27,7 +27,7 @@ namespace Google.Cloud.AspNetCore.DataProtection.SecretManager;
 public static class GoogleCloudDataProtectionBuilderExtensions
 {
     /// <summary>
-    /// Configures data protection system to persist keys in Google Cloud Secret Manager.
+    /// Configures the data protection system to persist keys in Google Cloud Secret Manager.
     /// </summary>
     /// <param name="builder">The data protection builder to configure. Must not be null.</param>
     /// <param name="projectId">The project id in which the keys are stored. Must not be null</param>
@@ -37,7 +37,7 @@ public static class GoogleCloudDataProtectionBuilderExtensions
             PersistKeysToGoogleCloudSecretManager(builder, projectId, secretName, null);
 
     /// <summary>
-    /// Configures data protection builder <see cref="IDataProtectionBuilder"/> to persist keys in Google Cloud Secret Manager.
+    /// Configures the data protection builder <see cref="IDataProtectionBuilder"/> to persist keys in Google Cloud Secret Manager.
     /// </summary>
     /// <remarks>
     /// <para>
@@ -66,8 +66,17 @@ public static class GoogleCloudDataProtectionBuilderExtensions
                 if (client == null)
                 {
                     var credential = services.GetService<GoogleCredential>();
-                    // If credential is null, this will use the default credentials automatically.
-                    client = SecretManagerServiceClient.Create();
+                    if (credential == null)
+                    {
+                        client = SecretManagerServiceClient.Create();
+                    }
+                    else
+                    {
+                        client = new SecretManagerServiceClientBuilder
+                        {
+                            Credential = credential
+                        }.Build();
+                    }
                 }
             }
             return new ConfigureOptions<KeyManagementOptions>(options =>

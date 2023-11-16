@@ -16,14 +16,16 @@ using Google.Cloud.ClientTesting;
 using Google.Cloud.SecretManager.V1;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using Xunit;
 
-namespace IntegrationTests;
+namespace Google.Cloud.AspNetCore.DataProtection.SecretManager.IntegrationTests;
 
 [CollectionDefinition(nameof(SecretManagerFixture))]
 public class SecretManagerFixture : CloudProjectFixtureBase, ICollectionFixture<SecretManagerFixture>
 {
     private readonly IList<string> _generatedSecrets = new List<string>();
+    public readonly DirectoryInfo  DirectoryInfo = new DirectoryInfo(Path.GetFullPath(@".\temp"));
 
     private SecretManagerServiceClient _client { get; }
 
@@ -39,18 +41,24 @@ public class SecretManagerFixture : CloudProjectFixtureBase, ICollectionFixture<
 
     public override void Dispose()
     {
-        foreach(var secret in _generatedSecrets)
+        foreach (var secret in _generatedSecrets)
         {
             try
             {
                 SecretName secretName = new SecretName(ProjectId, secret);
                 _client.DeleteSecret(secretName);
             }
-            catch (Exception ex)
+            catch
             {
-                Console.WriteLine($"Exception while deleting secret {secret}");
-                Console.WriteLine($"Exception {ex.StackTrace}");
+                // We're swallowing the exception.
             }
         }
+        // Deleting the files and folder created and used by FileXmlRespository.
+        FileInfo[] files = DirectoryInfo.GetFiles();
+        foreach (FileInfo file in files)
+        {
+            file.Delete();
+        }
+        DirectoryInfo.Delete();
     }
 }

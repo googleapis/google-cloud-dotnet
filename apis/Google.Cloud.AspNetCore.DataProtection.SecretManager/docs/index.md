@@ -7,11 +7,9 @@ or CSRF protection across multiple servers
 Follow the examples below to see how the library can be integrated into your application.
 
 ## Sample code
-```csharp
-public void ConfigureServices(IServiceCollection services)
-{
-    services.AddDataProtection()
-        .PersistKeysToGoogleCloudSecretManager("ProjectId", "SecretName", new SecretManagerServiceClient());
 
-}
-```
+{{sample:DataProtectionExtensionMethods.RegisterSecretManagerClient}}
+
+{{sample:DataProtectionExtensionMethods.RegisterGoogleCredentials}}
+
+{{sample:DataProtectionExtensionMethods.UseDefaultSecretManagerClientWithADC}}

@@ -31,8 +31,8 @@
         "Security"
       ],
       "dependencies": {
-          "Google.Cloud.SecretManager.V1": "2.1.0",
-          "Microsoft.AspNetCore.DataProtection": "6.0.0"
+        "Google.Cloud.SecretManager.V1": "2.1.0",
+        "Microsoft.AspNetCore.DataProtection": "6.0.0"
       }
     },
     {
