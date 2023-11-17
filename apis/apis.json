@@ -4665,6 +4665,29 @@
       "transport": "grpc+rest"
     },
     {
+      "id": "Google.Cloud.TelcoAutomation.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Telco Automation",
+      "productUrl": "https://cloud.google.com/telecom-network-automation",
+      "description": "Recommended Google client library to access the Google Cloud Telco Automation API, which automates 5G deployment and management of cloud infrastructure and network functions.",
+      "tags": [
+        "automation",
+        "telco",
+        "telecoms",
+        "Nephio"
+      ],
+      "dependencies": {
+        "Google.Cloud.Location": "2.0.0",
+        "Google.LongRunning": "3.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/telcoautomation/v1",
+      "shortName": "telcoautomation",
+      "serviceConfigFile": "telcoautomation_v1.yaml",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.TextToSpeech.V1",
       "generator": "micro",
       "protoPath": "google/cloud/texttospeech/v1",
