@@ -82,6 +82,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.FulfillIntentRequest> __Marshaller_google_cloud_dialogflow_cx_v3_FulfillIntentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.FulfillIntentRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.FulfillIntentResponse> __Marshaller_google_cloud_dialogflow_cx_v3_FulfillIntentResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.FulfillIntentResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.SubmitAnswerFeedbackRequest> __Marshaller_google_cloud_dialogflow_cx_v3_SubmitAnswerFeedbackRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.SubmitAnswerFeedbackRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.AnswerFeedback> __Marshaller_google_cloud_dialogflow_cx_v3_AnswerFeedback = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.AnswerFeedback.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentRequest, global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentResponse> __Method_DetectIntent = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentRequest, global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentResponse>(
@@ -114,6 +118,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         "FulfillIntent",
         __Marshaller_google_cloud_dialogflow_cx_v3_FulfillIntentRequest,
         __Marshaller_google_cloud_dialogflow_cx_v3_FulfillIntentResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.SubmitAnswerFeedbackRequest, global::Google.Cloud.Dialogflow.Cx.V3.AnswerFeedback> __Method_SubmitAnswerFeedback = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.SubmitAnswerFeedbackRequest, global::Google.Cloud.Dialogflow.Cx.V3.AnswerFeedback>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SubmitAnswerFeedback",
+        __Marshaller_google_cloud_dialogflow_cx_v3_SubmitAnswerFeedbackRequest,
+        __Marshaller_google_cloud_dialogflow_cx_v3_AnswerFeedback);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -190,6 +202,19 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.Cx.V3.FulfillIntentResponse> FulfillIntent(global::Google.Cloud.Dialogflow.Cx.V3.FulfillIntentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the feedback received from the user for a single turn of the bot
+      /// response.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.Cx.V3.AnswerFeedback> SubmitAnswerFeedback(global::Google.Cloud.Dialogflow.Cx.V3.SubmitAnswerFeedbackRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -457,6 +482,58 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_FulfillIntent, null, options, request);
       }
+      /// <summary>
+      /// Updates the feedback received from the user for a single turn of the bot
+      /// response.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dialogflow.Cx.V3.AnswerFeedback SubmitAnswerFeedback(global::Google.Cloud.Dialogflow.Cx.V3.SubmitAnswerFeedbackRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SubmitAnswerFeedback(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the feedback received from the user for a single turn of the bot
+      /// response.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dialogflow.Cx.V3.AnswerFeedback SubmitAnswerFeedback(global::Google.Cloud.Dialogflow.Cx.V3.SubmitAnswerFeedbackRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SubmitAnswerFeedback, null, options, request);
+      }
+      /// <summary>
+      /// Updates the feedback received from the user for a single turn of the bot
+      /// response.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.AnswerFeedback> SubmitAnswerFeedbackAsync(global::Google.Cloud.Dialogflow.Cx.V3.SubmitAnswerFeedbackRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SubmitAnswerFeedbackAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the feedback received from the user for a single turn of the bot
+      /// response.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.AnswerFeedback> SubmitAnswerFeedbackAsync(global::Google.Cloud.Dialogflow.Cx.V3.SubmitAnswerFeedbackRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SubmitAnswerFeedback, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override SessionsClient NewInstance(ClientBaseConfiguration configuration)
@@ -474,7 +551,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           .AddMethod(__Method_DetectIntent, serviceImpl.DetectIntent)
           .AddMethod(__Method_StreamingDetectIntent, serviceImpl.StreamingDetectIntent)
           .AddMethod(__Method_MatchIntent, serviceImpl.MatchIntent)
-          .AddMethod(__Method_FulfillIntent, serviceImpl.FulfillIntent).Build();
+          .AddMethod(__Method_FulfillIntent, serviceImpl.FulfillIntent)
+          .AddMethod(__Method_SubmitAnswerFeedback, serviceImpl.SubmitAnswerFeedback).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -488,6 +566,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       serviceBinder.AddMethod(__Method_StreamingDetectIntent, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentRequest, global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentResponse>(serviceImpl.StreamingDetectIntent));
       serviceBinder.AddMethod(__Method_MatchIntent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.MatchIntentRequest, global::Google.Cloud.Dialogflow.Cx.V3.MatchIntentResponse>(serviceImpl.MatchIntent));
       serviceBinder.AddMethod(__Method_FulfillIntent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.FulfillIntentRequest, global::Google.Cloud.Dialogflow.Cx.V3.FulfillIntentResponse>(serviceImpl.FulfillIntent));
+      serviceBinder.AddMethod(__Method_SubmitAnswerFeedback, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.SubmitAnswerFeedbackRequest, global::Google.Cloud.Dialogflow.Cx.V3.AnswerFeedback>(serviceImpl.SubmitAnswerFeedback));
     }
 
   }

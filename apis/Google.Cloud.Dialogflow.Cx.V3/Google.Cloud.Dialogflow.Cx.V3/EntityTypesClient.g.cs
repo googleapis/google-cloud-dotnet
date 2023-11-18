@@ -47,34 +47,16 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         private EntityTypesSettings(EntityTypesSettings existing) : base(existing)
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
-            ListEntityTypesSettings = existing.ListEntityTypesSettings;
             GetEntityTypeSettings = existing.GetEntityTypeSettings;
             CreateEntityTypeSettings = existing.CreateEntityTypeSettings;
             UpdateEntityTypeSettings = existing.UpdateEntityTypeSettings;
             DeleteEntityTypeSettings = existing.DeleteEntityTypeSettings;
+            ListEntityTypesSettings = existing.ListEntityTypesSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
 
         partial void OnCopy(EntityTypesSettings existing);
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>EntityTypesClient.ListEntityTypes</c> and <c>EntityTypesClient.ListEntityTypesAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: Unlimited</description></item>
-        /// <item>
-        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings ListEntityTypesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -147,6 +129,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteEntityTypeSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EntityTypesClient.ListEntityTypes</c> and <c>EntityTypesClient.ListEntityTypesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListEntityTypesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -297,124 +297,6 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
         public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Returns the list of all entity types in the specified agent.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="EntityType"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypes(ListEntityTypesRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Returns the list of all entity types in the specified agent.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="EntityType"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypesAsync(ListEntityTypesRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Returns the list of all entity types in the specified agent.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The agent to list all entity types for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="EntityType"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEntityTypes(new ListEntityTypesRequest
-            {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
-
-        /// <summary>
-        /// Returns the list of all entity types in the specified agent.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The agent to list all entity types for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="EntityType"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEntityTypesAsync(new ListEntityTypesRequest
-            {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
-
-        /// <summary>
-        /// Returns the list of all entity types in the specified agent.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The agent to list all entity types for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="EntityType"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypes(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEntityTypes(new ListEntityTypesRequest
-            {
-                ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
-
-        /// <summary>
-        /// Returns the list of all entity types in the specified agent.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The agent to list all entity types for.
-        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="EntityType"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypesAsync(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEntityTypesAsync(new ListEntityTypesRequest
-            {
-                ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
 
         /// <summary>
         /// Retrieves the specified entity type.
@@ -955,6 +837,124 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeleteEntityTypeAsync(EntityTypeName name, st::CancellationToken cancellationToken) =>
             DeleteEntityTypeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the list of all entity types in the specified agent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="EntityType"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypes(ListEntityTypesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the list of all entity types in the specified agent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="EntityType"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypesAsync(ListEntityTypesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the list of all entity types in the specified agent.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The agent to list all entity types for.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="EntityType"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListEntityTypes(new ListEntityTypesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the list of all entity types in the specified agent.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The agent to list all entity types for.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="EntityType"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListEntityTypesAsync(new ListEntityTypesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the list of all entity types in the specified agent.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The agent to list all entity types for.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="EntityType"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypes(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListEntityTypes(new ListEntityTypesRequest
+            {
+                ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the list of all entity types in the specified agent.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The agent to list all entity types for.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="EntityType"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypesAsync(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListEntityTypesAsync(new ListEntityTypesRequest
+            {
+                ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
     }
 
     /// <summary>EntityTypes client wrapper implementation, for convenient use.</summary>
@@ -963,8 +963,6 @@ namespace Google.Cloud.Dialogflow.Cx.V3
     /// </remarks>
     public sealed partial class EntityTypesClientImpl : EntityTypesClient
     {
-        private readonly gaxgrpc::ApiCall<ListEntityTypesRequest, ListEntityTypesResponse> _callListEntityTypes;
-
         private readonly gaxgrpc::ApiCall<GetEntityTypeRequest, EntityType> _callGetEntityType;
 
         private readonly gaxgrpc::ApiCall<CreateEntityTypeRequest, EntityType> _callCreateEntityType;
@@ -972,6 +970,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         private readonly gaxgrpc::ApiCall<UpdateEntityTypeRequest, EntityType> _callUpdateEntityType;
 
         private readonly gaxgrpc::ApiCall<DeleteEntityTypeRequest, wkt::Empty> _callDeleteEntityType;
+
+        private readonly gaxgrpc::ApiCall<ListEntityTypesRequest, ListEntityTypesResponse> _callListEntityTypes;
 
         /// <summary>
         /// Constructs a client wrapper for the EntityTypes service, with the specified gRPC client and settings.
@@ -985,9 +985,6 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             EntityTypesSettings effectiveSettings = settings ?? EntityTypesSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
-            _callListEntityTypes = clientHelper.BuildApiCall<ListEntityTypesRequest, ListEntityTypesResponse>("ListEntityTypes", grpcClient.ListEntityTypesAsync, grpcClient.ListEntityTypes, effectiveSettings.ListEntityTypesSettings).WithGoogleRequestParam("parent", request => request.Parent);
-            Modify_ApiCall(ref _callListEntityTypes);
-            Modify_ListEntityTypesApiCall(ref _callListEntityTypes);
             _callGetEntityType = clientHelper.BuildApiCall<GetEntityTypeRequest, EntityType>("GetEntityType", grpcClient.GetEntityTypeAsync, grpcClient.GetEntityType, effectiveSettings.GetEntityTypeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetEntityType);
             Modify_GetEntityTypeApiCall(ref _callGetEntityType);
@@ -1000,12 +997,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             _callDeleteEntityType = clientHelper.BuildApiCall<DeleteEntityTypeRequest, wkt::Empty>("DeleteEntityType", grpcClient.DeleteEntityTypeAsync, grpcClient.DeleteEntityType, effectiveSettings.DeleteEntityTypeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteEntityType);
             Modify_DeleteEntityTypeApiCall(ref _callDeleteEntityType);
+            _callListEntityTypes = clientHelper.BuildApiCall<ListEntityTypesRequest, ListEntityTypesResponse>("ListEntityTypes", grpcClient.ListEntityTypesAsync, grpcClient.ListEntityTypes, effectiveSettings.ListEntityTypesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListEntityTypes);
+            Modify_ListEntityTypesApiCall(ref _callListEntityTypes);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
-
-        partial void Modify_ListEntityTypesApiCall(ref gaxgrpc::ApiCall<ListEntityTypesRequest, ListEntityTypesResponse> call);
 
         partial void Modify_GetEntityTypeApiCall(ref gaxgrpc::ApiCall<GetEntityTypeRequest, EntityType> call);
 
@@ -1015,6 +1013,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         partial void Modify_DeleteEntityTypeApiCall(ref gaxgrpc::ApiCall<DeleteEntityTypeRequest, wkt::Empty> call);
 
+        partial void Modify_ListEntityTypesApiCall(ref gaxgrpc::ApiCall<ListEntityTypesRequest, ListEntityTypesResponse> call);
+
         partial void OnConstruction(EntityTypes.EntityTypesClient grpcClient, EntityTypesSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC EntityTypes client</summary>
@@ -1022,8 +1022,6 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
         public override gcl::LocationsClient LocationsClient { get; }
-
-        partial void Modify_ListEntityTypesRequest(ref ListEntityTypesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetEntityTypeRequest(ref GetEntityTypeRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1033,29 +1031,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         partial void Modify_DeleteEntityTypeRequest(ref DeleteEntityTypeRequest request, ref gaxgrpc::CallSettings settings);
 
-        /// <summary>
-        /// Returns the list of all entity types in the specified agent.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="EntityType"/> resources.</returns>
-        public override gax::PagedEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypes(ListEntityTypesRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_ListEntityTypesRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedEnumerable<ListEntityTypesRequest, ListEntityTypesResponse, EntityType>(_callListEntityTypes, request, callSettings);
-        }
-
-        /// <summary>
-        /// Returns the list of all entity types in the specified agent.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="EntityType"/> resources.</returns>
-        public override gax::PagedAsyncEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypesAsync(ListEntityTypesRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_ListEntityTypesRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListEntityTypesRequest, ListEntityTypesResponse, EntityType>(_callListEntityTypes, request, callSettings);
-        }
+        partial void Modify_ListEntityTypesRequest(ref ListEntityTypesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Retrieves the specified entity type.
@@ -1175,6 +1151,30 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             Modify_DeleteEntityTypeRequest(ref request, ref callSettings);
             return _callDeleteEntityType.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the list of all entity types in the specified agent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="EntityType"/> resources.</returns>
+        public override gax::PagedEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypes(ListEntityTypesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListEntityTypesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListEntityTypesRequest, ListEntityTypesResponse, EntityType>(_callListEntityTypes, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the list of all entity types in the specified agent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="EntityType"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListEntityTypesResponse, EntityType> ListEntityTypesAsync(ListEntityTypesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListEntityTypesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListEntityTypesRequest, ListEntityTypesResponse, EntityType>(_callListEntityTypes, request, callSettings);
         }
     }
 
