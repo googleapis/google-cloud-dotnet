@@ -50,6 +50,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             StreamingDetectIntentStreamingSettings = existing.StreamingDetectIntentStreamingSettings;
             MatchIntentSettings = existing.MatchIntentSettings;
             FulfillIntentSettings = existing.FulfillIntentSettings;
+            SubmitAnswerFeedbackSettings = existing.SubmitAnswerFeedbackSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -128,6 +129,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings FulfillIntentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SessionsClient.SubmitAnswerFeedback</c> and <c>SessionsClient.SubmitAnswerFeedbackAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SubmitAnswerFeedbackSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -427,6 +446,36 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<FulfillIntentResponse> FulfillIntentAsync(FulfillIntentRequest request, st::CancellationToken cancellationToken) =>
             FulfillIntentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the feedback received from the user for a single turn of the bot
+        /// response.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AnswerFeedback SubmitAnswerFeedback(SubmitAnswerFeedbackRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the feedback received from the user for a single turn of the bot
+        /// response.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnswerFeedback> SubmitAnswerFeedbackAsync(SubmitAnswerFeedbackRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the feedback received from the user for a single turn of the bot
+        /// response.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnswerFeedback> SubmitAnswerFeedbackAsync(SubmitAnswerFeedbackRequest request, st::CancellationToken cancellationToken) =>
+            SubmitAnswerFeedbackAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Sessions client wrapper implementation, for convenient use.</summary>
@@ -445,6 +494,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         private readonly gaxgrpc::ApiCall<MatchIntentRequest, MatchIntentResponse> _callMatchIntent;
 
         private readonly gaxgrpc::ApiCall<FulfillIntentRequest, FulfillIntentResponse> _callFulfillIntent;
+
+        private readonly gaxgrpc::ApiCall<SubmitAnswerFeedbackRequest, AnswerFeedback> _callSubmitAnswerFeedback;
 
         /// <summary>
         /// Constructs a client wrapper for the Sessions service, with the specified gRPC client and settings.
@@ -470,6 +521,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             _callFulfillIntent = clientHelper.BuildApiCall<FulfillIntentRequest, FulfillIntentResponse>("FulfillIntent", grpcClient.FulfillIntentAsync, grpcClient.FulfillIntent, effectiveSettings.FulfillIntentSettings).WithGoogleRequestParam("match_intent_request.session", request => request.MatchIntentRequest?.Session);
             Modify_ApiCall(ref _callFulfillIntent);
             Modify_FulfillIntentApiCall(ref _callFulfillIntent);
+            _callSubmitAnswerFeedback = clientHelper.BuildApiCall<SubmitAnswerFeedbackRequest, AnswerFeedback>("SubmitAnswerFeedback", grpcClient.SubmitAnswerFeedbackAsync, grpcClient.SubmitAnswerFeedback, effectiveSettings.SubmitAnswerFeedbackSettings).WithGoogleRequestParam("session", request => request.Session);
+            Modify_ApiCall(ref _callSubmitAnswerFeedback);
+            Modify_SubmitAnswerFeedbackApiCall(ref _callSubmitAnswerFeedback);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -484,6 +538,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         partial void Modify_MatchIntentApiCall(ref gaxgrpc::ApiCall<MatchIntentRequest, MatchIntentResponse> call);
 
         partial void Modify_FulfillIntentApiCall(ref gaxgrpc::ApiCall<FulfillIntentRequest, FulfillIntentResponse> call);
+
+        partial void Modify_SubmitAnswerFeedbackApiCall(ref gaxgrpc::ApiCall<SubmitAnswerFeedbackRequest, AnswerFeedback> call);
 
         partial void OnConstruction(Sessions.SessionsClient grpcClient, SessionsSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -502,6 +558,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         partial void Modify_MatchIntentRequest(ref MatchIntentRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_FulfillIntentRequest(ref FulfillIntentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SubmitAnswerFeedbackRequest(ref SubmitAnswerFeedbackRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Processes a natural language query and returns structured, actionable data
@@ -667,6 +725,32 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             Modify_FulfillIntentRequest(ref request, ref callSettings);
             return _callFulfillIntent.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the feedback received from the user for a single turn of the bot
+        /// response.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AnswerFeedback SubmitAnswerFeedback(SubmitAnswerFeedbackRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SubmitAnswerFeedbackRequest(ref request, ref callSettings);
+            return _callSubmitAnswerFeedback.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the feedback received from the user for a single turn of the bot
+        /// response.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AnswerFeedback> SubmitAnswerFeedbackAsync(SubmitAnswerFeedbackRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SubmitAnswerFeedbackRequest(ref request, ref callSettings);
+            return _callSubmitAnswerFeedback.Async(request, callSettings);
         }
     }
 

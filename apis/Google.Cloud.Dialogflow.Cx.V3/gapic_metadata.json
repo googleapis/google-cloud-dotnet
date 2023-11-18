@@ -540,6 +540,12 @@
                 "StreamingDetectIntent",
                 "StreamingDetectIntentAsync"
               ]
+            },
+            "SubmitAnswerFeedback": {
+              "methods": [
+                "SubmitAnswerFeedback",
+                "SubmitAnswerFeedbackAsync"
+              ]
             }
           }
         }

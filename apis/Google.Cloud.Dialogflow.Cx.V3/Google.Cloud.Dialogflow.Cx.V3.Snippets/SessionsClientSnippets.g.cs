@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax.Grpc;
     using Google.Cloud.Dialogflow.Cx.V3;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -187,6 +188,45 @@ namespace GoogleCSharpSnippets
             };
             // Make the request
             FulfillIntentResponse response = await sessionsClient.FulfillIntentAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SubmitAnswerFeedback</summary>
+        public void SubmitAnswerFeedbackRequestObject()
+        {
+            // Snippet: SubmitAnswerFeedback(SubmitAnswerFeedbackRequest, CallSettings)
+            // Create client
+            SessionsClient sessionsClient = SessionsClient.Create();
+            // Initialize request argument(s)
+            SubmitAnswerFeedbackRequest request = new SubmitAnswerFeedbackRequest
+            {
+                SessionAsSessionName = SessionName.FromProjectLocationAgentSession("[PROJECT]", "[LOCATION]", "[AGENT]", "[SESSION]"),
+                ResponseId = "",
+                AnswerFeedback = new AnswerFeedback(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            AnswerFeedback response = sessionsClient.SubmitAnswerFeedback(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SubmitAnswerFeedbackAsync</summary>
+        public async Task SubmitAnswerFeedbackRequestObjectAsync()
+        {
+            // Snippet: SubmitAnswerFeedbackAsync(SubmitAnswerFeedbackRequest, CallSettings)
+            // Additional: SubmitAnswerFeedbackAsync(SubmitAnswerFeedbackRequest, CancellationToken)
+            // Create client
+            SessionsClient sessionsClient = await SessionsClient.CreateAsync();
+            // Initialize request argument(s)
+            SubmitAnswerFeedbackRequest request = new SubmitAnswerFeedbackRequest
+            {
+                SessionAsSessionName = SessionName.FromProjectLocationAgentSession("[PROJECT]", "[LOCATION]", "[AGENT]", "[SESSION]"),
+                ResponseId = "",
+                AnswerFeedback = new AnswerFeedback(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            AnswerFeedback response = await sessionsClient.SubmitAnswerFeedbackAsync(request);
             // End snippet
         }
     }

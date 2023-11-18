@@ -339,6 +339,324 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         public static bool operator !=(SessionName a, SessionName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>DataStore</c> resource.</summary>
+    public sealed partial class DataStoreName : gax::IResourceName, sys::IEquatable<DataStoreName>
+    {
+        /// <summary>The possible contents of <see cref="DataStoreName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/locations/{location}/dataStores/{data_store}</c>.
+            /// </summary>
+            ProjectLocationDataStore = 1,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}</c>.
+            /// </summary>
+            ProjectLocationCollectionDataStore = 2,
+        }
+
+        private static gax::PathTemplate s_projectLocationDataStore = new gax::PathTemplate("projects/{project}/locations/{location}/dataStores/{data_store}");
+
+        private static gax::PathTemplate s_projectLocationCollectionDataStore = new gax::PathTemplate("projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}");
+
+        /// <summary>Creates a <see cref="DataStoreName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="DataStoreName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static DataStoreName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new DataStoreName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="DataStoreName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/dataStores/{data_store}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="dataStoreId">The <c>DataStore</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="DataStoreName"/> constructed from the provided ids.</returns>
+        public static DataStoreName FromProjectLocationDataStore(string projectId, string locationId, string dataStoreId) =>
+            new DataStoreName(ResourceNameType.ProjectLocationDataStore, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), dataStoreId: gax::GaxPreconditions.CheckNotNullOrEmpty(dataStoreId, nameof(dataStoreId)));
+
+        /// <summary>
+        /// Creates a <see cref="DataStoreName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="collectionId">The <c>Collection</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="dataStoreId">The <c>DataStore</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="DataStoreName"/> constructed from the provided ids.</returns>
+        public static DataStoreName FromProjectLocationCollectionDataStore(string projectId, string locationId, string collectionId, string dataStoreId) =>
+            new DataStoreName(ResourceNameType.ProjectLocationCollectionDataStore, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), collectionId: gax::GaxPreconditions.CheckNotNullOrEmpty(collectionId, nameof(collectionId)), dataStoreId: gax::GaxPreconditions.CheckNotNullOrEmpty(dataStoreId, nameof(dataStoreId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="DataStoreName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/dataStores/{data_store}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="dataStoreId">The <c>DataStore</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="DataStoreName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/dataStores/{data_store}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string dataStoreId) =>
+            FormatProjectLocationDataStore(projectId, locationId, dataStoreId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="DataStoreName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/dataStores/{data_store}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="dataStoreId">The <c>DataStore</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="DataStoreName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/dataStores/{data_store}</c>.
+        /// </returns>
+        public static string FormatProjectLocationDataStore(string projectId, string locationId, string dataStoreId) =>
+            s_projectLocationDataStore.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(dataStoreId, nameof(dataStoreId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="DataStoreName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="collectionId">The <c>Collection</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="dataStoreId">The <c>DataStore</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="DataStoreName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}</c>.
+        /// </returns>
+        public static string FormatProjectLocationCollectionDataStore(string projectId, string locationId, string collectionId, string dataStoreId) =>
+            s_projectLocationCollectionDataStore.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(collectionId, nameof(collectionId)), gax::GaxPreconditions.CheckNotNullOrEmpty(dataStoreId, nameof(dataStoreId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="DataStoreName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/dataStores/{data_store}</c></description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="dataStoreName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="DataStoreName"/> if successful.</returns>
+        public static DataStoreName Parse(string dataStoreName) => Parse(dataStoreName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="DataStoreName"/> instance; optionally allowing
+        /// an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/dataStores/{data_store}</c></description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="dataStoreName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="DataStoreName"/> if successful.</returns>
+        public static DataStoreName Parse(string dataStoreName, bool allowUnparsed) =>
+            TryParse(dataStoreName, allowUnparsed, out DataStoreName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="DataStoreName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/dataStores/{data_store}</c></description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="dataStoreName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="DataStoreName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string dataStoreName, out DataStoreName result) => TryParse(dataStoreName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="DataStoreName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/dataStores/{data_store}</c></description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="dataStoreName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="DataStoreName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string dataStoreName, bool allowUnparsed, out DataStoreName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(dataStoreName, nameof(dataStoreName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationDataStore.TryParseName(dataStoreName, out resourceName))
+            {
+                result = FromProjectLocationDataStore(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (s_projectLocationCollectionDataStore.TryParseName(dataStoreName, out resourceName))
+            {
+                result = FromProjectLocationCollectionDataStore(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(dataStoreName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private DataStoreName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string collectionId = null, string dataStoreId = null, string locationId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            CollectionId = collectionId;
+            DataStoreId = dataStoreId;
+            LocationId = locationId;
+            ProjectId = projectId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="DataStoreName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/dataStores/{data_store}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="dataStoreId">The <c>DataStore</c> ID. Must not be <c>null</c> or empty.</param>
+        public DataStoreName(string projectId, string locationId, string dataStoreId) : this(ResourceNameType.ProjectLocationDataStore, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), dataStoreId: gax::GaxPreconditions.CheckNotNullOrEmpty(dataStoreId, nameof(dataStoreId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Collection</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
+        /// </summary>
+        public string CollectionId { get; }
+
+        /// <summary>
+        /// The <c>DataStore</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string DataStoreId { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationDataStore: return s_projectLocationDataStore.Expand(ProjectId, LocationId, DataStoreId);
+                case ResourceNameType.ProjectLocationCollectionDataStore: return s_projectLocationCollectionDataStore.Expand(ProjectId, LocationId, CollectionId, DataStoreId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as DataStoreName);
+
+        /// <inheritdoc/>
+        public bool Equals(DataStoreName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(DataStoreName a, DataStoreName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(DataStoreName a, DataStoreName b) => !(a == b);
+    }
+
+    public partial class SubmitAnswerFeedbackRequest
+    {
+        /// <summary>
+        /// <see cref="SessionName"/>-typed view over the <see cref="Session"/> resource name property.
+        /// </summary>
+        public SessionName SessionAsSessionName
+        {
+            get => string.IsNullOrEmpty(Session) ? null : SessionName.Parse(Session, allowUnparsed: true);
+            set => Session = value?.ToString() ?? "";
+        }
+    }
+
     public partial class DetectIntentRequest
     {
         /// <summary>
@@ -380,6 +698,28 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         public gax::ResourceNameList<VersionName> FlowVersionsAsVersionNames
         {
             get => new gax::ResourceNameList<VersionName>(FlowVersions, s => string.IsNullOrEmpty(s) ? null : VersionName.Parse(s, allowUnparsed: true));
+        }
+    }
+
+    public partial class BoostSpecs
+    {
+        /// <summary>
+        /// <see cref="DataStoreName"/>-typed view over the <see cref="DataStores"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<DataStoreName> DataStoresAsDataStoreNames
+        {
+            get => new gax::ResourceNameList<DataStoreName>(DataStores, s => string.IsNullOrEmpty(s) ? null : DataStoreName.Parse(s, allowUnparsed: true));
+        }
+    }
+
+    public partial class FilterSpecs
+    {
+        /// <summary>
+        /// <see cref="DataStoreName"/>-typed view over the <see cref="DataStores"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<DataStoreName> DataStoresAsDataStoreNames
+        {
+            get => new gax::ResourceNameList<DataStoreName>(DataStores, s => string.IsNullOrEmpty(s) ? null : DataStoreName.Parse(s, allowUnparsed: true));
         }
     }
 
