@@ -2522,12 +2522,12 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// Deletes multiple conversations in a single request.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource to create analyses in.
+        /// Required. The parent resource to delete conversations from.
         /// Format:
         /// projects/{project}/locations/{location}
         /// </param>
         /// <param name="filter">
-        /// Filter used to select the subset of conversations to analyze.
+        /// Filter used to select the subset of conversations to delete.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2542,12 +2542,12 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// Deletes multiple conversations in a single request.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource to create analyses in.
+        /// Required. The parent resource to delete conversations from.
         /// Format:
         /// projects/{project}/locations/{location}
         /// </param>
         /// <param name="filter">
-        /// Filter used to select the subset of conversations to analyze.
+        /// Filter used to select the subset of conversations to delete.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2562,12 +2562,12 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// Deletes multiple conversations in a single request.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource to create analyses in.
+        /// Required. The parent resource to delete conversations from.
         /// Format:
         /// projects/{project}/locations/{location}
         /// </param>
         /// <param name="filter">
-        /// Filter used to select the subset of conversations to analyze.
+        /// Filter used to select the subset of conversations to delete.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2578,12 +2578,12 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// Deletes multiple conversations in a single request.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource to create analyses in.
+        /// Required. The parent resource to delete conversations from.
         /// Format:
         /// projects/{project}/locations/{location}
         /// </param>
         /// <param name="filter">
-        /// Filter used to select the subset of conversations to analyze.
+        /// Filter used to select the subset of conversations to delete.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2598,12 +2598,12 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// Deletes multiple conversations in a single request.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource to create analyses in.
+        /// Required. The parent resource to delete conversations from.
         /// Format:
         /// projects/{project}/locations/{location}
         /// </param>
         /// <param name="filter">
-        /// Filter used to select the subset of conversations to analyze.
+        /// Filter used to select the subset of conversations to delete.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2618,12 +2618,12 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// Deletes multiple conversations in a single request.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource to create analyses in.
+        /// Required. The parent resource to delete conversations from.
         /// Format:
         /// projects/{project}/locations/{location}
         /// </param>
         /// <param name="filter">
-        /// Filter used to select the subset of conversations to analyze.
+        /// Filter used to select the subset of conversations to delete.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
