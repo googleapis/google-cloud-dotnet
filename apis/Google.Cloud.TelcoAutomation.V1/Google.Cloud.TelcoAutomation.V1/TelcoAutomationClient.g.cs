@@ -2924,10 +2924,10 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// Required. Supported queries:
         /// 1. ""                       : Lists all revisions across all blueprints.
         /// 2. "latest=true"            : Lists latest revisions across all blueprints.
-        /// 3. "name=&lt;name&gt;"            : Lists all revisions of blueprint with name
-        /// &lt;name&gt;.
-        /// 4. "name=&lt;name&gt; latest=true": Lists latest revision of blueprint with name
-        /// &lt;name&gt;
+        /// 3. "name={name}"            : Lists all revisions of blueprint with name
+        /// {name}.
+        /// 4. "name={name} latest=true": Lists latest revision of blueprint with name
+        /// {name}
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2960,10 +2960,10 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// Required. Supported queries:
         /// 1. ""                       : Lists all revisions across all blueprints.
         /// 2. "latest=true"            : Lists latest revisions across all blueprints.
-        /// 3. "name=&lt;name&gt;"            : Lists all revisions of blueprint with name
-        /// &lt;name&gt;.
-        /// 4. "name=&lt;name&gt; latest=true": Lists latest revision of blueprint with name
-        /// &lt;name&gt;
+        /// 3. "name={name}"            : Lists all revisions of blueprint with name
+        /// {name}.
+        /// 4. "name={name} latest=true": Lists latest revision of blueprint with name
+        /// {name}
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2996,10 +2996,10 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// Required. Supported queries:
         /// 1. ""                       : Lists all revisions across all blueprints.
         /// 2. "latest=true"            : Lists latest revisions across all blueprints.
-        /// 3. "name=&lt;name&gt;"            : Lists all revisions of blueprint with name
-        /// &lt;name&gt;.
-        /// 4. "name=&lt;name&gt; latest=true": Lists latest revision of blueprint with name
-        /// &lt;name&gt;
+        /// 3. "name={name}"            : Lists all revisions of blueprint with name
+        /// {name}.
+        /// 4. "name={name} latest=true": Lists latest revision of blueprint with name
+        /// {name}
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3032,10 +3032,10 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// Required. Supported queries:
         /// 1. ""                       : Lists all revisions across all blueprints.
         /// 2. "latest=true"            : Lists latest revisions across all blueprints.
-        /// 3. "name=&lt;name&gt;"            : Lists all revisions of blueprint with name
-        /// &lt;name&gt;.
-        /// 4. "name=&lt;name&gt; latest=true": Lists latest revision of blueprint with name
-        /// &lt;name&gt;
+        /// 3. "name={name}"            : Lists all revisions of blueprint with name
+        /// {name}.
+        /// 4. "name={name} latest=true": Lists latest revision of blueprint with name
+        /// {name}
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3087,10 +3087,10 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// 1. ""                       : Lists all revisions across all deployments.
         /// 2. "latest=true"            : Lists latest revisions across all
         /// deployments.
-        /// 3. "name=&lt;name&gt;"            : Lists all revisions of deployment with name
-        /// &lt;name&gt;.
-        /// 4. "name=&lt;name&gt; latest=true": Lists latest revision of deployment with name
-        /// &lt;name&gt;
+        /// 3. "name={name}"            : Lists all revisions of deployment with name
+        /// {name}.
+        /// 4. "name={name} latest=true": Lists latest revision of deployment with name
+        /// {name}
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3124,10 +3124,10 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// 1. ""                       : Lists all revisions across all deployments.
         /// 2. "latest=true"            : Lists latest revisions across all
         /// deployments.
-        /// 3. "name=&lt;name&gt;"            : Lists all revisions of deployment with name
-        /// &lt;name&gt;.
-        /// 4. "name=&lt;name&gt; latest=true": Lists latest revision of deployment with name
-        /// &lt;name&gt;
+        /// 3. "name={name}"            : Lists all revisions of deployment with name
+        /// {name}.
+        /// 4. "name={name} latest=true": Lists latest revision of deployment with name
+        /// {name}
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3161,10 +3161,10 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// 1. ""                       : Lists all revisions across all deployments.
         /// 2. "latest=true"            : Lists latest revisions across all
         /// deployments.
-        /// 3. "name=&lt;name&gt;"            : Lists all revisions of deployment with name
-        /// &lt;name&gt;.
-        /// 4. "name=&lt;name&gt; latest=true": Lists latest revision of deployment with name
-        /// &lt;name&gt;
+        /// 3. "name={name}"            : Lists all revisions of deployment with name
+        /// {name}.
+        /// 4. "name={name} latest=true": Lists latest revision of deployment with name
+        /// {name}
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3198,10 +3198,10 @@ namespace Google.Cloud.TelcoAutomation.V1
         /// 1. ""                       : Lists all revisions across all deployments.
         /// 2. "latest=true"            : Lists latest revisions across all
         /// deployments.
-        /// 3. "name=&lt;name&gt;"            : Lists all revisions of deployment with name
-        /// &lt;name&gt;.
-        /// 4. "name=&lt;name&gt; latest=true": Lists latest revision of deployment with name
-        /// &lt;name&gt;
+        /// 3. "name={name}"            : Lists all revisions of deployment with name
+        /// {name}.
+        /// 4. "name={name} latest=true": Lists latest revision of deployment with name
+        /// {name}
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first

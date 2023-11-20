@@ -9558,10 +9558,10 @@ namespace Google.Cloud.TelcoAutomation.V1 {
     /// Required. Supported queries:
     /// 1. ""                       : Lists all revisions across all blueprints.
     /// 2. "latest=true"            : Lists latest revisions across all blueprints.
-    /// 3. "name=&lt;name>"            : Lists all revisions of blueprint with name
-    /// &lt;name>.
-    /// 4. "name=&lt;name> latest=true": Lists latest revision of blueprint with name
-    /// &lt;name>
+    /// 3. "name={name}"            : Lists all revisions of blueprint with name
+    /// {name}.
+    /// 4. "name={name} latest=true": Lists latest revision of blueprint with name
+    /// {name}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13179,10 +13179,10 @@ namespace Google.Cloud.TelcoAutomation.V1 {
     /// 1. ""                       : Lists all revisions across all deployments.
     /// 2. "latest=true"            : Lists latest revisions across all
     /// deployments.
-    /// 3. "name=&lt;name>"            : Lists all revisions of deployment with name
-    /// &lt;name>.
-    /// 4. "name=&lt;name> latest=true": Lists latest revision of deployment with name
-    /// &lt;name>
+    /// 3. "name={name}"            : Lists all revisions of deployment with name
+    /// {name}.
+    /// 4. "name={name} latest=true": Lists latest revision of deployment with name
+    /// {name}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
