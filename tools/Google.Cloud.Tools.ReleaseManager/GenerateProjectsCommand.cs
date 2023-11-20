@@ -106,12 +106,13 @@ namespace Google.Cloud.Tools.ReleaseManager
         private static readonly Dictionary<string, string> CommonTestDependencies = new Dictionary<string, string>
         {
             { "Google.Cloud.ClientTesting", ProjectVersionValue }, // Needed for all snippets and some other tests - easiest to just default
-            { "Microsoft.NET.Test.Sdk", "17.8.0" },
-            { "xunit", "2.6.1" },
-            { "xunit.runner.visualstudio", "2.5.3" },
-            { "Xunit.SkippableFact", "1.4.13" },
-            { "NSubstitute", "5.1.0" },
-            { "System.Linq.Async", "6.0.1" },
+            // These versions are in the top-level Directory.Build.props
+            { "Microsoft.NET.Test.Sdk", "$(TestSdkVersion)" },
+            { "xunit", "$(XUnitVersion)" },
+            { "xunit.runner.visualstudio", "$(XUnitRunnerVersion)" },
+            { "Xunit.SkippableFact", "$(XUnitSkippableFactVersion)" },
+            { "NSubstitute", "$(NSubstituteVersion)" },
+            { "System.Linq.Async", "$(SystemLinqAsyncVersion)" },
         };
 
         // Hard-coded versions for dependencies for production packages that can be updated arbitrarily, as their assets are all private.
@@ -341,7 +342,9 @@ namespace Google.Cloud.Tools.ReleaseManager
                         var currentVersion = dependencies[package];
                         if (currentVersion == DefaultVersionValue ||
                             currentVersion == ProjectVersionValue ||
-                            defaultVersion == currentVersion)
+                            defaultVersion == currentVersion ||
+                            currentVersion.StartsWith('$') ||
+                            defaultVersion.StartsWith('$'))
                         {
                             continue;
                         }
@@ -830,7 +833,7 @@ api-name: {api.Id}
 
             PrivateAssets.TryGetValue(package, out string privateAssetValue);
 
-            if (!AnyVersionPattern.IsMatch(version))
+            if (!IsValidVersion())
             {
                 throw new UserErrorException($"Project {project} has invalid version '{version}' for package {package}");
             }
@@ -856,6 +859,11 @@ api-name: {api.Id}
             }
 
             return element;
+
+            // We allow MSBuild properties, e.g. $(XUnitVersion), just for test dependencies.
+            bool IsValidVersion() =>
+                (testProject && version.StartsWith('$')) ||
+                AnyVersionPattern.IsMatch(version);
         }
 
         /// <summary>
