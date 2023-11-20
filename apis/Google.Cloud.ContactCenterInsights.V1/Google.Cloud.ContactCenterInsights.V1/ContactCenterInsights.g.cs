@@ -2531,8 +2531,8 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     public const int RedactionConfigFieldNumber = 4;
     private global::Google.Cloud.ContactCenterInsights.V1.RedactionConfig redactionConfig_;
     /// <summary>
-    /// Optional. DLP settings for transcript redaction. Optional, will default to
-    /// the config specified in Settings.
+    /// Optional. DLP settings for transcript redaction. Will default to the config
+    /// specified in Settings.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2547,8 +2547,8 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     public const int SpeechConfigFieldNumber = 11;
     private global::Google.Cloud.ContactCenterInsights.V1.SpeechConfig speechConfig_;
     /// <summary>
-    /// Optional. Default Speech-to-Text configuration. Optional, will default to
-    /// the config specified in Settings.
+    /// Optional. Speech-to-Text configuration. Will default to the config
+    /// specified in Settings.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5273,7 +5273,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         public static partial class Types {
           public enum BucketObjectType {
             /// <summary>
-            /// The object type is unspecified and will default to TRANSCRIPT.
+            /// The object type is unspecified and will default to `TRANSCRIPT`.
             /// </summary>
             [pbr::OriginalName("BUCKET_OBJECT_TYPE_UNSPECIFIED")] Unspecified = 0,
             /// <summary>
@@ -8881,7 +8881,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent resource to create analyses in.
+    /// Required. The parent resource to delete conversations from.
     /// Format:
     /// projects/{project}/locations/{location}
     /// </summary>
@@ -8898,7 +8898,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     public const int FilterFieldNumber = 2;
     private string filter_ = "";
     /// <summary>
-    /// Filter used to select the subset of conversations to analyze.
+    /// Filter used to select the subset of conversations to delete.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8913,8 +8913,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     public const int MaxDeleteCountFieldNumber = 3;
     private int maxDeleteCount_;
     /// <summary>
-    /// Maximum number of conversations to delete. The default is 1000. It can be
-    /// changed by setting the `max_delete_count` field.
+    /// Maximum number of conversations to delete.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9480,7 +9479,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
   }
 
   /// <summary>
-  /// The response for a bulk analyze conversations operation.
+  /// The response for a bulk delete conversations operation.
   /// </summary>
   public sealed partial class BulkDeleteConversationsResponse : pb::IMessage<BulkDeleteConversationsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
