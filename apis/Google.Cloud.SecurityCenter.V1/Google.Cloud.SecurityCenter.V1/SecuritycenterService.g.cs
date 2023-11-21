@@ -13272,10 +13272,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The relative resource name of the organization, project, or
-    /// folder. See:
-    /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
-    /// An example is:
-    /// "organizations/{organization_id}".
+    /// folder. For more information about relative resource names, see [Relative
+    /// Resource
+    /// Name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
+    /// Example: `organizations/{organization_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13290,7 +13290,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int CustomConfigFieldNumber = 2;
     private global::Google.Cloud.SecurityCenter.V1.CustomConfig customConfig_;
     /// <summary>
-    /// Required. The user specified custom configuration to test.
+    /// Required. The custom configuration that you need to test.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13519,9 +13519,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// Manually constructed resource. If the custom module only evaluates against
-      /// the resource data, the iam_policy_data field can be omitted, and vice
-      /// versa.
+      /// Manually constructed resource name. If the custom module evaluates against
+      /// only the resource data, you can omit the `iam_policy_data` field. If it
+      /// evaluates only the `iam_policy_data` field, you can omit the resource data.
       /// </summary>
       public sealed partial class SimulatedResource : pb::IMessage<SimulatedResource>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -13573,7 +13573,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
         public const int ResourceTypeFieldNumber = 1;
         private string resourceType_ = "";
         /// <summary>
-        /// Required. The type of the resource, e.g. `compute.googleapis.com/Disk`.
+        /// Required. The type of the resource, for example,
+        /// `compute.googleapis.com/Disk`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13588,8 +13589,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
         public const int ResourceDataFieldNumber = 2;
         private global::Google.Protobuf.WellKnownTypes.Struct resourceData_;
         /// <summary>
-        /// Optional. A representation of the GCP resource. Should match the GCP
-        /// resource JSON format.
+        /// Optional. A representation of the Google Cloud resource. Should match the
+        /// Google Cloud resource JSON format.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13820,8 +13821,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
   }
 
   /// <summary>
-  /// Response message for simulating a SecurityHealthAnalyticsCustomModule against
-  /// a given resource.
+  /// Response message for simulating a `SecurityHealthAnalyticsCustomModule`
+  /// against a given resource.
   /// </summary>
   public sealed partial class SimulateSecurityHealthAnalyticsCustomModuleResponse : pb::IMessage<SimulateSecurityHealthAnalyticsCustomModuleResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
