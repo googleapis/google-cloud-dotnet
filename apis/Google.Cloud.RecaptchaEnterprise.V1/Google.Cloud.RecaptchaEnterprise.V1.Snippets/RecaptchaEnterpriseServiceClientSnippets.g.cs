@@ -138,6 +138,7 @@ namespace GoogleCSharpSnippets
                 },
                 HashedAccountId = ByteString.Empty,
                 TransactionEvent = new TransactionEvent(),
+                AccountId = "",
             };
             // Make the request
             AnnotateAssessmentResponse response = recaptchaEnterpriseServiceClient.AnnotateAssessment(request);
@@ -162,6 +163,7 @@ namespace GoogleCSharpSnippets
                 },
                 HashedAccountId = ByteString.Empty,
                 TransactionEvent = new TransactionEvent(),
+                AccountId = "",
             };
             // Make the request
             AnnotateAssessmentResponse response = await recaptchaEnterpriseServiceClient.AnnotateAssessmentAsync(request);

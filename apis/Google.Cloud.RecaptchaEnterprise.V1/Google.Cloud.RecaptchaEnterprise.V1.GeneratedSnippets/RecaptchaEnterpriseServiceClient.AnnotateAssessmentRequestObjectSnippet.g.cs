@@ -45,6 +45,7 @@ namespace GoogleCSharpSnippets
                 },
                 HashedAccountId = ByteString.Empty,
                 TransactionEvent = new TransactionEvent(),
+                AccountId = "",
             };
             // Make the request
             AnnotateAssessmentResponse response = recaptchaEnterpriseServiceClient.AnnotateAssessment(request);
