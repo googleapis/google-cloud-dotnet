@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,6 +15,7 @@
 using Google.Apis.Http;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading;
@@ -71,7 +72,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 ["lab6"] = null,
             };
 
-            Assert.Equal(expectedResult, result);
+            Assert.Collection(result, DictionaryElementInspectors(expectedResult));
 
             var finalLabels = client.GetDataset(datasetId).Resource.Labels;
             var expectedFinalLabels = new Dictionary<string, string>
@@ -83,6 +84,10 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             };
 
             Assert.Equal(expectedFinalLabels, finalLabels);
+
+            Action<KeyValuePair<string, string>>[] DictionaryElementInspectors(Dictionary<string, string> expectedElements) =>
+                expectedElements.Select<KeyValuePair<string, string>, Action<KeyValuePair<string, string>>>(expected =>
+                    (actual) => Assert.Equal(expected, actual)).ToArray();
         }
 
         [Theory]
