@@ -991,8 +991,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
         = pb::FieldCodec.ForEnum(26, x => (int) x, x => (global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest.Types.Reason) x);
     private readonly pbc::RepeatedField<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest.Types.Reason> reasons_ = new pbc::RepeatedField<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest.Types.Reason>();
     /// <summary>
-    /// Optional. Optional reasons for the annotation that will be assigned to the
-    /// Event.
+    /// Optional. Reasons for the annotation that are assigned to the event.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1004,11 +1003,11 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
     public const int HashedAccountIdFieldNumber = 4;
     private pb::ByteString hashedAccountId_ = pb::ByteString.Empty;
     /// <summary>
-    /// Optional. Optional unique stable hashed user identifier to apply to the
-    /// assessment. This is an alternative to setting the hashed_account_id in
-    /// CreateAssessment, for example when the account identifier is not yet known
-    /// in the initial request. It is recommended that the identifier is hashed
-    /// using hmac-sha256 with stable secret.
+    /// Optional. Unique stable hashed user identifier to apply to the assessment.
+    /// This is an alternative to setting the `hashed_account_id` in
+    /// `CreateAssessment`, for example, when the account identifier is not yet
+    /// known in the initial request. It is recommended that the identifier is
+    /// hashed using hmac-sha256 with stable secret.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2840,7 +2839,6 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
 
   /// <summary>
   /// Transaction data associated with a payment protected by reCAPTCHA Enterprise.
-  /// All fields are optional.
   /// </summary>
   public sealed partial class TransactionData : pb::IMessage<TransactionData>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
