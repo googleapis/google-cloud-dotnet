@@ -13,8 +13,6 @@
 // limitations under the License.
 
 using Google.Cloud.Spanner.Common.V1;
-using static Google.Cloud.Spanner.V1.SessionPool;
-using System.Data;
 
 namespace Google.Cloud.Spanner.V1;
 public partial class SessionPool
@@ -42,14 +40,9 @@ public partial class SessionPool
         private SessionPoolSegmentKey Key { get; }
 
         /// <summary>
-        /// The number of read-only sessions in the pool.
+        /// The number of sessions in the pool.
         /// </summary>
-        public int ReadPoolCount { get; }
-
-        /// <summary>
-        /// The number of read/write sessions in the pool.
-        /// </summary>
-        public int ReadWritePoolCount { get; }
+        public int PoolCount { get; }
 
         /// <summary>
         /// The number of active or requested sessions. This is the difference between the number of successful or
@@ -70,16 +63,6 @@ public partial class SessionPool
         public int PendingAcquisitionCount { get; }
 
         /// <summary>
-        /// The number of times a read/write transaction was requested.
-        /// </summary>
-        public long ReadWriteTransactionRequests { get; }
-
-        /// <summary>
-        /// The number of times a read/write transaction was satisfied with a pre-warmed transaction.
-        /// </summary>
-        public long ReadWriteTransactionRequestsPrewarmed { get; }
-
-        /// <summary>
         /// Whether the pool is healthy or not.
         /// </summary>
         public bool Healthy { get; }
@@ -96,23 +79,17 @@ public partial class SessionPool
         internal SessionPoolSegmentStatistics(
             SessionPoolSegmentKey key,
             int activeSessionCount,
-            int readPoolCount,
-            int readWritePoolCount,
+            int poolCount,
             int inFlightCreationCount,
             int pendingAcquisitionCount,
-            long readWriteTransactionRequests,
-            long readWriteTransactionRequestsPrewarmed,
             bool healthy,
             bool shutdown)
         {
             Key = key;
             ActiveSessionCount = activeSessionCount;
-            ReadPoolCount = readPoolCount;
-            ReadWritePoolCount = readWritePoolCount;
+            PoolCount = poolCount;
             InFlightCreationCount = inFlightCreationCount;
             PendingAcquisitionCount = pendingAcquisitionCount;
-            ReadWriteTransactionRequests = readWriteTransactionRequests;
-            ReadWriteTransactionRequestsPrewarmed = readWriteTransactionRequestsPrewarmed;
             Healthy = healthy;
             Shutdown = shutdown;
         }
@@ -123,7 +100,7 @@ public partial class SessionPool
             string status = Shutdown ? "Shutdown"
                 : Healthy ? "Healthy"
                 : "Unhealthy";
-            return $"{Key}; Active: {ActiveSessionCount}; Read pool: {ReadPoolCount}; Write pool: {ReadWritePoolCount}; In-flight creation: {InFlightCreationCount}; Pending acquisitions: {PendingAcquisitionCount}; Status: {status}; Read/write prewarming: {ReadWriteTransactionRequestsPrewarmed}/{ReadWriteTransactionRequests}";
+            return $"{Key}; Active: {ActiveSessionCount}; Pool: {PoolCount}; In-flight creation: {InFlightCreationCount}; Pending acquisitions: {PendingAcquisitionCount}; Status: {status}";
         }
     }
 }

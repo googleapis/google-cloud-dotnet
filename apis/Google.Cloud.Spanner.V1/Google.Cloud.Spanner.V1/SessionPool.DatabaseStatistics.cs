@@ -41,14 +41,9 @@ namespace Google.Cloud.Spanner.V1
             private SessionPoolSegmentStatistics SegmentStatistics { get; }
 
             /// <summary>
-            /// The number of read-only sessions in the pool.
+            /// The number of sessions in the pool.
             /// </summary>
-            public int ReadPoolCount => SegmentStatistics.ReadPoolCount;
-
-            /// <summary>
-            /// The number of read/write sessions in the pool.
-            /// </summary>
-            public int ReadWritePoolCount => SegmentStatistics.ReadWritePoolCount;
+            public int PoolCount => SegmentStatistics.PoolCount;
 
             /// <summary>
             /// The number of active or requested sessions. This is the difference between the number of successful or
@@ -67,16 +62,6 @@ namespace Google.Cloud.Spanner.V1
             /// The number of client calls awaiting sessions.
             /// </summary>
             public int PendingAcquisitionCount => SegmentStatistics.PendingAcquisitionCount;
-
-            /// <summary>
-            /// The number of times a read/write transaction was requested.
-            /// </summary>
-            public long ReadWriteTransactionRequests => SegmentStatistics.ReadWriteTransactionRequests;
-
-            /// <summary>
-            /// The number of times a read/write transaction was satisfied with a pre-warmed transaction.
-            /// </summary>
-            public long ReadWriteTransactionRequestsPrewarmed => SegmentStatistics.ReadWriteTransactionRequestsPrewarmed;
 
             /// <summary>
             /// Whether the pool is healthy or not.

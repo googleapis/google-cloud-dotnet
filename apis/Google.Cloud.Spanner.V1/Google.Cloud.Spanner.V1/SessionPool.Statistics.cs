@@ -26,14 +26,9 @@ namespace Google.Cloud.Spanner.V1
         public sealed class Statistics
         {
             /// <summary>
-            /// The total of <see cref="SessionPoolSegmentStatistics.ReadPoolCount"/> values across all databases in the pool.
+            /// The total of <see cref="SessionPoolSegmentStatistics.PoolCount"/> values across all databases in the pool.
             /// </summary>
-            public int TotalReadPoolCount => PerSegmentStatistics.Sum(d => d.ReadPoolCount);
-
-            /// <summary>
-            /// The total of <see cref="SessionPoolSegmentStatistics.ReadWritePoolCount"/> values across all databases in the pool.
-            /// </summary>
-            public int TotalReadWritePoolCount => PerSegmentStatistics.Sum(d => d.ReadWritePoolCount);
+            public int TotalPoolCount => PerSegmentStatistics.Sum(d => d.PoolCount);
 
             /// <summary>
             /// The total of <see cref="SessionPoolSegmentStatistics.ActiveSessionCount"/> values across all databases in the pool.
