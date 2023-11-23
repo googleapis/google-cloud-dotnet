@@ -30,45 +30,33 @@ namespace Google.Cloud.Spanner.V1.Tests
                 var db1Stats = new SessionPoolSegmentStatistics(
                     SessionPoolSegmentKey.Create(new DatabaseName("project", "instance", "db1")),
                     activeSessionCount: 4,
-                    readPoolCount: 5,
-                    readWritePoolCount: 10,
+                    poolCount: 15,
                     inFlightCreationCount: 3,
                     pendingAcquisitionCount: 0,
-                    readWriteTransactionRequests: 100L,
-                    readWriteTransactionRequestsPrewarmed: 95L,
                     healthy: true,
                     shutdown: false);
                 var db2Stats = new SessionPoolSegmentStatistics(
                     SessionPoolSegmentKey.Create(new DatabaseName("project", "instance", "db2")),
                     activeSessionCount: 8,
-                    readPoolCount: 7,
-                    readWritePoolCount: 3,
+                    poolCount: 10,
                     inFlightCreationCount: 2,
                     pendingAcquisitionCount: 0,
-                    readWriteTransactionRequests: 200L,
-                    readWriteTransactionRequestsPrewarmed: 195L,
                     healthy: true,
                     shutdown: false);
                 var db3Stats = new SessionPoolSegmentStatistics(
                     SessionPoolSegmentKey.Create(new DatabaseName("project", "instance", "db3")),
                     activeSessionCount: 3,
-                    readPoolCount: 0,
-                    readWritePoolCount: 0,
+                    poolCount: 0,
                     inFlightCreationCount: 16,
                     pendingAcquisitionCount: 3,
-                    readWriteTransactionRequests: 500L,
-                    readWriteTransactionRequestsPrewarmed: 500L,
                     healthy: true,
                     shutdown: false);
                 var db4Stats = new SessionPoolSegmentStatistics(
                     SessionPoolSegmentKey.Create(new DatabaseName("project", "instance", "db1")).WithDatabaseRole("dbrole"),
                     activeSessionCount: 5,
-                    readPoolCount: 0,
-                    readWritePoolCount: 0,
+                    poolCount: 0,
                     inFlightCreationCount: 4,
                     pendingAcquisitionCount: 0,
-                    readWriteTransactionRequests: 100L,
-                    readWriteTransactionRequestsPrewarmed: 95L,
                     healthy: true,
                     shutdown: false);
                 var allStats = new[] { db1Stats, db2Stats, db3Stats, db4Stats };
@@ -76,8 +64,7 @@ namespace Google.Cloud.Spanner.V1.Tests
 
                 Assert.Equal(allStats, statistics.PerSegmentStatistics);
                 Assert.Equal(20, statistics.TotalActiveSessionCount);
-                Assert.Equal(12, statistics.TotalReadPoolCount);
-                Assert.Equal(13, statistics.TotalReadWritePoolCount);
+                Assert.Equal(25, statistics.TotalPoolCount);
                 Assert.Equal(25, statistics.TotalInFlightCreationCount);
                 Assert.Equal(3, statistics.TotalPendingAcquisitionCount);
             }

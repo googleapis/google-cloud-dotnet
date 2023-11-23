@@ -23,7 +23,6 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using static Google.Cloud.Spanner.V1.Internal.ExecuteHelper;
-using static Google.Cloud.Spanner.V1.TransactionOptions;
 
 namespace Google.Cloud.Spanner.V1
 {
@@ -43,8 +42,7 @@ namespace Google.Cloud.Spanner.V1
 
             // Mutable state, which should be accessed within the lock
 
-            private readonly ConcurrentStack<PooledSession> _readOnlySessions = new ConcurrentStack<PooledSession>();
-            private readonly ConcurrentStack<PooledSession> _readWriteSessions = new ConcurrentStack<PooledSession>();
+            private readonly ConcurrentStack<PooledSession> _sessions = new ConcurrentStack<PooledSession>();
             private readonly ConcurrentQueue<TaskCompletionSource<PooledSession>> _pendingAcquisitions =
                 new ConcurrentQueue<TaskCompletionSource<PooledSession>>();
 
@@ -101,10 +99,6 @@ namespace Google.Cloud.Spanner.V1
             /// </summary>
             internal int LiveOrRequestedSessionCount => Interlocked.CompareExchange(ref _liveOrRequestedSessionCount, 0, 0);
 
-            // Statistics maintained purely for diagnostic purposes.
-            private long _rwTransactionRequests;
-            private long _rwTransactionRequestsPrewarmed;
-
             internal TargetedSessionPool(SessionPool parent, SessionPoolSegmentKey key, bool acquireSessionsImmediately) : base(parent)
             {
                 _segmentKey = GaxPreconditions.CheckNotNull(key, nameof(key));
@@ -160,8 +154,6 @@ namespace Google.Cloud.Spanner.V1
 
             private async Task<PooledSession> AcquireSessionImplAsync(TransactionOptions transactionOptions, bool singleUseTransaction, CancellationToken cancellationToken)
             {
-                transactionOptions ??= new TransactionOptions();
-                var transactionMode = transactionOptions.ModeCase;
                 var sessionAcquisitionTask = GetSessionAcquisitionTask(cancellationToken);
 
                 // We've either fetched a task from the pool, or registered that a caller is waiting for one.
@@ -175,29 +167,16 @@ namespace Google.Cloud.Spanner.V1
                 // We do this when a session is released, and in the maintenance task.
                 // These happen frequently enough that we shouldn't need to worry about them here.
 
-                // Update statistics for sessions with read/write transaction options - only after we've already acquired the session.
-                if (transactionOptions.ModeCase == ModeOneofCase.ReadWrite)
-                {
-                    Interlocked.Increment(ref _rwTransactionRequests);
-                    if (session.TransactionOptions.ModeCase == transactionMode)
-                    {
-                        Interlocked.Increment(ref _rwTransactionRequestsPrewarmed);
-                    }
-                }
-
-                // Whatever session we got it either has vanilla transaction options or the wrong ones.
-                return session.WithTransactionOptions(transactionOptions, singleUseTransaction);
+                // While in the pool, sessions have TransactionOptions.ModeCase == ModeOneofCase.None and singleUseTransaction == false.
+                return session.WithTransactionOptions(transactionOptions ?? new TransactionOptions(), singleUseTransaction);
             }
 
             private Task<PooledSession> GetSessionAcquisitionTask(CancellationToken cancellationToken)
             {
-                ConcurrentStack<PooledSession> preferredStack = _readOnlySessions;
-                ConcurrentStack<PooledSession> alternateStack = _readWriteSessions;
-
                 lock (_lock)
                 {
                     // First try the pool.
-                    if (preferredStack.TryPop(out var session) || alternateStack.TryPop(out session))
+                    if (_sessions.TryPop(out var session))
                     {
                         // Slight inefficiency wrapping this in a task, but it makes the implementation simpler.
                         return Task.FromResult(session);
@@ -245,7 +224,7 @@ namespace Google.Cloud.Spanner.V1
             /// <summary>
             /// Release a session back to the pool (or refresh) but don't change the number of active sessions.
             /// </summary>
-            /// <param name="session">The session to stack. Should be "active" (i.e. not disposed)</param>
+            /// <param name="session">The session to release. Should be "active" (i.e. not disposed)</param>
             private void ReleaseInactiveSession(PooledSession session)
             {
                 if (Shutdown)
@@ -267,45 +246,20 @@ namespace Google.Cloud.Spanner.V1
                 Action outsideLockAction = null;
 
                 // We need to atomically (within the lock) decide between:
-                // - Adding the session to a pool stack (adding performed within the lock)
+                // - Adding the session to the pool (performed within the lock)
                 // - Providing the session to a waiting caller (setting the result peformed outside the lock)
                 while (true)
                 {
                     TaskCompletionSource<PooledSession> pendingAquisition;
                     lock (_lock)
                     {
-                        // Only add a session to a stack if there are no pending acquisitions.
+                        // Only add a session to the pool if there are no pending acquisitions.
                         if (!_pendingAcquisitions.TryDequeue(out pendingAquisition))
                         {
-                            ConcurrentStack<PooledSession> stack;
+                            // Potentially release tasks waiting for the pool to reach minimum size.
+                            _sessions.Push(session);
 
-                            // Add the session to the correct stack.
-                            if (session.TransactionOptions.ModeCase == ModeOneofCase.ReadWrite)
-                            {
-                                stack = _readWriteSessions;
-                            }
-                            else
-                            {
-                                var readCount = _readOnlySessions.Count;
-                                var writeCount = _readWriteSessions.Count;
-                                // Avoid division by zero by including the new session in the denominator.
-                                var writeProportion = writeCount / (writeCount + readCount + 1.0);
-                                if (writeProportion < Options.WriteSessionsFraction)
-                                {
-                                    session = session.WithTransactionOptions(s_readWriteOptions, singleUseTransaction: false);
-                                    stack = _readWriteSessions;
-                                }
-                                else
-                                {
-                                    stack = _readOnlySessions;
-                                }
-                            }
-                            // We definitely have a stack now, so add the session to it, and
-                            // potentially release tasks waiting for the pool to reach minimum size.
-                            stack.Push(session);
-
-                            int poolSize = _readOnlySessions.Count + _readWriteSessions.Count;
-                            if (poolSize >= Options.MinimumPooledSessions && _minimumSizeWaiters.Count > 0)
+                            if (_sessions.Count >= Options.MinimumPooledSessions && _minimumSizeWaiters.Count > 0)
                             {
                                 var minimumSizeWaiters = _minimumSizeWaiters.ToList();
                                 outsideLockAction = () => minimumSizeWaiters.ForEach(tcs => tcs.TrySetResult(0));
@@ -426,24 +380,10 @@ namespace Google.Cloud.Spanner.V1
                 LinkedList<PooledSession> staleSessions = new LinkedList<PooledSession>();
                 lock (_lock)
                 {
-                    RemoveStaleOrExpiredItemsFromStack(_readOnlySessions);
-                    RemoveStaleOrExpiredItemsFromStack(_readWriteSessions);
-                }
-
-                foreach (var session in sessionsToEvict)
-                {
-                    EvictSession(session);
-                }
-                foreach (var session in staleSessions)
-                {
-                    Parent.ConsumeBackgroundTask(RefreshAsync(session), "session refresh");
-                }
-
-                void RemoveStaleOrExpiredItemsFromStack(ConcurrentStack<PooledSession> stack)
-                {
+                    // Remove stale or expired sessions from the pool.
                     // TryPopRange will fail when receiving a zero sized array even if the stack is empty.
                     // So we always create the array one element bigger than the stack size.
-                    PooledSession[] sessions = new PooledSession[stack.Count + 1];
+                    PooledSession[] sessions = new PooledSession[_sessions.Count + 1];
                     // Use the actual count of elements popped to check for evicted sessions.
                     // It doesn't matter that the array might be bigger or smaller than the stack
                     // current size. TryPopRange will try to pop as many elements as sessions.Length
@@ -452,7 +392,7 @@ namespace Google.Cloud.Spanner.V1
                     // probably change from when we created the array to this point, but by using the
                     // actual number of elements popped we are making it more robust for any future changes.
                     int count;
-                    if ((count = stack.TryPopRange(sessions)) > 0)
+                    if ((count = _sessions.TryPopRange(sessions)) > 0)
                     {
                         // TryPopRange will store elements in the array in the same order
                         // they would have been popped individually starting at index 0.
@@ -474,11 +414,20 @@ namespace Google.Cloud.Spanner.V1
                             }
                             else
                             {
-                                // The session is fine - put it back on the stack.
-                                stack.Push(session);
+                                // The session is fine - put it back on the pool.
+                                _sessions.Push(session);
                             }
                         }
                     }
+                }
+
+                foreach (var session in sessionsToEvict)
+                {
+                    EvictSession(session);
+                }
+                foreach (var session in staleSessions)
+                {
+                    Parent.ConsumeBackgroundTask(RefreshAsync(session), "session refresh");
                 }
             }
 
@@ -692,8 +641,6 @@ namespace Google.Cloud.Spanner.V1
                 {
                     if (Healthy)
                     {
-                        int poolSize = _readWriteSessions.Count + _readOnlySessions.Count;
-
                         // Determine how many more sessions to create.
                         // We want to make sure that if all existing and new requests for session creation succeed:
                         // - All queuing callers will have a session
@@ -707,7 +654,7 @@ namespace Google.Cloud.Spanner.V1
 
                         // How many more sessions do we need to create in order to get the pool to the minimum size, after satisfying
                         // pending callers, assuming that all the in-flight session requests succeed, and there are no more requests?
-                        int newSessionsToSatisfyPool = (_pendingAcquisitions.Count + Options.MinimumPooledSessions) - (poolSize + InFlightSessionCreationCount);
+                        int newSessionsToSatisfyPool = (_pendingAcquisitions.Count + Options.MinimumPooledSessions) - (_sessions.Count + InFlightSessionCreationCount);
                         // How many more sessions *can* we create without going over the maximum number of active sessions?
                         int maxPossibleNewSessions = Options.MaximumActiveSessions - LiveOrRequestedSessionCount;
 
@@ -730,12 +677,9 @@ namespace Google.Cloud.Spanner.V1
                     return new SessionPoolSegmentStatistics(
                         _segmentKey,
                         ActiveSessionCount,
-                        _readOnlySessions.Count,
-                        _readWriteSessions.Count,
+                        _sessions.Count,
                         InFlightSessionCreationCount,
                         _pendingAcquisitions.Count,
-                        Interlocked.CompareExchange(ref _rwTransactionRequests, 0L, 0L),
-                        Interlocked.CompareExchange(ref _rwTransactionRequestsPrewarmed, 0L, 0L),
                         Healthy,
                         Shutdown);
                 }
@@ -761,7 +705,7 @@ namespace Google.Cloud.Spanner.V1
                     {
                         throw new RpcException(new Status(StatusCode.Unknown, "Session pool was unhealthy"));
                     }
-                    if (_readOnlySessions.Count + _readWriteSessions.Count >= Options.MinimumPooledSessions)
+                    if (_sessions.Count >= Options.MinimumPooledSessions)
                     {
                         return;
                     }
@@ -808,8 +752,7 @@ namespace Google.Cloud.Spanner.V1
                     {
                         lock (_lock)
                         {
-                            if (_readWriteSessions.Count == 0 &&
-                                _readOnlySessions.Count == 0 &&
+                            if (_sessions.Count == 0 &&
                                 ActiveSessionCount == 0 &&
                                 InFlightSessionCreationCount == 0 &&
                                 _pendingAcquisitions.Count == 0 &&
@@ -831,11 +774,7 @@ namespace Google.Cloud.Spanner.V1
                         List<TaskCompletionSource<PooledSession>> pendingAcquisitionsToCancel = new List<TaskCompletionSource<PooledSession>>();
                         lock (_lock)
                         {
-                            while (_readOnlySessions.TryPop(out var session))
-                            {
-                                sessionsToDelete.Add(session);
-                            }
-                            while (_readWriteSessions.TryPop(out var session))
+                            while (_sessions.TryPop(out var session))
                             {
                                 sessionsToDelete.Add(session);
                             }

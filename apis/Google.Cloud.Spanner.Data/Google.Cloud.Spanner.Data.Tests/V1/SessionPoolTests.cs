@@ -68,7 +68,6 @@ namespace Google.Cloud.Spanner.V1.Tests
                 SessionEvictionJitter = RetrySettings.NoJitter,
                 MinimumPooledSessions = 10,
                 MaximumConcurrentSessionCreates = 20,
-                WriteSessionsFraction = 0
             };
             var sessionPool = new SessionPool(client, options);
             var acquisitionTask = sessionPool.AcquireSessionAsync(s_sampleDatabaseName, new TransactionOptions(), default);
@@ -80,7 +79,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             var session = await acquisitionTask;
             var stats = sessionPool.GetSegmentStatisticsSnapshot(s_sampleDatabaseName);
 
-            Assert.Equal(10, stats.ReadPoolCount);
+            Assert.Equal(10, stats.PoolCount);
             Assert.Equal(11, client.SessionsCreated);
             Assert.Equal(0, client.SessionsDeleted);
 
@@ -89,7 +88,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             await client.Scheduler.RunAsync(TimeSpan.FromMinutes(4));
             stats = sessionPool.GetSegmentStatisticsSnapshot(s_sampleDatabaseName);
 
-            Assert.Equal(10, stats.ReadPoolCount);
+            Assert.Equal(10, stats.PoolCount);
             Assert.Equal(21, client.SessionsCreated);
             Assert.Equal(10, client.SessionsDeleted);
         }
@@ -107,7 +106,6 @@ namespace Google.Cloud.Spanner.V1.Tests
                 SessionEvictionJitter = RetrySettings.NoJitter,
                 MinimumPooledSessions = 10,
                 MaximumConcurrentSessionCreates = 20,
-                WriteSessionsFraction = 0
             };
             var sessionPool = new SessionPool(client, options);
             var acquisitionTask = sessionPool.AcquireSessionAsync(s_sampleDatabaseName, new TransactionOptions(), default);
@@ -119,7 +117,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             var session = await acquisitionTask;
             var stats = sessionPool.GetSegmentStatisticsSnapshot(s_sampleDatabaseName);
 
-            Assert.Equal(10, stats.ReadPoolCount);
+            Assert.Equal(10, stats.PoolCount);
             Assert.Equal(11, client.SessionsCreated);
             Assert.Equal(0, client.SessionsDeleted);
 
@@ -135,7 +133,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             session = await acquisitionTask;
             stats = sessionPool.GetSegmentStatisticsSnapshot(s_sampleDatabaseName);
 
-            Assert.Equal(10, stats.ReadPoolCount);
+            Assert.Equal(10, stats.PoolCount);
             Assert.Equal(12, client.SessionsCreated);
             Assert.Equal(0, client.SessionsDeleted);
 
@@ -144,7 +142,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             await client.Scheduler.RunAsync(TimeSpan.FromMinutes(2));
             stats = sessionPool.GetSegmentStatisticsSnapshot(s_sampleDatabaseName);
 
-            Assert.Equal(10, stats.ReadPoolCount);
+            Assert.Equal(10, stats.PoolCount);
             Assert.Equal(21, client.SessionsCreated);
             Assert.Equal(9, client.SessionsDeleted);
         }
@@ -160,7 +158,6 @@ namespace Google.Cloud.Spanner.V1.Tests
                 MaintenanceLoopDelay = TimeSpan.FromMinutes(1),
                 MinimumPooledSessions = 10,
                 MaximumConcurrentSessionCreates = 20,
-                WriteSessionsFraction = 0
             };
             var sessionPool = new SessionPool(client, options);
             var acquisitionTask = sessionPool.AcquireSessionAsync(s_sampleDatabaseName, new TransactionOptions(), default);
@@ -200,7 +197,6 @@ namespace Google.Cloud.Spanner.V1.Tests
                 MaintenanceLoopDelay = TimeSpan.FromMinutes(1),
                 MinimumPooledSessions = 10,
                 MaximumConcurrentSessionCreates = 20,
-                WriteSessionsFraction = 0
             };
             var sessionPool = new SessionPool(client, options);
 
@@ -244,7 +240,7 @@ namespace Google.Cloud.Spanner.V1.Tests
 
             Assert.Equal(2, stats.PerSegmentStatistics.Count);
             Assert.Equal(2, stats.TotalActiveSessionCount);
-            Assert.Equal(0, stats.TotalReadPoolCount);
+            Assert.Equal(0, stats.TotalPoolCount);
             // We've asked for 2 sessions, and the databases "know" they need 10 in the pool (each), so
             // there will be 22 in-flight requests in total.
             Assert.Equal(22, stats.TotalInFlightCreationCount);

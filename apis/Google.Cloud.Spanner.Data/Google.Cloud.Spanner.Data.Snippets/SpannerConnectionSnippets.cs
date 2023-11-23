@@ -447,8 +447,7 @@ namespace Google.Cloud.Spanner.Data.Snippets
                     // Access individual properties...
                     Console.WriteLine($"Database name: {stats.DatabaseName}");
                     Console.WriteLine($"Active sessions: {stats.ActiveSessionCount}");
-                    Console.WriteLine($"Pooled read-only sessions: {stats.ReadPoolCount}");
-                    Console.WriteLine($"Pooled read-write sessions: {stats.ReadWritePoolCount}");
+                    Console.WriteLine($"Pooled sessions: {stats.PoolCount}");
                     // ... or just use the overridden ToString method to log all the statistics in one go:
                     Console.WriteLine(stats);
                 }

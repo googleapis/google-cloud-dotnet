@@ -74,7 +74,6 @@ namespace Google.Cloud.Spanner.V1.Tests
                      MinimumPooledSessions = 10,
                      Timeout = TimeSpan.FromSeconds(60),
                      WaitOnResourcesExhausted = ResourcesExhaustedBehavior.Block,
-                     WriteSessionsFraction = 0.2
                 };
                 var parent = new SessionPool(client, options);
                 return new TargetedSessionPool(parent, SessionPoolSegmentKey.Create(s_databaseName), acquireSessionsImmediately);
@@ -88,8 +87,7 @@ namespace Google.Cloud.Spanner.V1.Tests
 
                 var stats = pool.GetStatisticsSnapshot();
                 Assert.Equal(0, stats.InFlightCreationCount);
-                Assert.Equal(0, stats.ReadPoolCount);
-                Assert.Equal(0, stats.ReadWritePoolCount);
+                Assert.Equal(0, stats.PoolCount);
 
                 // No attempt to run the scheduler, as there's nothing in-flight
                 client.Logger.AssertNoWarningsOrErrors();
@@ -107,8 +105,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 await Task.Delay(s_sessionAcquistionDelay);
                 var stats = pool.GetStatisticsSnapshot();
                 Assert.Equal(10, stats.InFlightCreationCount);
-                Assert.Equal(0, stats.ReadPoolCount);
-                Assert.Equal(0, stats.ReadWritePoolCount);
+                Assert.Equal(0, stats.PoolCount);
 
                 await client.Scheduler.RunForSecondsAsync(15);
 
@@ -119,8 +116,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 // as all the new sessions will go through the "do we need more read/write transactions?"
                 // code at the same time. That's likely to happen with the real pool too - but it'll
                 // even itself out over time.
-                Assert.Equal(10, stats.ReadPoolCount + stats.ReadWritePoolCount);
-                Assert.InRange(stats.ReadWritePoolCount, 2, 10);
+                Assert.Equal(10, stats.PoolCount);
 
                 client.Logger.AssertNoWarningsOrErrors();
             }
@@ -273,8 +269,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                     }
                 });
                 var stats = pool.GetStatisticsSnapshot();
-                Assert.Equal(0, stats.ReadPoolCount);
-                Assert.Equal(0, stats.ReadWritePoolCount);
+                Assert.Equal(0, stats.PoolCount);
                 Assert.Equal(100, stats.ActiveSessionCount);
             }
 
@@ -292,8 +287,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                     await Task.WhenAll(tasks);
                 });
                 var stats = pool.GetStatisticsSnapshot();
-                Assert.Equal(0, stats.ReadPoolCount);
-                Assert.Equal(0, stats.ReadWritePoolCount);
+                Assert.Equal(0, stats.PoolCount);
                 Assert.Equal(100, stats.ActiveSessionCount);
             }
 
@@ -353,8 +347,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                     Assert.False(stats.Healthy);
                     Assert.Equal(0, stats.ActiveSessionCount);
                     Assert.Equal(0, stats.PendingAcquisitionCount);
-                    Assert.Equal(0, stats.ReadPoolCount);
-                    Assert.Equal(0, stats.ReadWritePoolCount);
+                    Assert.Equal(0, stats.PoolCount);
                 });
             }
 
@@ -372,7 +365,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 Assert.True(stats.Healthy);
                 Assert.Equal(0, stats.ActiveSessionCount);
                 Assert.Equal(0, stats.PendingAcquisitionCount);
-                Assert.Equal(10, stats.ReadPoolCount + stats.ReadWritePoolCount);
+                Assert.Equal(10, stats.PoolCount);
                 Assert.Equal(0, stats.InFlightCreationCount);
 
                 client.FailAllRpcs = true;
@@ -389,8 +382,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 Assert.True(stats.Healthy);
                 Assert.Equal(13, stats.ActiveSessionCount);
                 Assert.Equal(3, stats.PendingAcquisitionCount);
-                Assert.Equal(0, stats.ReadPoolCount);
-                Assert.Equal(0, stats.ReadWritePoolCount);
+                Assert.Equal(0, stats.PoolCount);
                 Assert.Equal(13, stats.InFlightCreationCount);
 
                 // Make the create session tasks fail and notify the waiting callers.
@@ -421,8 +413,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 Assert.False(stats.Healthy);
                 Assert.Equal(10, stats.ActiveSessionCount);
                 Assert.Equal(0, stats.PendingAcquisitionCount);
-                Assert.Equal(0, stats.ReadPoolCount);
-                Assert.Equal(0, stats.ReadWritePoolCount);
+                Assert.Equal(0, stats.PoolCount);
                 Assert.Equal(0, stats.InFlightCreationCount);
             }
 
@@ -450,8 +441,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 Assert.False(stats.Healthy);
                 Assert.Equal(0, stats.ActiveSessionCount);
                 Assert.Equal(0, stats.PendingAcquisitionCount);
-                Assert.Equal(0, stats.ReadPoolCount);
-                Assert.Equal(0, stats.ReadWritePoolCount);
+                Assert.Equal(0, stats.PoolCount);
                 Assert.Equal(0, stats.InFlightCreationCount);
 
                 client.FailAllRpcs = false;
@@ -469,8 +459,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 // This one is 0 because the pool is unhealthy. The callers are waiting for the
                 // pool to become healthy first.
                 Assert.Equal(0, stats.PendingAcquisitionCount);
-                Assert.Equal(0, stats.ReadPoolCount);
-                Assert.Equal(0, stats.ReadWritePoolCount);
+                Assert.Equal(0, stats.PoolCount);
                 // Nursing back to health attempts to create the last failed batch.
                 // That will be either a batch of maximum size or a smaller batch with the remainder
                 // whichever failed last.
@@ -485,7 +474,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 Assert.True(stats.Healthy);
                 Assert.Equal(3, stats.ActiveSessionCount);
                 Assert.Equal(0, stats.PendingAcquisitionCount);
-                Assert.Equal(10, stats.ReadPoolCount + stats.ReadWritePoolCount);
+                Assert.Equal(10, stats.PoolCount);
                 Assert.Equal(0, stats.InFlightCreationCount);
             }
 
@@ -543,7 +532,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 Assert.True(stats.Healthy);
                 Assert.Equal(3, stats.ActiveSessionCount);
                 Assert.Equal(0, stats.PendingAcquisitionCount);
-                Assert.Equal(10, stats.ReadPoolCount + stats.ReadWritePoolCount);
+                Assert.Equal(10, stats.PoolCount);
                 Assert.Equal(0, stats.InFlightCreationCount);
             }
 
@@ -605,11 +594,10 @@ namespace Google.Cloud.Spanner.V1.Tests
             public async Task MaintainPool_CreatesNewSessions()
             {
                 var pool = CreatePool(false);
-                pool.Options.WriteSessionsFraction = 1; // Just for simplicity.
                 var client = (SessionTestingSpannerClient)pool.Client;
 
                 var stats = pool.GetStatisticsSnapshot();
-                Assert.Equal(0, stats.ReadWritePoolCount);
+                Assert.Equal(0, stats.PoolCount);
 
                 pool.MaintainPool();
 
@@ -617,7 +605,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 await client.Scheduler.RunForSecondsAsync(30);
 
                 stats = pool.GetStatisticsSnapshot();
-                Assert.Equal(10, stats.ReadWritePoolCount);
+                Assert.Equal(10, stats.PoolCount);
             }
 
             [Fact(Timeout = TestTimeoutMilliseconds)]
@@ -628,7 +616,7 @@ namespace Google.Cloud.Spanner.V1.Tests
 
                 // Give the pool a minute to fill up
                 await client.Scheduler.RunForSecondsAsync(60);
-                Assert.Equal(2, pool.GetStatisticsSnapshot().ReadWritePoolCount);
+                Assert.Equal(10, pool.GetStatisticsSnapshot().PoolCount);
 
                 // Let all the sessions idle out over 20 minutes.
                 await client.Scheduler.RunForSecondsAsync(60 * 20);
@@ -660,10 +648,8 @@ namespace Google.Cloud.Spanner.V1.Tests
 
                 // Give the pool a minute to fill up
                 await client.Scheduler.RunForSecondsAsync(60);
-                // There are 10 sessions in total with a 0.2 write/read proportion.
                 var stats = pool.GetStatisticsSnapshot();
-                Assert.Equal(10, stats.ReadPoolCount + stats.ReadWritePoolCount);
-                Assert.Equal(2, stats.ReadWritePoolCount);
+                Assert.Equal(10, stats.PoolCount);
 
                 // Let all the sessions go beyond their eviction time.
                 await client.Scheduler.RunForSecondsAsync(60 * 101); // 100 minute eviction
@@ -676,8 +662,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 await client.Scheduler.RunForSecondsAsync(60);
                 stats = pool.GetStatisticsSnapshot();
                 // Pool should be full aagain
-                Assert.Equal(10, stats.ReadPoolCount + stats.ReadWritePoolCount);
-                Assert.Equal(2, stats.ReadWritePoolCount);
+                Assert.Equal(10, stats.PoolCount);
 
                 // The newly created session should have an appropriate refresh time.
                 // (We don't need to let the scheduler run, as we're getting it from the pool.)
@@ -703,12 +688,8 @@ namespace Google.Cloud.Spanner.V1.Tests
                     await pool.WhenPoolReady(default);
 
                     // We allow 20 session creates at a time, and each takes 5 seconds.
-                    // We'll need at least 6 read/write sessions too.
-                    // We check the most important part first: that we actually have the required sessions.
                     var stats = pool.GetStatisticsSnapshot();
-                    Assert.Equal(30, stats.ReadWritePoolCount + stats.ReadPoolCount);
-                    // Implicitly checks that we have 24 read-only sessions
-                    Assert.Equal(6, stats.ReadWritePoolCount);
+                    Assert.Equal(30, stats.PoolCount);
 
                     // We're loose when checking the elapsed time, as on slow CI machines it can take around half
                     // a second for a released SemaphoreSlim to be acquired again, which means we don't start the second
@@ -866,8 +847,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                     Assert.Equal(true, stats.Shutdown);
                     Assert.Equal(1, stats.ActiveSessionCount);
                     Assert.Equal(0, stats.InFlightCreationCount);
-                    Assert.Equal(0, stats.ReadPoolCount);
-                    Assert.Equal(0, stats.ReadWritePoolCount);
+                    Assert.Equal(0, stats.PoolCount);
                     Assert.Equal(TaskStatus.WaitingForActivation, task.Status);
 
                     session.ReleaseToPool(false);
