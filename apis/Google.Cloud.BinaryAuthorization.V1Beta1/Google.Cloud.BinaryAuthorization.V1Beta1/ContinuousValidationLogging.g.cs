@@ -27,13 +27,13 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             "Ckxnb29nbGUvY2xvdWQvYmluYXJ5YXV0aG9yaXphdGlvbi92MWJldGExL2Nv",
             "bnRpbnVvdXNfdmFsaWRhdGlvbl9sb2dnaW5nLnByb3RvEihnb29nbGUuY2xv",
             "dWQuYmluYXJ5YXV0aG9yaXphdGlvbi52MWJldGExGh9nb29nbGUvcHJvdG9i",
-            "dWYvdGltZXN0YW1wLnByb3RvIuoOChlDb250aW51b3VzVmFsaWRhdGlvbkV2",
+            "dWYvdGltZXN0YW1wLnByb3RvIoURChlDb250aW51b3VzVmFsaWRhdGlvbkV2",
             "ZW50EnUKCXBvZF9ldmVudBgBIAEoCzJgLmdvb2dsZS5jbG91ZC5iaW5hcnlh",
             "dXRob3JpemF0aW9uLnYxYmV0YTEuQ29udGludW91c1ZhbGlkYXRpb25FdmVu",
             "dC5Db250aW51b3VzVmFsaWRhdGlvblBvZEV2ZW50SAAScgoSY29uZmlnX2Vy",
             "cm9yX2V2ZW50GAQgASgLMlQuZ29vZ2xlLmNsb3VkLmJpbmFyeWF1dGhvcml6",
             "YXRpb24udjFiZXRhMS5Db250aW51b3VzVmFsaWRhdGlvbkV2ZW50LkNvbmZp",
-            "Z0Vycm9yRXZlbnRIABqqDAocQ29udGludW91c1ZhbGlkYXRpb25Qb2RFdmVu",
+            "Z0Vycm9yRXZlbnRIABrFDgocQ29udGludW91c1ZhbGlkYXRpb25Qb2RFdmVu",
             "dBIVCg1wb2RfbmFtZXNwYWNlGAcgASgJEgsKA3BvZBgBIAEoCRITCgtwb2xp",
             "Y3lfbmFtZRgIIAEoCRIvCgtkZXBsb3lfdGltZRgCIAEoCzIaLmdvb2dsZS5w",
             "cm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYAyABKAsyGi5nb29nbGUu",
@@ -43,44 +43,51 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             "UG9saWN5Q29uZm9ybWFuY2VWZXJkaWN0En0KBmltYWdlcxgFIAMoCzJtLmdv",
             "b2dsZS5jbG91ZC5iaW5hcnlhdXRob3JpemF0aW9uLnYxYmV0YTEuQ29udGlu",
             "dW91c1ZhbGlkYXRpb25FdmVudC5Db250aW51b3VzVmFsaWRhdGlvblBvZEV2",
-            "ZW50LkltYWdlRGV0YWlscxqICAoMSW1hZ2VEZXRhaWxzEg0KBWltYWdlGAEg",
-            "ASgJEokBCgZyZXN1bHQYAiABKA4yeS5nb29nbGUuY2xvdWQuYmluYXJ5YXV0",
-            "aG9yaXphdGlvbi52MWJldGExLkNvbnRpbnVvdXNWYWxpZGF0aW9uRXZlbnQu",
-            "Q29udGludW91c1ZhbGlkYXRpb25Qb2RFdmVudC5JbWFnZURldGFpbHMuQXVk",
-            "aXRSZXN1bHQSEwoLZGVzY3JpcHRpb24YAyABKAkSkAEKDWNoZWNrX3Jlc3Vs",
-            "dHMYBCADKAsyeS5nb29nbGUuY2xvdWQuYmluYXJ5YXV0aG9yaXphdGlvbi52",
-            "MWJldGExLkNvbnRpbnVvdXNWYWxpZGF0aW9uRXZlbnQuQ29udGludW91c1Zh",
-            "bGlkYXRpb25Qb2RFdmVudC5JbWFnZURldGFpbHMuQ2hlY2tSZXN1bHQa8gQK",
-            "C0NoZWNrUmVzdWx0EhcKD2NoZWNrX3NldF9pbmRleBgBIAEoCRIWCg5jaGVj",
-            "a19zZXRfbmFtZRgCIAEoCRKhAQoPY2hlY2tfc2V0X3Njb3BlGAMgASgLMocB",
-            "Lmdvb2dsZS5jbG91ZC5iaW5hcnlhdXRob3JpemF0aW9uLnYxYmV0YTEuQ29u",
-            "dGludW91c1ZhbGlkYXRpb25FdmVudC5Db250aW51b3VzVmFsaWRhdGlvblBv",
-            "ZEV2ZW50LkltYWdlRGV0YWlscy5DaGVja1Jlc3VsdC5DaGVja1NldFNjb3Bl",
-            "EhMKC2NoZWNrX2luZGV4GAQgASgJEhIKCmNoZWNrX25hbWUYBSABKAkSEgoK",
-            "Y2hlY2tfdHlwZRgGIAEoCRKYAQoHdmVyZGljdBgHIAEoDjKGAS5nb29nbGUu",
-            "Y2xvdWQuYmluYXJ5YXV0aG9yaXphdGlvbi52MWJldGExLkNvbnRpbnVvdXNW",
-            "YWxpZGF0aW9uRXZlbnQuQ29udGludW91c1ZhbGlkYXRpb25Qb2RFdmVudC5J",
-            "bWFnZURldGFpbHMuQ2hlY2tSZXN1bHQuQ2hlY2tWZXJkaWN0EhMKC2V4cGxh",
-            "bmF0aW9uGAggASgJGl4KDUNoZWNrU2V0U2NvcGUSJAoaa3ViZXJuZXRlc19z",
-            "ZXJ2aWNlX2FjY291bnQYASABKAlIABIeChRrdWJlcm5ldGVzX25hbWVzcGFj",
-            "ZRgCIAEoCUgAQgcKBXNjb3BlIkEKDENoZWNrVmVyZGljdBIdChlDSEVDS19W",
-            "RVJESUNUX1VOU1BFQ0lGSUVEEAASEgoOTk9OX0NPTkZPUk1BTlQQASJACgtB",
-            "dWRpdFJlc3VsdBIcChhBVURJVF9SRVNVTFRfVU5TUEVDSUZJRUQQABIJCgVB",
-            "TExPVxABEggKBERFTlkQAiJbChhQb2xpY3lDb25mb3JtYW5jZVZlcmRpY3QS",
-            "KgomUE9MSUNZX0NPTkZPUk1BTkNFX1ZFUkRJQ1RfVU5TUEVDSUZJRUQQABIT",
-            "Cg9WSU9MQVRFU19QT0xJQ1kQARonChBDb25maWdFcnJvckV2ZW50EhMKC2Rl",
-            "c2NyaXB0aW9uGAEgASgJQgwKCmV2ZW50X3R5cGVCuQIKLGNvbS5nb29nbGUu",
-            "Y2xvdWQuYmluYXJ5YXV0aG9yaXphdGlvbi52MWJldGExQiBDb250aW51b3Vz",
-            "VmFsaWRhdGlvbkxvZ2dpbmdQcm90b1ABWl5jbG91ZC5nb29nbGUuY29tL2dv",
-            "L2JpbmFyeWF1dGhvcml6YXRpb24vYXBpdjFiZXRhMS9iaW5hcnlhdXRob3Jp",
-            "emF0aW9ucGI7YmluYXJ5YXV0aG9yaXphdGlvbnBi+AEBqgIoR29vZ2xlLkNs",
-            "b3VkLkJpbmFyeUF1dGhvcml6YXRpb24uVjFCZXRhMcoCKEdvb2dsZVxDbG91",
-            "ZFxCaW5hcnlBdXRob3JpemF0aW9uXFYxYmV0YTHqAitHb29nbGU6OkNsb3Vk",
-            "OjpCaW5hcnlBdXRob3JpemF0aW9uOjpWMWJldGExYgZwcm90bzM="));
+            "ZW50LkltYWdlRGV0YWlscxqjCgoMSW1hZ2VEZXRhaWxzEg0KBWltYWdlGAEg",
+            "ASgJEhYKDmNvbnRhaW5lcl9uYW1lGAUgASgJEpMBCg5jb250YWluZXJfdHlw",
+            "ZRgGIAEoDjJ7Lmdvb2dsZS5jbG91ZC5iaW5hcnlhdXRob3JpemF0aW9uLnYx",
+            "YmV0YTEuQ29udGludW91c1ZhbGlkYXRpb25FdmVudC5Db250aW51b3VzVmFs",
+            "aWRhdGlvblBvZEV2ZW50LkltYWdlRGV0YWlscy5Db250YWluZXJUeXBlEokB",
+            "CgZyZXN1bHQYAiABKA4yeS5nb29nbGUuY2xvdWQuYmluYXJ5YXV0aG9yaXph",
+            "dGlvbi52MWJldGExLkNvbnRpbnVvdXNWYWxpZGF0aW9uRXZlbnQuQ29udGlu",
+            "dW91c1ZhbGlkYXRpb25Qb2RFdmVudC5JbWFnZURldGFpbHMuQXVkaXRSZXN1",
+            "bHQSEwoLZGVzY3JpcHRpb24YAyABKAkSkAEKDWNoZWNrX3Jlc3VsdHMYBCAD",
+            "KAsyeS5nb29nbGUuY2xvdWQuYmluYXJ5YXV0aG9yaXphdGlvbi52MWJldGEx",
+            "LkNvbnRpbnVvdXNWYWxpZGF0aW9uRXZlbnQuQ29udGludW91c1ZhbGlkYXRp",
+            "b25Qb2RFdmVudC5JbWFnZURldGFpbHMuQ2hlY2tSZXN1bHQa8gQKC0NoZWNr",
+            "UmVzdWx0EhcKD2NoZWNrX3NldF9pbmRleBgBIAEoCRIWCg5jaGVja19zZXRf",
+            "bmFtZRgCIAEoCRKhAQoPY2hlY2tfc2V0X3Njb3BlGAMgASgLMocBLmdvb2ds",
+            "ZS5jbG91ZC5iaW5hcnlhdXRob3JpemF0aW9uLnYxYmV0YTEuQ29udGludW91",
+            "c1ZhbGlkYXRpb25FdmVudC5Db250aW51b3VzVmFsaWRhdGlvblBvZEV2ZW50",
+            "LkltYWdlRGV0YWlscy5DaGVja1Jlc3VsdC5DaGVja1NldFNjb3BlEhMKC2No",
+            "ZWNrX2luZGV4GAQgASgJEhIKCmNoZWNrX25hbWUYBSABKAkSEgoKY2hlY2tf",
+            "dHlwZRgGIAEoCRKYAQoHdmVyZGljdBgHIAEoDjKGAS5nb29nbGUuY2xvdWQu",
+            "YmluYXJ5YXV0aG9yaXphdGlvbi52MWJldGExLkNvbnRpbnVvdXNWYWxpZGF0",
+            "aW9uRXZlbnQuQ29udGludW91c1ZhbGlkYXRpb25Qb2RFdmVudC5JbWFnZURl",
+            "dGFpbHMuQ2hlY2tSZXN1bHQuQ2hlY2tWZXJkaWN0EhMKC2V4cGxhbmF0aW9u",
+            "GAggASgJGl4KDUNoZWNrU2V0U2NvcGUSJAoaa3ViZXJuZXRlc19zZXJ2aWNl",
+            "X2FjY291bnQYASABKAlIABIeChRrdWJlcm5ldGVzX25hbWVzcGFjZRgCIAEo",
+            "CUgAQgcKBXNjb3BlIkEKDENoZWNrVmVyZGljdBIdChlDSEVDS19WRVJESUNU",
+            "X1VOU1BFQ0lGSUVEEAASEgoOTk9OX0NPTkZPUk1BTlQQASJrCg1Db250YWlu",
+            "ZXJUeXBlEh4KGkNPTlRBSU5FUl9UWVBFX1VOU1BFQ0lGSUVEEAASDQoJQ09O",
+            "VEFJTkVSEAESEgoOSU5JVF9DT05UQUlORVIQAhIXChNFUEhFTUVSQUxfQ09O",
+            "VEFJTkVSEAMiQAoLQXVkaXRSZXN1bHQSHAoYQVVESVRfUkVTVUxUX1VOU1BF",
+            "Q0lGSUVEEAASCQoFQUxMT1cQARIICgRERU5ZEAIiWwoYUG9saWN5Q29uZm9y",
+            "bWFuY2VWZXJkaWN0EioKJlBPTElDWV9DT05GT1JNQU5DRV9WRVJESUNUX1VO",
+            "U1BFQ0lGSUVEEAASEwoPVklPTEFURVNfUE9MSUNZEAEaJwoQQ29uZmlnRXJy",
+            "b3JFdmVudBITCgtkZXNjcmlwdGlvbhgBIAEoCUIMCgpldmVudF90eXBlQrkC",
+            "Cixjb20uZ29vZ2xlLmNsb3VkLmJpbmFyeWF1dGhvcml6YXRpb24udjFiZXRh",
+            "MUIgQ29udGludW91c1ZhbGlkYXRpb25Mb2dnaW5nUHJvdG9QAVpeY2xvdWQu",
+            "Z29vZ2xlLmNvbS9nby9iaW5hcnlhdXRob3JpemF0aW9uL2FwaXYxYmV0YTEv",
+            "YmluYXJ5YXV0aG9yaXphdGlvbnBiO2JpbmFyeWF1dGhvcml6YXRpb25wYvgB",
+            "AaoCKEdvb2dsZS5DbG91ZC5CaW5hcnlBdXRob3JpemF0aW9uLlYxQmV0YTHK",
+            "AihHb29nbGVcQ2xvdWRcQmluYXJ5QXV0aG9yaXphdGlvblxWMWJldGEx6gIr",
+            "R29vZ2xlOjpDbG91ZDo6QmluYXJ5QXV0aG9yaXphdGlvbjo6VjFiZXRhMWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent), global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Parser, new[]{ "PodEvent", "ConfigErrorEvent" }, new[]{ "EventType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent), global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Parser, new[]{ "PodNamespace", "Pod", "PolicyName", "DeployTime", "EndTime", "Verdict", "Images" }, null, new[]{ typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.PolicyConformanceVerdict) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails), global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Parser, new[]{ "Image", "Result", "Description", "CheckResults" }, null, new[]{ typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.AuditResult) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.CheckResult), global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.CheckResult.Parser, new[]{ "CheckSetIndex", "CheckSetName", "CheckSetScope", "CheckIndex", "CheckName", "CheckType", "Verdict", "Explanation" }, null, new[]{ typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.CheckResult.Types.CheckVerdict) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.CheckResult.Types.CheckSetScope), global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.CheckResult.Types.CheckSetScope.Parser, new[]{ "KubernetesServiceAccount", "KubernetesNamespace" }, new[]{ "Scope" }, null, null, null)})})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent), global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Parser, new[]{ "PodEvent", "ConfigErrorEvent" }, new[]{ "EventType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent), global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Parser, new[]{ "PodNamespace", "Pod", "PolicyName", "DeployTime", "EndTime", "Verdict", "Images" }, null, new[]{ typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.PolicyConformanceVerdict) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails), global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Parser, new[]{ "Image", "ContainerName", "ContainerType", "Result", "Description", "CheckResults" }, null, new[]{ typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.ContainerType), typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.AuditResult) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.CheckResult), global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.CheckResult.Parser, new[]{ "CheckSetIndex", "CheckSetName", "CheckSetScope", "CheckIndex", "CheckName", "CheckType", "Verdict", "Explanation" }, null, new[]{ typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.CheckResult.Types.CheckVerdict) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.CheckResult.Types.CheckSetScope), global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.CheckResult.Types.CheckSetScope.Parser, new[]{ "KubernetesServiceAccount", "KubernetesNamespace" }, new[]{ "Scope" }, null, null, null)})})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ConfigErrorEvent), global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ConfigErrorEvent.Parser, new[]{ "Description" }, null, null, null, null)})
           }));
     }
@@ -882,6 +889,8 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public ImageDetails(ImageDetails other) : this() {
               image_ = other.image_;
+              containerName_ = other.containerName_;
+              containerType_ = other.containerType_;
               result_ = other.result_;
               description_ = other.description_;
               checkResults_ = other.checkResults_.Clone();
@@ -906,6 +915,36 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
               get { return image_; }
               set {
                 image_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "container_name" field.</summary>
+            public const int ContainerNameFieldNumber = 5;
+            private string containerName_ = "";
+            /// <summary>
+            /// The name of the container.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string ContainerName {
+              get { return containerName_; }
+              set {
+                containerName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "container_type" field.</summary>
+            public const int ContainerTypeFieldNumber = 6;
+            private global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.ContainerType containerType_ = global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.ContainerType.Unspecified;
+            /// <summary>
+            /// The container type that this image belongs to.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.ContainerType ContainerType {
+              get { return containerType_; }
+              set {
+                containerType_ = value;
               }
             }
 
@@ -969,6 +1008,8 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
                 return true;
               }
               if (Image != other.Image) return false;
+              if (ContainerName != other.ContainerName) return false;
+              if (ContainerType != other.ContainerType) return false;
               if (Result != other.Result) return false;
               if (Description != other.Description) return false;
               if(!checkResults_.Equals(other.checkResults_)) return false;
@@ -980,6 +1021,8 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             public override int GetHashCode() {
               int hash = 1;
               if (Image.Length != 0) hash ^= Image.GetHashCode();
+              if (ContainerName.Length != 0) hash ^= ContainerName.GetHashCode();
+              if (ContainerType != global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.ContainerType.Unspecified) hash ^= ContainerType.GetHashCode();
               if (Result != global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.AuditResult.Unspecified) hash ^= Result.GetHashCode();
               if (Description.Length != 0) hash ^= Description.GetHashCode();
               hash ^= checkResults_.GetHashCode();
@@ -1014,6 +1057,14 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
                 output.WriteString(Description);
               }
               checkResults_.WriteTo(output, _repeated_checkResults_codec);
+              if (ContainerName.Length != 0) {
+                output.WriteRawTag(42);
+                output.WriteString(ContainerName);
+              }
+              if (ContainerType != global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.ContainerType.Unspecified) {
+                output.WriteRawTag(48);
+                output.WriteEnum((int) ContainerType);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
@@ -1037,6 +1088,14 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
                 output.WriteString(Description);
               }
               checkResults_.WriteTo(ref output, _repeated_checkResults_codec);
+              if (ContainerName.Length != 0) {
+                output.WriteRawTag(42);
+                output.WriteString(ContainerName);
+              }
+              if (ContainerType != global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.ContainerType.Unspecified) {
+                output.WriteRawTag(48);
+                output.WriteEnum((int) ContainerType);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(ref output);
               }
@@ -1049,6 +1108,12 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
               int size = 0;
               if (Image.Length != 0) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(Image);
+              }
+              if (ContainerName.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(ContainerName);
+              }
+              if (ContainerType != global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.ContainerType.Unspecified) {
+                size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ContainerType);
               }
               if (Result != global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.AuditResult.Unspecified) {
                 size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Result);
@@ -1071,6 +1136,12 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
               }
               if (other.Image.Length != 0) {
                 Image = other.Image;
+              }
+              if (other.ContainerName.Length != 0) {
+                ContainerName = other.ContainerName;
+              }
+              if (other.ContainerType != global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.ContainerType.Unspecified) {
+                ContainerType = other.ContainerType;
               }
               if (other.Result != global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.AuditResult.Unspecified) {
                 Result = other.Result;
@@ -1110,6 +1181,14 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
                     checkResults_.AddEntriesFrom(input, _repeated_checkResults_codec);
                     break;
                   }
+                  case 42: {
+                    ContainerName = input.ReadString();
+                    break;
+                  }
+                  case 48: {
+                    ContainerType = (global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.ContainerType) input.ReadEnum();
+                    break;
+                  }
                 }
               }
             #endif
@@ -1141,6 +1220,14 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
                     checkResults_.AddEntriesFrom(ref input, _repeated_checkResults_codec);
                     break;
                   }
+                  case 42: {
+                    ContainerName = input.ReadString();
+                    break;
+                  }
+                  case 48: {
+                    ContainerType = (global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.ContainerType) input.ReadEnum();
+                    break;
+                  }
                 }
               }
             }
@@ -1151,6 +1238,30 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static partial class Types {
+              /// <summary>
+              /// The container type.
+              /// </summary>
+              public enum ContainerType {
+                /// <summary>
+                /// The container type should always be specified. This is an error.
+                /// </summary>
+                [pbr::OriginalName("CONTAINER_TYPE_UNSPECIFIED")] Unspecified = 0,
+                /// <summary>
+                /// A regular deployment.
+                /// </summary>
+                [pbr::OriginalName("CONTAINER")] Container = 1,
+                /// <summary>
+                /// Init container defined as specified at
+                /// https://kubernetes.io/docs/concepts/workloads/pods/init-containers/
+                /// </summary>
+                [pbr::OriginalName("INIT_CONTAINER")] InitContainer = 2,
+                /// <summary>
+                /// Ephemeral container defined as specified at
+                /// https://kubernetes.io/docs/concepts/workloads/pods/ephemeral-containers/
+                /// </summary>
+                [pbr::OriginalName("EPHEMERAL_CONTAINER")] EphemeralContainer = 3,
+              }
+
               /// <summary>
               /// Result of the audit.
               /// </summary>
