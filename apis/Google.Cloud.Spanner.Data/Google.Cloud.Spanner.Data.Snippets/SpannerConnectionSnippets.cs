@@ -332,6 +332,7 @@ namespace Google.Cloud.Spanner.Data.Snippets
                     // Read the first two keys in the database.
                     List<string> keys = new List<string>();
                     SpannerCommand selectCmd = connection.CreateSelectCommand("SELECT * FROM TestTable");
+                    selectCmd.Transaction = transaction;
                     using (SpannerDataReader reader = await selectCmd.ExecuteReaderAsync())
                     {
                         while (keys.Count < 3 && await reader.ReadAsync())
@@ -345,11 +346,13 @@ namespace Google.Cloud.Spanner.Data.Snippets
                     SpannerCommand updateCmd = connection.CreateUpdateCommand("TestTable");
                     updateCmd.Parameters.Add("Key", SpannerDbType.String, keys[0]);
                     updateCmd.Parameters.Add("Int64Value", SpannerDbType.Int64, 0L);
+                    updateCmd.Transaction = transaction;
                     await updateCmd.ExecuteNonQueryAsync();
 
                     // Delete row for keys[1]
                     SpannerCommand deleteCmd = connection.CreateDeleteCommand("TestTable");
                     deleteCmd.Parameters.Add("Key", SpannerDbType.String, keys[1]);
+                    deleteCmd.Transaction = transaction;
                     await deleteCmd.ExecuteNonQueryAsync();
                 });
                 // End sample
