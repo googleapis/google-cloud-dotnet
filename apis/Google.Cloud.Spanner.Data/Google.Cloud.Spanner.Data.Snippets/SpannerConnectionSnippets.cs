@@ -287,6 +287,7 @@ namespace Google.Cloud.Spanner.Data.Snippets
                     // Insert a second row
                     cmd.Parameters["Id"].Value = 11L;
                     cmd.Parameters["Name"].Value = "Demo 2";
+                    cmd.Transaction = transaction;
                     rowsAffected += await cmd.ExecuteNonQueryAsync();
                 });
 

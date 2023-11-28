@@ -62,7 +62,7 @@ namespace Google.Cloud.Spanner.Data
         // This value will be true if and only if this transaction was created by RetriableTransaction.
         private readonly bool _isRetriable = false;
         private DisposeBehavior _disposeBehavior = DisposeBehavior.ReleaseToPool;
-        private bool _disposed = false;
+        private int _disposed = 0;
 
         // Flag indicating whether the transaction has executed at least one statement.
         // The TransactionTag may no longer be set once the transaction has executed one
@@ -241,7 +241,11 @@ namespace Google.Cloud.Spanner.Data
         /// <see cref="SpannerBatchCommand.Add(SpannerCommandTextBuilder, SpannerParameterCollection)"/>
         /// and <see cref="SpannerBatchCommand.Add(string, SpannerParameterCollection)"/>.
         /// </summary>
-        public SpannerBatchCommand CreateBatchDmlCommand() => new SpannerBatchCommand(this);
+        public SpannerBatchCommand CreateBatchDmlCommand()
+        {
+            CheckNotDisposed();
+            return new SpannerBatchCommand(this);
+        }
 
         internal Task<IEnumerable<ByteString>> GetPartitionTokensAsync(
             ReadOrQueryRequest request,
@@ -250,6 +254,7 @@ namespace Google.Cloud.Spanner.Data
             CancellationToken cancellationToken,
             int timeoutSeconds)
         {
+            CheckNotDisposed();
             GaxPreconditions.CheckNotNull(request, nameof(request));
             GaxPreconditions.CheckState(Mode == TransactionMode.ReadOnly, "You can only call GetPartitions on a read-only transaction.");
             _hasExecutedStatements = true;
@@ -276,6 +281,7 @@ namespace Google.Cloud.Spanner.Data
             CancellationToken cancellationToken,
             int timeoutSeconds /* ignored */)
         {
+            CheckNotDisposed();
             CheckCompatibleMode(TransactionMode.ReadWrite);
             _hasExecutedStatements = true;
             return ExecuteHelper.WithErrorTranslationAndProfiling(() =>
@@ -296,6 +302,7 @@ namespace Google.Cloud.Spanner.Data
             CancellationToken cancellationToken,
             int timeoutSeconds) // Ignored
         {
+            CheckNotDisposed();
             GaxPreconditions.CheckNotNull(request, nameof(request));
             CheckCompatibleMode(TransactionMode.ReadOnly);
             _hasExecutedStatements = true;
@@ -308,6 +315,7 @@ namespace Google.Cloud.Spanner.Data
 
         Task<long> ISpannerTransaction.ExecuteDmlAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
         {
+            CheckNotDisposed();
             CheckCompatibleMode(TransactionMode.ReadWrite);
             GaxPreconditions.CheckNotNull(request, nameof(request));
             _hasExecutedStatements = true;
@@ -341,6 +349,7 @@ namespace Google.Cloud.Spanner.Data
 
         Task<ReliableStreamReader> ISpannerTransaction.ExecuteDmlReaderAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
         {
+            CheckNotDisposed();
             CheckCompatibleMode(TransactionMode.ReadWrite);
             GaxPreconditions.CheckNotNull(request, nameof(request));
             _hasExecutedStatements = true;
@@ -356,6 +365,7 @@ namespace Google.Cloud.Spanner.Data
 
         Task<IEnumerable<long>> ISpannerTransaction.ExecuteBatchDmlAsync(ExecuteBatchDmlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
         {
+            CheckNotDisposed();
             CheckCompatibleMode(TransactionMode.ReadWrite);
             GaxPreconditions.CheckNotNull(request, nameof(request));
             _hasExecutedStatements = true;
@@ -400,6 +410,7 @@ namespace Google.Cloud.Spanner.Data
         /// <returns>Returns the UTC timestamp when the data was written to the database.</returns>
         public new Task<DateTime> CommitAsync(CancellationToken cancellationToken = default)
         {
+            CheckNotDisposed();
             GaxPreconditions.CheckState(Mode != TransactionMode.ReadOnly, "You cannot commit a readonly transaction.");
             var request = new CommitRequest { Mutations = { _mutations }, ReturnCommitStats = LogCommitStats, RequestOptions = BuildCommitRequestOptions() };
             return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
@@ -434,6 +445,7 @@ namespace Google.Cloud.Spanner.Data
         public override Task RollbackAsync(CancellationToken cancellationToken = default)
 #endif
         {
+            CheckNotDisposed();
             GaxPreconditions.CheckState(Mode != TransactionMode.ReadOnly, "You cannot roll back a readonly transaction.");
             var callSettings = SpannerConnection.CreateCallSettings(settings => settings.RollbackSettings, CommitTimeout, cancellationToken);
             return ExecuteHelper.WithErrorTranslationAndProfiling(
@@ -456,14 +468,21 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public Timestamp ReadTimestamp => _session.ReadTimestamp;
 
+        private void CheckNotDisposed()
+        {
+            if (Interlocked.CompareExchange(ref _disposed, 0, 0) == 1)
+            {
+                throw new ObjectDisposedException("This transaction has been disposed and cannot be reused.");
+            }
+        }
+
         /// <inheritdoc />
         protected override void Dispose(bool disposing)
         {
-            if (_disposed)
+            if (Interlocked.Exchange(ref _disposed, 1) == 1)
             {
                 return;
             }
-            _disposed = true;
 
             if (_isRetriable)
             {
