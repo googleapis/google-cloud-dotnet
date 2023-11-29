@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.5.0-beta01, released 2023-11-29
+
+Note: this is a beta release as multiple database support in
+Firestore is still in preview. We don't *expect* the API surface to
+change between now and the final release, but we don't guarantee that.
+
+### New features
+
+- Expose multiple database support in FirestoreDb/FirestoreDbBuilder ([commit 4dd0318](https://github.com/googleapis/google-cloud-dotnet/commit/4dd0318f34b8763fb2dec2922ed8bc30213b7077))
+
 ## Version 3.4.0, released 2023-10-04
 
 ### Bug fixes
