@@ -50,11 +50,10 @@ namespace Google.Cloud.Firestore
         /// </summary>
         public string ProjectId { get; set; }
 
-        // TODO: Make this public again when the server supports it. Unskip the tests in FirestoreMultipleDbTest.
         /// <summary>
         /// The ID of the database within the project. May be null, in which case the default database will be used.
         /// </summary>
-        internal string DatabaseId { get; set; }
+        public string DatabaseId { get; set; }
 
         /// <summary>
         /// Action to receive warning messages. May be null, in which case warnings will be ignored.
