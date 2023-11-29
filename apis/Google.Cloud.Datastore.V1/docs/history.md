@@ -1,5 +1,13 @@
 # Version history
 
+## Version 4.7.0-beta01, released 2023-11-29
+
+Note: this is a beta release as multiple database support in Datastore is still in preview. We don't expect the API surface to change between now and the final release, but we don't guarantee that.
+
+### New features
+
+- Multi-db support in Datastore. ([commit 4e7700f](https://github.com/googleapis/google-cloud-dotnet/commit/4e7700ffb1850e405654a4893ad1a3fe87ed5c2f))
+
 ## Version 4.6.0, released 2023-08-22
 
 ### New features
