@@ -242,9 +242,9 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
         }
 
-        internal Bucket CreateBucket(string name, bool multiVersion)
+        internal Bucket CreateBucket(string name, bool multiVersion, CreateBucketOptions options = null)
         {
-            var bucket = Client.CreateBucket(ProjectId, new Bucket { Name = name, Versioning = new Bucket.VersioningData { Enabled = multiVersion } });
+            var bucket = Client.CreateBucket(ProjectId, new Bucket { Name = name, Versioning = new Bucket.VersioningData { Enabled = multiVersion } }, options);
             SleepAfterBucketCreateDelete();
             RegisterBucketToDelete(name);
             return bucket;

@@ -39,12 +39,14 @@ namespace Google.Cloud.Storage.V1.Tests
             {
                 PredefinedAcl = PredefinedBucketAcl.AuthenticatedRead,
                 PredefinedDefaultObjectAcl = PredefinedObjectAcl.BucketOwnerFullControl,
-                Projection = Projection.Full
+                Projection = Projection.Full,
+                EnableObjectRetention = true
             };
             options.ModifyRequest(request);
             Assert.Equal(PredefinedAclEnum.AuthenticatedRead, request.PredefinedAcl);
             Assert.Equal(PredefinedDefaultObjectAclEnum.BucketOwnerFullControl, request.PredefinedDefaultObjectAcl);
             Assert.Equal(ProjectionEnum.Full, request.Projection);
+            Assert.True(request.EnableObjectRetention);
         }
     }
 }

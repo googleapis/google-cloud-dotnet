@@ -43,6 +43,11 @@ namespace Google.Cloud.Storage.V1
         /// </summary>
         public RetryOptions RetryOptions { get; set; }
 
+        /// <summary>
+        /// When set to true, object retention is enabled for this bucket.
+        /// </summary>
+        public bool? EnableObjectRetention { get; set; }
+
         internal void ModifyRequest(BucketsResource.InsertRequest request)
         {
             if (PredefinedAcl != null)
@@ -58,6 +63,10 @@ namespace Google.Cloud.Storage.V1
             if (Projection != null)
             {
                 request.Projection = GaxPreconditions.CheckEnumValue((ProjectionEnum) Projection, nameof(Projection));
+            }
+            if (EnableObjectRetention != null)
+            {
+                request.EnableObjectRetention = EnableObjectRetention;
             }
         }
     }

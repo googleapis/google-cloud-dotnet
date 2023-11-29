@@ -111,6 +111,64 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         }
 
         /// <summary>
+        /// Tests for object retention policy.
+        /// </summary>
+        [Fact]
+        public void ObjectRetentionTests()
+        {
+            var client = _fixture.Client;
+            var bucketName = _fixture.GenerateBucketName();
+
+            // Create a bucket with object retention enabled.
+            var createBucketoptions = new CreateBucketOptions { EnableObjectRetention = true };
+            var bucket = _fixture.CreateBucket(bucketName, false, createBucketoptions);
+            bucket = client.GetBucket(bucketName);
+            Assert.Equal("Enabled", bucket.ObjectRetention?.Mode);
+
+            var baseDateTime = DateTimeOffset.UtcNow;
+
+            string objectName = "object.txt";
+            // Create an object, with retention configured.\
+            var newObject = new Object
+            {
+                Bucket = bucketName,
+                Name = objectName,
+                ContentType = "text/plain",
+                Retention = new Object.RetentionData
+                {
+                    Mode = "Unlocked",
+                    RetainUntilTimeDateTimeOffset = baseDateTime.AddDays(5),
+                }
+
+            };
+            CreateObject(newObject);
+            var obj = client.GetObject(bucketName, objectName);
+            Assert.Equal("Unlocked", obj.Retention?.Mode);
+            Assert.Equal(baseDateTime.AddDays(5).Date, obj.Retention.RetainUntilTimeDateTimeOffset.Value.Date);
+
+            Assert.Throws<GoogleApiException>(() => client.DeleteObject(bucketName, objectName));
+
+            // Update the retainUntilTime of the object
+            var updateObjectOptions = new UpdateObjectOptions { OverrideUnlockedRetention = true, };
+            obj.Retention.Mode = "Unlocked";
+            obj.Retention.RetainUntilTimeDateTimeOffset = baseDateTime.AddDays(2);
+            client.UpdateObject(obj, updateObjectOptions);
+            var updatedObj = client.GetObject(bucketName, objectName);
+            Assert.Equal(baseDateTime.AddDays(2).Date, updatedObj.Retention?.RetainUntilTimeDateTimeOffset.Value.Date);
+
+            Assert.Throws<GoogleApiException>(() => client.DeleteObject(bucketName, objectName));
+
+            // Remove retention for existing object.
+            updatedObj.Retention = null;
+            var removeobjectRetentionOption = new UpdateObjectOptions { OverrideUnlockedRetention = true, };
+            client.UpdateObject(updatedObj, removeobjectRetentionOption);
+            var retentionRemovedObj = client.GetObject(bucketName, objectName);
+            Assert.Null(retentionRemovedObj.Retention);
+
+            client.DeleteObject(bucketName, objectName);
+        }
+
+        /// <summary>
         /// Test Set/Update temporary hold on an object and attempt to delete an object.
         /// It should fail until temporaryHold is set to false.
         /// </summary>
@@ -205,6 +263,13 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             string text = $"This is the content of {objectName}";
             var bytes = Encoding.UTF8.GetBytes(text);
             return _fixture.Client.UploadObject(bucketName, objectName, "text/plain", new MemoryStream(bytes));
+        }
+
+        private Object CreateObject(Object obj)
+        {
+            string text = $"This is the content of {obj.Name}";
+            var bytes = Encoding.UTF8.GetBytes(text);
+            return _fixture.Client.UploadObject(obj, new MemoryStream(bytes));
         }
     }
 }

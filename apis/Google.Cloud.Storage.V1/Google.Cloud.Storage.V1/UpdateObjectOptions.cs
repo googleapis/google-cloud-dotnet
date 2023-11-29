@@ -88,6 +88,12 @@ namespace Google.Cloud.Storage.V1
         /// </summary>
         public RetryOptions RetryOptions { get; set; }
 
+        /// <summary>
+        /// Must be true to remove the retention configuration, reduce its unlocked retention period, or change its
+        /// mode from unlocked to locked.
+        /// </summary>
+        public bool? OverrideUnlockedRetention { get; set; }
+
         private bool AnyExplicitPreconditions =>
             IfGenerationMatch != null || IfGenerationNotMatch != null || IfMetagenerationMatch != null || IfMetagenerationNotMatch != null;
 
@@ -148,6 +154,10 @@ namespace Google.Cloud.Storage.V1
             if (UserProject != null)
             {
                 request.UserProject = UserProject;
+            }
+            if (OverrideUnlockedRetention != null)
+            {
+                request.OverrideUnlockedRetention = OverrideUnlockedRetention;
             }
         }
     }
