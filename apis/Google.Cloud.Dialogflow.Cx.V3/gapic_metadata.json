@@ -344,6 +344,45 @@
         }
       }
     },
+    "Generators": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "GeneratorsClient",
+          "rpcs": {
+            "CreateGenerator": {
+              "methods": [
+                "CreateGenerator",
+                "CreateGeneratorAsync"
+              ]
+            },
+            "DeleteGenerator": {
+              "methods": [
+                "DeleteGenerator",
+                "DeleteGeneratorAsync"
+              ]
+            },
+            "GetGenerator": {
+              "methods": [
+                "GetGenerator",
+                "GetGeneratorAsync"
+              ]
+            },
+            "ListGenerators": {
+              "methods": [
+                "ListGenerators",
+                "ListGeneratorsAsync"
+              ]
+            },
+            "UpdateGenerator": {
+              "methods": [
+                "UpdateGenerator",
+                "UpdateGeneratorAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "Intents": {
       "clients": {
         "grpc": {
