@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.0.0-alpha19, released 2023-12-04
+
+### New features
+
+- Add TaskGroup.enable_oslogin to give the Batch job submitter the ability to run runnables as non-root controlled by IAM ([commit 05eda0b](https://github.com/googleapis/google-cloud-dotnet/commit/05eda0ba0e08de129af6683a1404459b7afcbb22))
+- Add a CloudLoggingOption and use_generic_task_monitored_resource fields for users to opt out new batch monitored resource in cloud logging ([commit eecc6fa](https://github.com/googleapis/google-cloud-dotnet/commit/eecc6fa0be5ee899a2d811079ea893bf3242ea9a))
+
+### Documentation improvements
+
+- Update documentation for the network field of AllocationPolicy ([commit 05eda0b](https://github.com/googleapis/google-cloud-dotnet/commit/05eda0ba0e08de129af6683a1404459b7afcbb22))
+- Add clarification for `TaskGroup.parallelism` ([commit cbd5658](https://github.com/googleapis/google-cloud-dotnet/commit/cbd5658d43f63df5aace1dd96df77950425da37f))
+
 ## Version 1.0.0-alpha18, released 2023-10-30
 
 ### New features
