@@ -280,59 +280,57 @@ namespace Google.Cloud.Datastore.V1
         }
 
         /// <inheritdoc/>
-        public override IReadOnlyList<Entity> Lookup(IEnumerable<Key> keys, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
-            => LookupImpl(Client, ProjectId, DatabaseId, GetReadOptions(readConsistency), keys, callSettings);
+        public override IReadOnlyList<Entity> Lookup(IEnumerable<Key> keys, ReadConsistency? readConsistency = null, CallSettings callSettings = null) =>
+            LookupImpl(Client, ProjectId, DatabaseId, GetReadOptions(readConsistency), keys, callSettings);
 
         /// <inheritdoc/>
-        public override Task<IReadOnlyList<Entity>> LookupAsync(IEnumerable<Key> keys, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
-            => LookupImplAsync(Client, ProjectId, DatabaseId, GetReadOptions(readConsistency), keys, callSettings);
+        public override Task<IReadOnlyList<Entity>> LookupAsync(IEnumerable<Key> keys, ReadConsistency? readConsistency = null, CallSettings callSettings = null) =>
+            LookupImplAsync(Client, ProjectId, DatabaseId, GetReadOptions(readConsistency), keys, callSettings);
 
         // Non-transactional mutations
 
         /// <inheritdoc/>
         public override IReadOnlyList<Key> Insert(IEnumerable<Entity> entities, CallSettings callSettings = null) =>
-            Commit(entities, e => e.ToInsert(), SetKey, nameof(entities), callSettings);
+            Commit(entities, e => e.ToInsert(), SetKey, callSettings);
 
         /// <inheritdoc/>
         public override Task<IReadOnlyList<Key>> InsertAsync(IEnumerable<Entity> entities, CallSettings callSettings = null) =>
-            CommitAsync(entities, e => e.ToInsert(), SetKey, nameof(entities), callSettings);
+            CommitAsync(entities, e => e.ToInsert(), SetKey, callSettings);
 
         /// <inheritdoc/>
         public override IReadOnlyList<Key> Upsert(IEnumerable<Entity> entities, CallSettings callSettings = null) =>
-            Commit(entities, e => e.ToUpsert(), SetKey, nameof(entities), callSettings);
+            Commit(entities, e => e.ToUpsert(), SetKey, callSettings);
 
         /// <inheritdoc/>
         public override Task<IReadOnlyList<Key>> UpsertAsync(IEnumerable<Entity> entities, CallSettings callSettings = null) =>
-            CommitAsync(entities, e => e.ToUpsert(), SetKey, nameof(entities), callSettings);
+            CommitAsync(entities, e => e.ToUpsert(), SetKey, callSettings);
 
         /// <inheritdoc/>
         public override void Update(IEnumerable<Entity> entities, CallSettings callSettings = null) =>
-            Commit(entities, e => e.ToUpdate(), null, nameof(entities), callSettings);
+            Commit(entities, e => e.ToUpdate(), null, callSettings);
 
         /// <inheritdoc/>
         public override Task UpdateAsync(IEnumerable<Entity> entities, CallSettings callSettings = null) =>
-            CommitAsync(entities, e => e.ToUpdate(), null, nameof(entities), callSettings);
+            CommitAsync(entities, e => e.ToUpdate(), null, callSettings);
 
         /// <inheritdoc/>
         public override void Delete(IEnumerable<Entity> entities, CallSettings callSettings = null) =>
-            Commit(entities, e => e.ToDelete(), null, nameof(entities), callSettings);
+            Commit(entities, e => e.ToDelete(), null, callSettings);
 
         /// <inheritdoc/>
         public override Task DeleteAsync(IEnumerable<Entity> entities, CallSettings callSettings = null) =>
-            CommitAsync(entities, e => e.ToDelete(), null, nameof(entities), callSettings);
+            CommitAsync(entities, e => e.ToDelete(), null, callSettings);
 
         /// <inheritdoc/>
         public override void Delete(IEnumerable<Key> keys, CallSettings callSettings = null) =>
-            Commit(keys, e => e.ToDelete(), null, nameof(keys), callSettings);
+            Commit(keys, e => e.ToDelete(), null, callSettings);
 
         /// <inheritdoc/>
         public override Task DeleteAsync(IEnumerable<Key> keys, CallSettings callSettings = null) =>
-            CommitAsync(keys, e => e.ToDelete(), null, nameof(keys), callSettings);
+            CommitAsync(keys, e => e.ToDelete(), null,callSettings);
 
-        private IReadOnlyList<Key> Commit<T>(IEnumerable<T> values, Func<T, Mutation> conversion, Action<T, Key> keyPropagation, string parameterName, CallSettings callSettings)
+        private IReadOnlyList<Key> Commit<T>(IEnumerable<T> values, Func<T, Mutation> conversion, Action<T, Key> keyPropagation, CallSettings callSettings)
         {
-            // TODO: Validation
-
             // Ensure we only iterate over values once
             var valuesList = values.ToList();
             var commitRequest = new CommitRequest
@@ -351,10 +349,8 @@ namespace Google.Cloud.Datastore.V1
             return response.MutationResults.Select(mr => mr.Key).ToList();
         }
 
-        private async Task<IReadOnlyList<Key>> CommitAsync<T>(IEnumerable<T> values, Func<T, Mutation> conversion, Action<T, Key> keyPropagation, string parameterName, CallSettings callSettings)
+        private async Task<IReadOnlyList<Key>> CommitAsync<T>(IEnumerable<T> values, Func<T, Mutation> conversion, Action<T, Key> keyPropagation, CallSettings callSettings)
         {
-            // TODO: Validation
-
             // Ensure we only iterate over values once
             var valuesList = values.ToList();
             var commitRequest = new CommitRequest

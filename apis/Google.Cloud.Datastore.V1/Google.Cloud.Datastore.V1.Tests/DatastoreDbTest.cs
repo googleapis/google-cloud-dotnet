@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -96,8 +96,8 @@ namespace Google.Cloud.Datastore.V1.Tests
                 ["human_key"] = RenderKey(key)
             };
 
-        private static LookupRequest NormalizeRequest(LookupRequest input)
-            => new LookupRequest
+        private static LookupRequest NormalizeRequest(LookupRequest input) =>
+            new LookupRequest
             {
                 Keys = { input.Keys.Select(k => k.Clone()).OrderBy(RenderKey) },
                 ProjectId = input.ProjectId,

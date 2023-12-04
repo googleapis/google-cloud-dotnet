@@ -70,8 +70,8 @@ namespace Google.Cloud.Datastore.V1
         /// <param name="transactionId">The transaction obtained by an earlier <see cref="DatastoreClient.BeginTransaction(string, CallSettings)"/>
         /// or the asynchronous equivalent. Must not be null</param>
         /// <returns>A <see cref="DatastoreTransaction"/> representation of the specified transaction.</returns>
-        public static DatastoreTransaction Create(DatastoreClient client, string projectId, string namespaceId, ByteString transactionId)
-            => new DatastoreTransactionImpl(client, projectId, namespaceId, transactionId);
+        public static DatastoreTransaction Create(DatastoreClient client, string projectId, string namespaceId, ByteString transactionId) =>
+            new DatastoreTransactionImpl(client, projectId, namespaceId, transactionId);
 
         /// <summary>
         /// Constructs an instance of <see cref="DatastoreClientImpl"/> with the given arguments.
@@ -88,8 +88,8 @@ namespace Google.Cloud.Datastore.V1
         /// <param name="transactionId">The transaction obtained by an earlier <see cref="DatastoreClient.BeginTransaction(string, CallSettings)"/>
         /// or the asynchronous equivalent. Must not be null</param>
         /// <returns>A <see cref="DatastoreTransaction"/> representation of the specified transaction.</returns>,
-        public static DatastoreTransaction Create(DatastoreClient client, string projectId, string namespaceId, string databaseId, ByteString transactionId)
-            => new DatastoreTransactionImpl(client, projectId, namespaceId, databaseId, transactionId);
+        public static DatastoreTransaction Create(DatastoreClient client, string projectId, string namespaceId, string databaseId, ByteString transactionId) =>
+            new DatastoreTransactionImpl(client, projectId, namespaceId, databaseId, transactionId);
 
         /// <summary>
         /// Runs the given query eagerly in this transaction, retrieving all results in memory and indicating whether more

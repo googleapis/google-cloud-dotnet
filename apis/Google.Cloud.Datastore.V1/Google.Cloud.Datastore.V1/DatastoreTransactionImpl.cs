@@ -17,7 +17,6 @@ using Google.Api.Gax.Grpc;
 using Google.Protobuf;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using static Google.Cloud.Datastore.V1.CommitRequest.Types;
 
