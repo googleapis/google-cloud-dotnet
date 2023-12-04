@@ -69,7 +69,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
             Assert.Equal("bar", (string)entity["foo"]);
         }
 
-        [Fact(Skip = "Multiple databases are available only in preview right now.")]
+        [Fact]
         public async Task MultiDb_InsertLookupDelete()
         {
             await _fixture.RunWithTemporaryDatabaseAsync(databaseId =>

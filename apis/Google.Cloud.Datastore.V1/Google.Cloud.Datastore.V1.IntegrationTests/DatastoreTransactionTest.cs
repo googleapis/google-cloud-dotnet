@@ -200,5 +200,46 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
             Assert.Equal(18.8, results["sum_height"].DoubleValue);
             Assert.Equal(4.7, results["avg_height"].DoubleValue);
         }
+
+        [Fact]
+        public async Task MultiDb_InsertLookupDelete()
+        {
+            await _fixture.RunWithTemporaryDatabaseAsync(databaseId =>
+            {
+                var db = _fixture.CreateDatastoreDbWithDatabase(databaseId);
+                var keyFactory = db.CreateKeyFactory("test_dbid");
+                var entities = new[]
+                {
+                    new Entity { Key = keyFactory.CreateKey("x"), ["description"] = "predefined_key" },
+                    new Entity { Key = keyFactory.CreateIncompleteKey(), ["description"] = "incomplete_key" }
+                };
+
+                var insertedKeys = db.Insert(entities);
+
+                Assert.Null(insertedKeys[0]); // Insert with predefined key
+                Assert.NotNull(insertedKeys[1]); // Insert with incomplete key
+                Assert.Equal(insertedKeys[1], entities[1].Key); // Inserted key is propagated into entity
+
+                var lookupKey = new Key
+                {
+                    PartitionId = new() { ProjectId = _fixture.ProjectId, NamespaceId = _fixture.NamespaceId, DatabaseId = databaseId },
+                    Path = { insertedKeys[1].Path }
+                };
+
+                var transaction1 = db.BeginTransaction();
+                var fetchedEntity = transaction1.Lookup(lookupKey);
+                Assert.NotNull(fetchedEntity);
+                Assert.Equal("incomplete_key", fetchedEntity["description"]);
+                transaction1.Rollback();
+
+                var transaction2 = db.BeginTransaction();
+                transaction2.Delete(lookupKey);
+                transaction2.Commit();
+
+                var transaction3 = db.BeginTransaction();
+                Assert.Null(transaction3.Lookup(lookupKey));
+                transaction3.Rollback();                
+            });
+        }
     }
 }
