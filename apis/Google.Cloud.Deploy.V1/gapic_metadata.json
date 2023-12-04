@@ -46,6 +46,12 @@
                 "CreateAutomationAsync"
               ]
             },
+            "CreateCustomTargetType": {
+              "methods": [
+                "CreateCustomTargetType",
+                "CreateCustomTargetTypeAsync"
+              ]
+            },
             "CreateDeliveryPipeline": {
               "methods": [
                 "CreateDeliveryPipeline",
@@ -76,6 +82,12 @@
                 "DeleteAutomationAsync"
               ]
             },
+            "DeleteCustomTargetType": {
+              "methods": [
+                "DeleteCustomTargetType",
+                "DeleteCustomTargetTypeAsync"
+              ]
+            },
             "DeleteDeliveryPipeline": {
               "methods": [
                 "DeleteDeliveryPipeline",
@@ -104,6 +116,12 @@
               "methods": [
                 "GetConfig",
                 "GetConfigAsync"
+              ]
+            },
+            "GetCustomTargetType": {
+              "methods": [
+                "GetCustomTargetType",
+                "GetCustomTargetTypeAsync"
               ]
             },
             "GetDeliveryPipeline": {
@@ -152,6 +170,12 @@
               "methods": [
                 "ListAutomations",
                 "ListAutomationsAsync"
+              ]
+            },
+            "ListCustomTargetTypes": {
+              "methods": [
+                "ListCustomTargetTypes",
+                "ListCustomTargetTypesAsync"
               ]
             },
             "ListDeliveryPipelines": {
@@ -206,6 +230,12 @@
               "methods": [
                 "UpdateAutomation",
                 "UpdateAutomationAsync"
+              ]
+            },
+            "UpdateCustomTargetType": {
+              "methods": [
+                "UpdateCustomTargetType",
+                "UpdateCustomTargetTypeAsync"
               ]
             },
             "UpdateDeliveryPipeline": {

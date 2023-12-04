@@ -67,6 +67,14 @@ namespace Google.Cloud.Deploy.V1
             UpdateTargetOperationsSettings = existing.UpdateTargetOperationsSettings.Clone();
             DeleteTargetSettings = existing.DeleteTargetSettings;
             DeleteTargetOperationsSettings = existing.DeleteTargetOperationsSettings.Clone();
+            ListCustomTargetTypesSettings = existing.ListCustomTargetTypesSettings;
+            GetCustomTargetTypeSettings = existing.GetCustomTargetTypeSettings;
+            CreateCustomTargetTypeSettings = existing.CreateCustomTargetTypeSettings;
+            CreateCustomTargetTypeOperationsSettings = existing.CreateCustomTargetTypeOperationsSettings.Clone();
+            UpdateCustomTargetTypeSettings = existing.UpdateCustomTargetTypeSettings;
+            UpdateCustomTargetTypeOperationsSettings = existing.UpdateCustomTargetTypeOperationsSettings.Clone();
+            DeleteCustomTargetTypeSettings = existing.DeleteCustomTargetTypeSettings;
+            DeleteCustomTargetTypeOperationsSettings = existing.DeleteCustomTargetTypeOperationsSettings.Clone();
             ListReleasesSettings = existing.ListReleasesSettings;
             GetReleaseSettings = existing.GetReleaseSettings;
             CreateReleaseSettings = existing.CreateReleaseSettings;
@@ -363,6 +371,132 @@ namespace Google.Cloud.Deploy.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings DeleteTargetOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudDeployClient.ListCustomTargetTypes</c> and <c>CloudDeployClient.ListCustomTargetTypesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListCustomTargetTypesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudDeployClient.GetCustomTargetType</c> and <c>CloudDeployClient.GetCustomTargetTypeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetCustomTargetTypeSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudDeployClient.CreateCustomTargetType</c> and <c>CloudDeployClient.CreateCustomTargetTypeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateCustomTargetTypeSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>CloudDeployClient.CreateCustomTargetType</c> and
+        /// <c>CloudDeployClient.CreateCustomTargetTypeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateCustomTargetTypeOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudDeployClient.UpdateCustomTargetType</c> and <c>CloudDeployClient.UpdateCustomTargetTypeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateCustomTargetTypeSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>CloudDeployClient.UpdateCustomTargetType</c> and
+        /// <c>CloudDeployClient.UpdateCustomTargetTypeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateCustomTargetTypeOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudDeployClient.DeleteCustomTargetType</c> and <c>CloudDeployClient.DeleteCustomTargetTypeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteCustomTargetTypeSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>CloudDeployClient.DeleteCustomTargetType</c> and
+        /// <c>CloudDeployClient.DeleteCustomTargetTypeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteCustomTargetTypeOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -2467,6 +2601,677 @@ namespace Google.Cloud.Deploy.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteTargetAsync(TargetName name, st::CancellationToken cancellationToken) =>
             DeleteTargetAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists CustomTargetTypes in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="CustomTargetType"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListCustomTargetTypesResponse, CustomTargetType> ListCustomTargetTypes(ListCustomTargetTypesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists CustomTargetTypes in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="CustomTargetType"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListCustomTargetTypesResponse, CustomTargetType> ListCustomTargetTypesAsync(ListCustomTargetTypesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists CustomTargetTypes in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent that owns this collection of custom target types.
+        /// Format must be `projects/{project_id}/locations/{location_name}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="CustomTargetType"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListCustomTargetTypesResponse, CustomTargetType> ListCustomTargetTypes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListCustomTargetTypes(new ListCustomTargetTypesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists CustomTargetTypes in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent that owns this collection of custom target types.
+        /// Format must be `projects/{project_id}/locations/{location_name}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="CustomTargetType"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListCustomTargetTypesResponse, CustomTargetType> ListCustomTargetTypesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListCustomTargetTypesAsync(new ListCustomTargetTypesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists CustomTargetTypes in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent that owns this collection of custom target types.
+        /// Format must be `projects/{project_id}/locations/{location_name}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="CustomTargetType"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListCustomTargetTypesResponse, CustomTargetType> ListCustomTargetTypes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListCustomTargetTypes(new ListCustomTargetTypesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists CustomTargetTypes in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent that owns this collection of custom target types.
+        /// Format must be `projects/{project_id}/locations/{location_name}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="CustomTargetType"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListCustomTargetTypesResponse, CustomTargetType> ListCustomTargetTypesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListCustomTargetTypesAsync(new ListCustomTargetTypesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single CustomTargetType.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomTargetType GetCustomTargetType(GetCustomTargetTypeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single CustomTargetType.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomTargetType> GetCustomTargetTypeAsync(GetCustomTargetTypeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single CustomTargetType.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomTargetType> GetCustomTargetTypeAsync(GetCustomTargetTypeRequest request, st::CancellationToken cancellationToken) =>
+            GetCustomTargetTypeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single CustomTargetType.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the `CustomTargetType`. Format must be
+        /// `projects/{project_id}/locations/{location_name}/customTargetTypes/{custom_target_type}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomTargetType GetCustomTargetType(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCustomTargetType(new GetCustomTargetTypeRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single CustomTargetType.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the `CustomTargetType`. Format must be
+        /// `projects/{project_id}/locations/{location_name}/customTargetTypes/{custom_target_type}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomTargetType> GetCustomTargetTypeAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCustomTargetTypeAsync(new GetCustomTargetTypeRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single CustomTargetType.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the `CustomTargetType`. Format must be
+        /// `projects/{project_id}/locations/{location_name}/customTargetTypes/{custom_target_type}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomTargetType> GetCustomTargetTypeAsync(string name, st::CancellationToken cancellationToken) =>
+            GetCustomTargetTypeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single CustomTargetType.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the `CustomTargetType`. Format must be
+        /// `projects/{project_id}/locations/{location_name}/customTargetTypes/{custom_target_type}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomTargetType GetCustomTargetType(CustomTargetTypeName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCustomTargetType(new GetCustomTargetTypeRequest
+            {
+                CustomTargetTypeName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single CustomTargetType.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the `CustomTargetType`. Format must be
+        /// `projects/{project_id}/locations/{location_name}/customTargetTypes/{custom_target_type}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomTargetType> GetCustomTargetTypeAsync(CustomTargetTypeName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCustomTargetTypeAsync(new GetCustomTargetTypeRequest
+            {
+                CustomTargetTypeName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single CustomTargetType.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the `CustomTargetType`. Format must be
+        /// `projects/{project_id}/locations/{location_name}/customTargetTypes/{custom_target_type}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomTargetType> GetCustomTargetTypeAsync(CustomTargetTypeName name, st::CancellationToken cancellationToken) =>
+            GetCustomTargetTypeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new CustomTargetType in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<CustomTargetType, OperationMetadata> CreateCustomTargetType(CreateCustomTargetTypeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new CustomTargetType in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CustomTargetType, OperationMetadata>> CreateCustomTargetTypeAsync(CreateCustomTargetTypeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new CustomTargetType in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CustomTargetType, OperationMetadata>> CreateCustomTargetTypeAsync(CreateCustomTargetTypeRequest request, st::CancellationToken cancellationToken) =>
+            CreateCustomTargetTypeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateCustomTargetType</c>.</summary>
+        public virtual lro::OperationsClient CreateCustomTargetTypeOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateCustomTargetType</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<CustomTargetType, OperationMetadata> PollOnceCreateCustomTargetType(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<CustomTargetType, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateCustomTargetTypeOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateCustomTargetType</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<CustomTargetType, OperationMetadata>> PollOnceCreateCustomTargetTypeAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<CustomTargetType, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateCustomTargetTypeOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new CustomTargetType in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which the `CustomTargetType` should be
+        /// created in. Format should be
+        /// `projects/{project_id}/locations/{location_name}`.
+        /// </param>
+        /// <param name="customTargetType">
+        /// Required. The `CustomTargetType` to create.
+        /// </param>
+        /// <param name="customTargetTypeId">
+        /// Required. ID of the `CustomTargetType`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<CustomTargetType, OperationMetadata> CreateCustomTargetType(string parent, CustomTargetType customTargetType, string customTargetTypeId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCustomTargetType(new CreateCustomTargetTypeRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                CustomTargetTypeId = gax::GaxPreconditions.CheckNotNullOrEmpty(customTargetTypeId, nameof(customTargetTypeId)),
+                CustomTargetType = gax::GaxPreconditions.CheckNotNull(customTargetType, nameof(customTargetType)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new CustomTargetType in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which the `CustomTargetType` should be
+        /// created in. Format should be
+        /// `projects/{project_id}/locations/{location_name}`.
+        /// </param>
+        /// <param name="customTargetType">
+        /// Required. The `CustomTargetType` to create.
+        /// </param>
+        /// <param name="customTargetTypeId">
+        /// Required. ID of the `CustomTargetType`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CustomTargetType, OperationMetadata>> CreateCustomTargetTypeAsync(string parent, CustomTargetType customTargetType, string customTargetTypeId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCustomTargetTypeAsync(new CreateCustomTargetTypeRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                CustomTargetTypeId = gax::GaxPreconditions.CheckNotNullOrEmpty(customTargetTypeId, nameof(customTargetTypeId)),
+                CustomTargetType = gax::GaxPreconditions.CheckNotNull(customTargetType, nameof(customTargetType)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new CustomTargetType in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which the `CustomTargetType` should be
+        /// created in. Format should be
+        /// `projects/{project_id}/locations/{location_name}`.
+        /// </param>
+        /// <param name="customTargetType">
+        /// Required. The `CustomTargetType` to create.
+        /// </param>
+        /// <param name="customTargetTypeId">
+        /// Required. ID of the `CustomTargetType`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CustomTargetType, OperationMetadata>> CreateCustomTargetTypeAsync(string parent, CustomTargetType customTargetType, string customTargetTypeId, st::CancellationToken cancellationToken) =>
+            CreateCustomTargetTypeAsync(parent, customTargetType, customTargetTypeId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new CustomTargetType in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which the `CustomTargetType` should be
+        /// created in. Format should be
+        /// `projects/{project_id}/locations/{location_name}`.
+        /// </param>
+        /// <param name="customTargetType">
+        /// Required. The `CustomTargetType` to create.
+        /// </param>
+        /// <param name="customTargetTypeId">
+        /// Required. ID of the `CustomTargetType`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<CustomTargetType, OperationMetadata> CreateCustomTargetType(gagr::LocationName parent, CustomTargetType customTargetType, string customTargetTypeId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCustomTargetType(new CreateCustomTargetTypeRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                CustomTargetTypeId = gax::GaxPreconditions.CheckNotNullOrEmpty(customTargetTypeId, nameof(customTargetTypeId)),
+                CustomTargetType = gax::GaxPreconditions.CheckNotNull(customTargetType, nameof(customTargetType)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new CustomTargetType in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which the `CustomTargetType` should be
+        /// created in. Format should be
+        /// `projects/{project_id}/locations/{location_name}`.
+        /// </param>
+        /// <param name="customTargetType">
+        /// Required. The `CustomTargetType` to create.
+        /// </param>
+        /// <param name="customTargetTypeId">
+        /// Required. ID of the `CustomTargetType`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CustomTargetType, OperationMetadata>> CreateCustomTargetTypeAsync(gagr::LocationName parent, CustomTargetType customTargetType, string customTargetTypeId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCustomTargetTypeAsync(new CreateCustomTargetTypeRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                CustomTargetTypeId = gax::GaxPreconditions.CheckNotNullOrEmpty(customTargetTypeId, nameof(customTargetTypeId)),
+                CustomTargetType = gax::GaxPreconditions.CheckNotNull(customTargetType, nameof(customTargetType)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new CustomTargetType in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which the `CustomTargetType` should be
+        /// created in. Format should be
+        /// `projects/{project_id}/locations/{location_name}`.
+        /// </param>
+        /// <param name="customTargetType">
+        /// Required. The `CustomTargetType` to create.
+        /// </param>
+        /// <param name="customTargetTypeId">
+        /// Required. ID of the `CustomTargetType`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CustomTargetType, OperationMetadata>> CreateCustomTargetTypeAsync(gagr::LocationName parent, CustomTargetType customTargetType, string customTargetTypeId, st::CancellationToken cancellationToken) =>
+            CreateCustomTargetTypeAsync(parent, customTargetType, customTargetTypeId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a single CustomTargetType.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<CustomTargetType, OperationMetadata> UpdateCustomTargetType(UpdateCustomTargetTypeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a single CustomTargetType.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CustomTargetType, OperationMetadata>> UpdateCustomTargetTypeAsync(UpdateCustomTargetTypeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a single CustomTargetType.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CustomTargetType, OperationMetadata>> UpdateCustomTargetTypeAsync(UpdateCustomTargetTypeRequest request, st::CancellationToken cancellationToken) =>
+            UpdateCustomTargetTypeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateCustomTargetType</c>.</summary>
+        public virtual lro::OperationsClient UpdateCustomTargetTypeOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateCustomTargetType</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<CustomTargetType, OperationMetadata> PollOnceUpdateCustomTargetType(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<CustomTargetType, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateCustomTargetTypeOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateCustomTargetType</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<CustomTargetType, OperationMetadata>> PollOnceUpdateCustomTargetTypeAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<CustomTargetType, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateCustomTargetTypeOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates a single CustomTargetType.
+        /// </summary>
+        /// <param name="customTargetType">
+        /// Required. The `CustomTargetType` to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `CustomTargetType` resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<CustomTargetType, OperationMetadata> UpdateCustomTargetType(CustomTargetType customTargetType, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateCustomTargetType(new UpdateCustomTargetTypeRequest
+            {
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                CustomTargetType = gax::GaxPreconditions.CheckNotNull(customTargetType, nameof(customTargetType)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a single CustomTargetType.
+        /// </summary>
+        /// <param name="customTargetType">
+        /// Required. The `CustomTargetType` to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `CustomTargetType` resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CustomTargetType, OperationMetadata>> UpdateCustomTargetTypeAsync(CustomTargetType customTargetType, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateCustomTargetTypeAsync(new UpdateCustomTargetTypeRequest
+            {
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                CustomTargetType = gax::GaxPreconditions.CheckNotNull(customTargetType, nameof(customTargetType)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a single CustomTargetType.
+        /// </summary>
+        /// <param name="customTargetType">
+        /// Required. The `CustomTargetType` to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `CustomTargetType` resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CustomTargetType, OperationMetadata>> UpdateCustomTargetTypeAsync(CustomTargetType customTargetType, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateCustomTargetTypeAsync(customTargetType, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single CustomTargetType.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteCustomTargetType(DeleteCustomTargetTypeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single CustomTargetType.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteCustomTargetTypeAsync(DeleteCustomTargetTypeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single CustomTargetType.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteCustomTargetTypeAsync(DeleteCustomTargetTypeRequest request, st::CancellationToken cancellationToken) =>
+            DeleteCustomTargetTypeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteCustomTargetType</c>.</summary>
+        public virtual lro::OperationsClient DeleteCustomTargetTypeOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteCustomTargetType</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteCustomTargetType(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteCustomTargetTypeOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteCustomTargetType</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteCustomTargetTypeAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteCustomTargetTypeOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a single CustomTargetType.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `CustomTargetType` to delete. Format must be
+        /// `projects/{project_id}/locations/{location_name}/customTargetTypes/{custom_target_type}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteCustomTargetType(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCustomTargetType(new DeleteCustomTargetTypeRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single CustomTargetType.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `CustomTargetType` to delete. Format must be
+        /// `projects/{project_id}/locations/{location_name}/customTargetTypes/{custom_target_type}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteCustomTargetTypeAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCustomTargetTypeAsync(new DeleteCustomTargetTypeRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single CustomTargetType.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `CustomTargetType` to delete. Format must be
+        /// `projects/{project_id}/locations/{location_name}/customTargetTypes/{custom_target_type}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteCustomTargetTypeAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteCustomTargetTypeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single CustomTargetType.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `CustomTargetType` to delete. Format must be
+        /// `projects/{project_id}/locations/{location_name}/customTargetTypes/{custom_target_type}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteCustomTargetType(CustomTargetTypeName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCustomTargetType(new DeleteCustomTargetTypeRequest
+            {
+                CustomTargetTypeName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single CustomTargetType.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `CustomTargetType` to delete. Format must be
+        /// `projects/{project_id}/locations/{location_name}/customTargetTypes/{custom_target_type}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteCustomTargetTypeAsync(CustomTargetTypeName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCustomTargetTypeAsync(new DeleteCustomTargetTypeRequest
+            {
+                CustomTargetTypeName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single CustomTargetType.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `CustomTargetType` to delete. Format must be
+        /// `projects/{project_id}/locations/{location_name}/customTargetTypes/{custom_target_type}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteCustomTargetTypeAsync(CustomTargetTypeName name, st::CancellationToken cancellationToken) =>
+            DeleteCustomTargetTypeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists Releases in a given project and location.
@@ -5085,8 +5890,8 @@ namespace Google.Cloud.Deploy.V1
         /// Lists Automations in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns this collection of automations. Format
-        /// must be
+        /// Required. The parent `Delivery Pipeline`, which owns this collection of
+        /// automations. Format must be
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="pageToken">
@@ -5111,8 +5916,8 @@ namespace Google.Cloud.Deploy.V1
         /// Lists Automations in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns this collection of automations. Format
-        /// must be
+        /// Required. The parent `Delivery Pipeline`, which owns this collection of
+        /// automations. Format must be
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="pageToken">
@@ -5137,8 +5942,8 @@ namespace Google.Cloud.Deploy.V1
         /// Lists Automations in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns this collection of automations. Format
-        /// must be
+        /// Required. The parent `Delivery Pipeline`, which owns this collection of
+        /// automations. Format must be
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="pageToken">
@@ -5163,8 +5968,8 @@ namespace Google.Cloud.Deploy.V1
         /// Lists Automations in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns this collection of automations. Format
-        /// must be
+        /// Required. The parent `Delivery Pipeline`, which owns this collection of
+        /// automations. Format must be
         /// `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
         /// </param>
         /// <param name="pageToken">
@@ -5318,8 +6123,8 @@ namespace Google.Cloud.Deploy.V1
         /// Lists AutomationRuns in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns this collection of automationRuns. Format
-        /// must be
+        /// Required. The parent `Delivery Pipeline`, which owns this collection of
+        /// automationRuns. Format must be
         /// `projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}`.
         /// </param>
         /// <param name="pageToken">
@@ -5344,8 +6149,8 @@ namespace Google.Cloud.Deploy.V1
         /// Lists AutomationRuns in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns this collection of automationRuns. Format
-        /// must be
+        /// Required. The parent `Delivery Pipeline`, which owns this collection of
+        /// automationRuns. Format must be
         /// `projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}`.
         /// </param>
         /// <param name="pageToken">
@@ -5370,8 +6175,8 @@ namespace Google.Cloud.Deploy.V1
         /// Lists AutomationRuns in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns this collection of automationRuns. Format
-        /// must be
+        /// Required. The parent `Delivery Pipeline`, which owns this collection of
+        /// automationRuns. Format must be
         /// `projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}`.
         /// </param>
         /// <param name="pageToken">
@@ -5396,8 +6201,8 @@ namespace Google.Cloud.Deploy.V1
         /// Lists AutomationRuns in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns this collection of automationRuns. Format
-        /// must be
+        /// Required. The parent `Delivery Pipeline`, which owns this collection of
+        /// automationRuns. Format must be
         /// `projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}`.
         /// </param>
         /// <param name="pageToken">
@@ -5586,6 +6391,16 @@ namespace Google.Cloud.Deploy.V1
 
         private readonly gaxgrpc::ApiCall<DeleteTargetRequest, lro::Operation> _callDeleteTarget;
 
+        private readonly gaxgrpc::ApiCall<ListCustomTargetTypesRequest, ListCustomTargetTypesResponse> _callListCustomTargetTypes;
+
+        private readonly gaxgrpc::ApiCall<GetCustomTargetTypeRequest, CustomTargetType> _callGetCustomTargetType;
+
+        private readonly gaxgrpc::ApiCall<CreateCustomTargetTypeRequest, lro::Operation> _callCreateCustomTargetType;
+
+        private readonly gaxgrpc::ApiCall<UpdateCustomTargetTypeRequest, lro::Operation> _callUpdateCustomTargetType;
+
+        private readonly gaxgrpc::ApiCall<DeleteCustomTargetTypeRequest, lro::Operation> _callDeleteCustomTargetType;
+
         private readonly gaxgrpc::ApiCall<ListReleasesRequest, ListReleasesResponse> _callListReleases;
 
         private readonly gaxgrpc::ApiCall<GetReleaseRequest, Release> _callGetRelease;
@@ -5651,6 +6466,9 @@ namespace Google.Cloud.Deploy.V1
             CreateTargetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateTargetOperationsSettings, logger);
             UpdateTargetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateTargetOperationsSettings, logger);
             DeleteTargetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTargetOperationsSettings, logger);
+            CreateCustomTargetTypeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateCustomTargetTypeOperationsSettings, logger);
+            UpdateCustomTargetTypeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateCustomTargetTypeOperationsSettings, logger);
+            DeleteCustomTargetTypeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteCustomTargetTypeOperationsSettings, logger);
             CreateReleaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateReleaseOperationsSettings, logger);
             CreateRolloutOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateRolloutOperationsSettings, logger);
             CreateAutomationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAutomationOperationsSettings, logger);
@@ -5691,6 +6509,21 @@ namespace Google.Cloud.Deploy.V1
             _callDeleteTarget = clientHelper.BuildApiCall<DeleteTargetRequest, lro::Operation>("DeleteTarget", grpcClient.DeleteTargetAsync, grpcClient.DeleteTarget, effectiveSettings.DeleteTargetSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteTarget);
             Modify_DeleteTargetApiCall(ref _callDeleteTarget);
+            _callListCustomTargetTypes = clientHelper.BuildApiCall<ListCustomTargetTypesRequest, ListCustomTargetTypesResponse>("ListCustomTargetTypes", grpcClient.ListCustomTargetTypesAsync, grpcClient.ListCustomTargetTypes, effectiveSettings.ListCustomTargetTypesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListCustomTargetTypes);
+            Modify_ListCustomTargetTypesApiCall(ref _callListCustomTargetTypes);
+            _callGetCustomTargetType = clientHelper.BuildApiCall<GetCustomTargetTypeRequest, CustomTargetType>("GetCustomTargetType", grpcClient.GetCustomTargetTypeAsync, grpcClient.GetCustomTargetType, effectiveSettings.GetCustomTargetTypeSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetCustomTargetType);
+            Modify_GetCustomTargetTypeApiCall(ref _callGetCustomTargetType);
+            _callCreateCustomTargetType = clientHelper.BuildApiCall<CreateCustomTargetTypeRequest, lro::Operation>("CreateCustomTargetType", grpcClient.CreateCustomTargetTypeAsync, grpcClient.CreateCustomTargetType, effectiveSettings.CreateCustomTargetTypeSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateCustomTargetType);
+            Modify_CreateCustomTargetTypeApiCall(ref _callCreateCustomTargetType);
+            _callUpdateCustomTargetType = clientHelper.BuildApiCall<UpdateCustomTargetTypeRequest, lro::Operation>("UpdateCustomTargetType", grpcClient.UpdateCustomTargetTypeAsync, grpcClient.UpdateCustomTargetType, effectiveSettings.UpdateCustomTargetTypeSettings).WithGoogleRequestParam("custom_target_type.name", request => request.CustomTargetType?.Name);
+            Modify_ApiCall(ref _callUpdateCustomTargetType);
+            Modify_UpdateCustomTargetTypeApiCall(ref _callUpdateCustomTargetType);
+            _callDeleteCustomTargetType = clientHelper.BuildApiCall<DeleteCustomTargetTypeRequest, lro::Operation>("DeleteCustomTargetType", grpcClient.DeleteCustomTargetTypeAsync, grpcClient.DeleteCustomTargetType, effectiveSettings.DeleteCustomTargetTypeSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteCustomTargetType);
+            Modify_DeleteCustomTargetTypeApiCall(ref _callDeleteCustomTargetType);
             _callListReleases = clientHelper.BuildApiCall<ListReleasesRequest, ListReleasesResponse>("ListReleases", grpcClient.ListReleasesAsync, grpcClient.ListReleases, effectiveSettings.ListReleasesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListReleases);
             Modify_ListReleasesApiCall(ref _callListReleases);
@@ -5790,6 +6623,16 @@ namespace Google.Cloud.Deploy.V1
 
         partial void Modify_DeleteTargetApiCall(ref gaxgrpc::ApiCall<DeleteTargetRequest, lro::Operation> call);
 
+        partial void Modify_ListCustomTargetTypesApiCall(ref gaxgrpc::ApiCall<ListCustomTargetTypesRequest, ListCustomTargetTypesResponse> call);
+
+        partial void Modify_GetCustomTargetTypeApiCall(ref gaxgrpc::ApiCall<GetCustomTargetTypeRequest, CustomTargetType> call);
+
+        partial void Modify_CreateCustomTargetTypeApiCall(ref gaxgrpc::ApiCall<CreateCustomTargetTypeRequest, lro::Operation> call);
+
+        partial void Modify_UpdateCustomTargetTypeApiCall(ref gaxgrpc::ApiCall<UpdateCustomTargetTypeRequest, lro::Operation> call);
+
+        partial void Modify_DeleteCustomTargetTypeApiCall(ref gaxgrpc::ApiCall<DeleteCustomTargetTypeRequest, lro::Operation> call);
+
         partial void Modify_ListReleasesApiCall(ref gaxgrpc::ApiCall<ListReleasesRequest, ListReleasesResponse> call);
 
         partial void Modify_GetReleaseApiCall(ref gaxgrpc::ApiCall<GetReleaseRequest, Release> call);
@@ -5870,6 +6713,16 @@ namespace Google.Cloud.Deploy.V1
         partial void Modify_UpdateTargetRequest(ref UpdateTargetRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteTargetRequest(ref DeleteTargetRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListCustomTargetTypesRequest(ref ListCustomTargetTypesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetCustomTargetTypeRequest(ref GetCustomTargetTypeRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateCustomTargetTypeRequest(ref CreateCustomTargetTypeRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateCustomTargetTypeRequest(ref UpdateCustomTargetTypeRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteCustomTargetTypeRequest(ref DeleteCustomTargetTypeRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListReleasesRequest(ref ListReleasesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -6199,6 +7052,135 @@ namespace Google.Cloud.Deploy.V1
         {
             Modify_DeleteTargetRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteTarget.Async(request, callSettings).ConfigureAwait(false), DeleteTargetOperationsClient);
+        }
+
+        /// <summary>
+        /// Lists CustomTargetTypes in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="CustomTargetType"/> resources.</returns>
+        public override gax::PagedEnumerable<ListCustomTargetTypesResponse, CustomTargetType> ListCustomTargetTypes(ListCustomTargetTypesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListCustomTargetTypesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListCustomTargetTypesRequest, ListCustomTargetTypesResponse, CustomTargetType>(_callListCustomTargetTypes, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists CustomTargetTypes in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="CustomTargetType"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListCustomTargetTypesResponse, CustomTargetType> ListCustomTargetTypesAsync(ListCustomTargetTypesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListCustomTargetTypesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListCustomTargetTypesRequest, ListCustomTargetTypesResponse, CustomTargetType>(_callListCustomTargetTypes, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single CustomTargetType.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CustomTargetType GetCustomTargetType(GetCustomTargetTypeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetCustomTargetTypeRequest(ref request, ref callSettings);
+            return _callGetCustomTargetType.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single CustomTargetType.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CustomTargetType> GetCustomTargetTypeAsync(GetCustomTargetTypeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetCustomTargetTypeRequest(ref request, ref callSettings);
+            return _callGetCustomTargetType.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateCustomTargetType</c>.</summary>
+        public override lro::OperationsClient CreateCustomTargetTypeOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new CustomTargetType in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<CustomTargetType, OperationMetadata> CreateCustomTargetType(CreateCustomTargetTypeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateCustomTargetTypeRequest(ref request, ref callSettings);
+            return new lro::Operation<CustomTargetType, OperationMetadata>(_callCreateCustomTargetType.Sync(request, callSettings), CreateCustomTargetTypeOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new CustomTargetType in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<CustomTargetType, OperationMetadata>> CreateCustomTargetTypeAsync(CreateCustomTargetTypeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateCustomTargetTypeRequest(ref request, ref callSettings);
+            return new lro::Operation<CustomTargetType, OperationMetadata>(await _callCreateCustomTargetType.Async(request, callSettings).ConfigureAwait(false), CreateCustomTargetTypeOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateCustomTargetType</c>.</summary>
+        public override lro::OperationsClient UpdateCustomTargetTypeOperationsClient { get; }
+
+        /// <summary>
+        /// Updates a single CustomTargetType.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<CustomTargetType, OperationMetadata> UpdateCustomTargetType(UpdateCustomTargetTypeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateCustomTargetTypeRequest(ref request, ref callSettings);
+            return new lro::Operation<CustomTargetType, OperationMetadata>(_callUpdateCustomTargetType.Sync(request, callSettings), UpdateCustomTargetTypeOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates a single CustomTargetType.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<CustomTargetType, OperationMetadata>> UpdateCustomTargetTypeAsync(UpdateCustomTargetTypeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateCustomTargetTypeRequest(ref request, ref callSettings);
+            return new lro::Operation<CustomTargetType, OperationMetadata>(await _callUpdateCustomTargetType.Async(request, callSettings).ConfigureAwait(false), UpdateCustomTargetTypeOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteCustomTargetType</c>.</summary>
+        public override lro::OperationsClient DeleteCustomTargetTypeOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a single CustomTargetType.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteCustomTargetType(DeleteCustomTargetTypeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteCustomTargetTypeRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteCustomTargetType.Sync(request, callSettings), DeleteCustomTargetTypeOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a single CustomTargetType.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteCustomTargetTypeAsync(DeleteCustomTargetTypeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteCustomTargetTypeRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteCustomTargetType.Async(request, callSettings).ConfigureAwait(false), DeleteCustomTargetTypeOperationsClient);
         }
 
         /// <summary>
@@ -6807,6 +7789,10 @@ namespace Google.Cloud.Deploy.V1
     {
     }
 
+    public partial class ListCustomTargetTypesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListReleasesRequest : gaxgrpc::IPageRequest
     {
     }
@@ -6839,6 +7825,14 @@ namespace Google.Cloud.Deploy.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Target> GetEnumerator() => Targets.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListCustomTargetTypesResponse : gaxgrpc::IPageResponse<CustomTargetType>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<CustomTargetType> GetEnumerator() => CustomTargetTypes.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
