@@ -1,5 +1,19 @@
 # Version history
 
+## Version 2.14.0, released 2023-12-04
+
+### New features
+
+- Added Generator API ([commit 7fa7921](https://github.com/googleapis/google-cloud-dotnet/commit/7fa79211ca59b340b1645230c74d942753b5037f))
+- Add agent answer feedback capability ([commit 8a953a2](https://github.com/googleapis/google-cloud-dotnet/commit/8a953a2401c75a6022e490f4103ce857fac6bcaa))
+- Add fields for supporting barge-in in StreamingDetectIntent API ([commit 8a953a2](https://github.com/googleapis/google-cloud-dotnet/commit/8a953a2401c75a6022e490f4103ce857fac6bcaa))
+- Add end_user_metadata to QueryParameters ([commit 8a953a2](https://github.com/googleapis/google-cloud-dotnet/commit/8a953a2401c75a6022e490f4103ce857fac6bcaa))
+- Add boost & bury and filter ES controls ([commit 8a953a2](https://github.com/googleapis/google-cloud-dotnet/commit/8a953a2401c75a6022e490f4103ce857fac6bcaa))
+
+### Documentation improvements
+
+- Updated doc for speech mode ([commit 7fa7921](https://github.com/googleapis/google-cloud-dotnet/commit/7fa79211ca59b340b1645230c74d942753b5037f))
+
 ## Version 2.13.0, released 2023-10-02
 
 ### New features
