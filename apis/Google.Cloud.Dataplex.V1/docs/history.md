@@ -1,5 +1,13 @@
 # Version history
 
+## Version 2.10.0, released 2023-12-04
+
+### New features
+
+- Add data quality score to DataQualityResult ([commit 1d5d4bc](https://github.com/googleapis/google-cloud-dotnet/commit/1d5d4bccfa052038b2ddf87c8fdb3c0143f60b0e))
+- Added DataQualityResult.score, dimension_score, column_score ([commit 4514953](https://github.com/googleapis/google-cloud-dotnet/commit/4514953ce68393f342bd13e9217b4d44d589d180))
+- New event types GOVERNANCE_RULE_MATCHED_RESOURCES, GOVERNANCE_RULE_SEARCH_LIMIT_EXCEEDS, GOVERNANCE_RULE_ERRORS ([commit 4514953](https://github.com/googleapis/google-cloud-dotnet/commit/4514953ce68393f342bd13e9217b4d44d589d180))
+
 ## Version 2.9.0, released 2023-11-07
 
 ### New features
