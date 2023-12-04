@@ -216,13 +216,18 @@ namespace Google.Cloud.Datastore.V1
         }
 
         /// <inheritdoc/>
-        public override DatastoreTransaction BeginTransaction(CallSettings callSettings = null) =>
-            DatastoreTransaction.Create(Client, ProjectId, NamespaceId, DatabaseId, Client.BeginTransaction(ProjectId, callSettings).Transaction);
+        public override DatastoreTransaction BeginTransaction(CallSettings callSettings = null)
+        {
+            var request = new BeginTransactionRequest { ProjectId = ProjectId, DatabaseId = DatabaseId };
+            var response = Client.BeginTransaction(request, callSettings);
+            return DatastoreTransaction.Create(Client, ProjectId, NamespaceId, DatabaseId, response.Transaction);
+        }
 
         /// <inheritdoc/>
         public override async Task<DatastoreTransaction> BeginTransactionAsync(CallSettings callSettings = null)
         {
-            var response = await Client.BeginTransactionAsync(ProjectId, callSettings).ConfigureAwait(false);
+            var request = new BeginTransactionRequest { ProjectId = ProjectId, DatabaseId = DatabaseId };
+            var response = await Client.BeginTransactionAsync(request, callSettings).ConfigureAwait(false);
             return DatastoreTransaction.Create(Client, ProjectId, NamespaceId, DatabaseId, response.Transaction);
         }
 

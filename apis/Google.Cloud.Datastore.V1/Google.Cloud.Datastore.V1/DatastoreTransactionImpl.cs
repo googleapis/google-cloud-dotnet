@@ -246,7 +246,15 @@ namespace Google.Cloud.Datastore.V1
         {
             // TODO: What if there are no mutations? Just rollback?
             CheckActive();
-            var response = _client.Commit(_projectId, Mode.Transactional, TransactionId, _mutations, callSettings);
+            var request = new CommitRequest
+            {
+                ProjectId = _projectId,
+                DatabaseId = _databaseId,
+                Mode = Mode.Transactional,
+                Transaction = TransactionId,
+                Mutations = { _mutations }
+            };
+            var response = _client.Commit(request);
             PropagateKeys(response);
             _active = false;
             return response;
@@ -257,7 +265,15 @@ namespace Google.Cloud.Datastore.V1
         {
             // TODO: What if there are no mutations? Just rollback?
             CheckActive();
-            var response = await _client.CommitAsync(_projectId, Mode.Transactional, TransactionId, _mutations, callSettings).ConfigureAwait(false);
+            var request = new CommitRequest
+            {
+                ProjectId = _projectId,
+                DatabaseId = _databaseId,
+                Mode = Mode.Transactional,
+                Transaction = TransactionId,
+                Mutations = { _mutations }
+            };
+            var response = await _client.CommitAsync(request, callSettings).ConfigureAwait(false);
             PropagateKeys(response);
             _active = false;
             return response;
@@ -267,7 +283,8 @@ namespace Google.Cloud.Datastore.V1
         public override RollbackResponse Rollback(CallSettings callSettings = null)
         {
             CheckActive();
-            var response = _client.Rollback(_projectId, TransactionId, callSettings);
+            var request = new RollbackRequest { ProjectId = _projectId, DatabaseId = _databaseId, Transaction = TransactionId };
+            var response = _client.Rollback(request, callSettings);
             _active = false;
             return response;
         }
@@ -276,7 +293,8 @@ namespace Google.Cloud.Datastore.V1
         public override async Task<RollbackResponse> RollbackAsync(CallSettings callSettings = null)
         {
             CheckActive();
-            var response = await _client.RollbackAsync(_projectId, TransactionId, callSettings).ConfigureAwait(false);
+            var request = new RollbackRequest { ProjectId = _projectId, DatabaseId = _databaseId, Transaction = TransactionId };
+            var response = await _client.RollbackAsync(request, callSettings).ConfigureAwait(false);
             _active = false;
             return response;
         }
