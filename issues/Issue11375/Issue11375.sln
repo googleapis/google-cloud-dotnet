@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Issue11375", "Issue11375\Issue11375.csproj", "{7C8B0B56-175F-4696-9EC2-1C20CBAEAD3F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Datastore.V1", "..\..\apis\Google.Cloud.Datastore.V1\Google.Cloud.Datastore.V1\Google.Cloud.Datastore.V1.csproj", "{1CC01C17-A5B7-48D4-A7E3-F674364FD94B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C8B0B56-175F-4696-9EC2-1C20CBAEAD3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C8B0B56-175F-4696-9EC2-1C20CBAEAD3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C8B0B56-175F-4696-9EC2-1C20CBAEAD3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C8B0B56-175F-4696-9EC2-1C20CBAEAD3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CC01C17-A5B7-48D4-A7E3-F674364FD94B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CC01C17-A5B7-48D4-A7E3-F674364FD94B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CC01C17-A5B7-48D4-A7E3-F674364FD94B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CC01C17-A5B7-48D4-A7E3-F674364FD94B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C5C54B4A-23F9-4426-BE23-280D4F6B4CFC}
+	EndGlobalSection
+EndGlobal
