@@ -1,5 +1,13 @@
 # Version history
 
+## Version 3.20.0, released 2023-12-04
+
+### New features
+
+- Add enable_relay field to advanced_datapath_observability_config ([commit f986a27](https://github.com/googleapis/google-cloud-dotnet/commit/f986a278ad02e845461a3e4ce3a117ccde289cf1))
+- Enable Enterprise Flag to allow configuring Advanced Vuln Insights ([commit f986a27](https://github.com/googleapis/google-cloud-dotnet/commit/f986a278ad02e845461a3e4ce3a117ccde289cf1))
+- Add Provisioning Request API ([commit be2bfbd](https://github.com/googleapis/google-cloud-dotnet/commit/be2bfbdffcd33b0c045ffe3f7edd9bb25b33a69d))
+
 ## Version 3.19.0, released 2023-11-07
 
 ### New features
