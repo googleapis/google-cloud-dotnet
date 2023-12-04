@@ -1,5 +1,16 @@
 # Version history
 
+## Version 2.11.0, released 2023-12-04
+
+### New features
+
+- Add custom target type support ([commit 70af9a8](https://github.com/googleapis/google-cloud-dotnet/commit/70af9a8e2539e7f0fc7fb203cf9e0100888c4805))
+- Add revision tagging for one of the Cloud Run deployment strategies ([commit 70af9a8](https://github.com/googleapis/google-cloud-dotnet/commit/70af9a8e2539e7f0fc7fb203cf9e0100888c4805))
+
+### Documentation improvements
+
+- Fixed a number of comments. ([commit 70af9a8](https://github.com/googleapis/google-cloud-dotnet/commit/70af9a8e2539e7f0fc7fb203cf9e0100888c4805))
+
 ## Version 2.10.0, released 2023-11-07
 
 ### New features
