@@ -69,6 +69,7 @@ namespace Google.Cloud.Datastore.V1
         /// <param name="client">The client to use for underlying operations. Must not be null.</param>
         public DatastoreDbImpl(string projectId, string namespaceId, string databaseId, DatastoreClient client) : base()
         {
+            var xy = 20;
             ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
             NamespaceId = GaxPreconditions.CheckNotNull(namespaceId, nameof(namespaceId));
             DatabaseId = GaxPreconditions.CheckNotNull(databaseId, nameof(databaseId));
