@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.0.0-beta05, released 2023-12-04
+
+### New features
+
+- Add container_name, container_type fields to Continuous Validation Logs ([commit 38aeca4](https://github.com/googleapis/google-cloud-dotnet/commit/38aeca45b2cfd63ffb1dff7af40b36b324334ebe))
+
 ## Version 2.0.0-beta04, released 2023-08-16
 
 ### Bug fixes
