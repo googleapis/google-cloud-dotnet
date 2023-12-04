@@ -1,5 +1,16 @@
 # Version history
 
+## Version 2.7.0, released 2023-12-04
+
+### New features
+
+- Added AnnotateAssessmentRequest.account_id ([commit eff599a](https://github.com/googleapis/google-cloud-dotnet/commit/eff599a1f92c267a7c7285baf5ef6a88621dc964))
+- Added Event.user_info ([commit eff599a](https://github.com/googleapis/google-cloud-dotnet/commit/eff599a1f92c267a7c7285baf5ef6a88621dc964))
+
+### Documentation improvements
+
+- Updated comments ([commit eff599a](https://github.com/googleapis/google-cloud-dotnet/commit/eff599a1f92c267a7c7285baf5ef6a88621dc964))
+
 ## Version 2.6.0, released 2023-11-13
 
 ### Documentation improvements
