@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.9.0, released 2023-12-04
+
+### New features
+
+- Add `use_table_schema` field to BigQueryConfig ([commit c489a15](https://github.com/googleapis/google-cloud-dotnet/commit/c489a154b2e51add4442b2f9ba9ec6198df0bcee))
+
 ## Version 3.8.0, released 2023-11-03
 
 ### Bug fixes
