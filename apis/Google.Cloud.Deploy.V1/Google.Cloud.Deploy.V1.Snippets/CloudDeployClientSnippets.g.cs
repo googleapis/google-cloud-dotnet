@@ -1919,6 +1919,897 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListCustomTargetTypes</summary>
+        public void ListCustomTargetTypesRequestObject()
+        {
+            // Snippet: ListCustomTargetTypes(ListCustomTargetTypesRequest, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            ListCustomTargetTypesRequest request = new ListCustomTargetTypesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListCustomTargetTypesResponse, CustomTargetType> response = cloudDeployClient.ListCustomTargetTypes(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (CustomTargetType item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListCustomTargetTypesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CustomTargetType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CustomTargetType> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CustomTargetType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCustomTargetTypesAsync</summary>
+        public async Task ListCustomTargetTypesRequestObjectAsync()
+        {
+            // Snippet: ListCustomTargetTypesAsync(ListCustomTargetTypesRequest, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            ListCustomTargetTypesRequest request = new ListCustomTargetTypesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListCustomTargetTypesResponse, CustomTargetType> response = cloudDeployClient.ListCustomTargetTypesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((CustomTargetType item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListCustomTargetTypesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CustomTargetType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CustomTargetType> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CustomTargetType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCustomTargetTypes</summary>
+        public void ListCustomTargetTypes()
+        {
+            // Snippet: ListCustomTargetTypes(string, string, int?, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListCustomTargetTypesResponse, CustomTargetType> response = cloudDeployClient.ListCustomTargetTypes(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (CustomTargetType item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListCustomTargetTypesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CustomTargetType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CustomTargetType> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CustomTargetType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCustomTargetTypesAsync</summary>
+        public async Task ListCustomTargetTypesAsync()
+        {
+            // Snippet: ListCustomTargetTypesAsync(string, string, int?, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListCustomTargetTypesResponse, CustomTargetType> response = cloudDeployClient.ListCustomTargetTypesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((CustomTargetType item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListCustomTargetTypesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CustomTargetType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CustomTargetType> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CustomTargetType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCustomTargetTypes</summary>
+        public void ListCustomTargetTypesResourceNames()
+        {
+            // Snippet: ListCustomTargetTypes(LocationName, string, int?, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListCustomTargetTypesResponse, CustomTargetType> response = cloudDeployClient.ListCustomTargetTypes(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (CustomTargetType item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListCustomTargetTypesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CustomTargetType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CustomTargetType> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CustomTargetType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCustomTargetTypesAsync</summary>
+        public async Task ListCustomTargetTypesResourceNamesAsync()
+        {
+            // Snippet: ListCustomTargetTypesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListCustomTargetTypesResponse, CustomTargetType> response = cloudDeployClient.ListCustomTargetTypesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((CustomTargetType item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListCustomTargetTypesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CustomTargetType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CustomTargetType> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CustomTargetType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCustomTargetType</summary>
+        public void GetCustomTargetTypeRequestObject()
+        {
+            // Snippet: GetCustomTargetType(GetCustomTargetTypeRequest, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            GetCustomTargetTypeRequest request = new GetCustomTargetTypeRequest
+            {
+                CustomTargetTypeName = CustomTargetTypeName.FromProjectLocationCustomTargetType("[PROJECT]", "[LOCATION]", "[CUSTOM_TARGET_TYPE]"),
+            };
+            // Make the request
+            CustomTargetType response = cloudDeployClient.GetCustomTargetType(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCustomTargetTypeAsync</summary>
+        public async Task GetCustomTargetTypeRequestObjectAsync()
+        {
+            // Snippet: GetCustomTargetTypeAsync(GetCustomTargetTypeRequest, CallSettings)
+            // Additional: GetCustomTargetTypeAsync(GetCustomTargetTypeRequest, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            GetCustomTargetTypeRequest request = new GetCustomTargetTypeRequest
+            {
+                CustomTargetTypeName = CustomTargetTypeName.FromProjectLocationCustomTargetType("[PROJECT]", "[LOCATION]", "[CUSTOM_TARGET_TYPE]"),
+            };
+            // Make the request
+            CustomTargetType response = await cloudDeployClient.GetCustomTargetTypeAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCustomTargetType</summary>
+        public void GetCustomTargetType()
+        {
+            // Snippet: GetCustomTargetType(string, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/customTargetTypes/[CUSTOM_TARGET_TYPE]";
+            // Make the request
+            CustomTargetType response = cloudDeployClient.GetCustomTargetType(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCustomTargetTypeAsync</summary>
+        public async Task GetCustomTargetTypeAsync()
+        {
+            // Snippet: GetCustomTargetTypeAsync(string, CallSettings)
+            // Additional: GetCustomTargetTypeAsync(string, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/customTargetTypes/[CUSTOM_TARGET_TYPE]";
+            // Make the request
+            CustomTargetType response = await cloudDeployClient.GetCustomTargetTypeAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCustomTargetType</summary>
+        public void GetCustomTargetTypeResourceNames()
+        {
+            // Snippet: GetCustomTargetType(CustomTargetTypeName, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            CustomTargetTypeName name = CustomTargetTypeName.FromProjectLocationCustomTargetType("[PROJECT]", "[LOCATION]", "[CUSTOM_TARGET_TYPE]");
+            // Make the request
+            CustomTargetType response = cloudDeployClient.GetCustomTargetType(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCustomTargetTypeAsync</summary>
+        public async Task GetCustomTargetTypeResourceNamesAsync()
+        {
+            // Snippet: GetCustomTargetTypeAsync(CustomTargetTypeName, CallSettings)
+            // Additional: GetCustomTargetTypeAsync(CustomTargetTypeName, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            CustomTargetTypeName name = CustomTargetTypeName.FromProjectLocationCustomTargetType("[PROJECT]", "[LOCATION]", "[CUSTOM_TARGET_TYPE]");
+            // Make the request
+            CustomTargetType response = await cloudDeployClient.GetCustomTargetTypeAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCustomTargetType</summary>
+        public void CreateCustomTargetTypeRequestObject()
+        {
+            // Snippet: CreateCustomTargetType(CreateCustomTargetTypeRequest, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            CreateCustomTargetTypeRequest request = new CreateCustomTargetTypeRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                CustomTargetTypeId = "",
+                CustomTargetType = new CustomTargetType(),
+                RequestId = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<CustomTargetType, OperationMetadata> response = cloudDeployClient.CreateCustomTargetType(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CustomTargetType, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CustomTargetType result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CustomTargetType, OperationMetadata> retrievedResponse = cloudDeployClient.PollOnceCreateCustomTargetType(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CustomTargetType retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCustomTargetTypeAsync</summary>
+        public async Task CreateCustomTargetTypeRequestObjectAsync()
+        {
+            // Snippet: CreateCustomTargetTypeAsync(CreateCustomTargetTypeRequest, CallSettings)
+            // Additional: CreateCustomTargetTypeAsync(CreateCustomTargetTypeRequest, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateCustomTargetTypeRequest request = new CreateCustomTargetTypeRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                CustomTargetTypeId = "",
+                CustomTargetType = new CustomTargetType(),
+                RequestId = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<CustomTargetType, OperationMetadata> response = await cloudDeployClient.CreateCustomTargetTypeAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CustomTargetType, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CustomTargetType result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CustomTargetType, OperationMetadata> retrievedResponse = await cloudDeployClient.PollOnceCreateCustomTargetTypeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CustomTargetType retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCustomTargetType</summary>
+        public void CreateCustomTargetType()
+        {
+            // Snippet: CreateCustomTargetType(string, CustomTargetType, string, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            CustomTargetType customTargetType = new CustomTargetType();
+            string customTargetTypeId = "";
+            // Make the request
+            Operation<CustomTargetType, OperationMetadata> response = cloudDeployClient.CreateCustomTargetType(parent, customTargetType, customTargetTypeId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CustomTargetType, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CustomTargetType result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CustomTargetType, OperationMetadata> retrievedResponse = cloudDeployClient.PollOnceCreateCustomTargetType(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CustomTargetType retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCustomTargetTypeAsync</summary>
+        public async Task CreateCustomTargetTypeAsync()
+        {
+            // Snippet: CreateCustomTargetTypeAsync(string, CustomTargetType, string, CallSettings)
+            // Additional: CreateCustomTargetTypeAsync(string, CustomTargetType, string, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            CustomTargetType customTargetType = new CustomTargetType();
+            string customTargetTypeId = "";
+            // Make the request
+            Operation<CustomTargetType, OperationMetadata> response = await cloudDeployClient.CreateCustomTargetTypeAsync(parent, customTargetType, customTargetTypeId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CustomTargetType, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CustomTargetType result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CustomTargetType, OperationMetadata> retrievedResponse = await cloudDeployClient.PollOnceCreateCustomTargetTypeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CustomTargetType retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCustomTargetType</summary>
+        public void CreateCustomTargetTypeResourceNames()
+        {
+            // Snippet: CreateCustomTargetType(LocationName, CustomTargetType, string, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            CustomTargetType customTargetType = new CustomTargetType();
+            string customTargetTypeId = "";
+            // Make the request
+            Operation<CustomTargetType, OperationMetadata> response = cloudDeployClient.CreateCustomTargetType(parent, customTargetType, customTargetTypeId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CustomTargetType, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CustomTargetType result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CustomTargetType, OperationMetadata> retrievedResponse = cloudDeployClient.PollOnceCreateCustomTargetType(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CustomTargetType retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCustomTargetTypeAsync</summary>
+        public async Task CreateCustomTargetTypeResourceNamesAsync()
+        {
+            // Snippet: CreateCustomTargetTypeAsync(LocationName, CustomTargetType, string, CallSettings)
+            // Additional: CreateCustomTargetTypeAsync(LocationName, CustomTargetType, string, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            CustomTargetType customTargetType = new CustomTargetType();
+            string customTargetTypeId = "";
+            // Make the request
+            Operation<CustomTargetType, OperationMetadata> response = await cloudDeployClient.CreateCustomTargetTypeAsync(parent, customTargetType, customTargetTypeId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CustomTargetType, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CustomTargetType result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CustomTargetType, OperationMetadata> retrievedResponse = await cloudDeployClient.PollOnceCreateCustomTargetTypeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CustomTargetType retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCustomTargetType</summary>
+        public void UpdateCustomTargetTypeRequestObject()
+        {
+            // Snippet: UpdateCustomTargetType(UpdateCustomTargetTypeRequest, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            UpdateCustomTargetTypeRequest request = new UpdateCustomTargetTypeRequest
+            {
+                UpdateMask = new FieldMask(),
+                CustomTargetType = new CustomTargetType(),
+                RequestId = "",
+                AllowMissing = false,
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<CustomTargetType, OperationMetadata> response = cloudDeployClient.UpdateCustomTargetType(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CustomTargetType, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CustomTargetType result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CustomTargetType, OperationMetadata> retrievedResponse = cloudDeployClient.PollOnceUpdateCustomTargetType(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CustomTargetType retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCustomTargetTypeAsync</summary>
+        public async Task UpdateCustomTargetTypeRequestObjectAsync()
+        {
+            // Snippet: UpdateCustomTargetTypeAsync(UpdateCustomTargetTypeRequest, CallSettings)
+            // Additional: UpdateCustomTargetTypeAsync(UpdateCustomTargetTypeRequest, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateCustomTargetTypeRequest request = new UpdateCustomTargetTypeRequest
+            {
+                UpdateMask = new FieldMask(),
+                CustomTargetType = new CustomTargetType(),
+                RequestId = "",
+                AllowMissing = false,
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<CustomTargetType, OperationMetadata> response = await cloudDeployClient.UpdateCustomTargetTypeAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CustomTargetType, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CustomTargetType result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CustomTargetType, OperationMetadata> retrievedResponse = await cloudDeployClient.PollOnceUpdateCustomTargetTypeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CustomTargetType retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCustomTargetType</summary>
+        public void UpdateCustomTargetType()
+        {
+            // Snippet: UpdateCustomTargetType(CustomTargetType, FieldMask, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            CustomTargetType customTargetType = new CustomTargetType();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<CustomTargetType, OperationMetadata> response = cloudDeployClient.UpdateCustomTargetType(customTargetType, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CustomTargetType, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CustomTargetType result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CustomTargetType, OperationMetadata> retrievedResponse = cloudDeployClient.PollOnceUpdateCustomTargetType(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CustomTargetType retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCustomTargetTypeAsync</summary>
+        public async Task UpdateCustomTargetTypeAsync()
+        {
+            // Snippet: UpdateCustomTargetTypeAsync(CustomTargetType, FieldMask, CallSettings)
+            // Additional: UpdateCustomTargetTypeAsync(CustomTargetType, FieldMask, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            CustomTargetType customTargetType = new CustomTargetType();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<CustomTargetType, OperationMetadata> response = await cloudDeployClient.UpdateCustomTargetTypeAsync(customTargetType, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CustomTargetType, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CustomTargetType result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CustomTargetType, OperationMetadata> retrievedResponse = await cloudDeployClient.PollOnceUpdateCustomTargetTypeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CustomTargetType retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCustomTargetType</summary>
+        public void DeleteCustomTargetTypeRequestObject()
+        {
+            // Snippet: DeleteCustomTargetType(DeleteCustomTargetTypeRequest, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            DeleteCustomTargetTypeRequest request = new DeleteCustomTargetTypeRequest
+            {
+                CustomTargetTypeName = CustomTargetTypeName.FromProjectLocationCustomTargetType("[PROJECT]", "[LOCATION]", "[CUSTOM_TARGET_TYPE]"),
+                RequestId = "",
+                AllowMissing = false,
+                ValidateOnly = false,
+                Etag = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = cloudDeployClient.DeleteCustomTargetType(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = cloudDeployClient.PollOnceDeleteCustomTargetType(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCustomTargetTypeAsync</summary>
+        public async Task DeleteCustomTargetTypeRequestObjectAsync()
+        {
+            // Snippet: DeleteCustomTargetTypeAsync(DeleteCustomTargetTypeRequest, CallSettings)
+            // Additional: DeleteCustomTargetTypeAsync(DeleteCustomTargetTypeRequest, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteCustomTargetTypeRequest request = new DeleteCustomTargetTypeRequest
+            {
+                CustomTargetTypeName = CustomTargetTypeName.FromProjectLocationCustomTargetType("[PROJECT]", "[LOCATION]", "[CUSTOM_TARGET_TYPE]"),
+                RequestId = "",
+                AllowMissing = false,
+                ValidateOnly = false,
+                Etag = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await cloudDeployClient.DeleteCustomTargetTypeAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await cloudDeployClient.PollOnceDeleteCustomTargetTypeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCustomTargetType</summary>
+        public void DeleteCustomTargetType()
+        {
+            // Snippet: DeleteCustomTargetType(string, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/customTargetTypes/[CUSTOM_TARGET_TYPE]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = cloudDeployClient.DeleteCustomTargetType(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = cloudDeployClient.PollOnceDeleteCustomTargetType(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCustomTargetTypeAsync</summary>
+        public async Task DeleteCustomTargetTypeAsync()
+        {
+            // Snippet: DeleteCustomTargetTypeAsync(string, CallSettings)
+            // Additional: DeleteCustomTargetTypeAsync(string, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/customTargetTypes/[CUSTOM_TARGET_TYPE]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await cloudDeployClient.DeleteCustomTargetTypeAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await cloudDeployClient.PollOnceDeleteCustomTargetTypeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCustomTargetType</summary>
+        public void DeleteCustomTargetTypeResourceNames()
+        {
+            // Snippet: DeleteCustomTargetType(CustomTargetTypeName, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            CustomTargetTypeName name = CustomTargetTypeName.FromProjectLocationCustomTargetType("[PROJECT]", "[LOCATION]", "[CUSTOM_TARGET_TYPE]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = cloudDeployClient.DeleteCustomTargetType(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = cloudDeployClient.PollOnceDeleteCustomTargetType(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCustomTargetTypeAsync</summary>
+        public async Task DeleteCustomTargetTypeResourceNamesAsync()
+        {
+            // Snippet: DeleteCustomTargetTypeAsync(CustomTargetTypeName, CallSettings)
+            // Additional: DeleteCustomTargetTypeAsync(CustomTargetTypeName, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            CustomTargetTypeName name = CustomTargetTypeName.FromProjectLocationCustomTargetType("[PROJECT]", "[LOCATION]", "[CUSTOM_TARGET_TYPE]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await cloudDeployClient.DeleteCustomTargetTypeAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await cloudDeployClient.PollOnceDeleteCustomTargetTypeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for ListReleases</summary>
         public void ListReleasesRequestObject()
         {
