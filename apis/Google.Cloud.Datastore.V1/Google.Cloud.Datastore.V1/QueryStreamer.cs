@@ -83,8 +83,8 @@ namespace Google.Cloud.Datastore.V1
                 _parent = parent;
             }
 
-            public IAsyncEnumerator<RunQueryResponse> GetAsyncEnumerator(CancellationToken cancellationToken)
-                => new AsyncQueryEnumerator(_parent, cancellationToken);
+            public IAsyncEnumerator<RunQueryResponse> GetAsyncEnumerator(CancellationToken cancellationToken) =>
+                new AsyncQueryEnumerator(_parent, cancellationToken);
 
             private class AsyncQueryEnumerator : IAsyncEnumerator<RunQueryResponse>
             {

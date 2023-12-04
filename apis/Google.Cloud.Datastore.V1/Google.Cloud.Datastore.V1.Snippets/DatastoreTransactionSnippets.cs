@@ -13,7 +13,6 @@
 // limitations under the License.
 using Google.Cloud.ClientTesting;
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xunit;
 using static Google.Cloud.Datastore.V1.Key.Types;

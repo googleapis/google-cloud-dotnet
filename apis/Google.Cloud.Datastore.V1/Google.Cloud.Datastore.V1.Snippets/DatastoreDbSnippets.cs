@@ -14,7 +14,6 @@
 using Google.Api.Gax;
 using Google.Cloud.ClientTesting;
 using Google.Protobuf;
-using Grpc.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
