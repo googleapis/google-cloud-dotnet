@@ -25,72 +25,75 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cilnb29nbGUvZmlyZXN0b3JlL2FkbWluL3YxL29wZXJhdGlvbi5wcm90bxIZ",
-            "Z29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MRolZ29vZ2xlL2ZpcmVzdG9yZS9h",
-            "ZG1pbi92MS9pbmRleC5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFt",
-            "cC5wcm90byK9AgoWSW5kZXhPcGVyYXRpb25NZXRhZGF0YRIuCgpzdGFydF90",
-            "aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghlbmRf",
-            "dGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASDQoFaW5k",
-            "ZXgYAyABKAkSOAoFc3RhdGUYBCABKA4yKS5nb29nbGUuZmlyZXN0b3JlLmFk",
-            "bWluLnYxLk9wZXJhdGlvblN0YXRlEj8KEnByb2dyZXNzX2RvY3VtZW50cxgF",
-            "IAEoCzIjLmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjEuUHJvZ3Jlc3MSOwoO",
-            "cHJvZ3Jlc3NfYnl0ZXMYBiABKAsyIy5nb29nbGUuZmlyZXN0b3JlLmFkbWlu",
-            "LnYxLlByb2dyZXNzIpkHChZGaWVsZE9wZXJhdGlvbk1ldGFkYXRhEi4KCnN0",
-            "YXJ0X3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwK",
-            "CGVuZF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIN",
-            "CgVmaWVsZBgDIAEoCRJfChNpbmRleF9jb25maWdfZGVsdGFzGAQgAygLMkIu",
-            "Z29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5GaWVsZE9wZXJhdGlvbk1ldGFk",
-            "YXRhLkluZGV4Q29uZmlnRGVsdGESOAoFc3RhdGUYBSABKA4yKS5nb29nbGUu",
-            "ZmlyZXN0b3JlLmFkbWluLnYxLk9wZXJhdGlvblN0YXRlEj8KEnByb2dyZXNz",
-            "X2RvY3VtZW50cxgGIAEoCzIjLmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjEu",
-            "UHJvZ3Jlc3MSOwoOcHJvZ3Jlc3NfYnl0ZXMYByABKAsyIy5nb29nbGUuZmly",
-            "ZXN0b3JlLmFkbWluLnYxLlByb2dyZXNzEloKEHR0bF9jb25maWdfZGVsdGEY",
-            "CCABKAsyQC5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLkZpZWxkT3BlcmF0",
-            "aW9uTWV0YWRhdGEuVHRsQ29uZmlnRGVsdGEa5wEKEEluZGV4Q29uZmlnRGVs",
-            "dGESYgoLY2hhbmdlX3R5cGUYASABKA4yTS5nb29nbGUuZmlyZXN0b3JlLmFk",
-            "bWluLnYxLkZpZWxkT3BlcmF0aW9uTWV0YWRhdGEuSW5kZXhDb25maWdEZWx0",
-            "YS5DaGFuZ2VUeXBlEi8KBWluZGV4GAIgASgLMiAuZ29vZ2xlLmZpcmVzdG9y",
-            "ZS5hZG1pbi52MS5JbmRleCI+CgpDaGFuZ2VUeXBlEhsKF0NIQU5HRV9UWVBF",
-            "X1VOU1BFQ0lGSUVEEAASBwoDQUREEAESCgoGUkVNT1ZFEAIasgEKDlR0bENv",
-            "bmZpZ0RlbHRhEmAKC2NoYW5nZV90eXBlGAEgASgOMksuZ29vZ2xlLmZpcmVz",
-            "dG9yZS5hZG1pbi52MS5GaWVsZE9wZXJhdGlvbk1ldGFkYXRhLlR0bENvbmZp",
-            "Z0RlbHRhLkNoYW5nZVR5cGUiPgoKQ2hhbmdlVHlwZRIbChdDSEFOR0VfVFlQ",
-            "RV9VTlNQRUNJRklFRBAAEgcKA0FERBABEgoKBlJFTU9WRRACIuwCChdFeHBv",
-            "cnREb2N1bWVudHNNZXRhZGF0YRIuCgpzdGFydF90aW1lGAEgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghlbmRfdGltZRgCIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASQgoPb3BlcmF0aW9uX3N0YXRlGAMg",
-            "ASgOMikuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5PcGVyYXRpb25TdGF0",
-            "ZRI/ChJwcm9ncmVzc19kb2N1bWVudHMYBCABKAsyIy5nb29nbGUuZmlyZXN0",
-            "b3JlLmFkbWluLnYxLlByb2dyZXNzEjsKDnByb2dyZXNzX2J5dGVzGAUgASgL",
-            "MiMuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5Qcm9ncmVzcxIWCg5jb2xs",
-            "ZWN0aW9uX2lkcxgGIAMoCRIZChFvdXRwdXRfdXJpX3ByZWZpeBgHIAEoCSLr",
-            "AgoXSW1wb3J0RG9jdW1lbnRzTWV0YWRhdGESLgoKc3RhcnRfdGltZRgBIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYAiAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEkIKD29wZXJhdGlvbl9z",
-            "dGF0ZRgDIAEoDjIpLmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjEuT3BlcmF0",
-            "aW9uU3RhdGUSPwoScHJvZ3Jlc3NfZG9jdW1lbnRzGAQgASgLMiMuZ29vZ2xl",
-            "LmZpcmVzdG9yZS5hZG1pbi52MS5Qcm9ncmVzcxI7Cg5wcm9ncmVzc19ieXRl",
-            "cxgFIAEoCzIjLmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjEuUHJvZ3Jlc3MS",
-            "FgoOY29sbGVjdGlvbl9pZHMYBiADKAkSGAoQaW5wdXRfdXJpX3ByZWZpeBgH",
-            "IAEoCSI0ChdFeHBvcnREb2N1bWVudHNSZXNwb25zZRIZChFvdXRwdXRfdXJp",
-            "X3ByZWZpeBgBIAEoCSI6CghQcm9ncmVzcxIWCg5lc3RpbWF0ZWRfd29yaxgB",
-            "IAEoAxIWCg5jb21wbGV0ZWRfd29yaxgCIAEoAyqeAQoOT3BlcmF0aW9uU3Rh",
-            "dGUSHwobT1BFUkFUSU9OX1NUQVRFX1VOU1BFQ0lGSUVEEAASEAoMSU5JVElB",
-            "TElaSU5HEAESDgoKUFJPQ0VTU0lORxACEg4KCkNBTkNFTExJTkcQAxIOCgpG",
-            "SU5BTElaSU5HEAQSDgoKU1VDQ0VTU0ZVTBAFEgoKBkZBSUxFRBAGEg0KCUNB",
-            "TkNFTExFRBAHQt0BCh1jb20uZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MUIO",
-            "T3BlcmF0aW9uUHJvdG9QAVo5Y2xvdWQuZ29vZ2xlLmNvbS9nby9maXJlc3Rv",
-            "cmUvYXBpdjEvYWRtaW4vYWRtaW5wYjthZG1pbnBiogIER0NGU6oCH0dvb2ds",
-            "ZS5DbG91ZC5GaXJlc3RvcmUuQWRtaW4uVjHKAh9Hb29nbGVcQ2xvdWRcRmly",
-            "ZXN0b3JlXEFkbWluXFYx6gIjR29vZ2xlOjpDbG91ZDo6RmlyZXN0b3JlOjpB",
-            "ZG1pbjo6VjFiBnByb3RvMw=="));
+            "Z29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MRoZZ29vZ2xlL2FwaS9yZXNvdXJj",
+            "ZS5wcm90bxolZ29vZ2xlL2ZpcmVzdG9yZS9hZG1pbi92MS9pbmRleC5wcm90",
+            "bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byK9AgoWSW5kZXhP",
+            "cGVyYXRpb25NZXRhZGF0YRIuCgpzdGFydF90aW1lGAEgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcBIsCghlbmRfdGltZRgCIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXASDQoFaW5kZXgYAyABKAkSOAoFc3RhdGUY",
+            "BCABKA4yKS5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLk9wZXJhdGlvblN0",
+            "YXRlEj8KEnByb2dyZXNzX2RvY3VtZW50cxgFIAEoCzIjLmdvb2dsZS5maXJl",
+            "c3RvcmUuYWRtaW4udjEuUHJvZ3Jlc3MSOwoOcHJvZ3Jlc3NfYnl0ZXMYBiAB",
+            "KAsyIy5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLlByb2dyZXNzIpkHChZG",
+            "aWVsZE9wZXJhdGlvbk1ldGFkYXRhEi4KCnN0YXJ0X3RpbWUYASABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVuZF90aW1lGAIgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBINCgVmaWVsZBgDIAEoCRJfChNp",
+            "bmRleF9jb25maWdfZGVsdGFzGAQgAygLMkIuZ29vZ2xlLmZpcmVzdG9yZS5h",
+            "ZG1pbi52MS5GaWVsZE9wZXJhdGlvbk1ldGFkYXRhLkluZGV4Q29uZmlnRGVs",
+            "dGESOAoFc3RhdGUYBSABKA4yKS5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYx",
+            "Lk9wZXJhdGlvblN0YXRlEj8KEnByb2dyZXNzX2RvY3VtZW50cxgGIAEoCzIj",
+            "Lmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjEuUHJvZ3Jlc3MSOwoOcHJvZ3Jl",
+            "c3NfYnl0ZXMYByABKAsyIy5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLlBy",
+            "b2dyZXNzEloKEHR0bF9jb25maWdfZGVsdGEYCCABKAsyQC5nb29nbGUuZmly",
+            "ZXN0b3JlLmFkbWluLnYxLkZpZWxkT3BlcmF0aW9uTWV0YWRhdGEuVHRsQ29u",
+            "ZmlnRGVsdGEa5wEKEEluZGV4Q29uZmlnRGVsdGESYgoLY2hhbmdlX3R5cGUY",
+            "ASABKA4yTS5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLkZpZWxkT3BlcmF0",
+            "aW9uTWV0YWRhdGEuSW5kZXhDb25maWdEZWx0YS5DaGFuZ2VUeXBlEi8KBWlu",
+            "ZGV4GAIgASgLMiAuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5JbmRleCI+",
+            "CgpDaGFuZ2VUeXBlEhsKF0NIQU5HRV9UWVBFX1VOU1BFQ0lGSUVEEAASBwoD",
+            "QUREEAESCgoGUkVNT1ZFEAIasgEKDlR0bENvbmZpZ0RlbHRhEmAKC2NoYW5n",
+            "ZV90eXBlGAEgASgOMksuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5GaWVs",
+            "ZE9wZXJhdGlvbk1ldGFkYXRhLlR0bENvbmZpZ0RlbHRhLkNoYW5nZVR5cGUi",
+            "PgoKQ2hhbmdlVHlwZRIbChdDSEFOR0VfVFlQRV9VTlNQRUNJRklFRBAAEgcK",
+            "A0FERBABEgoKBlJFTU9WRRACIrYDChdFeHBvcnREb2N1bWVudHNNZXRhZGF0",
+            "YRIuCgpzdGFydF90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcBIsCghlbmRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXASQgoPb3BlcmF0aW9uX3N0YXRlGAMgASgOMikuZ29vZ2xlLmZpcmVz",
+            "dG9yZS5hZG1pbi52MS5PcGVyYXRpb25TdGF0ZRI/ChJwcm9ncmVzc19kb2N1",
+            "bWVudHMYBCABKAsyIy5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLlByb2dy",
+            "ZXNzEjsKDnByb2dyZXNzX2J5dGVzGAUgASgLMiMuZ29vZ2xlLmZpcmVzdG9y",
+            "ZS5hZG1pbi52MS5Qcm9ncmVzcxIWCg5jb2xsZWN0aW9uX2lkcxgGIAMoCRIZ",
+            "ChFvdXRwdXRfdXJpX3ByZWZpeBgHIAEoCRIVCg1uYW1lc3BhY2VfaWRzGAgg",
+            "AygJEjEKDXNuYXBzaG90X3RpbWUYCSABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wIoIDChdJbXBvcnREb2N1bWVudHNNZXRhZGF0YRIuCgpzdGFy",
+            "dF90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghl",
+            "bmRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASQgoP",
+            "b3BlcmF0aW9uX3N0YXRlGAMgASgOMikuZ29vZ2xlLmZpcmVzdG9yZS5hZG1p",
+            "bi52MS5PcGVyYXRpb25TdGF0ZRI/ChJwcm9ncmVzc19kb2N1bWVudHMYBCAB",
+            "KAsyIy5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLlByb2dyZXNzEjsKDnBy",
+            "b2dyZXNzX2J5dGVzGAUgASgLMiMuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52",
+            "MS5Qcm9ncmVzcxIWCg5jb2xsZWN0aW9uX2lkcxgGIAMoCRIYChBpbnB1dF91",
+            "cmlfcHJlZml4GAcgASgJEhUKDW5hbWVzcGFjZV9pZHMYCCADKAkiNAoXRXhw",
+            "b3J0RG9jdW1lbnRzUmVzcG9uc2USGQoRb3V0cHV0X3VyaV9wcmVmaXgYASAB",
+            "KAkiOgoIUHJvZ3Jlc3MSFgoOZXN0aW1hdGVkX3dvcmsYASABKAMSFgoOY29t",
+            "cGxldGVkX3dvcmsYAiABKAMqngEKDk9wZXJhdGlvblN0YXRlEh8KG09QRVJB",
+            "VElPTl9TVEFURV9VTlNQRUNJRklFRBAAEhAKDElOSVRJQUxJWklORxABEg4K",
+            "ClBST0NFU1NJTkcQAhIOCgpDQU5DRUxMSU5HEAMSDgoKRklOQUxJWklORxAE",
+            "Eg4KClNVQ0NFU1NGVUwQBRIKCgZGQUlMRUQQBhINCglDQU5DRUxMRUQQB0Ld",
+            "AQodY29tLmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjFCDk9wZXJhdGlvblBy",
+            "b3RvUAFaOWNsb3VkLmdvb2dsZS5jb20vZ28vZmlyZXN0b3JlL2FwaXYxL2Fk",
+            "bWluL2FkbWlucGI7YWRtaW5wYqICBEdDRlOqAh9Hb29nbGUuQ2xvdWQuRmly",
+            "ZXN0b3JlLkFkbWluLlYxygIfR29vZ2xlXENsb3VkXEZpcmVzdG9yZVxBZG1p",
+            "blxWMeoCI0dvb2dsZTo6Q2xvdWQ6OkZpcmVzdG9yZTo6QWRtaW46OlYxYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Cloud.Firestore.Admin.V1.IndexReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Firestore.Admin.V1.IndexReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Firestore.Admin.V1.OperationState), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.IndexOperationMetadata), global::Google.Cloud.Firestore.Admin.V1.IndexOperationMetadata.Parser, new[]{ "StartTime", "EndTime", "Index", "State", "ProgressDocuments", "ProgressBytes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata), global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Parser, new[]{ "StartTime", "EndTime", "Field", "IndexConfigDeltas", "State", "ProgressDocuments", "ProgressBytes", "TtlConfigDelta" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.IndexConfigDelta), global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.IndexConfigDelta.Parser, new[]{ "ChangeType", "Index" }, null, new[]{ typeof(global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.IndexConfigDelta.Types.ChangeType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.TtlConfigDelta), global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.TtlConfigDelta.Parser, new[]{ "ChangeType" }, null, new[]{ typeof(global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.TtlConfigDelta.Types.ChangeType) }, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsMetadata), global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsMetadata.Parser, new[]{ "StartTime", "EndTime", "OperationState", "ProgressDocuments", "ProgressBytes", "CollectionIds", "OutputUriPrefix" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsMetadata), global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsMetadata.Parser, new[]{ "StartTime", "EndTime", "OperationState", "ProgressDocuments", "ProgressBytes", "CollectionIds", "InputUriPrefix" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsMetadata), global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsMetadata.Parser, new[]{ "StartTime", "EndTime", "OperationState", "ProgressDocuments", "ProgressBytes", "CollectionIds", "OutputUriPrefix", "NamespaceIds", "SnapshotTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsMetadata), global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsMetadata.Parser, new[]{ "StartTime", "EndTime", "OperationState", "ProgressDocuments", "ProgressBytes", "CollectionIds", "InputUriPrefix", "NamespaceIds" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsResponse), global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsResponse.Parser, new[]{ "OutputUriPrefix" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Progress), global::Google.Cloud.Firestore.Admin.V1.Progress.Parser, new[]{ "EstimatedWork", "CompletedWork" }, null, null, null, null)
           }));
@@ -143,7 +146,8 @@ namespace Google.Cloud.Firestore.Admin.V1 {
 
   #region Messages
   /// <summary>
-  /// Metadata for [google.longrunning.Operation][google.longrunning.Operation] results from
+  /// Metadata for [google.longrunning.Operation][google.longrunning.Operation]
+  /// results from
   /// [FirestoreAdmin.CreateIndex][google.firestore.admin.v1.FirestoreAdmin.CreateIndex].
   /// </summary>
   public sealed partial class IndexOperationMetadata : pb::IMessage<IndexOperationMetadata>
@@ -577,7 +581,8 @@ namespace Google.Cloud.Firestore.Admin.V1 {
   }
 
   /// <summary>
-  /// Metadata for [google.longrunning.Operation][google.longrunning.Operation] results from
+  /// Metadata for [google.longrunning.Operation][google.longrunning.Operation]
+  /// results from
   /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField].
   /// </summary>
   public sealed partial class FieldOperationMetadata : pb::IMessage<FieldOperationMetadata>
@@ -684,8 +689,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.IndexConfigDelta.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.IndexConfigDelta> indexConfigDeltas_ = new pbc::RepeatedField<global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.IndexConfigDelta>();
     /// <summary>
-    /// A list of [IndexConfigDelta][google.firestore.admin.v1.FieldOperationMetadata.IndexConfigDelta], which describe the intent of this
-    /// operation.
+    /// A list of
+    /// [IndexConfigDelta][google.firestore.admin.v1.FieldOperationMetadata.IndexConfigDelta],
+    /// which describe the intent of this operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1363,7 +1369,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       }
 
       /// <summary>
-      /// Information about an TTL configuration change.
+      /// Information about a TTL configuration change.
       /// </summary>
       public sealed partial class TtlConfigDelta : pb::IMessage<TtlConfigDelta>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1589,7 +1595,8 @@ namespace Google.Cloud.Firestore.Admin.V1 {
   }
 
   /// <summary>
-  /// Metadata for [google.longrunning.Operation][google.longrunning.Operation] results from
+  /// Metadata for [google.longrunning.Operation][google.longrunning.Operation]
+  /// results from
   /// [FirestoreAdmin.ExportDocuments][google.firestore.admin.v1.FirestoreAdmin.ExportDocuments].
   /// </summary>
   public sealed partial class ExportDocumentsMetadata : pb::IMessage<ExportDocumentsMetadata>
@@ -1633,6 +1640,8 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       progressBytes_ = other.progressBytes_ != null ? other.progressBytes_.Clone() : null;
       collectionIds_ = other.collectionIds_.Clone();
       outputUriPrefix_ = other.outputUriPrefix_;
+      namespaceIds_ = other.namespaceIds_.Clone();
+      snapshotTime_ = other.snapshotTime_ != null ? other.snapshotTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1736,7 +1745,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
     public const int OutputUriPrefixFieldNumber = 7;
     private string outputUriPrefix_ = "";
     /// <summary>
-    /// Where the entities are being exported to.
+    /// Where the documents are being exported to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1744,6 +1753,37 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       get { return outputUriPrefix_; }
       set {
         outputUriPrefix_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "namespace_ids" field.</summary>
+    public const int NamespaceIdsFieldNumber = 8;
+    private static readonly pb::FieldCodec<string> _repeated_namespaceIds_codec
+        = pb::FieldCodec.ForString(66);
+    private readonly pbc::RepeatedField<string> namespaceIds_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Which namespace ids are being exported.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> NamespaceIds {
+      get { return namespaceIds_; }
+    }
+
+    /// <summary>Field number for the "snapshot_time" field.</summary>
+    public const int SnapshotTimeFieldNumber = 9;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp snapshotTime_;
+    /// <summary>
+    /// The timestamp that corresponds to the version of the database that is being
+    /// exported. If unspecified, there are no guarantees about the consistency of
+    /// the documents being exported.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp SnapshotTime {
+      get { return snapshotTime_; }
+      set {
+        snapshotTime_ = value;
       }
     }
 
@@ -1769,6 +1809,8 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       if (!object.Equals(ProgressBytes, other.ProgressBytes)) return false;
       if(!collectionIds_.Equals(other.collectionIds_)) return false;
       if (OutputUriPrefix != other.OutputUriPrefix) return false;
+      if(!namespaceIds_.Equals(other.namespaceIds_)) return false;
+      if (!object.Equals(SnapshotTime, other.SnapshotTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1783,6 +1825,8 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       if (progressBytes_ != null) hash ^= ProgressBytes.GetHashCode();
       hash ^= collectionIds_.GetHashCode();
       if (OutputUriPrefix.Length != 0) hash ^= OutputUriPrefix.GetHashCode();
+      hash ^= namespaceIds_.GetHashCode();
+      if (snapshotTime_ != null) hash ^= SnapshotTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1826,6 +1870,11 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         output.WriteRawTag(58);
         output.WriteString(OutputUriPrefix);
       }
+      namespaceIds_.WriteTo(output, _repeated_namespaceIds_codec);
+      if (snapshotTime_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(SnapshotTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1861,6 +1910,11 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         output.WriteRawTag(58);
         output.WriteString(OutputUriPrefix);
       }
+      namespaceIds_.WriteTo(ref output, _repeated_namespaceIds_codec);
+      if (snapshotTime_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(SnapshotTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1889,6 +1943,10 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       size += collectionIds_.CalculateSize(_repeated_collectionIds_codec);
       if (OutputUriPrefix.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(OutputUriPrefix);
+      }
+      size += namespaceIds_.CalculateSize(_repeated_namespaceIds_codec);
+      if (snapshotTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SnapshotTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1932,6 +1990,13 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       collectionIds_.Add(other.collectionIds_);
       if (other.OutputUriPrefix.Length != 0) {
         OutputUriPrefix = other.OutputUriPrefix;
+      }
+      namespaceIds_.Add(other.namespaceIds_);
+      if (other.snapshotTime_ != null) {
+        if (snapshotTime_ == null) {
+          SnapshotTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        SnapshotTime.MergeFrom(other.SnapshotTime);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1986,6 +2051,17 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           }
           case 58: {
             OutputUriPrefix = input.ReadString();
+            break;
+          }
+          case 66: {
+            namespaceIds_.AddEntriesFrom(input, _repeated_namespaceIds_codec);
+            break;
+          }
+          case 74: {
+            if (snapshotTime_ == null) {
+              SnapshotTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(SnapshotTime);
             break;
           }
         }
@@ -2043,6 +2119,17 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             OutputUriPrefix = input.ReadString();
             break;
           }
+          case 66: {
+            namespaceIds_.AddEntriesFrom(ref input, _repeated_namespaceIds_codec);
+            break;
+          }
+          case 74: {
+            if (snapshotTime_ == null) {
+              SnapshotTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(SnapshotTime);
+            break;
+          }
         }
       }
     }
@@ -2051,7 +2138,8 @@ namespace Google.Cloud.Firestore.Admin.V1 {
   }
 
   /// <summary>
-  /// Metadata for [google.longrunning.Operation][google.longrunning.Operation] results from
+  /// Metadata for [google.longrunning.Operation][google.longrunning.Operation]
+  /// results from
   /// [FirestoreAdmin.ImportDocuments][google.firestore.admin.v1.FirestoreAdmin.ImportDocuments].
   /// </summary>
   public sealed partial class ImportDocumentsMetadata : pb::IMessage<ImportDocumentsMetadata>
@@ -2095,6 +2183,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       progressBytes_ = other.progressBytes_ != null ? other.progressBytes_.Clone() : null;
       collectionIds_ = other.collectionIds_.Clone();
       inputUriPrefix_ = other.inputUriPrefix_;
+      namespaceIds_ = other.namespaceIds_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2209,6 +2298,20 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       }
     }
 
+    /// <summary>Field number for the "namespace_ids" field.</summary>
+    public const int NamespaceIdsFieldNumber = 8;
+    private static readonly pb::FieldCodec<string> _repeated_namespaceIds_codec
+        = pb::FieldCodec.ForString(66);
+    private readonly pbc::RepeatedField<string> namespaceIds_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Which namespace ids are being imported.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> NamespaceIds {
+      get { return namespaceIds_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2231,6 +2334,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       if (!object.Equals(ProgressBytes, other.ProgressBytes)) return false;
       if(!collectionIds_.Equals(other.collectionIds_)) return false;
       if (InputUriPrefix != other.InputUriPrefix) return false;
+      if(!namespaceIds_.Equals(other.namespaceIds_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2245,6 +2349,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       if (progressBytes_ != null) hash ^= ProgressBytes.GetHashCode();
       hash ^= collectionIds_.GetHashCode();
       if (InputUriPrefix.Length != 0) hash ^= InputUriPrefix.GetHashCode();
+      hash ^= namespaceIds_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2288,6 +2393,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         output.WriteRawTag(58);
         output.WriteString(InputUriPrefix);
       }
+      namespaceIds_.WriteTo(output, _repeated_namespaceIds_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2323,6 +2429,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         output.WriteRawTag(58);
         output.WriteString(InputUriPrefix);
       }
+      namespaceIds_.WriteTo(ref output, _repeated_namespaceIds_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2352,6 +2459,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       if (InputUriPrefix.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(InputUriPrefix);
       }
+      size += namespaceIds_.CalculateSize(_repeated_namespaceIds_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2395,6 +2503,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       if (other.InputUriPrefix.Length != 0) {
         InputUriPrefix = other.InputUriPrefix;
       }
+      namespaceIds_.Add(other.namespaceIds_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2448,6 +2557,10 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           }
           case 58: {
             InputUriPrefix = input.ReadString();
+            break;
+          }
+          case 66: {
+            namespaceIds_.AddEntriesFrom(input, _repeated_namespaceIds_codec);
             break;
           }
         }
@@ -2505,6 +2618,10 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             InputUriPrefix = input.ReadString();
             break;
           }
+          case 66: {
+            namespaceIds_.AddEntriesFrom(ref input, _repeated_namespaceIds_codec);
+            break;
+          }
         }
       }
     }
@@ -2513,7 +2630,8 @@ namespace Google.Cloud.Firestore.Admin.V1 {
   }
 
   /// <summary>
-  /// Returned in the [google.longrunning.Operation][google.longrunning.Operation] response field.
+  /// Returned in the [google.longrunning.Operation][google.longrunning.Operation]
+  /// response field.
   /// </summary>
   public sealed partial class ExportDocumentsResponse : pb::IMessage<ExportDocumentsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2711,8 +2829,8 @@ namespace Google.Cloud.Firestore.Admin.V1 {
 
   /// <summary>
   /// Describes the progress of the operation.
-  /// Unit of work is generic and must be interpreted based on where [Progress][google.firestore.admin.v1.Progress]
-  /// is used.
+  /// Unit of work is generic and must be interpreted based on where
+  /// [Progress][google.firestore.admin.v1.Progress] is used.
   /// </summary>
   public sealed partial class Progress : pb::IMessage<Progress>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

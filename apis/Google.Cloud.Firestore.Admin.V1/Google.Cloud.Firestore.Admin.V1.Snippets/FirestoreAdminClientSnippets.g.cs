@@ -1174,6 +1174,8 @@ namespace GoogleCSharpSnippets
                 DatabaseName = gcfav::DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
                 CollectionIds = { "", },
                 OutputUriPrefix = "",
+                NamespaceIds = { "", },
+                SnapshotTime = new Timestamp(),
             };
             // Make the request
             Operation<gcfav::ExportDocumentsResponse, gcfav::ExportDocumentsMetadata> response = firestoreAdminClient.ExportDocuments(request);
@@ -1209,6 +1211,8 @@ namespace GoogleCSharpSnippets
                 DatabaseName = gcfav::DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
                 CollectionIds = { "", },
                 OutputUriPrefix = "",
+                NamespaceIds = { "", },
+                SnapshotTime = new Timestamp(),
             };
             // Make the request
             Operation<gcfav::ExportDocumentsResponse, gcfav::ExportDocumentsMetadata> response = await firestoreAdminClient.ExportDocumentsAsync(request);
@@ -1361,6 +1365,7 @@ namespace GoogleCSharpSnippets
                 DatabaseName = gcfav::DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
                 CollectionIds = { "", },
                 InputUriPrefix = "",
+                NamespaceIds = { "", },
             };
             // Make the request
             Operation<Empty, gcfav::ImportDocumentsMetadata> response = firestoreAdminClient.ImportDocuments(request);
@@ -1396,6 +1401,7 @@ namespace GoogleCSharpSnippets
                 DatabaseName = gcfav::DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
                 CollectionIds = { "", },
                 InputUriPrefix = "",
+                NamespaceIds = { "", },
             };
             // Make the request
             Operation<Empty, gcfav::ImportDocumentsMetadata> response = await firestoreAdminClient.ImportDocumentsAsync(request);

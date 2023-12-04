@@ -43,7 +43,8 @@ namespace Google.Cloud.Firestore.Admin.V1 {
   }
   #region Messages
   /// <summary>
-  /// The metadata message for [google.cloud.location.Location.metadata][google.cloud.location.Location.metadata].
+  /// The metadata message for
+  /// [google.cloud.location.Location.metadata][google.cloud.location.Location.metadata].
   /// </summary>
   public sealed partial class LocationMetadata : pb::IMessage<LocationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
