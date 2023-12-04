@@ -26,33 +26,43 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           string.Concat(
             "Cihnb29nbGUvZmlyZXN0b3JlL2FkbWluL3YxL2RhdGFiYXNlLnByb3RvEhln",
             "b29nbGUuZmlyZXN0b3JlLmFkbWluLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2Jl",
-            "aGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvItAFCghE",
-            "YXRhYmFzZRIMCgRuYW1lGAEgASgJEhMKC2xvY2F0aW9uX2lkGAkgASgJEj4K",
-            "BHR5cGUYCiABKA4yMC5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLkRhdGFi",
-            "YXNlLkRhdGFiYXNlVHlwZRJNChBjb25jdXJyZW5jeV9tb2RlGA8gASgOMjMu",
-            "Z29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5EYXRhYmFzZS5Db25jdXJyZW5j",
-            "eU1vZGUSYQobYXBwX2VuZ2luZV9pbnRlZ3JhdGlvbl9tb2RlGBMgASgOMjwu",
-            "Z29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5EYXRhYmFzZS5BcHBFbmdpbmVJ",
-            "bnRlZ3JhdGlvbk1vZGUSFwoKa2V5X3ByZWZpeBgUIAEoCUID4EEDEgwKBGV0",
-            "YWcYYyABKAkiVwoMRGF0YWJhc2VUeXBlEh0KGURBVEFCQVNFX1RZUEVfVU5T",
-            "UEVDSUZJRUQQABIUChBGSVJFU1RPUkVfTkFUSVZFEAESEgoOREFUQVNUT1JF",
-            "X01PREUQAiJ3Cg9Db25jdXJyZW5jeU1vZGUSIAocQ09OQ1VSUkVOQ1lfTU9E",
-            "RV9VTlNQRUNJRklFRBAAEg4KCk9QVElNSVNUSUMQARIPCgtQRVNTSU1JU1RJ",
-            "QxACEiEKHU9QVElNSVNUSUNfV0lUSF9FTlRJVFlfR1JPVVBTEAMiYgoYQXBw",
-            "RW5naW5lSW50ZWdyYXRpb25Nb2RlEisKJ0FQUF9FTkdJTkVfSU5URUdSQVRJ",
-            "T05fTU9ERV9VTlNQRUNJRklFRBAAEgsKB0VOQUJMRUQQARIMCghESVNBQkxF",
-            "RBACOlLqQU8KIWZpcmVzdG9yZS5nb29nbGVhcGlzLmNvbS9EYXRhYmFzZRIn",
-            "cHJvamVjdHMve3Byb2plY3R9L2RhdGFiYXNlcy97ZGF0YWJhc2V9UgEBQtwB",
-            "Ch1jb20uZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MUINRGF0YWJhc2VQcm90",
-            "b1ABWjljbG91ZC5nb29nbGUuY29tL2dvL2ZpcmVzdG9yZS9hcGl2MS9hZG1p",
-            "bi9hZG1pbnBiO2FkbWlucGKiAgRHQ0ZTqgIfR29vZ2xlLkNsb3VkLkZpcmVz",
-            "dG9yZS5BZG1pbi5WMcoCH0dvb2dsZVxDbG91ZFxGaXJlc3RvcmVcQWRtaW5c",
-            "VjHqAiNHb29nbGU6OkNsb3VkOjpGaXJlc3RvcmU6OkFkbWluOjpWMWIGcHJv",
-            "dG8z"));
+            "aGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGh5nb29n",
+            "bGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90",
+            "aW1lc3RhbXAucHJvdG8i3ggKCERhdGFiYXNlEgwKBG5hbWUYASABKAkSEwoL",
+            "bG9jYXRpb25faWQYCSABKAkSPgoEdHlwZRgKIAEoDjIwLmdvb2dsZS5maXJl",
+            "c3RvcmUuYWRtaW4udjEuRGF0YWJhc2UuRGF0YWJhc2VUeXBlEk0KEGNvbmN1",
+            "cnJlbmN5X21vZGUYDyABKA4yMy5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYx",
+            "LkRhdGFiYXNlLkNvbmN1cnJlbmN5TW9kZRJAChh2ZXJzaW9uX3JldGVudGlv",
+            "bl9wZXJpb2QYESABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BB",
+            "AxI+ChVlYXJsaWVzdF92ZXJzaW9uX3RpbWUYEiABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wQgPgQQMSbAohcG9pbnRfaW5fdGltZV9yZWNvdmVy",
+            "eV9lbmFibGVtZW50GBUgASgOMkEuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52",
+            "MS5EYXRhYmFzZS5Qb2ludEluVGltZVJlY292ZXJ5RW5hYmxlbWVudBJhChth",
+            "cHBfZW5naW5lX2ludGVncmF0aW9uX21vZGUYEyABKA4yPC5nb29nbGUuZmly",
+            "ZXN0b3JlLmFkbWluLnYxLkRhdGFiYXNlLkFwcEVuZ2luZUludGVncmF0aW9u",
+            "TW9kZRIXCgprZXlfcHJlZml4GBQgASgJQgPgQQMSDAoEZXRhZxhjIAEoCSJX",
+            "CgxEYXRhYmFzZVR5cGUSHQoZREFUQUJBU0VfVFlQRV9VTlNQRUNJRklFRBAA",
+            "EhQKEEZJUkVTVE9SRV9OQVRJVkUQARISCg5EQVRBU1RPUkVfTU9ERRACIncK",
+            "D0NvbmN1cnJlbmN5TW9kZRIgChxDT05DVVJSRU5DWV9NT0RFX1VOU1BFQ0lG",
+            "SUVEEAASDgoKT1BUSU1JU1RJQxABEg8KC1BFU1NJTUlTVElDEAISIQodT1BU",
+            "SU1JU1RJQ19XSVRIX0VOVElUWV9HUk9VUFMQAyKbAQodUG9pbnRJblRpbWVS",
+            "ZWNvdmVyeUVuYWJsZW1lbnQSMQotUE9JTlRfSU5fVElNRV9SRUNPVkVSWV9F",
+            "TkFCTEVNRU5UX1VOU1BFQ0lGSUVEEAASIgoeUE9JTlRfSU5fVElNRV9SRUNP",
+            "VkVSWV9FTkFCTEVEEAESIwofUE9JTlRfSU5fVElNRV9SRUNPVkVSWV9ESVNB",
+            "QkxFRBACImIKGEFwcEVuZ2luZUludGVncmF0aW9uTW9kZRIrCidBUFBfRU5H",
+            "SU5FX0lOVEVHUkFUSU9OX01PREVfVU5TUEVDSUZJRUQQABILCgdFTkFCTEVE",
+            "EAESDAoIRElTQUJMRUQQAjpS6kFPCiFmaXJlc3RvcmUuZ29vZ2xlYXBpcy5j",
+            "b20vRGF0YWJhc2USJ3Byb2plY3RzL3twcm9qZWN0fS9kYXRhYmFzZXMve2Rh",
+            "dGFiYXNlfVIBAULcAQodY29tLmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjFC",
+            "DURhdGFiYXNlUHJvdG9QAVo5Y2xvdWQuZ29vZ2xlLmNvbS9nby9maXJlc3Rv",
+            "cmUvYXBpdjEvYWRtaW4vYWRtaW5wYjthZG1pbnBiogIER0NGU6oCH0dvb2ds",
+            "ZS5DbG91ZC5GaXJlc3RvcmUuQWRtaW4uVjHKAh9Hb29nbGVcQ2xvdWRcRmly",
+            "ZXN0b3JlXEFkbWluXFYx6gIjR29vZ2xlOjpDbG91ZDo6RmlyZXN0b3JlOjpB",
+            "ZG1pbjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Database), global::Google.Cloud.Firestore.Admin.V1.Database.Parser, new[]{ "Name", "LocationId", "Type", "ConcurrencyMode", "AppEngineIntegrationMode", "KeyPrefix", "Etag" }, null, new[]{ typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.DatabaseType), typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.ConcurrencyMode), typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.AppEngineIntegrationMode) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Database), global::Google.Cloud.Firestore.Admin.V1.Database.Parser, new[]{ "Name", "LocationId", "Type", "ConcurrencyMode", "VersionRetentionPeriod", "EarliestVersionTime", "PointInTimeRecoveryEnablement", "AppEngineIntegrationMode", "KeyPrefix", "Etag" }, null, new[]{ typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.DatabaseType), typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.ConcurrencyMode), typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.PointInTimeRecoveryEnablement), typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.AppEngineIntegrationMode) }, null, null)
           }));
     }
     #endregion
@@ -102,6 +112,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       locationId_ = other.locationId_;
       type_ = other.type_;
       concurrencyMode_ = other.concurrencyMode_;
+      versionRetentionPeriod_ = other.versionRetentionPeriod_ != null ? other.versionRetentionPeriod_.Clone() : null;
+      earliestVersionTime_ = other.earliestVersionTime_ != null ? other.earliestVersionTime_.Clone() : null;
+      pointInTimeRecoveryEnablement_ = other.pointInTimeRecoveryEnablement_;
       appEngineIntegrationMode_ = other.appEngineIntegrationMode_;
       keyPrefix_ = other.keyPrefix_;
       etag_ = other.etag_;
@@ -134,7 +147,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
     public const int LocationIdFieldNumber = 9;
     private string locationId_ = "";
     /// <summary>
-    /// The location of the database. Available databases are listed at
+    /// The location of the database. Available locations are listed at
     /// https://cloud.google.com/firestore/docs/locations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -178,6 +191,67 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       }
     }
 
+    /// <summary>Field number for the "version_retention_period" field.</summary>
+    public const int VersionRetentionPeriodFieldNumber = 17;
+    private global::Google.Protobuf.WellKnownTypes.Duration versionRetentionPeriod_;
+    /// <summary>
+    /// Output only. The period during which past versions of data are retained in
+    /// the database.
+    ///
+    /// Any [read][google.firestore.v1.GetDocumentRequest.read_time]
+    /// or [query][google.firestore.v1.ListDocumentsRequest.read_time] can specify
+    /// a `read_time` within this window, and will read the state of the database
+    /// at that time.
+    ///
+    /// If the PITR feature is enabled, the retention period is 7 days. Otherwise,
+    /// the retention period is 1 hour.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration VersionRetentionPeriod {
+      get { return versionRetentionPeriod_; }
+      set {
+        versionRetentionPeriod_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "earliest_version_time" field.</summary>
+    public const int EarliestVersionTimeFieldNumber = 18;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp earliestVersionTime_;
+    /// <summary>
+    /// Output only. The earliest timestamp at which older versions of the data can
+    /// be read from the database. See [version_retention_period] above; this field
+    /// is populated with `now - version_retention_period`.
+    ///
+    /// This value is continuously updated, and becomes stale the moment it is
+    /// queried. If you are using this value to recover data, make sure to account
+    /// for the time from the moment when the value is queried to the moment when
+    /// you initiate the recovery.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp EarliestVersionTime {
+      get { return earliestVersionTime_; }
+      set {
+        earliestVersionTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "point_in_time_recovery_enablement" field.</summary>
+    public const int PointInTimeRecoveryEnablementFieldNumber = 21;
+    private global::Google.Cloud.Firestore.Admin.V1.Database.Types.PointInTimeRecoveryEnablement pointInTimeRecoveryEnablement_ = global::Google.Cloud.Firestore.Admin.V1.Database.Types.PointInTimeRecoveryEnablement.Unspecified;
+    /// <summary>
+    /// Whether to enable the PITR feature on this database.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Firestore.Admin.V1.Database.Types.PointInTimeRecoveryEnablement PointInTimeRecoveryEnablement {
+      get { return pointInTimeRecoveryEnablement_; }
+      set {
+        pointInTimeRecoveryEnablement_ = value;
+      }
+    }
+
     /// <summary>Field number for the "app_engine_integration_mode" field.</summary>
     public const int AppEngineIntegrationModeFieldNumber = 19;
     private global::Google.Cloud.Firestore.Admin.V1.Database.Types.AppEngineIntegrationMode appEngineIntegrationMode_ = global::Google.Cloud.Firestore.Admin.V1.Database.Types.AppEngineIntegrationMode.Unspecified;
@@ -197,10 +271,10 @@ namespace Google.Cloud.Firestore.Admin.V1 {
     public const int KeyPrefixFieldNumber = 20;
     private string keyPrefix_ = "";
     /// <summary>
-    /// Output only. The key_prefix for this database. This key_prefix is used, in combination
-    /// with the project id ("&lt;key prefix>~&lt;project id>") to construct the
-    /// application id that is returned from the Cloud Datastore APIs in Google App
-    /// Engine first generation runtimes.
+    /// Output only. The key_prefix for this database. This key_prefix is used, in
+    /// combination with the project id ("&lt;key prefix>~&lt;project id>") to construct
+    /// the application id that is returned from the Cloud Datastore APIs in Google
+    /// App Engine first generation runtimes.
     ///
     /// This value may be empty in which case the appid to use for URL-encoded keys
     /// is the project_id (eg: foo instead of v~foo).
@@ -250,6 +324,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       if (LocationId != other.LocationId) return false;
       if (Type != other.Type) return false;
       if (ConcurrencyMode != other.ConcurrencyMode) return false;
+      if (!object.Equals(VersionRetentionPeriod, other.VersionRetentionPeriod)) return false;
+      if (!object.Equals(EarliestVersionTime, other.EarliestVersionTime)) return false;
+      if (PointInTimeRecoveryEnablement != other.PointInTimeRecoveryEnablement) return false;
       if (AppEngineIntegrationMode != other.AppEngineIntegrationMode) return false;
       if (KeyPrefix != other.KeyPrefix) return false;
       if (Etag != other.Etag) return false;
@@ -264,6 +341,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       if (LocationId.Length != 0) hash ^= LocationId.GetHashCode();
       if (Type != global::Google.Cloud.Firestore.Admin.V1.Database.Types.DatabaseType.Unspecified) hash ^= Type.GetHashCode();
       if (ConcurrencyMode != global::Google.Cloud.Firestore.Admin.V1.Database.Types.ConcurrencyMode.Unspecified) hash ^= ConcurrencyMode.GetHashCode();
+      if (versionRetentionPeriod_ != null) hash ^= VersionRetentionPeriod.GetHashCode();
+      if (earliestVersionTime_ != null) hash ^= EarliestVersionTime.GetHashCode();
+      if (PointInTimeRecoveryEnablement != global::Google.Cloud.Firestore.Admin.V1.Database.Types.PointInTimeRecoveryEnablement.Unspecified) hash ^= PointInTimeRecoveryEnablement.GetHashCode();
       if (AppEngineIntegrationMode != global::Google.Cloud.Firestore.Admin.V1.Database.Types.AppEngineIntegrationMode.Unspecified) hash ^= AppEngineIntegrationMode.GetHashCode();
       if (KeyPrefix.Length != 0) hash ^= KeyPrefix.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
@@ -301,6 +381,14 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         output.WriteRawTag(120);
         output.WriteEnum((int) ConcurrencyMode);
       }
+      if (versionRetentionPeriod_ != null) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(VersionRetentionPeriod);
+      }
+      if (earliestVersionTime_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(EarliestVersionTime);
+      }
       if (AppEngineIntegrationMode != global::Google.Cloud.Firestore.Admin.V1.Database.Types.AppEngineIntegrationMode.Unspecified) {
         output.WriteRawTag(152, 1);
         output.WriteEnum((int) AppEngineIntegrationMode);
@@ -308,6 +396,10 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       if (KeyPrefix.Length != 0) {
         output.WriteRawTag(162, 1);
         output.WriteString(KeyPrefix);
+      }
+      if (PointInTimeRecoveryEnablement != global::Google.Cloud.Firestore.Admin.V1.Database.Types.PointInTimeRecoveryEnablement.Unspecified) {
+        output.WriteRawTag(168, 1);
+        output.WriteEnum((int) PointInTimeRecoveryEnablement);
       }
       if (Etag.Length != 0) {
         output.WriteRawTag(154, 6);
@@ -339,6 +431,14 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         output.WriteRawTag(120);
         output.WriteEnum((int) ConcurrencyMode);
       }
+      if (versionRetentionPeriod_ != null) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(VersionRetentionPeriod);
+      }
+      if (earliestVersionTime_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(EarliestVersionTime);
+      }
       if (AppEngineIntegrationMode != global::Google.Cloud.Firestore.Admin.V1.Database.Types.AppEngineIntegrationMode.Unspecified) {
         output.WriteRawTag(152, 1);
         output.WriteEnum((int) AppEngineIntegrationMode);
@@ -346,6 +446,10 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       if (KeyPrefix.Length != 0) {
         output.WriteRawTag(162, 1);
         output.WriteString(KeyPrefix);
+      }
+      if (PointInTimeRecoveryEnablement != global::Google.Cloud.Firestore.Admin.V1.Database.Types.PointInTimeRecoveryEnablement.Unspecified) {
+        output.WriteRawTag(168, 1);
+        output.WriteEnum((int) PointInTimeRecoveryEnablement);
       }
       if (Etag.Length != 0) {
         output.WriteRawTag(154, 6);
@@ -372,6 +476,15 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       }
       if (ConcurrencyMode != global::Google.Cloud.Firestore.Admin.V1.Database.Types.ConcurrencyMode.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ConcurrencyMode);
+      }
+      if (versionRetentionPeriod_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(VersionRetentionPeriod);
+      }
+      if (earliestVersionTime_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(EarliestVersionTime);
+      }
+      if (PointInTimeRecoveryEnablement != global::Google.Cloud.Firestore.Admin.V1.Database.Types.PointInTimeRecoveryEnablement.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) PointInTimeRecoveryEnablement);
       }
       if (AppEngineIntegrationMode != global::Google.Cloud.Firestore.Admin.V1.Database.Types.AppEngineIntegrationMode.Unspecified) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) AppEngineIntegrationMode);
@@ -405,6 +518,21 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       }
       if (other.ConcurrencyMode != global::Google.Cloud.Firestore.Admin.V1.Database.Types.ConcurrencyMode.Unspecified) {
         ConcurrencyMode = other.ConcurrencyMode;
+      }
+      if (other.versionRetentionPeriod_ != null) {
+        if (versionRetentionPeriod_ == null) {
+          VersionRetentionPeriod = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        VersionRetentionPeriod.MergeFrom(other.VersionRetentionPeriod);
+      }
+      if (other.earliestVersionTime_ != null) {
+        if (earliestVersionTime_ == null) {
+          EarliestVersionTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        EarliestVersionTime.MergeFrom(other.EarliestVersionTime);
+      }
+      if (other.PointInTimeRecoveryEnablement != global::Google.Cloud.Firestore.Admin.V1.Database.Types.PointInTimeRecoveryEnablement.Unspecified) {
+        PointInTimeRecoveryEnablement = other.PointInTimeRecoveryEnablement;
       }
       if (other.AppEngineIntegrationMode != global::Google.Cloud.Firestore.Admin.V1.Database.Types.AppEngineIntegrationMode.Unspecified) {
         AppEngineIntegrationMode = other.AppEngineIntegrationMode;
@@ -446,12 +574,30 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             ConcurrencyMode = (global::Google.Cloud.Firestore.Admin.V1.Database.Types.ConcurrencyMode) input.ReadEnum();
             break;
           }
+          case 138: {
+            if (versionRetentionPeriod_ == null) {
+              VersionRetentionPeriod = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(VersionRetentionPeriod);
+            break;
+          }
+          case 146: {
+            if (earliestVersionTime_ == null) {
+              EarliestVersionTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EarliestVersionTime);
+            break;
+          }
           case 152: {
             AppEngineIntegrationMode = (global::Google.Cloud.Firestore.Admin.V1.Database.Types.AppEngineIntegrationMode) input.ReadEnum();
             break;
           }
           case 162: {
             KeyPrefix = input.ReadString();
+            break;
+          }
+          case 168: {
+            PointInTimeRecoveryEnablement = (global::Google.Cloud.Firestore.Admin.V1.Database.Types.PointInTimeRecoveryEnablement) input.ReadEnum();
             break;
           }
           case 794: {
@@ -489,12 +635,30 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             ConcurrencyMode = (global::Google.Cloud.Firestore.Admin.V1.Database.Types.ConcurrencyMode) input.ReadEnum();
             break;
           }
+          case 138: {
+            if (versionRetentionPeriod_ == null) {
+              VersionRetentionPeriod = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(VersionRetentionPeriod);
+            break;
+          }
+          case 146: {
+            if (earliestVersionTime_ == null) {
+              EarliestVersionTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EarliestVersionTime);
+            break;
+          }
           case 152: {
             AppEngineIntegrationMode = (global::Google.Cloud.Firestore.Admin.V1.Database.Types.AppEngineIntegrationMode) input.ReadEnum();
             break;
           }
           case 162: {
             KeyPrefix = input.ReadString();
+            break;
+          }
+          case 168: {
+            PointInTimeRecoveryEnablement = (global::Google.Cloud.Firestore.Admin.V1.Database.Types.PointInTimeRecoveryEnablement) input.ReadEnum();
             break;
           }
           case 794: {
@@ -565,6 +729,32 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       }
 
       /// <summary>
+      /// Point In Time Recovery feature enablement.
+      /// </summary>
+      public enum PointInTimeRecoveryEnablement {
+        /// <summary>
+        /// Not used.
+        /// </summary>
+        [pbr::OriginalName("POINT_IN_TIME_RECOVERY_ENABLEMENT_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Reads are supported on selected versions of the data from within the past
+        /// 7 days:
+        ///
+        /// * Reads against any timestamp within the past hour
+        /// * Reads against 1-minute snapshots beyond 1 hour and within 7 days
+        ///
+        /// `version_retention_period` and `earliest_version_time` can be
+        /// used to determine the supported versions.
+        /// </summary>
+        [pbr::OriginalName("POINT_IN_TIME_RECOVERY_ENABLED")] PointInTimeRecoveryEnabled = 1,
+        /// <summary>
+        /// Reads are supported on any version of the data from within the past 1
+        /// hour.
+        /// </summary>
+        [pbr::OriginalName("POINT_IN_TIME_RECOVERY_DISABLED")] PointInTimeRecoveryDisabled = 2,
+      }
+
+      /// <summary>
       /// The type of App Engine integration mode.
       /// </summary>
       public enum AppEngineIntegrationMode {
@@ -580,8 +770,10 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         /// </summary>
         [pbr::OriginalName("ENABLED")] Enabled = 1,
         /// <summary>
-        /// Appengine has no affect on the ability of this database to serve
+        /// App Engine has no effect on the ability of this database to serve
         /// requests.
+        ///
+        /// This is the default setting for databases created with the Firestore API.
         /// </summary>
         [pbr::OriginalName("DISABLED")] Disabled = 2,
       }

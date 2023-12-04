@@ -42,6 +42,7 @@ namespace GoogleCSharpSnippets
                 DatabaseName = DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
                 CollectionIds = { "", },
                 InputUriPrefix = "",
+                NamespaceIds = { "", },
             };
             // Make the request
             Operation<Empty, ImportDocumentsMetadata> response = await firestoreAdminClient.ImportDocumentsAsync(request);

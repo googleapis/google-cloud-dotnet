@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     // [START firestore_v1_generated_FirestoreAdmin_ExportDocuments_async]
     using Google.Cloud.Firestore.Admin.V1;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedFirestoreAdminClientSnippets
@@ -41,6 +42,8 @@ namespace GoogleCSharpSnippets
                 DatabaseName = DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
                 CollectionIds = { "", },
                 OutputUriPrefix = "",
+                NamespaceIds = { "", },
+                SnapshotTime = new Timestamp(),
             };
             // Make the request
             Operation<ExportDocumentsResponse, ExportDocumentsMetadata> response = await firestoreAdminClient.ExportDocumentsAsync(request);
