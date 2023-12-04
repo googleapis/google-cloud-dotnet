@@ -2103,7 +2103,8 @@
       "protoPath": "google/cloud/edgenetwork/v1",
       "shortName": "edgenetwork",
       "serviceConfigFile": "edgenetwork_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.EnterpriseKnowledgeGraph.V1",
