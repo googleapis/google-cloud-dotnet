@@ -1,5 +1,11 @@
 # Version history
 
+## Version 4.7.0-beta02, released 2023-12-05
+
+### Bug fixes
+
+- Specify the database ID in transaction-oriented operations. Fixes [issue 11375](https://github.com/googleapis/google-cloud-dotnet/issues/11375). ([commit 715167e](https://github.com/googleapis/google-cloud-dotnet/commit/715167eee78a8c129f0dd2b21714ebecda6310ba))
+
 ## Version 4.7.0-beta01, released 2023-11-29
 
 Note: this is a beta release as multiple database support in Datastore is still in preview. We don't expect the API surface to change between now and the final release, but we don't guarantee that.
