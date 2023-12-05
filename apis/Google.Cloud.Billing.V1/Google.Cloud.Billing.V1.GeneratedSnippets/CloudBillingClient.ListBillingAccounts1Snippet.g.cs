@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START cloudbilling_v1_generated_CloudBilling_ListBillingAccounts_sync]
+    // [START cloudbilling_v1_generated_CloudBilling_ListBillingAccounts_sync_flattened1]
     using Google.Api.Gax;
     using Google.Cloud.Billing.V1;
     using System;
@@ -31,18 +31,12 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void ListBillingAccountsRequestObject()
+        public void ListBillingAccounts1()
         {
             // Create client
             CloudBillingClient cloudBillingClient = CloudBillingClient.Create();
-            // Initialize request argument(s)
-            ListBillingAccountsRequest request = new ListBillingAccountsRequest
-            {
-                Filter = "",
-                Parent = "",
-            };
             // Make the request
-            PagedEnumerable<ListBillingAccountsResponse, BillingAccount> response = cloudBillingClient.ListBillingAccounts(request);
+            PagedEnumerable<ListBillingAccountsResponse, BillingAccount> response = cloudBillingClient.ListBillingAccounts();
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (BillingAccount item in response)
@@ -77,5 +71,5 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END cloudbilling_v1_generated_CloudBilling_ListBillingAccounts_sync]
+    // [END cloudbilling_v1_generated_CloudBilling_ListBillingAccounts_sync_flattened1]
 }

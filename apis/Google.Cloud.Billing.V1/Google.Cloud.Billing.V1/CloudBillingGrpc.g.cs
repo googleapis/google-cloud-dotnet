@@ -96,6 +96,8 @@ namespace Google.Cloud.Billing.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest> __Marshaller_google_iam_v1_TestIamPermissionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_google_iam_v1_TestIamPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Billing.V1.MoveBillingAccountRequest> __Marshaller_google_cloud_billing_v1_MoveBillingAccountRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Billing.V1.MoveBillingAccountRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Billing.V1.GetBillingAccountRequest, global::Google.Cloud.Billing.V1.BillingAccount> __Method_GetBillingAccount = new grpc::Method<global::Google.Cloud.Billing.V1.GetBillingAccountRequest, global::Google.Cloud.Billing.V1.BillingAccount>(
@@ -176,6 +178,14 @@ namespace Google.Cloud.Billing.V1 {
         "TestIamPermissions",
         __Marshaller_google_iam_v1_TestIamPermissionsRequest,
         __Marshaller_google_iam_v1_TestIamPermissionsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Billing.V1.MoveBillingAccountRequest, global::Google.Cloud.Billing.V1.BillingAccount> __Method_MoveBillingAccount = new grpc::Method<global::Google.Cloud.Billing.V1.MoveBillingAccountRequest, global::Google.Cloud.Billing.V1.BillingAccount>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "MoveBillingAccount",
+        __Marshaller_google_cloud_billing_v1_MoveBillingAccountRequest,
+        __Marshaller_google_cloud_billing_v1_BillingAccount);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -303,7 +313,8 @@ namespace Google.Cloud.Billing.V1 {
       /// account, even if the charge occurred before the new billing account was
       /// assigned to the project.
       ///
-      /// The current authenticated user must have ownership privileges for both the
+      /// The current authenticated user must have ownership privileges for both
+      /// the
       /// [project](https://cloud.google.com/docs/permissions-overview#h.bgs0oxofvnoo
       /// ) and the [billing
       /// account](https://cloud.google.com/billing/docs/how-to/billing-access).
@@ -372,6 +383,18 @@ namespace Google.Cloud.Billing.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Changes which parent organization a billing account belongs to.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Billing.V1.BillingAccount> MoveBillingAccount(global::Google.Cloud.Billing.V1.MoveBillingAccountRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -827,7 +850,8 @@ namespace Google.Cloud.Billing.V1 {
       /// account, even if the charge occurred before the new billing account was
       /// assigned to the project.
       ///
-      /// The current authenticated user must have ownership privileges for both the
+      /// The current authenticated user must have ownership privileges for both
+      /// the
       /// [project](https://cloud.google.com/docs/permissions-overview#h.bgs0oxofvnoo
       /// ) and the [billing
       /// account](https://cloud.google.com/billing/docs/how-to/billing-access).
@@ -870,7 +894,8 @@ namespace Google.Cloud.Billing.V1 {
       /// account, even if the charge occurred before the new billing account was
       /// assigned to the project.
       ///
-      /// The current authenticated user must have ownership privileges for both the
+      /// The current authenticated user must have ownership privileges for both
+      /// the
       /// [project](https://cloud.google.com/docs/permissions-overview#h.bgs0oxofvnoo
       /// ) and the [billing
       /// account](https://cloud.google.com/billing/docs/how-to/billing-access).
@@ -911,7 +936,8 @@ namespace Google.Cloud.Billing.V1 {
       /// account, even if the charge occurred before the new billing account was
       /// assigned to the project.
       ///
-      /// The current authenticated user must have ownership privileges for both the
+      /// The current authenticated user must have ownership privileges for both
+      /// the
       /// [project](https://cloud.google.com/docs/permissions-overview#h.bgs0oxofvnoo
       /// ) and the [billing
       /// account](https://cloud.google.com/billing/docs/how-to/billing-access).
@@ -954,7 +980,8 @@ namespace Google.Cloud.Billing.V1 {
       /// account, even if the charge occurred before the new billing account was
       /// assigned to the project.
       ///
-      /// The current authenticated user must have ownership privileges for both the
+      /// The current authenticated user must have ownership privileges for both
+      /// the
       /// [project](https://cloud.google.com/docs/permissions-overview#h.bgs0oxofvnoo
       /// ) and the [billing
       /// account](https://cloud.google.com/billing/docs/how-to/billing-access).
@@ -1161,6 +1188,54 @@ namespace Google.Cloud.Billing.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_TestIamPermissions, null, options, request);
       }
+      /// <summary>
+      /// Changes which parent organization a billing account belongs to.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Billing.V1.BillingAccount MoveBillingAccount(global::Google.Cloud.Billing.V1.MoveBillingAccountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return MoveBillingAccount(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Changes which parent organization a billing account belongs to.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Billing.V1.BillingAccount MoveBillingAccount(global::Google.Cloud.Billing.V1.MoveBillingAccountRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_MoveBillingAccount, null, options, request);
+      }
+      /// <summary>
+      /// Changes which parent organization a billing account belongs to.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Billing.V1.BillingAccount> MoveBillingAccountAsync(global::Google.Cloud.Billing.V1.MoveBillingAccountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return MoveBillingAccountAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Changes which parent organization a billing account belongs to.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Billing.V1.BillingAccount> MoveBillingAccountAsync(global::Google.Cloud.Billing.V1.MoveBillingAccountRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_MoveBillingAccount, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override CloudBillingClient NewInstance(ClientBaseConfiguration configuration)
@@ -1184,7 +1259,8 @@ namespace Google.Cloud.Billing.V1 {
           .AddMethod(__Method_UpdateProjectBillingInfo, serviceImpl.UpdateProjectBillingInfo)
           .AddMethod(__Method_GetIamPolicy, serviceImpl.GetIamPolicy)
           .AddMethod(__Method_SetIamPolicy, serviceImpl.SetIamPolicy)
-          .AddMethod(__Method_TestIamPermissions, serviceImpl.TestIamPermissions).Build();
+          .AddMethod(__Method_TestIamPermissions, serviceImpl.TestIamPermissions)
+          .AddMethod(__Method_MoveBillingAccount, serviceImpl.MoveBillingAccount).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1204,6 +1280,7 @@ namespace Google.Cloud.Billing.V1 {
       serviceBinder.AddMethod(__Method_GetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.GetIamPolicy));
       serviceBinder.AddMethod(__Method_SetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.SetIamPolicy));
       serviceBinder.AddMethod(__Method_TestIamPermissions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(serviceImpl.TestIamPermissions));
+      serviceBinder.AddMethod(__Method_MoveBillingAccount, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Billing.V1.MoveBillingAccountRequest, global::Google.Cloud.Billing.V1.BillingAccount>(serviceImpl.MoveBillingAccount));
     }
 
   }

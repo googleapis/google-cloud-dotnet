@@ -38,7 +38,11 @@ namespace GoogleCSharpSnippets
             // Create client
             CloudBillingClient cloudBillingClient = await CloudBillingClient.CreateAsync();
             // Initialize request argument(s)
-            ListBillingAccountsRequest request = new ListBillingAccountsRequest { Filter = "", };
+            ListBillingAccountsRequest request = new ListBillingAccountsRequest
+            {
+                Filter = "",
+                Parent = "",
+            };
             // Make the request
             PagedAsyncEnumerable<ListBillingAccountsResponse, BillingAccount> response = cloudBillingClient.ListBillingAccountsAsync(request);
 

@@ -30,100 +30,125 @@ namespace Google.Cloud.Billing.V1 {
             "cGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2Uu",
             "cHJvdG8aHmdvb2dsZS9pYW0vdjEvaWFtX3BvbGljeS5wcm90bxoaZ29vZ2xl",
             "L2lhbS92MS9wb2xpY3kucHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVsZF9t",
-            "YXNrLnByb3RvIpsBCg5CaWxsaW5nQWNjb3VudBJACgRuYW1lGAEgASgJQjLg",
+            "YXNrLnByb3RvIucCCg5CaWxsaW5nQWNjb3VudBJACgRuYW1lGAEgASgJQjLg",
             "QQP6QSwKKmNsb3VkYmlsbGluZy5nb29nbGVhcGlzLmNvbS9CaWxsaW5nQWNj",
             "b3VudBIRCgRvcGVuGAIgASgIQgPgQQMSFAoMZGlzcGxheV9uYW1lGAMgASgJ",
-            "Eh4KFm1hc3Rlcl9iaWxsaW5nX2FjY291bnQYBCABKAki0QEKElByb2plY3RC",
-            "aWxsaW5nSW5mbxIRCgRuYW1lGAEgASgJQgPgQQMSFwoKcHJvamVjdF9pZBgC",
-            "IAEoCUID4EEDEhwKFGJpbGxpbmdfYWNjb3VudF9uYW1lGAMgASgJEhwKD2Jp",
-            "bGxpbmdfZW5hYmxlZBgEIAEoCEID4EEDOlPqQVAKLmNsb3VkYmlsbGluZy5n",
-            "b29nbGVhcGlzLmNvbS9Qcm9qZWN0QmlsbGluZ0luZm8SHnByb2plY3RzL3tw",
-            "cm9qZWN0fS9iaWxsaW5nSW5mbyJcChhHZXRCaWxsaW5nQWNjb3VudFJlcXVl",
-            "c3QSQAoEbmFtZRgBIAEoCUIy4EEC+kEsCipjbG91ZGJpbGxpbmcuZ29vZ2xl",
-            "YXBpcy5jb20vQmlsbGluZ0FjY291bnQiUwoaTGlzdEJpbGxpbmdBY2NvdW50",
-            "c1JlcXVlc3QSEQoJcGFnZV9zaXplGAEgASgFEhIKCnBhZ2VfdG9rZW4YAiAB",
-            "KAkSDgoGZmlsdGVyGAMgASgJInkKG0xpc3RCaWxsaW5nQWNjb3VudHNSZXNw",
+            "Eh4KFm1hc3Rlcl9iaWxsaW5nX2FjY291bnQYBCABKAkSEwoGcGFyZW50GAYg",
+            "ASgJQgPgQQM6tAHqQbABCipjbG91ZGJpbGxpbmcuZ29vZ2xlYXBpcy5jb20v",
+            "QmlsbGluZ0FjY291bnQSIWJpbGxpbmdBY2NvdW50cy97YmlsbGluZ19hY2Nv",
+            "dW50fRI+b3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9iaWxsaW5nQWNj",
+            "b3VudHMve2JpbGxpbmdfYWNjb3VudH0qD2JpbGxpbmdBY2NvdW50czIOYmls",
+            "bGluZ0FjY291bnQi0QEKElByb2plY3RCaWxsaW5nSW5mbxIRCgRuYW1lGAEg",
+            "ASgJQgPgQQMSFwoKcHJvamVjdF9pZBgCIAEoCUID4EEDEhwKFGJpbGxpbmdf",
+            "YWNjb3VudF9uYW1lGAMgASgJEhwKD2JpbGxpbmdfZW5hYmxlZBgEIAEoCEID",
+            "4EEDOlPqQVAKLmNsb3VkYmlsbGluZy5nb29nbGVhcGlzLmNvbS9Qcm9qZWN0",
+            "QmlsbGluZ0luZm8SHnByb2plY3RzL3twcm9qZWN0fS9iaWxsaW5nSW5mbyJc",
+            "ChhHZXRCaWxsaW5nQWNjb3VudFJlcXVlc3QSQAoEbmFtZRgBIAEoCUIy4EEC",
+            "+kEsCipjbG91ZGJpbGxpbmcuZ29vZ2xlYXBpcy5jb20vQmlsbGluZ0FjY291",
+            "bnQiaAoaTGlzdEJpbGxpbmdBY2NvdW50c1JlcXVlc3QSEQoJcGFnZV9zaXpl",
+            "GAEgASgFEhIKCnBhZ2VfdG9rZW4YAiABKAkSDgoGZmlsdGVyGAMgASgJEhMK",
+            "BnBhcmVudBgEIAEoCUID4EEBInkKG0xpc3RCaWxsaW5nQWNjb3VudHNSZXNw",
             "b25zZRJBChBiaWxsaW5nX2FjY291bnRzGAEgAygLMicuZ29vZ2xlLmNsb3Vk",
             "LmJpbGxpbmcudjEuQmlsbGluZ0FjY291bnQSFwoPbmV4dF9wYWdlX3Rva2Vu",
-            "GAIgASgJImQKG0NyZWF0ZUJpbGxpbmdBY2NvdW50UmVxdWVzdBJFCg9iaWxs",
+            "GAIgASgJInkKG0NyZWF0ZUJpbGxpbmdBY2NvdW50UmVxdWVzdBJFCg9iaWxs",
             "aW5nX2FjY291bnQYASABKAsyJy5nb29nbGUuY2xvdWQuYmlsbGluZy52MS5C",
-            "aWxsaW5nQWNjb3VudEID4EECIs8BChtVcGRhdGVCaWxsaW5nQWNjb3VudFJl",
-            "cXVlc3QSQAoEbmFtZRgBIAEoCUIy4EEC+kEsCipjbG91ZGJpbGxpbmcuZ29v",
-            "Z2xlYXBpcy5jb20vQmlsbGluZ0FjY291bnQSPQoHYWNjb3VudBgCIAEoCzIn",
-            "Lmdvb2dsZS5jbG91ZC5iaWxsaW5nLnYxLkJpbGxpbmdBY2NvdW50QgPgQQIS",
-            "LwoLdXBkYXRlX21hc2sYAyABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRN",
-            "YXNrIogBCh1MaXN0UHJvamVjdEJpbGxpbmdJbmZvUmVxdWVzdBJACgRuYW1l",
-            "GAEgASgJQjLgQQL6QSwKKmNsb3VkYmlsbGluZy5nb29nbGVhcGlzLmNvbS9C",
-            "aWxsaW5nQWNjb3VudBIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tl",
-            "bhgDIAEoCSKEAQoeTGlzdFByb2plY3RCaWxsaW5nSW5mb1Jlc3BvbnNlEkkK",
-            "FHByb2plY3RfYmlsbGluZ19pbmZvGAEgAygLMisuZ29vZ2xlLmNsb3VkLmJp",
-            "bGxpbmcudjEuUHJvamVjdEJpbGxpbmdJbmZvEhcKD25leHRfcGFnZV90b2tl",
-            "bhgCIAEoCSJhChxHZXRQcm9qZWN0QmlsbGluZ0luZm9SZXF1ZXN0EkEKBG5h",
-            "bWUYASABKAlCM+BBAvpBLQorY2xvdWRyZXNvdXJjZW1hbmFnZXIuZ29vZ2xl",
-            "YXBpcy5jb20vUHJvamVjdCJ/Ch9VcGRhdGVQcm9qZWN0QmlsbGluZ0luZm9S",
-            "ZXF1ZXN0EhEKBG5hbWUYASABKAlCA+BBAhJJChRwcm9qZWN0X2JpbGxpbmdf",
-            "aW5mbxgCIAEoCzIrLmdvb2dsZS5jbG91ZC5iaWxsaW5nLnYxLlByb2plY3RC",
-            "aWxsaW5nSW5mbzKyDwoMQ2xvdWRCaWxsaW5nEpwBChFHZXRCaWxsaW5nQWNj",
-            "b3VudBIxLmdvb2dsZS5jbG91ZC5iaWxsaW5nLnYxLkdldEJpbGxpbmdBY2Nv",
-            "dW50UmVxdWVzdBonLmdvb2dsZS5jbG91ZC5iaWxsaW5nLnYxLkJpbGxpbmdB",
-            "Y2NvdW50IiuC0+STAh4SHC92MS97bmFtZT1iaWxsaW5nQWNjb3VudHMvKn3a",
-            "QQRuYW1lEqABChNMaXN0QmlsbGluZ0FjY291bnRzEjMuZ29vZ2xlLmNsb3Vk",
-            "LmJpbGxpbmcudjEuTGlzdEJpbGxpbmdBY2NvdW50c1JlcXVlc3QaNC5nb29n",
-            "bGUuY2xvdWQuYmlsbGluZy52MS5MaXN0QmlsbGluZ0FjY291bnRzUmVzcG9u",
-            "c2UiHoLT5JMCFRITL3YxL2JpbGxpbmdBY2NvdW50c9pBABKzAQoUVXBkYXRl",
-            "QmlsbGluZ0FjY291bnQSNC5nb29nbGUuY2xvdWQuYmlsbGluZy52MS5VcGRh",
-            "dGVCaWxsaW5nQWNjb3VudFJlcXVlc3QaJy5nb29nbGUuY2xvdWQuYmlsbGlu",
-            "Zy52MS5CaWxsaW5nQWNjb3VudCI8gtPkkwInMhwvdjEve25hbWU9YmlsbGlu",
-            "Z0FjY291bnRzLyp9OgdhY2NvdW502kEMbmFtZSxhY2NvdW50ErUBChRDcmVh",
-            "dGVCaWxsaW5nQWNjb3VudBI0Lmdvb2dsZS5jbG91ZC5iaWxsaW5nLnYxLkNy",
-            "ZWF0ZUJpbGxpbmdBY2NvdW50UmVxdWVzdBonLmdvb2dsZS5jbG91ZC5iaWxs",
-            "aW5nLnYxLkJpbGxpbmdBY2NvdW50Ij6C0+STAiYiEy92MS9iaWxsaW5nQWNj",
-            "b3VudHM6D2JpbGxpbmdfYWNjb3VudNpBD2JpbGxpbmdfYWNjb3VudBK/AQoW",
-            "TGlzdFByb2plY3RCaWxsaW5nSW5mbxI2Lmdvb2dsZS5jbG91ZC5iaWxsaW5n",
-            "LnYxLkxpc3RQcm9qZWN0QmlsbGluZ0luZm9SZXF1ZXN0GjcuZ29vZ2xlLmNs",
-            "b3VkLmJpbGxpbmcudjEuTGlzdFByb2plY3RCaWxsaW5nSW5mb1Jlc3BvbnNl",
-            "IjSC0+STAicSJS92MS97bmFtZT1iaWxsaW5nQWNjb3VudHMvKn0vcHJvamVj",
-            "dHPaQQRuYW1lEq0BChVHZXRQcm9qZWN0QmlsbGluZ0luZm8SNS5nb29nbGUu",
-            "Y2xvdWQuYmlsbGluZy52MS5HZXRQcm9qZWN0QmlsbGluZ0luZm9SZXF1ZXN0",
-            "GisuZ29vZ2xlLmNsb3VkLmJpbGxpbmcudjEuUHJvamVjdEJpbGxpbmdJbmZv",
-            "IjCC0+STAiMSIS92MS97bmFtZT1wcm9qZWN0cy8qfS9iaWxsaW5nSW5mb9pB",
-            "BG5hbWUS3gEKGFVwZGF0ZVByb2plY3RCaWxsaW5nSW5mbxI4Lmdvb2dsZS5j",
-            "bG91ZC5iaWxsaW5nLnYxLlVwZGF0ZVByb2plY3RCaWxsaW5nSW5mb1JlcXVl",
-            "c3QaKy5nb29nbGUuY2xvdWQuYmlsbGluZy52MS5Qcm9qZWN0QmlsbGluZ0lu",
-            "Zm8iW4LT5JMCORohL3YxL3tuYW1lPXByb2plY3RzLyp9L2JpbGxpbmdJbmZv",
-            "OhRwcm9qZWN0X2JpbGxpbmdfaW5mb9pBGW5hbWUscHJvamVjdF9iaWxsaW5n",
-            "X2luZm8SiwEKDEdldElhbVBvbGljeRIiLmdvb2dsZS5pYW0udjEuR2V0SWFt",
-            "UG9saWN5UmVxdWVzdBoVLmdvb2dsZS5pYW0udjEuUG9saWN5IkCC0+STAi8S",
-            "LS92MS97cmVzb3VyY2U9YmlsbGluZ0FjY291bnRzLyp9OmdldElhbVBvbGlj",
-            "edpBCHJlc291cmNlEpUBCgxTZXRJYW1Qb2xpY3kSIi5nb29nbGUuaWFtLnYx",
-            "LlNldElhbVBvbGljeVJlcXVlc3QaFS5nb29nbGUuaWFtLnYxLlBvbGljeSJK",
-            "gtPkkwIyIi0vdjEve3Jlc291cmNlPWJpbGxpbmdBY2NvdW50cy8qfTpzZXRJ",
-            "YW1Qb2xpY3k6ASraQQ9yZXNvdXJjZSxwb2xpY3kSwAEKElRlc3RJYW1QZXJt",
-            "aXNzaW9ucxIoLmdvb2dsZS5pYW0udjEuVGVzdElhbVBlcm1pc3Npb25zUmVx",
-            "dWVzdBopLmdvb2dsZS5pYW0udjEuVGVzdElhbVBlcm1pc3Npb25zUmVzcG9u",
-            "c2UiVYLT5JMCOCIzL3YxL3tyZXNvdXJjZT1iaWxsaW5nQWNjb3VudHMvKn06",
-            "dGVzdElhbVBlcm1pc3Npb25zOgEq2kEUcmVzb3VyY2UscGVybWlzc2lvbnMa",
-            "tQHKQRtjbG91ZGJpbGxpbmcuZ29vZ2xlYXBpcy5jb23SQZMBaHR0cHM6Ly93",
-            "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1iaWxsaW5nLGh0dHBzOi8v",
-            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtYmlsbGluZy5yZWFkb25s",
-            "eSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRm",
-            "b3JtQmkKG2NvbS5nb29nbGUuY2xvdWQuYmlsbGluZy52MUIRQ2xvdWRCaWxs",
-            "aW5nUHJvdG9QAVo1Y2xvdWQuZ29vZ2xlLmNvbS9nby9iaWxsaW5nL2FwaXYx",
-            "L2JpbGxpbmdwYjtiaWxsaW5ncGJiBnByb3RvMw=="));
+            "aWxsaW5nQWNjb3VudEID4EECEhMKBnBhcmVudBgCIAEoCUID4EEBIs8BChtV",
+            "cGRhdGVCaWxsaW5nQWNjb3VudFJlcXVlc3QSQAoEbmFtZRgBIAEoCUIy4EEC",
+            "+kEsCipjbG91ZGJpbGxpbmcuZ29vZ2xlYXBpcy5jb20vQmlsbGluZ0FjY291",
+            "bnQSPQoHYWNjb3VudBgCIAEoCzInLmdvb2dsZS5jbG91ZC5iaWxsaW5nLnYx",
+            "LkJpbGxpbmdBY2NvdW50QgPgQQISLwoLdXBkYXRlX21hc2sYAyABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuRmllbGRNYXNrIogBCh1MaXN0UHJvamVjdEJpbGxp",
+            "bmdJbmZvUmVxdWVzdBJACgRuYW1lGAEgASgJQjLgQQL6QSwKKmNsb3VkYmls",
+            "bGluZy5nb29nbGVhcGlzLmNvbS9CaWxsaW5nQWNjb3VudBIRCglwYWdlX3Np",
+            "emUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSKEAQoeTGlzdFByb2plY3RC",
+            "aWxsaW5nSW5mb1Jlc3BvbnNlEkkKFHByb2plY3RfYmlsbGluZ19pbmZvGAEg",
+            "AygLMisuZ29vZ2xlLmNsb3VkLmJpbGxpbmcudjEuUHJvamVjdEJpbGxpbmdJ",
+            "bmZvEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJhChxHZXRQcm9qZWN0Qmls",
+            "bGluZ0luZm9SZXF1ZXN0EkEKBG5hbWUYASABKAlCM+BBAvpBLQorY2xvdWRy",
+            "ZXNvdXJjZW1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vUHJvamVjdCJ/Ch9VcGRh",
+            "dGVQcm9qZWN0QmlsbGluZ0luZm9SZXF1ZXN0EhEKBG5hbWUYASABKAlCA+BB",
+            "AhJJChRwcm9qZWN0X2JpbGxpbmdfaW5mbxgCIAEoCzIrLmdvb2dsZS5jbG91",
+            "ZC5iaWxsaW5nLnYxLlByb2plY3RCaWxsaW5nSW5mbyKzAQoZTW92ZUJpbGxp",
+            "bmdBY2NvdW50UmVxdWVzdBJACgRuYW1lGAEgASgJQjLgQQL6QSwKKmNsb3Vk",
+            "YmlsbGluZy5nb29nbGVhcGlzLmNvbS9CaWxsaW5nQWNjb3VudBJUChJkZXN0",
+            "aW5hdGlvbl9wYXJlbnQYAiABKAlCOOBBAvpBMgowY2xvdWRyZXNvdXJjZW1h",
+            "bmFnZXIuZ29vZ2xlYXBpcy5jb20vT3JnYW5pemF0aW9uMqETCgxDbG91ZEJp",
+            "bGxpbmcSnAEKEUdldEJpbGxpbmdBY2NvdW50EjEuZ29vZ2xlLmNsb3VkLmJp",
+            "bGxpbmcudjEuR2V0QmlsbGluZ0FjY291bnRSZXF1ZXN0GicuZ29vZ2xlLmNs",
+            "b3VkLmJpbGxpbmcudjEuQmlsbGluZ0FjY291bnQiK4LT5JMCHhIcL3YxL3tu",
+            "YW1lPWJpbGxpbmdBY2NvdW50cy8qfdpBBG5hbWUSiAIKE0xpc3RCaWxsaW5n",
+            "QWNjb3VudHMSMy5nb29nbGUuY2xvdWQuYmlsbGluZy52MS5MaXN0QmlsbGlu",
+            "Z0FjY291bnRzUmVxdWVzdBo0Lmdvb2dsZS5jbG91ZC5iaWxsaW5nLnYxLkxp",
+            "c3RCaWxsaW5nQWNjb3VudHNSZXNwb25zZSKFAYLT5JMCcxITL3YxL2JpbGxp",
+            "bmdBY2NvdW50c1ouEiwvdjEve3BhcmVudD1vcmdhbml6YXRpb25zLyp9L2Jp",
+            "bGxpbmdBY2NvdW50c1osEiovdjEve3BhcmVudD1iaWxsaW5nQWNjb3VudHMv",
+            "Kn0vc3ViQWNjb3VudHPaQQDaQQZwYXJlbnQSswEKFFVwZGF0ZUJpbGxpbmdB",
+            "Y2NvdW50EjQuZ29vZ2xlLmNsb3VkLmJpbGxpbmcudjEuVXBkYXRlQmlsbGlu",
+            "Z0FjY291bnRSZXF1ZXN0GicuZ29vZ2xlLmNsb3VkLmJpbGxpbmcudjEuQmls",
+            "bGluZ0FjY291bnQiPILT5JMCJzIcL3YxL3tuYW1lPWJpbGxpbmdBY2NvdW50",
+            "cy8qfToHYWNjb3VudNpBDG5hbWUsYWNjb3VudBLQAgoUQ3JlYXRlQmlsbGlu",
+            "Z0FjY291bnQSNC5nb29nbGUuY2xvdWQuYmlsbGluZy52MS5DcmVhdGVCaWxs",
+            "aW5nQWNjb3VudFJlcXVlc3QaJy5nb29nbGUuY2xvdWQuYmlsbGluZy52MS5C",
+            "aWxsaW5nQWNjb3VudCLYAYLT5JMCpgEiEy92MS9iaWxsaW5nQWNjb3VudHM6",
+            "D2JpbGxpbmdfYWNjb3VudFo/IiwvdjEve3BhcmVudD1vcmdhbml6YXRpb25z",
+            "Lyp9L2JpbGxpbmdBY2NvdW50czoPYmlsbGluZ19hY2NvdW50Wj0iKi92MS97",
+            "cGFyZW50PWJpbGxpbmdBY2NvdW50cy8qfS9zdWJBY2NvdW50czoPYmlsbGlu",
+            "Z19hY2NvdW502kEPYmlsbGluZ19hY2NvdW502kEWYmlsbGluZ19hY2NvdW50",
+            "LHBhcmVudBK/AQoWTGlzdFByb2plY3RCaWxsaW5nSW5mbxI2Lmdvb2dsZS5j",
+            "bG91ZC5iaWxsaW5nLnYxLkxpc3RQcm9qZWN0QmlsbGluZ0luZm9SZXF1ZXN0",
+            "GjcuZ29vZ2xlLmNsb3VkLmJpbGxpbmcudjEuTGlzdFByb2plY3RCaWxsaW5n",
+            "SW5mb1Jlc3BvbnNlIjSC0+STAicSJS92MS97bmFtZT1iaWxsaW5nQWNjb3Vu",
+            "dHMvKn0vcHJvamVjdHPaQQRuYW1lEq0BChVHZXRQcm9qZWN0QmlsbGluZ0lu",
+            "Zm8SNS5nb29nbGUuY2xvdWQuYmlsbGluZy52MS5HZXRQcm9qZWN0QmlsbGlu",
+            "Z0luZm9SZXF1ZXN0GisuZ29vZ2xlLmNsb3VkLmJpbGxpbmcudjEuUHJvamVj",
+            "dEJpbGxpbmdJbmZvIjCC0+STAiMSIS92MS97bmFtZT1wcm9qZWN0cy8qfS9i",
+            "aWxsaW5nSW5mb9pBBG5hbWUS3gEKGFVwZGF0ZVByb2plY3RCaWxsaW5nSW5m",
+            "bxI4Lmdvb2dsZS5jbG91ZC5iaWxsaW5nLnYxLlVwZGF0ZVByb2plY3RCaWxs",
+            "aW5nSW5mb1JlcXVlc3QaKy5nb29nbGUuY2xvdWQuYmlsbGluZy52MS5Qcm9q",
+            "ZWN0QmlsbGluZ0luZm8iW4LT5JMCORohL3YxL3tuYW1lPXByb2plY3RzLyp9",
+            "L2JpbGxpbmdJbmZvOhRwcm9qZWN0X2JpbGxpbmdfaW5mb9pBGW5hbWUscHJv",
+            "amVjdF9iaWxsaW5nX2luZm8SiwEKDEdldElhbVBvbGljeRIiLmdvb2dsZS5p",
+            "YW0udjEuR2V0SWFtUG9saWN5UmVxdWVzdBoVLmdvb2dsZS5pYW0udjEuUG9s",
+            "aWN5IkCC0+STAi8SLS92MS97cmVzb3VyY2U9YmlsbGluZ0FjY291bnRzLyp9",
+            "OmdldElhbVBvbGljedpBCHJlc291cmNlEpUBCgxTZXRJYW1Qb2xpY3kSIi5n",
+            "b29nbGUuaWFtLnYxLlNldElhbVBvbGljeVJlcXVlc3QaFS5nb29nbGUuaWFt",
+            "LnYxLlBvbGljeSJKgtPkkwIyIi0vdjEve3Jlc291cmNlPWJpbGxpbmdBY2Nv",
+            "dW50cy8qfTpzZXRJYW1Qb2xpY3k6ASraQQ9yZXNvdXJjZSxwb2xpY3kSwAEK",
+            "ElRlc3RJYW1QZXJtaXNzaW9ucxIoLmdvb2dsZS5pYW0udjEuVGVzdElhbVBl",
+            "cm1pc3Npb25zUmVxdWVzdBopLmdvb2dsZS5pYW0udjEuVGVzdElhbVBlcm1p",
+            "c3Npb25zUmVzcG9uc2UiVYLT5JMCOCIzL3YxL3tyZXNvdXJjZT1iaWxsaW5n",
+            "QWNjb3VudHMvKn06dGVzdElhbVBlcm1pc3Npb25zOgEq2kEUcmVzb3VyY2Us",
+            "cGVybWlzc2lvbnMS6QEKEk1vdmVCaWxsaW5nQWNjb3VudBIyLmdvb2dsZS5j",
+            "bG91ZC5iaWxsaW5nLnYxLk1vdmVCaWxsaW5nQWNjb3VudFJlcXVlc3QaJy5n",
+            "b29nbGUuY2xvdWQuYmlsbGluZy52MS5CaWxsaW5nQWNjb3VudCJ2gtPkkwJw",
+            "IiEvdjEve25hbWU9YmlsbGluZ0FjY291bnRzLyp9Om1vdmU6ASpaSBJGL3Yx",
+            "L3tkZXN0aW5hdGlvbl9wYXJlbnQ9b3JnYW5pemF0aW9ucy8qfS97bmFtZT1i",
+            "aWxsaW5nQWNjb3VudHMvKn06bW92ZRq1AcpBG2Nsb3VkYmlsbGluZy5nb29n",
+            "bGVhcGlzLmNvbdJBkwFodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRo",
+            "L2Nsb3VkLWJpbGxpbmcsaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
+            "aC9jbG91ZC1iaWxsaW5nLnJlYWRvbmx5LGh0dHBzOi8vd3d3Lmdvb2dsZWFw",
+            "aXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CgAIKG2NvbS5nb29nbGUuY2xv",
+            "dWQuYmlsbGluZy52MUIRQ2xvdWRCaWxsaW5nUHJvdG9QAVo1Y2xvdWQuZ29v",
+            "Z2xlLmNvbS9nby9iaWxsaW5nL2FwaXYxL2JpbGxpbmdwYjtiaWxsaW5ncGLq",
+            "QUEKK2Nsb3VkcmVzb3VyY2VtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1Byb2pl",
+            "Y3QSEnByb2plY3RzL3twcm9qZWN0fepBUAowY2xvdWRyZXNvdXJjZW1hbmFn",
+            "ZXIuZ29vZ2xlYXBpcy5jb20vT3JnYW5pemF0aW9uEhxvcmdhbml6YXRpb25z",
+            "L3tvcmdhbml6YXRpb259YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.BillingAccount), global::Google.Cloud.Billing.V1.BillingAccount.Parser, new[]{ "Name", "Open", "DisplayName", "MasterBillingAccount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.BillingAccount), global::Google.Cloud.Billing.V1.BillingAccount.Parser, new[]{ "Name", "Open", "DisplayName", "MasterBillingAccount", "Parent" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.ProjectBillingInfo), global::Google.Cloud.Billing.V1.ProjectBillingInfo.Parser, new[]{ "Name", "ProjectId", "BillingAccountName", "BillingEnabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.GetBillingAccountRequest), global::Google.Cloud.Billing.V1.GetBillingAccountRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.ListBillingAccountsRequest), global::Google.Cloud.Billing.V1.ListBillingAccountsRequest.Parser, new[]{ "PageSize", "PageToken", "Filter" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.ListBillingAccountsRequest), global::Google.Cloud.Billing.V1.ListBillingAccountsRequest.Parser, new[]{ "PageSize", "PageToken", "Filter", "Parent" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.ListBillingAccountsResponse), global::Google.Cloud.Billing.V1.ListBillingAccountsResponse.Parser, new[]{ "BillingAccounts", "NextPageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.CreateBillingAccountRequest), global::Google.Cloud.Billing.V1.CreateBillingAccountRequest.Parser, new[]{ "BillingAccount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.CreateBillingAccountRequest), global::Google.Cloud.Billing.V1.CreateBillingAccountRequest.Parser, new[]{ "BillingAccount", "Parent" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.UpdateBillingAccountRequest), global::Google.Cloud.Billing.V1.UpdateBillingAccountRequest.Parser, new[]{ "Name", "Account", "UpdateMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.ListProjectBillingInfoRequest), global::Google.Cloud.Billing.V1.ListProjectBillingInfoRequest.Parser, new[]{ "Name", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.ListProjectBillingInfoResponse), global::Google.Cloud.Billing.V1.ListProjectBillingInfoResponse.Parser, new[]{ "ProjectBillingInfo", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.GetProjectBillingInfoRequest), global::Google.Cloud.Billing.V1.GetProjectBillingInfoRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.UpdateProjectBillingInfoRequest), global::Google.Cloud.Billing.V1.UpdateProjectBillingInfoRequest.Parser, new[]{ "Name", "ProjectBillingInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.UpdateProjectBillingInfoRequest), global::Google.Cloud.Billing.V1.UpdateProjectBillingInfoRequest.Parser, new[]{ "Name", "ProjectBillingInfo" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.V1.MoveBillingAccountRequest), global::Google.Cloud.Billing.V1.MoveBillingAccountRequest.Parser, new[]{ "Name", "DestinationParent" }, null, null, null, null)
           }));
     }
     #endregion
@@ -173,6 +198,7 @@ namespace Google.Cloud.Billing.V1 {
       open_ = other.open_;
       displayName_ = other.displayName_;
       masterBillingAccount_ = other.masterBillingAccount_;
+      parent_ = other.parent_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -253,6 +279,28 @@ namespace Google.Cloud.Billing.V1 {
       }
     }
 
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 6;
+    private string parent_ = "";
+    /// <summary>
+    /// Output only. The billing account's parent resource identifier.
+    /// Use the `MoveBillingAccount` method to update the account's parent resource
+    /// if it is a organization.
+    /// Format:
+    ///   - `organizations/{organization_id}`, for example,
+    ///     `organizations/12345678`
+    ///   - `billingAccounts/{billing_account_id}`, for example,
+    ///     `billingAccounts/012345-567890-ABCDEF`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -272,6 +320,7 @@ namespace Google.Cloud.Billing.V1 {
       if (Open != other.Open) return false;
       if (DisplayName != other.DisplayName) return false;
       if (MasterBillingAccount != other.MasterBillingAccount) return false;
+      if (Parent != other.Parent) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -283,6 +332,7 @@ namespace Google.Cloud.Billing.V1 {
       if (Open != false) hash ^= Open.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (MasterBillingAccount.Length != 0) hash ^= MasterBillingAccount.GetHashCode();
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -317,6 +367,10 @@ namespace Google.Cloud.Billing.V1 {
         output.WriteRawTag(34);
         output.WriteString(MasterBillingAccount);
       }
+      if (Parent.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Parent);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -343,6 +397,10 @@ namespace Google.Cloud.Billing.V1 {
         output.WriteRawTag(34);
         output.WriteString(MasterBillingAccount);
       }
+      if (Parent.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Parent);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -364,6 +422,9 @@ namespace Google.Cloud.Billing.V1 {
       }
       if (MasterBillingAccount.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MasterBillingAccount);
+      }
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -388,6 +449,9 @@ namespace Google.Cloud.Billing.V1 {
       }
       if (other.MasterBillingAccount.Length != 0) {
         MasterBillingAccount = other.MasterBillingAccount;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -420,6 +484,10 @@ namespace Google.Cloud.Billing.V1 {
             MasterBillingAccount = input.ReadString();
             break;
           }
+          case 50: {
+            Parent = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -449,6 +517,10 @@ namespace Google.Cloud.Billing.V1 {
           }
           case 34: {
             MasterBillingAccount = input.ReadString();
+            break;
+          }
+          case 50: {
+            Parent = input.ReadString();
             break;
           }
         }
@@ -1020,6 +1092,7 @@ namespace Google.Cloud.Billing.V1 {
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
       filter_ = other.filter_;
+      parent_ = other.parent_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1070,7 +1143,8 @@ namespace Google.Cloud.Billing.V1 {
     /// This only supports filtering for
     /// [subaccounts](https://cloud.google.com/billing/docs/concepts) under a
     /// single provided parent billing account.
-    /// (e.g. "master_billing_account=billingAccounts/012345-678901-ABCDEF").
+    /// (for example,
+    /// `master_billing_account=billingAccounts/012345-678901-ABCDEF`).
     /// Boolean algebra and other fields are not currently supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1079,6 +1153,26 @@ namespace Google.Cloud.Billing.V1 {
       get { return filter_; }
       set {
         filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 4;
+    private string parent_ = "";
+    /// <summary>
+    /// Optional. The parent resource to list billing accounts from.
+    /// Format:
+    ///   - `organizations/{organization_id}`, for example,
+    ///     `organizations/12345678`
+    ///   - `billingAccounts/{billing_account_id}`, for example,
+    ///     `billingAccounts/012345-567890-ABCDEF`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1100,6 +1194,7 @@ namespace Google.Cloud.Billing.V1 {
       if (PageSize != other.PageSize) return false;
       if (PageToken != other.PageToken) return false;
       if (Filter != other.Filter) return false;
+      if (Parent != other.Parent) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1110,6 +1205,7 @@ namespace Google.Cloud.Billing.V1 {
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       if (Filter.Length != 0) hash ^= Filter.GetHashCode();
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1140,6 +1236,10 @@ namespace Google.Cloud.Billing.V1 {
         output.WriteRawTag(26);
         output.WriteString(Filter);
       }
+      if (Parent.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Parent);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1162,6 +1262,10 @@ namespace Google.Cloud.Billing.V1 {
         output.WriteRawTag(26);
         output.WriteString(Filter);
       }
+      if (Parent.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Parent);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1180,6 +1284,9 @@ namespace Google.Cloud.Billing.V1 {
       }
       if (Filter.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
+      }
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1201,6 +1308,9 @@ namespace Google.Cloud.Billing.V1 {
       }
       if (other.Filter.Length != 0) {
         Filter = other.Filter;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1229,6 +1339,10 @@ namespace Google.Cloud.Billing.V1 {
             Filter = input.ReadString();
             break;
           }
+          case 34: {
+            Parent = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1254,6 +1368,10 @@ namespace Google.Cloud.Billing.V1 {
           }
           case 26: {
             Filter = input.ReadString();
+            break;
+          }
+          case 34: {
+            Parent = input.ReadString();
             break;
           }
         }
@@ -1527,6 +1645,7 @@ namespace Google.Cloud.Billing.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CreateBillingAccountRequest(CreateBillingAccountRequest other) : this() {
       billingAccount_ = other.billingAccount_ != null ? other.billingAccount_.Clone() : null;
+      parent_ = other.parent_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1554,6 +1673,26 @@ namespace Google.Cloud.Billing.V1 {
       }
     }
 
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 2;
+    private string parent_ = "";
+    /// <summary>
+    /// Optional. The parent to create a billing account from.
+    /// Format:
+    ///   - `organizations/{organization_id}`, for example,
+    ///     `organizations/12345678`
+    ///   - `billingAccounts/{billing_account_id}`, for example,
+    ///      `billingAccounts/012345-567890-ABCDEF`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1570,6 +1709,7 @@ namespace Google.Cloud.Billing.V1 {
         return true;
       }
       if (!object.Equals(BillingAccount, other.BillingAccount)) return false;
+      if (Parent != other.Parent) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1578,6 +1718,7 @@ namespace Google.Cloud.Billing.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (billingAccount_ != null) hash ^= BillingAccount.GetHashCode();
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1600,6 +1741,10 @@ namespace Google.Cloud.Billing.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(BillingAccount);
       }
+      if (Parent.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Parent);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1614,6 +1759,10 @@ namespace Google.Cloud.Billing.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(BillingAccount);
       }
+      if (Parent.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Parent);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1626,6 +1775,9 @@ namespace Google.Cloud.Billing.V1 {
       int size = 0;
       if (billingAccount_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(BillingAccount);
+      }
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1644,6 +1796,9 @@ namespace Google.Cloud.Billing.V1 {
           BillingAccount = new global::Google.Cloud.Billing.V1.BillingAccount();
         }
         BillingAccount.MergeFrom(other.BillingAccount);
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1667,6 +1822,10 @@ namespace Google.Cloud.Billing.V1 {
             input.ReadMessage(BillingAccount);
             break;
           }
+          case 18: {
+            Parent = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1687,6 +1846,10 @@ namespace Google.Cloud.Billing.V1 {
               BillingAccount = new global::Google.Cloud.Billing.V1.BillingAccount();
             }
             input.ReadMessage(BillingAccount);
+            break;
+          }
+          case 18: {
+            Parent = input.ReadString();
             break;
           }
         }
@@ -2933,6 +3096,246 @@ namespace Google.Cloud.Billing.V1 {
               ProjectBillingInfo = new global::Google.Cloud.Billing.V1.ProjectBillingInfo();
             }
             input.ReadMessage(ProjectBillingInfo);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for `MoveBillingAccount` RPC.
+  /// </summary>
+  public sealed partial class MoveBillingAccountRequest : pb::IMessage<MoveBillingAccountRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<MoveBillingAccountRequest> _parser = new pb::MessageParser<MoveBillingAccountRequest>(() => new MoveBillingAccountRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<MoveBillingAccountRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Billing.V1.CloudBillingReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MoveBillingAccountRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MoveBillingAccountRequest(MoveBillingAccountRequest other) : this() {
+      name_ = other.name_;
+      destinationParent_ = other.destinationParent_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MoveBillingAccountRequest Clone() {
+      return new MoveBillingAccountRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The resource name of the billing account to move.
+    /// Must be of the form `billingAccounts/{billing_account_id}`.
+    /// The specified billing account cannot be a subaccount, since a subaccount
+    /// always belongs to the same organization as its parent account.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "destination_parent" field.</summary>
+    public const int DestinationParentFieldNumber = 2;
+    private string destinationParent_ = "";
+    /// <summary>
+    /// Required. The resource name of the Organization to reparent
+    /// the billing account under.
+    /// Must be of the form `organizations/{organization_id}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DestinationParent {
+      get { return destinationParent_; }
+      set {
+        destinationParent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as MoveBillingAccountRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(MoveBillingAccountRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (DestinationParent != other.DestinationParent) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (DestinationParent.Length != 0) hash ^= DestinationParent.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (DestinationParent.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DestinationParent);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (DestinationParent.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DestinationParent);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (DestinationParent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DestinationParent);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(MoveBillingAccountRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.DestinationParent.Length != 0) {
+        DestinationParent = other.DestinationParent;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            DestinationParent = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            DestinationParent = input.ReadString();
             break;
           }
         }

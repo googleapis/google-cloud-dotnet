@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START cloudbilling_v1_generated_CloudBilling_CreateBillingAccount_async_flattened]
+    // [START cloudbilling_v1_generated_CloudBilling_CreateBillingAccount_async_flattened1]
     using Google.Cloud.Billing.V1;
     using System.Threading.Tasks;
 
@@ -30,7 +30,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task CreateBillingAccountAsync()
+        public async Task CreateBillingAccount1Async()
         {
             // Create client
             CloudBillingClient cloudBillingClient = await CloudBillingClient.CreateAsync();
@@ -40,5 +40,5 @@ namespace GoogleCSharpSnippets
             BillingAccount response = await cloudBillingClient.CreateBillingAccountAsync(billingAccount);
         }
     }
-    // [END cloudbilling_v1_generated_CloudBilling_CreateBillingAccount_async_flattened]
+    // [END cloudbilling_v1_generated_CloudBilling_CreateBillingAccount_async_flattened1]
 }

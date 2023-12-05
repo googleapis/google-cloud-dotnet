@@ -16,12 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START cloudbilling_v1_generated_CloudBilling_CreateBillingAccount_sync_flattened]
+    // [START cloudbilling_v1_generated_CloudBilling_MoveBillingAccount_sync]
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Billing.V1;
 
     public sealed partial class GeneratedCloudBillingClientSnippets
     {
-        /// <summary>Snippet for CreateBillingAccount</summary>
+        /// <summary>Snippet for MoveBillingAccount</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,15 +30,19 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void CreateBillingAccount()
+        public void MoveBillingAccountRequestObject()
         {
             // Create client
             CloudBillingClient cloudBillingClient = CloudBillingClient.Create();
             // Initialize request argument(s)
-            BillingAccount billingAccount = new BillingAccount();
+            MoveBillingAccountRequest request = new MoveBillingAccountRequest
+            {
+                BillingAccountName = BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
+                DestinationParentAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
+            };
             // Make the request
-            BillingAccount response = cloudBillingClient.CreateBillingAccount(billingAccount);
+            BillingAccount response = cloudBillingClient.MoveBillingAccount(request);
         }
     }
-    // [END cloudbilling_v1_generated_CloudBilling_CreateBillingAccount_sync_flattened]
+    // [END cloudbilling_v1_generated_CloudBilling_MoveBillingAccount_sync]
 }

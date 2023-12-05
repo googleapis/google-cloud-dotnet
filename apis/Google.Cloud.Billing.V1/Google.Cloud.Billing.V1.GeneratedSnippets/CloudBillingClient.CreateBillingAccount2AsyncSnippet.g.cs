@@ -16,12 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START cloudbilling_v1_generated_CloudBilling_CreateBillingAccount_sync]
+    // [START cloudbilling_v1_generated_CloudBilling_CreateBillingAccount_async_flattened2]
     using Google.Cloud.Billing.V1;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedCloudBillingClientSnippets
     {
-        /// <summary>Snippet for CreateBillingAccount</summary>
+        /// <summary>Snippet for CreateBillingAccountAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,19 +30,16 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void CreateBillingAccountRequestObject()
+        public async Task CreateBillingAccount2Async()
         {
             // Create client
-            CloudBillingClient cloudBillingClient = CloudBillingClient.Create();
+            CloudBillingClient cloudBillingClient = await CloudBillingClient.CreateAsync();
             // Initialize request argument(s)
-            CreateBillingAccountRequest request = new CreateBillingAccountRequest
-            {
-                BillingAccount = new BillingAccount(),
-                Parent = "",
-            };
+            BillingAccount billingAccount = new BillingAccount();
+            string parent = "";
             // Make the request
-            BillingAccount response = cloudBillingClient.CreateBillingAccount(request);
+            BillingAccount response = await cloudBillingClient.CreateBillingAccountAsync(billingAccount, parent);
         }
     }
-    // [END cloudbilling_v1_generated_CloudBilling_CreateBillingAccount_sync]
+    // [END cloudbilling_v1_generated_CloudBilling_CreateBillingAccount_async_flattened2]
 }

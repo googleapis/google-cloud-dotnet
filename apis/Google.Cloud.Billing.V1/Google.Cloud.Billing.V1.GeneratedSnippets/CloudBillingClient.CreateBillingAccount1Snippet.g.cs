@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START cloudbilling_v1_generated_CloudBilling_CreateBillingAccount_sync]
+    // [START cloudbilling_v1_generated_CloudBilling_CreateBillingAccount_sync_flattened1]
     using Google.Cloud.Billing.V1;
 
     public sealed partial class GeneratedCloudBillingClientSnippets
@@ -29,19 +29,15 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void CreateBillingAccountRequestObject()
+        public void CreateBillingAccount1()
         {
             // Create client
             CloudBillingClient cloudBillingClient = CloudBillingClient.Create();
             // Initialize request argument(s)
-            CreateBillingAccountRequest request = new CreateBillingAccountRequest
-            {
-                BillingAccount = new BillingAccount(),
-                Parent = "",
-            };
+            BillingAccount billingAccount = new BillingAccount();
             // Make the request
-            BillingAccount response = cloudBillingClient.CreateBillingAccount(request);
+            BillingAccount response = cloudBillingClient.CreateBillingAccount(billingAccount);
         }
     }
-    // [END cloudbilling_v1_generated_CloudBilling_CreateBillingAccount_sync]
+    // [END cloudbilling_v1_generated_CloudBilling_CreateBillingAccount_sync_flattened1]
 }

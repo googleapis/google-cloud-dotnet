@@ -38,6 +38,7 @@ namespace GoogleCSharpSnippets
             CreateBillingAccountRequest request = new CreateBillingAccountRequest
             {
                 BillingAccount = new BillingAccount(),
+                Parent = "",
             };
             // Make the request
             BillingAccount response = await cloudBillingClient.CreateBillingAccountAsync(request);
