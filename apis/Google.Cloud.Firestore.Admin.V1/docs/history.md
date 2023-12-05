@@ -1,5 +1,17 @@
 # Version history
 
+## Version 3.4.0, released 2023-12-05
+
+### New features
+
+- Expose Firestore PITR fields in Database to stable ([commit 164e151](https://github.com/googleapis/google-cloud-dotnet/commit/164e151633aa4d82861a61d4a95ff496d38b87ef))
+- Expose Firestore snapshot_time field in export API to stable ([commit 164e151](https://github.com/googleapis/google-cloud-dotnet/commit/164e151633aa4d82861a61d4a95ff496d38b87ef))
+- Expose Firestore namespace ID fields in import/export APIs to stable ([commit 164e151](https://github.com/googleapis/google-cloud-dotnet/commit/164e151633aa4d82861a61d4a95ff496d38b87ef))
+
+### Documentation improvements
+
+- Assorted typo fixes and whitespace updates ([commit 164e151](https://github.com/googleapis/google-cloud-dotnet/commit/164e151633aa4d82861a61d4a95ff496d38b87ef))
+
 ## Version 3.3.0, released 2023-06-05
 
 ### New features
