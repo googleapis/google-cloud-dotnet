@@ -1,5 +1,16 @@
 # Version history
 
+## Version 2.6.0, released 2023-12-05
+
+### New features
+
+- Add a CloudLoggingOption and use_generic_task_monitored_resource fields for users to opt out new batch monitored resource in cloud logging ([commit 838c6df](https://github.com/googleapis/google-cloud-dotnet/commit/838c6df45974d62021bb93080696f7f7c38d104a))
+
+### Documentation improvements
+
+- Update comment for AllocationPolicy.network ([commit 838c6df](https://github.com/googleapis/google-cloud-dotnet/commit/838c6df45974d62021bb93080696f7f7c38d104a))
+- Update default max parallel tasks per job ([commit 06a26bf](https://github.com/googleapis/google-cloud-dotnet/commit/06a26bfa140a0a01373ddc4fbc8fc9d0815cad1f))
+
 ## Version 2.5.0, released 2023-10-30
 
 ### New features
