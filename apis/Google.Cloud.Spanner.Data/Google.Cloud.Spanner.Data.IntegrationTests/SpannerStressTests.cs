@@ -52,7 +52,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     // This uses an ephemeral transaction, so it's legal to retry it.
                     await insertCommand.ExecuteNonQueryAsyncWithRetry();
                 }
-            });
+            },
+            // Mutations are not sent until the transaction is committed.
+            // Commit does not support transaction inlining so at this point, 2 RPCs are executed,
+            // one for begin transaction and one for commit.
+            latencyMultiplier: 2);
         }
 
         [Fact]
@@ -91,7 +95,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                         await tx.CommitAsync();
                     }
                 }
-            }));
+            }),
+            // Mutations are not sent until the transaction is committed.
+            // Commit does not support transaction inlining so at this point, 2 RPCs are executed,
+            // one for begin transaction and one for commit.
+            latencyMultiplier: 2);
         }
 
         [Fact]
@@ -112,7 +120,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 await insertCommand.ExecuteNonQueryAsyncWithRetry();
             }
 
-            await RunStress(TestReadOneRow);
+            // Only the read RPC is executed here as we are not creating any explicit SpannerTransaction.
+            // If no explicit SpannerTransaction is created, a read operation is executed without any
+            // transaction selector, that is, no inline transaction but also no need for a begin transaction RPC.
+            await RunStress(TestReadOneRow, latencyMultiplier: 1);
 
             async Task TestReadOneRow(SpannerConnectionStringBuilder connectionStringBuilder)
             {
@@ -131,7 +142,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
-        private async Task RunStress(Func<SpannerConnectionStringBuilder, Task> func)
+        private async Task RunStress(Func<SpannerConnectionStringBuilder, Task> func, int latencyMultiplier)
         {
             // Create a new session pool manager to eliminate the chance of a previous test altering the pool state.
 
@@ -185,7 +196,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             await SessionPoolHelpers.ShutdownPoolAsync(connectionStringBuilder);
 
             // Spanner latency with 100 qps simulated is usually around 75ms.
-            Assert.InRange(latencyMs, 0, 150);
+            // We allow for a latency multiplier from callers, because callers may be executing,
+            // more than one command. In particular, with inline transactions, mutation commits
+            // execute both the begin transaction and the commit RPCs, because commit does not
+            // support inline transactions.
+            Assert.InRange(latencyMs, 0, 150 * latencyMultiplier);
         }
     }
 }
