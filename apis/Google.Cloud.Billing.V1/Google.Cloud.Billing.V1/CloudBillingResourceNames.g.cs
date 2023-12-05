@@ -294,4 +294,26 @@ namespace Google.Cloud.Billing.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class MoveBillingAccountRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::BillingAccountName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gagr::BillingAccountName BillingAccountName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gagr::BillingAccountName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gagr::OrganizationName"/>-typed view over the <see cref="DestinationParent"/> resource name
+        /// property.
+        /// </summary>
+        public gagr::OrganizationName DestinationParentAsOrganizationName
+        {
+            get => string.IsNullOrEmpty(DestinationParent) ? null : gagr::OrganizationName.Parse(DestinationParent, allowUnparsed: true);
+            set => DestinationParent = value?.ToString() ?? "";
+        }
+    }
 }

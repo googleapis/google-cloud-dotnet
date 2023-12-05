@@ -57,6 +57,7 @@ namespace Google.Cloud.Billing.V1
             GetIamPolicySettings = existing.GetIamPolicySettings;
             SetIamPolicySettings = existing.SetIamPolicySettings;
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
+            MoveBillingAccountSettings = existing.MoveBillingAccountSettings;
             OnCopy(existing);
         }
 
@@ -263,6 +264,18 @@ namespace Google.Cloud.Billing.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings TestIamPermissionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudBillingClient.MoveBillingAccount</c> and <c>CloudBillingClient.MoveBillingAccountAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings MoveBillingAccountSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="CloudBillingSettings"/> object.</returns>
@@ -605,6 +618,68 @@ namespace Google.Cloud.Billing.V1
             }, callSettings);
 
         /// <summary>
+        /// Lists the billing accounts that the current authenticated user has
+        /// permission to
+        /// [view](https://cloud.google.com/billing/docs/how-to/billing-access).
+        /// </summary>
+        /// <param name="parent">
+        /// Optional. The parent resource to list billing accounts from.
+        /// Format:
+        /// - `organizations/{organization_id}`, for example,
+        /// `organizations/12345678`
+        /// - `billingAccounts/{billing_account_id}`, for example,
+        /// `billingAccounts/012345-567890-ABCDEF`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BillingAccount"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBillingAccountsResponse, BillingAccount> ListBillingAccounts(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBillingAccounts(new ListBillingAccountsRequest
+            {
+                Parent = parent ?? "",
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists the billing accounts that the current authenticated user has
+        /// permission to
+        /// [view](https://cloud.google.com/billing/docs/how-to/billing-access).
+        /// </summary>
+        /// <param name="parent">
+        /// Optional. The parent resource to list billing accounts from.
+        /// Format:
+        /// - `organizations/{organization_id}`, for example,
+        /// `organizations/12345678`
+        /// - `billingAccounts/{billing_account_id}`, for example,
+        /// `billingAccounts/012345-567890-ABCDEF`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BillingAccount"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBillingAccountsResponse, BillingAccount> ListBillingAccountsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBillingAccountsAsync(new ListBillingAccountsRequest
+            {
+                Parent = parent ?? "",
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
         /// Updates a billing account's fields.
         /// Currently the only field that can be edited is `display_name`.
         /// The current authenticated user must have the `billing.accounts.update`
@@ -942,6 +1017,122 @@ namespace Google.Cloud.Billing.V1
             CreateBillingAccountAsync(billingAccount, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// This method creates [billing
+        /// subaccounts](https://cloud.google.com/billing/docs/concepts#subaccounts).
+        /// 
+        /// Google Cloud resellers should use the
+        /// Channel Services APIs,
+        /// [accounts.customers.create](https://cloud.google.com/channel/docs/reference/rest/v1/accounts.customers/create)
+        /// and
+        /// [accounts.customers.entitlements.create](https://cloud.google.com/channel/docs/reference/rest/v1/accounts.customers.entitlements/create).
+        /// 
+        /// When creating a subaccount, the current authenticated user must have the
+        /// `billing.accounts.update` IAM permission on the parent account, which is
+        /// typically given to billing account
+        /// [administrators](https://cloud.google.com/billing/docs/how-to/billing-access).
+        /// This method will return an error if the parent account has not been
+        /// provisioned for subaccounts.
+        /// </summary>
+        /// <param name="billingAccount">
+        /// Required. The billing account resource to create.
+        /// Currently CreateBillingAccount only supports subaccount creation, so
+        /// any created billing accounts must be under a provided parent billing
+        /// account.
+        /// </param>
+        /// <param name="parent">
+        /// Optional. The parent to create a billing account from.
+        /// Format:
+        /// - `organizations/{organization_id}`, for example,
+        /// `organizations/12345678`
+        /// - `billingAccounts/{billing_account_id}`, for example,
+        /// `billingAccounts/012345-567890-ABCDEF`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BillingAccount CreateBillingAccount(BillingAccount billingAccount, string parent, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBillingAccount(new CreateBillingAccountRequest
+            {
+                BillingAccount = gax::GaxPreconditions.CheckNotNull(billingAccount, nameof(billingAccount)),
+                Parent = parent ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// This method creates [billing
+        /// subaccounts](https://cloud.google.com/billing/docs/concepts#subaccounts).
+        /// 
+        /// Google Cloud resellers should use the
+        /// Channel Services APIs,
+        /// [accounts.customers.create](https://cloud.google.com/channel/docs/reference/rest/v1/accounts.customers/create)
+        /// and
+        /// [accounts.customers.entitlements.create](https://cloud.google.com/channel/docs/reference/rest/v1/accounts.customers.entitlements/create).
+        /// 
+        /// When creating a subaccount, the current authenticated user must have the
+        /// `billing.accounts.update` IAM permission on the parent account, which is
+        /// typically given to billing account
+        /// [administrators](https://cloud.google.com/billing/docs/how-to/billing-access).
+        /// This method will return an error if the parent account has not been
+        /// provisioned for subaccounts.
+        /// </summary>
+        /// <param name="billingAccount">
+        /// Required. The billing account resource to create.
+        /// Currently CreateBillingAccount only supports subaccount creation, so
+        /// any created billing accounts must be under a provided parent billing
+        /// account.
+        /// </param>
+        /// <param name="parent">
+        /// Optional. The parent to create a billing account from.
+        /// Format:
+        /// - `organizations/{organization_id}`, for example,
+        /// `organizations/12345678`
+        /// - `billingAccounts/{billing_account_id}`, for example,
+        /// `billingAccounts/012345-567890-ABCDEF`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BillingAccount> CreateBillingAccountAsync(BillingAccount billingAccount, string parent, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBillingAccountAsync(new CreateBillingAccountRequest
+            {
+                BillingAccount = gax::GaxPreconditions.CheckNotNull(billingAccount, nameof(billingAccount)),
+                Parent = parent ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// This method creates [billing
+        /// subaccounts](https://cloud.google.com/billing/docs/concepts#subaccounts).
+        /// 
+        /// Google Cloud resellers should use the
+        /// Channel Services APIs,
+        /// [accounts.customers.create](https://cloud.google.com/channel/docs/reference/rest/v1/accounts.customers/create)
+        /// and
+        /// [accounts.customers.entitlements.create](https://cloud.google.com/channel/docs/reference/rest/v1/accounts.customers.entitlements/create).
+        /// 
+        /// When creating a subaccount, the current authenticated user must have the
+        /// `billing.accounts.update` IAM permission on the parent account, which is
+        /// typically given to billing account
+        /// [administrators](https://cloud.google.com/billing/docs/how-to/billing-access).
+        /// This method will return an error if the parent account has not been
+        /// provisioned for subaccounts.
+        /// </summary>
+        /// <param name="billingAccount">
+        /// Required. The billing account resource to create.
+        /// Currently CreateBillingAccount only supports subaccount creation, so
+        /// any created billing accounts must be under a provided parent billing
+        /// account.
+        /// </param>
+        /// <param name="parent">
+        /// Optional. The parent to create a billing account from.
+        /// Format:
+        /// - `organizations/{organization_id}`, for example,
+        /// `organizations/12345678`
+        /// - `billingAccounts/{billing_account_id}`, for example,
+        /// `billingAccounts/012345-567890-ABCDEF`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BillingAccount> CreateBillingAccountAsync(BillingAccount billingAccount, string parent, st::CancellationToken cancellationToken) =>
+            CreateBillingAccountAsync(billingAccount, parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Lists the projects associated with a billing account. The current
         /// authenticated user must have the `billing.resourceAssociations.list` IAM
         /// permission, which is often given to billing account
@@ -1242,7 +1433,8 @@ namespace Google.Cloud.Billing.V1
         /// account, even if the charge occurred before the new billing account was
         /// assigned to the project.
         /// 
-        /// The current authenticated user must have ownership privileges for both the
+        /// The current authenticated user must have ownership privileges for both
+        /// the
         /// [project](https://cloud.google.com/docs/permissions-overview#h.bgs0oxofvnoo
         /// ) and the [billing
         /// account](https://cloud.google.com/billing/docs/how-to/billing-access).
@@ -1281,7 +1473,8 @@ namespace Google.Cloud.Billing.V1
         /// account, even if the charge occurred before the new billing account was
         /// assigned to the project.
         /// 
-        /// The current authenticated user must have ownership privileges for both the
+        /// The current authenticated user must have ownership privileges for both
+        /// the
         /// [project](https://cloud.google.com/docs/permissions-overview#h.bgs0oxofvnoo
         /// ) and the [billing
         /// account](https://cloud.google.com/billing/docs/how-to/billing-access).
@@ -1320,7 +1513,8 @@ namespace Google.Cloud.Billing.V1
         /// account, even if the charge occurred before the new billing account was
         /// assigned to the project.
         /// 
-        /// The current authenticated user must have ownership privileges for both the
+        /// The current authenticated user must have ownership privileges for both
+        /// the
         /// [project](https://cloud.google.com/docs/permissions-overview#h.bgs0oxofvnoo
         /// ) and the [billing
         /// account](https://cloud.google.com/billing/docs/how-to/billing-access).
@@ -1359,7 +1553,8 @@ namespace Google.Cloud.Billing.V1
         /// account, even if the charge occurred before the new billing account was
         /// assigned to the project.
         /// 
-        /// The current authenticated user must have ownership privileges for both the
+        /// The current authenticated user must have ownership privileges for both
+        /// the
         /// [project](https://cloud.google.com/docs/permissions-overview#h.bgs0oxofvnoo
         /// ) and the [billing
         /// account](https://cloud.google.com/billing/docs/how-to/billing-access).
@@ -1411,7 +1606,8 @@ namespace Google.Cloud.Billing.V1
         /// account, even if the charge occurred before the new billing account was
         /// assigned to the project.
         /// 
-        /// The current authenticated user must have ownership privileges for both the
+        /// The current authenticated user must have ownership privileges for both
+        /// the
         /// [project](https://cloud.google.com/docs/permissions-overview#h.bgs0oxofvnoo
         /// ) and the [billing
         /// account](https://cloud.google.com/billing/docs/how-to/billing-access).
@@ -1463,7 +1659,8 @@ namespace Google.Cloud.Billing.V1
         /// account, even if the charge occurred before the new billing account was
         /// assigned to the project.
         /// 
-        /// The current authenticated user must have ownership privileges for both the
+        /// The current authenticated user must have ownership privileges for both
+        /// the
         /// [project](https://cloud.google.com/docs/permissions-overview#h.bgs0oxofvnoo
         /// ) and the [billing
         /// account](https://cloud.google.com/billing/docs/how-to/billing-access).
@@ -2002,6 +2199,33 @@ namespace Google.Cloud.Billing.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<gciv::TestIamPermissionsResponse> TestIamPermissionsAsync(gax::IResourceName resource, scg::IEnumerable<string> permissions, st::CancellationToken cancellationToken) =>
             TestIamPermissionsAsync(resource, permissions, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Changes which parent organization a billing account belongs to.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BillingAccount MoveBillingAccount(MoveBillingAccountRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Changes which parent organization a billing account belongs to.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BillingAccount> MoveBillingAccountAsync(MoveBillingAccountRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Changes which parent organization a billing account belongs to.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BillingAccount> MoveBillingAccountAsync(MoveBillingAccountRequest request, st::CancellationToken cancellationToken) =>
+            MoveBillingAccountAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>CloudBilling client wrapper implementation, for convenient use.</summary>
@@ -2030,6 +2254,8 @@ namespace Google.Cloud.Billing.V1
         private readonly gaxgrpc::ApiCall<gciv::SetIamPolicyRequest, gciv::Policy> _callSetIamPolicy;
 
         private readonly gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> _callTestIamPermissions;
+
+        private readonly gaxgrpc::ApiCall<MoveBillingAccountRequest, BillingAccount> _callMoveBillingAccount;
 
         /// <summary>
         /// Constructs a client wrapper for the CloudBilling service, with the specified gRPC client and settings.
@@ -2072,6 +2298,9 @@ namespace Google.Cloud.Billing.V1
             _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callTestIamPermissions);
             Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
+            _callMoveBillingAccount = clientHelper.BuildApiCall<MoveBillingAccountRequest, BillingAccount>("MoveBillingAccount", grpcClient.MoveBillingAccountAsync, grpcClient.MoveBillingAccount, effectiveSettings.MoveBillingAccountSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callMoveBillingAccount);
+            Modify_MoveBillingAccountApiCall(ref _callMoveBillingAccount);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2097,6 +2326,8 @@ namespace Google.Cloud.Billing.V1
 
         partial void Modify_TestIamPermissionsApiCall(ref gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> call);
 
+        partial void Modify_MoveBillingAccountApiCall(ref gaxgrpc::ApiCall<MoveBillingAccountRequest, BillingAccount> call);
+
         partial void OnConstruction(CloudBilling.CloudBillingClient grpcClient, CloudBillingSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC CloudBilling client</summary>
@@ -2121,6 +2352,8 @@ namespace Google.Cloud.Billing.V1
         partial void Modify_SetIamPolicyRequest(ref gciv::SetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_TestIamPermissionsRequest(ref gciv::TestIamPermissionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_MoveBillingAccountRequest(ref MoveBillingAccountRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Gets information about a billing account. The current authenticated user
@@ -2340,7 +2573,8 @@ namespace Google.Cloud.Billing.V1
         /// account, even if the charge occurred before the new billing account was
         /// assigned to the project.
         /// 
-        /// The current authenticated user must have ownership privileges for both the
+        /// The current authenticated user must have ownership privileges for both
+        /// the
         /// [project](https://cloud.google.com/docs/permissions-overview#h.bgs0oxofvnoo
         /// ) and the [billing
         /// account](https://cloud.google.com/billing/docs/how-to/billing-access).
@@ -2382,7 +2616,8 @@ namespace Google.Cloud.Billing.V1
         /// account, even if the charge occurred before the new billing account was
         /// assigned to the project.
         /// 
-        /// The current authenticated user must have ownership privileges for both the
+        /// The current authenticated user must have ownership privileges for both
+        /// the
         /// [project](https://cloud.google.com/docs/permissions-overview#h.bgs0oxofvnoo
         /// ) and the [billing
         /// account](https://cloud.google.com/billing/docs/how-to/billing-access).
@@ -2498,6 +2733,30 @@ namespace Google.Cloud.Billing.V1
         {
             Modify_TestIamPermissionsRequest(ref request, ref callSettings);
             return _callTestIamPermissions.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Changes which parent organization a billing account belongs to.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BillingAccount MoveBillingAccount(MoveBillingAccountRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_MoveBillingAccountRequest(ref request, ref callSettings);
+            return _callMoveBillingAccount.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Changes which parent organization a billing account belongs to.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BillingAccount> MoveBillingAccountAsync(MoveBillingAccountRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_MoveBillingAccountRequest(ref request, ref callSettings);
+            return _callMoveBillingAccount.Async(request, callSettings);
         }
     }
 

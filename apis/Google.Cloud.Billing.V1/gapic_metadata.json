@@ -46,6 +46,12 @@
                 "ListProjectBillingInfoAsync"
               ]
             },
+            "MoveBillingAccount": {
+              "methods": [
+                "MoveBillingAccount",
+                "MoveBillingAccountAsync"
+              ]
+            },
             "SetIamPolicy": {
               "methods": [
                 "SetIamPolicy",

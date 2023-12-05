@@ -16,12 +16,14 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START cloudbilling_v1_generated_CloudBilling_CreateBillingAccount_sync]
+    // [START cloudbilling_v1_generated_CloudBilling_MoveBillingAccount_async]
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Billing.V1;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedCloudBillingClientSnippets
     {
-        /// <summary>Snippet for CreateBillingAccount</summary>
+        /// <summary>Snippet for MoveBillingAccountAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,19 +31,19 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void CreateBillingAccountRequestObject()
+        public async Task MoveBillingAccountRequestObjectAsync()
         {
             // Create client
-            CloudBillingClient cloudBillingClient = CloudBillingClient.Create();
+            CloudBillingClient cloudBillingClient = await CloudBillingClient.CreateAsync();
             // Initialize request argument(s)
-            CreateBillingAccountRequest request = new CreateBillingAccountRequest
+            MoveBillingAccountRequest request = new MoveBillingAccountRequest
             {
-                BillingAccount = new BillingAccount(),
-                Parent = "",
+                BillingAccountName = BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
+                DestinationParentAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
             };
             // Make the request
-            BillingAccount response = cloudBillingClient.CreateBillingAccount(request);
+            BillingAccount response = await cloudBillingClient.MoveBillingAccountAsync(request);
         }
     }
-    // [END cloudbilling_v1_generated_CloudBilling_CreateBillingAccount_sync]
+    // [END cloudbilling_v1_generated_CloudBilling_MoveBillingAccount_async]
 }

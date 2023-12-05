@@ -123,7 +123,11 @@ namespace GoogleCSharpSnippets
             // Create client
             CloudBillingClient cloudBillingClient = CloudBillingClient.Create();
             // Initialize request argument(s)
-            ListBillingAccountsRequest request = new ListBillingAccountsRequest { Filter = "", };
+            ListBillingAccountsRequest request = new ListBillingAccountsRequest
+            {
+                Filter = "",
+                Parent = "",
+            };
             // Make the request
             PagedEnumerable<ListBillingAccountsResponse, BillingAccount> response = cloudBillingClient.ListBillingAccounts(request);
 
@@ -168,7 +172,11 @@ namespace GoogleCSharpSnippets
             // Create client
             CloudBillingClient cloudBillingClient = await CloudBillingClient.CreateAsync();
             // Initialize request argument(s)
-            ListBillingAccountsRequest request = new ListBillingAccountsRequest { Filter = "", };
+            ListBillingAccountsRequest request = new ListBillingAccountsRequest
+            {
+                Filter = "",
+                Parent = "",
+            };
             // Make the request
             PagedAsyncEnumerable<ListBillingAccountsResponse, BillingAccount> response = cloudBillingClient.ListBillingAccountsAsync(request);
 
@@ -207,7 +215,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for ListBillingAccounts</summary>
-        public void ListBillingAccounts()
+        public void ListBillingAccounts1()
         {
             // Snippet: ListBillingAccounts(string, int?, CallSettings)
             // Create client
@@ -250,13 +258,103 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for ListBillingAccountsAsync</summary>
-        public async Task ListBillingAccountsAsync()
+        public async Task ListBillingAccounts1Async()
         {
             // Snippet: ListBillingAccountsAsync(string, int?, CallSettings)
             // Create client
             CloudBillingClient cloudBillingClient = await CloudBillingClient.CreateAsync();
             // Make the request
             PagedAsyncEnumerable<ListBillingAccountsResponse, BillingAccount> response = cloudBillingClient.ListBillingAccountsAsync();
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((BillingAccount item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListBillingAccountsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BillingAccount item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BillingAccount> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BillingAccount item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBillingAccounts</summary>
+        public void ListBillingAccounts2()
+        {
+            // Snippet: ListBillingAccounts(string, string, int?, CallSettings)
+            // Create client
+            CloudBillingClient cloudBillingClient = CloudBillingClient.Create();
+            // Initialize request argument(s)
+            string parent = "";
+            // Make the request
+            PagedEnumerable<ListBillingAccountsResponse, BillingAccount> response = cloudBillingClient.ListBillingAccounts(parent: parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BillingAccount item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBillingAccountsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BillingAccount item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BillingAccount> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BillingAccount item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBillingAccountsAsync</summary>
+        public async Task ListBillingAccounts2Async()
+        {
+            // Snippet: ListBillingAccountsAsync(string, string, int?, CallSettings)
+            // Create client
+            CloudBillingClient cloudBillingClient = await CloudBillingClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "";
+            // Make the request
+            PagedAsyncEnumerable<ListBillingAccountsResponse, BillingAccount> response = cloudBillingClient.ListBillingAccountsAsync(parent: parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((BillingAccount item) =>
@@ -397,6 +495,7 @@ namespace GoogleCSharpSnippets
             CreateBillingAccountRequest request = new CreateBillingAccountRequest
             {
                 BillingAccount = new BillingAccount(),
+                Parent = "",
             };
             // Make the request
             BillingAccount response = cloudBillingClient.CreateBillingAccount(request);
@@ -414,6 +513,7 @@ namespace GoogleCSharpSnippets
             CreateBillingAccountRequest request = new CreateBillingAccountRequest
             {
                 BillingAccount = new BillingAccount(),
+                Parent = "",
             };
             // Make the request
             BillingAccount response = await cloudBillingClient.CreateBillingAccountAsync(request);
@@ -421,7 +521,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for CreateBillingAccount</summary>
-        public void CreateBillingAccount()
+        public void CreateBillingAccount1()
         {
             // Snippet: CreateBillingAccount(BillingAccount, CallSettings)
             // Create client
@@ -434,7 +534,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for CreateBillingAccountAsync</summary>
-        public async Task CreateBillingAccountAsync()
+        public async Task CreateBillingAccount1Async()
         {
             // Snippet: CreateBillingAccountAsync(BillingAccount, CallSettings)
             // Additional: CreateBillingAccountAsync(BillingAccount, CancellationToken)
@@ -444,6 +544,35 @@ namespace GoogleCSharpSnippets
             BillingAccount billingAccount = new BillingAccount();
             // Make the request
             BillingAccount response = await cloudBillingClient.CreateBillingAccountAsync(billingAccount);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBillingAccount</summary>
+        public void CreateBillingAccount2()
+        {
+            // Snippet: CreateBillingAccount(BillingAccount, string, CallSettings)
+            // Create client
+            CloudBillingClient cloudBillingClient = CloudBillingClient.Create();
+            // Initialize request argument(s)
+            BillingAccount billingAccount = new BillingAccount();
+            string parent = "";
+            // Make the request
+            BillingAccount response = cloudBillingClient.CreateBillingAccount(billingAccount, parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBillingAccountAsync</summary>
+        public async Task CreateBillingAccount2Async()
+        {
+            // Snippet: CreateBillingAccountAsync(BillingAccount, string, CallSettings)
+            // Additional: CreateBillingAccountAsync(BillingAccount, string, CancellationToken)
+            // Create client
+            CloudBillingClient cloudBillingClient = await CloudBillingClient.CreateAsync();
+            // Initialize request argument(s)
+            BillingAccount billingAccount = new BillingAccount();
+            string parent = "";
+            // Make the request
+            BillingAccount response = await cloudBillingClient.CreateBillingAccountAsync(billingAccount, parent);
             // End snippet
         }
 
@@ -1148,6 +1277,41 @@ namespace GoogleCSharpSnippets
             IEnumerable<string> permissions = new string[] { "", };
             // Make the request
             TestIamPermissionsResponse response = await cloudBillingClient.TestIamPermissionsAsync(resource, permissions);
+            // End snippet
+        }
+
+        /// <summary>Snippet for MoveBillingAccount</summary>
+        public void MoveBillingAccountRequestObject()
+        {
+            // Snippet: MoveBillingAccount(MoveBillingAccountRequest, CallSettings)
+            // Create client
+            CloudBillingClient cloudBillingClient = CloudBillingClient.Create();
+            // Initialize request argument(s)
+            MoveBillingAccountRequest request = new MoveBillingAccountRequest
+            {
+                BillingAccountName = BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
+                DestinationParentAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
+            };
+            // Make the request
+            BillingAccount response = cloudBillingClient.MoveBillingAccount(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for MoveBillingAccountAsync</summary>
+        public async Task MoveBillingAccountRequestObjectAsync()
+        {
+            // Snippet: MoveBillingAccountAsync(MoveBillingAccountRequest, CallSettings)
+            // Additional: MoveBillingAccountAsync(MoveBillingAccountRequest, CancellationToken)
+            // Create client
+            CloudBillingClient cloudBillingClient = await CloudBillingClient.CreateAsync();
+            // Initialize request argument(s)
+            MoveBillingAccountRequest request = new MoveBillingAccountRequest
+            {
+                BillingAccountName = BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
+                DestinationParentAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
+            };
+            // Make the request
+            BillingAccount response = await cloudBillingClient.MoveBillingAccountAsync(request);
             // End snippet
         }
     }
