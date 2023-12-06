@@ -4135,6 +4135,25 @@
       "transport": "grpc+rest"
     },
     {
+      "id": "Google.Cloud.SecurityCenterManagement.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Security Center Management",
+      "productUrl": "https://cloud.google.com/securitycentermanagement/docs/overview",
+      "description": "<UNKNOWN - NO SERVICE CONFIG DOCUMENTATION SUMMARY>",
+      "tags": [],
+      "dependencies": {
+        "Google.Cloud.Iam.V1": "3.0.0",
+        "Google.Cloud.Location": "2.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/securitycentermanagement/v1",
+      "shortName": "securitycentermanagement",
+      "serviceConfigFile": "securitycentermanagement_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.ServiceControl.V1",
       "version": "2.1.0",
       "type": "grpc",
