@@ -174,6 +174,7 @@ namespace GoogleCSharpSnippets
             {
                 OrderBy = "",
                 Project = "",
+                ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
@@ -226,6 +227,7 @@ namespace GoogleCSharpSnippets
             {
                 OrderBy = "",
                 Project = "",
+                ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
@@ -1141,6 +1143,198 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListUsable</summary>
+        public void ListUsableRequestObject()
+        {
+            // Snippet: ListUsable(ListUsableBackendServicesRequest, CallSettings)
+            // Create client
+            BackendServicesClient backendServicesClient = BackendServicesClient.Create();
+            // Initialize request argument(s)
+            ListUsableBackendServicesRequest request = new ListUsableBackendServicesRequest
+            {
+                OrderBy = "",
+                Project = "",
+                Filter = "",
+                ReturnPartialSuccess = false,
+            };
+            // Make the request
+            PagedEnumerable<BackendServiceListUsable, BackendService> response = backendServicesClient.ListUsable(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackendService item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (BackendServiceListUsable page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackendService item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackendService> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackendService item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListUsableAsync</summary>
+        public async Task ListUsableRequestObjectAsync()
+        {
+            // Snippet: ListUsableAsync(ListUsableBackendServicesRequest, CallSettings)
+            // Create client
+            BackendServicesClient backendServicesClient = await BackendServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            ListUsableBackendServicesRequest request = new ListUsableBackendServicesRequest
+            {
+                OrderBy = "",
+                Project = "",
+                Filter = "",
+                ReturnPartialSuccess = false,
+            };
+            // Make the request
+            PagedAsyncEnumerable<BackendServiceListUsable, BackendService> response = backendServicesClient.ListUsableAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((BackendService item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((BackendServiceListUsable page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackendService item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackendService> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackendService item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListUsable</summary>
+        public void ListUsable()
+        {
+            // Snippet: ListUsable(string, string, int?, CallSettings)
+            // Create client
+            BackendServicesClient backendServicesClient = BackendServicesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            // Make the request
+            PagedEnumerable<BackendServiceListUsable, BackendService> response = backendServicesClient.ListUsable(project);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackendService item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (BackendServiceListUsable page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackendService item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackendService> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackendService item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListUsableAsync</summary>
+        public async Task ListUsableAsync()
+        {
+            // Snippet: ListUsableAsync(string, string, int?, CallSettings)
+            // Create client
+            BackendServicesClient backendServicesClient = await BackendServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            // Make the request
+            PagedAsyncEnumerable<BackendServiceListUsable, BackendService> response = backendServicesClient.ListUsableAsync(project);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((BackendService item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((BackendServiceListUsable page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackendService item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackendService> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackendService item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         /// <summary>Snippet for Patch</summary>
         public void PatchRequestObject()
         {
@@ -1608,6 +1802,74 @@ namespace GoogleCSharpSnippets
                 // If it has completed, then access the result
                 Operation retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissionsRequestObject()
+        {
+            // Snippet: TestIamPermissions(TestIamPermissionsBackendServiceRequest, CallSettings)
+            // Create client
+            BackendServicesClient backendServicesClient = BackendServicesClient.Create();
+            // Initialize request argument(s)
+            TestIamPermissionsBackendServiceRequest request = new TestIamPermissionsBackendServiceRequest
+            {
+                Resource = "",
+                Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
+            };
+            // Make the request
+            TestPermissionsResponse response = backendServicesClient.TestIamPermissions(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsRequestObjectAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(TestIamPermissionsBackendServiceRequest, CallSettings)
+            // Additional: TestIamPermissionsAsync(TestIamPermissionsBackendServiceRequest, CancellationToken)
+            // Create client
+            BackendServicesClient backendServicesClient = await BackendServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            TestIamPermissionsBackendServiceRequest request = new TestIamPermissionsBackendServiceRequest
+            {
+                Resource = "",
+                Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
+            };
+            // Make the request
+            TestPermissionsResponse response = await backendServicesClient.TestIamPermissionsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissions()
+        {
+            // Snippet: TestIamPermissions(string, string, TestPermissionsRequest, CallSettings)
+            // Create client
+            BackendServicesClient backendServicesClient = BackendServicesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string resource = "";
+            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest();
+            // Make the request
+            TestPermissionsResponse response = backendServicesClient.TestIamPermissions(project, resource, testPermissionsRequestResource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(string, string, TestPermissionsRequest, CallSettings)
+            // Additional: TestIamPermissionsAsync(string, string, TestPermissionsRequest, CancellationToken)
+            // Create client
+            BackendServicesClient backendServicesClient = await BackendServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string resource = "";
+            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest();
+            // Make the request
+            TestPermissionsResponse response = await backendServicesClient.TestIamPermissionsAsync(project, resource, testPermissionsRequestResource);
             // End snippet
         }
 

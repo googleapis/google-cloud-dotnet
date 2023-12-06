@@ -702,6 +702,202 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListUsable</summary>
+        public void ListUsableRequestObject()
+        {
+            // Snippet: ListUsable(ListUsableRegionBackendServicesRequest, CallSettings)
+            // Create client
+            RegionBackendServicesClient regionBackendServicesClient = RegionBackendServicesClient.Create();
+            // Initialize request argument(s)
+            ListUsableRegionBackendServicesRequest request = new ListUsableRegionBackendServicesRequest
+            {
+                Region = "",
+                OrderBy = "",
+                Project = "",
+                Filter = "",
+                ReturnPartialSuccess = false,
+            };
+            // Make the request
+            PagedEnumerable<BackendServiceListUsable, BackendService> response = regionBackendServicesClient.ListUsable(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackendService item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (BackendServiceListUsable page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackendService item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackendService> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackendService item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListUsableAsync</summary>
+        public async Task ListUsableRequestObjectAsync()
+        {
+            // Snippet: ListUsableAsync(ListUsableRegionBackendServicesRequest, CallSettings)
+            // Create client
+            RegionBackendServicesClient regionBackendServicesClient = await RegionBackendServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            ListUsableRegionBackendServicesRequest request = new ListUsableRegionBackendServicesRequest
+            {
+                Region = "",
+                OrderBy = "",
+                Project = "",
+                Filter = "",
+                ReturnPartialSuccess = false,
+            };
+            // Make the request
+            PagedAsyncEnumerable<BackendServiceListUsable, BackendService> response = regionBackendServicesClient.ListUsableAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((BackendService item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((BackendServiceListUsable page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackendService item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackendService> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackendService item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListUsable</summary>
+        public void ListUsable()
+        {
+            // Snippet: ListUsable(string, string, string, int?, CallSettings)
+            // Create client
+            RegionBackendServicesClient regionBackendServicesClient = RegionBackendServicesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            // Make the request
+            PagedEnumerable<BackendServiceListUsable, BackendService> response = regionBackendServicesClient.ListUsable(project, region);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackendService item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (BackendServiceListUsable page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackendService item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackendService> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackendService item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListUsableAsync</summary>
+        public async Task ListUsableAsync()
+        {
+            // Snippet: ListUsableAsync(string, string, string, int?, CallSettings)
+            // Create client
+            RegionBackendServicesClient regionBackendServicesClient = await RegionBackendServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            // Make the request
+            PagedAsyncEnumerable<BackendServiceListUsable, BackendService> response = regionBackendServicesClient.ListUsableAsync(project, region);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((BackendService item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((BackendServiceListUsable page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackendService item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackendService> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackendService item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         /// <summary>Snippet for Patch</summary>
         public void PatchRequestObject()
         {
@@ -909,6 +1105,216 @@ namespace GoogleCSharpSnippets
             RegionSetPolicyRequest regionSetPolicyRequestResource = new RegionSetPolicyRequest();
             // Make the request
             Policy response = await regionBackendServicesClient.SetIamPolicyAsync(project, region, resource, regionSetPolicyRequestResource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetSecurityPolicy</summary>
+        public void SetSecurityPolicyRequestObject()
+        {
+            // Snippet: SetSecurityPolicy(SetSecurityPolicyRegionBackendServiceRequest, CallSettings)
+            // Create client
+            RegionBackendServicesClient regionBackendServicesClient = RegionBackendServicesClient.Create();
+            // Initialize request argument(s)
+            SetSecurityPolicyRegionBackendServiceRequest request = new SetSecurityPolicyRegionBackendServiceRequest
+            {
+                RequestId = "",
+                Region = "",
+                SecurityPolicyReferenceResource = new SecurityPolicyReference(),
+                Project = "",
+                BackendService = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = regionBackendServicesClient.SetSecurityPolicy(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionBackendServicesClient.PollOnceSetSecurityPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetSecurityPolicyAsync</summary>
+        public async Task SetSecurityPolicyRequestObjectAsync()
+        {
+            // Snippet: SetSecurityPolicyAsync(SetSecurityPolicyRegionBackendServiceRequest, CallSettings)
+            // Additional: SetSecurityPolicyAsync(SetSecurityPolicyRegionBackendServiceRequest, CancellationToken)
+            // Create client
+            RegionBackendServicesClient regionBackendServicesClient = await RegionBackendServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            SetSecurityPolicyRegionBackendServiceRequest request = new SetSecurityPolicyRegionBackendServiceRequest
+            {
+                RequestId = "",
+                Region = "",
+                SecurityPolicyReferenceResource = new SecurityPolicyReference(),
+                Project = "",
+                BackendService = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await regionBackendServicesClient.SetSecurityPolicyAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionBackendServicesClient.PollOnceSetSecurityPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetSecurityPolicy</summary>
+        public void SetSecurityPolicy()
+        {
+            // Snippet: SetSecurityPolicy(string, string, string, SecurityPolicyReference, CallSettings)
+            // Create client
+            RegionBackendServicesClient regionBackendServicesClient = RegionBackendServicesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string backendService = "";
+            SecurityPolicyReference securityPolicyReferenceResource = new SecurityPolicyReference();
+            // Make the request
+            lro::Operation<Operation, Operation> response = regionBackendServicesClient.SetSecurityPolicy(project, region, backendService, securityPolicyReferenceResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionBackendServicesClient.PollOnceSetSecurityPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetSecurityPolicyAsync</summary>
+        public async Task SetSecurityPolicyAsync()
+        {
+            // Snippet: SetSecurityPolicyAsync(string, string, string, SecurityPolicyReference, CallSettings)
+            // Additional: SetSecurityPolicyAsync(string, string, string, SecurityPolicyReference, CancellationToken)
+            // Create client
+            RegionBackendServicesClient regionBackendServicesClient = await RegionBackendServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string backendService = "";
+            SecurityPolicyReference securityPolicyReferenceResource = new SecurityPolicyReference();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await regionBackendServicesClient.SetSecurityPolicyAsync(project, region, backendService, securityPolicyReferenceResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionBackendServicesClient.PollOnceSetSecurityPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissionsRequestObject()
+        {
+            // Snippet: TestIamPermissions(TestIamPermissionsRegionBackendServiceRequest, CallSettings)
+            // Create client
+            RegionBackendServicesClient regionBackendServicesClient = RegionBackendServicesClient.Create();
+            // Initialize request argument(s)
+            TestIamPermissionsRegionBackendServiceRequest request = new TestIamPermissionsRegionBackendServiceRequest
+            {
+                Region = "",
+                Resource = "",
+                Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
+            };
+            // Make the request
+            TestPermissionsResponse response = regionBackendServicesClient.TestIamPermissions(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsRequestObjectAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(TestIamPermissionsRegionBackendServiceRequest, CallSettings)
+            // Additional: TestIamPermissionsAsync(TestIamPermissionsRegionBackendServiceRequest, CancellationToken)
+            // Create client
+            RegionBackendServicesClient regionBackendServicesClient = await RegionBackendServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            TestIamPermissionsRegionBackendServiceRequest request = new TestIamPermissionsRegionBackendServiceRequest
+            {
+                Region = "",
+                Resource = "",
+                Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
+            };
+            // Make the request
+            TestPermissionsResponse response = await regionBackendServicesClient.TestIamPermissionsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissions()
+        {
+            // Snippet: TestIamPermissions(string, string, string, TestPermissionsRequest, CallSettings)
+            // Create client
+            RegionBackendServicesClient regionBackendServicesClient = RegionBackendServicesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string resource = "";
+            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest();
+            // Make the request
+            TestPermissionsResponse response = regionBackendServicesClient.TestIamPermissions(project, region, resource, testPermissionsRequestResource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(string, string, string, TestPermissionsRequest, CallSettings)
+            // Additional: TestIamPermissionsAsync(string, string, string, TestPermissionsRequest, CancellationToken)
+            // Create client
+            RegionBackendServicesClient regionBackendServicesClient = await RegionBackendServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string resource = "";
+            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest();
+            // Make the request
+            TestPermissionsResponse response = await regionBackendServicesClient.TestIamPermissionsAsync(project, region, resource, testPermissionsRequestResource);
             // End snippet
         }
 

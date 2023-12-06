@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
             {
                 OrderBy = "",
                 Project = "",
+                ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
@@ -92,6 +93,7 @@ namespace GoogleCSharpSnippets
             {
                 OrderBy = "",
                 Project = "",
+                ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
@@ -822,6 +824,144 @@ namespace GoogleCSharpSnippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for Patch</summary>
+        public void PatchRequestObject()
+        {
+            // Snippet: Patch(PatchNetworkAttachmentRequest, CallSettings)
+            // Create client
+            NetworkAttachmentsClient networkAttachmentsClient = NetworkAttachmentsClient.Create();
+            // Initialize request argument(s)
+            PatchNetworkAttachmentRequest request = new PatchNetworkAttachmentRequest
+            {
+                RequestId = "",
+                Region = "",
+                NetworkAttachmentResource = new NetworkAttachment(),
+                NetworkAttachment = "",
+                Project = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = networkAttachmentsClient.Patch(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = networkAttachmentsClient.PollOncePatch(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PatchAsync</summary>
+        public async Task PatchRequestObjectAsync()
+        {
+            // Snippet: PatchAsync(PatchNetworkAttachmentRequest, CallSettings)
+            // Additional: PatchAsync(PatchNetworkAttachmentRequest, CancellationToken)
+            // Create client
+            NetworkAttachmentsClient networkAttachmentsClient = await NetworkAttachmentsClient.CreateAsync();
+            // Initialize request argument(s)
+            PatchNetworkAttachmentRequest request = new PatchNetworkAttachmentRequest
+            {
+                RequestId = "",
+                Region = "",
+                NetworkAttachmentResource = new NetworkAttachment(),
+                NetworkAttachment = "",
+                Project = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await networkAttachmentsClient.PatchAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await networkAttachmentsClient.PollOncePatchAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for Patch</summary>
+        public void Patch()
+        {
+            // Snippet: Patch(string, string, string, NetworkAttachment, CallSettings)
+            // Create client
+            NetworkAttachmentsClient networkAttachmentsClient = NetworkAttachmentsClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string networkAttachment = "";
+            NetworkAttachment networkAttachmentResource = new NetworkAttachment();
+            // Make the request
+            lro::Operation<Operation, Operation> response = networkAttachmentsClient.Patch(project, region, networkAttachment, networkAttachmentResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = networkAttachmentsClient.PollOncePatch(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PatchAsync</summary>
+        public async Task PatchAsync()
+        {
+            // Snippet: PatchAsync(string, string, string, NetworkAttachment, CallSettings)
+            // Additional: PatchAsync(string, string, string, NetworkAttachment, CancellationToken)
+            // Create client
+            NetworkAttachmentsClient networkAttachmentsClient = await NetworkAttachmentsClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string networkAttachment = "";
+            NetworkAttachment networkAttachmentResource = new NetworkAttachment();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await networkAttachmentsClient.PatchAsync(project, region, networkAttachment, networkAttachmentResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await networkAttachmentsClient.PollOncePatchAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 

@@ -316,6 +316,7 @@ namespace GoogleCSharpSnippets
             {
                 OrderBy = "",
                 Project = "",
+                ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
@@ -368,6 +369,7 @@ namespace GoogleCSharpSnippets
             {
                 OrderBy = "",
                 Project = "",
+                ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
@@ -1510,6 +1512,144 @@ namespace GoogleCSharpSnippets
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
             lro::Operation<Operation, Operation> retrievedResponse = await targetPoolsClient.PollOnceSetBackupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetSecurityPolicy</summary>
+        public void SetSecurityPolicyRequestObject()
+        {
+            // Snippet: SetSecurityPolicy(SetSecurityPolicyTargetPoolRequest, CallSettings)
+            // Create client
+            TargetPoolsClient targetPoolsClient = TargetPoolsClient.Create();
+            // Initialize request argument(s)
+            SetSecurityPolicyTargetPoolRequest request = new SetSecurityPolicyTargetPoolRequest
+            {
+                RequestId = "",
+                TargetPool = "",
+                Region = "",
+                SecurityPolicyReferenceResource = new SecurityPolicyReference(),
+                Project = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = targetPoolsClient.SetSecurityPolicy(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = targetPoolsClient.PollOnceSetSecurityPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetSecurityPolicyAsync</summary>
+        public async Task SetSecurityPolicyRequestObjectAsync()
+        {
+            // Snippet: SetSecurityPolicyAsync(SetSecurityPolicyTargetPoolRequest, CallSettings)
+            // Additional: SetSecurityPolicyAsync(SetSecurityPolicyTargetPoolRequest, CancellationToken)
+            // Create client
+            TargetPoolsClient targetPoolsClient = await TargetPoolsClient.CreateAsync();
+            // Initialize request argument(s)
+            SetSecurityPolicyTargetPoolRequest request = new SetSecurityPolicyTargetPoolRequest
+            {
+                RequestId = "",
+                TargetPool = "",
+                Region = "",
+                SecurityPolicyReferenceResource = new SecurityPolicyReference(),
+                Project = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await targetPoolsClient.SetSecurityPolicyAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await targetPoolsClient.PollOnceSetSecurityPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetSecurityPolicy</summary>
+        public void SetSecurityPolicy()
+        {
+            // Snippet: SetSecurityPolicy(string, string, string, SecurityPolicyReference, CallSettings)
+            // Create client
+            TargetPoolsClient targetPoolsClient = TargetPoolsClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string targetPool = "";
+            SecurityPolicyReference securityPolicyReferenceResource = new SecurityPolicyReference();
+            // Make the request
+            lro::Operation<Operation, Operation> response = targetPoolsClient.SetSecurityPolicy(project, region, targetPool, securityPolicyReferenceResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = targetPoolsClient.PollOnceSetSecurityPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetSecurityPolicyAsync</summary>
+        public async Task SetSecurityPolicyAsync()
+        {
+            // Snippet: SetSecurityPolicyAsync(string, string, string, SecurityPolicyReference, CallSettings)
+            // Additional: SetSecurityPolicyAsync(string, string, string, SecurityPolicyReference, CancellationToken)
+            // Create client
+            TargetPoolsClient targetPoolsClient = await TargetPoolsClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string targetPool = "";
+            SecurityPolicyReference securityPolicyReferenceResource = new SecurityPolicyReference();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await targetPoolsClient.SetSecurityPolicyAsync(project, region, targetPool, securityPolicyReferenceResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await targetPoolsClient.PollOnceSetSecurityPolicyAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {

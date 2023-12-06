@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
             {
                 OrderBy = "",
                 Project = "",
+                ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
@@ -92,6 +93,7 @@ namespace GoogleCSharpSnippets
             {
                 OrderBy = "",
                 Project = "",
+                ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
@@ -752,6 +754,144 @@ namespace GoogleCSharpSnippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetSecurityPolicy</summary>
+        public void SetSecurityPolicyRequestObject()
+        {
+            // Snippet: SetSecurityPolicy(SetSecurityPolicyTargetInstanceRequest, CallSettings)
+            // Create client
+            TargetInstancesClient targetInstancesClient = TargetInstancesClient.Create();
+            // Initialize request argument(s)
+            SetSecurityPolicyTargetInstanceRequest request = new SetSecurityPolicyTargetInstanceRequest
+            {
+                Zone = "",
+                RequestId = "",
+                SecurityPolicyReferenceResource = new SecurityPolicyReference(),
+                Project = "",
+                TargetInstance = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = targetInstancesClient.SetSecurityPolicy(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = targetInstancesClient.PollOnceSetSecurityPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetSecurityPolicyAsync</summary>
+        public async Task SetSecurityPolicyRequestObjectAsync()
+        {
+            // Snippet: SetSecurityPolicyAsync(SetSecurityPolicyTargetInstanceRequest, CallSettings)
+            // Additional: SetSecurityPolicyAsync(SetSecurityPolicyTargetInstanceRequest, CancellationToken)
+            // Create client
+            TargetInstancesClient targetInstancesClient = await TargetInstancesClient.CreateAsync();
+            // Initialize request argument(s)
+            SetSecurityPolicyTargetInstanceRequest request = new SetSecurityPolicyTargetInstanceRequest
+            {
+                Zone = "",
+                RequestId = "",
+                SecurityPolicyReferenceResource = new SecurityPolicyReference(),
+                Project = "",
+                TargetInstance = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await targetInstancesClient.SetSecurityPolicyAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await targetInstancesClient.PollOnceSetSecurityPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetSecurityPolicy</summary>
+        public void SetSecurityPolicy()
+        {
+            // Snippet: SetSecurityPolicy(string, string, string, SecurityPolicyReference, CallSettings)
+            // Create client
+            TargetInstancesClient targetInstancesClient = TargetInstancesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string targetInstance = "";
+            SecurityPolicyReference securityPolicyReferenceResource = new SecurityPolicyReference();
+            // Make the request
+            lro::Operation<Operation, Operation> response = targetInstancesClient.SetSecurityPolicy(project, zone, targetInstance, securityPolicyReferenceResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = targetInstancesClient.PollOnceSetSecurityPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetSecurityPolicyAsync</summary>
+        public async Task SetSecurityPolicyAsync()
+        {
+            // Snippet: SetSecurityPolicyAsync(string, string, string, SecurityPolicyReference, CallSettings)
+            // Additional: SetSecurityPolicyAsync(string, string, string, SecurityPolicyReference, CancellationToken)
+            // Create client
+            TargetInstancesClient targetInstancesClient = await TargetInstancesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string targetInstance = "";
+            SecurityPolicyReference securityPolicyReferenceResource = new SecurityPolicyReference();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await targetInstancesClient.SetSecurityPolicyAsync(project, zone, targetInstance, securityPolicyReferenceResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await targetInstancesClient.PollOnceSetSecurityPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
     }

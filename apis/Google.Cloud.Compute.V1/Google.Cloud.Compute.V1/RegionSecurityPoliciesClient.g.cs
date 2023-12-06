@@ -48,18 +48,55 @@ namespace Google.Cloud.Compute.V1
         private RegionSecurityPoliciesSettings(RegionSecurityPoliciesSettings existing) : base(existing)
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            AddRuleSettings = existing.AddRuleSettings;
+            AddRuleOperationsSettings = existing.AddRuleOperationsSettings.Clone();
             DeleteSettings = existing.DeleteSettings;
             DeleteOperationsSettings = existing.DeleteOperationsSettings.Clone();
             GetSettings = existing.GetSettings;
+            GetRuleSettings = existing.GetRuleSettings;
             InsertSettings = existing.InsertSettings;
             InsertOperationsSettings = existing.InsertOperationsSettings.Clone();
             ListSettings = existing.ListSettings;
             PatchSettings = existing.PatchSettings;
             PatchOperationsSettings = existing.PatchOperationsSettings.Clone();
+            PatchRuleSettings = existing.PatchRuleSettings;
+            PatchRuleOperationsSettings = existing.PatchRuleOperationsSettings.Clone();
+            RemoveRuleSettings = existing.RemoveRuleSettings;
+            RemoveRuleOperationsSettings = existing.RemoveRuleOperationsSettings.Clone();
             OnCopy(existing);
         }
 
         partial void OnCopy(RegionSecurityPoliciesSettings existing);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RegionSecurityPoliciesClient.AddRule</c> and <c>RegionSecurityPoliciesClient.AddRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AddRuleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>RegionSecurityPoliciesClient.AddRule</c> and
+        /// <c>RegionSecurityPoliciesClient.AddRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings AddRuleOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -111,6 +148,27 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RegionSecurityPoliciesClient.GetRule</c> and <c>RegionSecurityPoliciesClient.GetRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetRuleSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -189,6 +247,66 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings PatchOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RegionSecurityPoliciesClient.PatchRule</c> and <c>RegionSecurityPoliciesClient.PatchRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings PatchRuleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>RegionSecurityPoliciesClient.PatchRule</c> and
+        /// <c>RegionSecurityPoliciesClient.PatchRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings PatchRuleOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RegionSecurityPoliciesClient.RemoveRule</c> and <c>RegionSecurityPoliciesClient.RemoveRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RemoveRuleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>RegionSecurityPoliciesClient.RemoveRule</c> and
+        /// <c>RegionSecurityPoliciesClient.RemoveRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings RemoveRuleOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -338,6 +456,131 @@ namespace Google.Cloud.Compute.V1
 
         /// <summary>The underlying gRPC RegionSecurityPolicies client</summary>
         public virtual RegionSecurityPolicies.RegionSecurityPoliciesClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Inserts a rule into a security policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> AddRule(AddRuleRegionSecurityPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Inserts a rule into a security policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AddRuleAsync(AddRuleRegionSecurityPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Inserts a rule into a security policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AddRuleAsync(AddRuleRegionSecurityPolicyRequest request, st::CancellationToken cancellationToken) =>
+            AddRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>AddRule</c>.</summary>
+        public virtual lro::OperationsClient AddRuleOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>AddRule</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceAddRule(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AddRuleOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>AddRule</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceAddRuleAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AddRuleOperationsClient, callSettings);
+
+        /// <summary>
+        /// Inserts a rule into a security policy.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region scoping this request.
+        /// </param>
+        /// <param name="securityPolicy">
+        /// Name of the security policy to update.
+        /// </param>
+        /// <param name="securityPolicyRuleResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> AddRule(string project, string region, string securityPolicy, SecurityPolicyRule securityPolicyRuleResource, gaxgrpc::CallSettings callSettings = null) =>
+            AddRule(new AddRuleRegionSecurityPolicyRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                SecurityPolicy = gax::GaxPreconditions.CheckNotNullOrEmpty(securityPolicy, nameof(securityPolicy)),
+                SecurityPolicyRuleResource = gax::GaxPreconditions.CheckNotNull(securityPolicyRuleResource, nameof(securityPolicyRuleResource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Inserts a rule into a security policy.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region scoping this request.
+        /// </param>
+        /// <param name="securityPolicy">
+        /// Name of the security policy to update.
+        /// </param>
+        /// <param name="securityPolicyRuleResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AddRuleAsync(string project, string region, string securityPolicy, SecurityPolicyRule securityPolicyRuleResource, gaxgrpc::CallSettings callSettings = null) =>
+            AddRuleAsync(new AddRuleRegionSecurityPolicyRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                SecurityPolicy = gax::GaxPreconditions.CheckNotNullOrEmpty(securityPolicy, nameof(securityPolicy)),
+                SecurityPolicyRuleResource = gax::GaxPreconditions.CheckNotNull(securityPolicyRuleResource, nameof(securityPolicyRuleResource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Inserts a rule into a security policy.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region scoping this request.
+        /// </param>
+        /// <param name="securityPolicy">
+        /// Name of the security policy to update.
+        /// </param>
+        /// <param name="securityPolicyRuleResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AddRuleAsync(string project, string region, string securityPolicy, SecurityPolicyRule securityPolicyRuleResource, st::CancellationToken cancellationToken) =>
+            AddRuleAsync(project, region, securityPolicy, securityPolicyRuleResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes the specified policy.
@@ -540,6 +783,94 @@ namespace Google.Cloud.Compute.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<SecurityPolicy> GetAsync(string project, string region, string securityPolicy, st::CancellationToken cancellationToken) =>
             GetAsync(project, region, securityPolicy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a rule at the specified priority.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SecurityPolicyRule GetRule(GetRuleRegionSecurityPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a rule at the specified priority.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecurityPolicyRule> GetRuleAsync(GetRuleRegionSecurityPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a rule at the specified priority.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecurityPolicyRule> GetRuleAsync(GetRuleRegionSecurityPolicyRequest request, st::CancellationToken cancellationToken) =>
+            GetRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a rule at the specified priority.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region scoping this request.
+        /// </param>
+        /// <param name="securityPolicy">
+        /// Name of the security policy to which the queried rule belongs.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SecurityPolicyRule GetRule(string project, string region, string securityPolicy, gaxgrpc::CallSettings callSettings = null) =>
+            GetRule(new GetRuleRegionSecurityPolicyRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                SecurityPolicy = gax::GaxPreconditions.CheckNotNullOrEmpty(securityPolicy, nameof(securityPolicy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a rule at the specified priority.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region scoping this request.
+        /// </param>
+        /// <param name="securityPolicy">
+        /// Name of the security policy to which the queried rule belongs.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecurityPolicyRule> GetRuleAsync(string project, string region, string securityPolicy, gaxgrpc::CallSettings callSettings = null) =>
+            GetRuleAsync(new GetRuleRegionSecurityPolicyRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                SecurityPolicy = gax::GaxPreconditions.CheckNotNullOrEmpty(securityPolicy, nameof(securityPolicy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a rule at the specified priority.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region scoping this request.
+        /// </param>
+        /// <param name="securityPolicy">
+        /// Name of the security policy to which the queried rule belongs.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecurityPolicyRule> GetRuleAsync(string project, string region, string securityPolicy, st::CancellationToken cancellationToken) =>
+            GetRuleAsync(project, region, securityPolicy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a new policy in the specified project using the data included in the request.
@@ -853,6 +1184,245 @@ namespace Google.Cloud.Compute.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Operation, Operation>> PatchAsync(string project, string region, string securityPolicy, SecurityPolicy securityPolicyResource, st::CancellationToken cancellationToken) =>
             PatchAsync(project, region, securityPolicy, securityPolicyResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Patches a rule at the specified priority. To clear fields in the rule, leave the fields empty and specify them in the updateMask.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> PatchRule(PatchRuleRegionSecurityPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Patches a rule at the specified priority. To clear fields in the rule, leave the fields empty and specify them in the updateMask.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PatchRuleAsync(PatchRuleRegionSecurityPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Patches a rule at the specified priority. To clear fields in the rule, leave the fields empty and specify them in the updateMask.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PatchRuleAsync(PatchRuleRegionSecurityPolicyRequest request, st::CancellationToken cancellationToken) =>
+            PatchRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>PatchRule</c>.</summary>
+        public virtual lro::OperationsClient PatchRuleOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>PatchRule</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOncePatchRule(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PatchRuleOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>PatchRule</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOncePatchRuleAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PatchRuleOperationsClient, callSettings);
+
+        /// <summary>
+        /// Patches a rule at the specified priority. To clear fields in the rule, leave the fields empty and specify them in the updateMask.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region scoping this request.
+        /// </param>
+        /// <param name="securityPolicy">
+        /// Name of the security policy to update.
+        /// </param>
+        /// <param name="securityPolicyRuleResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> PatchRule(string project, string region, string securityPolicy, SecurityPolicyRule securityPolicyRuleResource, gaxgrpc::CallSettings callSettings = null) =>
+            PatchRule(new PatchRuleRegionSecurityPolicyRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                SecurityPolicy = gax::GaxPreconditions.CheckNotNullOrEmpty(securityPolicy, nameof(securityPolicy)),
+                SecurityPolicyRuleResource = gax::GaxPreconditions.CheckNotNull(securityPolicyRuleResource, nameof(securityPolicyRuleResource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Patches a rule at the specified priority. To clear fields in the rule, leave the fields empty and specify them in the updateMask.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region scoping this request.
+        /// </param>
+        /// <param name="securityPolicy">
+        /// Name of the security policy to update.
+        /// </param>
+        /// <param name="securityPolicyRuleResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PatchRuleAsync(string project, string region, string securityPolicy, SecurityPolicyRule securityPolicyRuleResource, gaxgrpc::CallSettings callSettings = null) =>
+            PatchRuleAsync(new PatchRuleRegionSecurityPolicyRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                SecurityPolicy = gax::GaxPreconditions.CheckNotNullOrEmpty(securityPolicy, nameof(securityPolicy)),
+                SecurityPolicyRuleResource = gax::GaxPreconditions.CheckNotNull(securityPolicyRuleResource, nameof(securityPolicyRuleResource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Patches a rule at the specified priority. To clear fields in the rule, leave the fields empty and specify them in the updateMask.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region scoping this request.
+        /// </param>
+        /// <param name="securityPolicy">
+        /// Name of the security policy to update.
+        /// </param>
+        /// <param name="securityPolicyRuleResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PatchRuleAsync(string project, string region, string securityPolicy, SecurityPolicyRule securityPolicyRuleResource, st::CancellationToken cancellationToken) =>
+            PatchRuleAsync(project, region, securityPolicy, securityPolicyRuleResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a rule at the specified priority.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> RemoveRule(RemoveRuleRegionSecurityPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a rule at the specified priority.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> RemoveRuleAsync(RemoveRuleRegionSecurityPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a rule at the specified priority.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> RemoveRuleAsync(RemoveRuleRegionSecurityPolicyRequest request, st::CancellationToken cancellationToken) =>
+            RemoveRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>RemoveRule</c>.</summary>
+        public virtual lro::OperationsClient RemoveRuleOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>RemoveRule</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceRemoveRule(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RemoveRuleOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RemoveRule</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceRemoveRuleAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RemoveRuleOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a rule at the specified priority.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region scoping this request.
+        /// </param>
+        /// <param name="securityPolicy">
+        /// Name of the security policy to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> RemoveRule(string project, string region, string securityPolicy, gaxgrpc::CallSettings callSettings = null) =>
+            RemoveRule(new RemoveRuleRegionSecurityPolicyRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                SecurityPolicy = gax::GaxPreconditions.CheckNotNullOrEmpty(securityPolicy, nameof(securityPolicy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a rule at the specified priority.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region scoping this request.
+        /// </param>
+        /// <param name="securityPolicy">
+        /// Name of the security policy to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> RemoveRuleAsync(string project, string region, string securityPolicy, gaxgrpc::CallSettings callSettings = null) =>
+            RemoveRuleAsync(new RemoveRuleRegionSecurityPolicyRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                SecurityPolicy = gax::GaxPreconditions.CheckNotNullOrEmpty(securityPolicy, nameof(securityPolicy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a rule at the specified priority.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region scoping this request.
+        /// </param>
+        /// <param name="securityPolicy">
+        /// Name of the security policy to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> RemoveRuleAsync(string project, string region, string securityPolicy, st::CancellationToken cancellationToken) =>
+            RemoveRuleAsync(project, region, securityPolicy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>RegionSecurityPolicies client wrapper implementation, for convenient use.</summary>
@@ -861,15 +1431,23 @@ namespace Google.Cloud.Compute.V1
     /// </remarks>
     public sealed partial class RegionSecurityPoliciesClientImpl : RegionSecurityPoliciesClient
     {
+        private readonly gaxgrpc::ApiCall<AddRuleRegionSecurityPolicyRequest, Operation> _callAddRule;
+
         private readonly gaxgrpc::ApiCall<DeleteRegionSecurityPolicyRequest, Operation> _callDelete;
 
         private readonly gaxgrpc::ApiCall<GetRegionSecurityPolicyRequest, SecurityPolicy> _callGet;
+
+        private readonly gaxgrpc::ApiCall<GetRuleRegionSecurityPolicyRequest, SecurityPolicyRule> _callGetRule;
 
         private readonly gaxgrpc::ApiCall<InsertRegionSecurityPolicyRequest, Operation> _callInsert;
 
         private readonly gaxgrpc::ApiCall<ListRegionSecurityPoliciesRequest, SecurityPolicyList> _callList;
 
         private readonly gaxgrpc::ApiCall<PatchRegionSecurityPolicyRequest, Operation> _callPatch;
+
+        private readonly gaxgrpc::ApiCall<PatchRuleRegionSecurityPolicyRequest, Operation> _callPatchRule;
+
+        private readonly gaxgrpc::ApiCall<RemoveRuleRegionSecurityPolicyRequest, Operation> _callRemoveRule;
 
         /// <summary>
         /// Constructs a client wrapper for the RegionSecurityPolicies service, with the specified gRPC client and
@@ -885,15 +1463,24 @@ namespace Google.Cloud.Compute.V1
             GrpcClient = grpcClient;
             RegionSecurityPoliciesSettings effectiveSettings = settings ?? RegionSecurityPoliciesSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            AddRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.AddRuleOperationsSettings, logger);
             DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.DeleteOperationsSettings, logger);
             InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.InsertOperationsSettings, logger);
             PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.PatchOperationsSettings, logger);
+            PatchRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.PatchRuleOperationsSettings, logger);
+            RemoveRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.RemoveRuleOperationsSettings, logger);
+            _callAddRule = clientHelper.BuildApiCall<AddRuleRegionSecurityPolicyRequest, Operation>("AddRule", grpcClient.AddRuleAsync, grpcClient.AddRule, effectiveSettings.AddRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("security_policy", request => request.SecurityPolicy);
+            Modify_ApiCall(ref _callAddRule);
+            Modify_AddRuleApiCall(ref _callAddRule);
             _callDelete = clientHelper.BuildApiCall<DeleteRegionSecurityPolicyRequest, Operation>("Delete", grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("security_policy", request => request.SecurityPolicy);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
             _callGet = clientHelper.BuildApiCall<GetRegionSecurityPolicyRequest, SecurityPolicy>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("security_policy", request => request.SecurityPolicy);
             Modify_ApiCall(ref _callGet);
             Modify_GetApiCall(ref _callGet);
+            _callGetRule = clientHelper.BuildApiCall<GetRuleRegionSecurityPolicyRequest, SecurityPolicyRule>("GetRule", grpcClient.GetRuleAsync, grpcClient.GetRule, effectiveSettings.GetRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("security_policy", request => request.SecurityPolicy);
+            Modify_ApiCall(ref _callGetRule);
+            Modify_GetRuleApiCall(ref _callGetRule);
             _callInsert = clientHelper.BuildApiCall<InsertRegionSecurityPolicyRequest, Operation>("Insert", grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
             Modify_ApiCall(ref _callInsert);
             Modify_InsertApiCall(ref _callInsert);
@@ -903,14 +1490,24 @@ namespace Google.Cloud.Compute.V1
             _callPatch = clientHelper.BuildApiCall<PatchRegionSecurityPolicyRequest, Operation>("Patch", grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("security_policy", request => request.SecurityPolicy);
             Modify_ApiCall(ref _callPatch);
             Modify_PatchApiCall(ref _callPatch);
+            _callPatchRule = clientHelper.BuildApiCall<PatchRuleRegionSecurityPolicyRequest, Operation>("PatchRule", grpcClient.PatchRuleAsync, grpcClient.PatchRule, effectiveSettings.PatchRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("security_policy", request => request.SecurityPolicy);
+            Modify_ApiCall(ref _callPatchRule);
+            Modify_PatchRuleApiCall(ref _callPatchRule);
+            _callRemoveRule = clientHelper.BuildApiCall<RemoveRuleRegionSecurityPolicyRequest, Operation>("RemoveRule", grpcClient.RemoveRuleAsync, grpcClient.RemoveRule, effectiveSettings.RemoveRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("security_policy", request => request.SecurityPolicy);
+            Modify_ApiCall(ref _callRemoveRule);
+            Modify_RemoveRuleApiCall(ref _callRemoveRule);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
+        partial void Modify_AddRuleApiCall(ref gaxgrpc::ApiCall<AddRuleRegionSecurityPolicyRequest, Operation> call);
+
         partial void Modify_DeleteApiCall(ref gaxgrpc::ApiCall<DeleteRegionSecurityPolicyRequest, Operation> call);
 
         partial void Modify_GetApiCall(ref gaxgrpc::ApiCall<GetRegionSecurityPolicyRequest, SecurityPolicy> call);
+
+        partial void Modify_GetRuleApiCall(ref gaxgrpc::ApiCall<GetRuleRegionSecurityPolicyRequest, SecurityPolicyRule> call);
 
         partial void Modify_InsertApiCall(ref gaxgrpc::ApiCall<InsertRegionSecurityPolicyRequest, Operation> call);
 
@@ -918,20 +1515,65 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_PatchApiCall(ref gaxgrpc::ApiCall<PatchRegionSecurityPolicyRequest, Operation> call);
 
+        partial void Modify_PatchRuleApiCall(ref gaxgrpc::ApiCall<PatchRuleRegionSecurityPolicyRequest, Operation> call);
+
+        partial void Modify_RemoveRuleApiCall(ref gaxgrpc::ApiCall<RemoveRuleRegionSecurityPolicyRequest, Operation> call);
+
         partial void OnConstruction(RegionSecurityPolicies.RegionSecurityPoliciesClient grpcClient, RegionSecurityPoliciesSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC RegionSecurityPolicies client</summary>
         public override RegionSecurityPolicies.RegionSecurityPoliciesClient GrpcClient { get; }
 
+        partial void Modify_AddRuleRegionSecurityPolicyRequest(ref AddRuleRegionSecurityPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_DeleteRegionSecurityPolicyRequest(ref DeleteRegionSecurityPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetRegionSecurityPolicyRequest(ref GetRegionSecurityPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetRuleRegionSecurityPolicyRequest(ref GetRuleRegionSecurityPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_InsertRegionSecurityPolicyRequest(ref InsertRegionSecurityPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListRegionSecurityPoliciesRequest(ref ListRegionSecurityPoliciesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_PatchRegionSecurityPolicyRequest(ref PatchRegionSecurityPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_PatchRuleRegionSecurityPolicyRequest(ref PatchRuleRegionSecurityPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RemoveRuleRegionSecurityPolicyRequest(ref RemoveRuleRegionSecurityPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        /// <summary>The long-running operations client for <c>AddRule</c>.</summary>
+        public override lro::OperationsClient AddRuleOperationsClient { get; }
+
+        /// <summary>
+        /// Inserts a rule into a security policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> AddRule(AddRuleRegionSecurityPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AddRuleRegionSecurityPolicyRequest(ref request, ref callSettings);
+            Operation response = _callAddRule.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AddRuleOperationsClient);
+        }
+
+        /// <summary>
+        /// Inserts a rule into a security policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> AddRuleAsync(AddRuleRegionSecurityPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AddRuleRegionSecurityPolicyRequest(ref request, ref callSettings);
+            Operation response = await _callAddRule.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AddRuleOperationsClient);
+        }
 
         /// <summary>The long-running operations client for <c>Delete</c>.</summary>
         public override lro::OperationsClient DeleteOperationsClient { get; }
@@ -988,6 +1630,30 @@ namespace Google.Cloud.Compute.V1
         {
             Modify_GetRegionSecurityPolicyRequest(ref request, ref callSettings);
             return _callGet.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a rule at the specified priority.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SecurityPolicyRule GetRule(GetRuleRegionSecurityPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetRuleRegionSecurityPolicyRequest(ref request, ref callSettings);
+            return _callGetRule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a rule at the specified priority.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SecurityPolicyRule> GetRuleAsync(GetRuleRegionSecurityPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetRuleRegionSecurityPolicyRequest(ref request, ref callSettings);
+            return _callGetRule.Async(request, callSettings);
         }
 
         /// <summary>The long-running operations client for <c>Insert</c>.</summary>
@@ -1078,6 +1744,72 @@ namespace Google.Cloud.Compute.V1
             GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
             request.PopulatePollRequestFields(pollRequest);
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>PatchRule</c>.</summary>
+        public override lro::OperationsClient PatchRuleOperationsClient { get; }
+
+        /// <summary>
+        /// Patches a rule at the specified priority. To clear fields in the rule, leave the fields empty and specify them in the updateMask.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> PatchRule(PatchRuleRegionSecurityPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PatchRuleRegionSecurityPolicyRequest(ref request, ref callSettings);
+            Operation response = _callPatchRule.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchRuleOperationsClient);
+        }
+
+        /// <summary>
+        /// Patches a rule at the specified priority. To clear fields in the rule, leave the fields empty and specify them in the updateMask.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> PatchRuleAsync(PatchRuleRegionSecurityPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PatchRuleRegionSecurityPolicyRequest(ref request, ref callSettings);
+            Operation response = await _callPatchRule.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchRuleOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>RemoveRule</c>.</summary>
+        public override lro::OperationsClient RemoveRuleOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a rule at the specified priority.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> RemoveRule(RemoveRuleRegionSecurityPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RemoveRuleRegionSecurityPolicyRequest(ref request, ref callSettings);
+            Operation response = _callRemoveRule.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), RemoveRuleOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a rule at the specified priority.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> RemoveRuleAsync(RemoveRuleRegionSecurityPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RemoveRuleRegionSecurityPolicyRequest(ref request, ref callSettings);
+            Operation response = await _callRemoveRule.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), RemoveRuleOperationsClient);
         }
     }
 

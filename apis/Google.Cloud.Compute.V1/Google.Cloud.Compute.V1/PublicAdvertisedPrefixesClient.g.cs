@@ -48,6 +48,8 @@ namespace Google.Cloud.Compute.V1
         private PublicAdvertisedPrefixesSettings(PublicAdvertisedPrefixesSettings existing) : base(existing)
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            AnnounceSettings = existing.AnnounceSettings;
+            AnnounceOperationsSettings = existing.AnnounceOperationsSettings.Clone();
             DeleteSettings = existing.DeleteSettings;
             DeleteOperationsSettings = existing.DeleteOperationsSettings.Clone();
             GetSettings = existing.GetSettings;
@@ -56,10 +58,42 @@ namespace Google.Cloud.Compute.V1
             ListSettings = existing.ListSettings;
             PatchSettings = existing.PatchSettings;
             PatchOperationsSettings = existing.PatchOperationsSettings.Clone();
+            WithdrawSettings = existing.WithdrawSettings;
+            WithdrawOperationsSettings = existing.WithdrawOperationsSettings.Clone();
             OnCopy(existing);
         }
 
         partial void OnCopy(PublicAdvertisedPrefixesSettings existing);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PublicAdvertisedPrefixesClient.Announce</c> and <c>PublicAdvertisedPrefixesClient.AnnounceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AnnounceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>PublicAdvertisedPrefixesClient.Announce</c> and
+        /// <c>PublicAdvertisedPrefixesClient.AnnounceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings AnnounceOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -189,6 +223,36 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings PatchOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PublicAdvertisedPrefixesClient.Withdraw</c> and <c>PublicAdvertisedPrefixesClient.WithdrawAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings WithdrawSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>PublicAdvertisedPrefixesClient.Withdraw</c> and
+        /// <c>PublicAdvertisedPrefixesClient.WithdrawAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings WithdrawOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -338,6 +402,109 @@ namespace Google.Cloud.Compute.V1
 
         /// <summary>The underlying gRPC PublicAdvertisedPrefixes client</summary>
         public virtual PublicAdvertisedPrefixes.PublicAdvertisedPrefixesClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Announces the specified PublicAdvertisedPrefix
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> Announce(AnnouncePublicAdvertisedPrefixeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Announces the specified PublicAdvertisedPrefix
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AnnounceAsync(AnnouncePublicAdvertisedPrefixeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Announces the specified PublicAdvertisedPrefix
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AnnounceAsync(AnnouncePublicAdvertisedPrefixeRequest request, st::CancellationToken cancellationToken) =>
+            AnnounceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>Announce</c>.</summary>
+        public virtual lro::OperationsClient AnnounceOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Announce</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceAnnounce(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AnnounceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>Announce</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceAnnounceAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AnnounceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Announces the specified PublicAdvertisedPrefix
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="publicAdvertisedPrefix">
+        /// The name of the public advertised prefix. It should comply with RFC1035.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> Announce(string project, string publicAdvertisedPrefix, gaxgrpc::CallSettings callSettings = null) =>
+            Announce(new AnnouncePublicAdvertisedPrefixeRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PublicAdvertisedPrefix = gax::GaxPreconditions.CheckNotNullOrEmpty(publicAdvertisedPrefix, nameof(publicAdvertisedPrefix)),
+            }, callSettings);
+
+        /// <summary>
+        /// Announces the specified PublicAdvertisedPrefix
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="publicAdvertisedPrefix">
+        /// The name of the public advertised prefix. It should comply with RFC1035.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AnnounceAsync(string project, string publicAdvertisedPrefix, gaxgrpc::CallSettings callSettings = null) =>
+            AnnounceAsync(new AnnouncePublicAdvertisedPrefixeRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PublicAdvertisedPrefix = gax::GaxPreconditions.CheckNotNullOrEmpty(publicAdvertisedPrefix, nameof(publicAdvertisedPrefix)),
+            }, callSettings);
+
+        /// <summary>
+        /// Announces the specified PublicAdvertisedPrefix
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="publicAdvertisedPrefix">
+        /// The name of the public advertised prefix. It should comply with RFC1035.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AnnounceAsync(string project, string publicAdvertisedPrefix, st::CancellationToken cancellationToken) =>
+            AnnounceAsync(project, publicAdvertisedPrefix, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes the specified PublicAdvertisedPrefix
@@ -801,6 +968,109 @@ namespace Google.Cloud.Compute.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Operation, Operation>> PatchAsync(string project, string publicAdvertisedPrefix, PublicAdvertisedPrefix publicAdvertisedPrefixResource, st::CancellationToken cancellationToken) =>
             PatchAsync(project, publicAdvertisedPrefix, publicAdvertisedPrefixResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Withdraws the specified PublicAdvertisedPrefix
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> Withdraw(WithdrawPublicAdvertisedPrefixeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Withdraws the specified PublicAdvertisedPrefix
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> WithdrawAsync(WithdrawPublicAdvertisedPrefixeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Withdraws the specified PublicAdvertisedPrefix
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> WithdrawAsync(WithdrawPublicAdvertisedPrefixeRequest request, st::CancellationToken cancellationToken) =>
+            WithdrawAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>Withdraw</c>.</summary>
+        public virtual lro::OperationsClient WithdrawOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Withdraw</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceWithdraw(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), WithdrawOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>Withdraw</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceWithdrawAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), WithdrawOperationsClient, callSettings);
+
+        /// <summary>
+        /// Withdraws the specified PublicAdvertisedPrefix
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="publicAdvertisedPrefix">
+        /// The name of the public advertised prefix. It should comply with RFC1035.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> Withdraw(string project, string publicAdvertisedPrefix, gaxgrpc::CallSettings callSettings = null) =>
+            Withdraw(new WithdrawPublicAdvertisedPrefixeRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PublicAdvertisedPrefix = gax::GaxPreconditions.CheckNotNullOrEmpty(publicAdvertisedPrefix, nameof(publicAdvertisedPrefix)),
+            }, callSettings);
+
+        /// <summary>
+        /// Withdraws the specified PublicAdvertisedPrefix
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="publicAdvertisedPrefix">
+        /// The name of the public advertised prefix. It should comply with RFC1035.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> WithdrawAsync(string project, string publicAdvertisedPrefix, gaxgrpc::CallSettings callSettings = null) =>
+            WithdrawAsync(new WithdrawPublicAdvertisedPrefixeRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PublicAdvertisedPrefix = gax::GaxPreconditions.CheckNotNullOrEmpty(publicAdvertisedPrefix, nameof(publicAdvertisedPrefix)),
+            }, callSettings);
+
+        /// <summary>
+        /// Withdraws the specified PublicAdvertisedPrefix
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="publicAdvertisedPrefix">
+        /// The name of the public advertised prefix. It should comply with RFC1035.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> WithdrawAsync(string project, string publicAdvertisedPrefix, st::CancellationToken cancellationToken) =>
+            WithdrawAsync(project, publicAdvertisedPrefix, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>PublicAdvertisedPrefixes client wrapper implementation, for convenient use.</summary>
@@ -809,6 +1079,8 @@ namespace Google.Cloud.Compute.V1
     /// </remarks>
     public sealed partial class PublicAdvertisedPrefixesClientImpl : PublicAdvertisedPrefixesClient
     {
+        private readonly gaxgrpc::ApiCall<AnnouncePublicAdvertisedPrefixeRequest, Operation> _callAnnounce;
+
         private readonly gaxgrpc::ApiCall<DeletePublicAdvertisedPrefixeRequest, Operation> _callDelete;
 
         private readonly gaxgrpc::ApiCall<GetPublicAdvertisedPrefixeRequest, PublicAdvertisedPrefix> _callGet;
@@ -818,6 +1090,8 @@ namespace Google.Cloud.Compute.V1
         private readonly gaxgrpc::ApiCall<ListPublicAdvertisedPrefixesRequest, PublicAdvertisedPrefixList> _callList;
 
         private readonly gaxgrpc::ApiCall<PatchPublicAdvertisedPrefixeRequest, Operation> _callPatch;
+
+        private readonly gaxgrpc::ApiCall<WithdrawPublicAdvertisedPrefixeRequest, Operation> _callWithdraw;
 
         /// <summary>
         /// Constructs a client wrapper for the PublicAdvertisedPrefixes service, with the specified gRPC client and
@@ -833,9 +1107,14 @@ namespace Google.Cloud.Compute.V1
             GrpcClient = grpcClient;
             PublicAdvertisedPrefixesSettings effectiveSettings = settings ?? PublicAdvertisedPrefixesSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            AnnounceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.AnnounceOperationsSettings, logger);
             DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings, logger);
             InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings, logger);
             PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchOperationsSettings, logger);
+            WithdrawOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.WithdrawOperationsSettings, logger);
+            _callAnnounce = clientHelper.BuildApiCall<AnnouncePublicAdvertisedPrefixeRequest, Operation>("Announce", grpcClient.AnnounceAsync, grpcClient.Announce, effectiveSettings.AnnounceSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("public_advertised_prefix", request => request.PublicAdvertisedPrefix);
+            Modify_ApiCall(ref _callAnnounce);
+            Modify_AnnounceApiCall(ref _callAnnounce);
             _callDelete = clientHelper.BuildApiCall<DeletePublicAdvertisedPrefixeRequest, Operation>("Delete", grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("public_advertised_prefix", request => request.PublicAdvertisedPrefix);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
@@ -851,10 +1130,15 @@ namespace Google.Cloud.Compute.V1
             _callPatch = clientHelper.BuildApiCall<PatchPublicAdvertisedPrefixeRequest, Operation>("Patch", grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("public_advertised_prefix", request => request.PublicAdvertisedPrefix);
             Modify_ApiCall(ref _callPatch);
             Modify_PatchApiCall(ref _callPatch);
+            _callWithdraw = clientHelper.BuildApiCall<WithdrawPublicAdvertisedPrefixeRequest, Operation>("Withdraw", grpcClient.WithdrawAsync, grpcClient.Withdraw, effectiveSettings.WithdrawSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("public_advertised_prefix", request => request.PublicAdvertisedPrefix);
+            Modify_ApiCall(ref _callWithdraw);
+            Modify_WithdrawApiCall(ref _callWithdraw);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
+
+        partial void Modify_AnnounceApiCall(ref gaxgrpc::ApiCall<AnnouncePublicAdvertisedPrefixeRequest, Operation> call);
 
         partial void Modify_DeleteApiCall(ref gaxgrpc::ApiCall<DeletePublicAdvertisedPrefixeRequest, Operation> call);
 
@@ -866,10 +1150,14 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_PatchApiCall(ref gaxgrpc::ApiCall<PatchPublicAdvertisedPrefixeRequest, Operation> call);
 
+        partial void Modify_WithdrawApiCall(ref gaxgrpc::ApiCall<WithdrawPublicAdvertisedPrefixeRequest, Operation> call);
+
         partial void OnConstruction(PublicAdvertisedPrefixes.PublicAdvertisedPrefixesClient grpcClient, PublicAdvertisedPrefixesSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC PublicAdvertisedPrefixes client</summary>
         public override PublicAdvertisedPrefixes.PublicAdvertisedPrefixesClient GrpcClient { get; }
+
+        partial void Modify_AnnouncePublicAdvertisedPrefixeRequest(ref AnnouncePublicAdvertisedPrefixeRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeletePublicAdvertisedPrefixeRequest(ref DeletePublicAdvertisedPrefixeRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -880,6 +1168,41 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_ListPublicAdvertisedPrefixesRequest(ref ListPublicAdvertisedPrefixesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_PatchPublicAdvertisedPrefixeRequest(ref PatchPublicAdvertisedPrefixeRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_WithdrawPublicAdvertisedPrefixeRequest(ref WithdrawPublicAdvertisedPrefixeRequest request, ref gaxgrpc::CallSettings settings);
+
+        /// <summary>The long-running operations client for <c>Announce</c>.</summary>
+        public override lro::OperationsClient AnnounceOperationsClient { get; }
+
+        /// <summary>
+        /// Announces the specified PublicAdvertisedPrefix
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> Announce(AnnouncePublicAdvertisedPrefixeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AnnouncePublicAdvertisedPrefixeRequest(ref request, ref callSettings);
+            Operation response = _callAnnounce.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AnnounceOperationsClient);
+        }
+
+        /// <summary>
+        /// Announces the specified PublicAdvertisedPrefix
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> AnnounceAsync(AnnouncePublicAdvertisedPrefixeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AnnouncePublicAdvertisedPrefixeRequest(ref request, ref callSettings);
+            Operation response = await _callAnnounce.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AnnounceOperationsClient);
+        }
 
         /// <summary>The long-running operations client for <c>Delete</c>.</summary>
         public override lro::OperationsClient DeleteOperationsClient { get; }
@@ -1026,6 +1349,39 @@ namespace Google.Cloud.Compute.V1
             GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
             request.PopulatePollRequestFields(pollRequest);
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>Withdraw</c>.</summary>
+        public override lro::OperationsClient WithdrawOperationsClient { get; }
+
+        /// <summary>
+        /// Withdraws the specified PublicAdvertisedPrefix
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> Withdraw(WithdrawPublicAdvertisedPrefixeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_WithdrawPublicAdvertisedPrefixeRequest(ref request, ref callSettings);
+            Operation response = _callWithdraw.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), WithdrawOperationsClient);
+        }
+
+        /// <summary>
+        /// Withdraws the specified PublicAdvertisedPrefix
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> WithdrawAsync(WithdrawPublicAdvertisedPrefixeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_WithdrawPublicAdvertisedPrefixeRequest(ref request, ref callSettings);
+            Operation response = await _callWithdraw.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), WithdrawOperationsClient);
         }
     }
 

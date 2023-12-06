@@ -909,6 +909,15 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class SetSecurityPolicyInstanceRequest
+    {
+        internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
+        {
+            pollRequest.Zone = Zone;
+            pollRequest.Project = Project;
+        }
+    }
+
     public partial class SetServiceAccountInstanceRequest
     {
         internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
@@ -1112,6 +1121,15 @@ namespace Google.Cloud.Compute.V1
     }
 
     public partial class InsertNetworkAttachmentRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class PatchNetworkAttachmentRequest
     {
         internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
         {
@@ -1416,6 +1434,11 @@ namespace Google.Cloud.Compute.V1
         internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
     }
 
+    public partial class AnnouncePublicAdvertisedPrefixeRequest
+    {
+        internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
+    }
+
     public partial class DeletePublicAdvertisedPrefixeRequest
     {
         internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
@@ -1429,6 +1452,20 @@ namespace Google.Cloud.Compute.V1
     public partial class PatchPublicAdvertisedPrefixeRequest
     {
         internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
+    }
+
+    public partial class WithdrawPublicAdvertisedPrefixeRequest
+    {
+        internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
+    }
+
+    public partial class AnnouncePublicDelegatedPrefixeRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
     }
 
     public partial class DeletePublicDelegatedPrefixeRequest
@@ -1450,6 +1487,15 @@ namespace Google.Cloud.Compute.V1
     }
 
     public partial class PatchPublicDelegatedPrefixeRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class WithdrawPublicDelegatedPrefixeRequest
     {
         internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
         {
@@ -1513,6 +1559,15 @@ namespace Google.Cloud.Compute.V1
     }
 
     public partial class PatchRegionBackendServiceRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class SetSecurityPolicyRegionBackendServiceRequest
     {
         internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
         {
@@ -1881,7 +1936,25 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class AttachNetworkEndpointsRegionNetworkEndpointGroupRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
     public partial class DeleteRegionNetworkEndpointGroupRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class DetachNetworkEndpointsRegionNetworkEndpointGroupRequest
     {
         internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
         {
@@ -1998,6 +2071,15 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class AddRuleRegionSecurityPolicyRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
     public partial class DeleteRegionSecurityPolicyRequest
     {
         internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
@@ -2017,6 +2099,24 @@ namespace Google.Cloud.Compute.V1
     }
 
     public partial class PatchRegionSecurityPolicyRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class PatchRuleRegionSecurityPolicyRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class RemoveRuleRegionSecurityPolicyRequest
     {
         internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
         {
@@ -2367,6 +2467,11 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class PatchSnapshotSettingRequest
+    {
+        internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
+    }
+
     public partial class DeleteSnapshotRequest
     {
         internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
@@ -2545,6 +2650,15 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class SetSecurityPolicyTargetInstanceRequest
+    {
+        internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
+        {
+            pollRequest.Zone = Zone;
+            pollRequest.Project = Project;
+        }
+    }
+
     public partial class AddHealthCheckTargetPoolRequest
     {
         internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
@@ -2600,6 +2714,15 @@ namespace Google.Cloud.Compute.V1
     }
 
     public partial class SetBackupTargetPoolRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class SetSecurityPolicyTargetPoolRequest
     {
         internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
         {
