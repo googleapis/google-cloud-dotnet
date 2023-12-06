@@ -1,0 +1,44 @@
+[
+  {
+    "method": "ListDescendantEventThreatDetectionCustomModules",
+    "client": "SecurityCenterManagementClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/global"
+    }
+  },
+  {
+    "method": "ListEffectiveSecurityHealthAnalyticsCustomModules",
+    "client": "SecurityCenterManagementClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/global"
+    }
+  },
+  {
+    "method": "ListSecurityHealthAnalyticsCustomModules",
+    "client": "SecurityCenterManagementClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/global"
+    }
+  },
+  {
+    "method": "ListDescendantSecurityHealthAnalyticsCustomModules",
+    "client": "SecurityCenterManagementClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/global"
+    }
+  },
+  {
+    "method": "ListEffectiveEventThreatDetectionCustomModules",
+    "client": "SecurityCenterManagementClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/global"
+    }
+  },
+  {
+    "method": "ListEventThreatDetectionCustomModules",
+    "client": "SecurityCenterManagementClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/global"
+    }
+  }
+]
