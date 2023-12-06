@@ -49,58 +49,59 @@ namespace Google.Cloud.CloudQuotas.V1 {
             "ZXJ2aWNlcy97c2VydmljZX0vcXVvdGFJbmZvcy97cXVvdGFfaW5mb30SXG9y",
             "Z2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vbG9jYXRpb25zL3tsb2NhdGlv",
             "bn0vc2VydmljZXMve3NlcnZpY2V9L3F1b3RhSW5mb3Mve3F1b3RhX2luZm99",
-            "IvYBChhRdW90YUluY3JlYXNlRWxpZ2liaWxpdHkSEwoLaXNfZWxpZ2libGUY",
+            "IvwBChhRdW90YUluY3JlYXNlRWxpZ2liaWxpdHkSEwoLaXNfZWxpZ2libGUY",
             "ASABKAgSZQoUaW5lbGlnaWJpbGl0eV9yZWFzb24YAiABKA4yRy5nb29nbGUu",
             "YXBpLmNsb3VkcXVvdGFzLnYxLlF1b3RhSW5jcmVhc2VFbGlnaWJpbGl0eS5J",
-            "bmVsaWdpYmlsaXR5UmVhc29uIl4KE0luZWxpZ2liaWxpdHlSZWFzb24SJAog",
-            "SU5FTElHSUJJTElUWV9SRUFTT05fVU5TUEVDSUZJRUQQABIWChJOT19CSUxM",
-            "SU5HX0FDQ09VTlQQAhIJCgVPVEhFUhADIuQFCg9RdW90YVByZWZlcmVuY2US",
-            "DAoEbmFtZRgBIAEoCRJOCgpkaW1lbnNpb25zGAIgAygLMjouZ29vZ2xlLmFw",
-            "aS5jbG91ZHF1b3Rhcy52MS5RdW90YVByZWZlcmVuY2UuRGltZW5zaW9uc0Vu",
-            "dHJ5EkEKDHF1b3RhX2NvbmZpZxgDIAEoCzImLmdvb2dsZS5hcGkuY2xvdWRx",
-            "dW90YXMudjEuUXVvdGFDb25maWdCA+BBAhIRCgRldGFnGAQgASgJQgPgQQES",
-            "NAoLY3JlYXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wQgPgQQMSFAoHc2VydmljZRgHIAEoCUID4EECEhUKCHF1",
-            "b3RhX2lkGAggASgJQgPgQQISGAoLcmVjb25jaWxpbmcYCiABKAhCA+BBAxIV",
-            "Cg1qdXN0aWZpY2F0aW9uGAsgASgJGjEKD0RpbWVuc2lvbnNFbnRyeRILCgNr",
-            "ZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOp8C6kGbAgoqY2xvdWRxdW90",
-            "YXMuZ29vZ2xlYXBpcy5jb20vUXVvdGFQcmVmZXJlbmNlEktwcm9qZWN0cy97",
-            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcXVvdGFQcmVmZXJlbmNl",
-            "cy97cXVvdGFfcHJlZmVyZW5jZX0SSWZvbGRlcnMve2ZvbGRlcn0vbG9jYXRp",
-            "b25zL3tsb2NhdGlvbn0vcXVvdGFQcmVmZXJlbmNlcy97cXVvdGFfcHJlZmVy",
-            "ZW5jZX0SVW9yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vbG9jYXRpb25z",
-            "L3tsb2NhdGlvbn0vcXVvdGFQcmVmZXJlbmNlcy97cXVvdGFfcHJlZmVyZW5j",
-            "ZX0irAMKC1F1b3RhQ29uZmlnEhwKD3ByZWZlcnJlZF92YWx1ZRgBIAEoA0ID",
-            "4EECEhkKDHN0YXRlX2RldGFpbBgCIAEoCUID4EEDEjcKDWdyYW50ZWRfdmFs",
-            "dWUYAyABKAsyGy5nb29nbGUucHJvdG9idWYuSW50NjRWYWx1ZUID4EEDEhUK",
-            "CHRyYWNlX2lkGAQgASgJQgPgQQMSTAoLYW5ub3RhdGlvbnMYBSADKAsyNy5n",
-            "b29nbGUuYXBpLmNsb3VkcXVvdGFzLnYxLlF1b3RhQ29uZmlnLkFubm90YXRp",
-            "b25zRW50cnkSSgoOcmVxdWVzdF9vcmlnaW4YBiABKA4yLS5nb29nbGUuYXBp",
-            "LmNsb3VkcXVvdGFzLnYxLlF1b3RhQ29uZmlnLk9yaWdpbkID4EEDGjIKEEFu",
-            "bm90YXRpb25zRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4",
-            "ASJGCgZPcmlnaW4SFgoST1JJR0lOX1VOU1BFQ0lGSUVEEAASEQoNQ0xPVURf",
-            "Q09OU09MRRABEhEKDUFVVE9fQURKVVNURVIQAiLqAQoORGltZW5zaW9uc0lu",
-            "Zm8STQoKZGltZW5zaW9ucxgBIAMoCzI5Lmdvb2dsZS5hcGkuY2xvdWRxdW90",
-            "YXMudjEuRGltZW5zaW9uc0luZm8uRGltZW5zaW9uc0VudHJ5EjgKB2RldGFp",
-            "bHMYAiABKAsyJy5nb29nbGUuYXBpLmNsb3VkcXVvdGFzLnYxLlF1b3RhRGV0",
-            "YWlscxIcChRhcHBsaWNhYmxlX2xvY2F0aW9ucxgDIAMoCRoxCg9EaW1lbnNp",
-            "b25zRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASIdCgxR",
-            "dW90YURldGFpbHMSDQoFdmFsdWUYASABKAMqfgoQUXVvdGFTYWZldHlDaGVj",
-            "axIiCh5RVU9UQV9TQUZFVFlfQ0hFQ0tfVU5TUEVDSUZJRUQQABIeChpMSU1J",
-            "VF9ERUNSRUFTRV9CRUxPV19VU0FHRRABEiYKIkxJTUlUX0RFQ1JFQVNFX1BF",
-            "UkNFTlRBR0VfVE9PX0hJR0gQAkLRAQodY29tLmdvb2dsZS5hcGkuY2xvdWRx",
-            "dW90YXMudjFCDlJlc291cmNlc1Byb3RvUAFaQWNsb3VkLmdvb2dsZS5jb20v",
-            "Z28vY2xvdWRxdW90YXMvYXBpdjEvY2xvdWRxdW90YXNwYjtjbG91ZHF1b3Rh",
-            "c3BiqgIbR29vZ2xlLkNsb3VkLkNsb3VkUXVvdGFzLlYxygIbR29vZ2xlXENs",
-            "b3VkXENsb3VkUXVvdGFzXFYx6gIeR29vZ2xlOjpDbG91ZDo6Q2xvdWRRdW90",
-            "YXM6OlYxYgZwcm90bzM="));
+            "bmVsaWdpYmlsaXR5UmVhc29uImQKE0luZWxpZ2liaWxpdHlSZWFzb24SJAog",
+            "SU5FTElHSUJJTElUWV9SRUFTT05fVU5TUEVDSUZJRUQQABIcChhOT19WQUxJ",
+            "RF9CSUxMSU5HX0FDQ09VTlQQAhIJCgVPVEhFUhADIoMGCg9RdW90YVByZWZl",
+            "cmVuY2USDAoEbmFtZRgBIAEoCRJOCgpkaW1lbnNpb25zGAIgAygLMjouZ29v",
+            "Z2xlLmFwaS5jbG91ZHF1b3Rhcy52MS5RdW90YVByZWZlcmVuY2UuRGltZW5z",
+            "aW9uc0VudHJ5EkEKDHF1b3RhX2NvbmZpZxgDIAEoCzImLmdvb2dsZS5hcGku",
+            "Y2xvdWRxdW90YXMudjEuUXVvdGFDb25maWdCA+BBAhIRCgRldGFnGAQgASgJ",
+            "QgPgQQESNAoLY3JlYXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBiABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSFAoHc2VydmljZRgHIAEoCUID4EEC",
+            "EhUKCHF1b3RhX2lkGAggASgJQgPgQQISGAoLcmVjb25jaWxpbmcYCiABKAhC",
+            "A+BBAxIVCg1qdXN0aWZpY2F0aW9uGAsgASgJEh0KDWNvbnRhY3RfZW1haWwY",
+            "DCABKAlCBuBBBOBBARoxCg9EaW1lbnNpb25zRW50cnkSCwoDa2V5GAEgASgJ",
+            "Eg0KBXZhbHVlGAIgASgJOgI4ATqfAupBmwIKKmNsb3VkcXVvdGFzLmdvb2ds",
+            "ZWFwaXMuY29tL1F1b3RhUHJlZmVyZW5jZRJLcHJvamVjdHMve3Byb2plY3R9",
+            "L2xvY2F0aW9ucy97bG9jYXRpb259L3F1b3RhUHJlZmVyZW5jZXMve3F1b3Rh",
+            "X3ByZWZlcmVuY2V9Eklmb2xkZXJzL3tmb2xkZXJ9L2xvY2F0aW9ucy97bG9j",
+            "YXRpb259L3F1b3RhUHJlZmVyZW5jZXMve3F1b3RhX3ByZWZlcmVuY2V9ElVv",
+            "cmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L2xvY2F0aW9ucy97bG9jYXRp",
+            "b259L3F1b3RhUHJlZmVyZW5jZXMve3F1b3RhX3ByZWZlcmVuY2V9IqwDCgtR",
+            "dW90YUNvbmZpZxIcCg9wcmVmZXJyZWRfdmFsdWUYASABKANCA+BBAhIZCgxz",
+            "dGF0ZV9kZXRhaWwYAiABKAlCA+BBAxI3Cg1ncmFudGVkX3ZhbHVlGAMgASgL",
+            "MhsuZ29vZ2xlLnByb3RvYnVmLkludDY0VmFsdWVCA+BBAxIVCgh0cmFjZV9p",
+            "ZBgEIAEoCUID4EEDEkwKC2Fubm90YXRpb25zGAUgAygLMjcuZ29vZ2xlLmFw",
+            "aS5jbG91ZHF1b3Rhcy52MS5RdW90YUNvbmZpZy5Bbm5vdGF0aW9uc0VudHJ5",
+            "EkoKDnJlcXVlc3Rfb3JpZ2luGAYgASgOMi0uZ29vZ2xlLmFwaS5jbG91ZHF1",
+            "b3Rhcy52MS5RdW90YUNvbmZpZy5PcmlnaW5CA+BBAxoyChBBbm5vdGF0aW9u",
+            "c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiRgoGT3Jp",
+            "Z2luEhYKEk9SSUdJTl9VTlNQRUNJRklFRBAAEhEKDUNMT1VEX0NPTlNPTEUQ",
+            "ARIRCg1BVVRPX0FESlVTVEVSEAIi6gEKDkRpbWVuc2lvbnNJbmZvEk0KCmRp",
+            "bWVuc2lvbnMYASADKAsyOS5nb29nbGUuYXBpLmNsb3VkcXVvdGFzLnYxLkRp",
+            "bWVuc2lvbnNJbmZvLkRpbWVuc2lvbnNFbnRyeRI4CgdkZXRhaWxzGAIgASgL",
+            "MicuZ29vZ2xlLmFwaS5jbG91ZHF1b3Rhcy52MS5RdW90YURldGFpbHMSHAoU",
+            "YXBwbGljYWJsZV9sb2NhdGlvbnMYAyADKAkaMQoPRGltZW5zaW9uc0VudHJ5",
+            "EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiHQoMUXVvdGFEZXRh",
+            "aWxzEg0KBXZhbHVlGAEgASgDKn4KEFF1b3RhU2FmZXR5Q2hlY2sSIgoeUVVP",
+            "VEFfU0FGRVRZX0NIRUNLX1VOU1BFQ0lGSUVEEAASHgoaTElNSVRfREVDUkVB",
+            "U0VfQkVMT1dfVVNBR0UQARImCiJMSU1JVF9ERUNSRUFTRV9QRVJDRU5UQUdF",
+            "X1RPT19ISUdIEAJC0QEKHWNvbS5nb29nbGUuYXBpLmNsb3VkcXVvdGFzLnYx",
+            "Qg5SZXNvdXJjZXNQcm90b1ABWkFjbG91ZC5nb29nbGUuY29tL2dvL2Nsb3Vk",
+            "cXVvdGFzL2FwaXYxL2Nsb3VkcXVvdGFzcGI7Y2xvdWRxdW90YXNwYqoCG0dv",
+            "b2dsZS5DbG91ZC5DbG91ZFF1b3Rhcy5WMcoCG0dvb2dsZVxDbG91ZFxDbG91",
+            "ZFF1b3Rhc1xWMeoCHkdvb2dsZTo6Q2xvdWQ6OkNsb3VkUXVvdGFzOjpWMWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.CloudQuotas.V1.QuotaSafetyCheck), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudQuotas.V1.QuotaInfo), global::Google.Cloud.CloudQuotas.V1.QuotaInfo.Parser, new[]{ "Name", "QuotaId", "Metric", "Service", "IsPrecise", "RefreshInterval", "ContainerType", "Dimensions", "MetricDisplayName", "QuotaDisplayName", "MetricUnit", "QuotaIncreaseEligibility", "IsFixed", "DimensionsInfos", "IsConcurrent", "ServiceRequestQuotaUri" }, null, new[]{ typeof(global::Google.Cloud.CloudQuotas.V1.QuotaInfo.Types.ContainerType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudQuotas.V1.QuotaIncreaseEligibility), global::Google.Cloud.CloudQuotas.V1.QuotaIncreaseEligibility.Parser, new[]{ "IsEligible", "IneligibilityReason" }, null, new[]{ typeof(global::Google.Cloud.CloudQuotas.V1.QuotaIncreaseEligibility.Types.IneligibilityReason) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudQuotas.V1.QuotaPreference), global::Google.Cloud.CloudQuotas.V1.QuotaPreference.Parser, new[]{ "Name", "Dimensions", "QuotaConfig", "Etag", "CreateTime", "UpdateTime", "Service", "QuotaId", "Reconciling", "Justification" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudQuotas.V1.QuotaPreference), global::Google.Cloud.CloudQuotas.V1.QuotaPreference.Parser, new[]{ "Name", "Dimensions", "QuotaConfig", "Etag", "CreateTime", "UpdateTime", "Service", "QuotaId", "Reconciling", "Justification", "ContactEmail" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudQuotas.V1.QuotaConfig), global::Google.Cloud.CloudQuotas.V1.QuotaConfig.Parser, new[]{ "PreferredValue", "StateDetail", "GrantedValue", "TraceId", "Annotations", "RequestOrigin" }, null, new[]{ typeof(global::Google.Cloud.CloudQuotas.V1.QuotaConfig.Types.Origin) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudQuotas.V1.DimensionsInfo), global::Google.Cloud.CloudQuotas.V1.DimensionsInfo.Parser, new[]{ "Dimensions", "Details", "ApplicableLocations" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudQuotas.V1.QuotaDetails), global::Google.Cloud.CloudQuotas.V1.QuotaDetails.Parser, new[]{ "Value" }, null, null, null, null)
@@ -285,7 +286,7 @@ namespace Google.Cloud.CloudQuotas.V1 {
     /// <summary>
     /// The reset time interval for the quota. Refresh interval applies to rate
     /// quota only.
-    /// Example: “minute” for per minute, “day” for per day, or “10 seconds” for
+    /// Example: "minute" for per minute, "day" for per day, or "10 seconds" for
     /// every 10 seconds.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -360,7 +361,7 @@ namespace Google.Cloud.CloudQuotas.V1 {
     public const int MetricUnitFieldNumber = 11;
     private string metricUnit_ = "";
     /// <summary>
-    /// The unit in which the metric value is reported, e.g., “MByte”.
+    /// The unit in which the metric value is reported, e.g., "MByte".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1217,9 +1218,9 @@ namespace Google.Cloud.CloudQuotas.V1 {
         /// </summary>
         [pbr::OriginalName("INELIGIBILITY_REASON_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// The container is not linked with a billing account.
+        /// The container is not linked with a valid billing account.
         /// </summary>
-        [pbr::OriginalName("NO_BILLING_ACCOUNT")] NoBillingAccount = 2,
+        [pbr::OriginalName("NO_VALID_BILLING_ACCOUNT")] NoValidBillingAccount = 2,
         /// <summary>
         /// Other reasons.
         /// </summary>
@@ -1280,6 +1281,7 @@ namespace Google.Cloud.CloudQuotas.V1 {
       quotaId_ = other.quotaId_;
       reconciling_ = other.reconciling_;
       justification_ = other.justification_;
+      contactEmail_ = other.contactEmail_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1315,7 +1317,7 @@ namespace Google.Cloud.CloudQuotas.V1 {
     private readonly pbc::MapField<string, string> dimensions_ = new pbc::MapField<string, string>();
     /// <summary>
     /// The dimensions that this quota preference applies to. The key of the map
-    /// entry is the name of a dimension, such as "region", "zone", “network_id”,
+    /// entry is the name of a dimension, such as "region", "zone", "network_id",
     /// and the value of the map entry is the dimension value.
     ///
     /// If a dimension is missing from the map of dimensions, the quota preference
@@ -1433,7 +1435,8 @@ namespace Google.Cloud.CloudQuotas.V1 {
     public const int ReconcilingFieldNumber = 10;
     private bool reconciling_;
     /// <summary>
-    /// Output only. Is the quota preference pending GCP approval and fulfillment.
+    /// Output only. Is the quota preference pending Google Cloud approval and
+    /// fulfillment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1456,6 +1459,31 @@ namespace Google.Cloud.CloudQuotas.V1 {
       get { return justification_; }
       set {
         justification_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "contact_email" field.</summary>
+    public const int ContactEmailFieldNumber = 12;
+    private string contactEmail_ = "";
+    /// <summary>
+    /// Optional. Input only. An optional email address that can be used for quota
+    /// related communication between the Google Cloud and the user in case the
+    /// Google Cloud needs further information to make a decision on whether the
+    /// user preferred quota can be granted.
+    ///
+    /// The Google account for the email address must have quota update permission
+    /// for the project, folder or organization this quota preference is for.
+    ///
+    /// If no contact email address is provided, or the provided email address does
+    /// not have the required quota update permission, the quota preference request
+    /// will be denied in case further information is required to make a decision.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ContactEmail {
+      get { return contactEmail_; }
+      set {
+        contactEmail_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1484,6 +1512,7 @@ namespace Google.Cloud.CloudQuotas.V1 {
       if (QuotaId != other.QuotaId) return false;
       if (Reconciling != other.Reconciling) return false;
       if (Justification != other.Justification) return false;
+      if (ContactEmail != other.ContactEmail) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1501,6 +1530,7 @@ namespace Google.Cloud.CloudQuotas.V1 {
       if (QuotaId.Length != 0) hash ^= QuotaId.GetHashCode();
       if (Reconciling != false) hash ^= Reconciling.GetHashCode();
       if (Justification.Length != 0) hash ^= Justification.GetHashCode();
+      if (ContactEmail.Length != 0) hash ^= ContactEmail.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1556,6 +1586,10 @@ namespace Google.Cloud.CloudQuotas.V1 {
         output.WriteRawTag(90);
         output.WriteString(Justification);
       }
+      if (ContactEmail.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(ContactEmail);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1603,6 +1637,10 @@ namespace Google.Cloud.CloudQuotas.V1 {
         output.WriteRawTag(90);
         output.WriteString(Justification);
       }
+      if (ContactEmail.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(ContactEmail);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1640,6 +1678,9 @@ namespace Google.Cloud.CloudQuotas.V1 {
       }
       if (Justification.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Justification);
+      }
+      if (ContactEmail.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ContactEmail);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1689,6 +1730,9 @@ namespace Google.Cloud.CloudQuotas.V1 {
       }
       if (other.Justification.Length != 0) {
         Justification = other.Justification;
+      }
+      if (other.ContactEmail.Length != 0) {
+        ContactEmail = other.ContactEmail;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1754,6 +1798,10 @@ namespace Google.Cloud.CloudQuotas.V1 {
             Justification = input.ReadString();
             break;
           }
+          case 98: {
+            ContactEmail = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1816,6 +1864,10 @@ namespace Google.Cloud.CloudQuotas.V1 {
           }
           case 90: {
             Justification = input.ReadString();
+            break;
+          }
+          case 98: {
+            ContactEmail = input.ReadString();
             break;
           }
         }
@@ -1929,10 +1981,10 @@ namespace Google.Cloud.CloudQuotas.V1 {
     public const int TraceIdFieldNumber = 4;
     private string traceId_ = "";
     /// <summary>
-    /// Output only. The trace id that the GCP uses to provision the requested
-    /// quota. This trace id may be used by the client to contact Cloud support to
-    /// track the state of a quota preference request. The trace id is only
-    /// produced for increase requests and is unique for each request. The
+    /// Output only. The trace id that the Google Cloud uses to provision the
+    /// requested quota. This trace id may be used by the client to contact Cloud
+    /// support to track the state of a quota preference request. The trace id is
+    /// only produced for increase requests and is unique for each request. The
     /// quota decrease requests do not have a trace id.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
