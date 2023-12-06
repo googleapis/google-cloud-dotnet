@@ -2213,7 +2213,7 @@ namespace GoogleCSharpSnippets
             SearchRelatedAccountGroupMembershipsRequest request = new SearchRelatedAccountGroupMembershipsRequest
             {
                 ProjectAsRelatedAccountGroupName = RelatedAccountGroupName.FromProjectRelatedaccountgroup("[PROJECT]", "[RELATEDACCOUNTGROUP]"),
-                HashedAccountId = ByteString.Empty,
+                AccountId = "",
             };
             // Make the request
             PagedEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> response = recaptchaEnterpriseServiceClient.SearchRelatedAccountGroupMemberships(request);
@@ -2262,7 +2262,7 @@ namespace GoogleCSharpSnippets
             SearchRelatedAccountGroupMembershipsRequest request = new SearchRelatedAccountGroupMembershipsRequest
             {
                 ProjectAsRelatedAccountGroupName = RelatedAccountGroupName.FromProjectRelatedaccountgroup("[PROJECT]", "[RELATEDACCOUNTGROUP]"),
-                HashedAccountId = ByteString.Empty,
+                AccountId = "",
             };
             // Make the request
             PagedAsyncEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> response = recaptchaEnterpriseServiceClient.SearchRelatedAccountGroupMembershipsAsync(request);
@@ -2311,7 +2311,9 @@ namespace GoogleCSharpSnippets
             string project = "projects/[PROJECT]/relatedaccountgroups/[RELATEDACCOUNTGROUP]";
             ByteString hashedAccountId = ByteString.Empty;
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> response = recaptchaEnterpriseServiceClient.SearchRelatedAccountGroupMemberships(project, hashedAccountId);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (RelatedAccountGroupMembership item in response)
@@ -2357,7 +2359,9 @@ namespace GoogleCSharpSnippets
             string project = "projects/[PROJECT]/relatedaccountgroups/[RELATEDACCOUNTGROUP]";
             ByteString hashedAccountId = ByteString.Empty;
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> response = recaptchaEnterpriseServiceClient.SearchRelatedAccountGroupMembershipsAsync(project, hashedAccountId);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((RelatedAccountGroupMembership item) =>
@@ -2403,7 +2407,9 @@ namespace GoogleCSharpSnippets
             RelatedAccountGroupName project = RelatedAccountGroupName.FromProjectRelatedaccountgroup("[PROJECT]", "[RELATEDACCOUNTGROUP]");
             ByteString hashedAccountId = ByteString.Empty;
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> response = recaptchaEnterpriseServiceClient.SearchRelatedAccountGroupMemberships(project, hashedAccountId);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (RelatedAccountGroupMembership item in response)
@@ -2449,7 +2455,9 @@ namespace GoogleCSharpSnippets
             RelatedAccountGroupName project = RelatedAccountGroupName.FromProjectRelatedaccountgroup("[PROJECT]", "[RELATEDACCOUNTGROUP]");
             ByteString hashedAccountId = ByteString.Empty;
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> response = recaptchaEnterpriseServiceClient.SearchRelatedAccountGroupMembershipsAsync(project, hashedAccountId);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((RelatedAccountGroupMembership item) =>

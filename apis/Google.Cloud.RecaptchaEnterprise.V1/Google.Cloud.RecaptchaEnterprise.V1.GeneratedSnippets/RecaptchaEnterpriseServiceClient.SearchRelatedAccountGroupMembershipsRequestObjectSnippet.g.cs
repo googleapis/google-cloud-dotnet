@@ -19,7 +19,6 @@ namespace GoogleCSharpSnippets
     // [START recaptchaenterprise_v1_generated_RecaptchaEnterpriseService_SearchRelatedAccountGroupMemberships_sync]
     using Google.Api.Gax;
     using Google.Cloud.RecaptchaEnterprise.V1;
-    using Google.Protobuf;
     using System;
 
     public sealed partial class GeneratedRecaptchaEnterpriseServiceClientSnippets
@@ -40,7 +39,7 @@ namespace GoogleCSharpSnippets
             SearchRelatedAccountGroupMembershipsRequest request = new SearchRelatedAccountGroupMembershipsRequest
             {
                 ProjectAsRelatedAccountGroupName = RelatedAccountGroupName.FromProjectRelatedaccountgroup("[PROJECT]", "[RELATEDACCOUNTGROUP]"),
-                HashedAccountId = ByteString.Empty,
+                AccountId = "",
             };
             // Make the request
             PagedEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> response = recaptchaEnterpriseServiceClient.SearchRelatedAccountGroupMemberships(request);
