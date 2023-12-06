@@ -43,6 +43,7 @@ namespace GoogleCSharpSnippets
                 SecurityPolicy = "",
                 SecurityPolicyResource = new SecurityPolicy(),
                 Project = "",
+                UpdateMask = "",
             };
             // Make the request
             lro::Operation<Operation, Operation> response = securityPoliciesClient.Patch(request);

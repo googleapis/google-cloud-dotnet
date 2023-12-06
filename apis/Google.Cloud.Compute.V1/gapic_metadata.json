@@ -163,6 +163,12 @@
                 "GetAsync"
               ]
             },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
             "Insert": {
               "methods": [
                 "Insert",
@@ -185,6 +191,18 @@
               "methods": [
                 "SetEdgeSecurityPolicy",
                 "SetEdgeSecurityPolicyAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
               ]
             },
             "Update": {
@@ -256,6 +274,12 @@
                 "ListAsync"
               ]
             },
+            "ListUsable": {
+              "methods": [
+                "ListUsable",
+                "ListUsableAsync"
+              ]
+            },
             "Patch": {
               "methods": [
                 "Patch",
@@ -278,6 +302,12 @@
               "methods": [
                 "SetSecurityPolicy",
                 "SetSecurityPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
               ]
             },
             "Update": {
@@ -1537,6 +1567,12 @@
                 "SetSchedulingAsync"
               ]
             },
+            "SetSecurityPolicy": {
+              "methods": [
+                "SetSecurityPolicy",
+                "SetSecurityPolicyAsync"
+              ]
+            },
             "SetServiceAccount": {
               "methods": [
                 "SetServiceAccount",
@@ -1739,6 +1775,12 @@
               "methods": [
                 "GetDiagnostics",
                 "GetDiagnosticsAsync"
+              ]
+            },
+            "GetMacsecConfig": {
+              "methods": [
+                "GetMacsecConfig",
+                "GetMacsecConfigAsync"
               ]
             },
             "Insert": {
@@ -1958,6 +2000,12 @@
               "methods": [
                 "List",
                 "ListAsync"
+              ]
+            },
+            "Patch": {
+              "methods": [
+                "Patch",
+                "PatchAsync"
               ]
             },
             "SetIamPolicy": {
@@ -2578,6 +2626,12 @@
         "grpc": {
           "libraryClient": "PublicAdvertisedPrefixesClient",
           "rpcs": {
+            "Announce": {
+              "methods": [
+                "Announce",
+                "AnnounceAsync"
+              ]
+            },
             "Delete": {
               "methods": [
                 "Delete",
@@ -2606,6 +2660,12 @@
               "methods": [
                 "Patch",
                 "PatchAsync"
+              ]
+            },
+            "Withdraw": {
+              "methods": [
+                "Withdraw",
+                "WithdrawAsync"
               ]
             }
           }
@@ -2623,6 +2683,12 @@
                 "AggregatedListAsync"
               ]
             },
+            "Announce": {
+              "methods": [
+                "Announce",
+                "AnnounceAsync"
+              ]
+            },
             "Delete": {
               "methods": [
                 "Delete",
@@ -2651,6 +2717,12 @@
               "methods": [
                 "Patch",
                 "PatchAsync"
+              ]
+            },
+            "Withdraw": {
+              "methods": [
+                "Withdraw",
+                "WithdrawAsync"
               ]
             }
           }
@@ -2743,6 +2815,12 @@
                 "ListAsync"
               ]
             },
+            "ListUsable": {
+              "methods": [
+                "ListUsable",
+                "ListUsableAsync"
+              ]
+            },
             "Patch": {
               "methods": [
                 "Patch",
@@ -2753,6 +2831,18 @@
               "methods": [
                 "SetIamPolicy",
                 "SetIamPolicyAsync"
+              ]
+            },
+            "SetSecurityPolicy": {
+              "methods": [
+                "SetSecurityPolicy",
+                "SetSecurityPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
               ]
             },
             "Update": {
@@ -3229,10 +3319,22 @@
         "grpc": {
           "libraryClient": "RegionNetworkEndpointGroupsClient",
           "rpcs": {
+            "AttachNetworkEndpoints": {
+              "methods": [
+                "AttachNetworkEndpoints",
+                "AttachNetworkEndpointsAsync"
+              ]
+            },
             "Delete": {
               "methods": [
                 "Delete",
                 "DeleteAsync"
+              ]
+            },
+            "DetachNetworkEndpoints": {
+              "methods": [
+                "DetachNetworkEndpoints",
+                "DetachNetworkEndpointsAsync"
               ]
             },
             "Get": {
@@ -3251,6 +3353,12 @@
               "methods": [
                 "List",
                 "ListAsync"
+              ]
+            },
+            "ListNetworkEndpoints": {
+              "methods": [
+                "ListNetworkEndpoints",
+                "ListNetworkEndpointsAsync"
               ]
             }
           }
@@ -3439,6 +3547,12 @@
         "grpc": {
           "libraryClient": "RegionSecurityPoliciesClient",
           "rpcs": {
+            "AddRule": {
+              "methods": [
+                "AddRule",
+                "AddRuleAsync"
+              ]
+            },
             "Delete": {
               "methods": [
                 "Delete",
@@ -3449,6 +3563,12 @@
               "methods": [
                 "Get",
                 "GetAsync"
+              ]
+            },
+            "GetRule": {
+              "methods": [
+                "GetRule",
+                "GetRuleAsync"
               ]
             },
             "Insert": {
@@ -3467,6 +3587,18 @@
               "methods": [
                 "Patch",
                 "PatchAsync"
+              ]
+            },
+            "PatchRule": {
+              "methods": [
+                "PatchRule",
+                "PatchRuleAsync"
+              ]
+            },
+            "RemoveRule": {
+              "methods": [
+                "RemoveRule",
+                "RemoveRuleAsync"
               ]
             }
           }
@@ -3901,6 +4033,12 @@
                 "GetAsync"
               ]
             },
+            "GetNatIpInfo": {
+              "methods": [
+                "GetNatIpInfo",
+                "GetNatIpInfoAsync"
+              ]
+            },
             "GetNatMappingInfo": {
               "methods": [
                 "GetNatMappingInfo",
@@ -4118,6 +4256,27 @@
               "methods": [
                 "TestIamPermissions",
                 "TestIamPermissionsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "SnapshotSettingsService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SnapshotSettingsServiceClient",
+          "rpcs": {
+            "Get": {
+              "methods": [
+                "Get",
+                "GetAsync"
+              ]
+            },
+            "Patch": {
+              "methods": [
+                "Patch",
+                "PatchAsync"
               ]
             }
           }
@@ -4551,6 +4710,12 @@
                 "List",
                 "ListAsync"
               ]
+            },
+            "SetSecurityPolicy": {
+              "methods": [
+                "SetSecurityPolicy",
+                "SetSecurityPolicyAsync"
+              ]
             }
           }
         }
@@ -4625,6 +4790,12 @@
               "methods": [
                 "SetBackup",
                 "SetBackupAsync"
+              ]
+            },
+            "SetSecurityPolicy": {
+              "methods": [
+                "SetSecurityPolicy",
+                "SetSecurityPolicyAsync"
               ]
             }
           }

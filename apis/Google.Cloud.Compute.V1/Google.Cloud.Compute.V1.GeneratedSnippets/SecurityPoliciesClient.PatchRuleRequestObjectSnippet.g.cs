@@ -44,6 +44,7 @@ namespace GoogleCSharpSnippets
                 ValidateOnly = false,
                 SecurityPolicyRuleResource = new SecurityPolicyRule(),
                 Priority = 0,
+                UpdateMask = "",
             };
             // Make the request
             lro::Operation<Operation, Operation> response = securityPoliciesClient.PatchRule(request);

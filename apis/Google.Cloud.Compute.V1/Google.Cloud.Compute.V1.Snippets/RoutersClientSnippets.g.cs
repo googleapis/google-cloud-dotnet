@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
             {
                 OrderBy = "",
                 Project = "",
+                ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
@@ -92,6 +93,7 @@ namespace GoogleCSharpSnippets
             {
                 OrderBy = "",
                 Project = "",
+                ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
@@ -422,6 +424,76 @@ namespace GoogleCSharpSnippets
             string router = "";
             // Make the request
             Router response = await routersClient.GetAsync(project, region, router);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNatIpInfo</summary>
+        public void GetNatIpInfoRequestObject()
+        {
+            // Snippet: GetNatIpInfo(GetNatIpInfoRouterRequest, CallSettings)
+            // Create client
+            RoutersClient routersClient = RoutersClient.Create();
+            // Initialize request argument(s)
+            GetNatIpInfoRouterRequest request = new GetNatIpInfoRouterRequest
+            {
+                Region = "",
+                Router = "",
+                Project = "",
+                NatName = "",
+            };
+            // Make the request
+            NatIpInfoResponse response = routersClient.GetNatIpInfo(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNatIpInfoAsync</summary>
+        public async Task GetNatIpInfoRequestObjectAsync()
+        {
+            // Snippet: GetNatIpInfoAsync(GetNatIpInfoRouterRequest, CallSettings)
+            // Additional: GetNatIpInfoAsync(GetNatIpInfoRouterRequest, CancellationToken)
+            // Create client
+            RoutersClient routersClient = await RoutersClient.CreateAsync();
+            // Initialize request argument(s)
+            GetNatIpInfoRouterRequest request = new GetNatIpInfoRouterRequest
+            {
+                Region = "",
+                Router = "",
+                Project = "",
+                NatName = "",
+            };
+            // Make the request
+            NatIpInfoResponse response = await routersClient.GetNatIpInfoAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNatIpInfo</summary>
+        public void GetNatIpInfo()
+        {
+            // Snippet: GetNatIpInfo(string, string, string, CallSettings)
+            // Create client
+            RoutersClient routersClient = RoutersClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string router = "";
+            // Make the request
+            NatIpInfoResponse response = routersClient.GetNatIpInfo(project, region, router);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNatIpInfoAsync</summary>
+        public async Task GetNatIpInfoAsync()
+        {
+            // Snippet: GetNatIpInfoAsync(string, string, string, CallSettings)
+            // Additional: GetNatIpInfoAsync(string, string, string, CancellationToken)
+            // Create client
+            RoutersClient routersClient = await RoutersClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string router = "";
+            // Make the request
+            NatIpInfoResponse response = await routersClient.GetNatIpInfoAsync(project, region, router);
             // End snippet
         }
 

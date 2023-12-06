@@ -28,6 +28,144 @@ namespace GoogleCSharpSnippets
     /// <summary>Generated snippets.</summary>
     public sealed class AllGeneratedRegionSecurityPoliciesClientSnippets
     {
+        /// <summary>Snippet for AddRule</summary>
+        public void AddRuleRequestObject()
+        {
+            // Snippet: AddRule(AddRuleRegionSecurityPolicyRequest, CallSettings)
+            // Create client
+            RegionSecurityPoliciesClient regionSecurityPoliciesClient = RegionSecurityPoliciesClient.Create();
+            // Initialize request argument(s)
+            AddRuleRegionSecurityPolicyRequest request = new AddRuleRegionSecurityPolicyRequest
+            {
+                Region = "",
+                SecurityPolicy = "",
+                Project = "",
+                ValidateOnly = false,
+                SecurityPolicyRuleResource = new SecurityPolicyRule(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = regionSecurityPoliciesClient.AddRule(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionSecurityPoliciesClient.PollOnceAddRule(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddRuleAsync</summary>
+        public async Task AddRuleRequestObjectAsync()
+        {
+            // Snippet: AddRuleAsync(AddRuleRegionSecurityPolicyRequest, CallSettings)
+            // Additional: AddRuleAsync(AddRuleRegionSecurityPolicyRequest, CancellationToken)
+            // Create client
+            RegionSecurityPoliciesClient regionSecurityPoliciesClient = await RegionSecurityPoliciesClient.CreateAsync();
+            // Initialize request argument(s)
+            AddRuleRegionSecurityPolicyRequest request = new AddRuleRegionSecurityPolicyRequest
+            {
+                Region = "",
+                SecurityPolicy = "",
+                Project = "",
+                ValidateOnly = false,
+                SecurityPolicyRuleResource = new SecurityPolicyRule(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await regionSecurityPoliciesClient.AddRuleAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionSecurityPoliciesClient.PollOnceAddRuleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddRule</summary>
+        public void AddRule()
+        {
+            // Snippet: AddRule(string, string, string, SecurityPolicyRule, CallSettings)
+            // Create client
+            RegionSecurityPoliciesClient regionSecurityPoliciesClient = RegionSecurityPoliciesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string securityPolicy = "";
+            SecurityPolicyRule securityPolicyRuleResource = new SecurityPolicyRule();
+            // Make the request
+            lro::Operation<Operation, Operation> response = regionSecurityPoliciesClient.AddRule(project, region, securityPolicy, securityPolicyRuleResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionSecurityPoliciesClient.PollOnceAddRule(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddRuleAsync</summary>
+        public async Task AddRuleAsync()
+        {
+            // Snippet: AddRuleAsync(string, string, string, SecurityPolicyRule, CallSettings)
+            // Additional: AddRuleAsync(string, string, string, SecurityPolicyRule, CancellationToken)
+            // Create client
+            RegionSecurityPoliciesClient regionSecurityPoliciesClient = await RegionSecurityPoliciesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string securityPolicy = "";
+            SecurityPolicyRule securityPolicyRuleResource = new SecurityPolicyRule();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await regionSecurityPoliciesClient.AddRuleAsync(project, region, securityPolicy, securityPolicyRuleResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionSecurityPoliciesClient.PollOnceAddRuleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for Delete</summary>
         public void DeleteRequestObject()
         {
@@ -227,6 +365,76 @@ namespace GoogleCSharpSnippets
             string securityPolicy = "";
             // Make the request
             SecurityPolicy response = await regionSecurityPoliciesClient.GetAsync(project, region, securityPolicy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRule</summary>
+        public void GetRuleRequestObject()
+        {
+            // Snippet: GetRule(GetRuleRegionSecurityPolicyRequest, CallSettings)
+            // Create client
+            RegionSecurityPoliciesClient regionSecurityPoliciesClient = RegionSecurityPoliciesClient.Create();
+            // Initialize request argument(s)
+            GetRuleRegionSecurityPolicyRequest request = new GetRuleRegionSecurityPolicyRequest
+            {
+                Region = "",
+                SecurityPolicy = "",
+                Project = "",
+                Priority = 0,
+            };
+            // Make the request
+            SecurityPolicyRule response = regionSecurityPoliciesClient.GetRule(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRuleAsync</summary>
+        public async Task GetRuleRequestObjectAsync()
+        {
+            // Snippet: GetRuleAsync(GetRuleRegionSecurityPolicyRequest, CallSettings)
+            // Additional: GetRuleAsync(GetRuleRegionSecurityPolicyRequest, CancellationToken)
+            // Create client
+            RegionSecurityPoliciesClient regionSecurityPoliciesClient = await RegionSecurityPoliciesClient.CreateAsync();
+            // Initialize request argument(s)
+            GetRuleRegionSecurityPolicyRequest request = new GetRuleRegionSecurityPolicyRequest
+            {
+                Region = "",
+                SecurityPolicy = "",
+                Project = "",
+                Priority = 0,
+            };
+            // Make the request
+            SecurityPolicyRule response = await regionSecurityPoliciesClient.GetRuleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRule</summary>
+        public void GetRule()
+        {
+            // Snippet: GetRule(string, string, string, CallSettings)
+            // Create client
+            RegionSecurityPoliciesClient regionSecurityPoliciesClient = RegionSecurityPoliciesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string securityPolicy = "";
+            // Make the request
+            SecurityPolicyRule response = regionSecurityPoliciesClient.GetRule(project, region, securityPolicy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRuleAsync</summary>
+        public async Task GetRuleAsync()
+        {
+            // Snippet: GetRuleAsync(string, string, string, CallSettings)
+            // Additional: GetRuleAsync(string, string, string, CancellationToken)
+            // Create client
+            RegionSecurityPoliciesClient regionSecurityPoliciesClient = await RegionSecurityPoliciesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string securityPolicy = "";
+            // Make the request
+            SecurityPolicyRule response = await regionSecurityPoliciesClient.GetRuleAsync(project, region, securityPolicy);
             // End snippet
         }
 
@@ -576,6 +784,7 @@ namespace GoogleCSharpSnippets
                 SecurityPolicy = "",
                 SecurityPolicyResource = new SecurityPolicy(),
                 Project = "",
+                UpdateMask = "",
             };
             // Make the request
             lro::Operation<Operation, Operation> response = regionSecurityPoliciesClient.Patch(request);
@@ -613,6 +822,7 @@ namespace GoogleCSharpSnippets
                 SecurityPolicy = "",
                 SecurityPolicyResource = new SecurityPolicy(),
                 Project = "",
+                UpdateMask = "",
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await regionSecurityPoliciesClient.PatchAsync(request);
@@ -691,6 +901,282 @@ namespace GoogleCSharpSnippets
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
             lro::Operation<Operation, Operation> retrievedResponse = await regionSecurityPoliciesClient.PollOncePatchAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PatchRule</summary>
+        public void PatchRuleRequestObject()
+        {
+            // Snippet: PatchRule(PatchRuleRegionSecurityPolicyRequest, CallSettings)
+            // Create client
+            RegionSecurityPoliciesClient regionSecurityPoliciesClient = RegionSecurityPoliciesClient.Create();
+            // Initialize request argument(s)
+            PatchRuleRegionSecurityPolicyRequest request = new PatchRuleRegionSecurityPolicyRequest
+            {
+                Region = "",
+                SecurityPolicy = "",
+                Project = "",
+                ValidateOnly = false,
+                SecurityPolicyRuleResource = new SecurityPolicyRule(),
+                Priority = 0,
+                UpdateMask = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = regionSecurityPoliciesClient.PatchRule(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionSecurityPoliciesClient.PollOncePatchRule(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PatchRuleAsync</summary>
+        public async Task PatchRuleRequestObjectAsync()
+        {
+            // Snippet: PatchRuleAsync(PatchRuleRegionSecurityPolicyRequest, CallSettings)
+            // Additional: PatchRuleAsync(PatchRuleRegionSecurityPolicyRequest, CancellationToken)
+            // Create client
+            RegionSecurityPoliciesClient regionSecurityPoliciesClient = await RegionSecurityPoliciesClient.CreateAsync();
+            // Initialize request argument(s)
+            PatchRuleRegionSecurityPolicyRequest request = new PatchRuleRegionSecurityPolicyRequest
+            {
+                Region = "",
+                SecurityPolicy = "",
+                Project = "",
+                ValidateOnly = false,
+                SecurityPolicyRuleResource = new SecurityPolicyRule(),
+                Priority = 0,
+                UpdateMask = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await regionSecurityPoliciesClient.PatchRuleAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionSecurityPoliciesClient.PollOncePatchRuleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PatchRule</summary>
+        public void PatchRule()
+        {
+            // Snippet: PatchRule(string, string, string, SecurityPolicyRule, CallSettings)
+            // Create client
+            RegionSecurityPoliciesClient regionSecurityPoliciesClient = RegionSecurityPoliciesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string securityPolicy = "";
+            SecurityPolicyRule securityPolicyRuleResource = new SecurityPolicyRule();
+            // Make the request
+            lro::Operation<Operation, Operation> response = regionSecurityPoliciesClient.PatchRule(project, region, securityPolicy, securityPolicyRuleResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionSecurityPoliciesClient.PollOncePatchRule(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PatchRuleAsync</summary>
+        public async Task PatchRuleAsync()
+        {
+            // Snippet: PatchRuleAsync(string, string, string, SecurityPolicyRule, CallSettings)
+            // Additional: PatchRuleAsync(string, string, string, SecurityPolicyRule, CancellationToken)
+            // Create client
+            RegionSecurityPoliciesClient regionSecurityPoliciesClient = await RegionSecurityPoliciesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string securityPolicy = "";
+            SecurityPolicyRule securityPolicyRuleResource = new SecurityPolicyRule();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await regionSecurityPoliciesClient.PatchRuleAsync(project, region, securityPolicy, securityPolicyRuleResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionSecurityPoliciesClient.PollOncePatchRuleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveRule</summary>
+        public void RemoveRuleRequestObject()
+        {
+            // Snippet: RemoveRule(RemoveRuleRegionSecurityPolicyRequest, CallSettings)
+            // Create client
+            RegionSecurityPoliciesClient regionSecurityPoliciesClient = RegionSecurityPoliciesClient.Create();
+            // Initialize request argument(s)
+            RemoveRuleRegionSecurityPolicyRequest request = new RemoveRuleRegionSecurityPolicyRequest
+            {
+                Region = "",
+                SecurityPolicy = "",
+                Project = "",
+                Priority = 0,
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = regionSecurityPoliciesClient.RemoveRule(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionSecurityPoliciesClient.PollOnceRemoveRule(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveRuleAsync</summary>
+        public async Task RemoveRuleRequestObjectAsync()
+        {
+            // Snippet: RemoveRuleAsync(RemoveRuleRegionSecurityPolicyRequest, CallSettings)
+            // Additional: RemoveRuleAsync(RemoveRuleRegionSecurityPolicyRequest, CancellationToken)
+            // Create client
+            RegionSecurityPoliciesClient regionSecurityPoliciesClient = await RegionSecurityPoliciesClient.CreateAsync();
+            // Initialize request argument(s)
+            RemoveRuleRegionSecurityPolicyRequest request = new RemoveRuleRegionSecurityPolicyRequest
+            {
+                Region = "",
+                SecurityPolicy = "",
+                Project = "",
+                Priority = 0,
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await regionSecurityPoliciesClient.RemoveRuleAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionSecurityPoliciesClient.PollOnceRemoveRuleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveRule</summary>
+        public void RemoveRule()
+        {
+            // Snippet: RemoveRule(string, string, string, CallSettings)
+            // Create client
+            RegionSecurityPoliciesClient regionSecurityPoliciesClient = RegionSecurityPoliciesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string securityPolicy = "";
+            // Make the request
+            lro::Operation<Operation, Operation> response = regionSecurityPoliciesClient.RemoveRule(project, region, securityPolicy);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionSecurityPoliciesClient.PollOnceRemoveRule(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveRuleAsync</summary>
+        public async Task RemoveRuleAsync()
+        {
+            // Snippet: RemoveRuleAsync(string, string, string, CallSettings)
+            // Additional: RemoveRuleAsync(string, string, string, CancellationToken)
+            // Create client
+            RegionSecurityPoliciesClient regionSecurityPoliciesClient = await RegionSecurityPoliciesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string securityPolicy = "";
+            // Make the request
+            lro::Operation<Operation, Operation> response = await regionSecurityPoliciesClient.RemoveRuleAsync(project, region, securityPolicy);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionSecurityPoliciesClient.PollOnceRemoveRuleAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {

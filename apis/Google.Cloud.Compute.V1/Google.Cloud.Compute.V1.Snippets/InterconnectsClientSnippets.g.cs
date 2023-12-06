@@ -286,6 +286,70 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetMacsecConfig</summary>
+        public void GetMacsecConfigRequestObject()
+        {
+            // Snippet: GetMacsecConfig(GetMacsecConfigInterconnectRequest, CallSettings)
+            // Create client
+            InterconnectsClient interconnectsClient = InterconnectsClient.Create();
+            // Initialize request argument(s)
+            GetMacsecConfigInterconnectRequest request = new GetMacsecConfigInterconnectRequest
+            {
+                Interconnect = "",
+                Project = "",
+            };
+            // Make the request
+            InterconnectsGetMacsecConfigResponse response = interconnectsClient.GetMacsecConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMacsecConfigAsync</summary>
+        public async Task GetMacsecConfigRequestObjectAsync()
+        {
+            // Snippet: GetMacsecConfigAsync(GetMacsecConfigInterconnectRequest, CallSettings)
+            // Additional: GetMacsecConfigAsync(GetMacsecConfigInterconnectRequest, CancellationToken)
+            // Create client
+            InterconnectsClient interconnectsClient = await InterconnectsClient.CreateAsync();
+            // Initialize request argument(s)
+            GetMacsecConfigInterconnectRequest request = new GetMacsecConfigInterconnectRequest
+            {
+                Interconnect = "",
+                Project = "",
+            };
+            // Make the request
+            InterconnectsGetMacsecConfigResponse response = await interconnectsClient.GetMacsecConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMacsecConfig</summary>
+        public void GetMacsecConfig()
+        {
+            // Snippet: GetMacsecConfig(string, string, CallSettings)
+            // Create client
+            InterconnectsClient interconnectsClient = InterconnectsClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string interconnect = "";
+            // Make the request
+            InterconnectsGetMacsecConfigResponse response = interconnectsClient.GetMacsecConfig(project, interconnect);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMacsecConfigAsync</summary>
+        public async Task GetMacsecConfigAsync()
+        {
+            // Snippet: GetMacsecConfigAsync(string, string, CallSettings)
+            // Additional: GetMacsecConfigAsync(string, string, CancellationToken)
+            // Create client
+            InterconnectsClient interconnectsClient = await InterconnectsClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string interconnect = "";
+            // Make the request
+            InterconnectsGetMacsecConfigResponse response = await interconnectsClient.GetMacsecConfigAsync(project, interconnect);
+            // End snippet
+        }
+
         /// <summary>Snippet for Insert</summary>
         public void InsertRequestObject()
         {

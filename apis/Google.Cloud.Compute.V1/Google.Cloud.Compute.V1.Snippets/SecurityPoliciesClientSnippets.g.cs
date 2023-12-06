@@ -174,6 +174,7 @@ namespace GoogleCSharpSnippets
             {
                 OrderBy = "",
                 Project = "",
+                ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
@@ -226,6 +227,7 @@ namespace GoogleCSharpSnippets
             {
                 OrderBy = "",
                 Project = "",
+                ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
@@ -1024,6 +1026,7 @@ namespace GoogleCSharpSnippets
                 SecurityPolicy = "",
                 SecurityPolicyResource = new SecurityPolicy(),
                 Project = "",
+                UpdateMask = "",
             };
             // Make the request
             lro::Operation<Operation, Operation> response = securityPoliciesClient.Patch(request);
@@ -1060,6 +1063,7 @@ namespace GoogleCSharpSnippets
                 SecurityPolicy = "",
                 SecurityPolicyResource = new SecurityPolicy(),
                 Project = "",
+                UpdateMask = "",
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await securityPoliciesClient.PatchAsync(request);
@@ -1159,6 +1163,7 @@ namespace GoogleCSharpSnippets
                 ValidateOnly = false,
                 SecurityPolicyRuleResource = new SecurityPolicyRule(),
                 Priority = 0,
+                UpdateMask = "",
             };
             // Make the request
             lro::Operation<Operation, Operation> response = securityPoliciesClient.PatchRule(request);
@@ -1196,6 +1201,7 @@ namespace GoogleCSharpSnippets
                 ValidateOnly = false,
                 SecurityPolicyRuleResource = new SecurityPolicyRule(),
                 Priority = 0,
+                UpdateMask = "",
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await securityPoliciesClient.PatchRuleAsync(request);

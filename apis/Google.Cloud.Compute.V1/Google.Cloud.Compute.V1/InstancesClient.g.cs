@@ -98,6 +98,8 @@ namespace Google.Cloud.Compute.V1
             SetNameOperationsSettings = existing.SetNameOperationsSettings.Clone();
             SetSchedulingSettings = existing.SetSchedulingSettings;
             SetSchedulingOperationsSettings = existing.SetSchedulingOperationsSettings.Clone();
+            SetSecurityPolicySettings = existing.SetSecurityPolicySettings;
+            SetSecurityPolicyOperationsSettings = existing.SetSecurityPolicyOperationsSettings.Clone();
             SetServiceAccountSettings = existing.SetServiceAccountSettings;
             SetServiceAccountOperationsSettings = existing.SetServiceAccountOperationsSettings.Clone();
             SetShieldedInstanceIntegrityPolicySettings = existing.SetShieldedInstanceIntegrityPolicySettings;
@@ -961,6 +963,36 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings SetSchedulingOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>InstancesClient.SetSecurityPolicy</c> and <c>InstancesClient.SetSecurityPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SetSecurityPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>InstancesClient.SetSecurityPolicy</c> and
+        /// <c>InstancesClient.SetSecurityPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings SetSecurityPolicyOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -5026,6 +5058,132 @@ namespace Google.Cloud.Compute.V1
             SetSchedulingAsync(project, zone, instance, schedulingResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Sets the Google Cloud Armor security policy for the specified instance. For more information, see Google Cloud Armor Overview
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> SetSecurityPolicy(SetSecurityPolicyInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Sets the Google Cloud Armor security policy for the specified instance. For more information, see Google Cloud Armor Overview
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetSecurityPolicyAsync(SetSecurityPolicyInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Sets the Google Cloud Armor security policy for the specified instance. For more information, see Google Cloud Armor Overview
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetSecurityPolicyAsync(SetSecurityPolicyInstanceRequest request, st::CancellationToken cancellationToken) =>
+            SetSecurityPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>SetSecurityPolicy</c>.</summary>
+        public virtual lro::OperationsClient SetSecurityPolicyOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>SetSecurityPolicy</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceSetSecurityPolicy(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetSecurityPolicyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SetSecurityPolicy</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceSetSecurityPolicyAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetSecurityPolicyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Sets the Google Cloud Armor security policy for the specified instance. For more information, see Google Cloud Armor Overview
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// Name of the zone scoping this request.
+        /// </param>
+        /// <param name="instance">
+        /// Name of the Instance resource to which the security policy should be set. The name should conform to RFC1035.
+        /// </param>
+        /// <param name="instancesSetSecurityPolicyRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> SetSecurityPolicy(string project, string zone, string instance, InstancesSetSecurityPolicyRequest instancesSetSecurityPolicyRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            SetSecurityPolicy(new SetSecurityPolicyInstanceRequest
+            {
+                Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
+                InstancesSetSecurityPolicyRequestResource = gax::GaxPreconditions.CheckNotNull(instancesSetSecurityPolicyRequestResource, nameof(instancesSetSecurityPolicyRequestResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sets the Google Cloud Armor security policy for the specified instance. For more information, see Google Cloud Armor Overview
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// Name of the zone scoping this request.
+        /// </param>
+        /// <param name="instance">
+        /// Name of the Instance resource to which the security policy should be set. The name should conform to RFC1035.
+        /// </param>
+        /// <param name="instancesSetSecurityPolicyRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetSecurityPolicyAsync(string project, string zone, string instance, InstancesSetSecurityPolicyRequest instancesSetSecurityPolicyRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            SetSecurityPolicyAsync(new SetSecurityPolicyInstanceRequest
+            {
+                Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
+                InstancesSetSecurityPolicyRequestResource = gax::GaxPreconditions.CheckNotNull(instancesSetSecurityPolicyRequestResource, nameof(instancesSetSecurityPolicyRequestResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sets the Google Cloud Armor security policy for the specified instance. For more information, see Google Cloud Armor Overview
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// Name of the zone scoping this request.
+        /// </param>
+        /// <param name="instance">
+        /// Name of the Instance resource to which the security policy should be set. The name should conform to RFC1035.
+        /// </param>
+        /// <param name="instancesSetSecurityPolicyRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetSecurityPolicyAsync(string project, string zone, string instance, InstancesSetSecurityPolicyRequest instancesSetSecurityPolicyRequestResource, st::CancellationToken cancellationToken) =>
+            SetSecurityPolicyAsync(project, zone, instance, instancesSetSecurityPolicyRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Sets the service account on the instance. For more information, read Changing the service account and access scopes for an instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -6806,6 +6964,8 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<SetSchedulingInstanceRequest, Operation> _callSetScheduling;
 
+        private readonly gaxgrpc::ApiCall<SetSecurityPolicyInstanceRequest, Operation> _callSetSecurityPolicy;
+
         private readonly gaxgrpc::ApiCall<SetServiceAccountInstanceRequest, Operation> _callSetServiceAccount;
 
         private readonly gaxgrpc::ApiCall<SetShieldedInstanceIntegrityPolicyInstanceRequest, Operation> _callSetShieldedInstanceIntegrityPolicy;
@@ -6865,6 +7025,7 @@ namespace Google.Cloud.Compute.V1
             SetMinCpuPlatformOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetMinCpuPlatformOperationsSettings, logger);
             SetNameOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetNameOperationsSettings, logger);
             SetSchedulingOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetSchedulingOperationsSettings, logger);
+            SetSecurityPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetSecurityPolicyOperationsSettings, logger);
             SetServiceAccountOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetServiceAccountOperationsSettings, logger);
             SetShieldedInstanceIntegrityPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetShieldedInstanceIntegrityPolicyOperationsSettings, logger);
             SetTagsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetTagsOperationsSettings, logger);
@@ -6974,6 +7135,9 @@ namespace Google.Cloud.Compute.V1
             _callSetScheduling = clientHelper.BuildApiCall<SetSchedulingInstanceRequest, Operation>("SetScheduling", grpcClient.SetSchedulingAsync, grpcClient.SetScheduling, effectiveSettings.SetSchedulingSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callSetScheduling);
             Modify_SetSchedulingApiCall(ref _callSetScheduling);
+            _callSetSecurityPolicy = clientHelper.BuildApiCall<SetSecurityPolicyInstanceRequest, Operation>("SetSecurityPolicy", grpcClient.SetSecurityPolicyAsync, grpcClient.SetSecurityPolicy, effectiveSettings.SetSecurityPolicySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            Modify_ApiCall(ref _callSetSecurityPolicy);
+            Modify_SetSecurityPolicyApiCall(ref _callSetSecurityPolicy);
             _callSetServiceAccount = clientHelper.BuildApiCall<SetServiceAccountInstanceRequest, Operation>("SetServiceAccount", grpcClient.SetServiceAccountAsync, grpcClient.SetServiceAccount, effectiveSettings.SetServiceAccountSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callSetServiceAccount);
             Modify_SetServiceAccountApiCall(ref _callSetServiceAccount);
@@ -7085,6 +7249,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_SetSchedulingApiCall(ref gaxgrpc::ApiCall<SetSchedulingInstanceRequest, Operation> call);
 
+        partial void Modify_SetSecurityPolicyApiCall(ref gaxgrpc::ApiCall<SetSecurityPolicyInstanceRequest, Operation> call);
+
         partial void Modify_SetServiceAccountApiCall(ref gaxgrpc::ApiCall<SetServiceAccountInstanceRequest, Operation> call);
 
         partial void Modify_SetShieldedInstanceIntegrityPolicyApiCall(ref gaxgrpc::ApiCall<SetShieldedInstanceIntegrityPolicyInstanceRequest, Operation> call);
@@ -7181,6 +7347,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_SetNameInstanceRequest(ref SetNameInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SetSchedulingInstanceRequest(ref SetSchedulingInstanceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SetSecurityPolicyInstanceRequest(ref SetSecurityPolicyInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SetServiceAccountInstanceRequest(ref SetServiceAccountInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -8158,6 +8326,39 @@ namespace Google.Cloud.Compute.V1
             GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
             request.PopulatePollRequestFields(pollRequest);
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetSchedulingOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>SetSecurityPolicy</c>.</summary>
+        public override lro::OperationsClient SetSecurityPolicyOperationsClient { get; }
+
+        /// <summary>
+        /// Sets the Google Cloud Armor security policy for the specified instance. For more information, see Google Cloud Armor Overview
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> SetSecurityPolicy(SetSecurityPolicyInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetSecurityPolicyInstanceRequest(ref request, ref callSettings);
+            Operation response = _callSetSecurityPolicy.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetSecurityPolicyOperationsClient);
+        }
+
+        /// <summary>
+        /// Sets the Google Cloud Armor security policy for the specified instance. For more information, see Google Cloud Armor Overview
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> SetSecurityPolicyAsync(SetSecurityPolicyInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetSecurityPolicyInstanceRequest(ref request, ref callSettings);
+            Operation response = await _callSetSecurityPolicy.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetSecurityPolicyOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>SetServiceAccount</c>.</summary>

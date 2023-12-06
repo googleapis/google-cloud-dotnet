@@ -64,6 +64,8 @@ namespace Google.Cloud.Compute.V1
             RemoveInstanceOperationsSettings = existing.RemoveInstanceOperationsSettings.Clone();
             SetBackupSettings = existing.SetBackupSettings;
             SetBackupOperationsSettings = existing.SetBackupOperationsSettings.Clone();
+            SetSecurityPolicySettings = existing.SetSecurityPolicySettings;
+            SetSecurityPolicyOperationsSettings = existing.SetSecurityPolicyOperationsSettings.Clone();
             OnCopy(existing);
         }
 
@@ -350,6 +352,36 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings SetBackupOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>TargetPoolsClient.SetSecurityPolicy</c> and <c>TargetPoolsClient.SetSecurityPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SetSecurityPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>TargetPoolsClient.SetSecurityPolicy</c> and
+        /// <c>TargetPoolsClient.SetSecurityPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings SetSecurityPolicyOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -1680,6 +1712,132 @@ namespace Google.Cloud.Compute.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Operation, Operation>> SetBackupAsync(string project, string region, string targetPool, TargetReference targetReferenceResource, st::CancellationToken cancellationToken) =>
             SetBackupAsync(project, region, targetPool, targetReferenceResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets the Google Cloud Armor security policy for the specified target pool. For more information, see Google Cloud Armor Overview
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> SetSecurityPolicy(SetSecurityPolicyTargetPoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Sets the Google Cloud Armor security policy for the specified target pool. For more information, see Google Cloud Armor Overview
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetSecurityPolicyAsync(SetSecurityPolicyTargetPoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Sets the Google Cloud Armor security policy for the specified target pool. For more information, see Google Cloud Armor Overview
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetSecurityPolicyAsync(SetSecurityPolicyTargetPoolRequest request, st::CancellationToken cancellationToken) =>
+            SetSecurityPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>SetSecurityPolicy</c>.</summary>
+        public virtual lro::OperationsClient SetSecurityPolicyOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>SetSecurityPolicy</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceSetSecurityPolicy(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetSecurityPolicyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SetSecurityPolicy</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceSetSecurityPolicyAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetSecurityPolicyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Sets the Google Cloud Armor security policy for the specified target pool. For more information, see Google Cloud Armor Overview
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region scoping this request.
+        /// </param>
+        /// <param name="targetPool">
+        /// Name of the TargetPool resource to which the security policy should be set. The name should conform to RFC1035.
+        /// </param>
+        /// <param name="securityPolicyReferenceResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> SetSecurityPolicy(string project, string region, string targetPool, SecurityPolicyReference securityPolicyReferenceResource, gaxgrpc::CallSettings callSettings = null) =>
+            SetSecurityPolicy(new SetSecurityPolicyTargetPoolRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                SecurityPolicyReferenceResource = gax::GaxPreconditions.CheckNotNull(securityPolicyReferenceResource, nameof(securityPolicyReferenceResource)),
+                TargetPool = gax::GaxPreconditions.CheckNotNullOrEmpty(targetPool, nameof(targetPool)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sets the Google Cloud Armor security policy for the specified target pool. For more information, see Google Cloud Armor Overview
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region scoping this request.
+        /// </param>
+        /// <param name="targetPool">
+        /// Name of the TargetPool resource to which the security policy should be set. The name should conform to RFC1035.
+        /// </param>
+        /// <param name="securityPolicyReferenceResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetSecurityPolicyAsync(string project, string region, string targetPool, SecurityPolicyReference securityPolicyReferenceResource, gaxgrpc::CallSettings callSettings = null) =>
+            SetSecurityPolicyAsync(new SetSecurityPolicyTargetPoolRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                SecurityPolicyReferenceResource = gax::GaxPreconditions.CheckNotNull(securityPolicyReferenceResource, nameof(securityPolicyReferenceResource)),
+                TargetPool = gax::GaxPreconditions.CheckNotNullOrEmpty(targetPool, nameof(targetPool)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sets the Google Cloud Armor security policy for the specified target pool. For more information, see Google Cloud Armor Overview
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region scoping this request.
+        /// </param>
+        /// <param name="targetPool">
+        /// Name of the TargetPool resource to which the security policy should be set. The name should conform to RFC1035.
+        /// </param>
+        /// <param name="securityPolicyReferenceResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetSecurityPolicyAsync(string project, string region, string targetPool, SecurityPolicyReference securityPolicyReferenceResource, st::CancellationToken cancellationToken) =>
+            SetSecurityPolicyAsync(project, region, targetPool, securityPolicyReferenceResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>TargetPools client wrapper implementation, for convenient use.</summary>
@@ -1710,6 +1868,8 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<SetBackupTargetPoolRequest, Operation> _callSetBackup;
 
+        private readonly gaxgrpc::ApiCall<SetSecurityPolicyTargetPoolRequest, Operation> _callSetSecurityPolicy;
+
         /// <summary>
         /// Constructs a client wrapper for the TargetPools service, with the specified gRPC client and settings.
         /// </summary>
@@ -1728,6 +1888,7 @@ namespace Google.Cloud.Compute.V1
             RemoveHealthCheckOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.RemoveHealthCheckOperationsSettings, logger);
             RemoveInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.RemoveInstanceOperationsSettings, logger);
             SetBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.SetBackupOperationsSettings, logger);
+            SetSecurityPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.SetSecurityPolicyOperationsSettings, logger);
             _callAddHealthCheck = clientHelper.BuildApiCall<AddHealthCheckTargetPoolRequest, Operation>("AddHealthCheck", grpcClient.AddHealthCheckAsync, grpcClient.AddHealthCheck, effectiveSettings.AddHealthCheckSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("target_pool", request => request.TargetPool);
             Modify_ApiCall(ref _callAddHealthCheck);
             Modify_AddHealthCheckApiCall(ref _callAddHealthCheck);
@@ -1761,6 +1922,9 @@ namespace Google.Cloud.Compute.V1
             _callSetBackup = clientHelper.BuildApiCall<SetBackupTargetPoolRequest, Operation>("SetBackup", grpcClient.SetBackupAsync, grpcClient.SetBackup, effectiveSettings.SetBackupSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("target_pool", request => request.TargetPool);
             Modify_ApiCall(ref _callSetBackup);
             Modify_SetBackupApiCall(ref _callSetBackup);
+            _callSetSecurityPolicy = clientHelper.BuildApiCall<SetSecurityPolicyTargetPoolRequest, Operation>("SetSecurityPolicy", grpcClient.SetSecurityPolicyAsync, grpcClient.SetSecurityPolicy, effectiveSettings.SetSecurityPolicySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("target_pool", request => request.TargetPool);
+            Modify_ApiCall(ref _callSetSecurityPolicy);
+            Modify_SetSecurityPolicyApiCall(ref _callSetSecurityPolicy);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1788,6 +1952,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_SetBackupApiCall(ref gaxgrpc::ApiCall<SetBackupTargetPoolRequest, Operation> call);
 
+        partial void Modify_SetSecurityPolicyApiCall(ref gaxgrpc::ApiCall<SetSecurityPolicyTargetPoolRequest, Operation> call);
+
         partial void OnConstruction(TargetPools.TargetPoolsClient grpcClient, TargetPoolsSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC TargetPools client</summary>
@@ -1814,6 +1980,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_RemoveInstanceTargetPoolRequest(ref RemoveInstanceTargetPoolRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SetBackupTargetPoolRequest(ref SetBackupTargetPoolRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SetSecurityPolicyTargetPoolRequest(ref SetSecurityPolicyTargetPoolRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>AddHealthCheck</c>.</summary>
         public override lro::OperationsClient AddHealthCheckOperationsClient { get; }
@@ -2142,6 +2310,39 @@ namespace Google.Cloud.Compute.V1
             GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
             request.PopulatePollRequestFields(pollRequest);
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetBackupOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>SetSecurityPolicy</c>.</summary>
+        public override lro::OperationsClient SetSecurityPolicyOperationsClient { get; }
+
+        /// <summary>
+        /// Sets the Google Cloud Armor security policy for the specified target pool. For more information, see Google Cloud Armor Overview
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> SetSecurityPolicy(SetSecurityPolicyTargetPoolRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetSecurityPolicyTargetPoolRequest(ref request, ref callSettings);
+            Operation response = _callSetSecurityPolicy.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetSecurityPolicyOperationsClient);
+        }
+
+        /// <summary>
+        /// Sets the Google Cloud Armor security policy for the specified target pool. For more information, see Google Cloud Armor Overview
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> SetSecurityPolicyAsync(SetSecurityPolicyTargetPoolRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetSecurityPolicyTargetPoolRequest(ref request, ref callSettings);
+            Operation response = await _callSetSecurityPolicy.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetSecurityPolicyOperationsClient);
         }
     }
 
