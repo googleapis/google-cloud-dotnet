@@ -42,7 +42,9 @@ namespace GoogleCSharpSnippets
             RelatedAccountGroupName project = RelatedAccountGroupName.FromProjectRelatedaccountgroup("[PROJECT]", "[RELATEDACCOUNTGROUP]");
             ByteString hashedAccountId = ByteString.Empty;
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> response = recaptchaEnterpriseServiceClient.SearchRelatedAccountGroupMembershipsAsync(project, hashedAccountId);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((RelatedAccountGroupMembership item) =>

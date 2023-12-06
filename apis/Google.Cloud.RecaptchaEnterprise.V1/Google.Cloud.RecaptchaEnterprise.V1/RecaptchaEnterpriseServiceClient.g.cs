@@ -2421,9 +2421,11 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// `projects/{project}`.
         /// </param>
         /// <param name="hashedAccountId">
-        /// Optional. The unique stable hashed user identifier used to search
-        /// connections. The identifier should correspond to a `hashed_account_id`
-        /// provided in a previous `CreateAssessment` or `AnnotateAssessment` call.
+        /// Optional. Deprecated: use `account_id` instead.
+        /// The unique stable hashed account identifier used to search connections. The
+        /// identifier should correspond to a `hashed_account_id` provided in a
+        /// previous `CreateAssessment` or `AnnotateAssessment` call. Either
+        /// hashed_account_id or account_id must be set, but not both.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2435,6 +2437,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="RelatedAccountGroupMembership"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> SearchRelatedAccountGroupMemberships(string project, proto::ByteString hashedAccountId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             SearchRelatedAccountGroupMemberships(new SearchRelatedAccountGroupMembershipsRequest
             {
@@ -2453,9 +2456,11 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// `projects/{project}`.
         /// </param>
         /// <param name="hashedAccountId">
-        /// Optional. The unique stable hashed user identifier used to search
-        /// connections. The identifier should correspond to a `hashed_account_id`
-        /// provided in a previous `CreateAssessment` or `AnnotateAssessment` call.
+        /// Optional. Deprecated: use `account_id` instead.
+        /// The unique stable hashed account identifier used to search connections. The
+        /// identifier should correspond to a `hashed_account_id` provided in a
+        /// previous `CreateAssessment` or `AnnotateAssessment` call. Either
+        /// hashed_account_id or account_id must be set, but not both.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2469,6 +2474,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="RelatedAccountGroupMembership"/> resources.
         /// </returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedAsyncEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> SearchRelatedAccountGroupMembershipsAsync(string project, proto::ByteString hashedAccountId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             SearchRelatedAccountGroupMembershipsAsync(new SearchRelatedAccountGroupMembershipsRequest
             {
@@ -2487,9 +2493,11 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// `projects/{project}`.
         /// </param>
         /// <param name="hashedAccountId">
-        /// Optional. The unique stable hashed user identifier used to search
-        /// connections. The identifier should correspond to a `hashed_account_id`
-        /// provided in a previous `CreateAssessment` or `AnnotateAssessment` call.
+        /// Optional. Deprecated: use `account_id` instead.
+        /// The unique stable hashed account identifier used to search connections. The
+        /// identifier should correspond to a `hashed_account_id` provided in a
+        /// previous `CreateAssessment` or `AnnotateAssessment` call. Either
+        /// hashed_account_id or account_id must be set, but not both.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2501,6 +2509,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="RelatedAccountGroupMembership"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> SearchRelatedAccountGroupMemberships(RelatedAccountGroupName project, proto::ByteString hashedAccountId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             SearchRelatedAccountGroupMemberships(new SearchRelatedAccountGroupMembershipsRequest
             {
@@ -2519,9 +2528,11 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// `projects/{project}`.
         /// </param>
         /// <param name="hashedAccountId">
-        /// Optional. The unique stable hashed user identifier used to search
-        /// connections. The identifier should correspond to a `hashed_account_id`
-        /// provided in a previous `CreateAssessment` or `AnnotateAssessment` call.
+        /// Optional. Deprecated: use `account_id` instead.
+        /// The unique stable hashed account identifier used to search connections. The
+        /// identifier should correspond to a `hashed_account_id` provided in a
+        /// previous `CreateAssessment` or `AnnotateAssessment` call. Either
+        /// hashed_account_id or account_id must be set, but not both.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2535,6 +2546,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="RelatedAccountGroupMembership"/> resources.
         /// </returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedAsyncEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> SearchRelatedAccountGroupMembershipsAsync(RelatedAccountGroupName project, proto::ByteString hashedAccountId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             SearchRelatedAccountGroupMembershipsAsync(new SearchRelatedAccountGroupMembershipsRequest
             {
