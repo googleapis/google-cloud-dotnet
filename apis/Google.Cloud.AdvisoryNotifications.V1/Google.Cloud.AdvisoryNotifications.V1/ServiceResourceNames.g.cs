@@ -35,9 +35,17 @@ namespace Google.Cloud.AdvisoryNotifications.V1
             /// <c>organizations/{organization}/locations/{location}/notifications/{notification}</c>.
             /// </summary>
             OrganizationLocationNotification = 1,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/locations/{location}/notifications/{notification}</c>
+            /// .
+            /// </summary>
+            ProjectLocationNotification = 2,
         }
 
         private static gax::PathTemplate s_organizationLocationNotification = new gax::PathTemplate("organizations/{organization}/locations/{location}/notifications/{notification}");
+
+        private static gax::PathTemplate s_projectLocationNotification = new gax::PathTemplate("projects/{project}/locations/{location}/notifications/{notification}");
 
         /// <summary>Creates a <see cref="NotificationName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -58,6 +66,17 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         /// <returns>A new instance of <see cref="NotificationName"/> constructed from the provided ids.</returns>
         public static NotificationName FromOrganizationLocationNotification(string organizationId, string locationId, string notificationId) =>
             new NotificationName(ResourceNameType.OrganizationLocationNotification, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), notificationId: gax::GaxPreconditions.CheckNotNullOrEmpty(notificationId, nameof(notificationId)));
+
+        /// <summary>
+        /// Creates a <see cref="NotificationName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/notifications/{notification}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="notificationId">The <c>Notification</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="NotificationName"/> constructed from the provided ids.</returns>
+        public static NotificationName FromProjectLocationNotification(string projectId, string locationId, string notificationId) =>
+            new NotificationName(ResourceNameType.ProjectLocationNotification, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), notificationId: gax::GaxPreconditions.CheckNotNullOrEmpty(notificationId, nameof(notificationId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="NotificationName"/> with pattern
@@ -87,6 +106,20 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         public static string FormatOrganizationLocationNotification(string organizationId, string locationId, string notificationId) =>
             s_organizationLocationNotification.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(notificationId, nameof(notificationId)));
 
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="NotificationName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/notifications/{notification}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="notificationId">The <c>Notification</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="NotificationName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/notifications/{notification}</c>.
+        /// </returns>
+        public static string FormatProjectLocationNotification(string projectId, string locationId, string notificationId) =>
+            s_projectLocationNotification.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(notificationId, nameof(notificationId)));
+
         /// <summary>Parses the given resource name string into a new <see cref="NotificationName"/> instance.</summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
@@ -95,6 +128,9 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         /// <description>
         /// <c>organizations/{organization}/locations/{location}/notifications/{notification}</c>
         /// </description>
+        /// </item>
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/notifications/{notification}</c></description>
         /// </item>
         /// </list>
         /// </remarks>
@@ -113,6 +149,9 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         /// <description>
         /// <c>organizations/{organization}/locations/{location}/notifications/{notification}</c>
         /// </description>
+        /// </item>
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/notifications/{notification}</c></description>
         /// </item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
@@ -138,6 +177,9 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         /// <c>organizations/{organization}/locations/{location}/notifications/{notification}</c>
         /// </description>
         /// </item>
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/notifications/{notification}</c></description>
+        /// </item>
         /// </list>
         /// </remarks>
         /// <param name="notificationName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -159,6 +201,9 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         /// <description>
         /// <c>organizations/{organization}/locations/{location}/notifications/{notification}</c>
         /// </description>
+        /// </item>
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/notifications/{notification}</c></description>
         /// </item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
@@ -182,6 +227,11 @@ namespace Google.Cloud.AdvisoryNotifications.V1
                 result = FromOrganizationLocationNotification(resourceName[0], resourceName[1], resourceName[2]);
                 return true;
             }
+            if (s_projectLocationNotification.TryParseName(notificationName, out resourceName))
+            {
+                result = FromProjectLocationNotification(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
             if (allowUnparsed)
             {
                 if (gax::UnparsedResourceName.TryParse(notificationName, out gax::UnparsedResourceName unparsedResourceName))
@@ -194,13 +244,14 @@ namespace Google.Cloud.AdvisoryNotifications.V1
             return false;
         }
 
-        private NotificationName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string notificationId = null, string organizationId = null)
+        private NotificationName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string notificationId = null, string organizationId = null, string projectId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
             LocationId = locationId;
             NotificationId = notificationId;
             OrganizationId = organizationId;
+            ProjectId = projectId;
         }
 
         /// <summary>
@@ -224,21 +275,26 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         public gax::UnparsedResourceName UnparsedResource { get; }
 
         /// <summary>
-        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string LocationId { get; }
 
         /// <summary>
-        /// The <c>Notification</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
-        /// name.
+        /// The <c>Notification</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
         /// </summary>
         public string NotificationId { get; }
 
         /// <summary>
-        /// The <c>Organization</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
-        /// name.
+        /// The <c>Organization</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
         /// </summary>
         public string OrganizationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string ProjectId { get; }
 
         /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
         public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
@@ -251,6 +307,7 @@ namespace Google.Cloud.AdvisoryNotifications.V1
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
                 case ResourceNameType.OrganizationLocationNotification: return s_organizationLocationNotification.Expand(OrganizationId, LocationId, NotificationId);
+                case ResourceNameType.ProjectLocationNotification: return s_projectLocationNotification.Expand(ProjectId, LocationId, NotificationId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }
@@ -505,9 +562,14 @@ namespace Google.Cloud.AdvisoryNotifications.V1
             /// A resource name with pattern <c>organizations/{organization}/locations/{location}</c>.
             /// </summary>
             OrganizationLocation = 1,
+
+            /// <summary>A resource name with pattern <c>projects/{project}/locations/{location}</c>.</summary>
+            ProjectLocation = 2,
         }
 
         private static gax::PathTemplate s_organizationLocation = new gax::PathTemplate("organizations/{organization}/locations/{location}");
+
+        private static gax::PathTemplate s_projectLocation = new gax::PathTemplate("projects/{project}/locations/{location}");
 
         /// <summary>Creates a <see cref="LocationName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -527,6 +589,15 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         /// <returns>A new instance of <see cref="LocationName"/> constructed from the provided ids.</returns>
         public static LocationName FromOrganizationLocation(string organizationId, string locationId) =>
             new LocationName(ResourceNameType.OrganizationLocation, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)));
+
+        /// <summary>
+        /// Creates a <see cref="LocationName"/> with the pattern <c>projects/{project}/locations/{location}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="LocationName"/> constructed from the provided ids.</returns>
+        public static LocationName FromProjectLocation(string projectId, string locationId) =>
+            new LocationName(ResourceNameType.ProjectLocation, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="LocationName"/> with pattern
@@ -554,11 +625,25 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         public static string FormatOrganizationLocation(string organizationId, string locationId) =>
             s_organizationLocation.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)));
 
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="LocationName"/> with pattern
+        /// <c>projects/{project}/locations/{location}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="LocationName"/> with pattern
+        /// <c>projects/{project}/locations/{location}</c>.
+        /// </returns>
+        public static string FormatProjectLocation(string projectId, string locationId) =>
+            s_projectLocation.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)));
+
         /// <summary>Parses the given resource name string into a new <see cref="LocationName"/> instance.</summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>organizations/{organization}/locations/{location}</c></description></item>
+        /// <item><description><c>projects/{project}/locations/{location}</c></description></item>
         /// </list>
         /// </remarks>
         /// <param name="locationName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -573,6 +658,7 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>organizations/{organization}/locations/{location}</c></description></item>
+        /// <item><description><c>projects/{project}/locations/{location}</c></description></item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -593,6 +679,7 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>organizations/{organization}/locations/{location}</c></description></item>
+        /// <item><description><c>projects/{project}/locations/{location}</c></description></item>
         /// </list>
         /// </remarks>
         /// <param name="locationName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -610,6 +697,7 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>organizations/{organization}/locations/{location}</c></description></item>
+        /// <item><description><c>projects/{project}/locations/{location}</c></description></item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -632,6 +720,11 @@ namespace Google.Cloud.AdvisoryNotifications.V1
                 result = FromOrganizationLocation(resourceName[0], resourceName[1]);
                 return true;
             }
+            if (s_projectLocation.TryParseName(locationName, out resourceName))
+            {
+                result = FromProjectLocation(resourceName[0], resourceName[1]);
+                return true;
+            }
             if (allowUnparsed)
             {
                 if (gax::UnparsedResourceName.TryParse(locationName, out gax::UnparsedResourceName unparsedResourceName))
@@ -644,12 +737,13 @@ namespace Google.Cloud.AdvisoryNotifications.V1
             return false;
         }
 
-        private LocationName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string organizationId = null)
+        private LocationName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string organizationId = null, string projectId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
             LocationId = locationId;
             OrganizationId = organizationId;
+            ProjectId = projectId;
         }
 
         /// <summary>
@@ -672,15 +766,20 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         public gax::UnparsedResourceName UnparsedResource { get; }
 
         /// <summary>
-        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string LocationId { get; }
 
         /// <summary>
-        /// The <c>Organization</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
-        /// name.
+        /// The <c>Organization</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
         /// </summary>
         public string OrganizationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string ProjectId { get; }
 
         /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
         public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
@@ -693,6 +792,7 @@ namespace Google.Cloud.AdvisoryNotifications.V1
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
                 case ResourceNameType.OrganizationLocation: return s_organizationLocation.Expand(OrganizationId, LocationId);
+                case ResourceNameType.ProjectLocation: return s_projectLocation.Expand(ProjectId, LocationId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }

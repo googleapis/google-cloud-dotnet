@@ -202,7 +202,7 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
-        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(AdvisoryNotificationsService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(AdvisoryNotificationsService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc | gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
         internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
@@ -287,7 +287,8 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of notifications.
-        /// Must be of the form "organizations/{organization}/locations/{location}".
+        /// Must be of the form "organizations/{organization}/locations/{location}"
+        /// or "projects/{project}/locations/{location}"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -312,7 +313,8 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of notifications.
-        /// Must be of the form "organizations/{organization}/locations/{location}".
+        /// Must be of the form "organizations/{organization}/locations/{location}"
+        /// or "projects/{project}/locations/{location}"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -337,7 +339,8 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of notifications.
-        /// Must be of the form "organizations/{organization}/locations/{location}".
+        /// Must be of the form "organizations/{organization}/locations/{location}"
+        /// or "projects/{project}/locations/{location}"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -362,7 +365,8 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of notifications.
-        /// Must be of the form "organizations/{organization}/locations/{location}".
+        /// Must be of the form "organizations/{organization}/locations/{location}"
+        /// or "projects/{project}/locations/{location}"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -415,7 +419,8 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         /// <param name="name">
         /// Required. A name of the notification to retrieve.
         /// Format:
-        /// organizations/{organization}/locations/{location}/notifications/{notification}.
+        /// organizations/{organization}/locations/{location}/notifications/{notification}
+        /// or projects/{projects}/locations/{location}/notifications/{notification}.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -431,7 +436,8 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         /// <param name="name">
         /// Required. A name of the notification to retrieve.
         /// Format:
-        /// organizations/{organization}/locations/{location}/notifications/{notification}.
+        /// organizations/{organization}/locations/{location}/notifications/{notification}
+        /// or projects/{projects}/locations/{location}/notifications/{notification}.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -447,7 +453,8 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         /// <param name="name">
         /// Required. A name of the notification to retrieve.
         /// Format:
-        /// organizations/{organization}/locations/{location}/notifications/{notification}.
+        /// organizations/{organization}/locations/{location}/notifications/{notification}
+        /// or projects/{projects}/locations/{location}/notifications/{notification}.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -460,7 +467,8 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         /// <param name="name">
         /// Required. A name of the notification to retrieve.
         /// Format:
-        /// organizations/{organization}/locations/{location}/notifications/{notification}.
+        /// organizations/{organization}/locations/{location}/notifications/{notification}
+        /// or projects/{projects}/locations/{location}/notifications/{notification}.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -476,7 +484,8 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         /// <param name="name">
         /// Required. A name of the notification to retrieve.
         /// Format:
-        /// organizations/{organization}/locations/{location}/notifications/{notification}.
+        /// organizations/{organization}/locations/{location}/notifications/{notification}
+        /// or projects/{projects}/locations/{location}/notifications/{notification}.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -492,7 +501,8 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         /// <param name="name">
         /// Required. A name of the notification to retrieve.
         /// Format:
-        /// organizations/{organization}/locations/{location}/notifications/{notification}.
+        /// organizations/{organization}/locations/{location}/notifications/{notification}
+        /// or projects/{projects}/locations/{location}/notifications/{notification}.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
