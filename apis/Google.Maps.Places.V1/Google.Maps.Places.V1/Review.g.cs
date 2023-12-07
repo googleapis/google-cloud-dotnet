@@ -25,26 +25,24 @@ namespace Google.Maps.Places.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJnb29nbGUvbWFwcy9wbGFjZXMvdjEvcmV2aWV3LnByb3RvEhVnb29nbGUu",
-            "bWFwcy5wbGFjZXMudjEaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJv",
-            "dG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aJ2dvb2dsZS9tYXBzL3Bs",
-            "YWNlcy92MS9hdHRyaWJ1dGlvbi5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3Rp",
-            "bWVzdGFtcC5wcm90bxogZ29vZ2xlL3R5cGUvbG9jYWxpemVkX3RleHQucHJv",
-            "dG8ingMKBlJldmlldxIRCgRuYW1lGAEgASgJQgPgQQMSLgohcmVsYXRpdmVf",
-            "cHVibGlzaF90aW1lX2Rlc2NyaXB0aW9uGAIgASgJQgPgQQMSLQoEdGV4dBgJ",
-            "IAEoCzIaLmdvb2dsZS50eXBlLkxvY2FsaXplZFRleHRCA+BBAxI2Cg1vcmln",
-            "aW5hbF90ZXh0GAwgASgLMhouZ29vZ2xlLnR5cGUuTG9jYWxpemVkVGV4dEID",
-            "4EEDEhMKBnJhdGluZxgHIAEoAUID4EEDEkkKEmF1dGhvcl9hdHRyaWJ1dGlv",
-            "bhgNIAEoCzIoLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5BdXRob3JBdHRyaWJ1",
-            "dGlvbkID4EEDEjUKDHB1Ymxpc2hfdGltZRgOIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXBCA+BBAzpT6kFQChxwbGFjZXMuZ29vZ2xlYXBpcy5j",
-            "b20vUmV2aWV3Eh9wbGFjZXMve3BsYWNlfS9yZXZpZXdzL3tyZXZpZXd9Kgdy",
-            "ZXZpZXdzMgZyZXZpZXdCnwEKGWNvbS5nb29nbGUubWFwcy5wbGFjZXMudjFC",
-            "C1Jldmlld1Byb3RvUAFaN2Nsb3VkLmdvb2dsZS5jb20vZ28vbWFwcy9wbGFj",
-            "ZXMvYXBpdjEvcGxhY2VzcGI7cGxhY2VzcGL4AQGiAgZHTVBTVjGqAhVHb29n",
-            "bGUuTWFwcy5QbGFjZXMuVjHKAhVHb29nbGVcTWFwc1xQbGFjZXNcVjFiBnBy",
-            "b3RvMw=="));
+            "bWFwcy5wbGFjZXMudjEaGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aJ2dv",
+            "b2dsZS9tYXBzL3BsYWNlcy92MS9hdHRyaWJ1dGlvbi5wcm90bxofZ29vZ2xl",
+            "L3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxogZ29vZ2xlL3R5cGUvbG9jYWxp",
+            "emVkX3RleHQucHJvdG8i+wIKBlJldmlldxIMCgRuYW1lGAEgASgJEikKIXJl",
+            "bGF0aXZlX3B1Ymxpc2hfdGltZV9kZXNjcmlwdGlvbhgCIAEoCRIoCgR0ZXh0",
+            "GAkgASgLMhouZ29vZ2xlLnR5cGUuTG9jYWxpemVkVGV4dBIxCg1vcmlnaW5h",
+            "bF90ZXh0GAwgASgLMhouZ29vZ2xlLnR5cGUuTG9jYWxpemVkVGV4dBIOCgZy",
+            "YXRpbmcYByABKAESRAoSYXV0aG9yX2F0dHJpYnV0aW9uGA0gASgLMiguZ29v",
+            "Z2xlLm1hcHMucGxhY2VzLnYxLkF1dGhvckF0dHJpYnV0aW9uEjAKDHB1Ymxp",
+            "c2hfdGltZRgOIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXA6U+pB",
+            "UAoccGxhY2VzLmdvb2dsZWFwaXMuY29tL1JldmlldxIfcGxhY2VzL3twbGFj",
+            "ZX0vcmV2aWV3cy97cmV2aWV3fSoHcmV2aWV3czIGcmV2aWV3Qp8BChljb20u",
+            "Z29vZ2xlLm1hcHMucGxhY2VzLnYxQgtSZXZpZXdQcm90b1ABWjdjbG91ZC5n",
+            "b29nbGUuY29tL2dvL21hcHMvcGxhY2VzL2FwaXYxL3BsYWNlc3BiO3BsYWNl",
+            "c3Bi+AEBogIGR01QU1YxqgIVR29vZ2xlLk1hcHMuUGxhY2VzLlYxygIVR29v",
+            "Z2xlXE1hcHNcUGxhY2VzXFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Maps.Places.V1.AttributionReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.LocalizedTextReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Maps.Places.V1.AttributionReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.LocalizedTextReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Review), global::Google.Maps.Places.V1.Review.Parser, new[]{ "Name", "RelativePublishTimeDescription", "Text", "OriginalText", "Rating", "AuthorAttribution", "PublishTime" }, null, null, null, null)
           }));
@@ -110,9 +108,9 @@ namespace Google.Maps.Places.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. A reference representing this place review which may be used
-    /// to look up this place review again (a.k.a. the API "resource" name:
-    /// places/{place_id}/reviews/{review}).
+    /// A reference representing this place review which may be used to look up
+    /// this place review again (also called the API "resource" name:
+    /// `places/{place_id}/reviews/{review}`).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -127,9 +125,8 @@ namespace Google.Maps.Places.V1 {
     public const int RelativePublishTimeDescriptionFieldNumber = 2;
     private string relativePublishTimeDescription_ = "";
     /// <summary>
-    /// Output only. A string of formatted recent time, expressing the review time
-    /// relative to the current time in a form appropriate for the language and
-    /// country.
+    /// A string of formatted recent time, expressing the review time relative
+    /// to the current time in a form appropriate for the language and country.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -144,7 +141,7 @@ namespace Google.Maps.Places.V1 {
     public const int TextFieldNumber = 9;
     private global::Google.Type.LocalizedText text_;
     /// <summary>
-    /// Output only. The localized text of the review.
+    /// The localized text of the review.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -159,7 +156,7 @@ namespace Google.Maps.Places.V1 {
     public const int OriginalTextFieldNumber = 12;
     private global::Google.Type.LocalizedText originalText_;
     /// <summary>
-    /// Output only. The review text in its original language.
+    /// The review text in its original language.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -174,7 +171,7 @@ namespace Google.Maps.Places.V1 {
     public const int RatingFieldNumber = 7;
     private double rating_;
     /// <summary>
-    /// Output only. A number between 1.0 and 5.0, a.k.a. the number of stars.
+    /// A number between 1.0 and 5.0, also called the number of stars.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -189,7 +186,7 @@ namespace Google.Maps.Places.V1 {
     public const int AuthorAttributionFieldNumber = 13;
     private global::Google.Maps.Places.V1.AuthorAttribution authorAttribution_;
     /// <summary>
-    /// Output only. This review's author.
+    /// This review's author.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -204,7 +201,7 @@ namespace Google.Maps.Places.V1 {
     public const int PublishTimeFieldNumber = 14;
     private global::Google.Protobuf.WellKnownTypes.Timestamp publishTime_;
     /// <summary>
-    /// Output only. Timestamp for the review.
+    /// Timestamp for the review.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

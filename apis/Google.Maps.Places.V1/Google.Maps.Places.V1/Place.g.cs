@@ -25,145 +25,144 @@ namespace Google.Maps.Places.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFnb29nbGUvbWFwcy9wbGFjZXMvdjEvcGxhY2UucHJvdG8SFWdvb2dsZS5t",
-            "YXBzLnBsYWNlcy52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90",
-            "bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxoeZ29vZ2xlL2dlby90eXBl",
-            "L3ZpZXdwb3J0LnByb3RvGidnb29nbGUvbWFwcy9wbGFjZXMvdjEvZXZfY2hh",
-            "cmdpbmcucHJvdG8aKGdvb2dsZS9tYXBzL3BsYWNlcy92MS9mdWVsX29wdGlv",
-            "bnMucHJvdG8aIWdvb2dsZS9tYXBzL3BsYWNlcy92MS9waG90by5wcm90bxoi",
-            "Z29vZ2xlL21hcHMvcGxhY2VzL3YxL3Jldmlldy5wcm90bxoWZ29vZ2xlL3R5",
-            "cGUvZGF0ZS5wcm90bxoYZ29vZ2xlL3R5cGUvbGF0bG5nLnByb3RvGiBnb29n",
-            "bGUvdHlwZS9sb2NhbGl6ZWRfdGV4dC5wcm90byL0KQoFUGxhY2USEQoEbmFt",
-            "ZRgBIAEoCUID4EEDEg8KAmlkGAIgASgJQgPgQQMSNQoMZGlzcGxheV9uYW1l",
-            "GB8gASgLMhouZ29vZ2xlLnR5cGUuTG9jYWxpemVkVGV4dEID4EEDEhIKBXR5",
-            "cGVzGAUgAygJQgPgQQMSIgoVbmF0aW9uYWxfcGhvbmVfbnVtYmVyGAcgASgJ",
-            "QgPgQQMSJwoaaW50ZXJuYXRpb25hbF9waG9uZV9udW1iZXIYCCABKAlCA+BB",
-            "AxIeChFmb3JtYXR0ZWRfYWRkcmVzcxgJIAEoCUID4EEDEk4KEmFkZHJlc3Nf",
-            "Y29tcG9uZW50cxgKIAMoCzItLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QbGFj",
-            "ZS5BZGRyZXNzQ29tcG9uZW50QgPgQQMSPQoJcGx1c19jb2RlGAsgASgLMiUu",
-            "Z29vZ2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLlBsdXNDb2RlQgPgQQMSKgoI",
-            "bG9jYXRpb24YDCABKAsyEy5nb29nbGUudHlwZS5MYXRMbmdCA+BBAxIwCgh2",
-            "aWV3cG9ydBgNIAEoCzIZLmdvb2dsZS5nZW8udHlwZS5WaWV3cG9ydEID4EED",
-            "EhMKBnJhdGluZxgOIAEoAUID4EEDEhwKD2dvb2dsZV9tYXBzX3VyaRgPIAEo",
-            "CUID4EEDEhgKC3dlYnNpdGVfdXJpGBAgASgJQgPgQQMSMwoHcmV2aWV3cxg1",
-            "IAMoCzIdLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5SZXZpZXdCA+BBAxJNChVy",
-            "ZWd1bGFyX29wZW5pbmdfaG91cnMYFSABKAsyKS5nb29nbGUubWFwcy5wbGFj",
-            "ZXMudjEuUGxhY2UuT3BlbmluZ0hvdXJzQgPgQQMSJAoSdXRjX29mZnNldF9t",
-            "aW51dGVzGBYgASgFQgPgQQNIAIgBARIxCgZwaG90b3MYNiADKAsyHC5nb29n",
-            "bGUubWFwcy5wbGFjZXMudjEuUGhvdG9CA+BBAxIfChJhZHJfZm9ybWF0X2Fk",
-            "ZHJlc3MYGCABKAlCA+BBAxJJCg9idXNpbmVzc19zdGF0dXMYGSABKA4yKy5n",
-            "b29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2UuQnVzaW5lc3NTdGF0dXNCA+BB",
-            "AxI7CgtwcmljZV9sZXZlbBgaIAEoDjIhLmdvb2dsZS5tYXBzLnBsYWNlcy52",
-            "MS5QcmljZUxldmVsQgPgQQMSQwoMYXR0cmlidXRpb25zGBsgAygLMiguZ29v",
-            "Z2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLkF0dHJpYnV0aW9uQgPgQQMSIwoR",
-            "dXNlcl9yYXRpbmdfY291bnQYHCABKAVCA+BBA0gBiAEBEh8KEmljb25fbWFz",
-            "a19iYXNlX3VyaRgdIAEoCUID4EEDEiIKFWljb25fYmFja2dyb3VuZF9jb2xv",
-            "chgeIAEoCUID4EEDEhkKB3Rha2VvdXQYISABKAhCA+BBA0gCiAEBEhoKCGRl",
-            "bGl2ZXJ5GCIgASgIQgPgQQNIA4gBARIZCgdkaW5lX2luGCMgASgIQgPgQQNI",
-            "BIgBARIhCg9jdXJic2lkZV9waWNrdXAYJCABKAhCA+BBA0gFiAEBEhwKCnJl",
-            "c2VydmFibGUYJiABKAhCA+BBA0gGiAEBEiIKEHNlcnZlc19icmVha2Zhc3QY",
-            "JyABKAhCA+BBA0gHiAEBEh4KDHNlcnZlc19sdW5jaBgoIAEoCEID4EEDSAiI",
-            "AQESHwoNc2VydmVzX2Rpbm5lchgpIAEoCEID4EEDSAmIAQESHQoLc2VydmVz",
-            "X2JlZXIYKiABKAhCA+BBA0gKiAEBEh0KC3NlcnZlc193aW5lGCsgASgIQgPg",
-            "QQNIC4gBARIfCg1zZXJ2ZXNfYnJ1bmNoGCwgASgIQgPgQQNIDIgBARIoChZz",
-            "ZXJ2ZXNfdmVnZXRhcmlhbl9mb29kGC0gASgIQgPgQQNIDYgBARJNChVjdXJy",
-            "ZW50X29wZW5pbmdfaG91cnMYLiABKAsyKS5nb29nbGUubWFwcy5wbGFjZXMu",
-            "djEuUGxhY2UuT3BlbmluZ0hvdXJzQgPgQQMSVwofY3VycmVudF9zZWNvbmRh",
-            "cnlfb3BlbmluZ19ob3VycxgvIAMoCzIpLmdvb2dsZS5tYXBzLnBsYWNlcy52",
-            "MS5QbGFjZS5PcGVuaW5nSG91cnNCA+BBAxJXCh9yZWd1bGFyX3NlY29uZGFy",
-            "eV9vcGVuaW5nX2hvdXJzGDEgAygLMikuZ29vZ2xlLm1hcHMucGxhY2VzLnYx",
-            "LlBsYWNlLk9wZW5pbmdIb3Vyc0ID4EEDEjoKEWVkaXRvcmlhbF9zdW1tYXJ5",
-            "GDQgASgLMhouZ29vZ2xlLnR5cGUuTG9jYWxpemVkVGV4dEID4EEDEiEKD291",
-            "dGRvb3Jfc2VhdGluZxg3IAEoCEID4EEDSA6IAQESHAoKbGl2ZV9tdXNpYxg4",
-            "IAEoCEID4EEDSA+IAQESIwoRbWVudV9mb3JfY2hpbGRyZW4YOSABKAhCA+BB",
-            "A0gQiAEBEiIKEHNlcnZlc19jb2NrdGFpbHMYOiABKAhCA+BBA0gRiAEBEiAK",
-            "DnNlcnZlc19kZXNzZXJ0GDsgASgIQgPgQQNIEogBARIfCg1zZXJ2ZXNfY29m",
-            "ZmVlGDwgASgIQgPgQQNIE4gBARIjChFnb29kX2Zvcl9jaGlsZHJlbhg+IAEo",
-            "CEID4EEDSBSIAQESHQoLYWxsb3dzX2RvZ3MYPyABKAhCA+BBA0gViAEBEhoK",
-            "CHJlc3Ryb29tGEAgASgIQgPgQQNIFogBARIhCg9nb29kX2Zvcl9ncm91cHMY",
-            "QSABKAhCA+BBA0gXiAEBEioKGGdvb2RfZm9yX3dhdGNoaW5nX3Nwb3J0cxhC",
-            "IAEoCEID4EEDSBiIAQESSQoPcGF5bWVudF9vcHRpb25zGEMgASgLMisuZ29v",
-            "Z2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLlBheW1lbnRPcHRpb25zQgPgQQMS",
-            "SQoPcGFya2luZ19vcHRpb25zGEYgASgLMisuZ29vZ2xlLm1hcHMucGxhY2Vz",
-            "LnYxLlBsYWNlLlBhcmtpbmdPcHRpb25zQgPgQQMSSgoQc3ViX2Rlc3RpbmF0",
-            "aW9ucxhHIAMoCzIrLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5TdWJE",
-            "ZXN0aW5hdGlvbkID4EEDEloKFWFjY2Vzc2liaWxpdHlfb3B0aW9ucxhIIAEo",
-            "CzIxLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5BY2Nlc3NpYmlsaXR5",
-            "T3B0aW9uc0ID4EEDSBmIAQESPQoMZnVlbF9vcHRpb25zGE4gASgLMiIuZ29v",
-            "Z2xlLm1hcHMucGxhY2VzLnYxLkZ1ZWxPcHRpb25zQgPgQQMSRgoRZXZfY2hh",
-            "cmdlX29wdGlvbnMYTyABKAsyJi5nb29nbGUubWFwcy5wbGFjZXMudjEuRVZD",
-            "aGFyZ2VPcHRpb25zQgPgQQMacwoQQWRkcmVzc0NvbXBvbmVudBIWCglsb25n",
-            "X3RleHQYASABKAlCA+BBAxIXCgpzaG9ydF90ZXh0GAIgASgJQgPgQQMSEgoF",
-            "dHlwZXMYAyADKAlCA+BBAxIaCg1sYW5ndWFnZV9jb2RlGAQgASgJQgPgQQMa",
-            "QAoIUGx1c0NvZGUSGAoLZ2xvYmFsX2NvZGUYASABKAlCA+BBAxIaCg1jb21w",
-            "b3VuZF9jb2RlGAIgASgJQgPgQQMa1QcKDE9wZW5pbmdIb3VycxIaCghvcGVu",
-            "X25vdxgBIAEoCEID4EEDSACIAQESRgoHcGVyaW9kcxgCIAMoCzIwLmdvb2ds",
-            "ZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5PcGVuaW5nSG91cnMuUGVyaW9kQgPg",
-            "QQMSIQoUd2Vla2RheV9kZXNjcmlwdGlvbnMYAyADKAlCA+BBAxJfChRzZWNv",
-            "bmRhcnlfaG91cnNfdHlwZRgEIAEoDjI8Lmdvb2dsZS5tYXBzLnBsYWNlcy52",
-            "MS5QbGFjZS5PcGVuaW5nSG91cnMuU2Vjb25kYXJ5SG91cnNUeXBlQgPgQQMS",
-            "TwoMc3BlY2lhbF9kYXlzGAUgAygLMjQuZ29vZ2xlLm1hcHMucGxhY2VzLnYx",
-            "LlBsYWNlLk9wZW5pbmdIb3Vycy5TcGVjaWFsRGF5QgPgQQMazAIKBlBlcmlv",
-            "ZBJJCgRvcGVuGAEgASgLMjYuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlBsYWNl",
-            "Lk9wZW5pbmdIb3Vycy5QZXJpb2QuUG9pbnRCA+BBAxJKCgVjbG9zZRgCIAEo",
-            "CzI2Lmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5PcGVuaW5nSG91cnMu",
-            "UGVyaW9kLlBvaW50QgPgQQMaqgEKBVBvaW50EhUKA2RheRgBIAEoBUID4EED",
-            "SACIAQESFgoEaG91chgCIAEoBUID4EEDSAGIAQESGAoGbWludXRlGAMgASgF",
-            "QgPgQQNIAogBARIkCgRkYXRlGAYgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZUID",
-            "4EEDEhYKCXRydW5jYXRlZBgFIAEoCEID4EEDQgYKBF9kYXlCBwoFX2hvdXJC",
-            "CQoHX21pbnV0ZRoyCgpTcGVjaWFsRGF5EiQKBGRhdGUYASABKAsyES5nb29n",
-            "bGUudHlwZS5EYXRlQgPgQQMi+wEKElNlY29uZGFyeUhvdXJzVHlwZRIkCiBT",
-            "RUNPTkRBUllfSE9VUlNfVFlQRV9VTlNQRUNJRklFRBAAEhEKDURSSVZFX1RI",
-            "Uk9VR0gQARIOCgpIQVBQWV9IT1VSEAISDAoIREVMSVZFUlkQAxILCgdUQUtF",
-            "T1VUEAQSCwoHS0lUQ0hFThAFEg0KCUJSRUFLRkFTVBAGEgkKBUxVTkNIEAcS",
-            "CgoGRElOTkVSEAgSCgoGQlJVTkNIEAkSCgoGUElDS1VQEAoSCgoGQUNDRVNT",
-            "EAsSEAoMU0VOSU9SX0hPVVJTEAwSGAoUT05MSU5FX1NFUlZJQ0VfSE9VUlMQ",
-            "DUILCglfb3Blbl9ub3caPwoLQXR0cmlidXRpb24SFQoIcHJvdmlkZXIYASAB",
-            "KAlCA+BBAxIZCgxwcm92aWRlcl91cmkYAiABKAlCA+BBAxrmAQoOUGF5bWVu",
-            "dE9wdGlvbnMSIQoUYWNjZXB0c19jcmVkaXRfY2FyZHMYASABKAhIAIgBARIg",
-            "ChNhY2NlcHRzX2RlYml0X2NhcmRzGAIgASgISAGIAQESHgoRYWNjZXB0c19j",
-            "YXNoX29ubHkYAyABKAhIAogBARIYCgthY2NlcHRzX25mYxgEIAEoCEgDiAEB",
-            "QhcKFV9hY2NlcHRzX2NyZWRpdF9jYXJkc0IWChRfYWNjZXB0c19kZWJpdF9j",
-            "YXJkc0IUChJfYWNjZXB0c19jYXNoX29ubHlCDgoMX2FjY2VwdHNfbmZjGo4D",
-            "Cg5QYXJraW5nT3B0aW9ucxIdChBmcmVlX3BhcmtpbmdfbG90GAEgASgISACI",
-            "AQESHQoQcGFpZF9wYXJraW5nX2xvdBgCIAEoCEgBiAEBEiAKE2ZyZWVfc3Ry",
-            "ZWV0X3BhcmtpbmcYAyABKAhIAogBARIgChNwYWlkX3N0cmVldF9wYXJraW5n",
-            "GAQgASgISAOIAQESGgoNdmFsZXRfcGFya2luZxgFIAEoCEgEiAEBEiAKE2Zy",
-            "ZWVfZ2FyYWdlX3BhcmtpbmcYBiABKAhIBYgBARIgChNwYWlkX2dhcmFnZV9w",
-            "YXJraW5nGAcgASgISAaIAQFCEwoRX2ZyZWVfcGFya2luZ19sb3RCEwoRX3Bh",
-            "aWRfcGFya2luZ19sb3RCFgoUX2ZyZWVfc3RyZWV0X3BhcmtpbmdCFgoUX3Bh",
-            "aWRfc3RyZWV0X3BhcmtpbmdCEAoOX3ZhbGV0X3BhcmtpbmdCFgoUX2ZyZWVf",
-            "Z2FyYWdlX3BhcmtpbmdCFgoUX3BhaWRfZ2FyYWdlX3BhcmtpbmcaTAoOU3Vi",
-            "RGVzdGluYXRpb24SLgoEbmFtZRgBIAEoCUIg+kEdChtwbGFjZXMuZ29vZ2xl",
-            "YXBpcy5jb20vUGxhY2USCgoCaWQYAiABKAkaZgoUQWNjZXNzaWJpbGl0eU9w",
-            "dGlvbnMSKwoed2hlZWxjaGFpcl9hY2Nlc3NpYmxlX2VudHJhbmNlGAIgASgI",
-            "SACIAQFCIQofX3doZWVsY2hhaXJfYWNjZXNzaWJsZV9lbnRyYW5jZSJyCg5C",
-            "dXNpbmVzc1N0YXR1cxIfChtCVVNJTkVTU19TVEFUVVNfVU5TUEVDSUZJRUQQ",
-            "ABIPCgtPUEVSQVRJT05BTBABEhYKEkNMT1NFRF9URU1QT1JBUklMWRACEhYK",
-            "EkNMT1NFRF9QRVJNQU5FTlRMWRADOkLqQT8KG3BsYWNlcy5nb29nbGVhcGlz",
-            "LmNvbS9QbGFjZRIRcGxhY2VzL3twbGFjZV9pZH0qBnBsYWNlczIFcGxhY2VC",
-            "FQoTX3V0Y19vZmZzZXRfbWludXRlc0IUChJfdXNlcl9yYXRpbmdfY291bnRC",
-            "CgoIX3Rha2VvdXRCCwoJX2RlbGl2ZXJ5QgoKCF9kaW5lX2luQhIKEF9jdXJi",
-            "c2lkZV9waWNrdXBCDQoLX3Jlc2VydmFibGVCEwoRX3NlcnZlc19icmVha2Zh",
-            "c3RCDwoNX3NlcnZlc19sdW5jaEIQCg5fc2VydmVzX2Rpbm5lckIOCgxfc2Vy",
-            "dmVzX2JlZXJCDgoMX3NlcnZlc193aW5lQhAKDl9zZXJ2ZXNfYnJ1bmNoQhkK",
-            "F19zZXJ2ZXNfdmVnZXRhcmlhbl9mb29kQhIKEF9vdXRkb29yX3NlYXRpbmdC",
-            "DQoLX2xpdmVfbXVzaWNCFAoSX21lbnVfZm9yX2NoaWxkcmVuQhMKEV9zZXJ2",
-            "ZXNfY29ja3RhaWxzQhEKD19zZXJ2ZXNfZGVzc2VydEIQCg5fc2VydmVzX2Nv",
-            "ZmZlZUIUChJfZ29vZF9mb3JfY2hpbGRyZW5CDgoMX2FsbG93c19kb2dzQgsK",
-            "CV9yZXN0cm9vbUISChBfZ29vZF9mb3JfZ3JvdXBzQhsKGV9nb29kX2Zvcl93",
-            "YXRjaGluZ19zcG9ydHNCGAoWX2FjY2Vzc2liaWxpdHlfb3B0aW9ucyqxAQoK",
-            "UHJpY2VMZXZlbBIbChdQUklDRV9MRVZFTF9VTlNQRUNJRklFRBAAEhQKEFBS",
-            "SUNFX0xFVkVMX0ZSRUUQARIbChdQUklDRV9MRVZFTF9JTkVYUEVOU0lWRRAC",
-            "EhgKFFBSSUNFX0xFVkVMX01PREVSQVRFEAMSGQoVUFJJQ0VfTEVWRUxfRVhQ",
-            "RU5TSVZFEAQSHgoaUFJJQ0VfTEVWRUxfVkVSWV9FWFBFTlNJVkUQBUKeAQoZ",
-            "Y29tLmdvb2dsZS5tYXBzLnBsYWNlcy52MUIKUGxhY2VQcm90b1ABWjdjbG91",
-            "ZC5nb29nbGUuY29tL2dvL21hcHMvcGxhY2VzL2FwaXYxL3BsYWNlc3BiO3Bs",
-            "YWNlc3Bi+AEBogIGR01QU1YxqgIVR29vZ2xlLk1hcHMuUGxhY2VzLlYxygIV",
-            "R29vZ2xlXE1hcHNcUGxhY2VzXFYxYgZwcm90bzM="));
+            "YXBzLnBsYWNlcy52MRoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxoeZ29v",
+            "Z2xlL2dlby90eXBlL3ZpZXdwb3J0LnByb3RvGidnb29nbGUvbWFwcy9wbGFj",
+            "ZXMvdjEvZXZfY2hhcmdpbmcucHJvdG8aKGdvb2dsZS9tYXBzL3BsYWNlcy92",
+            "MS9mdWVsX29wdGlvbnMucHJvdG8aIWdvb2dsZS9tYXBzL3BsYWNlcy92MS9w",
+            "aG90by5wcm90bxoiZ29vZ2xlL21hcHMvcGxhY2VzL3YxL3Jldmlldy5wcm90",
+            "bxoWZ29vZ2xlL3R5cGUvZGF0ZS5wcm90bxoYZ29vZ2xlL3R5cGUvbGF0bG5n",
+            "LnByb3RvGiBnb29nbGUvdHlwZS9sb2NhbGl6ZWRfdGV4dC5wcm90byLMKQoF",
+            "UGxhY2USDAoEbmFtZRgBIAEoCRIKCgJpZBgCIAEoCRIwCgxkaXNwbGF5X25h",
+            "bWUYHyABKAsyGi5nb29nbGUudHlwZS5Mb2NhbGl6ZWRUZXh0Eg0KBXR5cGVz",
+            "GAUgAygJEhQKDHByaW1hcnlfdHlwZRgyIAEoCRI9ChlwcmltYXJ5X3R5cGVf",
+            "ZGlzcGxheV9uYW1lGCAgASgLMhouZ29vZ2xlLnR5cGUuTG9jYWxpemVkVGV4",
+            "dBIdChVuYXRpb25hbF9waG9uZV9udW1iZXIYByABKAkSIgoaaW50ZXJuYXRp",
+            "b25hbF9waG9uZV9udW1iZXIYCCABKAkSGQoRZm9ybWF0dGVkX2FkZHJlc3MY",
+            "CSABKAkSHwoXc2hvcnRfZm9ybWF0dGVkX2FkZHJlc3MYMyABKAkSSQoSYWRk",
+            "cmVzc19jb21wb25lbnRzGAogAygLMi0uZ29vZ2xlLm1hcHMucGxhY2VzLnYx",
+            "LlBsYWNlLkFkZHJlc3NDb21wb25lbnQSOAoJcGx1c19jb2RlGAsgASgLMiUu",
+            "Z29vZ2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLlBsdXNDb2RlEiUKCGxvY2F0",
+            "aW9uGAwgASgLMhMuZ29vZ2xlLnR5cGUuTGF0TG5nEisKCHZpZXdwb3J0GA0g",
+            "ASgLMhkuZ29vZ2xlLmdlby50eXBlLlZpZXdwb3J0Eg4KBnJhdGluZxgOIAEo",
+            "ARIXCg9nb29nbGVfbWFwc191cmkYDyABKAkSEwoLd2Vic2l0ZV91cmkYECAB",
+            "KAkSLgoHcmV2aWV3cxg1IAMoCzIdLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5S",
+            "ZXZpZXcSSAoVcmVndWxhcl9vcGVuaW5nX2hvdXJzGBUgASgLMikuZ29vZ2xl",
+            "Lm1hcHMucGxhY2VzLnYxLlBsYWNlLk9wZW5pbmdIb3VycxIfChJ1dGNfb2Zm",
+            "c2V0X21pbnV0ZXMYFiABKAVIAIgBARIsCgZwaG90b3MYNiADKAsyHC5nb29n",
+            "bGUubWFwcy5wbGFjZXMudjEuUGhvdG8SGgoSYWRyX2Zvcm1hdF9hZGRyZXNz",
+            "GBggASgJEkQKD2J1c2luZXNzX3N0YXR1cxgZIAEoDjIrLmdvb2dsZS5tYXBz",
+            "LnBsYWNlcy52MS5QbGFjZS5CdXNpbmVzc1N0YXR1cxI2CgtwcmljZV9sZXZl",
+            "bBgaIAEoDjIhLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QcmljZUxldmVsEj4K",
+            "DGF0dHJpYnV0aW9ucxgbIAMoCzIoLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5Q",
+            "bGFjZS5BdHRyaWJ1dGlvbhIeChF1c2VyX3JhdGluZ19jb3VudBgcIAEoBUgB",
+            "iAEBEhoKEmljb25fbWFza19iYXNlX3VyaRgdIAEoCRIdChVpY29uX2JhY2tn",
+            "cm91bmRfY29sb3IYHiABKAkSFAoHdGFrZW91dBghIAEoCEgCiAEBEhUKCGRl",
+            "bGl2ZXJ5GCIgASgISAOIAQESFAoHZGluZV9pbhgjIAEoCEgEiAEBEhwKD2N1",
+            "cmJzaWRlX3BpY2t1cBgkIAEoCEgFiAEBEhcKCnJlc2VydmFibGUYJiABKAhI",
+            "BogBARIdChBzZXJ2ZXNfYnJlYWtmYXN0GCcgASgISAeIAQESGQoMc2VydmVz",
+            "X2x1bmNoGCggASgISAiIAQESGgoNc2VydmVzX2Rpbm5lchgpIAEoCEgJiAEB",
+            "EhgKC3NlcnZlc19iZWVyGCogASgISAqIAQESGAoLc2VydmVzX3dpbmUYKyAB",
+            "KAhIC4gBARIaCg1zZXJ2ZXNfYnJ1bmNoGCwgASgISAyIAQESIwoWc2VydmVz",
+            "X3ZlZ2V0YXJpYW5fZm9vZBgtIAEoCEgNiAEBEkgKFWN1cnJlbnRfb3Blbmlu",
+            "Z19ob3VycxguIAEoCzIpLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5P",
+            "cGVuaW5nSG91cnMSUgofY3VycmVudF9zZWNvbmRhcnlfb3BlbmluZ19ob3Vy",
+            "cxgvIAMoCzIpLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5PcGVuaW5n",
+            "SG91cnMSUgofcmVndWxhcl9zZWNvbmRhcnlfb3BlbmluZ19ob3VycxgxIAMo",
+            "CzIpLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QbGFjZS5PcGVuaW5nSG91cnMS",
+            "NQoRZWRpdG9yaWFsX3N1bW1hcnkYNCABKAsyGi5nb29nbGUudHlwZS5Mb2Nh",
+            "bGl6ZWRUZXh0EhwKD291dGRvb3Jfc2VhdGluZxg3IAEoCEgOiAEBEhcKCmxp",
+            "dmVfbXVzaWMYOCABKAhID4gBARIeChFtZW51X2Zvcl9jaGlsZHJlbhg5IAEo",
+            "CEgQiAEBEh0KEHNlcnZlc19jb2NrdGFpbHMYOiABKAhIEYgBARIbCg5zZXJ2",
+            "ZXNfZGVzc2VydBg7IAEoCEgSiAEBEhoKDXNlcnZlc19jb2ZmZWUYPCABKAhI",
+            "E4gBARIeChFnb29kX2Zvcl9jaGlsZHJlbhg+IAEoCEgUiAEBEhgKC2FsbG93",
+            "c19kb2dzGD8gASgISBWIAQESFQoIcmVzdHJvb20YQCABKAhIFogBARIcCg9n",
+            "b29kX2Zvcl9ncm91cHMYQSABKAhIF4gBARIlChhnb29kX2Zvcl93YXRjaGlu",
+            "Z19zcG9ydHMYQiABKAhIGIgBARJECg9wYXltZW50X29wdGlvbnMYQyABKAsy",
+            "Ky5nb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2UuUGF5bWVudE9wdGlvbnMS",
+            "RAoPcGFya2luZ19vcHRpb25zGEYgASgLMisuZ29vZ2xlLm1hcHMucGxhY2Vz",
+            "LnYxLlBsYWNlLlBhcmtpbmdPcHRpb25zEkUKEHN1Yl9kZXN0aW5hdGlvbnMY",
+            "RyADKAsyKy5nb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2UuU3ViRGVzdGlu",
+            "YXRpb24SVQoVYWNjZXNzaWJpbGl0eV9vcHRpb25zGEggASgLMjEuZ29vZ2xl",
+            "Lm1hcHMucGxhY2VzLnYxLlBsYWNlLkFjY2Vzc2liaWxpdHlPcHRpb25zSBmI",
+            "AQESOAoMZnVlbF9vcHRpb25zGE4gASgLMiIuZ29vZ2xlLm1hcHMucGxhY2Vz",
+            "LnYxLkZ1ZWxPcHRpb25zEkEKEWV2X2NoYXJnZV9vcHRpb25zGE8gASgLMiYu",
+            "Z29vZ2xlLm1hcHMucGxhY2VzLnYxLkVWQ2hhcmdlT3B0aW9ucxpfChBBZGRy",
+            "ZXNzQ29tcG9uZW50EhEKCWxvbmdfdGV4dBgBIAEoCRISCgpzaG9ydF90ZXh0",
+            "GAIgASgJEg0KBXR5cGVzGAMgAygJEhUKDWxhbmd1YWdlX2NvZGUYBCABKAka",
+            "NgoIUGx1c0NvZGUSEwoLZ2xvYmFsX2NvZGUYASABKAkSFQoNY29tcG91bmRf",
+            "Y29kZRgCIAEoCRqUBwoMT3BlbmluZ0hvdXJzEhUKCG9wZW5fbm93GAEgASgI",
+            "SACIAQESQQoHcGVyaW9kcxgCIAMoCzIwLmdvb2dsZS5tYXBzLnBsYWNlcy52",
+            "MS5QbGFjZS5PcGVuaW5nSG91cnMuUGVyaW9kEhwKFHdlZWtkYXlfZGVzY3Jp",
+            "cHRpb25zGAMgAygJEloKFHNlY29uZGFyeV9ob3Vyc190eXBlGAQgASgOMjwu",
+            "Z29vZ2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLk9wZW5pbmdIb3Vycy5TZWNv",
+            "bmRhcnlIb3Vyc1R5cGUSSgoMc3BlY2lhbF9kYXlzGAUgAygLMjQuZ29vZ2xl",
+            "Lm1hcHMucGxhY2VzLnYxLlBsYWNlLk9wZW5pbmdIb3Vycy5TcGVjaWFsRGF5",
+            "GqkCCgZQZXJpb2QSRAoEb3BlbhgBIAEoCzI2Lmdvb2dsZS5tYXBzLnBsYWNl",
+            "cy52MS5QbGFjZS5PcGVuaW5nSG91cnMuUGVyaW9kLlBvaW50EkUKBWNsb3Nl",
+            "GAIgASgLMjYuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlBsYWNlLk9wZW5pbmdI",
+            "b3Vycy5QZXJpb2QuUG9pbnQakQEKBVBvaW50EhAKA2RheRgBIAEoBUgAiAEB",
+            "EhEKBGhvdXIYAiABKAVIAYgBARITCgZtaW51dGUYAyABKAVIAogBARIfCgRk",
+            "YXRlGAYgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZRIRCgl0cnVuY2F0ZWQYBSAB",
+            "KAhCBgoEX2RheUIHCgVfaG91ckIJCgdfbWludXRlGi0KClNwZWNpYWxEYXkS",
+            "HwoEZGF0ZRgBIAEoCzIRLmdvb2dsZS50eXBlLkRhdGUi+wEKElNlY29uZGFy",
+            "eUhvdXJzVHlwZRIkCiBTRUNPTkRBUllfSE9VUlNfVFlQRV9VTlNQRUNJRklF",
+            "RBAAEhEKDURSSVZFX1RIUk9VR0gQARIOCgpIQVBQWV9IT1VSEAISDAoIREVM",
+            "SVZFUlkQAxILCgdUQUtFT1VUEAQSCwoHS0lUQ0hFThAFEg0KCUJSRUFLRkFT",
+            "VBAGEgkKBUxVTkNIEAcSCgoGRElOTkVSEAgSCgoGQlJVTkNIEAkSCgoGUElD",
+            "S1VQEAoSCgoGQUNDRVNTEAsSEAoMU0VOSU9SX0hPVVJTEAwSGAoUT05MSU5F",
+            "X1NFUlZJQ0VfSE9VUlMQDUILCglfb3Blbl9ub3caNQoLQXR0cmlidXRpb24S",
+            "EAoIcHJvdmlkZXIYASABKAkSFAoMcHJvdmlkZXJfdXJpGAIgASgJGuYBCg5Q",
+            "YXltZW50T3B0aW9ucxIhChRhY2NlcHRzX2NyZWRpdF9jYXJkcxgBIAEoCEgA",
+            "iAEBEiAKE2FjY2VwdHNfZGViaXRfY2FyZHMYAiABKAhIAYgBARIeChFhY2Nl",
+            "cHRzX2Nhc2hfb25seRgDIAEoCEgCiAEBEhgKC2FjY2VwdHNfbmZjGAQgASgI",
+            "SAOIAQFCFwoVX2FjY2VwdHNfY3JlZGl0X2NhcmRzQhYKFF9hY2NlcHRzX2Rl",
+            "Yml0X2NhcmRzQhQKEl9hY2NlcHRzX2Nhc2hfb25seUIOCgxfYWNjZXB0c19u",
+            "ZmMajgMKDlBhcmtpbmdPcHRpb25zEh0KEGZyZWVfcGFya2luZ19sb3QYASAB",
+            "KAhIAIgBARIdChBwYWlkX3BhcmtpbmdfbG90GAIgASgISAGIAQESIAoTZnJl",
+            "ZV9zdHJlZXRfcGFya2luZxgDIAEoCEgCiAEBEiAKE3BhaWRfc3RyZWV0X3Bh",
+            "cmtpbmcYBCABKAhIA4gBARIaCg12YWxldF9wYXJraW5nGAUgASgISASIAQES",
+            "IAoTZnJlZV9nYXJhZ2VfcGFya2luZxgGIAEoCEgFiAEBEiAKE3BhaWRfZ2Fy",
+            "YWdlX3BhcmtpbmcYByABKAhIBogBAUITChFfZnJlZV9wYXJraW5nX2xvdEIT",
+            "ChFfcGFpZF9wYXJraW5nX2xvdEIWChRfZnJlZV9zdHJlZXRfcGFya2luZ0IW",
+            "ChRfcGFpZF9zdHJlZXRfcGFya2luZ0IQCg5fdmFsZXRfcGFya2luZ0IWChRf",
+            "ZnJlZV9nYXJhZ2VfcGFya2luZ0IWChRfcGFpZF9nYXJhZ2VfcGFya2luZxpM",
+            "Cg5TdWJEZXN0aW5hdGlvbhIuCgRuYW1lGAEgASgJQiD6QR0KG3BsYWNlcy5n",
+            "b29nbGVhcGlzLmNvbS9QbGFjZRIKCgJpZBgCIAEoCRrSAgoUQWNjZXNzaWJp",
+            "bGl0eU9wdGlvbnMSKgodd2hlZWxjaGFpcl9hY2Nlc3NpYmxlX3BhcmtpbmcY",
+            "ASABKAhIAIgBARIrCh53aGVlbGNoYWlyX2FjY2Vzc2libGVfZW50cmFuY2UY",
+            "AiABKAhIAYgBARIrCh53aGVlbGNoYWlyX2FjY2Vzc2libGVfcmVzdHJvb20Y",
+            "AyABKAhIAogBARIqCh13aGVlbGNoYWlyX2FjY2Vzc2libGVfc2VhdGluZxgE",
+            "IAEoCEgDiAEBQiAKHl93aGVlbGNoYWlyX2FjY2Vzc2libGVfcGFya2luZ0Ih",
+            "Ch9fd2hlZWxjaGFpcl9hY2Nlc3NpYmxlX2VudHJhbmNlQiEKH193aGVlbGNo",
+            "YWlyX2FjY2Vzc2libGVfcmVzdHJvb21CIAoeX3doZWVsY2hhaXJfYWNjZXNz",
+            "aWJsZV9zZWF0aW5nInIKDkJ1c2luZXNzU3RhdHVzEh8KG0JVU0lORVNTX1NU",
+            "QVRVU19VTlNQRUNJRklFRBAAEg8KC09QRVJBVElPTkFMEAESFgoSQ0xPU0VE",
+            "X1RFTVBPUkFSSUxZEAISFgoSQ0xPU0VEX1BFUk1BTkVOVExZEAM6QupBPwob",
+            "cGxhY2VzLmdvb2dsZWFwaXMuY29tL1BsYWNlEhFwbGFjZXMve3BsYWNlX2lk",
+            "fSoGcGxhY2VzMgVwbGFjZUIVChNfdXRjX29mZnNldF9taW51dGVzQhQKEl91",
+            "c2VyX3JhdGluZ19jb3VudEIKCghfdGFrZW91dEILCglfZGVsaXZlcnlCCgoI",
+            "X2RpbmVfaW5CEgoQX2N1cmJzaWRlX3BpY2t1cEINCgtfcmVzZXJ2YWJsZUIT",
+            "ChFfc2VydmVzX2JyZWFrZmFzdEIPCg1fc2VydmVzX2x1bmNoQhAKDl9zZXJ2",
+            "ZXNfZGlubmVyQg4KDF9zZXJ2ZXNfYmVlckIOCgxfc2VydmVzX3dpbmVCEAoO",
+            "X3NlcnZlc19icnVuY2hCGQoXX3NlcnZlc192ZWdldGFyaWFuX2Zvb2RCEgoQ",
+            "X291dGRvb3Jfc2VhdGluZ0INCgtfbGl2ZV9tdXNpY0IUChJfbWVudV9mb3Jf",
+            "Y2hpbGRyZW5CEwoRX3NlcnZlc19jb2NrdGFpbHNCEQoPX3NlcnZlc19kZXNz",
+            "ZXJ0QhAKDl9zZXJ2ZXNfY29mZmVlQhQKEl9nb29kX2Zvcl9jaGlsZHJlbkIO",
+            "CgxfYWxsb3dzX2RvZ3NCCwoJX3Jlc3Ryb29tQhIKEF9nb29kX2Zvcl9ncm91",
+            "cHNCGwoZX2dvb2RfZm9yX3dhdGNoaW5nX3Nwb3J0c0IYChZfYWNjZXNzaWJp",
+            "bGl0eV9vcHRpb25zKrEBCgpQcmljZUxldmVsEhsKF1BSSUNFX0xFVkVMX1VO",
+            "U1BFQ0lGSUVEEAASFAoQUFJJQ0VfTEVWRUxfRlJFRRABEhsKF1BSSUNFX0xF",
+            "VkVMX0lORVhQRU5TSVZFEAISGAoUUFJJQ0VfTEVWRUxfTU9ERVJBVEUQAxIZ",
+            "ChVQUklDRV9MRVZFTF9FWFBFTlNJVkUQBBIeChpQUklDRV9MRVZFTF9WRVJZ",
+            "X0VYUEVOU0lWRRAFQp4BChljb20uZ29vZ2xlLm1hcHMucGxhY2VzLnYxQgpQ",
+            "bGFjZVByb3RvUAFaN2Nsb3VkLmdvb2dsZS5jb20vZ28vbWFwcy9wbGFjZXMv",
+            "YXBpdjEvcGxhY2VzcGI7cGxhY2VzcGL4AQGiAgZHTVBTVjGqAhVHb29nbGUu",
+            "TWFwcy5QbGFjZXMuVjHKAhVHb29nbGVcTWFwc1xQbGFjZXNcVjFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Geo.Type.ViewportReflection.Descriptor, global::Google.Maps.Places.V1.EvChargingReflection.Descriptor, global::Google.Maps.Places.V1.FuelOptionsReflection.Descriptor, global::Google.Maps.Places.V1.PhotoReflection.Descriptor, global::Google.Maps.Places.V1.ReviewReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, global::Google.Type.LocalizedTextReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Geo.Type.ViewportReflection.Descriptor, global::Google.Maps.Places.V1.EvChargingReflection.Descriptor, global::Google.Maps.Places.V1.FuelOptionsReflection.Descriptor, global::Google.Maps.Places.V1.PhotoReflection.Descriptor, global::Google.Maps.Places.V1.ReviewReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, global::Google.Type.LocalizedTextReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Maps.Places.V1.PriceLevel), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place), global::Google.Maps.Places.V1.Place.Parser, new[]{ "Name", "Id", "DisplayName", "Types_", "NationalPhoneNumber", "InternationalPhoneNumber", "FormattedAddress", "AddressComponents", "PlusCode", "Location", "Viewport", "Rating", "GoogleMapsUri", "WebsiteUri", "Reviews", "RegularOpeningHours", "UtcOffsetMinutes", "Photos", "AdrFormatAddress", "BusinessStatus", "PriceLevel", "Attributions", "UserRatingCount", "IconMaskBaseUri", "IconBackgroundColor", "Takeout", "Delivery", "DineIn", "CurbsidePickup", "Reservable", "ServesBreakfast", "ServesLunch", "ServesDinner", "ServesBeer", "ServesWine", "ServesBrunch", "ServesVegetarianFood", "CurrentOpeningHours", "CurrentSecondaryOpeningHours", "RegularSecondaryOpeningHours", "EditorialSummary", "OutdoorSeating", "LiveMusic", "MenuForChildren", "ServesCocktails", "ServesDessert", "ServesCoffee", "GoodForChildren", "AllowsDogs", "Restroom", "GoodForGroups", "GoodForWatchingSports", "PaymentOptions", "ParkingOptions", "SubDestinations", "AccessibilityOptions", "FuelOptions", "EvChargeOptions" }, new[]{ "UtcOffsetMinutes", "UserRatingCount", "Takeout", "Delivery", "DineIn", "CurbsidePickup", "Reservable", "ServesBreakfast", "ServesLunch", "ServesDinner", "ServesBeer", "ServesWine", "ServesBrunch", "ServesVegetarianFood", "OutdoorSeating", "LiveMusic", "MenuForChildren", "ServesCocktails", "ServesDessert", "ServesCoffee", "GoodForChildren", "AllowsDogs", "Restroom", "GoodForGroups", "GoodForWatchingSports", "AccessibilityOptions" }, new[]{ typeof(global::Google.Maps.Places.V1.Place.Types.BusinessStatus) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.AddressComponent), global::Google.Maps.Places.V1.Place.Types.AddressComponent.Parser, new[]{ "LongText", "ShortText", "Types_", "LanguageCode" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place), global::Google.Maps.Places.V1.Place.Parser, new[]{ "Name", "Id", "DisplayName", "Types_", "PrimaryType", "PrimaryTypeDisplayName", "NationalPhoneNumber", "InternationalPhoneNumber", "FormattedAddress", "ShortFormattedAddress", "AddressComponents", "PlusCode", "Location", "Viewport", "Rating", "GoogleMapsUri", "WebsiteUri", "Reviews", "RegularOpeningHours", "UtcOffsetMinutes", "Photos", "AdrFormatAddress", "BusinessStatus", "PriceLevel", "Attributions", "UserRatingCount", "IconMaskBaseUri", "IconBackgroundColor", "Takeout", "Delivery", "DineIn", "CurbsidePickup", "Reservable", "ServesBreakfast", "ServesLunch", "ServesDinner", "ServesBeer", "ServesWine", "ServesBrunch", "ServesVegetarianFood", "CurrentOpeningHours", "CurrentSecondaryOpeningHours", "RegularSecondaryOpeningHours", "EditorialSummary", "OutdoorSeating", "LiveMusic", "MenuForChildren", "ServesCocktails", "ServesDessert", "ServesCoffee", "GoodForChildren", "AllowsDogs", "Restroom", "GoodForGroups", "GoodForWatchingSports", "PaymentOptions", "ParkingOptions", "SubDestinations", "AccessibilityOptions", "FuelOptions", "EvChargeOptions" }, new[]{ "UtcOffsetMinutes", "UserRatingCount", "Takeout", "Delivery", "DineIn", "CurbsidePickup", "Reservable", "ServesBreakfast", "ServesLunch", "ServesDinner", "ServesBeer", "ServesWine", "ServesBrunch", "ServesVegetarianFood", "OutdoorSeating", "LiveMusic", "MenuForChildren", "ServesCocktails", "ServesDessert", "ServesCoffee", "GoodForChildren", "AllowsDogs", "Restroom", "GoodForGroups", "GoodForWatchingSports", "AccessibilityOptions" }, new[]{ typeof(global::Google.Maps.Places.V1.Place.Types.BusinessStatus) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.AddressComponent), global::Google.Maps.Places.V1.Place.Types.AddressComponent.Parser, new[]{ "LongText", "ShortText", "Types_", "LanguageCode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.PlusCode), global::Google.Maps.Places.V1.Place.Types.PlusCode.Parser, new[]{ "GlobalCode", "CompoundCode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.OpeningHours), global::Google.Maps.Places.V1.Place.Types.OpeningHours.Parser, new[]{ "OpenNow", "Periods", "WeekdayDescriptions", "SecondaryHoursType", "SpecialDays" }, new[]{ "OpenNow" }, new[]{ typeof(global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SecondaryHoursType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period), global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period.Parser, new[]{ "Open", "Close" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period.Types.Point), global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period.Types.Point.Parser, new[]{ "Day", "Hour", "Minute", "Date", "Truncated" }, new[]{ "Day", "Hour", "Minute" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SpecialDay), global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SpecialDay.Parser, new[]{ "Date" }, null, null, null, null)}),
@@ -171,7 +170,7 @@ namespace Google.Maps.Places.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.PaymentOptions), global::Google.Maps.Places.V1.Place.Types.PaymentOptions.Parser, new[]{ "AcceptsCreditCards", "AcceptsDebitCards", "AcceptsCashOnly", "AcceptsNfc" }, new[]{ "AcceptsCreditCards", "AcceptsDebitCards", "AcceptsCashOnly", "AcceptsNfc" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.ParkingOptions), global::Google.Maps.Places.V1.Place.Types.ParkingOptions.Parser, new[]{ "FreeParkingLot", "PaidParkingLot", "FreeStreetParking", "PaidStreetParking", "ValetParking", "FreeGarageParking", "PaidGarageParking" }, new[]{ "FreeParkingLot", "PaidParkingLot", "FreeStreetParking", "PaidStreetParking", "ValetParking", "FreeGarageParking", "PaidGarageParking" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.SubDestination), global::Google.Maps.Places.V1.Place.Types.SubDestination.Parser, new[]{ "Name", "Id" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.AccessibilityOptions), global::Google.Maps.Places.V1.Place.Types.AccessibilityOptions.Parser, new[]{ "WheelchairAccessibleEntrance" }, new[]{ "WheelchairAccessibleEntrance" }, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Place.Types.AccessibilityOptions), global::Google.Maps.Places.V1.Place.Types.AccessibilityOptions.Parser, new[]{ "WheelchairAccessibleParking", "WheelchairAccessibleEntrance", "WheelchairAccessibleRestroom", "WheelchairAccessibleSeating" }, new[]{ "WheelchairAccessibleParking", "WheelchairAccessibleEntrance", "WheelchairAccessibleRestroom", "WheelchairAccessibleSeating" }, null, null, null)})
           }));
     }
     #endregion
@@ -254,9 +253,12 @@ namespace Google.Maps.Places.V1 {
       id_ = other.id_;
       displayName_ = other.displayName_ != null ? other.displayName_.Clone() : null;
       types_ = other.types_.Clone();
+      primaryType_ = other.primaryType_;
+      primaryTypeDisplayName_ = other.primaryTypeDisplayName_ != null ? other.primaryTypeDisplayName_.Clone() : null;
       nationalPhoneNumber_ = other.nationalPhoneNumber_;
       internationalPhoneNumber_ = other.internationalPhoneNumber_;
       formattedAddress_ = other.formattedAddress_;
+      shortFormattedAddress_ = other.shortFormattedAddress_;
       addressComponents_ = other.addressComponents_.Clone();
       plusCode_ = other.plusCode_ != null ? other.plusCode_.Clone() : null;
       location_ = other.location_ != null ? other.location_.Clone() : null;
@@ -321,8 +323,8 @@ namespace Google.Maps.Places.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. An ID representing this place which may be used to look up
-    /// this place again (a.k.a. the API "resource" name: places/&lt;place_id>).
+    /// An ID representing this place which may be used to look up this place
+    /// again (a.k.a. the API "resource" name: places/place_id).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -337,7 +339,7 @@ namespace Google.Maps.Places.V1 {
     public const int IdFieldNumber = 2;
     private string id_ = "";
     /// <summary>
-    /// Output only. The unique identifier of a place.
+    /// The unique identifier of a place.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -352,9 +354,8 @@ namespace Google.Maps.Places.V1 {
     public const int DisplayNameFieldNumber = 31;
     private global::Google.Type.LocalizedText displayName_;
     /// <summary>
-    /// Output only. The localized name of the place, suitable as a short
-    /// human-readable description. For example, "Google Sydney", "Starbucks",
-    /// "Pyrmont", etc.
+    /// The localized name of the place, suitable as a short human-readable
+    /// description. For example, "Google Sydney", "Starbucks", "Pyrmont", etc.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -371,8 +372,10 @@ namespace Google.Maps.Places.V1 {
         = pb::FieldCodec.ForString(42);
     private readonly pbc::RepeatedField<string> types_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Output only. A set of type tags for this result. For example, "political"
-    /// and "locality".
+    /// A set of type tags for this result. For example, "political" and
+    /// "locality".  For the complete list of possible values, see Table A and
+    /// Table B at
+    /// https://developers.google.com/maps/documentation/places/web-service/place-types
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -380,12 +383,48 @@ namespace Google.Maps.Places.V1 {
       get { return types_; }
     }
 
+    /// <summary>Field number for the "primary_type" field.</summary>
+    public const int PrimaryTypeFieldNumber = 50;
+    private string primaryType_ = "";
+    /// <summary>
+    /// The primary type of the given result. This type must one of the Places API
+    /// supported types. For example, "restaurant", "cafe", "airport", etc.  A
+    /// place can only have a single primary type.  For the complete list of
+    /// possible values, see Table A and Table B at
+    /// https://developers.google.com/maps/documentation/places/web-service/place-types
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PrimaryType {
+      get { return primaryType_; }
+      set {
+        primaryType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "primary_type_display_name" field.</summary>
+    public const int PrimaryTypeDisplayNameFieldNumber = 32;
+    private global::Google.Type.LocalizedText primaryTypeDisplayName_;
+    /// <summary>
+    /// The display name of the primary type, localized to the request language if
+    /// applicable.  For the complete list of possible values, see Table A and
+    /// Table B at
+    /// https://developers.google.com/maps/documentation/places/web-service/place-types
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Type.LocalizedText PrimaryTypeDisplayName {
+      get { return primaryTypeDisplayName_; }
+      set {
+        primaryTypeDisplayName_ = value;
+      }
+    }
+
     /// <summary>Field number for the "national_phone_number" field.</summary>
     public const int NationalPhoneNumberFieldNumber = 7;
     private string nationalPhoneNumber_ = "";
     /// <summary>
-    /// Output only. A human-readable phone number for the place, in national
-    /// format.
+    /// A human-readable phone number for the place, in national format.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -400,8 +439,7 @@ namespace Google.Maps.Places.V1 {
     public const int InternationalPhoneNumberFieldNumber = 8;
     private string internationalPhoneNumber_ = "";
     /// <summary>
-    /// Output only. A human-readable phone number for the place, in international
-    /// format.
+    /// A human-readable phone number for the place, in international format.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -416,7 +454,7 @@ namespace Google.Maps.Places.V1 {
     public const int FormattedAddressFieldNumber = 9;
     private string formattedAddress_ = "";
     /// <summary>
-    /// Output only. A full, human-readable address for this place.
+    /// A full, human-readable address for this place.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -427,13 +465,41 @@ namespace Google.Maps.Places.V1 {
       }
     }
 
+    /// <summary>Field number for the "short_formatted_address" field.</summary>
+    public const int ShortFormattedAddressFieldNumber = 51;
+    private string shortFormattedAddress_ = "";
+    /// <summary>
+    /// A short, human-readable address for this place.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ShortFormattedAddress {
+      get { return shortFormattedAddress_; }
+      set {
+        shortFormattedAddress_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "address_components" field.</summary>
     public const int AddressComponentsFieldNumber = 10;
     private static readonly pb::FieldCodec<global::Google.Maps.Places.V1.Place.Types.AddressComponent> _repeated_addressComponents_codec
         = pb::FieldCodec.ForMessage(82, global::Google.Maps.Places.V1.Place.Types.AddressComponent.Parser);
     private readonly pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.AddressComponent> addressComponents_ = new pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.AddressComponent>();
     /// <summary>
-    /// Output only. Repeated components for each locality level.
+    /// Repeated components for each locality level.
+    /// Note the following facts about the address_components[] array:
+    /// - The array of address components may contain more components than the
+    /// formatted_address.
+    /// - The array does not necessarily include all the political entities that
+    /// contain an address, apart from those included in the formatted_address. To
+    /// retrieve all the political entities that contain a specific address, you
+    /// should use reverse geocoding, passing the latitude/longitude of the address
+    /// as a parameter to the request.
+    /// - The format of the response is not guaranteed to remain the same between
+    /// requests. In particular, the number of address_components varies based on
+    /// the address requested and can change over time for the same address. A
+    /// component can change position in the array. The type of the component can
+    /// change. A particular component may be missing in a later response.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -445,7 +511,7 @@ namespace Google.Maps.Places.V1 {
     public const int PlusCodeFieldNumber = 11;
     private global::Google.Maps.Places.V1.Place.Types.PlusCode plusCode_;
     /// <summary>
-    /// Output only. Plus code of the place location lat/long.
+    /// Plus code of the place location lat/long.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -460,7 +526,7 @@ namespace Google.Maps.Places.V1 {
     public const int LocationFieldNumber = 12;
     private global::Google.Type.LatLng location_;
     /// <summary>
-    /// Output only. The position of this place.
+    /// The position of this place.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -475,8 +541,7 @@ namespace Google.Maps.Places.V1 {
     public const int ViewportFieldNumber = 13;
     private global::Google.Geo.Type.Viewport viewport_;
     /// <summary>
-    /// Output only. A viewport suitable for displaying the place on an
-    /// average-sized map.
+    /// A viewport suitable for displaying the place on an average-sized map.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -491,8 +556,7 @@ namespace Google.Maps.Places.V1 {
     public const int RatingFieldNumber = 14;
     private double rating_;
     /// <summary>
-    /// Output only. A rating between 1.0 and 5.0, based on user reviews of this
-    /// place.
+    /// A rating between 1.0 and 5.0, based on user reviews of this place.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -507,7 +571,7 @@ namespace Google.Maps.Places.V1 {
     public const int GoogleMapsUriFieldNumber = 15;
     private string googleMapsUri_ = "";
     /// <summary>
-    /// Output only. A URL providing more information about this place.
+    /// A URL providing more information about this place.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -522,10 +586,10 @@ namespace Google.Maps.Places.V1 {
     public const int WebsiteUriFieldNumber = 16;
     private string websiteUri_ = "";
     /// <summary>
-    /// Output only. The authoritative website for this place, e.g. a business'
-    /// homepage. Note that for places that are part of a chain (e.g. an IKEA
-    /// store), this will usually be the website for the individual store, not the
-    /// overall chain.
+    /// The authoritative website for this place, e.g. a business' homepage.
+    /// Note that for places that are part of a chain (e.g. an IKEA store), this
+    /// will usually be the website for the individual store, not the overall
+    /// chain.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -542,7 +606,7 @@ namespace Google.Maps.Places.V1 {
         = pb::FieldCodec.ForMessage(426, global::Google.Maps.Places.V1.Review.Parser);
     private readonly pbc::RepeatedField<global::Google.Maps.Places.V1.Review> reviews_ = new pbc::RepeatedField<global::Google.Maps.Places.V1.Review>();
     /// <summary>
-    /// Output only. List of reviews about this place.
+    /// List of reviews about this place, sorted by relevance.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -554,7 +618,7 @@ namespace Google.Maps.Places.V1 {
     public const int RegularOpeningHoursFieldNumber = 21;
     private global::Google.Maps.Places.V1.Place.Types.OpeningHours regularOpeningHours_;
     /// <summary>
-    /// Output only. The regular hours of operation.
+    /// The regular hours of operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -571,9 +635,9 @@ namespace Google.Maps.Places.V1 {
 
     private int utcOffsetMinutes_;
     /// <summary>
-    /// Output only. Number of minutes this place's timezone is currently offset
-    /// from UTC. This is expressed in minutes to support timezones that are offset
-    /// by fractions of an hour, e.g. X hours and 15 minutes.
+    /// Number of minutes this place's timezone is currently offset from UTC.
+    /// This is expressed in minutes to support timezones that are offset by
+    /// fractions of an hour, e.g. X hours and 15 minutes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -603,7 +667,7 @@ namespace Google.Maps.Places.V1 {
         = pb::FieldCodec.ForMessage(434, global::Google.Maps.Places.V1.Photo.Parser);
     private readonly pbc::RepeatedField<global::Google.Maps.Places.V1.Photo> photos_ = new pbc::RepeatedField<global::Google.Maps.Places.V1.Photo>();
     /// <summary>
-    /// Output only. Information (including references) about photos of this place.
+    /// Information (including references) about photos of this place.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -615,8 +679,7 @@ namespace Google.Maps.Places.V1 {
     public const int AdrFormatAddressFieldNumber = 24;
     private string adrFormatAddress_ = "";
     /// <summary>
-    /// Output only. The place's address in adr microformat:
-    /// http://microformats.org/wiki/adr.
+    /// The place's address in adr microformat: http://microformats.org/wiki/adr.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -631,7 +694,7 @@ namespace Google.Maps.Places.V1 {
     public const int BusinessStatusFieldNumber = 25;
     private global::Google.Maps.Places.V1.Place.Types.BusinessStatus businessStatus_ = global::Google.Maps.Places.V1.Place.Types.BusinessStatus.Unspecified;
     /// <summary>
-    /// Output only. The business status for the place.
+    /// The business status for the place.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -646,7 +709,7 @@ namespace Google.Maps.Places.V1 {
     public const int PriceLevelFieldNumber = 26;
     private global::Google.Maps.Places.V1.PriceLevel priceLevel_ = global::Google.Maps.Places.V1.PriceLevel.Unspecified;
     /// <summary>
-    /// Output only. Price level of the place.
+    /// Price level of the place.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -663,7 +726,7 @@ namespace Google.Maps.Places.V1 {
         = pb::FieldCodec.ForMessage(218, global::Google.Maps.Places.V1.Place.Types.Attribution.Parser);
     private readonly pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.Attribution> attributions_ = new pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.Attribution>();
     /// <summary>
-    /// Output only. A set of data provider that must be shown with this result.
+    /// A set of data provider that must be shown with this result.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -677,8 +740,7 @@ namespace Google.Maps.Places.V1 {
 
     private int userRatingCount_;
     /// <summary>
-    /// Output only. The total number of reviews (with or without text) for this
-    /// place.
+    /// The total number of reviews (with or without text) for this place.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -706,8 +768,8 @@ namespace Google.Maps.Places.V1 {
     public const int IconMaskBaseUriFieldNumber = 29;
     private string iconMaskBaseUri_ = "";
     /// <summary>
-    /// Output only. A truncated URL to an v2 icon mask. User can access different
-    /// icon type by appending type suffix to the end (eg, ".svg" or ".png").
+    /// A truncated URL to an icon mask. User can access different icon type by
+    /// appending type suffix to the end (eg, ".svg" or ".png").
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -722,7 +784,7 @@ namespace Google.Maps.Places.V1 {
     public const int IconBackgroundColorFieldNumber = 30;
     private string iconBackgroundColor_ = "";
     /// <summary>
-    /// Output only. Background color for icon_mask in hex format, e.g. #909CE1.
+    /// Background color for icon_mask in hex format, e.g. #909CE1.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -739,7 +801,7 @@ namespace Google.Maps.Places.V1 {
 
     private bool takeout_;
     /// <summary>
-    /// Output only. Specifies if the business supports takeout.
+    /// Specifies if the business supports takeout.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -769,7 +831,7 @@ namespace Google.Maps.Places.V1 {
 
     private bool delivery_;
     /// <summary>
-    /// Output only. Specifies if the business supports delivery.
+    /// Specifies if the business supports delivery.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -799,8 +861,7 @@ namespace Google.Maps.Places.V1 {
 
     private bool dineIn_;
     /// <summary>
-    /// Output only. Specifies if the business supports indoor or outdoor seating
-    /// options.
+    /// Specifies if the business supports indoor or outdoor seating options.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -830,7 +891,7 @@ namespace Google.Maps.Places.V1 {
 
     private bool curbsidePickup_;
     /// <summary>
-    /// Output only. Specifies if the business supports curbside pickup.
+    /// Specifies if the business supports curbside pickup.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -860,7 +921,7 @@ namespace Google.Maps.Places.V1 {
 
     private bool reservable_;
     /// <summary>
-    /// Output only. Specifies if the place supports reservations.
+    /// Specifies if the place supports reservations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -890,7 +951,7 @@ namespace Google.Maps.Places.V1 {
 
     private bool servesBreakfast_;
     /// <summary>
-    /// Output only. Specifies if the place serves breakfast.
+    /// Specifies if the place serves breakfast.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -920,7 +981,7 @@ namespace Google.Maps.Places.V1 {
 
     private bool servesLunch_;
     /// <summary>
-    /// Output only. Specifies if the place serves lunch.
+    /// Specifies if the place serves lunch.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -950,7 +1011,7 @@ namespace Google.Maps.Places.V1 {
 
     private bool servesDinner_;
     /// <summary>
-    /// Output only. Specifies if the place serves dinner.
+    /// Specifies if the place serves dinner.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -980,7 +1041,7 @@ namespace Google.Maps.Places.V1 {
 
     private bool servesBeer_;
     /// <summary>
-    /// Output only. Specifies if the place serves beer.
+    /// Specifies if the place serves beer.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1010,7 +1071,7 @@ namespace Google.Maps.Places.V1 {
 
     private bool servesWine_;
     /// <summary>
-    /// Output only. Specifies if the place serves wine.
+    /// Specifies if the place serves wine.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1040,7 +1101,7 @@ namespace Google.Maps.Places.V1 {
 
     private bool servesBrunch_;
     /// <summary>
-    /// Output only. Specifies if the place serves brunch.
+    /// Specifies if the place serves brunch.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1070,7 +1131,7 @@ namespace Google.Maps.Places.V1 {
 
     private bool servesVegetarianFood_;
     /// <summary>
-    /// Output only. Specifies if the place serves vegetarian food.
+    /// Specifies if the place serves vegetarian food.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1098,10 +1159,10 @@ namespace Google.Maps.Places.V1 {
     public const int CurrentOpeningHoursFieldNumber = 46;
     private global::Google.Maps.Places.V1.Place.Types.OpeningHours currentOpeningHours_;
     /// <summary>
-    /// Output only. The hours of operation for the next seven days (including
-    /// today). The time period starts at midnight on the date of the request and
-    /// ends at 11:59 pm six days later. This field includes the special_days
-    /// subfield of all hours, set for dates that have exceptional hours.
+    /// The hours of operation for the next seven days (including today). The time
+    /// period starts at midnight on the date of the request and ends at 11:59 pm
+    /// six days later. This field includes the special_days subfield of all hours,
+    /// set for dates that have exceptional hours.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1118,14 +1179,14 @@ namespace Google.Maps.Places.V1 {
         = pb::FieldCodec.ForMessage(378, global::Google.Maps.Places.V1.Place.Types.OpeningHours.Parser);
     private readonly pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.OpeningHours> currentSecondaryOpeningHours_ = new pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.OpeningHours>();
     /// <summary>
-    /// Output only. Contains an array of entries for the next seven days including
-    /// information about secondary hours of a business. Secondary hours are
-    /// different from a business's main hours. For example, a restaurant can
-    /// specify drive through hours or delivery hours as its secondary hours. This
-    /// field populates the type subfield, which draws from a predefined list of
-    /// opening hours types (such as DRIVE_THROUGH, PICKUP, or TAKEOUT) based on
-    /// the types of the place. This field includes the special_days subfield of
-    /// all hours, set for dates that have exceptional hours.
+    /// Contains an array of entries for the next seven days including information
+    /// about secondary hours of a business. Secondary hours are different from a
+    /// business's main hours. For example, a restaurant can specify drive through
+    /// hours or delivery hours as its secondary hours. This field populates the
+    /// type subfield, which draws from a predefined list of opening hours types
+    /// (such as DRIVE_THROUGH, PICKUP, or TAKEOUT) based on the types of the
+    /// place. This field includes the special_days subfield of all hours, set for
+    /// dates that have exceptional hours.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1139,13 +1200,12 @@ namespace Google.Maps.Places.V1 {
         = pb::FieldCodec.ForMessage(394, global::Google.Maps.Places.V1.Place.Types.OpeningHours.Parser);
     private readonly pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.OpeningHours> regularSecondaryOpeningHours_ = new pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.OpeningHours>();
     /// <summary>
-    /// Output only. Contains an array of entries for information about regular
-    /// secondary hours of a business. Secondary hours are different from a
-    /// business's main hours. For example, a restaurant can specify drive through
-    /// hours or delivery hours as its secondary hours. This field populates the
-    /// type subfield, which draws from a predefined list of opening hours types
-    /// (such as DRIVE_THROUGH, PICKUP, or TAKEOUT) based on the types of the
-    /// place.
+    /// Contains an array of entries for information about regular secondary hours
+    /// of a business. Secondary hours are different from a business's main hours.
+    /// For example, a restaurant can specify drive through hours or delivery hours
+    /// as its secondary hours. This field populates the type subfield, which draws
+    /// from a predefined list of opening hours types (such as DRIVE_THROUGH,
+    /// PICKUP, or TAKEOUT) based on the types of the place.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1157,10 +1217,9 @@ namespace Google.Maps.Places.V1 {
     public const int EditorialSummaryFieldNumber = 52;
     private global::Google.Type.LocalizedText editorialSummary_;
     /// <summary>
-    /// Output only. Contains a summary of the place. A summary is comprised of a
-    /// textual overview, and also includes the language code for these if
-    /// applicable. Summary text must be presented as-is and can not be modified or
-    /// altered.
+    /// Contains a summary of the place. A summary is comprised of a textual
+    /// overview, and also includes the language code for these if applicable.
+    /// Summary text must be presented as-is and can not be modified or altered.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1177,7 +1236,7 @@ namespace Google.Maps.Places.V1 {
 
     private bool outdoorSeating_;
     /// <summary>
-    /// Output only. Place provides outdoor seating.
+    /// Place provides outdoor seating.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1207,7 +1266,7 @@ namespace Google.Maps.Places.V1 {
 
     private bool liveMusic_;
     /// <summary>
-    /// Output only. Place provides live music.
+    /// Place provides live music.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1237,7 +1296,7 @@ namespace Google.Maps.Places.V1 {
 
     private bool menuForChildren_;
     /// <summary>
-    /// Output only. Place has a children's menu.
+    /// Place has a children's menu.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1267,7 +1326,7 @@ namespace Google.Maps.Places.V1 {
 
     private bool servesCocktails_;
     /// <summary>
-    /// Output only. Place serves cocktails.
+    /// Place serves cocktails.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1297,7 +1356,7 @@ namespace Google.Maps.Places.V1 {
 
     private bool servesDessert_;
     /// <summary>
-    /// Output only. Place serves dessert.
+    /// Place serves dessert.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1327,7 +1386,7 @@ namespace Google.Maps.Places.V1 {
 
     private bool servesCoffee_;
     /// <summary>
-    /// Output only. Place serves coffee.
+    /// Place serves coffee.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1357,7 +1416,7 @@ namespace Google.Maps.Places.V1 {
 
     private bool goodForChildren_;
     /// <summary>
-    /// Output only. Place is good for children.
+    /// Place is good for children.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1387,7 +1446,7 @@ namespace Google.Maps.Places.V1 {
 
     private bool allowsDogs_;
     /// <summary>
-    /// Output only. Place allows dogs.
+    /// Place allows dogs.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1417,7 +1476,7 @@ namespace Google.Maps.Places.V1 {
 
     private bool restroom_;
     /// <summary>
-    /// Output only. Place has restroom.
+    /// Place has restroom.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1447,7 +1506,7 @@ namespace Google.Maps.Places.V1 {
 
     private bool goodForGroups_;
     /// <summary>
-    /// Output only. Place accommodates groups.
+    /// Place accommodates groups.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1477,7 +1536,7 @@ namespace Google.Maps.Places.V1 {
 
     private bool goodForWatchingSports_;
     /// <summary>
-    /// Output only. Place is suitable for watching sports.
+    /// Place is suitable for watching sports.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1504,6 +1563,10 @@ namespace Google.Maps.Places.V1 {
     /// <summary>Field number for the "payment_options" field.</summary>
     public const int PaymentOptionsFieldNumber = 67;
     private global::Google.Maps.Places.V1.Place.Types.PaymentOptions paymentOptions_;
+    /// <summary>
+    /// Payment options the place accepts. If a payment option data is not
+    /// available, the payment option field will be unset.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Maps.Places.V1.Place.Types.PaymentOptions PaymentOptions {
@@ -1517,7 +1580,7 @@ namespace Google.Maps.Places.V1 {
     public const int ParkingOptionsFieldNumber = 70;
     private global::Google.Maps.Places.V1.Place.Types.ParkingOptions parkingOptions_;
     /// <summary>
-    /// Output only. Options of parking provided by the place.
+    /// Options of parking provided by the place.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1534,7 +1597,7 @@ namespace Google.Maps.Places.V1 {
         = pb::FieldCodec.ForMessage(570, global::Google.Maps.Places.V1.Place.Types.SubDestination.Parser);
     private readonly pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.SubDestination> subDestinations_ = new pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.SubDestination>();
     /// <summary>
-    /// Output only. A list of sub destinations related to the place.
+    /// A list of sub destinations related to the place.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1546,7 +1609,7 @@ namespace Google.Maps.Places.V1 {
     public const int AccessibilityOptionsFieldNumber = 72;
     private global::Google.Maps.Places.V1.Place.Types.AccessibilityOptions accessibilityOptions_;
     /// <summary>
-    /// Output only. Information about the accessibility options a place offers.
+    /// Information about the accessibility options a place offers.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1561,8 +1624,8 @@ namespace Google.Maps.Places.V1 {
     public const int FuelOptionsFieldNumber = 78;
     private global::Google.Maps.Places.V1.FuelOptions fuelOptions_;
     /// <summary>
-    /// Output only. The most recent information about fuel options in a gas
-    /// station. This information is updated regularly.
+    /// The most recent information about fuel options in a gas station. This
+    /// information is updated regularly.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1577,7 +1640,7 @@ namespace Google.Maps.Places.V1 {
     public const int EvChargeOptionsFieldNumber = 79;
     private global::Google.Maps.Places.V1.EVChargeOptions evChargeOptions_;
     /// <summary>
-    /// Output only. Information of ev charging options.
+    /// Information of ev charging options.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1607,9 +1670,12 @@ namespace Google.Maps.Places.V1 {
       if (Id != other.Id) return false;
       if (!object.Equals(DisplayName, other.DisplayName)) return false;
       if(!types_.Equals(other.types_)) return false;
+      if (PrimaryType != other.PrimaryType) return false;
+      if (!object.Equals(PrimaryTypeDisplayName, other.PrimaryTypeDisplayName)) return false;
       if (NationalPhoneNumber != other.NationalPhoneNumber) return false;
       if (InternationalPhoneNumber != other.InternationalPhoneNumber) return false;
       if (FormattedAddress != other.FormattedAddress) return false;
+      if (ShortFormattedAddress != other.ShortFormattedAddress) return false;
       if(!addressComponents_.Equals(other.addressComponents_)) return false;
       if (!object.Equals(PlusCode, other.PlusCode)) return false;
       if (!object.Equals(Location, other.Location)) return false;
@@ -1672,9 +1738,12 @@ namespace Google.Maps.Places.V1 {
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (displayName_ != null) hash ^= DisplayName.GetHashCode();
       hash ^= types_.GetHashCode();
+      if (PrimaryType.Length != 0) hash ^= PrimaryType.GetHashCode();
+      if (primaryTypeDisplayName_ != null) hash ^= PrimaryTypeDisplayName.GetHashCode();
       if (NationalPhoneNumber.Length != 0) hash ^= NationalPhoneNumber.GetHashCode();
       if (InternationalPhoneNumber.Length != 0) hash ^= InternationalPhoneNumber.GetHashCode();
       if (FormattedAddress.Length != 0) hash ^= FormattedAddress.GetHashCode();
+      if (ShortFormattedAddress.Length != 0) hash ^= ShortFormattedAddress.GetHashCode();
       hash ^= addressComponents_.GetHashCode();
       if (plusCode_ != null) hash ^= PlusCode.GetHashCode();
       if (location_ != null) hash ^= Location.GetHashCode();
@@ -1827,6 +1896,10 @@ namespace Google.Maps.Places.V1 {
         output.WriteRawTag(250, 1);
         output.WriteMessage(DisplayName);
       }
+      if (primaryTypeDisplayName_ != null) {
+        output.WriteRawTag(130, 2);
+        output.WriteMessage(PrimaryTypeDisplayName);
+      }
       if (HasTakeout) {
         output.WriteRawTag(136, 2);
         output.WriteBool(Takeout);
@@ -1881,6 +1954,14 @@ namespace Google.Maps.Places.V1 {
       }
       currentSecondaryOpeningHours_.WriteTo(output, _repeated_currentSecondaryOpeningHours_codec);
       regularSecondaryOpeningHours_.WriteTo(output, _repeated_regularSecondaryOpeningHours_codec);
+      if (PrimaryType.Length != 0) {
+        output.WriteRawTag(146, 3);
+        output.WriteString(PrimaryType);
+      }
+      if (ShortFormattedAddress.Length != 0) {
+        output.WriteRawTag(154, 3);
+        output.WriteString(ShortFormattedAddress);
+      }
       if (editorialSummary_ != null) {
         output.WriteRawTag(162, 3);
         output.WriteMessage(EditorialSummary);
@@ -2045,6 +2126,10 @@ namespace Google.Maps.Places.V1 {
         output.WriteRawTag(250, 1);
         output.WriteMessage(DisplayName);
       }
+      if (primaryTypeDisplayName_ != null) {
+        output.WriteRawTag(130, 2);
+        output.WriteMessage(PrimaryTypeDisplayName);
+      }
       if (HasTakeout) {
         output.WriteRawTag(136, 2);
         output.WriteBool(Takeout);
@@ -2099,6 +2184,14 @@ namespace Google.Maps.Places.V1 {
       }
       currentSecondaryOpeningHours_.WriteTo(ref output, _repeated_currentSecondaryOpeningHours_codec);
       regularSecondaryOpeningHours_.WriteTo(ref output, _repeated_regularSecondaryOpeningHours_codec);
+      if (PrimaryType.Length != 0) {
+        output.WriteRawTag(146, 3);
+        output.WriteString(PrimaryType);
+      }
+      if (ShortFormattedAddress.Length != 0) {
+        output.WriteRawTag(154, 3);
+        output.WriteString(ShortFormattedAddress);
+      }
       if (editorialSummary_ != null) {
         output.WriteRawTag(162, 3);
         output.WriteMessage(EditorialSummary);
@@ -2190,6 +2283,12 @@ namespace Google.Maps.Places.V1 {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(DisplayName);
       }
       size += types_.CalculateSize(_repeated_types_codec);
+      if (PrimaryType.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(PrimaryType);
+      }
+      if (primaryTypeDisplayName_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(PrimaryTypeDisplayName);
+      }
       if (NationalPhoneNumber.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NationalPhoneNumber);
       }
@@ -2198,6 +2297,9 @@ namespace Google.Maps.Places.V1 {
       }
       if (FormattedAddress.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(FormattedAddress);
+      }
+      if (ShortFormattedAddress.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(ShortFormattedAddress);
       }
       size += addressComponents_.CalculateSize(_repeated_addressComponents_codec);
       if (plusCode_ != null) {
@@ -2363,6 +2465,15 @@ namespace Google.Maps.Places.V1 {
         DisplayName.MergeFrom(other.DisplayName);
       }
       types_.Add(other.types_);
+      if (other.PrimaryType.Length != 0) {
+        PrimaryType = other.PrimaryType;
+      }
+      if (other.primaryTypeDisplayName_ != null) {
+        if (primaryTypeDisplayName_ == null) {
+          PrimaryTypeDisplayName = new global::Google.Type.LocalizedText();
+        }
+        PrimaryTypeDisplayName.MergeFrom(other.PrimaryTypeDisplayName);
+      }
       if (other.NationalPhoneNumber.Length != 0) {
         NationalPhoneNumber = other.NationalPhoneNumber;
       }
@@ -2371,6 +2482,9 @@ namespace Google.Maps.Places.V1 {
       }
       if (other.FormattedAddress.Length != 0) {
         FormattedAddress = other.FormattedAddress;
+      }
+      if (other.ShortFormattedAddress.Length != 0) {
+        ShortFormattedAddress = other.ShortFormattedAddress;
       }
       addressComponents_.Add(other.addressComponents_);
       if (other.plusCode_ != null) {
@@ -2666,6 +2780,13 @@ namespace Google.Maps.Places.V1 {
             input.ReadMessage(DisplayName);
             break;
           }
+          case 258: {
+            if (primaryTypeDisplayName_ == null) {
+              PrimaryTypeDisplayName = new global::Google.Type.LocalizedText();
+            }
+            input.ReadMessage(PrimaryTypeDisplayName);
+            break;
+          }
           case 264: {
             Takeout = input.ReadBool();
             break;
@@ -2727,6 +2848,14 @@ namespace Google.Maps.Places.V1 {
           }
           case 394: {
             regularSecondaryOpeningHours_.AddEntriesFrom(input, _repeated_regularSecondaryOpeningHours_codec);
+            break;
+          }
+          case 402: {
+            PrimaryType = input.ReadString();
+            break;
+          }
+          case 410: {
+            ShortFormattedAddress = input.ReadString();
             break;
           }
           case 418: {
@@ -2949,6 +3078,13 @@ namespace Google.Maps.Places.V1 {
             input.ReadMessage(DisplayName);
             break;
           }
+          case 258: {
+            if (primaryTypeDisplayName_ == null) {
+              PrimaryTypeDisplayName = new global::Google.Type.LocalizedText();
+            }
+            input.ReadMessage(PrimaryTypeDisplayName);
+            break;
+          }
           case 264: {
             Takeout = input.ReadBool();
             break;
@@ -3010,6 +3146,14 @@ namespace Google.Maps.Places.V1 {
           }
           case 394: {
             regularSecondaryOpeningHours_.AddEntriesFrom(ref input, _repeated_regularSecondaryOpeningHours_codec);
+            break;
+          }
+          case 402: {
+            PrimaryType = input.ReadString();
+            break;
+          }
+          case 410: {
+            ShortFormattedAddress = input.ReadString();
             break;
           }
           case 418: {
@@ -3197,9 +3341,9 @@ namespace Google.Maps.Places.V1 {
         public const int LongTextFieldNumber = 1;
         private string longText_ = "";
         /// <summary>
-        /// Output only. The full text description or name of the address component.
-        /// For example, an address component for the country Australia may have a
-        /// long_name of "Australia".
+        /// The full text description or name of the address component. For example,
+        /// an address component for the country Australia may have a long_name of
+        /// "Australia".
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3214,9 +3358,9 @@ namespace Google.Maps.Places.V1 {
         public const int ShortTextFieldNumber = 2;
         private string shortText_ = "";
         /// <summary>
-        /// Output only. An abbreviated textual name for the address component, if
-        /// available. For example, an address component for the country of Australia
-        /// may have a short_name of "AU".
+        /// An abbreviated textual name for the address component, if available. For
+        /// example, an address component for the country of Australia may have a
+        /// short_name of "AU".
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3233,7 +3377,7 @@ namespace Google.Maps.Places.V1 {
             = pb::FieldCodec.ForString(26);
         private readonly pbc::RepeatedField<string> types_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// Output only. An array indicating the type(s) of the address component.
+        /// An array indicating the type(s) of the address component.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3245,8 +3389,7 @@ namespace Google.Maps.Places.V1 {
         public const int LanguageCodeFieldNumber = 4;
         private string languageCode_ = "";
         /// <summary>
-        /// Output only. The language used to format this components, in CLDR
-        /// notation.
+        /// The language used to format this components, in CLDR notation.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3506,8 +3649,8 @@ namespace Google.Maps.Places.V1 {
         public const int GlobalCodeFieldNumber = 1;
         private string globalCode_ = "";
         /// <summary>
-        /// Output only. Place's global (full) code, such as "9FWM33GV+HQ",
-        /// representing an 1/8000 by 1/8000 degree area (~14 by 14 meters).
+        /// Place's global (full) code, such as "9FWM33GV+HQ", representing an
+        /// 1/8000 by 1/8000 degree area (~14 by 14 meters).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3522,9 +3665,9 @@ namespace Google.Maps.Places.V1 {
         public const int CompoundCodeFieldNumber = 2;
         private string compoundCode_ = "";
         /// <summary>
-        /// Output only. Place's compound code, such as "33GV+HQ, Ramberg, Norway",
-        /// containing the suffix of the global code and replacing the prefix with a
-        /// formatted name of a reference entity.
+        /// Place's compound code, such as "33GV+HQ, Ramberg, Norway", containing
+        /// the suffix of the global code and replacing the prefix with a formatted
+        /// name of a reference entity.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3751,8 +3894,8 @@ namespace Google.Maps.Places.V1 {
 
         private bool openNow_;
         /// <summary>
-        /// Output only. Is this place open right now?  Always present unless we lack
-        /// time-of-day or timezone data for these opening hours.
+        /// Is this place open right now?  Always present unless we lack time-of-day
+        /// or timezone data for these opening hours.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3782,11 +3925,10 @@ namespace Google.Maps.Places.V1 {
             = pb::FieldCodec.ForMessage(18, global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period.Parser);
         private readonly pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period> periods_ = new pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period>();
         /// <summary>
-        /// Output only. The periods that this place is open during the week. The
-        /// periods are in chronological order, starting with Sunday in the
-        /// place-local timezone. An empty (but not absent) value indicates a place
-        /// that is never open, e.g. because it is closed temporarily for
-        /// renovations.
+        /// The periods that this place is open during the week. The periods are in
+        /// chronological order, starting with Sunday in the place-local timezone. An
+        /// empty (but not absent) value indicates a place that is never open, e.g.
+        /// because it is closed temporarily for renovations.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3800,10 +3942,9 @@ namespace Google.Maps.Places.V1 {
             = pb::FieldCodec.ForString(26);
         private readonly pbc::RepeatedField<string> weekdayDescriptions_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// Output only. Localized strings describing the opening hours of this
-        /// place, one string for each day of the week.  Will be empty if the hours
-        /// are unknown or could not be converted to localized text. Example: "Sun:
-        /// 18:00–06:00"
+        /// Localized strings describing the opening hours of this place, one string
+        /// for each day of the week.  Will be empty if the hours are unknown or
+        /// could not be converted to localized text. Example: "Sun: 18:00–06:00"
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3815,7 +3956,7 @@ namespace Google.Maps.Places.V1 {
         public const int SecondaryHoursTypeFieldNumber = 4;
         private global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SecondaryHoursType secondaryHoursType_ = global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SecondaryHoursType.Unspecified;
         /// <summary>
-        /// Output only. A type string used to identify the type of secondary hours.
+        /// A type string used to identify the type of secondary hours.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3832,9 +3973,9 @@ namespace Google.Maps.Places.V1 {
             = pb::FieldCodec.ForMessage(42, global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SpecialDay.Parser);
         private readonly pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SpecialDay> specialDays_ = new pbc::RepeatedField<global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.SpecialDay>();
         /// <summary>
-        /// Output only. Structured information for special days that fall within the
-        /// period that the returned opening hours cover. Special days are days that
-        /// could impact the business hours of a place, e.g. Christmas day. Set for
+        /// Structured information for special days that fall within the period that
+        /// the returned opening hours cover. Special days are days that could impact
+        /// the business hours of a place, e.g. Christmas day. Set for
         /// current_opening_hours and current_secondary_opening_hours if there are
         /// exceptional hours.
         /// </summary>
@@ -4160,7 +4301,7 @@ namespace Google.Maps.Places.V1 {
             public const int OpenFieldNumber = 1;
             private global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period.Types.Point open_;
             /// <summary>
-            /// Output only. The time that the place starts to be open.
+            /// The time that the place starts to be open.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4175,7 +4316,7 @@ namespace Google.Maps.Places.V1 {
             public const int CloseFieldNumber = 2;
             private global::Google.Maps.Places.V1.Place.Types.OpeningHours.Types.Period.Types.Point close_;
             /// <summary>
-            /// Output only. The time that the place starts to be closed.
+            /// The time that the place starts to be closed.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4423,8 +4564,8 @@ namespace Google.Maps.Places.V1 {
 
                 private int day_;
                 /// <summary>
-                /// Output only. A day of the week, as an integer in the range 0-6.  0 is
-                /// Sunday, 1 is Monday, etc.
+                /// A day of the week, as an integer in the range 0-6.  0 is Sunday, 1 is
+                /// Monday, etc.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4454,7 +4595,7 @@ namespace Google.Maps.Places.V1 {
 
                 private int hour_;
                 /// <summary>
-                /// Output only. The hour in 2 digits. Ranges from 00 to 23.
+                /// The hour in 2 digits. Ranges from 00 to 23.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4484,7 +4625,7 @@ namespace Google.Maps.Places.V1 {
 
                 private int minute_;
                 /// <summary>
-                /// Output only. The minute in 2 digits. Ranges from 00 to 59.
+                /// The minute in 2 digits. Ranges from 00 to 59.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4512,7 +4653,7 @@ namespace Google.Maps.Places.V1 {
                 public const int DateFieldNumber = 6;
                 private global::Google.Type.Date date_;
                 /// <summary>
-                /// Output only. Date in the local timezone for the place.
+                /// Date in the local timezone for the place.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4527,11 +4668,11 @@ namespace Google.Maps.Places.V1 {
                 public const int TruncatedFieldNumber = 5;
                 private bool truncated_;
                 /// <summary>
-                /// Output only. Whether or not this endpoint was truncated. Truncation
-                /// occurs when the real hours are outside the times we are willing to
-                /// return hours between, so we truncate the hours back to these
-                /// boundaries. This ensures that at most 24 * 7 hours from midnight of
-                /// the day of the request are returned.
+                /// Whether or not this endpoint was truncated. Truncation occurs when
+                /// the real hours are outside the times we are willing to return hours
+                /// between, so we truncate the hours back to these boundaries. This
+                /// ensures that at most 24 * 7 hours from midnight of the day of the
+                /// request are returned.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4838,7 +4979,7 @@ namespace Google.Maps.Places.V1 {
             public const int DateFieldNumber = 1;
             private global::Google.Type.Date date_;
             /// <summary>
-            /// Output only. The date of this special day.
+            /// The date of this special day.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5048,7 +5189,7 @@ namespace Google.Maps.Places.V1 {
         public const int ProviderFieldNumber = 1;
         private string provider_ = "";
         /// <summary>
-        /// Output only. Name of the Place's data provider.
+        /// Name of the Place's data provider.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5063,7 +5204,7 @@ namespace Google.Maps.Places.V1 {
         public const int ProviderUriFieldNumber = 2;
         private string providerUri_ = "";
         /// <summary>
-        /// Output only. URI to the Place's data provider.
+        /// URI to the Place's data provider.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6427,7 +6568,10 @@ namespace Google.Maps.Places.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public AccessibilityOptions(AccessibilityOptions other) : this() {
           _hasBits0 = other._hasBits0;
+          wheelchairAccessibleParking_ = other.wheelchairAccessibleParking_;
           wheelchairAccessibleEntrance_ = other.wheelchairAccessibleEntrance_;
+          wheelchairAccessibleRestroom_ = other.wheelchairAccessibleRestroom_;
+          wheelchairAccessibleSeating_ = other.wheelchairAccessibleSeating_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -6435,6 +6579,36 @@ namespace Google.Maps.Places.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public AccessibilityOptions Clone() {
           return new AccessibilityOptions(this);
+        }
+
+        /// <summary>Field number for the "wheelchair_accessible_parking" field.</summary>
+        public const int WheelchairAccessibleParkingFieldNumber = 1;
+        private readonly static bool WheelchairAccessibleParkingDefaultValue = false;
+
+        private bool wheelchairAccessibleParking_;
+        /// <summary>
+        /// Place offers wheelchair accessible parking.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool WheelchairAccessibleParking {
+          get { if ((_hasBits0 & 1) != 0) { return wheelchairAccessibleParking_; } else { return WheelchairAccessibleParkingDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            wheelchairAccessibleParking_ = value;
+          }
+        }
+        /// <summary>Gets whether the "wheelchair_accessible_parking" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasWheelchairAccessibleParking {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "wheelchair_accessible_parking" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearWheelchairAccessibleParking() {
+          _hasBits0 &= ~1;
         }
 
         /// <summary>Field number for the "wheelchair_accessible_entrance" field.</summary>
@@ -6448,9 +6622,9 @@ namespace Google.Maps.Places.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool WheelchairAccessibleEntrance {
-          get { if ((_hasBits0 & 1) != 0) { return wheelchairAccessibleEntrance_; } else { return WheelchairAccessibleEntranceDefaultValue; } }
+          get { if ((_hasBits0 & 2) != 0) { return wheelchairAccessibleEntrance_; } else { return WheelchairAccessibleEntranceDefaultValue; } }
           set {
-            _hasBits0 |= 1;
+            _hasBits0 |= 2;
             wheelchairAccessibleEntrance_ = value;
           }
         }
@@ -6458,13 +6632,73 @@ namespace Google.Maps.Places.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool HasWheelchairAccessibleEntrance {
-          get { return (_hasBits0 & 1) != 0; }
+          get { return (_hasBits0 & 2) != 0; }
         }
         /// <summary>Clears the value of the "wheelchair_accessible_entrance" field</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void ClearWheelchairAccessibleEntrance() {
-          _hasBits0 &= ~1;
+          _hasBits0 &= ~2;
+        }
+
+        /// <summary>Field number for the "wheelchair_accessible_restroom" field.</summary>
+        public const int WheelchairAccessibleRestroomFieldNumber = 3;
+        private readonly static bool WheelchairAccessibleRestroomDefaultValue = false;
+
+        private bool wheelchairAccessibleRestroom_;
+        /// <summary>
+        /// Place has wheelchair accessible restroom.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool WheelchairAccessibleRestroom {
+          get { if ((_hasBits0 & 4) != 0) { return wheelchairAccessibleRestroom_; } else { return WheelchairAccessibleRestroomDefaultValue; } }
+          set {
+            _hasBits0 |= 4;
+            wheelchairAccessibleRestroom_ = value;
+          }
+        }
+        /// <summary>Gets whether the "wheelchair_accessible_restroom" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasWheelchairAccessibleRestroom {
+          get { return (_hasBits0 & 4) != 0; }
+        }
+        /// <summary>Clears the value of the "wheelchair_accessible_restroom" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearWheelchairAccessibleRestroom() {
+          _hasBits0 &= ~4;
+        }
+
+        /// <summary>Field number for the "wheelchair_accessible_seating" field.</summary>
+        public const int WheelchairAccessibleSeatingFieldNumber = 4;
+        private readonly static bool WheelchairAccessibleSeatingDefaultValue = false;
+
+        private bool wheelchairAccessibleSeating_;
+        /// <summary>
+        /// Place has wheelchair accessible seating.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool WheelchairAccessibleSeating {
+          get { if ((_hasBits0 & 8) != 0) { return wheelchairAccessibleSeating_; } else { return WheelchairAccessibleSeatingDefaultValue; } }
+          set {
+            _hasBits0 |= 8;
+            wheelchairAccessibleSeating_ = value;
+          }
+        }
+        /// <summary>Gets whether the "wheelchair_accessible_seating" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasWheelchairAccessibleSeating {
+          get { return (_hasBits0 & 8) != 0; }
+        }
+        /// <summary>Clears the value of the "wheelchair_accessible_seating" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearWheelchairAccessibleSeating() {
+          _hasBits0 &= ~8;
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6482,7 +6716,10 @@ namespace Google.Maps.Places.V1 {
           if (ReferenceEquals(other, this)) {
             return true;
           }
+          if (WheelchairAccessibleParking != other.WheelchairAccessibleParking) return false;
           if (WheelchairAccessibleEntrance != other.WheelchairAccessibleEntrance) return false;
+          if (WheelchairAccessibleRestroom != other.WheelchairAccessibleRestroom) return false;
+          if (WheelchairAccessibleSeating != other.WheelchairAccessibleSeating) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -6490,7 +6727,10 @@ namespace Google.Maps.Places.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
+          if (HasWheelchairAccessibleParking) hash ^= WheelchairAccessibleParking.GetHashCode();
           if (HasWheelchairAccessibleEntrance) hash ^= WheelchairAccessibleEntrance.GetHashCode();
+          if (HasWheelchairAccessibleRestroom) hash ^= WheelchairAccessibleRestroom.GetHashCode();
+          if (HasWheelchairAccessibleSeating) hash ^= WheelchairAccessibleSeating.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -6509,9 +6749,21 @@ namespace Google.Maps.Places.V1 {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
         #else
+          if (HasWheelchairAccessibleParking) {
+            output.WriteRawTag(8);
+            output.WriteBool(WheelchairAccessibleParking);
+          }
           if (HasWheelchairAccessibleEntrance) {
             output.WriteRawTag(16);
             output.WriteBool(WheelchairAccessibleEntrance);
+          }
+          if (HasWheelchairAccessibleRestroom) {
+            output.WriteRawTag(24);
+            output.WriteBool(WheelchairAccessibleRestroom);
+          }
+          if (HasWheelchairAccessibleSeating) {
+            output.WriteRawTag(32);
+            output.WriteBool(WheelchairAccessibleSeating);
           }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
@@ -6523,9 +6775,21 @@ namespace Google.Maps.Places.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (HasWheelchairAccessibleParking) {
+            output.WriteRawTag(8);
+            output.WriteBool(WheelchairAccessibleParking);
+          }
           if (HasWheelchairAccessibleEntrance) {
             output.WriteRawTag(16);
             output.WriteBool(WheelchairAccessibleEntrance);
+          }
+          if (HasWheelchairAccessibleRestroom) {
+            output.WriteRawTag(24);
+            output.WriteBool(WheelchairAccessibleRestroom);
+          }
+          if (HasWheelchairAccessibleSeating) {
+            output.WriteRawTag(32);
+            output.WriteBool(WheelchairAccessibleSeating);
           }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
@@ -6537,7 +6801,16 @@ namespace Google.Maps.Places.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
+          if (HasWheelchairAccessibleParking) {
+            size += 1 + 1;
+          }
           if (HasWheelchairAccessibleEntrance) {
+            size += 1 + 1;
+          }
+          if (HasWheelchairAccessibleRestroom) {
+            size += 1 + 1;
+          }
+          if (HasWheelchairAccessibleSeating) {
             size += 1 + 1;
           }
           if (_unknownFields != null) {
@@ -6552,8 +6825,17 @@ namespace Google.Maps.Places.V1 {
           if (other == null) {
             return;
           }
+          if (other.HasWheelchairAccessibleParking) {
+            WheelchairAccessibleParking = other.WheelchairAccessibleParking;
+          }
           if (other.HasWheelchairAccessibleEntrance) {
             WheelchairAccessibleEntrance = other.WheelchairAccessibleEntrance;
+          }
+          if (other.HasWheelchairAccessibleRestroom) {
+            WheelchairAccessibleRestroom = other.WheelchairAccessibleRestroom;
+          }
+          if (other.HasWheelchairAccessibleSeating) {
+            WheelchairAccessibleSeating = other.WheelchairAccessibleSeating;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -6570,8 +6852,20 @@ namespace Google.Maps.Places.V1 {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
+              case 8: {
+                WheelchairAccessibleParking = input.ReadBool();
+                break;
+              }
               case 16: {
                 WheelchairAccessibleEntrance = input.ReadBool();
+                break;
+              }
+              case 24: {
+                WheelchairAccessibleRestroom = input.ReadBool();
+                break;
+              }
+              case 32: {
+                WheelchairAccessibleSeating = input.ReadBool();
                 break;
               }
             }
@@ -6589,8 +6883,20 @@ namespace Google.Maps.Places.V1 {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
                 break;
+              case 8: {
+                WheelchairAccessibleParking = input.ReadBool();
+                break;
+              }
               case 16: {
                 WheelchairAccessibleEntrance = input.ReadBool();
+                break;
+              }
+              case 24: {
+                WheelchairAccessibleRestroom = input.ReadBool();
+                break;
+              }
+              case 32: {
+                WheelchairAccessibleSeating = input.ReadBool();
                 break;
               }
             }

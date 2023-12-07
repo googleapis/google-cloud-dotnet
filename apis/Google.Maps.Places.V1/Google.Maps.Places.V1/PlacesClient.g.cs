@@ -160,10 +160,11 @@ namespace Google.Maps.Places.V1
     /// <summary>Places client wrapper, for convenient use.</summary>
     /// <remarks>
     /// Service definition for the Places API.
-    /// Note: every request actually requires a field mask set outside of the request
-    /// proto (all/'*' is not assumed).  That can be set via either a side channel
-    /// (SystemParameterContext) over RPC, or a header (X-Goog-FieldMask) over HTTP.
-    /// See: https://cloud.google.com/apis/docs/system-parameters
+    /// Note: every request actually requires a field mask set outside of
+    /// the request proto (all/'*', is not assumed).  That can be set via either a
+    /// side channel (SystemParameterContext) over RPC, or a header
+    /// (X-Goog-FieldMask) over HTTP. See:
+    /// https://cloud.google.com/apis/docs/system-parameters
     /// </remarks>
     public abstract partial class PlacesClient
     {
@@ -177,7 +178,7 @@ namespace Google.Maps.Places.V1
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] { });
 
         /// <summary>The service metadata associated with this client type.</summary>
-        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Places.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Places.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc | gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
         internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
@@ -321,9 +322,13 @@ namespace Google.Maps.Places.V1
         /// Get a photo media with a photo reference string.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of a photo. It is returned in Place's
-        /// photos.name field. Format:
-        /// places/&lt;place_id&gt;/photos/&lt;photo_reference&gt;/media.
+        /// Required. The resource name of a photo media in the format:
+        /// `places/{place_id}/photos/{photo_reference}/media`.
+        /// 
+        /// The resource name of a photo as returned in a Place object's `photos.name`
+        /// field comes with the format
+        /// `places/{place_id}/photos/{photo_reference}`. You need to append `/media`
+        /// at the end of the photo resource to get the photo media resource name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -337,9 +342,13 @@ namespace Google.Maps.Places.V1
         /// Get a photo media with a photo reference string.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of a photo. It is returned in Place's
-        /// photos.name field. Format:
-        /// places/&lt;place_id&gt;/photos/&lt;photo_reference&gt;/media.
+        /// Required. The resource name of a photo media in the format:
+        /// `places/{place_id}/photos/{photo_reference}/media`.
+        /// 
+        /// The resource name of a photo as returned in a Place object's `photos.name`
+        /// field comes with the format
+        /// `places/{place_id}/photos/{photo_reference}`. You need to append `/media`
+        /// at the end of the photo resource to get the photo media resource name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -353,9 +362,13 @@ namespace Google.Maps.Places.V1
         /// Get a photo media with a photo reference string.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of a photo. It is returned in Place's
-        /// photos.name field. Format:
-        /// places/&lt;place_id&gt;/photos/&lt;photo_reference&gt;/media.
+        /// Required. The resource name of a photo media in the format:
+        /// `places/{place_id}/photos/{photo_reference}/media`.
+        /// 
+        /// The resource name of a photo as returned in a Place object's `photos.name`
+        /// field comes with the format
+        /// `places/{place_id}/photos/{photo_reference}`. You need to append `/media`
+        /// at the end of the photo resource to get the photo media resource name.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -366,9 +379,13 @@ namespace Google.Maps.Places.V1
         /// Get a photo media with a photo reference string.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of a photo. It is returned in Place's
-        /// photos.name field. Format:
-        /// places/&lt;place_id&gt;/photos/&lt;photo_reference&gt;/media.
+        /// Required. The resource name of a photo media in the format:
+        /// `places/{place_id}/photos/{photo_reference}/media`.
+        /// 
+        /// The resource name of a photo as returned in a Place object's `photos.name`
+        /// field comes with the format
+        /// `places/{place_id}/photos/{photo_reference}`. You need to append `/media`
+        /// at the end of the photo resource to get the photo media resource name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -382,9 +399,13 @@ namespace Google.Maps.Places.V1
         /// Get a photo media with a photo reference string.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of a photo. It is returned in Place's
-        /// photos.name field. Format:
-        /// places/&lt;place_id&gt;/photos/&lt;photo_reference&gt;/media.
+        /// Required. The resource name of a photo media in the format:
+        /// `places/{place_id}/photos/{photo_reference}/media`.
+        /// 
+        /// The resource name of a photo as returned in a Place object's `photos.name`
+        /// field comes with the format
+        /// `places/{place_id}/photos/{photo_reference}`. You need to append `/media`
+        /// at the end of the photo resource to get the photo media resource name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -398,9 +419,13 @@ namespace Google.Maps.Places.V1
         /// Get a photo media with a photo reference string.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of a photo. It is returned in Place's
-        /// photos.name field. Format:
-        /// places/&lt;place_id&gt;/photos/&lt;photo_reference&gt;/media.
+        /// Required. The resource name of a photo media in the format:
+        /// `places/{place_id}/photos/{photo_reference}/media`.
+        /// 
+        /// The resource name of a photo as returned in a Place object's `photos.name`
+        /// field comes with the format
+        /// `places/{place_id}/photos/{photo_reference}`. You need to append `/media`
+        /// at the end of the photo resource to get the photo media resource name.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -408,7 +433,7 @@ namespace Google.Maps.Places.V1
             GetPhotoMediaAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Get a Place with a place id (in a name) string.
+        /// Get place details with a place id (in a name) string.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -417,7 +442,7 @@ namespace Google.Maps.Places.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Get a Place with a place id (in a name) string.
+        /// Get place details with a place id (in a name) string.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -426,7 +451,7 @@ namespace Google.Maps.Places.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Get a Place with a place id (in a name) string.
+        /// Get place details with a place id (in a name) string.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -435,11 +460,12 @@ namespace Google.Maps.Places.V1
             GetPlaceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Get a Place with a place id (in a name) string.
+        /// Get place details with a place id (in a name) string.
         /// </summary>
         /// <param name="name">
-        /// Required. A place_id returned in a Place (with "places/" prefix), or
-        /// equivalently the name in the same Place. Format: places/&lt;place_id&gt;.
+        /// Required. A place ID returned in a Place (with "places/" prefix), or
+        /// equivalently the name in the same Place. Format:
+        /// `places/{place_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -450,11 +476,12 @@ namespace Google.Maps.Places.V1
             }, callSettings);
 
         /// <summary>
-        /// Get a Place with a place id (in a name) string.
+        /// Get place details with a place id (in a name) string.
         /// </summary>
         /// <param name="name">
-        /// Required. A place_id returned in a Place (with "places/" prefix), or
-        /// equivalently the name in the same Place. Format: places/&lt;place_id&gt;.
+        /// Required. A place ID returned in a Place (with "places/" prefix), or
+        /// equivalently the name in the same Place. Format:
+        /// `places/{place_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -465,11 +492,12 @@ namespace Google.Maps.Places.V1
             }, callSettings);
 
         /// <summary>
-        /// Get a Place with a place id (in a name) string.
+        /// Get place details with a place id (in a name) string.
         /// </summary>
         /// <param name="name">
-        /// Required. A place_id returned in a Place (with "places/" prefix), or
-        /// equivalently the name in the same Place. Format: places/&lt;place_id&gt;.
+        /// Required. A place ID returned in a Place (with "places/" prefix), or
+        /// equivalently the name in the same Place. Format:
+        /// `places/{place_id}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -477,11 +505,12 @@ namespace Google.Maps.Places.V1
             GetPlaceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Get a Place with a place id (in a name) string.
+        /// Get place details with a place id (in a name) string.
         /// </summary>
         /// <param name="name">
-        /// Required. A place_id returned in a Place (with "places/" prefix), or
-        /// equivalently the name in the same Place. Format: places/&lt;place_id&gt;.
+        /// Required. A place ID returned in a Place (with "places/" prefix), or
+        /// equivalently the name in the same Place. Format:
+        /// `places/{place_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -492,11 +521,12 @@ namespace Google.Maps.Places.V1
             }, callSettings);
 
         /// <summary>
-        /// Get a Place with a place id (in a name) string.
+        /// Get place details with a place id (in a name) string.
         /// </summary>
         /// <param name="name">
-        /// Required. A place_id returned in a Place (with "places/" prefix), or
-        /// equivalently the name in the same Place. Format: places/&lt;place_id&gt;.
+        /// Required. A place ID returned in a Place (with "places/" prefix), or
+        /// equivalently the name in the same Place. Format:
+        /// `places/{place_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -507,11 +537,12 @@ namespace Google.Maps.Places.V1
             }, callSettings);
 
         /// <summary>
-        /// Get a Place with a place id (in a name) string.
+        /// Get place details with a place id (in a name) string.
         /// </summary>
         /// <param name="name">
-        /// Required. A place_id returned in a Place (with "places/" prefix), or
-        /// equivalently the name in the same Place. Format: places/&lt;place_id&gt;.
+        /// Required. A place ID returned in a Place (with "places/" prefix), or
+        /// equivalently the name in the same Place. Format:
+        /// `places/{place_id}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -522,10 +553,11 @@ namespace Google.Maps.Places.V1
     /// <summary>Places client wrapper implementation, for convenient use.</summary>
     /// <remarks>
     /// Service definition for the Places API.
-    /// Note: every request actually requires a field mask set outside of the request
-    /// proto (all/'*' is not assumed).  That can be set via either a side channel
-    /// (SystemParameterContext) over RPC, or a header (X-Goog-FieldMask) over HTTP.
-    /// See: https://cloud.google.com/apis/docs/system-parameters
+    /// Note: every request actually requires a field mask set outside of
+    /// the request proto (all/'*', is not assumed).  That can be set via either a
+    /// side channel (SystemParameterContext) over RPC, or a header
+    /// (X-Goog-FieldMask) over HTTP. See:
+    /// https://cloud.google.com/apis/docs/system-parameters
     /// </remarks>
     public sealed partial class PlacesClientImpl : PlacesClient
     {
@@ -659,7 +691,7 @@ namespace Google.Maps.Places.V1
         }
 
         /// <summary>
-        /// Get a Place with a place id (in a name) string.
+        /// Get place details with a place id (in a name) string.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -671,7 +703,7 @@ namespace Google.Maps.Places.V1
         }
 
         /// <summary>
-        /// Get a Place with a place id (in a name) string.
+        /// Get place details with a place id (in a name) string.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
