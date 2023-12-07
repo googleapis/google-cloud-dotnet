@@ -27,16 +27,16 @@ namespace Google.Maps.Places.V1 {
             "CiFnb29nbGUvbWFwcy9wbGFjZXMvdjEvcGhvdG8ucHJvdG8SFWdvb2dsZS5t",
             "YXBzLnBsYWNlcy52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90",
             "bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxonZ29vZ2xlL21hcHMvcGxh",
-            "Y2VzL3YxL2F0dHJpYnV0aW9uLnByb3RvIuUBCgVQaG90bxIRCgRuYW1lGAEg",
-            "ASgJQgPgQQMSFQoId2lkdGhfcHgYAiABKAVCA+BBAxIWCgloZWlnaHRfcHgY",
-            "AyABKAVCA+BBAxJKChNhdXRob3JfYXR0cmlidXRpb25zGAQgAygLMiguZ29v",
-            "Z2xlLm1hcHMucGxhY2VzLnYxLkF1dGhvckF0dHJpYnV0aW9uQgPgQQM6TupB",
-            "SwobcGxhY2VzLmdvb2dsZWFwaXMuY29tL1Bob3RvEh1wbGFjZXMve3BsYWNl",
-            "fS9waG90b3Mve3Bob3RvfSoGcGhvdG9zMgVwaG90b0KeAQoZY29tLmdvb2ds",
-            "ZS5tYXBzLnBsYWNlcy52MUIKUGhvdG9Qcm90b1ABWjdjbG91ZC5nb29nbGUu",
-            "Y29tL2dvL21hcHMvcGxhY2VzL2FwaXYxL3BsYWNlc3BiO3BsYWNlc3Bi+AEB",
-            "ogIGR01QU1YxqgIVR29vZ2xlLk1hcHMuUGxhY2VzLlYxygIVR29vZ2xlXE1h",
-            "cHNcUGxhY2VzXFYxYgZwcm90bzM="));
+            "Y2VzL3YxL2F0dHJpYnV0aW9uLnByb3RvItYBCgVQaG90bxIRCgRuYW1lGAEg",
+            "ASgJQgPgQQgSEAoId2lkdGhfcHgYAiABKAUSEQoJaGVpZ2h0X3B4GAMgASgF",
+            "EkUKE2F1dGhvcl9hdHRyaWJ1dGlvbnMYBCADKAsyKC5nb29nbGUubWFwcy5w",
+            "bGFjZXMudjEuQXV0aG9yQXR0cmlidXRpb246TupBSwobcGxhY2VzLmdvb2ds",
+            "ZWFwaXMuY29tL1Bob3RvEh1wbGFjZXMve3BsYWNlfS9waG90b3Mve3Bob3Rv",
+            "fSoGcGhvdG9zMgVwaG90b0KeAQoZY29tLmdvb2dsZS5tYXBzLnBsYWNlcy52",
+            "MUIKUGhvdG9Qcm90b1ABWjdjbG91ZC5nb29nbGUuY29tL2dvL21hcHMvcGxh",
+            "Y2VzL2FwaXYxL3BsYWNlc3BiO3BsYWNlc3Bi+AEBogIGR01QU1YxqgIVR29v",
+            "Z2xlLk1hcHMuUGxhY2VzLlYxygIVR29vZ2xlXE1hcHNcUGxhY2VzXFYxYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Maps.Places.V1.AttributionReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -101,9 +101,9 @@ namespace Google.Maps.Places.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. A reference representing this place photo which may be used to
-    /// look up this place photo again (a.k.a. the API "resource" name:
-    /// places/{place_id}/photos/{photo}).
+    /// Identifier. A reference representing this place photo which may be used to
+    /// look up this place photo again (also called the API "resource" name:
+    /// `places/{place_id}/photos/{photo}`).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -118,7 +118,7 @@ namespace Google.Maps.Places.V1 {
     public const int WidthPxFieldNumber = 2;
     private int widthPx_;
     /// <summary>
-    /// Output only. The maximum available width, in pixels.
+    /// The maximum available width, in pixels.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -133,7 +133,7 @@ namespace Google.Maps.Places.V1 {
     public const int HeightPxFieldNumber = 3;
     private int heightPx_;
     /// <summary>
-    /// Output only. The maximum available height, in pixels.
+    /// The maximum available height, in pixels.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -150,7 +150,7 @@ namespace Google.Maps.Places.V1 {
         = pb::FieldCodec.ForMessage(34, global::Google.Maps.Places.V1.AuthorAttribution.Parser);
     private readonly pbc::RepeatedField<global::Google.Maps.Places.V1.AuthorAttribution> authorAttributions_ = new pbc::RepeatedField<global::Google.Maps.Places.V1.AuthorAttribution>();
     /// <summary>
-    /// Output only. This photo's authors.
+    /// This photo's authors.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

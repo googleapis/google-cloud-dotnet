@@ -25,10 +25,11 @@ using grpc = global::Grpc.Core;
 namespace Google.Maps.Places.V1 {
   /// <summary>
   /// Service definition for the Places API.
-  /// Note: every request actually requires a field mask set outside of the request
-  /// proto (all/'*' is not assumed).  That can be set via either a side channel
-  /// (SystemParameterContext) over RPC, or a header (X-Goog-FieldMask) over HTTP.
-  /// See: https://cloud.google.com/apis/docs/system-parameters
+  /// Note: every request actually requires a field mask set outside of
+  /// the request proto (all/'*', is not assumed).  That can be set via either a
+  /// side channel (SystemParameterContext) over RPC, or a header
+  /// (X-Goog-FieldMask) over HTTP. See:
+  /// https://cloud.google.com/apis/docs/system-parameters
   /// </summary>
   public static partial class Places
   {
@@ -163,7 +164,7 @@ namespace Google.Maps.Places.V1 {
       }
 
       /// <summary>
-      /// Get a Place with a place id (in a name) string.
+      /// Get place details with a place id (in a name) string.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -348,7 +349,7 @@ namespace Google.Maps.Places.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetPhotoMedia, null, options, request);
       }
       /// <summary>
-      /// Get a Place with a place id (in a name) string.
+      /// Get place details with a place id (in a name) string.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -361,7 +362,7 @@ namespace Google.Maps.Places.V1 {
         return GetPlace(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get a Place with a place id (in a name) string.
+      /// Get place details with a place id (in a name) string.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -372,7 +373,7 @@ namespace Google.Maps.Places.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetPlace, null, options, request);
       }
       /// <summary>
-      /// Get a Place with a place id (in a name) string.
+      /// Get place details with a place id (in a name) string.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -385,7 +386,7 @@ namespace Google.Maps.Places.V1 {
         return GetPlaceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get a Place with a place id (in a name) string.
+      /// Get place details with a place id (in a name) string.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

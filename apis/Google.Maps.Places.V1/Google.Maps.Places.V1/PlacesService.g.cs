@@ -194,7 +194,7 @@ namespace Google.Maps.Places.V1 {
     /// affect results based on applicable law.
     ///
     /// For more information, see
-    /// http://www.unicode.org/reports/tr35/#unicode_region_subtag.
+    /// https://www.unicode.org/cldr/charts/latest/supplemental/territory_language_information.html.
     ///
     /// Note that 3-digit region codes are not currently supported.
     /// </summary>
@@ -214,7 +214,11 @@ namespace Google.Maps.Places.V1 {
     private readonly pbc::RepeatedField<string> includedTypes_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Included Place type (eg, "restaurant" or "gas_station") from
-    /// https://developers.google.com/places/supported_types.
+    /// https://developers.google.com/maps/documentation/places/web-service/place-types.
+    ///
+    /// Up to 50 types from [Table
+    /// A](https://developers.google.com/maps/documentation/places/web-service/place-types#table-a)
+    /// may be specified.
     ///
     /// If there are any conflicting types, i.e. a type appears in both
     /// included_types and excluded_types, an INVALID_ARGUMENT error is
@@ -223,7 +227,7 @@ namespace Google.Maps.Places.V1 {
     /// If a Place type is specified with multiple type restrictions, only places
     /// that satisfy all of the restrictions are returned. For example, if we
     /// have {included_types = ["restaurant"], excluded_primary_types =
-    /// ["restaurant"]}, the returned places are POIs that provide "restaurant"
+    /// ["restaurant"]}, the returned places provide "restaurant"
     /// related services but do not operate primarily as "restaurants".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -239,7 +243,11 @@ namespace Google.Maps.Places.V1 {
     private readonly pbc::RepeatedField<string> excludedTypes_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Excluded Place type (eg, "restaurant" or "gas_station") from
-    /// https://developers.google.com/places/supported_types.
+    /// https://developers.google.com/maps/documentation/places/web-service/place-types.
+    ///
+    /// Up to 50 types from [Table
+    /// A](https://developers.google.com/maps/documentation/places/web-service/place-types#table-a)
+    /// may be specified.
     ///
     /// If the client provides both included_types (e.g. restaurant) and
     /// excluded_types (e.g. cafe), then the response should include places that
@@ -252,7 +260,7 @@ namespace Google.Maps.Places.V1 {
     /// If a Place type is specified with multiple type restrictions, only places
     /// that satisfy all of the restrictions are returned. For example, if we
     /// have {included_types = ["restaurant"], excluded_primary_types =
-    /// ["restaurant"]}, the returned places are POIs that provide "restaurant"
+    /// ["restaurant"]}, the returned places provide "restaurant"
     /// related services but do not operate primarily as "restaurants".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -268,7 +276,13 @@ namespace Google.Maps.Places.V1 {
     private readonly pbc::RepeatedField<string> includedPrimaryTypes_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Included primary Place type (e.g. "restaurant" or "gas_station") from
-    /// https://developers.google.com/places/supported_types.
+    /// https://developers.google.com/maps/documentation/places/web-service/place-types.
+    /// A place can only have a single primary type from the supported types table
+    /// associated with it.
+    ///
+    /// Up to 50 types from [Table
+    /// A](https://developers.google.com/maps/documentation/places/web-service/place-types#table-a)
+    /// may be specified.
     ///
     /// If there are any conflicting primary types, i.e. a type appears in both
     /// included_primary_types and excluded_primary_types, an INVALID_ARGUMENT
@@ -277,7 +291,7 @@ namespace Google.Maps.Places.V1 {
     /// If a Place type is specified with multiple type restrictions, only places
     /// that satisfy all of the restrictions are returned. For example, if we
     /// have {included_types = ["restaurant"], excluded_primary_types =
-    /// ["restaurant"]}, the returned places are POIs that provide "restaurant"
+    /// ["restaurant"]}, the returned places provide "restaurant"
     /// related services but do not operate primarily as "restaurants".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -293,7 +307,11 @@ namespace Google.Maps.Places.V1 {
     private readonly pbc::RepeatedField<string> excludedPrimaryTypes_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Excluded primary Place type (e.g. "restaurant" or "gas_station") from
-    /// https://developers.google.com/places/supported_types.
+    /// https://developers.google.com/maps/documentation/places/web-service/place-types.
+    ///
+    /// Up to 50 types from [Table
+    /// A](https://developers.google.com/maps/documentation/places/web-service/place-types#table-a)
+    /// may be specified.
     ///
     /// If there are any conflicting primary types, i.e. a type appears in both
     /// included_primary_types and excluded_primary_types, an INVALID_ARGUMENT
@@ -302,7 +320,7 @@ namespace Google.Maps.Places.V1 {
     /// If a Place type is specified with multiple type restrictions, only places
     /// that satisfy all of the restrictions are returned. For example, if we
     /// have {included_types = ["restaurant"], excluded_primary_types =
-    /// ["restaurant"]}, the returned places are POIs that provide "restaurant"
+    /// ["restaurant"]}, the returned places provide "restaurant"
     /// related services but do not operate primarily as "restaurants".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -315,7 +333,7 @@ namespace Google.Maps.Places.V1 {
     public const int MaxResultCountFieldNumber = 7;
     private int maxResultCount_;
     /// <summary>
-    /// Maximum number of results to return. It must be between 1 and 20,
+    /// Maximum number of results to return. It must be between 1 and 20 (default),
     /// inclusively. If the number is unset, it falls back to the upper limit. If
     /// the number is set to negative or exceeds the upper limit, an
     /// INVALID_ARGUMENT error is returned.
@@ -970,7 +988,7 @@ namespace Google.Maps.Places.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Maps.Places.V1.Place.Parser);
     private readonly pbc::RepeatedField<global::Google.Maps.Places.V1.Place> places_ = new pbc::RepeatedField<global::Google.Maps.Places.V1.Place>();
     /// <summary>
-    /// A list of interesting places that meets user's requirements like places
+    /// A list of places that meets user's requirements like places
     /// types, number of places and specific location restriction.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1206,7 +1224,7 @@ namespace Google.Maps.Places.V1 {
     /// affect results based on applicable law.
     ///
     /// For more information, see
-    /// http://www.unicode.org/reports/tr35/#unicode_region_subtag.
+    /// https://www.unicode.org/cldr/charts/latest/supplemental/territory_language_information.html.
     ///
     /// Note that 3-digit region codes are not currently supported.
     /// </summary>
@@ -1239,8 +1257,8 @@ namespace Google.Maps.Places.V1 {
     private string includedType_ = "";
     /// <summary>
     /// The requested place type. Full list of types supported:
-    /// https://developers.google.com/places/supported_types. Only support one
-    /// included type.
+    /// https://developers.google.com/maps/documentation/places/web-service/place-types.
+    /// Only support one included type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1255,8 +1273,8 @@ namespace Google.Maps.Places.V1 {
     public const int OpenNowFieldNumber = 7;
     private bool openNow_;
     /// <summary>
-    /// Used to restrict the search to places that are open at a specific time.
-    /// open_now marks if a business is currently open.
+    /// Used to restrict the search to places that are currently open.  The default
+    /// is false.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1272,11 +1290,10 @@ namespace Google.Maps.Places.V1 {
     private double minRating_;
     /// <summary>
     /// Filter out results whose average user rating is strictly less than this
-    /// limit. A valid value must be an float between 0 and 5 (inclusively) at a
-    /// 0.5 cadence i.e. [0, 0.5, 1.0, ... , 5.0] inclusively. This is to keep
-    /// parity with LocalRefinement_UserRating. The input rating will round up to
-    /// the nearest 0.5(ceiling). For instance, a rating of 0.6 will eliminate all
-    /// results with a less than 1.0 rating.
+    /// limit. A valid value must be a float between 0 and 5 (inclusively) at a
+    /// 0.5 cadence i.e. [0, 0.5, 1.0, ... , 5.0] inclusively. The input rating
+    /// will round up to the nearest 0.5(ceiling). For instance, a rating of 0.6
+    /// will eliminate all results with a less than 1.0 rating.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1292,9 +1309,9 @@ namespace Google.Maps.Places.V1 {
     private int maxResultCount_;
     /// <summary>
     /// Maximum number of results to return. It must be between 1 and 20,
-    /// inclusively. If the number is unset, it falls back to the upper limit. If
-    /// the number is set to negative or exceeds the upper limit, an
-    /// INVALID_ARGUMENT error is returned.
+    /// inclusively. The default is 20.  If the number is unset, it falls back to
+    /// the upper limit. If the number is set to negative or exceeds the upper
+    /// limit, an INVALID_ARGUMENT error is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1795,7 +1812,7 @@ namespace Google.Maps.Places.V1 {
         [pbr::OriginalName("DISTANCE")] Distance = 1,
         /// <summary>
         /// Ranks results by relevance. Sort order determined by normal ranking
-        /// stack. See SortRefinement::RELEVANCE.
+        /// stack.
         /// </summary>
         [pbr::OriginalName("RELEVANCE")] Relevance = 2,
       }
@@ -1860,6 +1877,11 @@ namespace Google.Maps.Places.V1 {
         public const int RectangleFieldNumber = 1;
         /// <summary>
         /// A rectangle box defined by northeast and southwest corner.
+        /// `rectangle.high()` must be the northeast point of the rectangle
+        /// viewport. `rectangle.low()` must be the southwest point of the
+        /// rectangle viewport. `rectangle.low().latitude()` cannot be greater than
+        /// `rectangle.high().latitude()`. This will result in an empty latitude
+        /// range. A rectangle viewport cannot be wider than 180 degrees.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2152,6 +2174,11 @@ namespace Google.Maps.Places.V1 {
         public const int RectangleFieldNumber = 1;
         /// <summary>
         /// A rectangle box defined by northeast and southwest corner.
+        /// `rectangle.high()` must be the northeast point of the rectangle
+        /// viewport. `rectangle.low()` must be the southwest point of the
+        /// rectangle viewport. `rectangle.low().latitude()` cannot be greater than
+        /// `rectangle.high().latitude()`. This will result in an empty latitude
+        /// range. A rectangle viewport cannot be wider than 180 degrees.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2577,9 +2604,13 @@ namespace Google.Maps.Places.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of a photo. It is returned in Place's
-    /// photos.name field. Format:
-    /// places/&lt;place_id>/photos/&lt;photo_reference>/media.
+    /// Required. The resource name of a photo media in the format:
+    /// `places/{place_id}/photos/{photo_reference}/media`.
+    ///
+    /// The resource name of a photo as returned in a Place object's `photos.name`
+    /// field comes with the format
+    /// `places/{place_id}/photos/{photo_reference}`. You need to append `/media`
+    /// at the end of the photo resource to get the photo media resource name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2647,7 +2678,7 @@ namespace Google.Maps.Places.V1 {
     /// Optional. If set, skip the default HTTP redirect behavior and render a text
     /// format (for example, in JSON format for HTTP use case) response. If not
     /// set, an HTTP redirect will be issued to redirect the call to the image
-    /// midea. This option is ignored for non-HTTP requests.
+    /// media. This option is ignored for non-HTTP requests.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2915,8 +2946,8 @@ namespace Google.Maps.Places.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The resource name of a photo. It is returned in Place's photos.name field.
-    /// Format: places/&lt;place_id>/photos/&lt;photo_reference>/media.
+    /// The resource name of a photo media in the format:
+    /// `places/{place_id}/photos/{photo_reference}/media`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3152,8 +3183,9 @@ namespace Google.Maps.Places.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. A place_id returned in a Place (with "places/" prefix), or
-    /// equivalently the name in the same Place. Format: places/&lt;place_id>.
+    /// Required. A place ID returned in a Place (with "places/" prefix), or
+    /// equivalently the name in the same Place. Format:
+    /// `places/{place_id}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3192,7 +3224,7 @@ namespace Google.Maps.Places.V1 {
     /// details, like region-specific place name, if available. The parameter can
     /// affect results based on applicable law.
     /// For more information, see
-    /// http://www.unicode.org/reports/tr35/#unicode_region_subtag.
+    /// https://www.unicode.org/cldr/charts/latest/supplemental/territory_language_information.html.
     ///
     /// Note that 3-digit region codes are not currently supported.
     /// </summary>
