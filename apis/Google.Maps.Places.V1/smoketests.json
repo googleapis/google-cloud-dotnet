@@ -3,6 +3,7 @@
     "method": "SearchText",
     "client": "PlacesClient",
     "fieldMask": "places.formattedAddress",
+    "transports": [ "Grpc" ],
     "arguments": {
       "request": {
         "textQuery": "Google, 1600 Amphitheatre Parkway, CA"
