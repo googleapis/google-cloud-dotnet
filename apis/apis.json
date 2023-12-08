@@ -55,6 +55,25 @@
       "transport": "grpc+rest"
     },
     {
+      "id": "Google.Apps.Meet.V2Beta",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Google Meet",
+      "productUrl": "https://developers.google.com/meet/api/guides/overview",
+      "description": "Create and manage meetings in Google Meet.",
+      "tags": [
+        "meet",
+        "video-conferencing"
+      ],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/apps/meet/v2beta",
+      "shortName": "meet",
+      "serviceConfigFile": "meet_v2beta.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Apps.Script.Type",
       "version": "2.1.0",
       "targetFrameworks": "netstandard2.1;net462",

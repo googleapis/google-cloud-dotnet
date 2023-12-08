@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Issue11403", "Issue11403\Issue11403.csproj", "{863BE8EE-D69D-4152-9BED-B8A4C067BD41}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.BigQuery.V2", "..\..\apis\Google.Cloud.BigQuery.V2\Google.Cloud.BigQuery.V2\Google.Cloud.BigQuery.V2.csproj", "{9E6C737D-8925-4154-BD1C-EEFAA67A5709}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{863BE8EE-D69D-4152-9BED-B8A4C067BD41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{863BE8EE-D69D-4152-9BED-B8A4C067BD41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{863BE8EE-D69D-4152-9BED-B8A4C067BD41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{863BE8EE-D69D-4152-9BED-B8A4C067BD41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E6C737D-8925-4154-BD1C-EEFAA67A5709}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E6C737D-8925-4154-BD1C-EEFAA67A5709}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E6C737D-8925-4154-BD1C-EEFAA67A5709}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E6C737D-8925-4154-BD1C-EEFAA67A5709}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
