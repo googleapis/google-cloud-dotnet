@@ -17,11 +17,13 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
 using sys = System;
+using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
@@ -51,6 +53,11 @@ namespace Google.Analytics.Data.V1Beta
             GetMetadataSettings = existing.GetMetadataSettings;
             RunRealtimeReportSettings = existing.RunRealtimeReportSettings;
             CheckCompatibilitySettings = existing.CheckCompatibilitySettings;
+            CreateAudienceExportSettings = existing.CreateAudienceExportSettings;
+            CreateAudienceExportOperationsSettings = existing.CreateAudienceExportOperationsSettings.Clone();
+            QueryAudienceExportSettings = existing.QueryAudienceExportSettings;
+            GetAudienceExportSettings = existing.GetAudienceExportSettings;
+            ListAudienceExportsSettings = existing.ListAudienceExportsSettings;
             OnCopy(existing);
         }
 
@@ -141,6 +148,91 @@ namespace Google.Analytics.Data.V1Beta
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings CheckCompatibilitySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BetaAnalyticsDataClient.CreateAudienceExport</c> and <c>BetaAnalyticsDataClient.CreateAudienceExportAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Retriable status codes: <see cref="grpccore::StatusCode.Unknown"/>.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateAudienceExportSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BetaAnalyticsDataClient.CreateAudienceExport</c> and
+        /// <c>BetaAnalyticsDataClient.CreateAudienceExportAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateAudienceExportOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BetaAnalyticsDataClient.QueryAudienceExport</c> and <c>BetaAnalyticsDataClient.QueryAudienceExportAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Retriable status codes: <see cref="grpccore::StatusCode.Unknown"/>.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings QueryAudienceExportSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BetaAnalyticsDataClient.GetAudienceExport</c> and <c>BetaAnalyticsDataClient.GetAudienceExportAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Retriable status codes: <see cref="grpccore::StatusCode.Unknown"/>.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAudienceExportSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BetaAnalyticsDataClient.ListAudienceExports</c> and <c>BetaAnalyticsDataClient.ListAudienceExportsAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Retriable status codes: <see cref="grpccore::StatusCode.Unknown"/>.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListAudienceExportsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unknown)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="BetaAnalyticsDataSettings"/> object.</returns>
@@ -791,6 +883,971 @@ namespace Google.Analytics.Data.V1Beta
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<CheckCompatibilityResponse> CheckCompatibilityAsync(CheckCompatibilityRequest request, st::CancellationToken cancellationToken) =>
             CheckCompatibilityAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an audience export for later retrieval. This method quickly returns
+        /// the audience export's resource name and initiates a long running
+        /// asynchronous request to form an audience export. To export the users in an
+        /// audience export, first create the audience export through this method and
+        /// then send the audience resource name to the `QueryAudienceExport` method.
+        /// 
+        /// See [Creating an Audience
+        /// Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+        /// for an introduction to Audience Exports with examples.
+        /// 
+        /// An audience export is a snapshot of the users currently in the audience at
+        /// the time of audience export creation. Creating audience exports for one
+        /// audience on different days will return different results as users enter and
+        /// exit the audience.
+        /// 
+        /// Audiences in Google Analytics 4 allow you to segment your users in the ways
+        /// that are important to your business. To learn more, see
+        /// https://support.google.com/analytics/answer/9267572. Audience exports
+        /// contain the users in each audience.
+        /// 
+        /// Audience Export APIs have some methods at alpha and other methods at beta
+        /// stability. The intention is to advance methods to beta stability after some
+        /// feedback and adoption. To give your feedback on this API, complete the
+        /// [Google Analytics Audience Export API
+        /// Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AudienceExport, AudienceExportMetadata> CreateAudienceExport(CreateAudienceExportRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an audience export for later retrieval. This method quickly returns
+        /// the audience export's resource name and initiates a long running
+        /// asynchronous request to form an audience export. To export the users in an
+        /// audience export, first create the audience export through this method and
+        /// then send the audience resource name to the `QueryAudienceExport` method.
+        /// 
+        /// See [Creating an Audience
+        /// Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+        /// for an introduction to Audience Exports with examples.
+        /// 
+        /// An audience export is a snapshot of the users currently in the audience at
+        /// the time of audience export creation. Creating audience exports for one
+        /// audience on different days will return different results as users enter and
+        /// exit the audience.
+        /// 
+        /// Audiences in Google Analytics 4 allow you to segment your users in the ways
+        /// that are important to your business. To learn more, see
+        /// https://support.google.com/analytics/answer/9267572. Audience exports
+        /// contain the users in each audience.
+        /// 
+        /// Audience Export APIs have some methods at alpha and other methods at beta
+        /// stability. The intention is to advance methods to beta stability after some
+        /// feedback and adoption. To give your feedback on this API, complete the
+        /// [Google Analytics Audience Export API
+        /// Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AudienceExport, AudienceExportMetadata>> CreateAudienceExportAsync(CreateAudienceExportRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an audience export for later retrieval. This method quickly returns
+        /// the audience export's resource name and initiates a long running
+        /// asynchronous request to form an audience export. To export the users in an
+        /// audience export, first create the audience export through this method and
+        /// then send the audience resource name to the `QueryAudienceExport` method.
+        /// 
+        /// See [Creating an Audience
+        /// Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+        /// for an introduction to Audience Exports with examples.
+        /// 
+        /// An audience export is a snapshot of the users currently in the audience at
+        /// the time of audience export creation. Creating audience exports for one
+        /// audience on different days will return different results as users enter and
+        /// exit the audience.
+        /// 
+        /// Audiences in Google Analytics 4 allow you to segment your users in the ways
+        /// that are important to your business. To learn more, see
+        /// https://support.google.com/analytics/answer/9267572. Audience exports
+        /// contain the users in each audience.
+        /// 
+        /// Audience Export APIs have some methods at alpha and other methods at beta
+        /// stability. The intention is to advance methods to beta stability after some
+        /// feedback and adoption. To give your feedback on this API, complete the
+        /// [Google Analytics Audience Export API
+        /// Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AudienceExport, AudienceExportMetadata>> CreateAudienceExportAsync(CreateAudienceExportRequest request, st::CancellationToken cancellationToken) =>
+            CreateAudienceExportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateAudienceExport</c>.</summary>
+        public virtual lro::OperationsClient CreateAudienceExportOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateAudienceExport</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<AudienceExport, AudienceExportMetadata> PollOnceCreateAudienceExport(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AudienceExport, AudienceExportMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAudienceExportOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateAudienceExport</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<AudienceExport, AudienceExportMetadata>> PollOnceCreateAudienceExportAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AudienceExport, AudienceExportMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAudienceExportOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates an audience export for later retrieval. This method quickly returns
+        /// the audience export's resource name and initiates a long running
+        /// asynchronous request to form an audience export. To export the users in an
+        /// audience export, first create the audience export through this method and
+        /// then send the audience resource name to the `QueryAudienceExport` method.
+        /// 
+        /// See [Creating an Audience
+        /// Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+        /// for an introduction to Audience Exports with examples.
+        /// 
+        /// An audience export is a snapshot of the users currently in the audience at
+        /// the time of audience export creation. Creating audience exports for one
+        /// audience on different days will return different results as users enter and
+        /// exit the audience.
+        /// 
+        /// Audiences in Google Analytics 4 allow you to segment your users in the ways
+        /// that are important to your business. To learn more, see
+        /// https://support.google.com/analytics/answer/9267572. Audience exports
+        /// contain the users in each audience.
+        /// 
+        /// Audience Export APIs have some methods at alpha and other methods at beta
+        /// stability. The intention is to advance methods to beta stability after some
+        /// feedback and adoption. To give your feedback on this API, complete the
+        /// [Google Analytics Audience Export API
+        /// Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this audience export will be created.
+        /// Format: `properties/{property}`
+        /// </param>
+        /// <param name="audienceExport">
+        /// Required. The audience export to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AudienceExport, AudienceExportMetadata> CreateAudienceExport(string parent, AudienceExport audienceExport, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAudienceExport(new CreateAudienceExportRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AudienceExport = gax::GaxPreconditions.CheckNotNull(audienceExport, nameof(audienceExport)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an audience export for later retrieval. This method quickly returns
+        /// the audience export's resource name and initiates a long running
+        /// asynchronous request to form an audience export. To export the users in an
+        /// audience export, first create the audience export through this method and
+        /// then send the audience resource name to the `QueryAudienceExport` method.
+        /// 
+        /// See [Creating an Audience
+        /// Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+        /// for an introduction to Audience Exports with examples.
+        /// 
+        /// An audience export is a snapshot of the users currently in the audience at
+        /// the time of audience export creation. Creating audience exports for one
+        /// audience on different days will return different results as users enter and
+        /// exit the audience.
+        /// 
+        /// Audiences in Google Analytics 4 allow you to segment your users in the ways
+        /// that are important to your business. To learn more, see
+        /// https://support.google.com/analytics/answer/9267572. Audience exports
+        /// contain the users in each audience.
+        /// 
+        /// Audience Export APIs have some methods at alpha and other methods at beta
+        /// stability. The intention is to advance methods to beta stability after some
+        /// feedback and adoption. To give your feedback on this API, complete the
+        /// [Google Analytics Audience Export API
+        /// Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this audience export will be created.
+        /// Format: `properties/{property}`
+        /// </param>
+        /// <param name="audienceExport">
+        /// Required. The audience export to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AudienceExport, AudienceExportMetadata>> CreateAudienceExportAsync(string parent, AudienceExport audienceExport, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAudienceExportAsync(new CreateAudienceExportRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AudienceExport = gax::GaxPreconditions.CheckNotNull(audienceExport, nameof(audienceExport)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an audience export for later retrieval. This method quickly returns
+        /// the audience export's resource name and initiates a long running
+        /// asynchronous request to form an audience export. To export the users in an
+        /// audience export, first create the audience export through this method and
+        /// then send the audience resource name to the `QueryAudienceExport` method.
+        /// 
+        /// See [Creating an Audience
+        /// Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+        /// for an introduction to Audience Exports with examples.
+        /// 
+        /// An audience export is a snapshot of the users currently in the audience at
+        /// the time of audience export creation. Creating audience exports for one
+        /// audience on different days will return different results as users enter and
+        /// exit the audience.
+        /// 
+        /// Audiences in Google Analytics 4 allow you to segment your users in the ways
+        /// that are important to your business. To learn more, see
+        /// https://support.google.com/analytics/answer/9267572. Audience exports
+        /// contain the users in each audience.
+        /// 
+        /// Audience Export APIs have some methods at alpha and other methods at beta
+        /// stability. The intention is to advance methods to beta stability after some
+        /// feedback and adoption. To give your feedback on this API, complete the
+        /// [Google Analytics Audience Export API
+        /// Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this audience export will be created.
+        /// Format: `properties/{property}`
+        /// </param>
+        /// <param name="audienceExport">
+        /// Required. The audience export to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AudienceExport, AudienceExportMetadata>> CreateAudienceExportAsync(string parent, AudienceExport audienceExport, st::CancellationToken cancellationToken) =>
+            CreateAudienceExportAsync(parent, audienceExport, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an audience export for later retrieval. This method quickly returns
+        /// the audience export's resource name and initiates a long running
+        /// asynchronous request to form an audience export. To export the users in an
+        /// audience export, first create the audience export through this method and
+        /// then send the audience resource name to the `QueryAudienceExport` method.
+        /// 
+        /// See [Creating an Audience
+        /// Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+        /// for an introduction to Audience Exports with examples.
+        /// 
+        /// An audience export is a snapshot of the users currently in the audience at
+        /// the time of audience export creation. Creating audience exports for one
+        /// audience on different days will return different results as users enter and
+        /// exit the audience.
+        /// 
+        /// Audiences in Google Analytics 4 allow you to segment your users in the ways
+        /// that are important to your business. To learn more, see
+        /// https://support.google.com/analytics/answer/9267572. Audience exports
+        /// contain the users in each audience.
+        /// 
+        /// Audience Export APIs have some methods at alpha and other methods at beta
+        /// stability. The intention is to advance methods to beta stability after some
+        /// feedback and adoption. To give your feedback on this API, complete the
+        /// [Google Analytics Audience Export API
+        /// Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this audience export will be created.
+        /// Format: `properties/{property}`
+        /// </param>
+        /// <param name="audienceExport">
+        /// Required. The audience export to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AudienceExport, AudienceExportMetadata> CreateAudienceExport(PropertyName parent, AudienceExport audienceExport, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAudienceExport(new CreateAudienceExportRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AudienceExport = gax::GaxPreconditions.CheckNotNull(audienceExport, nameof(audienceExport)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an audience export for later retrieval. This method quickly returns
+        /// the audience export's resource name and initiates a long running
+        /// asynchronous request to form an audience export. To export the users in an
+        /// audience export, first create the audience export through this method and
+        /// then send the audience resource name to the `QueryAudienceExport` method.
+        /// 
+        /// See [Creating an Audience
+        /// Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+        /// for an introduction to Audience Exports with examples.
+        /// 
+        /// An audience export is a snapshot of the users currently in the audience at
+        /// the time of audience export creation. Creating audience exports for one
+        /// audience on different days will return different results as users enter and
+        /// exit the audience.
+        /// 
+        /// Audiences in Google Analytics 4 allow you to segment your users in the ways
+        /// that are important to your business. To learn more, see
+        /// https://support.google.com/analytics/answer/9267572. Audience exports
+        /// contain the users in each audience.
+        /// 
+        /// Audience Export APIs have some methods at alpha and other methods at beta
+        /// stability. The intention is to advance methods to beta stability after some
+        /// feedback and adoption. To give your feedback on this API, complete the
+        /// [Google Analytics Audience Export API
+        /// Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this audience export will be created.
+        /// Format: `properties/{property}`
+        /// </param>
+        /// <param name="audienceExport">
+        /// Required. The audience export to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AudienceExport, AudienceExportMetadata>> CreateAudienceExportAsync(PropertyName parent, AudienceExport audienceExport, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAudienceExportAsync(new CreateAudienceExportRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AudienceExport = gax::GaxPreconditions.CheckNotNull(audienceExport, nameof(audienceExport)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an audience export for later retrieval. This method quickly returns
+        /// the audience export's resource name and initiates a long running
+        /// asynchronous request to form an audience export. To export the users in an
+        /// audience export, first create the audience export through this method and
+        /// then send the audience resource name to the `QueryAudienceExport` method.
+        /// 
+        /// See [Creating an Audience
+        /// Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+        /// for an introduction to Audience Exports with examples.
+        /// 
+        /// An audience export is a snapshot of the users currently in the audience at
+        /// the time of audience export creation. Creating audience exports for one
+        /// audience on different days will return different results as users enter and
+        /// exit the audience.
+        /// 
+        /// Audiences in Google Analytics 4 allow you to segment your users in the ways
+        /// that are important to your business. To learn more, see
+        /// https://support.google.com/analytics/answer/9267572. Audience exports
+        /// contain the users in each audience.
+        /// 
+        /// Audience Export APIs have some methods at alpha and other methods at beta
+        /// stability. The intention is to advance methods to beta stability after some
+        /// feedback and adoption. To give your feedback on this API, complete the
+        /// [Google Analytics Audience Export API
+        /// Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this audience export will be created.
+        /// Format: `properties/{property}`
+        /// </param>
+        /// <param name="audienceExport">
+        /// Required. The audience export to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AudienceExport, AudienceExportMetadata>> CreateAudienceExportAsync(PropertyName parent, AudienceExport audienceExport, st::CancellationToken cancellationToken) =>
+            CreateAudienceExportAsync(parent, audienceExport, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves an audience export of users. After creating an audience, the
+        /// users are not immediately available for exporting. First, a request to
+        /// `CreateAudienceExport` is necessary to create an audience export of users,
+        /// and then second, this method is used to retrieve the users in the audience
+        /// export.
+        /// 
+        /// See [Creating an Audience
+        /// Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+        /// for an introduction to Audience Exports with examples.
+        /// 
+        /// Audiences in Google Analytics 4 allow you to segment your users in the ways
+        /// that are important to your business. To learn more, see
+        /// https://support.google.com/analytics/answer/9267572.
+        /// 
+        /// Audience Export APIs have some methods at alpha and other methods at beta
+        /// stability. The intention is to advance methods to beta stability after some
+        /// feedback and adoption. To give your feedback on this API, complete the
+        /// [Google Analytics Audience Export API
+        /// Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QueryAudienceExportResponse QueryAudienceExport(QueryAudienceExportRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves an audience export of users. After creating an audience, the
+        /// users are not immediately available for exporting. First, a request to
+        /// `CreateAudienceExport` is necessary to create an audience export of users,
+        /// and then second, this method is used to retrieve the users in the audience
+        /// export.
+        /// 
+        /// See [Creating an Audience
+        /// Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+        /// for an introduction to Audience Exports with examples.
+        /// 
+        /// Audiences in Google Analytics 4 allow you to segment your users in the ways
+        /// that are important to your business. To learn more, see
+        /// https://support.google.com/analytics/answer/9267572.
+        /// 
+        /// Audience Export APIs have some methods at alpha and other methods at beta
+        /// stability. The intention is to advance methods to beta stability after some
+        /// feedback and adoption. To give your feedback on this API, complete the
+        /// [Google Analytics Audience Export API
+        /// Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QueryAudienceExportResponse> QueryAudienceExportAsync(QueryAudienceExportRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves an audience export of users. After creating an audience, the
+        /// users are not immediately available for exporting. First, a request to
+        /// `CreateAudienceExport` is necessary to create an audience export of users,
+        /// and then second, this method is used to retrieve the users in the audience
+        /// export.
+        /// 
+        /// See [Creating an Audience
+        /// Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+        /// for an introduction to Audience Exports with examples.
+        /// 
+        /// Audiences in Google Analytics 4 allow you to segment your users in the ways
+        /// that are important to your business. To learn more, see
+        /// https://support.google.com/analytics/answer/9267572.
+        /// 
+        /// Audience Export APIs have some methods at alpha and other methods at beta
+        /// stability. The intention is to advance methods to beta stability after some
+        /// feedback and adoption. To give your feedback on this API, complete the
+        /// [Google Analytics Audience Export API
+        /// Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QueryAudienceExportResponse> QueryAudienceExportAsync(QueryAudienceExportRequest request, st::CancellationToken cancellationToken) =>
+            QueryAudienceExportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves an audience export of users. After creating an audience, the
+        /// users are not immediately available for exporting. First, a request to
+        /// `CreateAudienceExport` is necessary to create an audience export of users,
+        /// and then second, this method is used to retrieve the users in the audience
+        /// export.
+        /// 
+        /// See [Creating an Audience
+        /// Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+        /// for an introduction to Audience Exports with examples.
+        /// 
+        /// Audiences in Google Analytics 4 allow you to segment your users in the ways
+        /// that are important to your business. To learn more, see
+        /// https://support.google.com/analytics/answer/9267572.
+        /// 
+        /// Audience Export APIs have some methods at alpha and other methods at beta
+        /// stability. The intention is to advance methods to beta stability after some
+        /// feedback and adoption. To give your feedback on this API, complete the
+        /// [Google Analytics Audience Export API
+        /// Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the audience export to retrieve users from.
+        /// Format: `properties/{property}/audienceExports/{audience_export}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QueryAudienceExportResponse QueryAudienceExport(string name, gaxgrpc::CallSettings callSettings = null) =>
+            QueryAudienceExport(new QueryAudienceExportRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves an audience export of users. After creating an audience, the
+        /// users are not immediately available for exporting. First, a request to
+        /// `CreateAudienceExport` is necessary to create an audience export of users,
+        /// and then second, this method is used to retrieve the users in the audience
+        /// export.
+        /// 
+        /// See [Creating an Audience
+        /// Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+        /// for an introduction to Audience Exports with examples.
+        /// 
+        /// Audiences in Google Analytics 4 allow you to segment your users in the ways
+        /// that are important to your business. To learn more, see
+        /// https://support.google.com/analytics/answer/9267572.
+        /// 
+        /// Audience Export APIs have some methods at alpha and other methods at beta
+        /// stability. The intention is to advance methods to beta stability after some
+        /// feedback and adoption. To give your feedback on this API, complete the
+        /// [Google Analytics Audience Export API
+        /// Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the audience export to retrieve users from.
+        /// Format: `properties/{property}/audienceExports/{audience_export}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QueryAudienceExportResponse> QueryAudienceExportAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            QueryAudienceExportAsync(new QueryAudienceExportRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves an audience export of users. After creating an audience, the
+        /// users are not immediately available for exporting. First, a request to
+        /// `CreateAudienceExport` is necessary to create an audience export of users,
+        /// and then second, this method is used to retrieve the users in the audience
+        /// export.
+        /// 
+        /// See [Creating an Audience
+        /// Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+        /// for an introduction to Audience Exports with examples.
+        /// 
+        /// Audiences in Google Analytics 4 allow you to segment your users in the ways
+        /// that are important to your business. To learn more, see
+        /// https://support.google.com/analytics/answer/9267572.
+        /// 
+        /// Audience Export APIs have some methods at alpha and other methods at beta
+        /// stability. The intention is to advance methods to beta stability after some
+        /// feedback and adoption. To give your feedback on this API, complete the
+        /// [Google Analytics Audience Export API
+        /// Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the audience export to retrieve users from.
+        /// Format: `properties/{property}/audienceExports/{audience_export}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QueryAudienceExportResponse> QueryAudienceExportAsync(string name, st::CancellationToken cancellationToken) =>
+            QueryAudienceExportAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets configuration metadata about a specific audience export. This method
+        /// can be used to understand an audience export after it has been created.
+        /// 
+        /// See [Creating an Audience
+        /// Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+        /// for an introduction to Audience Exports with examples.
+        /// 
+        /// Audience Export APIs have some methods at alpha and other methods at beta
+        /// stability. The intention is to advance methods to beta stability after some
+        /// feedback and adoption. To give your feedback on this API, complete the
+        /// [Google Analytics Audience Export API
+        /// Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AudienceExport GetAudienceExport(GetAudienceExportRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets configuration metadata about a specific audience export. This method
+        /// can be used to understand an audience export after it has been created.
+        /// 
+        /// See [Creating an Audience
+        /// Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+        /// for an introduction to Audience Exports with examples.
+        /// 
+        /// Audience Export APIs have some methods at alpha and other methods at beta
+        /// stability. The intention is to advance methods to beta stability after some
+        /// feedback and adoption. To give your feedback on this API, complete the
+        /// [Google Analytics Audience Export API
+        /// Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AudienceExport> GetAudienceExportAsync(GetAudienceExportRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets configuration metadata about a specific audience export. This method
+        /// can be used to understand an audience export after it has been created.
+        /// 
+        /// See [Creating an Audience
+        /// Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+        /// for an introduction to Audience Exports with examples.
+        /// 
+        /// Audience Export APIs have some methods at alpha and other methods at beta
+        /// stability. The intention is to advance methods to beta stability after some
+        /// feedback and adoption. To give your feedback on this API, complete the
+        /// [Google Analytics Audience Export API
+        /// Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AudienceExport> GetAudienceExportAsync(GetAudienceExportRequest request, st::CancellationToken cancellationToken) =>
+            GetAudienceExportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets configuration metadata about a specific audience export. This method
+        /// can be used to understand an audience export after it has been created.
+        /// 
+        /// See [Creating an Audience
+        /// Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+        /// for an introduction to Audience Exports with examples.
+        /// 
+        /// Audience Export APIs have some methods at alpha and other methods at beta
+        /// stability. The intention is to advance methods to beta stability after some
+        /// feedback and adoption. To give your feedback on this API, complete the
+        /// [Google Analytics Audience Export API
+        /// Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The audience export resource name.
+        /// Format: `properties/{property}/audienceExports/{audience_export}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AudienceExport GetAudienceExport(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAudienceExport(new GetAudienceExportRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets configuration metadata about a specific audience export. This method
+        /// can be used to understand an audience export after it has been created.
+        /// 
+        /// See [Creating an Audience
+        /// Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+        /// for an introduction to Audience Exports with examples.
+        /// 
+        /// Audience Export APIs have some methods at alpha and other methods at beta
+        /// stability. The intention is to advance methods to beta stability after some
+        /// feedback and adoption. To give your feedback on this API, complete the
+        /// [Google Analytics Audience Export API
+        /// Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The audience export resource name.
+        /// Format: `properties/{property}/audienceExports/{audience_export}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AudienceExport> GetAudienceExportAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAudienceExportAsync(new GetAudienceExportRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets configuration metadata about a specific audience export. This method
+        /// can be used to understand an audience export after it has been created.
+        /// 
+        /// See [Creating an Audience
+        /// Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+        /// for an introduction to Audience Exports with examples.
+        /// 
+        /// Audience Export APIs have some methods at alpha and other methods at beta
+        /// stability. The intention is to advance methods to beta stability after some
+        /// feedback and adoption. To give your feedback on this API, complete the
+        /// [Google Analytics Audience Export API
+        /// Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The audience export resource name.
+        /// Format: `properties/{property}/audienceExports/{audience_export}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AudienceExport> GetAudienceExportAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAudienceExportAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets configuration metadata about a specific audience export. This method
+        /// can be used to understand an audience export after it has been created.
+        /// 
+        /// See [Creating an Audience
+        /// Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+        /// for an introduction to Audience Exports with examples.
+        /// 
+        /// Audience Export APIs have some methods at alpha and other methods at beta
+        /// stability. The intention is to advance methods to beta stability after some
+        /// feedback and adoption. To give your feedback on this API, complete the
+        /// [Google Analytics Audience Export API
+        /// Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The audience export resource name.
+        /// Format: `properties/{property}/audienceExports/{audience_export}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AudienceExport GetAudienceExport(AudienceExportName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAudienceExport(new GetAudienceExportRequest
+            {
+                AudienceExportName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets configuration metadata about a specific audience export. This method
+        /// can be used to understand an audience export after it has been created.
+        /// 
+        /// See [Creating an Audience
+        /// Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+        /// for an introduction to Audience Exports with examples.
+        /// 
+        /// Audience Export APIs have some methods at alpha and other methods at beta
+        /// stability. The intention is to advance methods to beta stability after some
+        /// feedback and adoption. To give your feedback on this API, complete the
+        /// [Google Analytics Audience Export API
+        /// Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The audience export resource name.
+        /// Format: `properties/{property}/audienceExports/{audience_export}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AudienceExport> GetAudienceExportAsync(AudienceExportName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAudienceExportAsync(new GetAudienceExportRequest
+            {
+                AudienceExportName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets configuration metadata about a specific audience export. This method
+        /// can be used to understand an audience export after it has been created.
+        /// 
+        /// See [Creating an Audience
+        /// Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+        /// for an introduction to Audience Exports with examples.
+        /// 
+        /// Audience Export APIs have some methods at alpha and other methods at beta
+        /// stability. The intention is to advance methods to beta stability after some
+        /// feedback and adoption. To give your feedback on this API, complete the
+        /// [Google Analytics Audience Export API
+        /// Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The audience export resource name.
+        /// Format: `properties/{property}/audienceExports/{audience_export}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AudienceExport> GetAudienceExportAsync(AudienceExportName name, st::CancellationToken cancellationToken) =>
+            GetAudienceExportAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all audience exports for a property. This method can be used for you
+        /// to find and reuse existing audience exports rather than creating
+        /// unnecessary new audience exports. The same audience can have multiple
+        /// audience exports that represent the export of users that were in an
+        /// audience on different days.
+        /// 
+        /// See [Creating an Audience
+        /// Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+        /// for an introduction to Audience Exports with examples.
+        /// 
+        /// Audience Export APIs have some methods at alpha and other methods at beta
+        /// stability. The intention is to advance methods to beta stability after some
+        /// feedback and adoption. To give your feedback on this API, complete the
+        /// [Google Analytics Audience Export API
+        /// Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AudienceExport"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAudienceExportsResponse, AudienceExport> ListAudienceExports(ListAudienceExportsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all audience exports for a property. This method can be used for you
+        /// to find and reuse existing audience exports rather than creating
+        /// unnecessary new audience exports. The same audience can have multiple
+        /// audience exports that represent the export of users that were in an
+        /// audience on different days.
+        /// 
+        /// See [Creating an Audience
+        /// Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+        /// for an introduction to Audience Exports with examples.
+        /// 
+        /// Audience Export APIs have some methods at alpha and other methods at beta
+        /// stability. The intention is to advance methods to beta stability after some
+        /// feedback and adoption. To give your feedback on this API, complete the
+        /// [Google Analytics Audience Export API
+        /// Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AudienceExport"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAudienceExportsResponse, AudienceExport> ListAudienceExportsAsync(ListAudienceExportsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all audience exports for a property. This method can be used for you
+        /// to find and reuse existing audience exports rather than creating
+        /// unnecessary new audience exports. The same audience can have multiple
+        /// audience exports that represent the export of users that were in an
+        /// audience on different days.
+        /// 
+        /// See [Creating an Audience
+        /// Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+        /// for an introduction to Audience Exports with examples.
+        /// 
+        /// Audience Export APIs have some methods at alpha and other methods at beta
+        /// stability. The intention is to advance methods to beta stability after some
+        /// feedback and adoption. To give your feedback on this API, complete the
+        /// [Google Analytics Audience Export API
+        /// Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. All audience exports for this property will be listed in the
+        /// response. Format: `properties/{property}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AudienceExport"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAudienceExportsResponse, AudienceExport> ListAudienceExports(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAudienceExports(new ListAudienceExportsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all audience exports for a property. This method can be used for you
+        /// to find and reuse existing audience exports rather than creating
+        /// unnecessary new audience exports. The same audience can have multiple
+        /// audience exports that represent the export of users that were in an
+        /// audience on different days.
+        /// 
+        /// See [Creating an Audience
+        /// Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+        /// for an introduction to Audience Exports with examples.
+        /// 
+        /// Audience Export APIs have some methods at alpha and other methods at beta
+        /// stability. The intention is to advance methods to beta stability after some
+        /// feedback and adoption. To give your feedback on this API, complete the
+        /// [Google Analytics Audience Export API
+        /// Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. All audience exports for this property will be listed in the
+        /// response. Format: `properties/{property}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AudienceExport"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAudienceExportsResponse, AudienceExport> ListAudienceExportsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAudienceExportsAsync(new ListAudienceExportsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all audience exports for a property. This method can be used for you
+        /// to find and reuse existing audience exports rather than creating
+        /// unnecessary new audience exports. The same audience can have multiple
+        /// audience exports that represent the export of users that were in an
+        /// audience on different days.
+        /// 
+        /// See [Creating an Audience
+        /// Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+        /// for an introduction to Audience Exports with examples.
+        /// 
+        /// Audience Export APIs have some methods at alpha and other methods at beta
+        /// stability. The intention is to advance methods to beta stability after some
+        /// feedback and adoption. To give your feedback on this API, complete the
+        /// [Google Analytics Audience Export API
+        /// Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. All audience exports for this property will be listed in the
+        /// response. Format: `properties/{property}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AudienceExport"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAudienceExportsResponse, AudienceExport> ListAudienceExports(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAudienceExports(new ListAudienceExportsRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all audience exports for a property. This method can be used for you
+        /// to find and reuse existing audience exports rather than creating
+        /// unnecessary new audience exports. The same audience can have multiple
+        /// audience exports that represent the export of users that were in an
+        /// audience on different days.
+        /// 
+        /// See [Creating an Audience
+        /// Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+        /// for an introduction to Audience Exports with examples.
+        /// 
+        /// Audience Export APIs have some methods at alpha and other methods at beta
+        /// stability. The intention is to advance methods to beta stability after some
+        /// feedback and adoption. To give your feedback on this API, complete the
+        /// [Google Analytics Audience Export API
+        /// Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. All audience exports for this property will be listed in the
+        /// response. Format: `properties/{property}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AudienceExport"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAudienceExportsResponse, AudienceExport> ListAudienceExportsAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAudienceExportsAsync(new ListAudienceExportsRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
     }
 
     /// <summary>BetaAnalyticsData client wrapper implementation, for convenient use.</summary>
@@ -813,6 +1870,14 @@ namespace Google.Analytics.Data.V1Beta
 
         private readonly gaxgrpc::ApiCall<CheckCompatibilityRequest, CheckCompatibilityResponse> _callCheckCompatibility;
 
+        private readonly gaxgrpc::ApiCall<CreateAudienceExportRequest, lro::Operation> _callCreateAudienceExport;
+
+        private readonly gaxgrpc::ApiCall<QueryAudienceExportRequest, QueryAudienceExportResponse> _callQueryAudienceExport;
+
+        private readonly gaxgrpc::ApiCall<GetAudienceExportRequest, AudienceExport> _callGetAudienceExport;
+
+        private readonly gaxgrpc::ApiCall<ListAudienceExportsRequest, ListAudienceExportsResponse> _callListAudienceExports;
+
         /// <summary>
         /// Constructs a client wrapper for the BetaAnalyticsData service, with the specified gRPC client and settings.
         /// </summary>
@@ -824,6 +1889,7 @@ namespace Google.Analytics.Data.V1Beta
             GrpcClient = grpcClient;
             BetaAnalyticsDataSettings effectiveSettings = settings ?? BetaAnalyticsDataSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            CreateAudienceExportOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAudienceExportOperationsSettings, logger);
             _callRunReport = clientHelper.BuildApiCall<RunReportRequest, RunReportResponse>("RunReport", grpcClient.RunReportAsync, grpcClient.RunReport, effectiveSettings.RunReportSettings).WithGoogleRequestParam("property", request => request.Property);
             Modify_ApiCall(ref _callRunReport);
             Modify_RunReportApiCall(ref _callRunReport);
@@ -845,6 +1911,18 @@ namespace Google.Analytics.Data.V1Beta
             _callCheckCompatibility = clientHelper.BuildApiCall<CheckCompatibilityRequest, CheckCompatibilityResponse>("CheckCompatibility", grpcClient.CheckCompatibilityAsync, grpcClient.CheckCompatibility, effectiveSettings.CheckCompatibilitySettings).WithGoogleRequestParam("property", request => request.Property);
             Modify_ApiCall(ref _callCheckCompatibility);
             Modify_CheckCompatibilityApiCall(ref _callCheckCompatibility);
+            _callCreateAudienceExport = clientHelper.BuildApiCall<CreateAudienceExportRequest, lro::Operation>("CreateAudienceExport", grpcClient.CreateAudienceExportAsync, grpcClient.CreateAudienceExport, effectiveSettings.CreateAudienceExportSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateAudienceExport);
+            Modify_CreateAudienceExportApiCall(ref _callCreateAudienceExport);
+            _callQueryAudienceExport = clientHelper.BuildApiCall<QueryAudienceExportRequest, QueryAudienceExportResponse>("QueryAudienceExport", grpcClient.QueryAudienceExportAsync, grpcClient.QueryAudienceExport, effectiveSettings.QueryAudienceExportSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callQueryAudienceExport);
+            Modify_QueryAudienceExportApiCall(ref _callQueryAudienceExport);
+            _callGetAudienceExport = clientHelper.BuildApiCall<GetAudienceExportRequest, AudienceExport>("GetAudienceExport", grpcClient.GetAudienceExportAsync, grpcClient.GetAudienceExport, effectiveSettings.GetAudienceExportSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetAudienceExport);
+            Modify_GetAudienceExportApiCall(ref _callGetAudienceExport);
+            _callListAudienceExports = clientHelper.BuildApiCall<ListAudienceExportsRequest, ListAudienceExportsResponse>("ListAudienceExports", grpcClient.ListAudienceExportsAsync, grpcClient.ListAudienceExports, effectiveSettings.ListAudienceExportsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListAudienceExports);
+            Modify_ListAudienceExportsApiCall(ref _callListAudienceExports);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -864,6 +1942,14 @@ namespace Google.Analytics.Data.V1Beta
 
         partial void Modify_CheckCompatibilityApiCall(ref gaxgrpc::ApiCall<CheckCompatibilityRequest, CheckCompatibilityResponse> call);
 
+        partial void Modify_CreateAudienceExportApiCall(ref gaxgrpc::ApiCall<CreateAudienceExportRequest, lro::Operation> call);
+
+        partial void Modify_QueryAudienceExportApiCall(ref gaxgrpc::ApiCall<QueryAudienceExportRequest, QueryAudienceExportResponse> call);
+
+        partial void Modify_GetAudienceExportApiCall(ref gaxgrpc::ApiCall<GetAudienceExportRequest, AudienceExport> call);
+
+        partial void Modify_ListAudienceExportsApiCall(ref gaxgrpc::ApiCall<ListAudienceExportsRequest, ListAudienceExportsResponse> call);
+
         partial void OnConstruction(BetaAnalyticsData.BetaAnalyticsDataClient grpcClient, BetaAnalyticsDataSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC BetaAnalyticsData client</summary>
@@ -882,6 +1968,14 @@ namespace Google.Analytics.Data.V1Beta
         partial void Modify_RunRealtimeReportRequest(ref RunRealtimeReportRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CheckCompatibilityRequest(ref CheckCompatibilityRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateAudienceExportRequest(ref CreateAudienceExportRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_QueryAudienceExportRequest(ref QueryAudienceExportRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAudienceExportRequest(ref GetAudienceExportRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListAudienceExportsRequest(ref ListAudienceExportsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Returns a customized report of your Google Analytics event data. Reports
@@ -1133,6 +2227,265 @@ namespace Google.Analytics.Data.V1Beta
         {
             Modify_CheckCompatibilityRequest(ref request, ref callSettings);
             return _callCheckCompatibility.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateAudienceExport</c>.</summary>
+        public override lro::OperationsClient CreateAudienceExportOperationsClient { get; }
+
+        /// <summary>
+        /// Creates an audience export for later retrieval. This method quickly returns
+        /// the audience export's resource name and initiates a long running
+        /// asynchronous request to form an audience export. To export the users in an
+        /// audience export, first create the audience export through this method and
+        /// then send the audience resource name to the `QueryAudienceExport` method.
+        /// 
+        /// See [Creating an Audience
+        /// Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+        /// for an introduction to Audience Exports with examples.
+        /// 
+        /// An audience export is a snapshot of the users currently in the audience at
+        /// the time of audience export creation. Creating audience exports for one
+        /// audience on different days will return different results as users enter and
+        /// exit the audience.
+        /// 
+        /// Audiences in Google Analytics 4 allow you to segment your users in the ways
+        /// that are important to your business. To learn more, see
+        /// https://support.google.com/analytics/answer/9267572. Audience exports
+        /// contain the users in each audience.
+        /// 
+        /// Audience Export APIs have some methods at alpha and other methods at beta
+        /// stability. The intention is to advance methods to beta stability after some
+        /// feedback and adoption. To give your feedback on this API, complete the
+        /// [Google Analytics Audience Export API
+        /// Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<AudienceExport, AudienceExportMetadata> CreateAudienceExport(CreateAudienceExportRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAudienceExportRequest(ref request, ref callSettings);
+            return new lro::Operation<AudienceExport, AudienceExportMetadata>(_callCreateAudienceExport.Sync(request, callSettings), CreateAudienceExportOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates an audience export for later retrieval. This method quickly returns
+        /// the audience export's resource name and initiates a long running
+        /// asynchronous request to form an audience export. To export the users in an
+        /// audience export, first create the audience export through this method and
+        /// then send the audience resource name to the `QueryAudienceExport` method.
+        /// 
+        /// See [Creating an Audience
+        /// Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+        /// for an introduction to Audience Exports with examples.
+        /// 
+        /// An audience export is a snapshot of the users currently in the audience at
+        /// the time of audience export creation. Creating audience exports for one
+        /// audience on different days will return different results as users enter and
+        /// exit the audience.
+        /// 
+        /// Audiences in Google Analytics 4 allow you to segment your users in the ways
+        /// that are important to your business. To learn more, see
+        /// https://support.google.com/analytics/answer/9267572. Audience exports
+        /// contain the users in each audience.
+        /// 
+        /// Audience Export APIs have some methods at alpha and other methods at beta
+        /// stability. The intention is to advance methods to beta stability after some
+        /// feedback and adoption. To give your feedback on this API, complete the
+        /// [Google Analytics Audience Export API
+        /// Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<AudienceExport, AudienceExportMetadata>> CreateAudienceExportAsync(CreateAudienceExportRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAudienceExportRequest(ref request, ref callSettings);
+            return new lro::Operation<AudienceExport, AudienceExportMetadata>(await _callCreateAudienceExport.Async(request, callSettings).ConfigureAwait(false), CreateAudienceExportOperationsClient);
+        }
+
+        /// <summary>
+        /// Retrieves an audience export of users. After creating an audience, the
+        /// users are not immediately available for exporting. First, a request to
+        /// `CreateAudienceExport` is necessary to create an audience export of users,
+        /// and then second, this method is used to retrieve the users in the audience
+        /// export.
+        /// 
+        /// See [Creating an Audience
+        /// Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+        /// for an introduction to Audience Exports with examples.
+        /// 
+        /// Audiences in Google Analytics 4 allow you to segment your users in the ways
+        /// that are important to your business. To learn more, see
+        /// https://support.google.com/analytics/answer/9267572.
+        /// 
+        /// Audience Export APIs have some methods at alpha and other methods at beta
+        /// stability. The intention is to advance methods to beta stability after some
+        /// feedback and adoption. To give your feedback on this API, complete the
+        /// [Google Analytics Audience Export API
+        /// Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override QueryAudienceExportResponse QueryAudienceExport(QueryAudienceExportRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_QueryAudienceExportRequest(ref request, ref callSettings);
+            return _callQueryAudienceExport.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves an audience export of users. After creating an audience, the
+        /// users are not immediately available for exporting. First, a request to
+        /// `CreateAudienceExport` is necessary to create an audience export of users,
+        /// and then second, this method is used to retrieve the users in the audience
+        /// export.
+        /// 
+        /// See [Creating an Audience
+        /// Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+        /// for an introduction to Audience Exports with examples.
+        /// 
+        /// Audiences in Google Analytics 4 allow you to segment your users in the ways
+        /// that are important to your business. To learn more, see
+        /// https://support.google.com/analytics/answer/9267572.
+        /// 
+        /// Audience Export APIs have some methods at alpha and other methods at beta
+        /// stability. The intention is to advance methods to beta stability after some
+        /// feedback and adoption. To give your feedback on this API, complete the
+        /// [Google Analytics Audience Export API
+        /// Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<QueryAudienceExportResponse> QueryAudienceExportAsync(QueryAudienceExportRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_QueryAudienceExportRequest(ref request, ref callSettings);
+            return _callQueryAudienceExport.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets configuration metadata about a specific audience export. This method
+        /// can be used to understand an audience export after it has been created.
+        /// 
+        /// See [Creating an Audience
+        /// Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+        /// for an introduction to Audience Exports with examples.
+        /// 
+        /// Audience Export APIs have some methods at alpha and other methods at beta
+        /// stability. The intention is to advance methods to beta stability after some
+        /// feedback and adoption. To give your feedback on this API, complete the
+        /// [Google Analytics Audience Export API
+        /// Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AudienceExport GetAudienceExport(GetAudienceExportRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAudienceExportRequest(ref request, ref callSettings);
+            return _callGetAudienceExport.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets configuration metadata about a specific audience export. This method
+        /// can be used to understand an audience export after it has been created.
+        /// 
+        /// See [Creating an Audience
+        /// Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+        /// for an introduction to Audience Exports with examples.
+        /// 
+        /// Audience Export APIs have some methods at alpha and other methods at beta
+        /// stability. The intention is to advance methods to beta stability after some
+        /// feedback and adoption. To give your feedback on this API, complete the
+        /// [Google Analytics Audience Export API
+        /// Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AudienceExport> GetAudienceExportAsync(GetAudienceExportRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAudienceExportRequest(ref request, ref callSettings);
+            return _callGetAudienceExport.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all audience exports for a property. This method can be used for you
+        /// to find and reuse existing audience exports rather than creating
+        /// unnecessary new audience exports. The same audience can have multiple
+        /// audience exports that represent the export of users that were in an
+        /// audience on different days.
+        /// 
+        /// See [Creating an Audience
+        /// Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+        /// for an introduction to Audience Exports with examples.
+        /// 
+        /// Audience Export APIs have some methods at alpha and other methods at beta
+        /// stability. The intention is to advance methods to beta stability after some
+        /// feedback and adoption. To give your feedback on this API, complete the
+        /// [Google Analytics Audience Export API
+        /// Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AudienceExport"/> resources.</returns>
+        public override gax::PagedEnumerable<ListAudienceExportsResponse, AudienceExport> ListAudienceExports(ListAudienceExportsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAudienceExportsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListAudienceExportsRequest, ListAudienceExportsResponse, AudienceExport>(_callListAudienceExports, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all audience exports for a property. This method can be used for you
+        /// to find and reuse existing audience exports rather than creating
+        /// unnecessary new audience exports. The same audience can have multiple
+        /// audience exports that represent the export of users that were in an
+        /// audience on different days.
+        /// 
+        /// See [Creating an Audience
+        /// Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+        /// for an introduction to Audience Exports with examples.
+        /// 
+        /// Audience Export APIs have some methods at alpha and other methods at beta
+        /// stability. The intention is to advance methods to beta stability after some
+        /// feedback and adoption. To give your feedback on this API, complete the
+        /// [Google Analytics Audience Export API
+        /// Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AudienceExport"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListAudienceExportsResponse, AudienceExport> ListAudienceExportsAsync(ListAudienceExportsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAudienceExportsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAudienceExportsRequest, ListAudienceExportsResponse, AudienceExport>(_callListAudienceExports, request, callSettings);
+        }
+    }
+
+    public partial class ListAudienceExportsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListAudienceExportsResponse : gaxgrpc::IPageResponse<AudienceExport>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<AudienceExport> GetEnumerator() => AudienceExports.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public static partial class BetaAnalyticsData
+    {
+        public partial class BetaAnalyticsDataClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>A new Operations client for the same target as this client.</returns>
+            public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
+                new lro::Operations.OperationsClient(CallInvoker);
         }
     }
 }

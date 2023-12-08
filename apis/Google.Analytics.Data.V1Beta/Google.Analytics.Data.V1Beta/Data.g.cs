@@ -110,87 +110,91 @@ namespace Google.Analytics.Data.V1Beta {
             "FAoMc3RhcnRfb2Zmc2V0GAIgASgFEhIKCmVuZF9vZmZzZXQYAyABKAUiTgoL",
             "R3JhbnVsYXJpdHkSGwoXR1JBTlVMQVJJVFlfVU5TUEVDSUZJRUQQABIJCgVE",
             "QUlMWRABEgoKBldFRUtMWRACEgsKB01PTlRITFkQAyIqChRDb2hvcnRSZXBv",
-            "cnRTZXR0aW5ncxISCgphY2N1bXVsYXRlGAEgASgIIsoFChBSZXNwb25zZU1l",
+            "cnRTZXR0aW5ncxISCgphY2N1bXVsYXRlGAEgASgIIpYGChBSZXNwb25zZU1l",
             "dGFEYXRhEiAKGGRhdGFfbG9zc19mcm9tX290aGVyX3JvdxgDIAEoCBJyChtz",
             "Y2hlbWFfcmVzdHJpY3Rpb25fcmVzcG9uc2UYBCABKAsySC5nb29nbGUuYW5h",
             "bHl0aWNzLmRhdGEudjFiZXRhLlJlc3BvbnNlTWV0YURhdGEuU2NoZW1hUmVz",
             "dHJpY3Rpb25SZXNwb25zZUgAiAEBEhoKDWN1cnJlbmN5X2NvZGUYBSABKAlI",
             "AYgBARIWCgl0aW1lX3pvbmUYBiABKAlIAogBARIZCgxlbXB0eV9yZWFzb24Y",
             "ByABKAlIA4gBARIkChdzdWJqZWN0X3RvX3RocmVzaG9sZGluZxgIIAEoCEgE",
-            "iAEBGr0CChlTY2hlbWFSZXN0cmljdGlvblJlc3BvbnNlEoQBChphY3RpdmVf",
-            "bWV0cmljX3Jlc3RyaWN0aW9ucxgBIAMoCzJgLmdvb2dsZS5hbmFseXRpY3Mu",
-            "ZGF0YS52MWJldGEuUmVzcG9uc2VNZXRhRGF0YS5TY2hlbWFSZXN0cmljdGlv",
-            "blJlc3BvbnNlLkFjdGl2ZU1ldHJpY1Jlc3RyaWN0aW9uGpgBChdBY3RpdmVN",
-            "ZXRyaWNSZXN0cmljdGlvbhIYCgttZXRyaWNfbmFtZRgBIAEoCUgAiAEBElMK",
-            "F3Jlc3RyaWN0ZWRfbWV0cmljX3R5cGVzGAIgAygOMjIuZ29vZ2xlLmFuYWx5",
-            "dGljcy5kYXRhLnYxYmV0YS5SZXN0cmljdGVkTWV0cmljVHlwZUIOCgxfbWV0",
-            "cmljX25hbWVCHgocX3NjaGVtYV9yZXN0cmljdGlvbl9yZXNwb25zZUIQCg5f",
-            "Y3VycmVuY3lfY29kZUIMCgpfdGltZV96b25lQg8KDV9lbXB0eV9yZWFzb25C",
-            "GgoYX3N1YmplY3RfdG9fdGhyZXNob2xkaW5nIh8KD0RpbWVuc2lvbkhlYWRl",
-            "chIMCgRuYW1lGAEgASgJIlQKDE1ldHJpY0hlYWRlchIMCgRuYW1lGAEgASgJ",
-            "EjYKBHR5cGUYAiABKA4yKC5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRh",
-            "Lk1ldHJpY1R5cGUidQoLUGl2b3RIZWFkZXISUwoXcGl2b3RfZGltZW5zaW9u",
-            "X2hlYWRlcnMYASADKAsyMi5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRh",
-            "LlBpdm90RGltZW5zaW9uSGVhZGVyEhEKCXJvd19jb3VudBgCIAEoBSJeChRQ",
-            "aXZvdERpbWVuc2lvbkhlYWRlchJGChBkaW1lbnNpb25fdmFsdWVzGAEgAygL",
-            "MiwuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5EaW1lbnNpb25WYWx1",
-            "ZSKPAQoDUm93EkYKEGRpbWVuc2lvbl92YWx1ZXMYASADKAsyLC5nb29nbGUu",
-            "YW5hbHl0aWNzLmRhdGEudjFiZXRhLkRpbWVuc2lvblZhbHVlEkAKDW1ldHJp",
-            "Y192YWx1ZXMYAiADKAsyKS5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRh",
-            "Lk1ldHJpY1ZhbHVlIi4KDkRpbWVuc2lvblZhbHVlEg8KBXZhbHVlGAEgASgJ",
-            "SABCCwoJb25lX3ZhbHVlIisKC01ldHJpY1ZhbHVlEg8KBXZhbHVlGAQgASgJ",
-            "SABCCwoJb25lX3ZhbHVlIkoKDE51bWVyaWNWYWx1ZRIVCgtpbnQ2NF92YWx1",
-            "ZRgBIAEoA0gAEhYKDGRvdWJsZV92YWx1ZRgCIAEoAUgAQgsKCW9uZV92YWx1",
-            "ZSLjAwoNUHJvcGVydHlRdW90YRJBCg50b2tlbnNfcGVyX2RheRgBIAEoCzIp",
-            "Lmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUXVvdGFTdGF0dXMSQgoP",
-            "dG9rZW5zX3Blcl9ob3VyGAIgASgLMikuZ29vZ2xlLmFuYWx5dGljcy5kYXRh",
-            "LnYxYmV0YS5RdW90YVN0YXR1cxJGChNjb25jdXJyZW50X3JlcXVlc3RzGAMg",
-            "ASgLMikuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5RdW90YVN0YXR1",
-            "cxJVCiJzZXJ2ZXJfZXJyb3JzX3Blcl9wcm9qZWN0X3Blcl9ob3VyGAQgASgL",
-            "MikuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5RdW90YVN0YXR1cxJc",
-            "Cilwb3RlbnRpYWxseV90aHJlc2hvbGRlZF9yZXF1ZXN0c19wZXJfaG91chgF",
-            "IAEoCzIpLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUXVvdGFTdGF0",
-            "dXMSTgobdG9rZW5zX3Blcl9wcm9qZWN0X3Blcl9ob3VyGAYgASgLMikuZ29v",
-            "Z2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5RdW90YVN0YXR1cyIyCgtRdW90",
-            "YVN0YXR1cxIQCghjb25zdW1lZBgBIAEoBRIRCglyZW1haW5pbmcYAiABKAUi",
-            "lgEKEURpbWVuc2lvbk1ldGFkYXRhEhAKCGFwaV9uYW1lGAEgASgJEg8KB3Vp",
-            "X25hbWUYAiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkSHAoUZGVwcmVjYXRl",
-            "ZF9hcGlfbmFtZXMYBCADKAkSGQoRY3VzdG9tX2RlZmluaXRpb24YBSABKAgS",
-            "EAoIY2F0ZWdvcnkYByABKAkikgMKDk1ldHJpY01ldGFkYXRhEhAKCGFwaV9u",
-            "YW1lGAEgASgJEg8KB3VpX25hbWUYAiABKAkSEwoLZGVzY3JpcHRpb24YAyAB",
-            "KAkSHAoUZGVwcmVjYXRlZF9hcGlfbmFtZXMYBCADKAkSNgoEdHlwZRgFIAEo",
-            "DjIoLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuTWV0cmljVHlwZRIS",
-            "CgpleHByZXNzaW9uGAYgASgJEhkKEWN1c3RvbV9kZWZpbml0aW9uGAcgASgI",
-            "ElMKD2Jsb2NrZWRfcmVhc29ucxgIIAMoDjI6Lmdvb2dsZS5hbmFseXRpY3Mu",
-            "ZGF0YS52MWJldGEuTWV0cmljTWV0YWRhdGEuQmxvY2tlZFJlYXNvbhIQCghj",
-            "YXRlZ29yeRgKIAEoCSJcCg1CbG9ja2VkUmVhc29uEh4KGkJMT0NLRURfUkVB",
-            "U09OX1VOU1BFQ0lGSUVEEAASFgoSTk9fUkVWRU5VRV9NRVRSSUNTEAESEwoP",
-            "Tk9fQ09TVF9NRVRSSUNTEAIi3AEKFkRpbWVuc2lvbkNvbXBhdGliaWxpdHkS",
-            "UAoSZGltZW5zaW9uX21ldGFkYXRhGAEgASgLMi8uZ29vZ2xlLmFuYWx5dGlj",
-            "cy5kYXRhLnYxYmV0YS5EaW1lbnNpb25NZXRhZGF0YUgAiAEBEkcKDWNvbXBh",
-            "dGliaWxpdHkYAiABKA4yKy5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRh",
-            "LkNvbXBhdGliaWxpdHlIAYgBAUIVChNfZGltZW5zaW9uX21ldGFkYXRhQhAK",
-            "Dl9jb21wYXRpYmlsaXR5ItABChNNZXRyaWNDb21wYXRpYmlsaXR5EkoKD21l",
-            "dHJpY19tZXRhZGF0YRgBIAEoCzIsLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52",
-            "MWJldGEuTWV0cmljTWV0YWRhdGFIAIgBARJHCg1jb21wYXRpYmlsaXR5GAIg",
-            "ASgOMisuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5Db21wYXRpYmls",
-            "aXR5SAGIAQFCEgoQX21ldHJpY19tZXRhZGF0YUIQCg5fY29tcGF0aWJpbGl0",
-            "eSpnChFNZXRyaWNBZ2dyZWdhdGlvbhIiCh5NRVRSSUNfQUdHUkVHQVRJT05f",
-            "VU5TUEVDSUZJRUQQABIJCgVUT1RBTBABEgsKB01JTklNVU0QBRILCgdNQVhJ",
-            "TVVNEAYSCQoFQ09VTlQQBCqBAgoKTWV0cmljVHlwZRIbChdNRVRSSUNfVFlQ",
-            "RV9VTlNQRUNJRklFRBAAEhAKDFRZUEVfSU5URUdFUhABEg4KClRZUEVfRkxP",
-            "QVQQAhIQCgxUWVBFX1NFQ09ORFMQBBIVChFUWVBFX01JTExJU0VDT05EUxAF",
-            "EhAKDFRZUEVfTUlOVVRFUxAGEg4KClRZUEVfSE9VUlMQBxIRCg1UWVBFX1NU",
-            "QU5EQVJEEAgSEQoNVFlQRV9DVVJSRU5DWRAJEg0KCVRZUEVfRkVFVBAKEg4K",
-            "ClRZUEVfTUlMRVMQCxIPCgtUWVBFX01FVEVSUxAMEhMKD1RZUEVfS0lMT01F",
-            "VEVSUxANKl8KFFJlc3RyaWN0ZWRNZXRyaWNUeXBlEiYKIlJFU1RSSUNURURf",
-            "TUVUUklDX1RZUEVfVU5TUEVDSUZJRUQQABINCglDT1NUX0RBVEEQARIQCgxS",
-            "RVZFTlVFX0RBVEEQAipQCg1Db21wYXRpYmlsaXR5Eh0KGUNPTVBBVElCSUxJ",
-            "VFlfVU5TUEVDSUZJRUQQABIOCgpDT01QQVRJQkxFEAESEAoMSU5DT01QQVRJ",
-            "QkxFEAJCeQogY29tLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGFCEVJl",
-            "cG9ydGluZ0FwaVByb3RvUAFaQGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
-            "L2dvb2dsZWFwaXMvYW5hbHl0aWNzL2RhdGEvdjFiZXRhO2RhdGFiBnByb3Rv",
-            "Mw=="));
+            "iAEBEkoKEnNhbXBsaW5nX21ldGFkYXRhcxgJIAMoCzIuLmdvb2dsZS5hbmFs",
+            "eXRpY3MuZGF0YS52MWJldGEuU2FtcGxpbmdNZXRhZGF0YRq9AgoZU2NoZW1h",
+            "UmVzdHJpY3Rpb25SZXNwb25zZRKEAQoaYWN0aXZlX21ldHJpY19yZXN0cmlj",
+            "dGlvbnMYASADKAsyYC5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLlJl",
+            "c3BvbnNlTWV0YURhdGEuU2NoZW1hUmVzdHJpY3Rpb25SZXNwb25zZS5BY3Rp",
+            "dmVNZXRyaWNSZXN0cmljdGlvbhqYAQoXQWN0aXZlTWV0cmljUmVzdHJpY3Rp",
+            "b24SGAoLbWV0cmljX25hbWUYASABKAlIAIgBARJTChdyZXN0cmljdGVkX21l",
+            "dHJpY190eXBlcxgCIAMoDjIyLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJl",
+            "dGEuUmVzdHJpY3RlZE1ldHJpY1R5cGVCDgoMX21ldHJpY19uYW1lQh4KHF9z",
+            "Y2hlbWFfcmVzdHJpY3Rpb25fcmVzcG9uc2VCEAoOX2N1cnJlbmN5X2NvZGVC",
+            "DAoKX3RpbWVfem9uZUIPCg1fZW1wdHlfcmVhc29uQhoKGF9zdWJqZWN0X3Rv",
+            "X3RocmVzaG9sZGluZyJLChBTYW1wbGluZ01ldGFkYXRhEhoKEnNhbXBsZXNf",
+            "cmVhZF9jb3VudBgBIAEoAxIbChNzYW1wbGluZ19zcGFjZV9zaXplGAIgASgD",
+            "Ih8KD0RpbWVuc2lvbkhlYWRlchIMCgRuYW1lGAEgASgJIlQKDE1ldHJpY0hl",
+            "YWRlchIMCgRuYW1lGAEgASgJEjYKBHR5cGUYAiABKA4yKC5nb29nbGUuYW5h",
+            "bHl0aWNzLmRhdGEudjFiZXRhLk1ldHJpY1R5cGUidQoLUGl2b3RIZWFkZXIS",
+            "UwoXcGl2b3RfZGltZW5zaW9uX2hlYWRlcnMYASADKAsyMi5nb29nbGUuYW5h",
+            "bHl0aWNzLmRhdGEudjFiZXRhLlBpdm90RGltZW5zaW9uSGVhZGVyEhEKCXJv",
+            "d19jb3VudBgCIAEoBSJeChRQaXZvdERpbWVuc2lvbkhlYWRlchJGChBkaW1l",
+            "bnNpb25fdmFsdWVzGAEgAygLMiwuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYx",
+            "YmV0YS5EaW1lbnNpb25WYWx1ZSKPAQoDUm93EkYKEGRpbWVuc2lvbl92YWx1",
+            "ZXMYASADKAsyLC5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLkRpbWVu",
+            "c2lvblZhbHVlEkAKDW1ldHJpY192YWx1ZXMYAiADKAsyKS5nb29nbGUuYW5h",
+            "bHl0aWNzLmRhdGEudjFiZXRhLk1ldHJpY1ZhbHVlIi4KDkRpbWVuc2lvblZh",
+            "bHVlEg8KBXZhbHVlGAEgASgJSABCCwoJb25lX3ZhbHVlIisKC01ldHJpY1Zh",
+            "bHVlEg8KBXZhbHVlGAQgASgJSABCCwoJb25lX3ZhbHVlIkoKDE51bWVyaWNW",
+            "YWx1ZRIVCgtpbnQ2NF92YWx1ZRgBIAEoA0gAEhYKDGRvdWJsZV92YWx1ZRgC",
+            "IAEoAUgAQgsKCW9uZV92YWx1ZSLjAwoNUHJvcGVydHlRdW90YRJBCg50b2tl",
+            "bnNfcGVyX2RheRgBIAEoCzIpLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJl",
+            "dGEuUXVvdGFTdGF0dXMSQgoPdG9rZW5zX3Blcl9ob3VyGAIgASgLMikuZ29v",
+            "Z2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5RdW90YVN0YXR1cxJGChNjb25j",
+            "dXJyZW50X3JlcXVlc3RzGAMgASgLMikuZ29vZ2xlLmFuYWx5dGljcy5kYXRh",
+            "LnYxYmV0YS5RdW90YVN0YXR1cxJVCiJzZXJ2ZXJfZXJyb3JzX3Blcl9wcm9q",
+            "ZWN0X3Blcl9ob3VyGAQgASgLMikuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYx",
+            "YmV0YS5RdW90YVN0YXR1cxJcCilwb3RlbnRpYWxseV90aHJlc2hvbGRlZF9y",
+            "ZXF1ZXN0c19wZXJfaG91chgFIAEoCzIpLmdvb2dsZS5hbmFseXRpY3MuZGF0",
+            "YS52MWJldGEuUXVvdGFTdGF0dXMSTgobdG9rZW5zX3Blcl9wcm9qZWN0X3Bl",
+            "cl9ob3VyGAYgASgLMikuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5R",
+            "dW90YVN0YXR1cyJXCgtRdW90YVN0YXR1cxIVCghjb25zdW1lZBgBIAEoBUgA",
+            "iAEBEhYKCXJlbWFpbmluZxgCIAEoBUgBiAEBQgsKCV9jb25zdW1lZEIMCgpf",
+            "cmVtYWluaW5nIpYBChFEaW1lbnNpb25NZXRhZGF0YRIQCghhcGlfbmFtZRgB",
+            "IAEoCRIPCgd1aV9uYW1lGAIgASgJEhMKC2Rlc2NyaXB0aW9uGAMgASgJEhwK",
+            "FGRlcHJlY2F0ZWRfYXBpX25hbWVzGAQgAygJEhkKEWN1c3RvbV9kZWZpbml0",
+            "aW9uGAUgASgIEhAKCGNhdGVnb3J5GAcgASgJIpIDCg5NZXRyaWNNZXRhZGF0",
+            "YRIQCghhcGlfbmFtZRgBIAEoCRIPCgd1aV9uYW1lGAIgASgJEhMKC2Rlc2Ny",
+            "aXB0aW9uGAMgASgJEhwKFGRlcHJlY2F0ZWRfYXBpX25hbWVzGAQgAygJEjYK",
+            "BHR5cGUYBSABKA4yKC5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLk1l",
+            "dHJpY1R5cGUSEgoKZXhwcmVzc2lvbhgGIAEoCRIZChFjdXN0b21fZGVmaW5p",
+            "dGlvbhgHIAEoCBJTCg9ibG9ja2VkX3JlYXNvbnMYCCADKA4yOi5nb29nbGUu",
+            "YW5hbHl0aWNzLmRhdGEudjFiZXRhLk1ldHJpY01ldGFkYXRhLkJsb2NrZWRS",
+            "ZWFzb24SEAoIY2F0ZWdvcnkYCiABKAkiXAoNQmxvY2tlZFJlYXNvbhIeChpC",
+            "TE9DS0VEX1JFQVNPTl9VTlNQRUNJRklFRBAAEhYKEk5PX1JFVkVOVUVfTUVU",
+            "UklDUxABEhMKD05PX0NPU1RfTUVUUklDUxACItwBChZEaW1lbnNpb25Db21w",
+            "YXRpYmlsaXR5ElAKEmRpbWVuc2lvbl9tZXRhZGF0YRgBIAEoCzIvLmdvb2ds",
+            "ZS5hbmFseXRpY3MuZGF0YS52MWJldGEuRGltZW5zaW9uTWV0YWRhdGFIAIgB",
+            "ARJHCg1jb21wYXRpYmlsaXR5GAIgASgOMisuZ29vZ2xlLmFuYWx5dGljcy5k",
+            "YXRhLnYxYmV0YS5Db21wYXRpYmlsaXR5SAGIAQFCFQoTX2RpbWVuc2lvbl9t",
+            "ZXRhZGF0YUIQCg5fY29tcGF0aWJpbGl0eSLQAQoTTWV0cmljQ29tcGF0aWJp",
+            "bGl0eRJKCg9tZXRyaWNfbWV0YWRhdGEYASABKAsyLC5nb29nbGUuYW5hbHl0",
+            "aWNzLmRhdGEudjFiZXRhLk1ldHJpY01ldGFkYXRhSACIAQESRwoNY29tcGF0",
+            "aWJpbGl0eRgCIAEoDjIrLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEu",
+            "Q29tcGF0aWJpbGl0eUgBiAEBQhIKEF9tZXRyaWNfbWV0YWRhdGFCEAoOX2Nv",
+            "bXBhdGliaWxpdHkqZwoRTWV0cmljQWdncmVnYXRpb24SIgoeTUVUUklDX0FH",
+            "R1JFR0FUSU9OX1VOU1BFQ0lGSUVEEAASCQoFVE9UQUwQARILCgdNSU5JTVVN",
+            "EAUSCwoHTUFYSU1VTRAGEgkKBUNPVU5UEAQqgQIKCk1ldHJpY1R5cGUSGwoX",
+            "TUVUUklDX1RZUEVfVU5TUEVDSUZJRUQQABIQCgxUWVBFX0lOVEVHRVIQARIO",
+            "CgpUWVBFX0ZMT0FUEAISEAoMVFlQRV9TRUNPTkRTEAQSFQoRVFlQRV9NSUxM",
+            "SVNFQ09ORFMQBRIQCgxUWVBFX01JTlVURVMQBhIOCgpUWVBFX0hPVVJTEAcS",
+            "EQoNVFlQRV9TVEFOREFSRBAIEhEKDVRZUEVfQ1VSUkVOQ1kQCRINCglUWVBF",
+            "X0ZFRVQQChIOCgpUWVBFX01JTEVTEAsSDwoLVFlQRV9NRVRFUlMQDBITCg9U",
+            "WVBFX0tJTE9NRVRFUlMQDSpfChRSZXN0cmljdGVkTWV0cmljVHlwZRImCiJS",
+            "RVNUUklDVEVEX01FVFJJQ19UWVBFX1VOU1BFQ0lGSUVEEAASDQoJQ09TVF9E",
+            "QVRBEAESEAoMUkVWRU5VRV9EQVRBEAIqUAoNQ29tcGF0aWJpbGl0eRIdChlD",
+            "T01QQVRJQklMSVRZX1VOU1BFQ0lGSUVEEAASDgoKQ09NUEFUSUJMRRABEhAK",
+            "DElOQ09NUEFUSUJMRRACQnkKIGNvbS5nb29nbGUuYW5hbHl0aWNzLmRhdGEu",
+            "djFiZXRhQhFSZXBvcnRpbmdBcGlQcm90b1ABWkBnb29nbGUuZ29sYW5nLm9y",
+            "Zy9nZW5wcm90by9nb29nbGVhcGlzL2FuYWx5dGljcy9kYXRhL3YxYmV0YTtk",
+            "YXRhYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Analytics.Data.V1Beta.MetricAggregation), typeof(global::Google.Analytics.Data.V1Beta.MetricType), typeof(global::Google.Analytics.Data.V1Beta.RestrictedMetricType), typeof(global::Google.Analytics.Data.V1Beta.Compatibility), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -214,7 +218,8 @@ namespace Google.Analytics.Data.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.Cohort), global::Google.Analytics.Data.V1Beta.Cohort.Parser, new[]{ "Name", "Dimension", "DateRange" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.CohortsRange), global::Google.Analytics.Data.V1Beta.CohortsRange.Parser, new[]{ "Granularity", "StartOffset", "EndOffset" }, null, new[]{ typeof(global::Google.Analytics.Data.V1Beta.CohortsRange.Types.Granularity) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.CohortReportSettings), global::Google.Analytics.Data.V1Beta.CohortReportSettings.Parser, new[]{ "Accumulate" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.ResponseMetaData), global::Google.Analytics.Data.V1Beta.ResponseMetaData.Parser, new[]{ "DataLossFromOtherRow", "SchemaRestrictionResponse", "CurrencyCode", "TimeZone", "EmptyReason", "SubjectToThresholding" }, new[]{ "SchemaRestrictionResponse", "CurrencyCode", "TimeZone", "EmptyReason", "SubjectToThresholding" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse), global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse.Parser, new[]{ "ActiveMetricRestrictions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse.Types.ActiveMetricRestriction), global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse.Types.ActiveMetricRestriction.Parser, new[]{ "MetricName", "RestrictedMetricTypes" }, new[]{ "MetricName" }, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.ResponseMetaData), global::Google.Analytics.Data.V1Beta.ResponseMetaData.Parser, new[]{ "DataLossFromOtherRow", "SchemaRestrictionResponse", "CurrencyCode", "TimeZone", "EmptyReason", "SubjectToThresholding", "SamplingMetadatas" }, new[]{ "SchemaRestrictionResponse", "CurrencyCode", "TimeZone", "EmptyReason", "SubjectToThresholding" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse), global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse.Parser, new[]{ "ActiveMetricRestrictions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse.Types.ActiveMetricRestriction), global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse.Types.ActiveMetricRestriction.Parser, new[]{ "MetricName", "RestrictedMetricTypes" }, new[]{ "MetricName" }, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.SamplingMetadata), global::Google.Analytics.Data.V1Beta.SamplingMetadata.Parser, new[]{ "SamplesReadCount", "SamplingSpaceSize" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.DimensionHeader), global::Google.Analytics.Data.V1Beta.DimensionHeader.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.MetricHeader), global::Google.Analytics.Data.V1Beta.MetricHeader.Parser, new[]{ "Name", "Type" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.PivotHeader), global::Google.Analytics.Data.V1Beta.PivotHeader.Parser, new[]{ "PivotDimensionHeaders", "RowCount" }, null, null, null, null),
@@ -224,7 +229,7 @@ namespace Google.Analytics.Data.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.MetricValue), global::Google.Analytics.Data.V1Beta.MetricValue.Parser, new[]{ "Value" }, new[]{ "OneValue" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.NumericValue), global::Google.Analytics.Data.V1Beta.NumericValue.Parser, new[]{ "Int64Value", "DoubleValue" }, new[]{ "OneValue" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.PropertyQuota), global::Google.Analytics.Data.V1Beta.PropertyQuota.Parser, new[]{ "TokensPerDay", "TokensPerHour", "ConcurrentRequests", "ServerErrorsPerProjectPerHour", "PotentiallyThresholdedRequestsPerHour", "TokensPerProjectPerHour" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.QuotaStatus), global::Google.Analytics.Data.V1Beta.QuotaStatus.Parser, new[]{ "Consumed", "Remaining" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.QuotaStatus), global::Google.Analytics.Data.V1Beta.QuotaStatus.Parser, new[]{ "Consumed", "Remaining" }, new[]{ "Consumed", "Remaining" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.DimensionMetadata), global::Google.Analytics.Data.V1Beta.DimensionMetadata.Parser, new[]{ "ApiName", "UiName", "Description", "DeprecatedApiNames", "CustomDefinition", "Category" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.MetricMetadata), global::Google.Analytics.Data.V1Beta.MetricMetadata.Parser, new[]{ "ApiName", "UiName", "Description", "DeprecatedApiNames", "Type", "Expression", "CustomDefinition", "BlockedReasons", "Category" }, null, new[]{ typeof(global::Google.Analytics.Data.V1Beta.MetricMetadata.Types.BlockedReason) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.DimensionCompatibility), global::Google.Analytics.Data.V1Beta.DimensionCompatibility.Parser, new[]{ "DimensionMetadata", "Compatibility" }, new[]{ "DimensionMetadata", "Compatibility" }, null, null, null),
@@ -1029,7 +1034,16 @@ namespace Google.Analytics.Data.V1Beta {
     /// <summary>
     /// The name of the dimension. See the [API
     /// Dimensions](https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#dimensions)
-    /// for the list of dimension names.
+    /// for the list of dimension names supported by core reporting methods such
+    /// as `runReport` and `batchRunReports`. See
+    /// [Realtime
+    /// Dimensions](https://developers.google.com/analytics/devguides/reporting/data/v1/realtime-api-schema#dimensions)
+    /// for the list of dimension names supported by the `runRealtimeReport`
+    /// method. See
+    /// [Funnel
+    /// Dimensions](https://developers.google.com/analytics/devguides/reporting/data/v1/exploration-api-schema#dimensions)
+    /// for the list of dimension names supported by the `runFunnelReport`
+    /// method.
     ///
     /// If `dimensionExpression` is specified, `name` can be any string that you
     /// would like within the allowed character set. For example if a
@@ -2077,7 +2091,16 @@ namespace Google.Analytics.Data.V1Beta {
     /// <summary>
     /// The name of the metric. See the [API
     /// Metrics](https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#metrics)
-    /// for the list of metric names.
+    /// for the list of metric names supported by core reporting methods such
+    /// as `runReport` and `batchRunReports`. See
+    /// [Realtime
+    /// Metrics](https://developers.google.com/analytics/devguides/reporting/data/v1/realtime-api-schema#metrics)
+    /// for the list of metric names supported by the `runRealtimeReport`
+    /// method. See
+    /// [Funnel
+    /// Metrics](https://developers.google.com/analytics/devguides/reporting/data/v1/exploration-api-schema#metrics)
+    /// for the list of metric names supported by the `runFunnelReport`
+    /// method.
     ///
     /// If `expression` is specified, `name` can be any string that you would like
     /// within the allowed character set. For example if `expression` is
@@ -7310,6 +7333,7 @@ namespace Google.Analytics.Data.V1Beta {
       timeZone_ = other.timeZone_;
       emptyReason_ = other.emptyReason_;
       subjectToThresholding_ = other.subjectToThresholding_;
+      samplingMetadatas_ = other.samplingMetadatas_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -7474,9 +7498,7 @@ namespace Google.Analytics.Data.V1Beta {
     /// possible for a request to be subject to thresholding thresholding and no
     /// data is absent from the report, and this happens when all data is above the
     /// thresholds. To learn more, see [Data
-    /// thresholds](https://support.google.com/analytics/answer/9383630) and [About
-    /// Demographics and
-    /// Interests](https://support.google.com/analytics/answer/2799357).
+    /// thresholds](https://support.google.com/analytics/answer/9383630).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7500,6 +7522,27 @@ namespace Google.Analytics.Data.V1Beta {
       _hasBits0 &= ~1;
     }
 
+    /// <summary>Field number for the "sampling_metadatas" field.</summary>
+    public const int SamplingMetadatasFieldNumber = 9;
+    private static readonly pb::FieldCodec<global::Google.Analytics.Data.V1Beta.SamplingMetadata> _repeated_samplingMetadatas_codec
+        = pb::FieldCodec.ForMessage(74, global::Google.Analytics.Data.V1Beta.SamplingMetadata.Parser);
+    private readonly pbc::RepeatedField<global::Google.Analytics.Data.V1Beta.SamplingMetadata> samplingMetadatas_ = new pbc::RepeatedField<global::Google.Analytics.Data.V1Beta.SamplingMetadata>();
+    /// <summary>
+    /// If this report results is
+    /// [sampled](https://support.google.com/analytics/answer/13331292), this
+    /// describes the percentage of events used in this report. One
+    /// `samplingMetadatas` is populated for each date range. Each
+    /// `samplingMetadatas` corresponds to a date range in order that date ranges
+    /// were specified in the request.
+    ///
+    /// However if the results are not sampled, this field will not be defined.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Analytics.Data.V1Beta.SamplingMetadata> SamplingMetadatas {
+      get { return samplingMetadatas_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -7521,6 +7564,7 @@ namespace Google.Analytics.Data.V1Beta {
       if (TimeZone != other.TimeZone) return false;
       if (EmptyReason != other.EmptyReason) return false;
       if (SubjectToThresholding != other.SubjectToThresholding) return false;
+      if(!samplingMetadatas_.Equals(other.samplingMetadatas_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -7534,6 +7578,7 @@ namespace Google.Analytics.Data.V1Beta {
       if (HasTimeZone) hash ^= TimeZone.GetHashCode();
       if (HasEmptyReason) hash ^= EmptyReason.GetHashCode();
       if (HasSubjectToThresholding) hash ^= SubjectToThresholding.GetHashCode();
+      hash ^= samplingMetadatas_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -7576,6 +7621,7 @@ namespace Google.Analytics.Data.V1Beta {
         output.WriteRawTag(64);
         output.WriteBool(SubjectToThresholding);
       }
+      samplingMetadatas_.WriteTo(output, _repeated_samplingMetadatas_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -7610,6 +7656,7 @@ namespace Google.Analytics.Data.V1Beta {
         output.WriteRawTag(64);
         output.WriteBool(SubjectToThresholding);
       }
+      samplingMetadatas_.WriteTo(ref output, _repeated_samplingMetadatas_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -7638,6 +7685,7 @@ namespace Google.Analytics.Data.V1Beta {
       if (HasSubjectToThresholding) {
         size += 1 + 1;
       }
+      size += samplingMetadatas_.CalculateSize(_repeated_samplingMetadatas_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -7671,6 +7719,7 @@ namespace Google.Analytics.Data.V1Beta {
       if (other.HasSubjectToThresholding) {
         SubjectToThresholding = other.SubjectToThresholding;
       }
+      samplingMetadatas_.Add(other.samplingMetadatas_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -7713,6 +7762,10 @@ namespace Google.Analytics.Data.V1Beta {
             SubjectToThresholding = input.ReadBool();
             break;
           }
+          case 74: {
+            samplingMetadatas_.AddEntriesFrom(input, _repeated_samplingMetadatas_codec);
+            break;
+          }
         }
       }
     #endif
@@ -7753,6 +7806,10 @@ namespace Google.Analytics.Data.V1Beta {
           }
           case 64: {
             SubjectToThresholding = input.ReadBool();
+            break;
+          }
+          case 74: {
+            samplingMetadatas_.AddEntriesFrom(ref input, _repeated_samplingMetadatas_codec);
             break;
           }
         }
@@ -8208,6 +8265,253 @@ namespace Google.Analytics.Data.V1Beta {
   }
 
   /// <summary>
+  /// If this report results is
+  /// [sampled](https://support.google.com/analytics/answer/13331292), this
+  /// describes the percentage of events used in this report. Sampling is the
+  /// practice of analyzing a subset of all data in order to uncover the meaningful
+  /// information in the larger data set.
+  /// </summary>
+  public sealed partial class SamplingMetadata : pb::IMessage<SamplingMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SamplingMetadata> _parser = new pb::MessageParser<SamplingMetadata>(() => new SamplingMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SamplingMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SamplingMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SamplingMetadata(SamplingMetadata other) : this() {
+      samplesReadCount_ = other.samplesReadCount_;
+      samplingSpaceSize_ = other.samplingSpaceSize_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SamplingMetadata Clone() {
+      return new SamplingMetadata(this);
+    }
+
+    /// <summary>Field number for the "samples_read_count" field.</summary>
+    public const int SamplesReadCountFieldNumber = 1;
+    private long samplesReadCount_;
+    /// <summary>
+    /// The total number of events read in this sampled report for a date range.
+    /// This is the size of the subset this property's data that was analyzed in
+    /// this report.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long SamplesReadCount {
+      get { return samplesReadCount_; }
+      set {
+        samplesReadCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "sampling_space_size" field.</summary>
+    public const int SamplingSpaceSizeFieldNumber = 2;
+    private long samplingSpaceSize_;
+    /// <summary>
+    /// The total number of events present in this property's data that could
+    /// have been analyzed in this report for a date range. Sampling
+    /// uncovers the meaningful information about the larger data set, and this
+    /// is the size of the larger data set.
+    ///
+    /// To calculate the percentage of available data that was used in this
+    /// report, compute `samplesReadCount/samplingSpaceSize`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long SamplingSpaceSize {
+      get { return samplingSpaceSize_; }
+      set {
+        samplingSpaceSize_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SamplingMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SamplingMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (SamplesReadCount != other.SamplesReadCount) return false;
+      if (SamplingSpaceSize != other.SamplingSpaceSize) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (SamplesReadCount != 0L) hash ^= SamplesReadCount.GetHashCode();
+      if (SamplingSpaceSize != 0L) hash ^= SamplingSpaceSize.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (SamplesReadCount != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(SamplesReadCount);
+      }
+      if (SamplingSpaceSize != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(SamplingSpaceSize);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (SamplesReadCount != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(SamplesReadCount);
+      }
+      if (SamplingSpaceSize != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(SamplingSpaceSize);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (SamplesReadCount != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(SamplesReadCount);
+      }
+      if (SamplingSpaceSize != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(SamplingSpaceSize);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SamplingMetadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.SamplesReadCount != 0L) {
+        SamplesReadCount = other.SamplesReadCount;
+      }
+      if (other.SamplingSpaceSize != 0L) {
+        SamplingSpaceSize = other.SamplingSpaceSize;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            SamplesReadCount = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            SamplingSpaceSize = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            SamplesReadCount = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            SamplingSpaceSize = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Describes a dimension column in the report. Dimensions requested in a report
   /// produce column entries within rows and DimensionHeaders. However, dimensions
   /// used exclusively within filters or expressions do not produce columns in a
@@ -8227,7 +8531,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8425,7 +8729,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8660,7 +8964,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8887,7 +9191,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9107,7 +9411,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9321,7 +9625,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9560,7 +9864,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9799,7 +10103,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10097,7 +10401,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[23]; }
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10555,6 +10859,7 @@ namespace Google.Analytics.Data.V1Beta {
   {
     private static readonly pb::MessageParser<QuotaStatus> _parser = new pb::MessageParser<QuotaStatus>(() => new QuotaStatus());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<QuotaStatus> Parser { get { return _parser; } }
@@ -10562,7 +10867,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[24]; }
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10582,6 +10887,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public QuotaStatus(QuotaStatus other) : this() {
+      _hasBits0 = other._hasBits0;
       consumed_ = other.consumed_;
       remaining_ = other.remaining_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -10595,6 +10901,8 @@ namespace Google.Analytics.Data.V1Beta {
 
     /// <summary>Field number for the "consumed" field.</summary>
     public const int ConsumedFieldNumber = 1;
+    private readonly static int ConsumedDefaultValue = 0;
+
     private int consumed_;
     /// <summary>
     /// Quota consumed by this request.
@@ -10602,14 +10910,29 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Consumed {
-      get { return consumed_; }
+      get { if ((_hasBits0 & 1) != 0) { return consumed_; } else { return ConsumedDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         consumed_ = value;
       }
+    }
+    /// <summary>Gets whether the "consumed" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasConsumed {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "consumed" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearConsumed() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "remaining" field.</summary>
     public const int RemainingFieldNumber = 2;
+    private readonly static int RemainingDefaultValue = 0;
+
     private int remaining_;
     /// <summary>
     /// Quota remaining after this request.
@@ -10617,10 +10940,23 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Remaining {
-      get { return remaining_; }
+      get { if ((_hasBits0 & 2) != 0) { return remaining_; } else { return RemainingDefaultValue; } }
       set {
+        _hasBits0 |= 2;
         remaining_ = value;
       }
+    }
+    /// <summary>Gets whether the "remaining" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRemaining {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "remaining" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRemaining() {
+      _hasBits0 &= ~2;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10647,8 +10983,8 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Consumed != 0) hash ^= Consumed.GetHashCode();
-      if (Remaining != 0) hash ^= Remaining.GetHashCode();
+      if (HasConsumed) hash ^= Consumed.GetHashCode();
+      if (HasRemaining) hash ^= Remaining.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -10667,11 +11003,11 @@ namespace Google.Analytics.Data.V1Beta {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Consumed != 0) {
+      if (HasConsumed) {
         output.WriteRawTag(8);
         output.WriteInt32(Consumed);
       }
-      if (Remaining != 0) {
+      if (HasRemaining) {
         output.WriteRawTag(16);
         output.WriteInt32(Remaining);
       }
@@ -10685,11 +11021,11 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Consumed != 0) {
+      if (HasConsumed) {
         output.WriteRawTag(8);
         output.WriteInt32(Consumed);
       }
-      if (Remaining != 0) {
+      if (HasRemaining) {
         output.WriteRawTag(16);
         output.WriteInt32(Remaining);
       }
@@ -10703,10 +11039,10 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Consumed != 0) {
+      if (HasConsumed) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Consumed);
       }
-      if (Remaining != 0) {
+      if (HasRemaining) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Remaining);
       }
       if (_unknownFields != null) {
@@ -10721,10 +11057,10 @@ namespace Google.Analytics.Data.V1Beta {
       if (other == null) {
         return;
       }
-      if (other.Consumed != 0) {
+      if (other.HasConsumed) {
         Consumed = other.Consumed;
       }
-      if (other.Remaining != 0) {
+      if (other.HasRemaining) {
         Remaining = other.Remaining;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -10797,7 +11133,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[25]; }
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11187,7 +11523,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[26]; }
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[27]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11726,7 +12062,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[27]; }
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11990,7 +12326,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[28]; }
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[29]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
