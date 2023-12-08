@@ -208,9 +208,9 @@ pre-release version (`{api.Version}`) of `{api.Id}`.";
 When running on Google Cloud, no action needs to be taken to authenticate.
 
 Otherwise, the simplest way of authenticating your API calls is to
-download a service account JSON file then set the `GOOGLE_APPLICATION_CREDENTIALS` environment variable to refer to it.
-The credentials will automatically be used to authenticate. See the [Authentication
-use cases](https://cloud.google.com/docs/authentication/use-cases) guide for more details.";
+set up Application Default Credentials.
+The credentials will automatically be used to authenticate. See 
+[Set up Application Default Credentials](https://cloud.google.com/docs/authentication/provide-credentials-adc) for more details.";
 
             var clients = GetClientClasses(api);
             string clientClasses = text.Contains("{{client-classes}}") ?
