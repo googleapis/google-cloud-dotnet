@@ -17,6 +17,7 @@
 #pragma warning disable CS8981
 using gadv = Google.Analytics.Data.V1Beta;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
 using gpr = Google.Protobuf.Reflection;
 using sys = System;
 using scg = System.Collections.Generic;
