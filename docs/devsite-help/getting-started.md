@@ -68,24 +68,19 @@ dotnet add package Google.Cloud.Translate.V3
 > - Grpc.Auth, Grpc.Core.Api, Grpc.Net.Client, Grpc.Net.Common: support for the [gRPC](https://grpc.io/) RPC protocol
 > - Google.LongRunning: support for [long-running operations](long-running-operations.md)
 
-## Set up Application Default Credentials
-
-This step sets up Application Default Credentials to use your user credentials in a local development
-environment. 
-
-```sh
-gcloud auth application-default login
-```
-
-When you create a client, it automatically detects and uses these credentials.
-For other ways to set up Application Default Credentials, see
-[Set up Application Default Credentials](https://cloud.google.com/docs/authentication/provide-credentials-adc).
-
 ## Create a client
 
 The first step in making any API calls is to create a client. Some libraries have multiple clients
 for operations involving different resources; others have a single client. In the Translation API
 we're using, there's just `TranslationServiceClient`.
+
+Clients can be configured in a number of ways, but in many cases the defaults are fine. The most
+common reason to use explicit configuration is to use specific credentials for
+[authentication](https://cloud.google.com/docs/authentication/use-cases). For this example, we'll just use
+[Application Default Credentials (ADC)]([https://cloud.google.com/docs/authentication/](https://cloud.google.com/docs/authentication/provide-credentials-adc#local-dev)application-default-credentials).
+To set up ADC  in your local environment, follow the instructions in
+[Local development environment](https://cloud.google.com/docs/authentication/provide-credentials-adc#local-dev).
+When you create a client, it automatically detects and uses these credentials.
 
 Each client class has static `Create` and `CreateAsync` methods to create clients using all the default settings.
 So in this case we can just use:
