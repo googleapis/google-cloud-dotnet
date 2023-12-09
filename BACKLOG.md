@@ -6,7 +6,6 @@ radar. Using this single document is simpler than keeping all the
 corresponding issues open, but we'll reopen the issue if we revisit
 the request and want to put work into it.
 
-
 ## Firestore: Make ValueSerializer public
 
 - Issue: [#1818](https://github.com/googleapis/google-cloud-dotnet/issues/1709)
