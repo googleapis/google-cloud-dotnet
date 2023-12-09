@@ -10,7 +10,7 @@ carefully before going against them.
   or prohibit it.)
 - Structs should be immutable.
 - All static members should be thread-safe. (Ideally, make shared
-  data immutable, but protect it with a lock if it has to be mutable.)
+  data immutable, but protect it with a lock if it has to be mutable).
 
 Asynchrony
 ---
