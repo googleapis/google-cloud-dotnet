@@ -7,7 +7,7 @@ carefully before going against them.
 - Code should be formatted as per the [Roslyn codeformatter project](https://github.com/dotnet/codeformatter)
 - Accessibility should be explicit
 - Classes should be sealed where possible. (Design for inheritance
-  or prohibit it.)
+  or prohibit it).
 - Structs should be immutable.
 - All static members should be thread-safe. (Ideally, make shared
   data immutable, but protect it with a lock if it has to be mutable).
