@@ -4,8 +4,8 @@
     - Common properties for all projects, including tools.
     -->
   <PropertyGroup>
-    <XUnitVersion>2.6.2</XUnitVersion>
-    <XUnitRunnerVersion>2.4.2</XUnitRunnerVersion>
+    <XUnitVersion>2.6.3</XUnitVersion>
+    <XUnitRunnerVersion>2.5.5</XUnitRunnerVersion>
     <TestSdkVersion>17.8.0</TestSdkVersion>
     <XUnitSkippableFactVersion>1.4.13</XUnitSkippableFactVersion>
     <NSubstituteVersion>5.1.0</NSubstituteVersion>
