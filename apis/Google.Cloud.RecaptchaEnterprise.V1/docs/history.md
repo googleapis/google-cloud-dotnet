@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.8.0, released 2023-12-11
+
+### New features
+
+- Added stable account identifier to related group membership resources, and deprecated hashed identifier field ([commit 45bfaad](https://github.com/googleapis/google-cloud-dotnet/commit/45bfaad51e9d0a9564872844963f9398caffc8cc))
+
+### Documentation improvements
+
+- Noted applicable fields as resource identifiers ([commit 45bfaad](https://github.com/googleapis/google-cloud-dotnet/commit/45bfaad51e9d0a9564872844963f9398caffc8cc))
+
 ## Version 2.7.0, released 2023-12-04
 
 ### New features
