@@ -1,5 +1,23 @@
 # Version history
 
+## Version 2.0.0-beta04, released 2023-12-11
+
+### Bug fixes
+
+- **BREAKING CHANGE** Add `optional` label to `consumed`, `remaining` fields of the `QuotaStatus` type ([commit a5715d6](https://github.com/googleapis/google-cloud-dotnet/commit/a5715d6a230fc24222a6cdc8e2840040f93c9e59))
+
+### New features
+
+- Add `CreateAudienceExport`, `QueryAudienceExport`, `GetAudienceExport`, `ListAudienceExports` methods to the Data API v1 beta ([commit a5715d6](https://github.com/googleapis/google-cloud-dotnet/commit/a5715d6a230fc24222a6cdc8e2840040f93c9e59))
+- Add `sampling_metadatas` field to `ResponseMetaData` ([commit a5715d6](https://github.com/googleapis/google-cloud-dotnet/commit/a5715d6a230fc24222a6cdc8e2840040f93c9e59))
+- Add `SamplingMetadata`, `AudienceExport`, `AudienceExportMetadata`, `AudienceDimensionValue` types ([commit a5715d6](https://github.com/googleapis/google-cloud-dotnet/commit/a5715d6a230fc24222a6cdc8e2840040f93c9e59))
+
+### Documentation improvements
+
+- Updated comments ([commit a5715d6](https://github.com/googleapis/google-cloud-dotnet/commit/a5715d6a230fc24222a6cdc8e2840040f93c9e59))
+- Minor formatting ([commit 8c49dd7](https://github.com/googleapis/google-cloud-dotnet/commit/8c49dd73c4e337e7e67db23a8726b5d01d073317))
+- Add clarifications ([commit 8c49dd7](https://github.com/googleapis/google-cloud-dotnet/commit/8c49dd73c4e337e7e67db23a8726b5d01d073317))
+
 ## Version 2.0.0-beta03, released 2023-01-19
 
 ### New features
