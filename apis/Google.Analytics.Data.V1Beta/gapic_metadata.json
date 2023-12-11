@@ -28,10 +28,34 @@
                 "CheckCompatibilityAsync"
               ]
             },
+            "CreateAudienceExport": {
+              "methods": [
+                "CreateAudienceExport",
+                "CreateAudienceExportAsync"
+              ]
+            },
+            "GetAudienceExport": {
+              "methods": [
+                "GetAudienceExport",
+                "GetAudienceExportAsync"
+              ]
+            },
             "GetMetadata": {
               "methods": [
                 "GetMetadata",
                 "GetMetadataAsync"
+              ]
+            },
+            "ListAudienceExports": {
+              "methods": [
+                "ListAudienceExports",
+                "ListAudienceExportsAsync"
+              ]
+            },
+            "QueryAudienceExport": {
+              "methods": [
+                "QueryAudienceExport",
+                "QueryAudienceExportAsync"
               ]
             },
             "RunPivotReport": {

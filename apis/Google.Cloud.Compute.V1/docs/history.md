@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.12.0, released 2023-12-11
+
+### New features
+
+- Update Compute Engine API to revision 20231110 ([issue 868](https://github.com/googleapis/google-cloud-dotnet/issues/868)) ([commit 8e8bab2](https://github.com/googleapis/google-cloud-dotnet/commit/8e8bab2c81fa30e3a176fc6a71f2abe9acae3646))
+
 ## Version 2.11.0, released 2023-08-04
 
 ### New features

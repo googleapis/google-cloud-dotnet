@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.5.0, released 2023-12-11
+
+### New features
+
+- Added the MoveBillingAccount method, which allows changing which organization a billing account belongs to ([commit d8674a8](https://github.com/googleapis/google-cloud-dotnet/commit/d8674a8ec8fed0314c4a0c557f05f47eb5139381))
+- Added field BillingAccount.parent ([commit d8674a8](https://github.com/googleapis/google-cloud-dotnet/commit/d8674a8ec8fed0314c4a0c557f05f47eb5139381))
+
+### Documentation improvements
+
+- Update service documentation ([commit e6e28ae](https://github.com/googleapis/google-cloud-dotnet/commit/e6e28aea18f1fbd8d70e62eae8bbdc698e321565))
 ## Version 3.4.0, released 2023-09-08
 
 ### Breaking change

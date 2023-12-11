@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
 using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
 
@@ -32,6 +33,7 @@ namespace Google.Analytics.Data.V1Beta
         {
             yield return AnalyticsDataApiReflection.Descriptor;
             yield return DataReflection.Descriptor;
+            yield return lro::OperationsReflection.Descriptor;
         }
     }
 }

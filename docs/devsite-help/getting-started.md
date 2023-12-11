@@ -76,8 +76,11 @@ we're using, there's just `TranslationServiceClient`.
 
 Clients can be configured in a number of ways, but in many cases the defaults are fine. The most
 common reason to use explicit configuration is to use specific credentials for
-[authentication](https://cloud.google.com/docs/authentication/use-cases). For this example, we'll just use the
-[application default credentials](https://cloud.google.com/docs/authentication/production#automatically).
+[authentication](https://cloud.google.com/docs/authentication/use-cases). For this example, we'll just use
+[Application Default Credentials (ADC)]([https://cloud.google.com/docs/authentication/](https://cloud.google.com/docs/authentication/provide-credentials-adc#local-dev)application-default-credentials).
+To set up ADC  in your local environment, follow the instructions in
+[Local development environment](https://cloud.google.com/docs/authentication/provide-credentials-adc#local-dev).
+When you create a client, it automatically detects and uses these credentials.
 
 Each client class has static `Create` and `CreateAsync` methods to create clients using all the default settings.
 So in this case we can just use:

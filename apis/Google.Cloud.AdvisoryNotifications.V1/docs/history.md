@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.3.0, released 2023-12-11
+
+### New features
+
+- Adding project level methods to advisorynotifications.googleapis.com ([commit 29bf8a2](https://github.com/googleapis/google-cloud-dotnet/commit/29bf8a20cc122f75ffc064bb58b26447bf408b91))
+
+### Documentation improvements
+
+- Adding docs for new project level methods ([commit 29bf8a2](https://github.com/googleapis/google-cloud-dotnet/commit/29bf8a20cc122f75ffc064bb58b26447bf408b91))
+
 ## Version 1.2.0, released 2023-09-26
 
 ### New features
