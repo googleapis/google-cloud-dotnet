@@ -1,0 +1,2992 @@
+{
+  "clientLibrary": {
+    "name": "Google.Shopping.Css.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.shopping.css.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "css_v1_generated_AccountLabelsService_ListAccountLabels_sync",
+      "title": "ListAccountLabelsRequestObject",
+      "description": "Snippet for ListAccountLabels",
+      "file": "AccountLabelsServiceClient.ListAccountLabelsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAccountLabels",
+        "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient.ListAccountLabels",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.ListAccountLabelsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Css.V1.ListAccountLabelsResponse, Google.Shopping.Css.V1.AccountLabel>",
+        "client": {
+          "shortName": "AccountLabelsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient"
+        },
+        "method": {
+          "shortName": "ListAccountLabels",
+          "fullName": "google.shopping.css.v1.AccountLabelsService.ListAccountLabels",
+          "service": {
+            "shortName": "AccountLabelsService",
+            "fullName": "google.shopping.css.v1.AccountLabelsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountLabelsService_ListAccountLabels_async",
+      "title": "ListAccountLabelsRequestObjectAsync",
+      "description": "Snippet for ListAccountLabelsAsync",
+      "file": "AccountLabelsServiceClient.ListAccountLabelsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAccountLabelsAsync",
+        "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient.ListAccountLabelsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.ListAccountLabelsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Css.V1.ListAccountLabelsResponse, Google.Shopping.Css.V1.AccountLabel>",
+        "client": {
+          "shortName": "AccountLabelsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient"
+        },
+        "method": {
+          "shortName": "ListAccountLabels",
+          "fullName": "google.shopping.css.v1.AccountLabelsService.ListAccountLabels",
+          "service": {
+            "shortName": "AccountLabelsService",
+            "fullName": "google.shopping.css.v1.AccountLabelsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountLabelsService_ListAccountLabels_sync_flattened",
+      "title": "ListAccountLabels",
+      "description": "Snippet for ListAccountLabels",
+      "file": "AccountLabelsServiceClient.ListAccountLabelsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAccountLabels",
+        "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient.ListAccountLabels",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Css.V1.ListAccountLabelsResponse, Google.Shopping.Css.V1.AccountLabel>",
+        "client": {
+          "shortName": "AccountLabelsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient"
+        },
+        "method": {
+          "shortName": "ListAccountLabels",
+          "fullName": "google.shopping.css.v1.AccountLabelsService.ListAccountLabels",
+          "service": {
+            "shortName": "AccountLabelsService",
+            "fullName": "google.shopping.css.v1.AccountLabelsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountLabelsService_ListAccountLabels_async_flattened",
+      "title": "ListAccountLabelsAsync",
+      "description": "Snippet for ListAccountLabelsAsync",
+      "file": "AccountLabelsServiceClient.ListAccountLabelsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAccountLabelsAsync",
+        "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient.ListAccountLabelsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Css.V1.ListAccountLabelsResponse, Google.Shopping.Css.V1.AccountLabel>",
+        "client": {
+          "shortName": "AccountLabelsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient"
+        },
+        "method": {
+          "shortName": "ListAccountLabels",
+          "fullName": "google.shopping.css.v1.AccountLabelsService.ListAccountLabels",
+          "service": {
+            "shortName": "AccountLabelsService",
+            "fullName": "google.shopping.css.v1.AccountLabelsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountLabelsService_ListAccountLabels_sync_flattened_resourceNames",
+      "title": "ListAccountLabelsResourceNames",
+      "description": "Snippet for ListAccountLabels",
+      "file": "AccountLabelsServiceClient.ListAccountLabelsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAccountLabels",
+        "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient.ListAccountLabels",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Css.V1.ListAccountLabelsResponse, Google.Shopping.Css.V1.AccountLabel>",
+        "client": {
+          "shortName": "AccountLabelsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient"
+        },
+        "method": {
+          "shortName": "ListAccountLabels",
+          "fullName": "google.shopping.css.v1.AccountLabelsService.ListAccountLabels",
+          "service": {
+            "shortName": "AccountLabelsService",
+            "fullName": "google.shopping.css.v1.AccountLabelsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountLabelsService_ListAccountLabels_async_flattened_resourceNames",
+      "title": "ListAccountLabelsResourceNamesAsync",
+      "description": "Snippet for ListAccountLabelsAsync",
+      "file": "AccountLabelsServiceClient.ListAccountLabelsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAccountLabelsAsync",
+        "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient.ListAccountLabelsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Css.V1.ListAccountLabelsResponse, Google.Shopping.Css.V1.AccountLabel>",
+        "client": {
+          "shortName": "AccountLabelsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient"
+        },
+        "method": {
+          "shortName": "ListAccountLabels",
+          "fullName": "google.shopping.css.v1.AccountLabelsService.ListAccountLabels",
+          "service": {
+            "shortName": "AccountLabelsService",
+            "fullName": "google.shopping.css.v1.AccountLabelsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountLabelsService_CreateAccountLabel_sync",
+      "title": "CreateAccountLabelRequestObject",
+      "description": "Snippet for CreateAccountLabel",
+      "file": "AccountLabelsServiceClient.CreateAccountLabelRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAccountLabel",
+        "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient.CreateAccountLabel",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.CreateAccountLabelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Css.V1.AccountLabel",
+        "client": {
+          "shortName": "AccountLabelsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAccountLabel",
+          "fullName": "google.shopping.css.v1.AccountLabelsService.CreateAccountLabel",
+          "service": {
+            "shortName": "AccountLabelsService",
+            "fullName": "google.shopping.css.v1.AccountLabelsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountLabelsService_CreateAccountLabel_async",
+      "title": "CreateAccountLabelRequestObjectAsync",
+      "description": "Snippet for CreateAccountLabelAsync",
+      "file": "AccountLabelsServiceClient.CreateAccountLabelRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAccountLabelAsync",
+        "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient.CreateAccountLabelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.CreateAccountLabelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Css.V1.AccountLabel>",
+        "client": {
+          "shortName": "AccountLabelsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAccountLabel",
+          "fullName": "google.shopping.css.v1.AccountLabelsService.CreateAccountLabel",
+          "service": {
+            "shortName": "AccountLabelsService",
+            "fullName": "google.shopping.css.v1.AccountLabelsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountLabelsService_CreateAccountLabel_sync_flattened",
+      "title": "CreateAccountLabel",
+      "description": "Snippet for CreateAccountLabel",
+      "file": "AccountLabelsServiceClient.CreateAccountLabelSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAccountLabel",
+        "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient.CreateAccountLabel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Shopping.Css.V1.AccountLabel",
+            "name": "accountLabel"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Css.V1.AccountLabel",
+        "client": {
+          "shortName": "AccountLabelsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAccountLabel",
+          "fullName": "google.shopping.css.v1.AccountLabelsService.CreateAccountLabel",
+          "service": {
+            "shortName": "AccountLabelsService",
+            "fullName": "google.shopping.css.v1.AccountLabelsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountLabelsService_CreateAccountLabel_async_flattened",
+      "title": "CreateAccountLabelAsync",
+      "description": "Snippet for CreateAccountLabelAsync",
+      "file": "AccountLabelsServiceClient.CreateAccountLabelAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAccountLabelAsync",
+        "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient.CreateAccountLabelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Shopping.Css.V1.AccountLabel",
+            "name": "accountLabel"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Css.V1.AccountLabel>",
+        "client": {
+          "shortName": "AccountLabelsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAccountLabel",
+          "fullName": "google.shopping.css.v1.AccountLabelsService.CreateAccountLabel",
+          "service": {
+            "shortName": "AccountLabelsService",
+            "fullName": "google.shopping.css.v1.AccountLabelsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountLabelsService_CreateAccountLabel_sync_flattened_resourceNames",
+      "title": "CreateAccountLabelResourceNames",
+      "description": "Snippet for CreateAccountLabel",
+      "file": "AccountLabelsServiceClient.CreateAccountLabelResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAccountLabel",
+        "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient.CreateAccountLabel",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Shopping.Css.V1.AccountLabel",
+            "name": "accountLabel"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Css.V1.AccountLabel",
+        "client": {
+          "shortName": "AccountLabelsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAccountLabel",
+          "fullName": "google.shopping.css.v1.AccountLabelsService.CreateAccountLabel",
+          "service": {
+            "shortName": "AccountLabelsService",
+            "fullName": "google.shopping.css.v1.AccountLabelsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountLabelsService_CreateAccountLabel_async_flattened_resourceNames",
+      "title": "CreateAccountLabelResourceNamesAsync",
+      "description": "Snippet for CreateAccountLabelAsync",
+      "file": "AccountLabelsServiceClient.CreateAccountLabelResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAccountLabelAsync",
+        "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient.CreateAccountLabelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Shopping.Css.V1.AccountLabel",
+            "name": "accountLabel"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Css.V1.AccountLabel>",
+        "client": {
+          "shortName": "AccountLabelsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAccountLabel",
+          "fullName": "google.shopping.css.v1.AccountLabelsService.CreateAccountLabel",
+          "service": {
+            "shortName": "AccountLabelsService",
+            "fullName": "google.shopping.css.v1.AccountLabelsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountLabelsService_UpdateAccountLabel_sync",
+      "title": "UpdateAccountLabelRequestObject",
+      "description": "Snippet for UpdateAccountLabel",
+      "file": "AccountLabelsServiceClient.UpdateAccountLabelRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAccountLabel",
+        "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient.UpdateAccountLabel",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.UpdateAccountLabelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Css.V1.AccountLabel",
+        "client": {
+          "shortName": "AccountLabelsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAccountLabel",
+          "fullName": "google.shopping.css.v1.AccountLabelsService.UpdateAccountLabel",
+          "service": {
+            "shortName": "AccountLabelsService",
+            "fullName": "google.shopping.css.v1.AccountLabelsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountLabelsService_UpdateAccountLabel_async",
+      "title": "UpdateAccountLabelRequestObjectAsync",
+      "description": "Snippet for UpdateAccountLabelAsync",
+      "file": "AccountLabelsServiceClient.UpdateAccountLabelRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAccountLabelAsync",
+        "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient.UpdateAccountLabelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.UpdateAccountLabelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Css.V1.AccountLabel>",
+        "client": {
+          "shortName": "AccountLabelsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAccountLabel",
+          "fullName": "google.shopping.css.v1.AccountLabelsService.UpdateAccountLabel",
+          "service": {
+            "shortName": "AccountLabelsService",
+            "fullName": "google.shopping.css.v1.AccountLabelsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountLabelsService_UpdateAccountLabel_sync_flattened",
+      "title": "UpdateAccountLabel",
+      "description": "Snippet for UpdateAccountLabel",
+      "file": "AccountLabelsServiceClient.UpdateAccountLabelSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAccountLabel",
+        "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient.UpdateAccountLabel",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.AccountLabel",
+            "name": "accountLabel"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Css.V1.AccountLabel",
+        "client": {
+          "shortName": "AccountLabelsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAccountLabel",
+          "fullName": "google.shopping.css.v1.AccountLabelsService.UpdateAccountLabel",
+          "service": {
+            "shortName": "AccountLabelsService",
+            "fullName": "google.shopping.css.v1.AccountLabelsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountLabelsService_UpdateAccountLabel_async_flattened",
+      "title": "UpdateAccountLabelAsync",
+      "description": "Snippet for UpdateAccountLabelAsync",
+      "file": "AccountLabelsServiceClient.UpdateAccountLabelAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAccountLabelAsync",
+        "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient.UpdateAccountLabelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.AccountLabel",
+            "name": "accountLabel"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Css.V1.AccountLabel>",
+        "client": {
+          "shortName": "AccountLabelsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAccountLabel",
+          "fullName": "google.shopping.css.v1.AccountLabelsService.UpdateAccountLabel",
+          "service": {
+            "shortName": "AccountLabelsService",
+            "fullName": "google.shopping.css.v1.AccountLabelsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountLabelsService_DeleteAccountLabel_sync",
+      "title": "DeleteAccountLabelRequestObject",
+      "description": "Snippet for DeleteAccountLabel",
+      "file": "AccountLabelsServiceClient.DeleteAccountLabelRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAccountLabel",
+        "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient.DeleteAccountLabel",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.DeleteAccountLabelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AccountLabelsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAccountLabel",
+          "fullName": "google.shopping.css.v1.AccountLabelsService.DeleteAccountLabel",
+          "service": {
+            "shortName": "AccountLabelsService",
+            "fullName": "google.shopping.css.v1.AccountLabelsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountLabelsService_DeleteAccountLabel_async",
+      "title": "DeleteAccountLabelRequestObjectAsync",
+      "description": "Snippet for DeleteAccountLabelAsync",
+      "file": "AccountLabelsServiceClient.DeleteAccountLabelRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAccountLabelAsync",
+        "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient.DeleteAccountLabelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.DeleteAccountLabelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AccountLabelsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAccountLabel",
+          "fullName": "google.shopping.css.v1.AccountLabelsService.DeleteAccountLabel",
+          "service": {
+            "shortName": "AccountLabelsService",
+            "fullName": "google.shopping.css.v1.AccountLabelsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountLabelsService_DeleteAccountLabel_sync_flattened",
+      "title": "DeleteAccountLabel",
+      "description": "Snippet for DeleteAccountLabel",
+      "file": "AccountLabelsServiceClient.DeleteAccountLabelSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAccountLabel",
+        "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient.DeleteAccountLabel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AccountLabelsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAccountLabel",
+          "fullName": "google.shopping.css.v1.AccountLabelsService.DeleteAccountLabel",
+          "service": {
+            "shortName": "AccountLabelsService",
+            "fullName": "google.shopping.css.v1.AccountLabelsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountLabelsService_DeleteAccountLabel_async_flattened",
+      "title": "DeleteAccountLabelAsync",
+      "description": "Snippet for DeleteAccountLabelAsync",
+      "file": "AccountLabelsServiceClient.DeleteAccountLabelAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAccountLabelAsync",
+        "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient.DeleteAccountLabelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AccountLabelsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAccountLabel",
+          "fullName": "google.shopping.css.v1.AccountLabelsService.DeleteAccountLabel",
+          "service": {
+            "shortName": "AccountLabelsService",
+            "fullName": "google.shopping.css.v1.AccountLabelsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountLabelsService_DeleteAccountLabel_sync_flattened_resourceNames",
+      "title": "DeleteAccountLabelResourceNames",
+      "description": "Snippet for DeleteAccountLabel",
+      "file": "AccountLabelsServiceClient.DeleteAccountLabelResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAccountLabel",
+        "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient.DeleteAccountLabel",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.AccountLabelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AccountLabelsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAccountLabel",
+          "fullName": "google.shopping.css.v1.AccountLabelsService.DeleteAccountLabel",
+          "service": {
+            "shortName": "AccountLabelsService",
+            "fullName": "google.shopping.css.v1.AccountLabelsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountLabelsService_DeleteAccountLabel_async_flattened_resourceNames",
+      "title": "DeleteAccountLabelResourceNamesAsync",
+      "description": "Snippet for DeleteAccountLabelAsync",
+      "file": "AccountLabelsServiceClient.DeleteAccountLabelResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAccountLabelAsync",
+        "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient.DeleteAccountLabelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.AccountLabelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AccountLabelsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountLabelsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAccountLabel",
+          "fullName": "google.shopping.css.v1.AccountLabelsService.DeleteAccountLabel",
+          "service": {
+            "shortName": "AccountLabelsService",
+            "fullName": "google.shopping.css.v1.AccountLabelsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountsService_ListChildAccounts_sync",
+      "title": "ListChildAccountsRequestObject",
+      "description": "Snippet for ListChildAccounts",
+      "file": "AccountsServiceClient.ListChildAccountsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListChildAccounts",
+        "fullName": "Google.Shopping.Css.V1.AccountsServiceClient.ListChildAccounts",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.ListChildAccountsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Css.V1.ListChildAccountsResponse, Google.Shopping.Css.V1.Account>",
+        "client": {
+          "shortName": "AccountsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountsServiceClient"
+        },
+        "method": {
+          "shortName": "ListChildAccounts",
+          "fullName": "google.shopping.css.v1.AccountsService.ListChildAccounts",
+          "service": {
+            "shortName": "AccountsService",
+            "fullName": "google.shopping.css.v1.AccountsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountsService_ListChildAccounts_async",
+      "title": "ListChildAccountsRequestObjectAsync",
+      "description": "Snippet for ListChildAccountsAsync",
+      "file": "AccountsServiceClient.ListChildAccountsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListChildAccountsAsync",
+        "fullName": "Google.Shopping.Css.V1.AccountsServiceClient.ListChildAccountsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.ListChildAccountsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Css.V1.ListChildAccountsResponse, Google.Shopping.Css.V1.Account>",
+        "client": {
+          "shortName": "AccountsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountsServiceClient"
+        },
+        "method": {
+          "shortName": "ListChildAccounts",
+          "fullName": "google.shopping.css.v1.AccountsService.ListChildAccounts",
+          "service": {
+            "shortName": "AccountsService",
+            "fullName": "google.shopping.css.v1.AccountsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountsService_ListChildAccounts_sync_flattened",
+      "title": "ListChildAccounts",
+      "description": "Snippet for ListChildAccounts",
+      "file": "AccountsServiceClient.ListChildAccountsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListChildAccounts",
+        "fullName": "Google.Shopping.Css.V1.AccountsServiceClient.ListChildAccounts",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Css.V1.ListChildAccountsResponse, Google.Shopping.Css.V1.Account>",
+        "client": {
+          "shortName": "AccountsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountsServiceClient"
+        },
+        "method": {
+          "shortName": "ListChildAccounts",
+          "fullName": "google.shopping.css.v1.AccountsService.ListChildAccounts",
+          "service": {
+            "shortName": "AccountsService",
+            "fullName": "google.shopping.css.v1.AccountsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountsService_ListChildAccounts_async_flattened",
+      "title": "ListChildAccountsAsync",
+      "description": "Snippet for ListChildAccountsAsync",
+      "file": "AccountsServiceClient.ListChildAccountsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListChildAccountsAsync",
+        "fullName": "Google.Shopping.Css.V1.AccountsServiceClient.ListChildAccountsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Css.V1.ListChildAccountsResponse, Google.Shopping.Css.V1.Account>",
+        "client": {
+          "shortName": "AccountsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountsServiceClient"
+        },
+        "method": {
+          "shortName": "ListChildAccounts",
+          "fullName": "google.shopping.css.v1.AccountsService.ListChildAccounts",
+          "service": {
+            "shortName": "AccountsService",
+            "fullName": "google.shopping.css.v1.AccountsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountsService_ListChildAccounts_sync_flattened_resourceNames",
+      "title": "ListChildAccountsResourceNames",
+      "description": "Snippet for ListChildAccounts",
+      "file": "AccountsServiceClient.ListChildAccountsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListChildAccounts",
+        "fullName": "Google.Shopping.Css.V1.AccountsServiceClient.ListChildAccounts",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Css.V1.ListChildAccountsResponse, Google.Shopping.Css.V1.Account>",
+        "client": {
+          "shortName": "AccountsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountsServiceClient"
+        },
+        "method": {
+          "shortName": "ListChildAccounts",
+          "fullName": "google.shopping.css.v1.AccountsService.ListChildAccounts",
+          "service": {
+            "shortName": "AccountsService",
+            "fullName": "google.shopping.css.v1.AccountsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountsService_ListChildAccounts_async_flattened_resourceNames",
+      "title": "ListChildAccountsResourceNamesAsync",
+      "description": "Snippet for ListChildAccountsAsync",
+      "file": "AccountsServiceClient.ListChildAccountsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListChildAccountsAsync",
+        "fullName": "Google.Shopping.Css.V1.AccountsServiceClient.ListChildAccountsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Css.V1.ListChildAccountsResponse, Google.Shopping.Css.V1.Account>",
+        "client": {
+          "shortName": "AccountsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountsServiceClient"
+        },
+        "method": {
+          "shortName": "ListChildAccounts",
+          "fullName": "google.shopping.css.v1.AccountsService.ListChildAccounts",
+          "service": {
+            "shortName": "AccountsService",
+            "fullName": "google.shopping.css.v1.AccountsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountsService_GetAccount_sync",
+      "title": "GetAccountRequestObject",
+      "description": "Snippet for GetAccount",
+      "file": "AccountsServiceClient.GetAccountRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAccount",
+        "fullName": "Google.Shopping.Css.V1.AccountsServiceClient.GetAccount",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.GetAccountRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Css.V1.Account",
+        "client": {
+          "shortName": "AccountsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountsServiceClient"
+        },
+        "method": {
+          "shortName": "GetAccount",
+          "fullName": "google.shopping.css.v1.AccountsService.GetAccount",
+          "service": {
+            "shortName": "AccountsService",
+            "fullName": "google.shopping.css.v1.AccountsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountsService_GetAccount_async",
+      "title": "GetAccountRequestObjectAsync",
+      "description": "Snippet for GetAccountAsync",
+      "file": "AccountsServiceClient.GetAccountRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAccountAsync",
+        "fullName": "Google.Shopping.Css.V1.AccountsServiceClient.GetAccountAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.GetAccountRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Css.V1.Account>",
+        "client": {
+          "shortName": "AccountsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountsServiceClient"
+        },
+        "method": {
+          "shortName": "GetAccount",
+          "fullName": "google.shopping.css.v1.AccountsService.GetAccount",
+          "service": {
+            "shortName": "AccountsService",
+            "fullName": "google.shopping.css.v1.AccountsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountsService_GetAccount_sync_flattened",
+      "title": "GetAccount",
+      "description": "Snippet for GetAccount",
+      "file": "AccountsServiceClient.GetAccountSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAccount",
+        "fullName": "Google.Shopping.Css.V1.AccountsServiceClient.GetAccount",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Css.V1.Account",
+        "client": {
+          "shortName": "AccountsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountsServiceClient"
+        },
+        "method": {
+          "shortName": "GetAccount",
+          "fullName": "google.shopping.css.v1.AccountsService.GetAccount",
+          "service": {
+            "shortName": "AccountsService",
+            "fullName": "google.shopping.css.v1.AccountsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountsService_GetAccount_async_flattened",
+      "title": "GetAccountAsync",
+      "description": "Snippet for GetAccountAsync",
+      "file": "AccountsServiceClient.GetAccountAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAccountAsync",
+        "fullName": "Google.Shopping.Css.V1.AccountsServiceClient.GetAccountAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Css.V1.Account>",
+        "client": {
+          "shortName": "AccountsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountsServiceClient"
+        },
+        "method": {
+          "shortName": "GetAccount",
+          "fullName": "google.shopping.css.v1.AccountsService.GetAccount",
+          "service": {
+            "shortName": "AccountsService",
+            "fullName": "google.shopping.css.v1.AccountsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountsService_GetAccount_sync_flattened_resourceNames",
+      "title": "GetAccountResourceNames",
+      "description": "Snippet for GetAccount",
+      "file": "AccountsServiceClient.GetAccountResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAccount",
+        "fullName": "Google.Shopping.Css.V1.AccountsServiceClient.GetAccount",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.AccountName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Css.V1.Account",
+        "client": {
+          "shortName": "AccountsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountsServiceClient"
+        },
+        "method": {
+          "shortName": "GetAccount",
+          "fullName": "google.shopping.css.v1.AccountsService.GetAccount",
+          "service": {
+            "shortName": "AccountsService",
+            "fullName": "google.shopping.css.v1.AccountsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountsService_GetAccount_async_flattened_resourceNames",
+      "title": "GetAccountResourceNamesAsync",
+      "description": "Snippet for GetAccountAsync",
+      "file": "AccountsServiceClient.GetAccountResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAccountAsync",
+        "fullName": "Google.Shopping.Css.V1.AccountsServiceClient.GetAccountAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.AccountName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Css.V1.Account>",
+        "client": {
+          "shortName": "AccountsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountsServiceClient"
+        },
+        "method": {
+          "shortName": "GetAccount",
+          "fullName": "google.shopping.css.v1.AccountsService.GetAccount",
+          "service": {
+            "shortName": "AccountsService",
+            "fullName": "google.shopping.css.v1.AccountsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountsService_UpdateLabels_sync",
+      "title": "UpdateLabelsRequestObject",
+      "description": "Snippet for UpdateLabels",
+      "file": "AccountsServiceClient.UpdateLabelsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateLabels",
+        "fullName": "Google.Shopping.Css.V1.AccountsServiceClient.UpdateLabels",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.UpdateAccountLabelsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Css.V1.Account",
+        "client": {
+          "shortName": "AccountsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateLabels",
+          "fullName": "google.shopping.css.v1.AccountsService.UpdateLabels",
+          "service": {
+            "shortName": "AccountsService",
+            "fullName": "google.shopping.css.v1.AccountsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountsService_UpdateLabels_async",
+      "title": "UpdateLabelsRequestObjectAsync",
+      "description": "Snippet for UpdateLabelsAsync",
+      "file": "AccountsServiceClient.UpdateLabelsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateLabelsAsync",
+        "fullName": "Google.Shopping.Css.V1.AccountsServiceClient.UpdateLabelsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.UpdateAccountLabelsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Css.V1.Account>",
+        "client": {
+          "shortName": "AccountsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateLabels",
+          "fullName": "google.shopping.css.v1.AccountsService.UpdateLabels",
+          "service": {
+            "shortName": "AccountsService",
+            "fullName": "google.shopping.css.v1.AccountsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountsService_UpdateLabels_sync_flattened",
+      "title": "UpdateLabels",
+      "description": "Snippet for UpdateLabels",
+      "file": "AccountsServiceClient.UpdateLabelsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateLabels",
+        "fullName": "Google.Shopping.Css.V1.AccountsServiceClient.UpdateLabels",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Css.V1.Account",
+        "client": {
+          "shortName": "AccountsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateLabels",
+          "fullName": "google.shopping.css.v1.AccountsService.UpdateLabels",
+          "service": {
+            "shortName": "AccountsService",
+            "fullName": "google.shopping.css.v1.AccountsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountsService_UpdateLabels_async_flattened",
+      "title": "UpdateLabelsAsync",
+      "description": "Snippet for UpdateLabelsAsync",
+      "file": "AccountsServiceClient.UpdateLabelsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateLabelsAsync",
+        "fullName": "Google.Shopping.Css.V1.AccountsServiceClient.UpdateLabelsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Css.V1.Account>",
+        "client": {
+          "shortName": "AccountsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateLabels",
+          "fullName": "google.shopping.css.v1.AccountsService.UpdateLabels",
+          "service": {
+            "shortName": "AccountsService",
+            "fullName": "google.shopping.css.v1.AccountsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountsService_UpdateLabels_sync_flattened_resourceNames",
+      "title": "UpdateLabelsResourceNames",
+      "description": "Snippet for UpdateLabels",
+      "file": "AccountsServiceClient.UpdateLabelsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateLabels",
+        "fullName": "Google.Shopping.Css.V1.AccountsServiceClient.UpdateLabels",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.AccountName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Css.V1.Account",
+        "client": {
+          "shortName": "AccountsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateLabels",
+          "fullName": "google.shopping.css.v1.AccountsService.UpdateLabels",
+          "service": {
+            "shortName": "AccountsService",
+            "fullName": "google.shopping.css.v1.AccountsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_AccountsService_UpdateLabels_async_flattened_resourceNames",
+      "title": "UpdateLabelsResourceNamesAsync",
+      "description": "Snippet for UpdateLabelsAsync",
+      "file": "AccountsServiceClient.UpdateLabelsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateLabelsAsync",
+        "fullName": "Google.Shopping.Css.V1.AccountsServiceClient.UpdateLabelsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.AccountName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Css.V1.Account>",
+        "client": {
+          "shortName": "AccountsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.AccountsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateLabels",
+          "fullName": "google.shopping.css.v1.AccountsService.UpdateLabels",
+          "service": {
+            "shortName": "AccountsService",
+            "fullName": "google.shopping.css.v1.AccountsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_CssProductInputsService_InsertCssProductInput_sync",
+      "title": "InsertCssProductInputRequestObject",
+      "description": "Snippet for InsertCssProductInput",
+      "file": "CssProductInputsServiceClient.InsertCssProductInputRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InsertCssProductInput",
+        "fullName": "Google.Shopping.Css.V1.CssProductInputsServiceClient.InsertCssProductInput",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.InsertCssProductInputRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Css.V1.CssProductInput",
+        "client": {
+          "shortName": "CssProductInputsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.CssProductInputsServiceClient"
+        },
+        "method": {
+          "shortName": "InsertCssProductInput",
+          "fullName": "google.shopping.css.v1.CssProductInputsService.InsertCssProductInput",
+          "service": {
+            "shortName": "CssProductInputsService",
+            "fullName": "google.shopping.css.v1.CssProductInputsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_CssProductInputsService_InsertCssProductInput_async",
+      "title": "InsertCssProductInputRequestObjectAsync",
+      "description": "Snippet for InsertCssProductInputAsync",
+      "file": "CssProductInputsServiceClient.InsertCssProductInputRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InsertCssProductInputAsync",
+        "fullName": "Google.Shopping.Css.V1.CssProductInputsServiceClient.InsertCssProductInputAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.InsertCssProductInputRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Css.V1.CssProductInput>",
+        "client": {
+          "shortName": "CssProductInputsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.CssProductInputsServiceClient"
+        },
+        "method": {
+          "shortName": "InsertCssProductInput",
+          "fullName": "google.shopping.css.v1.CssProductInputsService.InsertCssProductInput",
+          "service": {
+            "shortName": "CssProductInputsService",
+            "fullName": "google.shopping.css.v1.CssProductInputsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_CssProductInputsService_DeleteCssProductInput_sync",
+      "title": "DeleteCssProductInputRequestObject",
+      "description": "Snippet for DeleteCssProductInput",
+      "file": "CssProductInputsServiceClient.DeleteCssProductInputRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCssProductInput",
+        "fullName": "Google.Shopping.Css.V1.CssProductInputsServiceClient.DeleteCssProductInput",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.DeleteCssProductInputRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "CssProductInputsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.CssProductInputsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCssProductInput",
+          "fullName": "google.shopping.css.v1.CssProductInputsService.DeleteCssProductInput",
+          "service": {
+            "shortName": "CssProductInputsService",
+            "fullName": "google.shopping.css.v1.CssProductInputsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_CssProductInputsService_DeleteCssProductInput_async",
+      "title": "DeleteCssProductInputRequestObjectAsync",
+      "description": "Snippet for DeleteCssProductInputAsync",
+      "file": "CssProductInputsServiceClient.DeleteCssProductInputRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCssProductInputAsync",
+        "fullName": "Google.Shopping.Css.V1.CssProductInputsServiceClient.DeleteCssProductInputAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.DeleteCssProductInputRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "CssProductInputsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.CssProductInputsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCssProductInput",
+          "fullName": "google.shopping.css.v1.CssProductInputsService.DeleteCssProductInput",
+          "service": {
+            "shortName": "CssProductInputsService",
+            "fullName": "google.shopping.css.v1.CssProductInputsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_CssProductInputsService_DeleteCssProductInput_sync_flattened",
+      "title": "DeleteCssProductInput",
+      "description": "Snippet for DeleteCssProductInput",
+      "file": "CssProductInputsServiceClient.DeleteCssProductInputSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCssProductInput",
+        "fullName": "Google.Shopping.Css.V1.CssProductInputsServiceClient.DeleteCssProductInput",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "CssProductInputsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.CssProductInputsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCssProductInput",
+          "fullName": "google.shopping.css.v1.CssProductInputsService.DeleteCssProductInput",
+          "service": {
+            "shortName": "CssProductInputsService",
+            "fullName": "google.shopping.css.v1.CssProductInputsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_CssProductInputsService_DeleteCssProductInput_async_flattened",
+      "title": "DeleteCssProductInputAsync",
+      "description": "Snippet for DeleteCssProductInputAsync",
+      "file": "CssProductInputsServiceClient.DeleteCssProductInputAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCssProductInputAsync",
+        "fullName": "Google.Shopping.Css.V1.CssProductInputsServiceClient.DeleteCssProductInputAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "CssProductInputsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.CssProductInputsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCssProductInput",
+          "fullName": "google.shopping.css.v1.CssProductInputsService.DeleteCssProductInput",
+          "service": {
+            "shortName": "CssProductInputsService",
+            "fullName": "google.shopping.css.v1.CssProductInputsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_CssProductInputsService_DeleteCssProductInput_sync_flattened_resourceNames",
+      "title": "DeleteCssProductInputResourceNames",
+      "description": "Snippet for DeleteCssProductInput",
+      "file": "CssProductInputsServiceClient.DeleteCssProductInputResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCssProductInput",
+        "fullName": "Google.Shopping.Css.V1.CssProductInputsServiceClient.DeleteCssProductInput",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.CssProductInputName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "CssProductInputsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.CssProductInputsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCssProductInput",
+          "fullName": "google.shopping.css.v1.CssProductInputsService.DeleteCssProductInput",
+          "service": {
+            "shortName": "CssProductInputsService",
+            "fullName": "google.shopping.css.v1.CssProductInputsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_CssProductInputsService_DeleteCssProductInput_async_flattened_resourceNames",
+      "title": "DeleteCssProductInputResourceNamesAsync",
+      "description": "Snippet for DeleteCssProductInputAsync",
+      "file": "CssProductInputsServiceClient.DeleteCssProductInputResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCssProductInputAsync",
+        "fullName": "Google.Shopping.Css.V1.CssProductInputsServiceClient.DeleteCssProductInputAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.CssProductInputName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "CssProductInputsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.CssProductInputsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCssProductInput",
+          "fullName": "google.shopping.css.v1.CssProductInputsService.DeleteCssProductInput",
+          "service": {
+            "shortName": "CssProductInputsService",
+            "fullName": "google.shopping.css.v1.CssProductInputsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_CssProductsService_GetCssProduct_sync",
+      "title": "GetCssProductRequestObject",
+      "description": "Snippet for GetCssProduct",
+      "file": "CssProductsServiceClient.GetCssProductRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCssProduct",
+        "fullName": "Google.Shopping.Css.V1.CssProductsServiceClient.GetCssProduct",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.GetCssProductRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Css.V1.CssProduct",
+        "client": {
+          "shortName": "CssProductsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.CssProductsServiceClient"
+        },
+        "method": {
+          "shortName": "GetCssProduct",
+          "fullName": "google.shopping.css.v1.CssProductsService.GetCssProduct",
+          "service": {
+            "shortName": "CssProductsService",
+            "fullName": "google.shopping.css.v1.CssProductsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_CssProductsService_GetCssProduct_async",
+      "title": "GetCssProductRequestObjectAsync",
+      "description": "Snippet for GetCssProductAsync",
+      "file": "CssProductsServiceClient.GetCssProductRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCssProductAsync",
+        "fullName": "Google.Shopping.Css.V1.CssProductsServiceClient.GetCssProductAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.GetCssProductRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Css.V1.CssProduct>",
+        "client": {
+          "shortName": "CssProductsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.CssProductsServiceClient"
+        },
+        "method": {
+          "shortName": "GetCssProduct",
+          "fullName": "google.shopping.css.v1.CssProductsService.GetCssProduct",
+          "service": {
+            "shortName": "CssProductsService",
+            "fullName": "google.shopping.css.v1.CssProductsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_CssProductsService_GetCssProduct_sync_flattened",
+      "title": "GetCssProduct",
+      "description": "Snippet for GetCssProduct",
+      "file": "CssProductsServiceClient.GetCssProductSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCssProduct",
+        "fullName": "Google.Shopping.Css.V1.CssProductsServiceClient.GetCssProduct",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Css.V1.CssProduct",
+        "client": {
+          "shortName": "CssProductsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.CssProductsServiceClient"
+        },
+        "method": {
+          "shortName": "GetCssProduct",
+          "fullName": "google.shopping.css.v1.CssProductsService.GetCssProduct",
+          "service": {
+            "shortName": "CssProductsService",
+            "fullName": "google.shopping.css.v1.CssProductsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_CssProductsService_GetCssProduct_async_flattened",
+      "title": "GetCssProductAsync",
+      "description": "Snippet for GetCssProductAsync",
+      "file": "CssProductsServiceClient.GetCssProductAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCssProductAsync",
+        "fullName": "Google.Shopping.Css.V1.CssProductsServiceClient.GetCssProductAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Css.V1.CssProduct>",
+        "client": {
+          "shortName": "CssProductsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.CssProductsServiceClient"
+        },
+        "method": {
+          "shortName": "GetCssProduct",
+          "fullName": "google.shopping.css.v1.CssProductsService.GetCssProduct",
+          "service": {
+            "shortName": "CssProductsService",
+            "fullName": "google.shopping.css.v1.CssProductsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_CssProductsService_GetCssProduct_sync_flattened_resourceNames",
+      "title": "GetCssProductResourceNames",
+      "description": "Snippet for GetCssProduct",
+      "file": "CssProductsServiceClient.GetCssProductResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCssProduct",
+        "fullName": "Google.Shopping.Css.V1.CssProductsServiceClient.GetCssProduct",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.CssProductName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Css.V1.CssProduct",
+        "client": {
+          "shortName": "CssProductsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.CssProductsServiceClient"
+        },
+        "method": {
+          "shortName": "GetCssProduct",
+          "fullName": "google.shopping.css.v1.CssProductsService.GetCssProduct",
+          "service": {
+            "shortName": "CssProductsService",
+            "fullName": "google.shopping.css.v1.CssProductsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_CssProductsService_GetCssProduct_async_flattened_resourceNames",
+      "title": "GetCssProductResourceNamesAsync",
+      "description": "Snippet for GetCssProductAsync",
+      "file": "CssProductsServiceClient.GetCssProductResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCssProductAsync",
+        "fullName": "Google.Shopping.Css.V1.CssProductsServiceClient.GetCssProductAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.CssProductName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Css.V1.CssProduct>",
+        "client": {
+          "shortName": "CssProductsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.CssProductsServiceClient"
+        },
+        "method": {
+          "shortName": "GetCssProduct",
+          "fullName": "google.shopping.css.v1.CssProductsService.GetCssProduct",
+          "service": {
+            "shortName": "CssProductsService",
+            "fullName": "google.shopping.css.v1.CssProductsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_CssProductsService_ListCssProducts_sync",
+      "title": "ListCssProductsRequestObject",
+      "description": "Snippet for ListCssProducts",
+      "file": "CssProductsServiceClient.ListCssProductsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCssProducts",
+        "fullName": "Google.Shopping.Css.V1.CssProductsServiceClient.ListCssProducts",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.ListCssProductsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Css.V1.ListCssProductsResponse, Google.Shopping.Css.V1.CssProduct>",
+        "client": {
+          "shortName": "CssProductsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.CssProductsServiceClient"
+        },
+        "method": {
+          "shortName": "ListCssProducts",
+          "fullName": "google.shopping.css.v1.CssProductsService.ListCssProducts",
+          "service": {
+            "shortName": "CssProductsService",
+            "fullName": "google.shopping.css.v1.CssProductsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_CssProductsService_ListCssProducts_async",
+      "title": "ListCssProductsRequestObjectAsync",
+      "description": "Snippet for ListCssProductsAsync",
+      "file": "CssProductsServiceClient.ListCssProductsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCssProductsAsync",
+        "fullName": "Google.Shopping.Css.V1.CssProductsServiceClient.ListCssProductsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.ListCssProductsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Css.V1.ListCssProductsResponse, Google.Shopping.Css.V1.CssProduct>",
+        "client": {
+          "shortName": "CssProductsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.CssProductsServiceClient"
+        },
+        "method": {
+          "shortName": "ListCssProducts",
+          "fullName": "google.shopping.css.v1.CssProductsService.ListCssProducts",
+          "service": {
+            "shortName": "CssProductsService",
+            "fullName": "google.shopping.css.v1.CssProductsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_CssProductsService_ListCssProducts_sync_flattened",
+      "title": "ListCssProducts",
+      "description": "Snippet for ListCssProducts",
+      "file": "CssProductsServiceClient.ListCssProductsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCssProducts",
+        "fullName": "Google.Shopping.Css.V1.CssProductsServiceClient.ListCssProducts",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Css.V1.ListCssProductsResponse, Google.Shopping.Css.V1.CssProduct>",
+        "client": {
+          "shortName": "CssProductsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.CssProductsServiceClient"
+        },
+        "method": {
+          "shortName": "ListCssProducts",
+          "fullName": "google.shopping.css.v1.CssProductsService.ListCssProducts",
+          "service": {
+            "shortName": "CssProductsService",
+            "fullName": "google.shopping.css.v1.CssProductsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_CssProductsService_ListCssProducts_async_flattened",
+      "title": "ListCssProductsAsync",
+      "description": "Snippet for ListCssProductsAsync",
+      "file": "CssProductsServiceClient.ListCssProductsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCssProductsAsync",
+        "fullName": "Google.Shopping.Css.V1.CssProductsServiceClient.ListCssProductsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Css.V1.ListCssProductsResponse, Google.Shopping.Css.V1.CssProduct>",
+        "client": {
+          "shortName": "CssProductsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.CssProductsServiceClient"
+        },
+        "method": {
+          "shortName": "ListCssProducts",
+          "fullName": "google.shopping.css.v1.CssProductsService.ListCssProducts",
+          "service": {
+            "shortName": "CssProductsService",
+            "fullName": "google.shopping.css.v1.CssProductsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_CssProductsService_ListCssProducts_sync_flattened_resourceNames",
+      "title": "ListCssProductsResourceNames",
+      "description": "Snippet for ListCssProducts",
+      "file": "CssProductsServiceClient.ListCssProductsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCssProducts",
+        "fullName": "Google.Shopping.Css.V1.CssProductsServiceClient.ListCssProducts",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Css.V1.ListCssProductsResponse, Google.Shopping.Css.V1.CssProduct>",
+        "client": {
+          "shortName": "CssProductsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.CssProductsServiceClient"
+        },
+        "method": {
+          "shortName": "ListCssProducts",
+          "fullName": "google.shopping.css.v1.CssProductsService.ListCssProducts",
+          "service": {
+            "shortName": "CssProductsService",
+            "fullName": "google.shopping.css.v1.CssProductsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_CssProductsService_ListCssProducts_async_flattened_resourceNames",
+      "title": "ListCssProductsResourceNamesAsync",
+      "description": "Snippet for ListCssProductsAsync",
+      "file": "CssProductsServiceClient.ListCssProductsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCssProductsAsync",
+        "fullName": "Google.Shopping.Css.V1.CssProductsServiceClient.ListCssProductsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Css.V1.ListCssProductsResponse, Google.Shopping.Css.V1.CssProduct>",
+        "client": {
+          "shortName": "CssProductsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.CssProductsServiceClient"
+        },
+        "method": {
+          "shortName": "ListCssProducts",
+          "fullName": "google.shopping.css.v1.CssProductsService.ListCssProducts",
+          "service": {
+            "shortName": "CssProductsService",
+            "fullName": "google.shopping.css.v1.CssProductsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
