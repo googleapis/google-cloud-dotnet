@@ -5512,7 +5512,7 @@
     },
     {
       "id": "Google.Shopping.Css.V1",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "CSS",
       "productUrl": "https://developers.google.com/comparison-shopping-services/api",
