@@ -5511,6 +5511,27 @@
       "transport": "grpc+rest"
     },
     {
+      "id": "Google.Shopping.Css.V1",
+      "version": "1.0.0-beta01",
+      "type": "grpc",
+      "productName": "CSS",
+      "productUrl": "https://developers.google.com/comparison-shopping-services/api",
+      "description": "Recommended Google client library to access the Google Shopping CSS API, which allows you to programmatically manage your Comparison Shopping Service (CSS) account data at scale.",
+      "tags": [
+        "shopping",
+        "comparison"
+      ],
+      "dependencies": {
+        "Google.Shopping.Type": "1.0.0-beta02"
+      },
+      "generator": "micro",
+      "protoPath": "google/shopping/css/v1",
+      "shortName": "css",
+      "serviceConfigFile": "css_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Shopping.Merchant.Inventories.V1Beta",
       "version": "1.0.0-beta01",
       "type": "grpc",
