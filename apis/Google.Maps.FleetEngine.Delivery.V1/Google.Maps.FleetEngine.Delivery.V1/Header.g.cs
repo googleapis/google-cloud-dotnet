@@ -26,7 +26,7 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
           string.Concat(
             "CjBnb29nbGUvbWFwcy9mbGVldGVuZ2luZS9kZWxpdmVyeS92MS9oZWFkZXIu",
             "cHJvdG8SHG1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjEaH2dvb2dsZS9h",
-            "cGkvZmllbGRfYmVoYXZpb3IucHJvdG8ingQKFURlbGl2ZXJ5UmVxdWVzdEhl",
+            "cGkvZmllbGRfYmVoYXZpb3IucHJvdG8isAQKFURlbGl2ZXJ5UmVxdWVzdEhl",
             "YWRlchIVCg1sYW5ndWFnZV9jb2RlGAEgASgJEhgKC3JlZ2lvbl9jb2RlGAIg",
             "ASgJQgPgQQISEwoLc2RrX3ZlcnNpb24YAyABKAkSEgoKb3NfdmVyc2lvbhgE",
             "IAEoCRIUCgxkZXZpY2VfbW9kZWwYBSABKAkSTQoIc2RrX3R5cGUYBiABKA4y",
@@ -35,18 +35,18 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
             "bmF2X3Nka192ZXJzaW9uGAggASgJEk4KCHBsYXRmb3JtGAkgASgOMjwubWFw",
             "cy5mbGVldGVuZ2luZS5kZWxpdmVyeS52MS5EZWxpdmVyeVJlcXVlc3RIZWFk",
             "ZXIuUGxhdGZvcm0SFAoMbWFudWZhY3R1cmVyGAogASgJEhkKEWFuZHJvaWRf",
-            "YXBpX2xldmVsGAsgASgFIk0KB1Nka1R5cGUSGAoUU0RLX1RZUEVfVU5TUEVD",
-            "SUZJRUQQABIMCghDT05TVU1FUhABEgoKBkRSSVZFUhACEg4KCkpBVkFTQ1JJ",
-            "UFQQAyJDCghQbGF0Zm9ybRIYChRQTEFURk9STV9VTlNQRUNJRklFRBAAEgsK",
-            "B0FORFJPSUQQARIHCgNJT1MQAhIHCgNXRUIQA0KoAQojZ29vZ2xlLm1hcHMu",
-            "ZmxlZXRlbmdpbmUuZGVsaXZlcnkudjFCB0hlYWRlcnNQAVpJY2xvdWQuZ29v",
-            "Z2xlLmNvbS9nby9tYXBzL2ZsZWV0ZW5naW5lL2RlbGl2ZXJ5L2FwaXYxL2Rl",
-            "bGl2ZXJ5cGI7ZGVsaXZlcnlwYqICBENGRUSqAiNHb29nbGUuTWFwcy5GbGVl",
-            "dEVuZ2luZS5EZWxpdmVyeS5WMWIGcHJvdG8z"));
+            "YXBpX2xldmVsGAsgASgFEhAKCHRyYWNlX2lkGAwgASgJIk0KB1Nka1R5cGUS",
+            "GAoUU0RLX1RZUEVfVU5TUEVDSUZJRUQQABIMCghDT05TVU1FUhABEgoKBkRS",
+            "SVZFUhACEg4KCkpBVkFTQ1JJUFQQAyJDCghQbGF0Zm9ybRIYChRQTEFURk9S",
+            "TV9VTlNQRUNJRklFRBAAEgsKB0FORFJPSUQQARIHCgNJT1MQAhIHCgNXRUIQ",
+            "A0KoAQojZ29vZ2xlLm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjFCB0hl",
+            "YWRlcnNQAVpJY2xvdWQuZ29vZ2xlLmNvbS9nby9tYXBzL2ZsZWV0ZW5naW5l",
+            "L2RlbGl2ZXJ5L2FwaXYxL2RlbGl2ZXJ5cGI7ZGVsaXZlcnlwYqICBENGRUSq",
+            "AiNHb29nbGUuTWFwcy5GbGVldEVuZ2luZS5EZWxpdmVyeS5WMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.Delivery.V1.DeliveryRequestHeader), global::Google.Maps.FleetEngine.Delivery.V1.DeliveryRequestHeader.Parser, new[]{ "LanguageCode", "RegionCode", "SdkVersion", "OsVersion", "DeviceModel", "SdkType", "MapsSdkVersion", "NavSdkVersion", "Platform", "Manufacturer", "AndroidApiLevel" }, null, new[]{ typeof(global::Google.Maps.FleetEngine.Delivery.V1.DeliveryRequestHeader.Types.SdkType), typeof(global::Google.Maps.FleetEngine.Delivery.V1.DeliveryRequestHeader.Types.Platform) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.Delivery.V1.DeliveryRequestHeader), global::Google.Maps.FleetEngine.Delivery.V1.DeliveryRequestHeader.Parser, new[]{ "LanguageCode", "RegionCode", "SdkVersion", "OsVersion", "DeviceModel", "SdkType", "MapsSdkVersion", "NavSdkVersion", "Platform", "Manufacturer", "AndroidApiLevel", "TraceId" }, null, new[]{ typeof(global::Google.Maps.FleetEngine.Delivery.V1.DeliveryRequestHeader.Types.SdkType), typeof(global::Google.Maps.FleetEngine.Delivery.V1.DeliveryRequestHeader.Types.Platform) }, null, null)
           }));
     }
     #endregion
@@ -101,6 +101,7 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
       platform_ = other.platform_;
       manufacturer_ = other.manufacturer_;
       androidApiLevel_ = other.androidApiLevel_;
+      traceId_ = other.traceId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -287,6 +288,22 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
       }
     }
 
+    /// <summary>Field number for the "trace_id" field.</summary>
+    public const int TraceIdFieldNumber = 12;
+    private string traceId_ = "";
+    /// <summary>
+    /// Optional ID that can be provided for logging purposes in order to identify
+    /// the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TraceId {
+      get { return traceId_; }
+      set {
+        traceId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -313,6 +330,7 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
       if (Platform != other.Platform) return false;
       if (Manufacturer != other.Manufacturer) return false;
       if (AndroidApiLevel != other.AndroidApiLevel) return false;
+      if (TraceId != other.TraceId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -331,6 +349,7 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
       if (Platform != global::Google.Maps.FleetEngine.Delivery.V1.DeliveryRequestHeader.Types.Platform.Unspecified) hash ^= Platform.GetHashCode();
       if (Manufacturer.Length != 0) hash ^= Manufacturer.GetHashCode();
       if (AndroidApiLevel != 0) hash ^= AndroidApiLevel.GetHashCode();
+      if (TraceId.Length != 0) hash ^= TraceId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -393,6 +412,10 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
         output.WriteRawTag(88);
         output.WriteInt32(AndroidApiLevel);
       }
+      if (TraceId.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(TraceId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -447,6 +470,10 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
         output.WriteRawTag(88);
         output.WriteInt32(AndroidApiLevel);
       }
+      if (TraceId.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(TraceId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -489,6 +516,9 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
       }
       if (AndroidApiLevel != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(AndroidApiLevel);
+      }
+      if (TraceId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TraceId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -534,6 +564,9 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
       }
       if (other.AndroidApiLevel != 0) {
         AndroidApiLevel = other.AndroidApiLevel;
+      }
+      if (other.TraceId.Length != 0) {
+        TraceId = other.TraceId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -594,6 +627,10 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
             AndroidApiLevel = input.ReadInt32();
             break;
           }
+          case 98: {
+            TraceId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -651,6 +688,10 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
           }
           case 88: {
             AndroidApiLevel = input.ReadInt32();
+            break;
+          }
+          case 98: {
+            TraceId = input.ReadString();
             break;
           }
         }
