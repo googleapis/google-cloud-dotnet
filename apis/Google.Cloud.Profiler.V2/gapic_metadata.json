@@ -5,6 +5,21 @@
   "protoPackage": "google.devtools.cloudprofiler.v2",
   "libraryPackage": "Google.Cloud.Profiler.V2",
   "services": {
+    "ExportService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ExportServiceClient",
+          "rpcs": {
+            "ListProfiles": {
+              "methods": [
+                "ListProfiles",
+                "ListProfilesAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "ProfilerService": {
       "clients": {
         "grpc": {
