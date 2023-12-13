@@ -26,7 +26,7 @@ namespace Google.Maps.FleetEngine.V1 {
           string.Concat(
             "Cidnb29nbGUvbWFwcy9mbGVldGVuZ2luZS92MS9oZWFkZXIucHJvdG8SE21h",
             "cHMuZmxlZXRlbmdpbmUudjEaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3Iu",
-            "cHJvdG8i9AMKDVJlcXVlc3RIZWFkZXISFQoNbGFuZ3VhZ2VfY29kZRgBIAEo",
+            "cHJvdG8ihgQKDVJlcXVlc3RIZWFkZXISFQoNbGFuZ3VhZ2VfY29kZRgBIAEo",
             "CRIYCgtyZWdpb25fY29kZRgCIAEoCUID4EECEhMKC3Nka192ZXJzaW9uGAMg",
             "ASgJEhIKCm9zX3ZlcnNpb24YBCABKAkSFAoMZGV2aWNlX21vZGVsGAUgASgJ",
             "EjwKCHNka190eXBlGAYgASgOMioubWFwcy5mbGVldGVuZ2luZS52MS5SZXF1",
@@ -34,17 +34,18 @@ namespace Google.Maps.FleetEngine.V1 {
             "Cg9uYXZfc2RrX3ZlcnNpb24YCCABKAkSPQoIcGxhdGZvcm0YCSABKA4yKy5t",
             "YXBzLmZsZWV0ZW5naW5lLnYxLlJlcXVlc3RIZWFkZXIuUGxhdGZvcm0SFAoM",
             "bWFudWZhY3R1cmVyGAogASgJEhkKEWFuZHJvaWRfYXBpX2xldmVsGAsgASgF",
-            "Ik0KB1Nka1R5cGUSGAoUU0RLX1RZUEVfVU5TUEVDSUZJRUQQABIMCghDT05T",
-            "VU1FUhABEgoKBkRSSVZFUhACEg4KCkpBVkFTQ1JJUFQQAyJDCghQbGF0Zm9y",
-            "bRIYChRQTEFURk9STV9VTlNQRUNJRklFRBAAEgsKB0FORFJPSUQQARIHCgNJ",
-            "T1MQAhIHCgNXRUIQA0KSAQoaZ29vZ2xlLm1hcHMuZmxlZXRlbmdpbmUudjFC",
-            "B0hlYWRlcnNQAVpGY2xvdWQuZ29vZ2xlLmNvbS9nby9tYXBzL2ZsZWV0ZW5n",
-            "aW5lL2FwaXYxL2ZsZWV0ZW5naW5lcGI7ZmxlZXRlbmdpbmVwYqICA0NGRaoC",
-            "Gkdvb2dsZS5NYXBzLkZsZWV0RW5naW5lLlYxYgZwcm90bzM="));
+            "EhAKCHRyYWNlX2lkGAwgASgJIk0KB1Nka1R5cGUSGAoUU0RLX1RZUEVfVU5T",
+            "UEVDSUZJRUQQABIMCghDT05TVU1FUhABEgoKBkRSSVZFUhACEg4KCkpBVkFT",
+            "Q1JJUFQQAyJDCghQbGF0Zm9ybRIYChRQTEFURk9STV9VTlNQRUNJRklFRBAA",
+            "EgsKB0FORFJPSUQQARIHCgNJT1MQAhIHCgNXRUIQA0KSAQoaZ29vZ2xlLm1h",
+            "cHMuZmxlZXRlbmdpbmUudjFCB0hlYWRlcnNQAVpGY2xvdWQuZ29vZ2xlLmNv",
+            "bS9nby9tYXBzL2ZsZWV0ZW5naW5lL2FwaXYxL2ZsZWV0ZW5naW5lcGI7Zmxl",
+            "ZXRlbmdpbmVwYqICA0NGRaoCGkdvb2dsZS5NYXBzLkZsZWV0RW5naW5lLlYx",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.V1.RequestHeader), global::Google.Maps.FleetEngine.V1.RequestHeader.Parser, new[]{ "LanguageCode", "RegionCode", "SdkVersion", "OsVersion", "DeviceModel", "SdkType", "MapsSdkVersion", "NavSdkVersion", "Platform", "Manufacturer", "AndroidApiLevel" }, null, new[]{ typeof(global::Google.Maps.FleetEngine.V1.RequestHeader.Types.SdkType), typeof(global::Google.Maps.FleetEngine.V1.RequestHeader.Types.Platform) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.V1.RequestHeader), global::Google.Maps.FleetEngine.V1.RequestHeader.Parser, new[]{ "LanguageCode", "RegionCode", "SdkVersion", "OsVersion", "DeviceModel", "SdkType", "MapsSdkVersion", "NavSdkVersion", "Platform", "Manufacturer", "AndroidApiLevel", "TraceId" }, null, new[]{ typeof(global::Google.Maps.FleetEngine.V1.RequestHeader.Types.SdkType), typeof(global::Google.Maps.FleetEngine.V1.RequestHeader.Types.Platform) }, null, null)
           }));
     }
     #endregion
@@ -99,6 +100,7 @@ namespace Google.Maps.FleetEngine.V1 {
       platform_ = other.platform_;
       manufacturer_ = other.manufacturer_;
       androidApiLevel_ = other.androidApiLevel_;
+      traceId_ = other.traceId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -285,6 +287,22 @@ namespace Google.Maps.FleetEngine.V1 {
       }
     }
 
+    /// <summary>Field number for the "trace_id" field.</summary>
+    public const int TraceIdFieldNumber = 12;
+    private string traceId_ = "";
+    /// <summary>
+    /// Optional ID that can be provided for logging purposes in order to identify
+    /// the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TraceId {
+      get { return traceId_; }
+      set {
+        traceId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -311,6 +329,7 @@ namespace Google.Maps.FleetEngine.V1 {
       if (Platform != other.Platform) return false;
       if (Manufacturer != other.Manufacturer) return false;
       if (AndroidApiLevel != other.AndroidApiLevel) return false;
+      if (TraceId != other.TraceId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -329,6 +348,7 @@ namespace Google.Maps.FleetEngine.V1 {
       if (Platform != global::Google.Maps.FleetEngine.V1.RequestHeader.Types.Platform.Unspecified) hash ^= Platform.GetHashCode();
       if (Manufacturer.Length != 0) hash ^= Manufacturer.GetHashCode();
       if (AndroidApiLevel != 0) hash ^= AndroidApiLevel.GetHashCode();
+      if (TraceId.Length != 0) hash ^= TraceId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -391,6 +411,10 @@ namespace Google.Maps.FleetEngine.V1 {
         output.WriteRawTag(88);
         output.WriteInt32(AndroidApiLevel);
       }
+      if (TraceId.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(TraceId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -445,6 +469,10 @@ namespace Google.Maps.FleetEngine.V1 {
         output.WriteRawTag(88);
         output.WriteInt32(AndroidApiLevel);
       }
+      if (TraceId.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(TraceId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -487,6 +515,9 @@ namespace Google.Maps.FleetEngine.V1 {
       }
       if (AndroidApiLevel != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(AndroidApiLevel);
+      }
+      if (TraceId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TraceId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -532,6 +563,9 @@ namespace Google.Maps.FleetEngine.V1 {
       }
       if (other.AndroidApiLevel != 0) {
         AndroidApiLevel = other.AndroidApiLevel;
+      }
+      if (other.TraceId.Length != 0) {
+        TraceId = other.TraceId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -592,6 +626,10 @@ namespace Google.Maps.FleetEngine.V1 {
             AndroidApiLevel = input.ReadInt32();
             break;
           }
+          case 98: {
+            TraceId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -649,6 +687,10 @@ namespace Google.Maps.FleetEngine.V1 {
           }
           case 88: {
             AndroidApiLevel = input.ReadInt32();
+            break;
+          }
+          case 98: {
+            TraceId = input.ReadString();
             break;
           }
         }
