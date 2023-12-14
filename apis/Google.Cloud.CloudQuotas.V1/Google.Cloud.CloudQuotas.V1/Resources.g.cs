@@ -54,7 +54,7 @@ namespace Google.Cloud.CloudQuotas.V1 {
             "YXBpLmNsb3VkcXVvdGFzLnYxLlF1b3RhSW5jcmVhc2VFbGlnaWJpbGl0eS5J",
             "bmVsaWdpYmlsaXR5UmVhc29uImQKE0luZWxpZ2liaWxpdHlSZWFzb24SJAog",
             "SU5FTElHSUJJTElUWV9SRUFTT05fVU5TUEVDSUZJRUQQABIcChhOT19WQUxJ",
-            "RF9CSUxMSU5HX0FDQ09VTlQQAhIJCgVPVEhFUhADIoMGCg9RdW90YVByZWZl",
+            "RF9CSUxMSU5HX0FDQ09VTlQQARIJCgVPVEhFUhACIoMGCg9RdW90YVByZWZl",
             "cmVuY2USDAoEbmFtZRgBIAEoCRJOCgpkaW1lbnNpb25zGAIgAygLMjouZ29v",
             "Z2xlLmFwaS5jbG91ZHF1b3Rhcy52MS5RdW90YVByZWZlcmVuY2UuRGltZW5z",
             "aW9uc0VudHJ5EkEKDHF1b3RhX2NvbmZpZxgDIAEoCzImLmdvb2dsZS5hcGku",
@@ -88,8 +88,8 @@ namespace Google.Cloud.CloudQuotas.V1 {
             "YXBwbGljYWJsZV9sb2NhdGlvbnMYAyADKAkaMQoPRGltZW5zaW9uc0VudHJ5",
             "EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiHQoMUXVvdGFEZXRh",
             "aWxzEg0KBXZhbHVlGAEgASgDKn4KEFF1b3RhU2FmZXR5Q2hlY2sSIgoeUVVP",
-            "VEFfU0FGRVRZX0NIRUNLX1VOU1BFQ0lGSUVEEAASHgoaTElNSVRfREVDUkVB",
-            "U0VfQkVMT1dfVVNBR0UQARImCiJMSU1JVF9ERUNSRUFTRV9QRVJDRU5UQUdF",
+            "VEFfU0FGRVRZX0NIRUNLX1VOU1BFQ0lGSUVEEAASHgoaUVVPVEFfREVDUkVB",
+            "U0VfQkVMT1dfVVNBR0UQARImCiJRVU9UQV9ERUNSRUFTRV9QRVJDRU5UQUdF",
             "X1RPT19ISUdIEAJC0QEKHWNvbS5nb29nbGUuYXBpLmNsb3VkcXVvdGFzLnYx",
             "Qg5SZXNvdXJjZXNQcm90b1ABWkFjbG91ZC5nb29nbGUuY29tL2dvL2Nsb3Vk",
             "cXVvdGFzL2FwaXYxL2Nsb3VkcXVvdGFzcGI7Y2xvdWRxdW90YXNwYqoCG0dv",
@@ -123,12 +123,12 @@ namespace Google.Cloud.CloudQuotas.V1 {
     /// Validates that a quota mutation would not cause the consumer's effective
     /// limit to be lower than the consumer's quota usage.
     /// </summary>
-    [pbr::OriginalName("LIMIT_DECREASE_BELOW_USAGE")] LimitDecreaseBelowUsage = 1,
+    [pbr::OriginalName("QUOTA_DECREASE_BELOW_USAGE")] QuotaDecreaseBelowUsage = 1,
     /// <summary>
     /// Validates that a quota mutation would not cause the consumer's effective
     /// limit to decrease by more than 10 percent.
     /// </summary>
-    [pbr::OriginalName("LIMIT_DECREASE_PERCENTAGE_TOO_HIGH")] LimitDecreasePercentageTooHigh = 2,
+    [pbr::OriginalName("QUOTA_DECREASE_PERCENTAGE_TOO_HIGH")] QuotaDecreasePercentageTooHigh = 2,
   }
 
   #endregion
@@ -1220,11 +1220,11 @@ namespace Google.Cloud.CloudQuotas.V1 {
         /// <summary>
         /// The container is not linked with a valid billing account.
         /// </summary>
-        [pbr::OriginalName("NO_VALID_BILLING_ACCOUNT")] NoValidBillingAccount = 2,
+        [pbr::OriginalName("NO_VALID_BILLING_ACCOUNT")] NoValidBillingAccount = 1,
         /// <summary>
         /// Other reasons.
         /// </summary>
-        [pbr::OriginalName("OTHER")] Other = 3,
+        [pbr::OriginalName("OTHER")] Other = 2,
       }
 
     }
