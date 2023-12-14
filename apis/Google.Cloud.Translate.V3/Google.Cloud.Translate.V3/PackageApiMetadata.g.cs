@@ -60,6 +60,8 @@ namespace Google.Cloud.Translate.V3
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return AdaptiveMtReflection.Descriptor;
+            yield return CommonReflection.Descriptor;
             yield return TranslationServiceReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }
