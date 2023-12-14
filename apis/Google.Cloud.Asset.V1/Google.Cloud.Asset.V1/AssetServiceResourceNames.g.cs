@@ -850,6 +850,27 @@ namespace Google.Cloud.Asset.V1
         }
     }
 
+    public partial class AnalyzeMoveRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Resource"/> resource name property.
+        /// </summary>
+        public gagr::ProjectName ResourceAsProjectName
+        {
+            get => string.IsNullOrEmpty(Resource) ? null : gagr::ProjectName.Parse(Resource, allowUnparsed: true);
+            set => Resource = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="DestinationParent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName DestinationParentAsResourceName
+        {
+            get => string.IsNullOrEmpty(DestinationParent) ? null : gax::UnparsedResourceName.Parse(DestinationParent);
+            set => DestinationParent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class QueryAssetsRequest
     {
         /// <summary>
