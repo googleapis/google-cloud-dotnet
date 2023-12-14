@@ -13448,93 +13448,6 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
-        /// <summary>Snippet for DeleteSubpropertyEventFilter</summary>
-        public void DeleteSubpropertyEventFilterRequestObject()
-        {
-            // Snippet: DeleteSubpropertyEventFilter(DeleteSubpropertyEventFilterRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            DeleteSubpropertyEventFilterRequest request = new DeleteSubpropertyEventFilterRequest
-            {
-                SubpropertyEventFilterName = SubpropertyEventFilterName.FromPropertySubPropertyEventFilter("[PROPERTY]", "[SUB_PROPERTY_EVENT_FILTER]"),
-            };
-            // Make the request
-            analyticsAdminServiceClient.DeleteSubpropertyEventFilter(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteSubpropertyEventFilterAsync</summary>
-        public async Task DeleteSubpropertyEventFilterRequestObjectAsync()
-        {
-            // Snippet: DeleteSubpropertyEventFilterAsync(DeleteSubpropertyEventFilterRequest, CallSettings)
-            // Additional: DeleteSubpropertyEventFilterAsync(DeleteSubpropertyEventFilterRequest, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            DeleteSubpropertyEventFilterRequest request = new DeleteSubpropertyEventFilterRequest
-            {
-                SubpropertyEventFilterName = SubpropertyEventFilterName.FromPropertySubPropertyEventFilter("[PROPERTY]", "[SUB_PROPERTY_EVENT_FILTER]"),
-            };
-            // Make the request
-            await analyticsAdminServiceClient.DeleteSubpropertyEventFilterAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteSubpropertyEventFilter</summary>
-        public void DeleteSubpropertyEventFilter()
-        {
-            // Snippet: DeleteSubpropertyEventFilter(string, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            string name = "properties/[PROPERTY]/subpropertyEventFilters/[SUB_PROPERTY_EVENT_FILTER]";
-            // Make the request
-            analyticsAdminServiceClient.DeleteSubpropertyEventFilter(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteSubpropertyEventFilterAsync</summary>
-        public async Task DeleteSubpropertyEventFilterAsync()
-        {
-            // Snippet: DeleteSubpropertyEventFilterAsync(string, CallSettings)
-            // Additional: DeleteSubpropertyEventFilterAsync(string, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            string name = "properties/[PROPERTY]/subpropertyEventFilters/[SUB_PROPERTY_EVENT_FILTER]";
-            // Make the request
-            await analyticsAdminServiceClient.DeleteSubpropertyEventFilterAsync(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteSubpropertyEventFilter</summary>
-        public void DeleteSubpropertyEventFilterResourceNames()
-        {
-            // Snippet: DeleteSubpropertyEventFilter(SubpropertyEventFilterName, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            SubpropertyEventFilterName name = SubpropertyEventFilterName.FromPropertySubPropertyEventFilter("[PROPERTY]", "[SUB_PROPERTY_EVENT_FILTER]");
-            // Make the request
-            analyticsAdminServiceClient.DeleteSubpropertyEventFilter(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteSubpropertyEventFilterAsync</summary>
-        public async Task DeleteSubpropertyEventFilterResourceNamesAsync()
-        {
-            // Snippet: DeleteSubpropertyEventFilterAsync(SubpropertyEventFilterName, CallSettings)
-            // Additional: DeleteSubpropertyEventFilterAsync(SubpropertyEventFilterName, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            SubpropertyEventFilterName name = SubpropertyEventFilterName.FromPropertySubPropertyEventFilter("[PROPERTY]", "[SUB_PROPERTY_EVENT_FILTER]");
-            // Make the request
-            await analyticsAdminServiceClient.DeleteSubpropertyEventFilterAsync(name);
-            // End snippet
-        }
-
         /// <summary>Snippet for CreateSubpropertyEventFilter</summary>
         public void CreateSubpropertyEventFilterRequestObject()
         {
@@ -13625,6 +13538,520 @@ namespace GoogleCSharpSnippets
             SubpropertyEventFilter subpropertyEventFilter = new SubpropertyEventFilter();
             // Make the request
             SubpropertyEventFilter response = await analyticsAdminServiceClient.CreateSubpropertyEventFilterAsync(parent, subpropertyEventFilter);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSubpropertyEventFilter</summary>
+        public void GetSubpropertyEventFilterRequestObject()
+        {
+            // Snippet: GetSubpropertyEventFilter(GetSubpropertyEventFilterRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            GetSubpropertyEventFilterRequest request = new GetSubpropertyEventFilterRequest
+            {
+                SubpropertyEventFilterName = SubpropertyEventFilterName.FromPropertySubPropertyEventFilter("[PROPERTY]", "[SUB_PROPERTY_EVENT_FILTER]"),
+            };
+            // Make the request
+            SubpropertyEventFilter response = analyticsAdminServiceClient.GetSubpropertyEventFilter(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSubpropertyEventFilterAsync</summary>
+        public async Task GetSubpropertyEventFilterRequestObjectAsync()
+        {
+            // Snippet: GetSubpropertyEventFilterAsync(GetSubpropertyEventFilterRequest, CallSettings)
+            // Additional: GetSubpropertyEventFilterAsync(GetSubpropertyEventFilterRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetSubpropertyEventFilterRequest request = new GetSubpropertyEventFilterRequest
+            {
+                SubpropertyEventFilterName = SubpropertyEventFilterName.FromPropertySubPropertyEventFilter("[PROPERTY]", "[SUB_PROPERTY_EVENT_FILTER]"),
+            };
+            // Make the request
+            SubpropertyEventFilter response = await analyticsAdminServiceClient.GetSubpropertyEventFilterAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSubpropertyEventFilter</summary>
+        public void GetSubpropertyEventFilter()
+        {
+            // Snippet: GetSubpropertyEventFilter(string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/subpropertyEventFilters/[SUB_PROPERTY_EVENT_FILTER]";
+            // Make the request
+            SubpropertyEventFilter response = analyticsAdminServiceClient.GetSubpropertyEventFilter(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSubpropertyEventFilterAsync</summary>
+        public async Task GetSubpropertyEventFilterAsync()
+        {
+            // Snippet: GetSubpropertyEventFilterAsync(string, CallSettings)
+            // Additional: GetSubpropertyEventFilterAsync(string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/subpropertyEventFilters/[SUB_PROPERTY_EVENT_FILTER]";
+            // Make the request
+            SubpropertyEventFilter response = await analyticsAdminServiceClient.GetSubpropertyEventFilterAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSubpropertyEventFilter</summary>
+        public void GetSubpropertyEventFilterResourceNames()
+        {
+            // Snippet: GetSubpropertyEventFilter(SubpropertyEventFilterName, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            SubpropertyEventFilterName name = SubpropertyEventFilterName.FromPropertySubPropertyEventFilter("[PROPERTY]", "[SUB_PROPERTY_EVENT_FILTER]");
+            // Make the request
+            SubpropertyEventFilter response = analyticsAdminServiceClient.GetSubpropertyEventFilter(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSubpropertyEventFilterAsync</summary>
+        public async Task GetSubpropertyEventFilterResourceNamesAsync()
+        {
+            // Snippet: GetSubpropertyEventFilterAsync(SubpropertyEventFilterName, CallSettings)
+            // Additional: GetSubpropertyEventFilterAsync(SubpropertyEventFilterName, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SubpropertyEventFilterName name = SubpropertyEventFilterName.FromPropertySubPropertyEventFilter("[PROPERTY]", "[SUB_PROPERTY_EVENT_FILTER]");
+            // Make the request
+            SubpropertyEventFilter response = await analyticsAdminServiceClient.GetSubpropertyEventFilterAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSubpropertyEventFilters</summary>
+        public void ListSubpropertyEventFiltersRequestObject()
+        {
+            // Snippet: ListSubpropertyEventFilters(ListSubpropertyEventFiltersRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            ListSubpropertyEventFiltersRequest request = new ListSubpropertyEventFiltersRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            PagedEnumerable<ListSubpropertyEventFiltersResponse, SubpropertyEventFilter> response = analyticsAdminServiceClient.ListSubpropertyEventFilters(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SubpropertyEventFilter item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSubpropertyEventFiltersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SubpropertyEventFilter item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SubpropertyEventFilter> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SubpropertyEventFilter item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSubpropertyEventFiltersAsync</summary>
+        public async Task ListSubpropertyEventFiltersRequestObjectAsync()
+        {
+            // Snippet: ListSubpropertyEventFiltersAsync(ListSubpropertyEventFiltersRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListSubpropertyEventFiltersRequest request = new ListSubpropertyEventFiltersRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListSubpropertyEventFiltersResponse, SubpropertyEventFilter> response = analyticsAdminServiceClient.ListSubpropertyEventFiltersAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SubpropertyEventFilter item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSubpropertyEventFiltersResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SubpropertyEventFilter item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SubpropertyEventFilter> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SubpropertyEventFilter item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSubpropertyEventFilters</summary>
+        public void ListSubpropertyEventFilters()
+        {
+            // Snippet: ListSubpropertyEventFilters(string, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            // Make the request
+            PagedEnumerable<ListSubpropertyEventFiltersResponse, SubpropertyEventFilter> response = analyticsAdminServiceClient.ListSubpropertyEventFilters(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SubpropertyEventFilter item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSubpropertyEventFiltersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SubpropertyEventFilter item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SubpropertyEventFilter> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SubpropertyEventFilter item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSubpropertyEventFiltersAsync</summary>
+        public async Task ListSubpropertyEventFiltersAsync()
+        {
+            // Snippet: ListSubpropertyEventFiltersAsync(string, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            // Make the request
+            PagedAsyncEnumerable<ListSubpropertyEventFiltersResponse, SubpropertyEventFilter> response = analyticsAdminServiceClient.ListSubpropertyEventFiltersAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SubpropertyEventFilter item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSubpropertyEventFiltersResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SubpropertyEventFilter item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SubpropertyEventFilter> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SubpropertyEventFilter item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSubpropertyEventFilters</summary>
+        public void ListSubpropertyEventFiltersResourceNames()
+        {
+            // Snippet: ListSubpropertyEventFilters(PropertyName, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            // Make the request
+            PagedEnumerable<ListSubpropertyEventFiltersResponse, SubpropertyEventFilter> response = analyticsAdminServiceClient.ListSubpropertyEventFilters(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SubpropertyEventFilter item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSubpropertyEventFiltersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SubpropertyEventFilter item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SubpropertyEventFilter> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SubpropertyEventFilter item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSubpropertyEventFiltersAsync</summary>
+        public async Task ListSubpropertyEventFiltersResourceNamesAsync()
+        {
+            // Snippet: ListSubpropertyEventFiltersAsync(PropertyName, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            // Make the request
+            PagedAsyncEnumerable<ListSubpropertyEventFiltersResponse, SubpropertyEventFilter> response = analyticsAdminServiceClient.ListSubpropertyEventFiltersAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SubpropertyEventFilter item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSubpropertyEventFiltersResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SubpropertyEventFilter item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SubpropertyEventFilter> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SubpropertyEventFilter item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSubpropertyEventFilter</summary>
+        public void UpdateSubpropertyEventFilterRequestObject()
+        {
+            // Snippet: UpdateSubpropertyEventFilter(UpdateSubpropertyEventFilterRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateSubpropertyEventFilterRequest request = new UpdateSubpropertyEventFilterRequest
+            {
+                SubpropertyEventFilter = new SubpropertyEventFilter(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            SubpropertyEventFilter response = analyticsAdminServiceClient.UpdateSubpropertyEventFilter(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSubpropertyEventFilterAsync</summary>
+        public async Task UpdateSubpropertyEventFilterRequestObjectAsync()
+        {
+            // Snippet: UpdateSubpropertyEventFilterAsync(UpdateSubpropertyEventFilterRequest, CallSettings)
+            // Additional: UpdateSubpropertyEventFilterAsync(UpdateSubpropertyEventFilterRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateSubpropertyEventFilterRequest request = new UpdateSubpropertyEventFilterRequest
+            {
+                SubpropertyEventFilter = new SubpropertyEventFilter(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            SubpropertyEventFilter response = await analyticsAdminServiceClient.UpdateSubpropertyEventFilterAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSubpropertyEventFilter</summary>
+        public void UpdateSubpropertyEventFilter()
+        {
+            // Snippet: UpdateSubpropertyEventFilter(SubpropertyEventFilter, FieldMask, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            SubpropertyEventFilter subpropertyEventFilter = new SubpropertyEventFilter();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            SubpropertyEventFilter response = analyticsAdminServiceClient.UpdateSubpropertyEventFilter(subpropertyEventFilter, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSubpropertyEventFilterAsync</summary>
+        public async Task UpdateSubpropertyEventFilterAsync()
+        {
+            // Snippet: UpdateSubpropertyEventFilterAsync(SubpropertyEventFilter, FieldMask, CallSettings)
+            // Additional: UpdateSubpropertyEventFilterAsync(SubpropertyEventFilter, FieldMask, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SubpropertyEventFilter subpropertyEventFilter = new SubpropertyEventFilter();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            SubpropertyEventFilter response = await analyticsAdminServiceClient.UpdateSubpropertyEventFilterAsync(subpropertyEventFilter, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSubpropertyEventFilter</summary>
+        public void DeleteSubpropertyEventFilterRequestObject()
+        {
+            // Snippet: DeleteSubpropertyEventFilter(DeleteSubpropertyEventFilterRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteSubpropertyEventFilterRequest request = new DeleteSubpropertyEventFilterRequest
+            {
+                SubpropertyEventFilterName = SubpropertyEventFilterName.FromPropertySubPropertyEventFilter("[PROPERTY]", "[SUB_PROPERTY_EVENT_FILTER]"),
+            };
+            // Make the request
+            analyticsAdminServiceClient.DeleteSubpropertyEventFilter(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSubpropertyEventFilterAsync</summary>
+        public async Task DeleteSubpropertyEventFilterRequestObjectAsync()
+        {
+            // Snippet: DeleteSubpropertyEventFilterAsync(DeleteSubpropertyEventFilterRequest, CallSettings)
+            // Additional: DeleteSubpropertyEventFilterAsync(DeleteSubpropertyEventFilterRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteSubpropertyEventFilterRequest request = new DeleteSubpropertyEventFilterRequest
+            {
+                SubpropertyEventFilterName = SubpropertyEventFilterName.FromPropertySubPropertyEventFilter("[PROPERTY]", "[SUB_PROPERTY_EVENT_FILTER]"),
+            };
+            // Make the request
+            await analyticsAdminServiceClient.DeleteSubpropertyEventFilterAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSubpropertyEventFilter</summary>
+        public void DeleteSubpropertyEventFilter()
+        {
+            // Snippet: DeleteSubpropertyEventFilter(string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/subpropertyEventFilters/[SUB_PROPERTY_EVENT_FILTER]";
+            // Make the request
+            analyticsAdminServiceClient.DeleteSubpropertyEventFilter(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSubpropertyEventFilterAsync</summary>
+        public async Task DeleteSubpropertyEventFilterAsync()
+        {
+            // Snippet: DeleteSubpropertyEventFilterAsync(string, CallSettings)
+            // Additional: DeleteSubpropertyEventFilterAsync(string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/subpropertyEventFilters/[SUB_PROPERTY_EVENT_FILTER]";
+            // Make the request
+            await analyticsAdminServiceClient.DeleteSubpropertyEventFilterAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSubpropertyEventFilter</summary>
+        public void DeleteSubpropertyEventFilterResourceNames()
+        {
+            // Snippet: DeleteSubpropertyEventFilter(SubpropertyEventFilterName, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            SubpropertyEventFilterName name = SubpropertyEventFilterName.FromPropertySubPropertyEventFilter("[PROPERTY]", "[SUB_PROPERTY_EVENT_FILTER]");
+            // Make the request
+            analyticsAdminServiceClient.DeleteSubpropertyEventFilter(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSubpropertyEventFilterAsync</summary>
+        public async Task DeleteSubpropertyEventFilterResourceNamesAsync()
+        {
+            // Snippet: DeleteSubpropertyEventFilterAsync(SubpropertyEventFilterName, CallSettings)
+            // Additional: DeleteSubpropertyEventFilterAsync(SubpropertyEventFilterName, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SubpropertyEventFilterName name = SubpropertyEventFilterName.FromPropertySubPropertyEventFilter("[PROPERTY]", "[SUB_PROPERTY_EVENT_FILTER]");
+            // Make the request
+            await analyticsAdminServiceClient.DeleteSubpropertyEventFilterAsync(name);
             // End snippet
         }
     }

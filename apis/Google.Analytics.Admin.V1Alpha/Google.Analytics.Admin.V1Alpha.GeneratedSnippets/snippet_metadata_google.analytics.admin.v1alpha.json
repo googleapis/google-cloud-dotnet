@@ -31116,290 +31116,6 @@
       ]
     },
     {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteSubpropertyEventFilter_sync",
-      "title": "DeleteSubpropertyEventFilterRequestObject",
-      "description": "Snippet for DeleteSubpropertyEventFilter",
-      "file": "AnalyticsAdminServiceClient.DeleteSubpropertyEventFilterRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteSubpropertyEventFilter",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteSubpropertyEventFilter",
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest",
-            "name": "request"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "DeleteSubpropertyEventFilter",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteSubpropertyEventFilter",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 44,
-          "type": "FULL"
-        },
-        {
-          "start": 34,
-          "end": 42,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteSubpropertyEventFilter_async",
-      "title": "DeleteSubpropertyEventFilterRequestObjectAsync",
-      "description": "Snippet for DeleteSubpropertyEventFilterAsync",
-      "file": "AnalyticsAdminServiceClient.DeleteSubpropertyEventFilterRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteSubpropertyEventFilterAsync",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteSubpropertyEventFilterAsync",
-        "async": true,
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest",
-            "name": "request"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "System.Threading.Tasks.Task",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "DeleteSubpropertyEventFilter",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteSubpropertyEventFilter",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 45,
-          "type": "FULL"
-        },
-        {
-          "start": 35,
-          "end": 43,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteSubpropertyEventFilter_sync_flattened",
-      "title": "DeleteSubpropertyEventFilter",
-      "description": "Snippet for DeleteSubpropertyEventFilter",
-      "file": "AnalyticsAdminServiceClient.DeleteSubpropertyEventFilterSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteSubpropertyEventFilter",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteSubpropertyEventFilter",
-        "parameters": [
-          {
-            "type": "System.String",
-            "name": "name"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "DeleteSubpropertyEventFilter",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteSubpropertyEventFilter",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 41,
-          "type": "FULL"
-        },
-        {
-          "start": 34,
-          "end": 39,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteSubpropertyEventFilter_async_flattened",
-      "title": "DeleteSubpropertyEventFilterAsync",
-      "description": "Snippet for DeleteSubpropertyEventFilterAsync",
-      "file": "AnalyticsAdminServiceClient.DeleteSubpropertyEventFilterAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteSubpropertyEventFilterAsync",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteSubpropertyEventFilterAsync",
-        "async": true,
-        "parameters": [
-          {
-            "type": "System.String",
-            "name": "name"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "System.Threading.Tasks.Task",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "DeleteSubpropertyEventFilter",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteSubpropertyEventFilter",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 42,
-          "type": "FULL"
-        },
-        {
-          "start": 35,
-          "end": 40,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteSubpropertyEventFilter_sync_flattened_resourceNames",
-      "title": "DeleteSubpropertyEventFilterResourceNames",
-      "description": "Snippet for DeleteSubpropertyEventFilter",
-      "file": "AnalyticsAdminServiceClient.DeleteSubpropertyEventFilterResourceNamesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteSubpropertyEventFilter",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteSubpropertyEventFilter",
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.SubpropertyEventFilterName",
-            "name": "name"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "DeleteSubpropertyEventFilter",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteSubpropertyEventFilter",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 41,
-          "type": "FULL"
-        },
-        {
-          "start": 34,
-          "end": 39,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteSubpropertyEventFilter_async_flattened_resourceNames",
-      "title": "DeleteSubpropertyEventFilterResourceNamesAsync",
-      "description": "Snippet for DeleteSubpropertyEventFilterAsync",
-      "file": "AnalyticsAdminServiceClient.DeleteSubpropertyEventFilterResourceNamesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "DeleteSubpropertyEventFilterAsync",
-        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteSubpropertyEventFilterAsync",
-        "async": true,
-        "parameters": [
-          {
-            "type": "Google.Analytics.Admin.V1Alpha.SubpropertyEventFilterName",
-            "name": "name"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "System.Threading.Tasks.Task",
-        "client": {
-          "shortName": "AnalyticsAdminServiceClient",
-          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
-        },
-        "method": {
-          "shortName": "DeleteSubpropertyEventFilter",
-          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteSubpropertyEventFilter",
-          "service": {
-            "shortName": "AnalyticsAdminService",
-            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 42,
-          "type": "FULL"
-        },
-        {
-          "start": 35,
-          "end": 40,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
       "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateSubpropertyEventFilter_sync",
       "title": "CreateSubpropertyEventFilterRequestObject",
       "description": "Snippet for CreateSubpropertyEventFilter",
@@ -31698,6 +31414,1096 @@
         {
           "start": 35,
           "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetSubpropertyEventFilter_sync",
+      "title": "GetSubpropertyEventFilterRequestObject",
+      "description": "Snippet for GetSubpropertyEventFilter",
+      "file": "AnalyticsAdminServiceClient.GetSubpropertyEventFilterRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSubpropertyEventFilter",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetSubpropertyEventFilter",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.GetSubpropertyEventFilterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetSubpropertyEventFilter",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetSubpropertyEventFilter",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetSubpropertyEventFilter_async",
+      "title": "GetSubpropertyEventFilterRequestObjectAsync",
+      "description": "Snippet for GetSubpropertyEventFilterAsync",
+      "file": "AnalyticsAdminServiceClient.GetSubpropertyEventFilterRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSubpropertyEventFilterAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetSubpropertyEventFilterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.GetSubpropertyEventFilterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetSubpropertyEventFilter",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetSubpropertyEventFilter",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetSubpropertyEventFilter_sync_flattened",
+      "title": "GetSubpropertyEventFilter",
+      "description": "Snippet for GetSubpropertyEventFilter",
+      "file": "AnalyticsAdminServiceClient.GetSubpropertyEventFilterSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSubpropertyEventFilter",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetSubpropertyEventFilter",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetSubpropertyEventFilter",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetSubpropertyEventFilter",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetSubpropertyEventFilter_async_flattened",
+      "title": "GetSubpropertyEventFilterAsync",
+      "description": "Snippet for GetSubpropertyEventFilterAsync",
+      "file": "AnalyticsAdminServiceClient.GetSubpropertyEventFilterAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSubpropertyEventFilterAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetSubpropertyEventFilterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetSubpropertyEventFilter",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetSubpropertyEventFilter",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetSubpropertyEventFilter_sync_flattened_resourceNames",
+      "title": "GetSubpropertyEventFilterResourceNames",
+      "description": "Snippet for GetSubpropertyEventFilter",
+      "file": "AnalyticsAdminServiceClient.GetSubpropertyEventFilterResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSubpropertyEventFilter",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetSubpropertyEventFilter",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.SubpropertyEventFilterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetSubpropertyEventFilter",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetSubpropertyEventFilter",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetSubpropertyEventFilter_async_flattened_resourceNames",
+      "title": "GetSubpropertyEventFilterResourceNamesAsync",
+      "description": "Snippet for GetSubpropertyEventFilterAsync",
+      "file": "AnalyticsAdminServiceClient.GetSubpropertyEventFilterResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSubpropertyEventFilterAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetSubpropertyEventFilterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.SubpropertyEventFilterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetSubpropertyEventFilter",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetSubpropertyEventFilter",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListSubpropertyEventFilters_sync",
+      "title": "ListSubpropertyEventFiltersRequestObject",
+      "description": "Snippet for ListSubpropertyEventFilters",
+      "file": "AnalyticsAdminServiceClient.ListSubpropertyEventFiltersRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSubpropertyEventFilters",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListSubpropertyEventFilters",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersResponse, Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListSubpropertyEventFilters",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListSubpropertyEventFilters",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListSubpropertyEventFilters_async",
+      "title": "ListSubpropertyEventFiltersRequestObjectAsync",
+      "description": "Snippet for ListSubpropertyEventFiltersAsync",
+      "file": "AnalyticsAdminServiceClient.ListSubpropertyEventFiltersRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSubpropertyEventFiltersAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListSubpropertyEventFiltersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersResponse, Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListSubpropertyEventFilters",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListSubpropertyEventFilters",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListSubpropertyEventFilters_sync_flattened",
+      "title": "ListSubpropertyEventFilters",
+      "description": "Snippet for ListSubpropertyEventFilters",
+      "file": "AnalyticsAdminServiceClient.ListSubpropertyEventFiltersSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSubpropertyEventFilters",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListSubpropertyEventFilters",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersResponse, Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListSubpropertyEventFilters",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListSubpropertyEventFilters",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListSubpropertyEventFilters_async_flattened",
+      "title": "ListSubpropertyEventFiltersAsync",
+      "description": "Snippet for ListSubpropertyEventFiltersAsync",
+      "file": "AnalyticsAdminServiceClient.ListSubpropertyEventFiltersAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSubpropertyEventFiltersAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListSubpropertyEventFiltersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersResponse, Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListSubpropertyEventFilters",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListSubpropertyEventFilters",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListSubpropertyEventFilters_sync_flattened_resourceNames",
+      "title": "ListSubpropertyEventFiltersResourceNames",
+      "description": "Snippet for ListSubpropertyEventFilters",
+      "file": "AnalyticsAdminServiceClient.ListSubpropertyEventFiltersResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSubpropertyEventFilters",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListSubpropertyEventFilters",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersResponse, Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListSubpropertyEventFilters",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListSubpropertyEventFilters",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListSubpropertyEventFilters_async_flattened_resourceNames",
+      "title": "ListSubpropertyEventFiltersResourceNamesAsync",
+      "description": "Snippet for ListSubpropertyEventFiltersAsync",
+      "file": "AnalyticsAdminServiceClient.ListSubpropertyEventFiltersResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSubpropertyEventFiltersAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListSubpropertyEventFiltersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersResponse, Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListSubpropertyEventFilters",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListSubpropertyEventFilters",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateSubpropertyEventFilter_sync",
+      "title": "UpdateSubpropertyEventFilterRequestObject",
+      "description": "Snippet for UpdateSubpropertyEventFilter",
+      "file": "AnalyticsAdminServiceClient.UpdateSubpropertyEventFilterRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSubpropertyEventFilter",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateSubpropertyEventFilter",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.UpdateSubpropertyEventFilterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSubpropertyEventFilter",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateSubpropertyEventFilter",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateSubpropertyEventFilter_async",
+      "title": "UpdateSubpropertyEventFilterRequestObjectAsync",
+      "description": "Snippet for UpdateSubpropertyEventFilterAsync",
+      "file": "AnalyticsAdminServiceClient.UpdateSubpropertyEventFilterRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSubpropertyEventFilterAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateSubpropertyEventFilterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.UpdateSubpropertyEventFilterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSubpropertyEventFilter",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateSubpropertyEventFilter",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateSubpropertyEventFilter_sync_flattened",
+      "title": "UpdateSubpropertyEventFilter",
+      "description": "Snippet for UpdateSubpropertyEventFilter",
+      "file": "AnalyticsAdminServiceClient.UpdateSubpropertyEventFilterSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSubpropertyEventFilter",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateSubpropertyEventFilter",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter",
+            "name": "subpropertyEventFilter"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSubpropertyEventFilter",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateSubpropertyEventFilter",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateSubpropertyEventFilter_async_flattened",
+      "title": "UpdateSubpropertyEventFilterAsync",
+      "description": "Snippet for UpdateSubpropertyEventFilterAsync",
+      "file": "AnalyticsAdminServiceClient.UpdateSubpropertyEventFilterAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSubpropertyEventFilterAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateSubpropertyEventFilterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter",
+            "name": "subpropertyEventFilter"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSubpropertyEventFilter",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateSubpropertyEventFilter",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteSubpropertyEventFilter_sync",
+      "title": "DeleteSubpropertyEventFilterRequestObject",
+      "description": "Snippet for DeleteSubpropertyEventFilter",
+      "file": "AnalyticsAdminServiceClient.DeleteSubpropertyEventFilterRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSubpropertyEventFilter",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteSubpropertyEventFilter",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSubpropertyEventFilter",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteSubpropertyEventFilter",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteSubpropertyEventFilter_async",
+      "title": "DeleteSubpropertyEventFilterRequestObjectAsync",
+      "description": "Snippet for DeleteSubpropertyEventFilterAsync",
+      "file": "AnalyticsAdminServiceClient.DeleteSubpropertyEventFilterRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSubpropertyEventFilterAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteSubpropertyEventFilterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSubpropertyEventFilter",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteSubpropertyEventFilter",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteSubpropertyEventFilter_sync_flattened",
+      "title": "DeleteSubpropertyEventFilter",
+      "description": "Snippet for DeleteSubpropertyEventFilter",
+      "file": "AnalyticsAdminServiceClient.DeleteSubpropertyEventFilterSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSubpropertyEventFilter",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteSubpropertyEventFilter",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSubpropertyEventFilter",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteSubpropertyEventFilter",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteSubpropertyEventFilter_async_flattened",
+      "title": "DeleteSubpropertyEventFilterAsync",
+      "description": "Snippet for DeleteSubpropertyEventFilterAsync",
+      "file": "AnalyticsAdminServiceClient.DeleteSubpropertyEventFilterAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSubpropertyEventFilterAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteSubpropertyEventFilterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSubpropertyEventFilter",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteSubpropertyEventFilter",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteSubpropertyEventFilter_sync_flattened_resourceNames",
+      "title": "DeleteSubpropertyEventFilterResourceNames",
+      "description": "Snippet for DeleteSubpropertyEventFilter",
+      "file": "AnalyticsAdminServiceClient.DeleteSubpropertyEventFilterResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSubpropertyEventFilter",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteSubpropertyEventFilter",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.SubpropertyEventFilterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSubpropertyEventFilter",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteSubpropertyEventFilter",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteSubpropertyEventFilter_async_flattened_resourceNames",
+      "title": "DeleteSubpropertyEventFilterResourceNamesAsync",
+      "description": "Snippet for DeleteSubpropertyEventFilterAsync",
+      "file": "AnalyticsAdminServiceClient.DeleteSubpropertyEventFilterResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSubpropertyEventFilterAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteSubpropertyEventFilterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.SubpropertyEventFilterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSubpropertyEventFilter",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteSubpropertyEventFilter",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
           "type": "SHORT"
         }
       ]
