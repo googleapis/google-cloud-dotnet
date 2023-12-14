@@ -174,8 +174,11 @@ namespace Google.Analytics.Admin.V1Alpha
             CreateRollupPropertySourceLinkSettings = existing.CreateRollupPropertySourceLinkSettings;
             DeleteRollupPropertySourceLinkSettings = existing.DeleteRollupPropertySourceLinkSettings;
             CreateSubpropertySettings = existing.CreateSubpropertySettings;
-            DeleteSubpropertyEventFilterSettings = existing.DeleteSubpropertyEventFilterSettings;
             CreateSubpropertyEventFilterSettings = existing.CreateSubpropertyEventFilterSettings;
+            GetSubpropertyEventFilterSettings = existing.GetSubpropertyEventFilterSettings;
+            ListSubpropertyEventFiltersSettings = existing.ListSubpropertyEventFiltersSettings;
+            UpdateSubpropertyEventFilterSettings = existing.UpdateSubpropertyEventFilterSettings;
+            DeleteSubpropertyEventFilterSettings = existing.DeleteSubpropertyEventFilterSettings;
             OnCopy(existing);
         }
 
@@ -2767,28 +2770,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AnalyticsAdminServiceClient.DeleteSubpropertyEventFilter</c> and
-        /// <c>AnalyticsAdminServiceClient.DeleteSubpropertyEventFilterAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
-        /// <see cref="grpccore::StatusCode.Unknown"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings DeleteSubpropertyEventFilterSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>AnalyticsAdminServiceClient.CreateSubpropertyEventFilter</c> and
         /// <c>AnalyticsAdminServiceClient.CreateSubpropertyEventFilterAsync</c>.
         /// </summary>
@@ -2808,6 +2789,94 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings CreateSubpropertyEventFilterSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.GetSubpropertyEventFilter</c> and
+        /// <c>AnalyticsAdminServiceClient.GetSubpropertyEventFilterAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetSubpropertyEventFilterSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.ListSubpropertyEventFilters</c> and
+        /// <c>AnalyticsAdminServiceClient.ListSubpropertyEventFiltersAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListSubpropertyEventFiltersSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.UpdateSubpropertyEventFilter</c> and
+        /// <c>AnalyticsAdminServiceClient.UpdateSubpropertyEventFilterAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateSubpropertyEventFilterSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.DeleteSubpropertyEventFilter</c> and
+        /// <c>AnalyticsAdminServiceClient.DeleteSubpropertyEventFilterAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteSubpropertyEventFilterSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="AnalyticsAdminServiceSettings"/> object.</returns>
@@ -11274,8 +11343,10 @@ namespace Google.Analytics.Admin.V1Alpha
         /// records of each time a user reads Google Analytics reporting data. Access
         /// records are retained for up to 2 years.
         /// 
-        /// Data Access Reports can be requested for a property. The property must be
-        /// in Google Analytics 360. This method is only available to Administrators.
+        /// Data Access Reports can be requested for a property. Reports may be
+        /// requested for any property, but dimensions that aren't related to quota can
+        /// only be requested on Google Analytics 360 properties. This method is only
+        /// available to Administrators.
         /// 
         /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
         /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
@@ -11295,8 +11366,10 @@ namespace Google.Analytics.Admin.V1Alpha
         /// records of each time a user reads Google Analytics reporting data. Access
         /// records are retained for up to 2 years.
         /// 
-        /// Data Access Reports can be requested for a property. The property must be
-        /// in Google Analytics 360. This method is only available to Administrators.
+        /// Data Access Reports can be requested for a property. Reports may be
+        /// requested for any property, but dimensions that aren't related to quota can
+        /// only be requested on Google Analytics 360 properties. This method is only
+        /// available to Administrators.
         /// 
         /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
         /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
@@ -11316,8 +11389,10 @@ namespace Google.Analytics.Admin.V1Alpha
         /// records of each time a user reads Google Analytics reporting data. Access
         /// records are retained for up to 2 years.
         /// 
-        /// Data Access Reports can be requested for a property. The property must be
-        /// in Google Analytics 360. This method is only available to Administrators.
+        /// Data Access Reports can be requested for a property. Reports may be
+        /// requested for any property, but dimensions that aren't related to quota can
+        /// only be requested on Google Analytics 360 properties. This method is only
+        /// available to Administrators.
         /// 
         /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
         /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
@@ -15794,129 +15869,6 @@ namespace Google.Analytics.Admin.V1Alpha
             CreateSubpropertyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a subproperty event filter.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual void DeleteSubpropertyEventFilter(DeleteSubpropertyEventFilterRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Deletes a subproperty event filter.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteSubpropertyEventFilterAsync(DeleteSubpropertyEventFilterRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Deletes a subproperty event filter.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteSubpropertyEventFilterAsync(DeleteSubpropertyEventFilterRequest request, st::CancellationToken cancellationToken) =>
-            DeleteSubpropertyEventFilterAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Deletes a subproperty event filter.
-        /// </summary>
-        /// <param name="name">
-        /// Required. Resource name of the subproperty event filter to delete.
-        /// Format:
-        /// properties/property_id/subpropertyEventFilters/subproperty_event_filter
-        /// Example: properties/123/subpropertyEventFilters/456
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual void DeleteSubpropertyEventFilter(string name, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteSubpropertyEventFilter(new DeleteSubpropertyEventFilterRequest
-            {
-                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Deletes a subproperty event filter.
-        /// </summary>
-        /// <param name="name">
-        /// Required. Resource name of the subproperty event filter to delete.
-        /// Format:
-        /// properties/property_id/subpropertyEventFilters/subproperty_event_filter
-        /// Example: properties/123/subpropertyEventFilters/456
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteSubpropertyEventFilterAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteSubpropertyEventFilterAsync(new DeleteSubpropertyEventFilterRequest
-            {
-                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Deletes a subproperty event filter.
-        /// </summary>
-        /// <param name="name">
-        /// Required. Resource name of the subproperty event filter to delete.
-        /// Format:
-        /// properties/property_id/subpropertyEventFilters/subproperty_event_filter
-        /// Example: properties/123/subpropertyEventFilters/456
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteSubpropertyEventFilterAsync(string name, st::CancellationToken cancellationToken) =>
-            DeleteSubpropertyEventFilterAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Deletes a subproperty event filter.
-        /// </summary>
-        /// <param name="name">
-        /// Required. Resource name of the subproperty event filter to delete.
-        /// Format:
-        /// properties/property_id/subpropertyEventFilters/subproperty_event_filter
-        /// Example: properties/123/subpropertyEventFilters/456
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual void DeleteSubpropertyEventFilter(SubpropertyEventFilterName name, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteSubpropertyEventFilter(new DeleteSubpropertyEventFilterRequest
-            {
-                SubpropertyEventFilterName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Deletes a subproperty event filter.
-        /// </summary>
-        /// <param name="name">
-        /// Required. Resource name of the subproperty event filter to delete.
-        /// Format:
-        /// properties/property_id/subpropertyEventFilters/subproperty_event_filter
-        /// Example: properties/123/subpropertyEventFilters/456
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteSubpropertyEventFilterAsync(SubpropertyEventFilterName name, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteSubpropertyEventFilterAsync(new DeleteSubpropertyEventFilterRequest
-            {
-                SubpropertyEventFilterName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// Deletes a subproperty event filter.
-        /// </summary>
-        /// <param name="name">
-        /// Required. Resource name of the subproperty event filter to delete.
-        /// Format:
-        /// properties/property_id/subpropertyEventFilters/subproperty_event_filter
-        /// Example: properties/123/subpropertyEventFilters/456
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteSubpropertyEventFilterAsync(SubpropertyEventFilterName name, st::CancellationToken cancellationToken) =>
-            DeleteSubpropertyEventFilterAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
         /// Creates a subproperty Event Filter.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -16048,6 +16000,460 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<SubpropertyEventFilter> CreateSubpropertyEventFilterAsync(PropertyName parent, SubpropertyEventFilter subpropertyEventFilter, st::CancellationToken cancellationToken) =>
             CreateSubpropertyEventFilterAsync(parent, subpropertyEventFilter, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lookup for a single subproperty Event Filter.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SubpropertyEventFilter GetSubpropertyEventFilter(GetSubpropertyEventFilterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lookup for a single subproperty Event Filter.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SubpropertyEventFilter> GetSubpropertyEventFilterAsync(GetSubpropertyEventFilterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lookup for a single subproperty Event Filter.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SubpropertyEventFilter> GetSubpropertyEventFilterAsync(GetSubpropertyEventFilterRequest request, st::CancellationToken cancellationToken) =>
+            GetSubpropertyEventFilterAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lookup for a single subproperty Event Filter.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the subproperty event filter to lookup.
+        /// Format:
+        /// properties/property_id/subpropertyEventFilters/subproperty_event_filter
+        /// Example: properties/123/subpropertyEventFilters/456
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SubpropertyEventFilter GetSubpropertyEventFilter(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSubpropertyEventFilter(new GetSubpropertyEventFilterRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a single subproperty Event Filter.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the subproperty event filter to lookup.
+        /// Format:
+        /// properties/property_id/subpropertyEventFilters/subproperty_event_filter
+        /// Example: properties/123/subpropertyEventFilters/456
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SubpropertyEventFilter> GetSubpropertyEventFilterAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSubpropertyEventFilterAsync(new GetSubpropertyEventFilterRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a single subproperty Event Filter.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the subproperty event filter to lookup.
+        /// Format:
+        /// properties/property_id/subpropertyEventFilters/subproperty_event_filter
+        /// Example: properties/123/subpropertyEventFilters/456
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SubpropertyEventFilter> GetSubpropertyEventFilterAsync(string name, st::CancellationToken cancellationToken) =>
+            GetSubpropertyEventFilterAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lookup for a single subproperty Event Filter.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the subproperty event filter to lookup.
+        /// Format:
+        /// properties/property_id/subpropertyEventFilters/subproperty_event_filter
+        /// Example: properties/123/subpropertyEventFilters/456
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SubpropertyEventFilter GetSubpropertyEventFilter(SubpropertyEventFilterName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSubpropertyEventFilter(new GetSubpropertyEventFilterRequest
+            {
+                SubpropertyEventFilterName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a single subproperty Event Filter.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the subproperty event filter to lookup.
+        /// Format:
+        /// properties/property_id/subpropertyEventFilters/subproperty_event_filter
+        /// Example: properties/123/subpropertyEventFilters/456
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SubpropertyEventFilter> GetSubpropertyEventFilterAsync(SubpropertyEventFilterName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSubpropertyEventFilterAsync(new GetSubpropertyEventFilterRequest
+            {
+                SubpropertyEventFilterName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a single subproperty Event Filter.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the subproperty event filter to lookup.
+        /// Format:
+        /// properties/property_id/subpropertyEventFilters/subproperty_event_filter
+        /// Example: properties/123/subpropertyEventFilters/456
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SubpropertyEventFilter> GetSubpropertyEventFilterAsync(SubpropertyEventFilterName name, st::CancellationToken cancellationToken) =>
+            GetSubpropertyEventFilterAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// List all subproperty Event Filters on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SubpropertyEventFilter"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSubpropertyEventFiltersResponse, SubpropertyEventFilter> ListSubpropertyEventFilters(ListSubpropertyEventFiltersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List all subproperty Event Filters on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SubpropertyEventFilter"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSubpropertyEventFiltersResponse, SubpropertyEventFilter> ListSubpropertyEventFiltersAsync(ListSubpropertyEventFiltersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List all subproperty Event Filters on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the ordinary property.
+        /// Format: properties/property_id
+        /// Example: properties/123
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SubpropertyEventFilter"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSubpropertyEventFiltersResponse, SubpropertyEventFilter> ListSubpropertyEventFilters(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSubpropertyEventFilters(new ListSubpropertyEventFiltersRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// List all subproperty Event Filters on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the ordinary property.
+        /// Format: properties/property_id
+        /// Example: properties/123
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SubpropertyEventFilter"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSubpropertyEventFiltersResponse, SubpropertyEventFilter> ListSubpropertyEventFiltersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSubpropertyEventFiltersAsync(new ListSubpropertyEventFiltersRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// List all subproperty Event Filters on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the ordinary property.
+        /// Format: properties/property_id
+        /// Example: properties/123
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SubpropertyEventFilter"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSubpropertyEventFiltersResponse, SubpropertyEventFilter> ListSubpropertyEventFilters(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSubpropertyEventFilters(new ListSubpropertyEventFiltersRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// List all subproperty Event Filters on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the ordinary property.
+        /// Format: properties/property_id
+        /// Example: properties/123
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SubpropertyEventFilter"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSubpropertyEventFiltersResponse, SubpropertyEventFilter> ListSubpropertyEventFiltersAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSubpropertyEventFiltersAsync(new ListSubpropertyEventFiltersRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a subproperty Event Filter.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SubpropertyEventFilter UpdateSubpropertyEventFilter(UpdateSubpropertyEventFilterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a subproperty Event Filter.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SubpropertyEventFilter> UpdateSubpropertyEventFilterAsync(UpdateSubpropertyEventFilterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a subproperty Event Filter.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SubpropertyEventFilter> UpdateSubpropertyEventFilterAsync(UpdateSubpropertyEventFilterRequest request, st::CancellationToken cancellationToken) =>
+            UpdateSubpropertyEventFilterAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a subproperty Event Filter.
+        /// </summary>
+        /// <param name="subpropertyEventFilter">
+        /// Required. The subproperty event filter to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update. Field names must be in snake case
+        /// (for example, "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SubpropertyEventFilter UpdateSubpropertyEventFilter(SubpropertyEventFilter subpropertyEventFilter, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSubpropertyEventFilter(new UpdateSubpropertyEventFilterRequest
+            {
+                SubpropertyEventFilter = gax::GaxPreconditions.CheckNotNull(subpropertyEventFilter, nameof(subpropertyEventFilter)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a subproperty Event Filter.
+        /// </summary>
+        /// <param name="subpropertyEventFilter">
+        /// Required. The subproperty event filter to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update. Field names must be in snake case
+        /// (for example, "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SubpropertyEventFilter> UpdateSubpropertyEventFilterAsync(SubpropertyEventFilter subpropertyEventFilter, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSubpropertyEventFilterAsync(new UpdateSubpropertyEventFilterRequest
+            {
+                SubpropertyEventFilter = gax::GaxPreconditions.CheckNotNull(subpropertyEventFilter, nameof(subpropertyEventFilter)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a subproperty Event Filter.
+        /// </summary>
+        /// <param name="subpropertyEventFilter">
+        /// Required. The subproperty event filter to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update. Field names must be in snake case
+        /// (for example, "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SubpropertyEventFilter> UpdateSubpropertyEventFilterAsync(SubpropertyEventFilter subpropertyEventFilter, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateSubpropertyEventFilterAsync(subpropertyEventFilter, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a subproperty event filter.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteSubpropertyEventFilter(DeleteSubpropertyEventFilterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a subproperty event filter.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSubpropertyEventFilterAsync(DeleteSubpropertyEventFilterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a subproperty event filter.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSubpropertyEventFilterAsync(DeleteSubpropertyEventFilterRequest request, st::CancellationToken cancellationToken) =>
+            DeleteSubpropertyEventFilterAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a subproperty event filter.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the subproperty event filter to delete.
+        /// Format:
+        /// properties/property_id/subpropertyEventFilters/subproperty_event_filter
+        /// Example: properties/123/subpropertyEventFilters/456
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteSubpropertyEventFilter(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSubpropertyEventFilter(new DeleteSubpropertyEventFilterRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a subproperty event filter.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the subproperty event filter to delete.
+        /// Format:
+        /// properties/property_id/subpropertyEventFilters/subproperty_event_filter
+        /// Example: properties/123/subpropertyEventFilters/456
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSubpropertyEventFilterAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSubpropertyEventFilterAsync(new DeleteSubpropertyEventFilterRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a subproperty event filter.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the subproperty event filter to delete.
+        /// Format:
+        /// properties/property_id/subpropertyEventFilters/subproperty_event_filter
+        /// Example: properties/123/subpropertyEventFilters/456
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSubpropertyEventFilterAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteSubpropertyEventFilterAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a subproperty event filter.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the subproperty event filter to delete.
+        /// Format:
+        /// properties/property_id/subpropertyEventFilters/subproperty_event_filter
+        /// Example: properties/123/subpropertyEventFilters/456
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteSubpropertyEventFilter(SubpropertyEventFilterName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSubpropertyEventFilter(new DeleteSubpropertyEventFilterRequest
+            {
+                SubpropertyEventFilterName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a subproperty event filter.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the subproperty event filter to delete.
+        /// Format:
+        /// properties/property_id/subpropertyEventFilters/subproperty_event_filter
+        /// Example: properties/123/subpropertyEventFilters/456
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSubpropertyEventFilterAsync(SubpropertyEventFilterName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSubpropertyEventFilterAsync(new DeleteSubpropertyEventFilterRequest
+            {
+                SubpropertyEventFilterName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a subproperty event filter.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the subproperty event filter to delete.
+        /// Format:
+        /// properties/property_id/subpropertyEventFilters/subproperty_event_filter
+        /// Example: properties/123/subpropertyEventFilters/456
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSubpropertyEventFilterAsync(SubpropertyEventFilterName name, st::CancellationToken cancellationToken) =>
+            DeleteSubpropertyEventFilterAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>AnalyticsAdminService client wrapper implementation, for convenient use.</summary>
@@ -16308,9 +16714,15 @@ namespace Google.Analytics.Admin.V1Alpha
 
         private readonly gaxgrpc::ApiCall<CreateSubpropertyRequest, CreateSubpropertyResponse> _callCreateSubproperty;
 
-        private readonly gaxgrpc::ApiCall<DeleteSubpropertyEventFilterRequest, wkt::Empty> _callDeleteSubpropertyEventFilter;
-
         private readonly gaxgrpc::ApiCall<CreateSubpropertyEventFilterRequest, SubpropertyEventFilter> _callCreateSubpropertyEventFilter;
+
+        private readonly gaxgrpc::ApiCall<GetSubpropertyEventFilterRequest, SubpropertyEventFilter> _callGetSubpropertyEventFilter;
+
+        private readonly gaxgrpc::ApiCall<ListSubpropertyEventFiltersRequest, ListSubpropertyEventFiltersResponse> _callListSubpropertyEventFilters;
+
+        private readonly gaxgrpc::ApiCall<UpdateSubpropertyEventFilterRequest, SubpropertyEventFilter> _callUpdateSubpropertyEventFilter;
+
+        private readonly gaxgrpc::ApiCall<DeleteSubpropertyEventFilterRequest, wkt::Empty> _callDeleteSubpropertyEventFilter;
 
         /// <summary>
         /// Constructs a client wrapper for the AnalyticsAdminService service, with the specified gRPC client and
@@ -16702,12 +17114,21 @@ namespace Google.Analytics.Admin.V1Alpha
             _callCreateSubproperty = clientHelper.BuildApiCall<CreateSubpropertyRequest, CreateSubpropertyResponse>("CreateSubproperty", grpcClient.CreateSubpropertyAsync, grpcClient.CreateSubproperty, effectiveSettings.CreateSubpropertySettings);
             Modify_ApiCall(ref _callCreateSubproperty);
             Modify_CreateSubpropertyApiCall(ref _callCreateSubproperty);
-            _callDeleteSubpropertyEventFilter = clientHelper.BuildApiCall<DeleteSubpropertyEventFilterRequest, wkt::Empty>("DeleteSubpropertyEventFilter", grpcClient.DeleteSubpropertyEventFilterAsync, grpcClient.DeleteSubpropertyEventFilter, effectiveSettings.DeleteSubpropertyEventFilterSettings).WithGoogleRequestParam("name", request => request.Name);
-            Modify_ApiCall(ref _callDeleteSubpropertyEventFilter);
-            Modify_DeleteSubpropertyEventFilterApiCall(ref _callDeleteSubpropertyEventFilter);
             _callCreateSubpropertyEventFilter = clientHelper.BuildApiCall<CreateSubpropertyEventFilterRequest, SubpropertyEventFilter>("CreateSubpropertyEventFilter", grpcClient.CreateSubpropertyEventFilterAsync, grpcClient.CreateSubpropertyEventFilter, effectiveSettings.CreateSubpropertyEventFilterSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateSubpropertyEventFilter);
             Modify_CreateSubpropertyEventFilterApiCall(ref _callCreateSubpropertyEventFilter);
+            _callGetSubpropertyEventFilter = clientHelper.BuildApiCall<GetSubpropertyEventFilterRequest, SubpropertyEventFilter>("GetSubpropertyEventFilter", grpcClient.GetSubpropertyEventFilterAsync, grpcClient.GetSubpropertyEventFilter, effectiveSettings.GetSubpropertyEventFilterSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetSubpropertyEventFilter);
+            Modify_GetSubpropertyEventFilterApiCall(ref _callGetSubpropertyEventFilter);
+            _callListSubpropertyEventFilters = clientHelper.BuildApiCall<ListSubpropertyEventFiltersRequest, ListSubpropertyEventFiltersResponse>("ListSubpropertyEventFilters", grpcClient.ListSubpropertyEventFiltersAsync, grpcClient.ListSubpropertyEventFilters, effectiveSettings.ListSubpropertyEventFiltersSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListSubpropertyEventFilters);
+            Modify_ListSubpropertyEventFiltersApiCall(ref _callListSubpropertyEventFilters);
+            _callUpdateSubpropertyEventFilter = clientHelper.BuildApiCall<UpdateSubpropertyEventFilterRequest, SubpropertyEventFilter>("UpdateSubpropertyEventFilter", grpcClient.UpdateSubpropertyEventFilterAsync, grpcClient.UpdateSubpropertyEventFilter, effectiveSettings.UpdateSubpropertyEventFilterSettings).WithGoogleRequestParam("subproperty_event_filter.name", request => request.SubpropertyEventFilter?.Name);
+            Modify_ApiCall(ref _callUpdateSubpropertyEventFilter);
+            Modify_UpdateSubpropertyEventFilterApiCall(ref _callUpdateSubpropertyEventFilter);
+            _callDeleteSubpropertyEventFilter = clientHelper.BuildApiCall<DeleteSubpropertyEventFilterRequest, wkt::Empty>("DeleteSubpropertyEventFilter", grpcClient.DeleteSubpropertyEventFilterAsync, grpcClient.DeleteSubpropertyEventFilter, effectiveSettings.DeleteSubpropertyEventFilterSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteSubpropertyEventFilter);
+            Modify_DeleteSubpropertyEventFilterApiCall(ref _callDeleteSubpropertyEventFilter);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -16965,9 +17386,15 @@ namespace Google.Analytics.Admin.V1Alpha
 
         partial void Modify_CreateSubpropertyApiCall(ref gaxgrpc::ApiCall<CreateSubpropertyRequest, CreateSubpropertyResponse> call);
 
-        partial void Modify_DeleteSubpropertyEventFilterApiCall(ref gaxgrpc::ApiCall<DeleteSubpropertyEventFilterRequest, wkt::Empty> call);
-
         partial void Modify_CreateSubpropertyEventFilterApiCall(ref gaxgrpc::ApiCall<CreateSubpropertyEventFilterRequest, SubpropertyEventFilter> call);
+
+        partial void Modify_GetSubpropertyEventFilterApiCall(ref gaxgrpc::ApiCall<GetSubpropertyEventFilterRequest, SubpropertyEventFilter> call);
+
+        partial void Modify_ListSubpropertyEventFiltersApiCall(ref gaxgrpc::ApiCall<ListSubpropertyEventFiltersRequest, ListSubpropertyEventFiltersResponse> call);
+
+        partial void Modify_UpdateSubpropertyEventFilterApiCall(ref gaxgrpc::ApiCall<UpdateSubpropertyEventFilterRequest, SubpropertyEventFilter> call);
+
+        partial void Modify_DeleteSubpropertyEventFilterApiCall(ref gaxgrpc::ApiCall<DeleteSubpropertyEventFilterRequest, wkt::Empty> call);
 
         partial void OnConstruction(AnalyticsAdminService.AnalyticsAdminServiceClient grpcClient, AnalyticsAdminServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -17226,9 +17653,15 @@ namespace Google.Analytics.Admin.V1Alpha
 
         partial void Modify_CreateSubpropertyRequest(ref CreateSubpropertyRequest request, ref gaxgrpc::CallSettings settings);
 
-        partial void Modify_DeleteSubpropertyEventFilterRequest(ref DeleteSubpropertyEventFilterRequest request, ref gaxgrpc::CallSettings settings);
-
         partial void Modify_CreateSubpropertyEventFilterRequest(ref CreateSubpropertyEventFilterRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetSubpropertyEventFilterRequest(ref GetSubpropertyEventFilterRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListSubpropertyEventFiltersRequest(ref ListSubpropertyEventFiltersRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateSubpropertyEventFilterRequest(ref UpdateSubpropertyEventFilterRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteSubpropertyEventFilterRequest(ref DeleteSubpropertyEventFilterRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lookup for a single Account.
@@ -19253,8 +19686,10 @@ namespace Google.Analytics.Admin.V1Alpha
         /// records of each time a user reads Google Analytics reporting data. Access
         /// records are retained for up to 2 years.
         /// 
-        /// Data Access Reports can be requested for a property. The property must be
-        /// in Google Analytics 360. This method is only available to Administrators.
+        /// Data Access Reports can be requested for a property. Reports may be
+        /// requested for any property, but dimensions that aren't related to quota can
+        /// only be requested on Google Analytics 360 properties. This method is only
+        /// available to Administrators.
         /// 
         /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
         /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
@@ -19277,8 +19712,10 @@ namespace Google.Analytics.Admin.V1Alpha
         /// records of each time a user reads Google Analytics reporting data. Access
         /// records are retained for up to 2 years.
         /// 
-        /// Data Access Reports can be requested for a property. The property must be
-        /// in Google Analytics 360. This method is only available to Administrators.
+        /// Data Access Reports can be requested for a property. Reports may be
+        /// requested for any property, but dimensions that aren't related to quota can
+        /// only be requested on Google Analytics 360 properties. This method is only
+        /// available to Administrators.
         /// 
         /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
         /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
@@ -20457,30 +20894,6 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
-        /// Deletes a subproperty event filter.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override void DeleteSubpropertyEventFilter(DeleteSubpropertyEventFilterRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_DeleteSubpropertyEventFilterRequest(ref request, ref callSettings);
-            _callDeleteSubpropertyEventFilter.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Deletes a subproperty event filter.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task DeleteSubpropertyEventFilterAsync(DeleteSubpropertyEventFilterRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_DeleteSubpropertyEventFilterRequest(ref request, ref callSettings);
-            return _callDeleteSubpropertyEventFilter.Async(request, callSettings);
-        }
-
-        /// <summary>
         /// Creates a subproperty Event Filter.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -20502,6 +20915,102 @@ namespace Google.Analytics.Admin.V1Alpha
         {
             Modify_CreateSubpropertyEventFilterRequest(ref request, ref callSettings);
             return _callCreateSubpropertyEventFilter.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lookup for a single subproperty Event Filter.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SubpropertyEventFilter GetSubpropertyEventFilter(GetSubpropertyEventFilterRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSubpropertyEventFilterRequest(ref request, ref callSettings);
+            return _callGetSubpropertyEventFilter.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lookup for a single subproperty Event Filter.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SubpropertyEventFilter> GetSubpropertyEventFilterAsync(GetSubpropertyEventFilterRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSubpropertyEventFilterRequest(ref request, ref callSettings);
+            return _callGetSubpropertyEventFilter.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// List all subproperty Event Filters on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SubpropertyEventFilter"/> resources.</returns>
+        public override gax::PagedEnumerable<ListSubpropertyEventFiltersResponse, SubpropertyEventFilter> ListSubpropertyEventFilters(ListSubpropertyEventFiltersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSubpropertyEventFiltersRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListSubpropertyEventFiltersRequest, ListSubpropertyEventFiltersResponse, SubpropertyEventFilter>(_callListSubpropertyEventFilters, request, callSettings);
+        }
+
+        /// <summary>
+        /// List all subproperty Event Filters on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SubpropertyEventFilter"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListSubpropertyEventFiltersResponse, SubpropertyEventFilter> ListSubpropertyEventFiltersAsync(ListSubpropertyEventFiltersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSubpropertyEventFiltersRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListSubpropertyEventFiltersRequest, ListSubpropertyEventFiltersResponse, SubpropertyEventFilter>(_callListSubpropertyEventFilters, request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a subproperty Event Filter.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SubpropertyEventFilter UpdateSubpropertyEventFilter(UpdateSubpropertyEventFilterRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateSubpropertyEventFilterRequest(ref request, ref callSettings);
+            return _callUpdateSubpropertyEventFilter.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a subproperty Event Filter.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SubpropertyEventFilter> UpdateSubpropertyEventFilterAsync(UpdateSubpropertyEventFilterRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateSubpropertyEventFilterRequest(ref request, ref callSettings);
+            return _callUpdateSubpropertyEventFilter.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a subproperty event filter.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteSubpropertyEventFilter(DeleteSubpropertyEventFilterRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteSubpropertyEventFilterRequest(ref request, ref callSettings);
+            _callDeleteSubpropertyEventFilter.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a subproperty event filter.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteSubpropertyEventFilterAsync(DeleteSubpropertyEventFilterRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteSubpropertyEventFilterRequest(ref request, ref callSettings);
+            return _callDeleteSubpropertyEventFilter.Async(request, callSettings);
         }
     }
 
@@ -20594,6 +21103,10 @@ namespace Google.Analytics.Admin.V1Alpha
     }
 
     public partial class ListRollupPropertySourceLinksRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListSubpropertyEventFiltersRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -20780,6 +21293,14 @@ namespace Google.Analytics.Admin.V1Alpha
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<RollupPropertySourceLink> GetEnumerator() => RollupPropertySourceLinks.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListSubpropertyEventFiltersResponse : gaxgrpc::IPageResponse<SubpropertyEventFilter>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<SubpropertyEventFilter> GetEnumerator() => SubpropertyEventFilters.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

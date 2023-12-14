@@ -1828,7 +1828,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         = pb::FieldCodec.ForMessage(34, global::Google.Analytics.Admin.V1Alpha.GroupingRule.Parser);
     private readonly pbc::RepeatedField<global::Google.Analytics.Admin.V1Alpha.GroupingRule> groupingRule_ = new pbc::RepeatedField<global::Google.Analytics.Admin.V1Alpha.GroupingRule>();
     /// <summary>
-    /// Required. The grouping rules of channels. Maximum number of rules is 25.
+    /// Required. The grouping rules of channels. Maximum number of rules is 50.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1840,8 +1840,9 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int SystemDefinedFieldNumber = 5;
     private bool systemDefined_;
     /// <summary>
-    /// Output only. Default Channel Group defined by Google, which cannot be
-    /// updated.
+    /// Output only. If true, then this channel group is the Default Channel Group
+    /// predefined by Google Analytics. Display name and grouping rules cannot be
+    /// updated for this channel group.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

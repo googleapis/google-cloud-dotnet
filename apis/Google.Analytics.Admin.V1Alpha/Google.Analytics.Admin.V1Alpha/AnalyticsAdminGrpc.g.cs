@@ -448,11 +448,19 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateSubpropertyResponse> __Marshaller_google_analytics_admin_v1alpha_CreateSubpropertyResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateSubpropertyResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest> __Marshaller_google_analytics_admin_v1alpha_DeleteSubpropertyEventFilterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateSubpropertyEventFilterRequest> __Marshaller_google_analytics_admin_v1alpha_CreateSubpropertyEventFilterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateSubpropertyEventFilterRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter> __Marshaller_google_analytics_admin_v1alpha_SubpropertyEventFilter = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetSubpropertyEventFilterRequest> __Marshaller_google_analytics_admin_v1alpha_GetSubpropertyEventFilterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetSubpropertyEventFilterRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersRequest> __Marshaller_google_analytics_admin_v1alpha_ListSubpropertyEventFiltersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersResponse> __Marshaller_google_analytics_admin_v1alpha_ListSubpropertyEventFiltersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateSubpropertyEventFilterRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateSubpropertyEventFilterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateSubpropertyEventFilterRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest> __Marshaller_google_analytics_admin_v1alpha_DeleteSubpropertyEventFilterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetAccountRequest, global::Google.Analytics.Admin.V1Alpha.Account> __Method_GetAccount = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetAccountRequest, global::Google.Analytics.Admin.V1Alpha.Account>(
@@ -1463,20 +1471,44 @@ namespace Google.Analytics.Admin.V1Alpha {
         __Marshaller_google_analytics_admin_v1alpha_CreateSubpropertyResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteSubpropertyEventFilter = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "DeleteSubpropertyEventFilter",
-        __Marshaller_google_analytics_admin_v1alpha_DeleteSubpropertyEventFilterRequest,
-        __Marshaller_google_protobuf_Empty);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateSubpropertyEventFilterRequest, global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter> __Method_CreateSubpropertyEventFilter = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateSubpropertyEventFilterRequest, global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateSubpropertyEventFilter",
         __Marshaller_google_analytics_admin_v1alpha_CreateSubpropertyEventFilterRequest,
         __Marshaller_google_analytics_admin_v1alpha_SubpropertyEventFilter);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetSubpropertyEventFilterRequest, global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter> __Method_GetSubpropertyEventFilter = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetSubpropertyEventFilterRequest, global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetSubpropertyEventFilter",
+        __Marshaller_google_analytics_admin_v1alpha_GetSubpropertyEventFilterRequest,
+        __Marshaller_google_analytics_admin_v1alpha_SubpropertyEventFilter);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersRequest, global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersResponse> __Method_ListSubpropertyEventFilters = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersRequest, global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListSubpropertyEventFilters",
+        __Marshaller_google_analytics_admin_v1alpha_ListSubpropertyEventFiltersRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ListSubpropertyEventFiltersResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateSubpropertyEventFilterRequest, global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter> __Method_UpdateSubpropertyEventFilter = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateSubpropertyEventFilterRequest, global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateSubpropertyEventFilter",
+        __Marshaller_google_analytics_admin_v1alpha_UpdateSubpropertyEventFilterRequest,
+        __Marshaller_google_analytics_admin_v1alpha_SubpropertyEventFilter);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteSubpropertyEventFilter = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteSubpropertyEventFilter",
+        __Marshaller_google_analytics_admin_v1alpha_DeleteSubpropertyEventFilterRequest,
+        __Marshaller_google_protobuf_Empty);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -2499,8 +2531,10 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// records of each time a user reads Google Analytics reporting data. Access
       /// records are retained for up to 2 years.
       ///
-      /// Data Access Reports can be requested for a property. The property must be
-      /// in Google Analytics 360. This method is only available to Administrators.
+      /// Data Access Reports can be requested for a property. Reports may be
+      /// requested for any property, but dimensions that aren't related to quota can
+      /// only be requested on Google Analytics 360 properties. This method is only
+      /// available to Administrators.
       ///
       /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
       /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
@@ -3099,18 +3133,6 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
 
       /// <summary>
-      /// Deletes a subproperty event filter.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSubpropertyEventFilter(global::Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
       /// Creates a subproperty Event Filter.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -3118,6 +3140,54 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter> CreateSubpropertyEventFilter(global::Google.Analytics.Admin.V1Alpha.CreateSubpropertyEventFilterRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lookup for a single subproperty Event Filter.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter> GetSubpropertyEventFilter(global::Google.Analytics.Admin.V1Alpha.GetSubpropertyEventFilterRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// List all subproperty Event Filters on a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersResponse> ListSubpropertyEventFilters(global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a subproperty Event Filter.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter> UpdateSubpropertyEventFilter(global::Google.Analytics.Admin.V1Alpha.UpdateSubpropertyEventFilterRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a subproperty event filter.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSubpropertyEventFilter(global::Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -7180,8 +7250,10 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// records of each time a user reads Google Analytics reporting data. Access
       /// records are retained for up to 2 years.
       ///
-      /// Data Access Reports can be requested for a property. The property must be
-      /// in Google Analytics 360. This method is only available to Administrators.
+      /// Data Access Reports can be requested for a property. Reports may be
+      /// requested for any property, but dimensions that aren't related to quota can
+      /// only be requested on Google Analytics 360 properties. This method is only
+      /// available to Administrators.
       ///
       /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
       /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
@@ -7205,8 +7277,10 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// records of each time a user reads Google Analytics reporting data. Access
       /// records are retained for up to 2 years.
       ///
-      /// Data Access Reports can be requested for a property. The property must be
-      /// in Google Analytics 360. This method is only available to Administrators.
+      /// Data Access Reports can be requested for a property. Reports may be
+      /// requested for any property, but dimensions that aren't related to quota can
+      /// only be requested on Google Analytics 360 properties. This method is only
+      /// available to Administrators.
       ///
       /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
       /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
@@ -7228,8 +7302,10 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// records of each time a user reads Google Analytics reporting data. Access
       /// records are retained for up to 2 years.
       ///
-      /// Data Access Reports can be requested for a property. The property must be
-      /// in Google Analytics 360. This method is only available to Administrators.
+      /// Data Access Reports can be requested for a property. Reports may be
+      /// requested for any property, but dimensions that aren't related to quota can
+      /// only be requested on Google Analytics 360 properties. This method is only
+      /// available to Administrators.
       ///
       /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
       /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
@@ -7253,8 +7329,10 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// records of each time a user reads Google Analytics reporting data. Access
       /// records are retained for up to 2 years.
       ///
-      /// Data Access Reports can be requested for a property. The property must be
-      /// in Google Analytics 360. This method is only available to Administrators.
+      /// Data Access Reports can be requested for a property. Reports may be
+      /// requested for any property, but dimensions that aren't related to quota can
+      /// only be requested on Google Analytics 360 properties. This method is only
+      /// available to Administrators.
       ///
       /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
       /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
@@ -9592,54 +9670,6 @@ namespace Google.Analytics.Admin.V1Alpha {
         return CallInvoker.AsyncUnaryCall(__Method_CreateSubproperty, null, options, request);
       }
       /// <summary>
-      /// Deletes a subproperty event filter.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSubpropertyEventFilter(global::Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return DeleteSubpropertyEventFilter(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Deletes a subproperty event filter.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSubpropertyEventFilter(global::Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_DeleteSubpropertyEventFilter, null, options, request);
-      }
-      /// <summary>
-      /// Deletes a subproperty event filter.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSubpropertyEventFilterAsync(global::Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return DeleteSubpropertyEventFilterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Deletes a subproperty event filter.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSubpropertyEventFilterAsync(global::Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_DeleteSubpropertyEventFilter, null, options, request);
-      }
-      /// <summary>
       /// Creates a subproperty Event Filter.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -9686,6 +9716,198 @@ namespace Google.Analytics.Admin.V1Alpha {
       public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter> CreateSubpropertyEventFilterAsync(global::Google.Analytics.Admin.V1Alpha.CreateSubpropertyEventFilterRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateSubpropertyEventFilter, null, options, request);
+      }
+      /// <summary>
+      /// Lookup for a single subproperty Event Filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter GetSubpropertyEventFilter(global::Google.Analytics.Admin.V1Alpha.GetSubpropertyEventFilterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSubpropertyEventFilter(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup for a single subproperty Event Filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter GetSubpropertyEventFilter(global::Google.Analytics.Admin.V1Alpha.GetSubpropertyEventFilterRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetSubpropertyEventFilter, null, options, request);
+      }
+      /// <summary>
+      /// Lookup for a single subproperty Event Filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter> GetSubpropertyEventFilterAsync(global::Google.Analytics.Admin.V1Alpha.GetSubpropertyEventFilterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSubpropertyEventFilterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup for a single subproperty Event Filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter> GetSubpropertyEventFilterAsync(global::Google.Analytics.Admin.V1Alpha.GetSubpropertyEventFilterRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetSubpropertyEventFilter, null, options, request);
+      }
+      /// <summary>
+      /// List all subproperty Event Filters on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersResponse ListSubpropertyEventFilters(global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSubpropertyEventFilters(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List all subproperty Event Filters on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersResponse ListSubpropertyEventFilters(global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListSubpropertyEventFilters, null, options, request);
+      }
+      /// <summary>
+      /// List all subproperty Event Filters on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersResponse> ListSubpropertyEventFiltersAsync(global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSubpropertyEventFiltersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List all subproperty Event Filters on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersResponse> ListSubpropertyEventFiltersAsync(global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListSubpropertyEventFilters, null, options, request);
+      }
+      /// <summary>
+      /// Updates a subproperty Event Filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter UpdateSubpropertyEventFilter(global::Google.Analytics.Admin.V1Alpha.UpdateSubpropertyEventFilterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSubpropertyEventFilter(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a subproperty Event Filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter UpdateSubpropertyEventFilter(global::Google.Analytics.Admin.V1Alpha.UpdateSubpropertyEventFilterRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateSubpropertyEventFilter, null, options, request);
+      }
+      /// <summary>
+      /// Updates a subproperty Event Filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter> UpdateSubpropertyEventFilterAsync(global::Google.Analytics.Admin.V1Alpha.UpdateSubpropertyEventFilterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSubpropertyEventFilterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a subproperty Event Filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter> UpdateSubpropertyEventFilterAsync(global::Google.Analytics.Admin.V1Alpha.UpdateSubpropertyEventFilterRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateSubpropertyEventFilter, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a subproperty event filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSubpropertyEventFilter(global::Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteSubpropertyEventFilter(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a subproperty event filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSubpropertyEventFilter(global::Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteSubpropertyEventFilter, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a subproperty event filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSubpropertyEventFilterAsync(global::Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteSubpropertyEventFilterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a subproperty event filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSubpropertyEventFilterAsync(global::Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteSubpropertyEventFilter, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -9827,8 +10049,11 @@ namespace Google.Analytics.Admin.V1Alpha {
           .AddMethod(__Method_CreateRollupPropertySourceLink, serviceImpl.CreateRollupPropertySourceLink)
           .AddMethod(__Method_DeleteRollupPropertySourceLink, serviceImpl.DeleteRollupPropertySourceLink)
           .AddMethod(__Method_CreateSubproperty, serviceImpl.CreateSubproperty)
-          .AddMethod(__Method_DeleteSubpropertyEventFilter, serviceImpl.DeleteSubpropertyEventFilter)
-          .AddMethod(__Method_CreateSubpropertyEventFilter, serviceImpl.CreateSubpropertyEventFilter).Build();
+          .AddMethod(__Method_CreateSubpropertyEventFilter, serviceImpl.CreateSubpropertyEventFilter)
+          .AddMethod(__Method_GetSubpropertyEventFilter, serviceImpl.GetSubpropertyEventFilter)
+          .AddMethod(__Method_ListSubpropertyEventFilters, serviceImpl.ListSubpropertyEventFilters)
+          .AddMethod(__Method_UpdateSubpropertyEventFilter, serviceImpl.UpdateSubpropertyEventFilter)
+          .AddMethod(__Method_DeleteSubpropertyEventFilter, serviceImpl.DeleteSubpropertyEventFilter).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -9964,8 +10189,11 @@ namespace Google.Analytics.Admin.V1Alpha {
       serviceBinder.AddMethod(__Method_CreateRollupPropertySourceLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertySourceLinkRequest, global::Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink>(serviceImpl.CreateRollupPropertySourceLink));
       serviceBinder.AddMethod(__Method_DeleteRollupPropertySourceLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteRollupPropertySourceLinkRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteRollupPropertySourceLink));
       serviceBinder.AddMethod(__Method_CreateSubproperty, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateSubpropertyRequest, global::Google.Analytics.Admin.V1Alpha.CreateSubpropertyResponse>(serviceImpl.CreateSubproperty));
-      serviceBinder.AddMethod(__Method_DeleteSubpropertyEventFilter, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteSubpropertyEventFilter));
       serviceBinder.AddMethod(__Method_CreateSubpropertyEventFilter, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateSubpropertyEventFilterRequest, global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter>(serviceImpl.CreateSubpropertyEventFilter));
+      serviceBinder.AddMethod(__Method_GetSubpropertyEventFilter, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetSubpropertyEventFilterRequest, global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter>(serviceImpl.GetSubpropertyEventFilter));
+      serviceBinder.AddMethod(__Method_ListSubpropertyEventFilters, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersRequest, global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersResponse>(serviceImpl.ListSubpropertyEventFilters));
+      serviceBinder.AddMethod(__Method_UpdateSubpropertyEventFilter, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateSubpropertyEventFilterRequest, global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter>(serviceImpl.UpdateSubpropertyEventFilter));
+      serviceBinder.AddMethod(__Method_DeleteSubpropertyEventFilter, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteSubpropertyEventFilter));
     }
 
   }
