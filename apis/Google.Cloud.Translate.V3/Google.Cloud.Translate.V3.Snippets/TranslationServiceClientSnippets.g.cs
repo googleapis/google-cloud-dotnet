@@ -1548,5 +1548,1460 @@ namespace GoogleCSharpSnippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for CreateAdaptiveMtDataset</summary>
+        public void CreateAdaptiveMtDatasetRequestObject()
+        {
+            // Snippet: CreateAdaptiveMtDataset(CreateAdaptiveMtDatasetRequest, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            CreateAdaptiveMtDatasetRequest request = new CreateAdaptiveMtDatasetRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                AdaptiveMtDataset = new AdaptiveMtDataset(),
+            };
+            // Make the request
+            AdaptiveMtDataset response = translationServiceClient.CreateAdaptiveMtDataset(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAdaptiveMtDatasetAsync</summary>
+        public async Task CreateAdaptiveMtDatasetRequestObjectAsync()
+        {
+            // Snippet: CreateAdaptiveMtDatasetAsync(CreateAdaptiveMtDatasetRequest, CallSettings)
+            // Additional: CreateAdaptiveMtDatasetAsync(CreateAdaptiveMtDatasetRequest, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateAdaptiveMtDatasetRequest request = new CreateAdaptiveMtDatasetRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                AdaptiveMtDataset = new AdaptiveMtDataset(),
+            };
+            // Make the request
+            AdaptiveMtDataset response = await translationServiceClient.CreateAdaptiveMtDatasetAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAdaptiveMtDataset</summary>
+        public void CreateAdaptiveMtDataset()
+        {
+            // Snippet: CreateAdaptiveMtDataset(string, AdaptiveMtDataset, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            AdaptiveMtDataset adaptiveMtDataset = new AdaptiveMtDataset();
+            // Make the request
+            AdaptiveMtDataset response = translationServiceClient.CreateAdaptiveMtDataset(parent, adaptiveMtDataset);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAdaptiveMtDatasetAsync</summary>
+        public async Task CreateAdaptiveMtDatasetAsync()
+        {
+            // Snippet: CreateAdaptiveMtDatasetAsync(string, AdaptiveMtDataset, CallSettings)
+            // Additional: CreateAdaptiveMtDatasetAsync(string, AdaptiveMtDataset, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            AdaptiveMtDataset adaptiveMtDataset = new AdaptiveMtDataset();
+            // Make the request
+            AdaptiveMtDataset response = await translationServiceClient.CreateAdaptiveMtDatasetAsync(parent, adaptiveMtDataset);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAdaptiveMtDataset</summary>
+        public void CreateAdaptiveMtDatasetResourceNames()
+        {
+            // Snippet: CreateAdaptiveMtDataset(LocationName, AdaptiveMtDataset, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            AdaptiveMtDataset adaptiveMtDataset = new AdaptiveMtDataset();
+            // Make the request
+            AdaptiveMtDataset response = translationServiceClient.CreateAdaptiveMtDataset(parent, adaptiveMtDataset);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAdaptiveMtDatasetAsync</summary>
+        public async Task CreateAdaptiveMtDatasetResourceNamesAsync()
+        {
+            // Snippet: CreateAdaptiveMtDatasetAsync(LocationName, AdaptiveMtDataset, CallSettings)
+            // Additional: CreateAdaptiveMtDatasetAsync(LocationName, AdaptiveMtDataset, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            AdaptiveMtDataset adaptiveMtDataset = new AdaptiveMtDataset();
+            // Make the request
+            AdaptiveMtDataset response = await translationServiceClient.CreateAdaptiveMtDatasetAsync(parent, adaptiveMtDataset);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAdaptiveMtDataset</summary>
+        public void DeleteAdaptiveMtDatasetRequestObject()
+        {
+            // Snippet: DeleteAdaptiveMtDataset(DeleteAdaptiveMtDatasetRequest, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteAdaptiveMtDatasetRequest request = new DeleteAdaptiveMtDatasetRequest
+            {
+                AdaptiveMtDatasetName = AdaptiveMtDatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
+            };
+            // Make the request
+            translationServiceClient.DeleteAdaptiveMtDataset(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAdaptiveMtDatasetAsync</summary>
+        public async Task DeleteAdaptiveMtDatasetRequestObjectAsync()
+        {
+            // Snippet: DeleteAdaptiveMtDatasetAsync(DeleteAdaptiveMtDatasetRequest, CallSettings)
+            // Additional: DeleteAdaptiveMtDatasetAsync(DeleteAdaptiveMtDatasetRequest, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteAdaptiveMtDatasetRequest request = new DeleteAdaptiveMtDatasetRequest
+            {
+                AdaptiveMtDatasetName = AdaptiveMtDatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
+            };
+            // Make the request
+            await translationServiceClient.DeleteAdaptiveMtDatasetAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAdaptiveMtDataset</summary>
+        public void DeleteAdaptiveMtDataset()
+        {
+            // Snippet: DeleteAdaptiveMtDataset(string, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/adaptiveMtDatasets/[DATASET]";
+            // Make the request
+            translationServiceClient.DeleteAdaptiveMtDataset(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAdaptiveMtDatasetAsync</summary>
+        public async Task DeleteAdaptiveMtDatasetAsync()
+        {
+            // Snippet: DeleteAdaptiveMtDatasetAsync(string, CallSettings)
+            // Additional: DeleteAdaptiveMtDatasetAsync(string, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/adaptiveMtDatasets/[DATASET]";
+            // Make the request
+            await translationServiceClient.DeleteAdaptiveMtDatasetAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAdaptiveMtDataset</summary>
+        public void DeleteAdaptiveMtDatasetResourceNames()
+        {
+            // Snippet: DeleteAdaptiveMtDataset(AdaptiveMtDatasetName, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            AdaptiveMtDatasetName name = AdaptiveMtDatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]");
+            // Make the request
+            translationServiceClient.DeleteAdaptiveMtDataset(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAdaptiveMtDatasetAsync</summary>
+        public async Task DeleteAdaptiveMtDatasetResourceNamesAsync()
+        {
+            // Snippet: DeleteAdaptiveMtDatasetAsync(AdaptiveMtDatasetName, CallSettings)
+            // Additional: DeleteAdaptiveMtDatasetAsync(AdaptiveMtDatasetName, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AdaptiveMtDatasetName name = AdaptiveMtDatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]");
+            // Make the request
+            await translationServiceClient.DeleteAdaptiveMtDatasetAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAdaptiveMtDataset</summary>
+        public void GetAdaptiveMtDatasetRequestObject()
+        {
+            // Snippet: GetAdaptiveMtDataset(GetAdaptiveMtDatasetRequest, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            GetAdaptiveMtDatasetRequest request = new GetAdaptiveMtDatasetRequest
+            {
+                AdaptiveMtDatasetName = AdaptiveMtDatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
+            };
+            // Make the request
+            AdaptiveMtDataset response = translationServiceClient.GetAdaptiveMtDataset(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAdaptiveMtDatasetAsync</summary>
+        public async Task GetAdaptiveMtDatasetRequestObjectAsync()
+        {
+            // Snippet: GetAdaptiveMtDatasetAsync(GetAdaptiveMtDatasetRequest, CallSettings)
+            // Additional: GetAdaptiveMtDatasetAsync(GetAdaptiveMtDatasetRequest, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetAdaptiveMtDatasetRequest request = new GetAdaptiveMtDatasetRequest
+            {
+                AdaptiveMtDatasetName = AdaptiveMtDatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
+            };
+            // Make the request
+            AdaptiveMtDataset response = await translationServiceClient.GetAdaptiveMtDatasetAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAdaptiveMtDataset</summary>
+        public void GetAdaptiveMtDataset()
+        {
+            // Snippet: GetAdaptiveMtDataset(string, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/adaptiveMtDatasets/[DATASET]";
+            // Make the request
+            AdaptiveMtDataset response = translationServiceClient.GetAdaptiveMtDataset(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAdaptiveMtDatasetAsync</summary>
+        public async Task GetAdaptiveMtDatasetAsync()
+        {
+            // Snippet: GetAdaptiveMtDatasetAsync(string, CallSettings)
+            // Additional: GetAdaptiveMtDatasetAsync(string, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/adaptiveMtDatasets/[DATASET]";
+            // Make the request
+            AdaptiveMtDataset response = await translationServiceClient.GetAdaptiveMtDatasetAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAdaptiveMtDataset</summary>
+        public void GetAdaptiveMtDatasetResourceNames()
+        {
+            // Snippet: GetAdaptiveMtDataset(AdaptiveMtDatasetName, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            AdaptiveMtDatasetName name = AdaptiveMtDatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]");
+            // Make the request
+            AdaptiveMtDataset response = translationServiceClient.GetAdaptiveMtDataset(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAdaptiveMtDatasetAsync</summary>
+        public async Task GetAdaptiveMtDatasetResourceNamesAsync()
+        {
+            // Snippet: GetAdaptiveMtDatasetAsync(AdaptiveMtDatasetName, CallSettings)
+            // Additional: GetAdaptiveMtDatasetAsync(AdaptiveMtDatasetName, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AdaptiveMtDatasetName name = AdaptiveMtDatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]");
+            // Make the request
+            AdaptiveMtDataset response = await translationServiceClient.GetAdaptiveMtDatasetAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAdaptiveMtDatasets</summary>
+        public void ListAdaptiveMtDatasetsRequestObject()
+        {
+            // Snippet: ListAdaptiveMtDatasets(ListAdaptiveMtDatasetsRequest, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            ListAdaptiveMtDatasetsRequest request = new ListAdaptiveMtDatasetsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListAdaptiveMtDatasetsResponse, AdaptiveMtDataset> response = translationServiceClient.ListAdaptiveMtDatasets(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AdaptiveMtDataset item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAdaptiveMtDatasetsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AdaptiveMtDataset item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AdaptiveMtDataset> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AdaptiveMtDataset item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAdaptiveMtDatasetsAsync</summary>
+        public async Task ListAdaptiveMtDatasetsRequestObjectAsync()
+        {
+            // Snippet: ListAdaptiveMtDatasetsAsync(ListAdaptiveMtDatasetsRequest, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListAdaptiveMtDatasetsRequest request = new ListAdaptiveMtDatasetsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListAdaptiveMtDatasetsResponse, AdaptiveMtDataset> response = translationServiceClient.ListAdaptiveMtDatasetsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AdaptiveMtDataset item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAdaptiveMtDatasetsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AdaptiveMtDataset item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AdaptiveMtDataset> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AdaptiveMtDataset item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAdaptiveMtDatasets</summary>
+        public void ListAdaptiveMtDatasets()
+        {
+            // Snippet: ListAdaptiveMtDatasets(string, string, int?, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListAdaptiveMtDatasetsResponse, AdaptiveMtDataset> response = translationServiceClient.ListAdaptiveMtDatasets(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AdaptiveMtDataset item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAdaptiveMtDatasetsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AdaptiveMtDataset item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AdaptiveMtDataset> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AdaptiveMtDataset item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAdaptiveMtDatasetsAsync</summary>
+        public async Task ListAdaptiveMtDatasetsAsync()
+        {
+            // Snippet: ListAdaptiveMtDatasetsAsync(string, string, int?, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListAdaptiveMtDatasetsResponse, AdaptiveMtDataset> response = translationServiceClient.ListAdaptiveMtDatasetsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AdaptiveMtDataset item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAdaptiveMtDatasetsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AdaptiveMtDataset item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AdaptiveMtDataset> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AdaptiveMtDataset item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAdaptiveMtDatasets</summary>
+        public void ListAdaptiveMtDatasetsResourceNames()
+        {
+            // Snippet: ListAdaptiveMtDatasets(LocationName, string, int?, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListAdaptiveMtDatasetsResponse, AdaptiveMtDataset> response = translationServiceClient.ListAdaptiveMtDatasets(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AdaptiveMtDataset item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAdaptiveMtDatasetsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AdaptiveMtDataset item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AdaptiveMtDataset> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AdaptiveMtDataset item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAdaptiveMtDatasetsAsync</summary>
+        public async Task ListAdaptiveMtDatasetsResourceNamesAsync()
+        {
+            // Snippet: ListAdaptiveMtDatasetsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListAdaptiveMtDatasetsResponse, AdaptiveMtDataset> response = translationServiceClient.ListAdaptiveMtDatasetsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AdaptiveMtDataset item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAdaptiveMtDatasetsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AdaptiveMtDataset item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AdaptiveMtDataset> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AdaptiveMtDataset item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for AdaptiveMtTranslate</summary>
+        public void AdaptiveMtTranslateRequestObject()
+        {
+            // Snippet: AdaptiveMtTranslate(AdaptiveMtTranslateRequest, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            AdaptiveMtTranslateRequest request = new AdaptiveMtTranslateRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                DatasetAsAdaptiveMtDatasetName = AdaptiveMtDatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
+                Content = { "", },
+            };
+            // Make the request
+            AdaptiveMtTranslateResponse response = translationServiceClient.AdaptiveMtTranslate(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AdaptiveMtTranslateAsync</summary>
+        public async Task AdaptiveMtTranslateRequestObjectAsync()
+        {
+            // Snippet: AdaptiveMtTranslateAsync(AdaptiveMtTranslateRequest, CallSettings)
+            // Additional: AdaptiveMtTranslateAsync(AdaptiveMtTranslateRequest, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AdaptiveMtTranslateRequest request = new AdaptiveMtTranslateRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                DatasetAsAdaptiveMtDatasetName = AdaptiveMtDatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
+                Content = { "", },
+            };
+            // Make the request
+            AdaptiveMtTranslateResponse response = await translationServiceClient.AdaptiveMtTranslateAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AdaptiveMtTranslate</summary>
+        public void AdaptiveMtTranslate()
+        {
+            // Snippet: AdaptiveMtTranslate(string, IEnumerable<string>, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            IEnumerable<string> content = new string[] { "", };
+            // Make the request
+            AdaptiveMtTranslateResponse response = translationServiceClient.AdaptiveMtTranslate(parent, content);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AdaptiveMtTranslateAsync</summary>
+        public async Task AdaptiveMtTranslateAsync()
+        {
+            // Snippet: AdaptiveMtTranslateAsync(string, IEnumerable<string>, CallSettings)
+            // Additional: AdaptiveMtTranslateAsync(string, IEnumerable<string>, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            IEnumerable<string> content = new string[] { "", };
+            // Make the request
+            AdaptiveMtTranslateResponse response = await translationServiceClient.AdaptiveMtTranslateAsync(parent, content);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AdaptiveMtTranslate</summary>
+        public void AdaptiveMtTranslateResourceNames()
+        {
+            // Snippet: AdaptiveMtTranslate(LocationName, IEnumerable<string>, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            IEnumerable<string> content = new string[] { "", };
+            // Make the request
+            AdaptiveMtTranslateResponse response = translationServiceClient.AdaptiveMtTranslate(parent, content);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AdaptiveMtTranslateAsync</summary>
+        public async Task AdaptiveMtTranslateResourceNamesAsync()
+        {
+            // Snippet: AdaptiveMtTranslateAsync(LocationName, IEnumerable<string>, CallSettings)
+            // Additional: AdaptiveMtTranslateAsync(LocationName, IEnumerable<string>, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            IEnumerable<string> content = new string[] { "", };
+            // Make the request
+            AdaptiveMtTranslateResponse response = await translationServiceClient.AdaptiveMtTranslateAsync(parent, content);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAdaptiveMtFile</summary>
+        public void GetAdaptiveMtFileRequestObject()
+        {
+            // Snippet: GetAdaptiveMtFile(GetAdaptiveMtFileRequest, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            GetAdaptiveMtFileRequest request = new GetAdaptiveMtFileRequest
+            {
+                AdaptiveMtFileName = AdaptiveMtFileName.FromProjectLocationDatasetFile("[PROJECT]", "[LOCATION]", "[DATASET]", "[FILE]"),
+            };
+            // Make the request
+            AdaptiveMtFile response = translationServiceClient.GetAdaptiveMtFile(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAdaptiveMtFileAsync</summary>
+        public async Task GetAdaptiveMtFileRequestObjectAsync()
+        {
+            // Snippet: GetAdaptiveMtFileAsync(GetAdaptiveMtFileRequest, CallSettings)
+            // Additional: GetAdaptiveMtFileAsync(GetAdaptiveMtFileRequest, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetAdaptiveMtFileRequest request = new GetAdaptiveMtFileRequest
+            {
+                AdaptiveMtFileName = AdaptiveMtFileName.FromProjectLocationDatasetFile("[PROJECT]", "[LOCATION]", "[DATASET]", "[FILE]"),
+            };
+            // Make the request
+            AdaptiveMtFile response = await translationServiceClient.GetAdaptiveMtFileAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAdaptiveMtFile</summary>
+        public void GetAdaptiveMtFile()
+        {
+            // Snippet: GetAdaptiveMtFile(string, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/adaptiveMtDatasets/[DATASET]/adaptiveMtFiles/[FILE]";
+            // Make the request
+            AdaptiveMtFile response = translationServiceClient.GetAdaptiveMtFile(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAdaptiveMtFileAsync</summary>
+        public async Task GetAdaptiveMtFileAsync()
+        {
+            // Snippet: GetAdaptiveMtFileAsync(string, CallSettings)
+            // Additional: GetAdaptiveMtFileAsync(string, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/adaptiveMtDatasets/[DATASET]/adaptiveMtFiles/[FILE]";
+            // Make the request
+            AdaptiveMtFile response = await translationServiceClient.GetAdaptiveMtFileAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAdaptiveMtFile</summary>
+        public void GetAdaptiveMtFileResourceNames()
+        {
+            // Snippet: GetAdaptiveMtFile(AdaptiveMtFileName, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            AdaptiveMtFileName name = AdaptiveMtFileName.FromProjectLocationDatasetFile("[PROJECT]", "[LOCATION]", "[DATASET]", "[FILE]");
+            // Make the request
+            AdaptiveMtFile response = translationServiceClient.GetAdaptiveMtFile(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAdaptiveMtFileAsync</summary>
+        public async Task GetAdaptiveMtFileResourceNamesAsync()
+        {
+            // Snippet: GetAdaptiveMtFileAsync(AdaptiveMtFileName, CallSettings)
+            // Additional: GetAdaptiveMtFileAsync(AdaptiveMtFileName, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AdaptiveMtFileName name = AdaptiveMtFileName.FromProjectLocationDatasetFile("[PROJECT]", "[LOCATION]", "[DATASET]", "[FILE]");
+            // Make the request
+            AdaptiveMtFile response = await translationServiceClient.GetAdaptiveMtFileAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAdaptiveMtFile</summary>
+        public void DeleteAdaptiveMtFileRequestObject()
+        {
+            // Snippet: DeleteAdaptiveMtFile(DeleteAdaptiveMtFileRequest, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteAdaptiveMtFileRequest request = new DeleteAdaptiveMtFileRequest
+            {
+                AdaptiveMtFileName = AdaptiveMtFileName.FromProjectLocationDatasetFile("[PROJECT]", "[LOCATION]", "[DATASET]", "[FILE]"),
+            };
+            // Make the request
+            translationServiceClient.DeleteAdaptiveMtFile(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAdaptiveMtFileAsync</summary>
+        public async Task DeleteAdaptiveMtFileRequestObjectAsync()
+        {
+            // Snippet: DeleteAdaptiveMtFileAsync(DeleteAdaptiveMtFileRequest, CallSettings)
+            // Additional: DeleteAdaptiveMtFileAsync(DeleteAdaptiveMtFileRequest, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteAdaptiveMtFileRequest request = new DeleteAdaptiveMtFileRequest
+            {
+                AdaptiveMtFileName = AdaptiveMtFileName.FromProjectLocationDatasetFile("[PROJECT]", "[LOCATION]", "[DATASET]", "[FILE]"),
+            };
+            // Make the request
+            await translationServiceClient.DeleteAdaptiveMtFileAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAdaptiveMtFile</summary>
+        public void DeleteAdaptiveMtFile()
+        {
+            // Snippet: DeleteAdaptiveMtFile(string, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/adaptiveMtDatasets/[DATASET]/adaptiveMtFiles/[FILE]";
+            // Make the request
+            translationServiceClient.DeleteAdaptiveMtFile(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAdaptiveMtFileAsync</summary>
+        public async Task DeleteAdaptiveMtFileAsync()
+        {
+            // Snippet: DeleteAdaptiveMtFileAsync(string, CallSettings)
+            // Additional: DeleteAdaptiveMtFileAsync(string, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/adaptiveMtDatasets/[DATASET]/adaptiveMtFiles/[FILE]";
+            // Make the request
+            await translationServiceClient.DeleteAdaptiveMtFileAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAdaptiveMtFile</summary>
+        public void DeleteAdaptiveMtFileResourceNames()
+        {
+            // Snippet: DeleteAdaptiveMtFile(AdaptiveMtFileName, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            AdaptiveMtFileName name = AdaptiveMtFileName.FromProjectLocationDatasetFile("[PROJECT]", "[LOCATION]", "[DATASET]", "[FILE]");
+            // Make the request
+            translationServiceClient.DeleteAdaptiveMtFile(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAdaptiveMtFileAsync</summary>
+        public async Task DeleteAdaptiveMtFileResourceNamesAsync()
+        {
+            // Snippet: DeleteAdaptiveMtFileAsync(AdaptiveMtFileName, CallSettings)
+            // Additional: DeleteAdaptiveMtFileAsync(AdaptiveMtFileName, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AdaptiveMtFileName name = AdaptiveMtFileName.FromProjectLocationDatasetFile("[PROJECT]", "[LOCATION]", "[DATASET]", "[FILE]");
+            // Make the request
+            await translationServiceClient.DeleteAdaptiveMtFileAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportAdaptiveMtFile</summary>
+        public void ImportAdaptiveMtFileRequestObject()
+        {
+            // Snippet: ImportAdaptiveMtFile(ImportAdaptiveMtFileRequest, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            ImportAdaptiveMtFileRequest request = new ImportAdaptiveMtFileRequest
+            {
+                ParentAsAdaptiveMtDatasetName = AdaptiveMtDatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
+                FileInputSource = new FileInputSource(),
+            };
+            // Make the request
+            ImportAdaptiveMtFileResponse response = translationServiceClient.ImportAdaptiveMtFile(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportAdaptiveMtFileAsync</summary>
+        public async Task ImportAdaptiveMtFileRequestObjectAsync()
+        {
+            // Snippet: ImportAdaptiveMtFileAsync(ImportAdaptiveMtFileRequest, CallSettings)
+            // Additional: ImportAdaptiveMtFileAsync(ImportAdaptiveMtFileRequest, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ImportAdaptiveMtFileRequest request = new ImportAdaptiveMtFileRequest
+            {
+                ParentAsAdaptiveMtDatasetName = AdaptiveMtDatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
+                FileInputSource = new FileInputSource(),
+            };
+            // Make the request
+            ImportAdaptiveMtFileResponse response = await translationServiceClient.ImportAdaptiveMtFileAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportAdaptiveMtFile</summary>
+        public void ImportAdaptiveMtFile()
+        {
+            // Snippet: ImportAdaptiveMtFile(string, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/adaptiveMtDatasets/[DATASET]";
+            // Make the request
+            ImportAdaptiveMtFileResponse response = translationServiceClient.ImportAdaptiveMtFile(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportAdaptiveMtFileAsync</summary>
+        public async Task ImportAdaptiveMtFileAsync()
+        {
+            // Snippet: ImportAdaptiveMtFileAsync(string, CallSettings)
+            // Additional: ImportAdaptiveMtFileAsync(string, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/adaptiveMtDatasets/[DATASET]";
+            // Make the request
+            ImportAdaptiveMtFileResponse response = await translationServiceClient.ImportAdaptiveMtFileAsync(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportAdaptiveMtFile</summary>
+        public void ImportAdaptiveMtFileResourceNames()
+        {
+            // Snippet: ImportAdaptiveMtFile(AdaptiveMtDatasetName, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            AdaptiveMtDatasetName parent = AdaptiveMtDatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]");
+            // Make the request
+            ImportAdaptiveMtFileResponse response = translationServiceClient.ImportAdaptiveMtFile(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportAdaptiveMtFileAsync</summary>
+        public async Task ImportAdaptiveMtFileResourceNamesAsync()
+        {
+            // Snippet: ImportAdaptiveMtFileAsync(AdaptiveMtDatasetName, CallSettings)
+            // Additional: ImportAdaptiveMtFileAsync(AdaptiveMtDatasetName, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AdaptiveMtDatasetName parent = AdaptiveMtDatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]");
+            // Make the request
+            ImportAdaptiveMtFileResponse response = await translationServiceClient.ImportAdaptiveMtFileAsync(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAdaptiveMtFiles</summary>
+        public void ListAdaptiveMtFilesRequestObject()
+        {
+            // Snippet: ListAdaptiveMtFiles(ListAdaptiveMtFilesRequest, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            ListAdaptiveMtFilesRequest request = new ListAdaptiveMtFilesRequest
+            {
+                ParentAsAdaptiveMtDatasetName = AdaptiveMtDatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
+            };
+            // Make the request
+            PagedEnumerable<ListAdaptiveMtFilesResponse, AdaptiveMtFile> response = translationServiceClient.ListAdaptiveMtFiles(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AdaptiveMtFile item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAdaptiveMtFilesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AdaptiveMtFile item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AdaptiveMtFile> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AdaptiveMtFile item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAdaptiveMtFilesAsync</summary>
+        public async Task ListAdaptiveMtFilesRequestObjectAsync()
+        {
+            // Snippet: ListAdaptiveMtFilesAsync(ListAdaptiveMtFilesRequest, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListAdaptiveMtFilesRequest request = new ListAdaptiveMtFilesRequest
+            {
+                ParentAsAdaptiveMtDatasetName = AdaptiveMtDatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListAdaptiveMtFilesResponse, AdaptiveMtFile> response = translationServiceClient.ListAdaptiveMtFilesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AdaptiveMtFile item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAdaptiveMtFilesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AdaptiveMtFile item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AdaptiveMtFile> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AdaptiveMtFile item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAdaptiveMtFiles</summary>
+        public void ListAdaptiveMtFiles()
+        {
+            // Snippet: ListAdaptiveMtFiles(string, string, int?, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/adaptiveMtDatasets/[DATASET]";
+            // Make the request
+            PagedEnumerable<ListAdaptiveMtFilesResponse, AdaptiveMtFile> response = translationServiceClient.ListAdaptiveMtFiles(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AdaptiveMtFile item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAdaptiveMtFilesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AdaptiveMtFile item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AdaptiveMtFile> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AdaptiveMtFile item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAdaptiveMtFilesAsync</summary>
+        public async Task ListAdaptiveMtFilesAsync()
+        {
+            // Snippet: ListAdaptiveMtFilesAsync(string, string, int?, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/adaptiveMtDatasets/[DATASET]";
+            // Make the request
+            PagedAsyncEnumerable<ListAdaptiveMtFilesResponse, AdaptiveMtFile> response = translationServiceClient.ListAdaptiveMtFilesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AdaptiveMtFile item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAdaptiveMtFilesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AdaptiveMtFile item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AdaptiveMtFile> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AdaptiveMtFile item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAdaptiveMtFiles</summary>
+        public void ListAdaptiveMtFilesResourceNames()
+        {
+            // Snippet: ListAdaptiveMtFiles(AdaptiveMtDatasetName, string, int?, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            AdaptiveMtDatasetName parent = AdaptiveMtDatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]");
+            // Make the request
+            PagedEnumerable<ListAdaptiveMtFilesResponse, AdaptiveMtFile> response = translationServiceClient.ListAdaptiveMtFiles(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AdaptiveMtFile item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAdaptiveMtFilesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AdaptiveMtFile item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AdaptiveMtFile> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AdaptiveMtFile item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAdaptiveMtFilesAsync</summary>
+        public async Task ListAdaptiveMtFilesResourceNamesAsync()
+        {
+            // Snippet: ListAdaptiveMtFilesAsync(AdaptiveMtDatasetName, string, int?, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AdaptiveMtDatasetName parent = AdaptiveMtDatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]");
+            // Make the request
+            PagedAsyncEnumerable<ListAdaptiveMtFilesResponse, AdaptiveMtFile> response = translationServiceClient.ListAdaptiveMtFilesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AdaptiveMtFile item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAdaptiveMtFilesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AdaptiveMtFile item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AdaptiveMtFile> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AdaptiveMtFile item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAdaptiveMtSentences</summary>
+        public void ListAdaptiveMtSentencesRequestObject()
+        {
+            // Snippet: ListAdaptiveMtSentences(ListAdaptiveMtSentencesRequest, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            ListAdaptiveMtSentencesRequest request = new ListAdaptiveMtSentencesRequest
+            {
+                ParentAsAdaptiveMtFileName = AdaptiveMtFileName.FromProjectLocationDatasetFile("[PROJECT]", "[LOCATION]", "[DATASET]", "[FILE]"),
+            };
+            // Make the request
+            PagedEnumerable<ListAdaptiveMtSentencesResponse, AdaptiveMtSentence> response = translationServiceClient.ListAdaptiveMtSentences(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AdaptiveMtSentence item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAdaptiveMtSentencesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AdaptiveMtSentence item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AdaptiveMtSentence> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AdaptiveMtSentence item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAdaptiveMtSentencesAsync</summary>
+        public async Task ListAdaptiveMtSentencesRequestObjectAsync()
+        {
+            // Snippet: ListAdaptiveMtSentencesAsync(ListAdaptiveMtSentencesRequest, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListAdaptiveMtSentencesRequest request = new ListAdaptiveMtSentencesRequest
+            {
+                ParentAsAdaptiveMtFileName = AdaptiveMtFileName.FromProjectLocationDatasetFile("[PROJECT]", "[LOCATION]", "[DATASET]", "[FILE]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListAdaptiveMtSentencesResponse, AdaptiveMtSentence> response = translationServiceClient.ListAdaptiveMtSentencesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AdaptiveMtSentence item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAdaptiveMtSentencesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AdaptiveMtSentence item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AdaptiveMtSentence> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AdaptiveMtSentence item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAdaptiveMtSentences</summary>
+        public void ListAdaptiveMtSentences()
+        {
+            // Snippet: ListAdaptiveMtSentences(string, string, int?, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/adaptiveMtDatasets/[DATASET]/adaptiveMtFiles/[FILE]";
+            // Make the request
+            PagedEnumerable<ListAdaptiveMtSentencesResponse, AdaptiveMtSentence> response = translationServiceClient.ListAdaptiveMtSentences(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AdaptiveMtSentence item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAdaptiveMtSentencesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AdaptiveMtSentence item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AdaptiveMtSentence> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AdaptiveMtSentence item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAdaptiveMtSentencesAsync</summary>
+        public async Task ListAdaptiveMtSentencesAsync()
+        {
+            // Snippet: ListAdaptiveMtSentencesAsync(string, string, int?, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/adaptiveMtDatasets/[DATASET]/adaptiveMtFiles/[FILE]";
+            // Make the request
+            PagedAsyncEnumerable<ListAdaptiveMtSentencesResponse, AdaptiveMtSentence> response = translationServiceClient.ListAdaptiveMtSentencesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AdaptiveMtSentence item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAdaptiveMtSentencesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AdaptiveMtSentence item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AdaptiveMtSentence> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AdaptiveMtSentence item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAdaptiveMtSentences</summary>
+        public void ListAdaptiveMtSentencesResourceNames()
+        {
+            // Snippet: ListAdaptiveMtSentences(AdaptiveMtFileName, string, int?, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            AdaptiveMtFileName parent = AdaptiveMtFileName.FromProjectLocationDatasetFile("[PROJECT]", "[LOCATION]", "[DATASET]", "[FILE]");
+            // Make the request
+            PagedEnumerable<ListAdaptiveMtSentencesResponse, AdaptiveMtSentence> response = translationServiceClient.ListAdaptiveMtSentences(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AdaptiveMtSentence item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAdaptiveMtSentencesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AdaptiveMtSentence item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AdaptiveMtSentence> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AdaptiveMtSentence item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAdaptiveMtSentencesAsync</summary>
+        public async Task ListAdaptiveMtSentencesResourceNamesAsync()
+        {
+            // Snippet: ListAdaptiveMtSentencesAsync(AdaptiveMtFileName, string, int?, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AdaptiveMtFileName parent = AdaptiveMtFileName.FromProjectLocationDatasetFile("[PROJECT]", "[LOCATION]", "[DATASET]", "[FILE]");
+            // Make the request
+            PagedAsyncEnumerable<ListAdaptiveMtSentencesResponse, AdaptiveMtSentence> response = translationServiceClient.ListAdaptiveMtSentencesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AdaptiveMtSentence item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAdaptiveMtSentencesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AdaptiveMtSentence item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AdaptiveMtSentence> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AdaptiveMtSentence item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
     }
 }

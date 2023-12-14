@@ -20,6 +20,7 @@ using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
+using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
@@ -61,6 +62,16 @@ namespace Google.Cloud.Translate.V3
             GetGlossarySettings = existing.GetGlossarySettings;
             DeleteGlossarySettings = existing.DeleteGlossarySettings;
             DeleteGlossaryOperationsSettings = existing.DeleteGlossaryOperationsSettings.Clone();
+            CreateAdaptiveMtDatasetSettings = existing.CreateAdaptiveMtDatasetSettings;
+            DeleteAdaptiveMtDatasetSettings = existing.DeleteAdaptiveMtDatasetSettings;
+            GetAdaptiveMtDatasetSettings = existing.GetAdaptiveMtDatasetSettings;
+            ListAdaptiveMtDatasetsSettings = existing.ListAdaptiveMtDatasetsSettings;
+            AdaptiveMtTranslateSettings = existing.AdaptiveMtTranslateSettings;
+            GetAdaptiveMtFileSettings = existing.GetAdaptiveMtFileSettings;
+            DeleteAdaptiveMtFileSettings = existing.DeleteAdaptiveMtFileSettings;
+            ImportAdaptiveMtFileSettings = existing.ImportAdaptiveMtFileSettings;
+            ListAdaptiveMtFilesSettings = existing.ListAdaptiveMtFilesSettings;
+            ListAdaptiveMtSentencesSettings = existing.ListAdaptiveMtSentencesSettings;
             OnCopy(existing);
         }
 
@@ -297,6 +308,136 @@ namespace Google.Cloud.Translate.V3
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>TranslationServiceClient.CreateAdaptiveMtDataset</c> and
+        /// <c>TranslationServiceClient.CreateAdaptiveMtDatasetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateAdaptiveMtDatasetSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>TranslationServiceClient.DeleteAdaptiveMtDataset</c> and
+        /// <c>TranslationServiceClient.DeleteAdaptiveMtDatasetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteAdaptiveMtDatasetSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>TranslationServiceClient.GetAdaptiveMtDataset</c> and
+        /// <c>TranslationServiceClient.GetAdaptiveMtDatasetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAdaptiveMtDatasetSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>TranslationServiceClient.ListAdaptiveMtDatasets</c> and
+        /// <c>TranslationServiceClient.ListAdaptiveMtDatasetsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListAdaptiveMtDatasetsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>TranslationServiceClient.AdaptiveMtTranslate</c> and <c>TranslationServiceClient.AdaptiveMtTranslateAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AdaptiveMtTranslateSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>TranslationServiceClient.GetAdaptiveMtFile</c> and <c>TranslationServiceClient.GetAdaptiveMtFileAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAdaptiveMtFileSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>TranslationServiceClient.DeleteAdaptiveMtFile</c> and
+        /// <c>TranslationServiceClient.DeleteAdaptiveMtFileAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteAdaptiveMtFileSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>TranslationServiceClient.ImportAdaptiveMtFile</c> and
+        /// <c>TranslationServiceClient.ImportAdaptiveMtFileAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ImportAdaptiveMtFileSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>TranslationServiceClient.ListAdaptiveMtFiles</c> and <c>TranslationServiceClient.ListAdaptiveMtFilesAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListAdaptiveMtFilesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>TranslationServiceClient.ListAdaptiveMtSentences</c> and
+        /// <c>TranslationServiceClient.ListAdaptiveMtSentencesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListAdaptiveMtSentencesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="TranslationServiceSettings"/> object.</returns>
@@ -2744,6 +2885,1239 @@ namespace Google.Cloud.Translate.V3
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<DeleteGlossaryResponse, DeleteGlossaryMetadata>> DeleteGlossaryAsync(GlossaryName name, st::CancellationToken cancellationToken) =>
             DeleteGlossaryAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an Adaptive MT dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AdaptiveMtDataset CreateAdaptiveMtDataset(CreateAdaptiveMtDatasetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an Adaptive MT dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdaptiveMtDataset> CreateAdaptiveMtDatasetAsync(CreateAdaptiveMtDatasetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an Adaptive MT dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdaptiveMtDataset> CreateAdaptiveMtDatasetAsync(CreateAdaptiveMtDatasetRequest request, st::CancellationToken cancellationToken) =>
+            CreateAdaptiveMtDatasetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an Adaptive MT dataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the parent project. In form of
+        /// `projects/{project-number-or-id}/locations/{location-id}`
+        /// </param>
+        /// <param name="adaptiveMtDataset">
+        /// Required. The AdaptiveMtDataset to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AdaptiveMtDataset CreateAdaptiveMtDataset(string parent, AdaptiveMtDataset adaptiveMtDataset, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAdaptiveMtDataset(new CreateAdaptiveMtDatasetRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AdaptiveMtDataset = gax::GaxPreconditions.CheckNotNull(adaptiveMtDataset, nameof(adaptiveMtDataset)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an Adaptive MT dataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the parent project. In form of
+        /// `projects/{project-number-or-id}/locations/{location-id}`
+        /// </param>
+        /// <param name="adaptiveMtDataset">
+        /// Required. The AdaptiveMtDataset to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdaptiveMtDataset> CreateAdaptiveMtDatasetAsync(string parent, AdaptiveMtDataset adaptiveMtDataset, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAdaptiveMtDatasetAsync(new CreateAdaptiveMtDatasetRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AdaptiveMtDataset = gax::GaxPreconditions.CheckNotNull(adaptiveMtDataset, nameof(adaptiveMtDataset)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an Adaptive MT dataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the parent project. In form of
+        /// `projects/{project-number-or-id}/locations/{location-id}`
+        /// </param>
+        /// <param name="adaptiveMtDataset">
+        /// Required. The AdaptiveMtDataset to be created.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdaptiveMtDataset> CreateAdaptiveMtDatasetAsync(string parent, AdaptiveMtDataset adaptiveMtDataset, st::CancellationToken cancellationToken) =>
+            CreateAdaptiveMtDatasetAsync(parent, adaptiveMtDataset, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an Adaptive MT dataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the parent project. In form of
+        /// `projects/{project-number-or-id}/locations/{location-id}`
+        /// </param>
+        /// <param name="adaptiveMtDataset">
+        /// Required. The AdaptiveMtDataset to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AdaptiveMtDataset CreateAdaptiveMtDataset(gagr::LocationName parent, AdaptiveMtDataset adaptiveMtDataset, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAdaptiveMtDataset(new CreateAdaptiveMtDatasetRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AdaptiveMtDataset = gax::GaxPreconditions.CheckNotNull(adaptiveMtDataset, nameof(adaptiveMtDataset)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an Adaptive MT dataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the parent project. In form of
+        /// `projects/{project-number-or-id}/locations/{location-id}`
+        /// </param>
+        /// <param name="adaptiveMtDataset">
+        /// Required. The AdaptiveMtDataset to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdaptiveMtDataset> CreateAdaptiveMtDatasetAsync(gagr::LocationName parent, AdaptiveMtDataset adaptiveMtDataset, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAdaptiveMtDatasetAsync(new CreateAdaptiveMtDatasetRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AdaptiveMtDataset = gax::GaxPreconditions.CheckNotNull(adaptiveMtDataset, nameof(adaptiveMtDataset)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an Adaptive MT dataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the parent project. In form of
+        /// `projects/{project-number-or-id}/locations/{location-id}`
+        /// </param>
+        /// <param name="adaptiveMtDataset">
+        /// Required. The AdaptiveMtDataset to be created.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdaptiveMtDataset> CreateAdaptiveMtDatasetAsync(gagr::LocationName parent, AdaptiveMtDataset adaptiveMtDataset, st::CancellationToken cancellationToken) =>
+            CreateAdaptiveMtDatasetAsync(parent, adaptiveMtDataset, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an Adaptive MT dataset, including all its entries and associated
+        /// metadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteAdaptiveMtDataset(DeleteAdaptiveMtDatasetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes an Adaptive MT dataset, including all its entries and associated
+        /// metadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAdaptiveMtDatasetAsync(DeleteAdaptiveMtDatasetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes an Adaptive MT dataset, including all its entries and associated
+        /// metadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAdaptiveMtDatasetAsync(DeleteAdaptiveMtDatasetRequest request, st::CancellationToken cancellationToken) =>
+            DeleteAdaptiveMtDatasetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an Adaptive MT dataset, including all its entries and associated
+        /// metadata.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the dataset. In the form of
+        /// `projects/{project-number-or-id}/locations/{location-id}/adaptiveMtDatasets/{adaptive-mt-dataset-id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteAdaptiveMtDataset(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAdaptiveMtDataset(new DeleteAdaptiveMtDatasetRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an Adaptive MT dataset, including all its entries and associated
+        /// metadata.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the dataset. In the form of
+        /// `projects/{project-number-or-id}/locations/{location-id}/adaptiveMtDatasets/{adaptive-mt-dataset-id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAdaptiveMtDatasetAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAdaptiveMtDatasetAsync(new DeleteAdaptiveMtDatasetRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an Adaptive MT dataset, including all its entries and associated
+        /// metadata.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the dataset. In the form of
+        /// `projects/{project-number-or-id}/locations/{location-id}/adaptiveMtDatasets/{adaptive-mt-dataset-id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAdaptiveMtDatasetAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteAdaptiveMtDatasetAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an Adaptive MT dataset, including all its entries and associated
+        /// metadata.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the dataset. In the form of
+        /// `projects/{project-number-or-id}/locations/{location-id}/adaptiveMtDatasets/{adaptive-mt-dataset-id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteAdaptiveMtDataset(AdaptiveMtDatasetName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAdaptiveMtDataset(new DeleteAdaptiveMtDatasetRequest
+            {
+                AdaptiveMtDatasetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an Adaptive MT dataset, including all its entries and associated
+        /// metadata.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the dataset. In the form of
+        /// `projects/{project-number-or-id}/locations/{location-id}/adaptiveMtDatasets/{adaptive-mt-dataset-id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAdaptiveMtDatasetAsync(AdaptiveMtDatasetName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAdaptiveMtDatasetAsync(new DeleteAdaptiveMtDatasetRequest
+            {
+                AdaptiveMtDatasetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an Adaptive MT dataset, including all its entries and associated
+        /// metadata.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the dataset. In the form of
+        /// `projects/{project-number-or-id}/locations/{location-id}/adaptiveMtDatasets/{adaptive-mt-dataset-id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAdaptiveMtDatasetAsync(AdaptiveMtDatasetName name, st::CancellationToken cancellationToken) =>
+            DeleteAdaptiveMtDatasetAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the Adaptive MT dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AdaptiveMtDataset GetAdaptiveMtDataset(GetAdaptiveMtDatasetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the Adaptive MT dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdaptiveMtDataset> GetAdaptiveMtDatasetAsync(GetAdaptiveMtDatasetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the Adaptive MT dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdaptiveMtDataset> GetAdaptiveMtDatasetAsync(GetAdaptiveMtDatasetRequest request, st::CancellationToken cancellationToken) =>
+            GetAdaptiveMtDatasetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the Adaptive MT dataset.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the dataset. In the form of
+        /// `projects/{project-number-or-id}/locations/{location-id}/adaptiveMtDatasets/{adaptive-mt-dataset-id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AdaptiveMtDataset GetAdaptiveMtDataset(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAdaptiveMtDataset(new GetAdaptiveMtDatasetRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the Adaptive MT dataset.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the dataset. In the form of
+        /// `projects/{project-number-or-id}/locations/{location-id}/adaptiveMtDatasets/{adaptive-mt-dataset-id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdaptiveMtDataset> GetAdaptiveMtDatasetAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAdaptiveMtDatasetAsync(new GetAdaptiveMtDatasetRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the Adaptive MT dataset.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the dataset. In the form of
+        /// `projects/{project-number-or-id}/locations/{location-id}/adaptiveMtDatasets/{adaptive-mt-dataset-id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdaptiveMtDataset> GetAdaptiveMtDatasetAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAdaptiveMtDatasetAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the Adaptive MT dataset.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the dataset. In the form of
+        /// `projects/{project-number-or-id}/locations/{location-id}/adaptiveMtDatasets/{adaptive-mt-dataset-id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AdaptiveMtDataset GetAdaptiveMtDataset(AdaptiveMtDatasetName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAdaptiveMtDataset(new GetAdaptiveMtDatasetRequest
+            {
+                AdaptiveMtDatasetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the Adaptive MT dataset.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the dataset. In the form of
+        /// `projects/{project-number-or-id}/locations/{location-id}/adaptiveMtDatasets/{adaptive-mt-dataset-id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdaptiveMtDataset> GetAdaptiveMtDatasetAsync(AdaptiveMtDatasetName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAdaptiveMtDatasetAsync(new GetAdaptiveMtDatasetRequest
+            {
+                AdaptiveMtDatasetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the Adaptive MT dataset.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the dataset. In the form of
+        /// `projects/{project-number-or-id}/locations/{location-id}/adaptiveMtDatasets/{adaptive-mt-dataset-id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdaptiveMtDataset> GetAdaptiveMtDatasetAsync(AdaptiveMtDatasetName name, st::CancellationToken cancellationToken) =>
+            GetAdaptiveMtDatasetAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all Adaptive MT datasets for which the caller has read permission.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AdaptiveMtDataset"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAdaptiveMtDatasetsResponse, AdaptiveMtDataset> ListAdaptiveMtDatasets(ListAdaptiveMtDatasetsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all Adaptive MT datasets for which the caller has read permission.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AdaptiveMtDataset"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAdaptiveMtDatasetsResponse, AdaptiveMtDataset> ListAdaptiveMtDatasetsAsync(ListAdaptiveMtDatasetsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all Adaptive MT datasets for which the caller has read permission.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the project from which to list the Adaptive
+        /// MT datasets. `projects/{project-number-or-id}/locations/{location-id}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AdaptiveMtDataset"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAdaptiveMtDatasetsResponse, AdaptiveMtDataset> ListAdaptiveMtDatasets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAdaptiveMtDatasets(new ListAdaptiveMtDatasetsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all Adaptive MT datasets for which the caller has read permission.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the project from which to list the Adaptive
+        /// MT datasets. `projects/{project-number-or-id}/locations/{location-id}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AdaptiveMtDataset"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAdaptiveMtDatasetsResponse, AdaptiveMtDataset> ListAdaptiveMtDatasetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAdaptiveMtDatasetsAsync(new ListAdaptiveMtDatasetsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all Adaptive MT datasets for which the caller has read permission.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the project from which to list the Adaptive
+        /// MT datasets. `projects/{project-number-or-id}/locations/{location-id}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AdaptiveMtDataset"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAdaptiveMtDatasetsResponse, AdaptiveMtDataset> ListAdaptiveMtDatasets(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAdaptiveMtDatasets(new ListAdaptiveMtDatasetsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all Adaptive MT datasets for which the caller has read permission.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the project from which to list the Adaptive
+        /// MT datasets. `projects/{project-number-or-id}/locations/{location-id}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AdaptiveMtDataset"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAdaptiveMtDatasetsResponse, AdaptiveMtDataset> ListAdaptiveMtDatasetsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAdaptiveMtDatasetsAsync(new ListAdaptiveMtDatasetsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Translate text using Adaptive MT.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AdaptiveMtTranslateResponse AdaptiveMtTranslate(AdaptiveMtTranslateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Translate text using Adaptive MT.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdaptiveMtTranslateResponse> AdaptiveMtTranslateAsync(AdaptiveMtTranslateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Translate text using Adaptive MT.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdaptiveMtTranslateResponse> AdaptiveMtTranslateAsync(AdaptiveMtTranslateRequest request, st::CancellationToken cancellationToken) =>
+            AdaptiveMtTranslateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Translate text using Adaptive MT.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Location to make a regional call.
+        /// 
+        /// Format: `projects/{project-number-or-id}/locations/{location-id}`.
+        /// </param>
+        /// <param name="content">
+        /// Required. The content of the input in string format.
+        /// For now only one sentence per request is supported.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AdaptiveMtTranslateResponse AdaptiveMtTranslate(string parent, scg::IEnumerable<string> content, gaxgrpc::CallSettings callSettings = null) =>
+            AdaptiveMtTranslate(new AdaptiveMtTranslateRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Content =
+                {
+                    gax::GaxPreconditions.CheckNotNull(content, nameof(content)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Translate text using Adaptive MT.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Location to make a regional call.
+        /// 
+        /// Format: `projects/{project-number-or-id}/locations/{location-id}`.
+        /// </param>
+        /// <param name="content">
+        /// Required. The content of the input in string format.
+        /// For now only one sentence per request is supported.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdaptiveMtTranslateResponse> AdaptiveMtTranslateAsync(string parent, scg::IEnumerable<string> content, gaxgrpc::CallSettings callSettings = null) =>
+            AdaptiveMtTranslateAsync(new AdaptiveMtTranslateRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Content =
+                {
+                    gax::GaxPreconditions.CheckNotNull(content, nameof(content)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Translate text using Adaptive MT.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Location to make a regional call.
+        /// 
+        /// Format: `projects/{project-number-or-id}/locations/{location-id}`.
+        /// </param>
+        /// <param name="content">
+        /// Required. The content of the input in string format.
+        /// For now only one sentence per request is supported.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdaptiveMtTranslateResponse> AdaptiveMtTranslateAsync(string parent, scg::IEnumerable<string> content, st::CancellationToken cancellationToken) =>
+            AdaptiveMtTranslateAsync(parent, content, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Translate text using Adaptive MT.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Location to make a regional call.
+        /// 
+        /// Format: `projects/{project-number-or-id}/locations/{location-id}`.
+        /// </param>
+        /// <param name="content">
+        /// Required. The content of the input in string format.
+        /// For now only one sentence per request is supported.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AdaptiveMtTranslateResponse AdaptiveMtTranslate(gagr::LocationName parent, scg::IEnumerable<string> content, gaxgrpc::CallSettings callSettings = null) =>
+            AdaptiveMtTranslate(new AdaptiveMtTranslateRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Content =
+                {
+                    gax::GaxPreconditions.CheckNotNull(content, nameof(content)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Translate text using Adaptive MT.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Location to make a regional call.
+        /// 
+        /// Format: `projects/{project-number-or-id}/locations/{location-id}`.
+        /// </param>
+        /// <param name="content">
+        /// Required. The content of the input in string format.
+        /// For now only one sentence per request is supported.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdaptiveMtTranslateResponse> AdaptiveMtTranslateAsync(gagr::LocationName parent, scg::IEnumerable<string> content, gaxgrpc::CallSettings callSettings = null) =>
+            AdaptiveMtTranslateAsync(new AdaptiveMtTranslateRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Content =
+                {
+                    gax::GaxPreconditions.CheckNotNull(content, nameof(content)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Translate text using Adaptive MT.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Location to make a regional call.
+        /// 
+        /// Format: `projects/{project-number-or-id}/locations/{location-id}`.
+        /// </param>
+        /// <param name="content">
+        /// Required. The content of the input in string format.
+        /// For now only one sentence per request is supported.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdaptiveMtTranslateResponse> AdaptiveMtTranslateAsync(gagr::LocationName parent, scg::IEnumerable<string> content, st::CancellationToken cancellationToken) =>
+            AdaptiveMtTranslateAsync(parent, content, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets and AdaptiveMtFile
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AdaptiveMtFile GetAdaptiveMtFile(GetAdaptiveMtFileRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets and AdaptiveMtFile
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdaptiveMtFile> GetAdaptiveMtFileAsync(GetAdaptiveMtFileRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets and AdaptiveMtFile
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdaptiveMtFile> GetAdaptiveMtFileAsync(GetAdaptiveMtFileRequest request, st::CancellationToken cancellationToken) =>
+            GetAdaptiveMtFileAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets and AdaptiveMtFile
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the file, in form of
+        /// `projects/{project-number-or-id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AdaptiveMtFile GetAdaptiveMtFile(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAdaptiveMtFile(new GetAdaptiveMtFileRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets and AdaptiveMtFile
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the file, in form of
+        /// `projects/{project-number-or-id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdaptiveMtFile> GetAdaptiveMtFileAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAdaptiveMtFileAsync(new GetAdaptiveMtFileRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets and AdaptiveMtFile
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the file, in form of
+        /// `projects/{project-number-or-id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdaptiveMtFile> GetAdaptiveMtFileAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAdaptiveMtFileAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets and AdaptiveMtFile
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the file, in form of
+        /// `projects/{project-number-or-id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AdaptiveMtFile GetAdaptiveMtFile(AdaptiveMtFileName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAdaptiveMtFile(new GetAdaptiveMtFileRequest
+            {
+                AdaptiveMtFileName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets and AdaptiveMtFile
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the file, in form of
+        /// `projects/{project-number-or-id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdaptiveMtFile> GetAdaptiveMtFileAsync(AdaptiveMtFileName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAdaptiveMtFileAsync(new GetAdaptiveMtFileRequest
+            {
+                AdaptiveMtFileName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets and AdaptiveMtFile
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the file, in form of
+        /// `projects/{project-number-or-id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdaptiveMtFile> GetAdaptiveMtFileAsync(AdaptiveMtFileName name, st::CancellationToken cancellationToken) =>
+            GetAdaptiveMtFileAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an AdaptiveMtFile along with its sentences.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteAdaptiveMtFile(DeleteAdaptiveMtFileRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes an AdaptiveMtFile along with its sentences.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAdaptiveMtFileAsync(DeleteAdaptiveMtFileRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes an AdaptiveMtFile along with its sentences.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAdaptiveMtFileAsync(DeleteAdaptiveMtFileRequest request, st::CancellationToken cancellationToken) =>
+            DeleteAdaptiveMtFileAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an AdaptiveMtFile along with its sentences.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the file to delete, in form of
+        /// `projects/{project-number-or-id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteAdaptiveMtFile(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAdaptiveMtFile(new DeleteAdaptiveMtFileRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an AdaptiveMtFile along with its sentences.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the file to delete, in form of
+        /// `projects/{project-number-or-id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAdaptiveMtFileAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAdaptiveMtFileAsync(new DeleteAdaptiveMtFileRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an AdaptiveMtFile along with its sentences.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the file to delete, in form of
+        /// `projects/{project-number-or-id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAdaptiveMtFileAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteAdaptiveMtFileAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an AdaptiveMtFile along with its sentences.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the file to delete, in form of
+        /// `projects/{project-number-or-id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteAdaptiveMtFile(AdaptiveMtFileName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAdaptiveMtFile(new DeleteAdaptiveMtFileRequest
+            {
+                AdaptiveMtFileName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an AdaptiveMtFile along with its sentences.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the file to delete, in form of
+        /// `projects/{project-number-or-id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAdaptiveMtFileAsync(AdaptiveMtFileName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAdaptiveMtFileAsync(new DeleteAdaptiveMtFileRequest
+            {
+                AdaptiveMtFileName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an AdaptiveMtFile along with its sentences.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the file to delete, in form of
+        /// `projects/{project-number-or-id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAdaptiveMtFileAsync(AdaptiveMtFileName name, st::CancellationToken cancellationToken) =>
+            DeleteAdaptiveMtFileAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Imports an AdaptiveMtFile and adds all of its sentences into the
+        /// AdaptiveMtDataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ImportAdaptiveMtFileResponse ImportAdaptiveMtFile(ImportAdaptiveMtFileRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Imports an AdaptiveMtFile and adds all of its sentences into the
+        /// AdaptiveMtDataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ImportAdaptiveMtFileResponse> ImportAdaptiveMtFileAsync(ImportAdaptiveMtFileRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Imports an AdaptiveMtFile and adds all of its sentences into the
+        /// AdaptiveMtDataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ImportAdaptiveMtFileResponse> ImportAdaptiveMtFileAsync(ImportAdaptiveMtFileRequest request, st::CancellationToken cancellationToken) =>
+            ImportAdaptiveMtFileAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Imports an AdaptiveMtFile and adds all of its sentences into the
+        /// AdaptiveMtDataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the file, in form of
+        /// `projects/{project-number-or-id}/locations/{location_id}/adaptiveMtDatasets/{dataset}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ImportAdaptiveMtFileResponse ImportAdaptiveMtFile(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            ImportAdaptiveMtFile(new ImportAdaptiveMtFileRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Imports an AdaptiveMtFile and adds all of its sentences into the
+        /// AdaptiveMtDataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the file, in form of
+        /// `projects/{project-number-or-id}/locations/{location_id}/adaptiveMtDatasets/{dataset}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ImportAdaptiveMtFileResponse> ImportAdaptiveMtFileAsync(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            ImportAdaptiveMtFileAsync(new ImportAdaptiveMtFileRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Imports an AdaptiveMtFile and adds all of its sentences into the
+        /// AdaptiveMtDataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the file, in form of
+        /// `projects/{project-number-or-id}/locations/{location_id}/adaptiveMtDatasets/{dataset}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ImportAdaptiveMtFileResponse> ImportAdaptiveMtFileAsync(string parent, st::CancellationToken cancellationToken) =>
+            ImportAdaptiveMtFileAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Imports an AdaptiveMtFile and adds all of its sentences into the
+        /// AdaptiveMtDataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the file, in form of
+        /// `projects/{project-number-or-id}/locations/{location_id}/adaptiveMtDatasets/{dataset}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ImportAdaptiveMtFileResponse ImportAdaptiveMtFile(AdaptiveMtDatasetName parent, gaxgrpc::CallSettings callSettings = null) =>
+            ImportAdaptiveMtFile(new ImportAdaptiveMtFileRequest
+            {
+                ParentAsAdaptiveMtDatasetName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Imports an AdaptiveMtFile and adds all of its sentences into the
+        /// AdaptiveMtDataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the file, in form of
+        /// `projects/{project-number-or-id}/locations/{location_id}/adaptiveMtDatasets/{dataset}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ImportAdaptiveMtFileResponse> ImportAdaptiveMtFileAsync(AdaptiveMtDatasetName parent, gaxgrpc::CallSettings callSettings = null) =>
+            ImportAdaptiveMtFileAsync(new ImportAdaptiveMtFileRequest
+            {
+                ParentAsAdaptiveMtDatasetName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Imports an AdaptiveMtFile and adds all of its sentences into the
+        /// AdaptiveMtDataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the file, in form of
+        /// `projects/{project-number-or-id}/locations/{location_id}/adaptiveMtDatasets/{dataset}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ImportAdaptiveMtFileResponse> ImportAdaptiveMtFileAsync(AdaptiveMtDatasetName parent, st::CancellationToken cancellationToken) =>
+            ImportAdaptiveMtFileAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all AdaptiveMtFiles associated to an AdaptiveMtDataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AdaptiveMtFile"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAdaptiveMtFilesResponse, AdaptiveMtFile> ListAdaptiveMtFiles(ListAdaptiveMtFilesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all AdaptiveMtFiles associated to an AdaptiveMtDataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AdaptiveMtFile"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAdaptiveMtFilesResponse, AdaptiveMtFile> ListAdaptiveMtFilesAsync(ListAdaptiveMtFilesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all AdaptiveMtFiles associated to an AdaptiveMtDataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the project from which to list the Adaptive
+        /// MT files.
+        /// `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AdaptiveMtFile"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAdaptiveMtFilesResponse, AdaptiveMtFile> ListAdaptiveMtFiles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAdaptiveMtFiles(new ListAdaptiveMtFilesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all AdaptiveMtFiles associated to an AdaptiveMtDataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the project from which to list the Adaptive
+        /// MT files.
+        /// `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AdaptiveMtFile"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAdaptiveMtFilesResponse, AdaptiveMtFile> ListAdaptiveMtFilesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAdaptiveMtFilesAsync(new ListAdaptiveMtFilesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all AdaptiveMtFiles associated to an AdaptiveMtDataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the project from which to list the Adaptive
+        /// MT files.
+        /// `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AdaptiveMtFile"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAdaptiveMtFilesResponse, AdaptiveMtFile> ListAdaptiveMtFiles(AdaptiveMtDatasetName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAdaptiveMtFiles(new ListAdaptiveMtFilesRequest
+            {
+                ParentAsAdaptiveMtDatasetName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all AdaptiveMtFiles associated to an AdaptiveMtDataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the project from which to list the Adaptive
+        /// MT files.
+        /// `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AdaptiveMtFile"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAdaptiveMtFilesResponse, AdaptiveMtFile> ListAdaptiveMtFilesAsync(AdaptiveMtDatasetName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAdaptiveMtFilesAsync(new ListAdaptiveMtFilesRequest
+            {
+                ParentAsAdaptiveMtDatasetName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all AdaptiveMtSentences under a given file/dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AdaptiveMtSentence"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAdaptiveMtSentencesResponse, AdaptiveMtSentence> ListAdaptiveMtSentences(ListAdaptiveMtSentencesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all AdaptiveMtSentences under a given file/dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AdaptiveMtSentence"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAdaptiveMtSentencesResponse, AdaptiveMtSentence> ListAdaptiveMtSentencesAsync(ListAdaptiveMtSentencesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all AdaptiveMtSentences under a given file/dataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the project from which to list the Adaptive
+        /// MT files. The following format lists all sentences under a file.
+        /// `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}`
+        /// The following format lists all sentences within a dataset.
+        /// `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AdaptiveMtSentence"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAdaptiveMtSentencesResponse, AdaptiveMtSentence> ListAdaptiveMtSentences(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAdaptiveMtSentences(new ListAdaptiveMtSentencesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all AdaptiveMtSentences under a given file/dataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the project from which to list the Adaptive
+        /// MT files. The following format lists all sentences under a file.
+        /// `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}`
+        /// The following format lists all sentences within a dataset.
+        /// `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AdaptiveMtSentence"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAdaptiveMtSentencesResponse, AdaptiveMtSentence> ListAdaptiveMtSentencesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAdaptiveMtSentencesAsync(new ListAdaptiveMtSentencesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all AdaptiveMtSentences under a given file/dataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the project from which to list the Adaptive
+        /// MT files. The following format lists all sentences under a file.
+        /// `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}`
+        /// The following format lists all sentences within a dataset.
+        /// `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AdaptiveMtSentence"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAdaptiveMtSentencesResponse, AdaptiveMtSentence> ListAdaptiveMtSentences(AdaptiveMtFileName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAdaptiveMtSentences(new ListAdaptiveMtSentencesRequest
+            {
+                ParentAsAdaptiveMtFileName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all AdaptiveMtSentences under a given file/dataset.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the project from which to list the Adaptive
+        /// MT files. The following format lists all sentences under a file.
+        /// `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}`
+        /// The following format lists all sentences within a dataset.
+        /// `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AdaptiveMtSentence"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAdaptiveMtSentencesResponse, AdaptiveMtSentence> ListAdaptiveMtSentencesAsync(AdaptiveMtFileName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAdaptiveMtSentencesAsync(new ListAdaptiveMtSentencesRequest
+            {
+                ParentAsAdaptiveMtFileName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
     }
 
     /// <summary>TranslationService client wrapper implementation, for convenient use.</summary>
@@ -2771,6 +4145,26 @@ namespace Google.Cloud.Translate.V3
         private readonly gaxgrpc::ApiCall<GetGlossaryRequest, Glossary> _callGetGlossary;
 
         private readonly gaxgrpc::ApiCall<DeleteGlossaryRequest, lro::Operation> _callDeleteGlossary;
+
+        private readonly gaxgrpc::ApiCall<CreateAdaptiveMtDatasetRequest, AdaptiveMtDataset> _callCreateAdaptiveMtDataset;
+
+        private readonly gaxgrpc::ApiCall<DeleteAdaptiveMtDatasetRequest, wkt::Empty> _callDeleteAdaptiveMtDataset;
+
+        private readonly gaxgrpc::ApiCall<GetAdaptiveMtDatasetRequest, AdaptiveMtDataset> _callGetAdaptiveMtDataset;
+
+        private readonly gaxgrpc::ApiCall<ListAdaptiveMtDatasetsRequest, ListAdaptiveMtDatasetsResponse> _callListAdaptiveMtDatasets;
+
+        private readonly gaxgrpc::ApiCall<AdaptiveMtTranslateRequest, AdaptiveMtTranslateResponse> _callAdaptiveMtTranslate;
+
+        private readonly gaxgrpc::ApiCall<GetAdaptiveMtFileRequest, AdaptiveMtFile> _callGetAdaptiveMtFile;
+
+        private readonly gaxgrpc::ApiCall<DeleteAdaptiveMtFileRequest, wkt::Empty> _callDeleteAdaptiveMtFile;
+
+        private readonly gaxgrpc::ApiCall<ImportAdaptiveMtFileRequest, ImportAdaptiveMtFileResponse> _callImportAdaptiveMtFile;
+
+        private readonly gaxgrpc::ApiCall<ListAdaptiveMtFilesRequest, ListAdaptiveMtFilesResponse> _callListAdaptiveMtFiles;
+
+        private readonly gaxgrpc::ApiCall<ListAdaptiveMtSentencesRequest, ListAdaptiveMtSentencesResponse> _callListAdaptiveMtSentences;
 
         /// <summary>
         /// Constructs a client wrapper for the TranslationService service, with the specified gRPC client and settings.
@@ -2817,6 +4211,36 @@ namespace Google.Cloud.Translate.V3
             _callDeleteGlossary = clientHelper.BuildApiCall<DeleteGlossaryRequest, lro::Operation>("DeleteGlossary", grpcClient.DeleteGlossaryAsync, grpcClient.DeleteGlossary, effectiveSettings.DeleteGlossarySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteGlossary);
             Modify_DeleteGlossaryApiCall(ref _callDeleteGlossary);
+            _callCreateAdaptiveMtDataset = clientHelper.BuildApiCall<CreateAdaptiveMtDatasetRequest, AdaptiveMtDataset>("CreateAdaptiveMtDataset", grpcClient.CreateAdaptiveMtDatasetAsync, grpcClient.CreateAdaptiveMtDataset, effectiveSettings.CreateAdaptiveMtDatasetSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateAdaptiveMtDataset);
+            Modify_CreateAdaptiveMtDatasetApiCall(ref _callCreateAdaptiveMtDataset);
+            _callDeleteAdaptiveMtDataset = clientHelper.BuildApiCall<DeleteAdaptiveMtDatasetRequest, wkt::Empty>("DeleteAdaptiveMtDataset", grpcClient.DeleteAdaptiveMtDatasetAsync, grpcClient.DeleteAdaptiveMtDataset, effectiveSettings.DeleteAdaptiveMtDatasetSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteAdaptiveMtDataset);
+            Modify_DeleteAdaptiveMtDatasetApiCall(ref _callDeleteAdaptiveMtDataset);
+            _callGetAdaptiveMtDataset = clientHelper.BuildApiCall<GetAdaptiveMtDatasetRequest, AdaptiveMtDataset>("GetAdaptiveMtDataset", grpcClient.GetAdaptiveMtDatasetAsync, grpcClient.GetAdaptiveMtDataset, effectiveSettings.GetAdaptiveMtDatasetSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetAdaptiveMtDataset);
+            Modify_GetAdaptiveMtDatasetApiCall(ref _callGetAdaptiveMtDataset);
+            _callListAdaptiveMtDatasets = clientHelper.BuildApiCall<ListAdaptiveMtDatasetsRequest, ListAdaptiveMtDatasetsResponse>("ListAdaptiveMtDatasets", grpcClient.ListAdaptiveMtDatasetsAsync, grpcClient.ListAdaptiveMtDatasets, effectiveSettings.ListAdaptiveMtDatasetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListAdaptiveMtDatasets);
+            Modify_ListAdaptiveMtDatasetsApiCall(ref _callListAdaptiveMtDatasets);
+            _callAdaptiveMtTranslate = clientHelper.BuildApiCall<AdaptiveMtTranslateRequest, AdaptiveMtTranslateResponse>("AdaptiveMtTranslate", grpcClient.AdaptiveMtTranslateAsync, grpcClient.AdaptiveMtTranslate, effectiveSettings.AdaptiveMtTranslateSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callAdaptiveMtTranslate);
+            Modify_AdaptiveMtTranslateApiCall(ref _callAdaptiveMtTranslate);
+            _callGetAdaptiveMtFile = clientHelper.BuildApiCall<GetAdaptiveMtFileRequest, AdaptiveMtFile>("GetAdaptiveMtFile", grpcClient.GetAdaptiveMtFileAsync, grpcClient.GetAdaptiveMtFile, effectiveSettings.GetAdaptiveMtFileSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetAdaptiveMtFile);
+            Modify_GetAdaptiveMtFileApiCall(ref _callGetAdaptiveMtFile);
+            _callDeleteAdaptiveMtFile = clientHelper.BuildApiCall<DeleteAdaptiveMtFileRequest, wkt::Empty>("DeleteAdaptiveMtFile", grpcClient.DeleteAdaptiveMtFileAsync, grpcClient.DeleteAdaptiveMtFile, effectiveSettings.DeleteAdaptiveMtFileSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteAdaptiveMtFile);
+            Modify_DeleteAdaptiveMtFileApiCall(ref _callDeleteAdaptiveMtFile);
+            _callImportAdaptiveMtFile = clientHelper.BuildApiCall<ImportAdaptiveMtFileRequest, ImportAdaptiveMtFileResponse>("ImportAdaptiveMtFile", grpcClient.ImportAdaptiveMtFileAsync, grpcClient.ImportAdaptiveMtFile, effectiveSettings.ImportAdaptiveMtFileSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callImportAdaptiveMtFile);
+            Modify_ImportAdaptiveMtFileApiCall(ref _callImportAdaptiveMtFile);
+            _callListAdaptiveMtFiles = clientHelper.BuildApiCall<ListAdaptiveMtFilesRequest, ListAdaptiveMtFilesResponse>("ListAdaptiveMtFiles", grpcClient.ListAdaptiveMtFilesAsync, grpcClient.ListAdaptiveMtFiles, effectiveSettings.ListAdaptiveMtFilesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListAdaptiveMtFiles);
+            Modify_ListAdaptiveMtFilesApiCall(ref _callListAdaptiveMtFiles);
+            _callListAdaptiveMtSentences = clientHelper.BuildApiCall<ListAdaptiveMtSentencesRequest, ListAdaptiveMtSentencesResponse>("ListAdaptiveMtSentences", grpcClient.ListAdaptiveMtSentencesAsync, grpcClient.ListAdaptiveMtSentences, effectiveSettings.ListAdaptiveMtSentencesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListAdaptiveMtSentences);
+            Modify_ListAdaptiveMtSentencesApiCall(ref _callListAdaptiveMtSentences);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2842,6 +4266,26 @@ namespace Google.Cloud.Translate.V3
 
         partial void Modify_DeleteGlossaryApiCall(ref gaxgrpc::ApiCall<DeleteGlossaryRequest, lro::Operation> call);
 
+        partial void Modify_CreateAdaptiveMtDatasetApiCall(ref gaxgrpc::ApiCall<CreateAdaptiveMtDatasetRequest, AdaptiveMtDataset> call);
+
+        partial void Modify_DeleteAdaptiveMtDatasetApiCall(ref gaxgrpc::ApiCall<DeleteAdaptiveMtDatasetRequest, wkt::Empty> call);
+
+        partial void Modify_GetAdaptiveMtDatasetApiCall(ref gaxgrpc::ApiCall<GetAdaptiveMtDatasetRequest, AdaptiveMtDataset> call);
+
+        partial void Modify_ListAdaptiveMtDatasetsApiCall(ref gaxgrpc::ApiCall<ListAdaptiveMtDatasetsRequest, ListAdaptiveMtDatasetsResponse> call);
+
+        partial void Modify_AdaptiveMtTranslateApiCall(ref gaxgrpc::ApiCall<AdaptiveMtTranslateRequest, AdaptiveMtTranslateResponse> call);
+
+        partial void Modify_GetAdaptiveMtFileApiCall(ref gaxgrpc::ApiCall<GetAdaptiveMtFileRequest, AdaptiveMtFile> call);
+
+        partial void Modify_DeleteAdaptiveMtFileApiCall(ref gaxgrpc::ApiCall<DeleteAdaptiveMtFileRequest, wkt::Empty> call);
+
+        partial void Modify_ImportAdaptiveMtFileApiCall(ref gaxgrpc::ApiCall<ImportAdaptiveMtFileRequest, ImportAdaptiveMtFileResponse> call);
+
+        partial void Modify_ListAdaptiveMtFilesApiCall(ref gaxgrpc::ApiCall<ListAdaptiveMtFilesRequest, ListAdaptiveMtFilesResponse> call);
+
+        partial void Modify_ListAdaptiveMtSentencesApiCall(ref gaxgrpc::ApiCall<ListAdaptiveMtSentencesRequest, ListAdaptiveMtSentencesResponse> call);
+
         partial void OnConstruction(TranslationService.TranslationServiceClient grpcClient, TranslationServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC TranslationService client</summary>
@@ -2866,6 +4310,26 @@ namespace Google.Cloud.Translate.V3
         partial void Modify_GetGlossaryRequest(ref GetGlossaryRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteGlossaryRequest(ref DeleteGlossaryRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateAdaptiveMtDatasetRequest(ref CreateAdaptiveMtDatasetRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteAdaptiveMtDatasetRequest(ref DeleteAdaptiveMtDatasetRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAdaptiveMtDatasetRequest(ref GetAdaptiveMtDatasetRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListAdaptiveMtDatasetsRequest(ref ListAdaptiveMtDatasetsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_AdaptiveMtTranslateRequest(ref AdaptiveMtTranslateRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAdaptiveMtFileRequest(ref GetAdaptiveMtFileRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteAdaptiveMtFileRequest(ref DeleteAdaptiveMtFileRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ImportAdaptiveMtFileRequest(ref ImportAdaptiveMtFileRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListAdaptiveMtFilesRequest(ref ListAdaptiveMtFilesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListAdaptiveMtSentencesRequest(ref ListAdaptiveMtSentencesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Translates input text and returns translated text.
@@ -3152,9 +4616,265 @@ namespace Google.Cloud.Translate.V3
             Modify_DeleteGlossaryRequest(ref request, ref callSettings);
             return new lro::Operation<DeleteGlossaryResponse, DeleteGlossaryMetadata>(await _callDeleteGlossary.Async(request, callSettings).ConfigureAwait(false), DeleteGlossaryOperationsClient);
         }
+
+        /// <summary>
+        /// Creates an Adaptive MT dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AdaptiveMtDataset CreateAdaptiveMtDataset(CreateAdaptiveMtDatasetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAdaptiveMtDatasetRequest(ref request, ref callSettings);
+            return _callCreateAdaptiveMtDataset.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates an Adaptive MT dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AdaptiveMtDataset> CreateAdaptiveMtDatasetAsync(CreateAdaptiveMtDatasetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAdaptiveMtDatasetRequest(ref request, ref callSettings);
+            return _callCreateAdaptiveMtDataset.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes an Adaptive MT dataset, including all its entries and associated
+        /// metadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteAdaptiveMtDataset(DeleteAdaptiveMtDatasetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAdaptiveMtDatasetRequest(ref request, ref callSettings);
+            _callDeleteAdaptiveMtDataset.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes an Adaptive MT dataset, including all its entries and associated
+        /// metadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteAdaptiveMtDatasetAsync(DeleteAdaptiveMtDatasetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAdaptiveMtDatasetRequest(ref request, ref callSettings);
+            return _callDeleteAdaptiveMtDataset.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the Adaptive MT dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AdaptiveMtDataset GetAdaptiveMtDataset(GetAdaptiveMtDatasetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAdaptiveMtDatasetRequest(ref request, ref callSettings);
+            return _callGetAdaptiveMtDataset.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the Adaptive MT dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AdaptiveMtDataset> GetAdaptiveMtDatasetAsync(GetAdaptiveMtDatasetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAdaptiveMtDatasetRequest(ref request, ref callSettings);
+            return _callGetAdaptiveMtDataset.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all Adaptive MT datasets for which the caller has read permission.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AdaptiveMtDataset"/> resources.</returns>
+        public override gax::PagedEnumerable<ListAdaptiveMtDatasetsResponse, AdaptiveMtDataset> ListAdaptiveMtDatasets(ListAdaptiveMtDatasetsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAdaptiveMtDatasetsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListAdaptiveMtDatasetsRequest, ListAdaptiveMtDatasetsResponse, AdaptiveMtDataset>(_callListAdaptiveMtDatasets, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all Adaptive MT datasets for which the caller has read permission.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AdaptiveMtDataset"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListAdaptiveMtDatasetsResponse, AdaptiveMtDataset> ListAdaptiveMtDatasetsAsync(ListAdaptiveMtDatasetsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAdaptiveMtDatasetsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAdaptiveMtDatasetsRequest, ListAdaptiveMtDatasetsResponse, AdaptiveMtDataset>(_callListAdaptiveMtDatasets, request, callSettings);
+        }
+
+        /// <summary>
+        /// Translate text using Adaptive MT.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AdaptiveMtTranslateResponse AdaptiveMtTranslate(AdaptiveMtTranslateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AdaptiveMtTranslateRequest(ref request, ref callSettings);
+            return _callAdaptiveMtTranslate.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Translate text using Adaptive MT.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AdaptiveMtTranslateResponse> AdaptiveMtTranslateAsync(AdaptiveMtTranslateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AdaptiveMtTranslateRequest(ref request, ref callSettings);
+            return _callAdaptiveMtTranslate.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets and AdaptiveMtFile
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AdaptiveMtFile GetAdaptiveMtFile(GetAdaptiveMtFileRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAdaptiveMtFileRequest(ref request, ref callSettings);
+            return _callGetAdaptiveMtFile.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets and AdaptiveMtFile
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AdaptiveMtFile> GetAdaptiveMtFileAsync(GetAdaptiveMtFileRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAdaptiveMtFileRequest(ref request, ref callSettings);
+            return _callGetAdaptiveMtFile.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes an AdaptiveMtFile along with its sentences.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteAdaptiveMtFile(DeleteAdaptiveMtFileRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAdaptiveMtFileRequest(ref request, ref callSettings);
+            _callDeleteAdaptiveMtFile.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes an AdaptiveMtFile along with its sentences.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteAdaptiveMtFileAsync(DeleteAdaptiveMtFileRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAdaptiveMtFileRequest(ref request, ref callSettings);
+            return _callDeleteAdaptiveMtFile.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Imports an AdaptiveMtFile and adds all of its sentences into the
+        /// AdaptiveMtDataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ImportAdaptiveMtFileResponse ImportAdaptiveMtFile(ImportAdaptiveMtFileRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ImportAdaptiveMtFileRequest(ref request, ref callSettings);
+            return _callImportAdaptiveMtFile.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Imports an AdaptiveMtFile and adds all of its sentences into the
+        /// AdaptiveMtDataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ImportAdaptiveMtFileResponse> ImportAdaptiveMtFileAsync(ImportAdaptiveMtFileRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ImportAdaptiveMtFileRequest(ref request, ref callSettings);
+            return _callImportAdaptiveMtFile.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all AdaptiveMtFiles associated to an AdaptiveMtDataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AdaptiveMtFile"/> resources.</returns>
+        public override gax::PagedEnumerable<ListAdaptiveMtFilesResponse, AdaptiveMtFile> ListAdaptiveMtFiles(ListAdaptiveMtFilesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAdaptiveMtFilesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListAdaptiveMtFilesRequest, ListAdaptiveMtFilesResponse, AdaptiveMtFile>(_callListAdaptiveMtFiles, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all AdaptiveMtFiles associated to an AdaptiveMtDataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AdaptiveMtFile"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListAdaptiveMtFilesResponse, AdaptiveMtFile> ListAdaptiveMtFilesAsync(ListAdaptiveMtFilesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAdaptiveMtFilesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAdaptiveMtFilesRequest, ListAdaptiveMtFilesResponse, AdaptiveMtFile>(_callListAdaptiveMtFiles, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all AdaptiveMtSentences under a given file/dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AdaptiveMtSentence"/> resources.</returns>
+        public override gax::PagedEnumerable<ListAdaptiveMtSentencesResponse, AdaptiveMtSentence> ListAdaptiveMtSentences(ListAdaptiveMtSentencesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAdaptiveMtSentencesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListAdaptiveMtSentencesRequest, ListAdaptiveMtSentencesResponse, AdaptiveMtSentence>(_callListAdaptiveMtSentences, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all AdaptiveMtSentences under a given file/dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AdaptiveMtSentence"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListAdaptiveMtSentencesResponse, AdaptiveMtSentence> ListAdaptiveMtSentencesAsync(ListAdaptiveMtSentencesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAdaptiveMtSentencesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAdaptiveMtSentencesRequest, ListAdaptiveMtSentencesResponse, AdaptiveMtSentence>(_callListAdaptiveMtSentences, request, callSettings);
+        }
     }
 
     public partial class ListGlossariesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListAdaptiveMtDatasetsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListAdaptiveMtFilesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListAdaptiveMtSentencesRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -3162,6 +4882,30 @@ namespace Google.Cloud.Translate.V3
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Glossary> GetEnumerator() => Glossaries.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListAdaptiveMtDatasetsResponse : gaxgrpc::IPageResponse<AdaptiveMtDataset>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<AdaptiveMtDataset> GetEnumerator() => AdaptiveMtDatasets.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListAdaptiveMtFilesResponse : gaxgrpc::IPageResponse<AdaptiveMtFile>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<AdaptiveMtFile> GetEnumerator() => AdaptiveMtFiles.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListAdaptiveMtSentencesResponse : gaxgrpc::IPageResponse<AdaptiveMtSentence>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<AdaptiveMtSentence> GetEnumerator() => AdaptiveMtSentences.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

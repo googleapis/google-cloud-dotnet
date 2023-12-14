@@ -97,6 +97,42 @@ namespace Google.Cloud.Translate.V3 {
     static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.Glossary> __Marshaller_google_cloud_translation_v3_Glossary = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.Glossary.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.DeleteGlossaryRequest> __Marshaller_google_cloud_translation_v3_DeleteGlossaryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.DeleteGlossaryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.CreateAdaptiveMtDatasetRequest> __Marshaller_google_cloud_translation_v3_CreateAdaptiveMtDatasetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.CreateAdaptiveMtDatasetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.AdaptiveMtDataset> __Marshaller_google_cloud_translation_v3_AdaptiveMtDataset = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.AdaptiveMtDataset.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.DeleteAdaptiveMtDatasetRequest> __Marshaller_google_cloud_translation_v3_DeleteAdaptiveMtDatasetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.DeleteAdaptiveMtDatasetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.GetAdaptiveMtDatasetRequest> __Marshaller_google_cloud_translation_v3_GetAdaptiveMtDatasetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.GetAdaptiveMtDatasetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.ListAdaptiveMtDatasetsRequest> __Marshaller_google_cloud_translation_v3_ListAdaptiveMtDatasetsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.ListAdaptiveMtDatasetsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.ListAdaptiveMtDatasetsResponse> __Marshaller_google_cloud_translation_v3_ListAdaptiveMtDatasetsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.ListAdaptiveMtDatasetsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.AdaptiveMtTranslateRequest> __Marshaller_google_cloud_translation_v3_AdaptiveMtTranslateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.AdaptiveMtTranslateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.AdaptiveMtTranslateResponse> __Marshaller_google_cloud_translation_v3_AdaptiveMtTranslateResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.AdaptiveMtTranslateResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.GetAdaptiveMtFileRequest> __Marshaller_google_cloud_translation_v3_GetAdaptiveMtFileRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.GetAdaptiveMtFileRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.AdaptiveMtFile> __Marshaller_google_cloud_translation_v3_AdaptiveMtFile = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.AdaptiveMtFile.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.DeleteAdaptiveMtFileRequest> __Marshaller_google_cloud_translation_v3_DeleteAdaptiveMtFileRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.DeleteAdaptiveMtFileRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.ImportAdaptiveMtFileRequest> __Marshaller_google_cloud_translation_v3_ImportAdaptiveMtFileRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.ImportAdaptiveMtFileRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.ImportAdaptiveMtFileResponse> __Marshaller_google_cloud_translation_v3_ImportAdaptiveMtFileResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.ImportAdaptiveMtFileResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.ListAdaptiveMtFilesRequest> __Marshaller_google_cloud_translation_v3_ListAdaptiveMtFilesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.ListAdaptiveMtFilesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.ListAdaptiveMtFilesResponse> __Marshaller_google_cloud_translation_v3_ListAdaptiveMtFilesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.ListAdaptiveMtFilesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.ListAdaptiveMtSentencesRequest> __Marshaller_google_cloud_translation_v3_ListAdaptiveMtSentencesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.ListAdaptiveMtSentencesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.ListAdaptiveMtSentencesResponse> __Marshaller_google_cloud_translation_v3_ListAdaptiveMtSentencesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.ListAdaptiveMtSentencesResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Translate.V3.TranslateTextRequest, global::Google.Cloud.Translate.V3.TranslateTextResponse> __Method_TranslateText = new grpc::Method<global::Google.Cloud.Translate.V3.TranslateTextRequest, global::Google.Cloud.Translate.V3.TranslateTextResponse>(
@@ -177,6 +213,86 @@ namespace Google.Cloud.Translate.V3 {
         "DeleteGlossary",
         __Marshaller_google_cloud_translation_v3_DeleteGlossaryRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Translate.V3.CreateAdaptiveMtDatasetRequest, global::Google.Cloud.Translate.V3.AdaptiveMtDataset> __Method_CreateAdaptiveMtDataset = new grpc::Method<global::Google.Cloud.Translate.V3.CreateAdaptiveMtDatasetRequest, global::Google.Cloud.Translate.V3.AdaptiveMtDataset>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateAdaptiveMtDataset",
+        __Marshaller_google_cloud_translation_v3_CreateAdaptiveMtDatasetRequest,
+        __Marshaller_google_cloud_translation_v3_AdaptiveMtDataset);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Translate.V3.DeleteAdaptiveMtDatasetRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteAdaptiveMtDataset = new grpc::Method<global::Google.Cloud.Translate.V3.DeleteAdaptiveMtDatasetRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteAdaptiveMtDataset",
+        __Marshaller_google_cloud_translation_v3_DeleteAdaptiveMtDatasetRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Translate.V3.GetAdaptiveMtDatasetRequest, global::Google.Cloud.Translate.V3.AdaptiveMtDataset> __Method_GetAdaptiveMtDataset = new grpc::Method<global::Google.Cloud.Translate.V3.GetAdaptiveMtDatasetRequest, global::Google.Cloud.Translate.V3.AdaptiveMtDataset>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAdaptiveMtDataset",
+        __Marshaller_google_cloud_translation_v3_GetAdaptiveMtDatasetRequest,
+        __Marshaller_google_cloud_translation_v3_AdaptiveMtDataset);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Translate.V3.ListAdaptiveMtDatasetsRequest, global::Google.Cloud.Translate.V3.ListAdaptiveMtDatasetsResponse> __Method_ListAdaptiveMtDatasets = new grpc::Method<global::Google.Cloud.Translate.V3.ListAdaptiveMtDatasetsRequest, global::Google.Cloud.Translate.V3.ListAdaptiveMtDatasetsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListAdaptiveMtDatasets",
+        __Marshaller_google_cloud_translation_v3_ListAdaptiveMtDatasetsRequest,
+        __Marshaller_google_cloud_translation_v3_ListAdaptiveMtDatasetsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Translate.V3.AdaptiveMtTranslateRequest, global::Google.Cloud.Translate.V3.AdaptiveMtTranslateResponse> __Method_AdaptiveMtTranslate = new grpc::Method<global::Google.Cloud.Translate.V3.AdaptiveMtTranslateRequest, global::Google.Cloud.Translate.V3.AdaptiveMtTranslateResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AdaptiveMtTranslate",
+        __Marshaller_google_cloud_translation_v3_AdaptiveMtTranslateRequest,
+        __Marshaller_google_cloud_translation_v3_AdaptiveMtTranslateResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Translate.V3.GetAdaptiveMtFileRequest, global::Google.Cloud.Translate.V3.AdaptiveMtFile> __Method_GetAdaptiveMtFile = new grpc::Method<global::Google.Cloud.Translate.V3.GetAdaptiveMtFileRequest, global::Google.Cloud.Translate.V3.AdaptiveMtFile>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAdaptiveMtFile",
+        __Marshaller_google_cloud_translation_v3_GetAdaptiveMtFileRequest,
+        __Marshaller_google_cloud_translation_v3_AdaptiveMtFile);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Translate.V3.DeleteAdaptiveMtFileRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteAdaptiveMtFile = new grpc::Method<global::Google.Cloud.Translate.V3.DeleteAdaptiveMtFileRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteAdaptiveMtFile",
+        __Marshaller_google_cloud_translation_v3_DeleteAdaptiveMtFileRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Translate.V3.ImportAdaptiveMtFileRequest, global::Google.Cloud.Translate.V3.ImportAdaptiveMtFileResponse> __Method_ImportAdaptiveMtFile = new grpc::Method<global::Google.Cloud.Translate.V3.ImportAdaptiveMtFileRequest, global::Google.Cloud.Translate.V3.ImportAdaptiveMtFileResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ImportAdaptiveMtFile",
+        __Marshaller_google_cloud_translation_v3_ImportAdaptiveMtFileRequest,
+        __Marshaller_google_cloud_translation_v3_ImportAdaptiveMtFileResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Translate.V3.ListAdaptiveMtFilesRequest, global::Google.Cloud.Translate.V3.ListAdaptiveMtFilesResponse> __Method_ListAdaptiveMtFiles = new grpc::Method<global::Google.Cloud.Translate.V3.ListAdaptiveMtFilesRequest, global::Google.Cloud.Translate.V3.ListAdaptiveMtFilesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListAdaptiveMtFiles",
+        __Marshaller_google_cloud_translation_v3_ListAdaptiveMtFilesRequest,
+        __Marshaller_google_cloud_translation_v3_ListAdaptiveMtFilesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Translate.V3.ListAdaptiveMtSentencesRequest, global::Google.Cloud.Translate.V3.ListAdaptiveMtSentencesResponse> __Method_ListAdaptiveMtSentences = new grpc::Method<global::Google.Cloud.Translate.V3.ListAdaptiveMtSentencesRequest, global::Google.Cloud.Translate.V3.ListAdaptiveMtSentencesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListAdaptiveMtSentences",
+        __Marshaller_google_cloud_translation_v3_ListAdaptiveMtSentencesRequest,
+        __Marshaller_google_cloud_translation_v3_ListAdaptiveMtSentencesResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -321,6 +437,128 @@ namespace Google.Cloud.Translate.V3 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteGlossary(global::Google.Cloud.Translate.V3.DeleteGlossaryRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates an Adaptive MT dataset.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Translate.V3.AdaptiveMtDataset> CreateAdaptiveMtDataset(global::Google.Cloud.Translate.V3.CreateAdaptiveMtDatasetRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes an Adaptive MT dataset, including all its entries and associated
+      /// metadata.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAdaptiveMtDataset(global::Google.Cloud.Translate.V3.DeleteAdaptiveMtDatasetRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets the Adaptive MT dataset.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Translate.V3.AdaptiveMtDataset> GetAdaptiveMtDataset(global::Google.Cloud.Translate.V3.GetAdaptiveMtDatasetRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all Adaptive MT datasets for which the caller has read permission.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Translate.V3.ListAdaptiveMtDatasetsResponse> ListAdaptiveMtDatasets(global::Google.Cloud.Translate.V3.ListAdaptiveMtDatasetsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Translate text using Adaptive MT.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Translate.V3.AdaptiveMtTranslateResponse> AdaptiveMtTranslate(global::Google.Cloud.Translate.V3.AdaptiveMtTranslateRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets and AdaptiveMtFile
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Translate.V3.AdaptiveMtFile> GetAdaptiveMtFile(global::Google.Cloud.Translate.V3.GetAdaptiveMtFileRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes an AdaptiveMtFile along with its sentences.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAdaptiveMtFile(global::Google.Cloud.Translate.V3.DeleteAdaptiveMtFileRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Imports an AdaptiveMtFile and adds all of its sentences into the
+      /// AdaptiveMtDataset.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Translate.V3.ImportAdaptiveMtFileResponse> ImportAdaptiveMtFile(global::Google.Cloud.Translate.V3.ImportAdaptiveMtFileRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all AdaptiveMtFiles associated to an AdaptiveMtDataset.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Translate.V3.ListAdaptiveMtFilesResponse> ListAdaptiveMtFiles(global::Google.Cloud.Translate.V3.ListAdaptiveMtFilesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all AdaptiveMtSentences under a given file/dataset.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Translate.V3.ListAdaptiveMtSentencesResponse> ListAdaptiveMtSentences(global::Google.Cloud.Translate.V3.ListAdaptiveMtSentencesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -902,6 +1140,494 @@ namespace Google.Cloud.Translate.V3 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteGlossary, null, options, request);
       }
+      /// <summary>
+      /// Creates an Adaptive MT dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Translate.V3.AdaptiveMtDataset CreateAdaptiveMtDataset(global::Google.Cloud.Translate.V3.CreateAdaptiveMtDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAdaptiveMtDataset(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates an Adaptive MT dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Translate.V3.AdaptiveMtDataset CreateAdaptiveMtDataset(global::Google.Cloud.Translate.V3.CreateAdaptiveMtDatasetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateAdaptiveMtDataset, null, options, request);
+      }
+      /// <summary>
+      /// Creates an Adaptive MT dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.AdaptiveMtDataset> CreateAdaptiveMtDatasetAsync(global::Google.Cloud.Translate.V3.CreateAdaptiveMtDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAdaptiveMtDatasetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates an Adaptive MT dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.AdaptiveMtDataset> CreateAdaptiveMtDatasetAsync(global::Google.Cloud.Translate.V3.CreateAdaptiveMtDatasetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateAdaptiveMtDataset, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an Adaptive MT dataset, including all its entries and associated
+      /// metadata.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAdaptiveMtDataset(global::Google.Cloud.Translate.V3.DeleteAdaptiveMtDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAdaptiveMtDataset(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an Adaptive MT dataset, including all its entries and associated
+      /// metadata.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAdaptiveMtDataset(global::Google.Cloud.Translate.V3.DeleteAdaptiveMtDatasetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteAdaptiveMtDataset, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an Adaptive MT dataset, including all its entries and associated
+      /// metadata.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAdaptiveMtDatasetAsync(global::Google.Cloud.Translate.V3.DeleteAdaptiveMtDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAdaptiveMtDatasetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an Adaptive MT dataset, including all its entries and associated
+      /// metadata.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAdaptiveMtDatasetAsync(global::Google.Cloud.Translate.V3.DeleteAdaptiveMtDatasetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteAdaptiveMtDataset, null, options, request);
+      }
+      /// <summary>
+      /// Gets the Adaptive MT dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Translate.V3.AdaptiveMtDataset GetAdaptiveMtDataset(global::Google.Cloud.Translate.V3.GetAdaptiveMtDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAdaptiveMtDataset(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the Adaptive MT dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Translate.V3.AdaptiveMtDataset GetAdaptiveMtDataset(global::Google.Cloud.Translate.V3.GetAdaptiveMtDatasetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAdaptiveMtDataset, null, options, request);
+      }
+      /// <summary>
+      /// Gets the Adaptive MT dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.AdaptiveMtDataset> GetAdaptiveMtDatasetAsync(global::Google.Cloud.Translate.V3.GetAdaptiveMtDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAdaptiveMtDatasetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the Adaptive MT dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.AdaptiveMtDataset> GetAdaptiveMtDatasetAsync(global::Google.Cloud.Translate.V3.GetAdaptiveMtDatasetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAdaptiveMtDataset, null, options, request);
+      }
+      /// <summary>
+      /// Lists all Adaptive MT datasets for which the caller has read permission.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Translate.V3.ListAdaptiveMtDatasetsResponse ListAdaptiveMtDatasets(global::Google.Cloud.Translate.V3.ListAdaptiveMtDatasetsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAdaptiveMtDatasets(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all Adaptive MT datasets for which the caller has read permission.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Translate.V3.ListAdaptiveMtDatasetsResponse ListAdaptiveMtDatasets(global::Google.Cloud.Translate.V3.ListAdaptiveMtDatasetsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListAdaptiveMtDatasets, null, options, request);
+      }
+      /// <summary>
+      /// Lists all Adaptive MT datasets for which the caller has read permission.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.ListAdaptiveMtDatasetsResponse> ListAdaptiveMtDatasetsAsync(global::Google.Cloud.Translate.V3.ListAdaptiveMtDatasetsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAdaptiveMtDatasetsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all Adaptive MT datasets for which the caller has read permission.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.ListAdaptiveMtDatasetsResponse> ListAdaptiveMtDatasetsAsync(global::Google.Cloud.Translate.V3.ListAdaptiveMtDatasetsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListAdaptiveMtDatasets, null, options, request);
+      }
+      /// <summary>
+      /// Translate text using Adaptive MT.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Translate.V3.AdaptiveMtTranslateResponse AdaptiveMtTranslate(global::Google.Cloud.Translate.V3.AdaptiveMtTranslateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AdaptiveMtTranslate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Translate text using Adaptive MT.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Translate.V3.AdaptiveMtTranslateResponse AdaptiveMtTranslate(global::Google.Cloud.Translate.V3.AdaptiveMtTranslateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AdaptiveMtTranslate, null, options, request);
+      }
+      /// <summary>
+      /// Translate text using Adaptive MT.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.AdaptiveMtTranslateResponse> AdaptiveMtTranslateAsync(global::Google.Cloud.Translate.V3.AdaptiveMtTranslateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AdaptiveMtTranslateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Translate text using Adaptive MT.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.AdaptiveMtTranslateResponse> AdaptiveMtTranslateAsync(global::Google.Cloud.Translate.V3.AdaptiveMtTranslateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AdaptiveMtTranslate, null, options, request);
+      }
+      /// <summary>
+      /// Gets and AdaptiveMtFile
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Translate.V3.AdaptiveMtFile GetAdaptiveMtFile(global::Google.Cloud.Translate.V3.GetAdaptiveMtFileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAdaptiveMtFile(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets and AdaptiveMtFile
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Translate.V3.AdaptiveMtFile GetAdaptiveMtFile(global::Google.Cloud.Translate.V3.GetAdaptiveMtFileRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAdaptiveMtFile, null, options, request);
+      }
+      /// <summary>
+      /// Gets and AdaptiveMtFile
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.AdaptiveMtFile> GetAdaptiveMtFileAsync(global::Google.Cloud.Translate.V3.GetAdaptiveMtFileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAdaptiveMtFileAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets and AdaptiveMtFile
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.AdaptiveMtFile> GetAdaptiveMtFileAsync(global::Google.Cloud.Translate.V3.GetAdaptiveMtFileRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAdaptiveMtFile, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an AdaptiveMtFile along with its sentences.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAdaptiveMtFile(global::Google.Cloud.Translate.V3.DeleteAdaptiveMtFileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAdaptiveMtFile(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an AdaptiveMtFile along with its sentences.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAdaptiveMtFile(global::Google.Cloud.Translate.V3.DeleteAdaptiveMtFileRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteAdaptiveMtFile, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an AdaptiveMtFile along with its sentences.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAdaptiveMtFileAsync(global::Google.Cloud.Translate.V3.DeleteAdaptiveMtFileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAdaptiveMtFileAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an AdaptiveMtFile along with its sentences.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAdaptiveMtFileAsync(global::Google.Cloud.Translate.V3.DeleteAdaptiveMtFileRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteAdaptiveMtFile, null, options, request);
+      }
+      /// <summary>
+      /// Imports an AdaptiveMtFile and adds all of its sentences into the
+      /// AdaptiveMtDataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Translate.V3.ImportAdaptiveMtFileResponse ImportAdaptiveMtFile(global::Google.Cloud.Translate.V3.ImportAdaptiveMtFileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ImportAdaptiveMtFile(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Imports an AdaptiveMtFile and adds all of its sentences into the
+      /// AdaptiveMtDataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Translate.V3.ImportAdaptiveMtFileResponse ImportAdaptiveMtFile(global::Google.Cloud.Translate.V3.ImportAdaptiveMtFileRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ImportAdaptiveMtFile, null, options, request);
+      }
+      /// <summary>
+      /// Imports an AdaptiveMtFile and adds all of its sentences into the
+      /// AdaptiveMtDataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.ImportAdaptiveMtFileResponse> ImportAdaptiveMtFileAsync(global::Google.Cloud.Translate.V3.ImportAdaptiveMtFileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ImportAdaptiveMtFileAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Imports an AdaptiveMtFile and adds all of its sentences into the
+      /// AdaptiveMtDataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.ImportAdaptiveMtFileResponse> ImportAdaptiveMtFileAsync(global::Google.Cloud.Translate.V3.ImportAdaptiveMtFileRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ImportAdaptiveMtFile, null, options, request);
+      }
+      /// <summary>
+      /// Lists all AdaptiveMtFiles associated to an AdaptiveMtDataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Translate.V3.ListAdaptiveMtFilesResponse ListAdaptiveMtFiles(global::Google.Cloud.Translate.V3.ListAdaptiveMtFilesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAdaptiveMtFiles(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all AdaptiveMtFiles associated to an AdaptiveMtDataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Translate.V3.ListAdaptiveMtFilesResponse ListAdaptiveMtFiles(global::Google.Cloud.Translate.V3.ListAdaptiveMtFilesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListAdaptiveMtFiles, null, options, request);
+      }
+      /// <summary>
+      /// Lists all AdaptiveMtFiles associated to an AdaptiveMtDataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.ListAdaptiveMtFilesResponse> ListAdaptiveMtFilesAsync(global::Google.Cloud.Translate.V3.ListAdaptiveMtFilesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAdaptiveMtFilesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all AdaptiveMtFiles associated to an AdaptiveMtDataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.ListAdaptiveMtFilesResponse> ListAdaptiveMtFilesAsync(global::Google.Cloud.Translate.V3.ListAdaptiveMtFilesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListAdaptiveMtFiles, null, options, request);
+      }
+      /// <summary>
+      /// Lists all AdaptiveMtSentences under a given file/dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Translate.V3.ListAdaptiveMtSentencesResponse ListAdaptiveMtSentences(global::Google.Cloud.Translate.V3.ListAdaptiveMtSentencesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAdaptiveMtSentences(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all AdaptiveMtSentences under a given file/dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Translate.V3.ListAdaptiveMtSentencesResponse ListAdaptiveMtSentences(global::Google.Cloud.Translate.V3.ListAdaptiveMtSentencesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListAdaptiveMtSentences, null, options, request);
+      }
+      /// <summary>
+      /// Lists all AdaptiveMtSentences under a given file/dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.ListAdaptiveMtSentencesResponse> ListAdaptiveMtSentencesAsync(global::Google.Cloud.Translate.V3.ListAdaptiveMtSentencesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAdaptiveMtSentencesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all AdaptiveMtSentences under a given file/dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.ListAdaptiveMtSentencesResponse> ListAdaptiveMtSentencesAsync(global::Google.Cloud.Translate.V3.ListAdaptiveMtSentencesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListAdaptiveMtSentences, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override TranslationServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -925,7 +1651,17 @@ namespace Google.Cloud.Translate.V3 {
           .AddMethod(__Method_CreateGlossary, serviceImpl.CreateGlossary)
           .AddMethod(__Method_ListGlossaries, serviceImpl.ListGlossaries)
           .AddMethod(__Method_GetGlossary, serviceImpl.GetGlossary)
-          .AddMethod(__Method_DeleteGlossary, serviceImpl.DeleteGlossary).Build();
+          .AddMethod(__Method_DeleteGlossary, serviceImpl.DeleteGlossary)
+          .AddMethod(__Method_CreateAdaptiveMtDataset, serviceImpl.CreateAdaptiveMtDataset)
+          .AddMethod(__Method_DeleteAdaptiveMtDataset, serviceImpl.DeleteAdaptiveMtDataset)
+          .AddMethod(__Method_GetAdaptiveMtDataset, serviceImpl.GetAdaptiveMtDataset)
+          .AddMethod(__Method_ListAdaptiveMtDatasets, serviceImpl.ListAdaptiveMtDatasets)
+          .AddMethod(__Method_AdaptiveMtTranslate, serviceImpl.AdaptiveMtTranslate)
+          .AddMethod(__Method_GetAdaptiveMtFile, serviceImpl.GetAdaptiveMtFile)
+          .AddMethod(__Method_DeleteAdaptiveMtFile, serviceImpl.DeleteAdaptiveMtFile)
+          .AddMethod(__Method_ImportAdaptiveMtFile, serviceImpl.ImportAdaptiveMtFile)
+          .AddMethod(__Method_ListAdaptiveMtFiles, serviceImpl.ListAdaptiveMtFiles)
+          .AddMethod(__Method_ListAdaptiveMtSentences, serviceImpl.ListAdaptiveMtSentences).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -945,6 +1681,16 @@ namespace Google.Cloud.Translate.V3 {
       serviceBinder.AddMethod(__Method_ListGlossaries, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.ListGlossariesRequest, global::Google.Cloud.Translate.V3.ListGlossariesResponse>(serviceImpl.ListGlossaries));
       serviceBinder.AddMethod(__Method_GetGlossary, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.GetGlossaryRequest, global::Google.Cloud.Translate.V3.Glossary>(serviceImpl.GetGlossary));
       serviceBinder.AddMethod(__Method_DeleteGlossary, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.DeleteGlossaryRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteGlossary));
+      serviceBinder.AddMethod(__Method_CreateAdaptiveMtDataset, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.CreateAdaptiveMtDatasetRequest, global::Google.Cloud.Translate.V3.AdaptiveMtDataset>(serviceImpl.CreateAdaptiveMtDataset));
+      serviceBinder.AddMethod(__Method_DeleteAdaptiveMtDataset, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.DeleteAdaptiveMtDatasetRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteAdaptiveMtDataset));
+      serviceBinder.AddMethod(__Method_GetAdaptiveMtDataset, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.GetAdaptiveMtDatasetRequest, global::Google.Cloud.Translate.V3.AdaptiveMtDataset>(serviceImpl.GetAdaptiveMtDataset));
+      serviceBinder.AddMethod(__Method_ListAdaptiveMtDatasets, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.ListAdaptiveMtDatasetsRequest, global::Google.Cloud.Translate.V3.ListAdaptiveMtDatasetsResponse>(serviceImpl.ListAdaptiveMtDatasets));
+      serviceBinder.AddMethod(__Method_AdaptiveMtTranslate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.AdaptiveMtTranslateRequest, global::Google.Cloud.Translate.V3.AdaptiveMtTranslateResponse>(serviceImpl.AdaptiveMtTranslate));
+      serviceBinder.AddMethod(__Method_GetAdaptiveMtFile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.GetAdaptiveMtFileRequest, global::Google.Cloud.Translate.V3.AdaptiveMtFile>(serviceImpl.GetAdaptiveMtFile));
+      serviceBinder.AddMethod(__Method_DeleteAdaptiveMtFile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.DeleteAdaptiveMtFileRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteAdaptiveMtFile));
+      serviceBinder.AddMethod(__Method_ImportAdaptiveMtFile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.ImportAdaptiveMtFileRequest, global::Google.Cloud.Translate.V3.ImportAdaptiveMtFileResponse>(serviceImpl.ImportAdaptiveMtFile));
+      serviceBinder.AddMethod(__Method_ListAdaptiveMtFiles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.ListAdaptiveMtFilesRequest, global::Google.Cloud.Translate.V3.ListAdaptiveMtFilesResponse>(serviceImpl.ListAdaptiveMtFiles));
+      serviceBinder.AddMethod(__Method_ListAdaptiveMtSentences, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.ListAdaptiveMtSentencesRequest, global::Google.Cloud.Translate.V3.ListAdaptiveMtSentencesResponse>(serviceImpl.ListAdaptiveMtSentences));
     }
 
   }
