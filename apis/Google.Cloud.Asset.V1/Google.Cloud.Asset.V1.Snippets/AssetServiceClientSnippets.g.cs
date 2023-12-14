@@ -1290,8 +1290,8 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AnalyzeMoveRequest request = new AnalyzeMoveRequest
             {
-                Resource = "",
-                DestinationParent = "",
+                ResourceAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                DestinationParentAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 View = AnalyzeMoveRequest.Types.AnalysisView.Unspecified,
             };
             // Make the request
@@ -1309,8 +1309,8 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AnalyzeMoveRequest request = new AnalyzeMoveRequest
             {
-                Resource = "",
-                DestinationParent = "",
+                ResourceAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                DestinationParentAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 View = AnalyzeMoveRequest.Types.AnalysisView.Unspecified,
             };
             // Make the request

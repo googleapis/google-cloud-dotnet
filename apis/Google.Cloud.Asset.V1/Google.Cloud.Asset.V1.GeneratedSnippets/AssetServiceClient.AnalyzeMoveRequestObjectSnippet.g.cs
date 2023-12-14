@@ -17,6 +17,8 @@
 namespace GoogleCSharpSnippets
 {
     // [START cloudasset_v1_generated_AssetService_AnalyzeMove_sync]
+    using Google.Api.Gax;
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Asset.V1;
 
     public sealed partial class GeneratedAssetServiceClientSnippets
@@ -36,8 +38,8 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AnalyzeMoveRequest request = new AnalyzeMoveRequest
             {
-                Resource = "",
-                DestinationParent = "",
+                ResourceAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                DestinationParentAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 View = AnalyzeMoveRequest.Types.AnalysisView.Unspecified,
             };
             // Make the request
