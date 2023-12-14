@@ -1112,6 +1112,7 @@ namespace GoogleCSharpSnippets
                 {
                     new ModifyColumnFamiliesRequest.Types.Modification(),
                 },
+                IgnoreWarnings = false,
             };
             // Make the request
             Table response = bigtableTableAdminClient.ModifyColumnFamilies(request);
@@ -1133,6 +1134,7 @@ namespace GoogleCSharpSnippets
                 {
                     new ModifyColumnFamiliesRequest.Types.Modification(),
                 },
+                IgnoreWarnings = false,
             };
             // Make the request
             Table response = await bigtableTableAdminClient.ModifyColumnFamiliesAsync(request);
