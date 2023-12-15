@@ -72,40 +72,45 @@ namespace Google.Apps.Meet.V2Beta {
             "YW50U2Vzc2lvbiI8CgxTaWduZWRpblVzZXISEQoEdXNlchgBIAEoCUID4EED",
             "EhkKDGRpc3BsYXlfbmFtZRgCIAEoCUID4EEDIioKDUFub255bW91c1VzZXIS",
             "GQoMZGlzcGxheV9uYW1lGAEgASgJQgPgQQMiJgoJUGhvbmVVc2VyEhkKDGRp",
-            "c3BsYXlfbmFtZRgBIAEoCUID4EEDIv0CCglSZWNvcmRpbmcSSwoRZHJpdmVf",
+            "c3BsYXlfbmFtZRgBIAEoCUID4EEDIuUDCglSZWNvcmRpbmcSSwoRZHJpdmVf",
             "ZGVzdGluYXRpb24YBiABKAsyKS5nb29nbGUuYXBwcy5tZWV0LnYyYmV0YS5E",
             "cml2ZURlc3RpbmF0aW9uQgPgQQNIABIRCgRuYW1lGAEgASgJQgPgQQMSPAoF",
             "c3RhdGUYAyABKA4yKC5nb29nbGUuYXBwcy5tZWV0LnYyYmV0YS5SZWNvcmRp",
-            "bmcuU3RhdGVCA+BBAyJKCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAA",
-            "EgsKB1NUQVJURUQQARIJCgVFTkRFRBACEhIKDkZJTEVfR0VORVJBVEVEEAM6",
-            "d+pBdAodbWVldC5nb29nbGVhcGlzLmNvbS9SZWNvcmRpbmcSPGNvbmZlcmVu",
-            "Y2VSZWNvcmRzL3tjb25mZXJlbmNlX3JlY29yZH0vcmVjb3JkaW5ncy97cmVj",
-            "b3JkaW5nfSoKcmVjb3JkaW5nczIJcmVjb3JkaW5nQg0KC2Rlc3RpbmF0aW9u",
-            "Ij4KEERyaXZlRGVzdGluYXRpb24SEQoEZmlsZRgBIAEoCUID4EEDEhcKCmV4",
-            "cG9ydF91cmkYAiABKAlCA+BBAyKCAwoKVHJhbnNjcmlwdBJJChBkb2NzX2Rl",
-            "c3RpbmF0aW9uGAYgASgLMiguZ29vZ2xlLmFwcHMubWVldC52MmJldGEuRG9j",
-            "c0Rlc3RpbmF0aW9uQgPgQQNIABIRCgRuYW1lGAEgASgJQgPgQQMSPQoFc3Rh",
-            "dGUYAyABKA4yKS5nb29nbGUuYXBwcy5tZWV0LnYyYmV0YS5UcmFuc2NyaXB0",
-            "LlN0YXRlQgPgQQMiSgoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIL",
-            "CgdTVEFSVEVEEAESCQoFRU5ERUQQAhISCg5GSUxFX0dFTkVSQVRFRBADOnzq",
-            "QXkKHm1lZXQuZ29vZ2xlYXBpcy5jb20vVHJhbnNjcmlwdBI+Y29uZmVyZW5j",
+            "bmcuU3RhdGVCA+BBAxIzCgpzdGFydF90aW1lGAQgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcEID4EEDEjEKCGVuZF90aW1lGAUgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDIkoKBVN0YXRlEhUKEVNUQVRF",
+            "X1VOU1BFQ0lGSUVEEAASCwoHU1RBUlRFRBABEgkKBUVOREVEEAISEgoORklM",
+            "RV9HRU5FUkFURUQQAzp36kF0Ch1tZWV0Lmdvb2dsZWFwaXMuY29tL1JlY29y",
+            "ZGluZxI8Y29uZmVyZW5jZVJlY29yZHMve2NvbmZlcmVuY2VfcmVjb3JkfS9y",
+            "ZWNvcmRpbmdzL3tyZWNvcmRpbmd9KgpyZWNvcmRpbmdzMglyZWNvcmRpbmdC",
+            "DQoLZGVzdGluYXRpb24iPgoQRHJpdmVEZXN0aW5hdGlvbhIRCgRmaWxlGAEg",
+            "ASgJQgPgQQMSFwoKZXhwb3J0X3VyaRgCIAEoCUID4EEDIuoDCgpUcmFuc2Ny",
+            "aXB0EkkKEGRvY3NfZGVzdGluYXRpb24YBiABKAsyKC5nb29nbGUuYXBwcy5t",
+            "ZWV0LnYyYmV0YS5Eb2NzRGVzdGluYXRpb25CA+BBA0gAEhEKBG5hbWUYASAB",
+            "KAlCA+BBAxI9CgVzdGF0ZRgDIAEoDjIpLmdvb2dsZS5hcHBzLm1lZXQudjJi",
+            "ZXRhLlRyYW5zY3JpcHQuU3RhdGVCA+BBAxIzCgpzdGFydF90aW1lGAQgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjEKCGVuZF90aW1l",
+            "GAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDIkoKBVN0",
+            "YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCwoHU1RBUlRFRBABEgkKBUVO",
+            "REVEEAISEgoORklMRV9HRU5FUkFURUQQAzp86kF5Ch5tZWV0Lmdvb2dsZWFw",
+            "aXMuY29tL1RyYW5zY3JpcHQSPmNvbmZlcmVuY2VSZWNvcmRzL3tjb25mZXJl",
+            "bmNlX3JlY29yZH0vdHJhbnNjcmlwdHMve3RyYW5zY3JpcHR9Kgt0cmFuc2Ny",
+            "aXB0czIKdHJhbnNjcmlwdEINCgtkZXN0aW5hdGlvbiJBCg9Eb2NzRGVzdGlu",
+            "YXRpb24SFQoIZG9jdW1lbnQYASABKAlCA+BBAxIXCgpleHBvcnRfdXJpGAIg",
+            "ASgJQgPgQQMimQMKD1RyYW5zY3JpcHRFbnRyeRIRCgRuYW1lGAEgASgJQgPg",
+            "QQMSPAoLcGFydGljaXBhbnQYAiABKAlCJ+BBA/pBIQofbWVldC5nb29nbGVh",
+            "cGlzLmNvbS9QYXJ0aWNpcGFudBIRCgR0ZXh0GAMgASgJQgPgQQMSGgoNbGFu",
+            "Z3VhZ2VfY29kZRgEIAEoCUID4EEDEjMKCnN0YXJ0X3RpbWUYBSABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSMQoIZW5kX3RpbWUYBiAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQM6nQHqQZkBCiNt",
+            "ZWV0Lmdvb2dsZWFwaXMuY29tL1RyYW5zY3JpcHRFbnRyeRJOY29uZmVyZW5j",
             "ZVJlY29yZHMve2NvbmZlcmVuY2VfcmVjb3JkfS90cmFuc2NyaXB0cy97dHJh",
-            "bnNjcmlwdH0qC3RyYW5zY3JpcHRzMgp0cmFuc2NyaXB0Qg0KC2Rlc3RpbmF0",
-            "aW9uIkEKD0RvY3NEZXN0aW5hdGlvbhIVCghkb2N1bWVudBgBIAEoCUID4EED",
-            "EhcKCmV4cG9ydF91cmkYAiABKAlCA+BBAyKZAwoPVHJhbnNjcmlwdEVudHJ5",
-            "EhEKBG5hbWUYASABKAlCA+BBAxI8CgtwYXJ0aWNpcGFudBgCIAEoCUIn4EED",
-            "+kEhCh9tZWV0Lmdvb2dsZWFwaXMuY29tL1BhcnRpY2lwYW50EhEKBHRleHQY",
-            "AyABKAlCA+BBAxIaCg1sYW5ndWFnZV9jb2RlGAQgASgJQgPgQQMSMwoKc3Rh",
-            "cnRfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
-            "AxIxCghlbmRfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXBCA+BBAzqdAepBmQEKI21lZXQuZ29vZ2xlYXBpcy5jb20vVHJhbnNjcmlw",
-            "dEVudHJ5Ek5jb25mZXJlbmNlUmVjb3Jkcy97Y29uZmVyZW5jZV9yZWNvcmR9",
-            "L3RyYW5zY3JpcHRzL3t0cmFuc2NyaXB0fS9lbnRyaWVzL3tlbnRyeX0qEXRy",
-            "YW5zY3JpcHRFbnRyaWVzMg90cmFuc2NyaXB0RW50cnlCtgEKG2NvbS5nb29n",
-            "bGUuYXBwcy5tZWV0LnYyYmV0YUINUmVzb3VyY2VQcm90b1ABWjVjbG91ZC5n",
-            "b29nbGUuY29tL2dvL2FwcHMvbWVldC9hcGl2MmJldGEvbWVldHBiO21lZXRw",
-            "YqoCF0dvb2dsZS5BcHBzLk1lZXQuVjJCZXRhygIXR29vZ2xlXEFwcHNcTWVl",
-            "dFxWMmJldGHqAhpHb29nbGU6OkFwcHM6Ok1lZXQ6OlYyYmV0YWIGcHJvdG8z"));
+            "bnNjcmlwdH0vZW50cmllcy97ZW50cnl9KhF0cmFuc2NyaXB0RW50cmllczIP",
+            "dHJhbnNjcmlwdEVudHJ5QrYBChtjb20uZ29vZ2xlLmFwcHMubWVldC52MmJl",
+            "dGFCDVJlc291cmNlUHJvdG9QAVo1Y2xvdWQuZ29vZ2xlLmNvbS9nby9hcHBz",
+            "L21lZXQvYXBpdjJiZXRhL21lZXRwYjttZWV0cGKqAhdHb29nbGUuQXBwcy5N",
+            "ZWV0LlYyQmV0YcoCF0dvb2dsZVxBcHBzXE1lZXRcVjJiZXRh6gIaR29vZ2xl",
+            "OjpBcHBzOjpNZWV0OjpWMmJldGFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -118,9 +123,9 @@ namespace Google.Apps.Meet.V2Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.SignedinUser), global::Google.Apps.Meet.V2Beta.SignedinUser.Parser, new[]{ "User", "DisplayName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.AnonymousUser), global::Google.Apps.Meet.V2Beta.AnonymousUser.Parser, new[]{ "DisplayName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.PhoneUser), global::Google.Apps.Meet.V2Beta.PhoneUser.Parser, new[]{ "DisplayName" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.Recording), global::Google.Apps.Meet.V2Beta.Recording.Parser, new[]{ "DriveDestination", "Name", "State" }, new[]{ "Destination" }, new[]{ typeof(global::Google.Apps.Meet.V2Beta.Recording.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.Recording), global::Google.Apps.Meet.V2Beta.Recording.Parser, new[]{ "DriveDestination", "Name", "State", "StartTime", "EndTime" }, new[]{ "Destination" }, new[]{ typeof(global::Google.Apps.Meet.V2Beta.Recording.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.DriveDestination), global::Google.Apps.Meet.V2Beta.DriveDestination.Parser, new[]{ "File", "ExportUri" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.Transcript), global::Google.Apps.Meet.V2Beta.Transcript.Parser, new[]{ "DocsDestination", "Name", "State" }, new[]{ "Destination" }, new[]{ typeof(global::Google.Apps.Meet.V2Beta.Transcript.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.Transcript), global::Google.Apps.Meet.V2Beta.Transcript.Parser, new[]{ "DocsDestination", "Name", "State", "StartTime", "EndTime" }, new[]{ "Destination" }, new[]{ typeof(global::Google.Apps.Meet.V2Beta.Transcript.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.DocsDestination), global::Google.Apps.Meet.V2Beta.DocsDestination.Parser, new[]{ "Document", "ExportUri" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.TranscriptEntry), global::Google.Apps.Meet.V2Beta.TranscriptEntry.Parser, new[]{ "Name", "Participant", "Text", "LanguageCode", "StartTime", "EndTime" }, null, null, null, null)
           }));
@@ -2850,6 +2855,8 @@ namespace Google.Apps.Meet.V2Beta {
     public Recording(Recording other) : this() {
       name_ = other.name_;
       state_ = other.state_;
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
       switch (other.DestinationCase) {
         case DestinationOneofCase.DriveDestination:
           DriveDestination = other.DriveDestination.Clone();
@@ -2915,6 +2922,36 @@ namespace Google.Apps.Meet.V2Beta {
       }
     }
 
+    /// <summary>Field number for the "start_time" field.</summary>
+    public const int StartTimeFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
+    /// <summary>
+    /// Output only. Timestamp when the recording started.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
+      get { return startTime_; }
+      set {
+        startTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_time" field.</summary>
+    public const int EndTimeFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
+    /// <summary>
+    /// Output only. Timestamp when the recording ended.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
+      get { return endTime_; }
+      set {
+        endTime_ = value;
+      }
+    }
+
     private object destination_;
     /// <summary>Enum of possible cases for the "destination" oneof.</summary>
     public enum DestinationOneofCase {
@@ -2953,6 +2990,8 @@ namespace Google.Apps.Meet.V2Beta {
       if (!object.Equals(DriveDestination, other.DriveDestination)) return false;
       if (Name != other.Name) return false;
       if (State != other.State) return false;
+      if (!object.Equals(StartTime, other.StartTime)) return false;
+      if (!object.Equals(EndTime, other.EndTime)) return false;
       if (DestinationCase != other.DestinationCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2964,6 +3003,8 @@ namespace Google.Apps.Meet.V2Beta {
       if (destinationCase_ == DestinationOneofCase.DriveDestination) hash ^= DriveDestination.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (State != global::Google.Apps.Meet.V2Beta.Recording.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (startTime_ != null) hash ^= StartTime.GetHashCode();
+      if (endTime_ != null) hash ^= EndTime.GetHashCode();
       hash ^= (int) destinationCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2991,6 +3032,14 @@ namespace Google.Apps.Meet.V2Beta {
         output.WriteRawTag(24);
         output.WriteEnum((int) State);
       }
+      if (startTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(EndTime);
+      }
       if (destinationCase_ == DestinationOneofCase.DriveDestination) {
         output.WriteRawTag(50);
         output.WriteMessage(DriveDestination);
@@ -3012,6 +3061,14 @@ namespace Google.Apps.Meet.V2Beta {
       if (State != global::Google.Apps.Meet.V2Beta.Recording.Types.State.Unspecified) {
         output.WriteRawTag(24);
         output.WriteEnum((int) State);
+      }
+      if (startTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(EndTime);
       }
       if (destinationCase_ == DestinationOneofCase.DriveDestination) {
         output.WriteRawTag(50);
@@ -3036,6 +3093,12 @@ namespace Google.Apps.Meet.V2Beta {
       if (State != global::Google.Apps.Meet.V2Beta.Recording.Types.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
+      if (startTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+      }
+      if (endTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3053,6 +3116,18 @@ namespace Google.Apps.Meet.V2Beta {
       }
       if (other.State != global::Google.Apps.Meet.V2Beta.Recording.Types.State.Unspecified) {
         State = other.State;
+      }
+      if (other.startTime_ != null) {
+        if (startTime_ == null) {
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        StartTime.MergeFrom(other.StartTime);
+      }
+      if (other.endTime_ != null) {
+        if (endTime_ == null) {
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        EndTime.MergeFrom(other.EndTime);
       }
       switch (other.DestinationCase) {
         case DestinationOneofCase.DriveDestination:
@@ -3086,6 +3161,20 @@ namespace Google.Apps.Meet.V2Beta {
             State = (global::Google.Apps.Meet.V2Beta.Recording.Types.State) input.ReadEnum();
             break;
           }
+          case 34: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 42: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
           case 50: {
             global::Google.Apps.Meet.V2Beta.DriveDestination subBuilder = new global::Google.Apps.Meet.V2Beta.DriveDestination();
             if (destinationCase_ == DestinationOneofCase.DriveDestination) {
@@ -3116,6 +3205,20 @@ namespace Google.Apps.Meet.V2Beta {
           }
           case 24: {
             State = (global::Google.Apps.Meet.V2Beta.Recording.Types.State) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 42: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
             break;
           }
           case 50: {
@@ -3446,6 +3549,8 @@ namespace Google.Apps.Meet.V2Beta {
     public Transcript(Transcript other) : this() {
       name_ = other.name_;
       state_ = other.state_;
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
       switch (other.DestinationCase) {
         case DestinationOneofCase.DocsDestination:
           DocsDestination = other.DocsDestination.Clone();
@@ -3509,6 +3614,36 @@ namespace Google.Apps.Meet.V2Beta {
       }
     }
 
+    /// <summary>Field number for the "start_time" field.</summary>
+    public const int StartTimeFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
+    /// <summary>
+    /// Output only. Timestamp when the transcript started.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
+      get { return startTime_; }
+      set {
+        startTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_time" field.</summary>
+    public const int EndTimeFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
+    /// <summary>
+    /// Output only. Timestamp when the transcript stopped.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
+      get { return endTime_; }
+      set {
+        endTime_ = value;
+      }
+    }
+
     private object destination_;
     /// <summary>Enum of possible cases for the "destination" oneof.</summary>
     public enum DestinationOneofCase {
@@ -3547,6 +3682,8 @@ namespace Google.Apps.Meet.V2Beta {
       if (!object.Equals(DocsDestination, other.DocsDestination)) return false;
       if (Name != other.Name) return false;
       if (State != other.State) return false;
+      if (!object.Equals(StartTime, other.StartTime)) return false;
+      if (!object.Equals(EndTime, other.EndTime)) return false;
       if (DestinationCase != other.DestinationCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -3558,6 +3695,8 @@ namespace Google.Apps.Meet.V2Beta {
       if (destinationCase_ == DestinationOneofCase.DocsDestination) hash ^= DocsDestination.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (State != global::Google.Apps.Meet.V2Beta.Transcript.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (startTime_ != null) hash ^= StartTime.GetHashCode();
+      if (endTime_ != null) hash ^= EndTime.GetHashCode();
       hash ^= (int) destinationCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3585,6 +3724,14 @@ namespace Google.Apps.Meet.V2Beta {
         output.WriteRawTag(24);
         output.WriteEnum((int) State);
       }
+      if (startTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(EndTime);
+      }
       if (destinationCase_ == DestinationOneofCase.DocsDestination) {
         output.WriteRawTag(50);
         output.WriteMessage(DocsDestination);
@@ -3606,6 +3753,14 @@ namespace Google.Apps.Meet.V2Beta {
       if (State != global::Google.Apps.Meet.V2Beta.Transcript.Types.State.Unspecified) {
         output.WriteRawTag(24);
         output.WriteEnum((int) State);
+      }
+      if (startTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(EndTime);
       }
       if (destinationCase_ == DestinationOneofCase.DocsDestination) {
         output.WriteRawTag(50);
@@ -3630,6 +3785,12 @@ namespace Google.Apps.Meet.V2Beta {
       if (State != global::Google.Apps.Meet.V2Beta.Transcript.Types.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
+      if (startTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+      }
+      if (endTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3647,6 +3808,18 @@ namespace Google.Apps.Meet.V2Beta {
       }
       if (other.State != global::Google.Apps.Meet.V2Beta.Transcript.Types.State.Unspecified) {
         State = other.State;
+      }
+      if (other.startTime_ != null) {
+        if (startTime_ == null) {
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        StartTime.MergeFrom(other.StartTime);
+      }
+      if (other.endTime_ != null) {
+        if (endTime_ == null) {
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        EndTime.MergeFrom(other.EndTime);
       }
       switch (other.DestinationCase) {
         case DestinationOneofCase.DocsDestination:
@@ -3680,6 +3853,20 @@ namespace Google.Apps.Meet.V2Beta {
             State = (global::Google.Apps.Meet.V2Beta.Transcript.Types.State) input.ReadEnum();
             break;
           }
+          case 34: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 42: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
           case 50: {
             global::Google.Apps.Meet.V2Beta.DocsDestination subBuilder = new global::Google.Apps.Meet.V2Beta.DocsDestination();
             if (destinationCase_ == DestinationOneofCase.DocsDestination) {
@@ -3710,6 +3897,20 @@ namespace Google.Apps.Meet.V2Beta {
           }
           case 24: {
             State = (global::Google.Apps.Meet.V2Beta.Transcript.Types.State) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 42: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
             break;
           }
           case 50: {
