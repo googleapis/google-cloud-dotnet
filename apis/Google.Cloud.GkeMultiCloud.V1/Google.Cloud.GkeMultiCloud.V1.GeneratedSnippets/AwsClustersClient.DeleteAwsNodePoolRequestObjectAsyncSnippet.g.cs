@@ -43,6 +43,7 @@ namespace GoogleCSharpSnippets
                 ValidateOnly = false,
                 AllowMissing = false,
                 Etag = "",
+                IgnoreErrors = false,
             };
             // Make the request
             Operation<Empty, OperationMetadata> response = await awsClustersClient.DeleteAwsNodePoolAsync(request);

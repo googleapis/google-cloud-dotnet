@@ -103,4 +103,16 @@ namespace Google.Cloud.GkeMultiCloud.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class GenerateAttachedClusterAgentTokenRequest
+    {
+        /// <summary>
+        /// <see cref="AttachedClusterName"/>-typed view over the <see cref="AttachedCluster"/> resource name property.
+        /// </summary>
+        public AttachedClusterName AttachedClusterAsAttachedClusterName
+        {
+            get => string.IsNullOrEmpty(AttachedCluster) ? null : AttachedClusterName.Parse(AttachedCluster, allowUnparsed: true);
+            set => AttachedCluster = value?.ToString() ?? "";
+        }
+    }
 }

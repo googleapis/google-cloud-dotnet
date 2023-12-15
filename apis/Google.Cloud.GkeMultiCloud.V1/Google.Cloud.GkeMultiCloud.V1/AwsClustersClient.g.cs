@@ -56,15 +56,20 @@ namespace Google.Cloud.GkeMultiCloud.V1
             ListAwsClustersSettings = existing.ListAwsClustersSettings;
             DeleteAwsClusterSettings = existing.DeleteAwsClusterSettings;
             DeleteAwsClusterOperationsSettings = existing.DeleteAwsClusterOperationsSettings.Clone();
+            GenerateAwsClusterAgentTokenSettings = existing.GenerateAwsClusterAgentTokenSettings;
             GenerateAwsAccessTokenSettings = existing.GenerateAwsAccessTokenSettings;
             CreateAwsNodePoolSettings = existing.CreateAwsNodePoolSettings;
             CreateAwsNodePoolOperationsSettings = existing.CreateAwsNodePoolOperationsSettings.Clone();
             UpdateAwsNodePoolSettings = existing.UpdateAwsNodePoolSettings;
             UpdateAwsNodePoolOperationsSettings = existing.UpdateAwsNodePoolOperationsSettings.Clone();
+            RollbackAwsNodePoolUpdateSettings = existing.RollbackAwsNodePoolUpdateSettings;
+            RollbackAwsNodePoolUpdateOperationsSettings = existing.RollbackAwsNodePoolUpdateOperationsSettings.Clone();
             GetAwsNodePoolSettings = existing.GetAwsNodePoolSettings;
             ListAwsNodePoolsSettings = existing.ListAwsNodePoolsSettings;
             DeleteAwsNodePoolSettings = existing.DeleteAwsNodePoolSettings;
             DeleteAwsNodePoolOperationsSettings = existing.DeleteAwsNodePoolOperationsSettings.Clone();
+            GetAwsOpenIdConfigSettings = existing.GetAwsOpenIdConfigSettings;
+            GetAwsJsonWebKeysSettings = existing.GetAwsJsonWebKeysSettings;
             GetAwsServerConfigSettings = existing.GetAwsServerConfigSettings;
             OnCopy(existing);
         }
@@ -199,6 +204,25 @@ namespace Google.Cloud.GkeMultiCloud.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AwsClustersClient.GenerateAwsClusterAgentToken</c> and
+        /// <c>AwsClustersClient.GenerateAwsClusterAgentTokenAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GenerateAwsClusterAgentTokenSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>AwsClustersClient.GenerateAwsAccessToken</c> and <c>AwsClustersClient.GenerateAwsAccessTokenAsync</c>.
         /// </summary>
         /// <remarks>
@@ -277,6 +301,37 @@ namespace Google.Cloud.GkeMultiCloud.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AwsClustersClient.RollbackAwsNodePoolUpdate</c> and <c>AwsClustersClient.RollbackAwsNodePoolUpdateAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RollbackAwsNodePoolUpdateSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>AwsClustersClient.RollbackAwsNodePoolUpdate</c> and
+        /// <c>AwsClustersClient.RollbackAwsNodePoolUpdateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings RollbackAwsNodePoolUpdateOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>AwsClustersClient.GetAwsNodePool</c> and <c>AwsClustersClient.GetAwsNodePoolAsync</c>.
         /// </summary>
         /// <remarks>
@@ -340,6 +395,42 @@ namespace Google.Cloud.GkeMultiCloud.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AwsClustersClient.GetAwsOpenIdConfig</c> and <c>AwsClustersClient.GetAwsOpenIdConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAwsOpenIdConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AwsClustersClient.GetAwsJsonWebKeys</c> and <c>AwsClustersClient.GetAwsJsonWebKeysAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAwsJsonWebKeysSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -441,7 +532,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
-        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(AwsClusters.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(AwsClusters.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc | gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
         internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
@@ -885,6 +976,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// *   `annotations`.
         /// *   `control_plane.version`.
         /// *   `authorization.admin_users`.
+        /// *   `authorization.admin_groups`.
+        /// *   `binary_authorization.evaluation_mode`.
         /// *   `control_plane.aws_services_authentication.role_arn`.
         /// *   `control_plane.aws_services_authentication.role_session_name`.
         /// *   `control_plane.config_encryption.kms_key_arn`.
@@ -896,6 +989,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// *   `control_plane.root_volume.size_gib`.
         /// *   `control_plane.root_volume.volume_type`.
         /// *   `control_plane.root_volume.iops`.
+        /// *   `control_plane.root_volume.throughput`.
         /// *   `control_plane.root_volume.kms_key_arn`.
         /// *   `control_plane.ssh_config`.
         /// *   `control_plane.ssh_config.ec2_key_pair`.
@@ -904,6 +998,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// *   `logging_config.component_config.enable_components`.
         /// *   `control_plane.tags`.
         /// *   `monitoring_config.managed_prometheus_config.enabled`.
+        /// *   `networking.per_node_pool_sg_rules_disabled`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -930,6 +1025,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// *   `annotations`.
         /// *   `control_plane.version`.
         /// *   `authorization.admin_users`.
+        /// *   `authorization.admin_groups`.
+        /// *   `binary_authorization.evaluation_mode`.
         /// *   `control_plane.aws_services_authentication.role_arn`.
         /// *   `control_plane.aws_services_authentication.role_session_name`.
         /// *   `control_plane.config_encryption.kms_key_arn`.
@@ -941,6 +1038,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// *   `control_plane.root_volume.size_gib`.
         /// *   `control_plane.root_volume.volume_type`.
         /// *   `control_plane.root_volume.iops`.
+        /// *   `control_plane.root_volume.throughput`.
         /// *   `control_plane.root_volume.kms_key_arn`.
         /// *   `control_plane.ssh_config`.
         /// *   `control_plane.ssh_config.ec2_key_pair`.
@@ -949,6 +1047,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// *   `logging_config.component_config.enable_components`.
         /// *   `control_plane.tags`.
         /// *   `monitoring_config.managed_prometheus_config.enabled`.
+        /// *   `networking.per_node_pool_sg_rules_disabled`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -975,6 +1074,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// *   `annotations`.
         /// *   `control_plane.version`.
         /// *   `authorization.admin_users`.
+        /// *   `authorization.admin_groups`.
+        /// *   `binary_authorization.evaluation_mode`.
         /// *   `control_plane.aws_services_authentication.role_arn`.
         /// *   `control_plane.aws_services_authentication.role_session_name`.
         /// *   `control_plane.config_encryption.kms_key_arn`.
@@ -986,6 +1087,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// *   `control_plane.root_volume.size_gib`.
         /// *   `control_plane.root_volume.volume_type`.
         /// *   `control_plane.root_volume.iops`.
+        /// *   `control_plane.root_volume.throughput`.
         /// *   `control_plane.root_volume.kms_key_arn`.
         /// *   `control_plane.ssh_config`.
         /// *   `control_plane.ssh_config.ec2_key_pair`.
@@ -994,6 +1096,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// *   `logging_config.component_config.enable_components`.
         /// *   `control_plane.tags`.
         /// *   `monitoring_config.managed_prometheus_config.enabled`.
+        /// *   `networking.per_node_pool_sg_rules_disabled`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1552,6 +1655,33 @@ namespace Google.Cloud.GkeMultiCloud.V1
             DeleteAwsClusterAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Generates an access token for a cluster agent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GenerateAwsClusterAgentTokenResponse GenerateAwsClusterAgentToken(GenerateAwsClusterAgentTokenRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generates an access token for a cluster agent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateAwsClusterAgentTokenResponse> GenerateAwsClusterAgentTokenAsync(GenerateAwsClusterAgentTokenRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generates an access token for a cluster agent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateAwsClusterAgentTokenResponse> GenerateAwsClusterAgentTokenAsync(GenerateAwsClusterAgentTokenRequest request, st::CancellationToken cancellationToken) =>
+            GenerateAwsClusterAgentTokenAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Generates a short-lived access token to authenticate to a given
         /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource.
         /// </summary>
@@ -1971,6 +2101,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// *   `config.config_encryption.kms_key_arn`.
         /// *   `config.security_group_ids`.
         /// *   `config.root_volume.iops`.
+        /// *   `config.root_volume.throughput`.
         /// *   `config.root_volume.kms_key_arn`.
         /// *   `config.root_volume.volume_type`.
         /// *   `config.root_volume.size_gib`.
@@ -1986,6 +2117,13 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// *   `config.autoscaling_metrics_collection`.
         /// *   `config.autoscaling_metrics_collection.granularity`.
         /// *   `config.autoscaling_metrics_collection.metrics`.
+        /// *   `config.instance_type`.
+        /// *   `management.auto_repair`.
+        /// *   `management`.
+        /// *   `update_settings`.
+        /// *   `update_settings.surge_settings`.
+        /// *   `update_settings.surge_settings.max_surge`.
+        /// *   `update_settings.surge_settings.max_unavailable`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2015,6 +2153,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// *   `config.config_encryption.kms_key_arn`.
         /// *   `config.security_group_ids`.
         /// *   `config.root_volume.iops`.
+        /// *   `config.root_volume.throughput`.
         /// *   `config.root_volume.kms_key_arn`.
         /// *   `config.root_volume.volume_type`.
         /// *   `config.root_volume.size_gib`.
@@ -2030,6 +2169,13 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// *   `config.autoscaling_metrics_collection`.
         /// *   `config.autoscaling_metrics_collection.granularity`.
         /// *   `config.autoscaling_metrics_collection.metrics`.
+        /// *   `config.instance_type`.
+        /// *   `management.auto_repair`.
+        /// *   `management`.
+        /// *   `update_settings`.
+        /// *   `update_settings.surge_settings`.
+        /// *   `update_settings.surge_settings.max_surge`.
+        /// *   `update_settings.surge_settings.max_unavailable`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2059,6 +2205,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// *   `config.config_encryption.kms_key_arn`.
         /// *   `config.security_group_ids`.
         /// *   `config.root_volume.iops`.
+        /// *   `config.root_volume.throughput`.
         /// *   `config.root_volume.kms_key_arn`.
         /// *   `config.root_volume.volume_type`.
         /// *   `config.root_volume.size_gib`.
@@ -2074,11 +2221,243 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// *   `config.autoscaling_metrics_collection`.
         /// *   `config.autoscaling_metrics_collection.granularity`.
         /// *   `config.autoscaling_metrics_collection.metrics`.
+        /// *   `config.instance_type`.
+        /// *   `management.auto_repair`.
+        /// *   `management`.
+        /// *   `update_settings`.
+        /// *   `update_settings.surge_settings`.
+        /// *   `update_settings.surge_settings.max_surge`.
+        /// *   `update_settings.surge_settings.max_unavailable`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<AwsNodePool, OperationMetadata>> UpdateAwsNodePoolAsync(AwsNodePool awsNodePool, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateAwsNodePoolAsync(awsNodePool, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Rolls back a previously aborted or failed
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] update request.
+        /// Makes no changes if the last update request successfully finished.
+        /// If an update request is in progress, you cannot rollback the update.
+        /// You must first cancel or let it finish unsuccessfully before you can
+        /// rollback.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AwsNodePool, OperationMetadata> RollbackAwsNodePoolUpdate(RollbackAwsNodePoolUpdateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Rolls back a previously aborted or failed
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] update request.
+        /// Makes no changes if the last update request successfully finished.
+        /// If an update request is in progress, you cannot rollback the update.
+        /// You must first cancel or let it finish unsuccessfully before you can
+        /// rollback.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AwsNodePool, OperationMetadata>> RollbackAwsNodePoolUpdateAsync(RollbackAwsNodePoolUpdateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Rolls back a previously aborted or failed
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] update request.
+        /// Makes no changes if the last update request successfully finished.
+        /// If an update request is in progress, you cannot rollback the update.
+        /// You must first cancel or let it finish unsuccessfully before you can
+        /// rollback.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AwsNodePool, OperationMetadata>> RollbackAwsNodePoolUpdateAsync(RollbackAwsNodePoolUpdateRequest request, st::CancellationToken cancellationToken) =>
+            RollbackAwsNodePoolUpdateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>RollbackAwsNodePoolUpdate</c>.</summary>
+        public virtual lro::OperationsClient RollbackAwsNodePoolUpdateOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RollbackAwsNodePoolUpdate</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<AwsNodePool, OperationMetadata> PollOnceRollbackAwsNodePoolUpdate(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AwsNodePool, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RollbackAwsNodePoolUpdateOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RollbackAwsNodePoolUpdate</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<AwsNodePool, OperationMetadata>> PollOnceRollbackAwsNodePoolUpdateAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AwsNodePool, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RollbackAwsNodePoolUpdateOperationsClient, callSettings);
+
+        /// <summary>
+        /// Rolls back a previously aborted or failed
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] update request.
+        /// Makes no changes if the last update request successfully finished.
+        /// If an update request is in progress, you cannot rollback the update.
+        /// You must first cancel or let it finish unsuccessfully before you can
+        /// rollback.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource to
+        /// rollback.
+        /// 
+        /// `AwsNodePool` names are formatted as
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
+        /// 
+        /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
+        /// for more details on Google Cloud resource names.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AwsNodePool, OperationMetadata> RollbackAwsNodePoolUpdate(string name, gaxgrpc::CallSettings callSettings = null) =>
+            RollbackAwsNodePoolUpdate(new RollbackAwsNodePoolUpdateRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Rolls back a previously aborted or failed
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] update request.
+        /// Makes no changes if the last update request successfully finished.
+        /// If an update request is in progress, you cannot rollback the update.
+        /// You must first cancel or let it finish unsuccessfully before you can
+        /// rollback.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource to
+        /// rollback.
+        /// 
+        /// `AwsNodePool` names are formatted as
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
+        /// 
+        /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
+        /// for more details on Google Cloud resource names.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AwsNodePool, OperationMetadata>> RollbackAwsNodePoolUpdateAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            RollbackAwsNodePoolUpdateAsync(new RollbackAwsNodePoolUpdateRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Rolls back a previously aborted or failed
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] update request.
+        /// Makes no changes if the last update request successfully finished.
+        /// If an update request is in progress, you cannot rollback the update.
+        /// You must first cancel or let it finish unsuccessfully before you can
+        /// rollback.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource to
+        /// rollback.
+        /// 
+        /// `AwsNodePool` names are formatted as
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
+        /// 
+        /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
+        /// for more details on Google Cloud resource names.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AwsNodePool, OperationMetadata>> RollbackAwsNodePoolUpdateAsync(string name, st::CancellationToken cancellationToken) =>
+            RollbackAwsNodePoolUpdateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Rolls back a previously aborted or failed
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] update request.
+        /// Makes no changes if the last update request successfully finished.
+        /// If an update request is in progress, you cannot rollback the update.
+        /// You must first cancel or let it finish unsuccessfully before you can
+        /// rollback.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource to
+        /// rollback.
+        /// 
+        /// `AwsNodePool` names are formatted as
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
+        /// 
+        /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
+        /// for more details on Google Cloud resource names.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AwsNodePool, OperationMetadata> RollbackAwsNodePoolUpdate(AwsNodePoolName name, gaxgrpc::CallSettings callSettings = null) =>
+            RollbackAwsNodePoolUpdate(new RollbackAwsNodePoolUpdateRequest
+            {
+                AwsNodePoolName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Rolls back a previously aborted or failed
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] update request.
+        /// Makes no changes if the last update request successfully finished.
+        /// If an update request is in progress, you cannot rollback the update.
+        /// You must first cancel or let it finish unsuccessfully before you can
+        /// rollback.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource to
+        /// rollback.
+        /// 
+        /// `AwsNodePool` names are formatted as
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
+        /// 
+        /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
+        /// for more details on Google Cloud resource names.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AwsNodePool, OperationMetadata>> RollbackAwsNodePoolUpdateAsync(AwsNodePoolName name, gaxgrpc::CallSettings callSettings = null) =>
+            RollbackAwsNodePoolUpdateAsync(new RollbackAwsNodePoolUpdateRequest
+            {
+                AwsNodePoolName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Rolls back a previously aborted or failed
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] update request.
+        /// Makes no changes if the last update request successfully finished.
+        /// If an update request is in progress, you cannot rollback the update.
+        /// You must first cancel or let it finish unsuccessfully before you can
+        /// rollback.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] resource to
+        /// rollback.
+        /// 
+        /// `AwsNodePool` names are formatted as
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/awsClusters/&lt;cluster-id&gt;/awsNodePools/&lt;node-pool-id&gt;`.
+        /// 
+        /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
+        /// for more details on Google Cloud resource names.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AwsNodePool, OperationMetadata>> RollbackAwsNodePoolUpdateAsync(AwsNodePoolName name, st::CancellationToken cancellationToken) =>
+            RollbackAwsNodePoolUpdateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Describes a specific
@@ -2616,6 +2995,75 @@ namespace Google.Cloud.GkeMultiCloud.V1
             DeleteAwsNodePoolAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Gets the OIDC discovery document for the cluster.
+        /// See the
+        /// [OpenID Connect Discovery 1.0
+        /// specification](https://openid.net/specs/openid-connect-discovery-1_0.html)
+        /// for details.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AwsOpenIdConfig GetAwsOpenIdConfig(GetAwsOpenIdConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the OIDC discovery document for the cluster.
+        /// See the
+        /// [OpenID Connect Discovery 1.0
+        /// specification](https://openid.net/specs/openid-connect-discovery-1_0.html)
+        /// for details.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AwsOpenIdConfig> GetAwsOpenIdConfigAsync(GetAwsOpenIdConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the OIDC discovery document for the cluster.
+        /// See the
+        /// [OpenID Connect Discovery 1.0
+        /// specification](https://openid.net/specs/openid-connect-discovery-1_0.html)
+        /// for details.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AwsOpenIdConfig> GetAwsOpenIdConfigAsync(GetAwsOpenIdConfigRequest request, st::CancellationToken cancellationToken) =>
+            GetAwsOpenIdConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the public component of the cluster signing keys in
+        /// JSON Web Key format.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AwsJsonWebKeys GetAwsJsonWebKeys(GetAwsJsonWebKeysRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the public component of the cluster signing keys in
+        /// JSON Web Key format.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AwsJsonWebKeys> GetAwsJsonWebKeysAsync(GetAwsJsonWebKeysRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the public component of the cluster signing keys in
+        /// JSON Web Key format.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AwsJsonWebKeys> GetAwsJsonWebKeysAsync(GetAwsJsonWebKeysRequest request, st::CancellationToken cancellationToken) =>
+            GetAwsJsonWebKeysAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Returns information, such as supported AWS regions and Kubernetes
         /// versions, on a given Google Cloud location.
         /// </summary>
@@ -2795,17 +3243,25 @@ namespace Google.Cloud.GkeMultiCloud.V1
 
         private readonly gaxgrpc::ApiCall<DeleteAwsClusterRequest, lro::Operation> _callDeleteAwsCluster;
 
+        private readonly gaxgrpc::ApiCall<GenerateAwsClusterAgentTokenRequest, GenerateAwsClusterAgentTokenResponse> _callGenerateAwsClusterAgentToken;
+
         private readonly gaxgrpc::ApiCall<GenerateAwsAccessTokenRequest, GenerateAwsAccessTokenResponse> _callGenerateAwsAccessToken;
 
         private readonly gaxgrpc::ApiCall<CreateAwsNodePoolRequest, lro::Operation> _callCreateAwsNodePool;
 
         private readonly gaxgrpc::ApiCall<UpdateAwsNodePoolRequest, lro::Operation> _callUpdateAwsNodePool;
 
+        private readonly gaxgrpc::ApiCall<RollbackAwsNodePoolUpdateRequest, lro::Operation> _callRollbackAwsNodePoolUpdate;
+
         private readonly gaxgrpc::ApiCall<GetAwsNodePoolRequest, AwsNodePool> _callGetAwsNodePool;
 
         private readonly gaxgrpc::ApiCall<ListAwsNodePoolsRequest, ListAwsNodePoolsResponse> _callListAwsNodePools;
 
         private readonly gaxgrpc::ApiCall<DeleteAwsNodePoolRequest, lro::Operation> _callDeleteAwsNodePool;
+
+        private readonly gaxgrpc::ApiCall<GetAwsOpenIdConfigRequest, AwsOpenIdConfig> _callGetAwsOpenIdConfig;
+
+        private readonly gaxgrpc::ApiCall<GetAwsJsonWebKeysRequest, AwsJsonWebKeys> _callGetAwsJsonWebKeys;
 
         private readonly gaxgrpc::ApiCall<GetAwsServerConfigRequest, AwsServerConfig> _callGetAwsServerConfig;
 
@@ -2825,6 +3281,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
             DeleteAwsClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAwsClusterOperationsSettings, logger);
             CreateAwsNodePoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAwsNodePoolOperationsSettings, logger);
             UpdateAwsNodePoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAwsNodePoolOperationsSettings, logger);
+            RollbackAwsNodePoolUpdateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RollbackAwsNodePoolUpdateOperationsSettings, logger);
             DeleteAwsNodePoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAwsNodePoolOperationsSettings, logger);
             _callCreateAwsCluster = clientHelper.BuildApiCall<CreateAwsClusterRequest, lro::Operation>("CreateAwsCluster", grpcClient.CreateAwsClusterAsync, grpcClient.CreateAwsCluster, effectiveSettings.CreateAwsClusterSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateAwsCluster);
@@ -2841,6 +3298,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
             _callDeleteAwsCluster = clientHelper.BuildApiCall<DeleteAwsClusterRequest, lro::Operation>("DeleteAwsCluster", grpcClient.DeleteAwsClusterAsync, grpcClient.DeleteAwsCluster, effectiveSettings.DeleteAwsClusterSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteAwsCluster);
             Modify_DeleteAwsClusterApiCall(ref _callDeleteAwsCluster);
+            _callGenerateAwsClusterAgentToken = clientHelper.BuildApiCall<GenerateAwsClusterAgentTokenRequest, GenerateAwsClusterAgentTokenResponse>("GenerateAwsClusterAgentToken", grpcClient.GenerateAwsClusterAgentTokenAsync, grpcClient.GenerateAwsClusterAgentToken, effectiveSettings.GenerateAwsClusterAgentTokenSettings).WithGoogleRequestParam("aws_cluster", request => request.AwsCluster);
+            Modify_ApiCall(ref _callGenerateAwsClusterAgentToken);
+            Modify_GenerateAwsClusterAgentTokenApiCall(ref _callGenerateAwsClusterAgentToken);
             _callGenerateAwsAccessToken = clientHelper.BuildApiCall<GenerateAwsAccessTokenRequest, GenerateAwsAccessTokenResponse>("GenerateAwsAccessToken", grpcClient.GenerateAwsAccessTokenAsync, grpcClient.GenerateAwsAccessToken, effectiveSettings.GenerateAwsAccessTokenSettings).WithGoogleRequestParam("aws_cluster", request => request.AwsCluster);
             Modify_ApiCall(ref _callGenerateAwsAccessToken);
             Modify_GenerateAwsAccessTokenApiCall(ref _callGenerateAwsAccessToken);
@@ -2850,6 +3310,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
             _callUpdateAwsNodePool = clientHelper.BuildApiCall<UpdateAwsNodePoolRequest, lro::Operation>("UpdateAwsNodePool", grpcClient.UpdateAwsNodePoolAsync, grpcClient.UpdateAwsNodePool, effectiveSettings.UpdateAwsNodePoolSettings).WithGoogleRequestParam("aws_node_pool.name", request => request.AwsNodePool?.Name);
             Modify_ApiCall(ref _callUpdateAwsNodePool);
             Modify_UpdateAwsNodePoolApiCall(ref _callUpdateAwsNodePool);
+            _callRollbackAwsNodePoolUpdate = clientHelper.BuildApiCall<RollbackAwsNodePoolUpdateRequest, lro::Operation>("RollbackAwsNodePoolUpdate", grpcClient.RollbackAwsNodePoolUpdateAsync, grpcClient.RollbackAwsNodePoolUpdate, effectiveSettings.RollbackAwsNodePoolUpdateSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callRollbackAwsNodePoolUpdate);
+            Modify_RollbackAwsNodePoolUpdateApiCall(ref _callRollbackAwsNodePoolUpdate);
             _callGetAwsNodePool = clientHelper.BuildApiCall<GetAwsNodePoolRequest, AwsNodePool>("GetAwsNodePool", grpcClient.GetAwsNodePoolAsync, grpcClient.GetAwsNodePool, effectiveSettings.GetAwsNodePoolSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetAwsNodePool);
             Modify_GetAwsNodePoolApiCall(ref _callGetAwsNodePool);
@@ -2859,6 +3322,12 @@ namespace Google.Cloud.GkeMultiCloud.V1
             _callDeleteAwsNodePool = clientHelper.BuildApiCall<DeleteAwsNodePoolRequest, lro::Operation>("DeleteAwsNodePool", grpcClient.DeleteAwsNodePoolAsync, grpcClient.DeleteAwsNodePool, effectiveSettings.DeleteAwsNodePoolSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteAwsNodePool);
             Modify_DeleteAwsNodePoolApiCall(ref _callDeleteAwsNodePool);
+            _callGetAwsOpenIdConfig = clientHelper.BuildApiCall<GetAwsOpenIdConfigRequest, AwsOpenIdConfig>("GetAwsOpenIdConfig", grpcClient.GetAwsOpenIdConfigAsync, grpcClient.GetAwsOpenIdConfig, effectiveSettings.GetAwsOpenIdConfigSettings).WithGoogleRequestParam("aws_cluster", request => request.AwsCluster);
+            Modify_ApiCall(ref _callGetAwsOpenIdConfig);
+            Modify_GetAwsOpenIdConfigApiCall(ref _callGetAwsOpenIdConfig);
+            _callGetAwsJsonWebKeys = clientHelper.BuildApiCall<GetAwsJsonWebKeysRequest, AwsJsonWebKeys>("GetAwsJsonWebKeys", grpcClient.GetAwsJsonWebKeysAsync, grpcClient.GetAwsJsonWebKeys, effectiveSettings.GetAwsJsonWebKeysSettings).WithGoogleRequestParam("aws_cluster", request => request.AwsCluster);
+            Modify_ApiCall(ref _callGetAwsJsonWebKeys);
+            Modify_GetAwsJsonWebKeysApiCall(ref _callGetAwsJsonWebKeys);
             _callGetAwsServerConfig = clientHelper.BuildApiCall<GetAwsServerConfigRequest, AwsServerConfig>("GetAwsServerConfig", grpcClient.GetAwsServerConfigAsync, grpcClient.GetAwsServerConfig, effectiveSettings.GetAwsServerConfigSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetAwsServerConfig);
             Modify_GetAwsServerConfigApiCall(ref _callGetAwsServerConfig);
@@ -2877,17 +3346,25 @@ namespace Google.Cloud.GkeMultiCloud.V1
 
         partial void Modify_DeleteAwsClusterApiCall(ref gaxgrpc::ApiCall<DeleteAwsClusterRequest, lro::Operation> call);
 
+        partial void Modify_GenerateAwsClusterAgentTokenApiCall(ref gaxgrpc::ApiCall<GenerateAwsClusterAgentTokenRequest, GenerateAwsClusterAgentTokenResponse> call);
+
         partial void Modify_GenerateAwsAccessTokenApiCall(ref gaxgrpc::ApiCall<GenerateAwsAccessTokenRequest, GenerateAwsAccessTokenResponse> call);
 
         partial void Modify_CreateAwsNodePoolApiCall(ref gaxgrpc::ApiCall<CreateAwsNodePoolRequest, lro::Operation> call);
 
         partial void Modify_UpdateAwsNodePoolApiCall(ref gaxgrpc::ApiCall<UpdateAwsNodePoolRequest, lro::Operation> call);
 
+        partial void Modify_RollbackAwsNodePoolUpdateApiCall(ref gaxgrpc::ApiCall<RollbackAwsNodePoolUpdateRequest, lro::Operation> call);
+
         partial void Modify_GetAwsNodePoolApiCall(ref gaxgrpc::ApiCall<GetAwsNodePoolRequest, AwsNodePool> call);
 
         partial void Modify_ListAwsNodePoolsApiCall(ref gaxgrpc::ApiCall<ListAwsNodePoolsRequest, ListAwsNodePoolsResponse> call);
 
         partial void Modify_DeleteAwsNodePoolApiCall(ref gaxgrpc::ApiCall<DeleteAwsNodePoolRequest, lro::Operation> call);
+
+        partial void Modify_GetAwsOpenIdConfigApiCall(ref gaxgrpc::ApiCall<GetAwsOpenIdConfigRequest, AwsOpenIdConfig> call);
+
+        partial void Modify_GetAwsJsonWebKeysApiCall(ref gaxgrpc::ApiCall<GetAwsJsonWebKeysRequest, AwsJsonWebKeys> call);
 
         partial void Modify_GetAwsServerConfigApiCall(ref gaxgrpc::ApiCall<GetAwsServerConfigRequest, AwsServerConfig> call);
 
@@ -2906,17 +3383,25 @@ namespace Google.Cloud.GkeMultiCloud.V1
 
         partial void Modify_DeleteAwsClusterRequest(ref DeleteAwsClusterRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_GenerateAwsClusterAgentTokenRequest(ref GenerateAwsClusterAgentTokenRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_GenerateAwsAccessTokenRequest(ref GenerateAwsAccessTokenRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateAwsNodePoolRequest(ref CreateAwsNodePoolRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateAwsNodePoolRequest(ref UpdateAwsNodePoolRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_RollbackAwsNodePoolUpdateRequest(ref RollbackAwsNodePoolUpdateRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_GetAwsNodePoolRequest(ref GetAwsNodePoolRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListAwsNodePoolsRequest(ref ListAwsNodePoolsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteAwsNodePoolRequest(ref DeleteAwsNodePoolRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAwsOpenIdConfigRequest(ref GetAwsOpenIdConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAwsJsonWebKeysRequest(ref GetAwsJsonWebKeysRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetAwsServerConfigRequest(ref GetAwsServerConfigRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -3080,6 +3565,30 @@ namespace Google.Cloud.GkeMultiCloud.V1
         }
 
         /// <summary>
+        /// Generates an access token for a cluster agent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override GenerateAwsClusterAgentTokenResponse GenerateAwsClusterAgentToken(GenerateAwsClusterAgentTokenRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GenerateAwsClusterAgentTokenRequest(ref request, ref callSettings);
+            return _callGenerateAwsClusterAgentToken.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Generates an access token for a cluster agent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<GenerateAwsClusterAgentTokenResponse> GenerateAwsClusterAgentTokenAsync(GenerateAwsClusterAgentTokenRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GenerateAwsClusterAgentTokenRequest(ref request, ref callSettings);
+            return _callGenerateAwsClusterAgentToken.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Generates a short-lived access token to authenticate to a given
         /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource.
         /// </summary>
@@ -3167,6 +3676,43 @@ namespace Google.Cloud.GkeMultiCloud.V1
         {
             Modify_UpdateAwsNodePoolRequest(ref request, ref callSettings);
             return new lro::Operation<AwsNodePool, OperationMetadata>(await _callUpdateAwsNodePool.Async(request, callSettings).ConfigureAwait(false), UpdateAwsNodePoolOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>RollbackAwsNodePoolUpdate</c>.</summary>
+        public override lro::OperationsClient RollbackAwsNodePoolUpdateOperationsClient { get; }
+
+        /// <summary>
+        /// Rolls back a previously aborted or failed
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] update request.
+        /// Makes no changes if the last update request successfully finished.
+        /// If an update request is in progress, you cannot rollback the update.
+        /// You must first cancel or let it finish unsuccessfully before you can
+        /// rollback.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<AwsNodePool, OperationMetadata> RollbackAwsNodePoolUpdate(RollbackAwsNodePoolUpdateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RollbackAwsNodePoolUpdateRequest(ref request, ref callSettings);
+            return new lro::Operation<AwsNodePool, OperationMetadata>(_callRollbackAwsNodePoolUpdate.Sync(request, callSettings), RollbackAwsNodePoolUpdateOperationsClient);
+        }
+
+        /// <summary>
+        /// Rolls back a previously aborted or failed
+        /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] update request.
+        /// Makes no changes if the last update request successfully finished.
+        /// If an update request is in progress, you cannot rollback the update.
+        /// You must first cancel or let it finish unsuccessfully before you can
+        /// rollback.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<AwsNodePool, OperationMetadata>> RollbackAwsNodePoolUpdateAsync(RollbackAwsNodePoolUpdateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RollbackAwsNodePoolUpdateRequest(ref request, ref callSettings);
+            return new lro::Operation<AwsNodePool, OperationMetadata>(await _callRollbackAwsNodePoolUpdate.Async(request, callSettings).ConfigureAwait(false), RollbackAwsNodePoolUpdateOperationsClient);
         }
 
         /// <summary>
@@ -3258,6 +3804,64 @@ namespace Google.Cloud.GkeMultiCloud.V1
         {
             Modify_DeleteAwsNodePoolRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteAwsNodePool.Async(request, callSettings).ConfigureAwait(false), DeleteAwsNodePoolOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets the OIDC discovery document for the cluster.
+        /// See the
+        /// [OpenID Connect Discovery 1.0
+        /// specification](https://openid.net/specs/openid-connect-discovery-1_0.html)
+        /// for details.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AwsOpenIdConfig GetAwsOpenIdConfig(GetAwsOpenIdConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAwsOpenIdConfigRequest(ref request, ref callSettings);
+            return _callGetAwsOpenIdConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the OIDC discovery document for the cluster.
+        /// See the
+        /// [OpenID Connect Discovery 1.0
+        /// specification](https://openid.net/specs/openid-connect-discovery-1_0.html)
+        /// for details.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AwsOpenIdConfig> GetAwsOpenIdConfigAsync(GetAwsOpenIdConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAwsOpenIdConfigRequest(ref request, ref callSettings);
+            return _callGetAwsOpenIdConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the public component of the cluster signing keys in
+        /// JSON Web Key format.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AwsJsonWebKeys GetAwsJsonWebKeys(GetAwsJsonWebKeysRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAwsJsonWebKeysRequest(ref request, ref callSettings);
+            return _callGetAwsJsonWebKeys.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the public component of the cluster signing keys in
+        /// JSON Web Key format.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AwsJsonWebKeys> GetAwsJsonWebKeysAsync(GetAwsJsonWebKeysRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAwsJsonWebKeysRequest(ref request, ref callSettings);
+            return _callGetAwsJsonWebKeys.Async(request, callSettings);
         }
 
         /// <summary>

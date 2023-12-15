@@ -1654,6 +1654,57 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for GenerateAzureClusterAgentToken</summary>
+        public void GenerateAzureClusterAgentTokenRequestObject()
+        {
+            // Snippet: GenerateAzureClusterAgentToken(GenerateAzureClusterAgentTokenRequest, CallSettings)
+            // Create client
+            AzureClustersClient azureClustersClient = AzureClustersClient.Create();
+            // Initialize request argument(s)
+            GenerateAzureClusterAgentTokenRequest request = new GenerateAzureClusterAgentTokenRequest
+            {
+                AzureClusterAsAzureClusterName = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]"),
+                SubjectToken = "",
+                SubjectTokenType = "",
+                Version = "",
+                NodePoolId = "",
+                GrantType = "",
+                Audience = "",
+                Scope = "",
+                RequestedTokenType = "",
+                Options = "",
+            };
+            // Make the request
+            GenerateAzureClusterAgentTokenResponse response = azureClustersClient.GenerateAzureClusterAgentToken(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateAzureClusterAgentTokenAsync</summary>
+        public async Task GenerateAzureClusterAgentTokenRequestObjectAsync()
+        {
+            // Snippet: GenerateAzureClusterAgentTokenAsync(GenerateAzureClusterAgentTokenRequest, CallSettings)
+            // Additional: GenerateAzureClusterAgentTokenAsync(GenerateAzureClusterAgentTokenRequest, CancellationToken)
+            // Create client
+            AzureClustersClient azureClustersClient = await AzureClustersClient.CreateAsync();
+            // Initialize request argument(s)
+            GenerateAzureClusterAgentTokenRequest request = new GenerateAzureClusterAgentTokenRequest
+            {
+                AzureClusterAsAzureClusterName = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]"),
+                SubjectToken = "",
+                SubjectTokenType = "",
+                Version = "",
+                NodePoolId = "",
+                GrantType = "",
+                Audience = "",
+                Scope = "",
+                RequestedTokenType = "",
+                Options = "",
+            };
+            // Make the request
+            GenerateAzureClusterAgentTokenResponse response = await azureClustersClient.GenerateAzureClusterAgentTokenAsync(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for GenerateAzureAccessToken</summary>
         public void GenerateAzureAccessTokenRequestObject()
         {
@@ -2563,6 +2614,180 @@ namespace GoogleCSharpSnippets
                 // If it has completed, then access the result
                 Empty retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAzureOpenIdConfig</summary>
+        public void GetAzureOpenIdConfigRequestObject()
+        {
+            // Snippet: GetAzureOpenIdConfig(GetAzureOpenIdConfigRequest, CallSettings)
+            // Create client
+            AzureClustersClient azureClustersClient = AzureClustersClient.Create();
+            // Initialize request argument(s)
+            GetAzureOpenIdConfigRequest request = new GetAzureOpenIdConfigRequest
+            {
+                AzureClusterAsAzureClusterName = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]"),
+            };
+            // Make the request
+            AzureOpenIdConfig response = azureClustersClient.GetAzureOpenIdConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAzureOpenIdConfigAsync</summary>
+        public async Task GetAzureOpenIdConfigRequestObjectAsync()
+        {
+            // Snippet: GetAzureOpenIdConfigAsync(GetAzureOpenIdConfigRequest, CallSettings)
+            // Additional: GetAzureOpenIdConfigAsync(GetAzureOpenIdConfigRequest, CancellationToken)
+            // Create client
+            AzureClustersClient azureClustersClient = await AzureClustersClient.CreateAsync();
+            // Initialize request argument(s)
+            GetAzureOpenIdConfigRequest request = new GetAzureOpenIdConfigRequest
+            {
+                AzureClusterAsAzureClusterName = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]"),
+            };
+            // Make the request
+            AzureOpenIdConfig response = await azureClustersClient.GetAzureOpenIdConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAzureOpenIdConfig</summary>
+        public void GetAzureOpenIdConfig()
+        {
+            // Snippet: GetAzureOpenIdConfig(string, CallSettings)
+            // Create client
+            AzureClustersClient azureClustersClient = AzureClustersClient.Create();
+            // Initialize request argument(s)
+            string azureCluster = "projects/[PROJECT]/locations/[LOCATION]/azureClusters/[AZURE_CLUSTER]";
+            // Make the request
+            AzureOpenIdConfig response = azureClustersClient.GetAzureOpenIdConfig(azureCluster);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAzureOpenIdConfigAsync</summary>
+        public async Task GetAzureOpenIdConfigAsync()
+        {
+            // Snippet: GetAzureOpenIdConfigAsync(string, CallSettings)
+            // Additional: GetAzureOpenIdConfigAsync(string, CancellationToken)
+            // Create client
+            AzureClustersClient azureClustersClient = await AzureClustersClient.CreateAsync();
+            // Initialize request argument(s)
+            string azureCluster = "projects/[PROJECT]/locations/[LOCATION]/azureClusters/[AZURE_CLUSTER]";
+            // Make the request
+            AzureOpenIdConfig response = await azureClustersClient.GetAzureOpenIdConfigAsync(azureCluster);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAzureOpenIdConfig</summary>
+        public void GetAzureOpenIdConfigResourceNames()
+        {
+            // Snippet: GetAzureOpenIdConfig(AzureClusterName, CallSettings)
+            // Create client
+            AzureClustersClient azureClustersClient = AzureClustersClient.Create();
+            // Initialize request argument(s)
+            AzureClusterName azureCluster = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]");
+            // Make the request
+            AzureOpenIdConfig response = azureClustersClient.GetAzureOpenIdConfig(azureCluster);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAzureOpenIdConfigAsync</summary>
+        public async Task GetAzureOpenIdConfigResourceNamesAsync()
+        {
+            // Snippet: GetAzureOpenIdConfigAsync(AzureClusterName, CallSettings)
+            // Additional: GetAzureOpenIdConfigAsync(AzureClusterName, CancellationToken)
+            // Create client
+            AzureClustersClient azureClustersClient = await AzureClustersClient.CreateAsync();
+            // Initialize request argument(s)
+            AzureClusterName azureCluster = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]");
+            // Make the request
+            AzureOpenIdConfig response = await azureClustersClient.GetAzureOpenIdConfigAsync(azureCluster);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAzureJsonWebKeys</summary>
+        public void GetAzureJsonWebKeysRequestObject()
+        {
+            // Snippet: GetAzureJsonWebKeys(GetAzureJsonWebKeysRequest, CallSettings)
+            // Create client
+            AzureClustersClient azureClustersClient = AzureClustersClient.Create();
+            // Initialize request argument(s)
+            GetAzureJsonWebKeysRequest request = new GetAzureJsonWebKeysRequest
+            {
+                AzureClusterAsAzureClusterName = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]"),
+            };
+            // Make the request
+            AzureJsonWebKeys response = azureClustersClient.GetAzureJsonWebKeys(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAzureJsonWebKeysAsync</summary>
+        public async Task GetAzureJsonWebKeysRequestObjectAsync()
+        {
+            // Snippet: GetAzureJsonWebKeysAsync(GetAzureJsonWebKeysRequest, CallSettings)
+            // Additional: GetAzureJsonWebKeysAsync(GetAzureJsonWebKeysRequest, CancellationToken)
+            // Create client
+            AzureClustersClient azureClustersClient = await AzureClustersClient.CreateAsync();
+            // Initialize request argument(s)
+            GetAzureJsonWebKeysRequest request = new GetAzureJsonWebKeysRequest
+            {
+                AzureClusterAsAzureClusterName = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]"),
+            };
+            // Make the request
+            AzureJsonWebKeys response = await azureClustersClient.GetAzureJsonWebKeysAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAzureJsonWebKeys</summary>
+        public void GetAzureJsonWebKeys()
+        {
+            // Snippet: GetAzureJsonWebKeys(string, CallSettings)
+            // Create client
+            AzureClustersClient azureClustersClient = AzureClustersClient.Create();
+            // Initialize request argument(s)
+            string azureCluster = "projects/[PROJECT]/locations/[LOCATION]/azureClusters/[AZURE_CLUSTER]";
+            // Make the request
+            AzureJsonWebKeys response = azureClustersClient.GetAzureJsonWebKeys(azureCluster);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAzureJsonWebKeysAsync</summary>
+        public async Task GetAzureJsonWebKeysAsync()
+        {
+            // Snippet: GetAzureJsonWebKeysAsync(string, CallSettings)
+            // Additional: GetAzureJsonWebKeysAsync(string, CancellationToken)
+            // Create client
+            AzureClustersClient azureClustersClient = await AzureClustersClient.CreateAsync();
+            // Initialize request argument(s)
+            string azureCluster = "projects/[PROJECT]/locations/[LOCATION]/azureClusters/[AZURE_CLUSTER]";
+            // Make the request
+            AzureJsonWebKeys response = await azureClustersClient.GetAzureJsonWebKeysAsync(azureCluster);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAzureJsonWebKeys</summary>
+        public void GetAzureJsonWebKeysResourceNames()
+        {
+            // Snippet: GetAzureJsonWebKeys(AzureClusterName, CallSettings)
+            // Create client
+            AzureClustersClient azureClustersClient = AzureClustersClient.Create();
+            // Initialize request argument(s)
+            AzureClusterName azureCluster = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]");
+            // Make the request
+            AzureJsonWebKeys response = azureClustersClient.GetAzureJsonWebKeys(azureCluster);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAzureJsonWebKeysAsync</summary>
+        public async Task GetAzureJsonWebKeysResourceNamesAsync()
+        {
+            // Snippet: GetAzureJsonWebKeysAsync(AzureClusterName, CallSettings)
+            // Additional: GetAzureJsonWebKeysAsync(AzureClusterName, CancellationToken)
+            // Create client
+            AzureClustersClient azureClustersClient = await AzureClustersClient.CreateAsync();
+            // Initialize request argument(s)
+            AzureClusterName azureCluster = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]");
+            // Make the request
+            AzureJsonWebKeys response = await azureClustersClient.GetAzureJsonWebKeysAsync(azureCluster);
             // End snippet
         }
 

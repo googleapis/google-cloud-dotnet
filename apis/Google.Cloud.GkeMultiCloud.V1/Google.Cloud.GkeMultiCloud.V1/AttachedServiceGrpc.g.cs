@@ -3,7 +3,7 @@
 //     source: google/cloud/gkemulticloud/v1/attached_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2022 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -91,6 +91,10 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterInstallManifestRequest> __Marshaller_google_cloud_gkemulticloud_v1_GenerateAttachedClusterInstallManifestRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterInstallManifestRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterInstallManifestResponse> __Marshaller_google_cloud_gkemulticloud_v1_GenerateAttachedClusterInstallManifestResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterInstallManifestResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterAgentTokenRequest> __Marshaller_google_cloud_gkemulticloud_v1_GenerateAttachedClusterAgentTokenRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterAgentTokenRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterAgentTokenResponse> __Marshaller_google_cloud_gkemulticloud_v1_GenerateAttachedClusterAgentTokenResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterAgentTokenResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.GkeMultiCloud.V1.CreateAttachedClusterRequest, global::Google.LongRunning.Operation> __Method_CreateAttachedCluster = new grpc::Method<global::Google.Cloud.GkeMultiCloud.V1.CreateAttachedClusterRequest, global::Google.LongRunning.Operation>(
@@ -155,6 +159,14 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         "GenerateAttachedClusterInstallManifest",
         __Marshaller_google_cloud_gkemulticloud_v1_GenerateAttachedClusterInstallManifestRequest,
         __Marshaller_google_cloud_gkemulticloud_v1_GenerateAttachedClusterInstallManifestResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterAgentTokenRequest, global::Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterAgentTokenResponse> __Method_GenerateAttachedClusterAgentToken = new grpc::Method<global::Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterAgentTokenRequest, global::Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterAgentTokenResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GenerateAttachedClusterAgentToken",
+        __Marshaller_google_cloud_gkemulticloud_v1_GenerateAttachedClusterAgentTokenRequest,
+        __Marshaller_google_cloud_gkemulticloud_v1_GenerateAttachedClusterAgentTokenResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -282,6 +294,18 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterInstallManifestResponse> GenerateAttachedClusterInstallManifest(global::Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterInstallManifestRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Generates an access token for a cluster agent.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterAgentTokenResponse> GenerateAttachedClusterAgentToken(global::Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterAgentTokenRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -795,6 +819,54 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GenerateAttachedClusterInstallManifest, null, options, request);
       }
+      /// <summary>
+      /// Generates an access token for a cluster agent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterAgentTokenResponse GenerateAttachedClusterAgentToken(global::Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterAgentTokenRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GenerateAttachedClusterAgentToken(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Generates an access token for a cluster agent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterAgentTokenResponse GenerateAttachedClusterAgentToken(global::Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterAgentTokenRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GenerateAttachedClusterAgentToken, null, options, request);
+      }
+      /// <summary>
+      /// Generates an access token for a cluster agent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterAgentTokenResponse> GenerateAttachedClusterAgentTokenAsync(global::Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterAgentTokenRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GenerateAttachedClusterAgentTokenAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Generates an access token for a cluster agent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterAgentTokenResponse> GenerateAttachedClusterAgentTokenAsync(global::Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterAgentTokenRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GenerateAttachedClusterAgentToken, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override AttachedClustersClient NewInstance(ClientBaseConfiguration configuration)
@@ -816,7 +888,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
           .AddMethod(__Method_ListAttachedClusters, serviceImpl.ListAttachedClusters)
           .AddMethod(__Method_DeleteAttachedCluster, serviceImpl.DeleteAttachedCluster)
           .AddMethod(__Method_GetAttachedServerConfig, serviceImpl.GetAttachedServerConfig)
-          .AddMethod(__Method_GenerateAttachedClusterInstallManifest, serviceImpl.GenerateAttachedClusterInstallManifest).Build();
+          .AddMethod(__Method_GenerateAttachedClusterInstallManifest, serviceImpl.GenerateAttachedClusterInstallManifest)
+          .AddMethod(__Method_GenerateAttachedClusterAgentToken, serviceImpl.GenerateAttachedClusterAgentToken).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -834,6 +907,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       serviceBinder.AddMethod(__Method_DeleteAttachedCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeMultiCloud.V1.DeleteAttachedClusterRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteAttachedCluster));
       serviceBinder.AddMethod(__Method_GetAttachedServerConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeMultiCloud.V1.GetAttachedServerConfigRequest, global::Google.Cloud.GkeMultiCloud.V1.AttachedServerConfig>(serviceImpl.GetAttachedServerConfig));
       serviceBinder.AddMethod(__Method_GenerateAttachedClusterInstallManifest, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterInstallManifestRequest, global::Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterInstallManifestResponse>(serviceImpl.GenerateAttachedClusterInstallManifest));
+      serviceBinder.AddMethod(__Method_GenerateAttachedClusterAgentToken, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterAgentTokenRequest, global::Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterAgentTokenResponse>(serviceImpl.GenerateAttachedClusterAgentToken));
     }
 
   }

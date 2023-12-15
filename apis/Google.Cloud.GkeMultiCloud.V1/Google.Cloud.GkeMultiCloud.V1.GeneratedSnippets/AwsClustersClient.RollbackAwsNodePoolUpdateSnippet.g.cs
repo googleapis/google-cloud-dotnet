@@ -16,14 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START gkemulticloud_v1_generated_AttachedClusters_ImportAttachedCluster_sync]
-    using Google.Api.Gax.ResourceNames;
+    // [START gkemulticloud_v1_generated_AwsClusters_RollbackAwsNodePoolUpdate_sync_flattened]
     using Google.Cloud.GkeMultiCloud.V1;
     using Google.LongRunning;
 
-    public sealed partial class GeneratedAttachedClustersClientSnippets
+    public sealed partial class GeneratedAwsClustersClientSnippets
     {
-        /// <summary>Snippet for ImportAttachedCluster</summary>
+        /// <summary>Snippet for RollbackAwsNodePoolUpdate</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -31,39 +30,31 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void ImportAttachedClusterRequestObject()
+        public void RollbackAwsNodePoolUpdate()
         {
             // Create client
-            AttachedClustersClient attachedClustersClient = AttachedClustersClient.Create();
+            AwsClustersClient awsClustersClient = AwsClustersClient.Create();
             // Initialize request argument(s)
-            ImportAttachedClusterRequest request = new ImportAttachedClusterRequest
-            {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                ValidateOnly = false,
-                FleetMembership = "",
-                PlatformVersion = "",
-                Distribution = "",
-                ProxyConfig = new AttachedProxyConfig(),
-            };
+            string name = "projects/[PROJECT]/locations/[LOCATION]/awsClusters/[AWS_CLUSTER]/awsNodePools/[AWS_NODE_POOL]";
             // Make the request
-            Operation<AttachedCluster, OperationMetadata> response = attachedClustersClient.ImportAttachedCluster(request);
+            Operation<AwsNodePool, OperationMetadata> response = awsClustersClient.RollbackAwsNodePoolUpdate(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<AttachedCluster, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<AwsNodePool, OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            AttachedCluster result = completedResponse.Result;
+            AwsNodePool result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<AttachedCluster, OperationMetadata> retrievedResponse = attachedClustersClient.PollOnceImportAttachedCluster(operationName);
+            Operation<AwsNodePool, OperationMetadata> retrievedResponse = awsClustersClient.PollOnceRollbackAwsNodePoolUpdate(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                AttachedCluster retrievedResult = retrievedResponse.Result;
+                AwsNodePool retrievedResult = retrievedResponse.Result;
             }
         }
     }
-    // [END gkemulticloud_v1_generated_AttachedClusters_ImportAttachedCluster_sync]
+    // [END gkemulticloud_v1_generated_AwsClusters_RollbackAwsNodePoolUpdate_sync_flattened]
 }

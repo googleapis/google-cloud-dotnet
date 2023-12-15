@@ -44,6 +44,7 @@ namespace GoogleCSharpSnippets
                 FleetMembership = "",
                 PlatformVersion = "",
                 Distribution = "",
+                ProxyConfig = new AttachedProxyConfig(),
             };
             // Make the request
             Operation<AttachedCluster, OperationMetadata> response = await attachedClustersClient.ImportAttachedClusterAsync(request);
