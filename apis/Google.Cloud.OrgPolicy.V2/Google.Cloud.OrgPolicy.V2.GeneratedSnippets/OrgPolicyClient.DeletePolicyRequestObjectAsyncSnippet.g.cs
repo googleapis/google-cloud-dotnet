@@ -38,6 +38,7 @@ namespace GoogleCSharpSnippets
             DeletePolicyRequest request = new DeletePolicyRequest
             {
                 PolicyName = PolicyName.FromProjectPolicy("[PROJECT]", "[POLICY]"),
+                Etag = "",
             };
             // Make the request
             await orgPolicyClient.DeletePolicyAsync(request);

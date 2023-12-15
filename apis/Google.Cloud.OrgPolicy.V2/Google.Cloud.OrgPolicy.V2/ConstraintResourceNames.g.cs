@@ -329,6 +329,239 @@ namespace Google.Cloud.OrgPolicy.V2
         public static bool operator !=(ConstraintName a, ConstraintName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>CustomConstraint</c> resource.</summary>
+    public sealed partial class CustomConstraintName : gax::IResourceName, sys::IEquatable<CustomConstraintName>
+    {
+        /// <summary>The possible contents of <see cref="CustomConstraintName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>organizations/{organization}/customConstraints/{custom_constraint}</c>.
+            /// </summary>
+            OrganizationCustomConstraint = 1,
+        }
+
+        private static gax::PathTemplate s_organizationCustomConstraint = new gax::PathTemplate("organizations/{organization}/customConstraints/{custom_constraint}");
+
+        /// <summary>Creates a <see cref="CustomConstraintName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="CustomConstraintName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static CustomConstraintName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new CustomConstraintName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="CustomConstraintName"/> with the pattern
+        /// <c>organizations/{organization}/customConstraints/{custom_constraint}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="customConstraintId">The <c>CustomConstraint</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="CustomConstraintName"/> constructed from the provided ids.</returns>
+        public static CustomConstraintName FromOrganizationCustomConstraint(string organizationId, string customConstraintId) =>
+            new CustomConstraintName(ResourceNameType.OrganizationCustomConstraint, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), customConstraintId: gax::GaxPreconditions.CheckNotNullOrEmpty(customConstraintId, nameof(customConstraintId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="CustomConstraintName"/> with pattern
+        /// <c>organizations/{organization}/customConstraints/{custom_constraint}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="customConstraintId">The <c>CustomConstraint</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="CustomConstraintName"/> with pattern
+        /// <c>organizations/{organization}/customConstraints/{custom_constraint}</c>.
+        /// </returns>
+        public static string Format(string organizationId, string customConstraintId) =>
+            FormatOrganizationCustomConstraint(organizationId, customConstraintId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="CustomConstraintName"/> with pattern
+        /// <c>organizations/{organization}/customConstraints/{custom_constraint}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="customConstraintId">The <c>CustomConstraint</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="CustomConstraintName"/> with pattern
+        /// <c>organizations/{organization}/customConstraints/{custom_constraint}</c>.
+        /// </returns>
+        public static string FormatOrganizationCustomConstraint(string organizationId, string customConstraintId) =>
+            s_organizationCustomConstraint.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(customConstraintId, nameof(customConstraintId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="CustomConstraintName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>organizations/{organization}/customConstraints/{custom_constraint}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="customConstraintName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="CustomConstraintName"/> if successful.</returns>
+        public static CustomConstraintName Parse(string customConstraintName) => Parse(customConstraintName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="CustomConstraintName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>organizations/{organization}/customConstraints/{custom_constraint}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="customConstraintName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="CustomConstraintName"/> if successful.</returns>
+        public static CustomConstraintName Parse(string customConstraintName, bool allowUnparsed) =>
+            TryParse(customConstraintName, allowUnparsed, out CustomConstraintName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="CustomConstraintName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>organizations/{organization}/customConstraints/{custom_constraint}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="customConstraintName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="CustomConstraintName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string customConstraintName, out CustomConstraintName result) =>
+            TryParse(customConstraintName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="CustomConstraintName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>organizations/{organization}/customConstraints/{custom_constraint}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="customConstraintName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="CustomConstraintName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string customConstraintName, bool allowUnparsed, out CustomConstraintName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(customConstraintName, nameof(customConstraintName));
+            gax::TemplatedResourceName resourceName;
+            if (s_organizationCustomConstraint.TryParseName(customConstraintName, out resourceName))
+            {
+                result = FromOrganizationCustomConstraint(resourceName[0], resourceName[1]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(customConstraintName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private CustomConstraintName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string customConstraintId = null, string organizationId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            CustomConstraintId = customConstraintId;
+            OrganizationId = organizationId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="CustomConstraintName"/> class from the component parts of pattern
+        /// <c>organizations/{organization}/customConstraints/{custom_constraint}</c>
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="customConstraintId">The <c>CustomConstraint</c> ID. Must not be <c>null</c> or empty.</param>
+        public CustomConstraintName(string organizationId, string customConstraintId) : this(ResourceNameType.OrganizationCustomConstraint, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), customConstraintId: gax::GaxPreconditions.CheckNotNullOrEmpty(customConstraintId, nameof(customConstraintId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>CustomConstraint</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string CustomConstraintId { get; }
+
+        /// <summary>
+        /// The <c>Organization</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string OrganizationId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.OrganizationCustomConstraint: return s_organizationCustomConstraint.Expand(OrganizationId, CustomConstraintId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as CustomConstraintName);
+
+        /// <inheritdoc/>
+        public bool Equals(CustomConstraintName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(CustomConstraintName a, CustomConstraintName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(CustomConstraintName a, CustomConstraintName b) => !(a == b);
+    }
+
     public partial class Constraint
     {
         /// <summary>
@@ -337,6 +570,18 @@ namespace Google.Cloud.OrgPolicy.V2
         public gcov::ConstraintName ConstraintName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcov::ConstraintName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CustomConstraint
+    {
+        /// <summary>
+        /// <see cref="gcov::CustomConstraintName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcov::CustomConstraintName CustomConstraintName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcov::CustomConstraintName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

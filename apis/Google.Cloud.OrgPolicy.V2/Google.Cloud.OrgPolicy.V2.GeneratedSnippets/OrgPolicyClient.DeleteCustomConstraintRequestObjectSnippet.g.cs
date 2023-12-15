@@ -16,12 +16,12 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START orgpolicy_v2_generated_OrgPolicy_DeletePolicy_sync]
+    // [START orgpolicy_v2_generated_OrgPolicy_DeleteCustomConstraint_sync]
     using Google.Cloud.OrgPolicy.V2;
 
     public sealed partial class GeneratedOrgPolicyClientSnippets
     {
-        /// <summary>Snippet for DeletePolicy</summary>
+        /// <summary>Snippet for DeleteCustomConstraint</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,19 +29,18 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void DeletePolicyRequestObject()
+        public void DeleteCustomConstraintRequestObject()
         {
             // Create client
             OrgPolicyClient orgPolicyClient = OrgPolicyClient.Create();
             // Initialize request argument(s)
-            DeletePolicyRequest request = new DeletePolicyRequest
+            DeleteCustomConstraintRequest request = new DeleteCustomConstraintRequest
             {
-                PolicyName = PolicyName.FromProjectPolicy("[PROJECT]", "[POLICY]"),
-                Etag = "",
+                CustomConstraintName = CustomConstraintName.FromOrganizationCustomConstraint("[ORGANIZATION]", "[CUSTOM_CONSTRAINT]"),
             };
             // Make the request
-            orgPolicyClient.DeletePolicy(request);
+            orgPolicyClient.DeleteCustomConstraint(request);
         }
     }
-    // [END orgpolicy_v2_generated_OrgPolicy_DeletePolicy_sync]
+    // [END orgpolicy_v2_generated_OrgPolicy_DeleteCustomConstraint_sync]
 }

@@ -545,4 +545,52 @@ namespace Google.Cloud.OrgPolicy.V2
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class CreateCustomConstraintRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::OrganizationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::OrganizationName ParentAsOrganizationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::OrganizationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetCustomConstraintRequest
+    {
+        /// <summary>
+        /// <see cref="gcov::CustomConstraintName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcov::CustomConstraintName CustomConstraintName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcov::CustomConstraintName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListCustomConstraintsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::OrganizationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::OrganizationName ParentAsOrganizationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::OrganizationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteCustomConstraintRequest
+    {
+        /// <summary>
+        /// <see cref="gcov::CustomConstraintName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcov::CustomConstraintName CustomConstraintName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcov::CustomConstraintName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }

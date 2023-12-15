@@ -54,6 +54,11 @@ namespace Google.Cloud.OrgPolicy.V2
             CreatePolicySettings = existing.CreatePolicySettings;
             UpdatePolicySettings = existing.UpdatePolicySettings;
             DeletePolicySettings = existing.DeletePolicySettings;
+            CreateCustomConstraintSettings = existing.CreateCustomConstraintSettings;
+            UpdateCustomConstraintSettings = existing.UpdateCustomConstraintSettings;
+            GetCustomConstraintSettings = existing.GetCustomConstraintSettings;
+            ListCustomConstraintsSettings = existing.ListCustomConstraintsSettings;
+            DeleteCustomConstraintSettings = existing.DeleteCustomConstraintSettings;
             OnCopy(existing);
         }
 
@@ -206,6 +211,111 @@ namespace Google.Cloud.OrgPolicy.V2
         /// </remarks>
         public gaxgrpc::CallSettings DeletePolicySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
 
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OrgPolicyClient.CreateCustomConstraint</c> and <c>OrgPolicyClient.CreateCustomConstraintAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateCustomConstraintSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OrgPolicyClient.UpdateCustomConstraint</c> and <c>OrgPolicyClient.UpdateCustomConstraintAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateCustomConstraintSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OrgPolicyClient.GetCustomConstraint</c> and <c>OrgPolicyClient.GetCustomConstraintAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetCustomConstraintSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OrgPolicyClient.ListCustomConstraints</c> and <c>OrgPolicyClient.ListCustomConstraintsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListCustomConstraintsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OrgPolicyClient.DeleteCustomConstraint</c> and <c>OrgPolicyClient.DeleteCustomConstraintAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteCustomConstraintSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="OrgPolicySettings"/> object.</returns>
         public OrgPolicySettings Clone() => new OrgPolicySettings(this);
@@ -266,23 +376,23 @@ namespace Google.Cloud.OrgPolicy.V2
     /// <remarks>
     /// An interface for managing organization policies.
     /// 
-    /// The Cloud Org Policy service provides a simple mechanism for organizations to
-    /// restrict the allowed configurations across their entire Cloud Resource
-    /// hierarchy.
+    /// The Organization Policy Service provides a simple mechanism for
+    /// organizations to restrict the allowed configurations across their entire
+    /// resource hierarchy.
     /// 
-    /// You can use a `policy` to configure restrictions in Cloud resources. For
-    /// example, you can enforce a `policy` that restricts which Google
-    /// Cloud Platform APIs can be activated in a certain part of your resource
-    /// hierarchy, or prevents serial port access to VM instances in a particular
-    /// folder.
+    /// You can use a policy to configure restrictions on resources. For
+    /// example, you can enforce a policy that restricts which Google
+    /// Cloud APIs can be activated in a certain part of your resource
+    /// hierarchy, or prevents serial port access to VM instances in a
+    /// particular folder.
     /// 
-    /// `Policies` are inherited down through the resource hierarchy. A `policy`
+    /// Policies are inherited down through the resource hierarchy. A policy
     /// applied to a parent resource automatically applies to all its child resources
-    /// unless overridden with a `policy` lower in the hierarchy.
+    /// unless overridden with a policy lower in the hierarchy.
     /// 
-    /// A `constraint` defines an aspect of a resource's configuration that can be
-    /// controlled by an organization's policy administrator. `Policies` are a
-    /// collection of `constraints` that defines their allowable configuration on a
+    /// A constraint defines an aspect of a resource's configuration that can be
+    /// controlled by an organization's policy administrator. Policies are a
+    /// collection of constraints that defines their allowable configuration on a
     /// particular resource and its child resources.
     /// </remarks>
     public abstract partial class OrgPolicyClient
@@ -366,7 +476,7 @@ namespace Google.Cloud.OrgPolicy.V2
         public virtual OrgPolicy.OrgPolicyClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists `Constraints` that could be applied on the specified resource.
+        /// Lists constraints that could be applied on the specified resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -375,7 +485,7 @@ namespace Google.Cloud.OrgPolicy.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists `Constraints` that could be applied on the specified resource.
+        /// Lists constraints that could be applied on the specified resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -384,11 +494,12 @@ namespace Google.Cloud.OrgPolicy.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists `Constraints` that could be applied on the specified resource.
+        /// Lists constraints that could be applied on the specified resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that parents the constraint. Must be in one of
-        /// the following forms:
+        /// Required. The Google Cloud resource that parents the constraint. Must be in
+        /// one of the following forms:
+        /// 
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -413,11 +524,12 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists `Constraints` that could be applied on the specified resource.
+        /// Lists constraints that could be applied on the specified resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that parents the constraint. Must be in one of
-        /// the following forms:
+        /// Required. The Google Cloud resource that parents the constraint. Must be in
+        /// one of the following forms:
+        /// 
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -442,11 +554,12 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists `Constraints` that could be applied on the specified resource.
+        /// Lists constraints that could be applied on the specified resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that parents the constraint. Must be in one of
-        /// the following forms:
+        /// Required. The Google Cloud resource that parents the constraint. Must be in
+        /// one of the following forms:
+        /// 
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -471,11 +584,12 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists `Constraints` that could be applied on the specified resource.
+        /// Lists constraints that could be applied on the specified resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that parents the constraint. Must be in one of
-        /// the following forms:
+        /// Required. The Google Cloud resource that parents the constraint. Must be in
+        /// one of the following forms:
+        /// 
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -500,11 +614,12 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists `Constraints` that could be applied on the specified resource.
+        /// Lists constraints that could be applied on the specified resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that parents the constraint. Must be in one of
-        /// the following forms:
+        /// Required. The Google Cloud resource that parents the constraint. Must be in
+        /// one of the following forms:
+        /// 
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -529,11 +644,12 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists `Constraints` that could be applied on the specified resource.
+        /// Lists constraints that could be applied on the specified resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that parents the constraint. Must be in one of
-        /// the following forms:
+        /// Required. The Google Cloud resource that parents the constraint. Must be in
+        /// one of the following forms:
+        /// 
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -558,11 +674,12 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists `Constraints` that could be applied on the specified resource.
+        /// Lists constraints that could be applied on the specified resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that parents the constraint. Must be in one of
-        /// the following forms:
+        /// Required. The Google Cloud resource that parents the constraint. Must be in
+        /// one of the following forms:
+        /// 
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -587,11 +704,12 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists `Constraints` that could be applied on the specified resource.
+        /// Lists constraints that could be applied on the specified resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that parents the constraint. Must be in one of
-        /// the following forms:
+        /// Required. The Google Cloud resource that parents the constraint. Must be in
+        /// one of the following forms:
+        /// 
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -616,7 +734,7 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Retrieves all of the `Policies` that exist on a particular resource.
+        /// Retrieves all of the policies that exist on a particular resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -625,7 +743,7 @@ namespace Google.Cloud.OrgPolicy.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves all of the `Policies` that exist on a particular resource.
+        /// Retrieves all of the policies that exist on a particular resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -634,12 +752,13 @@ namespace Google.Cloud.OrgPolicy.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves all of the `Policies` that exist on a particular resource.
+        /// Retrieves all of the policies that exist on a particular resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The target Cloud resource that parents the set of constraints and
-        /// policies that will be returned from this call. Must be in one of the
-        /// following forms:
+        /// Required. The target Google Cloud resource that parents the set of
+        /// constraints and policies that will be returned from this call. Must be in
+        /// one of the following forms:
+        /// 
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -664,12 +783,13 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Retrieves all of the `Policies` that exist on a particular resource.
+        /// Retrieves all of the policies that exist on a particular resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The target Cloud resource that parents the set of constraints and
-        /// policies that will be returned from this call. Must be in one of the
-        /// following forms:
+        /// Required. The target Google Cloud resource that parents the set of
+        /// constraints and policies that will be returned from this call. Must be in
+        /// one of the following forms:
+        /// 
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -694,12 +814,13 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Retrieves all of the `Policies` that exist on a particular resource.
+        /// Retrieves all of the policies that exist on a particular resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The target Cloud resource that parents the set of constraints and
-        /// policies that will be returned from this call. Must be in one of the
-        /// following forms:
+        /// Required. The target Google Cloud resource that parents the set of
+        /// constraints and policies that will be returned from this call. Must be in
+        /// one of the following forms:
+        /// 
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -724,12 +845,13 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Retrieves all of the `Policies` that exist on a particular resource.
+        /// Retrieves all of the policies that exist on a particular resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The target Cloud resource that parents the set of constraints and
-        /// policies that will be returned from this call. Must be in one of the
-        /// following forms:
+        /// Required. The target Google Cloud resource that parents the set of
+        /// constraints and policies that will be returned from this call. Must be in
+        /// one of the following forms:
+        /// 
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -754,12 +876,13 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Retrieves all of the `Policies` that exist on a particular resource.
+        /// Retrieves all of the policies that exist on a particular resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The target Cloud resource that parents the set of constraints and
-        /// policies that will be returned from this call. Must be in one of the
-        /// following forms:
+        /// Required. The target Google Cloud resource that parents the set of
+        /// constraints and policies that will be returned from this call. Must be in
+        /// one of the following forms:
+        /// 
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -784,12 +907,13 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Retrieves all of the `Policies` that exist on a particular resource.
+        /// Retrieves all of the policies that exist on a particular resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The target Cloud resource that parents the set of constraints and
-        /// policies that will be returned from this call. Must be in one of the
-        /// following forms:
+        /// Required. The target Google Cloud resource that parents the set of
+        /// constraints and policies that will be returned from this call. Must be in
+        /// one of the following forms:
+        /// 
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -814,12 +938,13 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Retrieves all of the `Policies` that exist on a particular resource.
+        /// Retrieves all of the policies that exist on a particular resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The target Cloud resource that parents the set of constraints and
-        /// policies that will be returned from this call. Must be in one of the
-        /// following forms:
+        /// Required. The target Google Cloud resource that parents the set of
+        /// constraints and policies that will be returned from this call. Must be in
+        /// one of the following forms:
+        /// 
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -844,12 +969,13 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Retrieves all of the `Policies` that exist on a particular resource.
+        /// Retrieves all of the policies that exist on a particular resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The target Cloud resource that parents the set of constraints and
-        /// policies that will be returned from this call. Must be in one of the
-        /// following forms:
+        /// Required. The target Google Cloud resource that parents the set of
+        /// constraints and policies that will be returned from this call. Must be in
+        /// one of the following forms:
+        /// 
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
@@ -874,11 +1000,11 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Gets a `Policy` on a resource.
+        /// Gets a policy on a resource.
         /// 
-        /// If no `Policy` is set on the resource, NOT_FOUND is returned. The
+        /// If no policy is set on the resource, `NOT_FOUND` is returned. The
         /// `etag` value can be used with `UpdatePolicy()` to update a
-        /// `Policy` during read-modify-write.
+        /// policy during read-modify-write.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -887,11 +1013,11 @@ namespace Google.Cloud.OrgPolicy.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets a `Policy` on a resource.
+        /// Gets a policy on a resource.
         /// 
-        /// If no `Policy` is set on the resource, NOT_FOUND is returned. The
+        /// If no policy is set on the resource, `NOT_FOUND` is returned. The
         /// `etag` value can be used with `UpdatePolicy()` to update a
-        /// `Policy` during read-modify-write.
+        /// policy during read-modify-write.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -900,11 +1026,11 @@ namespace Google.Cloud.OrgPolicy.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets a `Policy` on a resource.
+        /// Gets a policy on a resource.
         /// 
-        /// If no `Policy` is set on the resource, NOT_FOUND is returned. The
+        /// If no policy is set on the resource, `NOT_FOUND` is returned. The
         /// `etag` value can be used with `UpdatePolicy()` to update a
-        /// `Policy` during read-modify-write.
+        /// policy during read-modify-write.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -913,15 +1039,15 @@ namespace Google.Cloud.OrgPolicy.V2
             GetPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a `Policy` on a resource.
+        /// Gets a policy on a resource.
         /// 
-        /// If no `Policy` is set on the resource, NOT_FOUND is returned. The
+        /// If no policy is set on the resource, `NOT_FOUND` is returned. The
         /// `etag` value can be used with `UpdatePolicy()` to update a
-        /// `Policy` during read-modify-write.
+        /// policy during read-modify-write.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the policy. See `Policy` for naming
-        /// requirements.
+        /// Required. Resource name of the policy. See
+        /// [Policy][google.cloud.orgpolicy.v2.Policy] for naming requirements.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -932,15 +1058,15 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Gets a `Policy` on a resource.
+        /// Gets a policy on a resource.
         /// 
-        /// If no `Policy` is set on the resource, NOT_FOUND is returned. The
+        /// If no policy is set on the resource, `NOT_FOUND` is returned. The
         /// `etag` value can be used with `UpdatePolicy()` to update a
-        /// `Policy` during read-modify-write.
+        /// policy during read-modify-write.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the policy. See `Policy` for naming
-        /// requirements.
+        /// Required. Resource name of the policy. See
+        /// [Policy][google.cloud.orgpolicy.v2.Policy] for naming requirements.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -951,15 +1077,15 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Gets a `Policy` on a resource.
+        /// Gets a policy on a resource.
         /// 
-        /// If no `Policy` is set on the resource, NOT_FOUND is returned. The
+        /// If no policy is set on the resource, `NOT_FOUND` is returned. The
         /// `etag` value can be used with `UpdatePolicy()` to update a
-        /// `Policy` during read-modify-write.
+        /// policy during read-modify-write.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the policy. See `Policy` for naming
-        /// requirements.
+        /// Required. Resource name of the policy. See
+        /// [Policy][google.cloud.orgpolicy.v2.Policy] for naming requirements.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -967,15 +1093,15 @@ namespace Google.Cloud.OrgPolicy.V2
             GetPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a `Policy` on a resource.
+        /// Gets a policy on a resource.
         /// 
-        /// If no `Policy` is set on the resource, NOT_FOUND is returned. The
+        /// If no policy is set on the resource, `NOT_FOUND` is returned. The
         /// `etag` value can be used with `UpdatePolicy()` to update a
-        /// `Policy` during read-modify-write.
+        /// policy during read-modify-write.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the policy. See `Policy` for naming
-        /// requirements.
+        /// Required. Resource name of the policy. See
+        /// [Policy][google.cloud.orgpolicy.v2.Policy] for naming requirements.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -986,15 +1112,15 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Gets a `Policy` on a resource.
+        /// Gets a policy on a resource.
         /// 
-        /// If no `Policy` is set on the resource, NOT_FOUND is returned. The
+        /// If no policy is set on the resource, `NOT_FOUND` is returned. The
         /// `etag` value can be used with `UpdatePolicy()` to update a
-        /// `Policy` during read-modify-write.
+        /// policy during read-modify-write.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the policy. See `Policy` for naming
-        /// requirements.
+        /// Required. Resource name of the policy. See
+        /// [Policy][google.cloud.orgpolicy.v2.Policy] for naming requirements.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1005,15 +1131,15 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Gets a `Policy` on a resource.
+        /// Gets a policy on a resource.
         /// 
-        /// If no `Policy` is set on the resource, NOT_FOUND is returned. The
+        /// If no policy is set on the resource, `NOT_FOUND` is returned. The
         /// `etag` value can be used with `UpdatePolicy()` to update a
-        /// `Policy` during read-modify-write.
+        /// policy during read-modify-write.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the policy. See `Policy` for naming
-        /// requirements.
+        /// Required. Resource name of the policy. See
+        /// [Policy][google.cloud.orgpolicy.v2.Policy] for naming requirements.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1021,10 +1147,10 @@ namespace Google.Cloud.OrgPolicy.V2
             GetPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the effective `Policy` on a resource. This is the result of merging
-        /// `Policies` in the resource hierarchy and evaluating conditions. The
-        /// returned `Policy` will not have an `etag` or `condition` set because it is
-        /// a computed `Policy` across multiple resources.
+        /// Gets the effective policy on a resource. This is the result of merging
+        /// policies in the resource hierarchy and evaluating conditions. The
+        /// returned policy will not have an `etag` or `condition` set because it is
+        /// an evaluated policy across multiple resources.
         /// Subtrees of Resource Manager resource hierarchy with 'under:' prefix will
         /// not be expanded.
         /// </summary>
@@ -1035,10 +1161,10 @@ namespace Google.Cloud.OrgPolicy.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the effective `Policy` on a resource. This is the result of merging
-        /// `Policies` in the resource hierarchy and evaluating conditions. The
-        /// returned `Policy` will not have an `etag` or `condition` set because it is
-        /// a computed `Policy` across multiple resources.
+        /// Gets the effective policy on a resource. This is the result of merging
+        /// policies in the resource hierarchy and evaluating conditions. The
+        /// returned policy will not have an `etag` or `condition` set because it is
+        /// an evaluated policy across multiple resources.
         /// Subtrees of Resource Manager resource hierarchy with 'under:' prefix will
         /// not be expanded.
         /// </summary>
@@ -1049,10 +1175,10 @@ namespace Google.Cloud.OrgPolicy.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the effective `Policy` on a resource. This is the result of merging
-        /// `Policies` in the resource hierarchy and evaluating conditions. The
-        /// returned `Policy` will not have an `etag` or `condition` set because it is
-        /// a computed `Policy` across multiple resources.
+        /// Gets the effective policy on a resource. This is the result of merging
+        /// policies in the resource hierarchy and evaluating conditions. The
+        /// returned policy will not have an `etag` or `condition` set because it is
+        /// an evaluated policy across multiple resources.
         /// Subtrees of Resource Manager resource hierarchy with 'under:' prefix will
         /// not be expanded.
         /// </summary>
@@ -1063,15 +1189,16 @@ namespace Google.Cloud.OrgPolicy.V2
             GetEffectivePolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the effective `Policy` on a resource. This is the result of merging
-        /// `Policies` in the resource hierarchy and evaluating conditions. The
-        /// returned `Policy` will not have an `etag` or `condition` set because it is
-        /// a computed `Policy` across multiple resources.
+        /// Gets the effective policy on a resource. This is the result of merging
+        /// policies in the resource hierarchy and evaluating conditions. The
+        /// returned policy will not have an `etag` or `condition` set because it is
+        /// an evaluated policy across multiple resources.
         /// Subtrees of Resource Manager resource hierarchy with 'under:' prefix will
         /// not be expanded.
         /// </summary>
         /// <param name="name">
-        /// Required. The effective policy to compute. See `Policy` for naming rules.
+        /// Required. The effective policy to compute. See
+        /// [Policy][google.cloud.orgpolicy.v2.Policy] for naming requirements.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1082,15 +1209,16 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Gets the effective `Policy` on a resource. This is the result of merging
-        /// `Policies` in the resource hierarchy and evaluating conditions. The
-        /// returned `Policy` will not have an `etag` or `condition` set because it is
-        /// a computed `Policy` across multiple resources.
+        /// Gets the effective policy on a resource. This is the result of merging
+        /// policies in the resource hierarchy and evaluating conditions. The
+        /// returned policy will not have an `etag` or `condition` set because it is
+        /// an evaluated policy across multiple resources.
         /// Subtrees of Resource Manager resource hierarchy with 'under:' prefix will
         /// not be expanded.
         /// </summary>
         /// <param name="name">
-        /// Required. The effective policy to compute. See `Policy` for naming rules.
+        /// Required. The effective policy to compute. See
+        /// [Policy][google.cloud.orgpolicy.v2.Policy] for naming requirements.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1101,15 +1229,16 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Gets the effective `Policy` on a resource. This is the result of merging
-        /// `Policies` in the resource hierarchy and evaluating conditions. The
-        /// returned `Policy` will not have an `etag` or `condition` set because it is
-        /// a computed `Policy` across multiple resources.
+        /// Gets the effective policy on a resource. This is the result of merging
+        /// policies in the resource hierarchy and evaluating conditions. The
+        /// returned policy will not have an `etag` or `condition` set because it is
+        /// an evaluated policy across multiple resources.
         /// Subtrees of Resource Manager resource hierarchy with 'under:' prefix will
         /// not be expanded.
         /// </summary>
         /// <param name="name">
-        /// Required. The effective policy to compute. See `Policy` for naming rules.
+        /// Required. The effective policy to compute. See
+        /// [Policy][google.cloud.orgpolicy.v2.Policy] for naming requirements.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1117,15 +1246,16 @@ namespace Google.Cloud.OrgPolicy.V2
             GetEffectivePolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the effective `Policy` on a resource. This is the result of merging
-        /// `Policies` in the resource hierarchy and evaluating conditions. The
-        /// returned `Policy` will not have an `etag` or `condition` set because it is
-        /// a computed `Policy` across multiple resources.
+        /// Gets the effective policy on a resource. This is the result of merging
+        /// policies in the resource hierarchy and evaluating conditions. The
+        /// returned policy will not have an `etag` or `condition` set because it is
+        /// an evaluated policy across multiple resources.
         /// Subtrees of Resource Manager resource hierarchy with 'under:' prefix will
         /// not be expanded.
         /// </summary>
         /// <param name="name">
-        /// Required. The effective policy to compute. See `Policy` for naming rules.
+        /// Required. The effective policy to compute. See
+        /// [Policy][google.cloud.orgpolicy.v2.Policy] for naming requirements.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1136,15 +1266,16 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Gets the effective `Policy` on a resource. This is the result of merging
-        /// `Policies` in the resource hierarchy and evaluating conditions. The
-        /// returned `Policy` will not have an `etag` or `condition` set because it is
-        /// a computed `Policy` across multiple resources.
+        /// Gets the effective policy on a resource. This is the result of merging
+        /// policies in the resource hierarchy and evaluating conditions. The
+        /// returned policy will not have an `etag` or `condition` set because it is
+        /// an evaluated policy across multiple resources.
         /// Subtrees of Resource Manager resource hierarchy with 'under:' prefix will
         /// not be expanded.
         /// </summary>
         /// <param name="name">
-        /// Required. The effective policy to compute. See `Policy` for naming rules.
+        /// Required. The effective policy to compute. See
+        /// [Policy][google.cloud.orgpolicy.v2.Policy] for naming requirements.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1155,15 +1286,16 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Gets the effective `Policy` on a resource. This is the result of merging
-        /// `Policies` in the resource hierarchy and evaluating conditions. The
-        /// returned `Policy` will not have an `etag` or `condition` set because it is
-        /// a computed `Policy` across multiple resources.
+        /// Gets the effective policy on a resource. This is the result of merging
+        /// policies in the resource hierarchy and evaluating conditions. The
+        /// returned policy will not have an `etag` or `condition` set because it is
+        /// an evaluated policy across multiple resources.
         /// Subtrees of Resource Manager resource hierarchy with 'under:' prefix will
         /// not be expanded.
         /// </summary>
         /// <param name="name">
-        /// Required. The effective policy to compute. See `Policy` for naming rules.
+        /// Required. The effective policy to compute. See
+        /// [Policy][google.cloud.orgpolicy.v2.Policy] for naming requirements.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1171,12 +1303,12 @@ namespace Google.Cloud.OrgPolicy.V2
             GetEffectivePolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a Policy.
+        /// Creates a policy.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
         /// constraint does not exist.
         /// Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the
-        /// policy already exists on the given Cloud resource.
+        /// policy already exists on the given Google Cloud resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1185,12 +1317,12 @@ namespace Google.Cloud.OrgPolicy.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a Policy.
+        /// Creates a policy.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
         /// constraint does not exist.
         /// Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the
-        /// policy already exists on the given Cloud resource.
+        /// policy already exists on the given Google Cloud resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1199,12 +1331,12 @@ namespace Google.Cloud.OrgPolicy.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a Policy.
+        /// Creates a policy.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
         /// constraint does not exist.
         /// Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the
-        /// policy already exists on the given Cloud resource.
+        /// policy already exists on the given Google Cloud resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1213,23 +1345,24 @@ namespace Google.Cloud.OrgPolicy.V2
             CreatePolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a Policy.
+        /// Creates a policy.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
         /// constraint does not exist.
         /// Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the
-        /// policy already exists on the given Cloud resource.
+        /// policy already exists on the given Google Cloud resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that will parent the new Policy. Must be in
-        /// one of the following forms:
+        /// Required. The Google Cloud resource that will parent the new policy. Must
+        /// be in one of the following forms:
+        /// 
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
         /// * `organizations/{organization_id}`
         /// </param>
         /// <param name="policy">
-        /// Required. `Policy` to create.
+        /// Required. Policy to create.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1241,23 +1374,24 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Creates a Policy.
+        /// Creates a policy.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
         /// constraint does not exist.
         /// Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the
-        /// policy already exists on the given Cloud resource.
+        /// policy already exists on the given Google Cloud resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that will parent the new Policy. Must be in
-        /// one of the following forms:
+        /// Required. The Google Cloud resource that will parent the new policy. Must
+        /// be in one of the following forms:
+        /// 
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
         /// * `organizations/{organization_id}`
         /// </param>
         /// <param name="policy">
-        /// Required. `Policy` to create.
+        /// Required. Policy to create.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1269,23 +1403,24 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Creates a Policy.
+        /// Creates a policy.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
         /// constraint does not exist.
         /// Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the
-        /// policy already exists on the given Cloud resource.
+        /// policy already exists on the given Google Cloud resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that will parent the new Policy. Must be in
-        /// one of the following forms:
+        /// Required. The Google Cloud resource that will parent the new policy. Must
+        /// be in one of the following forms:
+        /// 
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
         /// * `organizations/{organization_id}`
         /// </param>
         /// <param name="policy">
-        /// Required. `Policy` to create.
+        /// Required. Policy to create.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1293,23 +1428,24 @@ namespace Google.Cloud.OrgPolicy.V2
             CreatePolicyAsync(parent, policy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a Policy.
+        /// Creates a policy.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
         /// constraint does not exist.
         /// Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the
-        /// policy already exists on the given Cloud resource.
+        /// policy already exists on the given Google Cloud resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that will parent the new Policy. Must be in
-        /// one of the following forms:
+        /// Required. The Google Cloud resource that will parent the new policy. Must
+        /// be in one of the following forms:
+        /// 
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
         /// * `organizations/{organization_id}`
         /// </param>
         /// <param name="policy">
-        /// Required. `Policy` to create.
+        /// Required. Policy to create.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1321,23 +1457,24 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Creates a Policy.
+        /// Creates a policy.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
         /// constraint does not exist.
         /// Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the
-        /// policy already exists on the given Cloud resource.
+        /// policy already exists on the given Google Cloud resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that will parent the new Policy. Must be in
-        /// one of the following forms:
+        /// Required. The Google Cloud resource that will parent the new policy. Must
+        /// be in one of the following forms:
+        /// 
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
         /// * `organizations/{organization_id}`
         /// </param>
         /// <param name="policy">
-        /// Required. `Policy` to create.
+        /// Required. Policy to create.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1349,23 +1486,24 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Creates a Policy.
+        /// Creates a policy.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
         /// constraint does not exist.
         /// Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the
-        /// policy already exists on the given Cloud resource.
+        /// policy already exists on the given Google Cloud resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that will parent the new Policy. Must be in
-        /// one of the following forms:
+        /// Required. The Google Cloud resource that will parent the new policy. Must
+        /// be in one of the following forms:
+        /// 
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
         /// * `organizations/{organization_id}`
         /// </param>
         /// <param name="policy">
-        /// Required. `Policy` to create.
+        /// Required. Policy to create.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1373,23 +1511,24 @@ namespace Google.Cloud.OrgPolicy.V2
             CreatePolicyAsync(parent, policy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a Policy.
+        /// Creates a policy.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
         /// constraint does not exist.
         /// Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the
-        /// policy already exists on the given Cloud resource.
+        /// policy already exists on the given Google Cloud resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that will parent the new Policy. Must be in
-        /// one of the following forms:
+        /// Required. The Google Cloud resource that will parent the new policy. Must
+        /// be in one of the following forms:
+        /// 
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
         /// * `organizations/{organization_id}`
         /// </param>
         /// <param name="policy">
-        /// Required. `Policy` to create.
+        /// Required. Policy to create.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1401,23 +1540,24 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Creates a Policy.
+        /// Creates a policy.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
         /// constraint does not exist.
         /// Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the
-        /// policy already exists on the given Cloud resource.
+        /// policy already exists on the given Google Cloud resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that will parent the new Policy. Must be in
-        /// one of the following forms:
+        /// Required. The Google Cloud resource that will parent the new policy. Must
+        /// be in one of the following forms:
+        /// 
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
         /// * `organizations/{organization_id}`
         /// </param>
         /// <param name="policy">
-        /// Required. `Policy` to create.
+        /// Required. Policy to create.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1429,23 +1569,24 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Creates a Policy.
+        /// Creates a policy.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
         /// constraint does not exist.
         /// Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the
-        /// policy already exists on the given Cloud resource.
+        /// policy already exists on the given Google Cloud resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that will parent the new Policy. Must be in
-        /// one of the following forms:
+        /// Required. The Google Cloud resource that will parent the new policy. Must
+        /// be in one of the following forms:
+        /// 
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
         /// * `organizations/{organization_id}`
         /// </param>
         /// <param name="policy">
-        /// Required. `Policy` to create.
+        /// Required. Policy to create.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1453,23 +1594,24 @@ namespace Google.Cloud.OrgPolicy.V2
             CreatePolicyAsync(parent, policy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a Policy.
+        /// Creates a policy.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
         /// constraint does not exist.
         /// Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the
-        /// policy already exists on the given Cloud resource.
+        /// policy already exists on the given Google Cloud resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that will parent the new Policy. Must be in
-        /// one of the following forms:
+        /// Required. The Google Cloud resource that will parent the new policy. Must
+        /// be in one of the following forms:
+        /// 
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
         /// * `organizations/{organization_id}`
         /// </param>
         /// <param name="policy">
-        /// Required. `Policy` to create.
+        /// Required. Policy to create.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1481,23 +1623,24 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Creates a Policy.
+        /// Creates a policy.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
         /// constraint does not exist.
         /// Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the
-        /// policy already exists on the given Cloud resource.
+        /// policy already exists on the given Google Cloud resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that will parent the new Policy. Must be in
-        /// one of the following forms:
+        /// Required. The Google Cloud resource that will parent the new policy. Must
+        /// be in one of the following forms:
+        /// 
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
         /// * `organizations/{organization_id}`
         /// </param>
         /// <param name="policy">
-        /// Required. `Policy` to create.
+        /// Required. Policy to create.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1509,23 +1652,24 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Creates a Policy.
+        /// Creates a policy.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
         /// constraint does not exist.
         /// Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the
-        /// policy already exists on the given Cloud resource.
+        /// policy already exists on the given Google Cloud resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The Cloud resource that will parent the new Policy. Must be in
-        /// one of the following forms:
+        /// Required. The Google Cloud resource that will parent the new policy. Must
+        /// be in one of the following forms:
+        /// 
         /// * `projects/{project_number}`
         /// * `projects/{project_id}`
         /// * `folders/{folder_id}`
         /// * `organizations/{organization_id}`
         /// </param>
         /// <param name="policy">
-        /// Required. `Policy` to create.
+        /// Required. Policy to create.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1533,7 +1677,7 @@ namespace Google.Cloud.OrgPolicy.V2
             CreatePolicyAsync(parent, policy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates a Policy.
+        /// Updates a policy.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
         /// constraint or the policy do not exist.
@@ -1550,7 +1694,7 @@ namespace Google.Cloud.OrgPolicy.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates a Policy.
+        /// Updates a policy.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
         /// constraint or the policy do not exist.
@@ -1567,7 +1711,7 @@ namespace Google.Cloud.OrgPolicy.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates a Policy.
+        /// Updates a policy.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
         /// constraint or the policy do not exist.
@@ -1584,7 +1728,7 @@ namespace Google.Cloud.OrgPolicy.V2
             UpdatePolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates a Policy.
+        /// Updates a policy.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
         /// constraint or the policy do not exist.
@@ -1595,7 +1739,7 @@ namespace Google.Cloud.OrgPolicy.V2
         /// fields.
         /// </summary>
         /// <param name="policy">
-        /// Required. `Policy` to update.
+        /// Required. Policy to update.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1606,7 +1750,7 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Updates a Policy.
+        /// Updates a policy.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
         /// constraint or the policy do not exist.
@@ -1617,7 +1761,7 @@ namespace Google.Cloud.OrgPolicy.V2
         /// fields.
         /// </summary>
         /// <param name="policy">
-        /// Required. `Policy` to update.
+        /// Required. Policy to update.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1628,7 +1772,7 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Updates a Policy.
+        /// Updates a policy.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
         /// constraint or the policy do not exist.
@@ -1639,7 +1783,7 @@ namespace Google.Cloud.OrgPolicy.V2
         /// fields.
         /// </summary>
         /// <param name="policy">
-        /// Required. `Policy` to update.
+        /// Required. Policy to update.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1647,10 +1791,10 @@ namespace Google.Cloud.OrgPolicy.V2
             UpdatePolicyAsync(policy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a Policy.
+        /// Deletes a policy.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-        /// constraint or Org Policy does not exist.
+        /// constraint or organization policy does not exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1659,10 +1803,10 @@ namespace Google.Cloud.OrgPolicy.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a Policy.
+        /// Deletes a policy.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-        /// constraint or Org Policy does not exist.
+        /// constraint or organization policy does not exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1671,10 +1815,10 @@ namespace Google.Cloud.OrgPolicy.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a Policy.
+        /// Deletes a policy.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-        /// constraint or Org Policy does not exist.
+        /// constraint or organization policy does not exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1683,14 +1827,14 @@ namespace Google.Cloud.OrgPolicy.V2
             DeletePolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a Policy.
+        /// Deletes a policy.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-        /// constraint or Org Policy does not exist.
+        /// constraint or organization policy does not exist.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the policy to delete.
-        /// See `Policy` for naming rules.
+        /// See the policy entry for naming rules.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1701,14 +1845,14 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Deletes a Policy.
+        /// Deletes a policy.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-        /// constraint or Org Policy does not exist.
+        /// constraint or organization policy does not exist.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the policy to delete.
-        /// See `Policy` for naming rules.
+        /// See the policy entry for naming rules.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1719,14 +1863,14 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Deletes a Policy.
+        /// Deletes a policy.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-        /// constraint or Org Policy does not exist.
+        /// constraint or organization policy does not exist.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the policy to delete.
-        /// See `Policy` for naming rules.
+        /// See the policy entry for naming rules.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1734,14 +1878,14 @@ namespace Google.Cloud.OrgPolicy.V2
             DeletePolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a Policy.
+        /// Deletes a policy.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-        /// constraint or Org Policy does not exist.
+        /// constraint or organization policy does not exist.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the policy to delete.
-        /// See `Policy` for naming rules.
+        /// See the policy entry for naming rules.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1752,14 +1896,14 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Deletes a Policy.
+        /// Deletes a policy.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-        /// constraint or Org Policy does not exist.
+        /// constraint or organization policy does not exist.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the policy to delete.
-        /// See `Policy` for naming rules.
+        /// See the policy entry for naming rules.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1770,42 +1914,740 @@ namespace Google.Cloud.OrgPolicy.V2
             }, callSettings);
 
         /// <summary>
-        /// Deletes a Policy.
+        /// Deletes a policy.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-        /// constraint or Org Policy does not exist.
+        /// constraint or organization policy does not exist.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the policy to delete.
-        /// See `Policy` for naming rules.
+        /// See the policy entry for naming rules.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeletePolicyAsync(PolicyName name, st::CancellationToken cancellationToken) =>
             DeletePolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// organization does not exist.
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the
+        /// constraint already exists on the given organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomConstraint CreateCustomConstraint(CreateCustomConstraintRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// organization does not exist.
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the
+        /// constraint already exists on the given organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomConstraint> CreateCustomConstraintAsync(CreateCustomConstraintRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// organization does not exist.
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the
+        /// constraint already exists on the given organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomConstraint> CreateCustomConstraintAsync(CreateCustomConstraintRequest request, st::CancellationToken cancellationToken) =>
+            CreateCustomConstraintAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// organization does not exist.
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the
+        /// constraint already exists on the given organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Must be in the following form:
+        /// 
+        /// * `organizations/{organization_id}`
+        /// </param>
+        /// <param name="customConstraint">
+        /// Required. Custom constraint to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomConstraint CreateCustomConstraint(string parent, CustomConstraint customConstraint, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCustomConstraint(new CreateCustomConstraintRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                CustomConstraint = gax::GaxPreconditions.CheckNotNull(customConstraint, nameof(customConstraint)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// organization does not exist.
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the
+        /// constraint already exists on the given organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Must be in the following form:
+        /// 
+        /// * `organizations/{organization_id}`
+        /// </param>
+        /// <param name="customConstraint">
+        /// Required. Custom constraint to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomConstraint> CreateCustomConstraintAsync(string parent, CustomConstraint customConstraint, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCustomConstraintAsync(new CreateCustomConstraintRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                CustomConstraint = gax::GaxPreconditions.CheckNotNull(customConstraint, nameof(customConstraint)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// organization does not exist.
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the
+        /// constraint already exists on the given organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Must be in the following form:
+        /// 
+        /// * `organizations/{organization_id}`
+        /// </param>
+        /// <param name="customConstraint">
+        /// Required. Custom constraint to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomConstraint> CreateCustomConstraintAsync(string parent, CustomConstraint customConstraint, st::CancellationToken cancellationToken) =>
+            CreateCustomConstraintAsync(parent, customConstraint, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// organization does not exist.
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the
+        /// constraint already exists on the given organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Must be in the following form:
+        /// 
+        /// * `organizations/{organization_id}`
+        /// </param>
+        /// <param name="customConstraint">
+        /// Required. Custom constraint to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomConstraint CreateCustomConstraint(gagr::OrganizationName parent, CustomConstraint customConstraint, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCustomConstraint(new CreateCustomConstraintRequest
+            {
+                ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                CustomConstraint = gax::GaxPreconditions.CheckNotNull(customConstraint, nameof(customConstraint)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// organization does not exist.
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the
+        /// constraint already exists on the given organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Must be in the following form:
+        /// 
+        /// * `organizations/{organization_id}`
+        /// </param>
+        /// <param name="customConstraint">
+        /// Required. Custom constraint to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomConstraint> CreateCustomConstraintAsync(gagr::OrganizationName parent, CustomConstraint customConstraint, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCustomConstraintAsync(new CreateCustomConstraintRequest
+            {
+                ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                CustomConstraint = gax::GaxPreconditions.CheckNotNull(customConstraint, nameof(customConstraint)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// organization does not exist.
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the
+        /// constraint already exists on the given organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Must be in the following form:
+        /// 
+        /// * `organizations/{organization_id}`
+        /// </param>
+        /// <param name="customConstraint">
+        /// Required. Custom constraint to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomConstraint> CreateCustomConstraintAsync(gagr::OrganizationName parent, CustomConstraint customConstraint, st::CancellationToken cancellationToken) =>
+            CreateCustomConstraintAsync(parent, customConstraint, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// constraint does not exist.
+        /// 
+        /// Note: the supplied policy will perform a full overwrite of all
+        /// fields.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomConstraint UpdateCustomConstraint(UpdateCustomConstraintRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// constraint does not exist.
+        /// 
+        /// Note: the supplied policy will perform a full overwrite of all
+        /// fields.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomConstraint> UpdateCustomConstraintAsync(UpdateCustomConstraintRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// constraint does not exist.
+        /// 
+        /// Note: the supplied policy will perform a full overwrite of all
+        /// fields.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomConstraint> UpdateCustomConstraintAsync(UpdateCustomConstraintRequest request, st::CancellationToken cancellationToken) =>
+            UpdateCustomConstraintAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// constraint does not exist.
+        /// 
+        /// Note: the supplied policy will perform a full overwrite of all
+        /// fields.
+        /// </summary>
+        /// <param name="customConstraint">
+        /// Required. `CustomConstraint` to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomConstraint UpdateCustomConstraint(CustomConstraint customConstraint, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateCustomConstraint(new UpdateCustomConstraintRequest
+            {
+                CustomConstraint = gax::GaxPreconditions.CheckNotNull(customConstraint, nameof(customConstraint)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// constraint does not exist.
+        /// 
+        /// Note: the supplied policy will perform a full overwrite of all
+        /// fields.
+        /// </summary>
+        /// <param name="customConstraint">
+        /// Required. `CustomConstraint` to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomConstraint> UpdateCustomConstraintAsync(CustomConstraint customConstraint, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateCustomConstraintAsync(new UpdateCustomConstraintRequest
+            {
+                CustomConstraint = gax::GaxPreconditions.CheckNotNull(customConstraint, nameof(customConstraint)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// constraint does not exist.
+        /// 
+        /// Note: the supplied policy will perform a full overwrite of all
+        /// fields.
+        /// </summary>
+        /// <param name="customConstraint">
+        /// Required. `CustomConstraint` to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomConstraint> UpdateCustomConstraintAsync(CustomConstraint customConstraint, st::CancellationToken cancellationToken) =>
+            UpdateCustomConstraintAsync(customConstraint, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// custom constraint does not exist.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomConstraint GetCustomConstraint(GetCustomConstraintRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// custom constraint does not exist.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomConstraint> GetCustomConstraintAsync(GetCustomConstraintRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// custom constraint does not exist.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomConstraint> GetCustomConstraintAsync(GetCustomConstraintRequest request, st::CancellationToken cancellationToken) =>
+            GetCustomConstraintAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// custom constraint does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the custom constraint. See the custom constraint
+        /// entry for naming requirements.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomConstraint GetCustomConstraint(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCustomConstraint(new GetCustomConstraintRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// custom constraint does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the custom constraint. See the custom constraint
+        /// entry for naming requirements.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomConstraint> GetCustomConstraintAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCustomConstraintAsync(new GetCustomConstraintRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// custom constraint does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the custom constraint. See the custom constraint
+        /// entry for naming requirements.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomConstraint> GetCustomConstraintAsync(string name, st::CancellationToken cancellationToken) =>
+            GetCustomConstraintAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// custom constraint does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the custom constraint. See the custom constraint
+        /// entry for naming requirements.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomConstraint GetCustomConstraint(CustomConstraintName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCustomConstraint(new GetCustomConstraintRequest
+            {
+                CustomConstraintName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// custom constraint does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the custom constraint. See the custom constraint
+        /// entry for naming requirements.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomConstraint> GetCustomConstraintAsync(CustomConstraintName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCustomConstraintAsync(new GetCustomConstraintRequest
+            {
+                CustomConstraintName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// custom constraint does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the custom constraint. See the custom constraint
+        /// entry for naming requirements.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomConstraint> GetCustomConstraintAsync(CustomConstraintName name, st::CancellationToken cancellationToken) =>
+            GetCustomConstraintAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves all of the custom constraints that exist on a particular
+        /// organization resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="CustomConstraint"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListCustomConstraintsResponse, CustomConstraint> ListCustomConstraints(ListCustomConstraintsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves all of the custom constraints that exist on a particular
+        /// organization resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="CustomConstraint"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListCustomConstraintsResponse, CustomConstraint> ListCustomConstraintsAsync(ListCustomConstraintsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves all of the custom constraints that exist on a particular
+        /// organization resource.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The target Google Cloud resource that parents the set of custom
+        /// constraints that will be returned from this call. Must be in one of the
+        /// following forms:
+        /// 
+        /// * `organizations/{organization_id}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="CustomConstraint"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListCustomConstraintsResponse, CustomConstraint> ListCustomConstraints(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListCustomConstraints(new ListCustomConstraintsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves all of the custom constraints that exist on a particular
+        /// organization resource.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The target Google Cloud resource that parents the set of custom
+        /// constraints that will be returned from this call. Must be in one of the
+        /// following forms:
+        /// 
+        /// * `organizations/{organization_id}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="CustomConstraint"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListCustomConstraintsResponse, CustomConstraint> ListCustomConstraintsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListCustomConstraintsAsync(new ListCustomConstraintsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves all of the custom constraints that exist on a particular
+        /// organization resource.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The target Google Cloud resource that parents the set of custom
+        /// constraints that will be returned from this call. Must be in one of the
+        /// following forms:
+        /// 
+        /// * `organizations/{organization_id}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="CustomConstraint"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListCustomConstraintsResponse, CustomConstraint> ListCustomConstraints(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListCustomConstraints(new ListCustomConstraintsRequest
+            {
+                ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves all of the custom constraints that exist on a particular
+        /// organization resource.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The target Google Cloud resource that parents the set of custom
+        /// constraints that will be returned from this call. Must be in one of the
+        /// following forms:
+        /// 
+        /// * `organizations/{organization_id}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="CustomConstraint"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListCustomConstraintsResponse, CustomConstraint> ListCustomConstraintsAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListCustomConstraintsAsync(new ListCustomConstraintsRequest
+            {
+                ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// constraint does not exist.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteCustomConstraint(DeleteCustomConstraintRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// constraint does not exist.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteCustomConstraintAsync(DeleteCustomConstraintRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// constraint does not exist.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteCustomConstraintAsync(DeleteCustomConstraintRequest request, st::CancellationToken cancellationToken) =>
+            DeleteCustomConstraintAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// constraint does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the custom constraint to delete.
+        /// See the custom constraint entry for naming rules.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteCustomConstraint(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCustomConstraint(new DeleteCustomConstraintRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// constraint does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the custom constraint to delete.
+        /// See the custom constraint entry for naming rules.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteCustomConstraintAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCustomConstraintAsync(new DeleteCustomConstraintRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// constraint does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the custom constraint to delete.
+        /// See the custom constraint entry for naming rules.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteCustomConstraintAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteCustomConstraintAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// constraint does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the custom constraint to delete.
+        /// See the custom constraint entry for naming rules.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteCustomConstraint(CustomConstraintName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCustomConstraint(new DeleteCustomConstraintRequest
+            {
+                CustomConstraintName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// constraint does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the custom constraint to delete.
+        /// See the custom constraint entry for naming rules.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteCustomConstraintAsync(CustomConstraintName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCustomConstraintAsync(new DeleteCustomConstraintRequest
+            {
+                CustomConstraintName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// constraint does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the custom constraint to delete.
+        /// See the custom constraint entry for naming rules.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteCustomConstraintAsync(CustomConstraintName name, st::CancellationToken cancellationToken) =>
+            DeleteCustomConstraintAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>OrgPolicy client wrapper implementation, for convenient use.</summary>
     /// <remarks>
     /// An interface for managing organization policies.
     /// 
-    /// The Cloud Org Policy service provides a simple mechanism for organizations to
-    /// restrict the allowed configurations across their entire Cloud Resource
-    /// hierarchy.
+    /// The Organization Policy Service provides a simple mechanism for
+    /// organizations to restrict the allowed configurations across their entire
+    /// resource hierarchy.
     /// 
-    /// You can use a `policy` to configure restrictions in Cloud resources. For
-    /// example, you can enforce a `policy` that restricts which Google
-    /// Cloud Platform APIs can be activated in a certain part of your resource
-    /// hierarchy, or prevents serial port access to VM instances in a particular
-    /// folder.
+    /// You can use a policy to configure restrictions on resources. For
+    /// example, you can enforce a policy that restricts which Google
+    /// Cloud APIs can be activated in a certain part of your resource
+    /// hierarchy, or prevents serial port access to VM instances in a
+    /// particular folder.
     /// 
-    /// `Policies` are inherited down through the resource hierarchy. A `policy`
+    /// Policies are inherited down through the resource hierarchy. A policy
     /// applied to a parent resource automatically applies to all its child resources
-    /// unless overridden with a `policy` lower in the hierarchy.
+    /// unless overridden with a policy lower in the hierarchy.
     /// 
-    /// A `constraint` defines an aspect of a resource's configuration that can be
-    /// controlled by an organization's policy administrator. `Policies` are a
-    /// collection of `constraints` that defines their allowable configuration on a
+    /// A constraint defines an aspect of a resource's configuration that can be
+    /// controlled by an organization's policy administrator. Policies are a
+    /// collection of constraints that defines their allowable configuration on a
     /// particular resource and its child resources.
     /// </remarks>
     public sealed partial class OrgPolicyClientImpl : OrgPolicyClient
@@ -1823,6 +2665,16 @@ namespace Google.Cloud.OrgPolicy.V2
         private readonly gaxgrpc::ApiCall<UpdatePolicyRequest, Policy> _callUpdatePolicy;
 
         private readonly gaxgrpc::ApiCall<DeletePolicyRequest, wkt::Empty> _callDeletePolicy;
+
+        private readonly gaxgrpc::ApiCall<CreateCustomConstraintRequest, CustomConstraint> _callCreateCustomConstraint;
+
+        private readonly gaxgrpc::ApiCall<UpdateCustomConstraintRequest, CustomConstraint> _callUpdateCustomConstraint;
+
+        private readonly gaxgrpc::ApiCall<GetCustomConstraintRequest, CustomConstraint> _callGetCustomConstraint;
+
+        private readonly gaxgrpc::ApiCall<ListCustomConstraintsRequest, ListCustomConstraintsResponse> _callListCustomConstraints;
+
+        private readonly gaxgrpc::ApiCall<DeleteCustomConstraintRequest, wkt::Empty> _callDeleteCustomConstraint;
 
         /// <summary>
         /// Constructs a client wrapper for the OrgPolicy service, with the specified gRPC client and settings.
@@ -1856,6 +2708,21 @@ namespace Google.Cloud.OrgPolicy.V2
             _callDeletePolicy = clientHelper.BuildApiCall<DeletePolicyRequest, wkt::Empty>("DeletePolicy", grpcClient.DeletePolicyAsync, grpcClient.DeletePolicy, effectiveSettings.DeletePolicySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeletePolicy);
             Modify_DeletePolicyApiCall(ref _callDeletePolicy);
+            _callCreateCustomConstraint = clientHelper.BuildApiCall<CreateCustomConstraintRequest, CustomConstraint>("CreateCustomConstraint", grpcClient.CreateCustomConstraintAsync, grpcClient.CreateCustomConstraint, effectiveSettings.CreateCustomConstraintSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateCustomConstraint);
+            Modify_CreateCustomConstraintApiCall(ref _callCreateCustomConstraint);
+            _callUpdateCustomConstraint = clientHelper.BuildApiCall<UpdateCustomConstraintRequest, CustomConstraint>("UpdateCustomConstraint", grpcClient.UpdateCustomConstraintAsync, grpcClient.UpdateCustomConstraint, effectiveSettings.UpdateCustomConstraintSettings).WithGoogleRequestParam("custom_constraint.name", request => request.CustomConstraint?.Name);
+            Modify_ApiCall(ref _callUpdateCustomConstraint);
+            Modify_UpdateCustomConstraintApiCall(ref _callUpdateCustomConstraint);
+            _callGetCustomConstraint = clientHelper.BuildApiCall<GetCustomConstraintRequest, CustomConstraint>("GetCustomConstraint", grpcClient.GetCustomConstraintAsync, grpcClient.GetCustomConstraint, effectiveSettings.GetCustomConstraintSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetCustomConstraint);
+            Modify_GetCustomConstraintApiCall(ref _callGetCustomConstraint);
+            _callListCustomConstraints = clientHelper.BuildApiCall<ListCustomConstraintsRequest, ListCustomConstraintsResponse>("ListCustomConstraints", grpcClient.ListCustomConstraintsAsync, grpcClient.ListCustomConstraints, effectiveSettings.ListCustomConstraintsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListCustomConstraints);
+            Modify_ListCustomConstraintsApiCall(ref _callListCustomConstraints);
+            _callDeleteCustomConstraint = clientHelper.BuildApiCall<DeleteCustomConstraintRequest, wkt::Empty>("DeleteCustomConstraint", grpcClient.DeleteCustomConstraintAsync, grpcClient.DeleteCustomConstraint, effectiveSettings.DeleteCustomConstraintSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteCustomConstraint);
+            Modify_DeleteCustomConstraintApiCall(ref _callDeleteCustomConstraint);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1874,6 +2741,16 @@ namespace Google.Cloud.OrgPolicy.V2
         partial void Modify_UpdatePolicyApiCall(ref gaxgrpc::ApiCall<UpdatePolicyRequest, Policy> call);
 
         partial void Modify_DeletePolicyApiCall(ref gaxgrpc::ApiCall<DeletePolicyRequest, wkt::Empty> call);
+
+        partial void Modify_CreateCustomConstraintApiCall(ref gaxgrpc::ApiCall<CreateCustomConstraintRequest, CustomConstraint> call);
+
+        partial void Modify_UpdateCustomConstraintApiCall(ref gaxgrpc::ApiCall<UpdateCustomConstraintRequest, CustomConstraint> call);
+
+        partial void Modify_GetCustomConstraintApiCall(ref gaxgrpc::ApiCall<GetCustomConstraintRequest, CustomConstraint> call);
+
+        partial void Modify_ListCustomConstraintsApiCall(ref gaxgrpc::ApiCall<ListCustomConstraintsRequest, ListCustomConstraintsResponse> call);
+
+        partial void Modify_DeleteCustomConstraintApiCall(ref gaxgrpc::ApiCall<DeleteCustomConstraintRequest, wkt::Empty> call);
 
         partial void OnConstruction(OrgPolicy.OrgPolicyClient grpcClient, OrgPolicySettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1894,8 +2771,18 @@ namespace Google.Cloud.OrgPolicy.V2
 
         partial void Modify_DeletePolicyRequest(ref DeletePolicyRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_CreateCustomConstraintRequest(ref CreateCustomConstraintRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateCustomConstraintRequest(ref UpdateCustomConstraintRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetCustomConstraintRequest(ref GetCustomConstraintRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListCustomConstraintsRequest(ref ListCustomConstraintsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteCustomConstraintRequest(ref DeleteCustomConstraintRequest request, ref gaxgrpc::CallSettings settings);
+
         /// <summary>
-        /// Lists `Constraints` that could be applied on the specified resource.
+        /// Lists constraints that could be applied on the specified resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1907,7 +2794,7 @@ namespace Google.Cloud.OrgPolicy.V2
         }
 
         /// <summary>
-        /// Lists `Constraints` that could be applied on the specified resource.
+        /// Lists constraints that could be applied on the specified resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1919,7 +2806,7 @@ namespace Google.Cloud.OrgPolicy.V2
         }
 
         /// <summary>
-        /// Retrieves all of the `Policies` that exist on a particular resource.
+        /// Retrieves all of the policies that exist on a particular resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1931,7 +2818,7 @@ namespace Google.Cloud.OrgPolicy.V2
         }
 
         /// <summary>
-        /// Retrieves all of the `Policies` that exist on a particular resource.
+        /// Retrieves all of the policies that exist on a particular resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1943,11 +2830,11 @@ namespace Google.Cloud.OrgPolicy.V2
         }
 
         /// <summary>
-        /// Gets a `Policy` on a resource.
+        /// Gets a policy on a resource.
         /// 
-        /// If no `Policy` is set on the resource, NOT_FOUND is returned. The
+        /// If no policy is set on the resource, `NOT_FOUND` is returned. The
         /// `etag` value can be used with `UpdatePolicy()` to update a
-        /// `Policy` during read-modify-write.
+        /// policy during read-modify-write.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1959,11 +2846,11 @@ namespace Google.Cloud.OrgPolicy.V2
         }
 
         /// <summary>
-        /// Gets a `Policy` on a resource.
+        /// Gets a policy on a resource.
         /// 
-        /// If no `Policy` is set on the resource, NOT_FOUND is returned. The
+        /// If no policy is set on the resource, `NOT_FOUND` is returned. The
         /// `etag` value can be used with `UpdatePolicy()` to update a
-        /// `Policy` during read-modify-write.
+        /// policy during read-modify-write.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1975,10 +2862,10 @@ namespace Google.Cloud.OrgPolicy.V2
         }
 
         /// <summary>
-        /// Gets the effective `Policy` on a resource. This is the result of merging
-        /// `Policies` in the resource hierarchy and evaluating conditions. The
-        /// returned `Policy` will not have an `etag` or `condition` set because it is
-        /// a computed `Policy` across multiple resources.
+        /// Gets the effective policy on a resource. This is the result of merging
+        /// policies in the resource hierarchy and evaluating conditions. The
+        /// returned policy will not have an `etag` or `condition` set because it is
+        /// an evaluated policy across multiple resources.
         /// Subtrees of Resource Manager resource hierarchy with 'under:' prefix will
         /// not be expanded.
         /// </summary>
@@ -1992,10 +2879,10 @@ namespace Google.Cloud.OrgPolicy.V2
         }
 
         /// <summary>
-        /// Gets the effective `Policy` on a resource. This is the result of merging
-        /// `Policies` in the resource hierarchy and evaluating conditions. The
-        /// returned `Policy` will not have an `etag` or `condition` set because it is
-        /// a computed `Policy` across multiple resources.
+        /// Gets the effective policy on a resource. This is the result of merging
+        /// policies in the resource hierarchy and evaluating conditions. The
+        /// returned policy will not have an `etag` or `condition` set because it is
+        /// an evaluated policy across multiple resources.
         /// Subtrees of Resource Manager resource hierarchy with 'under:' prefix will
         /// not be expanded.
         /// </summary>
@@ -2009,12 +2896,12 @@ namespace Google.Cloud.OrgPolicy.V2
         }
 
         /// <summary>
-        /// Creates a Policy.
+        /// Creates a policy.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
         /// constraint does not exist.
         /// Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the
-        /// policy already exists on the given Cloud resource.
+        /// policy already exists on the given Google Cloud resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2026,12 +2913,12 @@ namespace Google.Cloud.OrgPolicy.V2
         }
 
         /// <summary>
-        /// Creates a Policy.
+        /// Creates a policy.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
         /// constraint does not exist.
         /// Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the
-        /// policy already exists on the given Cloud resource.
+        /// policy already exists on the given Google Cloud resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2043,7 +2930,7 @@ namespace Google.Cloud.OrgPolicy.V2
         }
 
         /// <summary>
-        /// Updates a Policy.
+        /// Updates a policy.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
         /// constraint or the policy do not exist.
@@ -2063,7 +2950,7 @@ namespace Google.Cloud.OrgPolicy.V2
         }
 
         /// <summary>
-        /// Updates a Policy.
+        /// Updates a policy.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
         /// constraint or the policy do not exist.
@@ -2083,10 +2970,10 @@ namespace Google.Cloud.OrgPolicy.V2
         }
 
         /// <summary>
-        /// Deletes a Policy.
+        /// Deletes a policy.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-        /// constraint or Org Policy does not exist.
+        /// constraint or organization policy does not exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2098,10 +2985,10 @@ namespace Google.Cloud.OrgPolicy.V2
         }
 
         /// <summary>
-        /// Deletes a Policy.
+        /// Deletes a policy.
         /// 
         /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-        /// constraint or Org Policy does not exist.
+        /// constraint or organization policy does not exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2111,6 +2998,162 @@ namespace Google.Cloud.OrgPolicy.V2
             Modify_DeletePolicyRequest(ref request, ref callSettings);
             return _callDeletePolicy.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Creates a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// organization does not exist.
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the
+        /// constraint already exists on the given organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CustomConstraint CreateCustomConstraint(CreateCustomConstraintRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateCustomConstraintRequest(ref request, ref callSettings);
+            return _callCreateCustomConstraint.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// organization does not exist.
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the
+        /// constraint already exists on the given organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CustomConstraint> CreateCustomConstraintAsync(CreateCustomConstraintRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateCustomConstraintRequest(ref request, ref callSettings);
+            return _callCreateCustomConstraint.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// constraint does not exist.
+        /// 
+        /// Note: the supplied policy will perform a full overwrite of all
+        /// fields.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CustomConstraint UpdateCustomConstraint(UpdateCustomConstraintRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateCustomConstraintRequest(ref request, ref callSettings);
+            return _callUpdateCustomConstraint.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// constraint does not exist.
+        /// 
+        /// Note: the supplied policy will perform a full overwrite of all
+        /// fields.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CustomConstraint> UpdateCustomConstraintAsync(UpdateCustomConstraintRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateCustomConstraintRequest(ref request, ref callSettings);
+            return _callUpdateCustomConstraint.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// custom constraint does not exist.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CustomConstraint GetCustomConstraint(GetCustomConstraintRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetCustomConstraintRequest(ref request, ref callSettings);
+            return _callGetCustomConstraint.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// custom constraint does not exist.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CustomConstraint> GetCustomConstraintAsync(GetCustomConstraintRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetCustomConstraintRequest(ref request, ref callSettings);
+            return _callGetCustomConstraint.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves all of the custom constraints that exist on a particular
+        /// organization resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="CustomConstraint"/> resources.</returns>
+        public override gax::PagedEnumerable<ListCustomConstraintsResponse, CustomConstraint> ListCustomConstraints(ListCustomConstraintsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListCustomConstraintsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListCustomConstraintsRequest, ListCustomConstraintsResponse, CustomConstraint>(_callListCustomConstraints, request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves all of the custom constraints that exist on a particular
+        /// organization resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="CustomConstraint"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListCustomConstraintsResponse, CustomConstraint> ListCustomConstraintsAsync(ListCustomConstraintsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListCustomConstraintsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListCustomConstraintsRequest, ListCustomConstraintsResponse, CustomConstraint>(_callListCustomConstraints, request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// constraint does not exist.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteCustomConstraint(DeleteCustomConstraintRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteCustomConstraintRequest(ref request, ref callSettings);
+            _callDeleteCustomConstraint.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a custom constraint.
+        /// 
+        /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+        /// constraint does not exist.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteCustomConstraintAsync(DeleteCustomConstraintRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteCustomConstraintRequest(ref request, ref callSettings);
+            return _callDeleteCustomConstraint.Async(request, callSettings);
+        }
     }
 
     public partial class ListConstraintsRequest : gaxgrpc::IPageRequest
@@ -2118,6 +3161,10 @@ namespace Google.Cloud.OrgPolicy.V2
     }
 
     public partial class ListPoliciesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListCustomConstraintsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -2133,6 +3180,14 @@ namespace Google.Cloud.OrgPolicy.V2
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Policy> GetEnumerator() => Policies.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListCustomConstraintsResponse : gaxgrpc::IPageResponse<CustomConstraint>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<CustomConstraint> GetEnumerator() => CustomConstraints.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

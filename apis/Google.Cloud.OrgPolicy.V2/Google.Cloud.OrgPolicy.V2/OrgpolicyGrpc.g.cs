@@ -3,7 +3,7 @@
 //     source: google/cloud/orgpolicy/v2/orgpolicy.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2022 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -26,23 +26,23 @@ namespace Google.Cloud.OrgPolicy.V2 {
   /// <summary>
   /// An interface for managing organization policies.
   ///
-  /// The Cloud Org Policy service provides a simple mechanism for organizations to
-  /// restrict the allowed configurations across their entire Cloud Resource
-  /// hierarchy.
+  /// The Organization Policy Service provides a simple mechanism for
+  /// organizations to restrict the allowed configurations across their entire
+  /// resource hierarchy.
   ///
-  /// You can use a `policy` to configure restrictions in Cloud resources. For
-  /// example, you can enforce a `policy` that restricts which Google
-  /// Cloud Platform APIs can be activated in a certain part of your resource
-  /// hierarchy, or prevents serial port access to VM instances in a particular
-  /// folder.
+  /// You can use a policy to configure restrictions on resources. For
+  /// example, you can enforce a policy that restricts which Google
+  /// Cloud APIs can be activated in a certain part of your resource
+  /// hierarchy, or prevents serial port access to VM instances in a
+  /// particular folder.
   ///
-  /// `Policies` are inherited down through the resource hierarchy. A `policy`
+  /// Policies are inherited down through the resource hierarchy. A policy
   /// applied to a parent resource automatically applies to all its child resources
-  /// unless overridden with a `policy` lower in the hierarchy.
+  /// unless overridden with a policy lower in the hierarchy.
   ///
-  /// A `constraint` defines an aspect of a resource's configuration that can be
-  /// controlled by an organization's policy administrator. `Policies` are a
-  /// collection of `constraints` that defines their allowable configuration on a
+  /// A constraint defines an aspect of a resource's configuration that can be
+  /// controlled by an organization's policy administrator. Policies are a
+  /// collection of constraints that defines their allowable configuration on a
   /// particular resource and its child resources.
   /// </summary>
   public static partial class OrgPolicy
@@ -104,6 +104,20 @@ namespace Google.Cloud.OrgPolicy.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.OrgPolicy.V2.DeletePolicyRequest> __Marshaller_google_cloud_orgpolicy_v2_DeletePolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OrgPolicy.V2.DeletePolicyRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OrgPolicy.V2.CreateCustomConstraintRequest> __Marshaller_google_cloud_orgpolicy_v2_CreateCustomConstraintRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OrgPolicy.V2.CreateCustomConstraintRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OrgPolicy.V2.CustomConstraint> __Marshaller_google_cloud_orgpolicy_v2_CustomConstraint = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OrgPolicy.V2.CustomConstraint.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OrgPolicy.V2.UpdateCustomConstraintRequest> __Marshaller_google_cloud_orgpolicy_v2_UpdateCustomConstraintRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OrgPolicy.V2.UpdateCustomConstraintRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OrgPolicy.V2.GetCustomConstraintRequest> __Marshaller_google_cloud_orgpolicy_v2_GetCustomConstraintRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OrgPolicy.V2.GetCustomConstraintRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OrgPolicy.V2.ListCustomConstraintsRequest> __Marshaller_google_cloud_orgpolicy_v2_ListCustomConstraintsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OrgPolicy.V2.ListCustomConstraintsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OrgPolicy.V2.ListCustomConstraintsResponse> __Marshaller_google_cloud_orgpolicy_v2_ListCustomConstraintsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OrgPolicy.V2.ListCustomConstraintsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OrgPolicy.V2.DeleteCustomConstraintRequest> __Marshaller_google_cloud_orgpolicy_v2_DeleteCustomConstraintRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OrgPolicy.V2.DeleteCustomConstraintRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.OrgPolicy.V2.ListConstraintsRequest, global::Google.Cloud.OrgPolicy.V2.ListConstraintsResponse> __Method_ListConstraints = new grpc::Method<global::Google.Cloud.OrgPolicy.V2.ListConstraintsRequest, global::Google.Cloud.OrgPolicy.V2.ListConstraintsResponse>(
@@ -161,6 +175,46 @@ namespace Google.Cloud.OrgPolicy.V2 {
         __Marshaller_google_cloud_orgpolicy_v2_DeletePolicyRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OrgPolicy.V2.CreateCustomConstraintRequest, global::Google.Cloud.OrgPolicy.V2.CustomConstraint> __Method_CreateCustomConstraint = new grpc::Method<global::Google.Cloud.OrgPolicy.V2.CreateCustomConstraintRequest, global::Google.Cloud.OrgPolicy.V2.CustomConstraint>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateCustomConstraint",
+        __Marshaller_google_cloud_orgpolicy_v2_CreateCustomConstraintRequest,
+        __Marshaller_google_cloud_orgpolicy_v2_CustomConstraint);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OrgPolicy.V2.UpdateCustomConstraintRequest, global::Google.Cloud.OrgPolicy.V2.CustomConstraint> __Method_UpdateCustomConstraint = new grpc::Method<global::Google.Cloud.OrgPolicy.V2.UpdateCustomConstraintRequest, global::Google.Cloud.OrgPolicy.V2.CustomConstraint>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateCustomConstraint",
+        __Marshaller_google_cloud_orgpolicy_v2_UpdateCustomConstraintRequest,
+        __Marshaller_google_cloud_orgpolicy_v2_CustomConstraint);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OrgPolicy.V2.GetCustomConstraintRequest, global::Google.Cloud.OrgPolicy.V2.CustomConstraint> __Method_GetCustomConstraint = new grpc::Method<global::Google.Cloud.OrgPolicy.V2.GetCustomConstraintRequest, global::Google.Cloud.OrgPolicy.V2.CustomConstraint>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetCustomConstraint",
+        __Marshaller_google_cloud_orgpolicy_v2_GetCustomConstraintRequest,
+        __Marshaller_google_cloud_orgpolicy_v2_CustomConstraint);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OrgPolicy.V2.ListCustomConstraintsRequest, global::Google.Cloud.OrgPolicy.V2.ListCustomConstraintsResponse> __Method_ListCustomConstraints = new grpc::Method<global::Google.Cloud.OrgPolicy.V2.ListCustomConstraintsRequest, global::Google.Cloud.OrgPolicy.V2.ListCustomConstraintsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListCustomConstraints",
+        __Marshaller_google_cloud_orgpolicy_v2_ListCustomConstraintsRequest,
+        __Marshaller_google_cloud_orgpolicy_v2_ListCustomConstraintsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OrgPolicy.V2.DeleteCustomConstraintRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteCustomConstraint = new grpc::Method<global::Google.Cloud.OrgPolicy.V2.DeleteCustomConstraintRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteCustomConstraint",
+        __Marshaller_google_cloud_orgpolicy_v2_DeleteCustomConstraintRequest,
+        __Marshaller_google_protobuf_Empty);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -172,7 +226,7 @@ namespace Google.Cloud.OrgPolicy.V2 {
     public abstract partial class OrgPolicyBase
     {
       /// <summary>
-      /// Lists `Constraints` that could be applied on the specified resource.
+      /// Lists constraints that could be applied on the specified resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -184,7 +238,7 @@ namespace Google.Cloud.OrgPolicy.V2 {
       }
 
       /// <summary>
-      /// Retrieves all of the `Policies` that exist on a particular resource.
+      /// Retrieves all of the policies that exist on a particular resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -196,11 +250,11 @@ namespace Google.Cloud.OrgPolicy.V2 {
       }
 
       /// <summary>
-      /// Gets a `Policy` on a resource.
+      /// Gets a policy on a resource.
       ///
-      /// If no `Policy` is set on the resource, NOT_FOUND is returned. The
+      /// If no policy is set on the resource, `NOT_FOUND` is returned. The
       /// `etag` value can be used with `UpdatePolicy()` to update a
-      /// `Policy` during read-modify-write.
+      /// policy during read-modify-write.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -212,10 +266,10 @@ namespace Google.Cloud.OrgPolicy.V2 {
       }
 
       /// <summary>
-      /// Gets the effective `Policy` on a resource. This is the result of merging
-      /// `Policies` in the resource hierarchy and evaluating conditions. The
-      /// returned `Policy` will not have an `etag` or `condition` set because it is
-      /// a computed `Policy` across multiple resources.
+      /// Gets the effective policy on a resource. This is the result of merging
+      /// policies in the resource hierarchy and evaluating conditions. The
+      /// returned policy will not have an `etag` or `condition` set because it is
+      /// an evaluated policy across multiple resources.
       /// Subtrees of Resource Manager resource hierarchy with 'under:' prefix will
       /// not be expanded.
       /// </summary>
@@ -229,12 +283,12 @@ namespace Google.Cloud.OrgPolicy.V2 {
       }
 
       /// <summary>
-      /// Creates a Policy.
+      /// Creates a policy.
       ///
       /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
       /// constraint does not exist.
       /// Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the
-      /// policy already exists on the given Cloud resource.
+      /// policy already exists on the given Google Cloud resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -246,7 +300,7 @@ namespace Google.Cloud.OrgPolicy.V2 {
       }
 
       /// <summary>
-      /// Updates a Policy.
+      /// Updates a policy.
       ///
       /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
       /// constraint or the policy do not exist.
@@ -266,16 +320,94 @@ namespace Google.Cloud.OrgPolicy.V2 {
       }
 
       /// <summary>
-      /// Deletes a Policy.
+      /// Deletes a policy.
       ///
       /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-      /// constraint or Org Policy does not exist.
+      /// constraint or organization policy does not exist.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeletePolicy(global::Google.Cloud.OrgPolicy.V2.DeletePolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a custom constraint.
+      ///
+      /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+      /// organization does not exist.
+      /// Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the
+      /// constraint already exists on the given organization.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OrgPolicy.V2.CustomConstraint> CreateCustomConstraint(global::Google.Cloud.OrgPolicy.V2.CreateCustomConstraintRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a custom constraint.
+      ///
+      /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+      /// constraint does not exist.
+      ///
+      /// Note: the supplied policy will perform a full overwrite of all
+      /// fields.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OrgPolicy.V2.CustomConstraint> UpdateCustomConstraint(global::Google.Cloud.OrgPolicy.V2.UpdateCustomConstraintRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a custom constraint.
+      ///
+      /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+      /// custom constraint does not exist.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OrgPolicy.V2.CustomConstraint> GetCustomConstraint(global::Google.Cloud.OrgPolicy.V2.GetCustomConstraintRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retrieves all of the custom constraints that exist on a particular
+      /// organization resource.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OrgPolicy.V2.ListCustomConstraintsResponse> ListCustomConstraints(global::Google.Cloud.OrgPolicy.V2.ListCustomConstraintsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a custom constraint.
+      ///
+      /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+      /// constraint does not exist.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCustomConstraint(global::Google.Cloud.OrgPolicy.V2.DeleteCustomConstraintRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -310,7 +442,7 @@ namespace Google.Cloud.OrgPolicy.V2 {
       }
 
       /// <summary>
-      /// Lists `Constraints` that could be applied on the specified resource.
+      /// Lists constraints that could be applied on the specified resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -323,7 +455,7 @@ namespace Google.Cloud.OrgPolicy.V2 {
         return ListConstraints(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists `Constraints` that could be applied on the specified resource.
+      /// Lists constraints that could be applied on the specified resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -334,7 +466,7 @@ namespace Google.Cloud.OrgPolicy.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_ListConstraints, null, options, request);
       }
       /// <summary>
-      /// Lists `Constraints` that could be applied on the specified resource.
+      /// Lists constraints that could be applied on the specified resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -347,7 +479,7 @@ namespace Google.Cloud.OrgPolicy.V2 {
         return ListConstraintsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists `Constraints` that could be applied on the specified resource.
+      /// Lists constraints that could be applied on the specified resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -358,7 +490,7 @@ namespace Google.Cloud.OrgPolicy.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_ListConstraints, null, options, request);
       }
       /// <summary>
-      /// Retrieves all of the `Policies` that exist on a particular resource.
+      /// Retrieves all of the policies that exist on a particular resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -371,7 +503,7 @@ namespace Google.Cloud.OrgPolicy.V2 {
         return ListPolicies(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieves all of the `Policies` that exist on a particular resource.
+      /// Retrieves all of the policies that exist on a particular resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -382,7 +514,7 @@ namespace Google.Cloud.OrgPolicy.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_ListPolicies, null, options, request);
       }
       /// <summary>
-      /// Retrieves all of the `Policies` that exist on a particular resource.
+      /// Retrieves all of the policies that exist on a particular resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -395,7 +527,7 @@ namespace Google.Cloud.OrgPolicy.V2 {
         return ListPoliciesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieves all of the `Policies` that exist on a particular resource.
+      /// Retrieves all of the policies that exist on a particular resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -406,11 +538,11 @@ namespace Google.Cloud.OrgPolicy.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_ListPolicies, null, options, request);
       }
       /// <summary>
-      /// Gets a `Policy` on a resource.
+      /// Gets a policy on a resource.
       ///
-      /// If no `Policy` is set on the resource, NOT_FOUND is returned. The
+      /// If no policy is set on the resource, `NOT_FOUND` is returned. The
       /// `etag` value can be used with `UpdatePolicy()` to update a
-      /// `Policy` during read-modify-write.
+      /// policy during read-modify-write.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -423,11 +555,11 @@ namespace Google.Cloud.OrgPolicy.V2 {
         return GetPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets a `Policy` on a resource.
+      /// Gets a policy on a resource.
       ///
-      /// If no `Policy` is set on the resource, NOT_FOUND is returned. The
+      /// If no policy is set on the resource, `NOT_FOUND` is returned. The
       /// `etag` value can be used with `UpdatePolicy()` to update a
-      /// `Policy` during read-modify-write.
+      /// policy during read-modify-write.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -438,11 +570,11 @@ namespace Google.Cloud.OrgPolicy.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_GetPolicy, null, options, request);
       }
       /// <summary>
-      /// Gets a `Policy` on a resource.
+      /// Gets a policy on a resource.
       ///
-      /// If no `Policy` is set on the resource, NOT_FOUND is returned. The
+      /// If no policy is set on the resource, `NOT_FOUND` is returned. The
       /// `etag` value can be used with `UpdatePolicy()` to update a
-      /// `Policy` during read-modify-write.
+      /// policy during read-modify-write.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -455,11 +587,11 @@ namespace Google.Cloud.OrgPolicy.V2 {
         return GetPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets a `Policy` on a resource.
+      /// Gets a policy on a resource.
       ///
-      /// If no `Policy` is set on the resource, NOT_FOUND is returned. The
+      /// If no policy is set on the resource, `NOT_FOUND` is returned. The
       /// `etag` value can be used with `UpdatePolicy()` to update a
-      /// `Policy` during read-modify-write.
+      /// policy during read-modify-write.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -470,10 +602,10 @@ namespace Google.Cloud.OrgPolicy.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_GetPolicy, null, options, request);
       }
       /// <summary>
-      /// Gets the effective `Policy` on a resource. This is the result of merging
-      /// `Policies` in the resource hierarchy and evaluating conditions. The
-      /// returned `Policy` will not have an `etag` or `condition` set because it is
-      /// a computed `Policy` across multiple resources.
+      /// Gets the effective policy on a resource. This is the result of merging
+      /// policies in the resource hierarchy and evaluating conditions. The
+      /// returned policy will not have an `etag` or `condition` set because it is
+      /// an evaluated policy across multiple resources.
       /// Subtrees of Resource Manager resource hierarchy with 'under:' prefix will
       /// not be expanded.
       /// </summary>
@@ -488,10 +620,10 @@ namespace Google.Cloud.OrgPolicy.V2 {
         return GetEffectivePolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets the effective `Policy` on a resource. This is the result of merging
-      /// `Policies` in the resource hierarchy and evaluating conditions. The
-      /// returned `Policy` will not have an `etag` or `condition` set because it is
-      /// a computed `Policy` across multiple resources.
+      /// Gets the effective policy on a resource. This is the result of merging
+      /// policies in the resource hierarchy and evaluating conditions. The
+      /// returned policy will not have an `etag` or `condition` set because it is
+      /// an evaluated policy across multiple resources.
       /// Subtrees of Resource Manager resource hierarchy with 'under:' prefix will
       /// not be expanded.
       /// </summary>
@@ -504,10 +636,10 @@ namespace Google.Cloud.OrgPolicy.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_GetEffectivePolicy, null, options, request);
       }
       /// <summary>
-      /// Gets the effective `Policy` on a resource. This is the result of merging
-      /// `Policies` in the resource hierarchy and evaluating conditions. The
-      /// returned `Policy` will not have an `etag` or `condition` set because it is
-      /// a computed `Policy` across multiple resources.
+      /// Gets the effective policy on a resource. This is the result of merging
+      /// policies in the resource hierarchy and evaluating conditions. The
+      /// returned policy will not have an `etag` or `condition` set because it is
+      /// an evaluated policy across multiple resources.
       /// Subtrees of Resource Manager resource hierarchy with 'under:' prefix will
       /// not be expanded.
       /// </summary>
@@ -522,10 +654,10 @@ namespace Google.Cloud.OrgPolicy.V2 {
         return GetEffectivePolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets the effective `Policy` on a resource. This is the result of merging
-      /// `Policies` in the resource hierarchy and evaluating conditions. The
-      /// returned `Policy` will not have an `etag` or `condition` set because it is
-      /// a computed `Policy` across multiple resources.
+      /// Gets the effective policy on a resource. This is the result of merging
+      /// policies in the resource hierarchy and evaluating conditions. The
+      /// returned policy will not have an `etag` or `condition` set because it is
+      /// an evaluated policy across multiple resources.
       /// Subtrees of Resource Manager resource hierarchy with 'under:' prefix will
       /// not be expanded.
       /// </summary>
@@ -538,12 +670,12 @@ namespace Google.Cloud.OrgPolicy.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_GetEffectivePolicy, null, options, request);
       }
       /// <summary>
-      /// Creates a Policy.
+      /// Creates a policy.
       ///
       /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
       /// constraint does not exist.
       /// Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the
-      /// policy already exists on the given Cloud resource.
+      /// policy already exists on the given Google Cloud resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -556,12 +688,12 @@ namespace Google.Cloud.OrgPolicy.V2 {
         return CreatePolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a Policy.
+      /// Creates a policy.
       ///
       /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
       /// constraint does not exist.
       /// Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the
-      /// policy already exists on the given Cloud resource.
+      /// policy already exists on the given Google Cloud resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -572,12 +704,12 @@ namespace Google.Cloud.OrgPolicy.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_CreatePolicy, null, options, request);
       }
       /// <summary>
-      /// Creates a Policy.
+      /// Creates a policy.
       ///
       /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
       /// constraint does not exist.
       /// Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the
-      /// policy already exists on the given Cloud resource.
+      /// policy already exists on the given Google Cloud resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -590,12 +722,12 @@ namespace Google.Cloud.OrgPolicy.V2 {
         return CreatePolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a Policy.
+      /// Creates a policy.
       ///
       /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
       /// constraint does not exist.
       /// Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the
-      /// policy already exists on the given Cloud resource.
+      /// policy already exists on the given Google Cloud resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -606,7 +738,7 @@ namespace Google.Cloud.OrgPolicy.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_CreatePolicy, null, options, request);
       }
       /// <summary>
-      /// Updates a Policy.
+      /// Updates a policy.
       ///
       /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
       /// constraint or the policy do not exist.
@@ -627,7 +759,7 @@ namespace Google.Cloud.OrgPolicy.V2 {
         return UpdatePolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates a Policy.
+      /// Updates a policy.
       ///
       /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
       /// constraint or the policy do not exist.
@@ -646,7 +778,7 @@ namespace Google.Cloud.OrgPolicy.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdatePolicy, null, options, request);
       }
       /// <summary>
-      /// Updates a Policy.
+      /// Updates a policy.
       ///
       /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
       /// constraint or the policy do not exist.
@@ -667,7 +799,7 @@ namespace Google.Cloud.OrgPolicy.V2 {
         return UpdatePolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates a Policy.
+      /// Updates a policy.
       ///
       /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
       /// constraint or the policy do not exist.
@@ -686,10 +818,10 @@ namespace Google.Cloud.OrgPolicy.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdatePolicy, null, options, request);
       }
       /// <summary>
-      /// Deletes a Policy.
+      /// Deletes a policy.
       ///
       /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-      /// constraint or Org Policy does not exist.
+      /// constraint or organization policy does not exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -702,10 +834,10 @@ namespace Google.Cloud.OrgPolicy.V2 {
         return DeletePolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a Policy.
+      /// Deletes a policy.
       ///
       /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-      /// constraint or Org Policy does not exist.
+      /// constraint or organization policy does not exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -716,10 +848,10 @@ namespace Google.Cloud.OrgPolicy.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_DeletePolicy, null, options, request);
       }
       /// <summary>
-      /// Deletes a Policy.
+      /// Deletes a policy.
       ///
       /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-      /// constraint or Org Policy does not exist.
+      /// constraint or organization policy does not exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -732,10 +864,10 @@ namespace Google.Cloud.OrgPolicy.V2 {
         return DeletePolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a Policy.
+      /// Deletes a policy.
       ///
       /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-      /// constraint or Org Policy does not exist.
+      /// constraint or organization policy does not exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -744,6 +876,318 @@ namespace Google.Cloud.OrgPolicy.V2 {
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeletePolicyAsync(global::Google.Cloud.OrgPolicy.V2.DeletePolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeletePolicy, null, options, request);
+      }
+      /// <summary>
+      /// Creates a custom constraint.
+      ///
+      /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+      /// organization does not exist.
+      /// Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the
+      /// constraint already exists on the given organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.OrgPolicy.V2.CustomConstraint CreateCustomConstraint(global::Google.Cloud.OrgPolicy.V2.CreateCustomConstraintRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateCustomConstraint(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a custom constraint.
+      ///
+      /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+      /// organization does not exist.
+      /// Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the
+      /// constraint already exists on the given organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.OrgPolicy.V2.CustomConstraint CreateCustomConstraint(global::Google.Cloud.OrgPolicy.V2.CreateCustomConstraintRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateCustomConstraint, null, options, request);
+      }
+      /// <summary>
+      /// Creates a custom constraint.
+      ///
+      /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+      /// organization does not exist.
+      /// Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the
+      /// constraint already exists on the given organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OrgPolicy.V2.CustomConstraint> CreateCustomConstraintAsync(global::Google.Cloud.OrgPolicy.V2.CreateCustomConstraintRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateCustomConstraintAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a custom constraint.
+      ///
+      /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+      /// organization does not exist.
+      /// Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the
+      /// constraint already exists on the given organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OrgPolicy.V2.CustomConstraint> CreateCustomConstraintAsync(global::Google.Cloud.OrgPolicy.V2.CreateCustomConstraintRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateCustomConstraint, null, options, request);
+      }
+      /// <summary>
+      /// Updates a custom constraint.
+      ///
+      /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+      /// constraint does not exist.
+      ///
+      /// Note: the supplied policy will perform a full overwrite of all
+      /// fields.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.OrgPolicy.V2.CustomConstraint UpdateCustomConstraint(global::Google.Cloud.OrgPolicy.V2.UpdateCustomConstraintRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateCustomConstraint(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a custom constraint.
+      ///
+      /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+      /// constraint does not exist.
+      ///
+      /// Note: the supplied policy will perform a full overwrite of all
+      /// fields.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.OrgPolicy.V2.CustomConstraint UpdateCustomConstraint(global::Google.Cloud.OrgPolicy.V2.UpdateCustomConstraintRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateCustomConstraint, null, options, request);
+      }
+      /// <summary>
+      /// Updates a custom constraint.
+      ///
+      /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+      /// constraint does not exist.
+      ///
+      /// Note: the supplied policy will perform a full overwrite of all
+      /// fields.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OrgPolicy.V2.CustomConstraint> UpdateCustomConstraintAsync(global::Google.Cloud.OrgPolicy.V2.UpdateCustomConstraintRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateCustomConstraintAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a custom constraint.
+      ///
+      /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+      /// constraint does not exist.
+      ///
+      /// Note: the supplied policy will perform a full overwrite of all
+      /// fields.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OrgPolicy.V2.CustomConstraint> UpdateCustomConstraintAsync(global::Google.Cloud.OrgPolicy.V2.UpdateCustomConstraintRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateCustomConstraint, null, options, request);
+      }
+      /// <summary>
+      /// Gets a custom constraint.
+      ///
+      /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+      /// custom constraint does not exist.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.OrgPolicy.V2.CustomConstraint GetCustomConstraint(global::Google.Cloud.OrgPolicy.V2.GetCustomConstraintRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetCustomConstraint(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a custom constraint.
+      ///
+      /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+      /// custom constraint does not exist.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.OrgPolicy.V2.CustomConstraint GetCustomConstraint(global::Google.Cloud.OrgPolicy.V2.GetCustomConstraintRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetCustomConstraint, null, options, request);
+      }
+      /// <summary>
+      /// Gets a custom constraint.
+      ///
+      /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+      /// custom constraint does not exist.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OrgPolicy.V2.CustomConstraint> GetCustomConstraintAsync(global::Google.Cloud.OrgPolicy.V2.GetCustomConstraintRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetCustomConstraintAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a custom constraint.
+      ///
+      /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+      /// custom constraint does not exist.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OrgPolicy.V2.CustomConstraint> GetCustomConstraintAsync(global::Google.Cloud.OrgPolicy.V2.GetCustomConstraintRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetCustomConstraint, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves all of the custom constraints that exist on a particular
+      /// organization resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.OrgPolicy.V2.ListCustomConstraintsResponse ListCustomConstraints(global::Google.Cloud.OrgPolicy.V2.ListCustomConstraintsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListCustomConstraints(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves all of the custom constraints that exist on a particular
+      /// organization resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.OrgPolicy.V2.ListCustomConstraintsResponse ListCustomConstraints(global::Google.Cloud.OrgPolicy.V2.ListCustomConstraintsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListCustomConstraints, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves all of the custom constraints that exist on a particular
+      /// organization resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OrgPolicy.V2.ListCustomConstraintsResponse> ListCustomConstraintsAsync(global::Google.Cloud.OrgPolicy.V2.ListCustomConstraintsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListCustomConstraintsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves all of the custom constraints that exist on a particular
+      /// organization resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OrgPolicy.V2.ListCustomConstraintsResponse> ListCustomConstraintsAsync(global::Google.Cloud.OrgPolicy.V2.ListCustomConstraintsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListCustomConstraints, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a custom constraint.
+      ///
+      /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+      /// constraint does not exist.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteCustomConstraint(global::Google.Cloud.OrgPolicy.V2.DeleteCustomConstraintRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteCustomConstraint(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a custom constraint.
+      ///
+      /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+      /// constraint does not exist.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteCustomConstraint(global::Google.Cloud.OrgPolicy.V2.DeleteCustomConstraintRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteCustomConstraint, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a custom constraint.
+      ///
+      /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+      /// constraint does not exist.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCustomConstraintAsync(global::Google.Cloud.OrgPolicy.V2.DeleteCustomConstraintRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteCustomConstraintAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a custom constraint.
+      ///
+      /// Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
+      /// constraint does not exist.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCustomConstraintAsync(global::Google.Cloud.OrgPolicy.V2.DeleteCustomConstraintRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteCustomConstraint, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -765,7 +1209,12 @@ namespace Google.Cloud.OrgPolicy.V2 {
           .AddMethod(__Method_GetEffectivePolicy, serviceImpl.GetEffectivePolicy)
           .AddMethod(__Method_CreatePolicy, serviceImpl.CreatePolicy)
           .AddMethod(__Method_UpdatePolicy, serviceImpl.UpdatePolicy)
-          .AddMethod(__Method_DeletePolicy, serviceImpl.DeletePolicy).Build();
+          .AddMethod(__Method_DeletePolicy, serviceImpl.DeletePolicy)
+          .AddMethod(__Method_CreateCustomConstraint, serviceImpl.CreateCustomConstraint)
+          .AddMethod(__Method_UpdateCustomConstraint, serviceImpl.UpdateCustomConstraint)
+          .AddMethod(__Method_GetCustomConstraint, serviceImpl.GetCustomConstraint)
+          .AddMethod(__Method_ListCustomConstraints, serviceImpl.ListCustomConstraints)
+          .AddMethod(__Method_DeleteCustomConstraint, serviceImpl.DeleteCustomConstraint).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -782,6 +1231,11 @@ namespace Google.Cloud.OrgPolicy.V2 {
       serviceBinder.AddMethod(__Method_CreatePolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OrgPolicy.V2.CreatePolicyRequest, global::Google.Cloud.OrgPolicy.V2.Policy>(serviceImpl.CreatePolicy));
       serviceBinder.AddMethod(__Method_UpdatePolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OrgPolicy.V2.UpdatePolicyRequest, global::Google.Cloud.OrgPolicy.V2.Policy>(serviceImpl.UpdatePolicy));
       serviceBinder.AddMethod(__Method_DeletePolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OrgPolicy.V2.DeletePolicyRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeletePolicy));
+      serviceBinder.AddMethod(__Method_CreateCustomConstraint, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OrgPolicy.V2.CreateCustomConstraintRequest, global::Google.Cloud.OrgPolicy.V2.CustomConstraint>(serviceImpl.CreateCustomConstraint));
+      serviceBinder.AddMethod(__Method_UpdateCustomConstraint, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OrgPolicy.V2.UpdateCustomConstraintRequest, global::Google.Cloud.OrgPolicy.V2.CustomConstraint>(serviceImpl.UpdateCustomConstraint));
+      serviceBinder.AddMethod(__Method_GetCustomConstraint, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OrgPolicy.V2.GetCustomConstraintRequest, global::Google.Cloud.OrgPolicy.V2.CustomConstraint>(serviceImpl.GetCustomConstraint));
+      serviceBinder.AddMethod(__Method_ListCustomConstraints, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OrgPolicy.V2.ListCustomConstraintsRequest, global::Google.Cloud.OrgPolicy.V2.ListCustomConstraintsResponse>(serviceImpl.ListCustomConstraints));
+      serviceBinder.AddMethod(__Method_DeleteCustomConstraint, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OrgPolicy.V2.DeleteCustomConstraintRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteCustomConstraint));
     }
 
   }
