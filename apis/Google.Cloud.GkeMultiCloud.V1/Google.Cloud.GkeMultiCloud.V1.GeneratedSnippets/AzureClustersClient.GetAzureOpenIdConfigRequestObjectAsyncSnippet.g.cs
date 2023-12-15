@@ -16,13 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START gkemulticloud_v1_generated_AttachedClusters_GenerateAttachedClusterInstallManifest_sync]
-    using Google.Api.Gax.ResourceNames;
+    // [START gkemulticloud_v1_generated_AzureClusters_GetAzureOpenIdConfig_async]
     using Google.Cloud.GkeMultiCloud.V1;
+    using System.Threading.Tasks;
 
-    public sealed partial class GeneratedAttachedClustersClientSnippets
+    public sealed partial class GeneratedAzureClustersClientSnippets
     {
-        /// <summary>Snippet for GenerateAttachedClusterInstallManifest</summary>
+        /// <summary>Snippet for GetAzureOpenIdConfigAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,21 +30,18 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void GenerateAttachedClusterInstallManifestRequestObject()
+        public async Task GetAzureOpenIdConfigRequestObjectAsync()
         {
             // Create client
-            AttachedClustersClient attachedClustersClient = AttachedClustersClient.Create();
+            AzureClustersClient azureClustersClient = await AzureClustersClient.CreateAsync();
             // Initialize request argument(s)
-            GenerateAttachedClusterInstallManifestRequest request = new GenerateAttachedClusterInstallManifestRequest
+            GetAzureOpenIdConfigRequest request = new GetAzureOpenIdConfigRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                AttachedClusterId = "",
-                PlatformVersion = "",
-                ProxyConfig = new AttachedProxyConfig(),
+                AzureClusterAsAzureClusterName = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]"),
             };
             // Make the request
-            GenerateAttachedClusterInstallManifestResponse response = attachedClustersClient.GenerateAttachedClusterInstallManifest(request);
+            AzureOpenIdConfig response = await azureClustersClient.GetAzureOpenIdConfigAsync(request);
         }
     }
-    // [END gkemulticloud_v1_generated_AttachedClusters_GenerateAttachedClusterInstallManifest_sync]
+    // [END gkemulticloud_v1_generated_AzureClusters_GetAzureOpenIdConfig_async]
 }

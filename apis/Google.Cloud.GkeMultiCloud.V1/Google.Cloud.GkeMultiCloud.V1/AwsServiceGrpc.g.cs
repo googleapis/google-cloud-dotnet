@@ -3,7 +3,7 @@
 //     source: google/cloud/gkemulticloud/v1/aws_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2022 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -81,6 +81,10 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GkeMultiCloud.V1.DeleteAwsClusterRequest> __Marshaller_google_cloud_gkemulticloud_v1_DeleteAwsClusterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeMultiCloud.V1.DeleteAwsClusterRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsClusterAgentTokenRequest> __Marshaller_google_cloud_gkemulticloud_v1_GenerateAwsClusterAgentTokenRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsClusterAgentTokenRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsClusterAgentTokenResponse> __Marshaller_google_cloud_gkemulticloud_v1_GenerateAwsClusterAgentTokenResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsClusterAgentTokenResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsAccessTokenRequest> __Marshaller_google_cloud_gkemulticloud_v1_GenerateAwsAccessTokenRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsAccessTokenRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsAccessTokenResponse> __Marshaller_google_cloud_gkemulticloud_v1_GenerateAwsAccessTokenResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsAccessTokenResponse.Parser));
@@ -88,6 +92,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.GkeMultiCloud.V1.CreateAwsNodePoolRequest> __Marshaller_google_cloud_gkemulticloud_v1_CreateAwsNodePoolRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeMultiCloud.V1.CreateAwsNodePoolRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GkeMultiCloud.V1.UpdateAwsNodePoolRequest> __Marshaller_google_cloud_gkemulticloud_v1_UpdateAwsNodePoolRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeMultiCloud.V1.UpdateAwsNodePoolRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeMultiCloud.V1.RollbackAwsNodePoolUpdateRequest> __Marshaller_google_cloud_gkemulticloud_v1_RollbackAwsNodePoolUpdateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeMultiCloud.V1.RollbackAwsNodePoolUpdateRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GkeMultiCloud.V1.GetAwsNodePoolRequest> __Marshaller_google_cloud_gkemulticloud_v1_GetAwsNodePoolRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeMultiCloud.V1.GetAwsNodePoolRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -98,6 +104,14 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.GkeMultiCloud.V1.ListAwsNodePoolsResponse> __Marshaller_google_cloud_gkemulticloud_v1_ListAwsNodePoolsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeMultiCloud.V1.ListAwsNodePoolsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GkeMultiCloud.V1.DeleteAwsNodePoolRequest> __Marshaller_google_cloud_gkemulticloud_v1_DeleteAwsNodePoolRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeMultiCloud.V1.DeleteAwsNodePoolRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeMultiCloud.V1.GetAwsOpenIdConfigRequest> __Marshaller_google_cloud_gkemulticloud_v1_GetAwsOpenIdConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeMultiCloud.V1.GetAwsOpenIdConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeMultiCloud.V1.AwsOpenIdConfig> __Marshaller_google_cloud_gkemulticloud_v1_AwsOpenIdConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeMultiCloud.V1.AwsOpenIdConfig.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeMultiCloud.V1.GetAwsJsonWebKeysRequest> __Marshaller_google_cloud_gkemulticloud_v1_GetAwsJsonWebKeysRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeMultiCloud.V1.GetAwsJsonWebKeysRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeMultiCloud.V1.AwsJsonWebKeys> __Marshaller_google_cloud_gkemulticloud_v1_AwsJsonWebKeys = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeMultiCloud.V1.AwsJsonWebKeys.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GkeMultiCloud.V1.GetAwsServerConfigRequest> __Marshaller_google_cloud_gkemulticloud_v1_GetAwsServerConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeMultiCloud.V1.GetAwsServerConfigRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -144,6 +158,14 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsClusterAgentTokenRequest, global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsClusterAgentTokenResponse> __Method_GenerateAwsClusterAgentToken = new grpc::Method<global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsClusterAgentTokenRequest, global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsClusterAgentTokenResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GenerateAwsClusterAgentToken",
+        __Marshaller_google_cloud_gkemulticloud_v1_GenerateAwsClusterAgentTokenRequest,
+        __Marshaller_google_cloud_gkemulticloud_v1_GenerateAwsClusterAgentTokenResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsAccessTokenRequest, global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsAccessTokenResponse> __Method_GenerateAwsAccessToken = new grpc::Method<global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsAccessTokenRequest, global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsAccessTokenResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -165,6 +187,14 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         __ServiceName,
         "UpdateAwsNodePool",
         __Marshaller_google_cloud_gkemulticloud_v1_UpdateAwsNodePoolRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeMultiCloud.V1.RollbackAwsNodePoolUpdateRequest, global::Google.LongRunning.Operation> __Method_RollbackAwsNodePoolUpdate = new grpc::Method<global::Google.Cloud.GkeMultiCloud.V1.RollbackAwsNodePoolUpdateRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RollbackAwsNodePoolUpdate",
+        __Marshaller_google_cloud_gkemulticloud_v1_RollbackAwsNodePoolUpdateRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -190,6 +220,22 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         "DeleteAwsNodePool",
         __Marshaller_google_cloud_gkemulticloud_v1_DeleteAwsNodePoolRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeMultiCloud.V1.GetAwsOpenIdConfigRequest, global::Google.Cloud.GkeMultiCloud.V1.AwsOpenIdConfig> __Method_GetAwsOpenIdConfig = new grpc::Method<global::Google.Cloud.GkeMultiCloud.V1.GetAwsOpenIdConfigRequest, global::Google.Cloud.GkeMultiCloud.V1.AwsOpenIdConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAwsOpenIdConfig",
+        __Marshaller_google_cloud_gkemulticloud_v1_GetAwsOpenIdConfigRequest,
+        __Marshaller_google_cloud_gkemulticloud_v1_AwsOpenIdConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeMultiCloud.V1.GetAwsJsonWebKeysRequest, global::Google.Cloud.GkeMultiCloud.V1.AwsJsonWebKeys> __Method_GetAwsJsonWebKeys = new grpc::Method<global::Google.Cloud.GkeMultiCloud.V1.GetAwsJsonWebKeysRequest, global::Google.Cloud.GkeMultiCloud.V1.AwsJsonWebKeys>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAwsJsonWebKeys",
+        __Marshaller_google_cloud_gkemulticloud_v1_GetAwsJsonWebKeysRequest,
+        __Marshaller_google_cloud_gkemulticloud_v1_AwsJsonWebKeys);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.GkeMultiCloud.V1.GetAwsServerConfigRequest, global::Google.Cloud.GkeMultiCloud.V1.AwsServerConfig> __Method_GetAwsServerConfig = new grpc::Method<global::Google.Cloud.GkeMultiCloud.V1.GetAwsServerConfigRequest, global::Google.Cloud.GkeMultiCloud.V1.AwsServerConfig>(
@@ -285,6 +331,18 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       }
 
       /// <summary>
+      /// Generates an access token for a cluster agent.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsClusterAgentTokenResponse> GenerateAwsClusterAgentToken(global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsClusterAgentTokenRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Generates a short-lived access token to authenticate to a given
       /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource.
       /// </summary>
@@ -322,6 +380,23 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateAwsNodePool(global::Google.Cloud.GkeMultiCloud.V1.UpdateAwsNodePoolRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Rolls back a previously aborted or failed
+      /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] update request.
+      /// Makes no changes if the last update request successfully finished.
+      /// If an update request is in progress, you cannot rollback the update.
+      /// You must first cancel or let it finish unsuccessfully before you can
+      /// rollback.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RollbackAwsNodePoolUpdate(global::Google.Cloud.GkeMultiCloud.V1.RollbackAwsNodePoolUpdateRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -366,6 +441,35 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteAwsNodePool(global::Google.Cloud.GkeMultiCloud.V1.DeleteAwsNodePoolRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets the OIDC discovery document for the cluster.
+      /// See the
+      /// [OpenID Connect Discovery 1.0
+      /// specification](https://openid.net/specs/openid-connect-discovery-1_0.html)
+      /// for details.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeMultiCloud.V1.AwsOpenIdConfig> GetAwsOpenIdConfig(global::Google.Cloud.GkeMultiCloud.V1.GetAwsOpenIdConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets the public component of the cluster signing keys in
+      /// JSON Web Key format.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeMultiCloud.V1.AwsJsonWebKeys> GetAwsJsonWebKeys(global::Google.Cloud.GkeMultiCloud.V1.GetAwsJsonWebKeysRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -713,6 +817,54 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteAwsCluster, null, options, request);
       }
       /// <summary>
+      /// Generates an access token for a cluster agent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsClusterAgentTokenResponse GenerateAwsClusterAgentToken(global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsClusterAgentTokenRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GenerateAwsClusterAgentToken(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Generates an access token for a cluster agent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsClusterAgentTokenResponse GenerateAwsClusterAgentToken(global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsClusterAgentTokenRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GenerateAwsClusterAgentToken, null, options, request);
+      }
+      /// <summary>
+      /// Generates an access token for a cluster agent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsClusterAgentTokenResponse> GenerateAwsClusterAgentTokenAsync(global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsClusterAgentTokenRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GenerateAwsClusterAgentTokenAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Generates an access token for a cluster agent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsClusterAgentTokenResponse> GenerateAwsClusterAgentTokenAsync(global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsClusterAgentTokenRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GenerateAwsClusterAgentToken, null, options, request);
+      }
+      /// <summary>
       /// Generates a short-lived access token to authenticate to a given
       /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resource.
       /// </summary>
@@ -879,6 +1031,74 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateAwsNodePoolAsync(global::Google.Cloud.GkeMultiCloud.V1.UpdateAwsNodePoolRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateAwsNodePool, null, options, request);
+      }
+      /// <summary>
+      /// Rolls back a previously aborted or failed
+      /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] update request.
+      /// Makes no changes if the last update request successfully finished.
+      /// If an update request is in progress, you cannot rollback the update.
+      /// You must first cancel or let it finish unsuccessfully before you can
+      /// rollback.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RollbackAwsNodePoolUpdate(global::Google.Cloud.GkeMultiCloud.V1.RollbackAwsNodePoolUpdateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RollbackAwsNodePoolUpdate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Rolls back a previously aborted or failed
+      /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] update request.
+      /// Makes no changes if the last update request successfully finished.
+      /// If an update request is in progress, you cannot rollback the update.
+      /// You must first cancel or let it finish unsuccessfully before you can
+      /// rollback.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RollbackAwsNodePoolUpdate(global::Google.Cloud.GkeMultiCloud.V1.RollbackAwsNodePoolUpdateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RollbackAwsNodePoolUpdate, null, options, request);
+      }
+      /// <summary>
+      /// Rolls back a previously aborted or failed
+      /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] update request.
+      /// Makes no changes if the last update request successfully finished.
+      /// If an update request is in progress, you cannot rollback the update.
+      /// You must first cancel or let it finish unsuccessfully before you can
+      /// rollback.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RollbackAwsNodePoolUpdateAsync(global::Google.Cloud.GkeMultiCloud.V1.RollbackAwsNodePoolUpdateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RollbackAwsNodePoolUpdateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Rolls back a previously aborted or failed
+      /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] update request.
+      /// Makes no changes if the last update request successfully finished.
+      /// If an update request is in progress, you cannot rollback the update.
+      /// You must first cancel or let it finish unsuccessfully before you can
+      /// rollback.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RollbackAwsNodePoolUpdateAsync(global::Google.Cloud.GkeMultiCloud.V1.RollbackAwsNodePoolUpdateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RollbackAwsNodePoolUpdate, null, options, request);
       }
       /// <summary>
       /// Describes a specific
@@ -1057,6 +1277,122 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteAwsNodePool, null, options, request);
       }
       /// <summary>
+      /// Gets the OIDC discovery document for the cluster.
+      /// See the
+      /// [OpenID Connect Discovery 1.0
+      /// specification](https://openid.net/specs/openid-connect-discovery-1_0.html)
+      /// for details.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeMultiCloud.V1.AwsOpenIdConfig GetAwsOpenIdConfig(global::Google.Cloud.GkeMultiCloud.V1.GetAwsOpenIdConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAwsOpenIdConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the OIDC discovery document for the cluster.
+      /// See the
+      /// [OpenID Connect Discovery 1.0
+      /// specification](https://openid.net/specs/openid-connect-discovery-1_0.html)
+      /// for details.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeMultiCloud.V1.AwsOpenIdConfig GetAwsOpenIdConfig(global::Google.Cloud.GkeMultiCloud.V1.GetAwsOpenIdConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAwsOpenIdConfig, null, options, request);
+      }
+      /// <summary>
+      /// Gets the OIDC discovery document for the cluster.
+      /// See the
+      /// [OpenID Connect Discovery 1.0
+      /// specification](https://openid.net/specs/openid-connect-discovery-1_0.html)
+      /// for details.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeMultiCloud.V1.AwsOpenIdConfig> GetAwsOpenIdConfigAsync(global::Google.Cloud.GkeMultiCloud.V1.GetAwsOpenIdConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAwsOpenIdConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the OIDC discovery document for the cluster.
+      /// See the
+      /// [OpenID Connect Discovery 1.0
+      /// specification](https://openid.net/specs/openid-connect-discovery-1_0.html)
+      /// for details.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeMultiCloud.V1.AwsOpenIdConfig> GetAwsOpenIdConfigAsync(global::Google.Cloud.GkeMultiCloud.V1.GetAwsOpenIdConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAwsOpenIdConfig, null, options, request);
+      }
+      /// <summary>
+      /// Gets the public component of the cluster signing keys in
+      /// JSON Web Key format.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeMultiCloud.V1.AwsJsonWebKeys GetAwsJsonWebKeys(global::Google.Cloud.GkeMultiCloud.V1.GetAwsJsonWebKeysRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAwsJsonWebKeys(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the public component of the cluster signing keys in
+      /// JSON Web Key format.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeMultiCloud.V1.AwsJsonWebKeys GetAwsJsonWebKeys(global::Google.Cloud.GkeMultiCloud.V1.GetAwsJsonWebKeysRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAwsJsonWebKeys, null, options, request);
+      }
+      /// <summary>
+      /// Gets the public component of the cluster signing keys in
+      /// JSON Web Key format.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeMultiCloud.V1.AwsJsonWebKeys> GetAwsJsonWebKeysAsync(global::Google.Cloud.GkeMultiCloud.V1.GetAwsJsonWebKeysRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAwsJsonWebKeysAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the public component of the cluster signing keys in
+      /// JSON Web Key format.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeMultiCloud.V1.AwsJsonWebKeys> GetAwsJsonWebKeysAsync(global::Google.Cloud.GkeMultiCloud.V1.GetAwsJsonWebKeysRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAwsJsonWebKeys, null, options, request);
+      }
+      /// <summary>
       /// Returns information, such as supported AWS regions and Kubernetes
       /// versions, on a given Google Cloud location.
       /// </summary>
@@ -1127,12 +1463,16 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
           .AddMethod(__Method_GetAwsCluster, serviceImpl.GetAwsCluster)
           .AddMethod(__Method_ListAwsClusters, serviceImpl.ListAwsClusters)
           .AddMethod(__Method_DeleteAwsCluster, serviceImpl.DeleteAwsCluster)
+          .AddMethod(__Method_GenerateAwsClusterAgentToken, serviceImpl.GenerateAwsClusterAgentToken)
           .AddMethod(__Method_GenerateAwsAccessToken, serviceImpl.GenerateAwsAccessToken)
           .AddMethod(__Method_CreateAwsNodePool, serviceImpl.CreateAwsNodePool)
           .AddMethod(__Method_UpdateAwsNodePool, serviceImpl.UpdateAwsNodePool)
+          .AddMethod(__Method_RollbackAwsNodePoolUpdate, serviceImpl.RollbackAwsNodePoolUpdate)
           .AddMethod(__Method_GetAwsNodePool, serviceImpl.GetAwsNodePool)
           .AddMethod(__Method_ListAwsNodePools, serviceImpl.ListAwsNodePools)
           .AddMethod(__Method_DeleteAwsNodePool, serviceImpl.DeleteAwsNodePool)
+          .AddMethod(__Method_GetAwsOpenIdConfig, serviceImpl.GetAwsOpenIdConfig)
+          .AddMethod(__Method_GetAwsJsonWebKeys, serviceImpl.GetAwsJsonWebKeys)
           .AddMethod(__Method_GetAwsServerConfig, serviceImpl.GetAwsServerConfig).Build();
     }
 
@@ -1148,12 +1488,16 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       serviceBinder.AddMethod(__Method_GetAwsCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeMultiCloud.V1.GetAwsClusterRequest, global::Google.Cloud.GkeMultiCloud.V1.AwsCluster>(serviceImpl.GetAwsCluster));
       serviceBinder.AddMethod(__Method_ListAwsClusters, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeMultiCloud.V1.ListAwsClustersRequest, global::Google.Cloud.GkeMultiCloud.V1.ListAwsClustersResponse>(serviceImpl.ListAwsClusters));
       serviceBinder.AddMethod(__Method_DeleteAwsCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeMultiCloud.V1.DeleteAwsClusterRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteAwsCluster));
+      serviceBinder.AddMethod(__Method_GenerateAwsClusterAgentToken, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsClusterAgentTokenRequest, global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsClusterAgentTokenResponse>(serviceImpl.GenerateAwsClusterAgentToken));
       serviceBinder.AddMethod(__Method_GenerateAwsAccessToken, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsAccessTokenRequest, global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsAccessTokenResponse>(serviceImpl.GenerateAwsAccessToken));
       serviceBinder.AddMethod(__Method_CreateAwsNodePool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeMultiCloud.V1.CreateAwsNodePoolRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateAwsNodePool));
       serviceBinder.AddMethod(__Method_UpdateAwsNodePool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeMultiCloud.V1.UpdateAwsNodePoolRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateAwsNodePool));
+      serviceBinder.AddMethod(__Method_RollbackAwsNodePoolUpdate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeMultiCloud.V1.RollbackAwsNodePoolUpdateRequest, global::Google.LongRunning.Operation>(serviceImpl.RollbackAwsNodePoolUpdate));
       serviceBinder.AddMethod(__Method_GetAwsNodePool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeMultiCloud.V1.GetAwsNodePoolRequest, global::Google.Cloud.GkeMultiCloud.V1.AwsNodePool>(serviceImpl.GetAwsNodePool));
       serviceBinder.AddMethod(__Method_ListAwsNodePools, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeMultiCloud.V1.ListAwsNodePoolsRequest, global::Google.Cloud.GkeMultiCloud.V1.ListAwsNodePoolsResponse>(serviceImpl.ListAwsNodePools));
       serviceBinder.AddMethod(__Method_DeleteAwsNodePool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeMultiCloud.V1.DeleteAwsNodePoolRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteAwsNodePool));
+      serviceBinder.AddMethod(__Method_GetAwsOpenIdConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeMultiCloud.V1.GetAwsOpenIdConfigRequest, global::Google.Cloud.GkeMultiCloud.V1.AwsOpenIdConfig>(serviceImpl.GetAwsOpenIdConfig));
+      serviceBinder.AddMethod(__Method_GetAwsJsonWebKeys, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeMultiCloud.V1.GetAwsJsonWebKeysRequest, global::Google.Cloud.GkeMultiCloud.V1.AwsJsonWebKeys>(serviceImpl.GetAwsJsonWebKeys));
       serviceBinder.AddMethod(__Method_GetAwsServerConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeMultiCloud.V1.GetAwsServerConfigRequest, global::Google.Cloud.GkeMultiCloud.V1.AwsServerConfig>(serviceImpl.GetAwsServerConfig));
     }
 

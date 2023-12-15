@@ -80,6 +80,18 @@ namespace Google.Cloud.GkeMultiCloud.V1
         }
     }
 
+    public partial class RollbackAwsNodePoolUpdateRequest
+    {
+        /// <summary>
+        /// <see cref="gcgv::AwsNodePoolName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcgv::AwsNodePoolName AwsNodePoolName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcgv::AwsNodePoolName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetAwsNodePoolRequest
     {
         /// <summary>
@@ -116,6 +128,30 @@ namespace Google.Cloud.GkeMultiCloud.V1
         }
     }
 
+    public partial class GetAwsOpenIdConfigRequest
+    {
+        /// <summary>
+        /// <see cref="AwsClusterName"/>-typed view over the <see cref="AwsCluster"/> resource name property.
+        /// </summary>
+        public AwsClusterName AwsClusterAsAwsClusterName
+        {
+            get => string.IsNullOrEmpty(AwsCluster) ? null : AwsClusterName.Parse(AwsCluster, allowUnparsed: true);
+            set => AwsCluster = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetAwsJsonWebKeysRequest
+    {
+        /// <summary>
+        /// <see cref="AwsClusterName"/>-typed view over the <see cref="AwsCluster"/> resource name property.
+        /// </summary>
+        public AwsClusterName AwsClusterAsAwsClusterName
+        {
+            get => string.IsNullOrEmpty(AwsCluster) ? null : AwsClusterName.Parse(AwsCluster, allowUnparsed: true);
+            set => AwsCluster = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetAwsServerConfigRequest
     {
         /// <summary>
@@ -129,6 +165,18 @@ namespace Google.Cloud.GkeMultiCloud.V1
     }
 
     public partial class GenerateAwsAccessTokenRequest
+    {
+        /// <summary>
+        /// <see cref="AwsClusterName"/>-typed view over the <see cref="AwsCluster"/> resource name property.
+        /// </summary>
+        public AwsClusterName AwsClusterAsAwsClusterName
+        {
+            get => string.IsNullOrEmpty(AwsCluster) ? null : AwsClusterName.Parse(AwsCluster, allowUnparsed: true);
+            set => AwsCluster = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GenerateAwsClusterAgentTokenRequest
     {
         /// <summary>
         /// <see cref="AwsClusterName"/>-typed view over the <see cref="AwsCluster"/> resource name property.

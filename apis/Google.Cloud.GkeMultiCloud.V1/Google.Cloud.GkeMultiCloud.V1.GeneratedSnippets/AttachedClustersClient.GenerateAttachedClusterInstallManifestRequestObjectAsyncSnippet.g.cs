@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 AttachedClusterId = "",
                 PlatformVersion = "",
+                ProxyConfig = new AttachedProxyConfig(),
             };
             // Make the request
             GenerateAttachedClusterInstallManifestResponse response = await attachedClustersClient.GenerateAttachedClusterInstallManifestAsync(request);

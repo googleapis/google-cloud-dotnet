@@ -567,12 +567,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 66,
+          "end": 67,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 64,
+          "end": 65,
           "type": "SHORT"
         }
       ]
@@ -616,12 +616,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 67,
+          "end": 68,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 65,
+          "end": 66,
           "type": "SHORT"
         }
       ]
@@ -2050,12 +2050,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 47,
+          "end": 48,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 45,
+          "end": 46,
           "type": "SHORT"
         }
       ]
@@ -2099,12 +2099,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 48,
+          "end": 49,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 46,
+          "end": 47,
           "type": "SHORT"
         }
       ]
@@ -2311,6 +2311,103 @@
         {
           "start": 36,
           "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_GenerateAttachedClusterAgentToken_sync",
+      "title": "GenerateAttachedClusterAgentTokenRequestObject",
+      "description": "Snippet for GenerateAttachedClusterAgentToken",
+      "file": "AttachedClustersClient.GenerateAttachedClusterAgentTokenRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateAttachedClusterAgentToken",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.GenerateAttachedClusterAgentToken",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterAgentTokenRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterAgentTokenResponse",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "GenerateAttachedClusterAgentToken",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.GenerateAttachedClusterAgentToken",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 52,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 50,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AttachedClusters_GenerateAttachedClusterAgentToken_async",
+      "title": "GenerateAttachedClusterAgentTokenRequestObjectAsync",
+      "description": "Snippet for GenerateAttachedClusterAgentTokenAsync",
+      "file": "AttachedClustersClient.GenerateAttachedClusterAgentTokenRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateAttachedClusterAgentTokenAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.GenerateAttachedClusterAgentTokenAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterAgentTokenRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterAgentTokenResponse>",
+        "client": {
+          "shortName": "AttachedClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient"
+        },
+        "method": {
+          "shortName": "GenerateAttachedClusterAgentToken",
+          "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters.GenerateAttachedClusterAgentToken",
+          "service": {
+            "shortName": "AttachedClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AttachedClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 53,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 51,
           "type": "SHORT"
         }
       ]
@@ -3478,12 +3575,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 65,
+          "end": 66,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 63,
+          "end": 64,
           "type": "SHORT"
         }
       ]
@@ -3527,12 +3624,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 66,
+          "end": 67,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 64,
+          "end": 65,
           "type": "SHORT"
         }
       ]
@@ -3723,6 +3820,103 @@
         {
           "start": 37,
           "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_GenerateAwsClusterAgentToken_sync",
+      "title": "GenerateAwsClusterAgentTokenRequestObject",
+      "description": "Snippet for GenerateAwsClusterAgentToken",
+      "file": "AwsClustersClient.GenerateAwsClusterAgentTokenRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateAwsClusterAgentToken",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GenerateAwsClusterAgentToken",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.GenerateAwsClusterAgentTokenRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.GenerateAwsClusterAgentTokenResponse",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "GenerateAwsClusterAgentToken",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.GenerateAwsClusterAgentToken",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 53,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 51,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_GenerateAwsClusterAgentToken_async",
+      "title": "GenerateAwsClusterAgentTokenRequestObjectAsync",
+      "description": "Snippet for GenerateAwsClusterAgentTokenAsync",
+      "file": "AwsClustersClient.GenerateAwsClusterAgentTokenRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateAwsClusterAgentTokenAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GenerateAwsClusterAgentTokenAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.GenerateAwsClusterAgentTokenRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.GenerateAwsClusterAgentTokenResponse>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "GenerateAwsClusterAgentToken",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.GenerateAwsClusterAgentToken",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 54,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 52,
           "type": "SHORT"
         }
       ]
@@ -4339,6 +4533,293 @@
         {
           "start": 37,
           "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_RollbackAwsNodePoolUpdate_sync",
+      "title": "RollbackAwsNodePoolUpdateRequestObject",
+      "description": "Snippet for RollbackAwsNodePoolUpdate",
+      "file": "AwsClustersClient.RollbackAwsNodePoolUpdateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RollbackAwsNodePoolUpdate",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.RollbackAwsNodePoolUpdate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.RollbackAwsNodePoolUpdateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "RollbackAwsNodePoolUpdate",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.RollbackAwsNodePoolUpdate",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_RollbackAwsNodePoolUpdate_async",
+      "title": "RollbackAwsNodePoolUpdateRequestObjectAsync",
+      "description": "Snippet for RollbackAwsNodePoolUpdateAsync",
+      "file": "AwsClustersClient.RollbackAwsNodePoolUpdateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RollbackAwsNodePoolUpdateAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.RollbackAwsNodePoolUpdateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.RollbackAwsNodePoolUpdateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "RollbackAwsNodePoolUpdate",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.RollbackAwsNodePoolUpdate",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_RollbackAwsNodePoolUpdate_sync_flattened",
+      "title": "RollbackAwsNodePoolUpdate",
+      "description": "Snippet for RollbackAwsNodePoolUpdate",
+      "file": "AwsClustersClient.RollbackAwsNodePoolUpdateSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RollbackAwsNodePoolUpdate",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.RollbackAwsNodePoolUpdate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "RollbackAwsNodePoolUpdate",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.RollbackAwsNodePoolUpdate",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_RollbackAwsNodePoolUpdate_async_flattened",
+      "title": "RollbackAwsNodePoolUpdateAsync",
+      "description": "Snippet for RollbackAwsNodePoolUpdateAsync",
+      "file": "AwsClustersClient.RollbackAwsNodePoolUpdateAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RollbackAwsNodePoolUpdateAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.RollbackAwsNodePoolUpdateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "RollbackAwsNodePoolUpdate",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.RollbackAwsNodePoolUpdate",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_RollbackAwsNodePoolUpdate_sync_flattened_resourceNames",
+      "title": "RollbackAwsNodePoolUpdateResourceNames",
+      "description": "Snippet for RollbackAwsNodePoolUpdate",
+      "file": "AwsClustersClient.RollbackAwsNodePoolUpdateResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RollbackAwsNodePoolUpdate",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.RollbackAwsNodePoolUpdate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AwsNodePoolName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "RollbackAwsNodePoolUpdate",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.RollbackAwsNodePoolUpdate",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_RollbackAwsNodePoolUpdate_async_flattened_resourceNames",
+      "title": "RollbackAwsNodePoolUpdateResourceNamesAsync",
+      "description": "Snippet for RollbackAwsNodePoolUpdateAsync",
+      "file": "AwsClustersClient.RollbackAwsNodePoolUpdateResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RollbackAwsNodePoolUpdateAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.RollbackAwsNodePoolUpdateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AwsNodePoolName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "RollbackAwsNodePoolUpdate",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.RollbackAwsNodePoolUpdate",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
           "type": "SHORT"
         }
       ]
@@ -4987,12 +5468,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 65,
+          "end": 66,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 63,
+          "end": 64,
           "type": "SHORT"
         }
       ]
@@ -5036,12 +5517,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 66,
+          "end": 67,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 64,
+          "end": 65,
           "type": "SHORT"
         }
       ]
@@ -5232,6 +5713,200 @@
         {
           "start": 37,
           "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_GetAwsOpenIdConfig_sync",
+      "title": "GetAwsOpenIdConfigRequestObject",
+      "description": "Snippet for GetAwsOpenIdConfig",
+      "file": "AwsClustersClient.GetAwsOpenIdConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAwsOpenIdConfig",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsOpenIdConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.GetAwsOpenIdConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.AwsOpenIdConfig",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "GetAwsOpenIdConfig",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.GetAwsOpenIdConfig",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_GetAwsOpenIdConfig_async",
+      "title": "GetAwsOpenIdConfigRequestObjectAsync",
+      "description": "Snippet for GetAwsOpenIdConfigAsync",
+      "file": "AwsClustersClient.GetAwsOpenIdConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAwsOpenIdConfigAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsOpenIdConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.GetAwsOpenIdConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AwsOpenIdConfig>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "GetAwsOpenIdConfig",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.GetAwsOpenIdConfig",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_GetAwsJsonWebKeys_sync",
+      "title": "GetAwsJsonWebKeysRequestObject",
+      "description": "Snippet for GetAwsJsonWebKeys",
+      "file": "AwsClustersClient.GetAwsJsonWebKeysRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAwsJsonWebKeys",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsJsonWebKeys",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.GetAwsJsonWebKeysRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.AwsJsonWebKeys",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "GetAwsJsonWebKeys",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.GetAwsJsonWebKeys",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AwsClusters_GetAwsJsonWebKeys_async",
+      "title": "GetAwsJsonWebKeysRequestObjectAsync",
+      "description": "Snippet for GetAwsJsonWebKeysAsync",
+      "file": "AwsClustersClient.GetAwsJsonWebKeysRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAwsJsonWebKeysAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsJsonWebKeysAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.GetAwsJsonWebKeysRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AwsJsonWebKeys>",
+        "client": {
+          "shortName": "AwsClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient"
+        },
+        "method": {
+          "shortName": "GetAwsJsonWebKeys",
+          "fullName": "google.cloud.gkemulticloud.v1.AwsClusters.GetAwsJsonWebKeys",
+          "service": {
+            "shortName": "AwsClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AwsClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
           "type": "SHORT"
         }
       ]
@@ -8148,6 +8823,103 @@
       ]
     },
     {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GenerateAzureClusterAgentToken_sync",
+      "title": "GenerateAzureClusterAgentTokenRequestObject",
+      "description": "Snippet for GenerateAzureClusterAgentToken",
+      "file": "AzureClustersClient.GenerateAzureClusterAgentTokenRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateAzureClusterAgentToken",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GenerateAzureClusterAgentToken",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.GenerateAzureClusterAgentTokenRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.GenerateAzureClusterAgentTokenResponse",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GenerateAzureClusterAgentToken",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GenerateAzureClusterAgentToken",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 53,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 51,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GenerateAzureClusterAgentToken_async",
+      "title": "GenerateAzureClusterAgentTokenRequestObjectAsync",
+      "description": "Snippet for GenerateAzureClusterAgentTokenAsync",
+      "file": "AzureClustersClient.GenerateAzureClusterAgentTokenRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateAzureClusterAgentTokenAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GenerateAzureClusterAgentTokenAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.GenerateAzureClusterAgentTokenRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.GenerateAzureClusterAgentTokenResponse>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GenerateAzureClusterAgentToken",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GenerateAzureClusterAgentToken",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 54,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 52,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "gkemulticloud_v1_generated_AzureClusters_GenerateAzureAccessToken_sync",
       "title": "GenerateAzureAccessTokenRequestObject",
       "description": "Snippet for GenerateAzureAccessToken",
@@ -9652,6 +10424,580 @@
         {
           "start": 37,
           "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GetAzureOpenIdConfig_sync",
+      "title": "GetAzureOpenIdConfigRequestObject",
+      "description": "Snippet for GetAzureOpenIdConfig",
+      "file": "AzureClustersClient.GetAzureOpenIdConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAzureOpenIdConfig",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureOpenIdConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.GetAzureOpenIdConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.AzureOpenIdConfig",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GetAzureOpenIdConfig",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GetAzureOpenIdConfig",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GetAzureOpenIdConfig_async",
+      "title": "GetAzureOpenIdConfigRequestObjectAsync",
+      "description": "Snippet for GetAzureOpenIdConfigAsync",
+      "file": "AzureClustersClient.GetAzureOpenIdConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAzureOpenIdConfigAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureOpenIdConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.GetAzureOpenIdConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AzureOpenIdConfig>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GetAzureOpenIdConfig",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GetAzureOpenIdConfig",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GetAzureOpenIdConfig_sync_flattened",
+      "title": "GetAzureOpenIdConfig",
+      "description": "Snippet for GetAzureOpenIdConfig",
+      "file": "AzureClustersClient.GetAzureOpenIdConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAzureOpenIdConfig",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureOpenIdConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "azureCluster"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.AzureOpenIdConfig",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GetAzureOpenIdConfig",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GetAzureOpenIdConfig",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GetAzureOpenIdConfig_async_flattened",
+      "title": "GetAzureOpenIdConfigAsync",
+      "description": "Snippet for GetAzureOpenIdConfigAsync",
+      "file": "AzureClustersClient.GetAzureOpenIdConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAzureOpenIdConfigAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureOpenIdConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "azureCluster"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AzureOpenIdConfig>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GetAzureOpenIdConfig",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GetAzureOpenIdConfig",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GetAzureOpenIdConfig_sync_flattened_resourceNames",
+      "title": "GetAzureOpenIdConfigResourceNames",
+      "description": "Snippet for GetAzureOpenIdConfig",
+      "file": "AzureClustersClient.GetAzureOpenIdConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAzureOpenIdConfig",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureOpenIdConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AzureClusterName",
+            "name": "azureCluster"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.AzureOpenIdConfig",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GetAzureOpenIdConfig",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GetAzureOpenIdConfig",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GetAzureOpenIdConfig_async_flattened_resourceNames",
+      "title": "GetAzureOpenIdConfigResourceNamesAsync",
+      "description": "Snippet for GetAzureOpenIdConfigAsync",
+      "file": "AzureClustersClient.GetAzureOpenIdConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAzureOpenIdConfigAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureOpenIdConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AzureClusterName",
+            "name": "azureCluster"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AzureOpenIdConfig>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GetAzureOpenIdConfig",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GetAzureOpenIdConfig",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GetAzureJsonWebKeys_sync",
+      "title": "GetAzureJsonWebKeysRequestObject",
+      "description": "Snippet for GetAzureJsonWebKeys",
+      "file": "AzureClustersClient.GetAzureJsonWebKeysRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAzureJsonWebKeys",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureJsonWebKeys",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.GetAzureJsonWebKeysRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.AzureJsonWebKeys",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GetAzureJsonWebKeys",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GetAzureJsonWebKeys",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GetAzureJsonWebKeys_async",
+      "title": "GetAzureJsonWebKeysRequestObjectAsync",
+      "description": "Snippet for GetAzureJsonWebKeysAsync",
+      "file": "AzureClustersClient.GetAzureJsonWebKeysRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAzureJsonWebKeysAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureJsonWebKeysAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.GetAzureJsonWebKeysRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AzureJsonWebKeys>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GetAzureJsonWebKeys",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GetAzureJsonWebKeys",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GetAzureJsonWebKeys_sync_flattened",
+      "title": "GetAzureJsonWebKeys",
+      "description": "Snippet for GetAzureJsonWebKeys",
+      "file": "AzureClustersClient.GetAzureJsonWebKeysSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAzureJsonWebKeys",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureJsonWebKeys",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "azureCluster"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.AzureJsonWebKeys",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GetAzureJsonWebKeys",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GetAzureJsonWebKeys",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GetAzureJsonWebKeys_async_flattened",
+      "title": "GetAzureJsonWebKeysAsync",
+      "description": "Snippet for GetAzureJsonWebKeysAsync",
+      "file": "AzureClustersClient.GetAzureJsonWebKeysAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAzureJsonWebKeysAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureJsonWebKeysAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "azureCluster"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AzureJsonWebKeys>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GetAzureJsonWebKeys",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GetAzureJsonWebKeys",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GetAzureJsonWebKeys_sync_flattened_resourceNames",
+      "title": "GetAzureJsonWebKeysResourceNames",
+      "description": "Snippet for GetAzureJsonWebKeys",
+      "file": "AzureClustersClient.GetAzureJsonWebKeysResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAzureJsonWebKeys",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureJsonWebKeys",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AzureClusterName",
+            "name": "azureCluster"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GkeMultiCloud.V1.AzureJsonWebKeys",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GetAzureJsonWebKeys",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GetAzureJsonWebKeys",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkemulticloud_v1_generated_AzureClusters_GetAzureJsonWebKeys_async_flattened_resourceNames",
+      "title": "GetAzureJsonWebKeysResourceNamesAsync",
+      "description": "Snippet for GetAzureJsonWebKeysAsync",
+      "file": "AzureClustersClient.GetAzureJsonWebKeysResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAzureJsonWebKeysAsync",
+        "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureJsonWebKeysAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AzureClusterName",
+            "name": "azureCluster"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AzureJsonWebKeys>",
+        "client": {
+          "shortName": "AzureClustersClient",
+          "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient"
+        },
+        "method": {
+          "shortName": "GetAzureJsonWebKeys",
+          "fullName": "google.cloud.gkemulticloud.v1.AzureClusters.GetAzureJsonWebKeys",
+          "service": {
+            "shortName": "AzureClusters",
+            "fullName": "google.cloud.gkemulticloud.v1.AzureClusters"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
           "type": "SHORT"
         }
       ]

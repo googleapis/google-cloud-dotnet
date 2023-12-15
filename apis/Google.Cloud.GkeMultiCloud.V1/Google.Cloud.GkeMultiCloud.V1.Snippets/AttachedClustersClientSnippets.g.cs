@@ -369,6 +369,7 @@ namespace GoogleCSharpSnippets
                 FleetMembership = "",
                 PlatformVersion = "",
                 Distribution = "",
+                ProxyConfig = new AttachedProxyConfig(),
             };
             // Make the request
             Operation<AttachedCluster, OperationMetadata> response = attachedClustersClient.ImportAttachedCluster(request);
@@ -406,6 +407,7 @@ namespace GoogleCSharpSnippets
                 FleetMembership = "",
                 PlatformVersion = "",
                 Distribution = "",
+                ProxyConfig = new AttachedProxyConfig(),
             };
             // Make the request
             Operation<AttachedCluster, OperationMetadata> response = await attachedClustersClient.ImportAttachedClusterAsync(request);
@@ -1203,6 +1205,7 @@ namespace GoogleCSharpSnippets
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 AttachedClusterId = "",
                 PlatformVersion = "",
+                ProxyConfig = new AttachedProxyConfig(),
             };
             // Make the request
             GenerateAttachedClusterInstallManifestResponse response = attachedClustersClient.GenerateAttachedClusterInstallManifest(request);
@@ -1222,6 +1225,7 @@ namespace GoogleCSharpSnippets
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 AttachedClusterId = "",
                 PlatformVersion = "",
+                ProxyConfig = new AttachedProxyConfig(),
             };
             // Make the request
             GenerateAttachedClusterInstallManifestResponse response = await attachedClustersClient.GenerateAttachedClusterInstallManifestAsync(request);
@@ -1283,6 +1287,55 @@ namespace GoogleCSharpSnippets
             string attachedClusterId = "";
             // Make the request
             GenerateAttachedClusterInstallManifestResponse response = await attachedClustersClient.GenerateAttachedClusterInstallManifestAsync(parent, attachedClusterId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateAttachedClusterAgentToken</summary>
+        public void GenerateAttachedClusterAgentTokenRequestObject()
+        {
+            // Snippet: GenerateAttachedClusterAgentToken(GenerateAttachedClusterAgentTokenRequest, CallSettings)
+            // Create client
+            AttachedClustersClient attachedClustersClient = AttachedClustersClient.Create();
+            // Initialize request argument(s)
+            GenerateAttachedClusterAgentTokenRequest request = new GenerateAttachedClusterAgentTokenRequest
+            {
+                AttachedClusterAsAttachedClusterName = AttachedClusterName.FromProjectLocationAttachedCluster("[PROJECT]", "[LOCATION]", "[ATTACHED_CLUSTER]"),
+                SubjectToken = "",
+                SubjectTokenType = "",
+                Version = "",
+                GrantType = "",
+                Audience = "",
+                Scope = "",
+                RequestedTokenType = "",
+                Options = "",
+            };
+            // Make the request
+            GenerateAttachedClusterAgentTokenResponse response = attachedClustersClient.GenerateAttachedClusterAgentToken(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateAttachedClusterAgentTokenAsync</summary>
+        public async Task GenerateAttachedClusterAgentTokenRequestObjectAsync()
+        {
+            // Snippet: GenerateAttachedClusterAgentTokenAsync(GenerateAttachedClusterAgentTokenRequest, CallSettings)
+            // Additional: GenerateAttachedClusterAgentTokenAsync(GenerateAttachedClusterAgentTokenRequest, CancellationToken)
+            // Create client
+            AttachedClustersClient attachedClustersClient = await AttachedClustersClient.CreateAsync();
+            // Initialize request argument(s)
+            GenerateAttachedClusterAgentTokenRequest request = new GenerateAttachedClusterAgentTokenRequest
+            {
+                AttachedClusterAsAttachedClusterName = AttachedClusterName.FromProjectLocationAttachedCluster("[PROJECT]", "[LOCATION]", "[ATTACHED_CLUSTER]"),
+                SubjectToken = "",
+                SubjectTokenType = "",
+                Version = "",
+                GrantType = "",
+                Audience = "",
+                Scope = "",
+                RequestedTokenType = "",
+                Options = "",
+            };
+            // Make the request
+            GenerateAttachedClusterAgentTokenResponse response = await attachedClustersClient.GenerateAttachedClusterAgentTokenAsync(request);
             // End snippet
         }
     }

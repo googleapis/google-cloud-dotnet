@@ -3,7 +3,7 @@
 //     source: google/cloud/gkemulticloud/v1/azure_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2022 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -93,6 +93,10 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GkeMultiCloud.V1.DeleteAzureClusterRequest> __Marshaller_google_cloud_gkemulticloud_v1_DeleteAzureClusterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeMultiCloud.V1.DeleteAzureClusterRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeMultiCloud.V1.GenerateAzureClusterAgentTokenRequest> __Marshaller_google_cloud_gkemulticloud_v1_GenerateAzureClusterAgentTokenRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeMultiCloud.V1.GenerateAzureClusterAgentTokenRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeMultiCloud.V1.GenerateAzureClusterAgentTokenResponse> __Marshaller_google_cloud_gkemulticloud_v1_GenerateAzureClusterAgentTokenResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeMultiCloud.V1.GenerateAzureClusterAgentTokenResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GkeMultiCloud.V1.GenerateAzureAccessTokenRequest> __Marshaller_google_cloud_gkemulticloud_v1_GenerateAzureAccessTokenRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeMultiCloud.V1.GenerateAzureAccessTokenRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GkeMultiCloud.V1.GenerateAzureAccessTokenResponse> __Marshaller_google_cloud_gkemulticloud_v1_GenerateAzureAccessTokenResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeMultiCloud.V1.GenerateAzureAccessTokenResponse.Parser));
@@ -110,6 +114,14 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.GkeMultiCloud.V1.ListAzureNodePoolsResponse> __Marshaller_google_cloud_gkemulticloud_v1_ListAzureNodePoolsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeMultiCloud.V1.ListAzureNodePoolsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GkeMultiCloud.V1.DeleteAzureNodePoolRequest> __Marshaller_google_cloud_gkemulticloud_v1_DeleteAzureNodePoolRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeMultiCloud.V1.DeleteAzureNodePoolRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeMultiCloud.V1.GetAzureOpenIdConfigRequest> __Marshaller_google_cloud_gkemulticloud_v1_GetAzureOpenIdConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeMultiCloud.V1.GetAzureOpenIdConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeMultiCloud.V1.AzureOpenIdConfig> __Marshaller_google_cloud_gkemulticloud_v1_AzureOpenIdConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeMultiCloud.V1.AzureOpenIdConfig.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeMultiCloud.V1.GetAzureJsonWebKeysRequest> __Marshaller_google_cloud_gkemulticloud_v1_GetAzureJsonWebKeysRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeMultiCloud.V1.GetAzureJsonWebKeysRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeMultiCloud.V1.AzureJsonWebKeys> __Marshaller_google_cloud_gkemulticloud_v1_AzureJsonWebKeys = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeMultiCloud.V1.AzureJsonWebKeys.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GkeMultiCloud.V1.GetAzureServerConfigRequest> __Marshaller_google_cloud_gkemulticloud_v1_GetAzureServerConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeMultiCloud.V1.GetAzureServerConfigRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -188,6 +200,14 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeMultiCloud.V1.GenerateAzureClusterAgentTokenRequest, global::Google.Cloud.GkeMultiCloud.V1.GenerateAzureClusterAgentTokenResponse> __Method_GenerateAzureClusterAgentToken = new grpc::Method<global::Google.Cloud.GkeMultiCloud.V1.GenerateAzureClusterAgentTokenRequest, global::Google.Cloud.GkeMultiCloud.V1.GenerateAzureClusterAgentTokenResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GenerateAzureClusterAgentToken",
+        __Marshaller_google_cloud_gkemulticloud_v1_GenerateAzureClusterAgentTokenRequest,
+        __Marshaller_google_cloud_gkemulticloud_v1_GenerateAzureClusterAgentTokenResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.GkeMultiCloud.V1.GenerateAzureAccessTokenRequest, global::Google.Cloud.GkeMultiCloud.V1.GenerateAzureAccessTokenResponse> __Method_GenerateAzureAccessToken = new grpc::Method<global::Google.Cloud.GkeMultiCloud.V1.GenerateAzureAccessTokenRequest, global::Google.Cloud.GkeMultiCloud.V1.GenerateAzureAccessTokenResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -234,6 +254,22 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         "DeleteAzureNodePool",
         __Marshaller_google_cloud_gkemulticloud_v1_DeleteAzureNodePoolRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeMultiCloud.V1.GetAzureOpenIdConfigRequest, global::Google.Cloud.GkeMultiCloud.V1.AzureOpenIdConfig> __Method_GetAzureOpenIdConfig = new grpc::Method<global::Google.Cloud.GkeMultiCloud.V1.GetAzureOpenIdConfigRequest, global::Google.Cloud.GkeMultiCloud.V1.AzureOpenIdConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAzureOpenIdConfig",
+        __Marshaller_google_cloud_gkemulticloud_v1_GetAzureOpenIdConfigRequest,
+        __Marshaller_google_cloud_gkemulticloud_v1_AzureOpenIdConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeMultiCloud.V1.GetAzureJsonWebKeysRequest, global::Google.Cloud.GkeMultiCloud.V1.AzureJsonWebKeys> __Method_GetAzureJsonWebKeys = new grpc::Method<global::Google.Cloud.GkeMultiCloud.V1.GetAzureJsonWebKeysRequest, global::Google.Cloud.GkeMultiCloud.V1.AzureJsonWebKeys>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAzureJsonWebKeys",
+        __Marshaller_google_cloud_gkemulticloud_v1_GetAzureJsonWebKeysRequest,
+        __Marshaller_google_cloud_gkemulticloud_v1_AzureJsonWebKeys);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.GkeMultiCloud.V1.GetAzureServerConfigRequest, global::Google.Cloud.GkeMultiCloud.V1.AzureServerConfig> __Method_GetAzureServerConfig = new grpc::Method<global::Google.Cloud.GkeMultiCloud.V1.GetAzureServerConfigRequest, global::Google.Cloud.GkeMultiCloud.V1.AzureServerConfig>(
@@ -396,6 +432,18 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       }
 
       /// <summary>
+      /// Generates an access token for a cluster agent.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeMultiCloud.V1.GenerateAzureClusterAgentTokenResponse> GenerateAzureClusterAgentToken(global::Google.Cloud.GkeMultiCloud.V1.GenerateAzureClusterAgentTokenRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Generates a short-lived access token to authenticate to a given
       /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
       /// </summary>
@@ -478,6 +526,35 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteAzureNodePool(global::Google.Cloud.GkeMultiCloud.V1.DeleteAzureNodePoolRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets the OIDC discovery document for the cluster.
+      /// See the
+      /// [OpenID Connect Discovery 1.0
+      /// specification](https://openid.net/specs/openid-connect-discovery-1_0.html)
+      /// for details.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeMultiCloud.V1.AzureOpenIdConfig> GetAzureOpenIdConfig(global::Google.Cloud.GkeMultiCloud.V1.GetAzureOpenIdConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets the public component of the cluster signing keys in
+      /// JSON Web Key format.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeMultiCloud.V1.AzureJsonWebKeys> GetAzureJsonWebKeys(global::Google.Cloud.GkeMultiCloud.V1.GetAzureJsonWebKeysRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1093,6 +1170,54 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteAzureCluster, null, options, request);
       }
       /// <summary>
+      /// Generates an access token for a cluster agent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeMultiCloud.V1.GenerateAzureClusterAgentTokenResponse GenerateAzureClusterAgentToken(global::Google.Cloud.GkeMultiCloud.V1.GenerateAzureClusterAgentTokenRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GenerateAzureClusterAgentToken(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Generates an access token for a cluster agent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeMultiCloud.V1.GenerateAzureClusterAgentTokenResponse GenerateAzureClusterAgentToken(global::Google.Cloud.GkeMultiCloud.V1.GenerateAzureClusterAgentTokenRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GenerateAzureClusterAgentToken, null, options, request);
+      }
+      /// <summary>
+      /// Generates an access token for a cluster agent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeMultiCloud.V1.GenerateAzureClusterAgentTokenResponse> GenerateAzureClusterAgentTokenAsync(global::Google.Cloud.GkeMultiCloud.V1.GenerateAzureClusterAgentTokenRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GenerateAzureClusterAgentTokenAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Generates an access token for a cluster agent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeMultiCloud.V1.GenerateAzureClusterAgentTokenResponse> GenerateAzureClusterAgentTokenAsync(global::Google.Cloud.GkeMultiCloud.V1.GenerateAzureClusterAgentTokenRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GenerateAzureClusterAgentToken, null, options, request);
+      }
+      /// <summary>
       /// Generates a short-lived access token to authenticate to a given
       /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
       /// </summary>
@@ -1441,6 +1566,122 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteAzureNodePool, null, options, request);
       }
       /// <summary>
+      /// Gets the OIDC discovery document for the cluster.
+      /// See the
+      /// [OpenID Connect Discovery 1.0
+      /// specification](https://openid.net/specs/openid-connect-discovery-1_0.html)
+      /// for details.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeMultiCloud.V1.AzureOpenIdConfig GetAzureOpenIdConfig(global::Google.Cloud.GkeMultiCloud.V1.GetAzureOpenIdConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAzureOpenIdConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the OIDC discovery document for the cluster.
+      /// See the
+      /// [OpenID Connect Discovery 1.0
+      /// specification](https://openid.net/specs/openid-connect-discovery-1_0.html)
+      /// for details.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeMultiCloud.V1.AzureOpenIdConfig GetAzureOpenIdConfig(global::Google.Cloud.GkeMultiCloud.V1.GetAzureOpenIdConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAzureOpenIdConfig, null, options, request);
+      }
+      /// <summary>
+      /// Gets the OIDC discovery document for the cluster.
+      /// See the
+      /// [OpenID Connect Discovery 1.0
+      /// specification](https://openid.net/specs/openid-connect-discovery-1_0.html)
+      /// for details.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeMultiCloud.V1.AzureOpenIdConfig> GetAzureOpenIdConfigAsync(global::Google.Cloud.GkeMultiCloud.V1.GetAzureOpenIdConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAzureOpenIdConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the OIDC discovery document for the cluster.
+      /// See the
+      /// [OpenID Connect Discovery 1.0
+      /// specification](https://openid.net/specs/openid-connect-discovery-1_0.html)
+      /// for details.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeMultiCloud.V1.AzureOpenIdConfig> GetAzureOpenIdConfigAsync(global::Google.Cloud.GkeMultiCloud.V1.GetAzureOpenIdConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAzureOpenIdConfig, null, options, request);
+      }
+      /// <summary>
+      /// Gets the public component of the cluster signing keys in
+      /// JSON Web Key format.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeMultiCloud.V1.AzureJsonWebKeys GetAzureJsonWebKeys(global::Google.Cloud.GkeMultiCloud.V1.GetAzureJsonWebKeysRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAzureJsonWebKeys(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the public component of the cluster signing keys in
+      /// JSON Web Key format.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeMultiCloud.V1.AzureJsonWebKeys GetAzureJsonWebKeys(global::Google.Cloud.GkeMultiCloud.V1.GetAzureJsonWebKeysRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAzureJsonWebKeys, null, options, request);
+      }
+      /// <summary>
+      /// Gets the public component of the cluster signing keys in
+      /// JSON Web Key format.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeMultiCloud.V1.AzureJsonWebKeys> GetAzureJsonWebKeysAsync(global::Google.Cloud.GkeMultiCloud.V1.GetAzureJsonWebKeysRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAzureJsonWebKeysAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the public component of the cluster signing keys in
+      /// JSON Web Key format.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeMultiCloud.V1.AzureJsonWebKeys> GetAzureJsonWebKeysAsync(global::Google.Cloud.GkeMultiCloud.V1.GetAzureJsonWebKeysRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAzureJsonWebKeys, null, options, request);
+      }
+      /// <summary>
       /// Returns information, such as supported Azure regions and Kubernetes
       /// versions, on a given Google Cloud location.
       /// </summary>
@@ -1515,12 +1756,15 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
           .AddMethod(__Method_GetAzureCluster, serviceImpl.GetAzureCluster)
           .AddMethod(__Method_ListAzureClusters, serviceImpl.ListAzureClusters)
           .AddMethod(__Method_DeleteAzureCluster, serviceImpl.DeleteAzureCluster)
+          .AddMethod(__Method_GenerateAzureClusterAgentToken, serviceImpl.GenerateAzureClusterAgentToken)
           .AddMethod(__Method_GenerateAzureAccessToken, serviceImpl.GenerateAzureAccessToken)
           .AddMethod(__Method_CreateAzureNodePool, serviceImpl.CreateAzureNodePool)
           .AddMethod(__Method_UpdateAzureNodePool, serviceImpl.UpdateAzureNodePool)
           .AddMethod(__Method_GetAzureNodePool, serviceImpl.GetAzureNodePool)
           .AddMethod(__Method_ListAzureNodePools, serviceImpl.ListAzureNodePools)
           .AddMethod(__Method_DeleteAzureNodePool, serviceImpl.DeleteAzureNodePool)
+          .AddMethod(__Method_GetAzureOpenIdConfig, serviceImpl.GetAzureOpenIdConfig)
+          .AddMethod(__Method_GetAzureJsonWebKeys, serviceImpl.GetAzureJsonWebKeys)
           .AddMethod(__Method_GetAzureServerConfig, serviceImpl.GetAzureServerConfig).Build();
     }
 
@@ -1540,12 +1784,15 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       serviceBinder.AddMethod(__Method_GetAzureCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeMultiCloud.V1.GetAzureClusterRequest, global::Google.Cloud.GkeMultiCloud.V1.AzureCluster>(serviceImpl.GetAzureCluster));
       serviceBinder.AddMethod(__Method_ListAzureClusters, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeMultiCloud.V1.ListAzureClustersRequest, global::Google.Cloud.GkeMultiCloud.V1.ListAzureClustersResponse>(serviceImpl.ListAzureClusters));
       serviceBinder.AddMethod(__Method_DeleteAzureCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeMultiCloud.V1.DeleteAzureClusterRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteAzureCluster));
+      serviceBinder.AddMethod(__Method_GenerateAzureClusterAgentToken, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeMultiCloud.V1.GenerateAzureClusterAgentTokenRequest, global::Google.Cloud.GkeMultiCloud.V1.GenerateAzureClusterAgentTokenResponse>(serviceImpl.GenerateAzureClusterAgentToken));
       serviceBinder.AddMethod(__Method_GenerateAzureAccessToken, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeMultiCloud.V1.GenerateAzureAccessTokenRequest, global::Google.Cloud.GkeMultiCloud.V1.GenerateAzureAccessTokenResponse>(serviceImpl.GenerateAzureAccessToken));
       serviceBinder.AddMethod(__Method_CreateAzureNodePool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeMultiCloud.V1.CreateAzureNodePoolRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateAzureNodePool));
       serviceBinder.AddMethod(__Method_UpdateAzureNodePool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeMultiCloud.V1.UpdateAzureNodePoolRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateAzureNodePool));
       serviceBinder.AddMethod(__Method_GetAzureNodePool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeMultiCloud.V1.GetAzureNodePoolRequest, global::Google.Cloud.GkeMultiCloud.V1.AzureNodePool>(serviceImpl.GetAzureNodePool));
       serviceBinder.AddMethod(__Method_ListAzureNodePools, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeMultiCloud.V1.ListAzureNodePoolsRequest, global::Google.Cloud.GkeMultiCloud.V1.ListAzureNodePoolsResponse>(serviceImpl.ListAzureNodePools));
       serviceBinder.AddMethod(__Method_DeleteAzureNodePool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeMultiCloud.V1.DeleteAzureNodePoolRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteAzureNodePool));
+      serviceBinder.AddMethod(__Method_GetAzureOpenIdConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeMultiCloud.V1.GetAzureOpenIdConfigRequest, global::Google.Cloud.GkeMultiCloud.V1.AzureOpenIdConfig>(serviceImpl.GetAzureOpenIdConfig));
+      serviceBinder.AddMethod(__Method_GetAzureJsonWebKeys, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeMultiCloud.V1.GetAzureJsonWebKeysRequest, global::Google.Cloud.GkeMultiCloud.V1.AzureJsonWebKeys>(serviceImpl.GetAzureJsonWebKeys));
       serviceBinder.AddMethod(__Method_GetAzureServerConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeMultiCloud.V1.GetAzureServerConfigRequest, global::Google.Cloud.GkeMultiCloud.V1.AzureServerConfig>(serviceImpl.GetAzureServerConfig));
     }
 

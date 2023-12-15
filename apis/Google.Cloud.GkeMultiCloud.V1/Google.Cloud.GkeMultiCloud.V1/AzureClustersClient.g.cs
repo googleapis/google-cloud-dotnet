@@ -62,6 +62,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
             ListAzureClustersSettings = existing.ListAzureClustersSettings;
             DeleteAzureClusterSettings = existing.DeleteAzureClusterSettings;
             DeleteAzureClusterOperationsSettings = existing.DeleteAzureClusterOperationsSettings.Clone();
+            GenerateAzureClusterAgentTokenSettings = existing.GenerateAzureClusterAgentTokenSettings;
             GenerateAzureAccessTokenSettings = existing.GenerateAzureAccessTokenSettings;
             CreateAzureNodePoolSettings = existing.CreateAzureNodePoolSettings;
             CreateAzureNodePoolOperationsSettings = existing.CreateAzureNodePoolOperationsSettings.Clone();
@@ -71,6 +72,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
             ListAzureNodePoolsSettings = existing.ListAzureNodePoolsSettings;
             DeleteAzureNodePoolSettings = existing.DeleteAzureNodePoolSettings;
             DeleteAzureNodePoolOperationsSettings = existing.DeleteAzureNodePoolOperationsSettings.Clone();
+            GetAzureOpenIdConfigSettings = existing.GetAzureOpenIdConfigSettings;
+            GetAzureJsonWebKeysSettings = existing.GetAzureJsonWebKeysSettings;
             GetAzureServerConfigSettings = existing.GetAzureServerConfigSettings;
             OnCopy(existing);
         }
@@ -301,6 +304,25 @@ namespace Google.Cloud.GkeMultiCloud.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AzureClustersClient.GenerateAzureClusterAgentToken</c> and
+        /// <c>AzureClustersClient.GenerateAzureClusterAgentTokenAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GenerateAzureClusterAgentTokenSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>AzureClustersClient.GenerateAzureAccessToken</c> and <c>AzureClustersClient.GenerateAzureAccessTokenAsync</c>
         /// .
         /// </summary>
@@ -446,6 +468,42 @@ namespace Google.Cloud.GkeMultiCloud.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AzureClustersClient.GetAzureOpenIdConfig</c> and <c>AzureClustersClient.GetAzureOpenIdConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAzureOpenIdConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AzureClustersClient.GetAzureJsonWebKeys</c> and <c>AzureClustersClient.GetAzureJsonWebKeysAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAzureJsonWebKeysSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>AzureClustersClient.GetAzureServerConfig</c> and <c>AzureClustersClient.GetAzureServerConfigAsync</c>.
         /// </summary>
         /// <remarks>
@@ -545,7 +603,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
-        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(AzureClusters.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(AzureClusters.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc | gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
         internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
@@ -1910,6 +1968,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// *   `control_plane.vm_size`.
         /// *   `annotations`.
         /// *   `authorization.admin_users`.
+        /// *   `authorization.admin_groups`.
         /// *   `control_plane.root_volume.size_gib`.
         /// *   `azure_services_authentication`.
         /// *   `azure_services_authentication.tenant_id`.
@@ -1948,6 +2007,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// *   `control_plane.vm_size`.
         /// *   `annotations`.
         /// *   `authorization.admin_users`.
+        /// *   `authorization.admin_groups`.
         /// *   `control_plane.root_volume.size_gib`.
         /// *   `azure_services_authentication`.
         /// *   `azure_services_authentication.tenant_id`.
@@ -1986,6 +2046,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// *   `control_plane.vm_size`.
         /// *   `annotations`.
         /// *   `authorization.admin_users`.
+        /// *   `authorization.admin_groups`.
         /// *   `control_plane.root_volume.size_gib`.
         /// *   `azure_services_authentication`.
         /// *   `azure_services_authentication.tenant_id`.
@@ -2555,6 +2616,33 @@ namespace Google.Cloud.GkeMultiCloud.V1
             DeleteAzureClusterAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Generates an access token for a cluster agent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GenerateAzureClusterAgentTokenResponse GenerateAzureClusterAgentToken(GenerateAzureClusterAgentTokenRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generates an access token for a cluster agent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateAzureClusterAgentTokenResponse> GenerateAzureClusterAgentTokenAsync(GenerateAzureClusterAgentTokenRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generates an access token for a cluster agent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateAzureClusterAgentTokenResponse> GenerateAzureClusterAgentTokenAsync(GenerateAzureClusterAgentTokenRequest request, st::CancellationToken cancellationToken) =>
+            GenerateAzureClusterAgentTokenAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Generates a short-lived access token to authenticate to a given
         /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
         /// </summary>
@@ -2669,7 +2757,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
         /// resource where this node pool will be created.
         /// 
-        /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
+        /// `AzureCluster` names are formatted as
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -2712,7 +2801,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
         /// resource where this node pool will be created.
         /// 
-        /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
+        /// `AzureCluster` names are formatted as
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -2755,7 +2845,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
         /// resource where this node pool will be created.
         /// 
-        /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
+        /// `AzureCluster` names are formatted as
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -2793,7 +2884,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
         /// resource where this node pool will be created.
         /// 
-        /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
+        /// `AzureCluster` names are formatted as
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -2836,7 +2928,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
         /// resource where this node pool will be created.
         /// 
-        /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
+        /// `AzureCluster` names are formatted as
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -2879,7 +2972,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// Required. The [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster]
         /// resource where this node pool will be created.
         /// 
-        /// Location names are formatted as `projects/&lt;project-id&gt;/locations/&lt;region&gt;`.
+        /// `AzureCluster` names are formatted as
+        /// `projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;`.
         /// 
         /// See [Resource Names](https://cloud.google.com/apis/design/resource_names)
         /// for more details on Google Cloud resource names.
@@ -2975,6 +3069,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// *   `autoscaling.min_node_count`.
         /// *   `autoscaling.max_node_count`.
         /// *   `config.ssh_config.authorized_key`.
+        /// *   `management.auto_repair`.
+        /// *   `management`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3002,6 +3098,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// *   `autoscaling.min_node_count`.
         /// *   `autoscaling.max_node_count`.
         /// *   `config.ssh_config.authorized_key`.
+        /// *   `management.auto_repair`.
+        /// *   `management`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3029,6 +3127,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// *   `autoscaling.min_node_count`.
         /// *   `autoscaling.max_node_count`.
         /// *   `config.ssh_config.authorized_key`.
+        /// *   `management.auto_repair`.
+        /// *   `management`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3571,6 +3671,285 @@ namespace Google.Cloud.GkeMultiCloud.V1
             DeleteAzureNodePoolAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Gets the OIDC discovery document for the cluster.
+        /// See the
+        /// [OpenID Connect Discovery 1.0
+        /// specification](https://openid.net/specs/openid-connect-discovery-1_0.html)
+        /// for details.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AzureOpenIdConfig GetAzureOpenIdConfig(GetAzureOpenIdConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the OIDC discovery document for the cluster.
+        /// See the
+        /// [OpenID Connect Discovery 1.0
+        /// specification](https://openid.net/specs/openid-connect-discovery-1_0.html)
+        /// for details.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AzureOpenIdConfig> GetAzureOpenIdConfigAsync(GetAzureOpenIdConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the OIDC discovery document for the cluster.
+        /// See the
+        /// [OpenID Connect Discovery 1.0
+        /// specification](https://openid.net/specs/openid-connect-discovery-1_0.html)
+        /// for details.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AzureOpenIdConfig> GetAzureOpenIdConfigAsync(GetAzureOpenIdConfigRequest request, st::CancellationToken cancellationToken) =>
+            GetAzureOpenIdConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the OIDC discovery document for the cluster.
+        /// See the
+        /// [OpenID Connect Discovery 1.0
+        /// specification](https://openid.net/specs/openid-connect-discovery-1_0.html)
+        /// for details.
+        /// </summary>
+        /// <param name="azureCluster">
+        /// Required. The AzureCluster, which owns the OIDC discovery document.
+        /// Format:
+        /// projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AzureOpenIdConfig GetAzureOpenIdConfig(string azureCluster, gaxgrpc::CallSettings callSettings = null) =>
+            GetAzureOpenIdConfig(new GetAzureOpenIdConfigRequest
+            {
+                AzureCluster = gax::GaxPreconditions.CheckNotNullOrEmpty(azureCluster, nameof(azureCluster)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the OIDC discovery document for the cluster.
+        /// See the
+        /// [OpenID Connect Discovery 1.0
+        /// specification](https://openid.net/specs/openid-connect-discovery-1_0.html)
+        /// for details.
+        /// </summary>
+        /// <param name="azureCluster">
+        /// Required. The AzureCluster, which owns the OIDC discovery document.
+        /// Format:
+        /// projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AzureOpenIdConfig> GetAzureOpenIdConfigAsync(string azureCluster, gaxgrpc::CallSettings callSettings = null) =>
+            GetAzureOpenIdConfigAsync(new GetAzureOpenIdConfigRequest
+            {
+                AzureCluster = gax::GaxPreconditions.CheckNotNullOrEmpty(azureCluster, nameof(azureCluster)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the OIDC discovery document for the cluster.
+        /// See the
+        /// [OpenID Connect Discovery 1.0
+        /// specification](https://openid.net/specs/openid-connect-discovery-1_0.html)
+        /// for details.
+        /// </summary>
+        /// <param name="azureCluster">
+        /// Required. The AzureCluster, which owns the OIDC discovery document.
+        /// Format:
+        /// projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AzureOpenIdConfig> GetAzureOpenIdConfigAsync(string azureCluster, st::CancellationToken cancellationToken) =>
+            GetAzureOpenIdConfigAsync(azureCluster, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the OIDC discovery document for the cluster.
+        /// See the
+        /// [OpenID Connect Discovery 1.0
+        /// specification](https://openid.net/specs/openid-connect-discovery-1_0.html)
+        /// for details.
+        /// </summary>
+        /// <param name="azureCluster">
+        /// Required. The AzureCluster, which owns the OIDC discovery document.
+        /// Format:
+        /// projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AzureOpenIdConfig GetAzureOpenIdConfig(AzureClusterName azureCluster, gaxgrpc::CallSettings callSettings = null) =>
+            GetAzureOpenIdConfig(new GetAzureOpenIdConfigRequest
+            {
+                AzureClusterAsAzureClusterName = gax::GaxPreconditions.CheckNotNull(azureCluster, nameof(azureCluster)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the OIDC discovery document for the cluster.
+        /// See the
+        /// [OpenID Connect Discovery 1.0
+        /// specification](https://openid.net/specs/openid-connect-discovery-1_0.html)
+        /// for details.
+        /// </summary>
+        /// <param name="azureCluster">
+        /// Required. The AzureCluster, which owns the OIDC discovery document.
+        /// Format:
+        /// projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AzureOpenIdConfig> GetAzureOpenIdConfigAsync(AzureClusterName azureCluster, gaxgrpc::CallSettings callSettings = null) =>
+            GetAzureOpenIdConfigAsync(new GetAzureOpenIdConfigRequest
+            {
+                AzureClusterAsAzureClusterName = gax::GaxPreconditions.CheckNotNull(azureCluster, nameof(azureCluster)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the OIDC discovery document for the cluster.
+        /// See the
+        /// [OpenID Connect Discovery 1.0
+        /// specification](https://openid.net/specs/openid-connect-discovery-1_0.html)
+        /// for details.
+        /// </summary>
+        /// <param name="azureCluster">
+        /// Required. The AzureCluster, which owns the OIDC discovery document.
+        /// Format:
+        /// projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AzureOpenIdConfig> GetAzureOpenIdConfigAsync(AzureClusterName azureCluster, st::CancellationToken cancellationToken) =>
+            GetAzureOpenIdConfigAsync(azureCluster, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the public component of the cluster signing keys in
+        /// JSON Web Key format.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AzureJsonWebKeys GetAzureJsonWebKeys(GetAzureJsonWebKeysRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the public component of the cluster signing keys in
+        /// JSON Web Key format.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AzureJsonWebKeys> GetAzureJsonWebKeysAsync(GetAzureJsonWebKeysRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the public component of the cluster signing keys in
+        /// JSON Web Key format.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AzureJsonWebKeys> GetAzureJsonWebKeysAsync(GetAzureJsonWebKeysRequest request, st::CancellationToken cancellationToken) =>
+            GetAzureJsonWebKeysAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the public component of the cluster signing keys in
+        /// JSON Web Key format.
+        /// </summary>
+        /// <param name="azureCluster">
+        /// Required. The AzureCluster, which owns the JsonWebKeys.
+        /// Format:
+        /// projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AzureJsonWebKeys GetAzureJsonWebKeys(string azureCluster, gaxgrpc::CallSettings callSettings = null) =>
+            GetAzureJsonWebKeys(new GetAzureJsonWebKeysRequest
+            {
+                AzureCluster = gax::GaxPreconditions.CheckNotNullOrEmpty(azureCluster, nameof(azureCluster)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the public component of the cluster signing keys in
+        /// JSON Web Key format.
+        /// </summary>
+        /// <param name="azureCluster">
+        /// Required. The AzureCluster, which owns the JsonWebKeys.
+        /// Format:
+        /// projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AzureJsonWebKeys> GetAzureJsonWebKeysAsync(string azureCluster, gaxgrpc::CallSettings callSettings = null) =>
+            GetAzureJsonWebKeysAsync(new GetAzureJsonWebKeysRequest
+            {
+                AzureCluster = gax::GaxPreconditions.CheckNotNullOrEmpty(azureCluster, nameof(azureCluster)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the public component of the cluster signing keys in
+        /// JSON Web Key format.
+        /// </summary>
+        /// <param name="azureCluster">
+        /// Required. The AzureCluster, which owns the JsonWebKeys.
+        /// Format:
+        /// projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AzureJsonWebKeys> GetAzureJsonWebKeysAsync(string azureCluster, st::CancellationToken cancellationToken) =>
+            GetAzureJsonWebKeysAsync(azureCluster, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the public component of the cluster signing keys in
+        /// JSON Web Key format.
+        /// </summary>
+        /// <param name="azureCluster">
+        /// Required. The AzureCluster, which owns the JsonWebKeys.
+        /// Format:
+        /// projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AzureJsonWebKeys GetAzureJsonWebKeys(AzureClusterName azureCluster, gaxgrpc::CallSettings callSettings = null) =>
+            GetAzureJsonWebKeys(new GetAzureJsonWebKeysRequest
+            {
+                AzureClusterAsAzureClusterName = gax::GaxPreconditions.CheckNotNull(azureCluster, nameof(azureCluster)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the public component of the cluster signing keys in
+        /// JSON Web Key format.
+        /// </summary>
+        /// <param name="azureCluster">
+        /// Required. The AzureCluster, which owns the JsonWebKeys.
+        /// Format:
+        /// projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AzureJsonWebKeys> GetAzureJsonWebKeysAsync(AzureClusterName azureCluster, gaxgrpc::CallSettings callSettings = null) =>
+            GetAzureJsonWebKeysAsync(new GetAzureJsonWebKeysRequest
+            {
+                AzureClusterAsAzureClusterName = gax::GaxPreconditions.CheckNotNull(azureCluster, nameof(azureCluster)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the public component of the cluster signing keys in
+        /// JSON Web Key format.
+        /// </summary>
+        /// <param name="azureCluster">
+        /// Required. The AzureCluster, which owns the JsonWebKeys.
+        /// Format:
+        /// projects/&lt;project-id&gt;/locations/&lt;region&gt;/azureClusters/&lt;cluster-id&gt;
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AzureJsonWebKeys> GetAzureJsonWebKeysAsync(AzureClusterName azureCluster, st::CancellationToken cancellationToken) =>
+            GetAzureJsonWebKeysAsync(azureCluster, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Returns information, such as supported Azure regions and Kubernetes
         /// versions, on a given Google Cloud location.
         /// </summary>
@@ -3758,6 +4137,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
 
         private readonly gaxgrpc::ApiCall<DeleteAzureClusterRequest, lro::Operation> _callDeleteAzureCluster;
 
+        private readonly gaxgrpc::ApiCall<GenerateAzureClusterAgentTokenRequest, GenerateAzureClusterAgentTokenResponse> _callGenerateAzureClusterAgentToken;
+
         private readonly gaxgrpc::ApiCall<GenerateAzureAccessTokenRequest, GenerateAzureAccessTokenResponse> _callGenerateAzureAccessToken;
 
         private readonly gaxgrpc::ApiCall<CreateAzureNodePoolRequest, lro::Operation> _callCreateAzureNodePool;
@@ -3769,6 +4150,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         private readonly gaxgrpc::ApiCall<ListAzureNodePoolsRequest, ListAzureNodePoolsResponse> _callListAzureNodePools;
 
         private readonly gaxgrpc::ApiCall<DeleteAzureNodePoolRequest, lro::Operation> _callDeleteAzureNodePool;
+
+        private readonly gaxgrpc::ApiCall<GetAzureOpenIdConfigRequest, AzureOpenIdConfig> _callGetAzureOpenIdConfig;
+
+        private readonly gaxgrpc::ApiCall<GetAzureJsonWebKeysRequest, AzureJsonWebKeys> _callGetAzureJsonWebKeys;
 
         private readonly gaxgrpc::ApiCall<GetAzureServerConfigRequest, AzureServerConfig> _callGetAzureServerConfig;
 
@@ -3818,6 +4203,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
             _callDeleteAzureCluster = clientHelper.BuildApiCall<DeleteAzureClusterRequest, lro::Operation>("DeleteAzureCluster", grpcClient.DeleteAzureClusterAsync, grpcClient.DeleteAzureCluster, effectiveSettings.DeleteAzureClusterSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteAzureCluster);
             Modify_DeleteAzureClusterApiCall(ref _callDeleteAzureCluster);
+            _callGenerateAzureClusterAgentToken = clientHelper.BuildApiCall<GenerateAzureClusterAgentTokenRequest, GenerateAzureClusterAgentTokenResponse>("GenerateAzureClusterAgentToken", grpcClient.GenerateAzureClusterAgentTokenAsync, grpcClient.GenerateAzureClusterAgentToken, effectiveSettings.GenerateAzureClusterAgentTokenSettings).WithGoogleRequestParam("azure_cluster", request => request.AzureCluster);
+            Modify_ApiCall(ref _callGenerateAzureClusterAgentToken);
+            Modify_GenerateAzureClusterAgentTokenApiCall(ref _callGenerateAzureClusterAgentToken);
             _callGenerateAzureAccessToken = clientHelper.BuildApiCall<GenerateAzureAccessTokenRequest, GenerateAzureAccessTokenResponse>("GenerateAzureAccessToken", grpcClient.GenerateAzureAccessTokenAsync, grpcClient.GenerateAzureAccessToken, effectiveSettings.GenerateAzureAccessTokenSettings).WithGoogleRequestParam("azure_cluster", request => request.AzureCluster);
             Modify_ApiCall(ref _callGenerateAzureAccessToken);
             Modify_GenerateAzureAccessTokenApiCall(ref _callGenerateAzureAccessToken);
@@ -3836,6 +4224,12 @@ namespace Google.Cloud.GkeMultiCloud.V1
             _callDeleteAzureNodePool = clientHelper.BuildApiCall<DeleteAzureNodePoolRequest, lro::Operation>("DeleteAzureNodePool", grpcClient.DeleteAzureNodePoolAsync, grpcClient.DeleteAzureNodePool, effectiveSettings.DeleteAzureNodePoolSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteAzureNodePool);
             Modify_DeleteAzureNodePoolApiCall(ref _callDeleteAzureNodePool);
+            _callGetAzureOpenIdConfig = clientHelper.BuildApiCall<GetAzureOpenIdConfigRequest, AzureOpenIdConfig>("GetAzureOpenIdConfig", grpcClient.GetAzureOpenIdConfigAsync, grpcClient.GetAzureOpenIdConfig, effectiveSettings.GetAzureOpenIdConfigSettings).WithGoogleRequestParam("azure_cluster", request => request.AzureCluster);
+            Modify_ApiCall(ref _callGetAzureOpenIdConfig);
+            Modify_GetAzureOpenIdConfigApiCall(ref _callGetAzureOpenIdConfig);
+            _callGetAzureJsonWebKeys = clientHelper.BuildApiCall<GetAzureJsonWebKeysRequest, AzureJsonWebKeys>("GetAzureJsonWebKeys", grpcClient.GetAzureJsonWebKeysAsync, grpcClient.GetAzureJsonWebKeys, effectiveSettings.GetAzureJsonWebKeysSettings).WithGoogleRequestParam("azure_cluster", request => request.AzureCluster);
+            Modify_ApiCall(ref _callGetAzureJsonWebKeys);
+            Modify_GetAzureJsonWebKeysApiCall(ref _callGetAzureJsonWebKeys);
             _callGetAzureServerConfig = clientHelper.BuildApiCall<GetAzureServerConfigRequest, AzureServerConfig>("GetAzureServerConfig", grpcClient.GetAzureServerConfigAsync, grpcClient.GetAzureServerConfig, effectiveSettings.GetAzureServerConfigSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetAzureServerConfig);
             Modify_GetAzureServerConfigApiCall(ref _callGetAzureServerConfig);
@@ -3862,6 +4256,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
 
         partial void Modify_DeleteAzureClusterApiCall(ref gaxgrpc::ApiCall<DeleteAzureClusterRequest, lro::Operation> call);
 
+        partial void Modify_GenerateAzureClusterAgentTokenApiCall(ref gaxgrpc::ApiCall<GenerateAzureClusterAgentTokenRequest, GenerateAzureClusterAgentTokenResponse> call);
+
         partial void Modify_GenerateAzureAccessTokenApiCall(ref gaxgrpc::ApiCall<GenerateAzureAccessTokenRequest, GenerateAzureAccessTokenResponse> call);
 
         partial void Modify_CreateAzureNodePoolApiCall(ref gaxgrpc::ApiCall<CreateAzureNodePoolRequest, lro::Operation> call);
@@ -3873,6 +4269,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         partial void Modify_ListAzureNodePoolsApiCall(ref gaxgrpc::ApiCall<ListAzureNodePoolsRequest, ListAzureNodePoolsResponse> call);
 
         partial void Modify_DeleteAzureNodePoolApiCall(ref gaxgrpc::ApiCall<DeleteAzureNodePoolRequest, lro::Operation> call);
+
+        partial void Modify_GetAzureOpenIdConfigApiCall(ref gaxgrpc::ApiCall<GetAzureOpenIdConfigRequest, AzureOpenIdConfig> call);
+
+        partial void Modify_GetAzureJsonWebKeysApiCall(ref gaxgrpc::ApiCall<GetAzureJsonWebKeysRequest, AzureJsonWebKeys> call);
 
         partial void Modify_GetAzureServerConfigApiCall(ref gaxgrpc::ApiCall<GetAzureServerConfigRequest, AzureServerConfig> call);
 
@@ -3899,6 +4299,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
 
         partial void Modify_DeleteAzureClusterRequest(ref DeleteAzureClusterRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_GenerateAzureClusterAgentTokenRequest(ref GenerateAzureClusterAgentTokenRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_GenerateAzureAccessTokenRequest(ref GenerateAzureAccessTokenRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateAzureNodePoolRequest(ref CreateAzureNodePoolRequest request, ref gaxgrpc::CallSettings settings);
@@ -3910,6 +4312,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         partial void Modify_ListAzureNodePoolsRequest(ref ListAzureNodePoolsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteAzureNodePoolRequest(ref DeleteAzureNodePoolRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAzureOpenIdConfigRequest(ref GetAzureOpenIdConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAzureJsonWebKeysRequest(ref GetAzureJsonWebKeysRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetAzureServerConfigRequest(ref GetAzureServerConfigRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4213,6 +4619,30 @@ namespace Google.Cloud.GkeMultiCloud.V1
         }
 
         /// <summary>
+        /// Generates an access token for a cluster agent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override GenerateAzureClusterAgentTokenResponse GenerateAzureClusterAgentToken(GenerateAzureClusterAgentTokenRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GenerateAzureClusterAgentTokenRequest(ref request, ref callSettings);
+            return _callGenerateAzureClusterAgentToken.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Generates an access token for a cluster agent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<GenerateAzureClusterAgentTokenResponse> GenerateAzureClusterAgentTokenAsync(GenerateAzureClusterAgentTokenRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GenerateAzureClusterAgentTokenRequest(ref request, ref callSettings);
+            return _callGenerateAzureClusterAgentToken.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Generates a short-lived access token to authenticate to a given
         /// [AzureCluster][google.cloud.gkemulticloud.v1.AzureCluster] resource.
         /// </summary>
@@ -4393,6 +4823,64 @@ namespace Google.Cloud.GkeMultiCloud.V1
         {
             Modify_DeleteAzureNodePoolRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteAzureNodePool.Async(request, callSettings).ConfigureAwait(false), DeleteAzureNodePoolOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets the OIDC discovery document for the cluster.
+        /// See the
+        /// [OpenID Connect Discovery 1.0
+        /// specification](https://openid.net/specs/openid-connect-discovery-1_0.html)
+        /// for details.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AzureOpenIdConfig GetAzureOpenIdConfig(GetAzureOpenIdConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAzureOpenIdConfigRequest(ref request, ref callSettings);
+            return _callGetAzureOpenIdConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the OIDC discovery document for the cluster.
+        /// See the
+        /// [OpenID Connect Discovery 1.0
+        /// specification](https://openid.net/specs/openid-connect-discovery-1_0.html)
+        /// for details.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AzureOpenIdConfig> GetAzureOpenIdConfigAsync(GetAzureOpenIdConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAzureOpenIdConfigRequest(ref request, ref callSettings);
+            return _callGetAzureOpenIdConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the public component of the cluster signing keys in
+        /// JSON Web Key format.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AzureJsonWebKeys GetAzureJsonWebKeys(GetAzureJsonWebKeysRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAzureJsonWebKeysRequest(ref request, ref callSettings);
+            return _callGetAzureJsonWebKeys.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the public component of the cluster signing keys in
+        /// JSON Web Key format.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AzureJsonWebKeys> GetAzureJsonWebKeysAsync(GetAzureJsonWebKeysRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAzureJsonWebKeysRequest(ref request, ref callSettings);
+            return _callGetAzureJsonWebKeys.Async(request, callSettings);
         }
 
         /// <summary>
