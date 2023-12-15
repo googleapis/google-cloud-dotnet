@@ -10,16 +10,34 @@
         "grpc": {
           "libraryClient": "OrgPolicyClient",
           "rpcs": {
+            "CreateCustomConstraint": {
+              "methods": [
+                "CreateCustomConstraint",
+                "CreateCustomConstraintAsync"
+              ]
+            },
             "CreatePolicy": {
               "methods": [
                 "CreatePolicy",
                 "CreatePolicyAsync"
               ]
             },
+            "DeleteCustomConstraint": {
+              "methods": [
+                "DeleteCustomConstraint",
+                "DeleteCustomConstraintAsync"
+              ]
+            },
             "DeletePolicy": {
               "methods": [
                 "DeletePolicy",
                 "DeletePolicyAsync"
+              ]
+            },
+            "GetCustomConstraint": {
+              "methods": [
+                "GetCustomConstraint",
+                "GetCustomConstraintAsync"
               ]
             },
             "GetEffectivePolicy": {
@@ -40,10 +58,22 @@
                 "ListConstraintsAsync"
               ]
             },
+            "ListCustomConstraints": {
+              "methods": [
+                "ListCustomConstraints",
+                "ListCustomConstraintsAsync"
+              ]
+            },
             "ListPolicies": {
               "methods": [
                 "ListPolicies",
                 "ListPoliciesAsync"
+              ]
+            },
+            "UpdateCustomConstraint": {
+              "methods": [
+                "UpdateCustomConstraint",
+                "UpdateCustomConstraintAsync"
               ]
             },
             "UpdatePolicy": {
