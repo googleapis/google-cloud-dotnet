@@ -132,6 +132,8 @@ namespace Google.Cloud.Firestore.Admin.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.ListDatabasesResponse> __Marshaller_google_firestore_admin_v1_ListDatabasesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.ListDatabasesResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.UpdateDatabaseRequest> __Marshaller_google_firestore_admin_v1_UpdateDatabaseRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.UpdateDatabaseRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.DeleteDatabaseRequest> __Marshaller_google_firestore_admin_v1_DeleteDatabaseRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.DeleteDatabaseRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.CreateIndexRequest, global::Google.LongRunning.Operation> __Method_CreateIndex = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.CreateIndexRequest, global::Google.LongRunning.Operation>(
@@ -235,6 +237,14 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         __ServiceName,
         "UpdateDatabase",
         __Marshaller_google_firestore_admin_v1_UpdateDatabaseRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.DeleteDatabaseRequest, global::Google.LongRunning.Operation> __Method_DeleteDatabase = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.DeleteDatabaseRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteDatabase",
+        __Marshaller_google_firestore_admin_v1_DeleteDatabaseRequest,
         __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
@@ -346,7 +356,8 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// only supports listing fields that have been explicitly overridden. To issue
       /// this query, call
       /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
-      /// with the filter set to `indexConfig.usesAncestorConfig:false` .
+      /// with the filter set to `indexConfig.usesAncestorConfig:false or
+      /// `ttlConfig:*`.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -439,6 +450,18 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateDatabase(global::Google.Cloud.Firestore.Admin.V1.UpdateDatabaseRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a database.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteDatabase(global::Google.Cloud.Firestore.Admin.V1.DeleteDatabaseRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -844,7 +867,8 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// only supports listing fields that have been explicitly overridden. To issue
       /// this query, call
       /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
-      /// with the filter set to `indexConfig.usesAncestorConfig:false` .
+      /// with the filter set to `indexConfig.usesAncestorConfig:false or
+      /// `ttlConfig:*`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -864,7 +888,8 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// only supports listing fields that have been explicitly overridden. To issue
       /// this query, call
       /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
-      /// with the filter set to `indexConfig.usesAncestorConfig:false` .
+      /// with the filter set to `indexConfig.usesAncestorConfig:false or
+      /// `ttlConfig:*`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -882,7 +907,8 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// only supports listing fields that have been explicitly overridden. To issue
       /// this query, call
       /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
-      /// with the filter set to `indexConfig.usesAncestorConfig:false` .
+      /// with the filter set to `indexConfig.usesAncestorConfig:false or
+      /// `ttlConfig:*`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -902,7 +928,8 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// only supports listing fields that have been explicitly overridden. To issue
       /// this query, call
       /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
-      /// with the filter set to `indexConfig.usesAncestorConfig:false` .
+      /// with the filter set to `indexConfig.usesAncestorConfig:false or
+      /// `ttlConfig:*`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1256,6 +1283,54 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateDatabase, null, options, request);
       }
+      /// <summary>
+      /// Deletes a database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteDatabase(global::Google.Cloud.Firestore.Admin.V1.DeleteDatabaseRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteDatabase(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteDatabase(global::Google.Cloud.Firestore.Admin.V1.DeleteDatabaseRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteDatabase, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteDatabaseAsync(global::Google.Cloud.Firestore.Admin.V1.DeleteDatabaseRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteDatabaseAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteDatabaseAsync(global::Google.Cloud.Firestore.Admin.V1.DeleteDatabaseRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteDatabase, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override FirestoreAdminClient NewInstance(ClientBaseConfiguration configuration)
@@ -1282,7 +1357,8 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           .AddMethod(__Method_CreateDatabase, serviceImpl.CreateDatabase)
           .AddMethod(__Method_GetDatabase, serviceImpl.GetDatabase)
           .AddMethod(__Method_ListDatabases, serviceImpl.ListDatabases)
-          .AddMethod(__Method_UpdateDatabase, serviceImpl.UpdateDatabase).Build();
+          .AddMethod(__Method_UpdateDatabase, serviceImpl.UpdateDatabase)
+          .AddMethod(__Method_DeleteDatabase, serviceImpl.DeleteDatabase).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1305,6 +1381,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       serviceBinder.AddMethod(__Method_GetDatabase, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.GetDatabaseRequest, global::Google.Cloud.Firestore.Admin.V1.Database>(serviceImpl.GetDatabase));
       serviceBinder.AddMethod(__Method_ListDatabases, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.ListDatabasesRequest, global::Google.Cloud.Firestore.Admin.V1.ListDatabasesResponse>(serviceImpl.ListDatabases));
       serviceBinder.AddMethod(__Method_UpdateDatabase, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.UpdateDatabaseRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateDatabase));
+      serviceBinder.AddMethod(__Method_DeleteDatabase, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.DeleteDatabaseRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteDatabase));
     }
 
   }

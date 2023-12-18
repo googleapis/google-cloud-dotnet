@@ -516,6 +516,18 @@ namespace Google.Cloud.Firestore.Admin.V1
         }
     }
 
+    public partial class DeleteDatabaseRequest
+    {
+        /// <summary>
+        /// <see cref="gcfav::DatabaseName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcfav::DatabaseName DatabaseName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcfav::DatabaseName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class CreateIndexRequest
     {
         /// <summary>
