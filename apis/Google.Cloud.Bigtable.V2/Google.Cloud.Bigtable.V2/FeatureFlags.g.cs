@@ -25,18 +25,19 @@ namespace Google.Cloud.Bigtable.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiZnb29nbGUvYmlndGFibGUvdjIvZmVhdHVyZV9mbGFncy5wcm90bxISZ29v",
-            "Z2xlLmJpZ3RhYmxlLnYyIooBCgxGZWF0dXJlRmxhZ3MSFQoNcmV2ZXJzZV9z",
+            "Z2xlLmJpZ3RhYmxlLnYyIrYBCgxGZWF0dXJlRmxhZ3MSFQoNcmV2ZXJzZV9z",
             "Y2FucxgBIAEoCBIeChZtdXRhdGVfcm93c19yYXRlX2xpbWl0GAMgASgIEh8K",
             "F211dGF0ZV9yb3dzX3JhdGVfbGltaXQyGAUgASgIEiIKGmxhc3Rfc2Nhbm5l",
-            "ZF9yb3dfcmVzcG9uc2VzGAQgASgIQr0BChZjb20uZ29vZ2xlLmJpZ3RhYmxl",
-            "LnYyQhFGZWF0dXJlRmxhZ3NQcm90b1ABWjpnb29nbGUuZ29sYW5nLm9yZy9n",
-            "ZW5wcm90by9nb29nbGVhcGlzL2JpZ3RhYmxlL3YyO2JpZ3RhYmxlqgIYR29v",
-            "Z2xlLkNsb3VkLkJpZ3RhYmxlLlYyygIYR29vZ2xlXENsb3VkXEJpZ3RhYmxl",
-            "XFYy6gIbR29vZ2xlOjpDbG91ZDo6QmlndGFibGU6OlYyYgZwcm90bzM="));
+            "ZF9yb3dfcmVzcG9uc2VzGAQgASgIEhYKDnJvdXRpbmdfY29va2llGAYgASgI",
+            "EhIKCnJldHJ5X2luZm8YByABKAhCvQEKFmNvbS5nb29nbGUuYmlndGFibGUu",
+            "djJCEUZlYXR1cmVGbGFnc1Byb3RvUAFaOmdvb2dsZS5nb2xhbmcub3JnL2dl",
+            "bnByb3RvL2dvb2dsZWFwaXMvYmlndGFibGUvdjI7YmlndGFibGWqAhhHb29n",
+            "bGUuQ2xvdWQuQmlndGFibGUuVjLKAhhHb29nbGVcQ2xvdWRcQmlndGFibGVc",
+            "VjLqAhtHb29nbGU6OkNsb3VkOjpCaWd0YWJsZTo6VjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.FeatureFlags), global::Google.Cloud.Bigtable.V2.FeatureFlags.Parser, new[]{ "ReverseScans", "MutateRowsRateLimit", "MutateRowsRateLimit2", "LastScannedRowResponses" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.FeatureFlags), global::Google.Cloud.Bigtable.V2.FeatureFlags.Parser, new[]{ "ReverseScans", "MutateRowsRateLimit", "MutateRowsRateLimit2", "LastScannedRowResponses", "RoutingCookie", "RetryInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -91,6 +92,8 @@ namespace Google.Cloud.Bigtable.V2 {
       mutateRowsRateLimit_ = other.mutateRowsRateLimit_;
       mutateRowsRateLimit2_ = other.mutateRowsRateLimit2_;
       lastScannedRowResponses_ = other.lastScannedRowResponses_;
+      routingCookie_ = other.routingCookie_;
+      retryInfo_ = other.retryInfo_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -166,6 +169,38 @@ namespace Google.Cloud.Bigtable.V2 {
       }
     }
 
+    /// <summary>Field number for the "routing_cookie" field.</summary>
+    public const int RoutingCookieFieldNumber = 6;
+    private bool routingCookie_;
+    /// <summary>
+    /// Notify the server that the client supports using encoded routing cookie
+    /// strings to retry requests with.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool RoutingCookie {
+      get { return routingCookie_; }
+      set {
+        routingCookie_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "retry_info" field.</summary>
+    public const int RetryInfoFieldNumber = 7;
+    private bool retryInfo_;
+    /// <summary>
+    /// Notify the server that the client supports using retry info back off
+    /// durations to retry requests with.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool RetryInfo {
+      get { return retryInfo_; }
+      set {
+        retryInfo_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -185,6 +220,8 @@ namespace Google.Cloud.Bigtable.V2 {
       if (MutateRowsRateLimit != other.MutateRowsRateLimit) return false;
       if (MutateRowsRateLimit2 != other.MutateRowsRateLimit2) return false;
       if (LastScannedRowResponses != other.LastScannedRowResponses) return false;
+      if (RoutingCookie != other.RoutingCookie) return false;
+      if (RetryInfo != other.RetryInfo) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -196,6 +233,8 @@ namespace Google.Cloud.Bigtable.V2 {
       if (MutateRowsRateLimit != false) hash ^= MutateRowsRateLimit.GetHashCode();
       if (MutateRowsRateLimit2 != false) hash ^= MutateRowsRateLimit2.GetHashCode();
       if (LastScannedRowResponses != false) hash ^= LastScannedRowResponses.GetHashCode();
+      if (RoutingCookie != false) hash ^= RoutingCookie.GetHashCode();
+      if (RetryInfo != false) hash ^= RetryInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -230,6 +269,14 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(40);
         output.WriteBool(MutateRowsRateLimit2);
       }
+      if (RoutingCookie != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(RoutingCookie);
+      }
+      if (RetryInfo != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(RetryInfo);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -256,6 +303,14 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(40);
         output.WriteBool(MutateRowsRateLimit2);
       }
+      if (RoutingCookie != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(RoutingCookie);
+      }
+      if (RetryInfo != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(RetryInfo);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -276,6 +331,12 @@ namespace Google.Cloud.Bigtable.V2 {
         size += 1 + 1;
       }
       if (LastScannedRowResponses != false) {
+        size += 1 + 1;
+      }
+      if (RoutingCookie != false) {
+        size += 1 + 1;
+      }
+      if (RetryInfo != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -301,6 +362,12 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (other.LastScannedRowResponses != false) {
         LastScannedRowResponses = other.LastScannedRowResponses;
+      }
+      if (other.RoutingCookie != false) {
+        RoutingCookie = other.RoutingCookie;
+      }
+      if (other.RetryInfo != false) {
+        RetryInfo = other.RetryInfo;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -333,6 +400,14 @@ namespace Google.Cloud.Bigtable.V2 {
             MutateRowsRateLimit2 = input.ReadBool();
             break;
           }
+          case 48: {
+            RoutingCookie = input.ReadBool();
+            break;
+          }
+          case 56: {
+            RetryInfo = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -362,6 +437,14 @@ namespace Google.Cloud.Bigtable.V2 {
           }
           case 40: {
             MutateRowsRateLimit2 = input.ReadBool();
+            break;
+          }
+          case 48: {
+            RoutingCookie = input.ReadBool();
+            break;
+          }
+          case 56: {
+            RetryInfo = input.ReadBool();
             break;
           }
         }
