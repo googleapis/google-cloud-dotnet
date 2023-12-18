@@ -64,7 +64,7 @@ namespace Google.Cloud.CloudQuotas.V1 {
             "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSFAoHc2VydmljZRgHIAEoCUID4EEC",
             "EhUKCHF1b3RhX2lkGAggASgJQgPgQQISGAoLcmVjb25jaWxpbmcYCiABKAhC",
             "A+BBAxIVCg1qdXN0aWZpY2F0aW9uGAsgASgJEh0KDWNvbnRhY3RfZW1haWwY",
-            "DCABKAlCBuBBBOBBARoxCg9EaW1lbnNpb25zRW50cnkSCwoDa2V5GAEgASgJ",
+            "DCABKAlCBuBBBOBBAhoxCg9EaW1lbnNpb25zRW50cnkSCwoDa2V5GAEgASgJ",
             "Eg0KBXZhbHVlGAIgASgJOgI4ATqfAupBmwIKKmNsb3VkcXVvdGFzLmdvb2ds",
             "ZWFwaXMuY29tL1F1b3RhUHJlZmVyZW5jZRJLcHJvamVjdHMve3Byb2plY3R9",
             "L2xvY2F0aW9ucy97bG9jYXRpb259L3F1b3RhUHJlZmVyZW5jZXMve3F1b3Rh",
@@ -1466,17 +1466,13 @@ namespace Google.Cloud.CloudQuotas.V1 {
     public const int ContactEmailFieldNumber = 12;
     private string contactEmail_ = "";
     /// <summary>
-    /// Optional. Input only. An optional email address that can be used for quota
-    /// related communication between the Google Cloud and the user in case the
-    /// Google Cloud needs further information to make a decision on whether the
-    /// user preferred quota can be granted.
+    /// Required. Input only. An email address that can be used for quota related
+    /// communication between the Google Cloud and the user in case the Google
+    /// Cloud needs further information to make a decision on whether the user
+    /// preferred quota can be granted.
     ///
     /// The Google account for the email address must have quota update permission
     /// for the project, folder or organization this quota preference is for.
-    ///
-    /// If no contact email address is provided, or the provided email address does
-    /// not have the required quota update permission, the quota preference request
-    /// will be denied in case further information is required to make a decision.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
