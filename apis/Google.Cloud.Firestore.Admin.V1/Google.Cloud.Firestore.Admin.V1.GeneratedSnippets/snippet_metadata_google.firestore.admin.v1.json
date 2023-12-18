@@ -3667,6 +3667,293 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_DeleteDatabase_sync",
+      "title": "DeleteDatabaseRequestObject",
+      "description": "Snippet for DeleteDatabase",
+      "file": "FirestoreAdminClient.DeleteDatabaseRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDatabase",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.DeleteDatabase",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.DeleteDatabaseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.Database, Google.Cloud.Firestore.Admin.V1.DeleteDatabaseMetadata>",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteDatabase",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.DeleteDatabase",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_DeleteDatabase_async",
+      "title": "DeleteDatabaseRequestObjectAsync",
+      "description": "Snippet for DeleteDatabaseAsync",
+      "file": "FirestoreAdminClient.DeleteDatabaseRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDatabaseAsync",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.DeleteDatabaseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.DeleteDatabaseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.Database, Google.Cloud.Firestore.Admin.V1.DeleteDatabaseMetadata>>",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteDatabase",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.DeleteDatabase",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_DeleteDatabase_sync_flattened",
+      "title": "DeleteDatabase",
+      "description": "Snippet for DeleteDatabase",
+      "file": "FirestoreAdminClient.DeleteDatabaseSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDatabase",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.DeleteDatabase",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.Database, Google.Cloud.Firestore.Admin.V1.DeleteDatabaseMetadata>",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteDatabase",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.DeleteDatabase",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_DeleteDatabase_async_flattened",
+      "title": "DeleteDatabaseAsync",
+      "description": "Snippet for DeleteDatabaseAsync",
+      "file": "FirestoreAdminClient.DeleteDatabaseAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDatabaseAsync",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.DeleteDatabaseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.Database, Google.Cloud.Firestore.Admin.V1.DeleteDatabaseMetadata>>",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteDatabase",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.DeleteDatabase",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_DeleteDatabase_sync_flattened_resourceNames",
+      "title": "DeleteDatabaseResourceNames",
+      "description": "Snippet for DeleteDatabase",
+      "file": "FirestoreAdminClient.DeleteDatabaseResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDatabase",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.DeleteDatabase",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.DatabaseName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.Database, Google.Cloud.Firestore.Admin.V1.DeleteDatabaseMetadata>",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteDatabase",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.DeleteDatabase",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_DeleteDatabase_async_flattened_resourceNames",
+      "title": "DeleteDatabaseResourceNamesAsync",
+      "description": "Snippet for DeleteDatabaseAsync",
+      "file": "FirestoreAdminClient.DeleteDatabaseResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDatabaseAsync",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.DeleteDatabaseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.DatabaseName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.Database, Google.Cloud.Firestore.Admin.V1.DeleteDatabaseMetadata>>",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteDatabase",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.DeleteDatabase",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

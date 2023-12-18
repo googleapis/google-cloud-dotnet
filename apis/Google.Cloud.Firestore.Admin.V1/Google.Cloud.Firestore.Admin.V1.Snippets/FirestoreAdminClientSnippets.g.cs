@@ -2038,5 +2038,190 @@ namespace GoogleCSharpSnippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for DeleteDatabase</summary>
+        public void DeleteDatabaseRequestObject()
+        {
+            // Snippet: DeleteDatabase(DeleteDatabaseRequest, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            gcfav::DeleteDatabaseRequest request = new gcfav::DeleteDatabaseRequest
+            {
+                DatabaseName = gcfav::DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
+                Etag = "",
+            };
+            // Make the request
+            Operation<gcfav::Database, gcfav::DeleteDatabaseMetadata> response = firestoreAdminClient.DeleteDatabase(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcfav::Database, gcfav::DeleteDatabaseMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcfav::Database result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcfav::Database, gcfav::DeleteDatabaseMetadata> retrievedResponse = firestoreAdminClient.PollOnceDeleteDatabase(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcfav::Database retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDatabaseAsync</summary>
+        public async Task DeleteDatabaseRequestObjectAsync()
+        {
+            // Snippet: DeleteDatabaseAsync(DeleteDatabaseRequest, CallSettings)
+            // Additional: DeleteDatabaseAsync(DeleteDatabaseRequest, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            gcfav::DeleteDatabaseRequest request = new gcfav::DeleteDatabaseRequest
+            {
+                DatabaseName = gcfav::DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
+                Etag = "",
+            };
+            // Make the request
+            Operation<gcfav::Database, gcfav::DeleteDatabaseMetadata> response = await firestoreAdminClient.DeleteDatabaseAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcfav::Database, gcfav::DeleteDatabaseMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcfav::Database result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcfav::Database, gcfav::DeleteDatabaseMetadata> retrievedResponse = await firestoreAdminClient.PollOnceDeleteDatabaseAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcfav::Database retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDatabase</summary>
+        public void DeleteDatabase()
+        {
+            // Snippet: DeleteDatabase(string, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/databases/[DATABASE]";
+            // Make the request
+            Operation<gcfav::Database, gcfav::DeleteDatabaseMetadata> response = firestoreAdminClient.DeleteDatabase(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcfav::Database, gcfav::DeleteDatabaseMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcfav::Database result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcfav::Database, gcfav::DeleteDatabaseMetadata> retrievedResponse = firestoreAdminClient.PollOnceDeleteDatabase(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcfav::Database retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDatabaseAsync</summary>
+        public async Task DeleteDatabaseAsync()
+        {
+            // Snippet: DeleteDatabaseAsync(string, CallSettings)
+            // Additional: DeleteDatabaseAsync(string, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/databases/[DATABASE]";
+            // Make the request
+            Operation<gcfav::Database, gcfav::DeleteDatabaseMetadata> response = await firestoreAdminClient.DeleteDatabaseAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcfav::Database, gcfav::DeleteDatabaseMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcfav::Database result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcfav::Database, gcfav::DeleteDatabaseMetadata> retrievedResponse = await firestoreAdminClient.PollOnceDeleteDatabaseAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcfav::Database retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDatabase</summary>
+        public void DeleteDatabaseResourceNames()
+        {
+            // Snippet: DeleteDatabase(DatabaseName, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            gcfav::DatabaseName name = gcfav::DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]");
+            // Make the request
+            Operation<gcfav::Database, gcfav::DeleteDatabaseMetadata> response = firestoreAdminClient.DeleteDatabase(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcfav::Database, gcfav::DeleteDatabaseMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcfav::Database result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcfav::Database, gcfav::DeleteDatabaseMetadata> retrievedResponse = firestoreAdminClient.PollOnceDeleteDatabase(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcfav::Database retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDatabaseAsync</summary>
+        public async Task DeleteDatabaseResourceNamesAsync()
+        {
+            // Snippet: DeleteDatabaseAsync(DatabaseName, CallSettings)
+            // Additional: DeleteDatabaseAsync(DatabaseName, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            gcfav::DatabaseName name = gcfav::DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]");
+            // Make the request
+            Operation<gcfav::Database, gcfav::DeleteDatabaseMetadata> response = await firestoreAdminClient.DeleteDatabaseAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcfav::Database, gcfav::DeleteDatabaseMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcfav::Database result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcfav::Database, gcfav::DeleteDatabaseMetadata> retrievedResponse = await firestoreAdminClient.PollOnceDeleteDatabaseAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcfav::Database retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }

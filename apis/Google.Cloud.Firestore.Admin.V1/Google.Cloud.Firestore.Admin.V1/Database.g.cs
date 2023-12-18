@@ -28,41 +28,49 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             "b29nbGUuZmlyZXN0b3JlLmFkbWluLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2Jl",
             "aGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGh5nb29n",
             "bGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90",
-            "aW1lc3RhbXAucHJvdG8i3ggKCERhdGFiYXNlEgwKBG5hbWUYASABKAkSEwoL",
-            "bG9jYXRpb25faWQYCSABKAkSPgoEdHlwZRgKIAEoDjIwLmdvb2dsZS5maXJl",
-            "c3RvcmUuYWRtaW4udjEuRGF0YWJhc2UuRGF0YWJhc2VUeXBlEk0KEGNvbmN1",
-            "cnJlbmN5X21vZGUYDyABKA4yMy5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYx",
-            "LkRhdGFiYXNlLkNvbmN1cnJlbmN5TW9kZRJAChh2ZXJzaW9uX3JldGVudGlv",
-            "bl9wZXJpb2QYESABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BB",
-            "AxI+ChVlYXJsaWVzdF92ZXJzaW9uX3RpbWUYEiABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wQgPgQQMSbAohcG9pbnRfaW5fdGltZV9yZWNvdmVy",
-            "eV9lbmFibGVtZW50GBUgASgOMkEuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52",
-            "MS5EYXRhYmFzZS5Qb2ludEluVGltZVJlY292ZXJ5RW5hYmxlbWVudBJhChth",
-            "cHBfZW5naW5lX2ludGVncmF0aW9uX21vZGUYEyABKA4yPC5nb29nbGUuZmly",
-            "ZXN0b3JlLmFkbWluLnYxLkRhdGFiYXNlLkFwcEVuZ2luZUludGVncmF0aW9u",
-            "TW9kZRIXCgprZXlfcHJlZml4GBQgASgJQgPgQQMSDAoEZXRhZxhjIAEoCSJX",
-            "CgxEYXRhYmFzZVR5cGUSHQoZREFUQUJBU0VfVFlQRV9VTlNQRUNJRklFRBAA",
-            "EhQKEEZJUkVTVE9SRV9OQVRJVkUQARISCg5EQVRBU1RPUkVfTU9ERRACIncK",
-            "D0NvbmN1cnJlbmN5TW9kZRIgChxDT05DVVJSRU5DWV9NT0RFX1VOU1BFQ0lG",
-            "SUVEEAASDgoKT1BUSU1JU1RJQxABEg8KC1BFU1NJTUlTVElDEAISIQodT1BU",
-            "SU1JU1RJQ19XSVRIX0VOVElUWV9HUk9VUFMQAyKbAQodUG9pbnRJblRpbWVS",
-            "ZWNvdmVyeUVuYWJsZW1lbnQSMQotUE9JTlRfSU5fVElNRV9SRUNPVkVSWV9F",
-            "TkFCTEVNRU5UX1VOU1BFQ0lGSUVEEAASIgoeUE9JTlRfSU5fVElNRV9SRUNP",
-            "VkVSWV9FTkFCTEVEEAESIwofUE9JTlRfSU5fVElNRV9SRUNPVkVSWV9ESVNB",
-            "QkxFRBACImIKGEFwcEVuZ2luZUludGVncmF0aW9uTW9kZRIrCidBUFBfRU5H",
-            "SU5FX0lOVEVHUkFUSU9OX01PREVfVU5TUEVDSUZJRUQQABILCgdFTkFCTEVE",
-            "EAESDAoIRElTQUJMRUQQAjpS6kFPCiFmaXJlc3RvcmUuZ29vZ2xlYXBpcy5j",
-            "b20vRGF0YWJhc2USJ3Byb2plY3RzL3twcm9qZWN0fS9kYXRhYmFzZXMve2Rh",
-            "dGFiYXNlfVIBAULcAQodY29tLmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjFC",
-            "DURhdGFiYXNlUHJvdG9QAVo5Y2xvdWQuZ29vZ2xlLmNvbS9nby9maXJlc3Rv",
-            "cmUvYXBpdjEvYWRtaW4vYWRtaW5wYjthZG1pbnBiogIER0NGU6oCH0dvb2ds",
-            "ZS5DbG91ZC5GaXJlc3RvcmUuQWRtaW4uVjHKAh9Hb29nbGVcQ2xvdWRcRmly",
-            "ZXN0b3JlXEFkbWluXFYx6gIjR29vZ2xlOjpDbG91ZDo6RmlyZXN0b3JlOjpB",
-            "ZG1pbjo6VjFiBnByb3RvMw=="));
+            "aW1lc3RhbXAucHJvdG8iuQsKCERhdGFiYXNlEgwKBG5hbWUYASABKAkSEAoD",
+            "dWlkGAMgASgJQgPgQQMSNAoLY3JlYXRlX3RpbWUYBSABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBiABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSEwoLbG9jYXRpb25f",
+            "aWQYCSABKAkSPgoEdHlwZRgKIAEoDjIwLmdvb2dsZS5maXJlc3RvcmUuYWRt",
+            "aW4udjEuRGF0YWJhc2UuRGF0YWJhc2VUeXBlEk0KEGNvbmN1cnJlbmN5X21v",
+            "ZGUYDyABKA4yMy5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLkRhdGFiYXNl",
+            "LkNvbmN1cnJlbmN5TW9kZRJAChh2ZXJzaW9uX3JldGVudGlvbl9wZXJpb2QY",
+            "ESABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBAxI+ChVlYXJs",
+            "aWVzdF92ZXJzaW9uX3RpbWUYEiABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wQgPgQQMSbAohcG9pbnRfaW5fdGltZV9yZWNvdmVyeV9lbmFibGVt",
+            "ZW50GBUgASgOMkEuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5EYXRhYmFz",
+            "ZS5Qb2ludEluVGltZVJlY292ZXJ5RW5hYmxlbWVudBJhChthcHBfZW5naW5l",
+            "X2ludGVncmF0aW9uX21vZGUYEyABKA4yPC5nb29nbGUuZmlyZXN0b3JlLmFk",
+            "bWluLnYxLkRhdGFiYXNlLkFwcEVuZ2luZUludGVncmF0aW9uTW9kZRIXCgpr",
+            "ZXlfcHJlZml4GBQgASgJQgPgQQMSWgoXZGVsZXRlX3Byb3RlY3Rpb25fc3Rh",
+            "dGUYFiABKA4yOS5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLkRhdGFiYXNl",
+            "LkRlbGV0ZVByb3RlY3Rpb25TdGF0ZRIMCgRldGFnGGMgASgJIlcKDERhdGFi",
+            "YXNlVHlwZRIdChlEQVRBQkFTRV9UWVBFX1VOU1BFQ0lGSUVEEAASFAoQRklS",
+            "RVNUT1JFX05BVElWRRABEhIKDkRBVEFTVE9SRV9NT0RFEAIidwoPQ29uY3Vy",
+            "cmVuY3lNb2RlEiAKHENPTkNVUlJFTkNZX01PREVfVU5TUEVDSUZJRUQQABIO",
+            "CgpPUFRJTUlTVElDEAESDwoLUEVTU0lNSVNUSUMQAhIhCh1PUFRJTUlTVElD",
+            "X1dJVEhfRU5USVRZX0dST1VQUxADIpsBCh1Qb2ludEluVGltZVJlY292ZXJ5",
+            "RW5hYmxlbWVudBIxCi1QT0lOVF9JTl9USU1FX1JFQ09WRVJZX0VOQUJMRU1F",
+            "TlRfVU5TUEVDSUZJRUQQABIiCh5QT0lOVF9JTl9USU1FX1JFQ09WRVJZX0VO",
+            "QUJMRUQQARIjCh9QT0lOVF9JTl9USU1FX1JFQ09WRVJZX0RJU0FCTEVEEAIi",
+            "YgoYQXBwRW5naW5lSW50ZWdyYXRpb25Nb2RlEisKJ0FQUF9FTkdJTkVfSU5U",
+            "RUdSQVRJT05fTU9ERV9VTlNQRUNJRklFRBAAEgsKB0VOQUJMRUQQARIMCghE",
+            "SVNBQkxFRBACIn8KFURlbGV0ZVByb3RlY3Rpb25TdGF0ZRInCiNERUxFVEVf",
+            "UFJPVEVDVElPTl9TVEFURV9VTlNQRUNJRklFRBAAEh4KGkRFTEVURV9QUk9U",
+            "RUNUSU9OX0RJU0FCTEVEEAESHQoZREVMRVRFX1BST1RFQ1RJT05fRU5BQkxF",
+            "RBACOlLqQU8KIWZpcmVzdG9yZS5nb29nbGVhcGlzLmNvbS9EYXRhYmFzZRIn",
+            "cHJvamVjdHMve3Byb2plY3R9L2RhdGFiYXNlcy97ZGF0YWJhc2V9UgEBQtwB",
+            "Ch1jb20uZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MUINRGF0YWJhc2VQcm90",
+            "b1ABWjljbG91ZC5nb29nbGUuY29tL2dvL2ZpcmVzdG9yZS9hcGl2MS9hZG1p",
+            "bi9hZG1pbnBiO2FkbWlucGKiAgRHQ0ZTqgIfR29vZ2xlLkNsb3VkLkZpcmVz",
+            "dG9yZS5BZG1pbi5WMcoCH0dvb2dsZVxDbG91ZFxGaXJlc3RvcmVcQWRtaW5c",
+            "VjHqAiNHb29nbGU6OkNsb3VkOjpGaXJlc3RvcmU6OkFkbWluOjpWMWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Database), global::Google.Cloud.Firestore.Admin.V1.Database.Parser, new[]{ "Name", "LocationId", "Type", "ConcurrencyMode", "VersionRetentionPeriod", "EarliestVersionTime", "PointInTimeRecoveryEnablement", "AppEngineIntegrationMode", "KeyPrefix", "Etag" }, null, new[]{ typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.DatabaseType), typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.ConcurrencyMode), typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.PointInTimeRecoveryEnablement), typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.AppEngineIntegrationMode) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Database), global::Google.Cloud.Firestore.Admin.V1.Database.Parser, new[]{ "Name", "Uid", "CreateTime", "UpdateTime", "LocationId", "Type", "ConcurrencyMode", "VersionRetentionPeriod", "EarliestVersionTime", "PointInTimeRecoveryEnablement", "AppEngineIntegrationMode", "KeyPrefix", "DeleteProtectionState", "Etag" }, null, new[]{ typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.DatabaseType), typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.ConcurrencyMode), typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.PointInTimeRecoveryEnablement), typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.AppEngineIntegrationMode), typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.DeleteProtectionState) }, null, null)
           }));
     }
     #endregion
@@ -71,8 +79,6 @@ namespace Google.Cloud.Firestore.Admin.V1 {
   #region Messages
   /// <summary>
   /// A Cloud Firestore Database.
-  /// Currently only one database is allowed per cloud project; this database
-  /// must have a `database_id` of '(default)'.
   /// </summary>
   public sealed partial class Database : pb::IMessage<Database>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -109,6 +115,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Database(Database other) : this() {
       name_ = other.name_;
+      uid_ = other.uid_;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       locationId_ = other.locationId_;
       type_ = other.type_;
       concurrencyMode_ = other.concurrencyMode_;
@@ -117,6 +126,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       pointInTimeRecoveryEnablement_ = other.pointInTimeRecoveryEnablement_;
       appEngineIntegrationMode_ = other.appEngineIntegrationMode_;
       keyPrefix_ = other.keyPrefix_;
+      deleteProtectionState_ = other.deleteProtectionState_;
       etag_ = other.etag_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -140,6 +150,54 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       get { return name_; }
       set {
         name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "uid" field.</summary>
+    public const int UidFieldNumber = 3;
+    private string uid_ = "";
+    /// <summary>
+    /// Output only. The system-generated UUID4 for this Database.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Uid {
+      get { return uid_; }
+      set {
+        uid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// Output only. The timestamp at which this database was created. Databases
+    /// created before 2016 do not populate create_time.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_time" field.</summary>
+    public const int UpdateTimeFieldNumber = 6;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
+    /// <summary>
+    /// Output only. The timestamp at which this database was most recently
+    /// updated. Note this only includes updates to the database resource and not
+    /// data contained by the database.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
+      get { return updateTime_; }
+      set {
+        updateTime_ = value;
       }
     }
 
@@ -288,6 +346,21 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       }
     }
 
+    /// <summary>Field number for the "delete_protection_state" field.</summary>
+    public const int DeleteProtectionStateFieldNumber = 22;
+    private global::Google.Cloud.Firestore.Admin.V1.Database.Types.DeleteProtectionState deleteProtectionState_ = global::Google.Cloud.Firestore.Admin.V1.Database.Types.DeleteProtectionState.Unspecified;
+    /// <summary>
+    /// State of delete protection for the database.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Firestore.Admin.V1.Database.Types.DeleteProtectionState DeleteProtectionState {
+      get { return deleteProtectionState_; }
+      set {
+        deleteProtectionState_ = value;
+      }
+    }
+
     /// <summary>Field number for the "etag" field.</summary>
     public const int EtagFieldNumber = 99;
     private string etag_ = "";
@@ -321,6 +394,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         return true;
       }
       if (Name != other.Name) return false;
+      if (Uid != other.Uid) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (LocationId != other.LocationId) return false;
       if (Type != other.Type) return false;
       if (ConcurrencyMode != other.ConcurrencyMode) return false;
@@ -329,6 +405,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       if (PointInTimeRecoveryEnablement != other.PointInTimeRecoveryEnablement) return false;
       if (AppEngineIntegrationMode != other.AppEngineIntegrationMode) return false;
       if (KeyPrefix != other.KeyPrefix) return false;
+      if (DeleteProtectionState != other.DeleteProtectionState) return false;
       if (Etag != other.Etag) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -338,6 +415,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Uid.Length != 0) hash ^= Uid.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (LocationId.Length != 0) hash ^= LocationId.GetHashCode();
       if (Type != global::Google.Cloud.Firestore.Admin.V1.Database.Types.DatabaseType.Unspecified) hash ^= Type.GetHashCode();
       if (ConcurrencyMode != global::Google.Cloud.Firestore.Admin.V1.Database.Types.ConcurrencyMode.Unspecified) hash ^= ConcurrencyMode.GetHashCode();
@@ -346,6 +426,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       if (PointInTimeRecoveryEnablement != global::Google.Cloud.Firestore.Admin.V1.Database.Types.PointInTimeRecoveryEnablement.Unspecified) hash ^= PointInTimeRecoveryEnablement.GetHashCode();
       if (AppEngineIntegrationMode != global::Google.Cloud.Firestore.Admin.V1.Database.Types.AppEngineIntegrationMode.Unspecified) hash ^= AppEngineIntegrationMode.GetHashCode();
       if (KeyPrefix.Length != 0) hash ^= KeyPrefix.GetHashCode();
+      if (DeleteProtectionState != global::Google.Cloud.Firestore.Admin.V1.Database.Types.DeleteProtectionState.Unspecified) hash ^= DeleteProtectionState.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -369,6 +450,18 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (Uid.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Uid);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(UpdateTime);
+      }
       if (LocationId.Length != 0) {
         output.WriteRawTag(74);
         output.WriteString(LocationId);
@@ -400,6 +493,10 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       if (PointInTimeRecoveryEnablement != global::Google.Cloud.Firestore.Admin.V1.Database.Types.PointInTimeRecoveryEnablement.Unspecified) {
         output.WriteRawTag(168, 1);
         output.WriteEnum((int) PointInTimeRecoveryEnablement);
+      }
+      if (DeleteProtectionState != global::Google.Cloud.Firestore.Admin.V1.Database.Types.DeleteProtectionState.Unspecified) {
+        output.WriteRawTag(176, 1);
+        output.WriteEnum((int) DeleteProtectionState);
       }
       if (Etag.Length != 0) {
         output.WriteRawTag(154, 6);
@@ -419,6 +516,18 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (Uid.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Uid);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(UpdateTime);
+      }
       if (LocationId.Length != 0) {
         output.WriteRawTag(74);
         output.WriteString(LocationId);
@@ -451,6 +560,10 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         output.WriteRawTag(168, 1);
         output.WriteEnum((int) PointInTimeRecoveryEnablement);
       }
+      if (DeleteProtectionState != global::Google.Cloud.Firestore.Admin.V1.Database.Types.DeleteProtectionState.Unspecified) {
+        output.WriteRawTag(176, 1);
+        output.WriteEnum((int) DeleteProtectionState);
+      }
       if (Etag.Length != 0) {
         output.WriteRawTag(154, 6);
         output.WriteString(Etag);
@@ -467,6 +580,15 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       int size = 0;
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Uid.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Uid);
+      }
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (updateTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
       }
       if (LocationId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(LocationId);
@@ -492,6 +614,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       if (KeyPrefix.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(KeyPrefix);
       }
+      if (DeleteProtectionState != global::Google.Cloud.Firestore.Admin.V1.Database.Types.DeleteProtectionState.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) DeleteProtectionState);
+      }
       if (Etag.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Etag);
       }
@@ -509,6 +634,21 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.Uid.Length != 0) {
+        Uid = other.Uid;
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.updateTime_ != null) {
+        if (updateTime_ == null) {
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        UpdateTime.MergeFrom(other.UpdateTime);
       }
       if (other.LocationId.Length != 0) {
         LocationId = other.LocationId;
@@ -540,6 +680,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       if (other.KeyPrefix.Length != 0) {
         KeyPrefix = other.KeyPrefix;
       }
+      if (other.DeleteProtectionState != global::Google.Cloud.Firestore.Admin.V1.Database.Types.DeleteProtectionState.Unspecified) {
+        DeleteProtectionState = other.DeleteProtectionState;
+      }
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
@@ -560,6 +703,24 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+          case 26: {
+            Uid = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 50: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
             break;
           }
           case 74: {
@@ -598,6 +759,10 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           }
           case 168: {
             PointInTimeRecoveryEnablement = (global::Google.Cloud.Firestore.Admin.V1.Database.Types.PointInTimeRecoveryEnablement) input.ReadEnum();
+            break;
+          }
+          case 176: {
+            DeleteProtectionState = (global::Google.Cloud.Firestore.Admin.V1.Database.Types.DeleteProtectionState) input.ReadEnum();
             break;
           }
           case 794: {
@@ -623,6 +788,24 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             Name = input.ReadString();
             break;
           }
+          case 26: {
+            Uid = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 50: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
           case 74: {
             LocationId = input.ReadString();
             break;
@@ -659,6 +842,10 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           }
           case 168: {
             PointInTimeRecoveryEnablement = (global::Google.Cloud.Firestore.Admin.V1.Database.Types.PointInTimeRecoveryEnablement) input.ReadEnum();
+            break;
+          }
+          case 176: {
+            DeleteProtectionState = (global::Google.Cloud.Firestore.Admin.V1.Database.Types.DeleteProtectionState) input.ReadEnum();
             break;
           }
           case 794: {
@@ -776,6 +963,24 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         /// This is the default setting for databases created with the Firestore API.
         /// </summary>
         [pbr::OriginalName("DISABLED")] Disabled = 2,
+      }
+
+      /// <summary>
+      /// The delete protection state of the database.
+      /// </summary>
+      public enum DeleteProtectionState {
+        /// <summary>
+        /// The default value. Delete protection type is not specified
+        /// </summary>
+        [pbr::OriginalName("DELETE_PROTECTION_STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Delete protection is disabled
+        /// </summary>
+        [pbr::OriginalName("DELETE_PROTECTION_DISABLED")] DeleteProtectionDisabled = 1,
+        /// <summary>
+        /// Delete protection is enabled
+        /// </summary>
+        [pbr::OriginalName("DELETE_PROTECTION_ENABLED")] DeleteProtectionEnabled = 2,
       }
 
     }

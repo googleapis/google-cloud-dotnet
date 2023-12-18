@@ -68,6 +68,8 @@ namespace Google.Cloud.Firestore.Admin.V1
             ListDatabasesSettings = existing.ListDatabasesSettings;
             UpdateDatabaseSettings = existing.UpdateDatabaseSettings;
             UpdateDatabaseOperationsSettings = existing.UpdateDatabaseOperationsSettings.Clone();
+            DeleteDatabaseSettings = existing.DeleteDatabaseSettings;
+            DeleteDatabaseOperationsSettings = existing.DeleteDatabaseOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -379,6 +381,36 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings UpdateDatabaseOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FirestoreAdminClient.DeleteDatabase</c> and <c>FirestoreAdminClient.DeleteDatabaseAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteDatabaseSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>FirestoreAdminClient.DeleteDatabase</c> and
+        /// <c>FirestoreAdminClient.DeleteDatabaseAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteDatabaseOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -1397,7 +1429,8 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// only supports listing fields that have been explicitly overridden. To issue
         /// this query, call
         /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
-        /// with the filter set to `indexConfig.usesAncestorConfig:false` .
+        /// with the filter set to `indexConfig.usesAncestorConfig:false or
+        /// `ttlConfig:*`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1413,7 +1446,8 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// only supports listing fields that have been explicitly overridden. To issue
         /// this query, call
         /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
-        /// with the filter set to `indexConfig.usesAncestorConfig:false` .
+        /// with the filter set to `indexConfig.usesAncestorConfig:false or
+        /// `ttlConfig:*`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1429,7 +1463,8 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// only supports listing fields that have been explicitly overridden. To issue
         /// this query, call
         /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
-        /// with the filter set to `indexConfig.usesAncestorConfig:false` .
+        /// with the filter set to `indexConfig.usesAncestorConfig:false or
+        /// `ttlConfig:*`.
         /// </summary>
         /// <param name="parent">
         /// Required. A parent name of the form
@@ -1461,7 +1496,8 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// only supports listing fields that have been explicitly overridden. To issue
         /// this query, call
         /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
-        /// with the filter set to `indexConfig.usesAncestorConfig:false` .
+        /// with the filter set to `indexConfig.usesAncestorConfig:false or
+        /// `ttlConfig:*`.
         /// </summary>
         /// <param name="parent">
         /// Required. A parent name of the form
@@ -1493,7 +1529,8 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// only supports listing fields that have been explicitly overridden. To issue
         /// this query, call
         /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
-        /// with the filter set to `indexConfig.usesAncestorConfig:false` .
+        /// with the filter set to `indexConfig.usesAncestorConfig:false or
+        /// `ttlConfig:*`.
         /// </summary>
         /// <param name="parent">
         /// Required. A parent name of the form
@@ -1525,7 +1562,8 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// only supports listing fields that have been explicitly overridden. To issue
         /// this query, call
         /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
-        /// with the filter set to `indexConfig.usesAncestorConfig:false` .
+        /// with the filter set to `indexConfig.usesAncestorConfig:false or
+        /// `ttlConfig:*`.
         /// </summary>
         /// <param name="parent">
         /// Required. A parent name of the form
@@ -2016,7 +2054,11 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Required. The ID to use for the database, which will become the final
         /// component of the database's resource name.
         /// 
-        /// The value must be set to "(default)".
+        /// This value should be 4-63 characters. Valid characters are /[a-z][0-9]-/
+        /// with first character a letter and the last a letter or a number. Must not
+        /// be UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
+        /// 
+        /// "(default)" database id is also valid.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2042,7 +2084,11 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Required. The ID to use for the database, which will become the final
         /// component of the database's resource name.
         /// 
-        /// The value must be set to "(default)".
+        /// This value should be 4-63 characters. Valid characters are /[a-z][0-9]-/
+        /// with first character a letter and the last a letter or a number. Must not
+        /// be UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
+        /// 
+        /// "(default)" database id is also valid.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2068,7 +2114,11 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Required. The ID to use for the database, which will become the final
         /// component of the database's resource name.
         /// 
-        /// The value must be set to "(default)".
+        /// This value should be 4-63 characters. Valid characters are /[a-z][0-9]-/
+        /// with first character a letter and the last a letter or a number. Must not
+        /// be UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
+        /// 
+        /// "(default)" database id is also valid.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2089,7 +2139,11 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Required. The ID to use for the database, which will become the final
         /// component of the database's resource name.
         /// 
-        /// The value must be set to "(default)".
+        /// This value should be 4-63 characters. Valid characters are /[a-z][0-9]-/
+        /// with first character a letter and the last a letter or a number. Must not
+        /// be UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
+        /// 
+        /// "(default)" database id is also valid.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2115,7 +2169,11 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Required. The ID to use for the database, which will become the final
         /// component of the database's resource name.
         /// 
-        /// The value must be set to "(default)".
+        /// This value should be 4-63 characters. Valid characters are /[a-z][0-9]-/
+        /// with first character a letter and the last a letter or a number. Must not
+        /// be UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
+        /// 
+        /// "(default)" database id is also valid.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2141,7 +2199,11 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Required. The ID to use for the database, which will become the final
         /// component of the database's resource name.
         /// 
-        /// The value must be set to "(default)".
+        /// This value should be 4-63 characters. Valid characters are /[a-z][0-9]-/
+        /// with first character a letter and the last a letter or a number. Must not
+        /// be UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
+        /// 
+        /// "(default)" database id is also valid.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2472,6 +2534,143 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Database, UpdateDatabaseMetadata>> UpdateDatabaseAsync(Database database, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateDatabaseAsync(database, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Database, DeleteDatabaseMetadata> DeleteDatabase(DeleteDatabaseRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Database, DeleteDatabaseMetadata>> DeleteDatabaseAsync(DeleteDatabaseRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Database, DeleteDatabaseMetadata>> DeleteDatabaseAsync(DeleteDatabaseRequest request, st::CancellationToken cancellationToken) =>
+            DeleteDatabaseAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteDatabase</c>.</summary>
+        public virtual lro::OperationsClient DeleteDatabaseOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteDatabase</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Database, DeleteDatabaseMetadata> PollOnceDeleteDatabase(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Database, DeleteDatabaseMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteDatabaseOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteDatabase</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Database, DeleteDatabaseMetadata>> PollOnceDeleteDatabaseAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Database, DeleteDatabaseMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteDatabaseOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Database, DeleteDatabaseMetadata> DeleteDatabase(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDatabase(new DeleteDatabaseRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Database, DeleteDatabaseMetadata>> DeleteDatabaseAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDatabaseAsync(new DeleteDatabaseRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Database, DeleteDatabaseMetadata>> DeleteDatabaseAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteDatabaseAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Database, DeleteDatabaseMetadata> DeleteDatabase(DatabaseName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDatabase(new DeleteDatabaseRequest
+            {
+                DatabaseName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Database, DeleteDatabaseMetadata>> DeleteDatabaseAsync(DatabaseName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDatabaseAsync(new DeleteDatabaseRequest
+            {
+                DatabaseName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Database, DeleteDatabaseMetadata>> DeleteDatabaseAsync(DatabaseName name, st::CancellationToken cancellationToken) =>
+            DeleteDatabaseAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>FirestoreAdmin client wrapper implementation, for convenient use.</summary>
@@ -2533,6 +2732,8 @@ namespace Google.Cloud.Firestore.Admin.V1
 
         private readonly gaxgrpc::ApiCall<UpdateDatabaseRequest, lro::Operation> _callUpdateDatabase;
 
+        private readonly gaxgrpc::ApiCall<DeleteDatabaseRequest, lro::Operation> _callDeleteDatabase;
+
         /// <summary>
         /// Constructs a client wrapper for the FirestoreAdmin service, with the specified gRPC client and settings.
         /// </summary>
@@ -2550,6 +2751,7 @@ namespace Google.Cloud.Firestore.Admin.V1
             ImportDocumentsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportDocumentsOperationsSettings, logger);
             CreateDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateDatabaseOperationsSettings, logger);
             UpdateDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDatabaseOperationsSettings, logger);
+            DeleteDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDatabaseOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callCreateIndex = clientHelper.BuildApiCall<CreateIndexRequest, lro::Operation>("CreateIndex", grpcClient.CreateIndexAsync, grpcClient.CreateIndex, effectiveSettings.CreateIndexSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateIndex);
@@ -2590,6 +2792,9 @@ namespace Google.Cloud.Firestore.Admin.V1
             _callUpdateDatabase = clientHelper.BuildApiCall<UpdateDatabaseRequest, lro::Operation>("UpdateDatabase", grpcClient.UpdateDatabaseAsync, grpcClient.UpdateDatabase, effectiveSettings.UpdateDatabaseSettings).WithGoogleRequestParam("database.name", request => request.Database?.Name);
             Modify_ApiCall(ref _callUpdateDatabase);
             Modify_UpdateDatabaseApiCall(ref _callUpdateDatabase);
+            _callDeleteDatabase = clientHelper.BuildApiCall<DeleteDatabaseRequest, lro::Operation>("DeleteDatabase", grpcClient.DeleteDatabaseAsync, grpcClient.DeleteDatabase, effectiveSettings.DeleteDatabaseSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteDatabase);
+            Modify_DeleteDatabaseApiCall(ref _callDeleteDatabase);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2620,6 +2825,8 @@ namespace Google.Cloud.Firestore.Admin.V1
         partial void Modify_ListDatabasesApiCall(ref gaxgrpc::ApiCall<ListDatabasesRequest, ListDatabasesResponse> call);
 
         partial void Modify_UpdateDatabaseApiCall(ref gaxgrpc::ApiCall<UpdateDatabaseRequest, lro::Operation> call);
+
+        partial void Modify_DeleteDatabaseApiCall(ref gaxgrpc::ApiCall<DeleteDatabaseRequest, lro::Operation> call);
 
         partial void OnConstruction(FirestoreAdmin.FirestoreAdminClient grpcClient, FirestoreAdminSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -2654,6 +2861,8 @@ namespace Google.Cloud.Firestore.Admin.V1
         partial void Modify_ListDatabasesRequest(ref ListDatabasesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateDatabaseRequest(ref UpdateDatabaseRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteDatabaseRequest(ref DeleteDatabaseRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>CreateIndex</c>.</summary>
         public override lro::OperationsClient CreateIndexOperationsClient { get; }
@@ -2851,7 +3060,8 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// only supports listing fields that have been explicitly overridden. To issue
         /// this query, call
         /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
-        /// with the filter set to `indexConfig.usesAncestorConfig:false` .
+        /// with the filter set to `indexConfig.usesAncestorConfig:false or
+        /// `ttlConfig:*`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2870,7 +3080,8 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// only supports listing fields that have been explicitly overridden. To issue
         /// this query, call
         /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
-        /// with the filter set to `indexConfig.usesAncestorConfig:false` .
+        /// with the filter set to `indexConfig.usesAncestorConfig:false or
+        /// `ttlConfig:*`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3063,6 +3274,33 @@ namespace Google.Cloud.Firestore.Admin.V1
         {
             Modify_UpdateDatabaseRequest(ref request, ref callSettings);
             return new lro::Operation<Database, UpdateDatabaseMetadata>(await _callUpdateDatabase.Async(request, callSettings).ConfigureAwait(false), UpdateDatabaseOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteDatabase</c>.</summary>
+        public override lro::OperationsClient DeleteDatabaseOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Database, DeleteDatabaseMetadata> DeleteDatabase(DeleteDatabaseRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteDatabaseRequest(ref request, ref callSettings);
+            return new lro::Operation<Database, DeleteDatabaseMetadata>(_callDeleteDatabase.Sync(request, callSettings), DeleteDatabaseOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Database, DeleteDatabaseMetadata>> DeleteDatabaseAsync(DeleteDatabaseRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteDatabaseRequest(ref request, ref callSettings);
+            return new lro::Operation<Database, DeleteDatabaseMetadata>(await _callDeleteDatabase.Async(request, callSettings).ConfigureAwait(false), DeleteDatabaseOperationsClient);
         }
     }
 

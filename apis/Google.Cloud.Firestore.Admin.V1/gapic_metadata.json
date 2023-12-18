@@ -22,6 +22,12 @@
                 "CreateIndexAsync"
               ]
             },
+            "DeleteDatabase": {
+              "methods": [
+                "DeleteDatabase",
+                "DeleteDatabaseAsync"
+              ]
+            },
             "DeleteIndex": {
               "methods": [
                 "DeleteIndex",
