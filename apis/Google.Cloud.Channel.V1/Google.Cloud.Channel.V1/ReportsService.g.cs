@@ -32,82 +32,83 @@ namespace Google.Cloud.Channel.V1 {
             "cm90bxojZ29vZ2xlL2xvbmdydW5uaW5nL29wZXJhdGlvbnMucHJvdG8aH2dv",
             "b2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aFmdvb2dsZS90eXBlL2Rh",
             "dGUucHJvdG8aGmdvb2dsZS90eXBlL2RhdGV0aW1lLnByb3RvGhlnb29nbGUv",
-            "dHlwZS9kZWNpbWFsLnByb3RvGhdnb29nbGUvdHlwZS9tb25leS5wcm90byK9",
+            "dHlwZS9kZWNpbWFsLnByb3RvGhdnb29nbGUvdHlwZS9tb25leS5wcm90byLB",
             "AQoTUnVuUmVwb3J0Sm9iUmVxdWVzdBI4CgRuYW1lGAEgASgJQirgQQL6QSQK",
             "ImNsb3VkY2hhbm5lbC5nb29nbGVhcGlzLmNvbS9SZXBvcnQSOwoKZGF0ZV9y",
             "YW5nZRgCIAEoCzIiLmdvb2dsZS5jbG91ZC5jaGFubmVsLnYxLkRhdGVSYW5n",
             "ZUID4EEBEhMKBmZpbHRlchgDIAEoCUID4EEBEhoKDWxhbmd1YWdlX2NvZGUY",
-            "BCABKAlCA+BBASKXAQoUUnVuUmVwb3J0Sm9iUmVzcG9uc2USNgoKcmVwb3J0",
-            "X2pvYhgBIAEoCzIiLmdvb2dsZS5jbG91ZC5jaGFubmVsLnYxLlJlcG9ydEpv",
-            "YhJHCg9yZXBvcnRfbWV0YWRhdGEYAiABKAsyLi5nb29nbGUuY2xvdWQuY2hh",
-            "bm5lbC52MS5SZXBvcnRSZXN1bHRzTWV0YWRhdGEirAEKGUZldGNoUmVwb3J0",
-            "UmVzdWx0c1JlcXVlc3QSQQoKcmVwb3J0X2pvYhgBIAEoCUIt4EEC+kEnCiVj",
-            "bG91ZGNoYW5uZWwuZ29vZ2xlYXBpcy5jb20vUmVwb3J0Sm9iEhYKCXBhZ2Vf",
-            "c2l6ZRgCIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BBARIbCg5w",
-            "YXJ0aXRpb25fa2V5cxgEIAMoCUID4EEBIqoBChpGZXRjaFJlcG9ydFJlc3Vs",
-            "dHNSZXNwb25zZRJHCg9yZXBvcnRfbWV0YWRhdGEYASABKAsyLi5nb29nbGUu",
-            "Y2xvdWQuY2hhbm5lbC52MS5SZXBvcnRSZXN1bHRzTWV0YWRhdGESKgoEcm93",
-            "cxgCIAMoCzIcLmdvb2dsZS5jbG91ZC5jaGFubmVsLnYxLlJvdxIXCg9uZXh0",
-            "X3BhZ2VfdG9rZW4YAyABKAkidgoSTGlzdFJlcG9ydHNSZXF1ZXN0EhMKBnBh",
-            "cmVudBgBIAEoCUID4EECEhYKCXBhZ2Vfc2l6ZRgCIAEoBUID4EEBEhcKCnBh",
-            "Z2VfdG9rZW4YAyABKAlCA+BBARIaCg1sYW5ndWFnZV9jb2RlGAQgASgJQgPg",
-            "QQEiYAoTTGlzdFJlcG9ydHNSZXNwb25zZRIwCgdyZXBvcnRzGAEgAygLMh8u",
-            "Z29vZ2xlLmNsb3VkLmNoYW5uZWwudjEuUmVwb3J0EhcKD25leHRfcGFnZV90",
-            "b2tlbhgCIAEoCSK0AQoJUmVwb3J0Sm9iEhEKBG5hbWUYASABKAlCA+BBAhI8",
-            "Cg1yZXBvcnRfc3RhdHVzGAIgASgLMiUuZ29vZ2xlLmNsb3VkLmNoYW5uZWwu",
-            "djEuUmVwb3J0U3RhdHVzOlbqQVMKJWNsb3VkY2hhbm5lbC5nb29nbGVhcGlz",
-            "LmNvbS9SZXBvcnRKb2ISKmFjY291bnRzL3thY2NvdW50fS9yZXBvcnRKb2Jz",
-            "L3tyZXBvcnRfam9ifSLVAQoVUmVwb3J0UmVzdWx0c01ldGFkYXRhEi8KBnJl",
-            "cG9ydBgBIAEoCzIfLmdvb2dsZS5jbG91ZC5jaGFubmVsLnYxLlJlcG9ydBIR",
-            "Cglyb3dfY291bnQYAiABKAMSNgoKZGF0ZV9yYW5nZRgDIAEoCzIiLmdvb2ds",
-            "ZS5jbG91ZC5jaGFubmVsLnYxLkRhdGVSYW5nZRJAChRwcmVjZWRpbmdfZGF0",
-            "ZV9yYW5nZRgEIAEoCzIiLmdvb2dsZS5jbG91ZC5jaGFubmVsLnYxLkRhdGVS",
-            "YW5nZSLbAQoGQ29sdW1uEhEKCWNvbHVtbl9pZBgBIAEoCRIUCgxkaXNwbGF5",
-            "X25hbWUYAiABKAkSOwoJZGF0YV90eXBlGAMgASgOMiguZ29vZ2xlLmNsb3Vk",
-            "LmNoYW5uZWwudjEuQ29sdW1uLkRhdGFUeXBlImsKCERhdGFUeXBlEhkKFURB",
-            "VEFfVFlQRV9VTlNQRUNJRklFRBAAEgoKBlNUUklORxABEgcKA0lOVBACEgsK",
-            "B0RFQ0lNQUwQAxIJCgVNT05FWRAEEggKBERBVEUQBRINCglEQVRFX1RJTUUQ",
-            "BiLRAQoJRGF0ZVJhbmdlEjQKFXVzYWdlX3N0YXJ0X2RhdGVfdGltZRgBIAEo",
-            "CzIVLmdvb2dsZS50eXBlLkRhdGVUaW1lEjIKE3VzYWdlX2VuZF9kYXRlX3Rp",
-            "bWUYAiABKAsyFS5nb29nbGUudHlwZS5EYXRlVGltZRItChJpbnZvaWNlX3N0",
-            "YXJ0X2RhdGUYAyABKAsyES5nb29nbGUudHlwZS5EYXRlEisKEGludm9pY2Vf",
-            "ZW5kX2RhdGUYBCABKAsyES5nb29nbGUudHlwZS5EYXRlIlIKA1JvdxI0CgZ2",
-            "YWx1ZXMYASADKAsyJC5nb29nbGUuY2xvdWQuY2hhbm5lbC52MS5SZXBvcnRW",
-            "YWx1ZRIVCg1wYXJ0aXRpb25fa2V5GAIgASgJIvgBCgtSZXBvcnRWYWx1ZRIW",
-            "CgxzdHJpbmdfdmFsdWUYASABKAlIABITCglpbnRfdmFsdWUYAiABKANIABIt",
-            "Cg1kZWNpbWFsX3ZhbHVlGAMgASgLMhQuZ29vZ2xlLnR5cGUuRGVjaW1hbEgA",
-            "EikKC21vbmV5X3ZhbHVlGAQgASgLMhIuZ29vZ2xlLnR5cGUuTW9uZXlIABIn",
-            "CgpkYXRlX3ZhbHVlGAUgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZUgAEjAKD2Rh",
-            "dGVfdGltZV92YWx1ZRgGIAEoCzIVLmdvb2dsZS50eXBlLkRhdGVUaW1lSABC",
-            "BwoFdmFsdWUi/QEKDFJlcG9ydFN0YXR1cxI6CgVzdGF0ZRgBIAEoDjIrLmdv",
-            "b2dsZS5jbG91ZC5jaGFubmVsLnYxLlJlcG9ydFN0YXR1cy5TdGF0ZRIuCgpz",
-            "dGFydF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIs",
-            "CghlbmRfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAi",
-            "UwoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABILCgdTVEFSVEVEEAES",
-            "CwoHV1JJVElORxACEg0KCUFWQUlMQUJMRRADEgoKBkZBSUxFRBAEIsYBCgZS",
-            "ZXBvcnQSEQoEbmFtZRgBIAEoCUID4EECEhQKDGRpc3BsYXlfbmFtZRgCIAEo",
-            "CRIwCgdjb2x1bW5zGAMgAygLMh8uZ29vZ2xlLmNsb3VkLmNoYW5uZWwudjEu",
-            "Q29sdW1uEhMKC2Rlc2NyaXB0aW9uGAQgASgJOkzqQUkKImNsb3VkY2hhbm5l",
-            "bC5nb29nbGVhcGlzLmNvbS9SZXBvcnQSI2FjY291bnRzL3thY2NvdW50fS9y",
-            "ZXBvcnRzL3tyZXBvcnR9MqYFChpDbG91ZENoYW5uZWxSZXBvcnRzU2Vydmlj",
-            "ZRK3AQoMUnVuUmVwb3J0Sm9iEiwuZ29vZ2xlLmNsb3VkLmNoYW5uZWwudjEu",
-            "UnVuUmVwb3J0Sm9iUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVy",
-            "YXRpb24iWoLT5JMCKCIjL3YxL3tuYW1lPWFjY291bnRzLyovcmVwb3J0cy8q",
-            "fTpydW46ASrKQSkKFFJ1blJlcG9ydEpvYlJlc3BvbnNlEhFPcGVyYXRpb25N",
-            "ZXRhZGF0YRLSAQoSRmV0Y2hSZXBvcnRSZXN1bHRzEjIuZ29vZ2xlLmNsb3Vk",
-            "LmNoYW5uZWwudjEuRmV0Y2hSZXBvcnRSZXN1bHRzUmVxdWVzdBozLmdvb2ds",
-            "ZS5jbG91ZC5jaGFubmVsLnYxLkZldGNoUmVwb3J0UmVzdWx0c1Jlc3BvbnNl",
-            "IlOC0+STAkAiOy92MS97cmVwb3J0X2pvYj1hY2NvdW50cy8qL3JlcG9ydEpv",
-            "YnMvKn06ZmV0Y2hSZXBvcnRSZXN1bHRzOgEq2kEKcmVwb3J0X2pvYhKaAQoL",
-            "TGlzdFJlcG9ydHMSKy5nb29nbGUuY2xvdWQuY2hhbm5lbC52MS5MaXN0UmVw",
-            "b3J0c1JlcXVlc3QaLC5nb29nbGUuY2xvdWQuY2hhbm5lbC52MS5MaXN0UmVw",
-            "b3J0c1Jlc3BvbnNlIjCC0+STAiESHy92MS97cGFyZW50PWFjY291bnRzLyp9",
-            "L3JlcG9ydHPaQQZwYXJlbnQaXMpBG2Nsb3VkY2hhbm5lbC5nb29nbGVhcGlz",
-            "LmNvbdJBO2h0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvYXBwcy5y",
-            "ZXBvcnRzLnVzYWdlLnJlYWRvbmx5QmsKG2NvbS5nb29nbGUuY2xvdWQuY2hh",
-            "bm5lbC52MUITUmVwb3J0c1NlcnZpY2VQcm90b1ABWjVjbG91ZC5nb29nbGUu",
-            "Y29tL2dvL2NoYW5uZWwvYXBpdjEvY2hhbm5lbHBiO2NoYW5uZWxwYmIGcHJv",
-            "dG8z"));
+            "BCABKAlCA+BBAToCGAEimwEKFFJ1blJlcG9ydEpvYlJlc3BvbnNlEjYKCnJl",
+            "cG9ydF9qb2IYASABKAsyIi5nb29nbGUuY2xvdWQuY2hhbm5lbC52MS5SZXBv",
+            "cnRKb2ISRwoPcmVwb3J0X21ldGFkYXRhGAIgASgLMi4uZ29vZ2xlLmNsb3Vk",
+            "LmNoYW5uZWwudjEuUmVwb3J0UmVzdWx0c01ldGFkYXRhOgIYASKwAQoZRmV0",
+            "Y2hSZXBvcnRSZXN1bHRzUmVxdWVzdBJBCgpyZXBvcnRfam9iGAEgASgJQi3g",
+            "QQL6QScKJWNsb3VkY2hhbm5lbC5nb29nbGVhcGlzLmNvbS9SZXBvcnRKb2IS",
+            "FgoJcGFnZV9zaXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tlbhgDIAEoCUID",
+            "4EEBEhsKDnBhcnRpdGlvbl9rZXlzGAQgAygJQgPgQQE6AhgBIq4BChpGZXRj",
+            "aFJlcG9ydFJlc3VsdHNSZXNwb25zZRJHCg9yZXBvcnRfbWV0YWRhdGEYASAB",
+            "KAsyLi5nb29nbGUuY2xvdWQuY2hhbm5lbC52MS5SZXBvcnRSZXN1bHRzTWV0",
+            "YWRhdGESKgoEcm93cxgCIAMoCzIcLmdvb2dsZS5jbG91ZC5jaGFubmVsLnYx",
+            "LlJvdxIXCg9uZXh0X3BhZ2VfdG9rZW4YAyABKAk6AhgBInoKEkxpc3RSZXBv",
+            "cnRzUmVxdWVzdBITCgZwYXJlbnQYASABKAlCA+BBAhIWCglwYWdlX3NpemUY",
+            "AiABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAMgASgJQgPgQQESGgoNbGFuZ3Vh",
+            "Z2VfY29kZRgEIAEoCUID4EEBOgIYASJkChNMaXN0UmVwb3J0c1Jlc3BvbnNl",
+            "EjAKB3JlcG9ydHMYASADKAsyHy5nb29nbGUuY2xvdWQuY2hhbm5lbC52MS5S",
+            "ZXBvcnQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJOgIYASK2AQoJUmVwb3J0",
+            "Sm9iEhEKBG5hbWUYASABKAlCA+BBAhI8Cg1yZXBvcnRfc3RhdHVzGAIgASgL",
+            "MiUuZ29vZ2xlLmNsb3VkLmNoYW5uZWwudjEuUmVwb3J0U3RhdHVzOlgYAepB",
+            "UwolY2xvdWRjaGFubmVsLmdvb2dsZWFwaXMuY29tL1JlcG9ydEpvYhIqYWNj",
+            "b3VudHMve2FjY291bnR9L3JlcG9ydEpvYnMve3JlcG9ydF9qb2J9ItkBChVS",
+            "ZXBvcnRSZXN1bHRzTWV0YWRhdGESLwoGcmVwb3J0GAEgASgLMh8uZ29vZ2xl",
+            "LmNsb3VkLmNoYW5uZWwudjEuUmVwb3J0EhEKCXJvd19jb3VudBgCIAEoAxI2",
+            "CgpkYXRlX3JhbmdlGAMgASgLMiIuZ29vZ2xlLmNsb3VkLmNoYW5uZWwudjEu",
+            "RGF0ZVJhbmdlEkAKFHByZWNlZGluZ19kYXRlX3JhbmdlGAQgASgLMiIuZ29v",
+            "Z2xlLmNsb3VkLmNoYW5uZWwudjEuRGF0ZVJhbmdlOgIYASLfAQoGQ29sdW1u",
+            "EhEKCWNvbHVtbl9pZBgBIAEoCRIUCgxkaXNwbGF5X25hbWUYAiABKAkSOwoJ",
+            "ZGF0YV90eXBlGAMgASgOMiguZ29vZ2xlLmNsb3VkLmNoYW5uZWwudjEuQ29s",
+            "dW1uLkRhdGFUeXBlImsKCERhdGFUeXBlEhkKFURBVEFfVFlQRV9VTlNQRUNJ",
+            "RklFRBAAEgoKBlNUUklORxABEgcKA0lOVBACEgsKB0RFQ0lNQUwQAxIJCgVN",
+            "T05FWRAEEggKBERBVEUQBRINCglEQVRFX1RJTUUQBjoCGAEi1QEKCURhdGVS",
+            "YW5nZRI0ChV1c2FnZV9zdGFydF9kYXRlX3RpbWUYASABKAsyFS5nb29nbGUu",
+            "dHlwZS5EYXRlVGltZRIyChN1c2FnZV9lbmRfZGF0ZV90aW1lGAIgASgLMhUu",
+            "Z29vZ2xlLnR5cGUuRGF0ZVRpbWUSLQoSaW52b2ljZV9zdGFydF9kYXRlGAMg",
+            "ASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZRIrChBpbnZvaWNlX2VuZF9kYXRlGAQg",
+            "ASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZToCGAEiVgoDUm93EjQKBnZhbHVlcxgB",
+            "IAMoCzIkLmdvb2dsZS5jbG91ZC5jaGFubmVsLnYxLlJlcG9ydFZhbHVlEhUK",
+            "DXBhcnRpdGlvbl9rZXkYAiABKAk6AhgBIvwBCgtSZXBvcnRWYWx1ZRIWCgxz",
+            "dHJpbmdfdmFsdWUYASABKAlIABITCglpbnRfdmFsdWUYAiABKANIABItCg1k",
+            "ZWNpbWFsX3ZhbHVlGAMgASgLMhQuZ29vZ2xlLnR5cGUuRGVjaW1hbEgAEikK",
+            "C21vbmV5X3ZhbHVlGAQgASgLMhIuZ29vZ2xlLnR5cGUuTW9uZXlIABInCgpk",
+            "YXRlX3ZhbHVlGAUgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZUgAEjAKD2RhdGVf",
+            "dGltZV92YWx1ZRgGIAEoCzIVLmdvb2dsZS50eXBlLkRhdGVUaW1lSAA6AhgB",
+            "QgcKBXZhbHVlIoECCgxSZXBvcnRTdGF0dXMSOgoFc3RhdGUYASABKA4yKy5n",
+            "b29nbGUuY2xvdWQuY2hhbm5lbC52MS5SZXBvcnRTdGF0dXMuU3RhdGUSLgoK",
+            "c3RhcnRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
+            "LAoIZW5kX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "IlMKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCwoHU1RBUlRFRBAB",
+            "EgsKB1dSSVRJTkcQAhINCglBVkFJTEFCTEUQAxIKCgZGQUlMRUQQBDoCGAEi",
+            "yAEKBlJlcG9ydBIRCgRuYW1lGAEgASgJQgPgQQISFAoMZGlzcGxheV9uYW1l",
+            "GAIgASgJEjAKB2NvbHVtbnMYAyADKAsyHy5nb29nbGUuY2xvdWQuY2hhbm5l",
+            "bC52MS5Db2x1bW4SEwoLZGVzY3JpcHRpb24YBCABKAk6ThgB6kFJCiJjbG91",
+            "ZGNoYW5uZWwuZ29vZ2xlYXBpcy5jb20vUmVwb3J0EiNhY2NvdW50cy97YWNj",
+            "b3VudH0vcmVwb3J0cy97cmVwb3J0fTKyBQoaQ2xvdWRDaGFubmVsUmVwb3J0",
+            "c1NlcnZpY2USugEKDFJ1blJlcG9ydEpvYhIsLmdvb2dsZS5jbG91ZC5jaGFu",
+            "bmVsLnYxLlJ1blJlcG9ydEpvYlJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5p",
+            "bmcuT3BlcmF0aW9uIl2IAgGC0+STAigiIy92MS97bmFtZT1hY2NvdW50cy8q",
+            "L3JlcG9ydHMvKn06cnVuOgEqykEpChRSdW5SZXBvcnRKb2JSZXNwb25zZRIR",
+            "T3BlcmF0aW9uTWV0YWRhdGES1QEKEkZldGNoUmVwb3J0UmVzdWx0cxIyLmdv",
+            "b2dsZS5jbG91ZC5jaGFubmVsLnYxLkZldGNoUmVwb3J0UmVzdWx0c1JlcXVl",
+            "c3QaMy5nb29nbGUuY2xvdWQuY2hhbm5lbC52MS5GZXRjaFJlcG9ydFJlc3Vs",
+            "dHNSZXNwb25zZSJWiAIBgtPkkwJAIjsvdjEve3JlcG9ydF9qb2I9YWNjb3Vu",
+            "dHMvKi9yZXBvcnRKb2JzLyp9OmZldGNoUmVwb3J0UmVzdWx0czoBKtpBCnJl",
+            "cG9ydF9qb2ISnQEKC0xpc3RSZXBvcnRzEisuZ29vZ2xlLmNsb3VkLmNoYW5u",
+            "ZWwudjEuTGlzdFJlcG9ydHNSZXF1ZXN0GiwuZ29vZ2xlLmNsb3VkLmNoYW5u",
+            "ZWwudjEuTGlzdFJlcG9ydHNSZXNwb25zZSIziAIBgtPkkwIhEh8vdjEve3Bh",
+            "cmVudD1hY2NvdW50cy8qfS9yZXBvcnRz2kEGcGFyZW50Gl+IAgHKQRtjbG91",
+            "ZGNoYW5uZWwuZ29vZ2xlYXBpcy5jb23SQTtodHRwczovL3d3dy5nb29nbGVh",
+            "cGlzLmNvbS9hdXRoL2FwcHMucmVwb3J0cy51c2FnZS5yZWFkb25seUJrChtj",
+            "b20uZ29vZ2xlLmNsb3VkLmNoYW5uZWwudjFCE1JlcG9ydHNTZXJ2aWNlUHJv",
+            "dG9QAVo1Y2xvdWQuZ29vZ2xlLmNvbS9nby9jaGFubmVsL2FwaXYxL2NoYW5u",
+            "ZWxwYjtjaGFubmVscGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Channel.V1.OperationsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, global::Google.Type.DecimalReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -135,6 +136,7 @@ namespace Google.Cloud.Channel.V1 {
   /// Request message for
   /// [CloudChannelReportsService.RunReportJob][google.cloud.channel.v1.CloudChannelReportsService.RunReportJob].
   /// </summary>
+  [global::System.ObsoleteAttribute]
   public sealed partial class RunReportJobRequest : pb::IMessage<RunReportJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -207,6 +209,7 @@ namespace Google.Cloud.Channel.V1 {
     /// <summary>
     /// Optional. The range of usage or invoice dates to include in the result.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Channel.V1.DateRange DateRange {
@@ -476,6 +479,7 @@ namespace Google.Cloud.Channel.V1 {
   /// Response message for
   /// [CloudChannelReportsService.RunReportJob][google.cloud.channel.v1.CloudChannelReportsService.RunReportJob].
   /// </summary>
+  [global::System.ObsoleteAttribute]
   public sealed partial class RunReportJobResponse : pb::IMessage<RunReportJobResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -529,6 +533,7 @@ namespace Google.Cloud.Channel.V1 {
     /// [FetchReportResultsRequest.report_job][google.cloud.channel.v1.FetchReportResultsRequest.report_job]
     /// to retrieve the report's results.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Channel.V1.ReportJob ReportJob {
@@ -546,6 +551,7 @@ namespace Google.Cloud.Channel.V1 {
     /// and date range). If you view this before the operation finishes,
     /// you may see incomplete data.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Channel.V1.ReportResultsMetadata ReportMetadata {
@@ -734,6 +740,7 @@ namespace Google.Cloud.Channel.V1 {
   /// Request message for
   /// [CloudChannelReportsService.FetchReportResults][google.cloud.channel.v1.CloudChannelReportsService.FetchReportResults].
   /// </summary>
+  [global::System.ObsoleteAttribute]
   public sealed partial class FetchReportResultsRequest : pb::IMessage<FetchReportResultsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1054,6 +1061,7 @@ namespace Google.Cloud.Channel.V1 {
   /// [CloudChannelReportsService.FetchReportResults][google.cloud.channel.v1.CloudChannelReportsService.FetchReportResults].
   /// Contains a tabular representation of the report results.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   public sealed partial class FetchReportResultsResponse : pb::IMessage<FetchReportResultsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1107,6 +1115,7 @@ namespace Google.Cloud.Channel.V1 {
     /// The metadata for the report results (display name, columns, row count, and
     /// date ranges).
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Channel.V1.ReportResultsMetadata ReportMetadata {
@@ -1125,6 +1134,7 @@ namespace Google.Cloud.Channel.V1 {
     /// The report's lists of values. Each row follows the settings and ordering
     /// of the columns from `report_metadata`.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Channel.V1.Row> Rows {
@@ -1332,6 +1342,7 @@ namespace Google.Cloud.Channel.V1 {
   /// Request message for
   /// [CloudChannelReportsService.ListReports][google.cloud.channel.v1.CloudChannelReportsService.ListReports].
   /// </summary>
+  [global::System.ObsoleteAttribute]
   public sealed partial class ListReportsRequest : pb::IMessage<ListReportsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1659,6 +1670,7 @@ namespace Google.Cloud.Channel.V1 {
   /// Response message for
   /// [CloudChannelReportsService.ListReports][google.cloud.channel.v1.CloudChannelReportsService.ListReports].
   /// </summary>
+  [global::System.ObsoleteAttribute]
   public sealed partial class ListReportsResponse : pb::IMessage<ListReportsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1712,6 +1724,7 @@ namespace Google.Cloud.Channel.V1 {
     /// <summary>
     /// The reports available to the partner.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Channel.V1.Report> Reports {
@@ -1887,6 +1900,7 @@ namespace Google.Cloud.Channel.V1 {
   /// [FetchReportResultsRequest.report_job][google.cloud.channel.v1.FetchReportResultsRequest.report_job]
   /// and the status of the operation.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   public sealed partial class ReportJob : pb::IMessage<ReportJob>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1955,6 +1969,7 @@ namespace Google.Cloud.Channel.V1 {
     /// <summary>
     /// The current status of report generation.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Channel.V1.ReportStatus ReportStatus {
@@ -2136,6 +2151,7 @@ namespace Google.Cloud.Channel.V1 {
   /// and
   /// [CloudChannelReportsService.FetchReportResults][google.cloud.channel.v1.CloudChannelReportsService.FetchReportResults].
   /// </summary>
+  [global::System.ObsoleteAttribute]
   public sealed partial class ReportResultsMetadata : pb::IMessage<ReportResultsMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2189,6 +2205,7 @@ namespace Google.Cloud.Channel.V1 {
     /// <summary>
     /// Details of the completed report.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Channel.V1.Report Report {
@@ -2219,6 +2236,7 @@ namespace Google.Cloud.Channel.V1 {
     /// <summary>
     /// The date range of reported usage.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Channel.V1.DateRange DateRange {
@@ -2239,6 +2257,7 @@ namespace Google.Cloud.Channel.V1 {
     /// For example, if `date_range` is July 1-15, `preceding_date_range` will be
     /// June 16-30.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Channel.V1.DateRange PrecedingDateRange {
@@ -2484,6 +2503,7 @@ namespace Google.Cloud.Channel.V1 {
   /// The definition of a report column. Specifies the data properties
   /// in the corresponding position of the report rows.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   public sealed partial class Column : pb::IMessage<Column>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2806,6 +2826,7 @@ namespace Google.Cloud.Channel.V1 {
   /// <summary>
   /// A representation of usage or invoice date ranges.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   public sealed partial class DateRange : pb::IMessage<DateRange>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3173,6 +3194,7 @@ namespace Google.Cloud.Channel.V1 {
   /// <summary>
   /// A row of report values.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   public sealed partial class Row : pb::IMessage<Row>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3226,6 +3248,7 @@ namespace Google.Cloud.Channel.V1 {
     /// <summary>
     /// The list of values in the row.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Channel.V1.ReportValue> Values {
@@ -3398,6 +3421,7 @@ namespace Google.Cloud.Channel.V1 {
   /// <summary>
   /// A single report value.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   public sealed partial class ReportValue : pb::IMessage<ReportValue>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3921,6 +3945,7 @@ namespace Google.Cloud.Channel.V1 {
   /// <summary>
   /// Status of a report generation process.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   public sealed partial class ReportStatus : pb::IMessage<ReportStatus>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4250,6 +4275,7 @@ namespace Google.Cloud.Channel.V1 {
   /// For example, "Google Cloud Daily Spend", "Google Workspace License Activity",
   /// etc.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   public sealed partial class Report : pb::IMessage<Report>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4341,6 +4367,7 @@ namespace Google.Cloud.Channel.V1 {
     /// The list of columns included in the report. This defines the schema of
     /// the report results.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Channel.V1.Column> Columns {

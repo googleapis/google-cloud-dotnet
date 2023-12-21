@@ -36,30 +36,36 @@ namespace GoogleCSharpSnippets
             // Create client
             CloudChannelReportsServiceClient cloudChannelReportsServiceClient = await CloudChannelReportsServiceClient.CreateAsync();
             // Initialize request argument(s)
-            RunReportJobRequest request = new RunReportJobRequest
-            {
-                ReportName = ReportName.FromAccountReport("[ACCOUNT]", "[REPORT]"),
-                DateRange = new DateRange(),
-                Filter = "",
-                LanguageCode = "",
-            };
+#pragma warning disable CS0612
+            RunReportJobRequest request = new RunReportJobRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             Operation<RunReportJobResponse, OperationMetadata> response = await cloudChannelReportsServiceClient.RunReportJobAsync(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<RunReportJobResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             RunReportJobResponse result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<RunReportJobResponse, OperationMetadata> retrievedResponse = await cloudChannelReportsServiceClient.PollOnceRunReportJobAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 RunReportJobResponse retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
         }
     }

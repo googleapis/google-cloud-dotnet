@@ -457,6 +457,7 @@ namespace Google.Cloud.Channel.V1
         /// <summary>
         /// <see cref="gccv::ReportName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gccv::ReportName ReportName
         {
             get => string.IsNullOrEmpty(Name) ? null : gccv::ReportName.Parse(Name, allowUnparsed: true);
@@ -469,6 +470,7 @@ namespace Google.Cloud.Channel.V1
         /// <summary>
         /// <see cref="ReportJobName"/>-typed view over the <see cref="ReportJob"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public ReportJobName ReportJobAsReportJobName
         {
             get => string.IsNullOrEmpty(ReportJob) ? null : ReportJobName.Parse(ReportJob, allowUnparsed: true);
@@ -481,6 +483,7 @@ namespace Google.Cloud.Channel.V1
         /// <summary>
         /// <see cref="gccv::ReportJobName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gccv::ReportJobName ReportJobName
         {
             get => string.IsNullOrEmpty(Name) ? null : gccv::ReportJobName.Parse(Name, allowUnparsed: true);
@@ -493,6 +496,7 @@ namespace Google.Cloud.Channel.V1
         /// <summary>
         /// <see cref="gccv::ReportName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gccv::ReportName ReportName
         {
             get => string.IsNullOrEmpty(Name) ? null : gccv::ReportName.Parse(Name, allowUnparsed: true);

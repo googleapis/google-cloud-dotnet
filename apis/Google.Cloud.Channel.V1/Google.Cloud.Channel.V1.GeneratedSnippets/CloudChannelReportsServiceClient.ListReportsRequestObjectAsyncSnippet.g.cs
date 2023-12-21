@@ -38,27 +38,33 @@ namespace GoogleCSharpSnippets
             // Create client
             CloudChannelReportsServiceClient cloudChannelReportsServiceClient = await CloudChannelReportsServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListReportsRequest request = new ListReportsRequest
-            {
-                Parent = "",
-                LanguageCode = "",
-            };
+#pragma warning disable CS0612
+            ListReportsRequest request = new ListReportsRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListReportsResponse, Report> response = cloudChannelReportsServiceClient.ListReportsAsync(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             await response.ForEachAsync((Report item) =>
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             await response.AsRawResponses().ForEachAsync((ListReportsResponse page) =>
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (Report item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -67,10 +73,14 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<Report> singlePage = await response.ReadPageAsync(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (Report item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
