@@ -163,6 +163,48 @@ namespace Google.Cloud.NetApp.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.ResumeReplicationRequest> __Marshaller_google_cloud_netapp_v1_ResumeReplicationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.ResumeReplicationRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.ReverseReplicationDirectionRequest> __Marshaller_google_cloud_netapp_v1_ReverseReplicationDirectionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.ReverseReplicationDirectionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.CreateBackupVaultRequest> __Marshaller_google_cloud_netapp_v1_CreateBackupVaultRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.CreateBackupVaultRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.GetBackupVaultRequest> __Marshaller_google_cloud_netapp_v1_GetBackupVaultRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.GetBackupVaultRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.BackupVault> __Marshaller_google_cloud_netapp_v1_BackupVault = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.BackupVault.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.ListBackupVaultsRequest> __Marshaller_google_cloud_netapp_v1_ListBackupVaultsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.ListBackupVaultsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.ListBackupVaultsResponse> __Marshaller_google_cloud_netapp_v1_ListBackupVaultsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.ListBackupVaultsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.UpdateBackupVaultRequest> __Marshaller_google_cloud_netapp_v1_UpdateBackupVaultRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.UpdateBackupVaultRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.DeleteBackupVaultRequest> __Marshaller_google_cloud_netapp_v1_DeleteBackupVaultRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.DeleteBackupVaultRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.CreateBackupRequest> __Marshaller_google_cloud_netapp_v1_CreateBackupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.CreateBackupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.GetBackupRequest> __Marshaller_google_cloud_netapp_v1_GetBackupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.GetBackupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.Backup> __Marshaller_google_cloud_netapp_v1_Backup = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.Backup.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.ListBackupsRequest> __Marshaller_google_cloud_netapp_v1_ListBackupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.ListBackupsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.ListBackupsResponse> __Marshaller_google_cloud_netapp_v1_ListBackupsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.ListBackupsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.DeleteBackupRequest> __Marshaller_google_cloud_netapp_v1_DeleteBackupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.DeleteBackupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.UpdateBackupRequest> __Marshaller_google_cloud_netapp_v1_UpdateBackupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.UpdateBackupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.CreateBackupPolicyRequest> __Marshaller_google_cloud_netapp_v1_CreateBackupPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.CreateBackupPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.GetBackupPolicyRequest> __Marshaller_google_cloud_netapp_v1_GetBackupPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.GetBackupPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.BackupPolicy> __Marshaller_google_cloud_netapp_v1_BackupPolicy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.BackupPolicy.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.ListBackupPoliciesRequest> __Marshaller_google_cloud_netapp_v1_ListBackupPoliciesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.ListBackupPoliciesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.ListBackupPoliciesResponse> __Marshaller_google_cloud_netapp_v1_ListBackupPoliciesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.ListBackupPoliciesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.UpdateBackupPolicyRequest> __Marshaller_google_cloud_netapp_v1_UpdateBackupPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.UpdateBackupPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.DeleteBackupPolicyRequest> __Marshaller_google_cloud_netapp_v1_DeleteBackupPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.DeleteBackupPolicyRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.NetApp.V1.ListStoragePoolsRequest, global::Google.Cloud.NetApp.V1.ListStoragePoolsResponse> __Method_ListStoragePools = new grpc::Method<global::Google.Cloud.NetApp.V1.ListStoragePoolsRequest, global::Google.Cloud.NetApp.V1.ListStoragePoolsResponse>(
@@ -450,6 +492,126 @@ namespace Google.Cloud.NetApp.V1 {
         __ServiceName,
         "ReverseReplicationDirection",
         __Marshaller_google_cloud_netapp_v1_ReverseReplicationDirectionRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.CreateBackupVaultRequest, global::Google.LongRunning.Operation> __Method_CreateBackupVault = new grpc::Method<global::Google.Cloud.NetApp.V1.CreateBackupVaultRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateBackupVault",
+        __Marshaller_google_cloud_netapp_v1_CreateBackupVaultRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.GetBackupVaultRequest, global::Google.Cloud.NetApp.V1.BackupVault> __Method_GetBackupVault = new grpc::Method<global::Google.Cloud.NetApp.V1.GetBackupVaultRequest, global::Google.Cloud.NetApp.V1.BackupVault>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetBackupVault",
+        __Marshaller_google_cloud_netapp_v1_GetBackupVaultRequest,
+        __Marshaller_google_cloud_netapp_v1_BackupVault);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.ListBackupVaultsRequest, global::Google.Cloud.NetApp.V1.ListBackupVaultsResponse> __Method_ListBackupVaults = new grpc::Method<global::Google.Cloud.NetApp.V1.ListBackupVaultsRequest, global::Google.Cloud.NetApp.V1.ListBackupVaultsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListBackupVaults",
+        __Marshaller_google_cloud_netapp_v1_ListBackupVaultsRequest,
+        __Marshaller_google_cloud_netapp_v1_ListBackupVaultsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.UpdateBackupVaultRequest, global::Google.LongRunning.Operation> __Method_UpdateBackupVault = new grpc::Method<global::Google.Cloud.NetApp.V1.UpdateBackupVaultRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateBackupVault",
+        __Marshaller_google_cloud_netapp_v1_UpdateBackupVaultRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.DeleteBackupVaultRequest, global::Google.LongRunning.Operation> __Method_DeleteBackupVault = new grpc::Method<global::Google.Cloud.NetApp.V1.DeleteBackupVaultRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteBackupVault",
+        __Marshaller_google_cloud_netapp_v1_DeleteBackupVaultRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.CreateBackupRequest, global::Google.LongRunning.Operation> __Method_CreateBackup = new grpc::Method<global::Google.Cloud.NetApp.V1.CreateBackupRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateBackup",
+        __Marshaller_google_cloud_netapp_v1_CreateBackupRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.GetBackupRequest, global::Google.Cloud.NetApp.V1.Backup> __Method_GetBackup = new grpc::Method<global::Google.Cloud.NetApp.V1.GetBackupRequest, global::Google.Cloud.NetApp.V1.Backup>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetBackup",
+        __Marshaller_google_cloud_netapp_v1_GetBackupRequest,
+        __Marshaller_google_cloud_netapp_v1_Backup);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.ListBackupsRequest, global::Google.Cloud.NetApp.V1.ListBackupsResponse> __Method_ListBackups = new grpc::Method<global::Google.Cloud.NetApp.V1.ListBackupsRequest, global::Google.Cloud.NetApp.V1.ListBackupsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListBackups",
+        __Marshaller_google_cloud_netapp_v1_ListBackupsRequest,
+        __Marshaller_google_cloud_netapp_v1_ListBackupsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.DeleteBackupRequest, global::Google.LongRunning.Operation> __Method_DeleteBackup = new grpc::Method<global::Google.Cloud.NetApp.V1.DeleteBackupRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteBackup",
+        __Marshaller_google_cloud_netapp_v1_DeleteBackupRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.UpdateBackupRequest, global::Google.LongRunning.Operation> __Method_UpdateBackup = new grpc::Method<global::Google.Cloud.NetApp.V1.UpdateBackupRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateBackup",
+        __Marshaller_google_cloud_netapp_v1_UpdateBackupRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.CreateBackupPolicyRequest, global::Google.LongRunning.Operation> __Method_CreateBackupPolicy = new grpc::Method<global::Google.Cloud.NetApp.V1.CreateBackupPolicyRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateBackupPolicy",
+        __Marshaller_google_cloud_netapp_v1_CreateBackupPolicyRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.GetBackupPolicyRequest, global::Google.Cloud.NetApp.V1.BackupPolicy> __Method_GetBackupPolicy = new grpc::Method<global::Google.Cloud.NetApp.V1.GetBackupPolicyRequest, global::Google.Cloud.NetApp.V1.BackupPolicy>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetBackupPolicy",
+        __Marshaller_google_cloud_netapp_v1_GetBackupPolicyRequest,
+        __Marshaller_google_cloud_netapp_v1_BackupPolicy);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.ListBackupPoliciesRequest, global::Google.Cloud.NetApp.V1.ListBackupPoliciesResponse> __Method_ListBackupPolicies = new grpc::Method<global::Google.Cloud.NetApp.V1.ListBackupPoliciesRequest, global::Google.Cloud.NetApp.V1.ListBackupPoliciesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListBackupPolicies",
+        __Marshaller_google_cloud_netapp_v1_ListBackupPoliciesRequest,
+        __Marshaller_google_cloud_netapp_v1_ListBackupPoliciesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.UpdateBackupPolicyRequest, global::Google.LongRunning.Operation> __Method_UpdateBackupPolicy = new grpc::Method<global::Google.Cloud.NetApp.V1.UpdateBackupPolicyRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateBackupPolicy",
+        __Marshaller_google_cloud_netapp_v1_UpdateBackupPolicyRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.DeleteBackupPolicyRequest, global::Google.LongRunning.Operation> __Method_DeleteBackupPolicy = new grpc::Method<global::Google.Cloud.NetApp.V1.DeleteBackupPolicyRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteBackupPolicy",
+        __Marshaller_google_cloud_netapp_v1_DeleteBackupPolicyRequest,
         __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
@@ -895,6 +1057,189 @@ namespace Google.Cloud.NetApp.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ReverseReplicationDirection(global::Google.Cloud.NetApp.V1.ReverseReplicationDirectionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates new backup vault
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateBackupVault(global::Google.Cloud.NetApp.V1.CreateBackupVaultRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns the description of the specified backup vault
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetApp.V1.BackupVault> GetBackupVault(global::Google.Cloud.NetApp.V1.GetBackupVaultRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns list of all available backup vaults.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetApp.V1.ListBackupVaultsResponse> ListBackupVaults(global::Google.Cloud.NetApp.V1.ListBackupVaultsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the settings of a specific backup vault.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateBackupVault(global::Google.Cloud.NetApp.V1.UpdateBackupVaultRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Warning! This operation will permanently delete the backup vault.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteBackupVault(global::Google.Cloud.NetApp.V1.DeleteBackupVaultRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a backup from the volume specified in the request
+      /// The backup can be created from the given snapshot if specified in the
+      /// request. If no snapshot specified, there'll be a new snapshot taken to
+      /// initiate the backup creation.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateBackup(global::Google.Cloud.NetApp.V1.CreateBackupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns the description of the specified backup
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetApp.V1.Backup> GetBackup(global::Google.Cloud.NetApp.V1.GetBackupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns descriptions of all backups for a backupVault.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetApp.V1.ListBackupsResponse> ListBackups(global::Google.Cloud.NetApp.V1.ListBackupsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Warning! This operation will permanently delete the backup.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteBackup(global::Google.Cloud.NetApp.V1.DeleteBackupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Update backup with full spec.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateBackup(global::Google.Cloud.NetApp.V1.UpdateBackupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates new backup policy
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateBackupPolicy(global::Google.Cloud.NetApp.V1.CreateBackupPolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns the description of the specified backup policy by backup_policy_id.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetApp.V1.BackupPolicy> GetBackupPolicy(global::Google.Cloud.NetApp.V1.GetBackupPolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns list of all available backup policies.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetApp.V1.ListBackupPoliciesResponse> ListBackupPolicies(global::Google.Cloud.NetApp.V1.ListBackupPoliciesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates settings of a specific backup policy.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateBackupPolicy(global::Google.Cloud.NetApp.V1.UpdateBackupPolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Warning! This operation will permanently delete the backup policy.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteBackupPolicy(global::Google.Cloud.NetApp.V1.DeleteBackupPolicyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2676,6 +3021,738 @@ namespace Google.Cloud.NetApp.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ReverseReplicationDirection, null, options, request);
       }
+      /// <summary>
+      /// Creates new backup vault
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateBackupVault(global::Google.Cloud.NetApp.V1.CreateBackupVaultRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateBackupVault(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates new backup vault
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateBackupVault(global::Google.Cloud.NetApp.V1.CreateBackupVaultRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateBackupVault, null, options, request);
+      }
+      /// <summary>
+      /// Creates new backup vault
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateBackupVaultAsync(global::Google.Cloud.NetApp.V1.CreateBackupVaultRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateBackupVaultAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates new backup vault
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateBackupVaultAsync(global::Google.Cloud.NetApp.V1.CreateBackupVaultRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateBackupVault, null, options, request);
+      }
+      /// <summary>
+      /// Returns the description of the specified backup vault
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetApp.V1.BackupVault GetBackupVault(global::Google.Cloud.NetApp.V1.GetBackupVaultRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBackupVault(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the description of the specified backup vault
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetApp.V1.BackupVault GetBackupVault(global::Google.Cloud.NetApp.V1.GetBackupVaultRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetBackupVault, null, options, request);
+      }
+      /// <summary>
+      /// Returns the description of the specified backup vault
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetApp.V1.BackupVault> GetBackupVaultAsync(global::Google.Cloud.NetApp.V1.GetBackupVaultRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBackupVaultAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the description of the specified backup vault
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetApp.V1.BackupVault> GetBackupVaultAsync(global::Google.Cloud.NetApp.V1.GetBackupVaultRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetBackupVault, null, options, request);
+      }
+      /// <summary>
+      /// Returns list of all available backup vaults.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetApp.V1.ListBackupVaultsResponse ListBackupVaults(global::Google.Cloud.NetApp.V1.ListBackupVaultsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBackupVaults(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns list of all available backup vaults.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetApp.V1.ListBackupVaultsResponse ListBackupVaults(global::Google.Cloud.NetApp.V1.ListBackupVaultsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListBackupVaults, null, options, request);
+      }
+      /// <summary>
+      /// Returns list of all available backup vaults.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetApp.V1.ListBackupVaultsResponse> ListBackupVaultsAsync(global::Google.Cloud.NetApp.V1.ListBackupVaultsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBackupVaultsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns list of all available backup vaults.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetApp.V1.ListBackupVaultsResponse> ListBackupVaultsAsync(global::Google.Cloud.NetApp.V1.ListBackupVaultsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListBackupVaults, null, options, request);
+      }
+      /// <summary>
+      /// Updates the settings of a specific backup vault.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateBackupVault(global::Google.Cloud.NetApp.V1.UpdateBackupVaultRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateBackupVault(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the settings of a specific backup vault.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateBackupVault(global::Google.Cloud.NetApp.V1.UpdateBackupVaultRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateBackupVault, null, options, request);
+      }
+      /// <summary>
+      /// Updates the settings of a specific backup vault.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateBackupVaultAsync(global::Google.Cloud.NetApp.V1.UpdateBackupVaultRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateBackupVaultAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the settings of a specific backup vault.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateBackupVaultAsync(global::Google.Cloud.NetApp.V1.UpdateBackupVaultRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateBackupVault, null, options, request);
+      }
+      /// <summary>
+      /// Warning! This operation will permanently delete the backup vault.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteBackupVault(global::Google.Cloud.NetApp.V1.DeleteBackupVaultRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteBackupVault(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Warning! This operation will permanently delete the backup vault.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteBackupVault(global::Google.Cloud.NetApp.V1.DeleteBackupVaultRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteBackupVault, null, options, request);
+      }
+      /// <summary>
+      /// Warning! This operation will permanently delete the backup vault.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteBackupVaultAsync(global::Google.Cloud.NetApp.V1.DeleteBackupVaultRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteBackupVaultAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Warning! This operation will permanently delete the backup vault.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteBackupVaultAsync(global::Google.Cloud.NetApp.V1.DeleteBackupVaultRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteBackupVault, null, options, request);
+      }
+      /// <summary>
+      /// Creates a backup from the volume specified in the request
+      /// The backup can be created from the given snapshot if specified in the
+      /// request. If no snapshot specified, there'll be a new snapshot taken to
+      /// initiate the backup creation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateBackup(global::Google.Cloud.NetApp.V1.CreateBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateBackup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a backup from the volume specified in the request
+      /// The backup can be created from the given snapshot if specified in the
+      /// request. If no snapshot specified, there'll be a new snapshot taken to
+      /// initiate the backup creation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateBackup(global::Google.Cloud.NetApp.V1.CreateBackupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateBackup, null, options, request);
+      }
+      /// <summary>
+      /// Creates a backup from the volume specified in the request
+      /// The backup can be created from the given snapshot if specified in the
+      /// request. If no snapshot specified, there'll be a new snapshot taken to
+      /// initiate the backup creation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateBackupAsync(global::Google.Cloud.NetApp.V1.CreateBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateBackupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a backup from the volume specified in the request
+      /// The backup can be created from the given snapshot if specified in the
+      /// request. If no snapshot specified, there'll be a new snapshot taken to
+      /// initiate the backup creation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateBackupAsync(global::Google.Cloud.NetApp.V1.CreateBackupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateBackup, null, options, request);
+      }
+      /// <summary>
+      /// Returns the description of the specified backup
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetApp.V1.Backup GetBackup(global::Google.Cloud.NetApp.V1.GetBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBackup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the description of the specified backup
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetApp.V1.Backup GetBackup(global::Google.Cloud.NetApp.V1.GetBackupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetBackup, null, options, request);
+      }
+      /// <summary>
+      /// Returns the description of the specified backup
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetApp.V1.Backup> GetBackupAsync(global::Google.Cloud.NetApp.V1.GetBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBackupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the description of the specified backup
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetApp.V1.Backup> GetBackupAsync(global::Google.Cloud.NetApp.V1.GetBackupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetBackup, null, options, request);
+      }
+      /// <summary>
+      /// Returns descriptions of all backups for a backupVault.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetApp.V1.ListBackupsResponse ListBackups(global::Google.Cloud.NetApp.V1.ListBackupsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBackups(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns descriptions of all backups for a backupVault.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetApp.V1.ListBackupsResponse ListBackups(global::Google.Cloud.NetApp.V1.ListBackupsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListBackups, null, options, request);
+      }
+      /// <summary>
+      /// Returns descriptions of all backups for a backupVault.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetApp.V1.ListBackupsResponse> ListBackupsAsync(global::Google.Cloud.NetApp.V1.ListBackupsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBackupsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns descriptions of all backups for a backupVault.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetApp.V1.ListBackupsResponse> ListBackupsAsync(global::Google.Cloud.NetApp.V1.ListBackupsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListBackups, null, options, request);
+      }
+      /// <summary>
+      /// Warning! This operation will permanently delete the backup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteBackup(global::Google.Cloud.NetApp.V1.DeleteBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteBackup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Warning! This operation will permanently delete the backup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteBackup(global::Google.Cloud.NetApp.V1.DeleteBackupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteBackup, null, options, request);
+      }
+      /// <summary>
+      /// Warning! This operation will permanently delete the backup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteBackupAsync(global::Google.Cloud.NetApp.V1.DeleteBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteBackupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Warning! This operation will permanently delete the backup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteBackupAsync(global::Google.Cloud.NetApp.V1.DeleteBackupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteBackup, null, options, request);
+      }
+      /// <summary>
+      /// Update backup with full spec.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateBackup(global::Google.Cloud.NetApp.V1.UpdateBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateBackup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update backup with full spec.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateBackup(global::Google.Cloud.NetApp.V1.UpdateBackupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateBackup, null, options, request);
+      }
+      /// <summary>
+      /// Update backup with full spec.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateBackupAsync(global::Google.Cloud.NetApp.V1.UpdateBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateBackupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update backup with full spec.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateBackupAsync(global::Google.Cloud.NetApp.V1.UpdateBackupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateBackup, null, options, request);
+      }
+      /// <summary>
+      /// Creates new backup policy
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateBackupPolicy(global::Google.Cloud.NetApp.V1.CreateBackupPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateBackupPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates new backup policy
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateBackupPolicy(global::Google.Cloud.NetApp.V1.CreateBackupPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateBackupPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Creates new backup policy
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateBackupPolicyAsync(global::Google.Cloud.NetApp.V1.CreateBackupPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateBackupPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates new backup policy
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateBackupPolicyAsync(global::Google.Cloud.NetApp.V1.CreateBackupPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateBackupPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Returns the description of the specified backup policy by backup_policy_id.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetApp.V1.BackupPolicy GetBackupPolicy(global::Google.Cloud.NetApp.V1.GetBackupPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBackupPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the description of the specified backup policy by backup_policy_id.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetApp.V1.BackupPolicy GetBackupPolicy(global::Google.Cloud.NetApp.V1.GetBackupPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetBackupPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Returns the description of the specified backup policy by backup_policy_id.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetApp.V1.BackupPolicy> GetBackupPolicyAsync(global::Google.Cloud.NetApp.V1.GetBackupPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBackupPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the description of the specified backup policy by backup_policy_id.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetApp.V1.BackupPolicy> GetBackupPolicyAsync(global::Google.Cloud.NetApp.V1.GetBackupPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetBackupPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Returns list of all available backup policies.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetApp.V1.ListBackupPoliciesResponse ListBackupPolicies(global::Google.Cloud.NetApp.V1.ListBackupPoliciesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBackupPolicies(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns list of all available backup policies.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetApp.V1.ListBackupPoliciesResponse ListBackupPolicies(global::Google.Cloud.NetApp.V1.ListBackupPoliciesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListBackupPolicies, null, options, request);
+      }
+      /// <summary>
+      /// Returns list of all available backup policies.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetApp.V1.ListBackupPoliciesResponse> ListBackupPoliciesAsync(global::Google.Cloud.NetApp.V1.ListBackupPoliciesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBackupPoliciesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns list of all available backup policies.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetApp.V1.ListBackupPoliciesResponse> ListBackupPoliciesAsync(global::Google.Cloud.NetApp.V1.ListBackupPoliciesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListBackupPolicies, null, options, request);
+      }
+      /// <summary>
+      /// Updates settings of a specific backup policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateBackupPolicy(global::Google.Cloud.NetApp.V1.UpdateBackupPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateBackupPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates settings of a specific backup policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateBackupPolicy(global::Google.Cloud.NetApp.V1.UpdateBackupPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateBackupPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Updates settings of a specific backup policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateBackupPolicyAsync(global::Google.Cloud.NetApp.V1.UpdateBackupPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateBackupPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates settings of a specific backup policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateBackupPolicyAsync(global::Google.Cloud.NetApp.V1.UpdateBackupPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateBackupPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Warning! This operation will permanently delete the backup policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteBackupPolicy(global::Google.Cloud.NetApp.V1.DeleteBackupPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteBackupPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Warning! This operation will permanently delete the backup policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteBackupPolicy(global::Google.Cloud.NetApp.V1.DeleteBackupPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteBackupPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Warning! This operation will permanently delete the backup policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteBackupPolicyAsync(global::Google.Cloud.NetApp.V1.DeleteBackupPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteBackupPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Warning! This operation will permanently delete the backup policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteBackupPolicyAsync(global::Google.Cloud.NetApp.V1.DeleteBackupPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteBackupPolicy, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override NetAppClient NewInstance(ClientBaseConfiguration configuration)
@@ -2725,7 +3802,22 @@ namespace Google.Cloud.NetApp.V1 {
           .AddMethod(__Method_UpdateReplication, serviceImpl.UpdateReplication)
           .AddMethod(__Method_StopReplication, serviceImpl.StopReplication)
           .AddMethod(__Method_ResumeReplication, serviceImpl.ResumeReplication)
-          .AddMethod(__Method_ReverseReplicationDirection, serviceImpl.ReverseReplicationDirection).Build();
+          .AddMethod(__Method_ReverseReplicationDirection, serviceImpl.ReverseReplicationDirection)
+          .AddMethod(__Method_CreateBackupVault, serviceImpl.CreateBackupVault)
+          .AddMethod(__Method_GetBackupVault, serviceImpl.GetBackupVault)
+          .AddMethod(__Method_ListBackupVaults, serviceImpl.ListBackupVaults)
+          .AddMethod(__Method_UpdateBackupVault, serviceImpl.UpdateBackupVault)
+          .AddMethod(__Method_DeleteBackupVault, serviceImpl.DeleteBackupVault)
+          .AddMethod(__Method_CreateBackup, serviceImpl.CreateBackup)
+          .AddMethod(__Method_GetBackup, serviceImpl.GetBackup)
+          .AddMethod(__Method_ListBackups, serviceImpl.ListBackups)
+          .AddMethod(__Method_DeleteBackup, serviceImpl.DeleteBackup)
+          .AddMethod(__Method_UpdateBackup, serviceImpl.UpdateBackup)
+          .AddMethod(__Method_CreateBackupPolicy, serviceImpl.CreateBackupPolicy)
+          .AddMethod(__Method_GetBackupPolicy, serviceImpl.GetBackupPolicy)
+          .AddMethod(__Method_ListBackupPolicies, serviceImpl.ListBackupPolicies)
+          .AddMethod(__Method_UpdateBackupPolicy, serviceImpl.UpdateBackupPolicy)
+          .AddMethod(__Method_DeleteBackupPolicy, serviceImpl.DeleteBackupPolicy).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -2771,6 +3863,21 @@ namespace Google.Cloud.NetApp.V1 {
       serviceBinder.AddMethod(__Method_StopReplication, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.StopReplicationRequest, global::Google.LongRunning.Operation>(serviceImpl.StopReplication));
       serviceBinder.AddMethod(__Method_ResumeReplication, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.ResumeReplicationRequest, global::Google.LongRunning.Operation>(serviceImpl.ResumeReplication));
       serviceBinder.AddMethod(__Method_ReverseReplicationDirection, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.ReverseReplicationDirectionRequest, global::Google.LongRunning.Operation>(serviceImpl.ReverseReplicationDirection));
+      serviceBinder.AddMethod(__Method_CreateBackupVault, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.CreateBackupVaultRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateBackupVault));
+      serviceBinder.AddMethod(__Method_GetBackupVault, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.GetBackupVaultRequest, global::Google.Cloud.NetApp.V1.BackupVault>(serviceImpl.GetBackupVault));
+      serviceBinder.AddMethod(__Method_ListBackupVaults, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.ListBackupVaultsRequest, global::Google.Cloud.NetApp.V1.ListBackupVaultsResponse>(serviceImpl.ListBackupVaults));
+      serviceBinder.AddMethod(__Method_UpdateBackupVault, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.UpdateBackupVaultRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateBackupVault));
+      serviceBinder.AddMethod(__Method_DeleteBackupVault, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.DeleteBackupVaultRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteBackupVault));
+      serviceBinder.AddMethod(__Method_CreateBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.CreateBackupRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateBackup));
+      serviceBinder.AddMethod(__Method_GetBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.GetBackupRequest, global::Google.Cloud.NetApp.V1.Backup>(serviceImpl.GetBackup));
+      serviceBinder.AddMethod(__Method_ListBackups, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.ListBackupsRequest, global::Google.Cloud.NetApp.V1.ListBackupsResponse>(serviceImpl.ListBackups));
+      serviceBinder.AddMethod(__Method_DeleteBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.DeleteBackupRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteBackup));
+      serviceBinder.AddMethod(__Method_UpdateBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.UpdateBackupRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateBackup));
+      serviceBinder.AddMethod(__Method_CreateBackupPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.CreateBackupPolicyRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateBackupPolicy));
+      serviceBinder.AddMethod(__Method_GetBackupPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.GetBackupPolicyRequest, global::Google.Cloud.NetApp.V1.BackupPolicy>(serviceImpl.GetBackupPolicy));
+      serviceBinder.AddMethod(__Method_ListBackupPolicies, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.ListBackupPoliciesRequest, global::Google.Cloud.NetApp.V1.ListBackupPoliciesResponse>(serviceImpl.ListBackupPolicies));
+      serviceBinder.AddMethod(__Method_UpdateBackupPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.UpdateBackupPolicyRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateBackupPolicy));
+      serviceBinder.AddMethod(__Method_DeleteBackupPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.DeleteBackupPolicyRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteBackupPolicy));
     }
 
   }

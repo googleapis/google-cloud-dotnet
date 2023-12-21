@@ -68,6 +68,9 @@ namespace Google.Cloud.NetApp.V1
         {
             yield return gcl::LocationsReflection.Descriptor;
             yield return ActiveDirectoryReflection.Descriptor;
+            yield return BackupReflection.Descriptor;
+            yield return BackupPolicyReflection.Descriptor;
+            yield return BackupVaultReflection.Descriptor;
             yield return CloudNetappServiceReflection.Descriptor;
             yield return CommonReflection.Descriptor;
             yield return KmsReflection.Descriptor;

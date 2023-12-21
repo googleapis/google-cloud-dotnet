@@ -9063,6 +9063,4242 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_CreateBackupVault_sync",
+      "title": "CreateBackupVaultRequestObject",
+      "description": "Snippet for CreateBackupVault",
+      "file": "NetAppClient.CreateBackupVaultRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBackupVault",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.CreateBackupVault",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.CreateBackupVaultRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.BackupVault, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "CreateBackupVault",
+          "fullName": "google.cloud.netapp.v1.NetApp.CreateBackupVault",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_CreateBackupVault_async",
+      "title": "CreateBackupVaultRequestObjectAsync",
+      "description": "Snippet for CreateBackupVaultAsync",
+      "file": "NetAppClient.CreateBackupVaultRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBackupVaultAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.CreateBackupVaultAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.CreateBackupVaultRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.BackupVault, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "CreateBackupVault",
+          "fullName": "google.cloud.netapp.v1.NetApp.CreateBackupVault",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_CreateBackupVault_sync_flattened",
+      "title": "CreateBackupVault",
+      "description": "Snippet for CreateBackupVault",
+      "file": "NetAppClient.CreateBackupVaultSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBackupVault",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.CreateBackupVault",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetApp.V1.BackupVault",
+            "name": "backupVault"
+          },
+          {
+            "type": "System.String",
+            "name": "backupVaultId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.BackupVault, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "CreateBackupVault",
+          "fullName": "google.cloud.netapp.v1.NetApp.CreateBackupVault",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_CreateBackupVault_async_flattened",
+      "title": "CreateBackupVaultAsync",
+      "description": "Snippet for CreateBackupVaultAsync",
+      "file": "NetAppClient.CreateBackupVaultAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBackupVaultAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.CreateBackupVaultAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetApp.V1.BackupVault",
+            "name": "backupVault"
+          },
+          {
+            "type": "System.String",
+            "name": "backupVaultId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.BackupVault, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "CreateBackupVault",
+          "fullName": "google.cloud.netapp.v1.NetApp.CreateBackupVault",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_CreateBackupVault_sync_flattened_resourceNames",
+      "title": "CreateBackupVaultResourceNames",
+      "description": "Snippet for CreateBackupVault",
+      "file": "NetAppClient.CreateBackupVaultResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBackupVault",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.CreateBackupVault",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetApp.V1.BackupVault",
+            "name": "backupVault"
+          },
+          {
+            "type": "System.String",
+            "name": "backupVaultId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.BackupVault, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "CreateBackupVault",
+          "fullName": "google.cloud.netapp.v1.NetApp.CreateBackupVault",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_CreateBackupVault_async_flattened_resourceNames",
+      "title": "CreateBackupVaultResourceNamesAsync",
+      "description": "Snippet for CreateBackupVaultAsync",
+      "file": "NetAppClient.CreateBackupVaultResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBackupVaultAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.CreateBackupVaultAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetApp.V1.BackupVault",
+            "name": "backupVault"
+          },
+          {
+            "type": "System.String",
+            "name": "backupVaultId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.BackupVault, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "CreateBackupVault",
+          "fullName": "google.cloud.netapp.v1.NetApp.CreateBackupVault",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_GetBackupVault_sync",
+      "title": "GetBackupVaultRequestObject",
+      "description": "Snippet for GetBackupVault",
+      "file": "NetAppClient.GetBackupVaultRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupVault",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.GetBackupVault",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.GetBackupVaultRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetApp.V1.BackupVault",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "GetBackupVault",
+          "fullName": "google.cloud.netapp.v1.NetApp.GetBackupVault",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_GetBackupVault_async",
+      "title": "GetBackupVaultRequestObjectAsync",
+      "description": "Snippet for GetBackupVaultAsync",
+      "file": "NetAppClient.GetBackupVaultRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupVaultAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.GetBackupVaultAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.GetBackupVaultRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetApp.V1.BackupVault>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "GetBackupVault",
+          "fullName": "google.cloud.netapp.v1.NetApp.GetBackupVault",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_GetBackupVault_sync_flattened",
+      "title": "GetBackupVault",
+      "description": "Snippet for GetBackupVault",
+      "file": "NetAppClient.GetBackupVaultSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupVault",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.GetBackupVault",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetApp.V1.BackupVault",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "GetBackupVault",
+          "fullName": "google.cloud.netapp.v1.NetApp.GetBackupVault",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_GetBackupVault_async_flattened",
+      "title": "GetBackupVaultAsync",
+      "description": "Snippet for GetBackupVaultAsync",
+      "file": "NetAppClient.GetBackupVaultAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupVaultAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.GetBackupVaultAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetApp.V1.BackupVault>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "GetBackupVault",
+          "fullName": "google.cloud.netapp.v1.NetApp.GetBackupVault",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_GetBackupVault_sync_flattened_resourceNames",
+      "title": "GetBackupVaultResourceNames",
+      "description": "Snippet for GetBackupVault",
+      "file": "NetAppClient.GetBackupVaultResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupVault",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.GetBackupVault",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.BackupVaultName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetApp.V1.BackupVault",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "GetBackupVault",
+          "fullName": "google.cloud.netapp.v1.NetApp.GetBackupVault",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_GetBackupVault_async_flattened_resourceNames",
+      "title": "GetBackupVaultResourceNamesAsync",
+      "description": "Snippet for GetBackupVaultAsync",
+      "file": "NetAppClient.GetBackupVaultResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupVaultAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.GetBackupVaultAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.BackupVaultName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetApp.V1.BackupVault>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "GetBackupVault",
+          "fullName": "google.cloud.netapp.v1.NetApp.GetBackupVault",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ListBackupVaults_sync",
+      "title": "ListBackupVaultsRequestObject",
+      "description": "Snippet for ListBackupVaults",
+      "file": "NetAppClient.ListBackupVaultsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupVaults",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ListBackupVaults",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.ListBackupVaultsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetApp.V1.ListBackupVaultsResponse, Google.Cloud.NetApp.V1.BackupVault>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ListBackupVaults",
+          "fullName": "google.cloud.netapp.v1.NetApp.ListBackupVaults",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ListBackupVaults_async",
+      "title": "ListBackupVaultsRequestObjectAsync",
+      "description": "Snippet for ListBackupVaultsAsync",
+      "file": "NetAppClient.ListBackupVaultsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupVaultsAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ListBackupVaultsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.ListBackupVaultsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetApp.V1.ListBackupVaultsResponse, Google.Cloud.NetApp.V1.BackupVault>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ListBackupVaults",
+          "fullName": "google.cloud.netapp.v1.NetApp.ListBackupVaults",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ListBackupVaults_sync_flattened",
+      "title": "ListBackupVaults",
+      "description": "Snippet for ListBackupVaults",
+      "file": "NetAppClient.ListBackupVaultsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupVaults",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ListBackupVaults",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetApp.V1.ListBackupVaultsResponse, Google.Cloud.NetApp.V1.BackupVault>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ListBackupVaults",
+          "fullName": "google.cloud.netapp.v1.NetApp.ListBackupVaults",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ListBackupVaults_async_flattened",
+      "title": "ListBackupVaultsAsync",
+      "description": "Snippet for ListBackupVaultsAsync",
+      "file": "NetAppClient.ListBackupVaultsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupVaultsAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ListBackupVaultsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetApp.V1.ListBackupVaultsResponse, Google.Cloud.NetApp.V1.BackupVault>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ListBackupVaults",
+          "fullName": "google.cloud.netapp.v1.NetApp.ListBackupVaults",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ListBackupVaults_sync_flattened_resourceNames",
+      "title": "ListBackupVaultsResourceNames",
+      "description": "Snippet for ListBackupVaults",
+      "file": "NetAppClient.ListBackupVaultsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupVaults",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ListBackupVaults",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetApp.V1.ListBackupVaultsResponse, Google.Cloud.NetApp.V1.BackupVault>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ListBackupVaults",
+          "fullName": "google.cloud.netapp.v1.NetApp.ListBackupVaults",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ListBackupVaults_async_flattened_resourceNames",
+      "title": "ListBackupVaultsResourceNamesAsync",
+      "description": "Snippet for ListBackupVaultsAsync",
+      "file": "NetAppClient.ListBackupVaultsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupVaultsAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ListBackupVaultsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetApp.V1.ListBackupVaultsResponse, Google.Cloud.NetApp.V1.BackupVault>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ListBackupVaults",
+          "fullName": "google.cloud.netapp.v1.NetApp.ListBackupVaults",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_UpdateBackupVault_sync",
+      "title": "UpdateBackupVaultRequestObject",
+      "description": "Snippet for UpdateBackupVault",
+      "file": "NetAppClient.UpdateBackupVaultRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBackupVault",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.UpdateBackupVault",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.UpdateBackupVaultRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.BackupVault, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "UpdateBackupVault",
+          "fullName": "google.cloud.netapp.v1.NetApp.UpdateBackupVault",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_UpdateBackupVault_async",
+      "title": "UpdateBackupVaultRequestObjectAsync",
+      "description": "Snippet for UpdateBackupVaultAsync",
+      "file": "NetAppClient.UpdateBackupVaultRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBackupVaultAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.UpdateBackupVaultAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.UpdateBackupVaultRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.BackupVault, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "UpdateBackupVault",
+          "fullName": "google.cloud.netapp.v1.NetApp.UpdateBackupVault",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_UpdateBackupVault_sync_flattened",
+      "title": "UpdateBackupVault",
+      "description": "Snippet for UpdateBackupVault",
+      "file": "NetAppClient.UpdateBackupVaultSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBackupVault",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.UpdateBackupVault",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.BackupVault",
+            "name": "backupVault"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.BackupVault, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "UpdateBackupVault",
+          "fullName": "google.cloud.netapp.v1.NetApp.UpdateBackupVault",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_UpdateBackupVault_async_flattened",
+      "title": "UpdateBackupVaultAsync",
+      "description": "Snippet for UpdateBackupVaultAsync",
+      "file": "NetAppClient.UpdateBackupVaultAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBackupVaultAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.UpdateBackupVaultAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.BackupVault",
+            "name": "backupVault"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.BackupVault, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "UpdateBackupVault",
+          "fullName": "google.cloud.netapp.v1.NetApp.UpdateBackupVault",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_DeleteBackupVault_sync",
+      "title": "DeleteBackupVaultRequestObject",
+      "description": "Snippet for DeleteBackupVault",
+      "file": "NetAppClient.DeleteBackupVaultRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBackupVault",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.DeleteBackupVault",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.DeleteBackupVaultRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "DeleteBackupVault",
+          "fullName": "google.cloud.netapp.v1.NetApp.DeleteBackupVault",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_DeleteBackupVault_async",
+      "title": "DeleteBackupVaultRequestObjectAsync",
+      "description": "Snippet for DeleteBackupVaultAsync",
+      "file": "NetAppClient.DeleteBackupVaultRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBackupVaultAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.DeleteBackupVaultAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.DeleteBackupVaultRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "DeleteBackupVault",
+          "fullName": "google.cloud.netapp.v1.NetApp.DeleteBackupVault",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_DeleteBackupVault_sync_flattened",
+      "title": "DeleteBackupVault",
+      "description": "Snippet for DeleteBackupVault",
+      "file": "NetAppClient.DeleteBackupVaultSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBackupVault",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.DeleteBackupVault",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "DeleteBackupVault",
+          "fullName": "google.cloud.netapp.v1.NetApp.DeleteBackupVault",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_DeleteBackupVault_async_flattened",
+      "title": "DeleteBackupVaultAsync",
+      "description": "Snippet for DeleteBackupVaultAsync",
+      "file": "NetAppClient.DeleteBackupVaultAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBackupVaultAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.DeleteBackupVaultAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "DeleteBackupVault",
+          "fullName": "google.cloud.netapp.v1.NetApp.DeleteBackupVault",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_DeleteBackupVault_sync_flattened_resourceNames",
+      "title": "DeleteBackupVaultResourceNames",
+      "description": "Snippet for DeleteBackupVault",
+      "file": "NetAppClient.DeleteBackupVaultResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBackupVault",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.DeleteBackupVault",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.BackupVaultName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "DeleteBackupVault",
+          "fullName": "google.cloud.netapp.v1.NetApp.DeleteBackupVault",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_DeleteBackupVault_async_flattened_resourceNames",
+      "title": "DeleteBackupVaultResourceNamesAsync",
+      "description": "Snippet for DeleteBackupVaultAsync",
+      "file": "NetAppClient.DeleteBackupVaultResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBackupVaultAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.DeleteBackupVaultAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.BackupVaultName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "DeleteBackupVault",
+          "fullName": "google.cloud.netapp.v1.NetApp.DeleteBackupVault",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_CreateBackup_sync",
+      "title": "CreateBackupRequestObject",
+      "description": "Snippet for CreateBackup",
+      "file": "NetAppClient.CreateBackupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBackup",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.CreateBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.CreateBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.Backup, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "CreateBackup",
+          "fullName": "google.cloud.netapp.v1.NetApp.CreateBackup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_CreateBackup_async",
+      "title": "CreateBackupRequestObjectAsync",
+      "description": "Snippet for CreateBackupAsync",
+      "file": "NetAppClient.CreateBackupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBackupAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.CreateBackupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.CreateBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.Backup, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "CreateBackup",
+          "fullName": "google.cloud.netapp.v1.NetApp.CreateBackup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_CreateBackup_sync_flattened",
+      "title": "CreateBackup",
+      "description": "Snippet for CreateBackup",
+      "file": "NetAppClient.CreateBackupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBackup",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.CreateBackup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetApp.V1.Backup",
+            "name": "backup"
+          },
+          {
+            "type": "System.String",
+            "name": "backupId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.Backup, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "CreateBackup",
+          "fullName": "google.cloud.netapp.v1.NetApp.CreateBackup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_CreateBackup_async_flattened",
+      "title": "CreateBackupAsync",
+      "description": "Snippet for CreateBackupAsync",
+      "file": "NetAppClient.CreateBackupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBackupAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.CreateBackupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetApp.V1.Backup",
+            "name": "backup"
+          },
+          {
+            "type": "System.String",
+            "name": "backupId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.Backup, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "CreateBackup",
+          "fullName": "google.cloud.netapp.v1.NetApp.CreateBackup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_CreateBackup_sync_flattened_resourceNames",
+      "title": "CreateBackupResourceNames",
+      "description": "Snippet for CreateBackup",
+      "file": "NetAppClient.CreateBackupResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBackup",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.CreateBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.BackupVaultName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetApp.V1.Backup",
+            "name": "backup"
+          },
+          {
+            "type": "System.String",
+            "name": "backupId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.Backup, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "CreateBackup",
+          "fullName": "google.cloud.netapp.v1.NetApp.CreateBackup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_CreateBackup_async_flattened_resourceNames",
+      "title": "CreateBackupResourceNamesAsync",
+      "description": "Snippet for CreateBackupAsync",
+      "file": "NetAppClient.CreateBackupResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBackupAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.CreateBackupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.BackupVaultName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetApp.V1.Backup",
+            "name": "backup"
+          },
+          {
+            "type": "System.String",
+            "name": "backupId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.Backup, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "CreateBackup",
+          "fullName": "google.cloud.netapp.v1.NetApp.CreateBackup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_GetBackup_sync",
+      "title": "GetBackupRequestObject",
+      "description": "Snippet for GetBackup",
+      "file": "NetAppClient.GetBackupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackup",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.GetBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.GetBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetApp.V1.Backup",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "GetBackup",
+          "fullName": "google.cloud.netapp.v1.NetApp.GetBackup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_GetBackup_async",
+      "title": "GetBackupRequestObjectAsync",
+      "description": "Snippet for GetBackupAsync",
+      "file": "NetAppClient.GetBackupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.GetBackupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.GetBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetApp.V1.Backup>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "GetBackup",
+          "fullName": "google.cloud.netapp.v1.NetApp.GetBackup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_GetBackup_sync_flattened",
+      "title": "GetBackup",
+      "description": "Snippet for GetBackup",
+      "file": "NetAppClient.GetBackupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackup",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.GetBackup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetApp.V1.Backup",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "GetBackup",
+          "fullName": "google.cloud.netapp.v1.NetApp.GetBackup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_GetBackup_async_flattened",
+      "title": "GetBackupAsync",
+      "description": "Snippet for GetBackupAsync",
+      "file": "NetAppClient.GetBackupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.GetBackupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetApp.V1.Backup>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "GetBackup",
+          "fullName": "google.cloud.netapp.v1.NetApp.GetBackup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_GetBackup_sync_flattened_resourceNames",
+      "title": "GetBackupResourceNames",
+      "description": "Snippet for GetBackup",
+      "file": "NetAppClient.GetBackupResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackup",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.GetBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.BackupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetApp.V1.Backup",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "GetBackup",
+          "fullName": "google.cloud.netapp.v1.NetApp.GetBackup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_GetBackup_async_flattened_resourceNames",
+      "title": "GetBackupResourceNamesAsync",
+      "description": "Snippet for GetBackupAsync",
+      "file": "NetAppClient.GetBackupResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.GetBackupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.BackupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetApp.V1.Backup>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "GetBackup",
+          "fullName": "google.cloud.netapp.v1.NetApp.GetBackup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ListBackups_sync",
+      "title": "ListBackupsRequestObject",
+      "description": "Snippet for ListBackups",
+      "file": "NetAppClient.ListBackupsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackups",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ListBackups",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.ListBackupsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetApp.V1.ListBackupsResponse, Google.Cloud.NetApp.V1.Backup>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ListBackups",
+          "fullName": "google.cloud.netapp.v1.NetApp.ListBackups",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ListBackups_async",
+      "title": "ListBackupsRequestObjectAsync",
+      "description": "Snippet for ListBackupsAsync",
+      "file": "NetAppClient.ListBackupsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupsAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ListBackupsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.ListBackupsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetApp.V1.ListBackupsResponse, Google.Cloud.NetApp.V1.Backup>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ListBackups",
+          "fullName": "google.cloud.netapp.v1.NetApp.ListBackups",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ListBackups_sync_flattened",
+      "title": "ListBackups",
+      "description": "Snippet for ListBackups",
+      "file": "NetAppClient.ListBackupsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackups",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ListBackups",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetApp.V1.ListBackupsResponse, Google.Cloud.NetApp.V1.Backup>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ListBackups",
+          "fullName": "google.cloud.netapp.v1.NetApp.ListBackups",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ListBackups_async_flattened",
+      "title": "ListBackupsAsync",
+      "description": "Snippet for ListBackupsAsync",
+      "file": "NetAppClient.ListBackupsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupsAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ListBackupsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetApp.V1.ListBackupsResponse, Google.Cloud.NetApp.V1.Backup>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ListBackups",
+          "fullName": "google.cloud.netapp.v1.NetApp.ListBackups",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ListBackups_sync_flattened_resourceNames",
+      "title": "ListBackupsResourceNames",
+      "description": "Snippet for ListBackups",
+      "file": "NetAppClient.ListBackupsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackups",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ListBackups",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.BackupVaultName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetApp.V1.ListBackupsResponse, Google.Cloud.NetApp.V1.Backup>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ListBackups",
+          "fullName": "google.cloud.netapp.v1.NetApp.ListBackups",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ListBackups_async_flattened_resourceNames",
+      "title": "ListBackupsResourceNamesAsync",
+      "description": "Snippet for ListBackupsAsync",
+      "file": "NetAppClient.ListBackupsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupsAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ListBackupsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.BackupVaultName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetApp.V1.ListBackupsResponse, Google.Cloud.NetApp.V1.Backup>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ListBackups",
+          "fullName": "google.cloud.netapp.v1.NetApp.ListBackups",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_DeleteBackup_sync",
+      "title": "DeleteBackupRequestObject",
+      "description": "Snippet for DeleteBackup",
+      "file": "NetAppClient.DeleteBackupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBackup",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.DeleteBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.DeleteBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "DeleteBackup",
+          "fullName": "google.cloud.netapp.v1.NetApp.DeleteBackup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_DeleteBackup_async",
+      "title": "DeleteBackupRequestObjectAsync",
+      "description": "Snippet for DeleteBackupAsync",
+      "file": "NetAppClient.DeleteBackupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBackupAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.DeleteBackupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.DeleteBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "DeleteBackup",
+          "fullName": "google.cloud.netapp.v1.NetApp.DeleteBackup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_DeleteBackup_sync_flattened",
+      "title": "DeleteBackup",
+      "description": "Snippet for DeleteBackup",
+      "file": "NetAppClient.DeleteBackupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBackup",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.DeleteBackup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "DeleteBackup",
+          "fullName": "google.cloud.netapp.v1.NetApp.DeleteBackup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_DeleteBackup_async_flattened",
+      "title": "DeleteBackupAsync",
+      "description": "Snippet for DeleteBackupAsync",
+      "file": "NetAppClient.DeleteBackupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBackupAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.DeleteBackupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "DeleteBackup",
+          "fullName": "google.cloud.netapp.v1.NetApp.DeleteBackup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_DeleteBackup_sync_flattened_resourceNames",
+      "title": "DeleteBackupResourceNames",
+      "description": "Snippet for DeleteBackup",
+      "file": "NetAppClient.DeleteBackupResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBackup",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.DeleteBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.BackupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "DeleteBackup",
+          "fullName": "google.cloud.netapp.v1.NetApp.DeleteBackup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_DeleteBackup_async_flattened_resourceNames",
+      "title": "DeleteBackupResourceNamesAsync",
+      "description": "Snippet for DeleteBackupAsync",
+      "file": "NetAppClient.DeleteBackupResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBackupAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.DeleteBackupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.BackupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "DeleteBackup",
+          "fullName": "google.cloud.netapp.v1.NetApp.DeleteBackup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_UpdateBackup_sync",
+      "title": "UpdateBackupRequestObject",
+      "description": "Snippet for UpdateBackup",
+      "file": "NetAppClient.UpdateBackupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBackup",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.UpdateBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.UpdateBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.Backup, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "UpdateBackup",
+          "fullName": "google.cloud.netapp.v1.NetApp.UpdateBackup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_UpdateBackup_async",
+      "title": "UpdateBackupRequestObjectAsync",
+      "description": "Snippet for UpdateBackupAsync",
+      "file": "NetAppClient.UpdateBackupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBackupAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.UpdateBackupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.UpdateBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.Backup, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "UpdateBackup",
+          "fullName": "google.cloud.netapp.v1.NetApp.UpdateBackup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_UpdateBackup_sync_flattened",
+      "title": "UpdateBackup",
+      "description": "Snippet for UpdateBackup",
+      "file": "NetAppClient.UpdateBackupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBackup",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.UpdateBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.Backup",
+            "name": "backup"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.Backup, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "UpdateBackup",
+          "fullName": "google.cloud.netapp.v1.NetApp.UpdateBackup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_UpdateBackup_async_flattened",
+      "title": "UpdateBackupAsync",
+      "description": "Snippet for UpdateBackupAsync",
+      "file": "NetAppClient.UpdateBackupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBackupAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.UpdateBackupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.Backup",
+            "name": "backup"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.Backup, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "UpdateBackup",
+          "fullName": "google.cloud.netapp.v1.NetApp.UpdateBackup",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_CreateBackupPolicy_sync",
+      "title": "CreateBackupPolicyRequestObject",
+      "description": "Snippet for CreateBackupPolicy",
+      "file": "NetAppClient.CreateBackupPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBackupPolicy",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.CreateBackupPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.CreateBackupPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.BackupPolicy, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "CreateBackupPolicy",
+          "fullName": "google.cloud.netapp.v1.NetApp.CreateBackupPolicy",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_CreateBackupPolicy_async",
+      "title": "CreateBackupPolicyRequestObjectAsync",
+      "description": "Snippet for CreateBackupPolicyAsync",
+      "file": "NetAppClient.CreateBackupPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBackupPolicyAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.CreateBackupPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.CreateBackupPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.BackupPolicy, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "CreateBackupPolicy",
+          "fullName": "google.cloud.netapp.v1.NetApp.CreateBackupPolicy",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_CreateBackupPolicy_sync_flattened",
+      "title": "CreateBackupPolicy",
+      "description": "Snippet for CreateBackupPolicy",
+      "file": "NetAppClient.CreateBackupPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBackupPolicy",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.CreateBackupPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetApp.V1.BackupPolicy",
+            "name": "backupPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "backupPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.BackupPolicy, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "CreateBackupPolicy",
+          "fullName": "google.cloud.netapp.v1.NetApp.CreateBackupPolicy",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_CreateBackupPolicy_async_flattened",
+      "title": "CreateBackupPolicyAsync",
+      "description": "Snippet for CreateBackupPolicyAsync",
+      "file": "NetAppClient.CreateBackupPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBackupPolicyAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.CreateBackupPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetApp.V1.BackupPolicy",
+            "name": "backupPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "backupPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.BackupPolicy, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "CreateBackupPolicy",
+          "fullName": "google.cloud.netapp.v1.NetApp.CreateBackupPolicy",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_CreateBackupPolicy_sync_flattened_resourceNames",
+      "title": "CreateBackupPolicyResourceNames",
+      "description": "Snippet for CreateBackupPolicy",
+      "file": "NetAppClient.CreateBackupPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBackupPolicy",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.CreateBackupPolicy",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetApp.V1.BackupPolicy",
+            "name": "backupPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "backupPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.BackupPolicy, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "CreateBackupPolicy",
+          "fullName": "google.cloud.netapp.v1.NetApp.CreateBackupPolicy",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_CreateBackupPolicy_async_flattened_resourceNames",
+      "title": "CreateBackupPolicyResourceNamesAsync",
+      "description": "Snippet for CreateBackupPolicyAsync",
+      "file": "NetAppClient.CreateBackupPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBackupPolicyAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.CreateBackupPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetApp.V1.BackupPolicy",
+            "name": "backupPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "backupPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.BackupPolicy, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "CreateBackupPolicy",
+          "fullName": "google.cloud.netapp.v1.NetApp.CreateBackupPolicy",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_GetBackupPolicy_sync",
+      "title": "GetBackupPolicyRequestObject",
+      "description": "Snippet for GetBackupPolicy",
+      "file": "NetAppClient.GetBackupPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupPolicy",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.GetBackupPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.GetBackupPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetApp.V1.BackupPolicy",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "GetBackupPolicy",
+          "fullName": "google.cloud.netapp.v1.NetApp.GetBackupPolicy",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_GetBackupPolicy_async",
+      "title": "GetBackupPolicyRequestObjectAsync",
+      "description": "Snippet for GetBackupPolicyAsync",
+      "file": "NetAppClient.GetBackupPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupPolicyAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.GetBackupPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.GetBackupPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetApp.V1.BackupPolicy>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "GetBackupPolicy",
+          "fullName": "google.cloud.netapp.v1.NetApp.GetBackupPolicy",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_GetBackupPolicy_sync_flattened",
+      "title": "GetBackupPolicy",
+      "description": "Snippet for GetBackupPolicy",
+      "file": "NetAppClient.GetBackupPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupPolicy",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.GetBackupPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetApp.V1.BackupPolicy",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "GetBackupPolicy",
+          "fullName": "google.cloud.netapp.v1.NetApp.GetBackupPolicy",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_GetBackupPolicy_async_flattened",
+      "title": "GetBackupPolicyAsync",
+      "description": "Snippet for GetBackupPolicyAsync",
+      "file": "NetAppClient.GetBackupPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupPolicyAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.GetBackupPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetApp.V1.BackupPolicy>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "GetBackupPolicy",
+          "fullName": "google.cloud.netapp.v1.NetApp.GetBackupPolicy",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_GetBackupPolicy_sync_flattened_resourceNames",
+      "title": "GetBackupPolicyResourceNames",
+      "description": "Snippet for GetBackupPolicy",
+      "file": "NetAppClient.GetBackupPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupPolicy",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.GetBackupPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.BackupPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetApp.V1.BackupPolicy",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "GetBackupPolicy",
+          "fullName": "google.cloud.netapp.v1.NetApp.GetBackupPolicy",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_GetBackupPolicy_async_flattened_resourceNames",
+      "title": "GetBackupPolicyResourceNamesAsync",
+      "description": "Snippet for GetBackupPolicyAsync",
+      "file": "NetAppClient.GetBackupPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupPolicyAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.GetBackupPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.BackupPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetApp.V1.BackupPolicy>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "GetBackupPolicy",
+          "fullName": "google.cloud.netapp.v1.NetApp.GetBackupPolicy",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ListBackupPolicies_sync",
+      "title": "ListBackupPoliciesRequestObject",
+      "description": "Snippet for ListBackupPolicies",
+      "file": "NetAppClient.ListBackupPoliciesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupPolicies",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ListBackupPolicies",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.ListBackupPoliciesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetApp.V1.ListBackupPoliciesResponse, Google.Cloud.NetApp.V1.BackupPolicy>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ListBackupPolicies",
+          "fullName": "google.cloud.netapp.v1.NetApp.ListBackupPolicies",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ListBackupPolicies_async",
+      "title": "ListBackupPoliciesRequestObjectAsync",
+      "description": "Snippet for ListBackupPoliciesAsync",
+      "file": "NetAppClient.ListBackupPoliciesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupPoliciesAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ListBackupPoliciesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.ListBackupPoliciesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetApp.V1.ListBackupPoliciesResponse, Google.Cloud.NetApp.V1.BackupPolicy>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ListBackupPolicies",
+          "fullName": "google.cloud.netapp.v1.NetApp.ListBackupPolicies",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ListBackupPolicies_sync_flattened",
+      "title": "ListBackupPolicies",
+      "description": "Snippet for ListBackupPolicies",
+      "file": "NetAppClient.ListBackupPoliciesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupPolicies",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ListBackupPolicies",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetApp.V1.ListBackupPoliciesResponse, Google.Cloud.NetApp.V1.BackupPolicy>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ListBackupPolicies",
+          "fullName": "google.cloud.netapp.v1.NetApp.ListBackupPolicies",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ListBackupPolicies_async_flattened",
+      "title": "ListBackupPoliciesAsync",
+      "description": "Snippet for ListBackupPoliciesAsync",
+      "file": "NetAppClient.ListBackupPoliciesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupPoliciesAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ListBackupPoliciesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetApp.V1.ListBackupPoliciesResponse, Google.Cloud.NetApp.V1.BackupPolicy>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ListBackupPolicies",
+          "fullName": "google.cloud.netapp.v1.NetApp.ListBackupPolicies",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ListBackupPolicies_sync_flattened_resourceNames",
+      "title": "ListBackupPoliciesResourceNames",
+      "description": "Snippet for ListBackupPolicies",
+      "file": "NetAppClient.ListBackupPoliciesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupPolicies",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ListBackupPolicies",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetApp.V1.ListBackupPoliciesResponse, Google.Cloud.NetApp.V1.BackupPolicy>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ListBackupPolicies",
+          "fullName": "google.cloud.netapp.v1.NetApp.ListBackupPolicies",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ListBackupPolicies_async_flattened_resourceNames",
+      "title": "ListBackupPoliciesResourceNamesAsync",
+      "description": "Snippet for ListBackupPoliciesAsync",
+      "file": "NetAppClient.ListBackupPoliciesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupPoliciesAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ListBackupPoliciesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetApp.V1.ListBackupPoliciesResponse, Google.Cloud.NetApp.V1.BackupPolicy>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ListBackupPolicies",
+          "fullName": "google.cloud.netapp.v1.NetApp.ListBackupPolicies",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_UpdateBackupPolicy_sync",
+      "title": "UpdateBackupPolicyRequestObject",
+      "description": "Snippet for UpdateBackupPolicy",
+      "file": "NetAppClient.UpdateBackupPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBackupPolicy",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.UpdateBackupPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.UpdateBackupPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.BackupPolicy, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "UpdateBackupPolicy",
+          "fullName": "google.cloud.netapp.v1.NetApp.UpdateBackupPolicy",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_UpdateBackupPolicy_async",
+      "title": "UpdateBackupPolicyRequestObjectAsync",
+      "description": "Snippet for UpdateBackupPolicyAsync",
+      "file": "NetAppClient.UpdateBackupPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBackupPolicyAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.UpdateBackupPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.UpdateBackupPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.BackupPolicy, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "UpdateBackupPolicy",
+          "fullName": "google.cloud.netapp.v1.NetApp.UpdateBackupPolicy",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_UpdateBackupPolicy_sync_flattened",
+      "title": "UpdateBackupPolicy",
+      "description": "Snippet for UpdateBackupPolicy",
+      "file": "NetAppClient.UpdateBackupPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBackupPolicy",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.UpdateBackupPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.BackupPolicy",
+            "name": "backupPolicy"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.BackupPolicy, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "UpdateBackupPolicy",
+          "fullName": "google.cloud.netapp.v1.NetApp.UpdateBackupPolicy",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_UpdateBackupPolicy_async_flattened",
+      "title": "UpdateBackupPolicyAsync",
+      "description": "Snippet for UpdateBackupPolicyAsync",
+      "file": "NetAppClient.UpdateBackupPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBackupPolicyAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.UpdateBackupPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.BackupPolicy",
+            "name": "backupPolicy"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.BackupPolicy, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "UpdateBackupPolicy",
+          "fullName": "google.cloud.netapp.v1.NetApp.UpdateBackupPolicy",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_DeleteBackupPolicy_sync",
+      "title": "DeleteBackupPolicyRequestObject",
+      "description": "Snippet for DeleteBackupPolicy",
+      "file": "NetAppClient.DeleteBackupPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBackupPolicy",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.DeleteBackupPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.DeleteBackupPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "DeleteBackupPolicy",
+          "fullName": "google.cloud.netapp.v1.NetApp.DeleteBackupPolicy",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_DeleteBackupPolicy_async",
+      "title": "DeleteBackupPolicyRequestObjectAsync",
+      "description": "Snippet for DeleteBackupPolicyAsync",
+      "file": "NetAppClient.DeleteBackupPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBackupPolicyAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.DeleteBackupPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.DeleteBackupPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "DeleteBackupPolicy",
+          "fullName": "google.cloud.netapp.v1.NetApp.DeleteBackupPolicy",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_DeleteBackupPolicy_sync_flattened",
+      "title": "DeleteBackupPolicy",
+      "description": "Snippet for DeleteBackupPolicy",
+      "file": "NetAppClient.DeleteBackupPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBackupPolicy",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.DeleteBackupPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "DeleteBackupPolicy",
+          "fullName": "google.cloud.netapp.v1.NetApp.DeleteBackupPolicy",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_DeleteBackupPolicy_async_flattened",
+      "title": "DeleteBackupPolicyAsync",
+      "description": "Snippet for DeleteBackupPolicyAsync",
+      "file": "NetAppClient.DeleteBackupPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBackupPolicyAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.DeleteBackupPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "DeleteBackupPolicy",
+          "fullName": "google.cloud.netapp.v1.NetApp.DeleteBackupPolicy",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_DeleteBackupPolicy_sync_flattened_resourceNames",
+      "title": "DeleteBackupPolicyResourceNames",
+      "description": "Snippet for DeleteBackupPolicy",
+      "file": "NetAppClient.DeleteBackupPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBackupPolicy",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.DeleteBackupPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.BackupPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "DeleteBackupPolicy",
+          "fullName": "google.cloud.netapp.v1.NetApp.DeleteBackupPolicy",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_DeleteBackupPolicy_async_flattened_resourceNames",
+      "title": "DeleteBackupPolicyResourceNamesAsync",
+      "description": "Snippet for DeleteBackupPolicyAsync",
+      "file": "NetAppClient.DeleteBackupPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBackupPolicyAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.DeleteBackupPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.BackupPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "DeleteBackupPolicy",
+          "fullName": "google.cloud.netapp.v1.NetApp.DeleteBackupPolicy",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

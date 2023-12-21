@@ -44,8 +44,8 @@ namespace Google.Cloud.NetApp.V1 {
             "Z29vZ2xlYXBpcy5jb20vU25hcHNob3QihgEKFVVwZGF0ZVNuYXBzaG90UmVx",
             "dWVzdBI0Cgt1cGRhdGVfbWFzaxgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5G",
             "aWVsZE1hc2tCA+BBAhI3CghzbmFwc2hvdBgCIAEoCzIgLmdvb2dsZS5jbG91",
-            "ZC5uZXRhcHAudjEuU25hcHNob3RCA+BBAiKoBAoIU25hcHNob3QSEQoEbmFt",
-            "ZRgBIAEoCUID4EEDEjoKBXN0YXRlGAIgASgOMiYuZ29vZ2xlLmNsb3VkLm5l",
+            "ZC5uZXRhcHAudjEuU25hcHNob3RCA+BBAiK/BAoIU25hcHNob3QSEQoEbmFt",
+            "ZRgBIAEoCUID4EEIEjoKBXN0YXRlGAIgASgOMiYuZ29vZ2xlLmNsb3VkLm5l",
             "dGFwcC52MS5TbmFwc2hvdC5TdGF0ZUID4EEDEhoKDXN0YXRlX2RldGFpbHMY",
             "AyABKAlCA+BBAxITCgtkZXNjcmlwdGlvbhgEIAEoCRIXCgp1c2VkX2J5dGVz",
             "GAUgASgBQgPgQQMSNAoLY3JlYXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJv",
@@ -54,14 +54,14 @@ namespace Google.Cloud.NetApp.V1 {
             "bHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBImwKBVN0",
             "YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCQoFUkVBRFkQARIMCghDUkVB",
             "VElORxACEgwKCERFTEVUSU5HEAMSDAoIVVBEQVRJTkcQBBIMCghESVNBQkxF",
-            "RBAFEgkKBUVSUk9SEAY6cupBbwoebmV0YXBwLmdvb2dsZWFwaXMuY29tL1Nu",
-            "YXBzaG90Ek1wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
-            "bn0vdm9sdW1lcy97dm9sdW1lfS9zbmFwc2hvdHMve3NuYXBzaG90fUKvAQoa",
-            "Y29tLmdvb2dsZS5jbG91ZC5uZXRhcHAudjFCDVNuYXBzaG90UHJvdG9QAVoy",
-            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9uZXRhcHAvYXBpdjEvbmV0YXBwcGI7bmV0",
-            "YXBwcGKqAhZHb29nbGUuQ2xvdWQuTmV0QXBwLlYxygIWR29vZ2xlXENsb3Vk",
-            "XE5ldEFwcFxWMeoCGUdvb2dsZTo6Q2xvdWQ6Ok5ldEFwcDo6VjFiBnByb3Rv",
-            "Mw=="));
+            "RBAFEgkKBUVSUk9SEAY6iAHqQYQBCh5uZXRhcHAuZ29vZ2xlYXBpcy5jb20v",
+            "U25hcHNob3QSTXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0",
+            "aW9ufS92b2x1bWVzL3t2b2x1bWV9L3NuYXBzaG90cy97c25hcHNob3R9Kglz",
+            "bmFwc2hvdHMyCHNuYXBzaG90Qq8BChpjb20uZ29vZ2xlLmNsb3VkLm5ldGFw",
+            "cC52MUINU25hcHNob3RQcm90b1ABWjJjbG91ZC5nb29nbGUuY29tL2dvL25l",
+            "dGFwcC9hcGl2MS9uZXRhcHBwYjtuZXRhcHBwYqoCFkdvb2dsZS5DbG91ZC5O",
+            "ZXRBcHAuVjHKAhZHb29nbGVcQ2xvdWRcTmV0QXBwXFYx6gIZR29vZ2xlOjpD",
+            "bG91ZDo6TmV0QXBwOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -1680,7 +1680,7 @@ namespace Google.Cloud.NetApp.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. The resource name of the snapshot.
+    /// Identifier. The resource name of the snapshot.
     /// Format:
     /// `projects/{project_id}/locations/{location}/volumes/{volume_id}/snapshots/{snapshot_id}`.
     /// </summary>

@@ -47,8 +47,8 @@ namespace Google.Cloud.NetApp.V1 {
             "Y3RpdmVfZGlyZWN0b3J5GAIgASgLMicuZ29vZ2xlLmNsb3VkLm5ldGFwcC52",
             "MS5BY3RpdmVEaXJlY3RvcnlCA+BBAiJbChxEZWxldGVBY3RpdmVEaXJlY3Rv",
             "cnlSZXF1ZXN0EjsKBG5hbWUYASABKAlCLeBBAvpBJwolbmV0YXBwLmdvb2ds",
-            "ZWFwaXMuY29tL0FjdGl2ZURpcmVjdG9yeSKNBwoPQWN0aXZlRGlyZWN0b3J5",
-            "EhEKBG5hbWUYASABKAlCA+BBAxI0CgtjcmVhdGVfdGltZRgCIAEoCzIaLmdv",
+            "ZWFwaXMuY29tL0FjdGl2ZURpcmVjdG9yeSKzBwoPQWN0aXZlRGlyZWN0b3J5",
+            "EhEKBG5hbWUYASABKAlCA+BBCBI0CgtjcmVhdGVfdGltZRgCIAEoCzIaLmdv",
             "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJBCgVzdGF0ZRgDIAEoDjIt",
             "Lmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuQWN0aXZlRGlyZWN0b3J5LlN0YXRl",
             "QgPgQQMSEwoGZG9tYWluGAQgASgJQgPgQQISDAoEc2l0ZRgFIAEoCRIQCgNk",
@@ -65,14 +65,14 @@ namespace Google.Cloud.NetApp.V1 {
             "EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiagoFU3RhdGUSFQoR",
             "U1RBVEVfVU5TUEVDSUZJRUQQABIMCghDUkVBVElORxABEgkKBVJFQURZEAIS",
             "DAoIVVBEQVRJTkcQAxIKCgZJTl9VU0UQBBIMCghERUxFVElORxAFEgkKBUVS",
-            "Uk9SEAY6eOpBdQolbmV0YXBwLmdvb2dsZWFwaXMuY29tL0FjdGl2ZURpcmVj",
-            "dG9yeRJMcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259",
-            "L2FjdGl2ZURpcmVjdG9yaWVzL3thY3RpdmVfZGlyZWN0b3J5fUK2AQoaY29t",
-            "Lmdvb2dsZS5jbG91ZC5uZXRhcHAudjFCFEFjdGl2ZURpcmVjdG9yeVByb3Rv",
-            "UAFaMmNsb3VkLmdvb2dsZS5jb20vZ28vbmV0YXBwL2FwaXYxL25ldGFwcHBi",
-            "O25ldGFwcHBiqgIWR29vZ2xlLkNsb3VkLk5ldEFwcC5WMcoCFkdvb2dsZVxD",
-            "bG91ZFxOZXRBcHBcVjHqAhlHb29nbGU6OkNsb3VkOjpOZXRBcHA6OlYxYgZw",
-            "cm90bzM="));
+            "Uk9SEAY6nQHqQZkBCiVuZXRhcHAuZ29vZ2xlYXBpcy5jb20vQWN0aXZlRGly",
+            "ZWN0b3J5Ekxwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
+            "bn0vYWN0aXZlRGlyZWN0b3JpZXMve2FjdGl2ZV9kaXJlY3Rvcnl9KhFhY3Rp",
+            "dmVEaXJlY3RvcmllczIPYWN0aXZlRGlyZWN0b3J5QrYBChpjb20uZ29vZ2xl",
+            "LmNsb3VkLm5ldGFwcC52MUIUQWN0aXZlRGlyZWN0b3J5UHJvdG9QAVoyY2xv",
+            "dWQuZ29vZ2xlLmNvbS9nby9uZXRhcHAvYXBpdjEvbmV0YXBwcGI7bmV0YXBw",
+            "cGKqAhZHb29nbGUuQ2xvdWQuTmV0QXBwLlYxygIWR29vZ2xlXENsb3VkXE5l",
+            "dEFwcFxWMeoCGUdvb2dsZTo6Q2xvdWQ6Ok5ldEFwcDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -1700,7 +1700,7 @@ namespace Google.Cloud.NetApp.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. The resource name of the active directory.
+    /// Identifier. The resource name of the active directory.
     /// Format:
     /// `projects/{project_number}/locations/{location_id}/activeDirectories/{active_directory_id}`.
     /// </summary>

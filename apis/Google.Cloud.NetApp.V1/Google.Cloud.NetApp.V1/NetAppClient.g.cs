@@ -108,6 +108,30 @@ namespace Google.Cloud.NetApp.V1
             ResumeReplicationOperationsSettings = existing.ResumeReplicationOperationsSettings.Clone();
             ReverseReplicationDirectionSettings = existing.ReverseReplicationDirectionSettings;
             ReverseReplicationDirectionOperationsSettings = existing.ReverseReplicationDirectionOperationsSettings.Clone();
+            CreateBackupVaultSettings = existing.CreateBackupVaultSettings;
+            CreateBackupVaultOperationsSettings = existing.CreateBackupVaultOperationsSettings.Clone();
+            GetBackupVaultSettings = existing.GetBackupVaultSettings;
+            ListBackupVaultsSettings = existing.ListBackupVaultsSettings;
+            UpdateBackupVaultSettings = existing.UpdateBackupVaultSettings;
+            UpdateBackupVaultOperationsSettings = existing.UpdateBackupVaultOperationsSettings.Clone();
+            DeleteBackupVaultSettings = existing.DeleteBackupVaultSettings;
+            DeleteBackupVaultOperationsSettings = existing.DeleteBackupVaultOperationsSettings.Clone();
+            CreateBackupSettings = existing.CreateBackupSettings;
+            CreateBackupOperationsSettings = existing.CreateBackupOperationsSettings.Clone();
+            GetBackupSettings = existing.GetBackupSettings;
+            ListBackupsSettings = existing.ListBackupsSettings;
+            DeleteBackupSettings = existing.DeleteBackupSettings;
+            DeleteBackupOperationsSettings = existing.DeleteBackupOperationsSettings.Clone();
+            UpdateBackupSettings = existing.UpdateBackupSettings;
+            UpdateBackupOperationsSettings = existing.UpdateBackupOperationsSettings.Clone();
+            CreateBackupPolicySettings = existing.CreateBackupPolicySettings;
+            CreateBackupPolicyOperationsSettings = existing.CreateBackupPolicyOperationsSettings.Clone();
+            GetBackupPolicySettings = existing.GetBackupPolicySettings;
+            ListBackupPoliciesSettings = existing.ListBackupPoliciesSettings;
+            UpdateBackupPolicySettings = existing.UpdateBackupPolicySettings;
+            UpdateBackupPolicyOperationsSettings = existing.UpdateBackupPolicyOperationsSettings.Clone();
+            DeleteBackupPolicySettings = existing.DeleteBackupPolicySettings;
+            DeleteBackupPolicyOperationsSettings = existing.DeleteBackupPolicyOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -1028,6 +1052,384 @@ namespace Google.Cloud.NetApp.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings ReverseReplicationDirectionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetAppClient.CreateBackupVault</c> and <c>NetAppClient.CreateBackupVaultAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateBackupVaultSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NetAppClient.CreateBackupVault</c> and
+        /// <c>NetAppClient.CreateBackupVaultAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateBackupVaultOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>NetAppClient.GetBackupVault</c>
+        ///  and <c>NetAppClient.GetBackupVaultAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetBackupVaultSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetAppClient.ListBackupVaults</c> and <c>NetAppClient.ListBackupVaultsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListBackupVaultsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetAppClient.UpdateBackupVault</c> and <c>NetAppClient.UpdateBackupVaultAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateBackupVaultSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NetAppClient.UpdateBackupVault</c> and
+        /// <c>NetAppClient.UpdateBackupVaultAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateBackupVaultOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetAppClient.DeleteBackupVault</c> and <c>NetAppClient.DeleteBackupVaultAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteBackupVaultSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NetAppClient.DeleteBackupVault</c> and
+        /// <c>NetAppClient.DeleteBackupVaultAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteBackupVaultOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>NetAppClient.CreateBackup</c>
+        ///  and <c>NetAppClient.CreateBackupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateBackupSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NetAppClient.CreateBackup</c> and
+        /// <c>NetAppClient.CreateBackupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateBackupOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>NetAppClient.GetBackup</c>
+        /// and <c>NetAppClient.GetBackupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetBackupSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>NetAppClient.ListBackups</c>
+        ///  and <c>NetAppClient.ListBackupsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListBackupsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>NetAppClient.DeleteBackup</c>
+        ///  and <c>NetAppClient.DeleteBackupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteBackupSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NetAppClient.DeleteBackup</c> and
+        /// <c>NetAppClient.DeleteBackupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteBackupOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>NetAppClient.UpdateBackup</c>
+        ///  and <c>NetAppClient.UpdateBackupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateBackupSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NetAppClient.UpdateBackup</c> and
+        /// <c>NetAppClient.UpdateBackupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateBackupOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetAppClient.CreateBackupPolicy</c> and <c>NetAppClient.CreateBackupPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateBackupPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NetAppClient.CreateBackupPolicy</c> and
+        /// <c>NetAppClient.CreateBackupPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateBackupPolicyOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetAppClient.GetBackupPolicy</c> and <c>NetAppClient.GetBackupPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetBackupPolicySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetAppClient.ListBackupPolicies</c> and <c>NetAppClient.ListBackupPoliciesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListBackupPoliciesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetAppClient.UpdateBackupPolicy</c> and <c>NetAppClient.UpdateBackupPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateBackupPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NetAppClient.UpdateBackupPolicy</c> and
+        /// <c>NetAppClient.UpdateBackupPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateBackupPolicyOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetAppClient.DeleteBackupPolicy</c> and <c>NetAppClient.DeleteBackupPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteBackupPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NetAppClient.DeleteBackupPolicy</c> and
+        /// <c>NetAppClient.DeleteBackupPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteBackupPolicyOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -5436,6 +5838,2137 @@ namespace Google.Cloud.NetApp.V1
         /// <returns>A task representing the result of polling the operation.</returns>
         public virtual stt::Task<lro::Operation<Replication, OperationMetadata>> PollOnceReverseReplicationDirectionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<Replication, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ReverseReplicationDirectionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates new backup vault
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BackupVault, OperationMetadata> CreateBackupVault(CreateBackupVaultRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates new backup vault
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BackupVault, OperationMetadata>> CreateBackupVaultAsync(CreateBackupVaultRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates new backup vault
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BackupVault, OperationMetadata>> CreateBackupVaultAsync(CreateBackupVaultRequest request, st::CancellationToken cancellationToken) =>
+            CreateBackupVaultAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateBackupVault</c>.</summary>
+        public virtual lro::OperationsClient CreateBackupVaultOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateBackupVault</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<BackupVault, OperationMetadata> PollOnceCreateBackupVault(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BackupVault, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateBackupVaultOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateBackupVault</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<BackupVault, OperationMetadata>> PollOnceCreateBackupVaultAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BackupVault, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateBackupVaultOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates new backup vault
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location to create the backup vaults, in the format
+        /// `projects/{project_id}/locations/{location}`
+        /// </param>
+        /// <param name="backupVault">
+        /// Required. A backupVault resource
+        /// </param>
+        /// <param name="backupVaultId">
+        /// Required. The ID to use for the backupVault.
+        /// The ID must be unique within the specified location.
+        /// The max supported length is 63 characters.
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// Values that do not match this pattern will trigger an INVALID_ARGUMENT
+        /// error.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BackupVault, OperationMetadata> CreateBackupVault(string parent, BackupVault backupVault, string backupVaultId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBackupVault(new CreateBackupVaultRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                BackupVaultId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupVaultId, nameof(backupVaultId)),
+                BackupVault = gax::GaxPreconditions.CheckNotNull(backupVault, nameof(backupVault)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates new backup vault
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location to create the backup vaults, in the format
+        /// `projects/{project_id}/locations/{location}`
+        /// </param>
+        /// <param name="backupVault">
+        /// Required. A backupVault resource
+        /// </param>
+        /// <param name="backupVaultId">
+        /// Required. The ID to use for the backupVault.
+        /// The ID must be unique within the specified location.
+        /// The max supported length is 63 characters.
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// Values that do not match this pattern will trigger an INVALID_ARGUMENT
+        /// error.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BackupVault, OperationMetadata>> CreateBackupVaultAsync(string parent, BackupVault backupVault, string backupVaultId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBackupVaultAsync(new CreateBackupVaultRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                BackupVaultId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupVaultId, nameof(backupVaultId)),
+                BackupVault = gax::GaxPreconditions.CheckNotNull(backupVault, nameof(backupVault)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates new backup vault
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location to create the backup vaults, in the format
+        /// `projects/{project_id}/locations/{location}`
+        /// </param>
+        /// <param name="backupVault">
+        /// Required. A backupVault resource
+        /// </param>
+        /// <param name="backupVaultId">
+        /// Required. The ID to use for the backupVault.
+        /// The ID must be unique within the specified location.
+        /// The max supported length is 63 characters.
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// Values that do not match this pattern will trigger an INVALID_ARGUMENT
+        /// error.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BackupVault, OperationMetadata>> CreateBackupVaultAsync(string parent, BackupVault backupVault, string backupVaultId, st::CancellationToken cancellationToken) =>
+            CreateBackupVaultAsync(parent, backupVault, backupVaultId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates new backup vault
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location to create the backup vaults, in the format
+        /// `projects/{project_id}/locations/{location}`
+        /// </param>
+        /// <param name="backupVault">
+        /// Required. A backupVault resource
+        /// </param>
+        /// <param name="backupVaultId">
+        /// Required. The ID to use for the backupVault.
+        /// The ID must be unique within the specified location.
+        /// The max supported length is 63 characters.
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// Values that do not match this pattern will trigger an INVALID_ARGUMENT
+        /// error.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BackupVault, OperationMetadata> CreateBackupVault(gagr::LocationName parent, BackupVault backupVault, string backupVaultId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBackupVault(new CreateBackupVaultRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                BackupVaultId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupVaultId, nameof(backupVaultId)),
+                BackupVault = gax::GaxPreconditions.CheckNotNull(backupVault, nameof(backupVault)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates new backup vault
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location to create the backup vaults, in the format
+        /// `projects/{project_id}/locations/{location}`
+        /// </param>
+        /// <param name="backupVault">
+        /// Required. A backupVault resource
+        /// </param>
+        /// <param name="backupVaultId">
+        /// Required. The ID to use for the backupVault.
+        /// The ID must be unique within the specified location.
+        /// The max supported length is 63 characters.
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// Values that do not match this pattern will trigger an INVALID_ARGUMENT
+        /// error.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BackupVault, OperationMetadata>> CreateBackupVaultAsync(gagr::LocationName parent, BackupVault backupVault, string backupVaultId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBackupVaultAsync(new CreateBackupVaultRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                BackupVaultId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupVaultId, nameof(backupVaultId)),
+                BackupVault = gax::GaxPreconditions.CheckNotNull(backupVault, nameof(backupVault)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates new backup vault
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location to create the backup vaults, in the format
+        /// `projects/{project_id}/locations/{location}`
+        /// </param>
+        /// <param name="backupVault">
+        /// Required. A backupVault resource
+        /// </param>
+        /// <param name="backupVaultId">
+        /// Required. The ID to use for the backupVault.
+        /// The ID must be unique within the specified location.
+        /// The max supported length is 63 characters.
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// Values that do not match this pattern will trigger an INVALID_ARGUMENT
+        /// error.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BackupVault, OperationMetadata>> CreateBackupVaultAsync(gagr::LocationName parent, BackupVault backupVault, string backupVaultId, st::CancellationToken cancellationToken) =>
+            CreateBackupVaultAsync(parent, backupVault, backupVaultId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the description of the specified backup vault
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupVault GetBackupVault(GetBackupVaultRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the description of the specified backup vault
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupVault> GetBackupVaultAsync(GetBackupVaultRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the description of the specified backup vault
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupVault> GetBackupVaultAsync(GetBackupVaultRequest request, st::CancellationToken cancellationToken) =>
+            GetBackupVaultAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the description of the specified backup vault
+        /// </summary>
+        /// <param name="name">
+        /// Required. The backupVault resource name, in the format
+        /// `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupVault GetBackupVault(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupVault(new GetBackupVaultRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the description of the specified backup vault
+        /// </summary>
+        /// <param name="name">
+        /// Required. The backupVault resource name, in the format
+        /// `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupVault> GetBackupVaultAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupVaultAsync(new GetBackupVaultRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the description of the specified backup vault
+        /// </summary>
+        /// <param name="name">
+        /// Required. The backupVault resource name, in the format
+        /// `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupVault> GetBackupVaultAsync(string name, st::CancellationToken cancellationToken) =>
+            GetBackupVaultAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the description of the specified backup vault
+        /// </summary>
+        /// <param name="name">
+        /// Required. The backupVault resource name, in the format
+        /// `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupVault GetBackupVault(BackupVaultName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupVault(new GetBackupVaultRequest
+            {
+                BackupVaultName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the description of the specified backup vault
+        /// </summary>
+        /// <param name="name">
+        /// Required. The backupVault resource name, in the format
+        /// `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupVault> GetBackupVaultAsync(BackupVaultName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupVaultAsync(new GetBackupVaultRequest
+            {
+                BackupVaultName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the description of the specified backup vault
+        /// </summary>
+        /// <param name="name">
+        /// Required. The backupVault resource name, in the format
+        /// `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupVault> GetBackupVaultAsync(BackupVaultName name, st::CancellationToken cancellationToken) =>
+            GetBackupVaultAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns list of all available backup vaults.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupVault"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupVaultsResponse, BackupVault> ListBackupVaults(ListBackupVaultsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns list of all available backup vaults.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupVault"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupVaultsResponse, BackupVault> ListBackupVaultsAsync(ListBackupVaultsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns list of all available backup vaults.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location for which to retrieve backupVault information,
+        /// in the format
+        /// `projects/{project_id}/locations/{location}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupVault"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupVaultsResponse, BackupVault> ListBackupVaults(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBackupVaults(new ListBackupVaultsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns list of all available backup vaults.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location for which to retrieve backupVault information,
+        /// in the format
+        /// `projects/{project_id}/locations/{location}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupVault"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupVaultsResponse, BackupVault> ListBackupVaultsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBackupVaultsAsync(new ListBackupVaultsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns list of all available backup vaults.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location for which to retrieve backupVault information,
+        /// in the format
+        /// `projects/{project_id}/locations/{location}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupVault"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupVaultsResponse, BackupVault> ListBackupVaults(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBackupVaults(new ListBackupVaultsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns list of all available backup vaults.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location for which to retrieve backupVault information,
+        /// in the format
+        /// `projects/{project_id}/locations/{location}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupVault"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupVaultsResponse, BackupVault> ListBackupVaultsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBackupVaultsAsync(new ListBackupVaultsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the settings of a specific backup vault.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BackupVault, OperationMetadata> UpdateBackupVault(UpdateBackupVaultRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the settings of a specific backup vault.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BackupVault, OperationMetadata>> UpdateBackupVaultAsync(UpdateBackupVaultRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the settings of a specific backup vault.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BackupVault, OperationMetadata>> UpdateBackupVaultAsync(UpdateBackupVaultRequest request, st::CancellationToken cancellationToken) =>
+            UpdateBackupVaultAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateBackupVault</c>.</summary>
+        public virtual lro::OperationsClient UpdateBackupVaultOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateBackupVault</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<BackupVault, OperationMetadata> PollOnceUpdateBackupVault(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BackupVault, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateBackupVaultOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateBackupVault</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<BackupVault, OperationMetadata>> PollOnceUpdateBackupVaultAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BackupVault, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateBackupVaultOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the settings of a specific backup vault.
+        /// </summary>
+        /// <param name="backupVault">
+        /// Required. The backupVault being updated
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// Backup resource to be updated.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BackupVault, OperationMetadata> UpdateBackupVault(BackupVault backupVault, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateBackupVault(new UpdateBackupVaultRequest
+            {
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                BackupVault = gax::GaxPreconditions.CheckNotNull(backupVault, nameof(backupVault)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the settings of a specific backup vault.
+        /// </summary>
+        /// <param name="backupVault">
+        /// Required. The backupVault being updated
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// Backup resource to be updated.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BackupVault, OperationMetadata>> UpdateBackupVaultAsync(BackupVault backupVault, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateBackupVaultAsync(new UpdateBackupVaultRequest
+            {
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                BackupVault = gax::GaxPreconditions.CheckNotNull(backupVault, nameof(backupVault)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the settings of a specific backup vault.
+        /// </summary>
+        /// <param name="backupVault">
+        /// Required. The backupVault being updated
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// Backup resource to be updated.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BackupVault, OperationMetadata>> UpdateBackupVaultAsync(BackupVault backupVault, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateBackupVaultAsync(backupVault, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Warning! This operation will permanently delete the backup vault.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteBackupVault(DeleteBackupVaultRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Warning! This operation will permanently delete the backup vault.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupVaultAsync(DeleteBackupVaultRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Warning! This operation will permanently delete the backup vault.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupVaultAsync(DeleteBackupVaultRequest request, st::CancellationToken cancellationToken) =>
+            DeleteBackupVaultAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteBackupVault</c>.</summary>
+        public virtual lro::OperationsClient DeleteBackupVaultOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteBackupVault</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteBackupVault(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteBackupVaultOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteBackupVault</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteBackupVaultAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteBackupVaultOperationsClient, callSettings);
+
+        /// <summary>
+        /// Warning! This operation will permanently delete the backup vault.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The backupVault resource name, in the format
+        /// `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteBackupVault(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackupVault(new DeleteBackupVaultRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Warning! This operation will permanently delete the backup vault.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The backupVault resource name, in the format
+        /// `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupVaultAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackupVaultAsync(new DeleteBackupVaultRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Warning! This operation will permanently delete the backup vault.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The backupVault resource name, in the format
+        /// `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupVaultAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteBackupVaultAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Warning! This operation will permanently delete the backup vault.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The backupVault resource name, in the format
+        /// `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteBackupVault(BackupVaultName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackupVault(new DeleteBackupVaultRequest
+            {
+                BackupVaultName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Warning! This operation will permanently delete the backup vault.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The backupVault resource name, in the format
+        /// `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupVaultAsync(BackupVaultName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackupVaultAsync(new DeleteBackupVaultRequest
+            {
+                BackupVaultName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Warning! This operation will permanently delete the backup vault.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The backupVault resource name, in the format
+        /// `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupVaultAsync(BackupVaultName name, st::CancellationToken cancellationToken) =>
+            DeleteBackupVaultAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a backup from the volume specified in the request
+        /// The backup can be created from the given snapshot if specified in the
+        /// request. If no snapshot specified, there'll be a new snapshot taken to
+        /// initiate the backup creation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Backup, OperationMetadata> CreateBackup(CreateBackupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a backup from the volume specified in the request
+        /// The backup can be created from the given snapshot if specified in the
+        /// request. If no snapshot specified, there'll be a new snapshot taken to
+        /// initiate the backup creation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, OperationMetadata>> CreateBackupAsync(CreateBackupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a backup from the volume specified in the request
+        /// The backup can be created from the given snapshot if specified in the
+        /// request. If no snapshot specified, there'll be a new snapshot taken to
+        /// initiate the backup creation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, OperationMetadata>> CreateBackupAsync(CreateBackupRequest request, st::CancellationToken cancellationToken) =>
+            CreateBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateBackup</c>.</summary>
+        public virtual lro::OperationsClient CreateBackupOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateBackup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Backup, OperationMetadata> PollOnceCreateBackup(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Backup, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateBackupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateBackup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Backup, OperationMetadata>> PollOnceCreateBackupAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Backup, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateBackupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a backup from the volume specified in the request
+        /// The backup can be created from the given snapshot if specified in the
+        /// request. If no snapshot specified, there'll be a new snapshot taken to
+        /// initiate the backup creation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The NetApp backupVault to create the backups of, in the format
+        /// `projects/*/locations/*/backupVaults/{backup_vault_id}`
+        /// </param>
+        /// <param name="backup">
+        /// Required. A backup resource
+        /// </param>
+        /// <param name="backupId">
+        /// Required. The ID to use for the backup.
+        /// The ID must be unique within the specified backupVault.
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// Values that do not match this pattern will trigger an INVALID_ARGUMENT
+        /// error.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Backup, OperationMetadata> CreateBackup(string parent, Backup backup, string backupId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBackup(new CreateBackupRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                BackupId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupId, nameof(backupId)),
+                Backup = gax::GaxPreconditions.CheckNotNull(backup, nameof(backup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a backup from the volume specified in the request
+        /// The backup can be created from the given snapshot if specified in the
+        /// request. If no snapshot specified, there'll be a new snapshot taken to
+        /// initiate the backup creation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The NetApp backupVault to create the backups of, in the format
+        /// `projects/*/locations/*/backupVaults/{backup_vault_id}`
+        /// </param>
+        /// <param name="backup">
+        /// Required. A backup resource
+        /// </param>
+        /// <param name="backupId">
+        /// Required. The ID to use for the backup.
+        /// The ID must be unique within the specified backupVault.
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// Values that do not match this pattern will trigger an INVALID_ARGUMENT
+        /// error.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, OperationMetadata>> CreateBackupAsync(string parent, Backup backup, string backupId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBackupAsync(new CreateBackupRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                BackupId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupId, nameof(backupId)),
+                Backup = gax::GaxPreconditions.CheckNotNull(backup, nameof(backup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a backup from the volume specified in the request
+        /// The backup can be created from the given snapshot if specified in the
+        /// request. If no snapshot specified, there'll be a new snapshot taken to
+        /// initiate the backup creation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The NetApp backupVault to create the backups of, in the format
+        /// `projects/*/locations/*/backupVaults/{backup_vault_id}`
+        /// </param>
+        /// <param name="backup">
+        /// Required. A backup resource
+        /// </param>
+        /// <param name="backupId">
+        /// Required. The ID to use for the backup.
+        /// The ID must be unique within the specified backupVault.
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// Values that do not match this pattern will trigger an INVALID_ARGUMENT
+        /// error.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, OperationMetadata>> CreateBackupAsync(string parent, Backup backup, string backupId, st::CancellationToken cancellationToken) =>
+            CreateBackupAsync(parent, backup, backupId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a backup from the volume specified in the request
+        /// The backup can be created from the given snapshot if specified in the
+        /// request. If no snapshot specified, there'll be a new snapshot taken to
+        /// initiate the backup creation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The NetApp backupVault to create the backups of, in the format
+        /// `projects/*/locations/*/backupVaults/{backup_vault_id}`
+        /// </param>
+        /// <param name="backup">
+        /// Required. A backup resource
+        /// </param>
+        /// <param name="backupId">
+        /// Required. The ID to use for the backup.
+        /// The ID must be unique within the specified backupVault.
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// Values that do not match this pattern will trigger an INVALID_ARGUMENT
+        /// error.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Backup, OperationMetadata> CreateBackup(BackupVaultName parent, Backup backup, string backupId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBackup(new CreateBackupRequest
+            {
+                ParentAsBackupVaultName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                BackupId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupId, nameof(backupId)),
+                Backup = gax::GaxPreconditions.CheckNotNull(backup, nameof(backup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a backup from the volume specified in the request
+        /// The backup can be created from the given snapshot if specified in the
+        /// request. If no snapshot specified, there'll be a new snapshot taken to
+        /// initiate the backup creation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The NetApp backupVault to create the backups of, in the format
+        /// `projects/*/locations/*/backupVaults/{backup_vault_id}`
+        /// </param>
+        /// <param name="backup">
+        /// Required. A backup resource
+        /// </param>
+        /// <param name="backupId">
+        /// Required. The ID to use for the backup.
+        /// The ID must be unique within the specified backupVault.
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// Values that do not match this pattern will trigger an INVALID_ARGUMENT
+        /// error.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, OperationMetadata>> CreateBackupAsync(BackupVaultName parent, Backup backup, string backupId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBackupAsync(new CreateBackupRequest
+            {
+                ParentAsBackupVaultName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                BackupId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupId, nameof(backupId)),
+                Backup = gax::GaxPreconditions.CheckNotNull(backup, nameof(backup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a backup from the volume specified in the request
+        /// The backup can be created from the given snapshot if specified in the
+        /// request. If no snapshot specified, there'll be a new snapshot taken to
+        /// initiate the backup creation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The NetApp backupVault to create the backups of, in the format
+        /// `projects/*/locations/*/backupVaults/{backup_vault_id}`
+        /// </param>
+        /// <param name="backup">
+        /// Required. A backup resource
+        /// </param>
+        /// <param name="backupId">
+        /// Required. The ID to use for the backup.
+        /// The ID must be unique within the specified backupVault.
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// Values that do not match this pattern will trigger an INVALID_ARGUMENT
+        /// error.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, OperationMetadata>> CreateBackupAsync(BackupVaultName parent, Backup backup, string backupId, st::CancellationToken cancellationToken) =>
+            CreateBackupAsync(parent, backup, backupId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the description of the specified backup
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Backup GetBackup(GetBackupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the description of the specified backup
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Backup> GetBackupAsync(GetBackupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the description of the specified backup
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Backup> GetBackupAsync(GetBackupRequest request, st::CancellationToken cancellationToken) =>
+            GetBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the description of the specified backup
+        /// </summary>
+        /// <param name="name">
+        /// Required. The backup resource name, in the format
+        /// `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Backup GetBackup(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackup(new GetBackupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the description of the specified backup
+        /// </summary>
+        /// <param name="name">
+        /// Required. The backup resource name, in the format
+        /// `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Backup> GetBackupAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupAsync(new GetBackupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the description of the specified backup
+        /// </summary>
+        /// <param name="name">
+        /// Required. The backup resource name, in the format
+        /// `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Backup> GetBackupAsync(string name, st::CancellationToken cancellationToken) =>
+            GetBackupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the description of the specified backup
+        /// </summary>
+        /// <param name="name">
+        /// Required. The backup resource name, in the format
+        /// `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Backup GetBackup(BackupName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackup(new GetBackupRequest
+            {
+                BackupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the description of the specified backup
+        /// </summary>
+        /// <param name="name">
+        /// Required. The backup resource name, in the format
+        /// `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Backup> GetBackupAsync(BackupName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupAsync(new GetBackupRequest
+            {
+                BackupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the description of the specified backup
+        /// </summary>
+        /// <param name="name">
+        /// Required. The backup resource name, in the format
+        /// `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Backup> GetBackupAsync(BackupName name, st::CancellationToken cancellationToken) =>
+            GetBackupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns descriptions of all backups for a backupVault.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Backup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(ListBackupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns descriptions of all backups for a backupVault.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Backup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(ListBackupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns descriptions of all backups for a backupVault.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The backupVault for which to retrieve backup information,
+        /// in the format
+        /// `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}`.
+        /// To retrieve backup information for all locations, use "-" for the
+        /// `{location}` value.
+        /// To retrieve backup information for all backupVaults, use "-" for the
+        /// `{backup_vault_id}` value.
+        /// To retrieve backup information for a volume, use "-" for the
+        /// `{backup_vault_id}` value and specify volume full name with the filter.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Backup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBackups(new ListBackupsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns descriptions of all backups for a backupVault.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The backupVault for which to retrieve backup information,
+        /// in the format
+        /// `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}`.
+        /// To retrieve backup information for all locations, use "-" for the
+        /// `{location}` value.
+        /// To retrieve backup information for all backupVaults, use "-" for the
+        /// `{backup_vault_id}` value.
+        /// To retrieve backup information for a volume, use "-" for the
+        /// `{backup_vault_id}` value and specify volume full name with the filter.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Backup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBackupsAsync(new ListBackupsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns descriptions of all backups for a backupVault.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The backupVault for which to retrieve backup information,
+        /// in the format
+        /// `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}`.
+        /// To retrieve backup information for all locations, use "-" for the
+        /// `{location}` value.
+        /// To retrieve backup information for all backupVaults, use "-" for the
+        /// `{backup_vault_id}` value.
+        /// To retrieve backup information for a volume, use "-" for the
+        /// `{backup_vault_id}` value and specify volume full name with the filter.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Backup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(BackupVaultName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBackups(new ListBackupsRequest
+            {
+                ParentAsBackupVaultName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns descriptions of all backups for a backupVault.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The backupVault for which to retrieve backup information,
+        /// in the format
+        /// `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}`.
+        /// To retrieve backup information for all locations, use "-" for the
+        /// `{location}` value.
+        /// To retrieve backup information for all backupVaults, use "-" for the
+        /// `{backup_vault_id}` value.
+        /// To retrieve backup information for a volume, use "-" for the
+        /// `{backup_vault_id}` value and specify volume full name with the filter.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Backup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(BackupVaultName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBackupsAsync(new ListBackupsRequest
+            {
+                ParentAsBackupVaultName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Warning! This operation will permanently delete the backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteBackup(DeleteBackupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Warning! This operation will permanently delete the backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupAsync(DeleteBackupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Warning! This operation will permanently delete the backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupAsync(DeleteBackupRequest request, st::CancellationToken cancellationToken) =>
+            DeleteBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteBackup</c>.</summary>
+        public virtual lro::OperationsClient DeleteBackupOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteBackup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteBackup(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteBackupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteBackup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteBackupAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteBackupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Warning! This operation will permanently delete the backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The backup resource name, in the format
+        /// `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteBackup(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackup(new DeleteBackupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Warning! This operation will permanently delete the backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The backup resource name, in the format
+        /// `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackupAsync(new DeleteBackupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Warning! This operation will permanently delete the backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The backup resource name, in the format
+        /// `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteBackupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Warning! This operation will permanently delete the backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The backup resource name, in the format
+        /// `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteBackup(BackupName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackup(new DeleteBackupRequest
+            {
+                BackupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Warning! This operation will permanently delete the backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The backup resource name, in the format
+        /// `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupAsync(BackupName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackupAsync(new DeleteBackupRequest
+            {
+                BackupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Warning! This operation will permanently delete the backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The backup resource name, in the format
+        /// `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupAsync(BackupName name, st::CancellationToken cancellationToken) =>
+            DeleteBackupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Update backup with full spec.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Backup, OperationMetadata> UpdateBackup(UpdateBackupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update backup with full spec.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, OperationMetadata>> UpdateBackupAsync(UpdateBackupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update backup with full spec.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, OperationMetadata>> UpdateBackupAsync(UpdateBackupRequest request, st::CancellationToken cancellationToken) =>
+            UpdateBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateBackup</c>.</summary>
+        public virtual lro::OperationsClient UpdateBackupOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateBackup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Backup, OperationMetadata> PollOnceUpdateBackup(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Backup, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateBackupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateBackup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Backup, OperationMetadata>> PollOnceUpdateBackupAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Backup, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateBackupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Update backup with full spec.
+        /// </summary>
+        /// <param name="backup">
+        /// Required. The backup being updated
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// Backup resource to be updated.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Backup, OperationMetadata> UpdateBackup(Backup backup, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateBackup(new UpdateBackupRequest
+            {
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                Backup = gax::GaxPreconditions.CheckNotNull(backup, nameof(backup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Update backup with full spec.
+        /// </summary>
+        /// <param name="backup">
+        /// Required. The backup being updated
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// Backup resource to be updated.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, OperationMetadata>> UpdateBackupAsync(Backup backup, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateBackupAsync(new UpdateBackupRequest
+            {
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                Backup = gax::GaxPreconditions.CheckNotNull(backup, nameof(backup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Update backup with full spec.
+        /// </summary>
+        /// <param name="backup">
+        /// Required. The backup being updated
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// Backup resource to be updated.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, OperationMetadata>> UpdateBackupAsync(Backup backup, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateBackupAsync(backup, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates new backup policy
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BackupPolicy, OperationMetadata> CreateBackupPolicy(CreateBackupPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates new backup policy
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BackupPolicy, OperationMetadata>> CreateBackupPolicyAsync(CreateBackupPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates new backup policy
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BackupPolicy, OperationMetadata>> CreateBackupPolicyAsync(CreateBackupPolicyRequest request, st::CancellationToken cancellationToken) =>
+            CreateBackupPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateBackupPolicy</c>.</summary>
+        public virtual lro::OperationsClient CreateBackupPolicyOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateBackupPolicy</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<BackupPolicy, OperationMetadata> PollOnceCreateBackupPolicy(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BackupPolicy, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateBackupPolicyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateBackupPolicy</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<BackupPolicy, OperationMetadata>> PollOnceCreateBackupPolicyAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BackupPolicy, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateBackupPolicyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates new backup policy
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location to create the backup policies of, in the format
+        /// `projects/{project_id}/locations/{location}`
+        /// </param>
+        /// <param name="backupPolicy">
+        /// Required. A backupPolicy resource
+        /// </param>
+        /// <param name="backupPolicyId">
+        /// Required. The ID to use for the backup policy.
+        /// The ID must be unique within the specified location.
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BackupPolicy, OperationMetadata> CreateBackupPolicy(string parent, BackupPolicy backupPolicy, string backupPolicyId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBackupPolicy(new CreateBackupPolicyRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                BackupPolicy = gax::GaxPreconditions.CheckNotNull(backupPolicy, nameof(backupPolicy)),
+                BackupPolicyId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupPolicyId, nameof(backupPolicyId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates new backup policy
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location to create the backup policies of, in the format
+        /// `projects/{project_id}/locations/{location}`
+        /// </param>
+        /// <param name="backupPolicy">
+        /// Required. A backupPolicy resource
+        /// </param>
+        /// <param name="backupPolicyId">
+        /// Required. The ID to use for the backup policy.
+        /// The ID must be unique within the specified location.
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BackupPolicy, OperationMetadata>> CreateBackupPolicyAsync(string parent, BackupPolicy backupPolicy, string backupPolicyId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBackupPolicyAsync(new CreateBackupPolicyRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                BackupPolicy = gax::GaxPreconditions.CheckNotNull(backupPolicy, nameof(backupPolicy)),
+                BackupPolicyId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupPolicyId, nameof(backupPolicyId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates new backup policy
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location to create the backup policies of, in the format
+        /// `projects/{project_id}/locations/{location}`
+        /// </param>
+        /// <param name="backupPolicy">
+        /// Required. A backupPolicy resource
+        /// </param>
+        /// <param name="backupPolicyId">
+        /// Required. The ID to use for the backup policy.
+        /// The ID must be unique within the specified location.
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BackupPolicy, OperationMetadata>> CreateBackupPolicyAsync(string parent, BackupPolicy backupPolicy, string backupPolicyId, st::CancellationToken cancellationToken) =>
+            CreateBackupPolicyAsync(parent, backupPolicy, backupPolicyId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates new backup policy
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location to create the backup policies of, in the format
+        /// `projects/{project_id}/locations/{location}`
+        /// </param>
+        /// <param name="backupPolicy">
+        /// Required. A backupPolicy resource
+        /// </param>
+        /// <param name="backupPolicyId">
+        /// Required. The ID to use for the backup policy.
+        /// The ID must be unique within the specified location.
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BackupPolicy, OperationMetadata> CreateBackupPolicy(gagr::LocationName parent, BackupPolicy backupPolicy, string backupPolicyId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBackupPolicy(new CreateBackupPolicyRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                BackupPolicy = gax::GaxPreconditions.CheckNotNull(backupPolicy, nameof(backupPolicy)),
+                BackupPolicyId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupPolicyId, nameof(backupPolicyId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates new backup policy
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location to create the backup policies of, in the format
+        /// `projects/{project_id}/locations/{location}`
+        /// </param>
+        /// <param name="backupPolicy">
+        /// Required. A backupPolicy resource
+        /// </param>
+        /// <param name="backupPolicyId">
+        /// Required. The ID to use for the backup policy.
+        /// The ID must be unique within the specified location.
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BackupPolicy, OperationMetadata>> CreateBackupPolicyAsync(gagr::LocationName parent, BackupPolicy backupPolicy, string backupPolicyId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBackupPolicyAsync(new CreateBackupPolicyRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                BackupPolicy = gax::GaxPreconditions.CheckNotNull(backupPolicy, nameof(backupPolicy)),
+                BackupPolicyId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupPolicyId, nameof(backupPolicyId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates new backup policy
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location to create the backup policies of, in the format
+        /// `projects/{project_id}/locations/{location}`
+        /// </param>
+        /// <param name="backupPolicy">
+        /// Required. A backupPolicy resource
+        /// </param>
+        /// <param name="backupPolicyId">
+        /// Required. The ID to use for the backup policy.
+        /// The ID must be unique within the specified location.
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BackupPolicy, OperationMetadata>> CreateBackupPolicyAsync(gagr::LocationName parent, BackupPolicy backupPolicy, string backupPolicyId, st::CancellationToken cancellationToken) =>
+            CreateBackupPolicyAsync(parent, backupPolicy, backupPolicyId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the description of the specified backup policy by backup_policy_id.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupPolicy GetBackupPolicy(GetBackupPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the description of the specified backup policy by backup_policy_id.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupPolicy> GetBackupPolicyAsync(GetBackupPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the description of the specified backup policy by backup_policy_id.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupPolicy> GetBackupPolicyAsync(GetBackupPolicyRequest request, st::CancellationToken cancellationToken) =>
+            GetBackupPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the description of the specified backup policy by backup_policy_id.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The backupPolicy resource name, in the format
+        /// `projects/{project_id}/locations/{location}/backupPolicies/{backup_policy_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupPolicy GetBackupPolicy(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupPolicy(new GetBackupPolicyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the description of the specified backup policy by backup_policy_id.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The backupPolicy resource name, in the format
+        /// `projects/{project_id}/locations/{location}/backupPolicies/{backup_policy_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupPolicy> GetBackupPolicyAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupPolicyAsync(new GetBackupPolicyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the description of the specified backup policy by backup_policy_id.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The backupPolicy resource name, in the format
+        /// `projects/{project_id}/locations/{location}/backupPolicies/{backup_policy_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupPolicy> GetBackupPolicyAsync(string name, st::CancellationToken cancellationToken) =>
+            GetBackupPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the description of the specified backup policy by backup_policy_id.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The backupPolicy resource name, in the format
+        /// `projects/{project_id}/locations/{location}/backupPolicies/{backup_policy_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupPolicy GetBackupPolicy(BackupPolicyName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupPolicy(new GetBackupPolicyRequest
+            {
+                BackupPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the description of the specified backup policy by backup_policy_id.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The backupPolicy resource name, in the format
+        /// `projects/{project_id}/locations/{location}/backupPolicies/{backup_policy_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupPolicy> GetBackupPolicyAsync(BackupPolicyName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupPolicyAsync(new GetBackupPolicyRequest
+            {
+                BackupPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the description of the specified backup policy by backup_policy_id.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The backupPolicy resource name, in the format
+        /// `projects/{project_id}/locations/{location}/backupPolicies/{backup_policy_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupPolicy> GetBackupPolicyAsync(BackupPolicyName name, st::CancellationToken cancellationToken) =>
+            GetBackupPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns list of all available backup policies.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupPolicy"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupPoliciesResponse, BackupPolicy> ListBackupPolicies(ListBackupPoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns list of all available backup policies.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupPolicy"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupPoliciesResponse, BackupPolicy> ListBackupPoliciesAsync(ListBackupPoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns list of all available backup policies.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListBackupPoliciesRequest
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupPolicy"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupPoliciesResponse, BackupPolicy> ListBackupPolicies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBackupPolicies(new ListBackupPoliciesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns list of all available backup policies.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListBackupPoliciesRequest
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupPolicy"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupPoliciesResponse, BackupPolicy> ListBackupPoliciesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBackupPoliciesAsync(new ListBackupPoliciesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns list of all available backup policies.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListBackupPoliciesRequest
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupPolicy"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupPoliciesResponse, BackupPolicy> ListBackupPolicies(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBackupPolicies(new ListBackupPoliciesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns list of all available backup policies.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListBackupPoliciesRequest
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupPolicy"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupPoliciesResponse, BackupPolicy> ListBackupPoliciesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBackupPoliciesAsync(new ListBackupPoliciesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates settings of a specific backup policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BackupPolicy, OperationMetadata> UpdateBackupPolicy(UpdateBackupPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates settings of a specific backup policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BackupPolicy, OperationMetadata>> UpdateBackupPolicyAsync(UpdateBackupPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates settings of a specific backup policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BackupPolicy, OperationMetadata>> UpdateBackupPolicyAsync(UpdateBackupPolicyRequest request, st::CancellationToken cancellationToken) =>
+            UpdateBackupPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateBackupPolicy</c>.</summary>
+        public virtual lro::OperationsClient UpdateBackupPolicyOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateBackupPolicy</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<BackupPolicy, OperationMetadata> PollOnceUpdateBackupPolicy(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BackupPolicy, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateBackupPolicyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateBackupPolicy</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<BackupPolicy, OperationMetadata>> PollOnceUpdateBackupPolicyAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BackupPolicy, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateBackupPolicyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates settings of a specific backup policy.
+        /// </summary>
+        /// <param name="backupPolicy">
+        /// Required. The backup policy being updated
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// Backup Policy resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BackupPolicy, OperationMetadata> UpdateBackupPolicy(BackupPolicy backupPolicy, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateBackupPolicy(new UpdateBackupPolicyRequest
+            {
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                BackupPolicy = gax::GaxPreconditions.CheckNotNull(backupPolicy, nameof(backupPolicy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates settings of a specific backup policy.
+        /// </summary>
+        /// <param name="backupPolicy">
+        /// Required. The backup policy being updated
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// Backup Policy resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BackupPolicy, OperationMetadata>> UpdateBackupPolicyAsync(BackupPolicy backupPolicy, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateBackupPolicyAsync(new UpdateBackupPolicyRequest
+            {
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                BackupPolicy = gax::GaxPreconditions.CheckNotNull(backupPolicy, nameof(backupPolicy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates settings of a specific backup policy.
+        /// </summary>
+        /// <param name="backupPolicy">
+        /// Required. The backup policy being updated
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// Backup Policy resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BackupPolicy, OperationMetadata>> UpdateBackupPolicyAsync(BackupPolicy backupPolicy, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateBackupPolicyAsync(backupPolicy, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Warning! This operation will permanently delete the backup policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteBackupPolicy(DeleteBackupPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Warning! This operation will permanently delete the backup policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupPolicyAsync(DeleteBackupPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Warning! This operation will permanently delete the backup policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupPolicyAsync(DeleteBackupPolicyRequest request, st::CancellationToken cancellationToken) =>
+            DeleteBackupPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteBackupPolicy</c>.</summary>
+        public virtual lro::OperationsClient DeleteBackupPolicyOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteBackupPolicy</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteBackupPolicy(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteBackupPolicyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteBackupPolicy</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteBackupPolicyAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteBackupPolicyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Warning! This operation will permanently delete the backup policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The backup policy resource name, in the format
+        /// `projects/{project_id}/locations/{location}/backupPolicies/{backup_policy_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteBackupPolicy(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackupPolicy(new DeleteBackupPolicyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Warning! This operation will permanently delete the backup policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The backup policy resource name, in the format
+        /// `projects/{project_id}/locations/{location}/backupPolicies/{backup_policy_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupPolicyAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackupPolicyAsync(new DeleteBackupPolicyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Warning! This operation will permanently delete the backup policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The backup policy resource name, in the format
+        /// `projects/{project_id}/locations/{location}/backupPolicies/{backup_policy_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupPolicyAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteBackupPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Warning! This operation will permanently delete the backup policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The backup policy resource name, in the format
+        /// `projects/{project_id}/locations/{location}/backupPolicies/{backup_policy_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteBackupPolicy(BackupPolicyName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackupPolicy(new DeleteBackupPolicyRequest
+            {
+                BackupPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Warning! This operation will permanently delete the backup policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The backup policy resource name, in the format
+        /// `projects/{project_id}/locations/{location}/backupPolicies/{backup_policy_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupPolicyAsync(BackupPolicyName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackupPolicyAsync(new DeleteBackupPolicyRequest
+            {
+                BackupPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Warning! This operation will permanently delete the backup policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The backup policy resource name, in the format
+        /// `projects/{project_id}/locations/{location}/backupPolicies/{backup_policy_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupPolicyAsync(BackupPolicyName name, st::CancellationToken cancellationToken) =>
+            DeleteBackupPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>NetApp client wrapper implementation, for convenient use.</summary>
@@ -5516,6 +8049,36 @@ namespace Google.Cloud.NetApp.V1
 
         private readonly gaxgrpc::ApiCall<ReverseReplicationDirectionRequest, lro::Operation> _callReverseReplicationDirection;
 
+        private readonly gaxgrpc::ApiCall<CreateBackupVaultRequest, lro::Operation> _callCreateBackupVault;
+
+        private readonly gaxgrpc::ApiCall<GetBackupVaultRequest, BackupVault> _callGetBackupVault;
+
+        private readonly gaxgrpc::ApiCall<ListBackupVaultsRequest, ListBackupVaultsResponse> _callListBackupVaults;
+
+        private readonly gaxgrpc::ApiCall<UpdateBackupVaultRequest, lro::Operation> _callUpdateBackupVault;
+
+        private readonly gaxgrpc::ApiCall<DeleteBackupVaultRequest, lro::Operation> _callDeleteBackupVault;
+
+        private readonly gaxgrpc::ApiCall<CreateBackupRequest, lro::Operation> _callCreateBackup;
+
+        private readonly gaxgrpc::ApiCall<GetBackupRequest, Backup> _callGetBackup;
+
+        private readonly gaxgrpc::ApiCall<ListBackupsRequest, ListBackupsResponse> _callListBackups;
+
+        private readonly gaxgrpc::ApiCall<DeleteBackupRequest, lro::Operation> _callDeleteBackup;
+
+        private readonly gaxgrpc::ApiCall<UpdateBackupRequest, lro::Operation> _callUpdateBackup;
+
+        private readonly gaxgrpc::ApiCall<CreateBackupPolicyRequest, lro::Operation> _callCreateBackupPolicy;
+
+        private readonly gaxgrpc::ApiCall<GetBackupPolicyRequest, BackupPolicy> _callGetBackupPolicy;
+
+        private readonly gaxgrpc::ApiCall<ListBackupPoliciesRequest, ListBackupPoliciesResponse> _callListBackupPolicies;
+
+        private readonly gaxgrpc::ApiCall<UpdateBackupPolicyRequest, lro::Operation> _callUpdateBackupPolicy;
+
+        private readonly gaxgrpc::ApiCall<DeleteBackupPolicyRequest, lro::Operation> _callDeleteBackupPolicy;
+
         /// <summary>
         /// Constructs a client wrapper for the NetApp service, with the specified gRPC client and settings.
         /// </summary>
@@ -5550,6 +8113,15 @@ namespace Google.Cloud.NetApp.V1
             StopReplicationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StopReplicationOperationsSettings, logger);
             ResumeReplicationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ResumeReplicationOperationsSettings, logger);
             ReverseReplicationDirectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ReverseReplicationDirectionOperationsSettings, logger);
+            CreateBackupVaultOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBackupVaultOperationsSettings, logger);
+            UpdateBackupVaultOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateBackupVaultOperationsSettings, logger);
+            DeleteBackupVaultOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBackupVaultOperationsSettings, logger);
+            CreateBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBackupOperationsSettings, logger);
+            DeleteBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBackupOperationsSettings, logger);
+            UpdateBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateBackupOperationsSettings, logger);
+            CreateBackupPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBackupPolicyOperationsSettings, logger);
+            UpdateBackupPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateBackupPolicyOperationsSettings, logger);
+            DeleteBackupPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBackupPolicyOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListStoragePools = clientHelper.BuildApiCall<ListStoragePoolsRequest, ListStoragePoolsResponse>("ListStoragePools", grpcClient.ListStoragePoolsAsync, grpcClient.ListStoragePools, effectiveSettings.ListStoragePoolsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListStoragePools);
@@ -5659,6 +8231,51 @@ namespace Google.Cloud.NetApp.V1
             _callReverseReplicationDirection = clientHelper.BuildApiCall<ReverseReplicationDirectionRequest, lro::Operation>("ReverseReplicationDirection", grpcClient.ReverseReplicationDirectionAsync, grpcClient.ReverseReplicationDirection, effectiveSettings.ReverseReplicationDirectionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callReverseReplicationDirection);
             Modify_ReverseReplicationDirectionApiCall(ref _callReverseReplicationDirection);
+            _callCreateBackupVault = clientHelper.BuildApiCall<CreateBackupVaultRequest, lro::Operation>("CreateBackupVault", grpcClient.CreateBackupVaultAsync, grpcClient.CreateBackupVault, effectiveSettings.CreateBackupVaultSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateBackupVault);
+            Modify_CreateBackupVaultApiCall(ref _callCreateBackupVault);
+            _callGetBackupVault = clientHelper.BuildApiCall<GetBackupVaultRequest, BackupVault>("GetBackupVault", grpcClient.GetBackupVaultAsync, grpcClient.GetBackupVault, effectiveSettings.GetBackupVaultSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetBackupVault);
+            Modify_GetBackupVaultApiCall(ref _callGetBackupVault);
+            _callListBackupVaults = clientHelper.BuildApiCall<ListBackupVaultsRequest, ListBackupVaultsResponse>("ListBackupVaults", grpcClient.ListBackupVaultsAsync, grpcClient.ListBackupVaults, effectiveSettings.ListBackupVaultsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListBackupVaults);
+            Modify_ListBackupVaultsApiCall(ref _callListBackupVaults);
+            _callUpdateBackupVault = clientHelper.BuildApiCall<UpdateBackupVaultRequest, lro::Operation>("UpdateBackupVault", grpcClient.UpdateBackupVaultAsync, grpcClient.UpdateBackupVault, effectiveSettings.UpdateBackupVaultSettings).WithGoogleRequestParam("backup_vault.name", request => request.BackupVault?.Name);
+            Modify_ApiCall(ref _callUpdateBackupVault);
+            Modify_UpdateBackupVaultApiCall(ref _callUpdateBackupVault);
+            _callDeleteBackupVault = clientHelper.BuildApiCall<DeleteBackupVaultRequest, lro::Operation>("DeleteBackupVault", grpcClient.DeleteBackupVaultAsync, grpcClient.DeleteBackupVault, effectiveSettings.DeleteBackupVaultSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteBackupVault);
+            Modify_DeleteBackupVaultApiCall(ref _callDeleteBackupVault);
+            _callCreateBackup = clientHelper.BuildApiCall<CreateBackupRequest, lro::Operation>("CreateBackup", grpcClient.CreateBackupAsync, grpcClient.CreateBackup, effectiveSettings.CreateBackupSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateBackup);
+            Modify_CreateBackupApiCall(ref _callCreateBackup);
+            _callGetBackup = clientHelper.BuildApiCall<GetBackupRequest, Backup>("GetBackup", grpcClient.GetBackupAsync, grpcClient.GetBackup, effectiveSettings.GetBackupSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetBackup);
+            Modify_GetBackupApiCall(ref _callGetBackup);
+            _callListBackups = clientHelper.BuildApiCall<ListBackupsRequest, ListBackupsResponse>("ListBackups", grpcClient.ListBackupsAsync, grpcClient.ListBackups, effectiveSettings.ListBackupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListBackups);
+            Modify_ListBackupsApiCall(ref _callListBackups);
+            _callDeleteBackup = clientHelper.BuildApiCall<DeleteBackupRequest, lro::Operation>("DeleteBackup", grpcClient.DeleteBackupAsync, grpcClient.DeleteBackup, effectiveSettings.DeleteBackupSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteBackup);
+            Modify_DeleteBackupApiCall(ref _callDeleteBackup);
+            _callUpdateBackup = clientHelper.BuildApiCall<UpdateBackupRequest, lro::Operation>("UpdateBackup", grpcClient.UpdateBackupAsync, grpcClient.UpdateBackup, effectiveSettings.UpdateBackupSettings).WithGoogleRequestParam("backup.name", request => request.Backup?.Name);
+            Modify_ApiCall(ref _callUpdateBackup);
+            Modify_UpdateBackupApiCall(ref _callUpdateBackup);
+            _callCreateBackupPolicy = clientHelper.BuildApiCall<CreateBackupPolicyRequest, lro::Operation>("CreateBackupPolicy", grpcClient.CreateBackupPolicyAsync, grpcClient.CreateBackupPolicy, effectiveSettings.CreateBackupPolicySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateBackupPolicy);
+            Modify_CreateBackupPolicyApiCall(ref _callCreateBackupPolicy);
+            _callGetBackupPolicy = clientHelper.BuildApiCall<GetBackupPolicyRequest, BackupPolicy>("GetBackupPolicy", grpcClient.GetBackupPolicyAsync, grpcClient.GetBackupPolicy, effectiveSettings.GetBackupPolicySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetBackupPolicy);
+            Modify_GetBackupPolicyApiCall(ref _callGetBackupPolicy);
+            _callListBackupPolicies = clientHelper.BuildApiCall<ListBackupPoliciesRequest, ListBackupPoliciesResponse>("ListBackupPolicies", grpcClient.ListBackupPoliciesAsync, grpcClient.ListBackupPolicies, effectiveSettings.ListBackupPoliciesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListBackupPolicies);
+            Modify_ListBackupPoliciesApiCall(ref _callListBackupPolicies);
+            _callUpdateBackupPolicy = clientHelper.BuildApiCall<UpdateBackupPolicyRequest, lro::Operation>("UpdateBackupPolicy", grpcClient.UpdateBackupPolicyAsync, grpcClient.UpdateBackupPolicy, effectiveSettings.UpdateBackupPolicySettings).WithGoogleRequestParam("backup_policy.name", request => request.BackupPolicy?.Name);
+            Modify_ApiCall(ref _callUpdateBackupPolicy);
+            Modify_UpdateBackupPolicyApiCall(ref _callUpdateBackupPolicy);
+            _callDeleteBackupPolicy = clientHelper.BuildApiCall<DeleteBackupPolicyRequest, lro::Operation>("DeleteBackupPolicy", grpcClient.DeleteBackupPolicyAsync, grpcClient.DeleteBackupPolicy, effectiveSettings.DeleteBackupPolicySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteBackupPolicy);
+            Modify_DeleteBackupPolicyApiCall(ref _callDeleteBackupPolicy);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -5735,6 +8352,36 @@ namespace Google.Cloud.NetApp.V1
         partial void Modify_ResumeReplicationApiCall(ref gaxgrpc::ApiCall<ResumeReplicationRequest, lro::Operation> call);
 
         partial void Modify_ReverseReplicationDirectionApiCall(ref gaxgrpc::ApiCall<ReverseReplicationDirectionRequest, lro::Operation> call);
+
+        partial void Modify_CreateBackupVaultApiCall(ref gaxgrpc::ApiCall<CreateBackupVaultRequest, lro::Operation> call);
+
+        partial void Modify_GetBackupVaultApiCall(ref gaxgrpc::ApiCall<GetBackupVaultRequest, BackupVault> call);
+
+        partial void Modify_ListBackupVaultsApiCall(ref gaxgrpc::ApiCall<ListBackupVaultsRequest, ListBackupVaultsResponse> call);
+
+        partial void Modify_UpdateBackupVaultApiCall(ref gaxgrpc::ApiCall<UpdateBackupVaultRequest, lro::Operation> call);
+
+        partial void Modify_DeleteBackupVaultApiCall(ref gaxgrpc::ApiCall<DeleteBackupVaultRequest, lro::Operation> call);
+
+        partial void Modify_CreateBackupApiCall(ref gaxgrpc::ApiCall<CreateBackupRequest, lro::Operation> call);
+
+        partial void Modify_GetBackupApiCall(ref gaxgrpc::ApiCall<GetBackupRequest, Backup> call);
+
+        partial void Modify_ListBackupsApiCall(ref gaxgrpc::ApiCall<ListBackupsRequest, ListBackupsResponse> call);
+
+        partial void Modify_DeleteBackupApiCall(ref gaxgrpc::ApiCall<DeleteBackupRequest, lro::Operation> call);
+
+        partial void Modify_UpdateBackupApiCall(ref gaxgrpc::ApiCall<UpdateBackupRequest, lro::Operation> call);
+
+        partial void Modify_CreateBackupPolicyApiCall(ref gaxgrpc::ApiCall<CreateBackupPolicyRequest, lro::Operation> call);
+
+        partial void Modify_GetBackupPolicyApiCall(ref gaxgrpc::ApiCall<GetBackupPolicyRequest, BackupPolicy> call);
+
+        partial void Modify_ListBackupPoliciesApiCall(ref gaxgrpc::ApiCall<ListBackupPoliciesRequest, ListBackupPoliciesResponse> call);
+
+        partial void Modify_UpdateBackupPolicyApiCall(ref gaxgrpc::ApiCall<UpdateBackupPolicyRequest, lro::Operation> call);
+
+        partial void Modify_DeleteBackupPolicyApiCall(ref gaxgrpc::ApiCall<DeleteBackupPolicyRequest, lro::Operation> call);
 
         partial void OnConstruction(NetApp.NetAppClient grpcClient, NetAppSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -5815,6 +8462,36 @@ namespace Google.Cloud.NetApp.V1
         partial void Modify_ResumeReplicationRequest(ref ResumeReplicationRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ReverseReplicationDirectionRequest(ref ReverseReplicationDirectionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateBackupVaultRequest(ref CreateBackupVaultRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetBackupVaultRequest(ref GetBackupVaultRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListBackupVaultsRequest(ref ListBackupVaultsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateBackupVaultRequest(ref UpdateBackupVaultRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteBackupVaultRequest(ref DeleteBackupVaultRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateBackupRequest(ref CreateBackupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetBackupRequest(ref GetBackupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListBackupsRequest(ref ListBackupsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteBackupRequest(ref DeleteBackupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateBackupRequest(ref UpdateBackupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateBackupPolicyRequest(ref CreateBackupPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetBackupPolicyRequest(ref GetBackupPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListBackupPoliciesRequest(ref ListBackupPoliciesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateBackupPolicyRequest(ref UpdateBackupPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteBackupPolicyRequest(ref DeleteBackupPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Returns descriptions of all storage pools owned by the caller.
@@ -6758,6 +9435,399 @@ namespace Google.Cloud.NetApp.V1
             Modify_ReverseReplicationDirectionRequest(ref request, ref callSettings);
             return new lro::Operation<Replication, OperationMetadata>(await _callReverseReplicationDirection.Async(request, callSettings).ConfigureAwait(false), ReverseReplicationDirectionOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>CreateBackupVault</c>.</summary>
+        public override lro::OperationsClient CreateBackupVaultOperationsClient { get; }
+
+        /// <summary>
+        /// Creates new backup vault
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<BackupVault, OperationMetadata> CreateBackupVault(CreateBackupVaultRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateBackupVaultRequest(ref request, ref callSettings);
+            return new lro::Operation<BackupVault, OperationMetadata>(_callCreateBackupVault.Sync(request, callSettings), CreateBackupVaultOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates new backup vault
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<BackupVault, OperationMetadata>> CreateBackupVaultAsync(CreateBackupVaultRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateBackupVaultRequest(ref request, ref callSettings);
+            return new lro::Operation<BackupVault, OperationMetadata>(await _callCreateBackupVault.Async(request, callSettings).ConfigureAwait(false), CreateBackupVaultOperationsClient);
+        }
+
+        /// <summary>
+        /// Returns the description of the specified backup vault
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BackupVault GetBackupVault(GetBackupVaultRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBackupVaultRequest(ref request, ref callSettings);
+            return _callGetBackupVault.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the description of the specified backup vault
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BackupVault> GetBackupVaultAsync(GetBackupVaultRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBackupVaultRequest(ref request, ref callSettings);
+            return _callGetBackupVault.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns list of all available backup vaults.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupVault"/> resources.</returns>
+        public override gax::PagedEnumerable<ListBackupVaultsResponse, BackupVault> ListBackupVaults(ListBackupVaultsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBackupVaultsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListBackupVaultsRequest, ListBackupVaultsResponse, BackupVault>(_callListBackupVaults, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns list of all available backup vaults.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupVault"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListBackupVaultsResponse, BackupVault> ListBackupVaultsAsync(ListBackupVaultsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBackupVaultsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListBackupVaultsRequest, ListBackupVaultsResponse, BackupVault>(_callListBackupVaults, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateBackupVault</c>.</summary>
+        public override lro::OperationsClient UpdateBackupVaultOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the settings of a specific backup vault.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<BackupVault, OperationMetadata> UpdateBackupVault(UpdateBackupVaultRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateBackupVaultRequest(ref request, ref callSettings);
+            return new lro::Operation<BackupVault, OperationMetadata>(_callUpdateBackupVault.Sync(request, callSettings), UpdateBackupVaultOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the settings of a specific backup vault.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<BackupVault, OperationMetadata>> UpdateBackupVaultAsync(UpdateBackupVaultRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateBackupVaultRequest(ref request, ref callSettings);
+            return new lro::Operation<BackupVault, OperationMetadata>(await _callUpdateBackupVault.Async(request, callSettings).ConfigureAwait(false), UpdateBackupVaultOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteBackupVault</c>.</summary>
+        public override lro::OperationsClient DeleteBackupVaultOperationsClient { get; }
+
+        /// <summary>
+        /// Warning! This operation will permanently delete the backup vault.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteBackupVault(DeleteBackupVaultRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteBackupVaultRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteBackupVault.Sync(request, callSettings), DeleteBackupVaultOperationsClient);
+        }
+
+        /// <summary>
+        /// Warning! This operation will permanently delete the backup vault.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupVaultAsync(DeleteBackupVaultRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteBackupVaultRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteBackupVault.Async(request, callSettings).ConfigureAwait(false), DeleteBackupVaultOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateBackup</c>.</summary>
+        public override lro::OperationsClient CreateBackupOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a backup from the volume specified in the request
+        /// The backup can be created from the given snapshot if specified in the
+        /// request. If no snapshot specified, there'll be a new snapshot taken to
+        /// initiate the backup creation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Backup, OperationMetadata> CreateBackup(CreateBackupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateBackupRequest(ref request, ref callSettings);
+            return new lro::Operation<Backup, OperationMetadata>(_callCreateBackup.Sync(request, callSettings), CreateBackupOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a backup from the volume specified in the request
+        /// The backup can be created from the given snapshot if specified in the
+        /// request. If no snapshot specified, there'll be a new snapshot taken to
+        /// initiate the backup creation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Backup, OperationMetadata>> CreateBackupAsync(CreateBackupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateBackupRequest(ref request, ref callSettings);
+            return new lro::Operation<Backup, OperationMetadata>(await _callCreateBackup.Async(request, callSettings).ConfigureAwait(false), CreateBackupOperationsClient);
+        }
+
+        /// <summary>
+        /// Returns the description of the specified backup
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Backup GetBackup(GetBackupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBackupRequest(ref request, ref callSettings);
+            return _callGetBackup.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the description of the specified backup
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Backup> GetBackupAsync(GetBackupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBackupRequest(ref request, ref callSettings);
+            return _callGetBackup.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns descriptions of all backups for a backupVault.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Backup"/> resources.</returns>
+        public override gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(ListBackupsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBackupsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListBackupsRequest, ListBackupsResponse, Backup>(_callListBackups, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns descriptions of all backups for a backupVault.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Backup"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(ListBackupsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBackupsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListBackupsRequest, ListBackupsResponse, Backup>(_callListBackups, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteBackup</c>.</summary>
+        public override lro::OperationsClient DeleteBackupOperationsClient { get; }
+
+        /// <summary>
+        /// Warning! This operation will permanently delete the backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteBackup(DeleteBackupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteBackupRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteBackup.Sync(request, callSettings), DeleteBackupOperationsClient);
+        }
+
+        /// <summary>
+        /// Warning! This operation will permanently delete the backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupAsync(DeleteBackupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteBackupRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteBackup.Async(request, callSettings).ConfigureAwait(false), DeleteBackupOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateBackup</c>.</summary>
+        public override lro::OperationsClient UpdateBackupOperationsClient { get; }
+
+        /// <summary>
+        /// Update backup with full spec.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Backup, OperationMetadata> UpdateBackup(UpdateBackupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateBackupRequest(ref request, ref callSettings);
+            return new lro::Operation<Backup, OperationMetadata>(_callUpdateBackup.Sync(request, callSettings), UpdateBackupOperationsClient);
+        }
+
+        /// <summary>
+        /// Update backup with full spec.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Backup, OperationMetadata>> UpdateBackupAsync(UpdateBackupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateBackupRequest(ref request, ref callSettings);
+            return new lro::Operation<Backup, OperationMetadata>(await _callUpdateBackup.Async(request, callSettings).ConfigureAwait(false), UpdateBackupOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateBackupPolicy</c>.</summary>
+        public override lro::OperationsClient CreateBackupPolicyOperationsClient { get; }
+
+        /// <summary>
+        /// Creates new backup policy
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<BackupPolicy, OperationMetadata> CreateBackupPolicy(CreateBackupPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateBackupPolicyRequest(ref request, ref callSettings);
+            return new lro::Operation<BackupPolicy, OperationMetadata>(_callCreateBackupPolicy.Sync(request, callSettings), CreateBackupPolicyOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates new backup policy
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<BackupPolicy, OperationMetadata>> CreateBackupPolicyAsync(CreateBackupPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateBackupPolicyRequest(ref request, ref callSettings);
+            return new lro::Operation<BackupPolicy, OperationMetadata>(await _callCreateBackupPolicy.Async(request, callSettings).ConfigureAwait(false), CreateBackupPolicyOperationsClient);
+        }
+
+        /// <summary>
+        /// Returns the description of the specified backup policy by backup_policy_id.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BackupPolicy GetBackupPolicy(GetBackupPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBackupPolicyRequest(ref request, ref callSettings);
+            return _callGetBackupPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the description of the specified backup policy by backup_policy_id.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BackupPolicy> GetBackupPolicyAsync(GetBackupPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBackupPolicyRequest(ref request, ref callSettings);
+            return _callGetBackupPolicy.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns list of all available backup policies.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupPolicy"/> resources.</returns>
+        public override gax::PagedEnumerable<ListBackupPoliciesResponse, BackupPolicy> ListBackupPolicies(ListBackupPoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBackupPoliciesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListBackupPoliciesRequest, ListBackupPoliciesResponse, BackupPolicy>(_callListBackupPolicies, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns list of all available backup policies.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupPolicy"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListBackupPoliciesResponse, BackupPolicy> ListBackupPoliciesAsync(ListBackupPoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBackupPoliciesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListBackupPoliciesRequest, ListBackupPoliciesResponse, BackupPolicy>(_callListBackupPolicies, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateBackupPolicy</c>.</summary>
+        public override lro::OperationsClient UpdateBackupPolicyOperationsClient { get; }
+
+        /// <summary>
+        /// Updates settings of a specific backup policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<BackupPolicy, OperationMetadata> UpdateBackupPolicy(UpdateBackupPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateBackupPolicyRequest(ref request, ref callSettings);
+            return new lro::Operation<BackupPolicy, OperationMetadata>(_callUpdateBackupPolicy.Sync(request, callSettings), UpdateBackupPolicyOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates settings of a specific backup policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<BackupPolicy, OperationMetadata>> UpdateBackupPolicyAsync(UpdateBackupPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateBackupPolicyRequest(ref request, ref callSettings);
+            return new lro::Operation<BackupPolicy, OperationMetadata>(await _callUpdateBackupPolicy.Async(request, callSettings).ConfigureAwait(false), UpdateBackupPolicyOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteBackupPolicy</c>.</summary>
+        public override lro::OperationsClient DeleteBackupPolicyOperationsClient { get; }
+
+        /// <summary>
+        /// Warning! This operation will permanently delete the backup policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteBackupPolicy(DeleteBackupPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteBackupPolicyRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteBackupPolicy.Sync(request, callSettings), DeleteBackupPolicyOperationsClient);
+        }
+
+        /// <summary>
+        /// Warning! This operation will permanently delete the backup policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupPolicyAsync(DeleteBackupPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteBackupPolicyRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteBackupPolicy.Async(request, callSettings).ConfigureAwait(false), DeleteBackupPolicyOperationsClient);
+        }
     }
 
     public partial class ListStoragePoolsRequest : gaxgrpc::IPageRequest
@@ -6781,6 +9851,18 @@ namespace Google.Cloud.NetApp.V1
     }
 
     public partial class ListReplicationsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListBackupVaultsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListBackupsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListBackupPoliciesRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -6828,6 +9910,30 @@ namespace Google.Cloud.NetApp.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Replication> GetEnumerator() => Replications.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListBackupVaultsResponse : gaxgrpc::IPageResponse<BackupVault>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<BackupVault> GetEnumerator() => BackupVaults.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListBackupsResponse : gaxgrpc::IPageResponse<Backup>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Backup> GetEnumerator() => Backups.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListBackupPoliciesResponse : gaxgrpc::IPageResponse<BackupPolicy>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<BackupPolicy> GetEnumerator() => BackupPolicies.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
