@@ -46,8 +46,8 @@ namespace Google.Cloud.NetApp.V1 {
             "YnVmLkZpZWxkTWFza0ID4EECEj4KDHN0b3JhZ2VfcG9vbBgCIAEoCzIjLmdv",
             "b2dsZS5jbG91ZC5uZXRhcHAudjEuU3RvcmFnZVBvb2xCA+BBAiJTChhEZWxl",
             "dGVTdG9yYWdlUG9vbFJlcXVlc3QSNwoEbmFtZRgBIAEoCUIp4EEC+kEjCiFu",
-            "ZXRhcHAuZ29vZ2xlYXBpcy5jb20vU3RvcmFnZVBvb2wipQgKC1N0b3JhZ2VQ",
-            "b29sEhEKBG5hbWUYASABKAlCA+BBAxJACg1zZXJ2aWNlX2xldmVsGAIgASgO",
+            "ZXRhcHAuZ29vZ2xlYXBpcy5jb20vU3RvcmFnZVBvb2wiwQgKC1N0b3JhZ2VQ",
+            "b29sEhEKBG5hbWUYASABKAlCA+BBCBJACg1zZXJ2aWNlX2xldmVsGAIgASgO",
             "MiQuZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5TZXJ2aWNlTGV2ZWxCA+BBAhIZ",
             "CgxjYXBhY2l0eV9naWIYAyABKANCA+BBAhIgChN2b2x1bWVfY2FwYWNpdHlf",
             "Z2liGAQgASgDQgPgQQMSGQoMdm9sdW1lX2NvdW50GAUgASgFQgPgQQMSPQoF",
@@ -62,19 +62,20 @@ namespace Google.Cloud.NetApp.V1 {
             "c19jb25maWcYDSABKAlCJPpBIQofbmV0YXBwLmdvb2dsZWFwaXMuY29tL0tt",
             "c0NvbmZpZxIUCgxsZGFwX2VuYWJsZWQYDiABKAgSEQoJcHNhX3JhbmdlGA8g",
             "ASgJEkQKD2VuY3J5cHRpb25fdHlwZRgQIAEoDjImLmdvb2dsZS5jbG91ZC5u",
-            "ZXRhcHAudjEuRW5jcnlwdGlvblR5cGVCA+BBAxInChVnbG9iYWxfYWNjZXNz",
-            "X2FsbG93ZWQYESABKAhCA+BBAUgAiAEBGi0KC0xhYmVsc0VudHJ5EgsKA2tl",
-            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiewoFU3RhdGUSFQoRU1RBVEVf",
-            "VU5TUEVDSUZJRUQQABIJCgVSRUFEWRABEgwKCENSRUFUSU5HEAISDAoIREVM",
-            "RVRJTkcQAxIMCghVUERBVElORxAEEg0KCVJFU1RPUklORxAFEgwKCERJU0FC",
-            "TEVEEAYSCQoFRVJST1IQBzpr6kFoCiFuZXRhcHAuZ29vZ2xlYXBpcy5jb20v",
-            "U3RvcmFnZVBvb2wSQ3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
-            "Y2F0aW9ufS9zdG9yYWdlUG9vbHMve3N0b3JhZ2VfcG9vbH1CGAoWX2dsb2Jh",
-            "bF9hY2Nlc3NfYWxsb3dlZEKyAQoaY29tLmdvb2dsZS5jbG91ZC5uZXRhcHAu",
-            "djFCEFN0b3JhZ2VQb29sUHJvdG9QAVoyY2xvdWQuZ29vZ2xlLmNvbS9nby9u",
-            "ZXRhcHAvYXBpdjEvbmV0YXBwcGI7bmV0YXBwcGKqAhZHb29nbGUuQ2xvdWQu",
-            "TmV0QXBwLlYxygIWR29vZ2xlXENsb3VkXE5ldEFwcFxWMeoCGUdvb2dsZTo6",
-            "Q2xvdWQ6Ok5ldEFwcDo6VjFiBnByb3RvMw=="));
+            "ZXRhcHAudjEuRW5jcnlwdGlvblR5cGVCA+BBAxImChVnbG9iYWxfYWNjZXNz",
+            "X2FsbG93ZWQYESABKAhCAhgBSACIAQEaLQoLTGFiZWxzRW50cnkSCwoDa2V5",
+            "GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJ7CgVTdGF0ZRIVChFTVEFURV9V",
+            "TlNQRUNJRklFRBAAEgkKBVJFQURZEAESDAoIQ1JFQVRJTkcQAhIMCghERUxF",
+            "VElORxADEgwKCFVQREFUSU5HEAQSDQoJUkVTVE9SSU5HEAUSDAoIRElTQUJM",
+            "RUQQBhIJCgVFUlJPUhAHOocB6kGDAQohbmV0YXBwLmdvb2dsZWFwaXMuY29t",
+            "L1N0b3JhZ2VQb29sEkNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
+            "b2NhdGlvbn0vc3RvcmFnZVBvb2xzL3tzdG9yYWdlX3Bvb2x9KgxzdG9yYWdl",
+            "UG9vbHMyC3N0b3JhZ2VQb29sQhgKFl9nbG9iYWxfYWNjZXNzX2FsbG93ZWRC",
+            "sgEKGmNvbS5nb29nbGUuY2xvdWQubmV0YXBwLnYxQhBTdG9yYWdlUG9vbFBy",
+            "b3RvUAFaMmNsb3VkLmdvb2dsZS5jb20vZ28vbmV0YXBwL2FwaXYxL25ldGFw",
+            "cHBiO25ldGFwcHBiqgIWR29vZ2xlLkNsb3VkLk5ldEFwcC5WMcoCFkdvb2ds",
+            "ZVxDbG91ZFxOZXRBcHBcVjHqAhlHb29nbGU6OkNsb3VkOjpOZXRBcHA6OlYx",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.NetApp.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -1704,7 +1705,7 @@ namespace Google.Cloud.NetApp.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. Name of the storage pool
+    /// Identifier. Name of the storage pool
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1947,8 +1948,10 @@ namespace Google.Cloud.NetApp.V1 {
 
     private bool globalAccessAllowed_;
     /// <summary>
-    /// Optional. Allows SO pool to access AD or DNS server from other regions.
+    /// Deprecated. Used to allow SO pool to access AD or DNS server from other
+    /// regions.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool GlobalAccessAllowed {
@@ -1959,12 +1962,14 @@ namespace Google.Cloud.NetApp.V1 {
       }
     }
     /// <summary>Gets whether the "global_access_allowed" field is set</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasGlobalAccessAllowed {
       get { return (_hasBits0 & 1) != 0; }
     }
     /// <summary>Clears the value of the "global_access_allowed" field</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearGlobalAccessAllowed() {

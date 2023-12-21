@@ -50,8 +50,8 @@ namespace Google.Cloud.NetApp.V1 {
             "b25maWdSZXF1ZXN0EjUKBG5hbWUYASABKAlCJ+BBAvpBIQofbmV0YXBwLmdv",
             "b2dsZWFwaXMuY29tL0ttc0NvbmZpZyJlChdWZXJpZnlLbXNDb25maWdSZXNw",
             "b25zZRIUCgdoZWFsdGh5GAEgASgIQgPgQQMSGQoMaGVhbHRoX2Vycm9yGAIg",
-            "ASgJQgPgQQMSGQoMaW5zdHJ1Y3Rpb25zGAMgASgJQgPgQQMitQUKCUttc0Nv",
-            "bmZpZxIRCgRuYW1lGAEgASgJQgPgQQMSHAoPY3J5cHRvX2tleV9uYW1lGAIg",
+            "ASgJQgPgQQMSGQoMaW5zdHJ1Y3Rpb25zGAMgASgJQgPgQQMizAUKCUttc0Nv",
+            "bmZpZxIRCgRuYW1lGAEgASgJQgPgQQgSHAoPY3J5cHRvX2tleV9uYW1lGAIg",
             "ASgJQgPgQQISOwoFc3RhdGUYAyABKA4yJy5nb29nbGUuY2xvdWQubmV0YXBw",
             "LnYxLkttc0NvbmZpZy5TdGF0ZUID4EEDEhoKDXN0YXRlX2RldGFpbHMYBCAB",
             "KAlCA+BBAxI0CgtjcmVhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1",
@@ -63,14 +63,14 @@ namespace Google.Cloud.NetApp.V1 {
             "TlNQRUNJRklFRBAAEgkKBVJFQURZEAESDAoIQ1JFQVRJTkcQAhIMCghERUxF",
             "VElORxADEgwKCFVQREFUSU5HEAQSCgoGSU5fVVNFEAUSCQoFRVJST1IQBhIV",
             "ChFLRVlfQ0hFQ0tfUEVORElORxAHEhUKEUtFWV9OT1RfUkVBQ0hBQkxFEAgS",
-            "DQoJRElTQUJMSU5HEAkSDAoIRElTQUJMRUQQChINCglNSUdSQVRJTkcQCzpl",
-            "6kFiCh9uZXRhcHAuZ29vZ2xlYXBpcy5jb20vS21zQ29uZmlnEj9wcm9qZWN0",
+            "DQoJRElTQUJMSU5HEAkSDAoIRElTQUJMRUQQChINCglNSUdSQVRJTkcQCzp8",
+            "6kF5Ch9uZXRhcHAuZ29vZ2xlYXBpcy5jb20vS21zQ29uZmlnEj9wcm9qZWN0",
             "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0va21zQ29uZmlncy97",
-            "a21zX2NvbmZpZ31CqgEKGmNvbS5nb29nbGUuY2xvdWQubmV0YXBwLnYxQghL",
-            "bXNQcm90b1ABWjJjbG91ZC5nb29nbGUuY29tL2dvL25ldGFwcC9hcGl2MS9u",
-            "ZXRhcHBwYjtuZXRhcHBwYqoCFkdvb2dsZS5DbG91ZC5OZXRBcHAuVjHKAhZH",
-            "b29nbGVcQ2xvdWRcTmV0QXBwXFYx6gIZR29vZ2xlOjpDbG91ZDo6TmV0QXBw",
-            "OjpWMWIGcHJvdG8z"));
+            "a21zX2NvbmZpZ30qCmttc0NvbmZpZ3MyCWttc0NvbmZpZ0KqAQoaY29tLmdv",
+            "b2dsZS5jbG91ZC5uZXRhcHAudjFCCEttc1Byb3RvUAFaMmNsb3VkLmdvb2ds",
+            "ZS5jb20vZ28vbmV0YXBwL2FwaXYxL25ldGFwcHBiO25ldGFwcHBiqgIWR29v",
+            "Z2xlLkNsb3VkLk5ldEFwcC5WMcoCFkdvb2dsZVxDbG91ZFxOZXRBcHBcVjHq",
+            "AhlHb29nbGU6OkNsb3VkOjpOZXRBcHA6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -2359,7 +2359,7 @@ namespace Google.Cloud.NetApp.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. Name of the KmsConfig.
+    /// Identifier. Name of the KmsConfig.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

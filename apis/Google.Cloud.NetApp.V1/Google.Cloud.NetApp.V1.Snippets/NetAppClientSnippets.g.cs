@@ -5629,5 +5629,2624 @@ namespace GoogleCSharpSnippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for CreateBackupVault</summary>
+        public void CreateBackupVaultRequestObject()
+        {
+            // Snippet: CreateBackupVault(CreateBackupVaultRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            CreateBackupVaultRequest request = new CreateBackupVaultRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                BackupVaultId = "",
+                BackupVault = new BackupVault(),
+            };
+            // Make the request
+            Operation<BackupVault, OperationMetadata> response = netAppClient.CreateBackupVault(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupVault, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BackupVault result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupVault, OperationMetadata> retrievedResponse = netAppClient.PollOnceCreateBackupVault(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupVault retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupVaultAsync</summary>
+        public async Task CreateBackupVaultRequestObjectAsync()
+        {
+            // Snippet: CreateBackupVaultAsync(CreateBackupVaultRequest, CallSettings)
+            // Additional: CreateBackupVaultAsync(CreateBackupVaultRequest, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateBackupVaultRequest request = new CreateBackupVaultRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                BackupVaultId = "",
+                BackupVault = new BackupVault(),
+            };
+            // Make the request
+            Operation<BackupVault, OperationMetadata> response = await netAppClient.CreateBackupVaultAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupVault, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BackupVault result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupVault, OperationMetadata> retrievedResponse = await netAppClient.PollOnceCreateBackupVaultAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupVault retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupVault</summary>
+        public void CreateBackupVault()
+        {
+            // Snippet: CreateBackupVault(string, BackupVault, string, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            BackupVault backupVault = new BackupVault();
+            string backupVaultId = "";
+            // Make the request
+            Operation<BackupVault, OperationMetadata> response = netAppClient.CreateBackupVault(parent, backupVault, backupVaultId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupVault, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BackupVault result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupVault, OperationMetadata> retrievedResponse = netAppClient.PollOnceCreateBackupVault(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupVault retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupVaultAsync</summary>
+        public async Task CreateBackupVaultAsync()
+        {
+            // Snippet: CreateBackupVaultAsync(string, BackupVault, string, CallSettings)
+            // Additional: CreateBackupVaultAsync(string, BackupVault, string, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            BackupVault backupVault = new BackupVault();
+            string backupVaultId = "";
+            // Make the request
+            Operation<BackupVault, OperationMetadata> response = await netAppClient.CreateBackupVaultAsync(parent, backupVault, backupVaultId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupVault, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BackupVault result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupVault, OperationMetadata> retrievedResponse = await netAppClient.PollOnceCreateBackupVaultAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupVault retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupVault</summary>
+        public void CreateBackupVaultResourceNames()
+        {
+            // Snippet: CreateBackupVault(LocationName, BackupVault, string, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            BackupVault backupVault = new BackupVault();
+            string backupVaultId = "";
+            // Make the request
+            Operation<BackupVault, OperationMetadata> response = netAppClient.CreateBackupVault(parent, backupVault, backupVaultId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupVault, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BackupVault result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupVault, OperationMetadata> retrievedResponse = netAppClient.PollOnceCreateBackupVault(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupVault retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupVaultAsync</summary>
+        public async Task CreateBackupVaultResourceNamesAsync()
+        {
+            // Snippet: CreateBackupVaultAsync(LocationName, BackupVault, string, CallSettings)
+            // Additional: CreateBackupVaultAsync(LocationName, BackupVault, string, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            BackupVault backupVault = new BackupVault();
+            string backupVaultId = "";
+            // Make the request
+            Operation<BackupVault, OperationMetadata> response = await netAppClient.CreateBackupVaultAsync(parent, backupVault, backupVaultId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupVault, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BackupVault result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupVault, OperationMetadata> retrievedResponse = await netAppClient.PollOnceCreateBackupVaultAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupVault retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupVault</summary>
+        public void GetBackupVaultRequestObject()
+        {
+            // Snippet: GetBackupVault(GetBackupVaultRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            GetBackupVaultRequest request = new GetBackupVaultRequest
+            {
+                BackupVaultName = BackupVaultName.FromProjectLocationBackupVault("[PROJECT]", "[LOCATION]", "[BACKUP_VAULT]"),
+            };
+            // Make the request
+            BackupVault response = netAppClient.GetBackupVault(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupVaultAsync</summary>
+        public async Task GetBackupVaultRequestObjectAsync()
+        {
+            // Snippet: GetBackupVaultAsync(GetBackupVaultRequest, CallSettings)
+            // Additional: GetBackupVaultAsync(GetBackupVaultRequest, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            GetBackupVaultRequest request = new GetBackupVaultRequest
+            {
+                BackupVaultName = BackupVaultName.FromProjectLocationBackupVault("[PROJECT]", "[LOCATION]", "[BACKUP_VAULT]"),
+            };
+            // Make the request
+            BackupVault response = await netAppClient.GetBackupVaultAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupVault</summary>
+        public void GetBackupVault()
+        {
+            // Snippet: GetBackupVault(string, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupVaults/[BACKUP_VAULT]";
+            // Make the request
+            BackupVault response = netAppClient.GetBackupVault(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupVaultAsync</summary>
+        public async Task GetBackupVaultAsync()
+        {
+            // Snippet: GetBackupVaultAsync(string, CallSettings)
+            // Additional: GetBackupVaultAsync(string, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupVaults/[BACKUP_VAULT]";
+            // Make the request
+            BackupVault response = await netAppClient.GetBackupVaultAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupVault</summary>
+        public void GetBackupVaultResourceNames()
+        {
+            // Snippet: GetBackupVault(BackupVaultName, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            BackupVaultName name = BackupVaultName.FromProjectLocationBackupVault("[PROJECT]", "[LOCATION]", "[BACKUP_VAULT]");
+            // Make the request
+            BackupVault response = netAppClient.GetBackupVault(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupVaultAsync</summary>
+        public async Task GetBackupVaultResourceNamesAsync()
+        {
+            // Snippet: GetBackupVaultAsync(BackupVaultName, CallSettings)
+            // Additional: GetBackupVaultAsync(BackupVaultName, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            BackupVaultName name = BackupVaultName.FromProjectLocationBackupVault("[PROJECT]", "[LOCATION]", "[BACKUP_VAULT]");
+            // Make the request
+            BackupVault response = await netAppClient.GetBackupVaultAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupVaults</summary>
+        public void ListBackupVaultsRequestObject()
+        {
+            // Snippet: ListBackupVaults(ListBackupVaultsRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            ListBackupVaultsRequest request = new ListBackupVaultsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                OrderBy = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListBackupVaultsResponse, BackupVault> response = netAppClient.ListBackupVaults(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackupVault item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupVaultsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupVault item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupVault> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupVault item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupVaultsAsync</summary>
+        public async Task ListBackupVaultsRequestObjectAsync()
+        {
+            // Snippet: ListBackupVaultsAsync(ListBackupVaultsRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            ListBackupVaultsRequest request = new ListBackupVaultsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                OrderBy = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListBackupVaultsResponse, BackupVault> response = netAppClient.ListBackupVaultsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((BackupVault item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListBackupVaultsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupVault item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupVault> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupVault item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupVaults</summary>
+        public void ListBackupVaults()
+        {
+            // Snippet: ListBackupVaults(string, string, int?, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListBackupVaultsResponse, BackupVault> response = netAppClient.ListBackupVaults(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackupVault item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupVaultsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupVault item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupVault> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupVault item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupVaultsAsync</summary>
+        public async Task ListBackupVaultsAsync()
+        {
+            // Snippet: ListBackupVaultsAsync(string, string, int?, CallSettings)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListBackupVaultsResponse, BackupVault> response = netAppClient.ListBackupVaultsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((BackupVault item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListBackupVaultsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupVault item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupVault> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupVault item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupVaults</summary>
+        public void ListBackupVaultsResourceNames()
+        {
+            // Snippet: ListBackupVaults(LocationName, string, int?, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListBackupVaultsResponse, BackupVault> response = netAppClient.ListBackupVaults(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackupVault item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupVaultsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupVault item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupVault> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupVault item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupVaultsAsync</summary>
+        public async Task ListBackupVaultsResourceNamesAsync()
+        {
+            // Snippet: ListBackupVaultsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListBackupVaultsResponse, BackupVault> response = netAppClient.ListBackupVaultsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((BackupVault item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListBackupVaultsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupVault item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupVault> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupVault item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupVault</summary>
+        public void UpdateBackupVaultRequestObject()
+        {
+            // Snippet: UpdateBackupVault(UpdateBackupVaultRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            UpdateBackupVaultRequest request = new UpdateBackupVaultRequest
+            {
+                UpdateMask = new FieldMask(),
+                BackupVault = new BackupVault(),
+            };
+            // Make the request
+            Operation<BackupVault, OperationMetadata> response = netAppClient.UpdateBackupVault(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupVault, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BackupVault result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupVault, OperationMetadata> retrievedResponse = netAppClient.PollOnceUpdateBackupVault(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupVault retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupVaultAsync</summary>
+        public async Task UpdateBackupVaultRequestObjectAsync()
+        {
+            // Snippet: UpdateBackupVaultAsync(UpdateBackupVaultRequest, CallSettings)
+            // Additional: UpdateBackupVaultAsync(UpdateBackupVaultRequest, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateBackupVaultRequest request = new UpdateBackupVaultRequest
+            {
+                UpdateMask = new FieldMask(),
+                BackupVault = new BackupVault(),
+            };
+            // Make the request
+            Operation<BackupVault, OperationMetadata> response = await netAppClient.UpdateBackupVaultAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupVault, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BackupVault result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupVault, OperationMetadata> retrievedResponse = await netAppClient.PollOnceUpdateBackupVaultAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupVault retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupVault</summary>
+        public void UpdateBackupVault()
+        {
+            // Snippet: UpdateBackupVault(BackupVault, FieldMask, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            BackupVault backupVault = new BackupVault();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<BackupVault, OperationMetadata> response = netAppClient.UpdateBackupVault(backupVault, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupVault, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BackupVault result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupVault, OperationMetadata> retrievedResponse = netAppClient.PollOnceUpdateBackupVault(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupVault retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupVaultAsync</summary>
+        public async Task UpdateBackupVaultAsync()
+        {
+            // Snippet: UpdateBackupVaultAsync(BackupVault, FieldMask, CallSettings)
+            // Additional: UpdateBackupVaultAsync(BackupVault, FieldMask, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            BackupVault backupVault = new BackupVault();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<BackupVault, OperationMetadata> response = await netAppClient.UpdateBackupVaultAsync(backupVault, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupVault, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BackupVault result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupVault, OperationMetadata> retrievedResponse = await netAppClient.PollOnceUpdateBackupVaultAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupVault retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupVault</summary>
+        public void DeleteBackupVaultRequestObject()
+        {
+            // Snippet: DeleteBackupVault(DeleteBackupVaultRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            DeleteBackupVaultRequest request = new DeleteBackupVaultRequest
+            {
+                BackupVaultName = BackupVaultName.FromProjectLocationBackupVault("[PROJECT]", "[LOCATION]", "[BACKUP_VAULT]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = netAppClient.DeleteBackupVault(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = netAppClient.PollOnceDeleteBackupVault(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupVaultAsync</summary>
+        public async Task DeleteBackupVaultRequestObjectAsync()
+        {
+            // Snippet: DeleteBackupVaultAsync(DeleteBackupVaultRequest, CallSettings)
+            // Additional: DeleteBackupVaultAsync(DeleteBackupVaultRequest, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteBackupVaultRequest request = new DeleteBackupVaultRequest
+            {
+                BackupVaultName = BackupVaultName.FromProjectLocationBackupVault("[PROJECT]", "[LOCATION]", "[BACKUP_VAULT]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await netAppClient.DeleteBackupVaultAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await netAppClient.PollOnceDeleteBackupVaultAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupVault</summary>
+        public void DeleteBackupVault()
+        {
+            // Snippet: DeleteBackupVault(string, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupVaults/[BACKUP_VAULT]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = netAppClient.DeleteBackupVault(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = netAppClient.PollOnceDeleteBackupVault(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupVaultAsync</summary>
+        public async Task DeleteBackupVaultAsync()
+        {
+            // Snippet: DeleteBackupVaultAsync(string, CallSettings)
+            // Additional: DeleteBackupVaultAsync(string, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupVaults/[BACKUP_VAULT]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await netAppClient.DeleteBackupVaultAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await netAppClient.PollOnceDeleteBackupVaultAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupVault</summary>
+        public void DeleteBackupVaultResourceNames()
+        {
+            // Snippet: DeleteBackupVault(BackupVaultName, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            BackupVaultName name = BackupVaultName.FromProjectLocationBackupVault("[PROJECT]", "[LOCATION]", "[BACKUP_VAULT]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = netAppClient.DeleteBackupVault(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = netAppClient.PollOnceDeleteBackupVault(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupVaultAsync</summary>
+        public async Task DeleteBackupVaultResourceNamesAsync()
+        {
+            // Snippet: DeleteBackupVaultAsync(BackupVaultName, CallSettings)
+            // Additional: DeleteBackupVaultAsync(BackupVaultName, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            BackupVaultName name = BackupVaultName.FromProjectLocationBackupVault("[PROJECT]", "[LOCATION]", "[BACKUP_VAULT]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await netAppClient.DeleteBackupVaultAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await netAppClient.PollOnceDeleteBackupVaultAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackup</summary>
+        public void CreateBackupRequestObject()
+        {
+            // Snippet: CreateBackup(CreateBackupRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            CreateBackupRequest request = new CreateBackupRequest
+            {
+                ParentAsBackupVaultName = BackupVaultName.FromProjectLocationBackupVault("[PROJECT]", "[LOCATION]", "[BACKUP_VAULT]"),
+                BackupId = "",
+                Backup = new Backup(),
+            };
+            // Make the request
+            Operation<Backup, OperationMetadata> response = netAppClient.CreateBackup(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, OperationMetadata> retrievedResponse = netAppClient.PollOnceCreateBackup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupAsync</summary>
+        public async Task CreateBackupRequestObjectAsync()
+        {
+            // Snippet: CreateBackupAsync(CreateBackupRequest, CallSettings)
+            // Additional: CreateBackupAsync(CreateBackupRequest, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateBackupRequest request = new CreateBackupRequest
+            {
+                ParentAsBackupVaultName = BackupVaultName.FromProjectLocationBackupVault("[PROJECT]", "[LOCATION]", "[BACKUP_VAULT]"),
+                BackupId = "",
+                Backup = new Backup(),
+            };
+            // Make the request
+            Operation<Backup, OperationMetadata> response = await netAppClient.CreateBackupAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, OperationMetadata> retrievedResponse = await netAppClient.PollOnceCreateBackupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackup</summary>
+        public void CreateBackup()
+        {
+            // Snippet: CreateBackup(string, Backup, string, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/backupVaults/[BACKUP_VAULT]";
+            Backup backup = new Backup();
+            string backupId = "";
+            // Make the request
+            Operation<Backup, OperationMetadata> response = netAppClient.CreateBackup(parent, backup, backupId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, OperationMetadata> retrievedResponse = netAppClient.PollOnceCreateBackup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupAsync</summary>
+        public async Task CreateBackupAsync()
+        {
+            // Snippet: CreateBackupAsync(string, Backup, string, CallSettings)
+            // Additional: CreateBackupAsync(string, Backup, string, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/backupVaults/[BACKUP_VAULT]";
+            Backup backup = new Backup();
+            string backupId = "";
+            // Make the request
+            Operation<Backup, OperationMetadata> response = await netAppClient.CreateBackupAsync(parent, backup, backupId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, OperationMetadata> retrievedResponse = await netAppClient.PollOnceCreateBackupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackup</summary>
+        public void CreateBackupResourceNames()
+        {
+            // Snippet: CreateBackup(BackupVaultName, Backup, string, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            BackupVaultName parent = BackupVaultName.FromProjectLocationBackupVault("[PROJECT]", "[LOCATION]", "[BACKUP_VAULT]");
+            Backup backup = new Backup();
+            string backupId = "";
+            // Make the request
+            Operation<Backup, OperationMetadata> response = netAppClient.CreateBackup(parent, backup, backupId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, OperationMetadata> retrievedResponse = netAppClient.PollOnceCreateBackup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupAsync</summary>
+        public async Task CreateBackupResourceNamesAsync()
+        {
+            // Snippet: CreateBackupAsync(BackupVaultName, Backup, string, CallSettings)
+            // Additional: CreateBackupAsync(BackupVaultName, Backup, string, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            BackupVaultName parent = BackupVaultName.FromProjectLocationBackupVault("[PROJECT]", "[LOCATION]", "[BACKUP_VAULT]");
+            Backup backup = new Backup();
+            string backupId = "";
+            // Make the request
+            Operation<Backup, OperationMetadata> response = await netAppClient.CreateBackupAsync(parent, backup, backupId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, OperationMetadata> retrievedResponse = await netAppClient.PollOnceCreateBackupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackup</summary>
+        public void GetBackupRequestObject()
+        {
+            // Snippet: GetBackup(GetBackupRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            GetBackupRequest request = new GetBackupRequest
+            {
+                BackupName = BackupName.FromProjectLocationBackupVaultBackup("[PROJECT]", "[LOCATION]", "[BACKUP_VAULT]", "[BACKUP]"),
+            };
+            // Make the request
+            Backup response = netAppClient.GetBackup(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupAsync</summary>
+        public async Task GetBackupRequestObjectAsync()
+        {
+            // Snippet: GetBackupAsync(GetBackupRequest, CallSettings)
+            // Additional: GetBackupAsync(GetBackupRequest, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            GetBackupRequest request = new GetBackupRequest
+            {
+                BackupName = BackupName.FromProjectLocationBackupVaultBackup("[PROJECT]", "[LOCATION]", "[BACKUP_VAULT]", "[BACKUP]"),
+            };
+            // Make the request
+            Backup response = await netAppClient.GetBackupAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackup</summary>
+        public void GetBackup()
+        {
+            // Snippet: GetBackup(string, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupVaults/[BACKUP_VAULT]/backups/[BACKUP]";
+            // Make the request
+            Backup response = netAppClient.GetBackup(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupAsync</summary>
+        public async Task GetBackupAsync()
+        {
+            // Snippet: GetBackupAsync(string, CallSettings)
+            // Additional: GetBackupAsync(string, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupVaults/[BACKUP_VAULT]/backups/[BACKUP]";
+            // Make the request
+            Backup response = await netAppClient.GetBackupAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackup</summary>
+        public void GetBackupResourceNames()
+        {
+            // Snippet: GetBackup(BackupName, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            BackupName name = BackupName.FromProjectLocationBackupVaultBackup("[PROJECT]", "[LOCATION]", "[BACKUP_VAULT]", "[BACKUP]");
+            // Make the request
+            Backup response = netAppClient.GetBackup(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupAsync</summary>
+        public async Task GetBackupResourceNamesAsync()
+        {
+            // Snippet: GetBackupAsync(BackupName, CallSettings)
+            // Additional: GetBackupAsync(BackupName, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            BackupName name = BackupName.FromProjectLocationBackupVaultBackup("[PROJECT]", "[LOCATION]", "[BACKUP_VAULT]", "[BACKUP]");
+            // Make the request
+            Backup response = await netAppClient.GetBackupAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackups</summary>
+        public void ListBackupsRequestObject()
+        {
+            // Snippet: ListBackups(ListBackupsRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            ListBackupsRequest request = new ListBackupsRequest
+            {
+                ParentAsBackupVaultName = BackupVaultName.FromProjectLocationBackupVault("[PROJECT]", "[LOCATION]", "[BACKUP_VAULT]"),
+                OrderBy = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListBackupsResponse, Backup> response = netAppClient.ListBackups(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Backup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Backup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Backup> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Backup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupsAsync</summary>
+        public async Task ListBackupsRequestObjectAsync()
+        {
+            // Snippet: ListBackupsAsync(ListBackupsRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            ListBackupsRequest request = new ListBackupsRequest
+            {
+                ParentAsBackupVaultName = BackupVaultName.FromProjectLocationBackupVault("[PROJECT]", "[LOCATION]", "[BACKUP_VAULT]"),
+                OrderBy = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListBackupsResponse, Backup> response = netAppClient.ListBackupsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Backup item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListBackupsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Backup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Backup> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Backup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackups</summary>
+        public void ListBackups()
+        {
+            // Snippet: ListBackups(string, string, int?, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/backupVaults/[BACKUP_VAULT]";
+            // Make the request
+            PagedEnumerable<ListBackupsResponse, Backup> response = netAppClient.ListBackups(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Backup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Backup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Backup> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Backup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupsAsync</summary>
+        public async Task ListBackupsAsync()
+        {
+            // Snippet: ListBackupsAsync(string, string, int?, CallSettings)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/backupVaults/[BACKUP_VAULT]";
+            // Make the request
+            PagedAsyncEnumerable<ListBackupsResponse, Backup> response = netAppClient.ListBackupsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Backup item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListBackupsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Backup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Backup> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Backup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackups</summary>
+        public void ListBackupsResourceNames()
+        {
+            // Snippet: ListBackups(BackupVaultName, string, int?, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            BackupVaultName parent = BackupVaultName.FromProjectLocationBackupVault("[PROJECT]", "[LOCATION]", "[BACKUP_VAULT]");
+            // Make the request
+            PagedEnumerable<ListBackupsResponse, Backup> response = netAppClient.ListBackups(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Backup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Backup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Backup> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Backup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupsAsync</summary>
+        public async Task ListBackupsResourceNamesAsync()
+        {
+            // Snippet: ListBackupsAsync(BackupVaultName, string, int?, CallSettings)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            BackupVaultName parent = BackupVaultName.FromProjectLocationBackupVault("[PROJECT]", "[LOCATION]", "[BACKUP_VAULT]");
+            // Make the request
+            PagedAsyncEnumerable<ListBackupsResponse, Backup> response = netAppClient.ListBackupsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Backup item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListBackupsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Backup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Backup> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Backup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackup</summary>
+        public void DeleteBackupRequestObject()
+        {
+            // Snippet: DeleteBackup(DeleteBackupRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            DeleteBackupRequest request = new DeleteBackupRequest
+            {
+                BackupName = BackupName.FromProjectLocationBackupVaultBackup("[PROJECT]", "[LOCATION]", "[BACKUP_VAULT]", "[BACKUP]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = netAppClient.DeleteBackup(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = netAppClient.PollOnceDeleteBackup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupAsync</summary>
+        public async Task DeleteBackupRequestObjectAsync()
+        {
+            // Snippet: DeleteBackupAsync(DeleteBackupRequest, CallSettings)
+            // Additional: DeleteBackupAsync(DeleteBackupRequest, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteBackupRequest request = new DeleteBackupRequest
+            {
+                BackupName = BackupName.FromProjectLocationBackupVaultBackup("[PROJECT]", "[LOCATION]", "[BACKUP_VAULT]", "[BACKUP]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await netAppClient.DeleteBackupAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await netAppClient.PollOnceDeleteBackupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackup</summary>
+        public void DeleteBackup()
+        {
+            // Snippet: DeleteBackup(string, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupVaults/[BACKUP_VAULT]/backups/[BACKUP]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = netAppClient.DeleteBackup(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = netAppClient.PollOnceDeleteBackup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupAsync</summary>
+        public async Task DeleteBackupAsync()
+        {
+            // Snippet: DeleteBackupAsync(string, CallSettings)
+            // Additional: DeleteBackupAsync(string, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupVaults/[BACKUP_VAULT]/backups/[BACKUP]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await netAppClient.DeleteBackupAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await netAppClient.PollOnceDeleteBackupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackup</summary>
+        public void DeleteBackupResourceNames()
+        {
+            // Snippet: DeleteBackup(BackupName, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            BackupName name = BackupName.FromProjectLocationBackupVaultBackup("[PROJECT]", "[LOCATION]", "[BACKUP_VAULT]", "[BACKUP]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = netAppClient.DeleteBackup(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = netAppClient.PollOnceDeleteBackup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupAsync</summary>
+        public async Task DeleteBackupResourceNamesAsync()
+        {
+            // Snippet: DeleteBackupAsync(BackupName, CallSettings)
+            // Additional: DeleteBackupAsync(BackupName, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            BackupName name = BackupName.FromProjectLocationBackupVaultBackup("[PROJECT]", "[LOCATION]", "[BACKUP_VAULT]", "[BACKUP]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await netAppClient.DeleteBackupAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await netAppClient.PollOnceDeleteBackupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackup</summary>
+        public void UpdateBackupRequestObject()
+        {
+            // Snippet: UpdateBackup(UpdateBackupRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            UpdateBackupRequest request = new UpdateBackupRequest
+            {
+                UpdateMask = new FieldMask(),
+                Backup = new Backup(),
+            };
+            // Make the request
+            Operation<Backup, OperationMetadata> response = netAppClient.UpdateBackup(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, OperationMetadata> retrievedResponse = netAppClient.PollOnceUpdateBackup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupAsync</summary>
+        public async Task UpdateBackupRequestObjectAsync()
+        {
+            // Snippet: UpdateBackupAsync(UpdateBackupRequest, CallSettings)
+            // Additional: UpdateBackupAsync(UpdateBackupRequest, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateBackupRequest request = new UpdateBackupRequest
+            {
+                UpdateMask = new FieldMask(),
+                Backup = new Backup(),
+            };
+            // Make the request
+            Operation<Backup, OperationMetadata> response = await netAppClient.UpdateBackupAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, OperationMetadata> retrievedResponse = await netAppClient.PollOnceUpdateBackupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackup</summary>
+        public void UpdateBackup()
+        {
+            // Snippet: UpdateBackup(Backup, FieldMask, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            Backup backup = new Backup();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Backup, OperationMetadata> response = netAppClient.UpdateBackup(backup, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, OperationMetadata> retrievedResponse = netAppClient.PollOnceUpdateBackup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupAsync</summary>
+        public async Task UpdateBackupAsync()
+        {
+            // Snippet: UpdateBackupAsync(Backup, FieldMask, CallSettings)
+            // Additional: UpdateBackupAsync(Backup, FieldMask, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            Backup backup = new Backup();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Backup, OperationMetadata> response = await netAppClient.UpdateBackupAsync(backup, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, OperationMetadata> retrievedResponse = await netAppClient.PollOnceUpdateBackupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupPolicy</summary>
+        public void CreateBackupPolicyRequestObject()
+        {
+            // Snippet: CreateBackupPolicy(CreateBackupPolicyRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            CreateBackupPolicyRequest request = new CreateBackupPolicyRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                BackupPolicy = new BackupPolicy(),
+                BackupPolicyId = "",
+            };
+            // Make the request
+            Operation<BackupPolicy, OperationMetadata> response = netAppClient.CreateBackupPolicy(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupPolicy, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BackupPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupPolicy, OperationMetadata> retrievedResponse = netAppClient.PollOnceCreateBackupPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupPolicyAsync</summary>
+        public async Task CreateBackupPolicyRequestObjectAsync()
+        {
+            // Snippet: CreateBackupPolicyAsync(CreateBackupPolicyRequest, CallSettings)
+            // Additional: CreateBackupPolicyAsync(CreateBackupPolicyRequest, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateBackupPolicyRequest request = new CreateBackupPolicyRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                BackupPolicy = new BackupPolicy(),
+                BackupPolicyId = "",
+            };
+            // Make the request
+            Operation<BackupPolicy, OperationMetadata> response = await netAppClient.CreateBackupPolicyAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupPolicy, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BackupPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupPolicy, OperationMetadata> retrievedResponse = await netAppClient.PollOnceCreateBackupPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupPolicy</summary>
+        public void CreateBackupPolicy()
+        {
+            // Snippet: CreateBackupPolicy(string, BackupPolicy, string, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            BackupPolicy backupPolicy = new BackupPolicy();
+            string backupPolicyId = "";
+            // Make the request
+            Operation<BackupPolicy, OperationMetadata> response = netAppClient.CreateBackupPolicy(parent, backupPolicy, backupPolicyId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupPolicy, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BackupPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupPolicy, OperationMetadata> retrievedResponse = netAppClient.PollOnceCreateBackupPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupPolicyAsync</summary>
+        public async Task CreateBackupPolicyAsync()
+        {
+            // Snippet: CreateBackupPolicyAsync(string, BackupPolicy, string, CallSettings)
+            // Additional: CreateBackupPolicyAsync(string, BackupPolicy, string, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            BackupPolicy backupPolicy = new BackupPolicy();
+            string backupPolicyId = "";
+            // Make the request
+            Operation<BackupPolicy, OperationMetadata> response = await netAppClient.CreateBackupPolicyAsync(parent, backupPolicy, backupPolicyId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupPolicy, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BackupPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupPolicy, OperationMetadata> retrievedResponse = await netAppClient.PollOnceCreateBackupPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupPolicy</summary>
+        public void CreateBackupPolicyResourceNames()
+        {
+            // Snippet: CreateBackupPolicy(LocationName, BackupPolicy, string, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            BackupPolicy backupPolicy = new BackupPolicy();
+            string backupPolicyId = "";
+            // Make the request
+            Operation<BackupPolicy, OperationMetadata> response = netAppClient.CreateBackupPolicy(parent, backupPolicy, backupPolicyId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupPolicy, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BackupPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupPolicy, OperationMetadata> retrievedResponse = netAppClient.PollOnceCreateBackupPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupPolicyAsync</summary>
+        public async Task CreateBackupPolicyResourceNamesAsync()
+        {
+            // Snippet: CreateBackupPolicyAsync(LocationName, BackupPolicy, string, CallSettings)
+            // Additional: CreateBackupPolicyAsync(LocationName, BackupPolicy, string, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            BackupPolicy backupPolicy = new BackupPolicy();
+            string backupPolicyId = "";
+            // Make the request
+            Operation<BackupPolicy, OperationMetadata> response = await netAppClient.CreateBackupPolicyAsync(parent, backupPolicy, backupPolicyId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupPolicy, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BackupPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupPolicy, OperationMetadata> retrievedResponse = await netAppClient.PollOnceCreateBackupPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupPolicy</summary>
+        public void GetBackupPolicyRequestObject()
+        {
+            // Snippet: GetBackupPolicy(GetBackupPolicyRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            GetBackupPolicyRequest request = new GetBackupPolicyRequest
+            {
+                BackupPolicyName = BackupPolicyName.FromProjectLocationBackupPolicy("[PROJECT]", "[LOCATION]", "[BACKUP_POLICY]"),
+            };
+            // Make the request
+            BackupPolicy response = netAppClient.GetBackupPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupPolicyAsync</summary>
+        public async Task GetBackupPolicyRequestObjectAsync()
+        {
+            // Snippet: GetBackupPolicyAsync(GetBackupPolicyRequest, CallSettings)
+            // Additional: GetBackupPolicyAsync(GetBackupPolicyRequest, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            GetBackupPolicyRequest request = new GetBackupPolicyRequest
+            {
+                BackupPolicyName = BackupPolicyName.FromProjectLocationBackupPolicy("[PROJECT]", "[LOCATION]", "[BACKUP_POLICY]"),
+            };
+            // Make the request
+            BackupPolicy response = await netAppClient.GetBackupPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupPolicy</summary>
+        public void GetBackupPolicy()
+        {
+            // Snippet: GetBackupPolicy(string, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupPolicies/[BACKUP_POLICY]";
+            // Make the request
+            BackupPolicy response = netAppClient.GetBackupPolicy(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupPolicyAsync</summary>
+        public async Task GetBackupPolicyAsync()
+        {
+            // Snippet: GetBackupPolicyAsync(string, CallSettings)
+            // Additional: GetBackupPolicyAsync(string, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupPolicies/[BACKUP_POLICY]";
+            // Make the request
+            BackupPolicy response = await netAppClient.GetBackupPolicyAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupPolicy</summary>
+        public void GetBackupPolicyResourceNames()
+        {
+            // Snippet: GetBackupPolicy(BackupPolicyName, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            BackupPolicyName name = BackupPolicyName.FromProjectLocationBackupPolicy("[PROJECT]", "[LOCATION]", "[BACKUP_POLICY]");
+            // Make the request
+            BackupPolicy response = netAppClient.GetBackupPolicy(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupPolicyAsync</summary>
+        public async Task GetBackupPolicyResourceNamesAsync()
+        {
+            // Snippet: GetBackupPolicyAsync(BackupPolicyName, CallSettings)
+            // Additional: GetBackupPolicyAsync(BackupPolicyName, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            BackupPolicyName name = BackupPolicyName.FromProjectLocationBackupPolicy("[PROJECT]", "[LOCATION]", "[BACKUP_POLICY]");
+            // Make the request
+            BackupPolicy response = await netAppClient.GetBackupPolicyAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupPolicies</summary>
+        public void ListBackupPoliciesRequestObject()
+        {
+            // Snippet: ListBackupPolicies(ListBackupPoliciesRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            ListBackupPoliciesRequest request = new ListBackupPoliciesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListBackupPoliciesResponse, BackupPolicy> response = netAppClient.ListBackupPolicies(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackupPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupPolicy> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupPoliciesAsync</summary>
+        public async Task ListBackupPoliciesRequestObjectAsync()
+        {
+            // Snippet: ListBackupPoliciesAsync(ListBackupPoliciesRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            ListBackupPoliciesRequest request = new ListBackupPoliciesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListBackupPoliciesResponse, BackupPolicy> response = netAppClient.ListBackupPoliciesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((BackupPolicy item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListBackupPoliciesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupPolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupPolicies</summary>
+        public void ListBackupPolicies()
+        {
+            // Snippet: ListBackupPolicies(string, string, int?, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListBackupPoliciesResponse, BackupPolicy> response = netAppClient.ListBackupPolicies(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackupPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupPolicy> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupPoliciesAsync</summary>
+        public async Task ListBackupPoliciesAsync()
+        {
+            // Snippet: ListBackupPoliciesAsync(string, string, int?, CallSettings)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListBackupPoliciesResponse, BackupPolicy> response = netAppClient.ListBackupPoliciesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((BackupPolicy item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListBackupPoliciesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupPolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupPolicies</summary>
+        public void ListBackupPoliciesResourceNames()
+        {
+            // Snippet: ListBackupPolicies(LocationName, string, int?, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListBackupPoliciesResponse, BackupPolicy> response = netAppClient.ListBackupPolicies(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackupPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupPolicy> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupPoliciesAsync</summary>
+        public async Task ListBackupPoliciesResourceNamesAsync()
+        {
+            // Snippet: ListBackupPoliciesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListBackupPoliciesResponse, BackupPolicy> response = netAppClient.ListBackupPoliciesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((BackupPolicy item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListBackupPoliciesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupPolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupPolicy</summary>
+        public void UpdateBackupPolicyRequestObject()
+        {
+            // Snippet: UpdateBackupPolicy(UpdateBackupPolicyRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            UpdateBackupPolicyRequest request = new UpdateBackupPolicyRequest
+            {
+                UpdateMask = new FieldMask(),
+                BackupPolicy = new BackupPolicy(),
+            };
+            // Make the request
+            Operation<BackupPolicy, OperationMetadata> response = netAppClient.UpdateBackupPolicy(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupPolicy, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BackupPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupPolicy, OperationMetadata> retrievedResponse = netAppClient.PollOnceUpdateBackupPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupPolicyAsync</summary>
+        public async Task UpdateBackupPolicyRequestObjectAsync()
+        {
+            // Snippet: UpdateBackupPolicyAsync(UpdateBackupPolicyRequest, CallSettings)
+            // Additional: UpdateBackupPolicyAsync(UpdateBackupPolicyRequest, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateBackupPolicyRequest request = new UpdateBackupPolicyRequest
+            {
+                UpdateMask = new FieldMask(),
+                BackupPolicy = new BackupPolicy(),
+            };
+            // Make the request
+            Operation<BackupPolicy, OperationMetadata> response = await netAppClient.UpdateBackupPolicyAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupPolicy, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BackupPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupPolicy, OperationMetadata> retrievedResponse = await netAppClient.PollOnceUpdateBackupPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupPolicy</summary>
+        public void UpdateBackupPolicy()
+        {
+            // Snippet: UpdateBackupPolicy(BackupPolicy, FieldMask, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            BackupPolicy backupPolicy = new BackupPolicy();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<BackupPolicy, OperationMetadata> response = netAppClient.UpdateBackupPolicy(backupPolicy, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupPolicy, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BackupPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupPolicy, OperationMetadata> retrievedResponse = netAppClient.PollOnceUpdateBackupPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupPolicyAsync</summary>
+        public async Task UpdateBackupPolicyAsync()
+        {
+            // Snippet: UpdateBackupPolicyAsync(BackupPolicy, FieldMask, CallSettings)
+            // Additional: UpdateBackupPolicyAsync(BackupPolicy, FieldMask, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            BackupPolicy backupPolicy = new BackupPolicy();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<BackupPolicy, OperationMetadata> response = await netAppClient.UpdateBackupPolicyAsync(backupPolicy, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupPolicy, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BackupPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupPolicy, OperationMetadata> retrievedResponse = await netAppClient.PollOnceUpdateBackupPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupPolicy</summary>
+        public void DeleteBackupPolicyRequestObject()
+        {
+            // Snippet: DeleteBackupPolicy(DeleteBackupPolicyRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            DeleteBackupPolicyRequest request = new DeleteBackupPolicyRequest
+            {
+                BackupPolicyName = BackupPolicyName.FromProjectLocationBackupPolicy("[PROJECT]", "[LOCATION]", "[BACKUP_POLICY]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = netAppClient.DeleteBackupPolicy(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = netAppClient.PollOnceDeleteBackupPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupPolicyAsync</summary>
+        public async Task DeleteBackupPolicyRequestObjectAsync()
+        {
+            // Snippet: DeleteBackupPolicyAsync(DeleteBackupPolicyRequest, CallSettings)
+            // Additional: DeleteBackupPolicyAsync(DeleteBackupPolicyRequest, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteBackupPolicyRequest request = new DeleteBackupPolicyRequest
+            {
+                BackupPolicyName = BackupPolicyName.FromProjectLocationBackupPolicy("[PROJECT]", "[LOCATION]", "[BACKUP_POLICY]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await netAppClient.DeleteBackupPolicyAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await netAppClient.PollOnceDeleteBackupPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupPolicy</summary>
+        public void DeleteBackupPolicy()
+        {
+            // Snippet: DeleteBackupPolicy(string, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupPolicies/[BACKUP_POLICY]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = netAppClient.DeleteBackupPolicy(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = netAppClient.PollOnceDeleteBackupPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupPolicyAsync</summary>
+        public async Task DeleteBackupPolicyAsync()
+        {
+            // Snippet: DeleteBackupPolicyAsync(string, CallSettings)
+            // Additional: DeleteBackupPolicyAsync(string, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupPolicies/[BACKUP_POLICY]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await netAppClient.DeleteBackupPolicyAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await netAppClient.PollOnceDeleteBackupPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupPolicy</summary>
+        public void DeleteBackupPolicyResourceNames()
+        {
+            // Snippet: DeleteBackupPolicy(BackupPolicyName, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            BackupPolicyName name = BackupPolicyName.FromProjectLocationBackupPolicy("[PROJECT]", "[LOCATION]", "[BACKUP_POLICY]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = netAppClient.DeleteBackupPolicy(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = netAppClient.PollOnceDeleteBackupPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupPolicyAsync</summary>
+        public async Task DeleteBackupPolicyResourceNamesAsync()
+        {
+            // Snippet: DeleteBackupPolicyAsync(BackupPolicyName, CallSettings)
+            // Additional: DeleteBackupPolicyAsync(BackupPolicyName, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            BackupPolicyName name = BackupPolicyName.FromProjectLocationBackupPolicy("[PROJECT]", "[LOCATION]", "[BACKUP_POLICY]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await netAppClient.DeleteBackupPolicyAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await netAppClient.PollOnceDeleteBackupPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }

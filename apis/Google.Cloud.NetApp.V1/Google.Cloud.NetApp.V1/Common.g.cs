@@ -46,8 +46,17 @@ namespace Google.Cloud.NetApp.V1 {
   /// The service levels - Storage Pool, Volumes
   /// </summary>
   public enum ServiceLevel {
+    /// <summary>
+    /// Unspecified service level.
+    /// </summary>
     [pbr::OriginalName("SERVICE_LEVEL_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Premium service level.
+    /// </summary>
     [pbr::OriginalName("PREMIUM")] Premium = 1,
+    /// <summary>
+    /// Extreme service level.
+    /// </summary>
     [pbr::OriginalName("EXTREME")] Extreme = 2,
     /// <summary>
     /// Standard (Software offering)

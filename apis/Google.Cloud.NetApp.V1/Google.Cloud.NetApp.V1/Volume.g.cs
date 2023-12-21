@@ -47,7 +47,7 @@ namespace Google.Cloud.NetApp.V1 {
             "dGFwcC5nb29nbGVhcGlzLmNvbS9Wb2x1bWUSDQoFZm9yY2UYAiABKAgiYwoT",
             "UmV2ZXJ0Vm9sdW1lUmVxdWVzdBIyCgRuYW1lGAEgASgJQiTgQQL6QR4KHG5l",
             "dGFwcC5nb29nbGVhcGlzLmNvbS9Wb2x1bWUSGAoLc25hcHNob3RfaWQYAiAB",
-            "KAlCA+BBAiLIDQoGVm9sdW1lEhEKBG5hbWUYASABKAlCA+BBAxI4CgVzdGF0",
+            "KAlCA+BBAiKtDgoGVm9sdW1lEhEKBG5hbWUYASABKAlCA+BBCBI4CgVzdGF0",
             "ZRgCIAEoDjIkLmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuVm9sdW1lLlN0YXRl",
             "QgPgQQMSGgoNc3RhdGVfZGV0YWlscxgDIAEoCUID4EEDEjQKC2NyZWF0ZV90",
             "aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEhcK",
@@ -78,72 +78,80 @@ namespace Google.Cloud.NetApp.V1 {
             "GyABKAlCJ+BBA/pBIQofbmV0YXBwLmdvb2dsZWFwaXMuY29tL0ttc0NvbmZp",
             "ZxJECg9lbmNyeXB0aW9uX3R5cGUYHCABKA4yJi5nb29nbGUuY2xvdWQubmV0",
             "YXBwLnYxLkVuY3J5cHRpb25UeXBlQgPgQQMSHAoPaGFzX3JlcGxpY2F0aW9u",
-            "GB0gASgIQgPgQQMSSQoScmVzdHJpY3RlZF9hY3Rpb25zGB8gAygOMiguZ29v",
-            "Z2xlLmNsb3VkLm5ldGFwcC52MS5SZXN0cmljdGVkQWN0aW9uQgPgQQEaLQoL",
-            "TGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJ7",
-            "CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgkKBVJFQURZEAESDAoI",
-            "Q1JFQVRJTkcQAhIMCghERUxFVElORxADEgwKCFVQREFUSU5HEAQSDQoJUkVT",
-            "VE9SSU5HEAUSDAoIRElTQUJMRUQQBhIJCgVFUlJPUhAHOlvqQVgKHG5ldGFw",
-            "cC5nb29nbGVhcGlzLmNvbS9Wb2x1bWUSOHByb2plY3RzL3twcm9qZWN0fS9s",
-            "b2NhdGlvbnMve2xvY2F0aW9ufS92b2x1bWVzL3t2b2x1bWV9IlIKDEV4cG9y",
-            "dFBvbGljeRJCCgVydWxlcxgBIAMoCzIuLmdvb2dsZS5jbG91ZC5uZXRhcHAu",
-            "djEuU2ltcGxlRXhwb3J0UG9saWN5UnVsZUID4EECIvwEChZTaW1wbGVFeHBv",
-            "cnRQb2xpY3lSdWxlEhwKD2FsbG93ZWRfY2xpZW50cxgBIAEoCUgAiAEBEhwK",
-            "D2hhc19yb290X2FjY2VzcxgCIAEoCUgBiAEBEjwKC2FjY2Vzc190eXBlGAMg",
-            "ASgOMiIuZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5BY2Nlc3NUeXBlSAKIAQES",
-            "EgoFbmZzdjMYBCABKAhIA4gBARISCgVuZnN2NBgFIAEoCEgEiAEBEiEKFGtl",
-            "cmJlcm9zXzVfcmVhZF9vbmx5GAYgASgISAWIAQESIgoVa2VyYmVyb3NfNV9y",
-            "ZWFkX3dyaXRlGAcgASgISAaIAQESIgoVa2VyYmVyb3NfNWlfcmVhZF9vbmx5",
-            "GAggASgISAeIAQESIwoWa2VyYmVyb3NfNWlfcmVhZF93cml0ZRgJIAEoCEgI",
-            "iAEBEiIKFWtlcmJlcm9zXzVwX3JlYWRfb25seRgKIAEoCEgJiAEBEiMKFmtl",
-            "cmJlcm9zXzVwX3JlYWRfd3JpdGUYCyABKAhICogBAUISChBfYWxsb3dlZF9j",
-            "bGllbnRzQhIKEF9oYXNfcm9vdF9hY2Nlc3NCDgoMX2FjY2Vzc190eXBlQggK",
-            "Bl9uZnN2M0IICgZfbmZzdjRCFwoVX2tlcmJlcm9zXzVfcmVhZF9vbmx5QhgK",
-            "Fl9rZXJiZXJvc181X3JlYWRfd3JpdGVCGAoWX2tlcmJlcm9zXzVpX3JlYWRf",
-            "b25seUIZChdfa2VyYmVyb3NfNWlfcmVhZF93cml0ZUIYChZfa2VyYmVyb3Nf",
-            "NXBfcmVhZF9vbmx5QhkKF19rZXJiZXJvc181cF9yZWFkX3dyaXRlIpoDCg5T",
-            "bmFwc2hvdFBvbGljeRIUCgdlbmFibGVkGAEgASgISACIAQESRAoPaG91cmx5",
-            "X3NjaGVkdWxlGAIgASgLMiYuZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5Ib3Vy",
-            "bHlTY2hlZHVsZUgBiAEBEkIKDmRhaWx5X3NjaGVkdWxlGAMgASgLMiUuZ29v",
-            "Z2xlLmNsb3VkLm5ldGFwcC52MS5EYWlseVNjaGVkdWxlSAKIAQESRAoPd2Vl",
-            "a2x5X3NjaGVkdWxlGAQgASgLMiYuZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5X",
-            "ZWVrbHlTY2hlZHVsZUgDiAEBEkYKEG1vbnRobHlfc2NoZWR1bGUYBSABKAsy",
-            "Jy5nb29nbGUuY2xvdWQubmV0YXBwLnYxLk1vbnRobHlTY2hlZHVsZUgEiAEB",
-            "QgoKCF9lbmFibGVkQhIKEF9ob3VybHlfc2NoZWR1bGVCEQoPX2RhaWx5X3Nj",
-            "aGVkdWxlQhIKEF93ZWVrbHlfc2NoZWR1bGVCEwoRX21vbnRobHlfc2NoZWR1",
-            "bGUiZgoOSG91cmx5U2NoZWR1bGUSHgoRc25hcHNob3RzX3RvX2tlZXAYASAB",
-            "KAFIAIgBARITCgZtaW51dGUYAiABKAFIAYgBAUIUChJfc25hcHNob3RzX3Rv",
-            "X2tlZXBCCQoHX21pbnV0ZSKBAQoNRGFpbHlTY2hlZHVsZRIeChFzbmFwc2hv",
-            "dHNfdG9fa2VlcBgBIAEoAUgAiAEBEhMKBm1pbnV0ZRgCIAEoAUgBiAEBEhEK",
-            "BGhvdXIYAyABKAFIAogBAUIUChJfc25hcHNob3RzX3RvX2tlZXBCCQoHX21p",
-            "bnV0ZUIHCgVfaG91ciKcAQoOV2Vla2x5U2NoZWR1bGUSHgoRc25hcHNob3Rz",
-            "X3RvX2tlZXAYASABKAFIAIgBARITCgZtaW51dGUYAiABKAFIAYgBARIRCgRo",
-            "b3VyGAMgASgBSAKIAQESEAoDZGF5GAQgASgJSAOIAQFCFAoSX3NuYXBzaG90",
-            "c190b19rZWVwQgkKB19taW51dGVCBwoFX2hvdXJCBgoEX2RheSKxAQoPTW9u",
-            "dGhseVNjaGVkdWxlEh4KEXNuYXBzaG90c190b19rZWVwGAEgASgBSACIAQES",
-            "EwoGbWludXRlGAIgASgBSAGIAQESEQoEaG91chgDIAEoAUgCiAEBEhoKDWRh",
-            "eXNfb2ZfbW9udGgYBCABKAlIA4gBAUIUChJfc25hcHNob3RzX3RvX2tlZXBC",
-            "CQoHX21pbnV0ZUIHCgVfaG91ckIQCg5fZGF5c19vZl9tb250aCJ9CgtNb3Vu",
-            "dE9wdGlvbhIOCgZleHBvcnQYASABKAkSEwoLZXhwb3J0X2Z1bGwYAiABKAkS",
-            "MwoIcHJvdG9jb2wYAyABKA4yIS5nb29nbGUuY2xvdWQubmV0YXBwLnYxLlBy",
-            "b3RvY29scxIUCgxpbnN0cnVjdGlvbnMYBCABKAkiOAoRUmVzdG9yZVBhcmFt",
-            "ZXRlcnMSGQoPc291cmNlX3NuYXBzaG90GAEgASgJSABCCAoGc291cmNlKkUK",
-            "CVByb3RvY29scxIZChVQUk9UT0NPTFNfVU5TUEVDSUZJRUQQABIJCgVORlNW",
-            "MxABEgkKBU5GU1Y0EAISBwoDU01CEAMqVwoKQWNjZXNzVHlwZRIbChdBQ0NF",
-            "U1NfVFlQRV9VTlNQRUNJRklFRBAAEg0KCVJFQURfT05MWRABEg4KClJFQURf",
-            "V1JJVEUQAhINCglSRUFEX05PTkUQAyroAQoLU01CU2V0dGluZ3MSHAoYU01C",
-            "X1NFVFRJTkdTX1VOU1BFQ0lGSUVEEAASEAoMRU5DUllQVF9EQVRBEAESDQoJ",
-            "QlJPV1NBQkxFEAISEQoNQ0hBTkdFX05PVElGWRADEhEKDU5PTl9CUk9XU0FC",
-            "TEUQBBILCgdPUExPQ0tTEAUSEQoNU0hPV19TTkFQU0hPVBAGEhoKFlNIT1df",
-            "UFJFVklPVVNfVkVSU0lPTlMQBxIcChhBQ0NFU1NfQkFTRURfRU5VTUVSQVRJ",
-            "T04QCBIaChZDT05USU5VT1VTTFlfQVZBSUxBQkxFEAkqQwoNU2VjdXJpdHlT",
-            "dHlsZRIeChpTRUNVUklUWV9TVFlMRV9VTlNQRUNJRklFRBAAEggKBE5URlMQ",
-            "ARIICgRVTklYEAIqQQoQUmVzdHJpY3RlZEFjdGlvbhIhCh1SRVNUUklDVEVE",
-            "X0FDVElPTl9VTlNQRUNJRklFRBAAEgoKBkRFTEVURRABQq0BChpjb20uZ29v",
-            "Z2xlLmNsb3VkLm5ldGFwcC52MUILVm9sdW1lUHJvdG9QAVoyY2xvdWQuZ29v",
-            "Z2xlLmNvbS9nby9uZXRhcHAvYXBpdjEvbmV0YXBwcGI7bmV0YXBwcGKqAhZH",
-            "b29nbGUuQ2xvdWQuTmV0QXBwLlYxygIWR29vZ2xlXENsb3VkXE5ldEFwcFxW",
-            "MeoCGUdvb2dsZTo6Q2xvdWQ6Ok5ldEFwcDo6VjFiBnByb3RvMw=="));
+            "GB0gASgIQgPgQQMSQAoNYmFja3VwX2NvbmZpZxgeIAEoCzIkLmdvb2dsZS5j",
+            "bG91ZC5uZXRhcHAudjEuQmFja3VwQ29uZmlnSACIAQESSQoScmVzdHJpY3Rl",
+            "ZF9hY3Rpb25zGB8gAygOMiguZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5SZXN0",
+            "cmljdGVkQWN0aW9uQgPgQQEaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJ",
+            "Eg0KBXZhbHVlGAIgASgJOgI4ASJ7CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJ",
+            "RklFRBAAEgkKBVJFQURZEAESDAoIQ1JFQVRJTkcQAhIMCghERUxFVElORxAD",
+            "EgwKCFVQREFUSU5HEAQSDQoJUkVTVE9SSU5HEAUSDAoIRElTQUJMRUQQBhIJ",
+            "CgVFUlJPUhAHOmzqQWkKHG5ldGFwcC5nb29nbGVhcGlzLmNvbS9Wb2x1bWUS",
+            "OHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS92b2x1",
+            "bWVzL3t2b2x1bWV9Kgd2b2x1bWVzMgZ2b2x1bWVCEAoOX2JhY2t1cF9jb25m",
+            "aWciUgoMRXhwb3J0UG9saWN5EkIKBXJ1bGVzGAEgAygLMi4uZ29vZ2xlLmNs",
+            "b3VkLm5ldGFwcC52MS5TaW1wbGVFeHBvcnRQb2xpY3lSdWxlQgPgQQIi/AQK",
+            "FlNpbXBsZUV4cG9ydFBvbGljeVJ1bGUSHAoPYWxsb3dlZF9jbGllbnRzGAEg",
+            "ASgJSACIAQESHAoPaGFzX3Jvb3RfYWNjZXNzGAIgASgJSAGIAQESPAoLYWNj",
+            "ZXNzX3R5cGUYAyABKA4yIi5nb29nbGUuY2xvdWQubmV0YXBwLnYxLkFjY2Vz",
+            "c1R5cGVIAogBARISCgVuZnN2MxgEIAEoCEgDiAEBEhIKBW5mc3Y0GAUgASgI",
+            "SASIAQESIQoUa2VyYmVyb3NfNV9yZWFkX29ubHkYBiABKAhIBYgBARIiChVr",
+            "ZXJiZXJvc181X3JlYWRfd3JpdGUYByABKAhIBogBARIiChVrZXJiZXJvc181",
+            "aV9yZWFkX29ubHkYCCABKAhIB4gBARIjChZrZXJiZXJvc181aV9yZWFkX3dy",
+            "aXRlGAkgASgISAiIAQESIgoVa2VyYmVyb3NfNXBfcmVhZF9vbmx5GAogASgI",
+            "SAmIAQESIwoWa2VyYmVyb3NfNXBfcmVhZF93cml0ZRgLIAEoCEgKiAEBQhIK",
+            "EF9hbGxvd2VkX2NsaWVudHNCEgoQX2hhc19yb290X2FjY2Vzc0IOCgxfYWNj",
+            "ZXNzX3R5cGVCCAoGX25mc3YzQggKBl9uZnN2NEIXChVfa2VyYmVyb3NfNV9y",
+            "ZWFkX29ubHlCGAoWX2tlcmJlcm9zXzVfcmVhZF93cml0ZUIYChZfa2VyYmVy",
+            "b3NfNWlfcmVhZF9vbmx5QhkKF19rZXJiZXJvc181aV9yZWFkX3dyaXRlQhgK",
+            "Fl9rZXJiZXJvc181cF9yZWFkX29ubHlCGQoXX2tlcmJlcm9zXzVwX3JlYWRf",
+            "d3JpdGUimgMKDlNuYXBzaG90UG9saWN5EhQKB2VuYWJsZWQYASABKAhIAIgB",
+            "ARJECg9ob3VybHlfc2NoZWR1bGUYAiABKAsyJi5nb29nbGUuY2xvdWQubmV0",
+            "YXBwLnYxLkhvdXJseVNjaGVkdWxlSAGIAQESQgoOZGFpbHlfc2NoZWR1bGUY",
+            "AyABKAsyJS5nb29nbGUuY2xvdWQubmV0YXBwLnYxLkRhaWx5U2NoZWR1bGVI",
+            "AogBARJECg93ZWVrbHlfc2NoZWR1bGUYBCABKAsyJi5nb29nbGUuY2xvdWQu",
+            "bmV0YXBwLnYxLldlZWtseVNjaGVkdWxlSAOIAQESRgoQbW9udGhseV9zY2hl",
+            "ZHVsZRgFIAEoCzInLmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuTW9udGhseVNj",
+            "aGVkdWxlSASIAQFCCgoIX2VuYWJsZWRCEgoQX2hvdXJseV9zY2hlZHVsZUIR",
+            "Cg9fZGFpbHlfc2NoZWR1bGVCEgoQX3dlZWtseV9zY2hlZHVsZUITChFfbW9u",
+            "dGhseV9zY2hlZHVsZSJmCg5Ib3VybHlTY2hlZHVsZRIeChFzbmFwc2hvdHNf",
+            "dG9fa2VlcBgBIAEoAUgAiAEBEhMKBm1pbnV0ZRgCIAEoAUgBiAEBQhQKEl9z",
+            "bmFwc2hvdHNfdG9fa2VlcEIJCgdfbWludXRlIoEBCg1EYWlseVNjaGVkdWxl",
+            "Eh4KEXNuYXBzaG90c190b19rZWVwGAEgASgBSACIAQESEwoGbWludXRlGAIg",
+            "ASgBSAGIAQESEQoEaG91chgDIAEoAUgCiAEBQhQKEl9zbmFwc2hvdHNfdG9f",
+            "a2VlcEIJCgdfbWludXRlQgcKBV9ob3VyIpwBCg5XZWVrbHlTY2hlZHVsZRIe",
+            "ChFzbmFwc2hvdHNfdG9fa2VlcBgBIAEoAUgAiAEBEhMKBm1pbnV0ZRgCIAEo",
+            "AUgBiAEBEhEKBGhvdXIYAyABKAFIAogBARIQCgNkYXkYBCABKAlIA4gBAUIU",
+            "ChJfc25hcHNob3RzX3RvX2tlZXBCCQoHX21pbnV0ZUIHCgVfaG91ckIGCgRf",
+            "ZGF5IrEBCg9Nb250aGx5U2NoZWR1bGUSHgoRc25hcHNob3RzX3RvX2tlZXAY",
+            "ASABKAFIAIgBARITCgZtaW51dGUYAiABKAFIAYgBARIRCgRob3VyGAMgASgB",
+            "SAKIAQESGgoNZGF5c19vZl9tb250aBgEIAEoCUgDiAEBQhQKEl9zbmFwc2hv",
+            "dHNfdG9fa2VlcEIJCgdfbWludXRlQgcKBV9ob3VyQhAKDl9kYXlzX29mX21v",
+            "bnRoIn0KC01vdW50T3B0aW9uEg4KBmV4cG9ydBgBIAEoCRITCgtleHBvcnRf",
+            "ZnVsbBgCIAEoCRIzCghwcm90b2NvbBgDIAEoDjIhLmdvb2dsZS5jbG91ZC5u",
+            "ZXRhcHAudjEuUHJvdG9jb2xzEhQKDGluc3RydWN0aW9ucxgEIAEoCSJRChFS",
+            "ZXN0b3JlUGFyYW1ldGVycxIZCg9zb3VyY2Vfc25hcHNob3QYASABKAlIABIX",
+            "Cg1zb3VyY2VfYmFja3VwGAIgASgJSABCCAoGc291cmNlIt0BCgxCYWNrdXBD",
+            "b25maWcSQwoPYmFja3VwX3BvbGljaWVzGAEgAygJQirgQQH6QSQKIm5ldGFw",
+            "cC5nb29nbGVhcGlzLmNvbS9CYWNrdXBQb2xpY3kSPwoMYmFja3VwX3ZhdWx0",
+            "GAIgASgJQingQQH6QSMKIW5ldGFwcC5nb29nbGVhcGlzLmNvbS9CYWNrdXBW",
+            "YXVsdBIqChhzY2hlZHVsZWRfYmFja3VwX2VuYWJsZWQYAyABKAhCA+BBAUgA",
+            "iAEBQhsKGV9zY2hlZHVsZWRfYmFja3VwX2VuYWJsZWQqRQoJUHJvdG9jb2xz",
+            "EhkKFVBST1RPQ09MU19VTlNQRUNJRklFRBAAEgkKBU5GU1YzEAESCQoFTkZT",
+            "VjQQAhIHCgNTTUIQAypXCgpBY2Nlc3NUeXBlEhsKF0FDQ0VTU19UWVBFX1VO",
+            "U1BFQ0lGSUVEEAASDQoJUkVBRF9PTkxZEAESDgoKUkVBRF9XUklURRACEg0K",
+            "CVJFQURfTk9ORRADKugBCgtTTUJTZXR0aW5ncxIcChhTTUJfU0VUVElOR1Nf",
+            "VU5TUEVDSUZJRUQQABIQCgxFTkNSWVBUX0RBVEEQARINCglCUk9XU0FCTEUQ",
+            "AhIRCg1DSEFOR0VfTk9USUZZEAMSEQoNTk9OX0JST1dTQUJMRRAEEgsKB09Q",
+            "TE9DS1MQBRIRCg1TSE9XX1NOQVBTSE9UEAYSGgoWU0hPV19QUkVWSU9VU19W",
+            "RVJTSU9OUxAHEhwKGEFDQ0VTU19CQVNFRF9FTlVNRVJBVElPThAIEhoKFkNP",
+            "TlRJTlVPVVNMWV9BVkFJTEFCTEUQCSpDCg1TZWN1cml0eVN0eWxlEh4KGlNF",
+            "Q1VSSVRZX1NUWUxFX1VOU1BFQ0lGSUVEEAASCAoETlRGUxABEggKBFVOSVgQ",
+            "AipBChBSZXN0cmljdGVkQWN0aW9uEiEKHVJFU1RSSUNURURfQUNUSU9OX1VO",
+            "U1BFQ0lGSUVEEAASCgoGREVMRVRFEAFCrQEKGmNvbS5nb29nbGUuY2xvdWQu",
+            "bmV0YXBwLnYxQgtWb2x1bWVQcm90b1ABWjJjbG91ZC5nb29nbGUuY29tL2dv",
+            "L25ldGFwcC9hcGl2MS9uZXRhcHBwYjtuZXRhcHBwYqoCFkdvb2dsZS5DbG91",
+            "ZC5OZXRBcHAuVjHKAhZHb29nbGVcQ2xvdWRcTmV0QXBwXFYx6gIZR29vZ2xl",
+            "OjpDbG91ZDo6TmV0QXBwOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.NetApp.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.NetApp.V1.Protocols), typeof(global::Google.Cloud.NetApp.V1.AccessType), typeof(global::Google.Cloud.NetApp.V1.SMBSettings), typeof(global::Google.Cloud.NetApp.V1.SecurityStyle), typeof(global::Google.Cloud.NetApp.V1.RestrictedAction), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -154,7 +162,7 @@ namespace Google.Cloud.NetApp.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.UpdateVolumeRequest), global::Google.Cloud.NetApp.V1.UpdateVolumeRequest.Parser, new[]{ "UpdateMask", "Volume" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.DeleteVolumeRequest), global::Google.Cloud.NetApp.V1.DeleteVolumeRequest.Parser, new[]{ "Name", "Force" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.RevertVolumeRequest), global::Google.Cloud.NetApp.V1.RevertVolumeRequest.Parser, new[]{ "Name", "SnapshotId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.Volume), global::Google.Cloud.NetApp.V1.Volume.Parser, new[]{ "Name", "State", "StateDetails", "CreateTime", "ShareName", "PsaRange", "StoragePool", "Network", "ServiceLevel", "CapacityGib", "ExportPolicy", "Protocols", "SmbSettings", "MountOptions", "UnixPermissions", "Labels", "Description", "SnapshotPolicy", "SnapReserve", "SnapshotDirectory", "UsedGib", "SecurityStyle", "KerberosEnabled", "LdapEnabled", "ActiveDirectory", "RestoreParameters", "KmsConfig", "EncryptionType", "HasReplication", "RestrictedActions" }, null, new[]{ typeof(global::Google.Cloud.NetApp.V1.Volume.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.Volume), global::Google.Cloud.NetApp.V1.Volume.Parser, new[]{ "Name", "State", "StateDetails", "CreateTime", "ShareName", "PsaRange", "StoragePool", "Network", "ServiceLevel", "CapacityGib", "ExportPolicy", "Protocols", "SmbSettings", "MountOptions", "UnixPermissions", "Labels", "Description", "SnapshotPolicy", "SnapReserve", "SnapshotDirectory", "UsedGib", "SecurityStyle", "KerberosEnabled", "LdapEnabled", "ActiveDirectory", "RestoreParameters", "KmsConfig", "EncryptionType", "HasReplication", "BackupConfig", "RestrictedActions" }, new[]{ "BackupConfig" }, new[]{ typeof(global::Google.Cloud.NetApp.V1.Volume.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.ExportPolicy), global::Google.Cloud.NetApp.V1.ExportPolicy.Parser, new[]{ "Rules" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.SimpleExportPolicyRule), global::Google.Cloud.NetApp.V1.SimpleExportPolicyRule.Parser, new[]{ "AllowedClients", "HasRootAccess", "AccessType", "Nfsv3", "Nfsv4", "Kerberos5ReadOnly", "Kerberos5ReadWrite", "Kerberos5IReadOnly", "Kerberos5IReadWrite", "Kerberos5PReadOnly", "Kerberos5PReadWrite" }, new[]{ "AllowedClients", "HasRootAccess", "AccessType", "Nfsv3", "Nfsv4", "Kerberos5ReadOnly", "Kerberos5ReadWrite", "Kerberos5IReadOnly", "Kerberos5IReadWrite", "Kerberos5PReadOnly", "Kerberos5PReadWrite" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.SnapshotPolicy), global::Google.Cloud.NetApp.V1.SnapshotPolicy.Parser, new[]{ "Enabled", "HourlySchedule", "DailySchedule", "WeeklySchedule", "MonthlySchedule" }, new[]{ "Enabled", "HourlySchedule", "DailySchedule", "WeeklySchedule", "MonthlySchedule" }, null, null, null),
@@ -163,13 +171,17 @@ namespace Google.Cloud.NetApp.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.WeeklySchedule), global::Google.Cloud.NetApp.V1.WeeklySchedule.Parser, new[]{ "SnapshotsToKeep", "Minute", "Hour", "Day" }, new[]{ "SnapshotsToKeep", "Minute", "Hour", "Day" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.MonthlySchedule), global::Google.Cloud.NetApp.V1.MonthlySchedule.Parser, new[]{ "SnapshotsToKeep", "Minute", "Hour", "DaysOfMonth" }, new[]{ "SnapshotsToKeep", "Minute", "Hour", "DaysOfMonth" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.MountOption), global::Google.Cloud.NetApp.V1.MountOption.Parser, new[]{ "Export", "ExportFull", "Protocol", "Instructions" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.RestoreParameters), global::Google.Cloud.NetApp.V1.RestoreParameters.Parser, new[]{ "SourceSnapshot" }, new[]{ "Source" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.RestoreParameters), global::Google.Cloud.NetApp.V1.RestoreParameters.Parser, new[]{ "SourceSnapshot", "SourceBackup" }, new[]{ "Source" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.BackupConfig), global::Google.Cloud.NetApp.V1.BackupConfig.Parser, new[]{ "BackupPolicies", "BackupVault", "ScheduledBackupEnabled" }, new[]{ "ScheduledBackupEnabled" }, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Enums
+  /// <summary>
+  /// Protocols is an enum of all the supported network protocols for a volume.
+  /// </summary>
   public enum Protocols {
     /// <summary>
     /// Unspecified protocol
@@ -189,6 +201,9 @@ namespace Google.Cloud.NetApp.V1 {
     [pbr::OriginalName("SMB")] Smb = 3,
   }
 
+  /// <summary>
+  /// AccessType is an enum of all the supported access types for a volume.
+  /// </summary>
   public enum AccessType {
     /// <summary>
     /// Unspecified Access Type
@@ -2178,6 +2193,7 @@ namespace Google.Cloud.NetApp.V1 {
       kmsConfig_ = other.kmsConfig_;
       encryptionType_ = other.encryptionType_;
       hasReplication_ = other.hasReplication_;
+      backupConfig_ = other.backupConfig_ != null ? other.backupConfig_.Clone() : null;
       restrictedActions_ = other.restrictedActions_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -2192,7 +2208,7 @@ namespace Google.Cloud.NetApp.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. Name of the volume
+    /// Identifier. Name of the volume
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2628,6 +2644,21 @@ namespace Google.Cloud.NetApp.V1 {
       }
     }
 
+    /// <summary>Field number for the "backup_config" field.</summary>
+    public const int BackupConfigFieldNumber = 30;
+    private global::Google.Cloud.NetApp.V1.BackupConfig backupConfig_;
+    /// <summary>
+    /// BackupConfig of the volume.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.NetApp.V1.BackupConfig BackupConfig {
+      get { return backupConfig_; }
+      set {
+        backupConfig_ = value;
+      }
+    }
+
     /// <summary>Field number for the "restricted_actions" field.</summary>
     public const int RestrictedActionsFieldNumber = 31;
     private static readonly pb::FieldCodec<global::Google.Cloud.NetApp.V1.RestrictedAction> _repeated_restrictedActions_codec
@@ -2686,6 +2717,7 @@ namespace Google.Cloud.NetApp.V1 {
       if (KmsConfig != other.KmsConfig) return false;
       if (EncryptionType != other.EncryptionType) return false;
       if (HasReplication != other.HasReplication) return false;
+      if (!object.Equals(BackupConfig, other.BackupConfig)) return false;
       if(!restrictedActions_.Equals(other.restrictedActions_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2723,6 +2755,7 @@ namespace Google.Cloud.NetApp.V1 {
       if (KmsConfig.Length != 0) hash ^= KmsConfig.GetHashCode();
       if (EncryptionType != global::Google.Cloud.NetApp.V1.EncryptionType.Unspecified) hash ^= EncryptionType.GetHashCode();
       if (HasReplication != false) hash ^= HasReplication.GetHashCode();
+      if (backupConfig_ != null) hash ^= BackupConfig.GetHashCode();
       hash ^= restrictedActions_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2846,6 +2879,10 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(232, 1);
         output.WriteBool(HasReplication);
       }
+      if (backupConfig_ != null) {
+        output.WriteRawTag(242, 1);
+        output.WriteMessage(BackupConfig);
+      }
       restrictedActions_.WriteTo(output, _repeated_restrictedActions_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -2961,6 +2998,10 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(232, 1);
         output.WriteBool(HasReplication);
       }
+      if (backupConfig_ != null) {
+        output.WriteRawTag(242, 1);
+        output.WriteMessage(BackupConfig);
+      }
       restrictedActions_.WriteTo(ref output, _repeated_restrictedActions_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -3050,6 +3091,9 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (HasReplication != false) {
         size += 2 + 1;
+      }
+      if (backupConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(BackupConfig);
       }
       size += restrictedActions_.CalculateSize(_repeated_restrictedActions_codec);
       if (_unknownFields != null) {
@@ -3154,6 +3198,12 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (other.HasReplication != false) {
         HasReplication = other.HasReplication;
+      }
+      if (other.backupConfig_ != null) {
+        if (backupConfig_ == null) {
+          BackupConfig = new global::Google.Cloud.NetApp.V1.BackupConfig();
+        }
+        BackupConfig.MergeFrom(other.BackupConfig);
       }
       restrictedActions_.Add(other.restrictedActions_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -3299,6 +3349,13 @@ namespace Google.Cloud.NetApp.V1 {
           }
           case 232: {
             HasReplication = input.ReadBool();
+            break;
+          }
+          case 242: {
+            if (backupConfig_ == null) {
+              BackupConfig = new global::Google.Cloud.NetApp.V1.BackupConfig();
+            }
+            input.ReadMessage(BackupConfig);
             break;
           }
           case 250:
@@ -3449,6 +3506,13 @@ namespace Google.Cloud.NetApp.V1 {
           }
           case 232: {
             HasReplication = input.ReadBool();
+            break;
+          }
+          case 242: {
+            if (backupConfig_ == null) {
+              BackupConfig = new global::Google.Cloud.NetApp.V1.BackupConfig();
+            }
+            input.ReadMessage(BackupConfig);
             break;
           }
           case 250:
@@ -6581,6 +6645,9 @@ namespace Google.Cloud.NetApp.V1 {
         case SourceOneofCase.SourceSnapshot:
           SourceSnapshot = other.SourceSnapshot;
           break;
+        case SourceOneofCase.SourceBackup:
+          SourceBackup = other.SourceBackup;
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -6623,11 +6690,43 @@ namespace Google.Cloud.NetApp.V1 {
       }
     }
 
+    /// <summary>Field number for the "source_backup" field.</summary>
+    public const int SourceBackupFieldNumber = 2;
+    /// <summary>
+    /// Full name of the backup resource.
+    /// Format:
+    /// projects/{project}/locations/{location}/backupVaults/{backup_vault_id}/backups/{backup_id}
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SourceBackup {
+      get { return HasSourceBackup ? (string) source_ : ""; }
+      set {
+        source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        sourceCase_ = SourceOneofCase.SourceBackup;
+      }
+    }
+    /// <summary>Gets whether the "source_backup" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSourceBackup {
+      get { return sourceCase_ == SourceOneofCase.SourceBackup; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "source_backup" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSourceBackup() {
+      if (HasSourceBackup) {
+        ClearSource();
+      }
+    }
+
     private object source_;
     /// <summary>Enum of possible cases for the "source" oneof.</summary>
     public enum SourceOneofCase {
       None = 0,
       SourceSnapshot = 1,
+      SourceBackup = 2,
     }
     private SourceOneofCase sourceCase_ = SourceOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6659,6 +6758,7 @@ namespace Google.Cloud.NetApp.V1 {
         return true;
       }
       if (SourceSnapshot != other.SourceSnapshot) return false;
+      if (SourceBackup != other.SourceBackup) return false;
       if (SourceCase != other.SourceCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -6668,6 +6768,7 @@ namespace Google.Cloud.NetApp.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (HasSourceSnapshot) hash ^= SourceSnapshot.GetHashCode();
+      if (HasSourceBackup) hash ^= SourceBackup.GetHashCode();
       hash ^= (int) sourceCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -6691,6 +6792,10 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(10);
         output.WriteString(SourceSnapshot);
       }
+      if (HasSourceBackup) {
+        output.WriteRawTag(18);
+        output.WriteString(SourceBackup);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6705,6 +6810,10 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(10);
         output.WriteString(SourceSnapshot);
       }
+      if (HasSourceBackup) {
+        output.WriteRawTag(18);
+        output.WriteString(SourceBackup);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6717,6 +6826,9 @@ namespace Google.Cloud.NetApp.V1 {
       int size = 0;
       if (HasSourceSnapshot) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceSnapshot);
+      }
+      if (HasSourceBackup) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceBackup);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -6733,6 +6845,9 @@ namespace Google.Cloud.NetApp.V1 {
       switch (other.SourceCase) {
         case SourceOneofCase.SourceSnapshot:
           SourceSnapshot = other.SourceSnapshot;
+          break;
+        case SourceOneofCase.SourceBackup:
+          SourceBackup = other.SourceBackup;
           break;
       }
 
@@ -6755,6 +6870,10 @@ namespace Google.Cloud.NetApp.V1 {
             SourceSnapshot = input.ReadString();
             break;
           }
+          case 18: {
+            SourceBackup = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -6772,6 +6891,295 @@ namespace Google.Cloud.NetApp.V1 {
             break;
           case 10: {
             SourceSnapshot = input.ReadString();
+            break;
+          }
+          case 18: {
+            SourceBackup = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// BackupConfig contains backup related config on a volume.
+  /// </summary>
+  public sealed partial class BackupConfig : pb::IMessage<BackupConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BackupConfig> _parser = new pb::MessageParser<BackupConfig>(() => new BackupConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BackupConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.NetApp.V1.VolumeReflection.Descriptor.MessageTypes[17]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BackupConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BackupConfig(BackupConfig other) : this() {
+      _hasBits0 = other._hasBits0;
+      backupPolicies_ = other.backupPolicies_.Clone();
+      backupVault_ = other.backupVault_;
+      scheduledBackupEnabled_ = other.scheduledBackupEnabled_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BackupConfig Clone() {
+      return new BackupConfig(this);
+    }
+
+    /// <summary>Field number for the "backup_policies" field.</summary>
+    public const int BackupPoliciesFieldNumber = 1;
+    private static readonly pb::FieldCodec<string> _repeated_backupPolicies_codec
+        = pb::FieldCodec.ForString(10);
+    private readonly pbc::RepeatedField<string> backupPolicies_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. When specified, schedule backups will be created based on the
+    /// policy configuration.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> BackupPolicies {
+      get { return backupPolicies_; }
+    }
+
+    /// <summary>Field number for the "backup_vault" field.</summary>
+    public const int BackupVaultFieldNumber = 2;
+    private string backupVault_ = "";
+    /// <summary>
+    /// Optional. Name of backup vault.
+    /// Format:
+    /// projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string BackupVault {
+      get { return backupVault_; }
+      set {
+        backupVault_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "scheduled_backup_enabled" field.</summary>
+    public const int ScheduledBackupEnabledFieldNumber = 3;
+    private readonly static bool ScheduledBackupEnabledDefaultValue = false;
+
+    private bool scheduledBackupEnabled_;
+    /// <summary>
+    /// Optional. When set to true, scheduled backup is enabled on the volume.
+    /// This field should be nil when there's no backup policy attached.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ScheduledBackupEnabled {
+      get { if ((_hasBits0 & 1) != 0) { return scheduledBackupEnabled_; } else { return ScheduledBackupEnabledDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        scheduledBackupEnabled_ = value;
+      }
+    }
+    /// <summary>Gets whether the "scheduled_backup_enabled" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasScheduledBackupEnabled {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "scheduled_backup_enabled" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearScheduledBackupEnabled() {
+      _hasBits0 &= ~1;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BackupConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BackupConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!backupPolicies_.Equals(other.backupPolicies_)) return false;
+      if (BackupVault != other.BackupVault) return false;
+      if (ScheduledBackupEnabled != other.ScheduledBackupEnabled) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= backupPolicies_.GetHashCode();
+      if (BackupVault.Length != 0) hash ^= BackupVault.GetHashCode();
+      if (HasScheduledBackupEnabled) hash ^= ScheduledBackupEnabled.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      backupPolicies_.WriteTo(output, _repeated_backupPolicies_codec);
+      if (BackupVault.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(BackupVault);
+      }
+      if (HasScheduledBackupEnabled) {
+        output.WriteRawTag(24);
+        output.WriteBool(ScheduledBackupEnabled);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      backupPolicies_.WriteTo(ref output, _repeated_backupPolicies_codec);
+      if (BackupVault.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(BackupVault);
+      }
+      if (HasScheduledBackupEnabled) {
+        output.WriteRawTag(24);
+        output.WriteBool(ScheduledBackupEnabled);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += backupPolicies_.CalculateSize(_repeated_backupPolicies_codec);
+      if (BackupVault.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(BackupVault);
+      }
+      if (HasScheduledBackupEnabled) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BackupConfig other) {
+      if (other == null) {
+        return;
+      }
+      backupPolicies_.Add(other.backupPolicies_);
+      if (other.BackupVault.Length != 0) {
+        BackupVault = other.BackupVault;
+      }
+      if (other.HasScheduledBackupEnabled) {
+        ScheduledBackupEnabled = other.ScheduledBackupEnabled;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            backupPolicies_.AddEntriesFrom(input, _repeated_backupPolicies_codec);
+            break;
+          }
+          case 18: {
+            BackupVault = input.ReadString();
+            break;
+          }
+          case 24: {
+            ScheduledBackupEnabled = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            backupPolicies_.AddEntriesFrom(ref input, _repeated_backupPolicies_codec);
+            break;
+          }
+          case 18: {
+            BackupVault = input.ReadString();
+            break;
+          }
+          case 24: {
+            ScheduledBackupEnabled = input.ReadBool();
             break;
           }
         }

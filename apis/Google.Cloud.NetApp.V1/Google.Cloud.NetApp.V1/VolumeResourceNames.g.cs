@@ -358,4 +358,24 @@ namespace Google.Cloud.NetApp.V1
             set => KmsConfig = value?.ToString() ?? "";
         }
     }
+
+    public partial class BackupConfig
+    {
+        /// <summary>
+        /// <see cref="BackupPolicyName"/>-typed view over the <see cref="BackupPolicies"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<BackupPolicyName> BackupPoliciesAsBackupPolicyNames
+        {
+            get => new gax::ResourceNameList<BackupPolicyName>(BackupPolicies, s => string.IsNullOrEmpty(s) ? null : BackupPolicyName.Parse(s, allowUnparsed: true));
+        }
+
+        /// <summary>
+        /// <see cref="BackupVaultName"/>-typed view over the <see cref="BackupVault"/> resource name property.
+        /// </summary>
+        public BackupVaultName BackupVaultAsBackupVaultName
+        {
+            get => string.IsNullOrEmpty(BackupVault) ? null : BackupVaultName.Parse(BackupVault, allowUnparsed: true);
+            set => BackupVault = value?.ToString() ?? "";
+        }
+    }
 }

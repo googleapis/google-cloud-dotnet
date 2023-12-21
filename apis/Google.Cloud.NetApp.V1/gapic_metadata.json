@@ -16,6 +16,24 @@
                 "CreateActiveDirectoryAsync"
               ]
             },
+            "CreateBackup": {
+              "methods": [
+                "CreateBackup",
+                "CreateBackupAsync"
+              ]
+            },
+            "CreateBackupPolicy": {
+              "methods": [
+                "CreateBackupPolicy",
+                "CreateBackupPolicyAsync"
+              ]
+            },
+            "CreateBackupVault": {
+              "methods": [
+                "CreateBackupVault",
+                "CreateBackupVaultAsync"
+              ]
+            },
             "CreateKmsConfig": {
               "methods": [
                 "CreateKmsConfig",
@@ -50,6 +68,24 @@
               "methods": [
                 "DeleteActiveDirectory",
                 "DeleteActiveDirectoryAsync"
+              ]
+            },
+            "DeleteBackup": {
+              "methods": [
+                "DeleteBackup",
+                "DeleteBackupAsync"
+              ]
+            },
+            "DeleteBackupPolicy": {
+              "methods": [
+                "DeleteBackupPolicy",
+                "DeleteBackupPolicyAsync"
+              ]
+            },
+            "DeleteBackupVault": {
+              "methods": [
+                "DeleteBackupVault",
+                "DeleteBackupVaultAsync"
               ]
             },
             "DeleteKmsConfig": {
@@ -94,6 +130,24 @@
                 "GetActiveDirectoryAsync"
               ]
             },
+            "GetBackup": {
+              "methods": [
+                "GetBackup",
+                "GetBackupAsync"
+              ]
+            },
+            "GetBackupPolicy": {
+              "methods": [
+                "GetBackupPolicy",
+                "GetBackupPolicyAsync"
+              ]
+            },
+            "GetBackupVault": {
+              "methods": [
+                "GetBackupVault",
+                "GetBackupVaultAsync"
+              ]
+            },
             "GetKmsConfig": {
               "methods": [
                 "GetKmsConfig",
@@ -128,6 +182,24 @@
               "methods": [
                 "ListActiveDirectories",
                 "ListActiveDirectoriesAsync"
+              ]
+            },
+            "ListBackupPolicies": {
+              "methods": [
+                "ListBackupPolicies",
+                "ListBackupPoliciesAsync"
+              ]
+            },
+            "ListBackupVaults": {
+              "methods": [
+                "ListBackupVaults",
+                "ListBackupVaultsAsync"
+              ]
+            },
+            "ListBackups": {
+              "methods": [
+                "ListBackups",
+                "ListBackupsAsync"
               ]
             },
             "ListKmsConfigs": {
@@ -188,6 +260,24 @@
               "methods": [
                 "UpdateActiveDirectory",
                 "UpdateActiveDirectoryAsync"
+              ]
+            },
+            "UpdateBackup": {
+              "methods": [
+                "UpdateBackup",
+                "UpdateBackupAsync"
+              ]
+            },
+            "UpdateBackupPolicy": {
+              "methods": [
+                "UpdateBackupPolicy",
+                "UpdateBackupPolicyAsync"
+              ]
+            },
+            "UpdateBackupVault": {
+              "methods": [
+                "UpdateBackupVault",
+                "UpdateBackupVaultAsync"
               ]
             },
             "UpdateKmsConfig": {
