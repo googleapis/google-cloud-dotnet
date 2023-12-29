@@ -3035,7 +3035,12 @@ namespace Google.Cloud.Dataplex.V1 {
     /// `ignore_null` is `true`. In that case, such `null` rows are trivially
     /// considered passing.
     ///
-    /// This field is only valid for row-level type rules.
+    /// This field is only valid for the following type of rules:
+    ///
+    /// * RangeExpectation
+    /// * RegexExpectation
+    /// * SetExpectation
+    /// * UniquenessExpectation
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
