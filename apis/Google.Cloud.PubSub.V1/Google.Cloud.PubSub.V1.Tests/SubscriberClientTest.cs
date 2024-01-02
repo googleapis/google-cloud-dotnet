@@ -145,7 +145,7 @@ namespace Google.Cloud.PubSub.V1.Tests
 
             private class En : IAsyncStreamReader<StreamingPullResponse>
             {
-                public En(IEnumerable<ServerAction> msgs, IScheduler scheduler, TaskHelper taskHelper, IClock clock, bool useMsgAsId, CancellationToken? ct, bool isExactlyOnceDelivery)
+                public En(IEnumerable<ServerAction> msgs, IScheduler scheduler, TaskHelper taskHelper, IClock clock, bool useMsgAsId, CancellationToken? ct, bool isExactlyOnceDelivery, bool messageOrderingEnabled)
                 {
                     _msgsEn = msgs.Select((x, i) => (i, x)).GetEnumerator();
                     _scheduler = scheduler;
@@ -154,6 +154,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                     _useMsgAsId = useMsgAsId;
                     _ct = ct ?? CancellationToken.None;
                     _isExactlyOnceDelivery = isExactlyOnceDelivery;
+                    _messageOrderingEnabled = messageOrderingEnabled;
                 }
 
                 private readonly IScheduler _scheduler;
@@ -161,6 +162,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 private readonly IClock _clock;
                 private readonly bool _useMsgAsId;
                 private readonly bool _isExactlyOnceDelivery;
+                private readonly bool _messageOrderingEnabled;
                 private readonly CancellationToken _ct;
 
                 private readonly IEnumerator<(int Index, ServerAction Action)> _msgsEn;
@@ -203,7 +205,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                                 _msgsEn.Current.Action.Msgs.Select((s, i) =>
                                     MakeReceivedMessage(_useMsgAsId ? s : MakeMsgId(_msgsEn.Current.Index, i), s, _msgsEn.Current.Action.DeliveryAttempt))
                             },
-                            SubscriptionProperties = _isExactlyOnceDelivery ? new SubscriptionProperties { ExactlyOnceDeliveryEnabled = true} : null
+                            SubscriptionProperties = new SubscriptionProperties { ExactlyOnceDeliveryEnabled = _isExactlyOnceDelivery, MessageOrderingEnabled = _messageOrderingEnabled}
                         };
                     }
                 }
@@ -217,12 +219,12 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 public PullStream(TimeSpan writeAsyncPreDelay,
                     IEnumerable<ServerAction> msgs, List<DateTime> writeCompletes, List<DateTime> streamPings,
-                    IScheduler scheduler, IClock clock, TaskHelper taskHelper, bool useMsgAsId, CancellationToken? ct, bool isExactlyOnceDelivery)
+                    IScheduler scheduler, IClock clock, TaskHelper taskHelper, bool useMsgAsId, CancellationToken? ct, bool isExactlyOnceDelivery, bool messageOrderingEnabled)
                 {
                     _taskHelper = taskHelper;
                     _scheduler = scheduler;
                     _writeAsyncPreDelay = writeAsyncPreDelay; // delay within the WriteAsync() method. Simulating network or server slowness.
-                    var responseStream = new En(msgs, scheduler, taskHelper, clock, useMsgAsId, ct, isExactlyOnceDelivery);
+                    var responseStream = new En(msgs, scheduler, taskHelper, clock, useMsgAsId, ct, isExactlyOnceDelivery, messageOrderingEnabled);
                     // Set disposeAction parameter of AsyncDuplexStreamingCall to No-op as it is called internally while disposing stream.
                     _call = new AsyncDuplexStreamingCall<StreamingPullRequest, StreamingPullResponse>(null, responseStream, Task.FromResult(new Metadata()), null, null, () => { });
                     _clock = clock;
@@ -272,7 +274,7 @@ namespace Google.Cloud.PubSub.V1.Tests
 
             public FakeSubscriberServiceApiClient(
                 IEnumerator<IEnumerable<ServerAction>> msgsEn, IScheduler scheduler, IClock clock,
-                TaskHelper taskHelper, TimeSpan writeAsyncPreDelay, bool useMsgAsId, AckModifyAckDeadlineAction ackModifyAckDeadlineAction, bool isExactlyOnceDelivery)
+                TaskHelper taskHelper, TimeSpan writeAsyncPreDelay, bool useMsgAsId, AckModifyAckDeadlineAction ackModifyAckDeadlineAction, bool isExactlyOnceDelivery, bool messageOrderingEnabled)
             {
                 _msgsEn = msgsEn;
                 _scheduler = scheduler;
@@ -283,6 +285,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 _ackModifyAckDeadlineAction = ackModifyAckDeadlineAction;
                 _numberOfAckModifyAckDeadlineFailures = 0;
                 _isExactlyOnceDelivery = isExactlyOnceDelivery;
+                _messageOrderingEnabled = messageOrderingEnabled;
             }
 
             private readonly object _lock = new object();
@@ -294,6 +297,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             private readonly bool _useMsgAsId;
             private readonly AckModifyAckDeadlineAction _ackModifyAckDeadlineAction; // Simulates Ack ModifyAckDeadline errors.
             private readonly bool _isExactlyOnceDelivery;
+            private readonly bool _messageOrderingEnabled;
             private int _numberOfAckModifyAckDeadlineFailures;
 
             private readonly List<TimedId> _extends = new List<TimedId>();
@@ -319,7 +323,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                     }
                     var msgs = _msgsEn.Current;
                     return new PullStream(_writeAsyncPreDelay, msgs, _writeCompletes, _streamPings,
-                        _scheduler, _clock, _taskHelper, _useMsgAsId, callSettings?.CancellationToken, _isExactlyOnceDelivery);
+                        _scheduler, _clock, _taskHelper, _useMsgAsId, callSettings?.CancellationToken, _isExactlyOnceDelivery, _messageOrderingEnabled);
                 }
             }
 
@@ -457,14 +461,14 @@ namespace Google.Cloud.PubSub.V1.Tests
                 TimeSpan? ackDeadline = null, TimeSpan? ackExtendWindow = null,
                 int? flowMaxElements = null, int? flowMaxBytes = null,
                 int clientCount = 1, int threadCount = 1, TimeSpan? writeAsyncPreDelay = null,
-                bool useMsgAsId = false, AckModifyAckDeadlineAction ackModifyAckDeadlineAction = null, bool isExactlyOnceDelivery = false, TimeSpan? disposeTimeout = null)
+                bool useMsgAsId = false, AckModifyAckDeadlineAction ackModifyAckDeadlineAction = null, bool isExactlyOnceDelivery = false, bool messageOrderingEnabled = false, TimeSpan? disposeTimeout = null)
             {
                 var scheduler = new TestScheduler(threadCount: threadCount);
                 TaskHelper taskHelper = scheduler.TaskHelper;
                 List<DateTime> clientShutdowns = new List<DateTime>();
                 var msgEn = msgs.GetEnumerator();
                 var clients = Enumerable.Range(0, clientCount)
-                    .Select(_ => new FakeSubscriberServiceApiClient(msgEn, scheduler, scheduler.Clock, taskHelper, writeAsyncPreDelay ?? TimeSpan.Zero, useMsgAsId, ackModifyAckDeadlineAction, isExactlyOnceDelivery))
+                    .Select(_ => new FakeSubscriberServiceApiClient(msgEn, scheduler, scheduler.Clock, taskHelper, writeAsyncPreDelay ?? TimeSpan.Zero, useMsgAsId, ackModifyAckDeadlineAction, isExactlyOnceDelivery, messageOrderingEnabled))
                     .ToList();
                 var settings = new SubscriberClient.Settings
                 {
@@ -988,7 +992,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             var rnd = new Random(rndSeed);
             var msgs = ServerAction.Data(TimeSpan.Zero, Enumerable.Range(0, msgCount).Select(i => $"order{i % orderingKeysCount}|{i}").ToList());
             var recvedMsgs = new List<string>();
-            using (var fake = Fake.Create(new[] { new[] { msgs, ServerAction.Inf() } }, flowMaxElements: flowMaxElements, threadCount: threadCount))
+            using (var fake = Fake.Create(new[] { new[] { msgs, ServerAction.Inf() } }, flowMaxElements: flowMaxElements, threadCount: threadCount, messageOrderingEnabled: true))
             {
                 var th = fake.TaskHelper;
                 fake.Scheduler.Run(async () =>

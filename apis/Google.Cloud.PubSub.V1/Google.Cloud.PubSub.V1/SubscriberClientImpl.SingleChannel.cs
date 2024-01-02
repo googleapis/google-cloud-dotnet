@@ -174,6 +174,7 @@ public sealed partial class SubscriberClientImpl
         private long _extendThrottleHigh = 0; // Incremented on extension, and put on extend queue items.
         private long _extendThrottleLow = 0; // Incremented after _extendQueueThrottleInterval, checked when throttling.
         private bool _exactlyOnceDeliveryEnabled = false; // True if subscription is exactly once, else false.
+        private bool _messageOrderingEnabled = false; // True if subscription has ordering enabled, else false.
         private TimeSpan? _pullBackoff = null;
 
         internal SingleChannel(SubscriberClientImpl subscriber,
@@ -397,6 +398,7 @@ public sealed partial class SubscriberClientImpl
                 {
                     current = _pull.GrpcCall.ResponseStream.Current;
                     _exactlyOnceDeliveryEnabled = current.SubscriptionProperties?.ExactlyOnceDeliveryEnabled ?? false;
+                    _messageOrderingEnabled = current.SubscriptionProperties?.MessageOrderingEnabled ?? false;
                 }
                 catch (Exception e) when (e.As<RpcException>()?.IsRecoverable() ?? false)
                 {
@@ -480,7 +482,7 @@ public sealed partial class SubscriberClientImpl
                 var msg = msgs[msgIndex];
                 msgs[msgIndex] = null;
                 // Prepare to call user message handler, _flow.Process(...) enforces the user-handler concurrency constraints.
-                await _taskHelper.ConfigureAwait(_flow.Process(msg.CalculateSize(), msg.Message.OrderingKey ?? "", async () =>
+                await _taskHelper.ConfigureAwait(_flow.Process(msg.CalculateSize(), _messageOrderingEnabled ? msg.Message.OrderingKey ?? "" : "", async () =>
                 {
                     // Running async. Common data needs locking
                     lock (_lock)
