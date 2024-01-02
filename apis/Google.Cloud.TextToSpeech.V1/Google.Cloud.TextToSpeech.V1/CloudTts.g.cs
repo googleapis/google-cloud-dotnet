@@ -51,34 +51,34 @@ namespace Google.Cloud.TextToSpeech.V1 {
             "ZRgCIAEoAUIG4EEE4EEBEhUKBXBpdGNoGAMgASgBQgbgQQTgQQESHgoOdm9s",
             "dW1lX2dhaW5fZGIYBCABKAFCBuBBBOBBARIeChFzYW1wbGVfcmF0ZV9oZXJ0",
             "ehgFIAEoBUID4EEBEiIKEmVmZmVjdHNfcHJvZmlsZV9pZBgGIAMoCUIG4EEE",
-            "4EEBIu8BChFDdXN0b21Wb2ljZVBhcmFtcxIyCgVtb2RlbBgBIAEoCUIj4EEC",
-            "+kEdChthdXRvbWwuZ29vZ2xlYXBpcy5jb20vTW9kZWwSWgoOcmVwb3J0ZWRf",
+            "4EEBIvEBChFDdXN0b21Wb2ljZVBhcmFtcxIyCgVtb2RlbBgBIAEoCUIj4EEC",
+            "+kEdChthdXRvbWwuZ29vZ2xlYXBpcy5jb20vTW9kZWwSXAoOcmVwb3J0ZWRf",
             "dXNhZ2UYAyABKA4yPS5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxLkN1",
-            "c3RvbVZvaWNlUGFyYW1zLlJlcG9ydGVkVXNhZ2VCA+BBASJKCg1SZXBvcnRl",
-            "ZFVzYWdlEh4KGlJFUE9SVEVEX1VTQUdFX1VOU1BFQ0lGSUVEEAASDAoIUkVB",
-            "TFRJTUUQARILCgdPRkZMSU5FEAIiMQoYU3ludGhlc2l6ZVNwZWVjaFJlc3Bv",
-            "bnNlEhUKDWF1ZGlvX2NvbnRlbnQYASABKAwqVwoPU3NtbFZvaWNlR2VuZGVy",
-            "EiEKHVNTTUxfVk9JQ0VfR0VOREVSX1VOU1BFQ0lGSUVEEAASCAoETUFMRRAB",
-            "EgoKBkZFTUFMRRACEgsKB05FVVRSQUwQAyppCg1BdWRpb0VuY29kaW5nEh4K",
-            "GkFVRElPX0VOQ09ESU5HX1VOU1BFQ0lGSUVEEAASDAoITElORUFSMTYQARIH",
-            "CgNNUDMQAhIMCghPR0dfT1BVUxADEgkKBU1VTEFXEAUSCAoEQUxBVxAGMrQD",
-            "CgxUZXh0VG9TcGVlY2gSkwEKCkxpc3RWb2ljZXMSLy5nb29nbGUuY2xvdWQu",
-            "dGV4dHRvc3BlZWNoLnYxLkxpc3RWb2ljZXNSZXF1ZXN0GjAuZ29vZ2xlLmNs",
-            "b3VkLnRleHR0b3NwZWVjaC52MS5MaXN0Vm9pY2VzUmVzcG9uc2UiIoLT5JMC",
-            "DBIKL3YxL3ZvaWNlc9pBDWxhbmd1YWdlX2NvZGUSvAEKEFN5bnRoZXNpemVT",
-            "cGVlY2gSNS5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxLlN5bnRoZXNp",
-            "emVTcGVlY2hSZXF1ZXN0GjYuZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52",
-            "MS5TeW50aGVzaXplU3BlZWNoUmVzcG9uc2UiOYLT5JMCGCITL3YxL3RleHQ6",
-            "c3ludGhlc2l6ZToBKtpBGGlucHV0LHZvaWNlLGF1ZGlvX2NvbmZpZxpPykEb",
-            "dGV4dHRvc3BlZWNoLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29v",
-            "Z2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUK4AgogY29tLmdvb2ds",
-            "ZS5jbG91ZC50ZXh0dG9zcGVlY2gudjFCEVRleHRUb1NwZWVjaFByb3RvUAFa",
-            "RGNsb3VkLmdvb2dsZS5jb20vZ28vdGV4dHRvc3BlZWNoL2FwaXYxL3RleHR0",
-            "b3NwZWVjaHBiO3RleHR0b3NwZWVjaHBi+AEBqgIcR29vZ2xlLkNsb3VkLlRl",
-            "eHRUb1NwZWVjaC5WMcoCHEdvb2dsZVxDbG91ZFxUZXh0VG9TcGVlY2hcVjHq",
-            "Ah9Hb29nbGU6OkNsb3VkOjpUZXh0VG9TcGVlY2g6OlYx6kFVChthdXRvbWwu",
-            "Z29vZ2xlYXBpcy5jb20vTW9kZWwSNnByb2plY3RzL3twcm9qZWN0fS9sb2Nh",
-            "dGlvbnMve2xvY2F0aW9ufS9tb2RlbHMve21vZGVsfWIGcHJvdG8z"));
+            "c3RvbVZvaWNlUGFyYW1zLlJlcG9ydGVkVXNhZ2VCBRgB4EEBIkoKDVJlcG9y",
+            "dGVkVXNhZ2USHgoaUkVQT1JURURfVVNBR0VfVU5TUEVDSUZJRUQQABIMCghS",
+            "RUFMVElNRRABEgsKB09GRkxJTkUQAiIxChhTeW50aGVzaXplU3BlZWNoUmVz",
+            "cG9uc2USFQoNYXVkaW9fY29udGVudBgBIAEoDCpXCg9Tc21sVm9pY2VHZW5k",
+            "ZXISIQodU1NNTF9WT0lDRV9HRU5ERVJfVU5TUEVDSUZJRUQQABIICgRNQUxF",
+            "EAESCgoGRkVNQUxFEAISCwoHTkVVVFJBTBADKmkKDUF1ZGlvRW5jb2RpbmcS",
+            "HgoaQVVESU9fRU5DT0RJTkdfVU5TUEVDSUZJRUQQABIMCghMSU5FQVIxNhAB",
+            "EgcKA01QMxACEgwKCE9HR19PUFVTEAMSCQoFTVVMQVcQBRIICgRBTEFXEAYy",
+            "tAMKDFRleHRUb1NwZWVjaBKTAQoKTGlzdFZvaWNlcxIvLmdvb2dsZS5jbG91",
+            "ZC50ZXh0dG9zcGVlY2gudjEuTGlzdFZvaWNlc1JlcXVlc3QaMC5nb29nbGUu",
+            "Y2xvdWQudGV4dHRvc3BlZWNoLnYxLkxpc3RWb2ljZXNSZXNwb25zZSIigtPk",
+            "kwIMEgovdjEvdm9pY2Vz2kENbGFuZ3VhZ2VfY29kZRK8AQoQU3ludGhlc2l6",
+            "ZVNwZWVjaBI1Lmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjEuU3ludGhl",
+            "c2l6ZVNwZWVjaFJlcXVlc3QaNi5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNo",
+            "LnYxLlN5bnRoZXNpemVTcGVlY2hSZXNwb25zZSI5gtPkkwIYIhMvdjEvdGV4",
+            "dDpzeW50aGVzaXplOgEq2kEYaW5wdXQsdm9pY2UsYXVkaW9fY29uZmlnGk/K",
+            "QRt0ZXh0dG9zcGVlY2guZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5n",
+            "b29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQrgCCiBjb20uZ29v",
+            "Z2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MUIRVGV4dFRvU3BlZWNoUHJvdG9Q",
+            "AVpEY2xvdWQuZ29vZ2xlLmNvbS9nby90ZXh0dG9zcGVlY2gvYXBpdjEvdGV4",
+            "dHRvc3BlZWNocGI7dGV4dHRvc3BlZWNocGL4AQGqAhxHb29nbGUuQ2xvdWQu",
+            "VGV4dFRvU3BlZWNoLlYxygIcR29vZ2xlXENsb3VkXFRleHRUb1NwZWVjaFxW",
+            "MeoCH0dvb2dsZTo6Q2xvdWQ6OlRleHRUb1NwZWVjaDo6VjHqQVUKG2F1dG9t",
+            "bC5nb29nbGVhcGlzLmNvbS9Nb2RlbBI2cHJvamVjdHMve3Byb2plY3R9L2xv",
+            "Y2F0aW9ucy97bG9jYXRpb259L21vZGVscy97bW9kZWx9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.TextToSpeech.V1.SsmlVoiceGender), typeof(global::Google.Cloud.TextToSpeech.V1.AudioEncoding), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -2277,8 +2277,9 @@ namespace Google.Cloud.TextToSpeech.V1 {
     public const int ReportedUsageFieldNumber = 3;
     private global::Google.Cloud.TextToSpeech.V1.CustomVoiceParams.Types.ReportedUsage reportedUsage_ = global::Google.Cloud.TextToSpeech.V1.CustomVoiceParams.Types.ReportedUsage.Unspecified;
     /// <summary>
-    /// Optional. The usage of the synthesized audio to be reported.
+    /// Optional. Deprecated. The usage of the synthesized audio to be reported.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.TextToSpeech.V1.CustomVoiceParams.Types.ReportedUsage ReportedUsage {
@@ -2449,9 +2450,8 @@ namespace Google.Cloud.TextToSpeech.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// The usage of the synthesized audio. You must report your honest and
-      /// correct usage of the service as it's regulated by contract and will cause
-      /// significant difference in billing.
+      /// Deprecated. The usage of the synthesized audio. Usage does not affect
+      /// billing.
       /// </summary>
       public enum ReportedUsage {
         /// <summary>
