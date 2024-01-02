@@ -55,41 +55,41 @@ namespace Google.Cloud.TextToSpeech.V1Beta1 {
             "dGExLkF1ZGlvRW5jb2RpbmdCA+BBAhIdCg1zcGVha2luZ19yYXRlGAIgASgB",
             "QgbgQQTgQQESFQoFcGl0Y2gYAyABKAFCBuBBBOBBARIeCg52b2x1bWVfZ2Fp",
             "bl9kYhgEIAEoAUIG4EEE4EEBEh4KEXNhbXBsZV9yYXRlX2hlcnR6GAUgASgF",
-            "QgPgQQESIgoSZWZmZWN0c19wcm9maWxlX2lkGAYgAygJQgbgQQTgQQEi9AEK",
+            "QgPgQQESIgoSZWZmZWN0c19wcm9maWxlX2lkGAYgAygJQgbgQQTgQQEi9gEK",
             "EUN1c3RvbVZvaWNlUGFyYW1zEjIKBW1vZGVsGAEgASgJQiPgQQL6QR0KG2F1",
-            "dG9tbC5nb29nbGVhcGlzLmNvbS9Nb2RlbBJfCg5yZXBvcnRlZF91c2FnZRgD",
+            "dG9tbC5nb29nbGVhcGlzLmNvbS9Nb2RlbBJhCg5yZXBvcnRlZF91c2FnZRgD",
             "IAEoDjJCLmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjFiZXRhMS5DdXN0",
-            "b21Wb2ljZVBhcmFtcy5SZXBvcnRlZFVzYWdlQgPgQQEiSgoNUmVwb3J0ZWRV",
-            "c2FnZRIeChpSRVBPUlRFRF9VU0FHRV9VTlNQRUNJRklFRBAAEgwKCFJFQUxU",
-            "SU1FEAESCwoHT0ZGTElORRACIrkBChhTeW50aGVzaXplU3BlZWNoUmVzcG9u",
-            "c2USFQoNYXVkaW9fY29udGVudBgBIAEoDBJACgp0aW1lcG9pbnRzGAIgAygL",
-            "MiwuZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MWJldGExLlRpbWVwb2lu",
-            "dBJECgxhdWRpb19jb25maWcYBCABKAsyLi5nb29nbGUuY2xvdWQudGV4dHRv",
-            "c3BlZWNoLnYxYmV0YTEuQXVkaW9Db25maWciNAoJVGltZXBvaW50EhEKCW1h",
-            "cmtfbmFtZRgEIAEoCRIUCgx0aW1lX3NlY29uZHMYAyABKAEqVwoPU3NtbFZv",
-            "aWNlR2VuZGVyEiEKHVNTTUxfVk9JQ0VfR0VOREVSX1VOU1BFQ0lGSUVEEAAS",
-            "CAoETUFMRRABEgoKBkZFTUFMRRACEgsKB05FVVRSQUwQAyp6Cg1BdWRpb0Vu",
-            "Y29kaW5nEh4KGkFVRElPX0VOQ09ESU5HX1VOU1BFQ0lGSUVEEAASDAoITElO",
-            "RUFSMTYQARIHCgNNUDMQAhIPCgtNUDNfNjRfS0JQUxAEEgwKCE9HR19PUFVT",
-            "EAMSCQoFTVVMQVcQBRIICgRBTEFXEAYy0gMKDFRleHRUb1NwZWVjaBKiAQoK",
-            "TGlzdFZvaWNlcxI0Lmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjFiZXRh",
-            "MS5MaXN0Vm9pY2VzUmVxdWVzdBo1Lmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVl",
-            "Y2gudjFiZXRhMS5MaXN0Vm9pY2VzUmVzcG9uc2UiJ4LT5JMCERIPL3YxYmV0",
-            "YTEvdm9pY2Vz2kENbGFuZ3VhZ2VfY29kZRLLAQoQU3ludGhlc2l6ZVNwZWVj",
-            "aBI6Lmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjFiZXRhMS5TeW50aGVz",
-            "aXplU3BlZWNoUmVxdWVzdBo7Lmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gu",
-            "djFiZXRhMS5TeW50aGVzaXplU3BlZWNoUmVzcG9uc2UiPoLT5JMCHSIYL3Yx",
-            "YmV0YTEvdGV4dDpzeW50aGVzaXplOgEq2kEYaW5wdXQsdm9pY2UsYXVkaW9f",
-            "Y29uZmlnGk/KQRt0ZXh0dG9zcGVlY2guZ29vZ2xlYXBpcy5jb23SQS5odHRw",
-            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQtEC",
-            "CiVjb20uZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MWJldGExQhFUZXh0",
-            "VG9TcGVlY2hQcm90b1ABWkljbG91ZC5nb29nbGUuY29tL2dvL3RleHR0b3Nw",
-            "ZWVjaC9hcGl2MWJldGExL3RleHR0b3NwZWVjaHBiO3RleHR0b3NwZWVjaHBi",
-            "+AEBqgIhR29vZ2xlLkNsb3VkLlRleHRUb1NwZWVjaC5WMUJldGExygIhR29v",
-            "Z2xlXENsb3VkXFRleHRUb1NwZWVjaFxWMWJldGEx6gIkR29vZ2xlOjpDbG91",
-            "ZDo6VGV4dFRvU3BlZWNoOjpWMWJldGEx6kFVChthdXRvbWwuZ29vZ2xlYXBp",
-            "cy5jb20vTW9kZWwSNnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
-            "Y2F0aW9ufS9tb2RlbHMve21vZGVsfWIGcHJvdG8z"));
+            "b21Wb2ljZVBhcmFtcy5SZXBvcnRlZFVzYWdlQgUYAeBBASJKCg1SZXBvcnRl",
+            "ZFVzYWdlEh4KGlJFUE9SVEVEX1VTQUdFX1VOU1BFQ0lGSUVEEAASDAoIUkVB",
+            "TFRJTUUQARILCgdPRkZMSU5FEAIiuQEKGFN5bnRoZXNpemVTcGVlY2hSZXNw",
+            "b25zZRIVCg1hdWRpb19jb250ZW50GAEgASgMEkAKCnRpbWVwb2ludHMYAiAD",
+            "KAsyLC5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxYmV0YTEuVGltZXBv",
+            "aW50EkQKDGF1ZGlvX2NvbmZpZxgEIAEoCzIuLmdvb2dsZS5jbG91ZC50ZXh0",
+            "dG9zcGVlY2gudjFiZXRhMS5BdWRpb0NvbmZpZyI0CglUaW1lcG9pbnQSEQoJ",
+            "bWFya19uYW1lGAQgASgJEhQKDHRpbWVfc2Vjb25kcxgDIAEoASpXCg9Tc21s",
+            "Vm9pY2VHZW5kZXISIQodU1NNTF9WT0lDRV9HRU5ERVJfVU5TUEVDSUZJRUQQ",
+            "ABIICgRNQUxFEAESCgoGRkVNQUxFEAISCwoHTkVVVFJBTBADKnoKDUF1ZGlv",
+            "RW5jb2RpbmcSHgoaQVVESU9fRU5DT0RJTkdfVU5TUEVDSUZJRUQQABIMCghM",
+            "SU5FQVIxNhABEgcKA01QMxACEg8KC01QM182NF9LQlBTEAQSDAoIT0dHX09Q",
+            "VVMQAxIJCgVNVUxBVxAFEggKBEFMQVcQBjLSAwoMVGV4dFRvU3BlZWNoEqIB",
+            "CgpMaXN0Vm9pY2VzEjQuZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MWJl",
+            "dGExLkxpc3RWb2ljZXNSZXF1ZXN0GjUuZ29vZ2xlLmNsb3VkLnRleHR0b3Nw",
+            "ZWVjaC52MWJldGExLkxpc3RWb2ljZXNSZXNwb25zZSIngtPkkwIREg8vdjFi",
+            "ZXRhMS92b2ljZXPaQQ1sYW5ndWFnZV9jb2RlEssBChBTeW50aGVzaXplU3Bl",
+            "ZWNoEjouZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MWJldGExLlN5bnRo",
+            "ZXNpemVTcGVlY2hSZXF1ZXN0GjsuZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVj",
+            "aC52MWJldGExLlN5bnRoZXNpemVTcGVlY2hSZXNwb25zZSI+gtPkkwIdIhgv",
+            "djFiZXRhMS90ZXh0OnN5bnRoZXNpemU6ASraQRhpbnB1dCx2b2ljZSxhdWRp",
+            "b19jb25maWcaT8pBG3RleHR0b3NwZWVjaC5nb29nbGVhcGlzLmNvbdJBLmh0",
+            "dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C",
+            "0QIKJWNvbS5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxYmV0YTFCEVRl",
+            "eHRUb1NwZWVjaFByb3RvUAFaSWNsb3VkLmdvb2dsZS5jb20vZ28vdGV4dHRv",
+            "c3BlZWNoL2FwaXYxYmV0YTEvdGV4dHRvc3BlZWNocGI7dGV4dHRvc3BlZWNo",
+            "cGL4AQGqAiFHb29nbGUuQ2xvdWQuVGV4dFRvU3BlZWNoLlYxQmV0YTHKAiFH",
+            "b29nbGVcQ2xvdWRcVGV4dFRvU3BlZWNoXFYxYmV0YTHqAiRHb29nbGU6OkNs",
+            "b3VkOjpUZXh0VG9TcGVlY2g6OlYxYmV0YTHqQVUKG2F1dG9tbC5nb29nbGVh",
+            "cGlzLmNvbS9Nb2RlbBI2cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97",
+            "bG9jYXRpb259L21vZGVscy97bW9kZWx9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.TextToSpeech.V1Beta1.SsmlVoiceGender), typeof(global::Google.Cloud.TextToSpeech.V1Beta1.AudioEncoding), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -142,7 +142,8 @@ namespace Google.Cloud.TextToSpeech.V1Beta1 {
   /// </summary>
   public enum AudioEncoding {
     /// <summary>
-    /// Not specified. Will return result [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT].
+    /// Not specified. Will return result
+    /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT].
     /// </summary>
     [pbr::OriginalName("AUDIO_ENCODING_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
@@ -1230,8 +1231,8 @@ namespace Google.Cloud.TextToSpeech.V1Beta1 {
   /// <summary>
   /// Contains text input to be synthesized. Either `text` or `ssml` must be
   /// supplied. Supplying both or neither returns
-  /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]. The input size is limited to 5000
-  /// bytes.
+  /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]. The
+  /// input size is limited to 5000 bytes.
   /// </summary>
   public sealed partial class SynthesisInput : pb::IMessage<SynthesisInput>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1319,7 +1320,8 @@ namespace Google.Cloud.TextToSpeech.V1Beta1 {
     /// <summary>
     /// The SSML document to be synthesized. The SSML document must be valid
     /// and well-formed. Otherwise the RPC will fail and return
-    /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]. For more information, see
+    /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]. For
+    /// more information, see
     /// [SSML](https://cloud.google.com/text-to-speech/docs/ssml).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1583,9 +1585,9 @@ namespace Google.Cloud.TextToSpeech.V1Beta1 {
     public const int LanguageCodeFieldNumber = 1;
     private string languageCode_ = "";
     /// <summary>
-    /// Required. The language (and potentially also the region) of the voice expressed as a
-    /// [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag, e.g.
-    /// "en-US". This should not include a script tag (e.g. use
+    /// Required. The language (and potentially also the region) of the voice
+    /// expressed as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt)
+    /// language tag, e.g. "en-US". This should not include a script tag (e.g. use
     /// "cmn-cn" rather than "cmn-Hant-cn"), because the script will be inferred
     /// from the input provided in the SynthesisInput.  The TTS service
     /// will use this parameter to help choose an appropriate voice.  Note that
@@ -2344,8 +2346,9 @@ namespace Google.Cloud.TextToSpeech.V1Beta1 {
     public const int ReportedUsageFieldNumber = 3;
     private global::Google.Cloud.TextToSpeech.V1Beta1.CustomVoiceParams.Types.ReportedUsage reportedUsage_ = global::Google.Cloud.TextToSpeech.V1Beta1.CustomVoiceParams.Types.ReportedUsage.Unspecified;
     /// <summary>
-    /// Optional. The usage of the synthesized audio to be reported.
+    /// Optional. Deprecated. The usage of the synthesized audio to be reported.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.TextToSpeech.V1Beta1.CustomVoiceParams.Types.ReportedUsage ReportedUsage {
@@ -2516,9 +2519,8 @@ namespace Google.Cloud.TextToSpeech.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// The usage of the synthesized audio. You must report your honest and
-      /// correct usage of the service as it's regulated by contract and will cause
-      /// significant difference in billing.
+      /// Deprecated. The usage of the synthesized audio. Usage does not affect
+      /// billing.
       /// </summary>
       public enum ReportedUsage {
         /// <summary>

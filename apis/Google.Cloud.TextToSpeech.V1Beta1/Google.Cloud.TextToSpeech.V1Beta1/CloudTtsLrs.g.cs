@@ -38,25 +38,26 @@ namespace Google.Cloud.TextToSpeech.V1Beta1 {
             "Dm91dHB1dF9nY3NfdXJpGAQgASgJQgPgQQISSwoFdm9pY2UYBSABKAsyNy5n",
             "b29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxYmV0YTEuVm9pY2VTZWxlY3Rp",
             "b25QYXJhbXNCA+BBAiIdChtTeW50aGVzaXplTG9uZ0F1ZGlvUmVzcG9uc2Ui",
-            "oAEKG1N5bnRoZXNpemVMb25nQXVkaW9NZXRhZGF0YRIuCgpzdGFydF90aW1l",
-            "GAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI0ChBsYXN0X3Vw",
-            "ZGF0ZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIb",
-            "ChNwcm9ncmVzc19wZXJjZW50YWdlGAMgASgBMvgCCh9UZXh0VG9TcGVlY2hM",
-            "b25nQXVkaW9TeW50aGVzaXplEoMCChNTeW50aGVzaXplTG9uZ0F1ZGlvEj0u",
-            "Z29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MWJldGExLlN5bnRoZXNpemVM",
-            "b25nQXVkaW9SZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlv",
-            "biKNAYLT5JMCSiJFL3YxYmV0YTEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qL3ZvaWNlcy8qfTpTeW50aGVzaXplTG9uZ0F1ZGlvOgEqykE6ChtT",
-            "eW50aGVzaXplTG9uZ0F1ZGlvUmVzcG9uc2USG1N5bnRoZXNpemVMb25nQXVk",
-            "aW9NZXRhZGF0YRpPykEbdGV4dHRvc3BlZWNoLmdvb2dsZWFwaXMuY29t0kEu",
-            "aHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9y",
-            "bUKLAgolY29tLmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjFiZXRhMUIj",
-            "VGV4dFRvU3BlZWNoTG9uZ0F1ZGlvU3ludGhlc2lzUHJvdG9QAVpJY2xvdWQu",
-            "Z29vZ2xlLmNvbS9nby90ZXh0dG9zcGVlY2gvYXBpdjFiZXRhMS90ZXh0dG9z",
-            "cGVlY2hwYjt0ZXh0dG9zcGVlY2hwYvgBAaoCIUdvb2dsZS5DbG91ZC5UZXh0",
-            "VG9TcGVlY2guVjFCZXRhMcoCIUdvb2dsZVxDbG91ZFxUZXh0VG9TcGVlY2hc",
-            "VjFiZXRhMeoCJEdvb2dsZTo6Q2xvdWQ6OlRleHRUb1NwZWVjaDo6VjFiZXRh",
-            "MWIGcHJvdG8z"));
+            "pAEKG1N5bnRoZXNpemVMb25nQXVkaW9NZXRhZGF0YRIuCgpzdGFydF90aW1l",
+            "GAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI4ChBsYXN0X3Vw",
+            "ZGF0ZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIC",
+            "GAESGwoTcHJvZ3Jlc3NfcGVyY2VudGFnZRgDIAEoATKzAwofVGV4dFRvU3Bl",
+            "ZWNoTG9uZ0F1ZGlvU3ludGhlc2l6ZRK+AgoTU3ludGhlc2l6ZUxvbmdBdWRp",
+            "bxI9Lmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjFiZXRhMS5TeW50aGVz",
+            "aXplTG9uZ0F1ZGlvUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVy",
+            "YXRpb24iyAGC0+STAkEiPC92MWJldGExL3twYXJlbnQ9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKn06c3ludGhlc2l6ZUxvbmdBdWRpbzoBKspBfgo9Z29vZ2xl",
+            "LmNsb3VkLnRleHR0b3NwZWVjaC52MWJldGExLlN5bnRoZXNpemVMb25nQXVk",
+            "aW9SZXNwb25zZRI9Z29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MWJldGEx",
+            "LlN5bnRoZXNpemVMb25nQXVkaW9NZXRhZGF0YRpPykEbdGV4dHRvc3BlZWNo",
+            "Lmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20v",
+            "YXV0aC9jbG91ZC1wbGF0Zm9ybUKLAgolY29tLmdvb2dsZS5jbG91ZC50ZXh0",
+            "dG9zcGVlY2gudjFiZXRhMUIjVGV4dFRvU3BlZWNoTG9uZ0F1ZGlvU3ludGhl",
+            "c2lzUHJvdG9QAVpJY2xvdWQuZ29vZ2xlLmNvbS9nby90ZXh0dG9zcGVlY2gv",
+            "YXBpdjFiZXRhMS90ZXh0dG9zcGVlY2hwYjt0ZXh0dG9zcGVlY2hwYvgBAaoC",
+            "IUdvb2dsZS5DbG91ZC5UZXh0VG9TcGVlY2guVjFCZXRhMcoCIUdvb2dsZVxD",
+            "bG91ZFxUZXh0VG9TcGVlY2hcVjFiZXRhMeoCJEdvb2dsZTo6Q2xvdWQ6OlRl",
+            "eHRUb1NwZWVjaDo6VjFiZXRhMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.TextToSpeech.V1Beta1.CloudTtsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -679,8 +680,9 @@ namespace Google.Cloud.TextToSpeech.V1Beta1 {
     public const int LastUpdateTimeFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp lastUpdateTime_;
     /// <summary>
-    /// Time of the most recent processing update.
+    /// Deprecated. Do not use.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp LastUpdateTime {
