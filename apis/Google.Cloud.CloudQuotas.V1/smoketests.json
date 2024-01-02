@@ -1,0 +1,9 @@
+[
+  {
+    "method": "ListQuotaInfos",
+    "client": "CloudQuotasClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/global/services/cloudquotas.googleapis.com"
+    }
+  }
+]
