@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.9.1, released 2024-01-03
+
+### Bug fixes
+
+- Use message ordering enabled property that comes with streaming pull responses so that messages are only delivered to the callback one at a time in order when ordering is actually enabled ([commit 3f8f8a2](https://github.com/googleapis/google-cloud-dotnet/commit/3f8f8a26587dd329cf2a90c6b9952a8ce5fff7f4))
+
 ## Version 3.9.0, released 2023-12-04
 
 ### New features
