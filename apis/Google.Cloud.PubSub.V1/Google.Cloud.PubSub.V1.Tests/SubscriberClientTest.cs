@@ -145,7 +145,9 @@ namespace Google.Cloud.PubSub.V1.Tests
 
             private class En : IAsyncStreamReader<StreamingPullResponse>
             {
-                public En(IEnumerable<ServerAction> msgs, IScheduler scheduler, TaskHelper taskHelper, IClock clock, bool useMsgAsId, CancellationToken? ct, bool isExactlyOnceDelivery, bool messageOrderingEnabled)
+                public En(
+                    IEnumerable<ServerAction> msgs, IScheduler scheduler, TaskHelper taskHelper, IClock clock,
+                    bool useMsgAsId, CancellationToken? ct, bool isExactlyOnceDelivery, bool messageOrderingEnabled)
                 {
                     _msgsEn = msgs.Select((x, i) => (i, x)).GetEnumerator();
                     _scheduler = scheduler;
@@ -199,13 +201,16 @@ namespace Google.Cloud.PubSub.V1.Tests
                         {
                             throw _msgsEn.Current.Action.CurrentEx;
                         }
+                        var messages = _msgsEn.Current.Action.Msgs.Select((s, i) =>
+                            MakeReceivedMessage(_useMsgAsId ? s : MakeMsgId(_msgsEn.Current.Index, i), s, _msgsEn.Current.Action.DeliveryAttempt));
                         return new StreamingPullResponse
                         {
-                            ReceivedMessages = {
-                                _msgsEn.Current.Action.Msgs.Select((s, i) =>
-                                    MakeReceivedMessage(_useMsgAsId ? s : MakeMsgId(_msgsEn.Current.Index, i), s, _msgsEn.Current.Action.DeliveryAttempt))
-                            },
-                            SubscriptionProperties = new SubscriptionProperties { ExactlyOnceDeliveryEnabled = _isExactlyOnceDelivery, MessageOrderingEnabled = _messageOrderingEnabled}
+                            ReceivedMessages = { messages },
+                            SubscriptionProperties = new()
+                            {
+                                ExactlyOnceDeliveryEnabled = _isExactlyOnceDelivery,
+                                MessageOrderingEnabled = _messageOrderingEnabled
+                            }
                         };
                     }
                 }
@@ -219,7 +224,8 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 public PullStream(TimeSpan writeAsyncPreDelay,
                     IEnumerable<ServerAction> msgs, List<DateTime> writeCompletes, List<DateTime> streamPings,
-                    IScheduler scheduler, IClock clock, TaskHelper taskHelper, bool useMsgAsId, CancellationToken? ct, bool isExactlyOnceDelivery, bool messageOrderingEnabled)
+                    IScheduler scheduler, IClock clock, TaskHelper taskHelper, bool useMsgAsId, CancellationToken? ct,
+                    bool isExactlyOnceDelivery, bool messageOrderingEnabled)
                 {
                     _taskHelper = taskHelper;
                     _scheduler = scheduler;
@@ -274,7 +280,8 @@ namespace Google.Cloud.PubSub.V1.Tests
 
             public FakeSubscriberServiceApiClient(
                 IEnumerator<IEnumerable<ServerAction>> msgsEn, IScheduler scheduler, IClock clock,
-                TaskHelper taskHelper, TimeSpan writeAsyncPreDelay, bool useMsgAsId, AckModifyAckDeadlineAction ackModifyAckDeadlineAction, bool isExactlyOnceDelivery, bool messageOrderingEnabled)
+                TaskHelper taskHelper, TimeSpan writeAsyncPreDelay, bool useMsgAsId,
+                AckModifyAckDeadlineAction ackModifyAckDeadlineAction, bool isExactlyOnceDelivery, bool messageOrderingEnabled)
             {
                 _msgsEn = msgsEn;
                 _scheduler = scheduler;
@@ -323,7 +330,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                     }
                     var msgs = _msgsEn.Current;
                     return new PullStream(_writeAsyncPreDelay, msgs, _writeCompletes, _streamPings,
-                        _scheduler, _clock, _taskHelper, _useMsgAsId, callSettings?.CancellationToken, _isExactlyOnceDelivery, _messageOrderingEnabled);
+                        _scheduler, _clock, _taskHelper, _useMsgAsId, callSettings?.CancellationToken,
+                        _isExactlyOnceDelivery, _messageOrderingEnabled);
                 }
             }
 
@@ -376,17 +384,28 @@ namespace Google.Cloud.PubSub.V1.Tests
             /// <summary>
             /// This method does the following:
             /// <list type="bullet">
-            /// <item> If a non-gRPC exception is specified in <see cref="_ackModifyAckDeadlineAction.Exception"/>, it always throws exception for specified number of times.</item>
-            /// <item> If subscription under test is exactly once delivery, it checks if there are temporary or permanent failures associated with given <paramref name="ackIds"/> in the specified exception <see cref="_ackModifyAckDeadlineAction.Exception"/>.
-            /// If not, it returns. Otherwise, it throws the specified exception <see cref="_ackModifyAckDeadlineAction.Exception"/> for <see cref="_numberOfAckModifyAckDeadlineFailures"/> times.</item>
-            /// <item> If subscription under test is not exactly once delivery, it will always throw the specified exception <see cref="_ackModifyAckDeadlineAction.Exception"/> for <see cref="_numberOfAckModifyAckDeadlineFailures"/> times.</item>
+            /// <item>
+            /// If a non-gRPC exception is specified in <see cref="_ackModifyAckDeadlineAction.Exception"/>,
+            /// it always throws exception for specified number of times.
+            /// </item>
+            /// <item>
+            /// If subscription under test is exactly once delivery, it checks if there are temporary or permanent failures
+            /// associated with given <paramref name="ackIds"/> in the specified exception <see cref="_ackModifyAckDeadlineAction.Exception"/>.
+            /// If not, it returns. Otherwise, it throws the specified exception <see cref="_ackModifyAckDeadlineAction.Exception"/>
+            /// for <see cref="_numberOfAckModifyAckDeadlineFailures"/> times.
+            /// </item>
+            /// <item>
+            /// If subscription under test is not exactly once delivery, it will always throw the specified exception
+            /// <see cref="_ackModifyAckDeadlineAction.Exception"/> for <see cref="_numberOfAckModifyAckDeadlineFailures"/> times.
+            /// </item>
             /// </list>
             /// </summary>
             /// <param name="ackIds">The list of acknowledgement ids being processed.</param>
             private void MaybeThrowException(IEnumerable<string> ackIds)
             {
                 // This method simulates exception thrown from AcknowledgeAsync or ModifyDeadlineAsync methods based on available test parameters.
-                // For non exactly once delivery, this method always throws an exception for the specified number of times as _numberOfAckModifyAckDeadlineFailures.
+                // For non exactly once delivery, this method always throws an exception for the specified number of times
+                // as _numberOfAckModifyAckDeadlineFailures.
                 // For exactly once delivery, this method should throw exception for following scenarios:
                 //  1. If the entire request failed based on gRPC status code.
                 //  2. There is a temporary or permanent failure associated with the message ID.
@@ -461,14 +480,17 @@ namespace Google.Cloud.PubSub.V1.Tests
                 TimeSpan? ackDeadline = null, TimeSpan? ackExtendWindow = null,
                 int? flowMaxElements = null, int? flowMaxBytes = null,
                 int clientCount = 1, int threadCount = 1, TimeSpan? writeAsyncPreDelay = null,
-                bool useMsgAsId = false, AckModifyAckDeadlineAction ackModifyAckDeadlineAction = null, bool isExactlyOnceDelivery = false, bool messageOrderingEnabled = false, TimeSpan? disposeTimeout = null)
+                bool useMsgAsId = false, AckModifyAckDeadlineAction ackModifyAckDeadlineAction = null,
+                bool isExactlyOnceDelivery = false, bool messageOrderingEnabled = false, TimeSpan? disposeTimeout = null)
             {
                 var scheduler = new TestScheduler(threadCount: threadCount);
                 TaskHelper taskHelper = scheduler.TaskHelper;
                 List<DateTime> clientShutdowns = new List<DateTime>();
                 var msgEn = msgs.GetEnumerator();
                 var clients = Enumerable.Range(0, clientCount)
-                    .Select(_ => new FakeSubscriberServiceApiClient(msgEn, scheduler, scheduler.Clock, taskHelper, writeAsyncPreDelay ?? TimeSpan.Zero, useMsgAsId, ackModifyAckDeadlineAction, isExactlyOnceDelivery, messageOrderingEnabled))
+                    .Select(_ => new FakeSubscriberServiceApiClient(
+                        msgEn, scheduler, scheduler.Clock, taskHelper, writeAsyncPreDelay ?? TimeSpan.Zero, useMsgAsId,
+                        ackModifyAckDeadlineAction, isExactlyOnceDelivery, messageOrderingEnabled))
                     .ToList();
                 var settings = new SubscriberClient.Settings
                 {
