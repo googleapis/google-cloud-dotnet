@@ -94,30 +94,10 @@ public sealed class UpdateFromBazelCommand : CommandBase
 
         bool updated = false;
 
-        bool restNumericEnums = properties.TryGetValue("rest_numeric_enums", out var restNumericEnumsValue) && restNumericEnumsValue == "True";
-        if (api.RestNumericEnums != restNumericEnums)
-        {
-            api.RestNumericEnums = restNumericEnums;
-            UpdateOrAddJson("restNumericEnums", restNumericEnums);
-            updated = true;
-        }
+        MaybeUpdateRestNumericEnums();
+        MaybeUpdateTransport();
+        MaybeUpdateServiceConfigFile();
 
-        string transport = properties.GetValueOrDefault("transport", "grpc");
-        if ((api.Transport ?? "grpc") != transport)
-        {
-            api.Transport = transport;
-            UpdateOrAddJson("transport", transport);
-            updated = true;
-        }
-
-        string serviceConfig = properties.GetValueOrDefault("service_yaml", "none");
-        serviceConfig = serviceConfig.Split(':').Last();
-        if (api.ServiceConfigFile != serviceConfig)
-        {
-            api.ServiceConfigFile = serviceConfig;
-            UpdateOrAddJson("serviceConfigFile", serviceConfig);
-            updated = true;
-        }
         return updated;
 
         void UpdateOrAddJson(string key, object value)
@@ -133,6 +113,38 @@ public sealed class UpdateFromBazelCommand : CommandBase
             else
             {
                 obj.Last.AddAfterSelf(new JProperty(key, value));
+            }
+            updated = true;
+        }
+
+        void MaybeUpdateRestNumericEnums()
+        {
+            bool restNumericEnums = properties.TryGetValue("rest_numeric_enums", out var restNumericEnumsValue) && restNumericEnumsValue == "True";
+            if (api.RestNumericEnums != restNumericEnums)
+            {
+                api.RestNumericEnums = restNumericEnums;
+                UpdateOrAddJson("restNumericEnums", restNumericEnums);
+            }
+        }
+
+        void MaybeUpdateTransport()
+        {
+            string transport = properties.GetValueOrDefault("transport", "grpc");
+            if ((api.Transport ?? "grpc") != transport)
+            {
+                api.Transport = transport;
+                UpdateOrAddJson("transport", transport);
+            }
+        }
+
+        void MaybeUpdateServiceConfigFile()
+        {
+            string serviceConfig = properties.GetValueOrDefault("service_yaml", "none");
+            serviceConfig = serviceConfig.Split(':').Last();
+            if (api.ServiceConfigFile != serviceConfig)
+            {
+                api.ServiceConfigFile = serviceConfig;
+                UpdateOrAddJson("serviceConfigFile", serviceConfig);
             }
         }
     }
