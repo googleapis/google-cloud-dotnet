@@ -150,7 +150,8 @@
       "protoPath": "google/cloud/advisorynotifications/v1",
       "shortName": "advisorynotifications",
       "serviceConfigFile": "advisorynotifications_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.AlloyDb.V1",
@@ -2549,7 +2550,8 @@
       "generator": "micro",
       "protoPath": "google/cloud/gkemulticloud/v1",
       "shortName": "gkemulticloud",
-      "serviceConfigFile": "gkemulticloud_v1.yaml"
+      "serviceConfigFile": "gkemulticloud_v1.yaml",
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Iam.Admin.V1",
@@ -5402,7 +5404,7 @@
       "generator": "micro",
       "protoPath": "google/maps/fleetengine/delivery/v1",
       "shortName": "fleetengine",
-      "serviceConfigFile": "none",
+      "serviceConfigFile": "fleetengine_v1.yaml",
       "transport": "grpc+rest",
       "restNumericEnums": true
     },
@@ -5487,7 +5489,8 @@
       "protoPath": "google/maps/places/v1",
       "shortName": "places",
       "serviceConfigFile": "places_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Maps.Routing.V2",
