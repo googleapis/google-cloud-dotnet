@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google Inc. All Rights Reserved.
+// Copyright 2018 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -46,13 +46,13 @@ namespace Google.Cloud.Logging.NLog.IntegrationTests
 
         private async Task AssertAsync<T>(GoogleStackdriverTarget target, bool shouldSucceed) where T : Exception
         {
-            // ConfigureForTargetLogging() and a write are both required to trigger target initialization.
-            SimpleConfigurator.ConfigureForTargetLogging(target);
+            // Configuration and a write are both required to trigger target initialization.
+            LogManager.Setup().LoadConfiguration(c => c.ForLogger().WriteTo(target));
             var tcs = new TaskCompletionSource<int>();
             target.WriteAsyncLogEvent(new AsyncLogEventInfo(LogEventInfo.CreateNullEvent(), MakeContinuation(tcs)));
             if (shouldSucceed)
             {
-                // On "succees", a KeyNotFoundException is thrown, as we're using an empty LogEventInfo.
+                // On "success", a KeyNotFoundException is thrown, as we're using an empty LogEventInfo.
                 // This does depend on an NLog implementation detail, but provides a simple way to test
                 // the success case that doesn't actually log anything.
                 await Assert.ThrowsAsync<KeyNotFoundException>(() => tcs.Task);

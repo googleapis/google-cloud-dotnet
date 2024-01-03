@@ -69,7 +69,7 @@ namespace Google.Cloud.Logging.NLog.Snippets
                 // Resource: nlog-template.xml nlog_template
                 // Sample: Overview
                 // Configure nlog to use Google Stackdriver logging from the XML configuration file.
-                LogManager.LoadConfiguration("nlog.xml");
+                LogManager.Setup().LoadConfigurationFromFile("nlog.xml", optional: false);
 
                 // Acquire a logger for this class
                 Logger logger = LogManager.GetCurrentClassLogger();

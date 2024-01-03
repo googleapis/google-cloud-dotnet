@@ -2869,7 +2869,7 @@
     },
     {
       "id": "Google.Cloud.Logging.NLog",
-      "version": "4.0.0",
+      "version": "5.0.0-beta00",
       "type": "other",
       "metadataType": "INTEGRATION",
       "targetFrameworks": "netstandard2.1;net462",
@@ -2885,7 +2885,7 @@
         "Google.Cloud.DevTools.Common": "3.0.0",
         "Google.Cloud.Logging.V2": "4.0.0",
         "Grpc.Core": "2.46.6",
-        "NLog": "4.7.15"
+        "NLog": "5.2.8"
       },
       "testDependencies": {
         "Google.Api.Gax.Testing": "4.4.0"
