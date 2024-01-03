@@ -22,6 +22,7 @@ fi
 export GOOGLEAPIS
 
 get_api_field() {
+  # TODO: Echo the error if there's a failure. (It currently makes the script fail, but silently.)
   dotnet run -c Release --no-build --no-restore --project tools/Google.Cloud.Tools.ReleaseManager -- query-api-catalog get-field "$@"
 }
 
@@ -98,16 +99,11 @@ generate_microgenerator() {
     SERVICE_CONFIG_OPTION=--gapic_opt=service-config=$API_SRC_DIR/$SERVICE_CONFIG_FILE
   fi
 
-  # Only specify common resource protos for GCP APIs.
-  # Don't include the file for the ResourceManager API, which genuinely defines these resources.
-  # Also don't include Cloud Quotas, which has currently-unusual (but long-term-standard)
-  # common resource definitions.
+  # Specify the common resources proto where appropriate - which is an increasingly-complex
+  # decision, now delegated to the API catalog.
+  INCLUDE_COMMON_RESOURCES_PROTO=$(get_api_field $PACKAGE_ID includeCommonResourcesProto)
   COMMON_RESOURCES_PROTO=
-  if [[ ( $PACKAGE_ID == Google.Cloud.* || $PACKAGE_ID == Google.Identity.* || \
-          $PACKAGE_ID == Google.Maps.MapsPlatformDatasets.V1Alpha || \
-          $PACKAGE_ID == Google.Maps.MapsPlatformDatasets.V1) \
-        && $PACKAGE_ID != Google.Cloud.ResourceManager.V3 \
-        && $PACKAGE_ID != Google.Cloud.CloudQuotas.V1 ]]
+  if [[ $INCLUDE_COMMON_RESOURCES_PROTO == "True" ]]
   then
     COMMON_RESOURCES_PROTO=$GOOGLEAPIS/google/cloud/common_resources.proto
   fi
