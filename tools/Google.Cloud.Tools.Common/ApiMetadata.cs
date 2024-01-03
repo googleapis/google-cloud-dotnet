@@ -213,6 +213,14 @@ namespace Google.Cloud.Tools.Common
         /// <param name="package">The name of the package, e.g. Google.Cloud.Storage.V1</param>
         public static bool IsCloudPackage(string package) => package.StartsWith("Google.Cloud.") || PseudoCloudPackages.Contains(package);
 
+        /// <summary>
+        /// Whether or not to include the common resources proto when generating. This is true for
+        /// most-but-not-all Cloud APIs, and false for most-but-not-all non-Cloud APIs.
+        /// This property is nullable in order to be able to detect whether or not it's been explicitly set.
+        /// It *should* be explicitly set for all GAPIC APIs.
+        /// </summary>
+        public bool? IncludeCommonResourcesProto { get; set; }
+
         // TODO: Optimize to do this lazily if it's ever an issue
         [JsonIgnore]
         public bool CanHaveGaRelease
