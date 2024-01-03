@@ -90,7 +90,7 @@ namespace Google.Cloud.Logging.NLog.Tests
                     googleTarget.ContextProperties.Add(new TargetPropertyWithContext() { Name = metadata.Key, Layout = metadata.Value });
                 }
                 configFn?.Invoke(googleTarget);
-                SimpleConfigurator.ConfigureForTargetLogging(googleTarget);
+                LogManager.Setup().LoadConfiguration(c => c.ForLogger().WriteTo(googleTarget));
                 await testFn(googleTarget);
             }
             finally
@@ -119,8 +119,8 @@ namespace Google.Cloud.Logging.NLog.Tests
 
         private Task ActivateTargetAsync(Target target)
         {
-            // ConfigureForTargetLogging() and a write are both required to trigger target initialization.
-            SimpleConfigurator.ConfigureForTargetLogging(target);
+            // Configuration and a write are both required to trigger target initialization.
+            LogManager.Setup().LoadConfiguration(c => c.ForLogger().WriteTo(target));
             var tcs = new TaskCompletionSource<int>();
             void Continuation(Exception ex)
             {

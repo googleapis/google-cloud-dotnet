@@ -77,7 +77,6 @@ namespace Google.Cloud.Logging.NLog
         // For testing only.
         internal GoogleStackdriverTarget(LoggingServiceV2Client client, Platform platform)
         {
-            OptimizeBufferReuse = true;
             ResourceLabels = new List<TargetPropertyWithContext>();
             _contextProperties = new List<TargetPropertyWithContext>();
             _client = client;

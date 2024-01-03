@@ -20,7 +20,14 @@ Create an `nlog` configuration file (`nlog.xml`):
 Edit the file replacing `PROJECT_ID` with your Google Cloud Project
 ID, and `LOG_ID` with an identifier for your application.
 
-Use this file to configure `nlog` and then log as normal:
+Ensure the file is copied to the output directory. For example, in
+your project file you might include:
+
+```xml
+<None Update="nlog.xml" CopyToOutputDirectory="Always" />
+```
+
+Use this file to configure NLog and then log as normal:
 
 {{sample:GoogleStackdriverTarget.Overview}}
 
