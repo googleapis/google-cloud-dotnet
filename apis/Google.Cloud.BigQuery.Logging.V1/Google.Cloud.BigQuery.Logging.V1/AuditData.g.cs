@@ -185,7 +185,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
             "b24iNAoPVGFibGVEZWZpbml0aW9uEgwKBG5hbWUYASABKAkSEwoLc291cmNl",
             "X3VyaXMYAiADKAkibAoJSm9iU3RhdHVzEg0KBXN0YXRlGAEgASgJEiEKBWVy",
             "cm9yGAIgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXMSLQoRYWRkaXRpb25hbF9l",
-            "cnJvcnMYAyADKAsyEi5nb29nbGUucnBjLlN0YXR1cyK5BQoNSm9iU3RhdGlz",
+            "cnJvcnMYAyADKAsyEi5nb29nbGUucnBjLlN0YXR1cyLOBQoNSm9iU3RhdGlz",
             "dGljcxIvCgtjcmVhdGVfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
             "aW1lc3RhbXASLgoKc3RhcnRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1",
             "Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9i",
@@ -193,24 +193,24 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
             "ChJ0b3RhbF9iaWxsZWRfYnl0ZXMYBSABKAMSFAoMYmlsbGluZ190aWVyGAcg",
             "ASgFEhUKDXRvdGFsX3Nsb3RfbXMYCCABKAMSZwoRcmVzZXJ2YXRpb25fdXNh",
             "Z2UYDiADKAsySC5nb29nbGUuY2xvdWQuYmlncXVlcnkubG9nZ2luZy52MS5K",
-            "b2JTdGF0aXN0aWNzLlJlc2VydmF0aW9uUmVzb3VyY2VVc2FnZUICGAESRgoR",
-            "cmVmZXJlbmNlZF90YWJsZXMYCSADKAsyKy5nb29nbGUuY2xvdWQuYmlncXVl",
-            "cnkubG9nZ2luZy52MS5UYWJsZU5hbWUSHgoWdG90YWxfdGFibGVzX3Byb2Nl",
-            "c3NlZBgKIAEoBRJFChByZWZlcmVuY2VkX3ZpZXdzGAsgAygLMisuZ29vZ2xl",
-            "LmNsb3VkLmJpZ3F1ZXJ5LmxvZ2dpbmcudjEuVGFibGVOYW1lEh0KFXRvdGFs",
-            "X3ZpZXdzX3Byb2Nlc3NlZBgMIAEoBRIeChZxdWVyeV9vdXRwdXRfcm93X2Nv",
-            "dW50GA8gASgDEh8KF3RvdGFsX2xvYWRfb3V0cHV0X2J5dGVzGA0gASgDGjkK",
-            "GFJlc2VydmF0aW9uUmVzb3VyY2VVc2FnZRIMCgRuYW1lGAEgASgJEg8KB3Ns",
-            "b3RfbXMYAiABKAMiNQoLRGF0YXNldE5hbWUSEgoKcHJvamVjdF9pZBgBIAEo",
-            "CRISCgpkYXRhc2V0X2lkGAIgASgJIkUKCVRhYmxlTmFtZRISCgpwcm9qZWN0",
-            "X2lkGAEgASgJEhIKCmRhdGFzZXRfaWQYAiABKAkSEAoIdGFibGVfaWQYAyAB",
-            "KAkiPwoHSm9iTmFtZRISCgpwcm9qZWN0X2lkGAEgASgJEg4KBmpvYl9pZBgC",
-            "IAEoCRIQCghsb2NhdGlvbhgDIAEoCSImCg5FbmNyeXB0aW9uSW5mbxIUCgxr",
-            "bXNfa2V5X25hbWUYASABKAlCmwEKJGNvbS5nb29nbGUuY2xvdWQuYmlncXVl",
-            "cnkubG9nZ2luZy52MUIOQXVkaXREYXRhUHJvdG9QAVo+Y2xvdWQuZ29vZ2xl",
-            "LmNvbS9nby9iaWdxdWVyeS9sb2dnaW5nL2FwaXYxL2xvZ2dpbmdwYjtsb2dn",
-            "aW5ncGKqAiBHb29nbGUuQ2xvdWQuQmlnUXVlcnkuTG9nZ2luZy5WMWIGcHJv",
-            "dG8z"));
+            "b2JTdGF0aXN0aWNzLlJlc2VydmF0aW9uUmVzb3VyY2VVc2FnZUICGAESEwoL",
+            "cmVzZXJ2YXRpb24YECABKAkSRgoRcmVmZXJlbmNlZF90YWJsZXMYCSADKAsy",
+            "Ky5nb29nbGUuY2xvdWQuYmlncXVlcnkubG9nZ2luZy52MS5UYWJsZU5hbWUS",
+            "HgoWdG90YWxfdGFibGVzX3Byb2Nlc3NlZBgKIAEoBRJFChByZWZlcmVuY2Vk",
+            "X3ZpZXdzGAsgAygLMisuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmxvZ2dpbmcu",
+            "djEuVGFibGVOYW1lEh0KFXRvdGFsX3ZpZXdzX3Byb2Nlc3NlZBgMIAEoBRIe",
+            "ChZxdWVyeV9vdXRwdXRfcm93X2NvdW50GA8gASgDEh8KF3RvdGFsX2xvYWRf",
+            "b3V0cHV0X2J5dGVzGA0gASgDGjkKGFJlc2VydmF0aW9uUmVzb3VyY2VVc2Fn",
+            "ZRIMCgRuYW1lGAEgASgJEg8KB3Nsb3RfbXMYAiABKAMiNQoLRGF0YXNldE5h",
+            "bWUSEgoKcHJvamVjdF9pZBgBIAEoCRISCgpkYXRhc2V0X2lkGAIgASgJIkUK",
+            "CVRhYmxlTmFtZRISCgpwcm9qZWN0X2lkGAEgASgJEhIKCmRhdGFzZXRfaWQY",
+            "AiABKAkSEAoIdGFibGVfaWQYAyABKAkiPwoHSm9iTmFtZRISCgpwcm9qZWN0",
+            "X2lkGAEgASgJEg4KBmpvYl9pZBgCIAEoCRIQCghsb2NhdGlvbhgDIAEoCSIm",
+            "Cg5FbmNyeXB0aW9uSW5mbxIUCgxrbXNfa2V5X25hbWUYASABKAlCmwEKJGNv",
+            "bS5nb29nbGUuY2xvdWQuYmlncXVlcnkubG9nZ2luZy52MUIOQXVkaXREYXRh",
+            "UHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9iaWdxdWVyeS9sb2dnaW5n",
+            "L2FwaXYxL2xvZ2dpbmdwYjtsb2dnaW5ncGKqAiBHb29nbGUuQ2xvdWQuQmln",
+            "UXVlcnkuTG9nZ2luZy5WMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -248,7 +248,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Logging.V1.TableDefinition), global::Google.Cloud.BigQuery.Logging.V1.TableDefinition.Parser, new[]{ "Name", "SourceUris" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Logging.V1.JobStatus), global::Google.Cloud.BigQuery.Logging.V1.JobStatus.Parser, new[]{ "State", "Error", "AdditionalErrors" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Logging.V1.JobStatistics), global::Google.Cloud.BigQuery.Logging.V1.JobStatistics.Parser, new[]{ "CreateTime", "StartTime", "EndTime", "TotalProcessedBytes", "TotalBilledBytes", "BillingTier", "TotalSlotMs", "ReservationUsage", "ReferencedTables", "TotalTablesProcessed", "ReferencedViews", "TotalViewsProcessed", "QueryOutputRowCount", "TotalLoadOutputBytes" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Logging.V1.JobStatistics.Types.ReservationResourceUsage), global::Google.Cloud.BigQuery.Logging.V1.JobStatistics.Types.ReservationResourceUsage.Parser, new[]{ "Name", "SlotMs" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Logging.V1.JobStatistics), global::Google.Cloud.BigQuery.Logging.V1.JobStatistics.Parser, new[]{ "CreateTime", "StartTime", "EndTime", "TotalProcessedBytes", "TotalBilledBytes", "BillingTier", "TotalSlotMs", "ReservationUsage", "Reservation", "ReferencedTables", "TotalTablesProcessed", "ReferencedViews", "TotalViewsProcessed", "QueryOutputRowCount", "TotalLoadOutputBytes" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Logging.V1.JobStatistics.Types.ReservationResourceUsage), global::Google.Cloud.BigQuery.Logging.V1.JobStatistics.Types.ReservationResourceUsage.Parser, new[]{ "Name", "SlotMs" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Logging.V1.DatasetName), global::Google.Cloud.BigQuery.Logging.V1.DatasetName.Parser, new[]{ "ProjectId", "DatasetId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Logging.V1.TableName), global::Google.Cloud.BigQuery.Logging.V1.TableName.Parser, new[]{ "ProjectId", "DatasetId", "TableId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Logging.V1.JobName), global::Google.Cloud.BigQuery.Logging.V1.JobName.Parser, new[]{ "ProjectId", "JobId", "Location" }, null, null, null, null),
@@ -11150,6 +11150,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
       billingTier_ = other.billingTier_;
       totalSlotMs_ = other.totalSlotMs_;
       reservationUsage_ = other.reservationUsage_.Clone();
+      reservation_ = other.reservation_;
       referencedTables_ = other.referencedTables_.Clone();
       totalTablesProcessed_ = other.totalTablesProcessed_;
       referencedViews_ = other.referencedViews_.Clone();
@@ -11288,6 +11289,21 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
       get { return reservationUsage_; }
     }
 
+    /// <summary>Field number for the "reservation" field.</summary>
+    public const int ReservationFieldNumber = 16;
+    private string reservation_ = "";
+    /// <summary>
+    /// Reservation name or "unreserved" for on-demand resource usage.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Reservation {
+      get { return reservation_; }
+      set {
+        reservation_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "referenced_tables" field.</summary>
     public const int ReferencedTablesFieldNumber = 9;
     private static readonly pb::FieldCodec<global::Google.Cloud.BigQuery.Logging.V1.TableName> _repeated_referencedTables_codec
@@ -11407,6 +11423,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
       if (BillingTier != other.BillingTier) return false;
       if (TotalSlotMs != other.TotalSlotMs) return false;
       if(!reservationUsage_.Equals(other.reservationUsage_)) return false;
+      if (Reservation != other.Reservation) return false;
       if(!referencedTables_.Equals(other.referencedTables_)) return false;
       if (TotalTablesProcessed != other.TotalTablesProcessed) return false;
       if(!referencedViews_.Equals(other.referencedViews_)) return false;
@@ -11428,6 +11445,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
       if (BillingTier != 0) hash ^= BillingTier.GetHashCode();
       if (TotalSlotMs != 0L) hash ^= TotalSlotMs.GetHashCode();
       hash ^= reservationUsage_.GetHashCode();
+      if (Reservation.Length != 0) hash ^= Reservation.GetHashCode();
       hash ^= referencedTables_.GetHashCode();
       if (TotalTablesProcessed != 0) hash ^= TotalTablesProcessed.GetHashCode();
       hash ^= referencedViews_.GetHashCode();
@@ -11499,6 +11517,10 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
         output.WriteRawTag(120);
         output.WriteInt64(QueryOutputRowCount);
       }
+      if (Reservation.Length != 0) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(Reservation);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -11556,6 +11578,10 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
         output.WriteRawTag(120);
         output.WriteInt64(QueryOutputRowCount);
       }
+      if (Reservation.Length != 0) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(Reservation);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -11588,6 +11614,9 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(TotalSlotMs);
       }
       size += reservationUsage_.CalculateSize(_repeated_reservationUsage_codec);
+      if (Reservation.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Reservation);
+      }
       size += referencedTables_.CalculateSize(_repeated_referencedTables_codec);
       if (TotalTablesProcessed != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(TotalTablesProcessed);
@@ -11645,6 +11674,9 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
         TotalSlotMs = other.TotalSlotMs;
       }
       reservationUsage_.Add(other.reservationUsage_);
+      if (other.Reservation.Length != 0) {
+        Reservation = other.Reservation;
+      }
       referencedTables_.Add(other.referencedTables_);
       if (other.TotalTablesProcessed != 0) {
         TotalTablesProcessed = other.TotalTablesProcessed;
@@ -11739,6 +11771,10 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
             QueryOutputRowCount = input.ReadInt64();
             break;
           }
+          case 130: {
+            Reservation = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -11817,6 +11853,10 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
           }
           case 120: {
             QueryOutputRowCount = input.ReadInt64();
+            break;
+          }
+          case 130: {
+            Reservation = input.ReadString();
             break;
           }
         }
