@@ -535,6 +535,7 @@ namespace GoogleCSharpSnippets
                 Parent = "",
                 StructuredQuery = new StructuredQuery(),
                 Transaction = ByteString.Empty,
+                Mode = QueryMode.Normal,
             };
             // Make the request, returning a streaming response
             using FirestoreClient.RunQueryStream response = firestoreClient.RunQuery(request);
@@ -563,6 +564,7 @@ namespace GoogleCSharpSnippets
                 Parent = "",
                 StructuredAggregationQuery = new StructuredAggregationQuery(),
                 Transaction = ByteString.Empty,
+                Mode = QueryMode.Normal,
             };
             // Make the request, returning a streaming response
             using FirestoreClient.RunAggregationQueryStream response = firestoreClient.RunAggregationQuery(request);
