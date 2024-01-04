@@ -21,13 +21,20 @@ fi
 # Allow pre/post-generation scripts to know where to find the repos
 export GOOGLEAPIS
 
+# We call ReleaseManager frequently; dotnet run takes a while to start it,
+# even with --no-build and --no-restore.
+# Using "dotnet" with the DLL is more portable than executing the .exe file directly.
+# TODO: Rather than hard-coding this, we could build into a new directory (once)
+# where we'd always have a fresh copy.
+RELEASE_MANAGER_BINARY=tools/Google.Cloud.Tools.ReleaseManager/bin/Release/net6.0/Google.Cloud.Tools.ReleaseManager.dll
+
 get_api_field() {
   # TODO: Echo the error if there's a failure. (It currently makes the script fail, but silently.)
-  dotnet run -c Release --no-build --no-restore --project tools/Google.Cloud.Tools.ReleaseManager -- query-api-catalog get-field "$@"
+  dotnet $RELEASE_MANAGER_BINARY query-api-catalog get-field "$@"
 }
 
 list_generated_apis() {
-  dotnet run -c Release --no-build --no-restore --project tools/Google.Cloud.Tools.ReleaseManager -- query-api-catalog list generator
+  dotnet $RELEASE_MANAGER_BINARY query-api-catalog list generator
 }
 
 fetch_github_repos() {
@@ -211,6 +218,8 @@ generate_api() {
 
 
 # Entry point
+
+echo "Preparing tools"
 
 install_protoc
 install_microgenerator

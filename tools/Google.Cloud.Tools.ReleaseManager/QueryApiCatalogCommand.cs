@@ -13,17 +13,18 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.Common;
+using Newtonsoft.Json.Linq;
 using System;
-using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Google.Cloud.Tools.ReleaseManager;
 
 public class QueryApiCatalogCommand : CommandBase
 {
-    public QueryApiCatalogCommand() : base("query-api-catalog", "Performs a query against the API catalog", 1, 4, "(get-field id field [default-value] | list [test-field]))")
+    internal const string CommandName = "query-api-catalog";
+
+    public QueryApiCatalogCommand() : base(CommandName, "Performs a query against the API catalog", 1, 4, "(get-field id field [default-value] | list [test-field]))")
     {
     }
 
@@ -48,10 +49,22 @@ public class QueryApiCatalogCommand : CommandBase
         string id = args[0];
         string field = args[1];
         string defaultValue = args.Length == 3 ? args[2] : null;
-        var catalog = ApiCatalog.Load();
 
-        var api = catalog[id];
-        var result = api.Json.TryGetValue(field, StringComparison.Ordinal, out var value)
+        // Load the API catalog as plain JSON with no deserialization, for efficiency.
+        // This command is called multiple times per API during local generation, and
+        // ApiCatalog.Load does a lot of work we don't need.
+        var catalogJToken = JToken.Parse(File.ReadAllText(ApiCatalog.CatalogPath));
+
+        var apiJToken = catalogJToken["apis"]
+            .Children()
+            .OfType<JObject>()
+            .FirstOrDefault(obj => obj.TryGetValue("id", out var idToken) && idToken.Value<string>() == id);
+        if (apiJToken is null)
+        {
+            throw new UserErrorException($"No such API {id}");
+        }
+
+        var result = apiJToken.TryGetValue(field, StringComparison.Ordinal, out var value)
             ? (string) value
             : defaultValue ?? throw new UserErrorException($"API {id} has no field {field}");
         Console.WriteLine(result);

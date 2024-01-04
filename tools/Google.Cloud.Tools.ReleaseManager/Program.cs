@@ -30,30 +30,13 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
             try
             {
-                var allCommands = typeof(Program).Assembly.GetTypes()
-                    .Where(t => !t.IsAbstract && typeof(ICommand).IsAssignableFrom(t))
-                    .Select(Activator.CreateInstance)
-                    .Cast<ICommand>()
-                    .OrderBy(c => c.Command)
-                    .ToList();
-                if (args.Length == 0)
+                var command = GetCommand(args);
+                if (command is null)
                 {
-                    ShowUsage(allCommands);
-                    return 0;
+                    // The error will already have been written to the console
+                    return 1;
                 }
-
-
-                var commandName = args[0];
-                var commandArgs = args.Skip(1).ToArray();
-
-                var selectedCommand = allCommands.Where(c => c.Command == commandName).FirstOrDefault();
-                if (selectedCommand is null)
-                {
-                    Console.WriteLine($"Unknown command: '{commandName}'");
-                    ShowUsage(allCommands);
-                    return 0;
-                }
-                return selectedCommand.Execute(commandArgs);
+                return command.Execute(args.Skip(1).ToArray());
             }
             catch (UserErrorException e)
             {
@@ -65,6 +48,38 @@ namespace Google.Cloud.Tools.ReleaseManager
                 Console.WriteLine($"Failed: {e}");
                 return 1;
             }
+        }
+
+        private static ICommand GetCommand(string[] args)
+        {
+            // This is called a lot during local generation, and doesn't do much. The reflection required
+            // to instantiate all the commands is significant, so we bypass it when we can.
+            if (args.Length >= 1 && args[0] == QueryApiCatalogCommand.CommandName)
+            {
+                return new QueryApiCatalogCommand();
+            }
+
+            var allCommands = typeof(Program).Assembly.GetTypes()
+                .Where(t => !t.IsAbstract && typeof(ICommand).IsAssignableFrom(t))
+                .Select(Activator.CreateInstance)
+                .Cast<ICommand>()
+                .OrderBy(c => c.Command)
+                .ToList();
+            if (args.Length == 0)
+            {
+                ShowUsage(allCommands);
+                return null;
+            }
+
+            var commandName = args[0];
+
+            var selectedCommand = allCommands.Where(c => c.Command == commandName).FirstOrDefault();
+            if (selectedCommand is null)
+            {
+                Console.WriteLine($"Unknown command: '{commandName}'");
+                ShowUsage(allCommands);
+           }
+            return selectedCommand;
         }
 
         private static void ShowUsage(IList<ICommand> commands)
