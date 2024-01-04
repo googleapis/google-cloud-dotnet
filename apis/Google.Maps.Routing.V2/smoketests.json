@@ -3,7 +3,7 @@
     "method": "ComputeRoutes",
     "client": "RoutesClient",
     "fieldMask": "*",
-    "transports": [ "Grpc", "Rest" ],
+    "transports": [ "Grpc" ],
     "arguments": {
       "request": {
         "origin": {
