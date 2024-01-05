@@ -404,15 +404,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
       }
 
       /// <summary>
-      /// Returns a list of all EffectiveEventThreatDetectionCustomModules for the
+      /// Lists all effective Event Threat Detection custom modules for the
       /// given parent. This includes resident modules defined at the scope of the
-      /// parent, and inherited modules, inherited from CRM ancestors (no
-      /// descendants). The difference between an EffectiveCustomModule and a
-      /// CustomModule is that the fields for an EffectiveCustomModule are computed
-      /// from ancestors if needed. For example, the enablement_state for a
-      /// CustomModule can be either ENABLED, DISABLED, or INHERITED. Where as the
-      /// enablement_state for an EffectiveCustomModule is always computed to ENABLED
-      /// or DISABLED (the effective enablement_state).
+      /// parent along with modules inherited from its ancestors.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -442,9 +436,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
       }
 
       /// <summary>
-      /// Returns a list of all EventThreatDetectionCustomModules for the given
-      /// parent. This includes resident modules defined at the scope of the parent,
-      /// and inherited modules, inherited from CRM ancestors (no descendants).
+      /// Lists all Event Threat Detection custom modules for the given
+      /// Resource Manager parent. This includes resident modules defined at the
+      /// scope of the parent along with modules inherited from ancestors.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -456,8 +450,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
       }
 
       /// <summary>
-      /// Returns a list of all resident EventThreatDetectionCustomModules under
-      /// the given CRM parent and all of the parent’s CRM descendants.
+      /// Lists all resident Event Threat Detection custom modules under the
+      /// given Resource Manager parent and its descendants.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -469,13 +463,7 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
       }
 
       /// <summary>
-      /// Gets an ETD custom module. Retrieves the module at the given level. The
-      /// difference between an EffectiveCustomModule and a CustomModule is that the
-      /// fields for an EffectiveCustomModule are computed from ancestors if needed.
-      /// For example, the enablement_state for a CustomModule can be either ENABLED,
-      /// DISABLED, or INHERITED. Where as the enablement_state for an
-      /// EffectiveCustomModule is always computed to ENABLED or DISABLED (the
-      /// effective enablement_state).
+      /// Gets an Event Threat Detection custom module.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -487,8 +475,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
       }
 
       /// <summary>
-      /// Creates an ETD custom module at the given level. Creating a module has a
-      /// side-effect of creating modules at all descendants.
+      /// Creates a resident Event Threat Detection custom module at the scope of the
+      /// given Resource Manager parent, and also creates inherited custom modules
+      /// for all descendants of the given parent. These modules are enabled by
+      /// default.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -500,11 +490,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
       }
 
       /// <summary>
-      /// Updates an ETD custom module at the given level. All config fields can be
-      /// updated when updating the module at resident level. Only enablement state
-      /// can be updated when updating the module at inherited levels. Updating the
-      /// module has a side-effect that it updates all descendants that are inherited
-      /// from this module.
+      /// Updates the Event Threat Detection custom module with the given name based
+      /// on the given update mask. Updating the enablement state is supported for
+      /// both resident and inherited modules (though resident modules cannot have an
+      /// enablement state of "inherited"). Updating the display name or
+      /// configuration of a module is supported for resident modules only. The type
+      /// of a module cannot be changed.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -516,8 +507,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
       }
 
       /// <summary>
-      /// Deletes an ETD custom module. Deletion at resident level also deletes
-      /// modules at all descendants. Deletion at any other level is not supported.
+      /// Deletes the specified Event Threat Detection custom module and all of its
+      /// descendants in the Resource Manager hierarchy. This method is only
+      /// supported for resident custom modules.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1062,15 +1054,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_SimulateSecurityHealthAnalyticsCustomModule, null, options, request);
       }
       /// <summary>
-      /// Returns a list of all EffectiveEventThreatDetectionCustomModules for the
+      /// Lists all effective Event Threat Detection custom modules for the
       /// given parent. This includes resident modules defined at the scope of the
-      /// parent, and inherited modules, inherited from CRM ancestors (no
-      /// descendants). The difference between an EffectiveCustomModule and a
-      /// CustomModule is that the fields for an EffectiveCustomModule are computed
-      /// from ancestors if needed. For example, the enablement_state for a
-      /// CustomModule can be either ENABLED, DISABLED, or INHERITED. Where as the
-      /// enablement_state for an EffectiveCustomModule is always computed to ENABLED
-      /// or DISABLED (the effective enablement_state).
+      /// parent along with modules inherited from its ancestors.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1083,15 +1069,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return ListEffectiveEventThreatDetectionCustomModules(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns a list of all EffectiveEventThreatDetectionCustomModules for the
+      /// Lists all effective Event Threat Detection custom modules for the
       /// given parent. This includes resident modules defined at the scope of the
-      /// parent, and inherited modules, inherited from CRM ancestors (no
-      /// descendants). The difference between an EffectiveCustomModule and a
-      /// CustomModule is that the fields for an EffectiveCustomModule are computed
-      /// from ancestors if needed. For example, the enablement_state for a
-      /// CustomModule can be either ENABLED, DISABLED, or INHERITED. Where as the
-      /// enablement_state for an EffectiveCustomModule is always computed to ENABLED
-      /// or DISABLED (the effective enablement_state).
+      /// parent along with modules inherited from its ancestors.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1102,15 +1082,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListEffectiveEventThreatDetectionCustomModules, null, options, request);
       }
       /// <summary>
-      /// Returns a list of all EffectiveEventThreatDetectionCustomModules for the
+      /// Lists all effective Event Threat Detection custom modules for the
       /// given parent. This includes resident modules defined at the scope of the
-      /// parent, and inherited modules, inherited from CRM ancestors (no
-      /// descendants). The difference between an EffectiveCustomModule and a
-      /// CustomModule is that the fields for an EffectiveCustomModule are computed
-      /// from ancestors if needed. For example, the enablement_state for a
-      /// CustomModule can be either ENABLED, DISABLED, or INHERITED. Where as the
-      /// enablement_state for an EffectiveCustomModule is always computed to ENABLED
-      /// or DISABLED (the effective enablement_state).
+      /// parent along with modules inherited from its ancestors.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1123,15 +1097,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return ListEffectiveEventThreatDetectionCustomModulesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns a list of all EffectiveEventThreatDetectionCustomModules for the
+      /// Lists all effective Event Threat Detection custom modules for the
       /// given parent. This includes resident modules defined at the scope of the
-      /// parent, and inherited modules, inherited from CRM ancestors (no
-      /// descendants). The difference between an EffectiveCustomModule and a
-      /// CustomModule is that the fields for an EffectiveCustomModule are computed
-      /// from ancestors if needed. For example, the enablement_state for a
-      /// CustomModule can be either ENABLED, DISABLED, or INHERITED. Where as the
-      /// enablement_state for an EffectiveCustomModule is always computed to ENABLED
-      /// or DISABLED (the effective enablement_state).
+      /// parent along with modules inherited from its ancestors.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1214,9 +1182,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetEffectiveEventThreatDetectionCustomModule, null, options, request);
       }
       /// <summary>
-      /// Returns a list of all EventThreatDetectionCustomModules for the given
-      /// parent. This includes resident modules defined at the scope of the parent,
-      /// and inherited modules, inherited from CRM ancestors (no descendants).
+      /// Lists all Event Threat Detection custom modules for the given
+      /// Resource Manager parent. This includes resident modules defined at the
+      /// scope of the parent along with modules inherited from ancestors.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1229,9 +1197,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return ListEventThreatDetectionCustomModules(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns a list of all EventThreatDetectionCustomModules for the given
-      /// parent. This includes resident modules defined at the scope of the parent,
-      /// and inherited modules, inherited from CRM ancestors (no descendants).
+      /// Lists all Event Threat Detection custom modules for the given
+      /// Resource Manager parent. This includes resident modules defined at the
+      /// scope of the parent along with modules inherited from ancestors.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1242,9 +1210,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListEventThreatDetectionCustomModules, null, options, request);
       }
       /// <summary>
-      /// Returns a list of all EventThreatDetectionCustomModules for the given
-      /// parent. This includes resident modules defined at the scope of the parent,
-      /// and inherited modules, inherited from CRM ancestors (no descendants).
+      /// Lists all Event Threat Detection custom modules for the given
+      /// Resource Manager parent. This includes resident modules defined at the
+      /// scope of the parent along with modules inherited from ancestors.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1257,9 +1225,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return ListEventThreatDetectionCustomModulesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns a list of all EventThreatDetectionCustomModules for the given
-      /// parent. This includes resident modules defined at the scope of the parent,
-      /// and inherited modules, inherited from CRM ancestors (no descendants).
+      /// Lists all Event Threat Detection custom modules for the given
+      /// Resource Manager parent. This includes resident modules defined at the
+      /// scope of the parent along with modules inherited from ancestors.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1270,8 +1238,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListEventThreatDetectionCustomModules, null, options, request);
       }
       /// <summary>
-      /// Returns a list of all resident EventThreatDetectionCustomModules under
-      /// the given CRM parent and all of the parent’s CRM descendants.
+      /// Lists all resident Event Threat Detection custom modules under the
+      /// given Resource Manager parent and its descendants.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1284,8 +1252,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return ListDescendantEventThreatDetectionCustomModules(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns a list of all resident EventThreatDetectionCustomModules under
-      /// the given CRM parent and all of the parent’s CRM descendants.
+      /// Lists all resident Event Threat Detection custom modules under the
+      /// given Resource Manager parent and its descendants.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1296,8 +1264,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListDescendantEventThreatDetectionCustomModules, null, options, request);
       }
       /// <summary>
-      /// Returns a list of all resident EventThreatDetectionCustomModules under
-      /// the given CRM parent and all of the parent’s CRM descendants.
+      /// Lists all resident Event Threat Detection custom modules under the
+      /// given Resource Manager parent and its descendants.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1310,8 +1278,8 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return ListDescendantEventThreatDetectionCustomModulesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns a list of all resident EventThreatDetectionCustomModules under
-      /// the given CRM parent and all of the parent’s CRM descendants.
+      /// Lists all resident Event Threat Detection custom modules under the
+      /// given Resource Manager parent and its descendants.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1322,13 +1290,7 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListDescendantEventThreatDetectionCustomModules, null, options, request);
       }
       /// <summary>
-      /// Gets an ETD custom module. Retrieves the module at the given level. The
-      /// difference between an EffectiveCustomModule and a CustomModule is that the
-      /// fields for an EffectiveCustomModule are computed from ancestors if needed.
-      /// For example, the enablement_state for a CustomModule can be either ENABLED,
-      /// DISABLED, or INHERITED. Where as the enablement_state for an
-      /// EffectiveCustomModule is always computed to ENABLED or DISABLED (the
-      /// effective enablement_state).
+      /// Gets an Event Threat Detection custom module.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1341,13 +1303,7 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return GetEventThreatDetectionCustomModule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets an ETD custom module. Retrieves the module at the given level. The
-      /// difference between an EffectiveCustomModule and a CustomModule is that the
-      /// fields for an EffectiveCustomModule are computed from ancestors if needed.
-      /// For example, the enablement_state for a CustomModule can be either ENABLED,
-      /// DISABLED, or INHERITED. Where as the enablement_state for an
-      /// EffectiveCustomModule is always computed to ENABLED or DISABLED (the
-      /// effective enablement_state).
+      /// Gets an Event Threat Detection custom module.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1358,13 +1314,7 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetEventThreatDetectionCustomModule, null, options, request);
       }
       /// <summary>
-      /// Gets an ETD custom module. Retrieves the module at the given level. The
-      /// difference between an EffectiveCustomModule and a CustomModule is that the
-      /// fields for an EffectiveCustomModule are computed from ancestors if needed.
-      /// For example, the enablement_state for a CustomModule can be either ENABLED,
-      /// DISABLED, or INHERITED. Where as the enablement_state for an
-      /// EffectiveCustomModule is always computed to ENABLED or DISABLED (the
-      /// effective enablement_state).
+      /// Gets an Event Threat Detection custom module.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1377,13 +1327,7 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return GetEventThreatDetectionCustomModuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets an ETD custom module. Retrieves the module at the given level. The
-      /// difference between an EffectiveCustomModule and a CustomModule is that the
-      /// fields for an EffectiveCustomModule are computed from ancestors if needed.
-      /// For example, the enablement_state for a CustomModule can be either ENABLED,
-      /// DISABLED, or INHERITED. Where as the enablement_state for an
-      /// EffectiveCustomModule is always computed to ENABLED or DISABLED (the
-      /// effective enablement_state).
+      /// Gets an Event Threat Detection custom module.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1394,8 +1338,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetEventThreatDetectionCustomModule, null, options, request);
       }
       /// <summary>
-      /// Creates an ETD custom module at the given level. Creating a module has a
-      /// side-effect of creating modules at all descendants.
+      /// Creates a resident Event Threat Detection custom module at the scope of the
+      /// given Resource Manager parent, and also creates inherited custom modules
+      /// for all descendants of the given parent. These modules are enabled by
+      /// default.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1408,8 +1354,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CreateEventThreatDetectionCustomModule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates an ETD custom module at the given level. Creating a module has a
-      /// side-effect of creating modules at all descendants.
+      /// Creates a resident Event Threat Detection custom module at the scope of the
+      /// given Resource Manager parent, and also creates inherited custom modules
+      /// for all descendants of the given parent. These modules are enabled by
+      /// default.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1420,8 +1368,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateEventThreatDetectionCustomModule, null, options, request);
       }
       /// <summary>
-      /// Creates an ETD custom module at the given level. Creating a module has a
-      /// side-effect of creating modules at all descendants.
+      /// Creates a resident Event Threat Detection custom module at the scope of the
+      /// given Resource Manager parent, and also creates inherited custom modules
+      /// for all descendants of the given parent. These modules are enabled by
+      /// default.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1434,8 +1384,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CreateEventThreatDetectionCustomModuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates an ETD custom module at the given level. Creating a module has a
-      /// side-effect of creating modules at all descendants.
+      /// Creates a resident Event Threat Detection custom module at the scope of the
+      /// given Resource Manager parent, and also creates inherited custom modules
+      /// for all descendants of the given parent. These modules are enabled by
+      /// default.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1446,11 +1398,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateEventThreatDetectionCustomModule, null, options, request);
       }
       /// <summary>
-      /// Updates an ETD custom module at the given level. All config fields can be
-      /// updated when updating the module at resident level. Only enablement state
-      /// can be updated when updating the module at inherited levels. Updating the
-      /// module has a side-effect that it updates all descendants that are inherited
-      /// from this module.
+      /// Updates the Event Threat Detection custom module with the given name based
+      /// on the given update mask. Updating the enablement state is supported for
+      /// both resident and inherited modules (though resident modules cannot have an
+      /// enablement state of "inherited"). Updating the display name or
+      /// configuration of a module is supported for resident modules only. The type
+      /// of a module cannot be changed.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1463,11 +1416,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return UpdateEventThreatDetectionCustomModule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates an ETD custom module at the given level. All config fields can be
-      /// updated when updating the module at resident level. Only enablement state
-      /// can be updated when updating the module at inherited levels. Updating the
-      /// module has a side-effect that it updates all descendants that are inherited
-      /// from this module.
+      /// Updates the Event Threat Detection custom module with the given name based
+      /// on the given update mask. Updating the enablement state is supported for
+      /// both resident and inherited modules (though resident modules cannot have an
+      /// enablement state of "inherited"). Updating the display name or
+      /// configuration of a module is supported for resident modules only. The type
+      /// of a module cannot be changed.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1478,11 +1432,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateEventThreatDetectionCustomModule, null, options, request);
       }
       /// <summary>
-      /// Updates an ETD custom module at the given level. All config fields can be
-      /// updated when updating the module at resident level. Only enablement state
-      /// can be updated when updating the module at inherited levels. Updating the
-      /// module has a side-effect that it updates all descendants that are inherited
-      /// from this module.
+      /// Updates the Event Threat Detection custom module with the given name based
+      /// on the given update mask. Updating the enablement state is supported for
+      /// both resident and inherited modules (though resident modules cannot have an
+      /// enablement state of "inherited"). Updating the display name or
+      /// configuration of a module is supported for resident modules only. The type
+      /// of a module cannot be changed.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1495,11 +1450,12 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return UpdateEventThreatDetectionCustomModuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates an ETD custom module at the given level. All config fields can be
-      /// updated when updating the module at resident level. Only enablement state
-      /// can be updated when updating the module at inherited levels. Updating the
-      /// module has a side-effect that it updates all descendants that are inherited
-      /// from this module.
+      /// Updates the Event Threat Detection custom module with the given name based
+      /// on the given update mask. Updating the enablement state is supported for
+      /// both resident and inherited modules (though resident modules cannot have an
+      /// enablement state of "inherited"). Updating the display name or
+      /// configuration of a module is supported for resident modules only. The type
+      /// of a module cannot be changed.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1510,8 +1466,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateEventThreatDetectionCustomModule, null, options, request);
       }
       /// <summary>
-      /// Deletes an ETD custom module. Deletion at resident level also deletes
-      /// modules at all descendants. Deletion at any other level is not supported.
+      /// Deletes the specified Event Threat Detection custom module and all of its
+      /// descendants in the Resource Manager hierarchy. This method is only
+      /// supported for resident custom modules.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1524,8 +1481,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return DeleteEventThreatDetectionCustomModule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes an ETD custom module. Deletion at resident level also deletes
-      /// modules at all descendants. Deletion at any other level is not supported.
+      /// Deletes the specified Event Threat Detection custom module and all of its
+      /// descendants in the Resource Manager hierarchy. This method is only
+      /// supported for resident custom modules.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1536,8 +1494,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteEventThreatDetectionCustomModule, null, options, request);
       }
       /// <summary>
-      /// Deletes an ETD custom module. Deletion at resident level also deletes
-      /// modules at all descendants. Deletion at any other level is not supported.
+      /// Deletes the specified Event Threat Detection custom module and all of its
+      /// descendants in the Resource Manager hierarchy. This method is only
+      /// supported for resident custom modules.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1550,8 +1509,9 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
         return DeleteEventThreatDetectionCustomModuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes an ETD custom module. Deletion at resident level also deletes
-      /// modules at all descendants. Deletion at any other level is not supported.
+      /// Deletes the specified Event Threat Detection custom module and all of its
+      /// descendants in the Resource Manager hierarchy. This method is only
+      /// supported for resident custom modules.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
