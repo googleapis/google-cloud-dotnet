@@ -96,6 +96,7 @@ generate_microgenerator() {
   COMMON_RESOURCES_OPTION=--gapic_opt=$COMMON_RESOURCES_CONFIG
   TRANSPORT_OPTION=--gapic_opt=transport=$(get_api_field $PACKAGE transport grpc)
   REST_NUMERIC_ENUMS_OPTION=--gapic_opt=rest-numeric-enums=$(get_api_field $PACKAGE restNumericEnums false)
+  LOGGING_OPTION=--gapic_opt=log=$OUTDIR/generator-log-${PACKAGE_ID}.txt
 
   # All APIs should have a service config specified, but it might be deliberately "none" to mean
   # "there are no services for this API directory" e.g. for oslogin/common
@@ -142,6 +143,7 @@ generate_microgenerator() {
     $COMMON_RESOURCES_OPTION \
     $TRANSPORT_OPTION \
     $REST_NUMERIC_ENUMS_OPTION \
+    $LOGGING_OPTION \
     --plugin=protoc-gen-gapic=$GAPIC_PLUGIN \
     -I $GOOGLEAPIS \
     -I $CORE_PROTOS_ROOT \
