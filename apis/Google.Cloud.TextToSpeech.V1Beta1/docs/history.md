@@ -1,5 +1,16 @@
 # Version history
 
+## Version 2.0.0-beta04, released 2024-01-08
+
+### Bug fixes
+
+- **BREAKING CHANGE** Correct long audio synthesis HTTP binding ([commit 8e47bc8](https://github.com/googleapis/google-cloud-dotnet/commit/8e47bc8ef2ade2fca2763ad2a91c4ce66283ec24))
+
+### Documentation improvements
+
+- Deprecate the custom voice usage field ([commit 8e47bc8](https://github.com/googleapis/google-cloud-dotnet/commit/8e47bc8ef2ade2fca2763ad2a91c4ce66283ec24))
+- Update documentation to require certain fields ([commit d79e879](https://github.com/googleapis/google-cloud-dotnet/commit/d79e87933ea43d41c8dfcecfe540dec85b54cbc9))
+
 ## Version 2.0.0-beta03, released 2023-01-16
 
 ### New features
