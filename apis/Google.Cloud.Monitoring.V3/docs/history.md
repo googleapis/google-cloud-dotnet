@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.5.0, released 2024-01-08
+
+### New features
+
+- Added support for severity in AlertPolicy ([commit cbde75b](https://github.com/googleapis/google-cloud-dotnet/commit/cbde75b40a9be197dff4d39a9f7a1b6876936bc6))
+
+### Documentation improvements
+
+- Add value range to comment on field forecast_horizon ([commit cbde75b](https://github.com/googleapis/google-cloud-dotnet/commit/cbde75b40a9be197dff4d39a9f7a1b6876936bc6))
+
 ## Version 3.4.0, released 2023-09-18
 
 ### New features
