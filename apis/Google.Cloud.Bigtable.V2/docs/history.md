@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.9.0, released 2024-01-08
+
+### New features
+
+- Adding feature flags for routing cookie and retry info ([commit af7aca5](https://github.com/googleapis/google-cloud-dotnet/commit/af7aca508568fba8e04d3d037ed6485f1dba1b12))
+
 ## Version 3.8.0, released 2023-09-18
 
 ### Bug fixes
