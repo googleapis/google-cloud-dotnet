@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.4.0, released 2024-01-08
+
+### New features
+
+- Add Adaptive MT API ([commit a8ac2b9](https://github.com/googleapis/google-cloud-dotnet/commit/a8ac2b9689c81a47561cdfe156dcd6547d922abf))
+
+### Documentation improvements
+
+- Fixes a typo in docs ([commit a8ac2b9](https://github.com/googleapis/google-cloud-dotnet/commit/a8ac2b9689c81a47561cdfe156dcd6547d922abf))
+
 ## Version 3.3.0, released 2023-08-16
 
 ### New features
