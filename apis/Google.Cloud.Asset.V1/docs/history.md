@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.7.0, released 2024-01-08
+
+### New features
+
+- Added new resource references to fields in AnalyzeMoveRequest ([commit 7a630af](https://github.com/googleapis/google-cloud-dotnet/commit/7a630af1ca491162f79358d2f802a330e1070b72))
+
+### Documentation improvements
+
+- Updated comments ([commit 7a630af](https://github.com/googleapis/google-cloud-dotnet/commit/7a630af1ca491162f79358d2f802a330e1070b72))
+
 ## Version 3.6.0, released 2023-09-26
 
 ### New features
