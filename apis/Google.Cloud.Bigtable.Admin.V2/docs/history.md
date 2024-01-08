@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.8.0, released 2024-01-08
+
+### New features
+
+- Modify ModifyColumnFamiliesRequest proto to expose ignore_warnings field ([commit 34c9afd](https://github.com/googleapis/google-cloud-dotnet/commit/34c9afdafaec3961537ac3211737c8ab972f77c0))
+
 ## Version 3.7.0, released 2023-10-30
 
 ### New features
