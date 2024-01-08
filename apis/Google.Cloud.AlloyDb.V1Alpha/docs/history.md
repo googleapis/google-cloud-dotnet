@@ -1,5 +1,19 @@
 # Version history
 
+## Version 1.0.0-alpha05, released 2024-01-08
+
+### New features
+
+- Added PSC config, PSC interface config, PSC instance config ([commit 838504a](https://github.com/googleapis/google-cloud-dotnet/commit/838504a48905157e2ae8acfd328ed948b3f974b8))
+- Added two boolean fields satisfies_pzi and satisfies_pzs ([commit 838504a](https://github.com/googleapis/google-cloud-dotnet/commit/838504a48905157e2ae8acfd328ed948b3f974b8))
+- Added instance network config ([commit 838504a](https://github.com/googleapis/google-cloud-dotnet/commit/838504a48905157e2ae8acfd328ed948b3f974b8))
+- Added ListDatabases API and Database object ([commit 838504a](https://github.com/googleapis/google-cloud-dotnet/commit/838504a48905157e2ae8acfd328ed948b3f974b8))
+- Changed field network in NetworkConfig from required to optional ([commit 838504a](https://github.com/googleapis/google-cloud-dotnet/commit/838504a48905157e2ae8acfd328ed948b3f974b8))
+
+### Documentation improvements
+
+- Clarified read pool config is for read pool type instances ([commit 838504a](https://github.com/googleapis/google-cloud-dotnet/commit/838504a48905157e2ae8acfd328ed948b3f974b8))
+
 ## Version 1.0.0-alpha04, released 2023-09-25
 
 ### New features
