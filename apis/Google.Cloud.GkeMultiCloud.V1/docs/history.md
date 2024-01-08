@@ -1,5 +1,22 @@
 # Version history
 
+## Version 2.3.0, released 2024-01-08
+
+### New features
+
+- Added proxy support for Attached Clusters ([commit 39eb8f0](https://github.com/googleapis/google-cloud-dotnet/commit/39eb8f0e301aa1be2a771c3301689079bae230ba))
+- Added Binary Authorization support which is a deploy-time security control that ensures only trusted container images are deployed ([commit 39eb8f0](https://github.com/googleapis/google-cloud-dotnet/commit/39eb8f0e301aa1be2a771c3301689079bae230ba))
+- Added support for a new admin-groups flag in the create and update APIs ([commit 39eb8f0](https://github.com/googleapis/google-cloud-dotnet/commit/39eb8f0e301aa1be2a771c3301689079bae230ba))
+- Added Surge Update and Rollback support for AWS Node Pools ([commit 39eb8f0](https://github.com/googleapis/google-cloud-dotnet/commit/39eb8f0e301aa1be2a771c3301689079bae230ba))
+- Added support for per-node-pool subnet security group rules for AWS Node Pools ([commit 39eb8f0](https://github.com/googleapis/google-cloud-dotnet/commit/39eb8f0e301aa1be2a771c3301689079bae230ba))
+- Added support for EC2 Spot instance types for AWS Node Pools ([commit 39eb8f0](https://github.com/googleapis/google-cloud-dotnet/commit/39eb8f0e301aa1be2a771c3301689079bae230ba))
+- Added force-deletion support for AWS Clusters & Node Pools ([commit 39eb8f0](https://github.com/googleapis/google-cloud-dotnet/commit/39eb8f0e301aa1be2a771c3301689079bae230ba))
+- Expanded Kubernetes version info ([commit 39eb8f0](https://github.com/googleapis/google-cloud-dotnet/commit/39eb8f0e301aa1be2a771c3301689079bae230ba))
+
+### Documentation improvements
+
+- Updated comments of existing fields ([commit 39eb8f0](https://github.com/googleapis/google-cloud-dotnet/commit/39eb8f0e301aa1be2a771c3301689079bae230ba))
+
 ## Version 2.2.0, released 2023-02-08
 
 ### New features
