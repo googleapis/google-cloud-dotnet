@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
                 ParentAsUserName = UserName.FromUser("[USER]"),
                 SshPublicKey = new SshPublicKey(),
                 ProjectId = "",
+                Regions = { "", },
             };
             // Make the request
             ImportSshPublicKeyResponse response = await osLoginServiceClient.ImportSshPublicKeyAsync(request);
