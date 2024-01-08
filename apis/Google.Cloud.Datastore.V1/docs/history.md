@@ -1,5 +1,15 @@
 # Version history
 
+## Version 4.7.0-beta03, released 2024-01-08
+
+### New features
+
+- Add new types QueryMode, QueryPlan, ResultSetStats ([commit 44bca87](https://github.com/googleapis/google-cloud-dotnet/commit/44bca8714317d24b5db5acb28ba62a95a0bd0c39))
+- Add QueryMode field to RunQueryRequest ([commit 44bca87](https://github.com/googleapis/google-cloud-dotnet/commit/44bca8714317d24b5db5acb28ba62a95a0bd0c39))
+- Add ResultSetStats field to RunQueryResponse ([commit 44bca87](https://github.com/googleapis/google-cloud-dotnet/commit/44bca8714317d24b5db5acb28ba62a95a0bd0c39))
+- Add QueryMode field to RunAggregationQueryRequest ([commit 44bca87](https://github.com/googleapis/google-cloud-dotnet/commit/44bca8714317d24b5db5acb28ba62a95a0bd0c39))
+- Add ResultSetStats field to RunAggregationQueryResponse ([commit 44bca87](https://github.com/googleapis/google-cloud-dotnet/commit/44bca8714317d24b5db5acb28ba62a95a0bd0c39))
+
 ## Version 4.7.0-beta02, released 2023-12-05
 
 ### Bug fixes
