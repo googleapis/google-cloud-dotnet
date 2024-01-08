@@ -26,17 +26,18 @@ namespace Google.Cloud.Deploy.V1 {
           string.Concat(
             "CkJnb29nbGUvY2xvdWQvZGVwbG95L3YxL2RlbGl2ZXJ5cGlwZWxpbmVfbm90",
             "aWZpY2F0aW9uX3BheWxvYWQucHJvdG8SFmdvb2dsZS5jbG91ZC5kZXBsb3ku",
-            "djEaJmdvb2dsZS9jbG91ZC9kZXBsb3kvdjEvbG9nX2VudW1zLnByb3RvInsK",
-            "IURlbGl2ZXJ5UGlwZWxpbmVOb3RpZmljYXRpb25FdmVudBIPCgdtZXNzYWdl",
-            "GAEgASgJEhkKEWRlbGl2ZXJ5X3BpcGVsaW5lGAIgASgJEioKBHR5cGUYAyAB",
-            "KA4yHC5nb29nbGUuY2xvdWQuZGVwbG95LnYxLlR5cGVCfAoaY29tLmdvb2ds",
-            "ZS5jbG91ZC5kZXBsb3kudjFCKERlbGl2ZXJ5UGlwZWxpbmVOb3RpZmljYXRp",
-            "b25QYXlsb2FkUHJvdG9QAVoyY2xvdWQuZ29vZ2xlLmNvbS9nby9kZXBsb3kv",
-            "YXBpdjEvZGVwbG95cGI7ZGVwbG95cGJiBnByb3RvMw=="));
+            "djEaJmdvb2dsZS9jbG91ZC9kZXBsb3kvdjEvbG9nX2VudW1zLnByb3RvIpEB",
+            "CiFEZWxpdmVyeVBpcGVsaW5lTm90aWZpY2F0aW9uRXZlbnQSDwoHbWVzc2Fn",
+            "ZRgBIAEoCRIUCgxwaXBlbGluZV91aWQYBCABKAkSGQoRZGVsaXZlcnlfcGlw",
+            "ZWxpbmUYAiABKAkSKgoEdHlwZRgDIAEoDjIcLmdvb2dsZS5jbG91ZC5kZXBs",
+            "b3kudjEuVHlwZUJ8Chpjb20uZ29vZ2xlLmNsb3VkLmRlcGxveS52MUIoRGVs",
+            "aXZlcnlQaXBlbGluZU5vdGlmaWNhdGlvblBheWxvYWRQcm90b1ABWjJjbG91",
+            "ZC5nb29nbGUuY29tL2dvL2RlcGxveS9hcGl2MS9kZXBsb3lwYjtkZXBsb3lw",
+            "YmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.Deploy.V1.LogEnumsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Deploy.V1.DeliveryPipelineNotificationEvent), global::Google.Cloud.Deploy.V1.DeliveryPipelineNotificationEvent.Parser, new[]{ "Message", "DeliveryPipeline", "Type" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Deploy.V1.DeliveryPipelineNotificationEvent), global::Google.Cloud.Deploy.V1.DeliveryPipelineNotificationEvent.Parser, new[]{ "Message", "PipelineUid", "DeliveryPipeline", "Type" }, null, null, null, null)
           }));
     }
     #endregion
@@ -83,6 +84,7 @@ namespace Google.Cloud.Deploy.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeliveryPipelineNotificationEvent(DeliveryPipelineNotificationEvent other) : this() {
       message_ = other.message_;
+      pipelineUid_ = other.pipelineUid_;
       deliveryPipeline_ = other.deliveryPipeline_;
       type_ = other.type_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -106,6 +108,21 @@ namespace Google.Cloud.Deploy.V1 {
       get { return message_; }
       set {
         message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "pipeline_uid" field.</summary>
+    public const int PipelineUidFieldNumber = 4;
+    private string pipelineUid_ = "";
+    /// <summary>
+    /// Unique identifier of the `DeliveryPipeline`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PipelineUid {
+      get { return pipelineUid_; }
+      set {
+        pipelineUid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -155,6 +172,7 @@ namespace Google.Cloud.Deploy.V1 {
         return true;
       }
       if (Message != other.Message) return false;
+      if (PipelineUid != other.PipelineUid) return false;
       if (DeliveryPipeline != other.DeliveryPipeline) return false;
       if (Type != other.Type) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -165,6 +183,7 @@ namespace Google.Cloud.Deploy.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Message.Length != 0) hash ^= Message.GetHashCode();
+      if (PipelineUid.Length != 0) hash ^= PipelineUid.GetHashCode();
       if (DeliveryPipeline.Length != 0) hash ^= DeliveryPipeline.GetHashCode();
       if (Type != global::Google.Cloud.Deploy.V1.Type.Unspecified) hash ^= Type.GetHashCode();
       if (_unknownFields != null) {
@@ -197,6 +216,10 @@ namespace Google.Cloud.Deploy.V1 {
         output.WriteRawTag(24);
         output.WriteEnum((int) Type);
       }
+      if (PipelineUid.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(PipelineUid);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -219,6 +242,10 @@ namespace Google.Cloud.Deploy.V1 {
         output.WriteRawTag(24);
         output.WriteEnum((int) Type);
       }
+      if (PipelineUid.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(PipelineUid);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -231,6 +258,9 @@ namespace Google.Cloud.Deploy.V1 {
       int size = 0;
       if (Message.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+      }
+      if (PipelineUid.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PipelineUid);
       }
       if (DeliveryPipeline.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DeliveryPipeline);
@@ -252,6 +282,9 @@ namespace Google.Cloud.Deploy.V1 {
       }
       if (other.Message.Length != 0) {
         Message = other.Message;
+      }
+      if (other.PipelineUid.Length != 0) {
+        PipelineUid = other.PipelineUid;
       }
       if (other.DeliveryPipeline.Length != 0) {
         DeliveryPipeline = other.DeliveryPipeline;
@@ -286,6 +319,10 @@ namespace Google.Cloud.Deploy.V1 {
             Type = (global::Google.Cloud.Deploy.V1.Type) input.ReadEnum();
             break;
           }
+          case 34: {
+            PipelineUid = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -311,6 +348,10 @@ namespace Google.Cloud.Deploy.V1 {
           }
           case 24: {
             Type = (global::Google.Cloud.Deploy.V1.Type) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            PipelineUid = input.ReadString();
             break;
           }
         }

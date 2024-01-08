@@ -1583,8 +1583,8 @@ namespace Google.Cloud.Deploy.V1
         /// Required. Field mask is used to specify the fields to be overwritten in the
         /// `DeliveryPipeline` resource by the update.
         /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it is in the mask. If the
-        /// user does not provide a mask then all fields will be overwritten.
+        /// the full request. A field will be overwritten if it's in the mask. If the
+        /// user doesn't provide a mask then all fields are overwritten.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1605,8 +1605,8 @@ namespace Google.Cloud.Deploy.V1
         /// Required. Field mask is used to specify the fields to be overwritten in the
         /// `DeliveryPipeline` resource by the update.
         /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it is in the mask. If the
-        /// user does not provide a mask then all fields will be overwritten.
+        /// the full request. A field will be overwritten if it's in the mask. If the
+        /// user doesn't provide a mask then all fields are overwritten.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1627,8 +1627,8 @@ namespace Google.Cloud.Deploy.V1
         /// Required. Field mask is used to specify the fields to be overwritten in the
         /// `DeliveryPipeline` resource by the update.
         /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it is in the mask. If the
-        /// user does not provide a mask then all fields will be overwritten.
+        /// the full request. A field will be overwritten if it's in the mask. If the
+        /// user doesn't provide a mask then all fields are overwritten.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2413,8 +2413,8 @@ namespace Google.Cloud.Deploy.V1
         /// Required. Field mask is used to specify the fields to be overwritten in the
         /// Target resource by the update.
         /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it is in the mask. If the
-        /// user does not provide a mask then all fields will be overwritten.
+        /// the full request. A field will be overwritten if it's in the mask. If the
+        /// user doesn't provide a mask then all fields are overwritten.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2435,8 +2435,8 @@ namespace Google.Cloud.Deploy.V1
         /// Required. Field mask is used to specify the fields to be overwritten in the
         /// Target resource by the update.
         /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it is in the mask. If the
-        /// user does not provide a mask then all fields will be overwritten.
+        /// the full request. A field will be overwritten if it's in the mask. If the
+        /// user doesn't provide a mask then all fields are overwritten.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2457,8 +2457,8 @@ namespace Google.Cloud.Deploy.V1
         /// Required. Field mask is used to specify the fields to be overwritten in the
         /// Target resource by the update.
         /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it is in the mask. If the
-        /// user does not provide a mask then all fields will be overwritten.
+        /// the full request. A field will be overwritten if it's in the mask. If the
+        /// user doesn't provide a mask then all fields are overwritten.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2890,7 +2890,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent collection in which the `CustomTargetType` should be
-        /// created in. Format should be
+        /// created. Format should be
         /// `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="customTargetType">
@@ -2914,7 +2914,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent collection in which the `CustomTargetType` should be
-        /// created in. Format should be
+        /// created. Format should be
         /// `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="customTargetType">
@@ -2938,7 +2938,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent collection in which the `CustomTargetType` should be
-        /// created in. Format should be
+        /// created. Format should be
         /// `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="customTargetType">
@@ -2957,7 +2957,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent collection in which the `CustomTargetType` should be
-        /// created in. Format should be
+        /// created. Format should be
         /// `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="customTargetType">
@@ -2981,7 +2981,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent collection in which the `CustomTargetType` should be
-        /// created in. Format should be
+        /// created. Format should be
         /// `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="customTargetType">
@@ -3005,7 +3005,7 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent collection in which the `CustomTargetType` should be
-        /// created in. Format should be
+        /// created. Format should be
         /// `projects/{project_id}/locations/{location_name}`.
         /// </param>
         /// <param name="customTargetType">
@@ -3083,8 +3083,8 @@ namespace Google.Cloud.Deploy.V1
         /// Required. Field mask is used to specify the fields to be overwritten in the
         /// `CustomTargetType` resource by the update.
         /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it is in the mask. If the
-        /// user does not provide a mask then all fields will be overwritten.
+        /// the full request. A field will be overwritten if it's in the mask. If the
+        /// user doesn't provide a mask then all fields are overwritten.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3105,8 +3105,8 @@ namespace Google.Cloud.Deploy.V1
         /// Required. Field mask is used to specify the fields to be overwritten in the
         /// `CustomTargetType` resource by the update.
         /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it is in the mask. If the
-        /// user does not provide a mask then all fields will be overwritten.
+        /// the full request. A field will be overwritten if it's in the mask. If the
+        /// user doesn't provide a mask then all fields are overwritten.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3127,8 +3127,8 @@ namespace Google.Cloud.Deploy.V1
         /// Required. Field mask is used to specify the fields to be overwritten in the
         /// `CustomTargetType` resource by the update.
         /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it is in the mask. If the
-        /// user does not provide a mask then all fields will be overwritten.
+        /// the full request. A field will be overwritten if it's in the mask. If the
+        /// user doesn't provide a mask then all fields are overwritten.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5568,8 +5568,8 @@ namespace Google.Cloud.Deploy.V1
         /// Required. Field mask is used to specify the fields to be overwritten in the
         /// `Automation` resource by the update.
         /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it is in the mask. If the
-        /// user does not provide a mask then all fields will be overwritten.
+        /// the full request. A field will be overwritten if it's in the mask. If the
+        /// user doesn't provide a mask then all fields are overwritten.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5590,8 +5590,8 @@ namespace Google.Cloud.Deploy.V1
         /// Required. Field mask is used to specify the fields to be overwritten in the
         /// `Automation` resource by the update.
         /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it is in the mask. If the
-        /// user does not provide a mask then all fields will be overwritten.
+        /// the full request. A field will be overwritten if it's in the mask. If the
+        /// user doesn't provide a mask then all fields are overwritten.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5612,8 +5612,8 @@ namespace Google.Cloud.Deploy.V1
         /// Required. Field mask is used to specify the fields to be overwritten in the
         /// `Automation` resource by the update.
         /// The fields specified in the update_mask are relative to the resource, not
-        /// the full request. A field will be overwritten if it is in the mask. If the
-        /// user does not provide a mask then all fields will be overwritten.
+        /// the full request. A field will be overwritten if it's in the mask. If the
+        /// user doesn't provide a mask then all fields are overwritten.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

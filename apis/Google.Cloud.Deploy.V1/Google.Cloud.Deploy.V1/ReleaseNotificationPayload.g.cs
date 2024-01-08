@@ -26,16 +26,17 @@ namespace Google.Cloud.Deploy.V1 {
           string.Concat(
             "Cjlnb29nbGUvY2xvdWQvZGVwbG95L3YxL3JlbGVhc2Vfbm90aWZpY2F0aW9u",
             "X3BheWxvYWQucHJvdG8SFmdvb2dsZS5jbG91ZC5kZXBsb3kudjEaJmdvb2ds",
-            "ZS9jbG91ZC9kZXBsb3kvdjEvbG9nX2VudW1zLnByb3RvImgKGFJlbGVhc2VO",
-            "b3RpZmljYXRpb25FdmVudBIPCgdtZXNzYWdlGAEgASgJEg8KB3JlbGVhc2UY",
-            "AiABKAkSKgoEdHlwZRgDIAEoDjIcLmdvb2dsZS5jbG91ZC5kZXBsb3kudjEu",
-            "VHlwZUJzChpjb20uZ29vZ2xlLmNsb3VkLmRlcGxveS52MUIfUmVsZWFzZU5v",
-            "dGlmaWNhdGlvblBheWxvYWRQcm90b1ABWjJjbG91ZC5nb29nbGUuY29tL2dv",
-            "L2RlcGxveS9hcGl2MS9kZXBsb3lwYjtkZXBsb3lwYmIGcHJvdG8z"));
+            "ZS9jbG91ZC9kZXBsb3kvdjEvbG9nX2VudW1zLnByb3RvIpMBChhSZWxlYXNl",
+            "Tm90aWZpY2F0aW9uRXZlbnQSDwoHbWVzc2FnZRgBIAEoCRIUCgxwaXBlbGlu",
+            "ZV91aWQYBCABKAkSEwoLcmVsZWFzZV91aWQYBSABKAkSDwoHcmVsZWFzZRgC",
+            "IAEoCRIqCgR0eXBlGAMgASgOMhwuZ29vZ2xlLmNsb3VkLmRlcGxveS52MS5U",
+            "eXBlQnMKGmNvbS5nb29nbGUuY2xvdWQuZGVwbG95LnYxQh9SZWxlYXNlTm90",
+            "aWZpY2F0aW9uUGF5bG9hZFByb3RvUAFaMmNsb3VkLmdvb2dsZS5jb20vZ28v",
+            "ZGVwbG95L2FwaXYxL2RlcGxveXBiO2RlcGxveXBiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.Deploy.V1.LogEnumsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Deploy.V1.ReleaseNotificationEvent), global::Google.Cloud.Deploy.V1.ReleaseNotificationEvent.Parser, new[]{ "Message", "Release", "Type" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Deploy.V1.ReleaseNotificationEvent), global::Google.Cloud.Deploy.V1.ReleaseNotificationEvent.Parser, new[]{ "Message", "PipelineUid", "ReleaseUid", "Release", "Type" }, null, null, null, null)
           }));
     }
     #endregion
@@ -82,6 +83,8 @@ namespace Google.Cloud.Deploy.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ReleaseNotificationEvent(ReleaseNotificationEvent other) : this() {
       message_ = other.message_;
+      pipelineUid_ = other.pipelineUid_;
+      releaseUid_ = other.releaseUid_;
       release_ = other.release_;
       type_ = other.type_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -105,6 +108,36 @@ namespace Google.Cloud.Deploy.V1 {
       get { return message_; }
       set {
         message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "pipeline_uid" field.</summary>
+    public const int PipelineUidFieldNumber = 4;
+    private string pipelineUid_ = "";
+    /// <summary>
+    /// Unique identifier of the `DeliveryPipeline`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PipelineUid {
+      get { return pipelineUid_; }
+      set {
+        pipelineUid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "release_uid" field.</summary>
+    public const int ReleaseUidFieldNumber = 5;
+    private string releaseUid_ = "";
+    /// <summary>
+    /// Unique identifier of the `Release`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ReleaseUid {
+      get { return releaseUid_; }
+      set {
+        releaseUid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -154,6 +187,8 @@ namespace Google.Cloud.Deploy.V1 {
         return true;
       }
       if (Message != other.Message) return false;
+      if (PipelineUid != other.PipelineUid) return false;
+      if (ReleaseUid != other.ReleaseUid) return false;
       if (Release != other.Release) return false;
       if (Type != other.Type) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -164,6 +199,8 @@ namespace Google.Cloud.Deploy.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Message.Length != 0) hash ^= Message.GetHashCode();
+      if (PipelineUid.Length != 0) hash ^= PipelineUid.GetHashCode();
+      if (ReleaseUid.Length != 0) hash ^= ReleaseUid.GetHashCode();
       if (Release.Length != 0) hash ^= Release.GetHashCode();
       if (Type != global::Google.Cloud.Deploy.V1.Type.Unspecified) hash ^= Type.GetHashCode();
       if (_unknownFields != null) {
@@ -196,6 +233,14 @@ namespace Google.Cloud.Deploy.V1 {
         output.WriteRawTag(24);
         output.WriteEnum((int) Type);
       }
+      if (PipelineUid.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(PipelineUid);
+      }
+      if (ReleaseUid.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(ReleaseUid);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -218,6 +263,14 @@ namespace Google.Cloud.Deploy.V1 {
         output.WriteRawTag(24);
         output.WriteEnum((int) Type);
       }
+      if (PipelineUid.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(PipelineUid);
+      }
+      if (ReleaseUid.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(ReleaseUid);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -230,6 +283,12 @@ namespace Google.Cloud.Deploy.V1 {
       int size = 0;
       if (Message.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+      }
+      if (PipelineUid.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PipelineUid);
+      }
+      if (ReleaseUid.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ReleaseUid);
       }
       if (Release.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Release);
@@ -251,6 +310,12 @@ namespace Google.Cloud.Deploy.V1 {
       }
       if (other.Message.Length != 0) {
         Message = other.Message;
+      }
+      if (other.PipelineUid.Length != 0) {
+        PipelineUid = other.PipelineUid;
+      }
+      if (other.ReleaseUid.Length != 0) {
+        ReleaseUid = other.ReleaseUid;
       }
       if (other.Release.Length != 0) {
         Release = other.Release;
@@ -285,6 +350,14 @@ namespace Google.Cloud.Deploy.V1 {
             Type = (global::Google.Cloud.Deploy.V1.Type) input.ReadEnum();
             break;
           }
+          case 34: {
+            PipelineUid = input.ReadString();
+            break;
+          }
+          case 42: {
+            ReleaseUid = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -310,6 +383,14 @@ namespace Google.Cloud.Deploy.V1 {
           }
           case 24: {
             Type = (global::Google.Cloud.Deploy.V1.Type) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            PipelineUid = input.ReadString();
+            break;
+          }
+          case 42: {
+            ReleaseUid = input.ReadString();
             break;
           }
         }

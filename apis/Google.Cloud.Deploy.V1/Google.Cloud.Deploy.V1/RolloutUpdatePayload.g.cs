@@ -26,25 +26,26 @@ namespace Google.Cloud.Deploy.V1 {
           string.Concat(
             "CjNnb29nbGUvY2xvdWQvZGVwbG95L3YxL3JvbGxvdXRfdXBkYXRlX3BheWxv",
             "YWQucHJvdG8SFmdvb2dsZS5jbG91ZC5kZXBsb3kudjEaJmdvb2dsZS9jbG91",
-            "ZC9kZXBsb3kvdjEvbG9nX2VudW1zLnByb3RvIoYEChJSb2xsb3V0VXBkYXRl",
-            "RXZlbnQSFAoMcGlwZWxpbmVfdWlkGAEgASgJEhMKC3JlbGVhc2VfdWlkGAIg",
-            "ASgJEg8KB3JvbGxvdXQYAyABKAkSEQoJdGFyZ2V0X2lkGAQgASgJElkKE3Jv",
-            "bGxvdXRfdXBkYXRlX3R5cGUYBSABKA4yPC5nb29nbGUuY2xvdWQuZGVwbG95",
-            "LnYxLlJvbGxvdXRVcGRhdGVFdmVudC5Sb2xsb3V0VXBkYXRlVHlwZRIPCgdt",
-            "ZXNzYWdlGAYgASgJEioKBHR5cGUYByABKA4yHC5nb29nbGUuY2xvdWQuZGVw",
-            "bG95LnYxLlR5cGUiiAIKEVJvbGxvdXRVcGRhdGVUeXBlEiMKH1JPTExPVVRf",
-            "VVBEQVRFX1RZUEVfVU5TUEVDSUZJRUQQABILCgdQRU5ESU5HEAESEwoPUEVO",
-            "RElOR19SRUxFQVNFEAISDwoLSU5fUFJPR1JFU1MQAxIOCgpDQU5DRUxMSU5H",
-            "EAQSDQoJQ0FOQ0VMTEVEEAUSCgoGSEFMVEVEEAYSDQoJU1VDQ0VFREVEEAcS",
-            "CgoGRkFJTEVEEAgSFQoRQVBQUk9WQUxfUkVRVUlSRUQQCRIMCghBUFBST1ZF",
-            "RBAKEgwKCFJFSkVDVEVEEAsSFAoQQURWQU5DRV9SRVFVSVJFRBAMEgwKCEFE",
-            "VkFOQ0VEEA1CbQoaY29tLmdvb2dsZS5jbG91ZC5kZXBsb3kudjFCGVJvbGxv",
-            "dXRVcGRhdGVQYXlsb2FkUHJvdG9QAVoyY2xvdWQuZ29vZ2xlLmNvbS9nby9k",
-            "ZXBsb3kvYXBpdjEvZGVwbG95cGI7ZGVwbG95cGJiBnByb3RvMw=="));
+            "ZC9kZXBsb3kvdjEvbG9nX2VudW1zLnByb3RvIpcEChJSb2xsb3V0VXBkYXRl",
+            "RXZlbnQSDwoHbWVzc2FnZRgGIAEoCRIUCgxwaXBlbGluZV91aWQYASABKAkS",
+            "EwoLcmVsZWFzZV91aWQYAiABKAkSDwoHcmVsZWFzZRgIIAEoCRIPCgdyb2xs",
+            "b3V0GAMgASgJEhEKCXRhcmdldF9pZBgEIAEoCRIqCgR0eXBlGAcgASgOMhwu",
+            "Z29vZ2xlLmNsb3VkLmRlcGxveS52MS5UeXBlElkKE3JvbGxvdXRfdXBkYXRl",
+            "X3R5cGUYBSABKA4yPC5nb29nbGUuY2xvdWQuZGVwbG95LnYxLlJvbGxvdXRV",
+            "cGRhdGVFdmVudC5Sb2xsb3V0VXBkYXRlVHlwZSKIAgoRUm9sbG91dFVwZGF0",
+            "ZVR5cGUSIwofUk9MTE9VVF9VUERBVEVfVFlQRV9VTlNQRUNJRklFRBAAEgsK",
+            "B1BFTkRJTkcQARITCg9QRU5ESU5HX1JFTEVBU0UQAhIPCgtJTl9QUk9HUkVT",
+            "UxADEg4KCkNBTkNFTExJTkcQBBINCglDQU5DRUxMRUQQBRIKCgZIQUxURUQQ",
+            "BhINCglTVUNDRUVERUQQBxIKCgZGQUlMRUQQCBIVChFBUFBST1ZBTF9SRVFV",
+            "SVJFRBAJEgwKCEFQUFJPVkVEEAoSDAoIUkVKRUNURUQQCxIUChBBRFZBTkNF",
+            "X1JFUVVJUkVEEAwSDAoIQURWQU5DRUQQDUJtChpjb20uZ29vZ2xlLmNsb3Vk",
+            "LmRlcGxveS52MUIZUm9sbG91dFVwZGF0ZVBheWxvYWRQcm90b1ABWjJjbG91",
+            "ZC5nb29nbGUuY29tL2dvL2RlcGxveS9hcGl2MS9kZXBsb3lwYjtkZXBsb3lw",
+            "YmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.Deploy.V1.LogEnumsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Deploy.V1.RolloutUpdateEvent), global::Google.Cloud.Deploy.V1.RolloutUpdateEvent.Parser, new[]{ "PipelineUid", "ReleaseUid", "Rollout", "TargetId", "RolloutUpdateType", "Message", "Type" }, null, new[]{ typeof(global::Google.Cloud.Deploy.V1.RolloutUpdateEvent.Types.RolloutUpdateType) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Deploy.V1.RolloutUpdateEvent), global::Google.Cloud.Deploy.V1.RolloutUpdateEvent.Parser, new[]{ "Message", "PipelineUid", "ReleaseUid", "Release", "Rollout", "TargetId", "Type", "RolloutUpdateType" }, null, new[]{ typeof(global::Google.Cloud.Deploy.V1.RolloutUpdateEvent.Types.RolloutUpdateType) }, null, null)
           }));
     }
     #endregion
@@ -89,13 +90,14 @@ namespace Google.Cloud.Deploy.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RolloutUpdateEvent(RolloutUpdateEvent other) : this() {
+      message_ = other.message_;
       pipelineUid_ = other.pipelineUid_;
       releaseUid_ = other.releaseUid_;
+      release_ = other.release_;
       rollout_ = other.rollout_;
       targetId_ = other.targetId_;
-      rolloutUpdateType_ = other.rolloutUpdateType_;
-      message_ = other.message_;
       type_ = other.type_;
+      rolloutUpdateType_ = other.rolloutUpdateType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -103,6 +105,21 @@ namespace Google.Cloud.Deploy.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RolloutUpdateEvent Clone() {
       return new RolloutUpdateEvent(this);
+    }
+
+    /// <summary>Field number for the "message" field.</summary>
+    public const int MessageFieldNumber = 6;
+    private string message_ = "";
+    /// <summary>
+    /// Debug message for when a rollout update event occurs.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Message {
+      get { return message_; }
+      set {
+        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     /// <summary>Field number for the "pipeline_uid" field.</summary>
@@ -135,11 +152,28 @@ namespace Google.Cloud.Deploy.V1 {
       }
     }
 
+    /// <summary>Field number for the "release" field.</summary>
+    public const int ReleaseFieldNumber = 8;
+    private string release_ = "";
+    /// <summary>
+    /// The name of the `Release`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Release {
+      get { return release_; }
+      set {
+        release_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "rollout" field.</summary>
     public const int RolloutFieldNumber = 3;
     private string rollout_ = "";
     /// <summary>
     /// The name of the rollout.
+    /// rollout_uid is not in this log message because we write some of these log
+    /// messages at rollout creation time, before we've generated the uid.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -165,36 +199,6 @@ namespace Google.Cloud.Deploy.V1 {
       }
     }
 
-    /// <summary>Field number for the "rollout_update_type" field.</summary>
-    public const int RolloutUpdateTypeFieldNumber = 5;
-    private global::Google.Cloud.Deploy.V1.RolloutUpdateEvent.Types.RolloutUpdateType rolloutUpdateType_ = global::Google.Cloud.Deploy.V1.RolloutUpdateEvent.Types.RolloutUpdateType.Unspecified;
-    /// <summary>
-    /// The type of the rollout update.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Cloud.Deploy.V1.RolloutUpdateEvent.Types.RolloutUpdateType RolloutUpdateType {
-      get { return rolloutUpdateType_; }
-      set {
-        rolloutUpdateType_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "message" field.</summary>
-    public const int MessageFieldNumber = 6;
-    private string message_ = "";
-    /// <summary>
-    /// Debug message for when a rollout update event occurs.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Message {
-      get { return message_; }
-      set {
-        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 7;
     private global::Google.Cloud.Deploy.V1.Type type_ = global::Google.Cloud.Deploy.V1.Type.Unspecified;
@@ -207,6 +211,21 @@ namespace Google.Cloud.Deploy.V1 {
       get { return type_; }
       set {
         type_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "rollout_update_type" field.</summary>
+    public const int RolloutUpdateTypeFieldNumber = 5;
+    private global::Google.Cloud.Deploy.V1.RolloutUpdateEvent.Types.RolloutUpdateType rolloutUpdateType_ = global::Google.Cloud.Deploy.V1.RolloutUpdateEvent.Types.RolloutUpdateType.Unspecified;
+    /// <summary>
+    /// The type of the rollout update.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Deploy.V1.RolloutUpdateEvent.Types.RolloutUpdateType RolloutUpdateType {
+      get { return rolloutUpdateType_; }
+      set {
+        rolloutUpdateType_ = value;
       }
     }
 
@@ -225,13 +244,14 @@ namespace Google.Cloud.Deploy.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (Message != other.Message) return false;
       if (PipelineUid != other.PipelineUid) return false;
       if (ReleaseUid != other.ReleaseUid) return false;
+      if (Release != other.Release) return false;
       if (Rollout != other.Rollout) return false;
       if (TargetId != other.TargetId) return false;
-      if (RolloutUpdateType != other.RolloutUpdateType) return false;
-      if (Message != other.Message) return false;
       if (Type != other.Type) return false;
+      if (RolloutUpdateType != other.RolloutUpdateType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -239,13 +259,14 @@ namespace Google.Cloud.Deploy.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (Message.Length != 0) hash ^= Message.GetHashCode();
       if (PipelineUid.Length != 0) hash ^= PipelineUid.GetHashCode();
       if (ReleaseUid.Length != 0) hash ^= ReleaseUid.GetHashCode();
+      if (Release.Length != 0) hash ^= Release.GetHashCode();
       if (Rollout.Length != 0) hash ^= Rollout.GetHashCode();
       if (TargetId.Length != 0) hash ^= TargetId.GetHashCode();
-      if (RolloutUpdateType != global::Google.Cloud.Deploy.V1.RolloutUpdateEvent.Types.RolloutUpdateType.Unspecified) hash ^= RolloutUpdateType.GetHashCode();
-      if (Message.Length != 0) hash ^= Message.GetHashCode();
       if (Type != global::Google.Cloud.Deploy.V1.Type.Unspecified) hash ^= Type.GetHashCode();
+      if (RolloutUpdateType != global::Google.Cloud.Deploy.V1.RolloutUpdateEvent.Types.RolloutUpdateType.Unspecified) hash ^= RolloutUpdateType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -292,6 +313,10 @@ namespace Google.Cloud.Deploy.V1 {
         output.WriteRawTag(56);
         output.WriteEnum((int) Type);
       }
+      if (Release.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(Release);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -330,6 +355,10 @@ namespace Google.Cloud.Deploy.V1 {
         output.WriteRawTag(56);
         output.WriteEnum((int) Type);
       }
+      if (Release.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(Release);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -340,11 +369,17 @@ namespace Google.Cloud.Deploy.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (Message.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+      }
       if (PipelineUid.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PipelineUid);
       }
       if (ReleaseUid.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ReleaseUid);
+      }
+      if (Release.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Release);
       }
       if (Rollout.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Rollout);
@@ -352,14 +387,11 @@ namespace Google.Cloud.Deploy.V1 {
       if (TargetId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TargetId);
       }
-      if (RolloutUpdateType != global::Google.Cloud.Deploy.V1.RolloutUpdateEvent.Types.RolloutUpdateType.Unspecified) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RolloutUpdateType);
-      }
-      if (Message.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
-      }
       if (Type != global::Google.Cloud.Deploy.V1.Type.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      }
+      if (RolloutUpdateType != global::Google.Cloud.Deploy.V1.RolloutUpdateEvent.Types.RolloutUpdateType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RolloutUpdateType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -373,11 +405,17 @@ namespace Google.Cloud.Deploy.V1 {
       if (other == null) {
         return;
       }
+      if (other.Message.Length != 0) {
+        Message = other.Message;
+      }
       if (other.PipelineUid.Length != 0) {
         PipelineUid = other.PipelineUid;
       }
       if (other.ReleaseUid.Length != 0) {
         ReleaseUid = other.ReleaseUid;
+      }
+      if (other.Release.Length != 0) {
+        Release = other.Release;
       }
       if (other.Rollout.Length != 0) {
         Rollout = other.Rollout;
@@ -385,14 +423,11 @@ namespace Google.Cloud.Deploy.V1 {
       if (other.TargetId.Length != 0) {
         TargetId = other.TargetId;
       }
-      if (other.RolloutUpdateType != global::Google.Cloud.Deploy.V1.RolloutUpdateEvent.Types.RolloutUpdateType.Unspecified) {
-        RolloutUpdateType = other.RolloutUpdateType;
-      }
-      if (other.Message.Length != 0) {
-        Message = other.Message;
-      }
       if (other.Type != global::Google.Cloud.Deploy.V1.Type.Unspecified) {
         Type = other.Type;
+      }
+      if (other.RolloutUpdateType != global::Google.Cloud.Deploy.V1.RolloutUpdateEvent.Types.RolloutUpdateType.Unspecified) {
+        RolloutUpdateType = other.RolloutUpdateType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -437,6 +472,10 @@ namespace Google.Cloud.Deploy.V1 {
             Type = (global::Google.Cloud.Deploy.V1.Type) input.ReadEnum();
             break;
           }
+          case 66: {
+            Release = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -478,6 +517,10 @@ namespace Google.Cloud.Deploy.V1 {
           }
           case 56: {
             Type = (global::Google.Cloud.Deploy.V1.Type) input.ReadEnum();
+            break;
+          }
+          case 66: {
+            Release = input.ReadString();
             break;
           }
         }
