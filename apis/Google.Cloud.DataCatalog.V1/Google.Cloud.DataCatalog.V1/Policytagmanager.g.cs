@@ -33,7 +33,7 @@ namespace Google.Cloud.DataCatalog.V1 {
             "bWVzdGFtcHMucHJvdG8aHmdvb2dsZS9pYW0vdjEvaWFtX3BvbGljeS5wcm90",
             "bxoaZ29vZ2xlL2lhbS92MS9wb2xpY3kucHJvdG8aG2dvb2dsZS9wcm90b2J1",
             "Zi9lbXB0eS5wcm90bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJv",
-            "dG8i6wQKCFRheG9ub215EhEKBG5hbWUYASABKAlCA+BBAxIZCgxkaXNwbGF5",
+            "dG8i6wQKCFRheG9ub215EhEKBG5hbWUYASABKAlCA+BBCBIZCgxkaXNwbGF5",
             "X25hbWUYAiABKAlCA+BBAhIYCgtkZXNjcmlwdGlvbhgDIAEoCUID4EEBEh0K",
             "EHBvbGljeV90YWdfY291bnQYBCABKAVCA+BBAxJPChN0YXhvbm9teV90aW1l",
             "c3RhbXBzGAUgASgLMi0uZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLlN5",
@@ -47,7 +47,7 @@ namespace Google.Cloud.DataCatalog.V1 {
             "R1JBSU5FRF9BQ0NFU1NfQ09OVFJPTBABOmfqQWQKI2RhdGFjYXRhbG9nLmdv",
             "b2dsZWFwaXMuY29tL1RheG9ub215Ej1wcm9qZWN0cy97cHJvamVjdH0vbG9j",
             "YXRpb25zL3tsb2NhdGlvbn0vdGF4b25vbWllcy97dGF4b25vbXl9IowCCglQ",
-            "b2xpY3lUYWcSEQoEbmFtZRgBIAEoCUID4EEDEhkKDGRpc3BsYXlfbmFtZRgC",
+            "b2xpY3lUYWcSEQoEbmFtZRgBIAEoCUID4EEIEhkKDGRpc3BsYXlfbmFtZRgC",
             "IAEoCUID4EECEhMKC2Rlc2NyaXB0aW9uGAMgASgJEhkKEXBhcmVudF9wb2xp",
             "Y3lfdGFnGAQgASgJEh4KEWNoaWxkX3BvbGljeV90YWdzGAUgAygJQgPgQQM6",
             "gAHqQX0KJGRhdGFjYXRhbG9nLmdvb2dsZWFwaXMuY29tL1BvbGljeVRhZxJV",
@@ -253,7 +253,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. Resource name of this taxonomy in URL format.
+    /// Identifier. Resource name of this taxonomy in URL format.
     ///
     /// Note: Policy tag manager generates unique taxonomy IDs.
     /// </summary>
@@ -979,7 +979,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. Resource name of this policy tag in the URL format.
+    /// Identifier. Resource name of this policy tag in the URL format.
     ///
     /// The policy tag manager generates unique taxonomy IDs and policy tag IDs.
     /// </summary>
