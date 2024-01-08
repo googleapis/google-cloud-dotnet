@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.5.0, released 2024-01-08
+
+### New features
+
+- Add DeleteDatabase API and delete protection ([commit 045eb3b](https://github.com/googleapis/google-cloud-dotnet/commit/045eb3b54e169edab666bc0e3154683d402fde0e))
+
+### Documentation improvements
+
+- Update Database API description ([commit 045eb3b](https://github.com/googleapis/google-cloud-dotnet/commit/045eb3b54e169edab666bc0e3154683d402fde0e))
+
 ## Version 3.4.0, released 2023-12-05
 
 ### New features
