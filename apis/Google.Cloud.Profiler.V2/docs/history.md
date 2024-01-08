@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.3.0, released 2024-01-08
+
+### New features
+
+- Add `ListProfiles` RPC to `ExportService` ([commit 720d004](https://github.com/googleapis/google-cloud-dotnet/commit/720d004863acc47395697f6bfcb54063f4dd529f))
+
 ## Version 2.2.0, released 2023-03-20
 
 ### Bug fixes
