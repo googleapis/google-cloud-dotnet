@@ -1,5 +1,16 @@
 # Version history
 
+## Version 2.11.0, released 2024-01-08
+
+### New features
+
+- Added enum value EventType.GOVERNANCE_RULE_PROCESSING ([commit d69b53d](https://github.com/googleapis/google-cloud-dotnet/commit/d69b53d698d7473699414f3686aa8f9e08ebf927))
+
+### Documentation improvements
+
+- Fix the comment for `ignore_null` field to clarify its applicability on data quality rules ([commit df58fbb](https://github.com/googleapis/google-cloud-dotnet/commit/df58fbbfc3c5912724d0253ef3fd959ddf47d811))
+- Added documentation of page_size default and maximum value for ListEntries and RetrieveAspects ([commit df58fbb](https://github.com/googleapis/google-cloud-dotnet/commit/df58fbbfc3c5912724d0253ef3fd959ddf47d811))
+
 ## Version 2.10.0, released 2023-12-04
 
 ### New features
