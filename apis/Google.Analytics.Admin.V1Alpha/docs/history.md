@@ -1,5 +1,21 @@
 # Version history
 
+## Version 2.0.0-alpha15, released 2024-01-08
+
+### Bug fixes
+
+- **BREAKING CHANGE** Remove values `PAID_AND_ORGANIC_CHANNELS_FIRST_CLICK`, `PAID_AND_ORGANIC_CHANNELS_LINEAR`, `PAID_AND_ORGANIC_CHANNELS_POSITION_BASED`, `PAID_AND_ORGANIC_CHANNELS_TIME_DECAY` corresponding to the deprecated attribution models from the `ReportingAttributionModel` enum, as per announcement in https://support.google.com/analytics/answer/9164320[issue 040623](https://github.com/googleapis/google-cloud-dotnet/issues/040623) ([commit c84ffbc](https://github.com/googleapis/google-cloud-dotnet/commit/c84ffbc15dbfd02f6583db2ec96b6e72c9c83e12))
+
+### New features
+
+- Add `GetSubpropertyEventFilter`, `ListSubpropertyEventFilters` methods to the Admin API v1 alpha ([commit c84ffbc](https://github.com/googleapis/google-cloud-dotnet/commit/c84ffbc15dbfd02f6583db2ec96b6e72c9c83e12))
+- Add the `default_conversion_value` field to the `ConversionEvent` type ([commit c84ffbc](https://github.com/googleapis/google-cloud-dotnet/commit/c84ffbc15dbfd02f6583db2ec96b6e72c9c83e12))
+
+### Documentation improvements
+
+- Update the documentation for the `RunAccessReport` method ([commit c84ffbc](https://github.com/googleapis/google-cloud-dotnet/commit/c84ffbc15dbfd02f6583db2ec96b6e72c9c83e12))
+- Update the documentation for `grouping_rule`, `system_defined` fields of the `ChannelGroup` type ([commit c84ffbc](https://github.com/googleapis/google-cloud-dotnet/commit/c84ffbc15dbfd02f6583db2ec96b6e72c9c83e12))
+
 ## Version 2.0.0-alpha14, released 2023-10-25
 
 ### Bug fixes
