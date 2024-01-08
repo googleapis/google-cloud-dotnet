@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.4.0, released 2024-01-08
+
+### New features
+
+- Support cost_in_local_currency field in the cost projection ([commit 0c726a4](https://github.com/googleapis/google-cloud-dotnet/commit/0c726a49180253efe4447dea6e07611962569fba))
+
+### Documentation improvements
+
+- Fix typo for the comment of reliability_projection ([commit 0c726a4](https://github.com/googleapis/google-cloud-dotnet/commit/0c726a49180253efe4447dea6e07611962569fba))
+- Add comment for targetResources ([commit 0c726a4](https://github.com/googleapis/google-cloud-dotnet/commit/0c726a49180253efe4447dea6e07611962569fba))
+
 ## Version 3.3.0, released 2023-09-06
 
 ### New features
