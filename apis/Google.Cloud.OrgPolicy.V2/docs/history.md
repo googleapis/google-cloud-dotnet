@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.3.0, released 2024-01-08
+
+### New features
+
+- Add custom constraints CRUD APIs, proper etag support in Org Policy Update/Delete API ([commit 258a6d5](https://github.com/googleapis/google-cloud-dotnet/commit/258a6d53808c793c4c1883da808c75a9ddc39b35))
+
+### Documentation improvements
+
+- Updated comments ([commit 258a6d5](https://github.com/googleapis/google-cloud-dotnet/commit/258a6d53808c793c4c1883da808c75a9ddc39b35))
+
 ## Version 2.2.0, released 2023-01-19
 
 ### New features
