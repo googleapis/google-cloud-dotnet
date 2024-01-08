@@ -1,5 +1,18 @@
 # Version history
 
+## Version 4.15.0, released 2024-01-08
+
+### New features
+
+- Add sections field to HumanAgentAssistantConfig.SuggestionQueryConfig ([commit 9dcd3d1](https://github.com/googleapis/google-cloud-dotnet/commit/9dcd3d1679ebe9c9a31f422499c23d92ac45c69b))
+- Add enable_conversation_augmented_query field to HumanAgentAssistantConfig.SuggestionFeatureConfig message ([commit 9dcd3d1](https://github.com/googleapis/google-cloud-dotnet/commit/9dcd3d1679ebe9c9a31f422499c23d92ac45c69b))
+- Add INTENT enum in SearchKnowledgeAnswer.AnswerType message ([commit 9dcd3d1](https://github.com/googleapis/google-cloud-dotnet/commit/9dcd3d1679ebe9c9a31f422499c23d92ac45c69b))
+- Add rewritten_query in field in SearchKnowledgeResponse message ([commit 9dcd3d1](https://github.com/googleapis/google-cloud-dotnet/commit/9dcd3d1679ebe9c9a31f422499c23d92ac45c69b))
+
+### Documentation improvements
+
+- Improved comments on audio_config proto ([commit 9dcd3d1](https://github.com/googleapis/google-cloud-dotnet/commit/9dcd3d1679ebe9c9a31f422499c23d92ac45c69b))
+
 ## Version 4.14.0, released 2023-10-02
 
 ### New features
