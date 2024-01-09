@@ -84,39 +84,25 @@ internal class Program
     private static async Task DeleteDatabasesAsync(string projectId)
     {
         var adminClient = await FirestoreAdminClient.CreateAsync();
-
-        // Use the REST API for operations not yet supported by Google.Cloud.Firestore.Admin.V1,
-        // currently DB deletion.
-        // TODO: Start using Google.Cloud.Firestore.Admin.V1 when it supports DB deletion.
-        string credentialsPath = Environment.GetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS");
-        string restApiUrlBase = "https://firestore.googleapis.com/v1";
-        string scope = "https://www.googleapis.com/auth/datastore";
-        GoogleCredential googleCredential = GoogleCredential.FromFile(credentialsPath).CreateScoped(scope);
-        HttpClient httpClient = new HttpClientFactory()
-            .CreateHttpClient(new CreateHttpClientArgs { Initializers = { googleCredential } });
-
-        var deleteDatabaseEndpointTemplate = $"{restApiUrlBase}/projects/{projectId}/databases/";
         var databases = (await adminClient.ListDatabasesAsync(ProjectName.FromProject(projectId))).Databases
             .Where(db => db.DatabaseName.DatabaseId.StartsWith("test-", StringComparison.Ordinal))
             .ToList();
         foreach (var database in databases)
         {
-            await DeleteDatabaseAsync(database.DatabaseName.DatabaseId);
+            await DeleteDatabaseAsync(database.DatabaseName);
         }
 
-        async Task DeleteDatabaseAsync(string databaseId)
+        async Task DeleteDatabaseAsync(DatabaseName dbName)
         {
-            Console.WriteLine($"Attempting to delete {databaseId}");
+            Console.WriteLine($"Attempting to delete {dbName.DatabaseId}");
             try
             {
-                var deleteDatabaseEndpoint = new Uri($"{deleteDatabaseEndpointTemplate}{databaseId}");
-                var response = await httpClient.DeleteAsync(deleteDatabaseEndpoint);
-                response.EnsureSuccessStatusCode();
-                Console.WriteLine($"Success deleting {databaseId}");
+                await adminClient.DeleteDatabaseAsync(dbName);
+                Console.WriteLine($"Success deleting {dbName.DatabaseId}");
             }
             catch (HttpRequestException ex) when (ex.StatusCode == HttpStatusCode.NotFound)
             {
-                Console.WriteLine($"Failure deleting {databaseId}: Not Found");
+                Console.WriteLine($"Failure deleting {dbName.DatabaseId}: Not Found");
             }
         }
     }

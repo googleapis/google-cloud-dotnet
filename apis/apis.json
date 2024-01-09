@@ -1763,7 +1763,7 @@
       },
       "testDependencies": {
         "Google.Api.Gax.Grpc.Testing": "4.4.0",
-        "Google.Cloud.Firestore.Admin.V1": "3.4.0"
+        "Google.Cloud.Firestore.Admin.V1": "3.5.0"
       },
       "shortName": "datastore",
       "serviceConfigFile": "datastore_v1.yaml",
@@ -2398,7 +2398,7 @@
       "testDependencies": {
         "Google.Api.Gax.Grpc.Testing": "4.4.0",
         "Google.Api.Gax.Testing": "4.4.0",
-        "Google.Cloud.Firestore.Admin.V1": "3.3.0",
+        "Google.Cloud.Firestore.Admin.V1": "3.5.0",
         "Grpc.Core.Testing": "2.46.6",
         "System.ValueTuple": "4.5.0",
         "Xunit.Combinatorial": "1.6.24"

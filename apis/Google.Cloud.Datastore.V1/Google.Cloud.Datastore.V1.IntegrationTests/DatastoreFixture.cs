@@ -37,7 +37,6 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         private const int RetryCount = 10;
         private static readonly TimeSpan RetryDelay = TimeSpan.FromSeconds(3);
 
-        private readonly HttpClient _firestoreRestApiHttpClient = new();
         private readonly FirestoreAdminClient _firestoreAdminClient;
 
         internal bool RunningOnEmulator { get; }
@@ -56,16 +55,6 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
             NamespaceId = IdGenerator.FromDateTime(prefix: "test-");
             RunningOnEmulator = !string.IsNullOrEmpty(Environment.GetEnvironmentVariable("DATASTORE_EMULATOR_HOST"));
             _firestoreAdminClient = FirestoreAdminClient.Create();
-
-            // Scope used for the REST API to delete databases.
-            string scope = "https://www.googleapis.com/auth/datastore";
-            string credentialsPath = Environment.GetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS");
-
-            // Initalize credentials to be used with REST API calls. 
-            GoogleCredential googleCredential = GoogleCredential.FromFile(credentialsPath).CreateScoped(scope);
-            _firestoreRestApiHttpClient = new HttpClientFactory()
-                .CreateHttpClient(new CreateHttpClientArgs { Initializers = { googleCredential } });
-            _firestoreRestApiHttpClient.BaseAddress = new Uri("https://firestore.googleapis.com");
         }
 
         public override void Dispose()
@@ -182,11 +171,9 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
 
         private async Task DeleteDatabaseAsync(string databaseId)
         {
-            var deleteDbUrl = $"/v1/projects/{ProjectId}/databases/{databaseId}";
             try
             {
-                var response = await _firestoreRestApiHttpClient.DeleteAsync(deleteDbUrl).ConfigureAwait(false);
-                response.EnsureSuccessStatusCode();
+                await _firestoreAdminClient.DeleteDatabaseAsync(new DatabaseName(ProjectId, databaseId));
             }
             catch (Exception)
             {
