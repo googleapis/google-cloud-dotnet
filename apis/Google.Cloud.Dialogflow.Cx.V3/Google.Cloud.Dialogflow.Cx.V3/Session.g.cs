@@ -5844,7 +5844,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// Optional. Data Stores where the boosting configuration is applied. The full
     /// names of the referenced data stores. Formats:
     /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`
-    /// `projects/{project}/locations/{location}/dataStores/{data_store}
+    /// `projects/{project}/locations/{location}/dataStores/{data_store}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6060,7 +6060,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// Optional. Data Stores where the boosting configuration is applied. The full
     /// names of the referenced data stores. Formats:
     /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`
-    /// `projects/{project}/locations/{location}/dataStores/{data_store}
+    /// `projects/{project}/locations/{location}/dataStores/{data_store}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
