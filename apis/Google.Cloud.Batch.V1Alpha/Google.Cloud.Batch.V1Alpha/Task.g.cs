@@ -2454,11 +2454,13 @@ namespace Google.Cloud.Batch.V1Alpha {
         public const int EnableImageStreamingFieldNumber = 12;
         private bool enableImageStreaming_;
         /// <summary>
-        /// Optional. Not yet implemented.
-        /// If set to true, container will run with Image streaming.
+        /// Optional. If set to true, container will run with Image streaming.
         /// The container runtime will be changed to containerd
         /// instead of docker. Currently, only imageUri, commands, entrypoint
         /// and volumes are supported and any other fields will be ignored.
+        /// Please refer
+        /// [here](https://github.com/GoogleCloudPlatform/batch-samples/tree/main/api-samples/image-streaming)
+        /// for the feature requirements and limitations.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
