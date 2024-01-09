@@ -30,7 +30,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             "LnByb3RvGixnb29nbGUvY2xvdWQvYmlncXVlcnkvc3RvcmFnZS92MS9hcnJv",
             "dy5wcm90bxorZ29vZ2xlL2Nsb3VkL2JpZ3F1ZXJ5L3N0b3JhZ2UvdjEvYXZy",
             "by5wcm90bxosZ29vZ2xlL2Nsb3VkL2JpZ3F1ZXJ5L3N0b3JhZ2UvdjEvdGFi",
-            "bGUucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8isAoK",
+            "bGUucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8iwwwK",
             "C1JlYWRTZXNzaW9uEhEKBG5hbWUYASABKAlCA+BBAxI0CgtleHBpcmVfdGlt",
             "ZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJGCgtk",
             "YXRhX2Zvcm1hdBgDIAEoDjIsLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9y",
@@ -49,48 +49,54 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             "X3BoeXNpY2FsX2ZpbGVfc2l6ZRgPIAEoA0ID4EEDEiAKE2VzdGltYXRlZF9y",
             "b3dfY291bnQYDiABKANCA+BBAxIVCgh0cmFjZV9pZBgNIAEoCUID4EEBGkMK",
             "DlRhYmxlTW9kaWZpZXJzEjEKDXNuYXBzaG90X3RpbWUYASABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wGvYCChBUYWJsZVJlYWRPcHRpb25zEhcK",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wGokFChBUYWJsZVJlYWRPcHRpb25zEhcK",
             "D3NlbGVjdGVkX2ZpZWxkcxgBIAMoCRIXCg9yb3dfcmVzdHJpY3Rpb24YAiAB",
             "KAkSZwobYXJyb3dfc2VyaWFsaXphdGlvbl9vcHRpb25zGAMgASgLMjsuZ29v",
             "Z2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuQXJyb3dTZXJpYWxpemF0",
             "aW9uT3B0aW9uc0ID4EEBSAASZQoaYXZyb19zZXJpYWxpemF0aW9uX29wdGlv",
             "bnMYBCABKAsyOi5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5B",
             "dnJvU2VyaWFsaXphdGlvbk9wdGlvbnNCA+BBAUgAEiMKEXNhbXBsZV9wZXJj",
-            "ZW50YWdlGAUgASgBQgPgQQFIAYgBAUIlCiNvdXRwdXRfZm9ybWF0X3Nlcmlh",
-            "bGl6YXRpb25fb3B0aW9uc0IUChJfc2FtcGxlX3BlcmNlbnRhZ2U6a+pBaAoq",
-            "YmlncXVlcnlzdG9yYWdlLmdvb2dsZWFwaXMuY29tL1JlYWRTZXNzaW9uEjpw",
-            "cm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vc2Vzc2lv",
-            "bnMve3Nlc3Npb259QggKBnNjaGVtYSKcAQoKUmVhZFN0cmVhbRIRCgRuYW1l",
-            "GAEgASgJQgPgQQM6e+pBeAopYmlncXVlcnlzdG9yYWdlLmdvb2dsZWFwaXMu",
-            "Y29tL1JlYWRTdHJlYW0SS3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
-            "e2xvY2F0aW9ufS9zZXNzaW9ucy97c2Vzc2lvbn0vc3RyZWFtcy97c3RyZWFt",
-            "fSL7BAoLV3JpdGVTdHJlYW0SEQoEbmFtZRgBIAEoCUID4EEDEkUKBHR5cGUY",
-            "AiABKA4yMi5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5Xcml0",
-            "ZVN0cmVhbS5UeXBlQgPgQQUSNAoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLY29tbWl0X3RpbWUYBCAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSSAoMdGFibGVf",
-            "c2NoZW1hGAUgASgLMi0uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2Uu",
-            "djEuVGFibGVTY2hlbWFCA+BBAxJQCgp3cml0ZV9tb2RlGAcgASgOMjcuZ29v",
-            "Z2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuV3JpdGVTdHJlYW0uV3Jp",
-            "dGVNb2RlQgPgQQUSFQoIbG9jYXRpb24YCCABKAlCA+BBBSJGCgRUeXBlEhQK",
-            "EFRZUEVfVU5TUEVDSUZJRUQQABINCglDT01NSVRURUQQARILCgdQRU5ESU5H",
-            "EAISDAoIQlVGRkVSRUQQAyIzCglXcml0ZU1vZGUSGgoWV1JJVEVfTU9ERV9V",
-            "TlNQRUNJRklFRBAAEgoKBklOU0VSVBABOnbqQXMKKmJpZ3F1ZXJ5c3RvcmFn",
-            "ZS5nb29nbGVhcGlzLmNvbS9Xcml0ZVN0cmVhbRJFcHJvamVjdHMve3Byb2pl",
-            "Y3R9L2RhdGFzZXRzL3tkYXRhc2V0fS90YWJsZXMve3RhYmxlfS9zdHJlYW1z",
-            "L3tzdHJlYW19Kj4KCkRhdGFGb3JtYXQSGwoXREFUQV9GT1JNQVRfVU5TUEVD",
-            "SUZJRUQQABIICgRBVlJPEAESCQoFQVJST1cQAipJCg9Xcml0ZVN0cmVhbVZp",
-            "ZXcSIQodV1JJVEVfU1RSRUFNX1ZJRVdfVU5TUEVDSUZJRUQQABIJCgVCQVNJ",
-            "QxABEggKBEZVTEwQAkK7AQokY29tLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5z",
-            "dG9yYWdlLnYxQgtTdHJlYW1Qcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dv",
-            "L2JpZ3F1ZXJ5L3N0b3JhZ2UvYXBpdjEvc3RvcmFnZXBiO3N0b3JhZ2VwYqoC",
-            "IEdvb2dsZS5DbG91ZC5CaWdRdWVyeS5TdG9yYWdlLlYxygIgR29vZ2xlXENs",
-            "b3VkXEJpZ1F1ZXJ5XFN0b3JhZ2VcVjFiBnByb3RvMw=="));
+            "ZW50YWdlGAUgASgBQgPgQQFIAYgBARKFAQoacmVzcG9uc2VfY29tcHJlc3Np",
+            "b25fY29kZWMYBiABKA4yVy5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFn",
+            "ZS52MS5SZWFkU2Vzc2lvbi5UYWJsZVJlYWRPcHRpb25zLlJlc3BvbnNlQ29t",
+            "cHJlc3Npb25Db2RlY0ID4EEBSAKIAQEiagoYUmVzcG9uc2VDb21wcmVzc2lv",
+            "bkNvZGVjEioKJlJFU1BPTlNFX0NPTVBSRVNTSU9OX0NPREVDX1VOU1BFQ0lG",
+            "SUVEEAASIgoeUkVTUE9OU0VfQ09NUFJFU1NJT05fQ09ERUNfTFo0EAJCJQoj",
+            "b3V0cHV0X2Zvcm1hdF9zZXJpYWxpemF0aW9uX29wdGlvbnNCFAoSX3NhbXBs",
+            "ZV9wZXJjZW50YWdlQh0KG19yZXNwb25zZV9jb21wcmVzc2lvbl9jb2RlYzpr",
+            "6kFoCipiaWdxdWVyeXN0b3JhZ2UuZ29vZ2xlYXBpcy5jb20vUmVhZFNlc3Np",
+            "b24SOnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9z",
+            "ZXNzaW9ucy97c2Vzc2lvbn1CCAoGc2NoZW1hIpwBCgpSZWFkU3RyZWFtEhEK",
+            "BG5hbWUYASABKAlCA+BBAzp76kF4CiliaWdxdWVyeXN0b3JhZ2UuZ29vZ2xl",
+            "YXBpcy5jb20vUmVhZFN0cmVhbRJLcHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
+            "aW9ucy97bG9jYXRpb259L3Nlc3Npb25zL3tzZXNzaW9ufS9zdHJlYW1zL3tz",
+            "dHJlYW19IvsECgtXcml0ZVN0cmVhbRIRCgRuYW1lGAEgASgJQgPgQQMSRQoE",
+            "dHlwZRgCIAEoDjIyLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYx",
+            "LldyaXRlU3RyZWFtLlR5cGVCA+BBBRI0CgtjcmVhdGVfdGltZRgDIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgtjb21taXRfdGlt",
+            "ZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJICgx0",
+            "YWJsZV9zY2hlbWEYBSABKAsyLS5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3Rv",
+            "cmFnZS52MS5UYWJsZVNjaGVtYUID4EEDElAKCndyaXRlX21vZGUYByABKA4y",
+            "Ny5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5Xcml0ZVN0cmVh",
+            "bS5Xcml0ZU1vZGVCA+BBBRIVCghsb2NhdGlvbhgIIAEoCUID4EEFIkYKBFR5",
+            "cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAAEg0KCUNPTU1JVFRFRBABEgsKB1BF",
+            "TkRJTkcQAhIMCghCVUZGRVJFRBADIjMKCVdyaXRlTW9kZRIaChZXUklURV9N",
+            "T0RFX1VOU1BFQ0lGSUVEEAASCgoGSU5TRVJUEAE6dupBcwoqYmlncXVlcnlz",
+            "dG9yYWdlLmdvb2dsZWFwaXMuY29tL1dyaXRlU3RyZWFtEkVwcm9qZWN0cy97",
+            "cHJvamVjdH0vZGF0YXNldHMve2RhdGFzZXR9L3RhYmxlcy97dGFibGV9L3N0",
+            "cmVhbXMve3N0cmVhbX0qPgoKRGF0YUZvcm1hdBIbChdEQVRBX0ZPUk1BVF9V",
+            "TlNQRUNJRklFRBAAEggKBEFWUk8QARIJCgVBUlJPVxACKkkKD1dyaXRlU3Ry",
+            "ZWFtVmlldxIhCh1XUklURV9TVFJFQU1fVklFV19VTlNQRUNJRklFRBAAEgkK",
+            "BUJBU0lDEAESCAoERlVMTBACQrsBCiRjb20uZ29vZ2xlLmNsb3VkLmJpZ3F1",
+            "ZXJ5LnN0b3JhZ2UudjFCC1N0cmVhbVByb3RvUAFaPmNsb3VkLmdvb2dsZS5j",
+            "b20vZ28vYmlncXVlcnkvc3RvcmFnZS9hcGl2MS9zdG9yYWdlcGI7c3RvcmFn",
+            "ZXBiqgIgR29vZ2xlLkNsb3VkLkJpZ1F1ZXJ5LlN0b3JhZ2UuVjHKAiBHb29n",
+            "bGVcQ2xvdWRcQmlnUXVlcnlcU3RvcmFnZVxWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.BigQuery.Storage.V1.ArrowReflection.Descriptor, global::Google.Cloud.BigQuery.Storage.V1.AvroReflection.Descriptor, global::Google.Cloud.BigQuery.Storage.V1.TableReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.BigQuery.Storage.V1.DataFormat), typeof(global::Google.Cloud.BigQuery.Storage.V1.WriteStreamView), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadSession), global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Parser, new[]{ "Name", "ExpireTime", "DataFormat", "AvroSchema", "ArrowSchema", "Table", "TableModifiers", "ReadOptions", "Streams", "EstimatedTotalBytesScanned", "EstimatedTotalPhysicalFileSize", "EstimatedRowCount", "TraceId" }, new[]{ "Schema" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableModifiers), global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableModifiers.Parser, new[]{ "SnapshotTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableReadOptions), global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableReadOptions.Parser, new[]{ "SelectedFields", "RowRestriction", "ArrowSerializationOptions", "AvroSerializationOptions", "SamplePercentage" }, new[]{ "OutputFormatSerializationOptions", "SamplePercentage" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableReadOptions), global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableReadOptions.Parser, new[]{ "SelectedFields", "RowRestriction", "ArrowSerializationOptions", "AvroSerializationOptions", "SamplePercentage", "ResponseCompressionCodec" }, new[]{ "OutputFormatSerializationOptions", "SamplePercentage", "ResponseCompressionCodec" }, new[]{ typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableReadOptions.Types.ResponseCompressionCodec) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadStream), global::Google.Cloud.BigQuery.Storage.V1.ReadStream.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.WriteStream), global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Parser, new[]{ "Name", "Type", "CreateTime", "CommitTime", "TableSchema", "WriteMode", "Location" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.Type), typeof(global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.WriteMode) }, null, null)
           }));
@@ -1169,6 +1175,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           selectedFields_ = other.selectedFields_.Clone();
           rowRestriction_ = other.rowRestriction_;
           samplePercentage_ = other.samplePercentage_;
+          responseCompressionCodec_ = other.responseCompressionCodec_;
           switch (other.OutputFormatSerializationOptionsCase) {
             case OutputFormatSerializationOptionsOneofCase.ArrowSerializationOptions:
               ArrowSerializationOptions = other.ArrowSerializationOptions.Clone();
@@ -1336,6 +1343,37 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           _hasBits0 &= ~1;
         }
 
+        /// <summary>Field number for the "response_compression_codec" field.</summary>
+        public const int ResponseCompressionCodecFieldNumber = 6;
+        private readonly static global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableReadOptions.Types.ResponseCompressionCodec ResponseCompressionCodecDefaultValue = global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableReadOptions.Types.ResponseCompressionCodec.Unspecified;
+
+        private global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableReadOptions.Types.ResponseCompressionCodec responseCompressionCodec_;
+        /// <summary>
+        /// Optional. Set response_compression_codec when creating a read session to
+        /// enable application-level compression of ReadRows responses.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableReadOptions.Types.ResponseCompressionCodec ResponseCompressionCodec {
+          get { if ((_hasBits0 & 2) != 0) { return responseCompressionCodec_; } else { return ResponseCompressionCodecDefaultValue; } }
+          set {
+            _hasBits0 |= 2;
+            responseCompressionCodec_ = value;
+          }
+        }
+        /// <summary>Gets whether the "response_compression_codec" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasResponseCompressionCodec {
+          get { return (_hasBits0 & 2) != 0; }
+        }
+        /// <summary>Clears the value of the "response_compression_codec" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearResponseCompressionCodec() {
+          _hasBits0 &= ~2;
+        }
+
         private object outputFormatSerializationOptions_;
         /// <summary>Enum of possible cases for the "output_format_serialization_options" oneof.</summary>
         public enum OutputFormatSerializationOptionsOneofCase {
@@ -1377,6 +1415,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           if (!object.Equals(ArrowSerializationOptions, other.ArrowSerializationOptions)) return false;
           if (!object.Equals(AvroSerializationOptions, other.AvroSerializationOptions)) return false;
           if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(SamplePercentage, other.SamplePercentage)) return false;
+          if (ResponseCompressionCodec != other.ResponseCompressionCodec) return false;
           if (OutputFormatSerializationOptionsCase != other.OutputFormatSerializationOptionsCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -1390,6 +1429,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           if (outputFormatSerializationOptionsCase_ == OutputFormatSerializationOptionsOneofCase.ArrowSerializationOptions) hash ^= ArrowSerializationOptions.GetHashCode();
           if (outputFormatSerializationOptionsCase_ == OutputFormatSerializationOptionsOneofCase.AvroSerializationOptions) hash ^= AvroSerializationOptions.GetHashCode();
           if (HasSamplePercentage) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(SamplePercentage);
+          if (HasResponseCompressionCodec) hash ^= ResponseCompressionCodec.GetHashCode();
           hash ^= (int) outputFormatSerializationOptionsCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -1426,6 +1466,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             output.WriteRawTag(41);
             output.WriteDouble(SamplePercentage);
           }
+          if (HasResponseCompressionCodec) {
+            output.WriteRawTag(48);
+            output.WriteEnum((int) ResponseCompressionCodec);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1453,6 +1497,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             output.WriteRawTag(41);
             output.WriteDouble(SamplePercentage);
           }
+          if (HasResponseCompressionCodec) {
+            output.WriteRawTag(48);
+            output.WriteEnum((int) ResponseCompressionCodec);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1476,6 +1524,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           if (HasSamplePercentage) {
             size += 1 + 8;
           }
+          if (HasResponseCompressionCodec) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ResponseCompressionCodec);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -1494,6 +1545,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           }
           if (other.HasSamplePercentage) {
             SamplePercentage = other.SamplePercentage;
+          }
+          if (other.HasResponseCompressionCodec) {
+            ResponseCompressionCodec = other.ResponseCompressionCodec;
           }
           switch (other.OutputFormatSerializationOptionsCase) {
             case OutputFormatSerializationOptionsOneofCase.ArrowSerializationOptions:
@@ -1555,6 +1609,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
                 SamplePercentage = input.ReadDouble();
                 break;
               }
+              case 48: {
+                ResponseCompressionCodec = (global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableReadOptions.Types.ResponseCompressionCodec) input.ReadEnum();
+                break;
+              }
             }
           }
         #endif
@@ -1600,10 +1658,42 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
                 SamplePercentage = input.ReadDouble();
                 break;
               }
+              case 48: {
+                ResponseCompressionCodec = (global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableReadOptions.Types.ResponseCompressionCodec) input.ReadEnum();
+                break;
+              }
             }
           }
         }
         #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the TableReadOptions message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Specifies which compression codec to attempt on the entire serialized
+          /// response payload (either Arrow record batch or Avro rows). This is
+          /// not to be confused with the Apache Arrow native compression codecs
+          /// specified in ArrowSerializationOptions. For performance reasons, when
+          /// creating a read session requesting Arrow responses, setting both native
+          /// Arrow compression and application-level response compression will not be
+          /// allowed - choose, at most, one kind of compression.
+          /// </summary>
+          public enum ResponseCompressionCodec {
+            /// <summary>
+            /// Default is no compression.
+            /// </summary>
+            [pbr::OriginalName("RESPONSE_COMPRESSION_CODEC_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Use raw LZ4 compression.
+            /// </summary>
+            [pbr::OriginalName("RESPONSE_COMPRESSION_CODEC_LZ4")] Lz4 = 2,
+          }
+
+        }
+        #endregion
 
       }
 
