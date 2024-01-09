@@ -42,6 +42,7 @@ namespace GoogleCSharpSnippets
                 SshPublicKey = new SshPublicKey(),
                 ProjectId = "",
                 View = LoginProfileView.Unspecified,
+                Regions = { "", },
             };
             // Make the request
             ImportSshPublicKeyResponse response = await osLoginServiceClient.ImportSshPublicKeyAsync(request);
