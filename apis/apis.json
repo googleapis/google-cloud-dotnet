@@ -4417,6 +4417,27 @@
       "includeCommonResourcesProto": true
     },
     {
+      "id": "Google.Cloud.ServiceHealth.V1",
+      "version": "1.0.0-beta01",
+      "type": "grpc",
+      "productName": "Service Health",
+      "productUrl": "https://cloud.google.com/service-health/docs/overview",
+      "description": "Recommended Google client library to access the Service Health API, which helps you gain visibility into disruptive events impacting Google Cloud products.",
+      "tags": [
+        "monitoring"
+      ],
+      "dependencies": {
+        "Google.Cloud.Location": "2.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/servicehealth/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "servicehealth",
+      "serviceConfigFile": "servicehealth_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.ServiceManagement.V1",
       "version": "2.1.0",
       "type": "grpc",

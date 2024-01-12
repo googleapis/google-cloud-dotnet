@@ -1,0 +1,19 @@
+[
+  {
+    "method": "ListLocations",
+    "client": "ServiceHealthClient",
+    "clientNavigationProperty": "LocationsClient",
+    "arguments": {
+      "request": {
+        "name": "projects/${PROJECT_ID}"
+      }
+    }
+  },
+  {
+    "method": "ListEvents",
+    "client": "ServiceHealthClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/global"
+    }
+  }
+]
