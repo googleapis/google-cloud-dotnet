@@ -4803,11 +4803,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
     public const int UpdateMaskFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    /// Required. Field mask is used to specify the fields to be overwritten in the
-    /// SecurityHealthAnalyticsCustomModule resource by the update.
-    /// The fields specified in the update_mask are relative to the resource, not
-    /// the full request. A field will be overwritten if it is in the mask. If the
-    /// user does not provide a mask then all fields will be overwritten.
+    /// Required. The list of fields to be updated. The only fields that can be
+    /// updated are `enablement_state` and `custom_config`. If empty or set to the
+    /// wildcard value `*`, both `enablement_state` and `custom_config` are
+    /// updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
