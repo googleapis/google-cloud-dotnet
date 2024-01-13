@@ -2355,5 +2355,783 @@ namespace GoogleCSharpSnippets
             LockInfo response = await configClient.ExportLockInfoAsync(name);
             // End snippet
         }
+
+        /// <summary>Snippet for CreatePreview</summary>
+        public void CreatePreviewRequestObject()
+        {
+            // Snippet: CreatePreview(CreatePreviewRequest, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            CreatePreviewRequest request = new CreatePreviewRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                PreviewId = "",
+                Preview = new Preview(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Preview, OperationMetadata> response = configClient.CreatePreview(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Preview, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Preview result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Preview, OperationMetadata> retrievedResponse = configClient.PollOnceCreatePreview(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Preview retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreatePreviewAsync</summary>
+        public async Task CreatePreviewRequestObjectAsync()
+        {
+            // Snippet: CreatePreviewAsync(CreatePreviewRequest, CallSettings)
+            // Additional: CreatePreviewAsync(CreatePreviewRequest, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            CreatePreviewRequest request = new CreatePreviewRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                PreviewId = "",
+                Preview = new Preview(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Preview, OperationMetadata> response = await configClient.CreatePreviewAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Preview, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Preview result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Preview, OperationMetadata> retrievedResponse = await configClient.PollOnceCreatePreviewAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Preview retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreatePreview</summary>
+        public void CreatePreview()
+        {
+            // Snippet: CreatePreview(string, Preview, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            Preview preview = new Preview();
+            // Make the request
+            Operation<Preview, OperationMetadata> response = configClient.CreatePreview(parent, preview);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Preview, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Preview result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Preview, OperationMetadata> retrievedResponse = configClient.PollOnceCreatePreview(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Preview retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreatePreviewAsync</summary>
+        public async Task CreatePreviewAsync()
+        {
+            // Snippet: CreatePreviewAsync(string, Preview, CallSettings)
+            // Additional: CreatePreviewAsync(string, Preview, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            Preview preview = new Preview();
+            // Make the request
+            Operation<Preview, OperationMetadata> response = await configClient.CreatePreviewAsync(parent, preview);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Preview, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Preview result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Preview, OperationMetadata> retrievedResponse = await configClient.PollOnceCreatePreviewAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Preview retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreatePreview</summary>
+        public void CreatePreviewResourceNames()
+        {
+            // Snippet: CreatePreview(LocationName, Preview, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            Preview preview = new Preview();
+            // Make the request
+            Operation<Preview, OperationMetadata> response = configClient.CreatePreview(parent, preview);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Preview, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Preview result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Preview, OperationMetadata> retrievedResponse = configClient.PollOnceCreatePreview(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Preview retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreatePreviewAsync</summary>
+        public async Task CreatePreviewResourceNamesAsync()
+        {
+            // Snippet: CreatePreviewAsync(LocationName, Preview, CallSettings)
+            // Additional: CreatePreviewAsync(LocationName, Preview, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            Preview preview = new Preview();
+            // Make the request
+            Operation<Preview, OperationMetadata> response = await configClient.CreatePreviewAsync(parent, preview);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Preview, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Preview result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Preview, OperationMetadata> retrievedResponse = await configClient.PollOnceCreatePreviewAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Preview retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPreview</summary>
+        public void GetPreviewRequestObject()
+        {
+            // Snippet: GetPreview(GetPreviewRequest, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            GetPreviewRequest request = new GetPreviewRequest
+            {
+                PreviewName = PreviewName.FromProjectLocationPreview("[PROJECT]", "[LOCATION]", "[PREVIEW]"),
+            };
+            // Make the request
+            Preview response = configClient.GetPreview(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPreviewAsync</summary>
+        public async Task GetPreviewRequestObjectAsync()
+        {
+            // Snippet: GetPreviewAsync(GetPreviewRequest, CallSettings)
+            // Additional: GetPreviewAsync(GetPreviewRequest, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            GetPreviewRequest request = new GetPreviewRequest
+            {
+                PreviewName = PreviewName.FromProjectLocationPreview("[PROJECT]", "[LOCATION]", "[PREVIEW]"),
+            };
+            // Make the request
+            Preview response = await configClient.GetPreviewAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPreview</summary>
+        public void GetPreview()
+        {
+            // Snippet: GetPreview(string, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/previews/[PREVIEW]";
+            // Make the request
+            Preview response = configClient.GetPreview(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPreviewAsync</summary>
+        public async Task GetPreviewAsync()
+        {
+            // Snippet: GetPreviewAsync(string, CallSettings)
+            // Additional: GetPreviewAsync(string, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/previews/[PREVIEW]";
+            // Make the request
+            Preview response = await configClient.GetPreviewAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPreview</summary>
+        public void GetPreviewResourceNames()
+        {
+            // Snippet: GetPreview(PreviewName, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            PreviewName name = PreviewName.FromProjectLocationPreview("[PROJECT]", "[LOCATION]", "[PREVIEW]");
+            // Make the request
+            Preview response = configClient.GetPreview(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPreviewAsync</summary>
+        public async Task GetPreviewResourceNamesAsync()
+        {
+            // Snippet: GetPreviewAsync(PreviewName, CallSettings)
+            // Additional: GetPreviewAsync(PreviewName, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            PreviewName name = PreviewName.FromProjectLocationPreview("[PROJECT]", "[LOCATION]", "[PREVIEW]");
+            // Make the request
+            Preview response = await configClient.GetPreviewAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPreviews</summary>
+        public void ListPreviewsRequestObject()
+        {
+            // Snippet: ListPreviews(ListPreviewsRequest, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            ListPreviewsRequest request = new ListPreviewsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListPreviewsResponse, Preview> response = configClient.ListPreviews(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Preview item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListPreviewsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Preview item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Preview> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Preview item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPreviewsAsync</summary>
+        public async Task ListPreviewsRequestObjectAsync()
+        {
+            // Snippet: ListPreviewsAsync(ListPreviewsRequest, CallSettings)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            ListPreviewsRequest request = new ListPreviewsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListPreviewsResponse, Preview> response = configClient.ListPreviewsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Preview item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListPreviewsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Preview item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Preview> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Preview item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPreviews</summary>
+        public void ListPreviews()
+        {
+            // Snippet: ListPreviews(string, string, int?, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListPreviewsResponse, Preview> response = configClient.ListPreviews(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Preview item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListPreviewsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Preview item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Preview> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Preview item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPreviewsAsync</summary>
+        public async Task ListPreviewsAsync()
+        {
+            // Snippet: ListPreviewsAsync(string, string, int?, CallSettings)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListPreviewsResponse, Preview> response = configClient.ListPreviewsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Preview item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListPreviewsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Preview item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Preview> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Preview item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPreviews</summary>
+        public void ListPreviewsResourceNames()
+        {
+            // Snippet: ListPreviews(LocationName, string, int?, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListPreviewsResponse, Preview> response = configClient.ListPreviews(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Preview item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListPreviewsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Preview item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Preview> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Preview item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPreviewsAsync</summary>
+        public async Task ListPreviewsResourceNamesAsync()
+        {
+            // Snippet: ListPreviewsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListPreviewsResponse, Preview> response = configClient.ListPreviewsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Preview item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListPreviewsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Preview item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Preview> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Preview item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeletePreview</summary>
+        public void DeletePreviewRequestObject()
+        {
+            // Snippet: DeletePreview(DeletePreviewRequest, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            DeletePreviewRequest request = new DeletePreviewRequest
+            {
+                PreviewName = PreviewName.FromProjectLocationPreview("[PROJECT]", "[LOCATION]", "[PREVIEW]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Preview, OperationMetadata> response = configClient.DeletePreview(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Preview, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Preview result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Preview, OperationMetadata> retrievedResponse = configClient.PollOnceDeletePreview(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Preview retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeletePreviewAsync</summary>
+        public async Task DeletePreviewRequestObjectAsync()
+        {
+            // Snippet: DeletePreviewAsync(DeletePreviewRequest, CallSettings)
+            // Additional: DeletePreviewAsync(DeletePreviewRequest, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            DeletePreviewRequest request = new DeletePreviewRequest
+            {
+                PreviewName = PreviewName.FromProjectLocationPreview("[PROJECT]", "[LOCATION]", "[PREVIEW]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Preview, OperationMetadata> response = await configClient.DeletePreviewAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Preview, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Preview result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Preview, OperationMetadata> retrievedResponse = await configClient.PollOnceDeletePreviewAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Preview retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeletePreview</summary>
+        public void DeletePreview()
+        {
+            // Snippet: DeletePreview(string, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/previews/[PREVIEW]";
+            // Make the request
+            Operation<Preview, OperationMetadata> response = configClient.DeletePreview(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Preview, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Preview result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Preview, OperationMetadata> retrievedResponse = configClient.PollOnceDeletePreview(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Preview retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeletePreviewAsync</summary>
+        public async Task DeletePreviewAsync()
+        {
+            // Snippet: DeletePreviewAsync(string, CallSettings)
+            // Additional: DeletePreviewAsync(string, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/previews/[PREVIEW]";
+            // Make the request
+            Operation<Preview, OperationMetadata> response = await configClient.DeletePreviewAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Preview, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Preview result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Preview, OperationMetadata> retrievedResponse = await configClient.PollOnceDeletePreviewAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Preview retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeletePreview</summary>
+        public void DeletePreviewResourceNames()
+        {
+            // Snippet: DeletePreview(PreviewName, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            PreviewName name = PreviewName.FromProjectLocationPreview("[PROJECT]", "[LOCATION]", "[PREVIEW]");
+            // Make the request
+            Operation<Preview, OperationMetadata> response = configClient.DeletePreview(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Preview, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Preview result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Preview, OperationMetadata> retrievedResponse = configClient.PollOnceDeletePreview(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Preview retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeletePreviewAsync</summary>
+        public async Task DeletePreviewResourceNamesAsync()
+        {
+            // Snippet: DeletePreviewAsync(PreviewName, CallSettings)
+            // Additional: DeletePreviewAsync(PreviewName, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            PreviewName name = PreviewName.FromProjectLocationPreview("[PROJECT]", "[LOCATION]", "[PREVIEW]");
+            // Make the request
+            Operation<Preview, OperationMetadata> response = await configClient.DeletePreviewAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Preview, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Preview result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Preview, OperationMetadata> retrievedResponse = await configClient.PollOnceDeletePreviewAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Preview retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportPreviewResult</summary>
+        public void ExportPreviewResultRequestObject()
+        {
+            // Snippet: ExportPreviewResult(ExportPreviewResultRequest, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            ExportPreviewResultRequest request = new ExportPreviewResultRequest
+            {
+                ParentAsPreviewName = PreviewName.FromProjectLocationPreview("[PROJECT]", "[LOCATION]", "[PREVIEW]"),
+            };
+            // Make the request
+            ExportPreviewResultResponse response = configClient.ExportPreviewResult(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportPreviewResultAsync</summary>
+        public async Task ExportPreviewResultRequestObjectAsync()
+        {
+            // Snippet: ExportPreviewResultAsync(ExportPreviewResultRequest, CallSettings)
+            // Additional: ExportPreviewResultAsync(ExportPreviewResultRequest, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            ExportPreviewResultRequest request = new ExportPreviewResultRequest
+            {
+                ParentAsPreviewName = PreviewName.FromProjectLocationPreview("[PROJECT]", "[LOCATION]", "[PREVIEW]"),
+            };
+            // Make the request
+            ExportPreviewResultResponse response = await configClient.ExportPreviewResultAsync(request);
+            // End snippet
+        }
     }
 }

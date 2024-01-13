@@ -71,6 +71,13 @@ namespace Google.Cloud.Config.V1
             UnlockDeploymentSettings = existing.UnlockDeploymentSettings;
             UnlockDeploymentOperationsSettings = existing.UnlockDeploymentOperationsSettings.Clone();
             ExportLockInfoSettings = existing.ExportLockInfoSettings;
+            CreatePreviewSettings = existing.CreatePreviewSettings;
+            CreatePreviewOperationsSettings = existing.CreatePreviewOperationsSettings.Clone();
+            GetPreviewSettings = existing.GetPreviewSettings;
+            ListPreviewsSettings = existing.ListPreviewsSettings;
+            DeletePreviewSettings = existing.DeletePreviewSettings;
+            DeletePreviewOperationsSettings = existing.DeletePreviewOperationsSettings.Clone();
+            ExportPreviewResultSettings = existing.ExportPreviewResultSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -359,6 +366,102 @@ namespace Google.Cloud.Config.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ExportLockInfoSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>ConfigClient.CreatePreview</c>
+        ///  and <c>ConfigClient.CreatePreviewAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreatePreviewSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ConfigClient.CreatePreview</c> and
+        /// <c>ConfigClient.CreatePreviewAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreatePreviewOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>ConfigClient.GetPreview</c>
+        /// and <c>ConfigClient.GetPreviewAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetPreviewSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>ConfigClient.ListPreviews</c>
+        ///  and <c>ConfigClient.ListPreviewsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListPreviewsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>ConfigClient.DeletePreview</c>
+        ///  and <c>ConfigClient.DeletePreviewAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeletePreviewSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ConfigClient.DeletePreview</c> and
+        /// <c>ConfigClient.DeletePreviewAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeletePreviewOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigClient.ExportPreviewResult</c> and <c>ConfigClient.ExportPreviewResultAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ExportPreviewResultSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -2409,6 +2512,564 @@ namespace Google.Cloud.Config.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<LockInfo> ExportLockInfoAsync(DeploymentName name, st::CancellationToken cancellationToken) =>
             ExportLockInfoAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a [Preview][google.cloud.config.v1.Preview].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Preview, OperationMetadata> CreatePreview(CreatePreviewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a [Preview][google.cloud.config.v1.Preview].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Preview, OperationMetadata>> CreatePreviewAsync(CreatePreviewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a [Preview][google.cloud.config.v1.Preview].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Preview, OperationMetadata>> CreatePreviewAsync(CreatePreviewRequest request, st::CancellationToken cancellationToken) =>
+            CreatePreviewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreatePreview</c>.</summary>
+        public virtual lro::OperationsClient CreatePreviewOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreatePreview</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Preview, OperationMetadata> PollOnceCreatePreview(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Preview, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreatePreviewOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreatePreview</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Preview, OperationMetadata>> PollOnceCreatePreviewAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Preview, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreatePreviewOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a [Preview][google.cloud.config.v1.Preview].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent in whose context the Preview is created. The parent
+        /// value is in the format: 'projects/{project_id}/locations/{location}'.
+        /// </param>
+        /// <param name="preview">
+        /// Required. [Preview][google.cloud.config.v1.Preview] resource to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Preview, OperationMetadata> CreatePreview(string parent, Preview preview, gaxgrpc::CallSettings callSettings = null) =>
+            CreatePreview(new CreatePreviewRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Preview = gax::GaxPreconditions.CheckNotNull(preview, nameof(preview)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a [Preview][google.cloud.config.v1.Preview].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent in whose context the Preview is created. The parent
+        /// value is in the format: 'projects/{project_id}/locations/{location}'.
+        /// </param>
+        /// <param name="preview">
+        /// Required. [Preview][google.cloud.config.v1.Preview] resource to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Preview, OperationMetadata>> CreatePreviewAsync(string parent, Preview preview, gaxgrpc::CallSettings callSettings = null) =>
+            CreatePreviewAsync(new CreatePreviewRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Preview = gax::GaxPreconditions.CheckNotNull(preview, nameof(preview)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a [Preview][google.cloud.config.v1.Preview].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent in whose context the Preview is created. The parent
+        /// value is in the format: 'projects/{project_id}/locations/{location}'.
+        /// </param>
+        /// <param name="preview">
+        /// Required. [Preview][google.cloud.config.v1.Preview] resource to be created.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Preview, OperationMetadata>> CreatePreviewAsync(string parent, Preview preview, st::CancellationToken cancellationToken) =>
+            CreatePreviewAsync(parent, preview, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a [Preview][google.cloud.config.v1.Preview].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent in whose context the Preview is created. The parent
+        /// value is in the format: 'projects/{project_id}/locations/{location}'.
+        /// </param>
+        /// <param name="preview">
+        /// Required. [Preview][google.cloud.config.v1.Preview] resource to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Preview, OperationMetadata> CreatePreview(gagr::LocationName parent, Preview preview, gaxgrpc::CallSettings callSettings = null) =>
+            CreatePreview(new CreatePreviewRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Preview = gax::GaxPreconditions.CheckNotNull(preview, nameof(preview)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a [Preview][google.cloud.config.v1.Preview].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent in whose context the Preview is created. The parent
+        /// value is in the format: 'projects/{project_id}/locations/{location}'.
+        /// </param>
+        /// <param name="preview">
+        /// Required. [Preview][google.cloud.config.v1.Preview] resource to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Preview, OperationMetadata>> CreatePreviewAsync(gagr::LocationName parent, Preview preview, gaxgrpc::CallSettings callSettings = null) =>
+            CreatePreviewAsync(new CreatePreviewRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Preview = gax::GaxPreconditions.CheckNotNull(preview, nameof(preview)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a [Preview][google.cloud.config.v1.Preview].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent in whose context the Preview is created. The parent
+        /// value is in the format: 'projects/{project_id}/locations/{location}'.
+        /// </param>
+        /// <param name="preview">
+        /// Required. [Preview][google.cloud.config.v1.Preview] resource to be created.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Preview, OperationMetadata>> CreatePreviewAsync(gagr::LocationName parent, Preview preview, st::CancellationToken cancellationToken) =>
+            CreatePreviewAsync(parent, preview, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details about a [Preview][google.cloud.config.v1.Preview].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Preview GetPreview(GetPreviewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details about a [Preview][google.cloud.config.v1.Preview].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Preview> GetPreviewAsync(GetPreviewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details about a [Preview][google.cloud.config.v1.Preview].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Preview> GetPreviewAsync(GetPreviewRequest request, st::CancellationToken cancellationToken) =>
+            GetPreviewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details about a [Preview][google.cloud.config.v1.Preview].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the preview. Format:
+        /// 'projects/{project_id}/locations/{location}/previews/{preview}'.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Preview GetPreview(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPreview(new GetPreviewRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details about a [Preview][google.cloud.config.v1.Preview].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the preview. Format:
+        /// 'projects/{project_id}/locations/{location}/previews/{preview}'.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Preview> GetPreviewAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPreviewAsync(new GetPreviewRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details about a [Preview][google.cloud.config.v1.Preview].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the preview. Format:
+        /// 'projects/{project_id}/locations/{location}/previews/{preview}'.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Preview> GetPreviewAsync(string name, st::CancellationToken cancellationToken) =>
+            GetPreviewAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details about a [Preview][google.cloud.config.v1.Preview].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the preview. Format:
+        /// 'projects/{project_id}/locations/{location}/previews/{preview}'.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Preview GetPreview(PreviewName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPreview(new GetPreviewRequest
+            {
+                PreviewName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details about a [Preview][google.cloud.config.v1.Preview].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the preview. Format:
+        /// 'projects/{project_id}/locations/{location}/previews/{preview}'.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Preview> GetPreviewAsync(PreviewName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPreviewAsync(new GetPreviewRequest
+            {
+                PreviewName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details about a [Preview][google.cloud.config.v1.Preview].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the preview. Format:
+        /// 'projects/{project_id}/locations/{location}/previews/{preview}'.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Preview> GetPreviewAsync(PreviewName name, st::CancellationToken cancellationToken) =>
+            GetPreviewAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists [Preview][google.cloud.config.v1.Preview]s in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Preview"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListPreviewsResponse, Preview> ListPreviews(ListPreviewsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists [Preview][google.cloud.config.v1.Preview]s in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Preview"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListPreviewsResponse, Preview> ListPreviewsAsync(ListPreviewsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists [Preview][google.cloud.config.v1.Preview]s in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent in whose context the Previews are listed. The parent
+        /// value is in the format: 'projects/{project_id}/locations/{location}'.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Preview"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListPreviewsResponse, Preview> ListPreviews(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListPreviews(new ListPreviewsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists [Preview][google.cloud.config.v1.Preview]s in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent in whose context the Previews are listed. The parent
+        /// value is in the format: 'projects/{project_id}/locations/{location}'.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Preview"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListPreviewsResponse, Preview> ListPreviewsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListPreviewsAsync(new ListPreviewsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists [Preview][google.cloud.config.v1.Preview]s in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent in whose context the Previews are listed. The parent
+        /// value is in the format: 'projects/{project_id}/locations/{location}'.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Preview"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListPreviewsResponse, Preview> ListPreviews(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListPreviews(new ListPreviewsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists [Preview][google.cloud.config.v1.Preview]s in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent in whose context the Previews are listed. The parent
+        /// value is in the format: 'projects/{project_id}/locations/{location}'.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Preview"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListPreviewsResponse, Preview> ListPreviewsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListPreviewsAsync(new ListPreviewsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a [Preview][google.cloud.config.v1.Preview].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Preview, OperationMetadata> DeletePreview(DeletePreviewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a [Preview][google.cloud.config.v1.Preview].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Preview, OperationMetadata>> DeletePreviewAsync(DeletePreviewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a [Preview][google.cloud.config.v1.Preview].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Preview, OperationMetadata>> DeletePreviewAsync(DeletePreviewRequest request, st::CancellationToken cancellationToken) =>
+            DeletePreviewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeletePreview</c>.</summary>
+        public virtual lro::OperationsClient DeletePreviewOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeletePreview</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Preview, OperationMetadata> PollOnceDeletePreview(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Preview, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeletePreviewOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeletePreview</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Preview, OperationMetadata>> PollOnceDeletePreviewAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Preview, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeletePreviewOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a [Preview][google.cloud.config.v1.Preview].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Preview in the format:
+        /// 'projects/{project_id}/locations/{location}/previews/{preview}'.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Preview, OperationMetadata> DeletePreview(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeletePreview(new DeletePreviewRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a [Preview][google.cloud.config.v1.Preview].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Preview in the format:
+        /// 'projects/{project_id}/locations/{location}/previews/{preview}'.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Preview, OperationMetadata>> DeletePreviewAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeletePreviewAsync(new DeletePreviewRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a [Preview][google.cloud.config.v1.Preview].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Preview in the format:
+        /// 'projects/{project_id}/locations/{location}/previews/{preview}'.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Preview, OperationMetadata>> DeletePreviewAsync(string name, st::CancellationToken cancellationToken) =>
+            DeletePreviewAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a [Preview][google.cloud.config.v1.Preview].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Preview in the format:
+        /// 'projects/{project_id}/locations/{location}/previews/{preview}'.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Preview, OperationMetadata> DeletePreview(PreviewName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeletePreview(new DeletePreviewRequest
+            {
+                PreviewName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a [Preview][google.cloud.config.v1.Preview].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Preview in the format:
+        /// 'projects/{project_id}/locations/{location}/previews/{preview}'.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Preview, OperationMetadata>> DeletePreviewAsync(PreviewName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeletePreviewAsync(new DeletePreviewRequest
+            {
+                PreviewName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a [Preview][google.cloud.config.v1.Preview].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Preview in the format:
+        /// 'projects/{project_id}/locations/{location}/previews/{preview}'.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Preview, OperationMetadata>> DeletePreviewAsync(PreviewName name, st::CancellationToken cancellationToken) =>
+            DeletePreviewAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Export [Preview][google.cloud.config.v1.Preview] results.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ExportPreviewResultResponse ExportPreviewResult(ExportPreviewResultRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Export [Preview][google.cloud.config.v1.Preview] results.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExportPreviewResultResponse> ExportPreviewResultAsync(ExportPreviewResultRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Export [Preview][google.cloud.config.v1.Preview] results.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExportPreviewResultResponse> ExportPreviewResultAsync(ExportPreviewResultRequest request, st::CancellationToken cancellationToken) =>
+            ExportPreviewResultAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Config client wrapper implementation, for convenient use.</summary>
@@ -2450,6 +3111,16 @@ namespace Google.Cloud.Config.V1
 
         private readonly gaxgrpc::ApiCall<ExportLockInfoRequest, LockInfo> _callExportLockInfo;
 
+        private readonly gaxgrpc::ApiCall<CreatePreviewRequest, lro::Operation> _callCreatePreview;
+
+        private readonly gaxgrpc::ApiCall<GetPreviewRequest, Preview> _callGetPreview;
+
+        private readonly gaxgrpc::ApiCall<ListPreviewsRequest, ListPreviewsResponse> _callListPreviews;
+
+        private readonly gaxgrpc::ApiCall<DeletePreviewRequest, lro::Operation> _callDeletePreview;
+
+        private readonly gaxgrpc::ApiCall<ExportPreviewResultRequest, ExportPreviewResultResponse> _callExportPreviewResult;
+
         /// <summary>
         /// Constructs a client wrapper for the Config service, with the specified gRPC client and settings.
         /// </summary>
@@ -2466,6 +3137,8 @@ namespace Google.Cloud.Config.V1
             DeleteDeploymentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDeploymentOperationsSettings, logger);
             LockDeploymentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.LockDeploymentOperationsSettings, logger);
             UnlockDeploymentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UnlockDeploymentOperationsSettings, logger);
+            CreatePreviewOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreatePreviewOperationsSettings, logger);
+            DeletePreviewOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeletePreviewOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callListDeployments = clientHelper.BuildApiCall<ListDeploymentsRequest, ListDeploymentsResponse>("ListDeployments", grpcClient.ListDeploymentsAsync, grpcClient.ListDeployments, effectiveSettings.ListDeploymentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -2516,6 +3189,21 @@ namespace Google.Cloud.Config.V1
             _callExportLockInfo = clientHelper.BuildApiCall<ExportLockInfoRequest, LockInfo>("ExportLockInfo", grpcClient.ExportLockInfoAsync, grpcClient.ExportLockInfo, effectiveSettings.ExportLockInfoSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callExportLockInfo);
             Modify_ExportLockInfoApiCall(ref _callExportLockInfo);
+            _callCreatePreview = clientHelper.BuildApiCall<CreatePreviewRequest, lro::Operation>("CreatePreview", grpcClient.CreatePreviewAsync, grpcClient.CreatePreview, effectiveSettings.CreatePreviewSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreatePreview);
+            Modify_CreatePreviewApiCall(ref _callCreatePreview);
+            _callGetPreview = clientHelper.BuildApiCall<GetPreviewRequest, Preview>("GetPreview", grpcClient.GetPreviewAsync, grpcClient.GetPreview, effectiveSettings.GetPreviewSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetPreview);
+            Modify_GetPreviewApiCall(ref _callGetPreview);
+            _callListPreviews = clientHelper.BuildApiCall<ListPreviewsRequest, ListPreviewsResponse>("ListPreviews", grpcClient.ListPreviewsAsync, grpcClient.ListPreviews, effectiveSettings.ListPreviewsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListPreviews);
+            Modify_ListPreviewsApiCall(ref _callListPreviews);
+            _callDeletePreview = clientHelper.BuildApiCall<DeletePreviewRequest, lro::Operation>("DeletePreview", grpcClient.DeletePreviewAsync, grpcClient.DeletePreview, effectiveSettings.DeletePreviewSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeletePreview);
+            Modify_DeletePreviewApiCall(ref _callDeletePreview);
+            _callExportPreviewResult = clientHelper.BuildApiCall<ExportPreviewResultRequest, ExportPreviewResultResponse>("ExportPreviewResult", grpcClient.ExportPreviewResultAsync, grpcClient.ExportPreviewResult, effectiveSettings.ExportPreviewResultSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callExportPreviewResult);
+            Modify_ExportPreviewResultApiCall(ref _callExportPreviewResult);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2552,6 +3240,16 @@ namespace Google.Cloud.Config.V1
         partial void Modify_UnlockDeploymentApiCall(ref gaxgrpc::ApiCall<UnlockDeploymentRequest, lro::Operation> call);
 
         partial void Modify_ExportLockInfoApiCall(ref gaxgrpc::ApiCall<ExportLockInfoRequest, LockInfo> call);
+
+        partial void Modify_CreatePreviewApiCall(ref gaxgrpc::ApiCall<CreatePreviewRequest, lro::Operation> call);
+
+        partial void Modify_GetPreviewApiCall(ref gaxgrpc::ApiCall<GetPreviewRequest, Preview> call);
+
+        partial void Modify_ListPreviewsApiCall(ref gaxgrpc::ApiCall<ListPreviewsRequest, ListPreviewsResponse> call);
+
+        partial void Modify_DeletePreviewApiCall(ref gaxgrpc::ApiCall<DeletePreviewRequest, lro::Operation> call);
+
+        partial void Modify_ExportPreviewResultApiCall(ref gaxgrpc::ApiCall<ExportPreviewResultRequest, ExportPreviewResultResponse> call);
 
         partial void OnConstruction(Config.ConfigClient grpcClient, ConfigSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -2595,6 +3293,16 @@ namespace Google.Cloud.Config.V1
         partial void Modify_UnlockDeploymentRequest(ref UnlockDeploymentRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ExportLockInfoRequest(ref ExportLockInfoRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreatePreviewRequest(ref CreatePreviewRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetPreviewRequest(ref GetPreviewRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListPreviewsRequest(ref ListPreviewsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeletePreviewRequest(ref DeletePreviewRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ExportPreviewResultRequest(ref ExportPreviewResultRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists [Deployment][google.cloud.config.v1.Deployment]s in a given project
@@ -3000,6 +3708,134 @@ namespace Google.Cloud.Config.V1
             Modify_ExportLockInfoRequest(ref request, ref callSettings);
             return _callExportLockInfo.Async(request, callSettings);
         }
+
+        /// <summary>The long-running operations client for <c>CreatePreview</c>.</summary>
+        public override lro::OperationsClient CreatePreviewOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a [Preview][google.cloud.config.v1.Preview].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Preview, OperationMetadata> CreatePreview(CreatePreviewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreatePreviewRequest(ref request, ref callSettings);
+            return new lro::Operation<Preview, OperationMetadata>(_callCreatePreview.Sync(request, callSettings), CreatePreviewOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a [Preview][google.cloud.config.v1.Preview].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Preview, OperationMetadata>> CreatePreviewAsync(CreatePreviewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreatePreviewRequest(ref request, ref callSettings);
+            return new lro::Operation<Preview, OperationMetadata>(await _callCreatePreview.Async(request, callSettings).ConfigureAwait(false), CreatePreviewOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets details about a [Preview][google.cloud.config.v1.Preview].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Preview GetPreview(GetPreviewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetPreviewRequest(ref request, ref callSettings);
+            return _callGetPreview.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details about a [Preview][google.cloud.config.v1.Preview].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Preview> GetPreviewAsync(GetPreviewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetPreviewRequest(ref request, ref callSettings);
+            return _callGetPreview.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists [Preview][google.cloud.config.v1.Preview]s in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Preview"/> resources.</returns>
+        public override gax::PagedEnumerable<ListPreviewsResponse, Preview> ListPreviews(ListPreviewsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListPreviewsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListPreviewsRequest, ListPreviewsResponse, Preview>(_callListPreviews, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists [Preview][google.cloud.config.v1.Preview]s in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Preview"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListPreviewsResponse, Preview> ListPreviewsAsync(ListPreviewsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListPreviewsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListPreviewsRequest, ListPreviewsResponse, Preview>(_callListPreviews, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>DeletePreview</c>.</summary>
+        public override lro::OperationsClient DeletePreviewOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a [Preview][google.cloud.config.v1.Preview].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Preview, OperationMetadata> DeletePreview(DeletePreviewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeletePreviewRequest(ref request, ref callSettings);
+            return new lro::Operation<Preview, OperationMetadata>(_callDeletePreview.Sync(request, callSettings), DeletePreviewOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a [Preview][google.cloud.config.v1.Preview].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Preview, OperationMetadata>> DeletePreviewAsync(DeletePreviewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeletePreviewRequest(ref request, ref callSettings);
+            return new lro::Operation<Preview, OperationMetadata>(await _callDeletePreview.Async(request, callSettings).ConfigureAwait(false), DeletePreviewOperationsClient);
+        }
+
+        /// <summary>
+        /// Export [Preview][google.cloud.config.v1.Preview] results.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ExportPreviewResultResponse ExportPreviewResult(ExportPreviewResultRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExportPreviewResultRequest(ref request, ref callSettings);
+            return _callExportPreviewResult.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Export [Preview][google.cloud.config.v1.Preview] results.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ExportPreviewResultResponse> ExportPreviewResultAsync(ExportPreviewResultRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExportPreviewResultRequest(ref request, ref callSettings);
+            return _callExportPreviewResult.Async(request, callSettings);
+        }
     }
 
     public partial class ListDeploymentsRequest : gaxgrpc::IPageRequest
@@ -3011,6 +3847,10 @@ namespace Google.Cloud.Config.V1
     }
 
     public partial class ListResourcesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListPreviewsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -3034,6 +3874,14 @@ namespace Google.Cloud.Config.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Resource> GetEnumerator() => Resources.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListPreviewsResponse : gaxgrpc::IPageResponse<Preview>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Preview> GetEnumerator() => Previews.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

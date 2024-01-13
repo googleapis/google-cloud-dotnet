@@ -116,6 +116,22 @@ namespace Google.Cloud.Config.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.ExportLockInfoRequest> __Marshaller_google_cloud_config_v1_ExportLockInfoRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.ExportLockInfoRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.LockInfo> __Marshaller_google_cloud_config_v1_LockInfo = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.LockInfo.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.CreatePreviewRequest> __Marshaller_google_cloud_config_v1_CreatePreviewRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.CreatePreviewRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.GetPreviewRequest> __Marshaller_google_cloud_config_v1_GetPreviewRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.GetPreviewRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.Preview> __Marshaller_google_cloud_config_v1_Preview = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.Preview.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.ListPreviewsRequest> __Marshaller_google_cloud_config_v1_ListPreviewsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.ListPreviewsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.ListPreviewsResponse> __Marshaller_google_cloud_config_v1_ListPreviewsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.ListPreviewsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.DeletePreviewRequest> __Marshaller_google_cloud_config_v1_DeletePreviewRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.DeletePreviewRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.ExportPreviewResultRequest> __Marshaller_google_cloud_config_v1_ExportPreviewResultRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.ExportPreviewResultRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.ExportPreviewResultResponse> __Marshaller_google_cloud_config_v1_ExportPreviewResultResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.ExportPreviewResultResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Config.V1.ListDeploymentsRequest, global::Google.Cloud.Config.V1.ListDeploymentsResponse> __Method_ListDeployments = new grpc::Method<global::Google.Cloud.Config.V1.ListDeploymentsRequest, global::Google.Cloud.Config.V1.ListDeploymentsResponse>(
@@ -244,6 +260,46 @@ namespace Google.Cloud.Config.V1 {
         "ExportLockInfo",
         __Marshaller_google_cloud_config_v1_ExportLockInfoRequest,
         __Marshaller_google_cloud_config_v1_LockInfo);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Config.V1.CreatePreviewRequest, global::Google.LongRunning.Operation> __Method_CreatePreview = new grpc::Method<global::Google.Cloud.Config.V1.CreatePreviewRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreatePreview",
+        __Marshaller_google_cloud_config_v1_CreatePreviewRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Config.V1.GetPreviewRequest, global::Google.Cloud.Config.V1.Preview> __Method_GetPreview = new grpc::Method<global::Google.Cloud.Config.V1.GetPreviewRequest, global::Google.Cloud.Config.V1.Preview>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetPreview",
+        __Marshaller_google_cloud_config_v1_GetPreviewRequest,
+        __Marshaller_google_cloud_config_v1_Preview);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Config.V1.ListPreviewsRequest, global::Google.Cloud.Config.V1.ListPreviewsResponse> __Method_ListPreviews = new grpc::Method<global::Google.Cloud.Config.V1.ListPreviewsRequest, global::Google.Cloud.Config.V1.ListPreviewsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListPreviews",
+        __Marshaller_google_cloud_config_v1_ListPreviewsRequest,
+        __Marshaller_google_cloud_config_v1_ListPreviewsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Config.V1.DeletePreviewRequest, global::Google.LongRunning.Operation> __Method_DeletePreview = new grpc::Method<global::Google.Cloud.Config.V1.DeletePreviewRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeletePreview",
+        __Marshaller_google_cloud_config_v1_DeletePreviewRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Config.V1.ExportPreviewResultRequest, global::Google.Cloud.Config.V1.ExportPreviewResultResponse> __Method_ExportPreviewResult = new grpc::Method<global::Google.Cloud.Config.V1.ExportPreviewResultRequest, global::Google.Cloud.Config.V1.ExportPreviewResultResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ExportPreviewResult",
+        __Marshaller_google_cloud_config_v1_ExportPreviewResultRequest,
+        __Marshaller_google_cloud_config_v1_ExportPreviewResultResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -446,6 +502,67 @@ namespace Google.Cloud.Config.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Config.V1.LockInfo> ExportLockInfo(global::Google.Cloud.Config.V1.ExportLockInfoRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a [Preview][google.cloud.config.v1.Preview].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreatePreview(global::Google.Cloud.Config.V1.CreatePreviewRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details about a [Preview][google.cloud.config.v1.Preview].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Config.V1.Preview> GetPreview(global::Google.Cloud.Config.V1.GetPreviewRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists [Preview][google.cloud.config.v1.Preview]s in a given project and
+      /// location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Config.V1.ListPreviewsResponse> ListPreviews(global::Google.Cloud.Config.V1.ListPreviewsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a [Preview][google.cloud.config.v1.Preview].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeletePreview(global::Google.Cloud.Config.V1.DeletePreviewRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Export [Preview][google.cloud.config.v1.Preview] results.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Config.V1.ExportPreviewResultResponse> ExportPreviewResult(global::Google.Cloud.Config.V1.ExportPreviewResultRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1259,6 +1376,250 @@ namespace Google.Cloud.Config.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ExportLockInfo, null, options, request);
       }
+      /// <summary>
+      /// Creates a [Preview][google.cloud.config.v1.Preview].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreatePreview(global::Google.Cloud.Config.V1.CreatePreviewRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreatePreview(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a [Preview][google.cloud.config.v1.Preview].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreatePreview(global::Google.Cloud.Config.V1.CreatePreviewRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreatePreview, null, options, request);
+      }
+      /// <summary>
+      /// Creates a [Preview][google.cloud.config.v1.Preview].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreatePreviewAsync(global::Google.Cloud.Config.V1.CreatePreviewRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreatePreviewAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a [Preview][google.cloud.config.v1.Preview].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreatePreviewAsync(global::Google.Cloud.Config.V1.CreatePreviewRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreatePreview, null, options, request);
+      }
+      /// <summary>
+      /// Gets details about a [Preview][google.cloud.config.v1.Preview].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Config.V1.Preview GetPreview(global::Google.Cloud.Config.V1.GetPreviewRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetPreview(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details about a [Preview][google.cloud.config.v1.Preview].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Config.V1.Preview GetPreview(global::Google.Cloud.Config.V1.GetPreviewRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetPreview, null, options, request);
+      }
+      /// <summary>
+      /// Gets details about a [Preview][google.cloud.config.v1.Preview].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Config.V1.Preview> GetPreviewAsync(global::Google.Cloud.Config.V1.GetPreviewRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetPreviewAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details about a [Preview][google.cloud.config.v1.Preview].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Config.V1.Preview> GetPreviewAsync(global::Google.Cloud.Config.V1.GetPreviewRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetPreview, null, options, request);
+      }
+      /// <summary>
+      /// Lists [Preview][google.cloud.config.v1.Preview]s in a given project and
+      /// location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Config.V1.ListPreviewsResponse ListPreviews(global::Google.Cloud.Config.V1.ListPreviewsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListPreviews(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists [Preview][google.cloud.config.v1.Preview]s in a given project and
+      /// location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Config.V1.ListPreviewsResponse ListPreviews(global::Google.Cloud.Config.V1.ListPreviewsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListPreviews, null, options, request);
+      }
+      /// <summary>
+      /// Lists [Preview][google.cloud.config.v1.Preview]s in a given project and
+      /// location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Config.V1.ListPreviewsResponse> ListPreviewsAsync(global::Google.Cloud.Config.V1.ListPreviewsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListPreviewsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists [Preview][google.cloud.config.v1.Preview]s in a given project and
+      /// location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Config.V1.ListPreviewsResponse> ListPreviewsAsync(global::Google.Cloud.Config.V1.ListPreviewsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListPreviews, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a [Preview][google.cloud.config.v1.Preview].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeletePreview(global::Google.Cloud.Config.V1.DeletePreviewRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeletePreview(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a [Preview][google.cloud.config.v1.Preview].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeletePreview(global::Google.Cloud.Config.V1.DeletePreviewRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeletePreview, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a [Preview][google.cloud.config.v1.Preview].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeletePreviewAsync(global::Google.Cloud.Config.V1.DeletePreviewRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeletePreviewAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a [Preview][google.cloud.config.v1.Preview].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeletePreviewAsync(global::Google.Cloud.Config.V1.DeletePreviewRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeletePreview, null, options, request);
+      }
+      /// <summary>
+      /// Export [Preview][google.cloud.config.v1.Preview] results.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Config.V1.ExportPreviewResultResponse ExportPreviewResult(global::Google.Cloud.Config.V1.ExportPreviewResultRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExportPreviewResult(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Export [Preview][google.cloud.config.v1.Preview] results.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Config.V1.ExportPreviewResultResponse ExportPreviewResult(global::Google.Cloud.Config.V1.ExportPreviewResultRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ExportPreviewResult, null, options, request);
+      }
+      /// <summary>
+      /// Export [Preview][google.cloud.config.v1.Preview] results.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Config.V1.ExportPreviewResultResponse> ExportPreviewResultAsync(global::Google.Cloud.Config.V1.ExportPreviewResultRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExportPreviewResultAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Export [Preview][google.cloud.config.v1.Preview] results.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Config.V1.ExportPreviewResultResponse> ExportPreviewResultAsync(global::Google.Cloud.Config.V1.ExportPreviewResultRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ExportPreviewResult, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ConfigClient NewInstance(ClientBaseConfiguration configuration)
@@ -1288,7 +1649,12 @@ namespace Google.Cloud.Config.V1 {
           .AddMethod(__Method_DeleteStatefile, serviceImpl.DeleteStatefile)
           .AddMethod(__Method_LockDeployment, serviceImpl.LockDeployment)
           .AddMethod(__Method_UnlockDeployment, serviceImpl.UnlockDeployment)
-          .AddMethod(__Method_ExportLockInfo, serviceImpl.ExportLockInfo).Build();
+          .AddMethod(__Method_ExportLockInfo, serviceImpl.ExportLockInfo)
+          .AddMethod(__Method_CreatePreview, serviceImpl.CreatePreview)
+          .AddMethod(__Method_GetPreview, serviceImpl.GetPreview)
+          .AddMethod(__Method_ListPreviews, serviceImpl.ListPreviews)
+          .AddMethod(__Method_DeletePreview, serviceImpl.DeletePreview)
+          .AddMethod(__Method_ExportPreviewResult, serviceImpl.ExportPreviewResult).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1314,6 +1680,11 @@ namespace Google.Cloud.Config.V1 {
       serviceBinder.AddMethod(__Method_LockDeployment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Config.V1.LockDeploymentRequest, global::Google.LongRunning.Operation>(serviceImpl.LockDeployment));
       serviceBinder.AddMethod(__Method_UnlockDeployment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Config.V1.UnlockDeploymentRequest, global::Google.LongRunning.Operation>(serviceImpl.UnlockDeployment));
       serviceBinder.AddMethod(__Method_ExportLockInfo, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Config.V1.ExportLockInfoRequest, global::Google.Cloud.Config.V1.LockInfo>(serviceImpl.ExportLockInfo));
+      serviceBinder.AddMethod(__Method_CreatePreview, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Config.V1.CreatePreviewRequest, global::Google.LongRunning.Operation>(serviceImpl.CreatePreview));
+      serviceBinder.AddMethod(__Method_GetPreview, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Config.V1.GetPreviewRequest, global::Google.Cloud.Config.V1.Preview>(serviceImpl.GetPreview));
+      serviceBinder.AddMethod(__Method_ListPreviews, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Config.V1.ListPreviewsRequest, global::Google.Cloud.Config.V1.ListPreviewsResponse>(serviceImpl.ListPreviews));
+      serviceBinder.AddMethod(__Method_DeletePreview, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Config.V1.DeletePreviewRequest, global::Google.LongRunning.Operation>(serviceImpl.DeletePreview));
+      serviceBinder.AddMethod(__Method_ExportPreviewResult, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Config.V1.ExportPreviewResultRequest, global::Google.Cloud.Config.V1.ExportPreviewResultResponse>(serviceImpl.ExportPreviewResult));
     }
 
   }

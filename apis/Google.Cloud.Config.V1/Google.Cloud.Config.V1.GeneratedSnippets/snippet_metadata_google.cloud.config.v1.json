@@ -4291,6 +4291,1299 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_CreatePreview_sync",
+      "title": "CreatePreviewRequestObject",
+      "description": "Snippet for CreatePreview",
+      "file": "ConfigClient.CreatePreviewRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePreview",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.CreatePreview",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.CreatePreviewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Config.V1.Preview, Google.Cloud.Config.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "CreatePreview",
+          "fullName": "google.cloud.config.v1.Config.CreatePreview",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_CreatePreview_async",
+      "title": "CreatePreviewRequestObjectAsync",
+      "description": "Snippet for CreatePreviewAsync",
+      "file": "ConfigClient.CreatePreviewRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePreviewAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.CreatePreviewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.CreatePreviewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Config.V1.Preview, Google.Cloud.Config.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "CreatePreview",
+          "fullName": "google.cloud.config.v1.Config.CreatePreview",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_CreatePreview_sync_flattened",
+      "title": "CreatePreview",
+      "description": "Snippet for CreatePreview",
+      "file": "ConfigClient.CreatePreviewSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePreview",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.CreatePreview",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Config.V1.Preview",
+            "name": "preview"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Config.V1.Preview, Google.Cloud.Config.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "CreatePreview",
+          "fullName": "google.cloud.config.v1.Config.CreatePreview",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_CreatePreview_async_flattened",
+      "title": "CreatePreviewAsync",
+      "description": "Snippet for CreatePreviewAsync",
+      "file": "ConfigClient.CreatePreviewAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePreviewAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.CreatePreviewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Config.V1.Preview",
+            "name": "preview"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Config.V1.Preview, Google.Cloud.Config.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "CreatePreview",
+          "fullName": "google.cloud.config.v1.Config.CreatePreview",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_CreatePreview_sync_flattened_resourceNames",
+      "title": "CreatePreviewResourceNames",
+      "description": "Snippet for CreatePreview",
+      "file": "ConfigClient.CreatePreviewResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePreview",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.CreatePreview",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Config.V1.Preview",
+            "name": "preview"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Config.V1.Preview, Google.Cloud.Config.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "CreatePreview",
+          "fullName": "google.cloud.config.v1.Config.CreatePreview",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_CreatePreview_async_flattened_resourceNames",
+      "title": "CreatePreviewResourceNamesAsync",
+      "description": "Snippet for CreatePreviewAsync",
+      "file": "ConfigClient.CreatePreviewResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePreviewAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.CreatePreviewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Config.V1.Preview",
+            "name": "preview"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Config.V1.Preview, Google.Cloud.Config.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "CreatePreview",
+          "fullName": "google.cloud.config.v1.Config.CreatePreview",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_GetPreview_sync",
+      "title": "GetPreviewRequestObject",
+      "description": "Snippet for GetPreview",
+      "file": "ConfigClient.GetPreviewRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPreview",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.GetPreview",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.GetPreviewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Config.V1.Preview",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetPreview",
+          "fullName": "google.cloud.config.v1.Config.GetPreview",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_GetPreview_async",
+      "title": "GetPreviewRequestObjectAsync",
+      "description": "Snippet for GetPreviewAsync",
+      "file": "ConfigClient.GetPreviewRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPreviewAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.GetPreviewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.GetPreviewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Config.V1.Preview>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetPreview",
+          "fullName": "google.cloud.config.v1.Config.GetPreview",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_GetPreview_sync_flattened",
+      "title": "GetPreview",
+      "description": "Snippet for GetPreview",
+      "file": "ConfigClient.GetPreviewSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPreview",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.GetPreview",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Config.V1.Preview",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetPreview",
+          "fullName": "google.cloud.config.v1.Config.GetPreview",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_GetPreview_async_flattened",
+      "title": "GetPreviewAsync",
+      "description": "Snippet for GetPreviewAsync",
+      "file": "ConfigClient.GetPreviewAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPreviewAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.GetPreviewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Config.V1.Preview>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetPreview",
+          "fullName": "google.cloud.config.v1.Config.GetPreview",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_GetPreview_sync_flattened_resourceNames",
+      "title": "GetPreviewResourceNames",
+      "description": "Snippet for GetPreview",
+      "file": "ConfigClient.GetPreviewResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPreview",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.GetPreview",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.PreviewName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Config.V1.Preview",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetPreview",
+          "fullName": "google.cloud.config.v1.Config.GetPreview",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_GetPreview_async_flattened_resourceNames",
+      "title": "GetPreviewResourceNamesAsync",
+      "description": "Snippet for GetPreviewAsync",
+      "file": "ConfigClient.GetPreviewResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPreviewAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.GetPreviewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.PreviewName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Config.V1.Preview>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "GetPreview",
+          "fullName": "google.cloud.config.v1.Config.GetPreview",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_ListPreviews_sync",
+      "title": "ListPreviewsRequestObject",
+      "description": "Snippet for ListPreviews",
+      "file": "ConfigClient.ListPreviewsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPreviews",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.ListPreviews",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.ListPreviewsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Config.V1.ListPreviewsResponse, Google.Cloud.Config.V1.Preview>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListPreviews",
+          "fullName": "google.cloud.config.v1.Config.ListPreviews",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_ListPreviews_async",
+      "title": "ListPreviewsRequestObjectAsync",
+      "description": "Snippet for ListPreviewsAsync",
+      "file": "ConfigClient.ListPreviewsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPreviewsAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.ListPreviewsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.ListPreviewsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Config.V1.ListPreviewsResponse, Google.Cloud.Config.V1.Preview>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListPreviews",
+          "fullName": "google.cloud.config.v1.Config.ListPreviews",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_ListPreviews_sync_flattened",
+      "title": "ListPreviews",
+      "description": "Snippet for ListPreviews",
+      "file": "ConfigClient.ListPreviewsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPreviews",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.ListPreviews",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Config.V1.ListPreviewsResponse, Google.Cloud.Config.V1.Preview>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListPreviews",
+          "fullName": "google.cloud.config.v1.Config.ListPreviews",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_ListPreviews_async_flattened",
+      "title": "ListPreviewsAsync",
+      "description": "Snippet for ListPreviewsAsync",
+      "file": "ConfigClient.ListPreviewsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPreviewsAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.ListPreviewsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Config.V1.ListPreviewsResponse, Google.Cloud.Config.V1.Preview>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListPreviews",
+          "fullName": "google.cloud.config.v1.Config.ListPreviews",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_ListPreviews_sync_flattened_resourceNames",
+      "title": "ListPreviewsResourceNames",
+      "description": "Snippet for ListPreviews",
+      "file": "ConfigClient.ListPreviewsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPreviews",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.ListPreviews",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Config.V1.ListPreviewsResponse, Google.Cloud.Config.V1.Preview>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListPreviews",
+          "fullName": "google.cloud.config.v1.Config.ListPreviews",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_ListPreviews_async_flattened_resourceNames",
+      "title": "ListPreviewsResourceNamesAsync",
+      "description": "Snippet for ListPreviewsAsync",
+      "file": "ConfigClient.ListPreviewsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPreviewsAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.ListPreviewsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Config.V1.ListPreviewsResponse, Google.Cloud.Config.V1.Preview>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ListPreviews",
+          "fullName": "google.cloud.config.v1.Config.ListPreviews",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_DeletePreview_sync",
+      "title": "DeletePreviewRequestObject",
+      "description": "Snippet for DeletePreview",
+      "file": "ConfigClient.DeletePreviewRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePreview",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.DeletePreview",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.DeletePreviewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Config.V1.Preview, Google.Cloud.Config.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "DeletePreview",
+          "fullName": "google.cloud.config.v1.Config.DeletePreview",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_DeletePreview_async",
+      "title": "DeletePreviewRequestObjectAsync",
+      "description": "Snippet for DeletePreviewAsync",
+      "file": "ConfigClient.DeletePreviewRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePreviewAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.DeletePreviewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.DeletePreviewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Config.V1.Preview, Google.Cloud.Config.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "DeletePreview",
+          "fullName": "google.cloud.config.v1.Config.DeletePreview",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_DeletePreview_sync_flattened",
+      "title": "DeletePreview",
+      "description": "Snippet for DeletePreview",
+      "file": "ConfigClient.DeletePreviewSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePreview",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.DeletePreview",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Config.V1.Preview, Google.Cloud.Config.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "DeletePreview",
+          "fullName": "google.cloud.config.v1.Config.DeletePreview",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_DeletePreview_async_flattened",
+      "title": "DeletePreviewAsync",
+      "description": "Snippet for DeletePreviewAsync",
+      "file": "ConfigClient.DeletePreviewAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePreviewAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.DeletePreviewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Config.V1.Preview, Google.Cloud.Config.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "DeletePreview",
+          "fullName": "google.cloud.config.v1.Config.DeletePreview",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_DeletePreview_sync_flattened_resourceNames",
+      "title": "DeletePreviewResourceNames",
+      "description": "Snippet for DeletePreview",
+      "file": "ConfigClient.DeletePreviewResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePreview",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.DeletePreview",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.PreviewName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Config.V1.Preview, Google.Cloud.Config.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "DeletePreview",
+          "fullName": "google.cloud.config.v1.Config.DeletePreview",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_DeletePreview_async_flattened_resourceNames",
+      "title": "DeletePreviewResourceNamesAsync",
+      "description": "Snippet for DeletePreviewAsync",
+      "file": "ConfigClient.DeletePreviewResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePreviewAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.DeletePreviewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.PreviewName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Config.V1.Preview, Google.Cloud.Config.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "DeletePreview",
+          "fullName": "google.cloud.config.v1.Config.DeletePreview",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_ExportPreviewResult_sync",
+      "title": "ExportPreviewResultRequestObject",
+      "description": "Snippet for ExportPreviewResult",
+      "file": "ConfigClient.ExportPreviewResultRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportPreviewResult",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.ExportPreviewResult",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.ExportPreviewResultRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Config.V1.ExportPreviewResultResponse",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ExportPreviewResult",
+          "fullName": "google.cloud.config.v1.Config.ExportPreviewResult",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "config_v1_generated_Config_ExportPreviewResult_async",
+      "title": "ExportPreviewResultRequestObjectAsync",
+      "description": "Snippet for ExportPreviewResultAsync",
+      "file": "ConfigClient.ExportPreviewResultRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportPreviewResultAsync",
+        "fullName": "Google.Cloud.Config.V1.ConfigClient.ExportPreviewResultAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Config.V1.ExportPreviewResultRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Config.V1.ExportPreviewResultResponse>",
+        "client": {
+          "shortName": "ConfigClient",
+          "fullName": "Google.Cloud.Config.V1.ConfigClient"
+        },
+        "method": {
+          "shortName": "ExportPreviewResult",
+          "fullName": "google.cloud.config.v1.Config.ExportPreviewResult",
+          "service": {
+            "shortName": "Config",
+            "fullName": "google.cloud.config.v1.Config"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }
