@@ -16,10 +16,22 @@
                 "CreateDeploymentAsync"
               ]
             },
+            "CreatePreview": {
+              "methods": [
+                "CreatePreview",
+                "CreatePreviewAsync"
+              ]
+            },
             "DeleteDeployment": {
               "methods": [
                 "DeleteDeployment",
                 "DeleteDeploymentAsync"
+              ]
+            },
+            "DeletePreview": {
+              "methods": [
+                "DeletePreview",
+                "DeletePreviewAsync"
               ]
             },
             "DeleteStatefile": {
@@ -40,6 +52,12 @@
                 "ExportLockInfoAsync"
               ]
             },
+            "ExportPreviewResult": {
+              "methods": [
+                "ExportPreviewResult",
+                "ExportPreviewResultAsync"
+              ]
+            },
             "ExportRevisionStatefile": {
               "methods": [
                 "ExportRevisionStatefile",
@@ -50,6 +68,12 @@
               "methods": [
                 "GetDeployment",
                 "GetDeploymentAsync"
+              ]
+            },
+            "GetPreview": {
+              "methods": [
+                "GetPreview",
+                "GetPreviewAsync"
               ]
             },
             "GetResource": {
@@ -74,6 +98,12 @@
               "methods": [
                 "ListDeployments",
                 "ListDeploymentsAsync"
+              ]
+            },
+            "ListPreviews": {
+              "methods": [
+                "ListPreviews",
+                "ListPreviewsAsync"
               ]
             },
             "ListResources": {
