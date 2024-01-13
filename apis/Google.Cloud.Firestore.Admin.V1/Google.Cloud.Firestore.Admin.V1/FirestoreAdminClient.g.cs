@@ -1429,7 +1429,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// only supports listing fields that have been explicitly overridden. To issue
         /// this query, call
         /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
-        /// with the filter set to `indexConfig.usesAncestorConfig:false or
+        /// with the filter set to `indexConfig.usesAncestorConfig:false` or
         /// `ttlConfig:*`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1446,7 +1446,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// only supports listing fields that have been explicitly overridden. To issue
         /// this query, call
         /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
-        /// with the filter set to `indexConfig.usesAncestorConfig:false or
+        /// with the filter set to `indexConfig.usesAncestorConfig:false` or
         /// `ttlConfig:*`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1463,7 +1463,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// only supports listing fields that have been explicitly overridden. To issue
         /// this query, call
         /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
-        /// with the filter set to `indexConfig.usesAncestorConfig:false or
+        /// with the filter set to `indexConfig.usesAncestorConfig:false` or
         /// `ttlConfig:*`.
         /// </summary>
         /// <param name="parent">
@@ -1496,7 +1496,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// only supports listing fields that have been explicitly overridden. To issue
         /// this query, call
         /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
-        /// with the filter set to `indexConfig.usesAncestorConfig:false or
+        /// with the filter set to `indexConfig.usesAncestorConfig:false` or
         /// `ttlConfig:*`.
         /// </summary>
         /// <param name="parent">
@@ -1529,7 +1529,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// only supports listing fields that have been explicitly overridden. To issue
         /// this query, call
         /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
-        /// with the filter set to `indexConfig.usesAncestorConfig:false or
+        /// with the filter set to `indexConfig.usesAncestorConfig:false` or
         /// `ttlConfig:*`.
         /// </summary>
         /// <param name="parent">
@@ -1562,7 +1562,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// only supports listing fields that have been explicitly overridden. To issue
         /// this query, call
         /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
-        /// with the filter set to `indexConfig.usesAncestorConfig:false or
+        /// with the filter set to `indexConfig.usesAncestorConfig:false` or
         /// `ttlConfig:*`.
         /// </summary>
         /// <param name="parent">
@@ -3060,7 +3060,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// only supports listing fields that have been explicitly overridden. To issue
         /// this query, call
         /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
-        /// with the filter set to `indexConfig.usesAncestorConfig:false or
+        /// with the filter set to `indexConfig.usesAncestorConfig:false` or
         /// `ttlConfig:*`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3080,7 +3080,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// only supports listing fields that have been explicitly overridden. To issue
         /// this query, call
         /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
-        /// with the filter set to `indexConfig.usesAncestorConfig:false or
+        /// with the filter set to `indexConfig.usesAncestorConfig:false` or
         /// `ttlConfig:*`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
