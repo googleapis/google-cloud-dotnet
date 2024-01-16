@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.11.0, released 2024-01-16
+
+### New features
+
+- Add ability to request compressed ReadRowsResponse rows ([commit 2f64e53](https://github.com/googleapis/google-cloud-dotnet/commit/2f64e5396d8aca9ac8da452a5c385d0283bdfefb))
+
 ## Version 3.10.0, released 2023-08-16
 
 ### New features
