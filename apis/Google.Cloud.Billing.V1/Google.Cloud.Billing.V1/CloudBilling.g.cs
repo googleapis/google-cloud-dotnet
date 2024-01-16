@@ -232,8 +232,8 @@ namespace Google.Cloud.Billing.V1 {
     /// <summary>
     /// Output only. True if the billing account is open, and will therefore be
     /// charged for any usage on associated projects. False if the billing account
-    /// is closed, and therefore projects associated with it will be unable to use
-    /// paid services.
+    /// is closed, and therefore projects associated with it are unable to use paid
+    /// services.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3175,7 +3175,7 @@ namespace Google.Cloud.Billing.V1 {
     public const int DestinationParentFieldNumber = 2;
     private string destinationParent_ = "";
     /// <summary>
-    /// Required. The resource name of the Organization to reparent
+    /// Required. The resource name of the Organization to move
     /// the billing account under.
     /// Must be of the form `organizations/{organization_id}`.
     /// </summary>
