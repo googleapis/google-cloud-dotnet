@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.2.0, released 2024-01-16
+
+### New features
+
+- Add regions field to ImportSshPublicKeyRequest ([commit 0a6fe42](https://github.com/googleapis/google-cloud-dotnet/commit/0a6fe42cfd061012ca70817c89a8e982797e631c))
+
 ## Version 3.1.0, released 2023-02-08
 
 ### New features
