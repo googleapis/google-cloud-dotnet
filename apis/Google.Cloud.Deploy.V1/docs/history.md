@@ -1,5 +1,16 @@
 # Version history
 
+## Version 2.12.0, released 2024-01-16
+
+### New features
+
+- Add stable cutback duration configuration to the k8s gateway service mesh deployment strategy. This allows configuring the amount of time to migrate traffic back to the original Service in the stable phase ([commit 86ff329](https://github.com/googleapis/google-cloud-dotnet/commit/86ff329170bcede92ce7e5e9c9eb29b802e13e0f))
+- Updated logging protos with new fields ([commit 86ff329](https://github.com/googleapis/google-cloud-dotnet/commit/86ff329170bcede92ce7e5e9c9eb29b802e13e0f))
+
+### Documentation improvements
+
+- Fixed a number of comments ([commit 86ff329](https://github.com/googleapis/google-cloud-dotnet/commit/86ff329170bcede92ce7e5e9c9eb29b802e13e0f))
+
 ## Version 2.11.0, released 2023-12-04
 
 ### New features
