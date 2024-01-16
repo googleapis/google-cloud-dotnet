@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.1.0, released 2024-01-16
+
+### New features
+
+- Added Terraform Plan ([commit 99a1ff8](https://github.com/googleapis/google-cloud-dotnet/commit/99a1ff8251389867da1c31bd91e525408b69a6a3))
+
 ## Version 1.0.0, released 2023-11-01
 
 No API surface changes; just dependency updates and promotion to GA.
