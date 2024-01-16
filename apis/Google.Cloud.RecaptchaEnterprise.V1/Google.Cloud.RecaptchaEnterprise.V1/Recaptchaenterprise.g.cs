@@ -2422,7 +2422,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
     private string username_ = "";
     /// <summary>
     /// Username of the account that is being verified. Deprecated. Customers
-    /// should now provide the hashed account ID field in Event.
+    /// should now provide the `account_id` field in `event.user_info`.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
