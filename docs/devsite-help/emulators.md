@@ -16,6 +16,7 @@ The packages for the following APIs support emulators directly in the way descri
 - Bigtable
 - Spanner
 - Datastore
+- Storage
 
 In these packages, the client builder type has an `EmulatorDetection`
 property which can be set to one of the following values:
@@ -91,4 +92,4 @@ switch that you should consider carefully before enabling. In most cases we expe
 and appropriate when testing an application against an emulator, but that's not a decision
 that the client libraries can reasonably take for themselves.
 
-This switch is not required when running .NET 6.
+This switch is not required when running .NET 6 or above.

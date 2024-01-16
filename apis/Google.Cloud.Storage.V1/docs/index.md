@@ -180,3 +180,23 @@ bucket. You'll need to add a dependency on the
 manage its permissions.
 
 {{sample:StorageClient.NotificationsOverview}}
+
+## Connecting to an emulator
+
+`StorageClient` supports the [Firebase Storage
+Emulator](https://firebase.google.com/docs/emulator-suite/connect_storage).
+
+This is configured using `StorageClientBuilder.EmulatorDetection`,
+as described in the [client library help page on
+emulators](https://cloud.google.com/dotnet/docs/reference/help/emulators).
+
+As well as setting the `EmulatorDetection` property when building a
+client, you must set the `STORAGE_EMULATOR_HOST` environment
+variable, in the form `host:port` (or `http://host:port`), e.g.
+`127.0.0.1:9199`. The port is the one shown in the emulator UI; note
+that this is *not* the port of the Storage Emulator user interface.
+
+Note that the Firebase Storage Emulator only supports a limited set
+of operations. See [the Storage Emulator
+documentation](https://firebase.google.com/docs/emulator-suite/connect_storage#differences_from_google_cloud_storage)
+for more details.
