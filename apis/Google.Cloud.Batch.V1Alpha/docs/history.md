@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.0.0-alpha20, released 2024-01-16
+
+### New features
+
+- Add `tags` field in Job's AllocationPolicy field in v1alpha ([commit c6fb071](https://github.com/googleapis/google-cloud-dotnet/commit/c6fb07199c400c06c87fa10d4864a94df48523e5))
+- Add a run_as_non_root field and deprecate enable_oslogin for non-root execution ([commit c6fb071](https://github.com/googleapis/google-cloud-dotnet/commit/c6fb07199c400c06c87fa10d4864a94df48523e5))
+
+### Documentation improvements
+
+- Updated comments ([commit c6fb071](https://github.com/googleapis/google-cloud-dotnet/commit/c6fb07199c400c06c87fa10d4864a94df48523e5))
+
 ## Version 1.0.0-alpha19, released 2023-12-04
 
 ### New features
