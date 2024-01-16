@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.8.0, released 2024-01-16
+
+### Bug fixes
+
+- Change field behavior of the property "name" to IDENTIFIER ([commit 093f27c](https://github.com/googleapis/google-cloud-dotnet/commit/093f27c1285516f85ebb81be4c10753deefd42d4))
+
 ## Version 2.7.0, released 2023-10-02
 
 ### New features
