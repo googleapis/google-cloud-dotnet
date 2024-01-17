@@ -110,10 +110,6 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     static readonly grpc::Marshaller<global::Google.Cloud.Tasks.V2Beta3.DeleteTaskRequest> __Marshaller_google_cloud_tasks_v2beta3_DeleteTaskRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tasks.V2Beta3.DeleteTaskRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Tasks.V2Beta3.RunTaskRequest> __Marshaller_google_cloud_tasks_v2beta3_RunTaskRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tasks.V2Beta3.RunTaskRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Tasks.V2Beta3.BufferTaskRequest> __Marshaller_google_cloud_tasks_v2beta3_BufferTaskRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tasks.V2Beta3.BufferTaskRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Tasks.V2Beta3.BufferTaskResponse> __Marshaller_google_cloud_tasks_v2beta3_BufferTaskResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tasks.V2Beta3.BufferTaskResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Tasks.V2Beta3.ListQueuesRequest, global::Google.Cloud.Tasks.V2Beta3.ListQueuesResponse> __Method_ListQueues = new grpc::Method<global::Google.Cloud.Tasks.V2Beta3.ListQueuesRequest, global::Google.Cloud.Tasks.V2Beta3.ListQueuesResponse>(
@@ -242,14 +238,6 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         "RunTask",
         __Marshaller_google_cloud_tasks_v2beta3_RunTaskRequest,
         __Marshaller_google_cloud_tasks_v2beta3_Task);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Cloud.Tasks.V2Beta3.BufferTaskRequest, global::Google.Cloud.Tasks.V2Beta3.BufferTaskResponse> __Method_BufferTask = new grpc::Method<global::Google.Cloud.Tasks.V2Beta3.BufferTaskRequest, global::Google.Cloud.Tasks.V2Beta3.BufferTaskResponse>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "BufferTask",
-        __Marshaller_google_cloud_tasks_v2beta3_BufferTaskRequest,
-        __Marshaller_google_cloud_tasks_v2beta3_BufferTaskResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -581,28 +569,6 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Tasks.V2Beta3.Task> RunTask(global::Google.Cloud.Tasks.V2Beta3.RunTaskRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Creates and buffers a new task without the need to explicitly define a Task
-      /// message. The queue must have [HTTP
-      /// target][google.cloud.tasks.v2beta3.HttpTarget]. To create the task with a
-      /// custom ID, use the following format and set TASK_ID to your desired ID:
-      /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID:buffer
-      /// To create the task with an automatically generated ID, use the following
-      /// format:
-      /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks:buffer.
-      /// Note: This feature is in its experimental stage. You must request access to
-      /// the API through the [Cloud Tasks BufferTask Experiment Signup
-      /// form](https://forms.gle/X8Zr5hiXH5tTGFqh8).
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Tasks.V2Beta3.BufferTaskResponse> BufferTask(global::Google.Cloud.Tasks.V2Beta3.BufferTaskRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1932,94 +1898,6 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_RunTask, null, options, request);
       }
-      /// <summary>
-      /// Creates and buffers a new task without the need to explicitly define a Task
-      /// message. The queue must have [HTTP
-      /// target][google.cloud.tasks.v2beta3.HttpTarget]. To create the task with a
-      /// custom ID, use the following format and set TASK_ID to your desired ID:
-      /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID:buffer
-      /// To create the task with an automatically generated ID, use the following
-      /// format:
-      /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks:buffer.
-      /// Note: This feature is in its experimental stage. You must request access to
-      /// the API through the [Cloud Tasks BufferTask Experiment Signup
-      /// form](https://forms.gle/X8Zr5hiXH5tTGFqh8).
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Tasks.V2Beta3.BufferTaskResponse BufferTask(global::Google.Cloud.Tasks.V2Beta3.BufferTaskRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return BufferTask(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Creates and buffers a new task without the need to explicitly define a Task
-      /// message. The queue must have [HTTP
-      /// target][google.cloud.tasks.v2beta3.HttpTarget]. To create the task with a
-      /// custom ID, use the following format and set TASK_ID to your desired ID:
-      /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID:buffer
-      /// To create the task with an automatically generated ID, use the following
-      /// format:
-      /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks:buffer.
-      /// Note: This feature is in its experimental stage. You must request access to
-      /// the API through the [Cloud Tasks BufferTask Experiment Signup
-      /// form](https://forms.gle/X8Zr5hiXH5tTGFqh8).
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Tasks.V2Beta3.BufferTaskResponse BufferTask(global::Google.Cloud.Tasks.V2Beta3.BufferTaskRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_BufferTask, null, options, request);
-      }
-      /// <summary>
-      /// Creates and buffers a new task without the need to explicitly define a Task
-      /// message. The queue must have [HTTP
-      /// target][google.cloud.tasks.v2beta3.HttpTarget]. To create the task with a
-      /// custom ID, use the following format and set TASK_ID to your desired ID:
-      /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID:buffer
-      /// To create the task with an automatically generated ID, use the following
-      /// format:
-      /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks:buffer.
-      /// Note: This feature is in its experimental stage. You must request access to
-      /// the API through the [Cloud Tasks BufferTask Experiment Signup
-      /// form](https://forms.gle/X8Zr5hiXH5tTGFqh8).
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta3.BufferTaskResponse> BufferTaskAsync(global::Google.Cloud.Tasks.V2Beta3.BufferTaskRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return BufferTaskAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Creates and buffers a new task without the need to explicitly define a Task
-      /// message. The queue must have [HTTP
-      /// target][google.cloud.tasks.v2beta3.HttpTarget]. To create the task with a
-      /// custom ID, use the following format and set TASK_ID to your desired ID:
-      /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID:buffer
-      /// To create the task with an automatically generated ID, use the following
-      /// format:
-      /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks:buffer.
-      /// Note: This feature is in its experimental stage. You must request access to
-      /// the API through the [Cloud Tasks BufferTask Experiment Signup
-      /// form](https://forms.gle/X8Zr5hiXH5tTGFqh8).
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta3.BufferTaskResponse> BufferTaskAsync(global::Google.Cloud.Tasks.V2Beta3.BufferTaskRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_BufferTask, null, options, request);
-      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override CloudTasksClient NewInstance(ClientBaseConfiguration configuration)
@@ -2049,8 +1927,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
           .AddMethod(__Method_GetTask, serviceImpl.GetTask)
           .AddMethod(__Method_CreateTask, serviceImpl.CreateTask)
           .AddMethod(__Method_DeleteTask, serviceImpl.DeleteTask)
-          .AddMethod(__Method_RunTask, serviceImpl.RunTask)
-          .AddMethod(__Method_BufferTask, serviceImpl.BufferTask).Build();
+          .AddMethod(__Method_RunTask, serviceImpl.RunTask).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -2076,7 +1953,6 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       serviceBinder.AddMethod(__Method_CreateTask, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Tasks.V2Beta3.CreateTaskRequest, global::Google.Cloud.Tasks.V2Beta3.Task>(serviceImpl.CreateTask));
       serviceBinder.AddMethod(__Method_DeleteTask, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Tasks.V2Beta3.DeleteTaskRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteTask));
       serviceBinder.AddMethod(__Method_RunTask, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Tasks.V2Beta3.RunTaskRequest, global::Google.Cloud.Tasks.V2Beta3.Task>(serviceImpl.RunTask));
-      serviceBinder.AddMethod(__Method_BufferTask, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Tasks.V2Beta3.BufferTaskRequest, global::Google.Cloud.Tasks.V2Beta3.BufferTaskResponse>(serviceImpl.BufferTask));
     }
 
   }
