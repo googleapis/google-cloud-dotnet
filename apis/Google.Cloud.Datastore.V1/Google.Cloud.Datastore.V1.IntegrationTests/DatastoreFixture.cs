@@ -13,13 +13,10 @@
 // limitations under the License.
 using Google.Api.Gax;
 using Google.Api.Gax.ResourceNames;
-using Google.Apis.Auth.OAuth2;
-using Google.Apis.Http;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Firestore.Admin.V1;
 using System;
 using System.Linq;
-using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
@@ -163,7 +160,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
             Assert.False(RunningOnEmulator);
             var operation = await _firestoreAdminClient.CreateDatabaseAsync(
                 new ProjectName(ProjectId),
-                new Database { LocationId = "us-east1", Type = DatabaseType.DatastoreMode },
+                new Database { LocationId = "northamerica-northeast1", Type = DatabaseType.DatastoreMode },
                 databaseId);
             await operation.PollUntilCompletedAsync(AdminOperationPollSettings);
             Console.WriteLine($"Success creating database {databaseId}");
