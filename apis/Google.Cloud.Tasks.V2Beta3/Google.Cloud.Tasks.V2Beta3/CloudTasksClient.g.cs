@@ -15,7 +15,6 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
-using ga = Google.Api;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
@@ -66,7 +65,6 @@ namespace Google.Cloud.Tasks.V2Beta3
             CreateTaskSettings = existing.CreateTaskSettings;
             DeleteTaskSettings = existing.DeleteTaskSettings;
             RunTaskSettings = existing.RunTaskSettings;
-            BufferTaskSettings = existing.BufferTaskSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -336,18 +334,6 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings RunTaskSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(20000)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>CloudTasksClient.BufferTask</c>
-        ///  and <c>CloudTasksClient.BufferTaskAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 20 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings BufferTaskSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(20000)));
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -3781,287 +3767,6 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Task> RunTaskAsync(TaskName name, st::CancellationToken cancellationToken) =>
             RunTaskAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates and buffers a new task without the need to explicitly define a Task
-        /// message. The queue must have [HTTP
-        /// target][google.cloud.tasks.v2beta3.HttpTarget]. To create the task with a
-        /// custom ID, use the following format and set TASK_ID to your desired ID:
-        /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID:buffer
-        /// To create the task with an automatically generated ID, use the following
-        /// format:
-        /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks:buffer.
-        /// Note: This feature is in its experimental stage. You must request access to
-        /// the API through the [Cloud Tasks BufferTask Experiment Signup
-        /// form](https://forms.gle/X8Zr5hiXH5tTGFqh8).
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual BufferTaskResponse BufferTask(BufferTaskRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Creates and buffers a new task without the need to explicitly define a Task
-        /// message. The queue must have [HTTP
-        /// target][google.cloud.tasks.v2beta3.HttpTarget]. To create the task with a
-        /// custom ID, use the following format and set TASK_ID to your desired ID:
-        /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID:buffer
-        /// To create the task with an automatically generated ID, use the following
-        /// format:
-        /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks:buffer.
-        /// Note: This feature is in its experimental stage. You must request access to
-        /// the API through the [Cloud Tasks BufferTask Experiment Signup
-        /// form](https://forms.gle/X8Zr5hiXH5tTGFqh8).
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<BufferTaskResponse> BufferTaskAsync(BufferTaskRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Creates and buffers a new task without the need to explicitly define a Task
-        /// message. The queue must have [HTTP
-        /// target][google.cloud.tasks.v2beta3.HttpTarget]. To create the task with a
-        /// custom ID, use the following format and set TASK_ID to your desired ID:
-        /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID:buffer
-        /// To create the task with an automatically generated ID, use the following
-        /// format:
-        /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks:buffer.
-        /// Note: This feature is in its experimental stage. You must request access to
-        /// the API through the [Cloud Tasks BufferTask Experiment Signup
-        /// form](https://forms.gle/X8Zr5hiXH5tTGFqh8).
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<BufferTaskResponse> BufferTaskAsync(BufferTaskRequest request, st::CancellationToken cancellationToken) =>
-            BufferTaskAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates and buffers a new task without the need to explicitly define a Task
-        /// message. The queue must have [HTTP
-        /// target][google.cloud.tasks.v2beta3.HttpTarget]. To create the task with a
-        /// custom ID, use the following format and set TASK_ID to your desired ID:
-        /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID:buffer
-        /// To create the task with an automatically generated ID, use the following
-        /// format:
-        /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks:buffer.
-        /// Note: This feature is in its experimental stage. You must request access to
-        /// the API through the [Cloud Tasks BufferTask Experiment Signup
-        /// form](https://forms.gle/X8Zr5hiXH5tTGFqh8).
-        /// </summary>
-        /// <param name="queue">
-        /// Required. The parent queue name. For example:
-        /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
-        /// 
-        /// The queue must already exist.
-        /// </param>
-        /// <param name="taskId">
-        /// Optional. Task ID for the task being created. If not provided, a random
-        /// task ID is assigned to the task.
-        /// </param>
-        /// <param name="body">
-        /// Optional. Body of the HTTP request.
-        /// 
-        /// The body can take any generic value. The value is written to the
-        /// [HttpRequest][payload] of the [Task].
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual BufferTaskResponse BufferTask(string queue, string taskId, ga::HttpBody body, gaxgrpc::CallSettings callSettings = null) =>
-            BufferTask(new BufferTaskRequest
-            {
-                Queue = gax::GaxPreconditions.CheckNotNullOrEmpty(queue, nameof(queue)),
-                TaskId = taskId ?? "",
-                Body = body,
-            }, callSettings);
-
-        /// <summary>
-        /// Creates and buffers a new task without the need to explicitly define a Task
-        /// message. The queue must have [HTTP
-        /// target][google.cloud.tasks.v2beta3.HttpTarget]. To create the task with a
-        /// custom ID, use the following format and set TASK_ID to your desired ID:
-        /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID:buffer
-        /// To create the task with an automatically generated ID, use the following
-        /// format:
-        /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks:buffer.
-        /// Note: This feature is in its experimental stage. You must request access to
-        /// the API through the [Cloud Tasks BufferTask Experiment Signup
-        /// form](https://forms.gle/X8Zr5hiXH5tTGFqh8).
-        /// </summary>
-        /// <param name="queue">
-        /// Required. The parent queue name. For example:
-        /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
-        /// 
-        /// The queue must already exist.
-        /// </param>
-        /// <param name="taskId">
-        /// Optional. Task ID for the task being created. If not provided, a random
-        /// task ID is assigned to the task.
-        /// </param>
-        /// <param name="body">
-        /// Optional. Body of the HTTP request.
-        /// 
-        /// The body can take any generic value. The value is written to the
-        /// [HttpRequest][payload] of the [Task].
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<BufferTaskResponse> BufferTaskAsync(string queue, string taskId, ga::HttpBody body, gaxgrpc::CallSettings callSettings = null) =>
-            BufferTaskAsync(new BufferTaskRequest
-            {
-                Queue = gax::GaxPreconditions.CheckNotNullOrEmpty(queue, nameof(queue)),
-                TaskId = taskId ?? "",
-                Body = body,
-            }, callSettings);
-
-        /// <summary>
-        /// Creates and buffers a new task without the need to explicitly define a Task
-        /// message. The queue must have [HTTP
-        /// target][google.cloud.tasks.v2beta3.HttpTarget]. To create the task with a
-        /// custom ID, use the following format and set TASK_ID to your desired ID:
-        /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID:buffer
-        /// To create the task with an automatically generated ID, use the following
-        /// format:
-        /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks:buffer.
-        /// Note: This feature is in its experimental stage. You must request access to
-        /// the API through the [Cloud Tasks BufferTask Experiment Signup
-        /// form](https://forms.gle/X8Zr5hiXH5tTGFqh8).
-        /// </summary>
-        /// <param name="queue">
-        /// Required. The parent queue name. For example:
-        /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
-        /// 
-        /// The queue must already exist.
-        /// </param>
-        /// <param name="taskId">
-        /// Optional. Task ID for the task being created. If not provided, a random
-        /// task ID is assigned to the task.
-        /// </param>
-        /// <param name="body">
-        /// Optional. Body of the HTTP request.
-        /// 
-        /// The body can take any generic value. The value is written to the
-        /// [HttpRequest][payload] of the [Task].
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<BufferTaskResponse> BufferTaskAsync(string queue, string taskId, ga::HttpBody body, st::CancellationToken cancellationToken) =>
-            BufferTaskAsync(queue, taskId, body, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates and buffers a new task without the need to explicitly define a Task
-        /// message. The queue must have [HTTP
-        /// target][google.cloud.tasks.v2beta3.HttpTarget]. To create the task with a
-        /// custom ID, use the following format and set TASK_ID to your desired ID:
-        /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID:buffer
-        /// To create the task with an automatically generated ID, use the following
-        /// format:
-        /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks:buffer.
-        /// Note: This feature is in its experimental stage. You must request access to
-        /// the API through the [Cloud Tasks BufferTask Experiment Signup
-        /// form](https://forms.gle/X8Zr5hiXH5tTGFqh8).
-        /// </summary>
-        /// <param name="queue">
-        /// Required. The parent queue name. For example:
-        /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
-        /// 
-        /// The queue must already exist.
-        /// </param>
-        /// <param name="taskId">
-        /// Optional. Task ID for the task being created. If not provided, a random
-        /// task ID is assigned to the task.
-        /// </param>
-        /// <param name="body">
-        /// Optional. Body of the HTTP request.
-        /// 
-        /// The body can take any generic value. The value is written to the
-        /// [HttpRequest][payload] of the [Task].
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual BufferTaskResponse BufferTask(QueueName queue, string taskId, ga::HttpBody body, gaxgrpc::CallSettings callSettings = null) =>
-            BufferTask(new BufferTaskRequest
-            {
-                QueueAsQueueName = gax::GaxPreconditions.CheckNotNull(queue, nameof(queue)),
-                TaskId = taskId ?? "",
-                Body = body,
-            }, callSettings);
-
-        /// <summary>
-        /// Creates and buffers a new task without the need to explicitly define a Task
-        /// message. The queue must have [HTTP
-        /// target][google.cloud.tasks.v2beta3.HttpTarget]. To create the task with a
-        /// custom ID, use the following format and set TASK_ID to your desired ID:
-        /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID:buffer
-        /// To create the task with an automatically generated ID, use the following
-        /// format:
-        /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks:buffer.
-        /// Note: This feature is in its experimental stage. You must request access to
-        /// the API through the [Cloud Tasks BufferTask Experiment Signup
-        /// form](https://forms.gle/X8Zr5hiXH5tTGFqh8).
-        /// </summary>
-        /// <param name="queue">
-        /// Required. The parent queue name. For example:
-        /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
-        /// 
-        /// The queue must already exist.
-        /// </param>
-        /// <param name="taskId">
-        /// Optional. Task ID for the task being created. If not provided, a random
-        /// task ID is assigned to the task.
-        /// </param>
-        /// <param name="body">
-        /// Optional. Body of the HTTP request.
-        /// 
-        /// The body can take any generic value. The value is written to the
-        /// [HttpRequest][payload] of the [Task].
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<BufferTaskResponse> BufferTaskAsync(QueueName queue, string taskId, ga::HttpBody body, gaxgrpc::CallSettings callSettings = null) =>
-            BufferTaskAsync(new BufferTaskRequest
-            {
-                QueueAsQueueName = gax::GaxPreconditions.CheckNotNull(queue, nameof(queue)),
-                TaskId = taskId ?? "",
-                Body = body,
-            }, callSettings);
-
-        /// <summary>
-        /// Creates and buffers a new task without the need to explicitly define a Task
-        /// message. The queue must have [HTTP
-        /// target][google.cloud.tasks.v2beta3.HttpTarget]. To create the task with a
-        /// custom ID, use the following format and set TASK_ID to your desired ID:
-        /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID:buffer
-        /// To create the task with an automatically generated ID, use the following
-        /// format:
-        /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks:buffer.
-        /// Note: This feature is in its experimental stage. You must request access to
-        /// the API through the [Cloud Tasks BufferTask Experiment Signup
-        /// form](https://forms.gle/X8Zr5hiXH5tTGFqh8).
-        /// </summary>
-        /// <param name="queue">
-        /// Required. The parent queue name. For example:
-        /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
-        /// 
-        /// The queue must already exist.
-        /// </param>
-        /// <param name="taskId">
-        /// Optional. Task ID for the task being created. If not provided, a random
-        /// task ID is assigned to the task.
-        /// </param>
-        /// <param name="body">
-        /// Optional. Body of the HTTP request.
-        /// 
-        /// The body can take any generic value. The value is written to the
-        /// [HttpRequest][payload] of the [Task].
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<BufferTaskResponse> BufferTaskAsync(QueueName queue, string taskId, ga::HttpBody body, st::CancellationToken cancellationToken) =>
-            BufferTaskAsync(queue, taskId, body, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>CloudTasks client wrapper implementation, for convenient use.</summary>
@@ -4102,8 +3807,6 @@ namespace Google.Cloud.Tasks.V2Beta3
         private readonly gaxgrpc::ApiCall<DeleteTaskRequest, wkt::Empty> _callDeleteTask;
 
         private readonly gaxgrpc::ApiCall<RunTaskRequest, Task> _callRunTask;
-
-        private readonly gaxgrpc::ApiCall<BufferTaskRequest, BufferTaskResponse> _callBufferTask;
 
         /// <summary>
         /// Constructs a client wrapper for the CloudTasks service, with the specified gRPC client and settings.
@@ -4165,9 +3868,6 @@ namespace Google.Cloud.Tasks.V2Beta3
             _callRunTask = clientHelper.BuildApiCall<RunTaskRequest, Task>("RunTask", grpcClient.RunTaskAsync, grpcClient.RunTask, effectiveSettings.RunTaskSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callRunTask);
             Modify_RunTaskApiCall(ref _callRunTask);
-            _callBufferTask = clientHelper.BuildApiCall<BufferTaskRequest, BufferTaskResponse>("BufferTask", grpcClient.BufferTaskAsync, grpcClient.BufferTask, effectiveSettings.BufferTaskSettings).WithGoogleRequestParam("queue", request => request.Queue).WithGoogleRequestParam("task_id", request => request.TaskId);
-            Modify_ApiCall(ref _callBufferTask);
-            Modify_BufferTaskApiCall(ref _callBufferTask);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -4204,8 +3904,6 @@ namespace Google.Cloud.Tasks.V2Beta3
         partial void Modify_DeleteTaskApiCall(ref gaxgrpc::ApiCall<DeleteTaskRequest, wkt::Empty> call);
 
         partial void Modify_RunTaskApiCall(ref gaxgrpc::ApiCall<RunTaskRequest, Task> call);
-
-        partial void Modify_BufferTaskApiCall(ref gaxgrpc::ApiCall<BufferTaskRequest, BufferTaskResponse> call);
 
         partial void OnConstruction(CloudTasks.CloudTasksClient grpcClient, CloudTasksSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -4246,8 +3944,6 @@ namespace Google.Cloud.Tasks.V2Beta3
         partial void Modify_DeleteTaskRequest(ref DeleteTaskRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_RunTaskRequest(ref RunTaskRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_BufferTaskRequest(ref BufferTaskRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists queues.
@@ -4895,50 +4591,6 @@ namespace Google.Cloud.Tasks.V2Beta3
         {
             Modify_RunTaskRequest(ref request, ref callSettings);
             return _callRunTask.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Creates and buffers a new task without the need to explicitly define a Task
-        /// message. The queue must have [HTTP
-        /// target][google.cloud.tasks.v2beta3.HttpTarget]. To create the task with a
-        /// custom ID, use the following format and set TASK_ID to your desired ID:
-        /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID:buffer
-        /// To create the task with an automatically generated ID, use the following
-        /// format:
-        /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks:buffer.
-        /// Note: This feature is in its experimental stage. You must request access to
-        /// the API through the [Cloud Tasks BufferTask Experiment Signup
-        /// form](https://forms.gle/X8Zr5hiXH5tTGFqh8).
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override BufferTaskResponse BufferTask(BufferTaskRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_BufferTaskRequest(ref request, ref callSettings);
-            return _callBufferTask.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Creates and buffers a new task without the need to explicitly define a Task
-        /// message. The queue must have [HTTP
-        /// target][google.cloud.tasks.v2beta3.HttpTarget]. To create the task with a
-        /// custom ID, use the following format and set TASK_ID to your desired ID:
-        /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID:buffer
-        /// To create the task with an automatically generated ID, use the following
-        /// format:
-        /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks:buffer.
-        /// Note: This feature is in its experimental stage. You must request access to
-        /// the API through the [Cloud Tasks BufferTask Experiment Signup
-        /// form](https://forms.gle/X8Zr5hiXH5tTGFqh8).
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<BufferTaskResponse> BufferTaskAsync(BufferTaskRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_BufferTaskRequest(ref request, ref callSettings);
-            return _callBufferTask.Async(request, callSettings);
         }
     }
 
