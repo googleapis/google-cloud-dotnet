@@ -25,19 +25,20 @@ namespace Google.Cloud.Spanner.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Chxnb29nbGUvc3Bhbm5lci92MS90eXBlLnByb3RvEhFnb29nbGUuc3Bhbm5l",
-            "ci52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90byLfAQoEVHlw",
+            "ci52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90byL3AQoEVHlw",
             "ZRIuCgRjb2RlGAEgASgOMhsuZ29vZ2xlLnNwYW5uZXIudjEuVHlwZUNvZGVC",
             "A+BBAhIzChJhcnJheV9lbGVtZW50X3R5cGUYAiABKAsyFy5nb29nbGUuc3Bh",
             "bm5lci52MS5UeXBlEjIKC3N0cnVjdF90eXBlGAMgASgLMh0uZ29vZ2xlLnNw",
             "YW5uZXIudjEuU3RydWN0VHlwZRI+Cg90eXBlX2Fubm90YXRpb24YBCABKA4y",
-            "JS5nb29nbGUuc3Bhbm5lci52MS5UeXBlQW5ub3RhdGlvbkNvZGUifwoKU3Ry",
-            "dWN0VHlwZRIzCgZmaWVsZHMYASADKAsyIy5nb29nbGUuc3Bhbm5lci52MS5T",
-            "dHJ1Y3RUeXBlLkZpZWxkGjwKBUZpZWxkEgwKBG5hbWUYASABKAkSJQoEdHlw",
-            "ZRgCIAEoCzIXLmdvb2dsZS5zcGFubmVyLnYxLlR5cGUqpQEKCFR5cGVDb2Rl",
-            "EhkKFVRZUEVfQ09ERV9VTlNQRUNJRklFRBAAEggKBEJPT0wQARIJCgVJTlQ2",
-            "NBACEgsKB0ZMT0FUNjQQAxINCglUSU1FU1RBTVAQBBIICgREQVRFEAUSCgoG",
-            "U1RSSU5HEAYSCQoFQllURVMQBxIJCgVBUlJBWRAIEgoKBlNUUlVDVBAJEgsK",
-            "B05VTUVSSUMQChIICgRKU09OEAsqZAoSVHlwZUFubm90YXRpb25Db2RlEiQK",
+            "JS5nb29nbGUuc3Bhbm5lci52MS5UeXBlQW5ub3RhdGlvbkNvZGUSFgoOcHJv",
+            "dG9fdHlwZV9mcW4YBSABKAkifwoKU3RydWN0VHlwZRIzCgZmaWVsZHMYASAD",
+            "KAsyIy5nb29nbGUuc3Bhbm5lci52MS5TdHJ1Y3RUeXBlLkZpZWxkGjwKBUZp",
+            "ZWxkEgwKBG5hbWUYASABKAkSJQoEdHlwZRgCIAEoCzIXLmdvb2dsZS5zcGFu",
+            "bmVyLnYxLlR5cGUqugEKCFR5cGVDb2RlEhkKFVRZUEVfQ09ERV9VTlNQRUNJ",
+            "RklFRBAAEggKBEJPT0wQARIJCgVJTlQ2NBACEgsKB0ZMT0FUNjQQAxINCglU",
+            "SU1FU1RBTVAQBBIICgREQVRFEAUSCgoGU1RSSU5HEAYSCQoFQllURVMQBxIJ",
+            "CgVBUlJBWRAIEgoKBlNUUlVDVBAJEgsKB05VTUVSSUMQChIICgRKU09OEAsS",
+            "CQoFUFJPVE8QDRIICgRFTlVNEA4qZAoSVHlwZUFubm90YXRpb25Db2RlEiQK",
             "IFRZUEVfQU5OT1RBVElPTl9DT0RFX1VOU1BFQ0lGSUVEEAASDgoKUEdfTlVN",
             "RVJJQxACEgwKCFBHX0pTT05CEAMSCgoGUEdfT0lEEARCrAEKFWNvbS5nb29n",
             "bGUuc3Bhbm5lci52MUIJVHlwZVByb3RvUAFaNWNsb3VkLmdvb2dsZS5jb20v",
@@ -47,7 +48,7 @@ namespace Google.Cloud.Spanner.V1 {
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Spanner.V1.TypeCode), typeof(global::Google.Cloud.Spanner.V1.TypeAnnotationCode), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.Type), global::Google.Cloud.Spanner.V1.Type.Parser, new[]{ "Code", "ArrayElementType", "StructType", "TypeAnnotation" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.Type), global::Google.Cloud.Spanner.V1.Type.Parser, new[]{ "Code", "ArrayElementType", "StructType", "TypeAnnotation", "ProtoTypeFqn" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.StructType), global::Google.Cloud.Spanner.V1.StructType.Parser, new[]{ "Fields" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.StructType.Types.Field), global::Google.Cloud.Spanner.V1.StructType.Types.Field.Parser, new[]{ "Name", "Type" }, null, null, null, null)})
           }));
     }
@@ -140,6 +141,15 @@ namespace Google.Cloud.Spanner.V1 {
     /// - JSON array elements will have their order preserved.
     /// </summary>
     [pbr::OriginalName("JSON")] Json = 11,
+    /// <summary>
+    /// Encoded as a base64-encoded `string`, as described in RFC 4648,
+    /// section 4.
+    /// </summary>
+    [pbr::OriginalName("PROTO")] Proto = 13,
+    /// <summary>
+    /// Encoded as `string`, in decimal format.
+    /// </summary>
+    [pbr::OriginalName("ENUM")] Enum = 14,
   }
 
   /// <summary>
@@ -225,6 +235,7 @@ namespace Google.Cloud.Spanner.V1 {
       arrayElementType_ = other.arrayElementType_ != null ? other.arrayElementType_.Clone() : null;
       structType_ = other.structType_ != null ? other.structType_.Clone() : null;
       typeAnnotation_ = other.typeAnnotation_;
+      protoTypeFqn_ = other.protoTypeFqn_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -301,6 +312,25 @@ namespace Google.Cloud.Spanner.V1 {
       }
     }
 
+    /// <summary>Field number for the "proto_type_fqn" field.</summary>
+    public const int ProtoTypeFqnFieldNumber = 5;
+    private string protoTypeFqn_ = "";
+    /// <summary>
+    /// If [code][google.spanner.v1.Type.code] ==
+    /// [PROTO][google.spanner.v1.TypeCode.PROTO] or
+    /// [code][google.spanner.v1.Type.code] ==
+    /// [ENUM][google.spanner.v1.TypeCode.ENUM], then `proto_type_fqn` is the fully
+    /// qualified name of the proto type representing the proto/enum definition.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ProtoTypeFqn {
+      get { return protoTypeFqn_; }
+      set {
+        protoTypeFqn_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -320,6 +350,7 @@ namespace Google.Cloud.Spanner.V1 {
       if (!object.Equals(ArrayElementType, other.ArrayElementType)) return false;
       if (!object.Equals(StructType, other.StructType)) return false;
       if (TypeAnnotation != other.TypeAnnotation) return false;
+      if (ProtoTypeFqn != other.ProtoTypeFqn) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -331,6 +362,7 @@ namespace Google.Cloud.Spanner.V1 {
       if (arrayElementType_ != null) hash ^= ArrayElementType.GetHashCode();
       if (structType_ != null) hash ^= StructType.GetHashCode();
       if (TypeAnnotation != global::Google.Cloud.Spanner.V1.TypeAnnotationCode.Unspecified) hash ^= TypeAnnotation.GetHashCode();
+      if (ProtoTypeFqn.Length != 0) hash ^= ProtoTypeFqn.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -365,6 +397,10 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(32);
         output.WriteEnum((int) TypeAnnotation);
       }
+      if (ProtoTypeFqn.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(ProtoTypeFqn);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -391,6 +427,10 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(32);
         output.WriteEnum((int) TypeAnnotation);
       }
+      if (ProtoTypeFqn.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(ProtoTypeFqn);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -412,6 +452,9 @@ namespace Google.Cloud.Spanner.V1 {
       }
       if (TypeAnnotation != global::Google.Cloud.Spanner.V1.TypeAnnotationCode.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TypeAnnotation);
+      }
+      if (ProtoTypeFqn.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ProtoTypeFqn);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -442,6 +485,9 @@ namespace Google.Cloud.Spanner.V1 {
       }
       if (other.TypeAnnotation != global::Google.Cloud.Spanner.V1.TypeAnnotationCode.Unspecified) {
         TypeAnnotation = other.TypeAnnotation;
+      }
+      if (other.ProtoTypeFqn.Length != 0) {
+        ProtoTypeFqn = other.ProtoTypeFqn;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -480,6 +526,10 @@ namespace Google.Cloud.Spanner.V1 {
             TypeAnnotation = (global::Google.Cloud.Spanner.V1.TypeAnnotationCode) input.ReadEnum();
             break;
           }
+          case 42: {
+            ProtoTypeFqn = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -515,6 +565,10 @@ namespace Google.Cloud.Spanner.V1 {
           }
           case 32: {
             TypeAnnotation = (global::Google.Cloud.Spanner.V1.TypeAnnotationCode) input.ReadEnum();
+            break;
+          }
+          case 42: {
+            ProtoTypeFqn = input.ReadString();
             break;
           }
         }
