@@ -163,7 +163,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
             Assert.False(RunningOnEmulator);
             var operation = await _firestoreAdminClient.CreateDatabaseAsync(
                 new ProjectName(ProjectId),
-                new Database { LocationId = "us-east1", Type = DatabaseType.DatastoreMode },
+                new Database { LocationId = "us-east7", Type = DatabaseType.DatastoreMode },
                 databaseId);
             await operation.PollUntilCompletedAsync(AdminOperationPollSettings);
             Console.WriteLine($"Success creating database {databaseId}");
