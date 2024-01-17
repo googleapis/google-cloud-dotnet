@@ -3688,10 +3688,24 @@ namespace Google.Cloud.Firestore.Tests.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Offset {
-      get { return clauseCase_ == ClauseOneofCase.Offset ? (int) clause_ : 0; }
+      get { return HasOffset ? (int) clause_ : 0; }
       set {
         clause_ = value;
         clauseCase_ = ClauseOneofCase.Offset;
+      }
+    }
+    /// <summary>Gets whether the "offset" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasOffset {
+      get { return clauseCase_ == ClauseOneofCase.Offset; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "offset" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearOffset() {
+      if (HasOffset) {
+        ClearClause();
       }
     }
 
@@ -3700,10 +3714,24 @@ namespace Google.Cloud.Firestore.Tests.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Limit {
-      get { return clauseCase_ == ClauseOneofCase.Limit ? (int) clause_ : 0; }
+      get { return HasLimit ? (int) clause_ : 0; }
       set {
         clause_ = value;
         clauseCase_ = ClauseOneofCase.Limit;
+      }
+    }
+    /// <summary>Gets whether the "limit" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasLimit {
+      get { return clauseCase_ == ClauseOneofCase.Limit; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "limit" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearLimit() {
+      if (HasLimit) {
+        ClearClause();
       }
     }
 
@@ -3818,8 +3846,8 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       if (clauseCase_ == ClauseOneofCase.Select) hash ^= Select.GetHashCode();
       if (clauseCase_ == ClauseOneofCase.Where) hash ^= Where.GetHashCode();
       if (clauseCase_ == ClauseOneofCase.OrderBy) hash ^= OrderBy.GetHashCode();
-      if (clauseCase_ == ClauseOneofCase.Offset) hash ^= Offset.GetHashCode();
-      if (clauseCase_ == ClauseOneofCase.Limit) hash ^= Limit.GetHashCode();
+      if (HasOffset) hash ^= Offset.GetHashCode();
+      if (HasLimit) hash ^= Limit.GetHashCode();
       if (clauseCase_ == ClauseOneofCase.StartAt) hash ^= StartAt.GetHashCode();
       if (clauseCase_ == ClauseOneofCase.StartAfter) hash ^= StartAfter.GetHashCode();
       if (clauseCase_ == ClauseOneofCase.EndAt) hash ^= EndAt.GetHashCode();
@@ -3855,11 +3883,11 @@ namespace Google.Cloud.Firestore.Tests.Proto {
         output.WriteRawTag(26);
         output.WriteMessage(OrderBy);
       }
-      if (clauseCase_ == ClauseOneofCase.Offset) {
+      if (HasOffset) {
         output.WriteRawTag(32);
         output.WriteInt32(Offset);
       }
-      if (clauseCase_ == ClauseOneofCase.Limit) {
+      if (HasLimit) {
         output.WriteRawTag(40);
         output.WriteInt32(Limit);
       }
@@ -3901,11 +3929,11 @@ namespace Google.Cloud.Firestore.Tests.Proto {
         output.WriteRawTag(26);
         output.WriteMessage(OrderBy);
       }
-      if (clauseCase_ == ClauseOneofCase.Offset) {
+      if (HasOffset) {
         output.WriteRawTag(32);
         output.WriteInt32(Offset);
       }
-      if (clauseCase_ == ClauseOneofCase.Limit) {
+      if (HasLimit) {
         output.WriteRawTag(40);
         output.WriteInt32(Limit);
       }
@@ -3944,10 +3972,10 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       if (clauseCase_ == ClauseOneofCase.OrderBy) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(OrderBy);
       }
-      if (clauseCase_ == ClauseOneofCase.Offset) {
+      if (HasOffset) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Offset);
       }
-      if (clauseCase_ == ClauseOneofCase.Limit) {
+      if (HasLimit) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Limit);
       }
       if (clauseCase_ == ClauseOneofCase.StartAt) {
