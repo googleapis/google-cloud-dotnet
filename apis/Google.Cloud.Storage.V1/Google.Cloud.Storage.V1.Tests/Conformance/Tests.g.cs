@@ -873,8 +873,8 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
       if (other.ExpectedUrl.Length != 0) {
         ExpectedUrl = other.ExpectedUrl;
       }
-      headers_.Add(other.headers_);
-      queryParameters_.Add(other.queryParameters_);
+      headers_.MergeFrom(other.headers_);
+      queryParameters_.MergeFrom(other.queryParameters_);
       if (other.Scheme.Length != 0) {
         Scheme = other.Scheme;
       }
@@ -1816,7 +1816,7 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
         }
         Timestamp.MergeFrom(other.Timestamp);
       }
-      fields_.Add(other.fields_);
+      fields_.MergeFrom(other.fields_);
       if (other.conditions_ != null) {
         if (conditions_ == null) {
           Conditions = new global::Google.Cloud.Storage.V1.Tests.Conformance.PolicyConditions();
@@ -2189,7 +2189,7 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
       if (other.Url.Length != 0) {
         Url = other.Url;
       }
-      fields_.Add(other.fields_);
+      fields_.MergeFrom(other.fields_);
       if (other.ExpectedDecodedPolicy.Length != 0) {
         ExpectedDecodedPolicy = other.ExpectedDecodedPolicy;
       }
