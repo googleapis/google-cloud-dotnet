@@ -117,6 +117,14 @@ namespace Google.Cloud.Firestore.V1 {
   #region Messages
   /// <summary>
   /// A Firestore query.
+  ///
+  /// The query stages are executed in the following order:
+  /// 1. from
+  /// 2. where
+  /// 3. select
+  /// 4. order_by + start_at + end_at
+  /// 5. offset
+  /// 6. limit
   /// </summary>
   public sealed partial class StructuredQuery : pb::IMessage<StructuredQuery>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
