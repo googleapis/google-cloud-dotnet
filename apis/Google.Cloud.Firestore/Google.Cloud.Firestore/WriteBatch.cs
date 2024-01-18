@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -121,7 +121,6 @@ namespace Google.Cloud.Firestore
             GaxPreconditions.CheckNotNull(documentReference, nameof(documentReference));
             GaxPreconditions.CheckNotNull(updates, nameof(updates));
             GaxPreconditions.CheckArgument(updates.Count != 0, nameof(updates), "Empty set of updates specified");
-            GaxPreconditions.CheckArgument(precondition?.Exists != true, nameof(precondition), "Cannot specify a must-exist precondition for update");
 
             var serializedUpdates = updates.ToDictionary(pair => pair.Key, pair => ValueSerializer.Serialize(documentReference.Database.SerializationContext, pair.Value));
             var expanded = ExpandObject(serializedUpdates);
