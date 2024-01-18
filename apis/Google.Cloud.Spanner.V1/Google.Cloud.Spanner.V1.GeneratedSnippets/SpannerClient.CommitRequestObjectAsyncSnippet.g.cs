@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     // [START spanner_v1_generated_Spanner_Commit_async]
     using Google.Cloud.Spanner.V1;
     using Google.Protobuf;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedSpannerClientSnippets
@@ -43,6 +44,7 @@ namespace GoogleCSharpSnippets
                 Mutations = { new Mutation(), },
                 ReturnCommitStats = false,
                 RequestOptions = new RequestOptions(),
+                MaxCommitDelay = new Duration(),
             };
             // Make the request
             CommitResponse response = await spannerClient.CommitAsync(request);
