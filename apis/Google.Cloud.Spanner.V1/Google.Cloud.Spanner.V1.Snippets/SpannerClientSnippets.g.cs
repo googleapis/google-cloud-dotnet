@@ -1032,6 +1032,7 @@ namespace GoogleCSharpSnippets
                 },
                 ReturnCommitStats = false,
                 RequestOptions = new gcsv::RequestOptions(),
+                MaxCommitDelay = new Duration(),
             };
             // Make the request
             gcsv::CommitResponse response = spannerClient.Commit(request);
@@ -1056,6 +1057,7 @@ namespace GoogleCSharpSnippets
                 },
                 ReturnCommitStats = false,
                 RequestOptions = new gcsv::RequestOptions(),
+                MaxCommitDelay = new Duration(),
             };
             // Make the request
             gcsv::CommitResponse response = await spannerClient.CommitAsync(request);
