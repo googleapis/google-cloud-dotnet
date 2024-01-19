@@ -345,6 +345,90 @@ namespace Google.Cloud.VmwareEngine.V1
         }
     }
 
+    public partial class ListNodesRequest
+    {
+        /// <summary>
+        /// <see cref="ClusterName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ClusterName ParentAsClusterName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : ClusterName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetNodeRequest
+    {
+        /// <summary>
+        /// <see cref="gcvv::NodeName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcvv::NodeName NodeName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcvv::NodeName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListExternalAddressesRequest
+    {
+        /// <summary>
+        /// <see cref="PrivateCloudName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PrivateCloudName ParentAsPrivateCloudName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PrivateCloudName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class FetchNetworkPolicyExternalAddressesRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkPolicyName"/>-typed view over the <see cref="NetworkPolicy"/> resource name property.
+        /// </summary>
+        public NetworkPolicyName NetworkPolicyAsNetworkPolicyName
+        {
+            get => string.IsNullOrEmpty(NetworkPolicy) ? null : NetworkPolicyName.Parse(NetworkPolicy, allowUnparsed: true);
+            set => NetworkPolicy = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetExternalAddressRequest
+    {
+        /// <summary>
+        /// <see cref="gcvv::ExternalAddressName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcvv::ExternalAddressName ExternalAddressName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcvv::ExternalAddressName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateExternalAddressRequest
+    {
+        /// <summary>
+        /// <see cref="PrivateCloudName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PrivateCloudName ParentAsPrivateCloudName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PrivateCloudName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteExternalAddressRequest
+    {
+        /// <summary>
+        /// <see cref="gcvv::ExternalAddressName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcvv::ExternalAddressName ExternalAddressName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcvv::ExternalAddressName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ListSubnetsRequest
     {
         /// <summary>
@@ -365,6 +449,102 @@ namespace Google.Cloud.VmwareEngine.V1
         public gcvv::SubnetName SubnetName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcvv::SubnetName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListExternalAccessRulesRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkPolicyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public NetworkPolicyName ParentAsNetworkPolicyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : NetworkPolicyName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetExternalAccessRuleRequest
+    {
+        /// <summary>
+        /// <see cref="gcvv::ExternalAccessRuleName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcvv::ExternalAccessRuleName ExternalAccessRuleName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcvv::ExternalAccessRuleName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateExternalAccessRuleRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkPolicyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public NetworkPolicyName ParentAsNetworkPolicyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : NetworkPolicyName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteExternalAccessRuleRequest
+    {
+        /// <summary>
+        /// <see cref="gcvv::ExternalAccessRuleName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcvv::ExternalAccessRuleName ExternalAccessRuleName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcvv::ExternalAccessRuleName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListLoggingServersRequest
+    {
+        /// <summary>
+        /// <see cref="PrivateCloudName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PrivateCloudName ParentAsPrivateCloudName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PrivateCloudName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetLoggingServerRequest
+    {
+        /// <summary>
+        /// <see cref="gcvv::LoggingServerName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcvv::LoggingServerName LoggingServerName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcvv::LoggingServerName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateLoggingServerRequest
+    {
+        /// <summary>
+        /// <see cref="PrivateCloudName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PrivateCloudName ParentAsPrivateCloudName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PrivateCloudName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteLoggingServerRequest
+    {
+        /// <summary>
+        /// <see cref="gcvv::LoggingServerName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcvv::LoggingServerName LoggingServerName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcvv::LoggingServerName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -477,6 +657,78 @@ namespace Google.Cloud.VmwareEngine.V1
         }
     }
 
+    public partial class GetDnsForwardingRequest
+    {
+        /// <summary>
+        /// <see cref="gcvv::DnsForwardingName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcvv::DnsForwardingName DnsForwardingName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcvv::DnsForwardingName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateNetworkPeeringRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteNetworkPeeringRequest
+    {
+        /// <summary>
+        /// <see cref="gcvv::NetworkPeeringName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcvv::NetworkPeeringName NetworkPeeringName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcvv::NetworkPeeringName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetNetworkPeeringRequest
+    {
+        /// <summary>
+        /// <see cref="gcvv::NetworkPeeringName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcvv::NetworkPeeringName NetworkPeeringName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcvv::NetworkPeeringName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListNetworkPeeringsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListPeeringRoutesRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkPeeringName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public NetworkPeeringName ParentAsNetworkPeeringName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : NetworkPeeringName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ListNetworkPoliciesRequest
     {
         /// <summary>
@@ -521,6 +773,69 @@ namespace Google.Cloud.VmwareEngine.V1
         public gcvv::NetworkPolicyName NetworkPolicyName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcvv::NetworkPolicyName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListManagementDnsZoneBindingsRequest
+    {
+        /// <summary>
+        /// <see cref="PrivateCloudName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PrivateCloudName ParentAsPrivateCloudName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PrivateCloudName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetManagementDnsZoneBindingRequest
+    {
+        /// <summary>
+        /// <see cref="gcvv::ManagementDnsZoneBindingName"/>-typed view over the <see cref="Name"/> resource name
+        /// property.
+        /// </summary>
+        public gcvv::ManagementDnsZoneBindingName ManagementDnsZoneBindingName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcvv::ManagementDnsZoneBindingName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateManagementDnsZoneBindingRequest
+    {
+        /// <summary>
+        /// <see cref="PrivateCloudName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PrivateCloudName ParentAsPrivateCloudName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PrivateCloudName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteManagementDnsZoneBindingRequest
+    {
+        /// <summary>
+        /// <see cref="gcvv::ManagementDnsZoneBindingName"/>-typed view over the <see cref="Name"/> resource name
+        /// property.
+        /// </summary>
+        public gcvv::ManagementDnsZoneBindingName ManagementDnsZoneBindingName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcvv::ManagementDnsZoneBindingName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class RepairManagementDnsZoneBindingRequest
+    {
+        /// <summary>
+        /// <see cref="gcvv::ManagementDnsZoneBindingName"/>-typed view over the <see cref="Name"/> resource name
+        /// property.
+        /// </summary>
+        public gcvv::ManagementDnsZoneBindingName ManagementDnsZoneBindingName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcvv::ManagementDnsZoneBindingName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -630,6 +945,42 @@ namespace Google.Cloud.VmwareEngine.V1
         {
             get => string.IsNullOrEmpty(Parent) ? null : PrivateConnectionName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GrantDnsBindPermissionRequest
+    {
+        /// <summary>
+        /// <see cref="gcvv::DnsBindPermissionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcvv::DnsBindPermissionName DnsBindPermissionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcvv::DnsBindPermissionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class RevokeDnsBindPermissionRequest
+    {
+        /// <summary>
+        /// <see cref="gcvv::DnsBindPermissionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcvv::DnsBindPermissionName DnsBindPermissionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcvv::DnsBindPermissionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetDnsBindPermissionRequest
+    {
+        /// <summary>
+        /// <see cref="gcvv::DnsBindPermissionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcvv::DnsBindPermissionName DnsBindPermissionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcvv::DnsBindPermissionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
         }
     }
 }

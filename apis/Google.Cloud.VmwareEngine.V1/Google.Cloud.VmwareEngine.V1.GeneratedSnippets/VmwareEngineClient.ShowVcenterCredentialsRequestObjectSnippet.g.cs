@@ -37,6 +37,7 @@ namespace GoogleCSharpSnippets
             ShowVcenterCredentialsRequest request = new ShowVcenterCredentialsRequest
             {
                 PrivateCloudAsPrivateCloudName = PrivateCloudName.FromProjectLocationPrivateCloud("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]"),
+                Username = "",
             };
             // Make the request
             Credentials response = vmwareEngineClient.ShowVcenterCredentials(request);
