@@ -31,6 +31,13 @@ namespace Google.Cloud.Firestore
     /// </summary>
     public sealed class FirestoreDb
     {
+        private static readonly RetrySettings s_defaultBatchGetDocumentsRetrySettings = RetrySettings.FromExponentialBackoff(
+                maxAttempts: 5,
+                initialBackoff: TimeSpan.FromMilliseconds(100),
+                maxBackoff: TimeSpan.FromSeconds(60),
+                backoffMultiplier: 1.3,
+                retryFilter: RetrySettings.FilterForStatusCodes(StatusCode.Unavailable, StatusCode.Internal, StatusCode.DeadlineExceeded));
+
         private const string DefaultDatabaseId = "(default)";
 
         /// <summary>
@@ -62,9 +69,11 @@ namespace Google.Cloud.Firestore
 
         internal SerializationContext SerializationContext { get; }
 
-        private readonly CallSettings _batchGetCallSettings;
+        private readonly RetrySettings _batchGetDocumentsRetrySettings;
 
-        private FirestoreDb(string projectId, string databaseId, FirestoreClient client, Action<string> warningLogger, SerializationContext serializationContext)
+        private FirestoreDb(
+            string projectId, string databaseId, FirestoreClient client, Action<string> warningLogger,
+            SerializationContext serializationContext, RetrySettings batchGetDocumentsRetrySettings)
         {
             ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
             DatabaseId = GaxPreconditions.CheckNotNull(databaseId, nameof(databaseId));
@@ -74,23 +83,10 @@ namespace Google.Cloud.Firestore
             DocumentsPath = $"{RootPath}/documents";
             WarningLogger = warningLogger;
 
-            // TODO: Potentially make these configurable.
-            // The retry settings are taken from firestore_grpc_service_config.json.
-            var batchGetRetry = RetrySettings.FromExponentialBackoff(
-                maxAttempts: 5,
-                initialBackoff: TimeSpan.FromMilliseconds(100),
-                maxBackoff: TimeSpan.FromSeconds(60),
-                backoffMultiplier: 1.3,
-                retryFilter: RetrySettings.FilterForStatusCodes(StatusCode.Unavailable, StatusCode.Internal, StatusCode.DeadlineExceeded));
-            _batchGetCallSettings = CallSettings.FromRetry(batchGetRetry).WithTimeout(TimeSpan.FromMinutes(10));
-
             SerializationContext = GaxPreconditions.CheckNotNull(serializationContext, nameof(serializationContext));
-        }
 
-        // Internally, we support non-default databases. The public Create and CreateAsync methods only support the default database,
-        // as that's all the server supports at the moment. When that changes, we'll want to support non-default databases publicly,
-        // but will probably need a different method name in order to do so, to avoid it being a breaking change.
-        // We don't have a CreateAsync method accepting a database ID, as we don't use that anywhere for testing.
+            _batchGetDocumentsRetrySettings = GaxPreconditions.CheckNotNull(batchGetDocumentsRetrySettings, nameof(batchGetDocumentsRetrySettings));
+        }
 
         /// <summary>
         /// Creates an instance for the specified project, using the specified <see cref="FirestoreClient"/> for RPC operations.
@@ -129,20 +125,23 @@ namespace Google.Cloud.Firestore
         /// <param name="client">The client to use for RPC operations. Must not be null.</param>
         /// <param name="warningLogger">The warning logger to use, if any. May be null.</param>
         /// <param name="converterRegistry">A registry of custom converters. May be null.</param>
+        /// <param name="batchGetDocumentsRetrySettings">The retry settings for batch document fetching operations. May be null.</param>
         /// <returns>A new instance.</returns>
         internal static FirestoreDb Create(
             // Required parameters
             string projectId, string databaseId, FirestoreClient client,
             // Optional parameters
             Action<string> warningLogger = null,
-            ConverterRegistry converterRegistry = null) =>
+            ConverterRegistry converterRegistry = null,
+            RetrySettings batchGetDocumentsRetrySettings = null) =>
             // Validation is performed in the constructor.
             new FirestoreDb(
                 projectId,
                 databaseId ?? DefaultDatabaseId,
                 client,
                 warningLogger,
-                new SerializationContext(converterRegistry));
+                new SerializationContext(converterRegistry),
+                batchGetDocumentsRetrySettings ?? s_defaultBatchGetDocumentsRetrySettings);
 
         /// <summary>
         /// Returns a new <see cref="FirestoreDb"/> with the same project, database and client as this one,
@@ -151,7 +150,7 @@ namespace Google.Cloud.Firestore
         /// <param name="warningLogger">The logger for warnings. May be null.</param>
         /// <returns>A new <see cref="FirestoreDb"/> based on this one, with the given warning logger.</returns>
         public FirestoreDb WithWarningLogger(Action<string> warningLogger) =>
-            new FirestoreDb(ProjectId, DatabaseId, Client, warningLogger, SerializationContext);
+            new FirestoreDb(ProjectId, DatabaseId, Client, warningLogger, SerializationContext, _batchGetDocumentsRetrySettings);
 
         internal void LogWarning(string message) => WarningLogger?.Invoke(message);
 
@@ -295,7 +294,7 @@ namespace Google.Cloud.Firestore
 
             var clock = Client.Settings.Clock ?? SystemClock.Instance;
             var scheduler = Client.Settings.Scheduler ?? SystemScheduler.Instance;
-            var callSettings = _batchGetCallSettings.WithCancellationToken(cancellationToken);
+            var callSettings = Client.Settings.BatchGetDocumentsSettings.WithCancellationToken(cancellationToken);
 
             // This is the function that we'll retry. We can't use the built-in retry functionality, because it's not a unary gRPC call.
             // (We could potentially simulate a unary call, but it would be a little odd to do so.)
@@ -328,7 +327,7 @@ namespace Google.Cloud.Firestore
                 return snapshots;
             };
 
-            var retryingTask = RetryHelper.Retry(function, request, callSettings, clock, scheduler);
+            var retryingTask = RetryHelper.Retry(_batchGetDocumentsRetrySettings, function, request, callSettings, clock, scheduler);
             return await retryingTask.ConfigureAwait(false);
 
             string ExtractPath(DocumentReference documentReference)
@@ -387,7 +386,6 @@ namespace Google.Cloud.Firestore
         /// <returns>A task which completes when the transaction has committed. The result of the task then contains the result of the callback.</returns>
         public async Task<T> RunTransactionAsync<T>(Func<Transaction, Task<T>> callback, TransactionOptions options = null, CancellationToken cancellationToken = default)
         {
-
             ByteString previousTransactionId = null;
             options = options ?? TransactionOptions.Default;
             var attemptsLeft = options.MaxAttempts;
