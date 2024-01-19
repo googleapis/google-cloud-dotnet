@@ -37,6 +37,25 @@ namespace Google.Cloud.Firestore.V1
         }
     }
 
+    // Partial class to set up resource-based routing.
+    public partial class FirestoreClientImpl
+    {
+        /// <summary>
+        /// The name of the header used for efficiently routing requests.
+        /// </summary>
+        /// <remarks>
+        /// This should be set to the database resource name ("projects/{projectId}/databases/{databaseId}") for any RPC.
+        /// For non-streaming calls, <see cref="FirestoreClientImpl"/> performs this automatically. This cannot be performed
+        /// automatically for streaming calls due to the separation between initializing the stream and sending requests, so
+        /// client code should set the value in a <see cref="CallSettings"/>. Typically this is performed with either the
+        /// <see cref="CallSettings.FromHeader(string, string)"/> factory method or the
+        /// <see cref="CallSettingsExtensions.WithHeader(CallSettings, string, string)"/> extension method.
+        /// </remarks>
+        [Obsolete("This header is obsolete; x-goog-request-params should now be used instead. " +
+            "This constant will be removed in a future version")]
+        public const string ResourcePrefixHeader = "google-cloud-resource-prefix";
+    }
+
     // Support for FirestoreDbBuilder.
     public sealed partial class FirestoreClientBuilder : ClientBuilderBase<FirestoreClient>
     {

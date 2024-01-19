@@ -478,7 +478,9 @@ namespace Google.Cloud.Firestore.Tests
             {
                 var metadata = new Metadata();
                 callSettings.HeaderMutation?.Invoke(metadata);
+#pragma warning disable CS0618 // Type or member is obsolete
                 var resourcePrefixHeader = metadata.FirstOrDefault(entry => entry.Key == FirestoreClientImpl.ResourcePrefixHeader);
+#pragma warning restore CS0618 // Type or member is obsolete
                 Assert.NotNull(resourcePrefixHeader);
                 Assert.Equal(_expectedResourceName, resourcePrefixHeader.Value);
                 return _streams[_index++];

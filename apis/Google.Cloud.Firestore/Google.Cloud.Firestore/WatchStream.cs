@@ -73,7 +73,11 @@ namespace Google.Cloud.Firestore
             _db = db;
             _callbackCancellationTokenSource = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
             _networkCancellationTokenSource = CancellationTokenSource.CreateLinkedTokenSource(_callbackCancellationTokenSource.Token);
+
+#pragma warning disable CS0618 // Type or member is obsolete
+            // TODO(b/320595510): Use x-goog-request-params (which will be easier after a new GAX release)
             _listenCallSettings = CallSettings.FromHeader(FirestoreClientImpl.ResourcePrefixHeader, db.RootPath);
+#pragma warning restore CS0618 // Type or member is obsolete
 
             // TODO: Make these configurable?
             _backoffSettings = RetrySettings.FromExponentialBackoff(
