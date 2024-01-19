@@ -1,4 +1,4 @@
-﻿// Copyright 2019, Google LLC
+// Copyright 2019, Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -28,10 +28,10 @@ namespace Google.Cloud.Firestore
     internal static class RetryHelper
     {
         internal static async Task<TResponse> Retry<TRequest, TResponse>(
+            RetrySettings retrySettings,
             Func<TRequest, CallSettings, Task<TResponse>> fn,
             TRequest request, CallSettings callSettings, IClock clock, IScheduler scheduler)
         {
-            RetrySettings retrySettings = callSettings.Retry;
             if (retrySettings == null)
             {
                 return await fn(request, callSettings).ConfigureAwait(false);

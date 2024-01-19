@@ -337,6 +337,7 @@ namespace Google.Cloud.Firestore.Tests
             await Assert.ThrowsAsync<InvalidOperationException>(() => db.GetDocumentSnapshotsAsync(new[] { db.Document("col1/doc1") }, transactionId: null, fieldMask: null, default));
         }
 
+        // This tests the default retry settings.
         [Fact]
         public async Task GetDocumentSnapshotsAsync_Retry()
         {
@@ -362,6 +363,37 @@ namespace Google.Cloud.Firestore.Tests
             var docRef = db.Document("col1/doc1");
             var results = await db.GetDocumentSnapshotsAsync(new[] { docRef }, transactionId: null, fieldMask: null, default);
             Assert.Equal(1, results.Count);
+        }
+
+        // This is effectively just testing that custom retry settings are observed.
+        [Fact]
+        public async Task GetDocumentSnapshotsAsync_RetryProhibited()
+        {
+            var customRetrySettings = RetrySettings.FromConstantBackoff(maxAttempts: 1, backoff: TimeSpan.Zero, retryFilter: ex => true);
+
+            string docName = "projects/proj/databases/db/documents/col1/doc1";
+            var mock = CreateMockClient();
+            mock.Settings.Clock = new FakeClock();
+            mock.Settings.Scheduler = new NoOpScheduler();
+
+            var request = new BatchGetDocumentsRequest
+            {
+                Database = "projects/proj/databases/db",
+                Documents = { docName }
+            };
+
+            var responses = new[]
+            {
+                new BatchGetDocumentsResponse { Missing = docName, ReadTime = CreateProtoTimestamp(1, 2) },
+            };
+            var errorResponses = responses.Where(r => throw new RpcException(new Status(StatusCode.Unavailable, "Bang")));
+            mock.Configure().BatchGetDocuments(request, Arg.Any<CallSettings>())
+                .Returns(new FakeDocumentStream(errorResponses), new FakeDocumentStream(errorResponses), new FakeDocumentStream(responses));
+            var db = FirestoreDb.Create("proj", "db", mock, batchGetDocumentsRetrySettings: customRetrySettings);
+            var docRef = db.Document("col1/doc1");
+
+            var exception = await Assert.ThrowsAsync<RpcException>(() => db.GetDocumentSnapshotsAsync(new[] { docRef }, transactionId: null, fieldMask: null, default));
+            Assert.Equal("Bang", exception.Status.Detail);
         }
 
         [Fact]
