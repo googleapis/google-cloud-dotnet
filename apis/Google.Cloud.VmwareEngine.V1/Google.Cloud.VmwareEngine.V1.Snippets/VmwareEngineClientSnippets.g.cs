@@ -1981,6 +1981,1524 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListNodes</summary>
+        public void ListNodesRequestObject()
+        {
+            // Snippet: ListNodes(ListNodesRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            ListNodesRequest request = new ListNodesRequest
+            {
+                ParentAsClusterName = ClusterName.FromProjectLocationPrivateCloudCluster("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[CLUSTER]"),
+            };
+            // Make the request
+            PagedEnumerable<ListNodesResponse, Node> response = vmwareEngineClient.ListNodes(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Node item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListNodesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Node item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Node> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Node item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNodesAsync</summary>
+        public async Task ListNodesRequestObjectAsync()
+        {
+            // Snippet: ListNodesAsync(ListNodesRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            ListNodesRequest request = new ListNodesRequest
+            {
+                ParentAsClusterName = ClusterName.FromProjectLocationPrivateCloudCluster("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[CLUSTER]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListNodesResponse, Node> response = vmwareEngineClient.ListNodesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Node item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListNodesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Node item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Node> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Node item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNodes</summary>
+        public void ListNodes()
+        {
+            // Snippet: ListNodes(string, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/privateClouds/[PRIVATE_CLOUD]/clusters/[CLUSTER]";
+            // Make the request
+            PagedEnumerable<ListNodesResponse, Node> response = vmwareEngineClient.ListNodes(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Node item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListNodesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Node item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Node> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Node item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNodesAsync</summary>
+        public async Task ListNodesAsync()
+        {
+            // Snippet: ListNodesAsync(string, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/privateClouds/[PRIVATE_CLOUD]/clusters/[CLUSTER]";
+            // Make the request
+            PagedAsyncEnumerable<ListNodesResponse, Node> response = vmwareEngineClient.ListNodesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Node item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListNodesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Node item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Node> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Node item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNodes</summary>
+        public void ListNodesResourceNames()
+        {
+            // Snippet: ListNodes(ClusterName, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            ClusterName parent = ClusterName.FromProjectLocationPrivateCloudCluster("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[CLUSTER]");
+            // Make the request
+            PagedEnumerable<ListNodesResponse, Node> response = vmwareEngineClient.ListNodes(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Node item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListNodesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Node item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Node> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Node item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNodesAsync</summary>
+        public async Task ListNodesResourceNamesAsync()
+        {
+            // Snippet: ListNodesAsync(ClusterName, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            ClusterName parent = ClusterName.FromProjectLocationPrivateCloudCluster("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[CLUSTER]");
+            // Make the request
+            PagedAsyncEnumerable<ListNodesResponse, Node> response = vmwareEngineClient.ListNodesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Node item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListNodesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Node item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Node> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Node item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNode</summary>
+        public void GetNodeRequestObject()
+        {
+            // Snippet: GetNode(GetNodeRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            GetNodeRequest request = new GetNodeRequest
+            {
+                NodeName = NodeName.FromProjectLocationPrivateCloudClusterNode("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[CLUSTER]", "[NODE]"),
+            };
+            // Make the request
+            Node response = vmwareEngineClient.GetNode(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNodeAsync</summary>
+        public async Task GetNodeRequestObjectAsync()
+        {
+            // Snippet: GetNodeAsync(GetNodeRequest, CallSettings)
+            // Additional: GetNodeAsync(GetNodeRequest, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            GetNodeRequest request = new GetNodeRequest
+            {
+                NodeName = NodeName.FromProjectLocationPrivateCloudClusterNode("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[CLUSTER]", "[NODE]"),
+            };
+            // Make the request
+            Node response = await vmwareEngineClient.GetNodeAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNode</summary>
+        public void GetNode()
+        {
+            // Snippet: GetNode(string, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/privateClouds/[PRIVATE_CLOUD]/clusters/[CLUSTER]/nodes/[NODE]";
+            // Make the request
+            Node response = vmwareEngineClient.GetNode(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNodeAsync</summary>
+        public async Task GetNodeAsync()
+        {
+            // Snippet: GetNodeAsync(string, CallSettings)
+            // Additional: GetNodeAsync(string, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/privateClouds/[PRIVATE_CLOUD]/clusters/[CLUSTER]/nodes/[NODE]";
+            // Make the request
+            Node response = await vmwareEngineClient.GetNodeAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNode</summary>
+        public void GetNodeResourceNames()
+        {
+            // Snippet: GetNode(NodeName, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            NodeName name = NodeName.FromProjectLocationPrivateCloudClusterNode("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[CLUSTER]", "[NODE]");
+            // Make the request
+            Node response = vmwareEngineClient.GetNode(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNodeAsync</summary>
+        public async Task GetNodeResourceNamesAsync()
+        {
+            // Snippet: GetNodeAsync(NodeName, CallSettings)
+            // Additional: GetNodeAsync(NodeName, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            NodeName name = NodeName.FromProjectLocationPrivateCloudClusterNode("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[CLUSTER]", "[NODE]");
+            // Make the request
+            Node response = await vmwareEngineClient.GetNodeAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListExternalAddresses</summary>
+        public void ListExternalAddressesRequestObject()
+        {
+            // Snippet: ListExternalAddresses(ListExternalAddressesRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            ListExternalAddressesRequest request = new ListExternalAddressesRequest
+            {
+                ParentAsPrivateCloudName = PrivateCloudName.FromProjectLocationPrivateCloud("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListExternalAddressesResponse, ExternalAddress> response = vmwareEngineClient.ListExternalAddresses(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ExternalAddress item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListExternalAddressesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ExternalAddress item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ExternalAddress> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ExternalAddress item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListExternalAddressesAsync</summary>
+        public async Task ListExternalAddressesRequestObjectAsync()
+        {
+            // Snippet: ListExternalAddressesAsync(ListExternalAddressesRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            ListExternalAddressesRequest request = new ListExternalAddressesRequest
+            {
+                ParentAsPrivateCloudName = PrivateCloudName.FromProjectLocationPrivateCloud("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListExternalAddressesResponse, ExternalAddress> response = vmwareEngineClient.ListExternalAddressesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ExternalAddress item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListExternalAddressesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ExternalAddress item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ExternalAddress> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ExternalAddress item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListExternalAddresses</summary>
+        public void ListExternalAddresses()
+        {
+            // Snippet: ListExternalAddresses(string, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/privateClouds/[PRIVATE_CLOUD]";
+            // Make the request
+            PagedEnumerable<ListExternalAddressesResponse, ExternalAddress> response = vmwareEngineClient.ListExternalAddresses(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ExternalAddress item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListExternalAddressesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ExternalAddress item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ExternalAddress> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ExternalAddress item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListExternalAddressesAsync</summary>
+        public async Task ListExternalAddressesAsync()
+        {
+            // Snippet: ListExternalAddressesAsync(string, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/privateClouds/[PRIVATE_CLOUD]";
+            // Make the request
+            PagedAsyncEnumerable<ListExternalAddressesResponse, ExternalAddress> response = vmwareEngineClient.ListExternalAddressesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ExternalAddress item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListExternalAddressesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ExternalAddress item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ExternalAddress> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ExternalAddress item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListExternalAddresses</summary>
+        public void ListExternalAddressesResourceNames()
+        {
+            // Snippet: ListExternalAddresses(PrivateCloudName, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            PrivateCloudName parent = PrivateCloudName.FromProjectLocationPrivateCloud("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]");
+            // Make the request
+            PagedEnumerable<ListExternalAddressesResponse, ExternalAddress> response = vmwareEngineClient.ListExternalAddresses(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ExternalAddress item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListExternalAddressesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ExternalAddress item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ExternalAddress> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ExternalAddress item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListExternalAddressesAsync</summary>
+        public async Task ListExternalAddressesResourceNamesAsync()
+        {
+            // Snippet: ListExternalAddressesAsync(PrivateCloudName, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            PrivateCloudName parent = PrivateCloudName.FromProjectLocationPrivateCloud("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]");
+            // Make the request
+            PagedAsyncEnumerable<ListExternalAddressesResponse, ExternalAddress> response = vmwareEngineClient.ListExternalAddressesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ExternalAddress item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListExternalAddressesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ExternalAddress item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ExternalAddress> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ExternalAddress item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchNetworkPolicyExternalAddresses</summary>
+        public void FetchNetworkPolicyExternalAddressesRequestObject()
+        {
+            // Snippet: FetchNetworkPolicyExternalAddresses(FetchNetworkPolicyExternalAddressesRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            FetchNetworkPolicyExternalAddressesRequest request = new FetchNetworkPolicyExternalAddressesRequest
+            {
+                NetworkPolicyAsNetworkPolicyName = NetworkPolicyName.FromProjectLocationNetworkPolicy("[PROJECT]", "[LOCATION]", "[NETWORK_POLICY]"),
+            };
+            // Make the request
+            PagedEnumerable<FetchNetworkPolicyExternalAddressesResponse, ExternalAddress> response = vmwareEngineClient.FetchNetworkPolicyExternalAddresses(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ExternalAddress item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (FetchNetworkPolicyExternalAddressesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ExternalAddress item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ExternalAddress> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ExternalAddress item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchNetworkPolicyExternalAddressesAsync</summary>
+        public async Task FetchNetworkPolicyExternalAddressesRequestObjectAsync()
+        {
+            // Snippet: FetchNetworkPolicyExternalAddressesAsync(FetchNetworkPolicyExternalAddressesRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            FetchNetworkPolicyExternalAddressesRequest request = new FetchNetworkPolicyExternalAddressesRequest
+            {
+                NetworkPolicyAsNetworkPolicyName = NetworkPolicyName.FromProjectLocationNetworkPolicy("[PROJECT]", "[LOCATION]", "[NETWORK_POLICY]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<FetchNetworkPolicyExternalAddressesResponse, ExternalAddress> response = vmwareEngineClient.FetchNetworkPolicyExternalAddressesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ExternalAddress item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((FetchNetworkPolicyExternalAddressesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ExternalAddress item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ExternalAddress> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ExternalAddress item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchNetworkPolicyExternalAddresses</summary>
+        public void FetchNetworkPolicyExternalAddresses()
+        {
+            // Snippet: FetchNetworkPolicyExternalAddresses(string, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            string networkPolicy = "projects/[PROJECT]/locations/[LOCATION]/networkPolicies/[NETWORK_POLICY]";
+            // Make the request
+            PagedEnumerable<FetchNetworkPolicyExternalAddressesResponse, ExternalAddress> response = vmwareEngineClient.FetchNetworkPolicyExternalAddresses(networkPolicy);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ExternalAddress item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (FetchNetworkPolicyExternalAddressesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ExternalAddress item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ExternalAddress> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ExternalAddress item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchNetworkPolicyExternalAddressesAsync</summary>
+        public async Task FetchNetworkPolicyExternalAddressesAsync()
+        {
+            // Snippet: FetchNetworkPolicyExternalAddressesAsync(string, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            string networkPolicy = "projects/[PROJECT]/locations/[LOCATION]/networkPolicies/[NETWORK_POLICY]";
+            // Make the request
+            PagedAsyncEnumerable<FetchNetworkPolicyExternalAddressesResponse, ExternalAddress> response = vmwareEngineClient.FetchNetworkPolicyExternalAddressesAsync(networkPolicy);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ExternalAddress item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((FetchNetworkPolicyExternalAddressesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ExternalAddress item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ExternalAddress> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ExternalAddress item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchNetworkPolicyExternalAddresses</summary>
+        public void FetchNetworkPolicyExternalAddressesResourceNames()
+        {
+            // Snippet: FetchNetworkPolicyExternalAddresses(NetworkPolicyName, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            NetworkPolicyName networkPolicy = NetworkPolicyName.FromProjectLocationNetworkPolicy("[PROJECT]", "[LOCATION]", "[NETWORK_POLICY]");
+            // Make the request
+            PagedEnumerable<FetchNetworkPolicyExternalAddressesResponse, ExternalAddress> response = vmwareEngineClient.FetchNetworkPolicyExternalAddresses(networkPolicy);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ExternalAddress item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (FetchNetworkPolicyExternalAddressesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ExternalAddress item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ExternalAddress> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ExternalAddress item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchNetworkPolicyExternalAddressesAsync</summary>
+        public async Task FetchNetworkPolicyExternalAddressesResourceNamesAsync()
+        {
+            // Snippet: FetchNetworkPolicyExternalAddressesAsync(NetworkPolicyName, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            NetworkPolicyName networkPolicy = NetworkPolicyName.FromProjectLocationNetworkPolicy("[PROJECT]", "[LOCATION]", "[NETWORK_POLICY]");
+            // Make the request
+            PagedAsyncEnumerable<FetchNetworkPolicyExternalAddressesResponse, ExternalAddress> response = vmwareEngineClient.FetchNetworkPolicyExternalAddressesAsync(networkPolicy);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ExternalAddress item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((FetchNetworkPolicyExternalAddressesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ExternalAddress item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ExternalAddress> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ExternalAddress item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetExternalAddress</summary>
+        public void GetExternalAddressRequestObject()
+        {
+            // Snippet: GetExternalAddress(GetExternalAddressRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            GetExternalAddressRequest request = new GetExternalAddressRequest
+            {
+                ExternalAddressName = ExternalAddressName.FromProjectLocationPrivateCloudExternalAddress("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[EXTERNAL_ADDRESS]"),
+            };
+            // Make the request
+            ExternalAddress response = vmwareEngineClient.GetExternalAddress(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetExternalAddressAsync</summary>
+        public async Task GetExternalAddressRequestObjectAsync()
+        {
+            // Snippet: GetExternalAddressAsync(GetExternalAddressRequest, CallSettings)
+            // Additional: GetExternalAddressAsync(GetExternalAddressRequest, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            GetExternalAddressRequest request = new GetExternalAddressRequest
+            {
+                ExternalAddressName = ExternalAddressName.FromProjectLocationPrivateCloudExternalAddress("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[EXTERNAL_ADDRESS]"),
+            };
+            // Make the request
+            ExternalAddress response = await vmwareEngineClient.GetExternalAddressAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetExternalAddress</summary>
+        public void GetExternalAddress()
+        {
+            // Snippet: GetExternalAddress(string, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/privateClouds/[PRIVATE_CLOUD]/externalAddresses/[EXTERNAL_ADDRESS]";
+            // Make the request
+            ExternalAddress response = vmwareEngineClient.GetExternalAddress(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetExternalAddressAsync</summary>
+        public async Task GetExternalAddressAsync()
+        {
+            // Snippet: GetExternalAddressAsync(string, CallSettings)
+            // Additional: GetExternalAddressAsync(string, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/privateClouds/[PRIVATE_CLOUD]/externalAddresses/[EXTERNAL_ADDRESS]";
+            // Make the request
+            ExternalAddress response = await vmwareEngineClient.GetExternalAddressAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetExternalAddress</summary>
+        public void GetExternalAddressResourceNames()
+        {
+            // Snippet: GetExternalAddress(ExternalAddressName, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            ExternalAddressName name = ExternalAddressName.FromProjectLocationPrivateCloudExternalAddress("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[EXTERNAL_ADDRESS]");
+            // Make the request
+            ExternalAddress response = vmwareEngineClient.GetExternalAddress(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetExternalAddressAsync</summary>
+        public async Task GetExternalAddressResourceNamesAsync()
+        {
+            // Snippet: GetExternalAddressAsync(ExternalAddressName, CallSettings)
+            // Additional: GetExternalAddressAsync(ExternalAddressName, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            ExternalAddressName name = ExternalAddressName.FromProjectLocationPrivateCloudExternalAddress("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[EXTERNAL_ADDRESS]");
+            // Make the request
+            ExternalAddress response = await vmwareEngineClient.GetExternalAddressAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateExternalAddress</summary>
+        public void CreateExternalAddressRequestObject()
+        {
+            // Snippet: CreateExternalAddress(CreateExternalAddressRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            CreateExternalAddressRequest request = new CreateExternalAddressRequest
+            {
+                ParentAsPrivateCloudName = PrivateCloudName.FromProjectLocationPrivateCloud("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]"),
+                ExternalAddress = new ExternalAddress(),
+                ExternalAddressId = "",
+                RequestId = "",
+            };
+            // Make the request
+            Operation<ExternalAddress, OperationMetadata> response = vmwareEngineClient.CreateExternalAddress(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExternalAddress, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExternalAddress result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExternalAddress, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceCreateExternalAddress(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExternalAddress retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateExternalAddressAsync</summary>
+        public async Task CreateExternalAddressRequestObjectAsync()
+        {
+            // Snippet: CreateExternalAddressAsync(CreateExternalAddressRequest, CallSettings)
+            // Additional: CreateExternalAddressAsync(CreateExternalAddressRequest, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateExternalAddressRequest request = new CreateExternalAddressRequest
+            {
+                ParentAsPrivateCloudName = PrivateCloudName.FromProjectLocationPrivateCloud("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]"),
+                ExternalAddress = new ExternalAddress(),
+                ExternalAddressId = "",
+                RequestId = "",
+            };
+            // Make the request
+            Operation<ExternalAddress, OperationMetadata> response = await vmwareEngineClient.CreateExternalAddressAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExternalAddress, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExternalAddress result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExternalAddress, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceCreateExternalAddressAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExternalAddress retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateExternalAddress</summary>
+        public void CreateExternalAddress()
+        {
+            // Snippet: CreateExternalAddress(string, ExternalAddress, string, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/privateClouds/[PRIVATE_CLOUD]";
+            ExternalAddress externalAddress = new ExternalAddress();
+            string externalAddressId = "";
+            // Make the request
+            Operation<ExternalAddress, OperationMetadata> response = vmwareEngineClient.CreateExternalAddress(parent, externalAddress, externalAddressId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExternalAddress, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExternalAddress result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExternalAddress, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceCreateExternalAddress(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExternalAddress retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateExternalAddressAsync</summary>
+        public async Task CreateExternalAddressAsync()
+        {
+            // Snippet: CreateExternalAddressAsync(string, ExternalAddress, string, CallSettings)
+            // Additional: CreateExternalAddressAsync(string, ExternalAddress, string, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/privateClouds/[PRIVATE_CLOUD]";
+            ExternalAddress externalAddress = new ExternalAddress();
+            string externalAddressId = "";
+            // Make the request
+            Operation<ExternalAddress, OperationMetadata> response = await vmwareEngineClient.CreateExternalAddressAsync(parent, externalAddress, externalAddressId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExternalAddress, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExternalAddress result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExternalAddress, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceCreateExternalAddressAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExternalAddress retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateExternalAddress</summary>
+        public void CreateExternalAddressResourceNames()
+        {
+            // Snippet: CreateExternalAddress(PrivateCloudName, ExternalAddress, string, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            PrivateCloudName parent = PrivateCloudName.FromProjectLocationPrivateCloud("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]");
+            ExternalAddress externalAddress = new ExternalAddress();
+            string externalAddressId = "";
+            // Make the request
+            Operation<ExternalAddress, OperationMetadata> response = vmwareEngineClient.CreateExternalAddress(parent, externalAddress, externalAddressId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExternalAddress, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExternalAddress result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExternalAddress, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceCreateExternalAddress(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExternalAddress retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateExternalAddressAsync</summary>
+        public async Task CreateExternalAddressResourceNamesAsync()
+        {
+            // Snippet: CreateExternalAddressAsync(PrivateCloudName, ExternalAddress, string, CallSettings)
+            // Additional: CreateExternalAddressAsync(PrivateCloudName, ExternalAddress, string, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            PrivateCloudName parent = PrivateCloudName.FromProjectLocationPrivateCloud("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]");
+            ExternalAddress externalAddress = new ExternalAddress();
+            string externalAddressId = "";
+            // Make the request
+            Operation<ExternalAddress, OperationMetadata> response = await vmwareEngineClient.CreateExternalAddressAsync(parent, externalAddress, externalAddressId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExternalAddress, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExternalAddress result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExternalAddress, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceCreateExternalAddressAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExternalAddress retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateExternalAddress</summary>
+        public void UpdateExternalAddressRequestObject()
+        {
+            // Snippet: UpdateExternalAddress(UpdateExternalAddressRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            UpdateExternalAddressRequest request = new UpdateExternalAddressRequest
+            {
+                UpdateMask = new FieldMask(),
+                ExternalAddress = new ExternalAddress(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<ExternalAddress, OperationMetadata> response = vmwareEngineClient.UpdateExternalAddress(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExternalAddress, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExternalAddress result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExternalAddress, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceUpdateExternalAddress(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExternalAddress retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateExternalAddressAsync</summary>
+        public async Task UpdateExternalAddressRequestObjectAsync()
+        {
+            // Snippet: UpdateExternalAddressAsync(UpdateExternalAddressRequest, CallSettings)
+            // Additional: UpdateExternalAddressAsync(UpdateExternalAddressRequest, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateExternalAddressRequest request = new UpdateExternalAddressRequest
+            {
+                UpdateMask = new FieldMask(),
+                ExternalAddress = new ExternalAddress(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<ExternalAddress, OperationMetadata> response = await vmwareEngineClient.UpdateExternalAddressAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExternalAddress, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExternalAddress result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExternalAddress, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceUpdateExternalAddressAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExternalAddress retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateExternalAddress</summary>
+        public void UpdateExternalAddress()
+        {
+            // Snippet: UpdateExternalAddress(ExternalAddress, FieldMask, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            ExternalAddress externalAddress = new ExternalAddress();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<ExternalAddress, OperationMetadata> response = vmwareEngineClient.UpdateExternalAddress(externalAddress, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExternalAddress, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExternalAddress result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExternalAddress, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceUpdateExternalAddress(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExternalAddress retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateExternalAddressAsync</summary>
+        public async Task UpdateExternalAddressAsync()
+        {
+            // Snippet: UpdateExternalAddressAsync(ExternalAddress, FieldMask, CallSettings)
+            // Additional: UpdateExternalAddressAsync(ExternalAddress, FieldMask, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            ExternalAddress externalAddress = new ExternalAddress();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<ExternalAddress, OperationMetadata> response = await vmwareEngineClient.UpdateExternalAddressAsync(externalAddress, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExternalAddress, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExternalAddress result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExternalAddress, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceUpdateExternalAddressAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExternalAddress retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteExternalAddress</summary>
+        public void DeleteExternalAddressRequestObject()
+        {
+            // Snippet: DeleteExternalAddress(DeleteExternalAddressRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            DeleteExternalAddressRequest request = new DeleteExternalAddressRequest
+            {
+                ExternalAddressName = ExternalAddressName.FromProjectLocationPrivateCloudExternalAddress("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[EXTERNAL_ADDRESS]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = vmwareEngineClient.DeleteExternalAddress(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceDeleteExternalAddress(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteExternalAddressAsync</summary>
+        public async Task DeleteExternalAddressRequestObjectAsync()
+        {
+            // Snippet: DeleteExternalAddressAsync(DeleteExternalAddressRequest, CallSettings)
+            // Additional: DeleteExternalAddressAsync(DeleteExternalAddressRequest, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteExternalAddressRequest request = new DeleteExternalAddressRequest
+            {
+                ExternalAddressName = ExternalAddressName.FromProjectLocationPrivateCloudExternalAddress("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[EXTERNAL_ADDRESS]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await vmwareEngineClient.DeleteExternalAddressAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceDeleteExternalAddressAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteExternalAddress</summary>
+        public void DeleteExternalAddress()
+        {
+            // Snippet: DeleteExternalAddress(string, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/privateClouds/[PRIVATE_CLOUD]/externalAddresses/[EXTERNAL_ADDRESS]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = vmwareEngineClient.DeleteExternalAddress(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceDeleteExternalAddress(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteExternalAddressAsync</summary>
+        public async Task DeleteExternalAddressAsync()
+        {
+            // Snippet: DeleteExternalAddressAsync(string, CallSettings)
+            // Additional: DeleteExternalAddressAsync(string, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/privateClouds/[PRIVATE_CLOUD]/externalAddresses/[EXTERNAL_ADDRESS]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await vmwareEngineClient.DeleteExternalAddressAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceDeleteExternalAddressAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteExternalAddress</summary>
+        public void DeleteExternalAddressResourceNames()
+        {
+            // Snippet: DeleteExternalAddress(ExternalAddressName, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            ExternalAddressName name = ExternalAddressName.FromProjectLocationPrivateCloudExternalAddress("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[EXTERNAL_ADDRESS]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = vmwareEngineClient.DeleteExternalAddress(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceDeleteExternalAddress(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteExternalAddressAsync</summary>
+        public async Task DeleteExternalAddressResourceNamesAsync()
+        {
+            // Snippet: DeleteExternalAddressAsync(ExternalAddressName, CallSettings)
+            // Additional: DeleteExternalAddressAsync(ExternalAddressName, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            ExternalAddressName name = ExternalAddressName.FromProjectLocationPrivateCloudExternalAddress("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[EXTERNAL_ADDRESS]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await vmwareEngineClient.DeleteExternalAddressAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceDeleteExternalAddressAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for ListSubnets</summary>
         public void ListSubnetsRequestObject()
         {
@@ -2472,6 +3990,1764 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListExternalAccessRules</summary>
+        public void ListExternalAccessRulesRequestObject()
+        {
+            // Snippet: ListExternalAccessRules(ListExternalAccessRulesRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            ListExternalAccessRulesRequest request = new ListExternalAccessRulesRequest
+            {
+                ParentAsNetworkPolicyName = NetworkPolicyName.FromProjectLocationNetworkPolicy("[PROJECT]", "[LOCATION]", "[NETWORK_POLICY]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListExternalAccessRulesResponse, ExternalAccessRule> response = vmwareEngineClient.ListExternalAccessRules(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ExternalAccessRule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListExternalAccessRulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ExternalAccessRule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ExternalAccessRule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ExternalAccessRule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListExternalAccessRulesAsync</summary>
+        public async Task ListExternalAccessRulesRequestObjectAsync()
+        {
+            // Snippet: ListExternalAccessRulesAsync(ListExternalAccessRulesRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            ListExternalAccessRulesRequest request = new ListExternalAccessRulesRequest
+            {
+                ParentAsNetworkPolicyName = NetworkPolicyName.FromProjectLocationNetworkPolicy("[PROJECT]", "[LOCATION]", "[NETWORK_POLICY]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListExternalAccessRulesResponse, ExternalAccessRule> response = vmwareEngineClient.ListExternalAccessRulesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ExternalAccessRule item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListExternalAccessRulesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ExternalAccessRule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ExternalAccessRule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ExternalAccessRule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListExternalAccessRules</summary>
+        public void ListExternalAccessRules()
+        {
+            // Snippet: ListExternalAccessRules(string, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/networkPolicies/[NETWORK_POLICY]";
+            // Make the request
+            PagedEnumerable<ListExternalAccessRulesResponse, ExternalAccessRule> response = vmwareEngineClient.ListExternalAccessRules(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ExternalAccessRule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListExternalAccessRulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ExternalAccessRule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ExternalAccessRule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ExternalAccessRule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListExternalAccessRulesAsync</summary>
+        public async Task ListExternalAccessRulesAsync()
+        {
+            // Snippet: ListExternalAccessRulesAsync(string, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/networkPolicies/[NETWORK_POLICY]";
+            // Make the request
+            PagedAsyncEnumerable<ListExternalAccessRulesResponse, ExternalAccessRule> response = vmwareEngineClient.ListExternalAccessRulesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ExternalAccessRule item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListExternalAccessRulesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ExternalAccessRule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ExternalAccessRule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ExternalAccessRule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListExternalAccessRules</summary>
+        public void ListExternalAccessRulesResourceNames()
+        {
+            // Snippet: ListExternalAccessRules(NetworkPolicyName, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            NetworkPolicyName parent = NetworkPolicyName.FromProjectLocationNetworkPolicy("[PROJECT]", "[LOCATION]", "[NETWORK_POLICY]");
+            // Make the request
+            PagedEnumerable<ListExternalAccessRulesResponse, ExternalAccessRule> response = vmwareEngineClient.ListExternalAccessRules(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ExternalAccessRule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListExternalAccessRulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ExternalAccessRule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ExternalAccessRule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ExternalAccessRule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListExternalAccessRulesAsync</summary>
+        public async Task ListExternalAccessRulesResourceNamesAsync()
+        {
+            // Snippet: ListExternalAccessRulesAsync(NetworkPolicyName, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            NetworkPolicyName parent = NetworkPolicyName.FromProjectLocationNetworkPolicy("[PROJECT]", "[LOCATION]", "[NETWORK_POLICY]");
+            // Make the request
+            PagedAsyncEnumerable<ListExternalAccessRulesResponse, ExternalAccessRule> response = vmwareEngineClient.ListExternalAccessRulesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ExternalAccessRule item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListExternalAccessRulesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ExternalAccessRule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ExternalAccessRule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ExternalAccessRule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetExternalAccessRule</summary>
+        public void GetExternalAccessRuleRequestObject()
+        {
+            // Snippet: GetExternalAccessRule(GetExternalAccessRuleRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            GetExternalAccessRuleRequest request = new GetExternalAccessRuleRequest
+            {
+                ExternalAccessRuleName = ExternalAccessRuleName.FromProjectLocationNetworkPolicyExternalAccessRule("[PROJECT]", "[LOCATION]", "[NETWORK_POLICY]", "[EXTERNAL_ACCESS_RULE]"),
+            };
+            // Make the request
+            ExternalAccessRule response = vmwareEngineClient.GetExternalAccessRule(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetExternalAccessRuleAsync</summary>
+        public async Task GetExternalAccessRuleRequestObjectAsync()
+        {
+            // Snippet: GetExternalAccessRuleAsync(GetExternalAccessRuleRequest, CallSettings)
+            // Additional: GetExternalAccessRuleAsync(GetExternalAccessRuleRequest, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            GetExternalAccessRuleRequest request = new GetExternalAccessRuleRequest
+            {
+                ExternalAccessRuleName = ExternalAccessRuleName.FromProjectLocationNetworkPolicyExternalAccessRule("[PROJECT]", "[LOCATION]", "[NETWORK_POLICY]", "[EXTERNAL_ACCESS_RULE]"),
+            };
+            // Make the request
+            ExternalAccessRule response = await vmwareEngineClient.GetExternalAccessRuleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetExternalAccessRule</summary>
+        public void GetExternalAccessRule()
+        {
+            // Snippet: GetExternalAccessRule(string, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/networkPolicies/[NETWORK_POLICY]/externalAccessRules/[EXTERNAL_ACCESS_RULE]";
+            // Make the request
+            ExternalAccessRule response = vmwareEngineClient.GetExternalAccessRule(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetExternalAccessRuleAsync</summary>
+        public async Task GetExternalAccessRuleAsync()
+        {
+            // Snippet: GetExternalAccessRuleAsync(string, CallSettings)
+            // Additional: GetExternalAccessRuleAsync(string, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/networkPolicies/[NETWORK_POLICY]/externalAccessRules/[EXTERNAL_ACCESS_RULE]";
+            // Make the request
+            ExternalAccessRule response = await vmwareEngineClient.GetExternalAccessRuleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetExternalAccessRule</summary>
+        public void GetExternalAccessRuleResourceNames()
+        {
+            // Snippet: GetExternalAccessRule(ExternalAccessRuleName, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            ExternalAccessRuleName name = ExternalAccessRuleName.FromProjectLocationNetworkPolicyExternalAccessRule("[PROJECT]", "[LOCATION]", "[NETWORK_POLICY]", "[EXTERNAL_ACCESS_RULE]");
+            // Make the request
+            ExternalAccessRule response = vmwareEngineClient.GetExternalAccessRule(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetExternalAccessRuleAsync</summary>
+        public async Task GetExternalAccessRuleResourceNamesAsync()
+        {
+            // Snippet: GetExternalAccessRuleAsync(ExternalAccessRuleName, CallSettings)
+            // Additional: GetExternalAccessRuleAsync(ExternalAccessRuleName, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            ExternalAccessRuleName name = ExternalAccessRuleName.FromProjectLocationNetworkPolicyExternalAccessRule("[PROJECT]", "[LOCATION]", "[NETWORK_POLICY]", "[EXTERNAL_ACCESS_RULE]");
+            // Make the request
+            ExternalAccessRule response = await vmwareEngineClient.GetExternalAccessRuleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateExternalAccessRule</summary>
+        public void CreateExternalAccessRuleRequestObject()
+        {
+            // Snippet: CreateExternalAccessRule(CreateExternalAccessRuleRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            CreateExternalAccessRuleRequest request = new CreateExternalAccessRuleRequest
+            {
+                ParentAsNetworkPolicyName = NetworkPolicyName.FromProjectLocationNetworkPolicy("[PROJECT]", "[LOCATION]", "[NETWORK_POLICY]"),
+                ExternalAccessRule = new ExternalAccessRule(),
+                ExternalAccessRuleId = "",
+                RequestId = "",
+            };
+            // Make the request
+            Operation<ExternalAccessRule, OperationMetadata> response = vmwareEngineClient.CreateExternalAccessRule(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExternalAccessRule, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExternalAccessRule result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExternalAccessRule, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceCreateExternalAccessRule(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExternalAccessRule retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateExternalAccessRuleAsync</summary>
+        public async Task CreateExternalAccessRuleRequestObjectAsync()
+        {
+            // Snippet: CreateExternalAccessRuleAsync(CreateExternalAccessRuleRequest, CallSettings)
+            // Additional: CreateExternalAccessRuleAsync(CreateExternalAccessRuleRequest, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateExternalAccessRuleRequest request = new CreateExternalAccessRuleRequest
+            {
+                ParentAsNetworkPolicyName = NetworkPolicyName.FromProjectLocationNetworkPolicy("[PROJECT]", "[LOCATION]", "[NETWORK_POLICY]"),
+                ExternalAccessRule = new ExternalAccessRule(),
+                ExternalAccessRuleId = "",
+                RequestId = "",
+            };
+            // Make the request
+            Operation<ExternalAccessRule, OperationMetadata> response = await vmwareEngineClient.CreateExternalAccessRuleAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExternalAccessRule, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExternalAccessRule result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExternalAccessRule, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceCreateExternalAccessRuleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExternalAccessRule retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateExternalAccessRule</summary>
+        public void CreateExternalAccessRule()
+        {
+            // Snippet: CreateExternalAccessRule(string, ExternalAccessRule, string, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/networkPolicies/[NETWORK_POLICY]";
+            ExternalAccessRule externalAccessRule = new ExternalAccessRule();
+            string externalAccessRuleId = "";
+            // Make the request
+            Operation<ExternalAccessRule, OperationMetadata> response = vmwareEngineClient.CreateExternalAccessRule(parent, externalAccessRule, externalAccessRuleId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExternalAccessRule, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExternalAccessRule result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExternalAccessRule, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceCreateExternalAccessRule(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExternalAccessRule retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateExternalAccessRuleAsync</summary>
+        public async Task CreateExternalAccessRuleAsync()
+        {
+            // Snippet: CreateExternalAccessRuleAsync(string, ExternalAccessRule, string, CallSettings)
+            // Additional: CreateExternalAccessRuleAsync(string, ExternalAccessRule, string, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/networkPolicies/[NETWORK_POLICY]";
+            ExternalAccessRule externalAccessRule = new ExternalAccessRule();
+            string externalAccessRuleId = "";
+            // Make the request
+            Operation<ExternalAccessRule, OperationMetadata> response = await vmwareEngineClient.CreateExternalAccessRuleAsync(parent, externalAccessRule, externalAccessRuleId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExternalAccessRule, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExternalAccessRule result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExternalAccessRule, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceCreateExternalAccessRuleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExternalAccessRule retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateExternalAccessRule</summary>
+        public void CreateExternalAccessRuleResourceNames()
+        {
+            // Snippet: CreateExternalAccessRule(NetworkPolicyName, ExternalAccessRule, string, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            NetworkPolicyName parent = NetworkPolicyName.FromProjectLocationNetworkPolicy("[PROJECT]", "[LOCATION]", "[NETWORK_POLICY]");
+            ExternalAccessRule externalAccessRule = new ExternalAccessRule();
+            string externalAccessRuleId = "";
+            // Make the request
+            Operation<ExternalAccessRule, OperationMetadata> response = vmwareEngineClient.CreateExternalAccessRule(parent, externalAccessRule, externalAccessRuleId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExternalAccessRule, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExternalAccessRule result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExternalAccessRule, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceCreateExternalAccessRule(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExternalAccessRule retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateExternalAccessRuleAsync</summary>
+        public async Task CreateExternalAccessRuleResourceNamesAsync()
+        {
+            // Snippet: CreateExternalAccessRuleAsync(NetworkPolicyName, ExternalAccessRule, string, CallSettings)
+            // Additional: CreateExternalAccessRuleAsync(NetworkPolicyName, ExternalAccessRule, string, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            NetworkPolicyName parent = NetworkPolicyName.FromProjectLocationNetworkPolicy("[PROJECT]", "[LOCATION]", "[NETWORK_POLICY]");
+            ExternalAccessRule externalAccessRule = new ExternalAccessRule();
+            string externalAccessRuleId = "";
+            // Make the request
+            Operation<ExternalAccessRule, OperationMetadata> response = await vmwareEngineClient.CreateExternalAccessRuleAsync(parent, externalAccessRule, externalAccessRuleId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExternalAccessRule, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExternalAccessRule result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExternalAccessRule, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceCreateExternalAccessRuleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExternalAccessRule retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateExternalAccessRule</summary>
+        public void UpdateExternalAccessRuleRequestObject()
+        {
+            // Snippet: UpdateExternalAccessRule(UpdateExternalAccessRuleRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            UpdateExternalAccessRuleRequest request = new UpdateExternalAccessRuleRequest
+            {
+                UpdateMask = new FieldMask(),
+                ExternalAccessRule = new ExternalAccessRule(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<ExternalAccessRule, OperationMetadata> response = vmwareEngineClient.UpdateExternalAccessRule(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExternalAccessRule, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExternalAccessRule result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExternalAccessRule, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceUpdateExternalAccessRule(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExternalAccessRule retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateExternalAccessRuleAsync</summary>
+        public async Task UpdateExternalAccessRuleRequestObjectAsync()
+        {
+            // Snippet: UpdateExternalAccessRuleAsync(UpdateExternalAccessRuleRequest, CallSettings)
+            // Additional: UpdateExternalAccessRuleAsync(UpdateExternalAccessRuleRequest, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateExternalAccessRuleRequest request = new UpdateExternalAccessRuleRequest
+            {
+                UpdateMask = new FieldMask(),
+                ExternalAccessRule = new ExternalAccessRule(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<ExternalAccessRule, OperationMetadata> response = await vmwareEngineClient.UpdateExternalAccessRuleAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExternalAccessRule, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExternalAccessRule result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExternalAccessRule, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceUpdateExternalAccessRuleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExternalAccessRule retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateExternalAccessRule</summary>
+        public void UpdateExternalAccessRule()
+        {
+            // Snippet: UpdateExternalAccessRule(ExternalAccessRule, FieldMask, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            ExternalAccessRule externalAccessRule = new ExternalAccessRule();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<ExternalAccessRule, OperationMetadata> response = vmwareEngineClient.UpdateExternalAccessRule(externalAccessRule, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExternalAccessRule, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExternalAccessRule result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExternalAccessRule, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceUpdateExternalAccessRule(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExternalAccessRule retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateExternalAccessRuleAsync</summary>
+        public async Task UpdateExternalAccessRuleAsync()
+        {
+            // Snippet: UpdateExternalAccessRuleAsync(ExternalAccessRule, FieldMask, CallSettings)
+            // Additional: UpdateExternalAccessRuleAsync(ExternalAccessRule, FieldMask, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            ExternalAccessRule externalAccessRule = new ExternalAccessRule();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<ExternalAccessRule, OperationMetadata> response = await vmwareEngineClient.UpdateExternalAccessRuleAsync(externalAccessRule, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExternalAccessRule, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExternalAccessRule result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExternalAccessRule, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceUpdateExternalAccessRuleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExternalAccessRule retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteExternalAccessRule</summary>
+        public void DeleteExternalAccessRuleRequestObject()
+        {
+            // Snippet: DeleteExternalAccessRule(DeleteExternalAccessRuleRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            DeleteExternalAccessRuleRequest request = new DeleteExternalAccessRuleRequest
+            {
+                ExternalAccessRuleName = ExternalAccessRuleName.FromProjectLocationNetworkPolicyExternalAccessRule("[PROJECT]", "[LOCATION]", "[NETWORK_POLICY]", "[EXTERNAL_ACCESS_RULE]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = vmwareEngineClient.DeleteExternalAccessRule(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceDeleteExternalAccessRule(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteExternalAccessRuleAsync</summary>
+        public async Task DeleteExternalAccessRuleRequestObjectAsync()
+        {
+            // Snippet: DeleteExternalAccessRuleAsync(DeleteExternalAccessRuleRequest, CallSettings)
+            // Additional: DeleteExternalAccessRuleAsync(DeleteExternalAccessRuleRequest, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteExternalAccessRuleRequest request = new DeleteExternalAccessRuleRequest
+            {
+                ExternalAccessRuleName = ExternalAccessRuleName.FromProjectLocationNetworkPolicyExternalAccessRule("[PROJECT]", "[LOCATION]", "[NETWORK_POLICY]", "[EXTERNAL_ACCESS_RULE]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await vmwareEngineClient.DeleteExternalAccessRuleAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceDeleteExternalAccessRuleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteExternalAccessRule</summary>
+        public void DeleteExternalAccessRule()
+        {
+            // Snippet: DeleteExternalAccessRule(string, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/networkPolicies/[NETWORK_POLICY]/externalAccessRules/[EXTERNAL_ACCESS_RULE]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = vmwareEngineClient.DeleteExternalAccessRule(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceDeleteExternalAccessRule(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteExternalAccessRuleAsync</summary>
+        public async Task DeleteExternalAccessRuleAsync()
+        {
+            // Snippet: DeleteExternalAccessRuleAsync(string, CallSettings)
+            // Additional: DeleteExternalAccessRuleAsync(string, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/networkPolicies/[NETWORK_POLICY]/externalAccessRules/[EXTERNAL_ACCESS_RULE]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await vmwareEngineClient.DeleteExternalAccessRuleAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceDeleteExternalAccessRuleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteExternalAccessRule</summary>
+        public void DeleteExternalAccessRuleResourceNames()
+        {
+            // Snippet: DeleteExternalAccessRule(ExternalAccessRuleName, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            ExternalAccessRuleName name = ExternalAccessRuleName.FromProjectLocationNetworkPolicyExternalAccessRule("[PROJECT]", "[LOCATION]", "[NETWORK_POLICY]", "[EXTERNAL_ACCESS_RULE]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = vmwareEngineClient.DeleteExternalAccessRule(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceDeleteExternalAccessRule(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteExternalAccessRuleAsync</summary>
+        public async Task DeleteExternalAccessRuleResourceNamesAsync()
+        {
+            // Snippet: DeleteExternalAccessRuleAsync(ExternalAccessRuleName, CallSettings)
+            // Additional: DeleteExternalAccessRuleAsync(ExternalAccessRuleName, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            ExternalAccessRuleName name = ExternalAccessRuleName.FromProjectLocationNetworkPolicyExternalAccessRule("[PROJECT]", "[LOCATION]", "[NETWORK_POLICY]", "[EXTERNAL_ACCESS_RULE]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await vmwareEngineClient.DeleteExternalAccessRuleAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceDeleteExternalAccessRuleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLoggingServers</summary>
+        public void ListLoggingServersRequestObject()
+        {
+            // Snippet: ListLoggingServers(ListLoggingServersRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            ListLoggingServersRequest request = new ListLoggingServersRequest
+            {
+                ParentAsPrivateCloudName = PrivateCloudName.FromProjectLocationPrivateCloud("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListLoggingServersResponse, LoggingServer> response = vmwareEngineClient.ListLoggingServers(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (LoggingServer item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListLoggingServersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LoggingServer item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LoggingServer> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LoggingServer item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLoggingServersAsync</summary>
+        public async Task ListLoggingServersRequestObjectAsync()
+        {
+            // Snippet: ListLoggingServersAsync(ListLoggingServersRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            ListLoggingServersRequest request = new ListLoggingServersRequest
+            {
+                ParentAsPrivateCloudName = PrivateCloudName.FromProjectLocationPrivateCloud("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListLoggingServersResponse, LoggingServer> response = vmwareEngineClient.ListLoggingServersAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((LoggingServer item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListLoggingServersResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LoggingServer item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LoggingServer> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LoggingServer item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLoggingServers</summary>
+        public void ListLoggingServers()
+        {
+            // Snippet: ListLoggingServers(string, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/privateClouds/[PRIVATE_CLOUD]";
+            // Make the request
+            PagedEnumerable<ListLoggingServersResponse, LoggingServer> response = vmwareEngineClient.ListLoggingServers(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (LoggingServer item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListLoggingServersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LoggingServer item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LoggingServer> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LoggingServer item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLoggingServersAsync</summary>
+        public async Task ListLoggingServersAsync()
+        {
+            // Snippet: ListLoggingServersAsync(string, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/privateClouds/[PRIVATE_CLOUD]";
+            // Make the request
+            PagedAsyncEnumerable<ListLoggingServersResponse, LoggingServer> response = vmwareEngineClient.ListLoggingServersAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((LoggingServer item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListLoggingServersResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LoggingServer item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LoggingServer> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LoggingServer item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLoggingServers</summary>
+        public void ListLoggingServersResourceNames()
+        {
+            // Snippet: ListLoggingServers(PrivateCloudName, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            PrivateCloudName parent = PrivateCloudName.FromProjectLocationPrivateCloud("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]");
+            // Make the request
+            PagedEnumerable<ListLoggingServersResponse, LoggingServer> response = vmwareEngineClient.ListLoggingServers(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (LoggingServer item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListLoggingServersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LoggingServer item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LoggingServer> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LoggingServer item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLoggingServersAsync</summary>
+        public async Task ListLoggingServersResourceNamesAsync()
+        {
+            // Snippet: ListLoggingServersAsync(PrivateCloudName, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            PrivateCloudName parent = PrivateCloudName.FromProjectLocationPrivateCloud("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]");
+            // Make the request
+            PagedAsyncEnumerable<ListLoggingServersResponse, LoggingServer> response = vmwareEngineClient.ListLoggingServersAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((LoggingServer item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListLoggingServersResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LoggingServer item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LoggingServer> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LoggingServer item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetLoggingServer</summary>
+        public void GetLoggingServerRequestObject()
+        {
+            // Snippet: GetLoggingServer(GetLoggingServerRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            GetLoggingServerRequest request = new GetLoggingServerRequest
+            {
+                LoggingServerName = LoggingServerName.FromProjectLocationPrivateCloudLoggingServer("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[LOGGING_SERVER]"),
+            };
+            // Make the request
+            LoggingServer response = vmwareEngineClient.GetLoggingServer(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetLoggingServerAsync</summary>
+        public async Task GetLoggingServerRequestObjectAsync()
+        {
+            // Snippet: GetLoggingServerAsync(GetLoggingServerRequest, CallSettings)
+            // Additional: GetLoggingServerAsync(GetLoggingServerRequest, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            GetLoggingServerRequest request = new GetLoggingServerRequest
+            {
+                LoggingServerName = LoggingServerName.FromProjectLocationPrivateCloudLoggingServer("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[LOGGING_SERVER]"),
+            };
+            // Make the request
+            LoggingServer response = await vmwareEngineClient.GetLoggingServerAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetLoggingServer</summary>
+        public void GetLoggingServer()
+        {
+            // Snippet: GetLoggingServer(string, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/privateClouds/[PRIVATE_CLOUD]/loggingServers/[LOGGING_SERVER]";
+            // Make the request
+            LoggingServer response = vmwareEngineClient.GetLoggingServer(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetLoggingServerAsync</summary>
+        public async Task GetLoggingServerAsync()
+        {
+            // Snippet: GetLoggingServerAsync(string, CallSettings)
+            // Additional: GetLoggingServerAsync(string, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/privateClouds/[PRIVATE_CLOUD]/loggingServers/[LOGGING_SERVER]";
+            // Make the request
+            LoggingServer response = await vmwareEngineClient.GetLoggingServerAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetLoggingServer</summary>
+        public void GetLoggingServerResourceNames()
+        {
+            // Snippet: GetLoggingServer(LoggingServerName, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            LoggingServerName name = LoggingServerName.FromProjectLocationPrivateCloudLoggingServer("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[LOGGING_SERVER]");
+            // Make the request
+            LoggingServer response = vmwareEngineClient.GetLoggingServer(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetLoggingServerAsync</summary>
+        public async Task GetLoggingServerResourceNamesAsync()
+        {
+            // Snippet: GetLoggingServerAsync(LoggingServerName, CallSettings)
+            // Additional: GetLoggingServerAsync(LoggingServerName, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            LoggingServerName name = LoggingServerName.FromProjectLocationPrivateCloudLoggingServer("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[LOGGING_SERVER]");
+            // Make the request
+            LoggingServer response = await vmwareEngineClient.GetLoggingServerAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateLoggingServer</summary>
+        public void CreateLoggingServerRequestObject()
+        {
+            // Snippet: CreateLoggingServer(CreateLoggingServerRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            CreateLoggingServerRequest request = new CreateLoggingServerRequest
+            {
+                ParentAsPrivateCloudName = PrivateCloudName.FromProjectLocationPrivateCloud("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]"),
+                LoggingServer = new LoggingServer(),
+                LoggingServerId = "",
+                RequestId = "",
+            };
+            // Make the request
+            Operation<LoggingServer, OperationMetadata> response = vmwareEngineClient.CreateLoggingServer(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LoggingServer, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            LoggingServer result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LoggingServer, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceCreateLoggingServer(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LoggingServer retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateLoggingServerAsync</summary>
+        public async Task CreateLoggingServerRequestObjectAsync()
+        {
+            // Snippet: CreateLoggingServerAsync(CreateLoggingServerRequest, CallSettings)
+            // Additional: CreateLoggingServerAsync(CreateLoggingServerRequest, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateLoggingServerRequest request = new CreateLoggingServerRequest
+            {
+                ParentAsPrivateCloudName = PrivateCloudName.FromProjectLocationPrivateCloud("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]"),
+                LoggingServer = new LoggingServer(),
+                LoggingServerId = "",
+                RequestId = "",
+            };
+            // Make the request
+            Operation<LoggingServer, OperationMetadata> response = await vmwareEngineClient.CreateLoggingServerAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LoggingServer, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            LoggingServer result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LoggingServer, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceCreateLoggingServerAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LoggingServer retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateLoggingServer</summary>
+        public void CreateLoggingServer()
+        {
+            // Snippet: CreateLoggingServer(string, LoggingServer, string, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/privateClouds/[PRIVATE_CLOUD]";
+            LoggingServer loggingServer = new LoggingServer();
+            string loggingServerId = "";
+            // Make the request
+            Operation<LoggingServer, OperationMetadata> response = vmwareEngineClient.CreateLoggingServer(parent, loggingServer, loggingServerId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LoggingServer, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            LoggingServer result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LoggingServer, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceCreateLoggingServer(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LoggingServer retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateLoggingServerAsync</summary>
+        public async Task CreateLoggingServerAsync()
+        {
+            // Snippet: CreateLoggingServerAsync(string, LoggingServer, string, CallSettings)
+            // Additional: CreateLoggingServerAsync(string, LoggingServer, string, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/privateClouds/[PRIVATE_CLOUD]";
+            LoggingServer loggingServer = new LoggingServer();
+            string loggingServerId = "";
+            // Make the request
+            Operation<LoggingServer, OperationMetadata> response = await vmwareEngineClient.CreateLoggingServerAsync(parent, loggingServer, loggingServerId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LoggingServer, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            LoggingServer result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LoggingServer, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceCreateLoggingServerAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LoggingServer retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateLoggingServer</summary>
+        public void CreateLoggingServerResourceNames()
+        {
+            // Snippet: CreateLoggingServer(PrivateCloudName, LoggingServer, string, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            PrivateCloudName parent = PrivateCloudName.FromProjectLocationPrivateCloud("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]");
+            LoggingServer loggingServer = new LoggingServer();
+            string loggingServerId = "";
+            // Make the request
+            Operation<LoggingServer, OperationMetadata> response = vmwareEngineClient.CreateLoggingServer(parent, loggingServer, loggingServerId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LoggingServer, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            LoggingServer result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LoggingServer, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceCreateLoggingServer(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LoggingServer retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateLoggingServerAsync</summary>
+        public async Task CreateLoggingServerResourceNamesAsync()
+        {
+            // Snippet: CreateLoggingServerAsync(PrivateCloudName, LoggingServer, string, CallSettings)
+            // Additional: CreateLoggingServerAsync(PrivateCloudName, LoggingServer, string, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            PrivateCloudName parent = PrivateCloudName.FromProjectLocationPrivateCloud("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]");
+            LoggingServer loggingServer = new LoggingServer();
+            string loggingServerId = "";
+            // Make the request
+            Operation<LoggingServer, OperationMetadata> response = await vmwareEngineClient.CreateLoggingServerAsync(parent, loggingServer, loggingServerId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LoggingServer, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            LoggingServer result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LoggingServer, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceCreateLoggingServerAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LoggingServer retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateLoggingServer</summary>
+        public void UpdateLoggingServerRequestObject()
+        {
+            // Snippet: UpdateLoggingServer(UpdateLoggingServerRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            UpdateLoggingServerRequest request = new UpdateLoggingServerRequest
+            {
+                UpdateMask = new FieldMask(),
+                LoggingServer = new LoggingServer(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<LoggingServer, OperationMetadata> response = vmwareEngineClient.UpdateLoggingServer(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LoggingServer, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            LoggingServer result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LoggingServer, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceUpdateLoggingServer(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LoggingServer retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateLoggingServerAsync</summary>
+        public async Task UpdateLoggingServerRequestObjectAsync()
+        {
+            // Snippet: UpdateLoggingServerAsync(UpdateLoggingServerRequest, CallSettings)
+            // Additional: UpdateLoggingServerAsync(UpdateLoggingServerRequest, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateLoggingServerRequest request = new UpdateLoggingServerRequest
+            {
+                UpdateMask = new FieldMask(),
+                LoggingServer = new LoggingServer(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<LoggingServer, OperationMetadata> response = await vmwareEngineClient.UpdateLoggingServerAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LoggingServer, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            LoggingServer result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LoggingServer, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceUpdateLoggingServerAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LoggingServer retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateLoggingServer</summary>
+        public void UpdateLoggingServer()
+        {
+            // Snippet: UpdateLoggingServer(LoggingServer, FieldMask, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            LoggingServer loggingServer = new LoggingServer();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<LoggingServer, OperationMetadata> response = vmwareEngineClient.UpdateLoggingServer(loggingServer, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LoggingServer, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            LoggingServer result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LoggingServer, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceUpdateLoggingServer(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LoggingServer retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateLoggingServerAsync</summary>
+        public async Task UpdateLoggingServerAsync()
+        {
+            // Snippet: UpdateLoggingServerAsync(LoggingServer, FieldMask, CallSettings)
+            // Additional: UpdateLoggingServerAsync(LoggingServer, FieldMask, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            LoggingServer loggingServer = new LoggingServer();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<LoggingServer, OperationMetadata> response = await vmwareEngineClient.UpdateLoggingServerAsync(loggingServer, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LoggingServer, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            LoggingServer result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LoggingServer, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceUpdateLoggingServerAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LoggingServer retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteLoggingServer</summary>
+        public void DeleteLoggingServerRequestObject()
+        {
+            // Snippet: DeleteLoggingServer(DeleteLoggingServerRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            DeleteLoggingServerRequest request = new DeleteLoggingServerRequest
+            {
+                LoggingServerName = LoggingServerName.FromProjectLocationPrivateCloudLoggingServer("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[LOGGING_SERVER]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = vmwareEngineClient.DeleteLoggingServer(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceDeleteLoggingServer(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteLoggingServerAsync</summary>
+        public async Task DeleteLoggingServerRequestObjectAsync()
+        {
+            // Snippet: DeleteLoggingServerAsync(DeleteLoggingServerRequest, CallSettings)
+            // Additional: DeleteLoggingServerAsync(DeleteLoggingServerRequest, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteLoggingServerRequest request = new DeleteLoggingServerRequest
+            {
+                LoggingServerName = LoggingServerName.FromProjectLocationPrivateCloudLoggingServer("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[LOGGING_SERVER]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await vmwareEngineClient.DeleteLoggingServerAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceDeleteLoggingServerAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteLoggingServer</summary>
+        public void DeleteLoggingServer()
+        {
+            // Snippet: DeleteLoggingServer(string, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/privateClouds/[PRIVATE_CLOUD]/loggingServers/[LOGGING_SERVER]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = vmwareEngineClient.DeleteLoggingServer(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceDeleteLoggingServer(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteLoggingServerAsync</summary>
+        public async Task DeleteLoggingServerAsync()
+        {
+            // Snippet: DeleteLoggingServerAsync(string, CallSettings)
+            // Additional: DeleteLoggingServerAsync(string, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/privateClouds/[PRIVATE_CLOUD]/loggingServers/[LOGGING_SERVER]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await vmwareEngineClient.DeleteLoggingServerAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceDeleteLoggingServerAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteLoggingServer</summary>
+        public void DeleteLoggingServerResourceNames()
+        {
+            // Snippet: DeleteLoggingServer(LoggingServerName, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            LoggingServerName name = LoggingServerName.FromProjectLocationPrivateCloudLoggingServer("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[LOGGING_SERVER]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = vmwareEngineClient.DeleteLoggingServer(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceDeleteLoggingServer(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteLoggingServerAsync</summary>
+        public async Task DeleteLoggingServerResourceNamesAsync()
+        {
+            // Snippet: DeleteLoggingServerAsync(LoggingServerName, CallSettings)
+            // Additional: DeleteLoggingServerAsync(LoggingServerName, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            LoggingServerName name = LoggingServerName.FromProjectLocationPrivateCloudLoggingServer("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[LOGGING_SERVER]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await vmwareEngineClient.DeleteLoggingServerAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceDeleteLoggingServerAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for ListNodeTypes</summary>
         public void ListNodeTypesRequestObject()
         {
@@ -2934,6 +6210,7 @@ namespace GoogleCSharpSnippets
             ShowVcenterCredentialsRequest request = new ShowVcenterCredentialsRequest
             {
                 PrivateCloudAsPrivateCloudName = PrivateCloudName.FromProjectLocationPrivateCloud("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]"),
+                Username = "",
             };
             // Make the request
             Credentials response = vmwareEngineClient.ShowVcenterCredentials(request);
@@ -2951,6 +6228,7 @@ namespace GoogleCSharpSnippets
             ShowVcenterCredentialsRequest request = new ShowVcenterCredentialsRequest
             {
                 PrivateCloudAsPrivateCloudName = PrivateCloudName.FromProjectLocationPrivateCloud("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]"),
+                Username = "",
             };
             // Make the request
             Credentials response = await vmwareEngineClient.ShowVcenterCredentialsAsync(request);
@@ -3207,6 +6485,7 @@ namespace GoogleCSharpSnippets
             {
                 PrivateCloudAsPrivateCloudName = PrivateCloudName.FromProjectLocationPrivateCloud("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]"),
                 RequestId = "",
+                Username = "",
             };
             // Make the request
             Operation<PrivateCloud, OperationMetadata> response = vmwareEngineClient.ResetVcenterCredentials(request);
@@ -3241,6 +6520,7 @@ namespace GoogleCSharpSnippets
             {
                 PrivateCloudAsPrivateCloudName = PrivateCloudName.FromProjectLocationPrivateCloud("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]"),
                 RequestId = "",
+                Username = "",
             };
             // Make the request
             Operation<PrivateCloud, OperationMetadata> response = await vmwareEngineClient.ResetVcenterCredentialsAsync(request);
@@ -3378,6 +6658,1380 @@ namespace GoogleCSharpSnippets
                 // If it has completed, then access the result
                 PrivateCloud retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDnsForwarding</summary>
+        public void GetDnsForwardingRequestObject()
+        {
+            // Snippet: GetDnsForwarding(GetDnsForwardingRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            GetDnsForwardingRequest request = new GetDnsForwardingRequest
+            {
+                DnsForwardingName = DnsForwardingName.FromProjectLocationPrivateCloud("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]"),
+            };
+            // Make the request
+            DnsForwarding response = vmwareEngineClient.GetDnsForwarding(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDnsForwardingAsync</summary>
+        public async Task GetDnsForwardingRequestObjectAsync()
+        {
+            // Snippet: GetDnsForwardingAsync(GetDnsForwardingRequest, CallSettings)
+            // Additional: GetDnsForwardingAsync(GetDnsForwardingRequest, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            GetDnsForwardingRequest request = new GetDnsForwardingRequest
+            {
+                DnsForwardingName = DnsForwardingName.FromProjectLocationPrivateCloud("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]"),
+            };
+            // Make the request
+            DnsForwarding response = await vmwareEngineClient.GetDnsForwardingAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDnsForwarding</summary>
+        public void GetDnsForwarding()
+        {
+            // Snippet: GetDnsForwarding(string, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/privateClouds/[PRIVATE_CLOUD]/dnsForwarding";
+            // Make the request
+            DnsForwarding response = vmwareEngineClient.GetDnsForwarding(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDnsForwardingAsync</summary>
+        public async Task GetDnsForwardingAsync()
+        {
+            // Snippet: GetDnsForwardingAsync(string, CallSettings)
+            // Additional: GetDnsForwardingAsync(string, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/privateClouds/[PRIVATE_CLOUD]/dnsForwarding";
+            // Make the request
+            DnsForwarding response = await vmwareEngineClient.GetDnsForwardingAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDnsForwarding</summary>
+        public void GetDnsForwardingResourceNames()
+        {
+            // Snippet: GetDnsForwarding(DnsForwardingName, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            DnsForwardingName name = DnsForwardingName.FromProjectLocationPrivateCloud("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]");
+            // Make the request
+            DnsForwarding response = vmwareEngineClient.GetDnsForwarding(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDnsForwardingAsync</summary>
+        public async Task GetDnsForwardingResourceNamesAsync()
+        {
+            // Snippet: GetDnsForwardingAsync(DnsForwardingName, CallSettings)
+            // Additional: GetDnsForwardingAsync(DnsForwardingName, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            DnsForwardingName name = DnsForwardingName.FromProjectLocationPrivateCloud("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]");
+            // Make the request
+            DnsForwarding response = await vmwareEngineClient.GetDnsForwardingAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDnsForwarding</summary>
+        public void UpdateDnsForwardingRequestObject()
+        {
+            // Snippet: UpdateDnsForwarding(UpdateDnsForwardingRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            UpdateDnsForwardingRequest request = new UpdateDnsForwardingRequest
+            {
+                DnsForwarding = new DnsForwarding(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<DnsForwarding, OperationMetadata> response = vmwareEngineClient.UpdateDnsForwarding(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DnsForwarding, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DnsForwarding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DnsForwarding, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceUpdateDnsForwarding(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DnsForwarding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDnsForwardingAsync</summary>
+        public async Task UpdateDnsForwardingRequestObjectAsync()
+        {
+            // Snippet: UpdateDnsForwardingAsync(UpdateDnsForwardingRequest, CallSettings)
+            // Additional: UpdateDnsForwardingAsync(UpdateDnsForwardingRequest, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateDnsForwardingRequest request = new UpdateDnsForwardingRequest
+            {
+                DnsForwarding = new DnsForwarding(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<DnsForwarding, OperationMetadata> response = await vmwareEngineClient.UpdateDnsForwardingAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DnsForwarding, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DnsForwarding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DnsForwarding, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceUpdateDnsForwardingAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DnsForwarding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDnsForwarding</summary>
+        public void UpdateDnsForwarding()
+        {
+            // Snippet: UpdateDnsForwarding(DnsForwarding, FieldMask, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            DnsForwarding dnsForwarding = new DnsForwarding();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<DnsForwarding, OperationMetadata> response = vmwareEngineClient.UpdateDnsForwarding(dnsForwarding, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DnsForwarding, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DnsForwarding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DnsForwarding, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceUpdateDnsForwarding(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DnsForwarding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDnsForwardingAsync</summary>
+        public async Task UpdateDnsForwardingAsync()
+        {
+            // Snippet: UpdateDnsForwardingAsync(DnsForwarding, FieldMask, CallSettings)
+            // Additional: UpdateDnsForwardingAsync(DnsForwarding, FieldMask, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            DnsForwarding dnsForwarding = new DnsForwarding();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<DnsForwarding, OperationMetadata> response = await vmwareEngineClient.UpdateDnsForwardingAsync(dnsForwarding, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DnsForwarding, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DnsForwarding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DnsForwarding, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceUpdateDnsForwardingAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DnsForwarding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNetworkPeering</summary>
+        public void GetNetworkPeeringRequestObject()
+        {
+            // Snippet: GetNetworkPeering(GetNetworkPeeringRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            GetNetworkPeeringRequest request = new GetNetworkPeeringRequest
+            {
+                NetworkPeeringName = NetworkPeeringName.FromProjectLocationNetworkPeering("[PROJECT]", "[LOCATION]", "[NETWORK_PEERING]"),
+            };
+            // Make the request
+            NetworkPeering response = vmwareEngineClient.GetNetworkPeering(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNetworkPeeringAsync</summary>
+        public async Task GetNetworkPeeringRequestObjectAsync()
+        {
+            // Snippet: GetNetworkPeeringAsync(GetNetworkPeeringRequest, CallSettings)
+            // Additional: GetNetworkPeeringAsync(GetNetworkPeeringRequest, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            GetNetworkPeeringRequest request = new GetNetworkPeeringRequest
+            {
+                NetworkPeeringName = NetworkPeeringName.FromProjectLocationNetworkPeering("[PROJECT]", "[LOCATION]", "[NETWORK_PEERING]"),
+            };
+            // Make the request
+            NetworkPeering response = await vmwareEngineClient.GetNetworkPeeringAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNetworkPeering</summary>
+        public void GetNetworkPeering()
+        {
+            // Snippet: GetNetworkPeering(string, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/networkPeerings/[NETWORK_PEERING]";
+            // Make the request
+            NetworkPeering response = vmwareEngineClient.GetNetworkPeering(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNetworkPeeringAsync</summary>
+        public async Task GetNetworkPeeringAsync()
+        {
+            // Snippet: GetNetworkPeeringAsync(string, CallSettings)
+            // Additional: GetNetworkPeeringAsync(string, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/networkPeerings/[NETWORK_PEERING]";
+            // Make the request
+            NetworkPeering response = await vmwareEngineClient.GetNetworkPeeringAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNetworkPeering</summary>
+        public void GetNetworkPeeringResourceNames()
+        {
+            // Snippet: GetNetworkPeering(NetworkPeeringName, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            NetworkPeeringName name = NetworkPeeringName.FromProjectLocationNetworkPeering("[PROJECT]", "[LOCATION]", "[NETWORK_PEERING]");
+            // Make the request
+            NetworkPeering response = vmwareEngineClient.GetNetworkPeering(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNetworkPeeringAsync</summary>
+        public async Task GetNetworkPeeringResourceNamesAsync()
+        {
+            // Snippet: GetNetworkPeeringAsync(NetworkPeeringName, CallSettings)
+            // Additional: GetNetworkPeeringAsync(NetworkPeeringName, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            NetworkPeeringName name = NetworkPeeringName.FromProjectLocationNetworkPeering("[PROJECT]", "[LOCATION]", "[NETWORK_PEERING]");
+            // Make the request
+            NetworkPeering response = await vmwareEngineClient.GetNetworkPeeringAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNetworkPeerings</summary>
+        public void ListNetworkPeeringsRequestObject()
+        {
+            // Snippet: ListNetworkPeerings(ListNetworkPeeringsRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            ListNetworkPeeringsRequest request = new ListNetworkPeeringsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListNetworkPeeringsResponse, NetworkPeering> response = vmwareEngineClient.ListNetworkPeerings(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (NetworkPeering item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListNetworkPeeringsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NetworkPeering item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NetworkPeering> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NetworkPeering item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNetworkPeeringsAsync</summary>
+        public async Task ListNetworkPeeringsRequestObjectAsync()
+        {
+            // Snippet: ListNetworkPeeringsAsync(ListNetworkPeeringsRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            ListNetworkPeeringsRequest request = new ListNetworkPeeringsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListNetworkPeeringsResponse, NetworkPeering> response = vmwareEngineClient.ListNetworkPeeringsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((NetworkPeering item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListNetworkPeeringsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NetworkPeering item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NetworkPeering> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NetworkPeering item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNetworkPeerings</summary>
+        public void ListNetworkPeerings()
+        {
+            // Snippet: ListNetworkPeerings(string, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListNetworkPeeringsResponse, NetworkPeering> response = vmwareEngineClient.ListNetworkPeerings(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (NetworkPeering item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListNetworkPeeringsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NetworkPeering item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NetworkPeering> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NetworkPeering item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNetworkPeeringsAsync</summary>
+        public async Task ListNetworkPeeringsAsync()
+        {
+            // Snippet: ListNetworkPeeringsAsync(string, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListNetworkPeeringsResponse, NetworkPeering> response = vmwareEngineClient.ListNetworkPeeringsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((NetworkPeering item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListNetworkPeeringsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NetworkPeering item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NetworkPeering> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NetworkPeering item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNetworkPeerings</summary>
+        public void ListNetworkPeeringsResourceNames()
+        {
+            // Snippet: ListNetworkPeerings(LocationName, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListNetworkPeeringsResponse, NetworkPeering> response = vmwareEngineClient.ListNetworkPeerings(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (NetworkPeering item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListNetworkPeeringsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NetworkPeering item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NetworkPeering> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NetworkPeering item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNetworkPeeringsAsync</summary>
+        public async Task ListNetworkPeeringsResourceNamesAsync()
+        {
+            // Snippet: ListNetworkPeeringsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListNetworkPeeringsResponse, NetworkPeering> response = vmwareEngineClient.ListNetworkPeeringsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((NetworkPeering item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListNetworkPeeringsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NetworkPeering item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NetworkPeering> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NetworkPeering item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateNetworkPeering</summary>
+        public void CreateNetworkPeeringRequestObject()
+        {
+            // Snippet: CreateNetworkPeering(CreateNetworkPeeringRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            CreateNetworkPeeringRequest request = new CreateNetworkPeeringRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                NetworkPeeringId = "",
+                NetworkPeering = new NetworkPeering(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<NetworkPeering, OperationMetadata> response = vmwareEngineClient.CreateNetworkPeering(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<NetworkPeering, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            NetworkPeering result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<NetworkPeering, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceCreateNetworkPeering(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                NetworkPeering retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateNetworkPeeringAsync</summary>
+        public async Task CreateNetworkPeeringRequestObjectAsync()
+        {
+            // Snippet: CreateNetworkPeeringAsync(CreateNetworkPeeringRequest, CallSettings)
+            // Additional: CreateNetworkPeeringAsync(CreateNetworkPeeringRequest, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateNetworkPeeringRequest request = new CreateNetworkPeeringRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                NetworkPeeringId = "",
+                NetworkPeering = new NetworkPeering(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<NetworkPeering, OperationMetadata> response = await vmwareEngineClient.CreateNetworkPeeringAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<NetworkPeering, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            NetworkPeering result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<NetworkPeering, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceCreateNetworkPeeringAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                NetworkPeering retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateNetworkPeering</summary>
+        public void CreateNetworkPeering()
+        {
+            // Snippet: CreateNetworkPeering(string, NetworkPeering, string, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            NetworkPeering networkPeering = new NetworkPeering();
+            string networkPeeringId = "";
+            // Make the request
+            Operation<NetworkPeering, OperationMetadata> response = vmwareEngineClient.CreateNetworkPeering(parent, networkPeering, networkPeeringId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<NetworkPeering, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            NetworkPeering result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<NetworkPeering, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceCreateNetworkPeering(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                NetworkPeering retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateNetworkPeeringAsync</summary>
+        public async Task CreateNetworkPeeringAsync()
+        {
+            // Snippet: CreateNetworkPeeringAsync(string, NetworkPeering, string, CallSettings)
+            // Additional: CreateNetworkPeeringAsync(string, NetworkPeering, string, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            NetworkPeering networkPeering = new NetworkPeering();
+            string networkPeeringId = "";
+            // Make the request
+            Operation<NetworkPeering, OperationMetadata> response = await vmwareEngineClient.CreateNetworkPeeringAsync(parent, networkPeering, networkPeeringId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<NetworkPeering, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            NetworkPeering result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<NetworkPeering, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceCreateNetworkPeeringAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                NetworkPeering retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateNetworkPeering</summary>
+        public void CreateNetworkPeeringResourceNames()
+        {
+            // Snippet: CreateNetworkPeering(LocationName, NetworkPeering, string, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            NetworkPeering networkPeering = new NetworkPeering();
+            string networkPeeringId = "";
+            // Make the request
+            Operation<NetworkPeering, OperationMetadata> response = vmwareEngineClient.CreateNetworkPeering(parent, networkPeering, networkPeeringId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<NetworkPeering, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            NetworkPeering result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<NetworkPeering, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceCreateNetworkPeering(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                NetworkPeering retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateNetworkPeeringAsync</summary>
+        public async Task CreateNetworkPeeringResourceNamesAsync()
+        {
+            // Snippet: CreateNetworkPeeringAsync(LocationName, NetworkPeering, string, CallSettings)
+            // Additional: CreateNetworkPeeringAsync(LocationName, NetworkPeering, string, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            NetworkPeering networkPeering = new NetworkPeering();
+            string networkPeeringId = "";
+            // Make the request
+            Operation<NetworkPeering, OperationMetadata> response = await vmwareEngineClient.CreateNetworkPeeringAsync(parent, networkPeering, networkPeeringId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<NetworkPeering, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            NetworkPeering result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<NetworkPeering, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceCreateNetworkPeeringAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                NetworkPeering retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNetworkPeering</summary>
+        public void DeleteNetworkPeeringRequestObject()
+        {
+            // Snippet: DeleteNetworkPeering(DeleteNetworkPeeringRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            DeleteNetworkPeeringRequest request = new DeleteNetworkPeeringRequest
+            {
+                NetworkPeeringName = NetworkPeeringName.FromProjectLocationNetworkPeering("[PROJECT]", "[LOCATION]", "[NETWORK_PEERING]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = vmwareEngineClient.DeleteNetworkPeering(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceDeleteNetworkPeering(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNetworkPeeringAsync</summary>
+        public async Task DeleteNetworkPeeringRequestObjectAsync()
+        {
+            // Snippet: DeleteNetworkPeeringAsync(DeleteNetworkPeeringRequest, CallSettings)
+            // Additional: DeleteNetworkPeeringAsync(DeleteNetworkPeeringRequest, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteNetworkPeeringRequest request = new DeleteNetworkPeeringRequest
+            {
+                NetworkPeeringName = NetworkPeeringName.FromProjectLocationNetworkPeering("[PROJECT]", "[LOCATION]", "[NETWORK_PEERING]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await vmwareEngineClient.DeleteNetworkPeeringAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceDeleteNetworkPeeringAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNetworkPeering</summary>
+        public void DeleteNetworkPeering()
+        {
+            // Snippet: DeleteNetworkPeering(string, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/networkPeerings/[NETWORK_PEERING]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = vmwareEngineClient.DeleteNetworkPeering(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceDeleteNetworkPeering(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNetworkPeeringAsync</summary>
+        public async Task DeleteNetworkPeeringAsync()
+        {
+            // Snippet: DeleteNetworkPeeringAsync(string, CallSettings)
+            // Additional: DeleteNetworkPeeringAsync(string, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/networkPeerings/[NETWORK_PEERING]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await vmwareEngineClient.DeleteNetworkPeeringAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceDeleteNetworkPeeringAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNetworkPeering</summary>
+        public void DeleteNetworkPeeringResourceNames()
+        {
+            // Snippet: DeleteNetworkPeering(NetworkPeeringName, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            NetworkPeeringName name = NetworkPeeringName.FromProjectLocationNetworkPeering("[PROJECT]", "[LOCATION]", "[NETWORK_PEERING]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = vmwareEngineClient.DeleteNetworkPeering(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceDeleteNetworkPeering(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNetworkPeeringAsync</summary>
+        public async Task DeleteNetworkPeeringResourceNamesAsync()
+        {
+            // Snippet: DeleteNetworkPeeringAsync(NetworkPeeringName, CallSettings)
+            // Additional: DeleteNetworkPeeringAsync(NetworkPeeringName, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            NetworkPeeringName name = NetworkPeeringName.FromProjectLocationNetworkPeering("[PROJECT]", "[LOCATION]", "[NETWORK_PEERING]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await vmwareEngineClient.DeleteNetworkPeeringAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceDeleteNetworkPeeringAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateNetworkPeering</summary>
+        public void UpdateNetworkPeeringRequestObject()
+        {
+            // Snippet: UpdateNetworkPeering(UpdateNetworkPeeringRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            UpdateNetworkPeeringRequest request = new UpdateNetworkPeeringRequest
+            {
+                NetworkPeering = new NetworkPeering(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<NetworkPeering, OperationMetadata> response = vmwareEngineClient.UpdateNetworkPeering(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<NetworkPeering, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            NetworkPeering result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<NetworkPeering, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceUpdateNetworkPeering(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                NetworkPeering retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateNetworkPeeringAsync</summary>
+        public async Task UpdateNetworkPeeringRequestObjectAsync()
+        {
+            // Snippet: UpdateNetworkPeeringAsync(UpdateNetworkPeeringRequest, CallSettings)
+            // Additional: UpdateNetworkPeeringAsync(UpdateNetworkPeeringRequest, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateNetworkPeeringRequest request = new UpdateNetworkPeeringRequest
+            {
+                NetworkPeering = new NetworkPeering(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<NetworkPeering, OperationMetadata> response = await vmwareEngineClient.UpdateNetworkPeeringAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<NetworkPeering, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            NetworkPeering result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<NetworkPeering, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceUpdateNetworkPeeringAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                NetworkPeering retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateNetworkPeering</summary>
+        public void UpdateNetworkPeering()
+        {
+            // Snippet: UpdateNetworkPeering(NetworkPeering, FieldMask, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            NetworkPeering networkPeering = new NetworkPeering();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<NetworkPeering, OperationMetadata> response = vmwareEngineClient.UpdateNetworkPeering(networkPeering, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<NetworkPeering, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            NetworkPeering result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<NetworkPeering, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceUpdateNetworkPeering(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                NetworkPeering retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateNetworkPeeringAsync</summary>
+        public async Task UpdateNetworkPeeringAsync()
+        {
+            // Snippet: UpdateNetworkPeeringAsync(NetworkPeering, FieldMask, CallSettings)
+            // Additional: UpdateNetworkPeeringAsync(NetworkPeering, FieldMask, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            NetworkPeering networkPeering = new NetworkPeering();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<NetworkPeering, OperationMetadata> response = await vmwareEngineClient.UpdateNetworkPeeringAsync(networkPeering, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<NetworkPeering, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            NetworkPeering result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<NetworkPeering, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceUpdateNetworkPeeringAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                NetworkPeering retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPeeringRoutes</summary>
+        public void ListPeeringRoutesRequestObject()
+        {
+            // Snippet: ListPeeringRoutes(ListPeeringRoutesRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            ListPeeringRoutesRequest request = new ListPeeringRoutesRequest
+            {
+                ParentAsNetworkPeeringName = NetworkPeeringName.FromProjectLocationNetworkPeering("[PROJECT]", "[LOCATION]", "[NETWORK_PEERING]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListPeeringRoutesResponse, PeeringRoute> response = vmwareEngineClient.ListPeeringRoutes(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (PeeringRoute item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListPeeringRoutesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PeeringRoute item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PeeringRoute> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PeeringRoute item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPeeringRoutesAsync</summary>
+        public async Task ListPeeringRoutesRequestObjectAsync()
+        {
+            // Snippet: ListPeeringRoutesAsync(ListPeeringRoutesRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            ListPeeringRoutesRequest request = new ListPeeringRoutesRequest
+            {
+                ParentAsNetworkPeeringName = NetworkPeeringName.FromProjectLocationNetworkPeering("[PROJECT]", "[LOCATION]", "[NETWORK_PEERING]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListPeeringRoutesResponse, PeeringRoute> response = vmwareEngineClient.ListPeeringRoutesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((PeeringRoute item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListPeeringRoutesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PeeringRoute item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PeeringRoute> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PeeringRoute item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPeeringRoutes</summary>
+        public void ListPeeringRoutes()
+        {
+            // Snippet: ListPeeringRoutes(string, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/networkPeerings/[NETWORK_PEERING]";
+            // Make the request
+            PagedEnumerable<ListPeeringRoutesResponse, PeeringRoute> response = vmwareEngineClient.ListPeeringRoutes(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (PeeringRoute item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListPeeringRoutesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PeeringRoute item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PeeringRoute> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PeeringRoute item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPeeringRoutesAsync</summary>
+        public async Task ListPeeringRoutesAsync()
+        {
+            // Snippet: ListPeeringRoutesAsync(string, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/networkPeerings/[NETWORK_PEERING]";
+            // Make the request
+            PagedAsyncEnumerable<ListPeeringRoutesResponse, PeeringRoute> response = vmwareEngineClient.ListPeeringRoutesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((PeeringRoute item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListPeeringRoutesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PeeringRoute item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PeeringRoute> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PeeringRoute item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPeeringRoutes</summary>
+        public void ListPeeringRoutesResourceNames()
+        {
+            // Snippet: ListPeeringRoutes(NetworkPeeringName, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            NetworkPeeringName parent = NetworkPeeringName.FromProjectLocationNetworkPeering("[PROJECT]", "[LOCATION]", "[NETWORK_PEERING]");
+            // Make the request
+            PagedEnumerable<ListPeeringRoutesResponse, PeeringRoute> response = vmwareEngineClient.ListPeeringRoutes(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (PeeringRoute item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListPeeringRoutesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PeeringRoute item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PeeringRoute> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PeeringRoute item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPeeringRoutesAsync</summary>
+        public async Task ListPeeringRoutesResourceNamesAsync()
+        {
+            // Snippet: ListPeeringRoutesAsync(NetworkPeeringName, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            NetworkPeeringName parent = NetworkPeeringName.FromProjectLocationNetworkPeering("[PROJECT]", "[LOCATION]", "[NETWORK_PEERING]");
+            // Make the request
+            PagedAsyncEnumerable<ListPeeringRoutesResponse, PeeringRoute> response = vmwareEngineClient.ListPeeringRoutesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((PeeringRoute item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListPeeringRoutesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PeeringRoute item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PeeringRoute> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PeeringRoute item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -4816,6 +9470,1070 @@ namespace GoogleCSharpSnippets
             {
                 // If it has completed, then access the result
                 Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListManagementDnsZoneBindings</summary>
+        public void ListManagementDnsZoneBindingsRequestObject()
+        {
+            // Snippet: ListManagementDnsZoneBindings(ListManagementDnsZoneBindingsRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            ListManagementDnsZoneBindingsRequest request = new ListManagementDnsZoneBindingsRequest
+            {
+                ParentAsPrivateCloudName = PrivateCloudName.FromProjectLocationPrivateCloud("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListManagementDnsZoneBindingsResponse, ManagementDnsZoneBinding> response = vmwareEngineClient.ListManagementDnsZoneBindings(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ManagementDnsZoneBinding item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListManagementDnsZoneBindingsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ManagementDnsZoneBinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ManagementDnsZoneBinding> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ManagementDnsZoneBinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListManagementDnsZoneBindingsAsync</summary>
+        public async Task ListManagementDnsZoneBindingsRequestObjectAsync()
+        {
+            // Snippet: ListManagementDnsZoneBindingsAsync(ListManagementDnsZoneBindingsRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            ListManagementDnsZoneBindingsRequest request = new ListManagementDnsZoneBindingsRequest
+            {
+                ParentAsPrivateCloudName = PrivateCloudName.FromProjectLocationPrivateCloud("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListManagementDnsZoneBindingsResponse, ManagementDnsZoneBinding> response = vmwareEngineClient.ListManagementDnsZoneBindingsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ManagementDnsZoneBinding item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListManagementDnsZoneBindingsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ManagementDnsZoneBinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ManagementDnsZoneBinding> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ManagementDnsZoneBinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListManagementDnsZoneBindings</summary>
+        public void ListManagementDnsZoneBindings()
+        {
+            // Snippet: ListManagementDnsZoneBindings(string, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/privateClouds/[PRIVATE_CLOUD]";
+            // Make the request
+            PagedEnumerable<ListManagementDnsZoneBindingsResponse, ManagementDnsZoneBinding> response = vmwareEngineClient.ListManagementDnsZoneBindings(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ManagementDnsZoneBinding item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListManagementDnsZoneBindingsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ManagementDnsZoneBinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ManagementDnsZoneBinding> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ManagementDnsZoneBinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListManagementDnsZoneBindingsAsync</summary>
+        public async Task ListManagementDnsZoneBindingsAsync()
+        {
+            // Snippet: ListManagementDnsZoneBindingsAsync(string, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/privateClouds/[PRIVATE_CLOUD]";
+            // Make the request
+            PagedAsyncEnumerable<ListManagementDnsZoneBindingsResponse, ManagementDnsZoneBinding> response = vmwareEngineClient.ListManagementDnsZoneBindingsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ManagementDnsZoneBinding item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListManagementDnsZoneBindingsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ManagementDnsZoneBinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ManagementDnsZoneBinding> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ManagementDnsZoneBinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListManagementDnsZoneBindings</summary>
+        public void ListManagementDnsZoneBindingsResourceNames()
+        {
+            // Snippet: ListManagementDnsZoneBindings(PrivateCloudName, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            PrivateCloudName parent = PrivateCloudName.FromProjectLocationPrivateCloud("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]");
+            // Make the request
+            PagedEnumerable<ListManagementDnsZoneBindingsResponse, ManagementDnsZoneBinding> response = vmwareEngineClient.ListManagementDnsZoneBindings(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ManagementDnsZoneBinding item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListManagementDnsZoneBindingsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ManagementDnsZoneBinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ManagementDnsZoneBinding> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ManagementDnsZoneBinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListManagementDnsZoneBindingsAsync</summary>
+        public async Task ListManagementDnsZoneBindingsResourceNamesAsync()
+        {
+            // Snippet: ListManagementDnsZoneBindingsAsync(PrivateCloudName, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            PrivateCloudName parent = PrivateCloudName.FromProjectLocationPrivateCloud("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]");
+            // Make the request
+            PagedAsyncEnumerable<ListManagementDnsZoneBindingsResponse, ManagementDnsZoneBinding> response = vmwareEngineClient.ListManagementDnsZoneBindingsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ManagementDnsZoneBinding item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListManagementDnsZoneBindingsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ManagementDnsZoneBinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ManagementDnsZoneBinding> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ManagementDnsZoneBinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetManagementDnsZoneBinding</summary>
+        public void GetManagementDnsZoneBindingRequestObject()
+        {
+            // Snippet: GetManagementDnsZoneBinding(GetManagementDnsZoneBindingRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            GetManagementDnsZoneBindingRequest request = new GetManagementDnsZoneBindingRequest
+            {
+                ManagementDnsZoneBindingName = ManagementDnsZoneBindingName.FromProjectLocationPrivateCloudManagementDnsZoneBinding("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[MANAGEMENT_DNS_ZONE_BINDING]"),
+            };
+            // Make the request
+            ManagementDnsZoneBinding response = vmwareEngineClient.GetManagementDnsZoneBinding(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetManagementDnsZoneBindingAsync</summary>
+        public async Task GetManagementDnsZoneBindingRequestObjectAsync()
+        {
+            // Snippet: GetManagementDnsZoneBindingAsync(GetManagementDnsZoneBindingRequest, CallSettings)
+            // Additional: GetManagementDnsZoneBindingAsync(GetManagementDnsZoneBindingRequest, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            GetManagementDnsZoneBindingRequest request = new GetManagementDnsZoneBindingRequest
+            {
+                ManagementDnsZoneBindingName = ManagementDnsZoneBindingName.FromProjectLocationPrivateCloudManagementDnsZoneBinding("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[MANAGEMENT_DNS_ZONE_BINDING]"),
+            };
+            // Make the request
+            ManagementDnsZoneBinding response = await vmwareEngineClient.GetManagementDnsZoneBindingAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetManagementDnsZoneBinding</summary>
+        public void GetManagementDnsZoneBinding()
+        {
+            // Snippet: GetManagementDnsZoneBinding(string, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/privateClouds/[PRIVATE_CLOUD]/managementDnsZoneBindings/[MANAGEMENT_DNS_ZONE_BINDING]";
+            // Make the request
+            ManagementDnsZoneBinding response = vmwareEngineClient.GetManagementDnsZoneBinding(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetManagementDnsZoneBindingAsync</summary>
+        public async Task GetManagementDnsZoneBindingAsync()
+        {
+            // Snippet: GetManagementDnsZoneBindingAsync(string, CallSettings)
+            // Additional: GetManagementDnsZoneBindingAsync(string, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/privateClouds/[PRIVATE_CLOUD]/managementDnsZoneBindings/[MANAGEMENT_DNS_ZONE_BINDING]";
+            // Make the request
+            ManagementDnsZoneBinding response = await vmwareEngineClient.GetManagementDnsZoneBindingAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetManagementDnsZoneBinding</summary>
+        public void GetManagementDnsZoneBindingResourceNames()
+        {
+            // Snippet: GetManagementDnsZoneBinding(ManagementDnsZoneBindingName, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            ManagementDnsZoneBindingName name = ManagementDnsZoneBindingName.FromProjectLocationPrivateCloudManagementDnsZoneBinding("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[MANAGEMENT_DNS_ZONE_BINDING]");
+            // Make the request
+            ManagementDnsZoneBinding response = vmwareEngineClient.GetManagementDnsZoneBinding(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetManagementDnsZoneBindingAsync</summary>
+        public async Task GetManagementDnsZoneBindingResourceNamesAsync()
+        {
+            // Snippet: GetManagementDnsZoneBindingAsync(ManagementDnsZoneBindingName, CallSettings)
+            // Additional: GetManagementDnsZoneBindingAsync(ManagementDnsZoneBindingName, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            ManagementDnsZoneBindingName name = ManagementDnsZoneBindingName.FromProjectLocationPrivateCloudManagementDnsZoneBinding("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[MANAGEMENT_DNS_ZONE_BINDING]");
+            // Make the request
+            ManagementDnsZoneBinding response = await vmwareEngineClient.GetManagementDnsZoneBindingAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateManagementDnsZoneBinding</summary>
+        public void CreateManagementDnsZoneBindingRequestObject()
+        {
+            // Snippet: CreateManagementDnsZoneBinding(CreateManagementDnsZoneBindingRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            CreateManagementDnsZoneBindingRequest request = new CreateManagementDnsZoneBindingRequest
+            {
+                ParentAsPrivateCloudName = PrivateCloudName.FromProjectLocationPrivateCloud("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]"),
+                ManagementDnsZoneBinding = new ManagementDnsZoneBinding(),
+                ManagementDnsZoneBindingId = "",
+                RequestId = "",
+            };
+            // Make the request
+            Operation<ManagementDnsZoneBinding, OperationMetadata> response = vmwareEngineClient.CreateManagementDnsZoneBinding(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ManagementDnsZoneBinding, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ManagementDnsZoneBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ManagementDnsZoneBinding, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceCreateManagementDnsZoneBinding(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ManagementDnsZoneBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateManagementDnsZoneBindingAsync</summary>
+        public async Task CreateManagementDnsZoneBindingRequestObjectAsync()
+        {
+            // Snippet: CreateManagementDnsZoneBindingAsync(CreateManagementDnsZoneBindingRequest, CallSettings)
+            // Additional: CreateManagementDnsZoneBindingAsync(CreateManagementDnsZoneBindingRequest, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateManagementDnsZoneBindingRequest request = new CreateManagementDnsZoneBindingRequest
+            {
+                ParentAsPrivateCloudName = PrivateCloudName.FromProjectLocationPrivateCloud("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]"),
+                ManagementDnsZoneBinding = new ManagementDnsZoneBinding(),
+                ManagementDnsZoneBindingId = "",
+                RequestId = "",
+            };
+            // Make the request
+            Operation<ManagementDnsZoneBinding, OperationMetadata> response = await vmwareEngineClient.CreateManagementDnsZoneBindingAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ManagementDnsZoneBinding, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ManagementDnsZoneBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ManagementDnsZoneBinding, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceCreateManagementDnsZoneBindingAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ManagementDnsZoneBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateManagementDnsZoneBinding</summary>
+        public void CreateManagementDnsZoneBinding()
+        {
+            // Snippet: CreateManagementDnsZoneBinding(string, ManagementDnsZoneBinding, string, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/privateClouds/[PRIVATE_CLOUD]";
+            ManagementDnsZoneBinding managementDnsZoneBinding = new ManagementDnsZoneBinding();
+            string managementDnsZoneBindingId = "";
+            // Make the request
+            Operation<ManagementDnsZoneBinding, OperationMetadata> response = vmwareEngineClient.CreateManagementDnsZoneBinding(parent, managementDnsZoneBinding, managementDnsZoneBindingId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ManagementDnsZoneBinding, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ManagementDnsZoneBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ManagementDnsZoneBinding, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceCreateManagementDnsZoneBinding(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ManagementDnsZoneBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateManagementDnsZoneBindingAsync</summary>
+        public async Task CreateManagementDnsZoneBindingAsync()
+        {
+            // Snippet: CreateManagementDnsZoneBindingAsync(string, ManagementDnsZoneBinding, string, CallSettings)
+            // Additional: CreateManagementDnsZoneBindingAsync(string, ManagementDnsZoneBinding, string, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/privateClouds/[PRIVATE_CLOUD]";
+            ManagementDnsZoneBinding managementDnsZoneBinding = new ManagementDnsZoneBinding();
+            string managementDnsZoneBindingId = "";
+            // Make the request
+            Operation<ManagementDnsZoneBinding, OperationMetadata> response = await vmwareEngineClient.CreateManagementDnsZoneBindingAsync(parent, managementDnsZoneBinding, managementDnsZoneBindingId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ManagementDnsZoneBinding, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ManagementDnsZoneBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ManagementDnsZoneBinding, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceCreateManagementDnsZoneBindingAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ManagementDnsZoneBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateManagementDnsZoneBinding</summary>
+        public void CreateManagementDnsZoneBindingResourceNames()
+        {
+            // Snippet: CreateManagementDnsZoneBinding(PrivateCloudName, ManagementDnsZoneBinding, string, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            PrivateCloudName parent = PrivateCloudName.FromProjectLocationPrivateCloud("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]");
+            ManagementDnsZoneBinding managementDnsZoneBinding = new ManagementDnsZoneBinding();
+            string managementDnsZoneBindingId = "";
+            // Make the request
+            Operation<ManagementDnsZoneBinding, OperationMetadata> response = vmwareEngineClient.CreateManagementDnsZoneBinding(parent, managementDnsZoneBinding, managementDnsZoneBindingId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ManagementDnsZoneBinding, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ManagementDnsZoneBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ManagementDnsZoneBinding, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceCreateManagementDnsZoneBinding(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ManagementDnsZoneBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateManagementDnsZoneBindingAsync</summary>
+        public async Task CreateManagementDnsZoneBindingResourceNamesAsync()
+        {
+            // Snippet: CreateManagementDnsZoneBindingAsync(PrivateCloudName, ManagementDnsZoneBinding, string, CallSettings)
+            // Additional: CreateManagementDnsZoneBindingAsync(PrivateCloudName, ManagementDnsZoneBinding, string, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            PrivateCloudName parent = PrivateCloudName.FromProjectLocationPrivateCloud("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]");
+            ManagementDnsZoneBinding managementDnsZoneBinding = new ManagementDnsZoneBinding();
+            string managementDnsZoneBindingId = "";
+            // Make the request
+            Operation<ManagementDnsZoneBinding, OperationMetadata> response = await vmwareEngineClient.CreateManagementDnsZoneBindingAsync(parent, managementDnsZoneBinding, managementDnsZoneBindingId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ManagementDnsZoneBinding, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ManagementDnsZoneBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ManagementDnsZoneBinding, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceCreateManagementDnsZoneBindingAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ManagementDnsZoneBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateManagementDnsZoneBinding</summary>
+        public void UpdateManagementDnsZoneBindingRequestObject()
+        {
+            // Snippet: UpdateManagementDnsZoneBinding(UpdateManagementDnsZoneBindingRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            UpdateManagementDnsZoneBindingRequest request = new UpdateManagementDnsZoneBindingRequest
+            {
+                UpdateMask = new FieldMask(),
+                ManagementDnsZoneBinding = new ManagementDnsZoneBinding(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<ManagementDnsZoneBinding, OperationMetadata> response = vmwareEngineClient.UpdateManagementDnsZoneBinding(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ManagementDnsZoneBinding, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ManagementDnsZoneBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ManagementDnsZoneBinding, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceUpdateManagementDnsZoneBinding(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ManagementDnsZoneBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateManagementDnsZoneBindingAsync</summary>
+        public async Task UpdateManagementDnsZoneBindingRequestObjectAsync()
+        {
+            // Snippet: UpdateManagementDnsZoneBindingAsync(UpdateManagementDnsZoneBindingRequest, CallSettings)
+            // Additional: UpdateManagementDnsZoneBindingAsync(UpdateManagementDnsZoneBindingRequest, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateManagementDnsZoneBindingRequest request = new UpdateManagementDnsZoneBindingRequest
+            {
+                UpdateMask = new FieldMask(),
+                ManagementDnsZoneBinding = new ManagementDnsZoneBinding(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<ManagementDnsZoneBinding, OperationMetadata> response = await vmwareEngineClient.UpdateManagementDnsZoneBindingAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ManagementDnsZoneBinding, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ManagementDnsZoneBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ManagementDnsZoneBinding, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceUpdateManagementDnsZoneBindingAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ManagementDnsZoneBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateManagementDnsZoneBinding</summary>
+        public void UpdateManagementDnsZoneBinding()
+        {
+            // Snippet: UpdateManagementDnsZoneBinding(ManagementDnsZoneBinding, FieldMask, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            ManagementDnsZoneBinding managementDnsZoneBinding = new ManagementDnsZoneBinding();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<ManagementDnsZoneBinding, OperationMetadata> response = vmwareEngineClient.UpdateManagementDnsZoneBinding(managementDnsZoneBinding, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ManagementDnsZoneBinding, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ManagementDnsZoneBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ManagementDnsZoneBinding, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceUpdateManagementDnsZoneBinding(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ManagementDnsZoneBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateManagementDnsZoneBindingAsync</summary>
+        public async Task UpdateManagementDnsZoneBindingAsync()
+        {
+            // Snippet: UpdateManagementDnsZoneBindingAsync(ManagementDnsZoneBinding, FieldMask, CallSettings)
+            // Additional: UpdateManagementDnsZoneBindingAsync(ManagementDnsZoneBinding, FieldMask, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            ManagementDnsZoneBinding managementDnsZoneBinding = new ManagementDnsZoneBinding();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<ManagementDnsZoneBinding, OperationMetadata> response = await vmwareEngineClient.UpdateManagementDnsZoneBindingAsync(managementDnsZoneBinding, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ManagementDnsZoneBinding, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ManagementDnsZoneBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ManagementDnsZoneBinding, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceUpdateManagementDnsZoneBindingAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ManagementDnsZoneBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteManagementDnsZoneBinding</summary>
+        public void DeleteManagementDnsZoneBindingRequestObject()
+        {
+            // Snippet: DeleteManagementDnsZoneBinding(DeleteManagementDnsZoneBindingRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            DeleteManagementDnsZoneBindingRequest request = new DeleteManagementDnsZoneBindingRequest
+            {
+                ManagementDnsZoneBindingName = ManagementDnsZoneBindingName.FromProjectLocationPrivateCloudManagementDnsZoneBinding("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[MANAGEMENT_DNS_ZONE_BINDING]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = vmwareEngineClient.DeleteManagementDnsZoneBinding(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceDeleteManagementDnsZoneBinding(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteManagementDnsZoneBindingAsync</summary>
+        public async Task DeleteManagementDnsZoneBindingRequestObjectAsync()
+        {
+            // Snippet: DeleteManagementDnsZoneBindingAsync(DeleteManagementDnsZoneBindingRequest, CallSettings)
+            // Additional: DeleteManagementDnsZoneBindingAsync(DeleteManagementDnsZoneBindingRequest, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteManagementDnsZoneBindingRequest request = new DeleteManagementDnsZoneBindingRequest
+            {
+                ManagementDnsZoneBindingName = ManagementDnsZoneBindingName.FromProjectLocationPrivateCloudManagementDnsZoneBinding("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[MANAGEMENT_DNS_ZONE_BINDING]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await vmwareEngineClient.DeleteManagementDnsZoneBindingAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceDeleteManagementDnsZoneBindingAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteManagementDnsZoneBinding</summary>
+        public void DeleteManagementDnsZoneBinding()
+        {
+            // Snippet: DeleteManagementDnsZoneBinding(string, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/privateClouds/[PRIVATE_CLOUD]/managementDnsZoneBindings/[MANAGEMENT_DNS_ZONE_BINDING]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = vmwareEngineClient.DeleteManagementDnsZoneBinding(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceDeleteManagementDnsZoneBinding(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteManagementDnsZoneBindingAsync</summary>
+        public async Task DeleteManagementDnsZoneBindingAsync()
+        {
+            // Snippet: DeleteManagementDnsZoneBindingAsync(string, CallSettings)
+            // Additional: DeleteManagementDnsZoneBindingAsync(string, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/privateClouds/[PRIVATE_CLOUD]/managementDnsZoneBindings/[MANAGEMENT_DNS_ZONE_BINDING]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await vmwareEngineClient.DeleteManagementDnsZoneBindingAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceDeleteManagementDnsZoneBindingAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteManagementDnsZoneBinding</summary>
+        public void DeleteManagementDnsZoneBindingResourceNames()
+        {
+            // Snippet: DeleteManagementDnsZoneBinding(ManagementDnsZoneBindingName, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            ManagementDnsZoneBindingName name = ManagementDnsZoneBindingName.FromProjectLocationPrivateCloudManagementDnsZoneBinding("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[MANAGEMENT_DNS_ZONE_BINDING]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = vmwareEngineClient.DeleteManagementDnsZoneBinding(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceDeleteManagementDnsZoneBinding(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteManagementDnsZoneBindingAsync</summary>
+        public async Task DeleteManagementDnsZoneBindingResourceNamesAsync()
+        {
+            // Snippet: DeleteManagementDnsZoneBindingAsync(ManagementDnsZoneBindingName, CallSettings)
+            // Additional: DeleteManagementDnsZoneBindingAsync(ManagementDnsZoneBindingName, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            ManagementDnsZoneBindingName name = ManagementDnsZoneBindingName.FromProjectLocationPrivateCloudManagementDnsZoneBinding("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[MANAGEMENT_DNS_ZONE_BINDING]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await vmwareEngineClient.DeleteManagementDnsZoneBindingAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceDeleteManagementDnsZoneBindingAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RepairManagementDnsZoneBinding</summary>
+        public void RepairManagementDnsZoneBindingRequestObject()
+        {
+            // Snippet: RepairManagementDnsZoneBinding(RepairManagementDnsZoneBindingRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            RepairManagementDnsZoneBindingRequest request = new RepairManagementDnsZoneBindingRequest
+            {
+                ManagementDnsZoneBindingName = ManagementDnsZoneBindingName.FromProjectLocationPrivateCloudManagementDnsZoneBinding("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[MANAGEMENT_DNS_ZONE_BINDING]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<ManagementDnsZoneBinding, OperationMetadata> response = vmwareEngineClient.RepairManagementDnsZoneBinding(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ManagementDnsZoneBinding, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ManagementDnsZoneBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ManagementDnsZoneBinding, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceRepairManagementDnsZoneBinding(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ManagementDnsZoneBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RepairManagementDnsZoneBindingAsync</summary>
+        public async Task RepairManagementDnsZoneBindingRequestObjectAsync()
+        {
+            // Snippet: RepairManagementDnsZoneBindingAsync(RepairManagementDnsZoneBindingRequest, CallSettings)
+            // Additional: RepairManagementDnsZoneBindingAsync(RepairManagementDnsZoneBindingRequest, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            RepairManagementDnsZoneBindingRequest request = new RepairManagementDnsZoneBindingRequest
+            {
+                ManagementDnsZoneBindingName = ManagementDnsZoneBindingName.FromProjectLocationPrivateCloudManagementDnsZoneBinding("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[MANAGEMENT_DNS_ZONE_BINDING]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<ManagementDnsZoneBinding, OperationMetadata> response = await vmwareEngineClient.RepairManagementDnsZoneBindingAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ManagementDnsZoneBinding, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ManagementDnsZoneBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ManagementDnsZoneBinding, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceRepairManagementDnsZoneBindingAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ManagementDnsZoneBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RepairManagementDnsZoneBinding</summary>
+        public void RepairManagementDnsZoneBinding()
+        {
+            // Snippet: RepairManagementDnsZoneBinding(string, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/privateClouds/[PRIVATE_CLOUD]/managementDnsZoneBindings/[MANAGEMENT_DNS_ZONE_BINDING]";
+            // Make the request
+            Operation<ManagementDnsZoneBinding, OperationMetadata> response = vmwareEngineClient.RepairManagementDnsZoneBinding(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ManagementDnsZoneBinding, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ManagementDnsZoneBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ManagementDnsZoneBinding, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceRepairManagementDnsZoneBinding(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ManagementDnsZoneBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RepairManagementDnsZoneBindingAsync</summary>
+        public async Task RepairManagementDnsZoneBindingAsync()
+        {
+            // Snippet: RepairManagementDnsZoneBindingAsync(string, CallSettings)
+            // Additional: RepairManagementDnsZoneBindingAsync(string, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/privateClouds/[PRIVATE_CLOUD]/managementDnsZoneBindings/[MANAGEMENT_DNS_ZONE_BINDING]";
+            // Make the request
+            Operation<ManagementDnsZoneBinding, OperationMetadata> response = await vmwareEngineClient.RepairManagementDnsZoneBindingAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ManagementDnsZoneBinding, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ManagementDnsZoneBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ManagementDnsZoneBinding, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceRepairManagementDnsZoneBindingAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ManagementDnsZoneBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RepairManagementDnsZoneBinding</summary>
+        public void RepairManagementDnsZoneBindingResourceNames()
+        {
+            // Snippet: RepairManagementDnsZoneBinding(ManagementDnsZoneBindingName, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            ManagementDnsZoneBindingName name = ManagementDnsZoneBindingName.FromProjectLocationPrivateCloudManagementDnsZoneBinding("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[MANAGEMENT_DNS_ZONE_BINDING]");
+            // Make the request
+            Operation<ManagementDnsZoneBinding, OperationMetadata> response = vmwareEngineClient.RepairManagementDnsZoneBinding(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ManagementDnsZoneBinding, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ManagementDnsZoneBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ManagementDnsZoneBinding, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceRepairManagementDnsZoneBinding(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ManagementDnsZoneBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RepairManagementDnsZoneBindingAsync</summary>
+        public async Task RepairManagementDnsZoneBindingResourceNamesAsync()
+        {
+            // Snippet: RepairManagementDnsZoneBindingAsync(ManagementDnsZoneBindingName, CallSettings)
+            // Additional: RepairManagementDnsZoneBindingAsync(ManagementDnsZoneBindingName, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            ManagementDnsZoneBindingName name = ManagementDnsZoneBindingName.FromProjectLocationPrivateCloudManagementDnsZoneBinding("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[MANAGEMENT_DNS_ZONE_BINDING]");
+            // Make the request
+            Operation<ManagementDnsZoneBinding, OperationMetadata> response = await vmwareEngineClient.RepairManagementDnsZoneBindingAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ManagementDnsZoneBinding, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ManagementDnsZoneBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ManagementDnsZoneBinding, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceRepairManagementDnsZoneBindingAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ManagementDnsZoneBinding retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -6853,6 +12571,475 @@ namespace GoogleCSharpSnippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GrantDnsBindPermission</summary>
+        public void GrantDnsBindPermissionRequestObject()
+        {
+            // Snippet: GrantDnsBindPermission(GrantDnsBindPermissionRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            GrantDnsBindPermissionRequest request = new GrantDnsBindPermissionRequest
+            {
+                DnsBindPermissionName = DnsBindPermissionName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Principal = new Principal(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<DnsBindPermission, OperationMetadata> response = vmwareEngineClient.GrantDnsBindPermission(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DnsBindPermission, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DnsBindPermission result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DnsBindPermission, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceGrantDnsBindPermission(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DnsBindPermission retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GrantDnsBindPermissionAsync</summary>
+        public async Task GrantDnsBindPermissionRequestObjectAsync()
+        {
+            // Snippet: GrantDnsBindPermissionAsync(GrantDnsBindPermissionRequest, CallSettings)
+            // Additional: GrantDnsBindPermissionAsync(GrantDnsBindPermissionRequest, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            GrantDnsBindPermissionRequest request = new GrantDnsBindPermissionRequest
+            {
+                DnsBindPermissionName = DnsBindPermissionName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Principal = new Principal(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<DnsBindPermission, OperationMetadata> response = await vmwareEngineClient.GrantDnsBindPermissionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DnsBindPermission, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DnsBindPermission result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DnsBindPermission, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceGrantDnsBindPermissionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DnsBindPermission retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GrantDnsBindPermission</summary>
+        public void GrantDnsBindPermission()
+        {
+            // Snippet: GrantDnsBindPermission(string, Principal, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/dnsBindPermission";
+            Principal principal = new Principal();
+            // Make the request
+            Operation<DnsBindPermission, OperationMetadata> response = vmwareEngineClient.GrantDnsBindPermission(name, principal);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DnsBindPermission, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DnsBindPermission result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DnsBindPermission, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceGrantDnsBindPermission(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DnsBindPermission retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GrantDnsBindPermissionAsync</summary>
+        public async Task GrantDnsBindPermissionAsync()
+        {
+            // Snippet: GrantDnsBindPermissionAsync(string, Principal, CallSettings)
+            // Additional: GrantDnsBindPermissionAsync(string, Principal, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/dnsBindPermission";
+            Principal principal = new Principal();
+            // Make the request
+            Operation<DnsBindPermission, OperationMetadata> response = await vmwareEngineClient.GrantDnsBindPermissionAsync(name, principal);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DnsBindPermission, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DnsBindPermission result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DnsBindPermission, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceGrantDnsBindPermissionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DnsBindPermission retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GrantDnsBindPermission</summary>
+        public void GrantDnsBindPermissionResourceNames()
+        {
+            // Snippet: GrantDnsBindPermission(DnsBindPermissionName, Principal, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            DnsBindPermissionName name = DnsBindPermissionName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            Principal principal = new Principal();
+            // Make the request
+            Operation<DnsBindPermission, OperationMetadata> response = vmwareEngineClient.GrantDnsBindPermission(name, principal);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DnsBindPermission, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DnsBindPermission result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DnsBindPermission, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceGrantDnsBindPermission(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DnsBindPermission retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GrantDnsBindPermissionAsync</summary>
+        public async Task GrantDnsBindPermissionResourceNamesAsync()
+        {
+            // Snippet: GrantDnsBindPermissionAsync(DnsBindPermissionName, Principal, CallSettings)
+            // Additional: GrantDnsBindPermissionAsync(DnsBindPermissionName, Principal, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            DnsBindPermissionName name = DnsBindPermissionName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            Principal principal = new Principal();
+            // Make the request
+            Operation<DnsBindPermission, OperationMetadata> response = await vmwareEngineClient.GrantDnsBindPermissionAsync(name, principal);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DnsBindPermission, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DnsBindPermission result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DnsBindPermission, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceGrantDnsBindPermissionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DnsBindPermission retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDnsBindPermission</summary>
+        public void GetDnsBindPermissionRequestObject()
+        {
+            // Snippet: GetDnsBindPermission(GetDnsBindPermissionRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            GetDnsBindPermissionRequest request = new GetDnsBindPermissionRequest
+            {
+                DnsBindPermissionName = DnsBindPermissionName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            DnsBindPermission response = vmwareEngineClient.GetDnsBindPermission(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDnsBindPermissionAsync</summary>
+        public async Task GetDnsBindPermissionRequestObjectAsync()
+        {
+            // Snippet: GetDnsBindPermissionAsync(GetDnsBindPermissionRequest, CallSettings)
+            // Additional: GetDnsBindPermissionAsync(GetDnsBindPermissionRequest, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            GetDnsBindPermissionRequest request = new GetDnsBindPermissionRequest
+            {
+                DnsBindPermissionName = DnsBindPermissionName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            DnsBindPermission response = await vmwareEngineClient.GetDnsBindPermissionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDnsBindPermission</summary>
+        public void GetDnsBindPermission()
+        {
+            // Snippet: GetDnsBindPermission(string, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/dnsBindPermission";
+            // Make the request
+            DnsBindPermission response = vmwareEngineClient.GetDnsBindPermission(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDnsBindPermissionAsync</summary>
+        public async Task GetDnsBindPermissionAsync()
+        {
+            // Snippet: GetDnsBindPermissionAsync(string, CallSettings)
+            // Additional: GetDnsBindPermissionAsync(string, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/dnsBindPermission";
+            // Make the request
+            DnsBindPermission response = await vmwareEngineClient.GetDnsBindPermissionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDnsBindPermission</summary>
+        public void GetDnsBindPermissionResourceNames()
+        {
+            // Snippet: GetDnsBindPermission(DnsBindPermissionName, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            DnsBindPermissionName name = DnsBindPermissionName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            DnsBindPermission response = vmwareEngineClient.GetDnsBindPermission(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDnsBindPermissionAsync</summary>
+        public async Task GetDnsBindPermissionResourceNamesAsync()
+        {
+            // Snippet: GetDnsBindPermissionAsync(DnsBindPermissionName, CallSettings)
+            // Additional: GetDnsBindPermissionAsync(DnsBindPermissionName, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            DnsBindPermissionName name = DnsBindPermissionName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            DnsBindPermission response = await vmwareEngineClient.GetDnsBindPermissionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RevokeDnsBindPermission</summary>
+        public void RevokeDnsBindPermissionRequestObject()
+        {
+            // Snippet: RevokeDnsBindPermission(RevokeDnsBindPermissionRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            RevokeDnsBindPermissionRequest request = new RevokeDnsBindPermissionRequest
+            {
+                DnsBindPermissionName = DnsBindPermissionName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Principal = new Principal(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<DnsBindPermission, OperationMetadata> response = vmwareEngineClient.RevokeDnsBindPermission(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DnsBindPermission, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DnsBindPermission result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DnsBindPermission, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceRevokeDnsBindPermission(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DnsBindPermission retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RevokeDnsBindPermissionAsync</summary>
+        public async Task RevokeDnsBindPermissionRequestObjectAsync()
+        {
+            // Snippet: RevokeDnsBindPermissionAsync(RevokeDnsBindPermissionRequest, CallSettings)
+            // Additional: RevokeDnsBindPermissionAsync(RevokeDnsBindPermissionRequest, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            RevokeDnsBindPermissionRequest request = new RevokeDnsBindPermissionRequest
+            {
+                DnsBindPermissionName = DnsBindPermissionName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Principal = new Principal(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<DnsBindPermission, OperationMetadata> response = await vmwareEngineClient.RevokeDnsBindPermissionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DnsBindPermission, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DnsBindPermission result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DnsBindPermission, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceRevokeDnsBindPermissionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DnsBindPermission retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RevokeDnsBindPermission</summary>
+        public void RevokeDnsBindPermission()
+        {
+            // Snippet: RevokeDnsBindPermission(string, Principal, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/dnsBindPermission";
+            Principal principal = new Principal();
+            // Make the request
+            Operation<DnsBindPermission, OperationMetadata> response = vmwareEngineClient.RevokeDnsBindPermission(name, principal);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DnsBindPermission, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DnsBindPermission result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DnsBindPermission, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceRevokeDnsBindPermission(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DnsBindPermission retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RevokeDnsBindPermissionAsync</summary>
+        public async Task RevokeDnsBindPermissionAsync()
+        {
+            // Snippet: RevokeDnsBindPermissionAsync(string, Principal, CallSettings)
+            // Additional: RevokeDnsBindPermissionAsync(string, Principal, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/dnsBindPermission";
+            Principal principal = new Principal();
+            // Make the request
+            Operation<DnsBindPermission, OperationMetadata> response = await vmwareEngineClient.RevokeDnsBindPermissionAsync(name, principal);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DnsBindPermission, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DnsBindPermission result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DnsBindPermission, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceRevokeDnsBindPermissionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DnsBindPermission retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RevokeDnsBindPermission</summary>
+        public void RevokeDnsBindPermissionResourceNames()
+        {
+            // Snippet: RevokeDnsBindPermission(DnsBindPermissionName, Principal, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            DnsBindPermissionName name = DnsBindPermissionName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            Principal principal = new Principal();
+            // Make the request
+            Operation<DnsBindPermission, OperationMetadata> response = vmwareEngineClient.RevokeDnsBindPermission(name, principal);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DnsBindPermission, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DnsBindPermission result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DnsBindPermission, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceRevokeDnsBindPermission(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DnsBindPermission retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RevokeDnsBindPermissionAsync</summary>
+        public async Task RevokeDnsBindPermissionResourceNamesAsync()
+        {
+            // Snippet: RevokeDnsBindPermissionAsync(DnsBindPermissionName, Principal, CallSettings)
+            // Additional: RevokeDnsBindPermissionAsync(DnsBindPermissionName, Principal, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            DnsBindPermissionName name = DnsBindPermissionName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            Principal principal = new Principal();
+            // Make the request
+            Operation<DnsBindPermission, OperationMetadata> response = await vmwareEngineClient.RevokeDnsBindPermissionAsync(name, principal);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DnsBindPermission, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DnsBindPermission result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DnsBindPermission, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceRevokeDnsBindPermissionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DnsBindPermission retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
     }

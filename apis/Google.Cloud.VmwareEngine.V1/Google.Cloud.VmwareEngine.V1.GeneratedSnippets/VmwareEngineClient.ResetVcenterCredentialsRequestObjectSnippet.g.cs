@@ -39,6 +39,7 @@ namespace GoogleCSharpSnippets
             {
                 PrivateCloudAsPrivateCloudName = PrivateCloudName.FromProjectLocationPrivateCloud("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]"),
                 RequestId = "",
+                Username = "",
             };
             // Make the request
             Operation<PrivateCloud, OperationMetadata> response = vmwareEngineClient.ResetVcenterCredentials(request);

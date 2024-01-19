@@ -96,6 +96,32 @@ namespace Google.Cloud.VmwareEngine.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.DeleteClusterRequest> __Marshaller_google_cloud_vmwareengine_v1_DeleteClusterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.DeleteClusterRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.ListNodesRequest> __Marshaller_google_cloud_vmwareengine_v1_ListNodesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.ListNodesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.ListNodesResponse> __Marshaller_google_cloud_vmwareengine_v1_ListNodesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.ListNodesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.GetNodeRequest> __Marshaller_google_cloud_vmwareengine_v1_GetNodeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.GetNodeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.Node> __Marshaller_google_cloud_vmwareengine_v1_Node = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.Node.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.ListExternalAddressesRequest> __Marshaller_google_cloud_vmwareengine_v1_ListExternalAddressesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.ListExternalAddressesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.ListExternalAddressesResponse> __Marshaller_google_cloud_vmwareengine_v1_ListExternalAddressesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.ListExternalAddressesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.FetchNetworkPolicyExternalAddressesRequest> __Marshaller_google_cloud_vmwareengine_v1_FetchNetworkPolicyExternalAddressesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.FetchNetworkPolicyExternalAddressesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.FetchNetworkPolicyExternalAddressesResponse> __Marshaller_google_cloud_vmwareengine_v1_FetchNetworkPolicyExternalAddressesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.FetchNetworkPolicyExternalAddressesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.GetExternalAddressRequest> __Marshaller_google_cloud_vmwareengine_v1_GetExternalAddressRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.GetExternalAddressRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.ExternalAddress> __Marshaller_google_cloud_vmwareengine_v1_ExternalAddress = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.ExternalAddress.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.CreateExternalAddressRequest> __Marshaller_google_cloud_vmwareengine_v1_CreateExternalAddressRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.CreateExternalAddressRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.UpdateExternalAddressRequest> __Marshaller_google_cloud_vmwareengine_v1_UpdateExternalAddressRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.UpdateExternalAddressRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.DeleteExternalAddressRequest> __Marshaller_google_cloud_vmwareengine_v1_DeleteExternalAddressRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.DeleteExternalAddressRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.ListSubnetsRequest> __Marshaller_google_cloud_vmwareengine_v1_ListSubnetsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.ListSubnetsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.ListSubnetsResponse> __Marshaller_google_cloud_vmwareengine_v1_ListSubnetsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.ListSubnetsResponse.Parser));
@@ -105,6 +131,34 @@ namespace Google.Cloud.VmwareEngine.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.Subnet> __Marshaller_google_cloud_vmwareengine_v1_Subnet = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.Subnet.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.UpdateSubnetRequest> __Marshaller_google_cloud_vmwareengine_v1_UpdateSubnetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.UpdateSubnetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.ListExternalAccessRulesRequest> __Marshaller_google_cloud_vmwareengine_v1_ListExternalAccessRulesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.ListExternalAccessRulesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.ListExternalAccessRulesResponse> __Marshaller_google_cloud_vmwareengine_v1_ListExternalAccessRulesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.ListExternalAccessRulesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.GetExternalAccessRuleRequest> __Marshaller_google_cloud_vmwareengine_v1_GetExternalAccessRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.GetExternalAccessRuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule> __Marshaller_google_cloud_vmwareengine_v1_ExternalAccessRule = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.CreateExternalAccessRuleRequest> __Marshaller_google_cloud_vmwareengine_v1_CreateExternalAccessRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.CreateExternalAccessRuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.UpdateExternalAccessRuleRequest> __Marshaller_google_cloud_vmwareengine_v1_UpdateExternalAccessRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.UpdateExternalAccessRuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.DeleteExternalAccessRuleRequest> __Marshaller_google_cloud_vmwareengine_v1_DeleteExternalAccessRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.DeleteExternalAccessRuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.ListLoggingServersRequest> __Marshaller_google_cloud_vmwareengine_v1_ListLoggingServersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.ListLoggingServersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.ListLoggingServersResponse> __Marshaller_google_cloud_vmwareengine_v1_ListLoggingServersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.ListLoggingServersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.GetLoggingServerRequest> __Marshaller_google_cloud_vmwareengine_v1_GetLoggingServerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.GetLoggingServerRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.LoggingServer> __Marshaller_google_cloud_vmwareengine_v1_LoggingServer = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.LoggingServer.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.CreateLoggingServerRequest> __Marshaller_google_cloud_vmwareengine_v1_CreateLoggingServerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.CreateLoggingServerRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.UpdateLoggingServerRequest> __Marshaller_google_cloud_vmwareengine_v1_UpdateLoggingServerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.UpdateLoggingServerRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.DeleteLoggingServerRequest> __Marshaller_google_cloud_vmwareengine_v1_DeleteLoggingServerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.DeleteLoggingServerRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.ListNodeTypesRequest> __Marshaller_google_cloud_vmwareengine_v1_ListNodeTypesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.ListNodeTypesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -123,6 +177,30 @@ namespace Google.Cloud.VmwareEngine.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.ResetNsxCredentialsRequest> __Marshaller_google_cloud_vmwareengine_v1_ResetNsxCredentialsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.ResetNsxCredentialsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.ResetVcenterCredentialsRequest> __Marshaller_google_cloud_vmwareengine_v1_ResetVcenterCredentialsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.ResetVcenterCredentialsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.GetDnsForwardingRequest> __Marshaller_google_cloud_vmwareengine_v1_GetDnsForwardingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.GetDnsForwardingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.DnsForwarding> __Marshaller_google_cloud_vmwareengine_v1_DnsForwarding = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.DnsForwarding.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.UpdateDnsForwardingRequest> __Marshaller_google_cloud_vmwareengine_v1_UpdateDnsForwardingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.UpdateDnsForwardingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.GetNetworkPeeringRequest> __Marshaller_google_cloud_vmwareengine_v1_GetNetworkPeeringRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.GetNetworkPeeringRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.NetworkPeering> __Marshaller_google_cloud_vmwareengine_v1_NetworkPeering = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.NetworkPeering.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.ListNetworkPeeringsRequest> __Marshaller_google_cloud_vmwareengine_v1_ListNetworkPeeringsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.ListNetworkPeeringsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.ListNetworkPeeringsResponse> __Marshaller_google_cloud_vmwareengine_v1_ListNetworkPeeringsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.ListNetworkPeeringsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.CreateNetworkPeeringRequest> __Marshaller_google_cloud_vmwareengine_v1_CreateNetworkPeeringRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.CreateNetworkPeeringRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.DeleteNetworkPeeringRequest> __Marshaller_google_cloud_vmwareengine_v1_DeleteNetworkPeeringRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.DeleteNetworkPeeringRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.UpdateNetworkPeeringRequest> __Marshaller_google_cloud_vmwareengine_v1_UpdateNetworkPeeringRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.UpdateNetworkPeeringRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.ListPeeringRoutesRequest> __Marshaller_google_cloud_vmwareengine_v1_ListPeeringRoutesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.ListPeeringRoutesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.ListPeeringRoutesResponse> __Marshaller_google_cloud_vmwareengine_v1_ListPeeringRoutesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.ListPeeringRoutesResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.CreateHcxActivationKeyRequest> __Marshaller_google_cloud_vmwareengine_v1_CreateHcxActivationKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.CreateHcxActivationKeyRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -147,6 +225,22 @@ namespace Google.Cloud.VmwareEngine.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.UpdateNetworkPolicyRequest> __Marshaller_google_cloud_vmwareengine_v1_UpdateNetworkPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.UpdateNetworkPolicyRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.DeleteNetworkPolicyRequest> __Marshaller_google_cloud_vmwareengine_v1_DeleteNetworkPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.DeleteNetworkPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.ListManagementDnsZoneBindingsRequest> __Marshaller_google_cloud_vmwareengine_v1_ListManagementDnsZoneBindingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.ListManagementDnsZoneBindingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.ListManagementDnsZoneBindingsResponse> __Marshaller_google_cloud_vmwareengine_v1_ListManagementDnsZoneBindingsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.ListManagementDnsZoneBindingsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.GetManagementDnsZoneBindingRequest> __Marshaller_google_cloud_vmwareengine_v1_GetManagementDnsZoneBindingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.GetManagementDnsZoneBindingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.ManagementDnsZoneBinding> __Marshaller_google_cloud_vmwareengine_v1_ManagementDnsZoneBinding = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.ManagementDnsZoneBinding.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.CreateManagementDnsZoneBindingRequest> __Marshaller_google_cloud_vmwareengine_v1_CreateManagementDnsZoneBindingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.CreateManagementDnsZoneBindingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.UpdateManagementDnsZoneBindingRequest> __Marshaller_google_cloud_vmwareengine_v1_UpdateManagementDnsZoneBindingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.UpdateManagementDnsZoneBindingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.DeleteManagementDnsZoneBindingRequest> __Marshaller_google_cloud_vmwareengine_v1_DeleteManagementDnsZoneBindingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.DeleteManagementDnsZoneBindingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.RepairManagementDnsZoneBindingRequest> __Marshaller_google_cloud_vmwareengine_v1_RepairManagementDnsZoneBindingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.RepairManagementDnsZoneBindingRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.CreateVmwareEngineNetworkRequest> __Marshaller_google_cloud_vmwareengine_v1_CreateVmwareEngineNetworkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.CreateVmwareEngineNetworkRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -179,6 +273,14 @@ namespace Google.Cloud.VmwareEngine.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionPeeringRoutesRequest> __Marshaller_google_cloud_vmwareengine_v1_ListPrivateConnectionPeeringRoutesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionPeeringRoutesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionPeeringRoutesResponse> __Marshaller_google_cloud_vmwareengine_v1_ListPrivateConnectionPeeringRoutesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionPeeringRoutesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.GrantDnsBindPermissionRequest> __Marshaller_google_cloud_vmwareengine_v1_GrantDnsBindPermissionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.GrantDnsBindPermissionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.GetDnsBindPermissionRequest> __Marshaller_google_cloud_vmwareengine_v1_GetDnsBindPermissionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.GetDnsBindPermissionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.DnsBindPermission> __Marshaller_google_cloud_vmwareengine_v1_DnsBindPermission = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.DnsBindPermission.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.RevokeDnsBindPermissionRequest> __Marshaller_google_cloud_vmwareengine_v1_RevokeDnsBindPermissionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.RevokeDnsBindPermissionRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.ListPrivateCloudsRequest, global::Google.Cloud.VmwareEngine.V1.ListPrivateCloudsResponse> __Method_ListPrivateClouds = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.ListPrivateCloudsRequest, global::Google.Cloud.VmwareEngine.V1.ListPrivateCloudsResponse>(
@@ -269,6 +371,70 @@ namespace Google.Cloud.VmwareEngine.V1 {
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.ListNodesRequest, global::Google.Cloud.VmwareEngine.V1.ListNodesResponse> __Method_ListNodes = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.ListNodesRequest, global::Google.Cloud.VmwareEngine.V1.ListNodesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListNodes",
+        __Marshaller_google_cloud_vmwareengine_v1_ListNodesRequest,
+        __Marshaller_google_cloud_vmwareengine_v1_ListNodesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.GetNodeRequest, global::Google.Cloud.VmwareEngine.V1.Node> __Method_GetNode = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.GetNodeRequest, global::Google.Cloud.VmwareEngine.V1.Node>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetNode",
+        __Marshaller_google_cloud_vmwareengine_v1_GetNodeRequest,
+        __Marshaller_google_cloud_vmwareengine_v1_Node);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.ListExternalAddressesRequest, global::Google.Cloud.VmwareEngine.V1.ListExternalAddressesResponse> __Method_ListExternalAddresses = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.ListExternalAddressesRequest, global::Google.Cloud.VmwareEngine.V1.ListExternalAddressesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListExternalAddresses",
+        __Marshaller_google_cloud_vmwareengine_v1_ListExternalAddressesRequest,
+        __Marshaller_google_cloud_vmwareengine_v1_ListExternalAddressesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.FetchNetworkPolicyExternalAddressesRequest, global::Google.Cloud.VmwareEngine.V1.FetchNetworkPolicyExternalAddressesResponse> __Method_FetchNetworkPolicyExternalAddresses = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.FetchNetworkPolicyExternalAddressesRequest, global::Google.Cloud.VmwareEngine.V1.FetchNetworkPolicyExternalAddressesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "FetchNetworkPolicyExternalAddresses",
+        __Marshaller_google_cloud_vmwareengine_v1_FetchNetworkPolicyExternalAddressesRequest,
+        __Marshaller_google_cloud_vmwareengine_v1_FetchNetworkPolicyExternalAddressesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.GetExternalAddressRequest, global::Google.Cloud.VmwareEngine.V1.ExternalAddress> __Method_GetExternalAddress = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.GetExternalAddressRequest, global::Google.Cloud.VmwareEngine.V1.ExternalAddress>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetExternalAddress",
+        __Marshaller_google_cloud_vmwareengine_v1_GetExternalAddressRequest,
+        __Marshaller_google_cloud_vmwareengine_v1_ExternalAddress);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.CreateExternalAddressRequest, global::Google.LongRunning.Operation> __Method_CreateExternalAddress = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.CreateExternalAddressRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateExternalAddress",
+        __Marshaller_google_cloud_vmwareengine_v1_CreateExternalAddressRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.UpdateExternalAddressRequest, global::Google.LongRunning.Operation> __Method_UpdateExternalAddress = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.UpdateExternalAddressRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateExternalAddress",
+        __Marshaller_google_cloud_vmwareengine_v1_UpdateExternalAddressRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.DeleteExternalAddressRequest, global::Google.LongRunning.Operation> __Method_DeleteExternalAddress = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.DeleteExternalAddressRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteExternalAddress",
+        __Marshaller_google_cloud_vmwareengine_v1_DeleteExternalAddressRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.ListSubnetsRequest, global::Google.Cloud.VmwareEngine.V1.ListSubnetsResponse> __Method_ListSubnets = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.ListSubnetsRequest, global::Google.Cloud.VmwareEngine.V1.ListSubnetsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -290,6 +456,86 @@ namespace Google.Cloud.VmwareEngine.V1 {
         __ServiceName,
         "UpdateSubnet",
         __Marshaller_google_cloud_vmwareengine_v1_UpdateSubnetRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.ListExternalAccessRulesRequest, global::Google.Cloud.VmwareEngine.V1.ListExternalAccessRulesResponse> __Method_ListExternalAccessRules = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.ListExternalAccessRulesRequest, global::Google.Cloud.VmwareEngine.V1.ListExternalAccessRulesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListExternalAccessRules",
+        __Marshaller_google_cloud_vmwareengine_v1_ListExternalAccessRulesRequest,
+        __Marshaller_google_cloud_vmwareengine_v1_ListExternalAccessRulesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.GetExternalAccessRuleRequest, global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule> __Method_GetExternalAccessRule = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.GetExternalAccessRuleRequest, global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetExternalAccessRule",
+        __Marshaller_google_cloud_vmwareengine_v1_GetExternalAccessRuleRequest,
+        __Marshaller_google_cloud_vmwareengine_v1_ExternalAccessRule);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.CreateExternalAccessRuleRequest, global::Google.LongRunning.Operation> __Method_CreateExternalAccessRule = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.CreateExternalAccessRuleRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateExternalAccessRule",
+        __Marshaller_google_cloud_vmwareengine_v1_CreateExternalAccessRuleRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.UpdateExternalAccessRuleRequest, global::Google.LongRunning.Operation> __Method_UpdateExternalAccessRule = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.UpdateExternalAccessRuleRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateExternalAccessRule",
+        __Marshaller_google_cloud_vmwareengine_v1_UpdateExternalAccessRuleRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.DeleteExternalAccessRuleRequest, global::Google.LongRunning.Operation> __Method_DeleteExternalAccessRule = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.DeleteExternalAccessRuleRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteExternalAccessRule",
+        __Marshaller_google_cloud_vmwareengine_v1_DeleteExternalAccessRuleRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.ListLoggingServersRequest, global::Google.Cloud.VmwareEngine.V1.ListLoggingServersResponse> __Method_ListLoggingServers = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.ListLoggingServersRequest, global::Google.Cloud.VmwareEngine.V1.ListLoggingServersResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListLoggingServers",
+        __Marshaller_google_cloud_vmwareengine_v1_ListLoggingServersRequest,
+        __Marshaller_google_cloud_vmwareengine_v1_ListLoggingServersResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.GetLoggingServerRequest, global::Google.Cloud.VmwareEngine.V1.LoggingServer> __Method_GetLoggingServer = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.GetLoggingServerRequest, global::Google.Cloud.VmwareEngine.V1.LoggingServer>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetLoggingServer",
+        __Marshaller_google_cloud_vmwareengine_v1_GetLoggingServerRequest,
+        __Marshaller_google_cloud_vmwareengine_v1_LoggingServer);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.CreateLoggingServerRequest, global::Google.LongRunning.Operation> __Method_CreateLoggingServer = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.CreateLoggingServerRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateLoggingServer",
+        __Marshaller_google_cloud_vmwareengine_v1_CreateLoggingServerRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.UpdateLoggingServerRequest, global::Google.LongRunning.Operation> __Method_UpdateLoggingServer = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.UpdateLoggingServerRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateLoggingServer",
+        __Marshaller_google_cloud_vmwareengine_v1_UpdateLoggingServerRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.DeleteLoggingServerRequest, global::Google.LongRunning.Operation> __Method_DeleteLoggingServer = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.DeleteLoggingServerRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteLoggingServer",
+        __Marshaller_google_cloud_vmwareengine_v1_DeleteLoggingServerRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -339,6 +585,70 @@ namespace Google.Cloud.VmwareEngine.V1 {
         "ResetVcenterCredentials",
         __Marshaller_google_cloud_vmwareengine_v1_ResetVcenterCredentialsRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.GetDnsForwardingRequest, global::Google.Cloud.VmwareEngine.V1.DnsForwarding> __Method_GetDnsForwarding = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.GetDnsForwardingRequest, global::Google.Cloud.VmwareEngine.V1.DnsForwarding>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetDnsForwarding",
+        __Marshaller_google_cloud_vmwareengine_v1_GetDnsForwardingRequest,
+        __Marshaller_google_cloud_vmwareengine_v1_DnsForwarding);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.UpdateDnsForwardingRequest, global::Google.LongRunning.Operation> __Method_UpdateDnsForwarding = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.UpdateDnsForwardingRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateDnsForwarding",
+        __Marshaller_google_cloud_vmwareengine_v1_UpdateDnsForwardingRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.GetNetworkPeeringRequest, global::Google.Cloud.VmwareEngine.V1.NetworkPeering> __Method_GetNetworkPeering = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.GetNetworkPeeringRequest, global::Google.Cloud.VmwareEngine.V1.NetworkPeering>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetNetworkPeering",
+        __Marshaller_google_cloud_vmwareengine_v1_GetNetworkPeeringRequest,
+        __Marshaller_google_cloud_vmwareengine_v1_NetworkPeering);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.ListNetworkPeeringsRequest, global::Google.Cloud.VmwareEngine.V1.ListNetworkPeeringsResponse> __Method_ListNetworkPeerings = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.ListNetworkPeeringsRequest, global::Google.Cloud.VmwareEngine.V1.ListNetworkPeeringsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListNetworkPeerings",
+        __Marshaller_google_cloud_vmwareengine_v1_ListNetworkPeeringsRequest,
+        __Marshaller_google_cloud_vmwareengine_v1_ListNetworkPeeringsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.CreateNetworkPeeringRequest, global::Google.LongRunning.Operation> __Method_CreateNetworkPeering = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.CreateNetworkPeeringRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateNetworkPeering",
+        __Marshaller_google_cloud_vmwareengine_v1_CreateNetworkPeeringRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.DeleteNetworkPeeringRequest, global::Google.LongRunning.Operation> __Method_DeleteNetworkPeering = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.DeleteNetworkPeeringRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteNetworkPeering",
+        __Marshaller_google_cloud_vmwareengine_v1_DeleteNetworkPeeringRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.UpdateNetworkPeeringRequest, global::Google.LongRunning.Operation> __Method_UpdateNetworkPeering = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.UpdateNetworkPeeringRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateNetworkPeering",
+        __Marshaller_google_cloud_vmwareengine_v1_UpdateNetworkPeeringRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.ListPeeringRoutesRequest, global::Google.Cloud.VmwareEngine.V1.ListPeeringRoutesResponse> __Method_ListPeeringRoutes = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.ListPeeringRoutesRequest, global::Google.Cloud.VmwareEngine.V1.ListPeeringRoutesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListPeeringRoutes",
+        __Marshaller_google_cloud_vmwareengine_v1_ListPeeringRoutesRequest,
+        __Marshaller_google_cloud_vmwareengine_v1_ListPeeringRoutesResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.CreateHcxActivationKeyRequest, global::Google.LongRunning.Operation> __Method_CreateHcxActivationKey = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.CreateHcxActivationKeyRequest, global::Google.LongRunning.Operation>(
@@ -402,6 +712,54 @@ namespace Google.Cloud.VmwareEngine.V1 {
         __ServiceName,
         "DeleteNetworkPolicy",
         __Marshaller_google_cloud_vmwareengine_v1_DeleteNetworkPolicyRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.ListManagementDnsZoneBindingsRequest, global::Google.Cloud.VmwareEngine.V1.ListManagementDnsZoneBindingsResponse> __Method_ListManagementDnsZoneBindings = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.ListManagementDnsZoneBindingsRequest, global::Google.Cloud.VmwareEngine.V1.ListManagementDnsZoneBindingsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListManagementDnsZoneBindings",
+        __Marshaller_google_cloud_vmwareengine_v1_ListManagementDnsZoneBindingsRequest,
+        __Marshaller_google_cloud_vmwareengine_v1_ListManagementDnsZoneBindingsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.GetManagementDnsZoneBindingRequest, global::Google.Cloud.VmwareEngine.V1.ManagementDnsZoneBinding> __Method_GetManagementDnsZoneBinding = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.GetManagementDnsZoneBindingRequest, global::Google.Cloud.VmwareEngine.V1.ManagementDnsZoneBinding>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetManagementDnsZoneBinding",
+        __Marshaller_google_cloud_vmwareengine_v1_GetManagementDnsZoneBindingRequest,
+        __Marshaller_google_cloud_vmwareengine_v1_ManagementDnsZoneBinding);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.CreateManagementDnsZoneBindingRequest, global::Google.LongRunning.Operation> __Method_CreateManagementDnsZoneBinding = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.CreateManagementDnsZoneBindingRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateManagementDnsZoneBinding",
+        __Marshaller_google_cloud_vmwareengine_v1_CreateManagementDnsZoneBindingRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.UpdateManagementDnsZoneBindingRequest, global::Google.LongRunning.Operation> __Method_UpdateManagementDnsZoneBinding = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.UpdateManagementDnsZoneBindingRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateManagementDnsZoneBinding",
+        __Marshaller_google_cloud_vmwareengine_v1_UpdateManagementDnsZoneBindingRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.DeleteManagementDnsZoneBindingRequest, global::Google.LongRunning.Operation> __Method_DeleteManagementDnsZoneBinding = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.DeleteManagementDnsZoneBindingRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteManagementDnsZoneBinding",
+        __Marshaller_google_cloud_vmwareengine_v1_DeleteManagementDnsZoneBindingRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.RepairManagementDnsZoneBindingRequest, global::Google.LongRunning.Operation> __Method_RepairManagementDnsZoneBinding = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.RepairManagementDnsZoneBindingRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RepairManagementDnsZoneBinding",
+        __Marshaller_google_cloud_vmwareengine_v1_RepairManagementDnsZoneBindingRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -492,6 +850,30 @@ namespace Google.Cloud.VmwareEngine.V1 {
         __Marshaller_google_cloud_vmwareengine_v1_ListPrivateConnectionPeeringRoutesRequest,
         __Marshaller_google_cloud_vmwareengine_v1_ListPrivateConnectionPeeringRoutesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.GrantDnsBindPermissionRequest, global::Google.LongRunning.Operation> __Method_GrantDnsBindPermission = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.GrantDnsBindPermissionRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GrantDnsBindPermission",
+        __Marshaller_google_cloud_vmwareengine_v1_GrantDnsBindPermissionRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.GetDnsBindPermissionRequest, global::Google.Cloud.VmwareEngine.V1.DnsBindPermission> __Method_GetDnsBindPermission = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.GetDnsBindPermissionRequest, global::Google.Cloud.VmwareEngine.V1.DnsBindPermission>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetDnsBindPermission",
+        __Marshaller_google_cloud_vmwareengine_v1_GetDnsBindPermissionRequest,
+        __Marshaller_google_cloud_vmwareengine_v1_DnsBindPermission);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.RevokeDnsBindPermissionRequest, global::Google.LongRunning.Operation> __Method_RevokeDnsBindPermission = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.RevokeDnsBindPermissionRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RevokeDnsBindPermission",
+        __Marshaller_google_cloud_vmwareengine_v1_RevokeDnsBindPermissionRequest,
+        __Marshaller_google_longrunning_Operation);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -528,9 +910,9 @@ namespace Google.Cloud.VmwareEngine.V1 {
 
       /// <summary>
       /// Creates a new `PrivateCloud` resource in a given project and location.
-      /// Private clouds can only be created in zones, regional private clouds are
-      /// not supported.
-      ///
+      /// Private clouds of type `STANDARD` and
+      /// `TIME_LIMITED` are zonal resources, `STRETCHED` private clouds are
+      /// regional.
       /// Creating a private cloud also creates a [management
       /// cluster](https://cloud.google.com/vmware-engine/docs/concepts-vmware-components)
       /// for that private cloud.
@@ -644,8 +1026,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
       }
 
       /// <summary>
-      /// Modifies a `Cluster` resource. Only the following fields can be updated:
-      /// `node_type_configs.*.node_count`. Only fields specified in `updateMask` are
+      /// Modifies a `Cluster` resource. Only fields specified in `updateMask` are
       /// applied.
       ///
       /// During operation processing, the resource is temporarily in the `ACTIVE`
@@ -673,6 +1054,114 @@ namespace Google.Cloud.VmwareEngine.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteCluster(global::Google.Cloud.VmwareEngine.V1.DeleteClusterRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists nodes in a given cluster.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.VmwareEngine.V1.ListNodesResponse> ListNodes(global::Google.Cloud.VmwareEngine.V1.ListNodesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a single node.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.VmwareEngine.V1.Node> GetNode(global::Google.Cloud.VmwareEngine.V1.GetNodeRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists external IP addresses assigned to VMware workload VMs in a given
+      /// private cloud.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.VmwareEngine.V1.ListExternalAddressesResponse> ListExternalAddresses(global::Google.Cloud.VmwareEngine.V1.ListExternalAddressesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists external IP addresses assigned to VMware workload VMs within the
+      /// scope of the given network policy.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.VmwareEngine.V1.FetchNetworkPolicyExternalAddressesResponse> FetchNetworkPolicyExternalAddresses(global::Google.Cloud.VmwareEngine.V1.FetchNetworkPolicyExternalAddressesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a single external IP address.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.VmwareEngine.V1.ExternalAddress> GetExternalAddress(global::Google.Cloud.VmwareEngine.V1.GetExternalAddressRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new `ExternalAddress` resource in a given private cloud. The
+      /// network policy that corresponds to the private cloud must have the external
+      /// IP address network service enabled (`NetworkPolicy.external_ip`).
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateExternalAddress(global::Google.Cloud.VmwareEngine.V1.CreateExternalAddressRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the parameters of a single external IP address.
+      /// Only fields specified in `update_mask` are applied.
+      ///
+      /// During operation processing, the resource is temporarily in the `ACTIVE`
+      /// state before the operation fully completes. For that period of time, you
+      /// can't update the resource. Use the operation status to determine when the
+      /// processing fully completes.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateExternalAddress(global::Google.Cloud.VmwareEngine.V1.UpdateExternalAddressRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a single external IP address. When you delete an external IP
+      /// address, connectivity between the external IP address and the corresponding
+      /// internal IP address is lost.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteExternalAddress(global::Google.Cloud.VmwareEngine.V1.DeleteExternalAddressRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -714,6 +1203,129 @@ namespace Google.Cloud.VmwareEngine.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateSubnet(global::Google.Cloud.VmwareEngine.V1.UpdateSubnetRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists `ExternalAccessRule` resources in the specified network policy.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.VmwareEngine.V1.ListExternalAccessRulesResponse> ListExternalAccessRules(global::Google.Cloud.VmwareEngine.V1.ListExternalAccessRulesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a single external access rule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule> GetExternalAccessRule(global::Google.Cloud.VmwareEngine.V1.GetExternalAccessRuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new external access rule in a given network policy.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateExternalAccessRule(global::Google.Cloud.VmwareEngine.V1.CreateExternalAccessRuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the parameters of a single external access rule.
+      /// Only fields specified in `update_mask` are applied.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateExternalAccessRule(global::Google.Cloud.VmwareEngine.V1.UpdateExternalAccessRuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a single external access rule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteExternalAccessRule(global::Google.Cloud.VmwareEngine.V1.DeleteExternalAccessRuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists logging servers configured for a given private
+      /// cloud.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.VmwareEngine.V1.ListLoggingServersResponse> ListLoggingServers(global::Google.Cloud.VmwareEngine.V1.ListLoggingServersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a logging server.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.VmwareEngine.V1.LoggingServer> GetLoggingServer(global::Google.Cloud.VmwareEngine.V1.GetLoggingServerRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Create a new logging server for a given private cloud.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateLoggingServer(global::Google.Cloud.VmwareEngine.V1.CreateLoggingServerRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the parameters of a single logging server.
+      /// Only fields specified in `update_mask` are applied.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateLoggingServer(global::Google.Cloud.VmwareEngine.V1.UpdateLoggingServerRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a single logging server.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteLoggingServer(global::Google.Cloud.VmwareEngine.V1.DeleteLoggingServerRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -786,6 +1398,115 @@ namespace Google.Cloud.VmwareEngine.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ResetVcenterCredentials(global::Google.Cloud.VmwareEngine.V1.ResetVcenterCredentialsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of the `DnsForwarding` config.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.VmwareEngine.V1.DnsForwarding> GetDnsForwarding(global::Google.Cloud.VmwareEngine.V1.GetDnsForwardingRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the parameters of the `DnsForwarding` config, like associated
+      /// domains. Only fields specified in `update_mask` are applied.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateDnsForwarding(global::Google.Cloud.VmwareEngine.V1.UpdateDnsForwardingRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retrieves a `NetworkPeering` resource by its resource name. The resource
+      /// contains details of the network peering, such as peered
+      /// networks, import and export custom route configurations, and peering state.
+      /// NetworkPeering is a global resource and location can only be global.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.VmwareEngine.V1.NetworkPeering> GetNetworkPeering(global::Google.Cloud.VmwareEngine.V1.GetNetworkPeeringRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists `NetworkPeering` resources in a given project. NetworkPeering is a
+      /// global resource and location can only be global.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.VmwareEngine.V1.ListNetworkPeeringsResponse> ListNetworkPeerings(global::Google.Cloud.VmwareEngine.V1.ListNetworkPeeringsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new network peering between the peer network and VMware Engine
+      /// network provided in a `NetworkPeering` resource. NetworkPeering is a
+      /// global resource and location can only be global.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateNetworkPeering(global::Google.Cloud.VmwareEngine.V1.CreateNetworkPeeringRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a `NetworkPeering` resource. When a network peering is deleted for
+      /// a VMware Engine network, the peer network becomes inaccessible to that
+      /// VMware Engine network. NetworkPeering is a global resource and location can
+      /// only be global.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteNetworkPeering(global::Google.Cloud.VmwareEngine.V1.DeleteNetworkPeeringRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Modifies a `NetworkPeering` resource. Only the `description` field can be
+      /// updated. Only fields specified in `updateMask` are applied. NetworkPeering
+      /// is a global resource and location can only be global.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateNetworkPeering(global::Google.Cloud.VmwareEngine.V1.UpdateNetworkPeeringRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists the network peering routes exchanged over a peering connection.
+      /// NetworkPeering is a global resource and location can only be global.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.VmwareEngine.V1.ListPeeringRoutesResponse> ListPeeringRoutes(global::Google.Cloud.VmwareEngine.V1.ListPeeringRoutesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -897,6 +1618,88 @@ namespace Google.Cloud.VmwareEngine.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteNetworkPolicy(global::Google.Cloud.VmwareEngine.V1.DeleteNetworkPolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists Consumer VPCs bound to Management DNS Zone of a given private cloud.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.VmwareEngine.V1.ListManagementDnsZoneBindingsResponse> ListManagementDnsZoneBindings(global::Google.Cloud.VmwareEngine.V1.ListManagementDnsZoneBindingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retrieves a 'ManagementDnsZoneBinding' resource by its resource name.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.VmwareEngine.V1.ManagementDnsZoneBinding> GetManagementDnsZoneBinding(global::Google.Cloud.VmwareEngine.V1.GetManagementDnsZoneBindingRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new `ManagementDnsZoneBinding` resource in a private cloud.
+      /// This RPC creates the DNS binding and the resource that represents the
+      /// DNS binding of the consumer VPC network to the management DNS zone. A
+      /// management DNS zone is the Cloud DNS cross-project binding zone that
+      /// VMware Engine creates for each private cloud. It contains FQDNs and
+      /// corresponding IP addresses for the private cloud's ESXi hosts and
+      /// management VM appliances like vCenter and NSX Manager.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateManagementDnsZoneBinding(global::Google.Cloud.VmwareEngine.V1.CreateManagementDnsZoneBindingRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a `ManagementDnsZoneBinding` resource.
+      /// Only fields specified in `update_mask` are applied.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateManagementDnsZoneBinding(global::Google.Cloud.VmwareEngine.V1.UpdateManagementDnsZoneBindingRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a `ManagementDnsZoneBinding` resource. When a management DNS zone
+      /// binding is deleted, the corresponding consumer VPC network is no longer
+      /// bound to the management DNS zone.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteManagementDnsZoneBinding(global::Google.Cloud.VmwareEngine.V1.DeleteManagementDnsZoneBindingRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retries to create a `ManagementDnsZoneBinding` resource that is
+      /// in failed state.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RepairManagementDnsZoneBinding(global::Google.Cloud.VmwareEngine.V1.RepairManagementDnsZoneBindingRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1048,6 +1851,49 @@ namespace Google.Cloud.VmwareEngine.V1 {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      /// <summary>
+      /// Grants the bind permission to the customer provided principal(user /
+      /// service account) to bind their DNS zone with the intranet VPC associated
+      /// with the project. DnsBindPermission is a global resource and location can
+      /// only be global.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> GrantDnsBindPermission(global::Google.Cloud.VmwareEngine.V1.GrantDnsBindPermissionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets all the principals having bind permission on the intranet VPC
+      /// associated with the consumer project granted by the Grant API.
+      /// DnsBindPermission is a global resource and location can only be global.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.VmwareEngine.V1.DnsBindPermission> GetDnsBindPermission(global::Google.Cloud.VmwareEngine.V1.GetDnsBindPermissionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Revokes the bind permission from the customer provided principal(user /
+      /// service account) on the intranet VPC associated with the consumer project.
+      /// DnsBindPermission is a global resource and location can only be global.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RevokeDnsBindPermission(global::Google.Cloud.VmwareEngine.V1.RevokeDnsBindPermissionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
     }
 
     /// <summary>Client for VmwareEngine</summary>
@@ -1175,9 +2021,9 @@ namespace Google.Cloud.VmwareEngine.V1 {
       }
       /// <summary>
       /// Creates a new `PrivateCloud` resource in a given project and location.
-      /// Private clouds can only be created in zones, regional private clouds are
-      /// not supported.
-      ///
+      /// Private clouds of type `STANDARD` and
+      /// `TIME_LIMITED` are zonal resources, `STRETCHED` private clouds are
+      /// regional.
       /// Creating a private cloud also creates a [management
       /// cluster](https://cloud.google.com/vmware-engine/docs/concepts-vmware-components)
       /// for that private cloud.
@@ -1194,9 +2040,9 @@ namespace Google.Cloud.VmwareEngine.V1 {
       }
       /// <summary>
       /// Creates a new `PrivateCloud` resource in a given project and location.
-      /// Private clouds can only be created in zones, regional private clouds are
-      /// not supported.
-      ///
+      /// Private clouds of type `STANDARD` and
+      /// `TIME_LIMITED` are zonal resources, `STRETCHED` private clouds are
+      /// regional.
       /// Creating a private cloud also creates a [management
       /// cluster](https://cloud.google.com/vmware-engine/docs/concepts-vmware-components)
       /// for that private cloud.
@@ -1211,9 +2057,9 @@ namespace Google.Cloud.VmwareEngine.V1 {
       }
       /// <summary>
       /// Creates a new `PrivateCloud` resource in a given project and location.
-      /// Private clouds can only be created in zones, regional private clouds are
-      /// not supported.
-      ///
+      /// Private clouds of type `STANDARD` and
+      /// `TIME_LIMITED` are zonal resources, `STRETCHED` private clouds are
+      /// regional.
       /// Creating a private cloud also creates a [management
       /// cluster](https://cloud.google.com/vmware-engine/docs/concepts-vmware-components)
       /// for that private cloud.
@@ -1230,9 +2076,9 @@ namespace Google.Cloud.VmwareEngine.V1 {
       }
       /// <summary>
       /// Creates a new `PrivateCloud` resource in a given project and location.
-      /// Private clouds can only be created in zones, regional private clouds are
-      /// not supported.
-      ///
+      /// Private clouds of type `STANDARD` and
+      /// `TIME_LIMITED` are zonal resources, `STRETCHED` private clouds are
+      /// regional.
       /// Creating a private cloud also creates a [management
       /// cluster](https://cloud.google.com/vmware-engine/docs/concepts-vmware-components)
       /// for that private cloud.
@@ -1642,8 +2488,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateCluster, null, options, request);
       }
       /// <summary>
-      /// Modifies a `Cluster` resource. Only the following fields can be updated:
-      /// `node_type_configs.*.node_count`. Only fields specified in `updateMask` are
+      /// Modifies a `Cluster` resource. Only fields specified in `updateMask` are
       /// applied.
       ///
       /// During operation processing, the resource is temporarily in the `ACTIVE`
@@ -1662,8 +2507,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
         return UpdateCluster(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Modifies a `Cluster` resource. Only the following fields can be updated:
-      /// `node_type_configs.*.node_count`. Only fields specified in `updateMask` are
+      /// Modifies a `Cluster` resource. Only fields specified in `updateMask` are
       /// applied.
       ///
       /// During operation processing, the resource is temporarily in the `ACTIVE`
@@ -1680,8 +2524,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateCluster, null, options, request);
       }
       /// <summary>
-      /// Modifies a `Cluster` resource. Only the following fields can be updated:
-      /// `node_type_configs.*.node_count`. Only fields specified in `updateMask` are
+      /// Modifies a `Cluster` resource. Only fields specified in `updateMask` are
       /// applied.
       ///
       /// During operation processing, the resource is temporarily in the `ACTIVE`
@@ -1700,8 +2543,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
         return UpdateClusterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Modifies a `Cluster` resource. Only the following fields can be updated:
-      /// `node_type_configs.*.node_count`. Only fields specified in `updateMask` are
+      /// Modifies a `Cluster` resource. Only fields specified in `updateMask` are
       /// applied.
       ///
       /// During operation processing, the resource is temporarily in the `ACTIVE`
@@ -1776,6 +2618,438 @@ namespace Google.Cloud.VmwareEngine.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteClusterAsync(global::Google.Cloud.VmwareEngine.V1.DeleteClusterRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteCluster, null, options, request);
+      }
+      /// <summary>
+      /// Lists nodes in a given cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.ListNodesResponse ListNodes(global::Google.Cloud.VmwareEngine.V1.ListNodesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListNodes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists nodes in a given cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.ListNodesResponse ListNodes(global::Google.Cloud.VmwareEngine.V1.ListNodesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListNodes, null, options, request);
+      }
+      /// <summary>
+      /// Lists nodes in a given cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.ListNodesResponse> ListNodesAsync(global::Google.Cloud.VmwareEngine.V1.ListNodesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListNodesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists nodes in a given cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.ListNodesResponse> ListNodesAsync(global::Google.Cloud.VmwareEngine.V1.ListNodesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListNodes, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single node.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.Node GetNode(global::Google.Cloud.VmwareEngine.V1.GetNodeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetNode(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single node.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.Node GetNode(global::Google.Cloud.VmwareEngine.V1.GetNodeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetNode, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single node.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.Node> GetNodeAsync(global::Google.Cloud.VmwareEngine.V1.GetNodeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetNodeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single node.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.Node> GetNodeAsync(global::Google.Cloud.VmwareEngine.V1.GetNodeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetNode, null, options, request);
+      }
+      /// <summary>
+      /// Lists external IP addresses assigned to VMware workload VMs in a given
+      /// private cloud.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.ListExternalAddressesResponse ListExternalAddresses(global::Google.Cloud.VmwareEngine.V1.ListExternalAddressesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListExternalAddresses(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists external IP addresses assigned to VMware workload VMs in a given
+      /// private cloud.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.ListExternalAddressesResponse ListExternalAddresses(global::Google.Cloud.VmwareEngine.V1.ListExternalAddressesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListExternalAddresses, null, options, request);
+      }
+      /// <summary>
+      /// Lists external IP addresses assigned to VMware workload VMs in a given
+      /// private cloud.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.ListExternalAddressesResponse> ListExternalAddressesAsync(global::Google.Cloud.VmwareEngine.V1.ListExternalAddressesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListExternalAddressesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists external IP addresses assigned to VMware workload VMs in a given
+      /// private cloud.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.ListExternalAddressesResponse> ListExternalAddressesAsync(global::Google.Cloud.VmwareEngine.V1.ListExternalAddressesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListExternalAddresses, null, options, request);
+      }
+      /// <summary>
+      /// Lists external IP addresses assigned to VMware workload VMs within the
+      /// scope of the given network policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.FetchNetworkPolicyExternalAddressesResponse FetchNetworkPolicyExternalAddresses(global::Google.Cloud.VmwareEngine.V1.FetchNetworkPolicyExternalAddressesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchNetworkPolicyExternalAddresses(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists external IP addresses assigned to VMware workload VMs within the
+      /// scope of the given network policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.FetchNetworkPolicyExternalAddressesResponse FetchNetworkPolicyExternalAddresses(global::Google.Cloud.VmwareEngine.V1.FetchNetworkPolicyExternalAddressesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_FetchNetworkPolicyExternalAddresses, null, options, request);
+      }
+      /// <summary>
+      /// Lists external IP addresses assigned to VMware workload VMs within the
+      /// scope of the given network policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.FetchNetworkPolicyExternalAddressesResponse> FetchNetworkPolicyExternalAddressesAsync(global::Google.Cloud.VmwareEngine.V1.FetchNetworkPolicyExternalAddressesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchNetworkPolicyExternalAddressesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists external IP addresses assigned to VMware workload VMs within the
+      /// scope of the given network policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.FetchNetworkPolicyExternalAddressesResponse> FetchNetworkPolicyExternalAddressesAsync(global::Google.Cloud.VmwareEngine.V1.FetchNetworkPolicyExternalAddressesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_FetchNetworkPolicyExternalAddresses, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single external IP address.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.ExternalAddress GetExternalAddress(global::Google.Cloud.VmwareEngine.V1.GetExternalAddressRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetExternalAddress(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single external IP address.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.ExternalAddress GetExternalAddress(global::Google.Cloud.VmwareEngine.V1.GetExternalAddressRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetExternalAddress, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single external IP address.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.ExternalAddress> GetExternalAddressAsync(global::Google.Cloud.VmwareEngine.V1.GetExternalAddressRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetExternalAddressAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single external IP address.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.ExternalAddress> GetExternalAddressAsync(global::Google.Cloud.VmwareEngine.V1.GetExternalAddressRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetExternalAddress, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new `ExternalAddress` resource in a given private cloud. The
+      /// network policy that corresponds to the private cloud must have the external
+      /// IP address network service enabled (`NetworkPolicy.external_ip`).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateExternalAddress(global::Google.Cloud.VmwareEngine.V1.CreateExternalAddressRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateExternalAddress(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new `ExternalAddress` resource in a given private cloud. The
+      /// network policy that corresponds to the private cloud must have the external
+      /// IP address network service enabled (`NetworkPolicy.external_ip`).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateExternalAddress(global::Google.Cloud.VmwareEngine.V1.CreateExternalAddressRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateExternalAddress, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new `ExternalAddress` resource in a given private cloud. The
+      /// network policy that corresponds to the private cloud must have the external
+      /// IP address network service enabled (`NetworkPolicy.external_ip`).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateExternalAddressAsync(global::Google.Cloud.VmwareEngine.V1.CreateExternalAddressRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateExternalAddressAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new `ExternalAddress` resource in a given private cloud. The
+      /// network policy that corresponds to the private cloud must have the external
+      /// IP address network service enabled (`NetworkPolicy.external_ip`).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateExternalAddressAsync(global::Google.Cloud.VmwareEngine.V1.CreateExternalAddressRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateExternalAddress, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of a single external IP address.
+      /// Only fields specified in `update_mask` are applied.
+      ///
+      /// During operation processing, the resource is temporarily in the `ACTIVE`
+      /// state before the operation fully completes. For that period of time, you
+      /// can't update the resource. Use the operation status to determine when the
+      /// processing fully completes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateExternalAddress(global::Google.Cloud.VmwareEngine.V1.UpdateExternalAddressRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateExternalAddress(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single external IP address.
+      /// Only fields specified in `update_mask` are applied.
+      ///
+      /// During operation processing, the resource is temporarily in the `ACTIVE`
+      /// state before the operation fully completes. For that period of time, you
+      /// can't update the resource. Use the operation status to determine when the
+      /// processing fully completes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateExternalAddress(global::Google.Cloud.VmwareEngine.V1.UpdateExternalAddressRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateExternalAddress, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of a single external IP address.
+      /// Only fields specified in `update_mask` are applied.
+      ///
+      /// During operation processing, the resource is temporarily in the `ACTIVE`
+      /// state before the operation fully completes. For that period of time, you
+      /// can't update the resource. Use the operation status to determine when the
+      /// processing fully completes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateExternalAddressAsync(global::Google.Cloud.VmwareEngine.V1.UpdateExternalAddressRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateExternalAddressAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single external IP address.
+      /// Only fields specified in `update_mask` are applied.
+      ///
+      /// During operation processing, the resource is temporarily in the `ACTIVE`
+      /// state before the operation fully completes. For that period of time, you
+      /// can't update the resource. Use the operation status to determine when the
+      /// processing fully completes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateExternalAddressAsync(global::Google.Cloud.VmwareEngine.V1.UpdateExternalAddressRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateExternalAddress, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single external IP address. When you delete an external IP
+      /// address, connectivity between the external IP address and the corresponding
+      /// internal IP address is lost.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteExternalAddress(global::Google.Cloud.VmwareEngine.V1.DeleteExternalAddressRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteExternalAddress(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single external IP address. When you delete an external IP
+      /// address, connectivity between the external IP address and the corresponding
+      /// internal IP address is lost.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteExternalAddress(global::Google.Cloud.VmwareEngine.V1.DeleteExternalAddressRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteExternalAddress, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single external IP address. When you delete an external IP
+      /// address, connectivity between the external IP address and the corresponding
+      /// internal IP address is lost.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteExternalAddressAsync(global::Google.Cloud.VmwareEngine.V1.DeleteExternalAddressRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteExternalAddressAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single external IP address. When you delete an external IP
+      /// address, connectivity between the external IP address and the corresponding
+      /// internal IP address is lost.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteExternalAddressAsync(global::Google.Cloud.VmwareEngine.V1.DeleteExternalAddressRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteExternalAddress, null, options, request);
       }
       /// <summary>
       /// Lists subnets in a given private cloud.
@@ -1940,6 +3214,498 @@ namespace Google.Cloud.VmwareEngine.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateSubnetAsync(global::Google.Cloud.VmwareEngine.V1.UpdateSubnetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateSubnet, null, options, request);
+      }
+      /// <summary>
+      /// Lists `ExternalAccessRule` resources in the specified network policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.ListExternalAccessRulesResponse ListExternalAccessRules(global::Google.Cloud.VmwareEngine.V1.ListExternalAccessRulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListExternalAccessRules(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists `ExternalAccessRule` resources in the specified network policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.ListExternalAccessRulesResponse ListExternalAccessRules(global::Google.Cloud.VmwareEngine.V1.ListExternalAccessRulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListExternalAccessRules, null, options, request);
+      }
+      /// <summary>
+      /// Lists `ExternalAccessRule` resources in the specified network policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.ListExternalAccessRulesResponse> ListExternalAccessRulesAsync(global::Google.Cloud.VmwareEngine.V1.ListExternalAccessRulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListExternalAccessRulesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists `ExternalAccessRule` resources in the specified network policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.ListExternalAccessRulesResponse> ListExternalAccessRulesAsync(global::Google.Cloud.VmwareEngine.V1.ListExternalAccessRulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListExternalAccessRules, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single external access rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule GetExternalAccessRule(global::Google.Cloud.VmwareEngine.V1.GetExternalAccessRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetExternalAccessRule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single external access rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule GetExternalAccessRule(global::Google.Cloud.VmwareEngine.V1.GetExternalAccessRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetExternalAccessRule, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single external access rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule> GetExternalAccessRuleAsync(global::Google.Cloud.VmwareEngine.V1.GetExternalAccessRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetExternalAccessRuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single external access rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule> GetExternalAccessRuleAsync(global::Google.Cloud.VmwareEngine.V1.GetExternalAccessRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetExternalAccessRule, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new external access rule in a given network policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateExternalAccessRule(global::Google.Cloud.VmwareEngine.V1.CreateExternalAccessRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateExternalAccessRule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new external access rule in a given network policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateExternalAccessRule(global::Google.Cloud.VmwareEngine.V1.CreateExternalAccessRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateExternalAccessRule, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new external access rule in a given network policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateExternalAccessRuleAsync(global::Google.Cloud.VmwareEngine.V1.CreateExternalAccessRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateExternalAccessRuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new external access rule in a given network policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateExternalAccessRuleAsync(global::Google.Cloud.VmwareEngine.V1.CreateExternalAccessRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateExternalAccessRule, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of a single external access rule.
+      /// Only fields specified in `update_mask` are applied.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateExternalAccessRule(global::Google.Cloud.VmwareEngine.V1.UpdateExternalAccessRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateExternalAccessRule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single external access rule.
+      /// Only fields specified in `update_mask` are applied.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateExternalAccessRule(global::Google.Cloud.VmwareEngine.V1.UpdateExternalAccessRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateExternalAccessRule, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of a single external access rule.
+      /// Only fields specified in `update_mask` are applied.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateExternalAccessRuleAsync(global::Google.Cloud.VmwareEngine.V1.UpdateExternalAccessRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateExternalAccessRuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single external access rule.
+      /// Only fields specified in `update_mask` are applied.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateExternalAccessRuleAsync(global::Google.Cloud.VmwareEngine.V1.UpdateExternalAccessRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateExternalAccessRule, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single external access rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteExternalAccessRule(global::Google.Cloud.VmwareEngine.V1.DeleteExternalAccessRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteExternalAccessRule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single external access rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteExternalAccessRule(global::Google.Cloud.VmwareEngine.V1.DeleteExternalAccessRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteExternalAccessRule, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single external access rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteExternalAccessRuleAsync(global::Google.Cloud.VmwareEngine.V1.DeleteExternalAccessRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteExternalAccessRuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single external access rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteExternalAccessRuleAsync(global::Google.Cloud.VmwareEngine.V1.DeleteExternalAccessRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteExternalAccessRule, null, options, request);
+      }
+      /// <summary>
+      /// Lists logging servers configured for a given private
+      /// cloud.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.ListLoggingServersResponse ListLoggingServers(global::Google.Cloud.VmwareEngine.V1.ListLoggingServersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListLoggingServers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists logging servers configured for a given private
+      /// cloud.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.ListLoggingServersResponse ListLoggingServers(global::Google.Cloud.VmwareEngine.V1.ListLoggingServersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListLoggingServers, null, options, request);
+      }
+      /// <summary>
+      /// Lists logging servers configured for a given private
+      /// cloud.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.ListLoggingServersResponse> ListLoggingServersAsync(global::Google.Cloud.VmwareEngine.V1.ListLoggingServersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListLoggingServersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists logging servers configured for a given private
+      /// cloud.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.ListLoggingServersResponse> ListLoggingServersAsync(global::Google.Cloud.VmwareEngine.V1.ListLoggingServersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListLoggingServers, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a logging server.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.LoggingServer GetLoggingServer(global::Google.Cloud.VmwareEngine.V1.GetLoggingServerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetLoggingServer(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a logging server.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.LoggingServer GetLoggingServer(global::Google.Cloud.VmwareEngine.V1.GetLoggingServerRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetLoggingServer, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a logging server.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.LoggingServer> GetLoggingServerAsync(global::Google.Cloud.VmwareEngine.V1.GetLoggingServerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetLoggingServerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a logging server.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.LoggingServer> GetLoggingServerAsync(global::Google.Cloud.VmwareEngine.V1.GetLoggingServerRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetLoggingServer, null, options, request);
+      }
+      /// <summary>
+      /// Create a new logging server for a given private cloud.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateLoggingServer(global::Google.Cloud.VmwareEngine.V1.CreateLoggingServerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateLoggingServer(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Create a new logging server for a given private cloud.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateLoggingServer(global::Google.Cloud.VmwareEngine.V1.CreateLoggingServerRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateLoggingServer, null, options, request);
+      }
+      /// <summary>
+      /// Create a new logging server for a given private cloud.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateLoggingServerAsync(global::Google.Cloud.VmwareEngine.V1.CreateLoggingServerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateLoggingServerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Create a new logging server for a given private cloud.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateLoggingServerAsync(global::Google.Cloud.VmwareEngine.V1.CreateLoggingServerRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateLoggingServer, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of a single logging server.
+      /// Only fields specified in `update_mask` are applied.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateLoggingServer(global::Google.Cloud.VmwareEngine.V1.UpdateLoggingServerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateLoggingServer(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single logging server.
+      /// Only fields specified in `update_mask` are applied.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateLoggingServer(global::Google.Cloud.VmwareEngine.V1.UpdateLoggingServerRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateLoggingServer, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of a single logging server.
+      /// Only fields specified in `update_mask` are applied.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateLoggingServerAsync(global::Google.Cloud.VmwareEngine.V1.UpdateLoggingServerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateLoggingServerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single logging server.
+      /// Only fields specified in `update_mask` are applied.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateLoggingServerAsync(global::Google.Cloud.VmwareEngine.V1.UpdateLoggingServerRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateLoggingServer, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single logging server.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteLoggingServer(global::Google.Cloud.VmwareEngine.V1.DeleteLoggingServerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteLoggingServer(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single logging server.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteLoggingServer(global::Google.Cloud.VmwareEngine.V1.DeleteLoggingServerRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteLoggingServer, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single logging server.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteLoggingServerAsync(global::Google.Cloud.VmwareEngine.V1.DeleteLoggingServerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteLoggingServerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single logging server.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteLoggingServerAsync(global::Google.Cloud.VmwareEngine.V1.DeleteLoggingServerRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteLoggingServer, null, options, request);
       }
       /// <summary>
       /// Lists node types
@@ -2228,6 +3994,442 @@ namespace Google.Cloud.VmwareEngine.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ResetVcenterCredentialsAsync(global::Google.Cloud.VmwareEngine.V1.ResetVcenterCredentialsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ResetVcenterCredentials, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of the `DnsForwarding` config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.DnsForwarding GetDnsForwarding(global::Google.Cloud.VmwareEngine.V1.GetDnsForwardingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDnsForwarding(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of the `DnsForwarding` config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.DnsForwarding GetDnsForwarding(global::Google.Cloud.VmwareEngine.V1.GetDnsForwardingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetDnsForwarding, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of the `DnsForwarding` config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.DnsForwarding> GetDnsForwardingAsync(global::Google.Cloud.VmwareEngine.V1.GetDnsForwardingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDnsForwardingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of the `DnsForwarding` config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.DnsForwarding> GetDnsForwardingAsync(global::Google.Cloud.VmwareEngine.V1.GetDnsForwardingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetDnsForwarding, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of the `DnsForwarding` config, like associated
+      /// domains. Only fields specified in `update_mask` are applied.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateDnsForwarding(global::Google.Cloud.VmwareEngine.V1.UpdateDnsForwardingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateDnsForwarding(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of the `DnsForwarding` config, like associated
+      /// domains. Only fields specified in `update_mask` are applied.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateDnsForwarding(global::Google.Cloud.VmwareEngine.V1.UpdateDnsForwardingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateDnsForwarding, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of the `DnsForwarding` config, like associated
+      /// domains. Only fields specified in `update_mask` are applied.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDnsForwardingAsync(global::Google.Cloud.VmwareEngine.V1.UpdateDnsForwardingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateDnsForwardingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of the `DnsForwarding` config, like associated
+      /// domains. Only fields specified in `update_mask` are applied.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDnsForwardingAsync(global::Google.Cloud.VmwareEngine.V1.UpdateDnsForwardingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateDnsForwarding, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves a `NetworkPeering` resource by its resource name. The resource
+      /// contains details of the network peering, such as peered
+      /// networks, import and export custom route configurations, and peering state.
+      /// NetworkPeering is a global resource and location can only be global.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.NetworkPeering GetNetworkPeering(global::Google.Cloud.VmwareEngine.V1.GetNetworkPeeringRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetNetworkPeering(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves a `NetworkPeering` resource by its resource name. The resource
+      /// contains details of the network peering, such as peered
+      /// networks, import and export custom route configurations, and peering state.
+      /// NetworkPeering is a global resource and location can only be global.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.NetworkPeering GetNetworkPeering(global::Google.Cloud.VmwareEngine.V1.GetNetworkPeeringRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetNetworkPeering, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves a `NetworkPeering` resource by its resource name. The resource
+      /// contains details of the network peering, such as peered
+      /// networks, import and export custom route configurations, and peering state.
+      /// NetworkPeering is a global resource and location can only be global.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.NetworkPeering> GetNetworkPeeringAsync(global::Google.Cloud.VmwareEngine.V1.GetNetworkPeeringRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetNetworkPeeringAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves a `NetworkPeering` resource by its resource name. The resource
+      /// contains details of the network peering, such as peered
+      /// networks, import and export custom route configurations, and peering state.
+      /// NetworkPeering is a global resource and location can only be global.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.NetworkPeering> GetNetworkPeeringAsync(global::Google.Cloud.VmwareEngine.V1.GetNetworkPeeringRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetNetworkPeering, null, options, request);
+      }
+      /// <summary>
+      /// Lists `NetworkPeering` resources in a given project. NetworkPeering is a
+      /// global resource and location can only be global.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.ListNetworkPeeringsResponse ListNetworkPeerings(global::Google.Cloud.VmwareEngine.V1.ListNetworkPeeringsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListNetworkPeerings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists `NetworkPeering` resources in a given project. NetworkPeering is a
+      /// global resource and location can only be global.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.ListNetworkPeeringsResponse ListNetworkPeerings(global::Google.Cloud.VmwareEngine.V1.ListNetworkPeeringsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListNetworkPeerings, null, options, request);
+      }
+      /// <summary>
+      /// Lists `NetworkPeering` resources in a given project. NetworkPeering is a
+      /// global resource and location can only be global.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.ListNetworkPeeringsResponse> ListNetworkPeeringsAsync(global::Google.Cloud.VmwareEngine.V1.ListNetworkPeeringsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListNetworkPeeringsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists `NetworkPeering` resources in a given project. NetworkPeering is a
+      /// global resource and location can only be global.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.ListNetworkPeeringsResponse> ListNetworkPeeringsAsync(global::Google.Cloud.VmwareEngine.V1.ListNetworkPeeringsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListNetworkPeerings, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new network peering between the peer network and VMware Engine
+      /// network provided in a `NetworkPeering` resource. NetworkPeering is a
+      /// global resource and location can only be global.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateNetworkPeering(global::Google.Cloud.VmwareEngine.V1.CreateNetworkPeeringRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateNetworkPeering(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new network peering between the peer network and VMware Engine
+      /// network provided in a `NetworkPeering` resource. NetworkPeering is a
+      /// global resource and location can only be global.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateNetworkPeering(global::Google.Cloud.VmwareEngine.V1.CreateNetworkPeeringRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateNetworkPeering, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new network peering between the peer network and VMware Engine
+      /// network provided in a `NetworkPeering` resource. NetworkPeering is a
+      /// global resource and location can only be global.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateNetworkPeeringAsync(global::Google.Cloud.VmwareEngine.V1.CreateNetworkPeeringRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateNetworkPeeringAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new network peering between the peer network and VMware Engine
+      /// network provided in a `NetworkPeering` resource. NetworkPeering is a
+      /// global resource and location can only be global.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateNetworkPeeringAsync(global::Google.Cloud.VmwareEngine.V1.CreateNetworkPeeringRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateNetworkPeering, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a `NetworkPeering` resource. When a network peering is deleted for
+      /// a VMware Engine network, the peer network becomes inaccessible to that
+      /// VMware Engine network. NetworkPeering is a global resource and location can
+      /// only be global.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteNetworkPeering(global::Google.Cloud.VmwareEngine.V1.DeleteNetworkPeeringRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteNetworkPeering(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a `NetworkPeering` resource. When a network peering is deleted for
+      /// a VMware Engine network, the peer network becomes inaccessible to that
+      /// VMware Engine network. NetworkPeering is a global resource and location can
+      /// only be global.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteNetworkPeering(global::Google.Cloud.VmwareEngine.V1.DeleteNetworkPeeringRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteNetworkPeering, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a `NetworkPeering` resource. When a network peering is deleted for
+      /// a VMware Engine network, the peer network becomes inaccessible to that
+      /// VMware Engine network. NetworkPeering is a global resource and location can
+      /// only be global.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteNetworkPeeringAsync(global::Google.Cloud.VmwareEngine.V1.DeleteNetworkPeeringRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteNetworkPeeringAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a `NetworkPeering` resource. When a network peering is deleted for
+      /// a VMware Engine network, the peer network becomes inaccessible to that
+      /// VMware Engine network. NetworkPeering is a global resource and location can
+      /// only be global.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteNetworkPeeringAsync(global::Google.Cloud.VmwareEngine.V1.DeleteNetworkPeeringRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteNetworkPeering, null, options, request);
+      }
+      /// <summary>
+      /// Modifies a `NetworkPeering` resource. Only the `description` field can be
+      /// updated. Only fields specified in `updateMask` are applied. NetworkPeering
+      /// is a global resource and location can only be global.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateNetworkPeering(global::Google.Cloud.VmwareEngine.V1.UpdateNetworkPeeringRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateNetworkPeering(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Modifies a `NetworkPeering` resource. Only the `description` field can be
+      /// updated. Only fields specified in `updateMask` are applied. NetworkPeering
+      /// is a global resource and location can only be global.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateNetworkPeering(global::Google.Cloud.VmwareEngine.V1.UpdateNetworkPeeringRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateNetworkPeering, null, options, request);
+      }
+      /// <summary>
+      /// Modifies a `NetworkPeering` resource. Only the `description` field can be
+      /// updated. Only fields specified in `updateMask` are applied. NetworkPeering
+      /// is a global resource and location can only be global.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateNetworkPeeringAsync(global::Google.Cloud.VmwareEngine.V1.UpdateNetworkPeeringRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateNetworkPeeringAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Modifies a `NetworkPeering` resource. Only the `description` field can be
+      /// updated. Only fields specified in `updateMask` are applied. NetworkPeering
+      /// is a global resource and location can only be global.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateNetworkPeeringAsync(global::Google.Cloud.VmwareEngine.V1.UpdateNetworkPeeringRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateNetworkPeering, null, options, request);
+      }
+      /// <summary>
+      /// Lists the network peering routes exchanged over a peering connection.
+      /// NetworkPeering is a global resource and location can only be global.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.ListPeeringRoutesResponse ListPeeringRoutes(global::Google.Cloud.VmwareEngine.V1.ListPeeringRoutesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListPeeringRoutes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the network peering routes exchanged over a peering connection.
+      /// NetworkPeering is a global resource and location can only be global.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.ListPeeringRoutesResponse ListPeeringRoutes(global::Google.Cloud.VmwareEngine.V1.ListPeeringRoutesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListPeeringRoutes, null, options, request);
+      }
+      /// <summary>
+      /// Lists the network peering routes exchanged over a peering connection.
+      /// NetworkPeering is a global resource and location can only be global.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.ListPeeringRoutesResponse> ListPeeringRoutesAsync(global::Google.Cloud.VmwareEngine.V1.ListPeeringRoutesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListPeeringRoutesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the network peering routes exchanged over a peering connection.
+      /// NetworkPeering is a global resource and location can only be global.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.ListPeeringRoutesResponse> ListPeeringRoutesAsync(global::Google.Cloud.VmwareEngine.V1.ListPeeringRoutesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListPeeringRoutes, null, options, request);
       }
       /// <summary>
       /// Creates a new HCX activation key in a given private cloud.
@@ -2672,6 +4874,334 @@ namespace Google.Cloud.VmwareEngine.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteNetworkPolicyAsync(global::Google.Cloud.VmwareEngine.V1.DeleteNetworkPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteNetworkPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Lists Consumer VPCs bound to Management DNS Zone of a given private cloud.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.ListManagementDnsZoneBindingsResponse ListManagementDnsZoneBindings(global::Google.Cloud.VmwareEngine.V1.ListManagementDnsZoneBindingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListManagementDnsZoneBindings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists Consumer VPCs bound to Management DNS Zone of a given private cloud.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.ListManagementDnsZoneBindingsResponse ListManagementDnsZoneBindings(global::Google.Cloud.VmwareEngine.V1.ListManagementDnsZoneBindingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListManagementDnsZoneBindings, null, options, request);
+      }
+      /// <summary>
+      /// Lists Consumer VPCs bound to Management DNS Zone of a given private cloud.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.ListManagementDnsZoneBindingsResponse> ListManagementDnsZoneBindingsAsync(global::Google.Cloud.VmwareEngine.V1.ListManagementDnsZoneBindingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListManagementDnsZoneBindingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists Consumer VPCs bound to Management DNS Zone of a given private cloud.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.ListManagementDnsZoneBindingsResponse> ListManagementDnsZoneBindingsAsync(global::Google.Cloud.VmwareEngine.V1.ListManagementDnsZoneBindingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListManagementDnsZoneBindings, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves a 'ManagementDnsZoneBinding' resource by its resource name.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.ManagementDnsZoneBinding GetManagementDnsZoneBinding(global::Google.Cloud.VmwareEngine.V1.GetManagementDnsZoneBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetManagementDnsZoneBinding(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves a 'ManagementDnsZoneBinding' resource by its resource name.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.ManagementDnsZoneBinding GetManagementDnsZoneBinding(global::Google.Cloud.VmwareEngine.V1.GetManagementDnsZoneBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetManagementDnsZoneBinding, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves a 'ManagementDnsZoneBinding' resource by its resource name.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.ManagementDnsZoneBinding> GetManagementDnsZoneBindingAsync(global::Google.Cloud.VmwareEngine.V1.GetManagementDnsZoneBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetManagementDnsZoneBindingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves a 'ManagementDnsZoneBinding' resource by its resource name.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.ManagementDnsZoneBinding> GetManagementDnsZoneBindingAsync(global::Google.Cloud.VmwareEngine.V1.GetManagementDnsZoneBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetManagementDnsZoneBinding, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new `ManagementDnsZoneBinding` resource in a private cloud.
+      /// This RPC creates the DNS binding and the resource that represents the
+      /// DNS binding of the consumer VPC network to the management DNS zone. A
+      /// management DNS zone is the Cloud DNS cross-project binding zone that
+      /// VMware Engine creates for each private cloud. It contains FQDNs and
+      /// corresponding IP addresses for the private cloud's ESXi hosts and
+      /// management VM appliances like vCenter and NSX Manager.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateManagementDnsZoneBinding(global::Google.Cloud.VmwareEngine.V1.CreateManagementDnsZoneBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateManagementDnsZoneBinding(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new `ManagementDnsZoneBinding` resource in a private cloud.
+      /// This RPC creates the DNS binding and the resource that represents the
+      /// DNS binding of the consumer VPC network to the management DNS zone. A
+      /// management DNS zone is the Cloud DNS cross-project binding zone that
+      /// VMware Engine creates for each private cloud. It contains FQDNs and
+      /// corresponding IP addresses for the private cloud's ESXi hosts and
+      /// management VM appliances like vCenter and NSX Manager.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateManagementDnsZoneBinding(global::Google.Cloud.VmwareEngine.V1.CreateManagementDnsZoneBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateManagementDnsZoneBinding, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new `ManagementDnsZoneBinding` resource in a private cloud.
+      /// This RPC creates the DNS binding and the resource that represents the
+      /// DNS binding of the consumer VPC network to the management DNS zone. A
+      /// management DNS zone is the Cloud DNS cross-project binding zone that
+      /// VMware Engine creates for each private cloud. It contains FQDNs and
+      /// corresponding IP addresses for the private cloud's ESXi hosts and
+      /// management VM appliances like vCenter and NSX Manager.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateManagementDnsZoneBindingAsync(global::Google.Cloud.VmwareEngine.V1.CreateManagementDnsZoneBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateManagementDnsZoneBindingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new `ManagementDnsZoneBinding` resource in a private cloud.
+      /// This RPC creates the DNS binding and the resource that represents the
+      /// DNS binding of the consumer VPC network to the management DNS zone. A
+      /// management DNS zone is the Cloud DNS cross-project binding zone that
+      /// VMware Engine creates for each private cloud. It contains FQDNs and
+      /// corresponding IP addresses for the private cloud's ESXi hosts and
+      /// management VM appliances like vCenter and NSX Manager.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateManagementDnsZoneBindingAsync(global::Google.Cloud.VmwareEngine.V1.CreateManagementDnsZoneBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateManagementDnsZoneBinding, null, options, request);
+      }
+      /// <summary>
+      /// Updates a `ManagementDnsZoneBinding` resource.
+      /// Only fields specified in `update_mask` are applied.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateManagementDnsZoneBinding(global::Google.Cloud.VmwareEngine.V1.UpdateManagementDnsZoneBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateManagementDnsZoneBinding(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a `ManagementDnsZoneBinding` resource.
+      /// Only fields specified in `update_mask` are applied.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateManagementDnsZoneBinding(global::Google.Cloud.VmwareEngine.V1.UpdateManagementDnsZoneBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateManagementDnsZoneBinding, null, options, request);
+      }
+      /// <summary>
+      /// Updates a `ManagementDnsZoneBinding` resource.
+      /// Only fields specified in `update_mask` are applied.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateManagementDnsZoneBindingAsync(global::Google.Cloud.VmwareEngine.V1.UpdateManagementDnsZoneBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateManagementDnsZoneBindingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a `ManagementDnsZoneBinding` resource.
+      /// Only fields specified in `update_mask` are applied.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateManagementDnsZoneBindingAsync(global::Google.Cloud.VmwareEngine.V1.UpdateManagementDnsZoneBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateManagementDnsZoneBinding, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a `ManagementDnsZoneBinding` resource. When a management DNS zone
+      /// binding is deleted, the corresponding consumer VPC network is no longer
+      /// bound to the management DNS zone.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteManagementDnsZoneBinding(global::Google.Cloud.VmwareEngine.V1.DeleteManagementDnsZoneBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteManagementDnsZoneBinding(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a `ManagementDnsZoneBinding` resource. When a management DNS zone
+      /// binding is deleted, the corresponding consumer VPC network is no longer
+      /// bound to the management DNS zone.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteManagementDnsZoneBinding(global::Google.Cloud.VmwareEngine.V1.DeleteManagementDnsZoneBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteManagementDnsZoneBinding, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a `ManagementDnsZoneBinding` resource. When a management DNS zone
+      /// binding is deleted, the corresponding consumer VPC network is no longer
+      /// bound to the management DNS zone.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteManagementDnsZoneBindingAsync(global::Google.Cloud.VmwareEngine.V1.DeleteManagementDnsZoneBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteManagementDnsZoneBindingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a `ManagementDnsZoneBinding` resource. When a management DNS zone
+      /// binding is deleted, the corresponding consumer VPC network is no longer
+      /// bound to the management DNS zone.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteManagementDnsZoneBindingAsync(global::Google.Cloud.VmwareEngine.V1.DeleteManagementDnsZoneBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteManagementDnsZoneBinding, null, options, request);
+      }
+      /// <summary>
+      /// Retries to create a `ManagementDnsZoneBinding` resource that is
+      /// in failed state.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RepairManagementDnsZoneBinding(global::Google.Cloud.VmwareEngine.V1.RepairManagementDnsZoneBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RepairManagementDnsZoneBinding(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retries to create a `ManagementDnsZoneBinding` resource that is
+      /// in failed state.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RepairManagementDnsZoneBinding(global::Google.Cloud.VmwareEngine.V1.RepairManagementDnsZoneBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RepairManagementDnsZoneBinding, null, options, request);
+      }
+      /// <summary>
+      /// Retries to create a `ManagementDnsZoneBinding` resource that is
+      /// in failed state.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RepairManagementDnsZoneBindingAsync(global::Google.Cloud.VmwareEngine.V1.RepairManagementDnsZoneBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RepairManagementDnsZoneBindingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retries to create a `ManagementDnsZoneBinding` resource that is
+      /// in failed state.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RepairManagementDnsZoneBindingAsync(global::Google.Cloud.VmwareEngine.V1.RepairManagementDnsZoneBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RepairManagementDnsZoneBinding, null, options, request);
       }
       /// <summary>
       /// Creates a new VMware Engine network that can be used by a private cloud.
@@ -3261,6 +5791,178 @@ namespace Google.Cloud.VmwareEngine.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListPrivateConnectionPeeringRoutes, null, options, request);
       }
+      /// <summary>
+      /// Grants the bind permission to the customer provided principal(user /
+      /// service account) to bind their DNS zone with the intranet VPC associated
+      /// with the project. DnsBindPermission is a global resource and location can
+      /// only be global.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation GrantDnsBindPermission(global::Google.Cloud.VmwareEngine.V1.GrantDnsBindPermissionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GrantDnsBindPermission(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Grants the bind permission to the customer provided principal(user /
+      /// service account) to bind their DNS zone with the intranet VPC associated
+      /// with the project. DnsBindPermission is a global resource and location can
+      /// only be global.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation GrantDnsBindPermission(global::Google.Cloud.VmwareEngine.V1.GrantDnsBindPermissionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GrantDnsBindPermission, null, options, request);
+      }
+      /// <summary>
+      /// Grants the bind permission to the customer provided principal(user /
+      /// service account) to bind their DNS zone with the intranet VPC associated
+      /// with the project. DnsBindPermission is a global resource and location can
+      /// only be global.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> GrantDnsBindPermissionAsync(global::Google.Cloud.VmwareEngine.V1.GrantDnsBindPermissionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GrantDnsBindPermissionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Grants the bind permission to the customer provided principal(user /
+      /// service account) to bind their DNS zone with the intranet VPC associated
+      /// with the project. DnsBindPermission is a global resource and location can
+      /// only be global.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> GrantDnsBindPermissionAsync(global::Google.Cloud.VmwareEngine.V1.GrantDnsBindPermissionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GrantDnsBindPermission, null, options, request);
+      }
+      /// <summary>
+      /// Gets all the principals having bind permission on the intranet VPC
+      /// associated with the consumer project granted by the Grant API.
+      /// DnsBindPermission is a global resource and location can only be global.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.DnsBindPermission GetDnsBindPermission(global::Google.Cloud.VmwareEngine.V1.GetDnsBindPermissionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDnsBindPermission(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets all the principals having bind permission on the intranet VPC
+      /// associated with the consumer project granted by the Grant API.
+      /// DnsBindPermission is a global resource and location can only be global.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.DnsBindPermission GetDnsBindPermission(global::Google.Cloud.VmwareEngine.V1.GetDnsBindPermissionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetDnsBindPermission, null, options, request);
+      }
+      /// <summary>
+      /// Gets all the principals having bind permission on the intranet VPC
+      /// associated with the consumer project granted by the Grant API.
+      /// DnsBindPermission is a global resource and location can only be global.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.DnsBindPermission> GetDnsBindPermissionAsync(global::Google.Cloud.VmwareEngine.V1.GetDnsBindPermissionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDnsBindPermissionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets all the principals having bind permission on the intranet VPC
+      /// associated with the consumer project granted by the Grant API.
+      /// DnsBindPermission is a global resource and location can only be global.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.DnsBindPermission> GetDnsBindPermissionAsync(global::Google.Cloud.VmwareEngine.V1.GetDnsBindPermissionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetDnsBindPermission, null, options, request);
+      }
+      /// <summary>
+      /// Revokes the bind permission from the customer provided principal(user /
+      /// service account) on the intranet VPC associated with the consumer project.
+      /// DnsBindPermission is a global resource and location can only be global.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RevokeDnsBindPermission(global::Google.Cloud.VmwareEngine.V1.RevokeDnsBindPermissionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RevokeDnsBindPermission(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Revokes the bind permission from the customer provided principal(user /
+      /// service account) on the intranet VPC associated with the consumer project.
+      /// DnsBindPermission is a global resource and location can only be global.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RevokeDnsBindPermission(global::Google.Cloud.VmwareEngine.V1.RevokeDnsBindPermissionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RevokeDnsBindPermission, null, options, request);
+      }
+      /// <summary>
+      /// Revokes the bind permission from the customer provided principal(user /
+      /// service account) on the intranet VPC associated with the consumer project.
+      /// DnsBindPermission is a global resource and location can only be global.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RevokeDnsBindPermissionAsync(global::Google.Cloud.VmwareEngine.V1.RevokeDnsBindPermissionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RevokeDnsBindPermissionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Revokes the bind permission from the customer provided principal(user /
+      /// service account) on the intranet VPC associated with the consumer project.
+      /// DnsBindPermission is a global resource and location can only be global.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RevokeDnsBindPermissionAsync(global::Google.Cloud.VmwareEngine.V1.RevokeDnsBindPermissionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RevokeDnsBindPermission, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override VmwareEngineClient NewInstance(ClientBaseConfiguration configuration)
@@ -3286,15 +5988,41 @@ namespace Google.Cloud.VmwareEngine.V1 {
           .AddMethod(__Method_CreateCluster, serviceImpl.CreateCluster)
           .AddMethod(__Method_UpdateCluster, serviceImpl.UpdateCluster)
           .AddMethod(__Method_DeleteCluster, serviceImpl.DeleteCluster)
+          .AddMethod(__Method_ListNodes, serviceImpl.ListNodes)
+          .AddMethod(__Method_GetNode, serviceImpl.GetNode)
+          .AddMethod(__Method_ListExternalAddresses, serviceImpl.ListExternalAddresses)
+          .AddMethod(__Method_FetchNetworkPolicyExternalAddresses, serviceImpl.FetchNetworkPolicyExternalAddresses)
+          .AddMethod(__Method_GetExternalAddress, serviceImpl.GetExternalAddress)
+          .AddMethod(__Method_CreateExternalAddress, serviceImpl.CreateExternalAddress)
+          .AddMethod(__Method_UpdateExternalAddress, serviceImpl.UpdateExternalAddress)
+          .AddMethod(__Method_DeleteExternalAddress, serviceImpl.DeleteExternalAddress)
           .AddMethod(__Method_ListSubnets, serviceImpl.ListSubnets)
           .AddMethod(__Method_GetSubnet, serviceImpl.GetSubnet)
           .AddMethod(__Method_UpdateSubnet, serviceImpl.UpdateSubnet)
+          .AddMethod(__Method_ListExternalAccessRules, serviceImpl.ListExternalAccessRules)
+          .AddMethod(__Method_GetExternalAccessRule, serviceImpl.GetExternalAccessRule)
+          .AddMethod(__Method_CreateExternalAccessRule, serviceImpl.CreateExternalAccessRule)
+          .AddMethod(__Method_UpdateExternalAccessRule, serviceImpl.UpdateExternalAccessRule)
+          .AddMethod(__Method_DeleteExternalAccessRule, serviceImpl.DeleteExternalAccessRule)
+          .AddMethod(__Method_ListLoggingServers, serviceImpl.ListLoggingServers)
+          .AddMethod(__Method_GetLoggingServer, serviceImpl.GetLoggingServer)
+          .AddMethod(__Method_CreateLoggingServer, serviceImpl.CreateLoggingServer)
+          .AddMethod(__Method_UpdateLoggingServer, serviceImpl.UpdateLoggingServer)
+          .AddMethod(__Method_DeleteLoggingServer, serviceImpl.DeleteLoggingServer)
           .AddMethod(__Method_ListNodeTypes, serviceImpl.ListNodeTypes)
           .AddMethod(__Method_GetNodeType, serviceImpl.GetNodeType)
           .AddMethod(__Method_ShowNsxCredentials, serviceImpl.ShowNsxCredentials)
           .AddMethod(__Method_ShowVcenterCredentials, serviceImpl.ShowVcenterCredentials)
           .AddMethod(__Method_ResetNsxCredentials, serviceImpl.ResetNsxCredentials)
           .AddMethod(__Method_ResetVcenterCredentials, serviceImpl.ResetVcenterCredentials)
+          .AddMethod(__Method_GetDnsForwarding, serviceImpl.GetDnsForwarding)
+          .AddMethod(__Method_UpdateDnsForwarding, serviceImpl.UpdateDnsForwarding)
+          .AddMethod(__Method_GetNetworkPeering, serviceImpl.GetNetworkPeering)
+          .AddMethod(__Method_ListNetworkPeerings, serviceImpl.ListNetworkPeerings)
+          .AddMethod(__Method_CreateNetworkPeering, serviceImpl.CreateNetworkPeering)
+          .AddMethod(__Method_DeleteNetworkPeering, serviceImpl.DeleteNetworkPeering)
+          .AddMethod(__Method_UpdateNetworkPeering, serviceImpl.UpdateNetworkPeering)
+          .AddMethod(__Method_ListPeeringRoutes, serviceImpl.ListPeeringRoutes)
           .AddMethod(__Method_CreateHcxActivationKey, serviceImpl.CreateHcxActivationKey)
           .AddMethod(__Method_ListHcxActivationKeys, serviceImpl.ListHcxActivationKeys)
           .AddMethod(__Method_GetHcxActivationKey, serviceImpl.GetHcxActivationKey)
@@ -3303,6 +6031,12 @@ namespace Google.Cloud.VmwareEngine.V1 {
           .AddMethod(__Method_CreateNetworkPolicy, serviceImpl.CreateNetworkPolicy)
           .AddMethod(__Method_UpdateNetworkPolicy, serviceImpl.UpdateNetworkPolicy)
           .AddMethod(__Method_DeleteNetworkPolicy, serviceImpl.DeleteNetworkPolicy)
+          .AddMethod(__Method_ListManagementDnsZoneBindings, serviceImpl.ListManagementDnsZoneBindings)
+          .AddMethod(__Method_GetManagementDnsZoneBinding, serviceImpl.GetManagementDnsZoneBinding)
+          .AddMethod(__Method_CreateManagementDnsZoneBinding, serviceImpl.CreateManagementDnsZoneBinding)
+          .AddMethod(__Method_UpdateManagementDnsZoneBinding, serviceImpl.UpdateManagementDnsZoneBinding)
+          .AddMethod(__Method_DeleteManagementDnsZoneBinding, serviceImpl.DeleteManagementDnsZoneBinding)
+          .AddMethod(__Method_RepairManagementDnsZoneBinding, serviceImpl.RepairManagementDnsZoneBinding)
           .AddMethod(__Method_CreateVmwareEngineNetwork, serviceImpl.CreateVmwareEngineNetwork)
           .AddMethod(__Method_UpdateVmwareEngineNetwork, serviceImpl.UpdateVmwareEngineNetwork)
           .AddMethod(__Method_DeleteVmwareEngineNetwork, serviceImpl.DeleteVmwareEngineNetwork)
@@ -3313,7 +6047,10 @@ namespace Google.Cloud.VmwareEngine.V1 {
           .AddMethod(__Method_ListPrivateConnections, serviceImpl.ListPrivateConnections)
           .AddMethod(__Method_UpdatePrivateConnection, serviceImpl.UpdatePrivateConnection)
           .AddMethod(__Method_DeletePrivateConnection, serviceImpl.DeletePrivateConnection)
-          .AddMethod(__Method_ListPrivateConnectionPeeringRoutes, serviceImpl.ListPrivateConnectionPeeringRoutes).Build();
+          .AddMethod(__Method_ListPrivateConnectionPeeringRoutes, serviceImpl.ListPrivateConnectionPeeringRoutes)
+          .AddMethod(__Method_GrantDnsBindPermission, serviceImpl.GrantDnsBindPermission)
+          .AddMethod(__Method_GetDnsBindPermission, serviceImpl.GetDnsBindPermission)
+          .AddMethod(__Method_RevokeDnsBindPermission, serviceImpl.RevokeDnsBindPermission).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -3334,15 +6071,41 @@ namespace Google.Cloud.VmwareEngine.V1 {
       serviceBinder.AddMethod(__Method_CreateCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.CreateClusterRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateCluster));
       serviceBinder.AddMethod(__Method_UpdateCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.UpdateClusterRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateCluster));
       serviceBinder.AddMethod(__Method_DeleteCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.DeleteClusterRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteCluster));
+      serviceBinder.AddMethod(__Method_ListNodes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.ListNodesRequest, global::Google.Cloud.VmwareEngine.V1.ListNodesResponse>(serviceImpl.ListNodes));
+      serviceBinder.AddMethod(__Method_GetNode, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.GetNodeRequest, global::Google.Cloud.VmwareEngine.V1.Node>(serviceImpl.GetNode));
+      serviceBinder.AddMethod(__Method_ListExternalAddresses, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.ListExternalAddressesRequest, global::Google.Cloud.VmwareEngine.V1.ListExternalAddressesResponse>(serviceImpl.ListExternalAddresses));
+      serviceBinder.AddMethod(__Method_FetchNetworkPolicyExternalAddresses, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.FetchNetworkPolicyExternalAddressesRequest, global::Google.Cloud.VmwareEngine.V1.FetchNetworkPolicyExternalAddressesResponse>(serviceImpl.FetchNetworkPolicyExternalAddresses));
+      serviceBinder.AddMethod(__Method_GetExternalAddress, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.GetExternalAddressRequest, global::Google.Cloud.VmwareEngine.V1.ExternalAddress>(serviceImpl.GetExternalAddress));
+      serviceBinder.AddMethod(__Method_CreateExternalAddress, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.CreateExternalAddressRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateExternalAddress));
+      serviceBinder.AddMethod(__Method_UpdateExternalAddress, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.UpdateExternalAddressRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateExternalAddress));
+      serviceBinder.AddMethod(__Method_DeleteExternalAddress, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.DeleteExternalAddressRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteExternalAddress));
       serviceBinder.AddMethod(__Method_ListSubnets, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.ListSubnetsRequest, global::Google.Cloud.VmwareEngine.V1.ListSubnetsResponse>(serviceImpl.ListSubnets));
       serviceBinder.AddMethod(__Method_GetSubnet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.GetSubnetRequest, global::Google.Cloud.VmwareEngine.V1.Subnet>(serviceImpl.GetSubnet));
       serviceBinder.AddMethod(__Method_UpdateSubnet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.UpdateSubnetRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateSubnet));
+      serviceBinder.AddMethod(__Method_ListExternalAccessRules, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.ListExternalAccessRulesRequest, global::Google.Cloud.VmwareEngine.V1.ListExternalAccessRulesResponse>(serviceImpl.ListExternalAccessRules));
+      serviceBinder.AddMethod(__Method_GetExternalAccessRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.GetExternalAccessRuleRequest, global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule>(serviceImpl.GetExternalAccessRule));
+      serviceBinder.AddMethod(__Method_CreateExternalAccessRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.CreateExternalAccessRuleRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateExternalAccessRule));
+      serviceBinder.AddMethod(__Method_UpdateExternalAccessRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.UpdateExternalAccessRuleRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateExternalAccessRule));
+      serviceBinder.AddMethod(__Method_DeleteExternalAccessRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.DeleteExternalAccessRuleRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteExternalAccessRule));
+      serviceBinder.AddMethod(__Method_ListLoggingServers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.ListLoggingServersRequest, global::Google.Cloud.VmwareEngine.V1.ListLoggingServersResponse>(serviceImpl.ListLoggingServers));
+      serviceBinder.AddMethod(__Method_GetLoggingServer, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.GetLoggingServerRequest, global::Google.Cloud.VmwareEngine.V1.LoggingServer>(serviceImpl.GetLoggingServer));
+      serviceBinder.AddMethod(__Method_CreateLoggingServer, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.CreateLoggingServerRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateLoggingServer));
+      serviceBinder.AddMethod(__Method_UpdateLoggingServer, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.UpdateLoggingServerRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateLoggingServer));
+      serviceBinder.AddMethod(__Method_DeleteLoggingServer, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.DeleteLoggingServerRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteLoggingServer));
       serviceBinder.AddMethod(__Method_ListNodeTypes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.ListNodeTypesRequest, global::Google.Cloud.VmwareEngine.V1.ListNodeTypesResponse>(serviceImpl.ListNodeTypes));
       serviceBinder.AddMethod(__Method_GetNodeType, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.GetNodeTypeRequest, global::Google.Cloud.VmwareEngine.V1.NodeType>(serviceImpl.GetNodeType));
       serviceBinder.AddMethod(__Method_ShowNsxCredentials, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.ShowNsxCredentialsRequest, global::Google.Cloud.VmwareEngine.V1.Credentials>(serviceImpl.ShowNsxCredentials));
       serviceBinder.AddMethod(__Method_ShowVcenterCredentials, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.ShowVcenterCredentialsRequest, global::Google.Cloud.VmwareEngine.V1.Credentials>(serviceImpl.ShowVcenterCredentials));
       serviceBinder.AddMethod(__Method_ResetNsxCredentials, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.ResetNsxCredentialsRequest, global::Google.LongRunning.Operation>(serviceImpl.ResetNsxCredentials));
       serviceBinder.AddMethod(__Method_ResetVcenterCredentials, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.ResetVcenterCredentialsRequest, global::Google.LongRunning.Operation>(serviceImpl.ResetVcenterCredentials));
+      serviceBinder.AddMethod(__Method_GetDnsForwarding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.GetDnsForwardingRequest, global::Google.Cloud.VmwareEngine.V1.DnsForwarding>(serviceImpl.GetDnsForwarding));
+      serviceBinder.AddMethod(__Method_UpdateDnsForwarding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.UpdateDnsForwardingRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateDnsForwarding));
+      serviceBinder.AddMethod(__Method_GetNetworkPeering, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.GetNetworkPeeringRequest, global::Google.Cloud.VmwareEngine.V1.NetworkPeering>(serviceImpl.GetNetworkPeering));
+      serviceBinder.AddMethod(__Method_ListNetworkPeerings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.ListNetworkPeeringsRequest, global::Google.Cloud.VmwareEngine.V1.ListNetworkPeeringsResponse>(serviceImpl.ListNetworkPeerings));
+      serviceBinder.AddMethod(__Method_CreateNetworkPeering, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.CreateNetworkPeeringRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateNetworkPeering));
+      serviceBinder.AddMethod(__Method_DeleteNetworkPeering, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.DeleteNetworkPeeringRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteNetworkPeering));
+      serviceBinder.AddMethod(__Method_UpdateNetworkPeering, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.UpdateNetworkPeeringRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateNetworkPeering));
+      serviceBinder.AddMethod(__Method_ListPeeringRoutes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.ListPeeringRoutesRequest, global::Google.Cloud.VmwareEngine.V1.ListPeeringRoutesResponse>(serviceImpl.ListPeeringRoutes));
       serviceBinder.AddMethod(__Method_CreateHcxActivationKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.CreateHcxActivationKeyRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateHcxActivationKey));
       serviceBinder.AddMethod(__Method_ListHcxActivationKeys, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.ListHcxActivationKeysRequest, global::Google.Cloud.VmwareEngine.V1.ListHcxActivationKeysResponse>(serviceImpl.ListHcxActivationKeys));
       serviceBinder.AddMethod(__Method_GetHcxActivationKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.GetHcxActivationKeyRequest, global::Google.Cloud.VmwareEngine.V1.HcxActivationKey>(serviceImpl.GetHcxActivationKey));
@@ -3351,6 +6114,12 @@ namespace Google.Cloud.VmwareEngine.V1 {
       serviceBinder.AddMethod(__Method_CreateNetworkPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.CreateNetworkPolicyRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateNetworkPolicy));
       serviceBinder.AddMethod(__Method_UpdateNetworkPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.UpdateNetworkPolicyRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateNetworkPolicy));
       serviceBinder.AddMethod(__Method_DeleteNetworkPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.DeleteNetworkPolicyRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteNetworkPolicy));
+      serviceBinder.AddMethod(__Method_ListManagementDnsZoneBindings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.ListManagementDnsZoneBindingsRequest, global::Google.Cloud.VmwareEngine.V1.ListManagementDnsZoneBindingsResponse>(serviceImpl.ListManagementDnsZoneBindings));
+      serviceBinder.AddMethod(__Method_GetManagementDnsZoneBinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.GetManagementDnsZoneBindingRequest, global::Google.Cloud.VmwareEngine.V1.ManagementDnsZoneBinding>(serviceImpl.GetManagementDnsZoneBinding));
+      serviceBinder.AddMethod(__Method_CreateManagementDnsZoneBinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.CreateManagementDnsZoneBindingRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateManagementDnsZoneBinding));
+      serviceBinder.AddMethod(__Method_UpdateManagementDnsZoneBinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.UpdateManagementDnsZoneBindingRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateManagementDnsZoneBinding));
+      serviceBinder.AddMethod(__Method_DeleteManagementDnsZoneBinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.DeleteManagementDnsZoneBindingRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteManagementDnsZoneBinding));
+      serviceBinder.AddMethod(__Method_RepairManagementDnsZoneBinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.RepairManagementDnsZoneBindingRequest, global::Google.LongRunning.Operation>(serviceImpl.RepairManagementDnsZoneBinding));
       serviceBinder.AddMethod(__Method_CreateVmwareEngineNetwork, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.CreateVmwareEngineNetworkRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateVmwareEngineNetwork));
       serviceBinder.AddMethod(__Method_UpdateVmwareEngineNetwork, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.UpdateVmwareEngineNetworkRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateVmwareEngineNetwork));
       serviceBinder.AddMethod(__Method_DeleteVmwareEngineNetwork, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.DeleteVmwareEngineNetworkRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteVmwareEngineNetwork));
@@ -3362,6 +6131,9 @@ namespace Google.Cloud.VmwareEngine.V1 {
       serviceBinder.AddMethod(__Method_UpdatePrivateConnection, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.UpdatePrivateConnectionRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdatePrivateConnection));
       serviceBinder.AddMethod(__Method_DeletePrivateConnection, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.DeletePrivateConnectionRequest, global::Google.LongRunning.Operation>(serviceImpl.DeletePrivateConnection));
       serviceBinder.AddMethod(__Method_ListPrivateConnectionPeeringRoutes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionPeeringRoutesRequest, global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionPeeringRoutesResponse>(serviceImpl.ListPrivateConnectionPeeringRoutes));
+      serviceBinder.AddMethod(__Method_GrantDnsBindPermission, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.GrantDnsBindPermissionRequest, global::Google.LongRunning.Operation>(serviceImpl.GrantDnsBindPermission));
+      serviceBinder.AddMethod(__Method_GetDnsBindPermission, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.GetDnsBindPermissionRequest, global::Google.Cloud.VmwareEngine.V1.DnsBindPermission>(serviceImpl.GetDnsBindPermission));
+      serviceBinder.AddMethod(__Method_RevokeDnsBindPermission, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.RevokeDnsBindPermissionRequest, global::Google.LongRunning.Operation>(serviceImpl.RevokeDnsBindPermission));
     }
 
   }
