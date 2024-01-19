@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,11 +12,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
+using Google.Api.Gax.Testing;
 using Google.Cloud.Firestore.V1;
 using Google.Protobuf;
 using Grpc.Core;
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 using static Google.Cloud.Firestore.Tests.ProtoHelpers;
@@ -138,6 +143,35 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Equal(actualAttempts, client.RollbackRequests.Count);
         }
 
+        [Fact]
+        public async Task RunTransactionAsync_CustomRetrySettings()
+        {
+            var start = new DateTime(2000, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+            var clock = new FakeClock(start);
+            var scheduler = new FakeScheduler(clock);
+
+            var settings = new FirestoreSettings
+            {
+                Scheduler = scheduler,
+                Clock = scheduler.Clock
+            };
+
+            // 6 failures, so 7 RPCs in total.
+            var client = new TransactionTestingClient(6, CreateRpcException(StatusCode.Aborted), settings);
+            var db = FirestoreDb.Create("proj", "db", client);
+
+            // Backoffs will be 1, 2, 4, 5, 5, 5.
+            // Timestamps will be 0, 1, 3, 7, 12, 17, 22.
+            var retrySettings = RetrySettings.FromExponentialBackoff(10, TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(5), 2.0, ex => true, RetrySettings.NoJitter);
+            var options = TransactionOptions.ForRetrySettings(retrySettings);
+
+            var timestamps = await scheduler.RunAsync(() => db.RunTransactionAsync(CreateTimestampingCallback(scheduler.Clock), options));
+
+            var timestampSecondsSinceStart = timestamps.Select(ts => (ts - start).TotalSeconds).ToArray();
+            double[] expectedSecondsSinceStart = { 0.0, 1.0, 3.0, 7.0, 12.0, 17.0, 22.0 };
+            Assert.Equal(expectedSecondsSinceStart, timestampSecondsSinceStart);
+        }
+
         /// <summary>
         /// Creates a request that creates projects/proj/databases/db/documents/col/doc1 and
         /// deletes projects/proj/databases/db/documents/col/doc2 - the operations performed in
@@ -184,6 +218,19 @@ namespace Google.Cloud.Firestore.Tests
             };
         }
 
+        private Func<Transaction, Task<List<DateTime>>> CreateTimestampingCallback(IClock clock)
+        {
+            List<DateTime> ret = new();
+            return async transaction =>
+            {
+                var db = transaction.Database;
+                ret.Add(clock.GetCurrentDateTimeUtc());
+                await transaction.GetSnapshotAsync(db.Document("col/x"));
+                transaction.Create(db.Document("col/doc1"), new { Name = "Test" });
+                transaction.Delete(db.Document("col/doc2"));
+                return ret;
+            };
+        }
 
         private static RollbackRequest CreateRollbackRequest(string transactionId) =>
             new RollbackRequest

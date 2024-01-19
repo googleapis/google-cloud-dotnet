@@ -387,9 +387,12 @@ namespace Google.Cloud.Firestore
         public async Task<T> RunTransactionAsync<T>(Func<Transaction, Task<T>> callback, TransactionOptions options = null, CancellationToken cancellationToken = default)
         {
             ByteString previousTransactionId = null;
-            options = options ?? TransactionOptions.Default;
-            var attemptsLeft = options.MaxAttempts;
-            TimeSpan backoff = TimeSpan.FromSeconds(1);
+            options ??= TransactionOptions.Default;
+
+            var retrySettings = options.RetrySettings;
+            var attemptsLeft = retrySettings.MaxAttempts;
+            TimeSpan backoff = retrySettings.InitialBackoff;
+            var scheduler = Client.Settings.Scheduler ?? SystemScheduler.Instance;
 
             while (true)
             {
@@ -408,8 +411,12 @@ namespace Google.Cloud.Firestore
                     }
                     catch (RpcException e) when (CheckRetry(e, ref rollback))
                     {
-                        // On to the next iteration...
+                        // On to the next iteration after a backoff.
                     }
+
+                    // This is essentially the inner loop of RetryAttempt.CreateRetrySequence.
+                    await scheduler.Delay(retrySettings.BackoffJitter.GetDelay(backoff), cancellationToken).ConfigureAwait(false);
+                    backoff = retrySettings.NextBackoff(backoff);
                 }
                 finally
                 {

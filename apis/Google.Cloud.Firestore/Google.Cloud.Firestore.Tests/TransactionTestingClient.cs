@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -57,9 +57,9 @@ namespace Google.Cloud.Firestore.Tests
         /// <summary>
         /// Creates a client which will respond to the first <paramref name="failures"/> commit calls with <paramref name="exception"/>.
         /// </summary>
-        public TransactionTestingClient(int failures, Exception exception)
+        public TransactionTestingClient(int failures, Exception exception, FirestoreSettings settings = null)
         {
-            Settings = FirestoreSettings.GetDefault();
+            Settings = settings ?? FirestoreSettings.GetDefault();
             _failures = failures;
             _exception = exception;
         }
