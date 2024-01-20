@@ -145,7 +145,7 @@ namespace Google.Cloud.Batch.V1Alpha {
             "bhgBIAEoCRIUCgxtYXhfZGlzdGFuY2UYAiABKAMaLQoLTGFiZWxzRW50cnkS",
             "CwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJgChFQcm92aXNpb25p",
             "bmdNb2RlbBIiCh5QUk9WSVNJT05JTkdfTU9ERUxfVU5TUEVDSUZJRUQQABIM",
-            "CghTVEFOREFSRBABEggKBFNQT1QQAhIPCgtQUkVFTVBUSUJMRRADIrQGCglU",
+            "CghTVEFOREFSRBABEggKBFNQT1QQAhIPCgtQUkVFTVBUSUJMRRADIpUGCglU",
             "YXNrR3JvdXASEQoEbmFtZRgBIAEoCUID4EEDEjwKCXRhc2tfc3BlYxgDIAEo",
             "CzIkLmdvb2dsZS5jbG91ZC5iYXRjaC52MWFscGhhLlRhc2tTcGVjQgPgQQIS",
             "EgoKdGFza19jb3VudBgEIAEoAxITCgtwYXJhbGxlbGlzbRgFIAEoAxJRChFz",
@@ -157,19 +157,19 @@ namespace Google.Cloud.Batch.V1Alpha {
             "a19lbnZpcm9ubWVudHMYCSADKAsyJy5nb29nbGUuY2xvdWQuYmF0Y2gudjFh",
             "bHBoYS5FbnZpcm9ubWVudBIbChN0YXNrX2NvdW50X3Blcl9ub2RlGAogASgD",
             "EhoKEnJlcXVpcmVfaG9zdHNfZmlsZRgLIAEoCBIWCg5wZXJtaXNzaXZlX3Nz",
-            "aBgMIAEoCBIdCg5lbmFibGVfb3Nsb2dpbhgNIAEoCEIFGAHgQQESHAoPcnVu",
-            "X2FzX25vbl9yb290GA4gASgIQgPgQQEaLQoLTGFiZWxzRW50cnkSCwoDa2V5",
-            "GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJcChBTY2hlZHVsaW5nUG9saWN5",
-            "EiEKHVNDSEVEVUxJTkdfUE9MSUNZX1VOU1BFQ0lGSUVEEAASFwoTQVNfU09P",
-            "Tl9BU19QT1NTSUJMRRABEgwKCElOX09SREVSEAI6b+pBbAoeYmF0Y2guZ29v",
-            "Z2xlYXBpcy5jb20vVGFza0dyb3VwEkpwcm9qZWN0cy97cHJvamVjdH0vbG9j",
-            "YXRpb25zL3tsb2NhdGlvbn0vam9icy97am9ifS90YXNrR3JvdXBzL3t0YXNr",
-            "X2dyb3VwfSIvCg5TZXJ2aWNlQWNjb3VudBINCgVlbWFpbBgBIAEoCRIOCgZz",
-            "Y29wZXMYAiADKAlCwgEKHmNvbS5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBo",
-            "YUIISm9iUHJvdG9QAVo0Y2xvdWQuZ29vZ2xlLmNvbS9nby9iYXRjaC9hcGl2",
-            "MWFscGhhL2JhdGNocGI7YmF0Y2hwYqICA0dDQqoCGkdvb2dsZS5DbG91ZC5C",
-            "YXRjaC5WMUFscGhhygIaR29vZ2xlXENsb3VkXEJhdGNoXFYxYWxwaGHqAh1H",
-            "b29nbGU6OkNsb3VkOjpCYXRjaDo6VjFhbHBoYWIGcHJvdG8z"));
+            "aBgMIAEoCBIcCg9ydW5fYXNfbm9uX3Jvb3QYDiABKAhCA+BBARotCgtMYWJl",
+            "bHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIlwKEFNj",
+            "aGVkdWxpbmdQb2xpY3kSIQodU0NIRURVTElOR19QT0xJQ1lfVU5TUEVDSUZJ",
+            "RUQQABIXChNBU19TT09OX0FTX1BPU1NJQkxFEAESDAoISU5fT1JERVIQAjpv",
+            "6kFsCh5iYXRjaC5nb29nbGVhcGlzLmNvbS9UYXNrR3JvdXASSnByb2plY3Rz",
+            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9qb2JzL3tqb2J9L3Rh",
+            "c2tHcm91cHMve3Rhc2tfZ3JvdXB9Ii8KDlNlcnZpY2VBY2NvdW50Eg0KBWVt",
+            "YWlsGAEgASgJEg4KBnNjb3BlcxgCIAMoCULCAQoeY29tLmdvb2dsZS5jbG91",
+            "ZC5iYXRjaC52MWFscGhhQghKb2JQcm90b1ABWjRjbG91ZC5nb29nbGUuY29t",
+            "L2dvL2JhdGNoL2FwaXYxYWxwaGEvYmF0Y2hwYjtiYXRjaHBiogIDR0NCqgIa",
+            "R29vZ2xlLkNsb3VkLkJhdGNoLlYxQWxwaGHKAhpHb29nbGVcQ2xvdWRcQmF0",
+            "Y2hcVjFhbHBoYeoCHUdvb2dsZTo6Q2xvdWQ6OkJhdGNoOjpWMWFscGhhYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Batch.V1Alpha.TaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -191,7 +191,7 @@ namespace Google.Cloud.Batch.V1Alpha {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.NetworkPolicy), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.NetworkPolicy.Parser, new[]{ "NetworkInterfaces" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.PlacementPolicy), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.PlacementPolicy.Parser, new[]{ "Collocation", "MaxDistance" }, null, null, null, null),
             null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.TaskGroup), global::Google.Cloud.Batch.V1Alpha.TaskGroup.Parser, new[]{ "Name", "TaskSpec", "TaskCount", "Parallelism", "SchedulingPolicy", "AllocationPolicy", "Labels", "TaskEnvironments", "TaskCountPerNode", "RequireHostsFile", "PermissiveSsh", "EnableOslogin", "RunAsNonRoot" }, null, new[]{ typeof(global::Google.Cloud.Batch.V1Alpha.TaskGroup.Types.SchedulingPolicy) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.TaskGroup), global::Google.Cloud.Batch.V1Alpha.TaskGroup.Parser, new[]{ "Name", "TaskSpec", "TaskCount", "Parallelism", "SchedulingPolicy", "AllocationPolicy", "Labels", "TaskEnvironments", "TaskCountPerNode", "RequireHostsFile", "PermissiveSsh", "RunAsNonRoot" }, null, new[]{ typeof(global::Google.Cloud.Batch.V1Alpha.TaskGroup.Types.SchedulingPolicy) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.ServiceAccount), global::Google.Cloud.Batch.V1Alpha.ServiceAccount.Parser, new[]{ "Email", "Scopes" }, null, null, null, null)
           }));
     }
@@ -6951,7 +6951,6 @@ namespace Google.Cloud.Batch.V1Alpha {
       taskCountPerNode_ = other.taskCountPerNode_;
       requireHostsFile_ = other.requireHostsFile_;
       permissiveSsh_ = other.permissiveSsh_;
-      enableOslogin_ = other.enableOslogin_;
       runAsNonRoot_ = other.runAsNonRoot_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -7152,30 +7151,6 @@ namespace Google.Cloud.Batch.V1Alpha {
       }
     }
 
-    /// <summary>Field number for the "enable_oslogin" field.</summary>
-    public const int EnableOsloginFieldNumber = 13;
-    private bool enableOslogin_;
-    /// <summary>
-    /// Optional. Deprecated: When true, Batch will use the OS Login generated
-    /// POSIX account to exeucute the runnables instead of the default root user.
-    ///
-    /// To control root or non-root privilege for runnable execution, the project \
-    /// Admin user needs to configure IAM roles according to
-    /// https://cloud.google.com/compute/docs/oslogin/set-up-oslogin#configure_users.
-    /// Specifically, if a root execution is needed, the roles/compute.osAdminLogin
-    /// should be granted to the Batch job submitter. Otherwise,
-    /// roles/compute.osLogin should be granted to the Batch job submitter.
-    /// </summary>
-    [global::System.ObsoleteAttribute]
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool EnableOslogin {
-      get { return enableOslogin_; }
-      set {
-        enableOslogin_ = value;
-      }
-    }
-
     /// <summary>Field number for the "run_as_non_root" field.</summary>
     public const int RunAsNonRootFieldNumber = 14;
     private bool runAsNonRoot_;
@@ -7220,7 +7195,6 @@ namespace Google.Cloud.Batch.V1Alpha {
       if (TaskCountPerNode != other.TaskCountPerNode) return false;
       if (RequireHostsFile != other.RequireHostsFile) return false;
       if (PermissiveSsh != other.PermissiveSsh) return false;
-      if (EnableOslogin != other.EnableOslogin) return false;
       if (RunAsNonRoot != other.RunAsNonRoot) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -7240,7 +7214,6 @@ namespace Google.Cloud.Batch.V1Alpha {
       if (TaskCountPerNode != 0L) hash ^= TaskCountPerNode.GetHashCode();
       if (RequireHostsFile != false) hash ^= RequireHostsFile.GetHashCode();
       if (PermissiveSsh != false) hash ^= PermissiveSsh.GetHashCode();
-      if (EnableOslogin != false) hash ^= EnableOslogin.GetHashCode();
       if (RunAsNonRoot != false) hash ^= RunAsNonRoot.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -7298,10 +7271,6 @@ namespace Google.Cloud.Batch.V1Alpha {
         output.WriteRawTag(96);
         output.WriteBool(PermissiveSsh);
       }
-      if (EnableOslogin != false) {
-        output.WriteRawTag(104);
-        output.WriteBool(EnableOslogin);
-      }
       if (RunAsNonRoot != false) {
         output.WriteRawTag(112);
         output.WriteBool(RunAsNonRoot);
@@ -7354,10 +7323,6 @@ namespace Google.Cloud.Batch.V1Alpha {
         output.WriteRawTag(96);
         output.WriteBool(PermissiveSsh);
       }
-      if (EnableOslogin != false) {
-        output.WriteRawTag(104);
-        output.WriteBool(EnableOslogin);
-      }
       if (RunAsNonRoot != false) {
         output.WriteRawTag(112);
         output.WriteBool(RunAsNonRoot);
@@ -7399,9 +7364,6 @@ namespace Google.Cloud.Batch.V1Alpha {
         size += 1 + 1;
       }
       if (PermissiveSsh != false) {
-        size += 1 + 1;
-      }
-      if (EnableOslogin != false) {
         size += 1 + 1;
       }
       if (RunAsNonRoot != false) {
@@ -7453,9 +7415,6 @@ namespace Google.Cloud.Batch.V1Alpha {
       }
       if (other.PermissiveSsh != false) {
         PermissiveSsh = other.PermissiveSsh;
-      }
-      if (other.EnableOslogin != false) {
-        EnableOslogin = other.EnableOslogin;
       }
       if (other.RunAsNonRoot != false) {
         RunAsNonRoot = other.RunAsNonRoot;
@@ -7525,10 +7484,6 @@ namespace Google.Cloud.Batch.V1Alpha {
             PermissiveSsh = input.ReadBool();
             break;
           }
-          case 104: {
-            EnableOslogin = input.ReadBool();
-            break;
-          }
           case 112: {
             RunAsNonRoot = input.ReadBool();
             break;
@@ -7596,10 +7551,6 @@ namespace Google.Cloud.Batch.V1Alpha {
           }
           case 96: {
             PermissiveSsh = input.ReadBool();
-            break;
-          }
-          case 104: {
-            EnableOslogin = input.ReadBool();
             break;
           }
           case 112: {
