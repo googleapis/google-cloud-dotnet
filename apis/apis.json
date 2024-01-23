@@ -199,7 +199,6 @@
         "database"
       ],
       "dependencies": {
-        "Google.Api.CommonProtos": "2.13.0",
         "Google.Cloud.Iam.V1": "3.0.0",
         "Google.Cloud.Location": "2.0.0",
         "Google.LongRunning": "3.0.0"
@@ -630,7 +629,6 @@
         "batch"
       ],
       "dependencies": {
-        "Google.Api.CommonProtos": "2.13.0",
         "Google.Cloud.Iam.V1": "3.0.0",
         "Google.Cloud.Location": "2.0.0",
         "Google.LongRunning": "3.0.0"
@@ -1425,8 +1423,7 @@
         "resources"
       ],
       "dependencies": {
-        "Google.Api.CommonProtos": "2.13.0",
-        "Google.Api.Gax.Grpc": "4.4.0",
+        "Google.Api.Gax.Grpc": "4.5.0",
         "Google.Cloud.Iam.V1": "3.0.0",
         "Google.Cloud.Location": "2.0.0",
         "Google.LongRunning": "3.0.0",
@@ -5261,8 +5258,7 @@
         "vmware"
       ],
       "dependencies": {
-        "Google.Api.CommonProtos": "2.13.0",
-        "Google.Api.Gax.Grpc": "4.4.0",
+        "Google.Api.Gax.Grpc": "4.5.0",
         "Google.Cloud.Iam.V1": "3.0.0",
         "Google.Cloud.Location": "2.0.0",
         "Google.LongRunning": "3.0.0",
