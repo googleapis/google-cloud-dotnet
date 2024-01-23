@@ -52,7 +52,7 @@ public class StorageUploader
         GaxPreconditions.CheckNotNullOrEmpty(objectName, nameof(objectName));
         GaxPreconditions.CheckNotNull(stream, nameof(stream));
 
-        var headerCallSettings = CallSettings.FromHeader("x-goog-request-params", $"bucket={Uri.EscapeDataString(bucket.ToString())}");
+        var headerCallSettings = CallSettings.FromGoogleRequestParamsHeader("bucket", bucket.ToString());
         using var requestStream = _client.WriteObject(headerCallSettings);
 
         // TODO: Ouch! Can we avoid this?
