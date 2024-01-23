@@ -162,11 +162,8 @@ public sealed class SubscriberClientBuilder : ClientBuilderBase<SubscriberClient
 
         // We never modify a settings object that the user code has specified explicitly.
         var settingsToModify = ApiSettings?.Clone() ?? new SubscriberServiceApiSettings();
-
-        // TODO: Use CallSettings.FromGoogleRequestParamsHeader when
-        // https://github.com/googleapis/gax-dotnet/issues/733 is fixed and released.
-        settingsToModify.StreamingPullSettings = settingsToModify.StreamingPullSettings
-            .WithHeader("x-goog-request-params", $"subscription={Uri.EscapeDataString(subscriptionName.ToString())}");
+        var requestHeader = CallSettings.FromGoogleRequestParamsHeader("subscription", subscriptionName.ToString());
+        settingsToModify.StreamingPullSettings = settingsToModify.StreamingPullSettings.MergedWith(requestHeader);
         return settingsToModify;        
     }
 
