@@ -44,6 +44,8 @@ namespace GoogleCSharpSnippets
                 SchemaSettings = new SchemaSettings(),
                 SatisfiesPzs = false,
                 MessageRetentionDuration = new Duration(),
+                State = Topic.Types.State.Unspecified,
+                IngestionDataSourceSettings = new IngestionDataSourceSettings(),
             };
             // Make the request
             Topic response = publisherServiceApiClient.CreateTopic(request);
