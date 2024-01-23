@@ -586,7 +586,7 @@ namespace Google.Cloud.Functions.V1
 
         /// <summary>
         /// Creates a new function. If a function with the given name already exists in
-        /// the specified project, the long running operation returns an
+        /// the specified project, the long running operation will return
         /// `ALREADY_EXISTS` error.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -597,7 +597,7 @@ namespace Google.Cloud.Functions.V1
 
         /// <summary>
         /// Creates a new function. If a function with the given name already exists in
-        /// the specified project, the long running operation returns an
+        /// the specified project, the long running operation will return
         /// `ALREADY_EXISTS` error.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -608,7 +608,7 @@ namespace Google.Cloud.Functions.V1
 
         /// <summary>
         /// Creates a new function. If a function with the given name already exists in
-        /// the specified project, the long running operation returns an
+        /// the specified project, the long running operation will return
         /// `ALREADY_EXISTS` error.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -645,7 +645,7 @@ namespace Google.Cloud.Functions.V1
 
         /// <summary>
         /// Creates a new function. If a function with the given name already exists in
-        /// the specified project, the long running operation returns an
+        /// the specified project, the long running operation will return
         /// `ALREADY_EXISTS` error.
         /// </summary>
         /// <param name="location">
@@ -666,7 +666,7 @@ namespace Google.Cloud.Functions.V1
 
         /// <summary>
         /// Creates a new function. If a function with the given name already exists in
-        /// the specified project, the long running operation returns an
+        /// the specified project, the long running operation will return
         /// `ALREADY_EXISTS` error.
         /// </summary>
         /// <param name="location">
@@ -687,7 +687,7 @@ namespace Google.Cloud.Functions.V1
 
         /// <summary>
         /// Creates a new function. If a function with the given name already exists in
-        /// the specified project, the long running operation returns an
+        /// the specified project, the long running operation will return
         /// `ALREADY_EXISTS` error.
         /// </summary>
         /// <param name="location">
@@ -704,7 +704,7 @@ namespace Google.Cloud.Functions.V1
 
         /// <summary>
         /// Creates a new function. If a function with the given name already exists in
-        /// the specified project, the long running operation returns an
+        /// the specified project, the long running operation will return
         /// `ALREADY_EXISTS` error.
         /// </summary>
         /// <param name="location">
@@ -725,7 +725,7 @@ namespace Google.Cloud.Functions.V1
 
         /// <summary>
         /// Creates a new function. If a function with the given name already exists in
-        /// the specified project, the long running operation returns an
+        /// the specified project, the long running operation will return
         /// `ALREADY_EXISTS` error.
         /// </summary>
         /// <param name="location">
@@ -746,7 +746,7 @@ namespace Google.Cloud.Functions.V1
 
         /// <summary>
         /// Creates a new function. If a function with the given name already exists in
-        /// the specified project, the long running operation returns an
+        /// the specified project, the long running operation will return
         /// `ALREADY_EXISTS` error.
         /// </summary>
         /// <param name="location">
@@ -855,7 +855,7 @@ namespace Google.Cloud.Functions.V1
 
         /// <summary>
         /// Deletes a function with the given name from the specified project. If the
-        /// given function is used by some trigger, the trigger is updated to
+        /// given function is used by some trigger, the trigger will be updated to
         /// remove this function.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -866,7 +866,7 @@ namespace Google.Cloud.Functions.V1
 
         /// <summary>
         /// Deletes a function with the given name from the specified project. If the
-        /// given function is used by some trigger, the trigger is updated to
+        /// given function is used by some trigger, the trigger will be updated to
         /// remove this function.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -877,7 +877,7 @@ namespace Google.Cloud.Functions.V1
 
         /// <summary>
         /// Deletes a function with the given name from the specified project. If the
-        /// given function is used by some trigger, the trigger is updated to
+        /// given function is used by some trigger, the trigger will be updated to
         /// remove this function.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -914,7 +914,7 @@ namespace Google.Cloud.Functions.V1
 
         /// <summary>
         /// Deletes a function with the given name from the specified project. If the
-        /// given function is used by some trigger, the trigger is updated to
+        /// given function is used by some trigger, the trigger will be updated to
         /// remove this function.
         /// </summary>
         /// <param name="name">
@@ -930,7 +930,7 @@ namespace Google.Cloud.Functions.V1
 
         /// <summary>
         /// Deletes a function with the given name from the specified project. If the
-        /// given function is used by some trigger, the trigger is updated to
+        /// given function is used by some trigger, the trigger will be updated to
         /// remove this function.
         /// </summary>
         /// <param name="name">
@@ -946,7 +946,7 @@ namespace Google.Cloud.Functions.V1
 
         /// <summary>
         /// Deletes a function with the given name from the specified project. If the
-        /// given function is used by some trigger, the trigger is updated to
+        /// given function is used by some trigger, the trigger will be updated to
         /// remove this function.
         /// </summary>
         /// <param name="name">
@@ -959,7 +959,7 @@ namespace Google.Cloud.Functions.V1
 
         /// <summary>
         /// Deletes a function with the given name from the specified project. If the
-        /// given function is used by some trigger, the trigger is updated to
+        /// given function is used by some trigger, the trigger will be updated to
         /// remove this function.
         /// </summary>
         /// <param name="name">
@@ -975,7 +975,7 @@ namespace Google.Cloud.Functions.V1
 
         /// <summary>
         /// Deletes a function with the given name from the specified project. If the
-        /// given function is used by some trigger, the trigger is updated to
+        /// given function is used by some trigger, the trigger will be updated to
         /// remove this function.
         /// </summary>
         /// <param name="name">
@@ -991,7 +991,7 @@ namespace Google.Cloud.Functions.V1
 
         /// <summary>
         /// Deletes a function with the given name from the specified project. If the
-        /// given function is used by some trigger, the trigger is updated to
+        /// given function is used by some trigger, the trigger will be updated to
         /// remove this function.
         /// </summary>
         /// <param name="name">
@@ -1174,12 +1174,12 @@ namespace Google.Cloud.Functions.V1
         /// attached, the identity from the credentials would be used, but that
         /// identity does not have permissions to upload files to the URL.
         /// 
-        /// When making an HTTP PUT request, these two headers must be specified:
+        /// When making a HTTP PUT request, these two headers need to be specified:
         /// 
         /// * `content-type: application/zip`
         /// * `x-goog-content-length-range: 0,104857600`
         /// 
-        /// And this header must NOT be specified:
+        /// And this header SHOULD NOT be specified:
         /// 
         /// * `Authorization: Bearer YOUR_TOKEN`
         /// </summary>
@@ -1207,12 +1207,12 @@ namespace Google.Cloud.Functions.V1
         /// attached, the identity from the credentials would be used, but that
         /// identity does not have permissions to upload files to the URL.
         /// 
-        /// When making an HTTP PUT request, these two headers must be specified:
+        /// When making a HTTP PUT request, these two headers need to be specified:
         /// 
         /// * `content-type: application/zip`
         /// * `x-goog-content-length-range: 0,104857600`
         /// 
-        /// And this header must NOT be specified:
+        /// And this header SHOULD NOT be specified:
         /// 
         /// * `Authorization: Bearer YOUR_TOKEN`
         /// </summary>
@@ -1240,12 +1240,12 @@ namespace Google.Cloud.Functions.V1
         /// attached, the identity from the credentials would be used, but that
         /// identity does not have permissions to upload files to the URL.
         /// 
-        /// When making an HTTP PUT request, these two headers must be specified:
+        /// When making a HTTP PUT request, these two headers need to be specified:
         /// 
         /// * `content-type: application/zip`
         /// * `x-goog-content-length-range: 0,104857600`
         /// 
-        /// And this header must NOT be specified:
+        /// And this header SHOULD NOT be specified:
         /// 
         /// * `Authorization: Bearer YOUR_TOKEN`
         /// </summary>
@@ -1257,9 +1257,9 @@ namespace Google.Cloud.Functions.V1
 
         /// <summary>
         /// Returns a signed URL for downloading deployed function source code.
-        /// The URL is only valid for a limited period and must be used within
+        /// The URL is only valid for a limited period and should be used within
         /// minutes after generation.
-        /// For more information about the signed URL usage, see:
+        /// For more information about the signed URL usage see:
         /// https://cloud.google.com/storage/docs/access-control/signed-urls
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1270,9 +1270,9 @@ namespace Google.Cloud.Functions.V1
 
         /// <summary>
         /// Returns a signed URL for downloading deployed function source code.
-        /// The URL is only valid for a limited period and must be used within
+        /// The URL is only valid for a limited period and should be used within
         /// minutes after generation.
-        /// For more information about the signed URL usage, see:
+        /// For more information about the signed URL usage see:
         /// https://cloud.google.com/storage/docs/access-control/signed-urls
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1283,9 +1283,9 @@ namespace Google.Cloud.Functions.V1
 
         /// <summary>
         /// Returns a signed URL for downloading deployed function source code.
-        /// The URL is only valid for a limited period and must be used within
+        /// The URL is only valid for a limited period and should be used within
         /// minutes after generation.
-        /// For more information about the signed URL usage, see:
+        /// For more information about the signed URL usage see:
         /// https://cloud.google.com/storage/docs/access-control/signed-urls
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1360,7 +1360,7 @@ namespace Google.Cloud.Functions.V1
         /// <summary>
         /// Tests the specified permissions against the IAM access control policy
         /// for a function.
-        /// If the function does not exist, this returns an empty set of
+        /// If the function does not exist, this will return an empty set of
         /// permissions, not a NOT_FOUND error.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1372,7 +1372,7 @@ namespace Google.Cloud.Functions.V1
         /// <summary>
         /// Tests the specified permissions against the IAM access control policy
         /// for a function.
-        /// If the function does not exist, this returns an empty set of
+        /// If the function does not exist, this will return an empty set of
         /// permissions, not a NOT_FOUND error.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1384,7 +1384,7 @@ namespace Google.Cloud.Functions.V1
         /// <summary>
         /// Tests the specified permissions against the IAM access control policy
         /// for a function.
-        /// If the function does not exist, this returns an empty set of
+        /// If the function does not exist, this will return an empty set of
         /// permissions, not a NOT_FOUND error.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1585,7 +1585,7 @@ namespace Google.Cloud.Functions.V1
 
         /// <summary>
         /// Creates a new function. If a function with the given name already exists in
-        /// the specified project, the long running operation returns an
+        /// the specified project, the long running operation will return
         /// `ALREADY_EXISTS` error.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1599,7 +1599,7 @@ namespace Google.Cloud.Functions.V1
 
         /// <summary>
         /// Creates a new function. If a function with the given name already exists in
-        /// the specified project, the long running operation returns an
+        /// the specified project, the long running operation will return
         /// `ALREADY_EXISTS` error.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1643,7 +1643,7 @@ namespace Google.Cloud.Functions.V1
 
         /// <summary>
         /// Deletes a function with the given name from the specified project. If the
-        /// given function is used by some trigger, the trigger is updated to
+        /// given function is used by some trigger, the trigger will be updated to
         /// remove this function.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1657,7 +1657,7 @@ namespace Google.Cloud.Functions.V1
 
         /// <summary>
         /// Deletes a function with the given name from the specified project. If the
-        /// given function is used by some trigger, the trigger is updated to
+        /// given function is used by some trigger, the trigger will be updated to
         /// remove this function.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1717,12 +1717,12 @@ namespace Google.Cloud.Functions.V1
         /// attached, the identity from the credentials would be used, but that
         /// identity does not have permissions to upload files to the URL.
         /// 
-        /// When making an HTTP PUT request, these two headers must be specified:
+        /// When making a HTTP PUT request, these two headers need to be specified:
         /// 
         /// * `content-type: application/zip`
         /// * `x-goog-content-length-range: 0,104857600`
         /// 
-        /// And this header must NOT be specified:
+        /// And this header SHOULD NOT be specified:
         /// 
         /// * `Authorization: Bearer YOUR_TOKEN`
         /// </summary>
@@ -1753,12 +1753,12 @@ namespace Google.Cloud.Functions.V1
         /// attached, the identity from the credentials would be used, but that
         /// identity does not have permissions to upload files to the URL.
         /// 
-        /// When making an HTTP PUT request, these two headers must be specified:
+        /// When making a HTTP PUT request, these two headers need to be specified:
         /// 
         /// * `content-type: application/zip`
         /// * `x-goog-content-length-range: 0,104857600`
         /// 
-        /// And this header must NOT be specified:
+        /// And this header SHOULD NOT be specified:
         /// 
         /// * `Authorization: Bearer YOUR_TOKEN`
         /// </summary>
@@ -1773,9 +1773,9 @@ namespace Google.Cloud.Functions.V1
 
         /// <summary>
         /// Returns a signed URL for downloading deployed function source code.
-        /// The URL is only valid for a limited period and must be used within
+        /// The URL is only valid for a limited period and should be used within
         /// minutes after generation.
-        /// For more information about the signed URL usage, see:
+        /// For more information about the signed URL usage see:
         /// https://cloud.google.com/storage/docs/access-control/signed-urls
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1789,9 +1789,9 @@ namespace Google.Cloud.Functions.V1
 
         /// <summary>
         /// Returns a signed URL for downloading deployed function source code.
-        /// The URL is only valid for a limited period and must be used within
+        /// The URL is only valid for a limited period and should be used within
         /// minutes after generation.
-        /// For more information about the signed URL usage, see:
+        /// For more information about the signed URL usage see:
         /// https://cloud.google.com/storage/docs/access-control/signed-urls
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1860,7 +1860,7 @@ namespace Google.Cloud.Functions.V1
         /// <summary>
         /// Tests the specified permissions against the IAM access control policy
         /// for a function.
-        /// If the function does not exist, this returns an empty set of
+        /// If the function does not exist, this will return an empty set of
         /// permissions, not a NOT_FOUND error.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1875,7 +1875,7 @@ namespace Google.Cloud.Functions.V1
         /// <summary>
         /// Tests the specified permissions against the IAM access control policy
         /// for a function.
-        /// If the function does not exist, this returns an empty set of
+        /// If the function does not exist, this will return an empty set of
         /// permissions, not a NOT_FOUND error.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>

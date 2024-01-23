@@ -37,6 +37,7 @@ namespace GoogleCSharpSnippets
             GetFunctionRequest request = new GetFunctionRequest
             {
                 CloudFunctionName = CloudFunctionName.FromProjectLocationFunction("[PROJECT]", "[LOCATION]", "[FUNCTION]"),
+                VersionId = 0L,
             };
             // Make the request
             CloudFunction response = cloudFunctionsServiceClient.GetFunction(request);
