@@ -34,17 +34,18 @@ namespace Google.Cloud.Spanner.V1 {
             "dG9fdHlwZV9mcW4YBSABKAkifwoKU3RydWN0VHlwZRIzCgZmaWVsZHMYASAD",
             "KAsyIy5nb29nbGUuc3Bhbm5lci52MS5TdHJ1Y3RUeXBlLkZpZWxkGjwKBUZp",
             "ZWxkEgwKBG5hbWUYASABKAkSJQoEdHlwZRgCIAEoCzIXLmdvb2dsZS5zcGFu",
-            "bmVyLnYxLlR5cGUqugEKCFR5cGVDb2RlEhkKFVRZUEVfQ09ERV9VTlNQRUNJ",
-            "RklFRBAAEggKBEJPT0wQARIJCgVJTlQ2NBACEgsKB0ZMT0FUNjQQAxINCglU",
-            "SU1FU1RBTVAQBBIICgREQVRFEAUSCgoGU1RSSU5HEAYSCQoFQllURVMQBxIJ",
-            "CgVBUlJBWRAIEgoKBlNUUlVDVBAJEgsKB05VTUVSSUMQChIICgRKU09OEAsS",
-            "CQoFUFJPVE8QDRIICgRFTlVNEA4qZAoSVHlwZUFubm90YXRpb25Db2RlEiQK",
-            "IFRZUEVfQU5OT1RBVElPTl9DT0RFX1VOU1BFQ0lGSUVEEAASDgoKUEdfTlVN",
-            "RVJJQxACEgwKCFBHX0pTT05CEAMSCgoGUEdfT0lEEARCrAEKFWNvbS5nb29n",
-            "bGUuc3Bhbm5lci52MUIJVHlwZVByb3RvUAFaNWNsb3VkLmdvb2dsZS5jb20v",
-            "Z28vc3Bhbm5lci9hcGl2MS9zcGFubmVycGI7c3Bhbm5lcnBiqgIXR29vZ2xl",
-            "LkNsb3VkLlNwYW5uZXIuVjHKAhdHb29nbGVcQ2xvdWRcU3Bhbm5lclxWMeoC",
-            "Gkdvb2dsZTo6Q2xvdWQ6OlNwYW5uZXI6OlYxYgZwcm90bzM="));
+            "bmVyLnYxLlR5cGUqxwEKCFR5cGVDb2RlEhkKFVRZUEVfQ09ERV9VTlNQRUNJ",
+            "RklFRBAAEggKBEJPT0wQARIJCgVJTlQ2NBACEgsKB0ZMT0FUNjQQAxILCgdG",
+            "TE9BVDMyEA8SDQoJVElNRVNUQU1QEAQSCAoEREFURRAFEgoKBlNUUklORxAG",
+            "EgkKBUJZVEVTEAcSCQoFQVJSQVkQCBIKCgZTVFJVQ1QQCRILCgdOVU1FUklD",
+            "EAoSCAoESlNPThALEgkKBVBST1RPEA0SCAoERU5VTRAOKmQKElR5cGVBbm5v",
+            "dGF0aW9uQ29kZRIkCiBUWVBFX0FOTk9UQVRJT05fQ09ERV9VTlNQRUNJRklF",
+            "RBAAEg4KClBHX05VTUVSSUMQAhIMCghQR19KU09OQhADEgoKBlBHX09JRBAE",
+            "QqwBChVjb20uZ29vZ2xlLnNwYW5uZXIudjFCCVR5cGVQcm90b1ABWjVjbG91",
+            "ZC5nb29nbGUuY29tL2dvL3NwYW5uZXIvYXBpdjEvc3Bhbm5lcnBiO3NwYW5u",
+            "ZXJwYqoCF0dvb2dsZS5DbG91ZC5TcGFubmVyLlYxygIXR29vZ2xlXENsb3Vk",
+            "XFNwYW5uZXJcVjHqAhpHb29nbGU6OkNsb3VkOjpTcGFubmVyOjpWMWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Spanner.V1.TypeCode), typeof(global::Google.Cloud.Spanner.V1.TypeAnnotationCode), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -83,6 +84,11 @@ namespace Google.Cloud.Spanner.V1 {
     /// `"-Infinity"`.
     /// </summary>
     [pbr::OriginalName("FLOAT64")] Float64 = 3,
+    /// <summary>
+    /// Encoded as `number`, or the strings `"NaN"`, `"Infinity"`, or
+    /// `"-Infinity"`.
+    /// </summary>
+    [pbr::OriginalName("FLOAT32")] Float32 = 15,
     /// <summary>
     /// Encoded as `string` in RFC 3339 timestamp format. The time zone
     /// must be present, and must be `"Z"`.
