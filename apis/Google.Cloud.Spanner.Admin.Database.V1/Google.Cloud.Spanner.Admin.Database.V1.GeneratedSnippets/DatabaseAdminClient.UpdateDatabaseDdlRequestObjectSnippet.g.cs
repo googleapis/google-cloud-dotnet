@@ -20,6 +20,7 @@ namespace GoogleCSharpSnippets
     using Google.Cloud.Spanner.Admin.Database.V1;
     using Google.Cloud.Spanner.Common.V1;
     using Google.LongRunning;
+    using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedDatabaseAdminClientSnippets
@@ -42,6 +43,7 @@ namespace GoogleCSharpSnippets
                 DatabaseAsDatabaseName = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 Statements = { "", },
                 OperationId = "",
+                ProtoDescriptors = ByteString.Empty,
             };
             // Make the request
             Operation<Empty, UpdateDatabaseDdlMetadata> response = databaseAdminClient.UpdateDatabaseDdl(request);
