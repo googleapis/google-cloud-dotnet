@@ -41,7 +41,7 @@ namespace Google.Cloud.Batch.V1 {
             "Cg1zdGF0dXNfZXZlbnRzGAIgAygLMiIuZ29vZ2xlLmNsb3VkLmJhdGNoLnYx",
             "LlN0YXR1c0V2ZW50InEKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAAS",
             "CwoHUEVORElORxABEgwKCEFTU0lHTkVEEAISCwoHUlVOTklORxADEgoKBkZB",
-            "SUxFRBAEEg0KCVNVQ0NFRURFRBAFEg4KClVORVhFQ1VURUQQBiL5BQoIUnVu",
+            "SUxFRBAEEg0KCVNVQ0NFRURFRBAFEg4KClVORVhFQ1VURUQQBiKeBgoIUnVu",
             "bmFibGUSPgoJY29udGFpbmVyGAEgASgLMikuZ29vZ2xlLmNsb3VkLmJhdGNo",
             "LnYxLlJ1bm5hYmxlLkNvbnRhaW5lckgAEjgKBnNjcmlwdBgCIAEoCzImLmdv",
             "b2dsZS5jbG91ZC5iYXRjaC52MS5SdW5uYWJsZS5TY3JpcHRIABI6CgdiYXJy",
@@ -51,49 +51,50 @@ namespace Google.Cloud.Batch.V1 {
             "eXNfcnVuGAUgASgIEjcKC2Vudmlyb25tZW50GAcgASgLMiIuZ29vZ2xlLmNs",
             "b3VkLmJhdGNoLnYxLkVudmlyb25tZW50EioKB3RpbWVvdXQYCCABKAsyGS5n",
             "b29nbGUucHJvdG9idWYuRHVyYXRpb24SOwoGbGFiZWxzGAkgAygLMisuZ29v",
-            "Z2xlLmNsb3VkLmJhdGNoLnYxLlJ1bm5hYmxlLkxhYmVsc0VudHJ5GqoBCglD",
+            "Z2xlLmNsb3VkLmJhdGNoLnYxLlJ1bm5hYmxlLkxhYmVsc0VudHJ5Gs8BCglD",
             "b250YWluZXISEQoJaW1hZ2VfdXJpGAEgASgJEhAKCGNvbW1hbmRzGAIgAygJ",
             "EhIKCmVudHJ5cG9pbnQYAyABKAkSDwoHdm9sdW1lcxgHIAMoCRIPCgdvcHRp",
             "b25zGAggASgJEh4KFmJsb2NrX2V4dGVybmFsX25ldHdvcmsYCSABKAgSEAoI",
-            "dXNlcm5hbWUYCiABKAkSEAoIcGFzc3dvcmQYCyABKAkaMwoGU2NyaXB0Eg4K",
-            "BHBhdGgYASABKAlIABIOCgR0ZXh0GAIgASgJSABCCQoHY29tbWFuZBoXCgdC",
-            "YXJyaWVyEgwKBG5hbWUYASABKAkaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEg",
-            "ASgJEg0KBXZhbHVlGAIgASgJOgI4AUIMCgpleGVjdXRhYmxlIv0DCghUYXNr",
-            "U3BlYxIyCglydW5uYWJsZXMYCCADKAsyHy5nb29nbGUuY2xvdWQuYmF0Y2gu",
-            "djEuUnVubmFibGUSQAoQY29tcHV0ZV9yZXNvdXJjZRgDIAEoCzImLmdvb2ds",
-            "ZS5jbG91ZC5iYXRjaC52MS5Db21wdXRlUmVzb3VyY2USMwoQbWF4X3J1bl9k",
-            "dXJhdGlvbhgEIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIXCg9t",
-            "YXhfcmV0cnlfY291bnQYBSABKAUSQgoSbGlmZWN5Y2xlX3BvbGljaWVzGAkg",
-            "AygLMiYuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxLkxpZmVjeWNsZVBvbGljeRJL",
-            "CgxlbnZpcm9ubWVudHMYBiADKAsyMS5nb29nbGUuY2xvdWQuYmF0Y2gudjEu",
-            "VGFza1NwZWMuRW52aXJvbm1lbnRzRW50cnlCAhgBEi4KB3ZvbHVtZXMYByAD",
-            "KAsyHS5nb29nbGUuY2xvdWQuYmF0Y2gudjEuVm9sdW1lEjcKC2Vudmlyb25t",
-            "ZW50GAogASgLMiIuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxLkVudmlyb25tZW50",
-            "GjMKEUVudmlyb25tZW50c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
-            "IAEoCToCOAEiigIKD0xpZmVjeWNsZVBvbGljeRI9CgZhY3Rpb24YASABKA4y",
-            "LS5nb29nbGUuY2xvdWQuYmF0Y2gudjEuTGlmZWN5Y2xlUG9saWN5LkFjdGlv",
-            "bhJQChBhY3Rpb25fY29uZGl0aW9uGAIgASgLMjYuZ29vZ2xlLmNsb3VkLmJh",
-            "dGNoLnYxLkxpZmVjeWNsZVBvbGljeS5BY3Rpb25Db25kaXRpb24aJQoPQWN0",
-            "aW9uQ29uZGl0aW9uEhIKCmV4aXRfY29kZXMYASADKAUiPwoGQWN0aW9uEhYK",
-            "EkFDVElPTl9VTlNQRUNJRklFRBAAEg4KClJFVFJZX1RBU0sQARINCglGQUlM",
-            "X1RBU0sQAiLAAQoEVGFzaxIMCgRuYW1lGAEgASgJEjEKBnN0YXR1cxgCIAEo",
-            "CzIhLmdvb2dsZS5jbG91ZC5iYXRjaC52MS5UYXNrU3RhdHVzOnfqQXQKGWJh",
-            "dGNoLmdvb2dsZWFwaXMuY29tL1Rhc2sSV3Byb2plY3RzL3twcm9qZWN0fS9s",
-            "b2NhdGlvbnMve2xvY2F0aW9ufS9qb2JzL3tqb2J9L3Rhc2tHcm91cHMve3Rh",
-            "c2tfZ3JvdXB9L3Rhc2tzL3t0YXNrfSKPAwoLRW52aXJvbm1lbnQSRAoJdmFy",
-            "aWFibGVzGAEgAygLMjEuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxLkVudmlyb25t",
-            "ZW50LlZhcmlhYmxlc0VudHJ5ElEKEHNlY3JldF92YXJpYWJsZXMYAiADKAsy",
-            "Ny5nb29nbGUuY2xvdWQuYmF0Y2gudjEuRW52aXJvbm1lbnQuU2VjcmV0VmFy",
-            "aWFibGVzRW50cnkSSQoTZW5jcnlwdGVkX3ZhcmlhYmxlcxgDIAEoCzIsLmdv",
-            "b2dsZS5jbG91ZC5iYXRjaC52MS5FbnZpcm9ubWVudC5LTVNFbnZNYXAaMgoJ",
-            "S01TRW52TWFwEhAKCGtleV9uYW1lGAEgASgJEhMKC2NpcGhlcl90ZXh0GAIg",
-            "ASgJGjAKDlZhcmlhYmxlc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
-            "IAEoCToCOAEaNgoUU2VjcmV0VmFyaWFibGVzRW50cnkSCwoDa2V5GAEgASgJ",
-            "Eg0KBXZhbHVlGAIgASgJOgI4AUKqAQoZY29tLmdvb2dsZS5jbG91ZC5iYXRj",
-            "aC52MUIJVGFza1Byb3RvUAFaL2Nsb3VkLmdvb2dsZS5jb20vZ28vYmF0Y2gv",
-            "YXBpdjEvYmF0Y2hwYjtiYXRjaHBiogIDR0NCqgIVR29vZ2xlLkNsb3VkLkJh",
-            "dGNoLlYxygIVR29vZ2xlXENsb3VkXEJhdGNoXFYx6gIYR29vZ2xlOjpDbG91",
-            "ZDo6QmF0Y2g6OlYxYgZwcm90bzM="));
+            "dXNlcm5hbWUYCiABKAkSEAoIcGFzc3dvcmQYCyABKAkSIwoWZW5hYmxlX2lt",
+            "YWdlX3N0cmVhbWluZxgMIAEoCEID4EEBGjMKBlNjcmlwdBIOCgRwYXRoGAEg",
+            "ASgJSAASDgoEdGV4dBgCIAEoCUgAQgkKB2NvbW1hbmQaFwoHQmFycmllchIM",
+            "CgRuYW1lGAEgASgJGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2",
+            "YWx1ZRgCIAEoCToCOAFCDAoKZXhlY3V0YWJsZSL9AwoIVGFza1NwZWMSMgoJ",
+            "cnVubmFibGVzGAggAygLMh8uZ29vZ2xlLmNsb3VkLmJhdGNoLnYxLlJ1bm5h",
+            "YmxlEkAKEGNvbXB1dGVfcmVzb3VyY2UYAyABKAsyJi5nb29nbGUuY2xvdWQu",
+            "YmF0Y2gudjEuQ29tcHV0ZVJlc291cmNlEjMKEG1heF9ydW5fZHVyYXRpb24Y",
+            "BCABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SFwoPbWF4X3JldHJ5",
+            "X2NvdW50GAUgASgFEkIKEmxpZmVjeWNsZV9wb2xpY2llcxgJIAMoCzImLmdv",
+            "b2dsZS5jbG91ZC5iYXRjaC52MS5MaWZlY3ljbGVQb2xpY3kSSwoMZW52aXJv",
+            "bm1lbnRzGAYgAygLMjEuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxLlRhc2tTcGVj",
+            "LkVudmlyb25tZW50c0VudHJ5QgIYARIuCgd2b2x1bWVzGAcgAygLMh0uZ29v",
+            "Z2xlLmNsb3VkLmJhdGNoLnYxLlZvbHVtZRI3CgtlbnZpcm9ubWVudBgKIAEo",
+            "CzIiLmdvb2dsZS5jbG91ZC5iYXRjaC52MS5FbnZpcm9ubWVudBozChFFbnZp",
+            "cm9ubWVudHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgB",
+            "IooCCg9MaWZlY3ljbGVQb2xpY3kSPQoGYWN0aW9uGAEgASgOMi0uZ29vZ2xl",
+            "LmNsb3VkLmJhdGNoLnYxLkxpZmVjeWNsZVBvbGljeS5BY3Rpb24SUAoQYWN0",
+            "aW9uX2NvbmRpdGlvbhgCIAEoCzI2Lmdvb2dsZS5jbG91ZC5iYXRjaC52MS5M",
+            "aWZlY3ljbGVQb2xpY3kuQWN0aW9uQ29uZGl0aW9uGiUKD0FjdGlvbkNvbmRp",
+            "dGlvbhISCgpleGl0X2NvZGVzGAEgAygFIj8KBkFjdGlvbhIWChJBQ1RJT05f",
+            "VU5TUEVDSUZJRUQQABIOCgpSRVRSWV9UQVNLEAESDQoJRkFJTF9UQVNLEAIi",
+            "wAEKBFRhc2sSDAoEbmFtZRgBIAEoCRIxCgZzdGF0dXMYAiABKAsyIS5nb29n",
+            "bGUuY2xvdWQuYmF0Y2gudjEuVGFza1N0YXR1czp36kF0ChliYXRjaC5nb29n",
+            "bGVhcGlzLmNvbS9UYXNrEldwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
+            "L3tsb2NhdGlvbn0vam9icy97am9ifS90YXNrR3JvdXBzL3t0YXNrX2dyb3Vw",
+            "fS90YXNrcy97dGFza30ijwMKC0Vudmlyb25tZW50EkQKCXZhcmlhYmxlcxgB",
+            "IAMoCzIxLmdvb2dsZS5jbG91ZC5iYXRjaC52MS5FbnZpcm9ubWVudC5WYXJp",
+            "YWJsZXNFbnRyeRJRChBzZWNyZXRfdmFyaWFibGVzGAIgAygLMjcuZ29vZ2xl",
+            "LmNsb3VkLmJhdGNoLnYxLkVudmlyb25tZW50LlNlY3JldFZhcmlhYmxlc0Vu",
+            "dHJ5EkkKE2VuY3J5cHRlZF92YXJpYWJsZXMYAyABKAsyLC5nb29nbGUuY2xv",
+            "dWQuYmF0Y2gudjEuRW52aXJvbm1lbnQuS01TRW52TWFwGjIKCUtNU0Vudk1h",
+            "cBIQCghrZXlfbmFtZRgBIAEoCRITCgtjaXBoZXJfdGV4dBgCIAEoCRowCg5W",
+            "YXJpYWJsZXNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgB",
+            "GjYKFFNlY3JldFZhcmlhYmxlc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
+            "ZRgCIAEoCToCOAFCqgEKGWNvbS5nb29nbGUuY2xvdWQuYmF0Y2gudjFCCVRh",
+            "c2tQcm90b1ABWi9jbG91ZC5nb29nbGUuY29tL2dvL2JhdGNoL2FwaXYxL2Jh",
+            "dGNocGI7YmF0Y2hwYqICA0dDQqoCFUdvb2dsZS5DbG91ZC5CYXRjaC5WMcoC",
+            "FUdvb2dsZVxDbG91ZFxCYXRjaFxWMeoCGEdvb2dsZTo6Q2xvdWQ6OkJhdGNo",
+            "OjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Batch.V1.VolumeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -101,7 +102,7 @@ namespace Google.Cloud.Batch.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.StatusEvent), global::Google.Cloud.Batch.V1.StatusEvent.Parser, new[]{ "Type", "Description", "EventTime", "TaskExecution", "TaskState" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.TaskExecution), global::Google.Cloud.Batch.V1.TaskExecution.Parser, new[]{ "ExitCode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.TaskStatus), global::Google.Cloud.Batch.V1.TaskStatus.Parser, new[]{ "State", "StatusEvents" }, null, new[]{ typeof(global::Google.Cloud.Batch.V1.TaskStatus.Types.State) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.Runnable), global::Google.Cloud.Batch.V1.Runnable.Parser, new[]{ "Container", "Script", "Barrier", "DisplayName", "IgnoreExitStatus", "Background", "AlwaysRun", "Environment", "Timeout", "Labels" }, new[]{ "Executable" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.Runnable.Types.Container), global::Google.Cloud.Batch.V1.Runnable.Types.Container.Parser, new[]{ "ImageUri", "Commands", "Entrypoint", "Volumes", "Options", "BlockExternalNetwork", "Username", "Password" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.Runnable), global::Google.Cloud.Batch.V1.Runnable.Parser, new[]{ "Container", "Script", "Barrier", "DisplayName", "IgnoreExitStatus", "Background", "AlwaysRun", "Environment", "Timeout", "Labels" }, new[]{ "Executable" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.Runnable.Types.Container), global::Google.Cloud.Batch.V1.Runnable.Types.Container.Parser, new[]{ "ImageUri", "Commands", "Entrypoint", "Volumes", "Options", "BlockExternalNetwork", "Username", "Password", "EnableImageStreaming" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.Runnable.Types.Script), global::Google.Cloud.Batch.V1.Runnable.Types.Script.Parser, new[]{ "Path", "Text" }, new[]{ "Command" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.Runnable.Types.Barrier), global::Google.Cloud.Batch.V1.Runnable.Types.Barrier.Parser, new[]{ "Name" }, null, null, null, null),
             null, }),
@@ -1965,6 +1966,7 @@ namespace Google.Cloud.Batch.V1 {
           blockExternalNetwork_ = other.blockExternalNetwork_;
           username_ = other.username_;
           password_ = other.password_;
+          enableImageStreaming_ = other.enableImageStreaming_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -2112,6 +2114,37 @@ namespace Google.Cloud.Batch.V1 {
           }
         }
 
+        /// <summary>Field number for the "enable_image_streaming" field.</summary>
+        public const int EnableImageStreamingFieldNumber = 12;
+        private bool enableImageStreaming_;
+        /// <summary>
+        /// Optional. If set to true, this container runnable uses Image streaming.
+        ///
+        /// Use Image streaming to allow the runnable to initialize without
+        /// waiting for the entire container image to download, which can
+        /// significantly reduce startup time for large container images.
+        ///
+        /// When `enableImageStreaming` is set to true, the container
+        /// runtime is [containerd](https://containerd.io/) instead of Docker.
+        /// Additionally, this container runnable only supports the following
+        /// `container` subfields: `imageUri`,
+        /// `commands[]`, `entrypoint`, and
+        /// `volumes[]`; any other `container` subfields are ignored.
+        ///
+        /// For more information about the requirements and limitations for using
+        /// Image streaming with Batch, see the [`image-streaming`
+        /// sample on
+        /// GitHub](https://github.com/GoogleCloudPlatform/batch-samples/tree/main/api-samples/image-streaming).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool EnableImageStreaming {
+          get { return enableImageStreaming_; }
+          set {
+            enableImageStreaming_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -2135,6 +2168,7 @@ namespace Google.Cloud.Batch.V1 {
           if (BlockExternalNetwork != other.BlockExternalNetwork) return false;
           if (Username != other.Username) return false;
           if (Password != other.Password) return false;
+          if (EnableImageStreaming != other.EnableImageStreaming) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -2150,6 +2184,7 @@ namespace Google.Cloud.Batch.V1 {
           if (BlockExternalNetwork != false) hash ^= BlockExternalNetwork.GetHashCode();
           if (Username.Length != 0) hash ^= Username.GetHashCode();
           if (Password.Length != 0) hash ^= Password.GetHashCode();
+          if (EnableImageStreaming != false) hash ^= EnableImageStreaming.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -2194,6 +2229,10 @@ namespace Google.Cloud.Batch.V1 {
             output.WriteRawTag(90);
             output.WriteString(Password);
           }
+          if (EnableImageStreaming != false) {
+            output.WriteRawTag(96);
+            output.WriteBool(EnableImageStreaming);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -2230,6 +2269,10 @@ namespace Google.Cloud.Batch.V1 {
             output.WriteRawTag(90);
             output.WriteString(Password);
           }
+          if (EnableImageStreaming != false) {
+            output.WriteRawTag(96);
+            output.WriteBool(EnableImageStreaming);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -2259,6 +2302,9 @@ namespace Google.Cloud.Batch.V1 {
           }
           if (Password.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Password);
+          }
+          if (EnableImageStreaming != false) {
+            size += 1 + 1;
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -2291,6 +2337,9 @@ namespace Google.Cloud.Batch.V1 {
           }
           if (other.Password.Length != 0) {
             Password = other.Password;
+          }
+          if (other.EnableImageStreaming != false) {
+            EnableImageStreaming = other.EnableImageStreaming;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -2339,6 +2388,10 @@ namespace Google.Cloud.Batch.V1 {
                 Password = input.ReadString();
                 break;
               }
+              case 96: {
+                EnableImageStreaming = input.ReadBool();
+                break;
+              }
             }
           }
         #endif
@@ -2384,6 +2437,10 @@ namespace Google.Cloud.Batch.V1 {
               }
               case 90: {
                 Password = input.ReadString();
+                break;
+              }
+              case 96: {
+                EnableImageStreaming = input.ReadBool();
                 break;
               }
             }
