@@ -20,6 +20,7 @@ namespace GoogleCSharpSnippets
     using Google.Cloud.Spanner.Admin.Database.V1;
     using Google.Cloud.Spanner.Common.V1;
     using Google.LongRunning;
+    using Google.Protobuf;
 
     public sealed partial class GeneratedDatabaseAdminClientSnippets
     {
@@ -43,6 +44,7 @@ namespace GoogleCSharpSnippets
                 ExtraStatements = { "", },
                 EncryptionConfig = new EncryptionConfig(),
                 DatabaseDialect = DatabaseDialect.Unspecified,
+                ProtoDescriptors = ByteString.Empty,
             };
             // Make the request
             Operation<Database, CreateDatabaseMetadata> response = databaseAdminClient.CreateDatabase(request);

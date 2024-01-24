@@ -21,6 +21,7 @@ namespace GoogleCSharpSnippets
     using Google.Cloud.Spanner.Admin.Database.V1;
     using Google.Cloud.Spanner.Common.V1;
     using Google.LongRunning;
+    using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Collections.Generic;
@@ -320,6 +321,7 @@ namespace GoogleCSharpSnippets
                 ExtraStatements = { "", },
                 EncryptionConfig = new EncryptionConfig(),
                 DatabaseDialect = DatabaseDialect.Unspecified,
+                ProtoDescriptors = ByteString.Empty,
             };
             // Make the request
             Operation<Database, CreateDatabaseMetadata> response = databaseAdminClient.CreateDatabase(request);
@@ -357,6 +359,7 @@ namespace GoogleCSharpSnippets
                 ExtraStatements = { "", },
                 EncryptionConfig = new EncryptionConfig(),
                 DatabaseDialect = DatabaseDialect.Unspecified,
+                ProtoDescriptors = ByteString.Empty,
             };
             // Make the request
             Operation<Database, CreateDatabaseMetadata> response = await databaseAdminClient.CreateDatabaseAsync(request);
@@ -728,6 +731,7 @@ namespace GoogleCSharpSnippets
                 DatabaseAsDatabaseName = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 Statements = { "", },
                 OperationId = "",
+                ProtoDescriptors = ByteString.Empty,
             };
             // Make the request
             Operation<Empty, UpdateDatabaseDdlMetadata> response = databaseAdminClient.UpdateDatabaseDdl(request);
@@ -763,6 +767,7 @@ namespace GoogleCSharpSnippets
                 DatabaseAsDatabaseName = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 Statements = { "", },
                 OperationId = "",
+                ProtoDescriptors = ByteString.Empty,
             };
             // Make the request
             Operation<Empty, UpdateDatabaseDdlMetadata> response = await databaseAdminClient.UpdateDatabaseDdlAsync(request);
