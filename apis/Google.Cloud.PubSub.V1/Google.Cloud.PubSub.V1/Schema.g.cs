@@ -667,8 +667,8 @@ namespace Google.Cloud.PubSub.V1 {
     /// The ID to use for the schema, which will become the final component of
     /// the schema's resource name.
     ///
-    /// See https://cloud.google.com/pubsub/docs/admin#resource_names for resource
-    /// name constraints.
+    /// See https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names for
+    /// resource name constraints.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

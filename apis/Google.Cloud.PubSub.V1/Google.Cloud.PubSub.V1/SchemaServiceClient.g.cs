@@ -440,8 +440,8 @@ namespace Google.Cloud.PubSub.V1
         /// The ID to use for the schema, which will become the final component of
         /// the schema's resource name.
         /// 
-        /// See https://cloud.google.com/pubsub/docs/admin#resource_names for resource
-        /// name constraints.
+        /// See https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names for
+        /// resource name constraints.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -471,8 +471,8 @@ namespace Google.Cloud.PubSub.V1
         /// The ID to use for the schema, which will become the final component of
         /// the schema's resource name.
         /// 
-        /// See https://cloud.google.com/pubsub/docs/admin#resource_names for resource
-        /// name constraints.
+        /// See https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names for
+        /// resource name constraints.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -502,8 +502,8 @@ namespace Google.Cloud.PubSub.V1
         /// The ID to use for the schema, which will become the final component of
         /// the schema's resource name.
         /// 
-        /// See https://cloud.google.com/pubsub/docs/admin#resource_names for resource
-        /// name constraints.
+        /// See https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names for
+        /// resource name constraints.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -528,8 +528,8 @@ namespace Google.Cloud.PubSub.V1
         /// The ID to use for the schema, which will become the final component of
         /// the schema's resource name.
         /// 
-        /// See https://cloud.google.com/pubsub/docs/admin#resource_names for resource
-        /// name constraints.
+        /// See https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names for
+        /// resource name constraints.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -559,8 +559,8 @@ namespace Google.Cloud.PubSub.V1
         /// The ID to use for the schema, which will become the final component of
         /// the schema's resource name.
         /// 
-        /// See https://cloud.google.com/pubsub/docs/admin#resource_names for resource
-        /// name constraints.
+        /// See https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names for
+        /// resource name constraints.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -590,8 +590,8 @@ namespace Google.Cloud.PubSub.V1
         /// The ID to use for the schema, which will become the final component of
         /// the schema's resource name.
         /// 
-        /// See https://cloud.google.com/pubsub/docs/admin#resource_names for resource
-        /// name constraints.
+        /// See https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names for
+        /// resource name constraints.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

@@ -545,8 +545,8 @@ namespace Google.Cloud.PubSub.V1
             CreateTopicAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates an existing topic. Note that certain properties of a
-        /// topic are not modifiable.
+        /// Updates an existing topic by updating the fields specified in the update
+        /// mask. Note that certain properties of a topic are not modifiable.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -555,8 +555,8 @@ namespace Google.Cloud.PubSub.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates an existing topic. Note that certain properties of a
-        /// topic are not modifiable.
+        /// Updates an existing topic by updating the fields specified in the update
+        /// mask. Note that certain properties of a topic are not modifiable.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -565,8 +565,8 @@ namespace Google.Cloud.PubSub.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates an existing topic. Note that certain properties of a
-        /// topic are not modifiable.
+        /// Updates an existing topic by updating the fields specified in the update
+        /// mask. Note that certain properties of a topic are not modifiable.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -575,8 +575,8 @@ namespace Google.Cloud.PubSub.V1
             UpdateTopicAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates an existing topic. Note that certain properties of a
-        /// topic are not modifiable.
+        /// Updates an existing topic by updating the fields specified in the update
+        /// mask. Note that certain properties of a topic are not modifiable.
         /// </summary>
         /// <param name="topic">
         /// Required. The updated topic object.
@@ -598,8 +598,8 @@ namespace Google.Cloud.PubSub.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates an existing topic. Note that certain properties of a
-        /// topic are not modifiable.
+        /// Updates an existing topic by updating the fields specified in the update
+        /// mask. Note that certain properties of a topic are not modifiable.
         /// </summary>
         /// <param name="topic">
         /// Required. The updated topic object.
@@ -621,8 +621,8 @@ namespace Google.Cloud.PubSub.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates an existing topic. Note that certain properties of a
-        /// topic are not modifiable.
+        /// Updates an existing topic by updating the fields specified in the update
+        /// mask. Note that certain properties of a topic are not modifiable.
         /// </summary>
         /// <param name="topic">
         /// Required. The updated topic object.
@@ -1607,8 +1607,8 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Updates an existing topic. Note that certain properties of a
-        /// topic are not modifiable.
+        /// Updates an existing topic by updating the fields specified in the update
+        /// mask. Note that certain properties of a topic are not modifiable.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1620,8 +1620,8 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Updates an existing topic. Note that certain properties of a
-        /// topic are not modifiable.
+        /// Updates an existing topic by updating the fields specified in the update
+        /// mask. Note that certain properties of a topic are not modifiable.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
