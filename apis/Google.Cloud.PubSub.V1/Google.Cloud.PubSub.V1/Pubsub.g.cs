@@ -31,313 +31,326 @@ namespace Google.Cloud.PubSub.V1 {
             "Zi9kdXJhdGlvbi5wcm90bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3Rv",
             "GiBnb29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90bxofZ29vZ2xlL3By",
             "b3RvYnVmL3RpbWVzdGFtcC5wcm90bxodZ29vZ2xlL3B1YnN1Yi92MS9zY2hl",
-            "bWEucHJvdG8iOwoUTWVzc2FnZVN0b3JhZ2VQb2xpY3kSIwobYWxsb3dlZF9w",
-            "ZXJzaXN0ZW5jZV9yZWdpb25zGAEgAygJIqkBCg5TY2hlbWFTZXR0aW5ncxI0",
-            "CgZzY2hlbWEYASABKAlCJOBBAvpBHgoccHVic3ViLmdvb2dsZWFwaXMuY29t",
-            "L1NjaGVtYRIsCghlbmNvZGluZxgCIAEoDjIaLmdvb2dsZS5wdWJzdWIudjEu",
-            "RW5jb2RpbmcSGQoRZmlyc3RfcmV2aXNpb25faWQYAyABKAkSGAoQbGFzdF9y",
-            "ZXZpc2lvbl9pZBgEIAEoCSLqAwobSW5nZXN0aW9uRGF0YVNvdXJjZVNldHRp",
-            "bmdzElQKC2F3c19raW5lc2lzGAEgASgLMjguZ29vZ2xlLnB1YnN1Yi52MS5J",
-            "bmdlc3Rpb25EYXRhU291cmNlU2V0dGluZ3MuQXdzS2luZXNpc0ID4EEBSAAa",
-            "6gIKCkF3c0tpbmVzaXMSUgoFc3RhdGUYASABKA4yPi5nb29nbGUucHVic3Vi",
-            "LnYxLkluZ2VzdGlvbkRhdGFTb3VyY2VTZXR0aW5ncy5Bd3NLaW5lc2lzLlN0",
-            "YXRlQgPgQQMSFwoKc3RyZWFtX2FybhgCIAEoCUID4EECEhkKDGNvbnN1bWVy",
-            "X2FybhgDIAEoCUID4EECEhkKDGF3c19yb2xlX2FybhgEIAEoCUID4EECEiAK",
-            "E2djcF9zZXJ2aWNlX2FjY291bnQYBSABKAlCA+BBAiKWAQoFU3RhdGUSFQoR",
-            "U1RBVEVfVU5TUEVDSUZJRUQQABIKCgZBQ1RJVkUQARIdChlLSU5FU0lTX1BF",
-            "Uk1JU1NJT05fREVOSUVEEAISHQoZUFVCTElTSF9QRVJNSVNTSU9OX0RFTklF",
-            "RBADEhQKEFNUUkVBTV9OT1RfRk9VTkQQBBIWChJDT05TVU1FUl9OT1RfRk9V",
-            "TkQQBUIICgZzb3VyY2UinAUKBVRvcGljEhEKBG5hbWUYASABKAlCA+BBAhIz",
-            "CgZsYWJlbHMYAiADKAsyIy5nb29nbGUucHVic3ViLnYxLlRvcGljLkxhYmVs",
-            "c0VudHJ5EkYKFm1lc3NhZ2Vfc3RvcmFnZV9wb2xpY3kYAyABKAsyJi5nb29n",
-            "bGUucHVic3ViLnYxLk1lc3NhZ2VTdG9yYWdlUG9saWN5EhQKDGttc19rZXlf",
-            "bmFtZRgFIAEoCRI5Cg9zY2hlbWFfc2V0dGluZ3MYBiABKAsyIC5nb29nbGUu",
-            "cHVic3ViLnYxLlNjaGVtYVNldHRpbmdzEhUKDXNhdGlzZmllc19wenMYByAB",
-            "KAgSPQoabWVzc2FnZV9yZXRlbnRpb25fZHVyYXRpb24YCCABKAsyGS5nb29n",
-            "bGUucHJvdG9idWYuRHVyYXRpb24SMQoFc3RhdGUYCSABKA4yHS5nb29nbGUu",
-            "cHVic3ViLnYxLlRvcGljLlN0YXRlQgPgQQMSWgoeaW5nZXN0aW9uX2RhdGFf",
-            "c291cmNlX3NldHRpbmdzGAogASgLMi0uZ29vZ2xlLnB1YnN1Yi52MS5Jbmdl",
-            "c3Rpb25EYXRhU291cmNlU2V0dGluZ3NCA+BBARotCgtMYWJlbHNFbnRyeRIL",
-            "CgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIkgKBVN0YXRlEhUKEVNU",
-            "QVRFX1VOU1BFQ0lGSUVEEAASCgoGQUNUSVZFEAESHAoYSU5HRVNUSU9OX1JF",
-            "U09VUkNFX0VSUk9SEAI6VOpBUQobcHVic3ViLmdvb2dsZWFwaXMuY29tL1Rv",
-            "cGljEiFwcm9qZWN0cy97cHJvamVjdH0vdG9waWNzL3t0b3BpY30SD19kZWxl",
-            "dGVkLXRvcGljXyLxAQoNUHVic3ViTWVzc2FnZRIMCgRkYXRhGAEgASgMEkMK",
-            "CmF0dHJpYnV0ZXMYAiADKAsyLy5nb29nbGUucHVic3ViLnYxLlB1YnN1Yk1l",
-            "c3NhZ2UuQXR0cmlidXRlc0VudHJ5EhIKCm1lc3NhZ2VfaWQYAyABKAkSMAoM",
-            "cHVibGlzaF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cBIUCgxvcmRlcmluZ19rZXkYBSABKAkaMQoPQXR0cmlidXRlc0VudHJ5EgsK",
-            "A2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiRQoPR2V0VG9waWNSZXF1",
-            "ZXN0EjIKBXRvcGljGAEgASgJQiPgQQL6QR0KG3B1YnN1Yi5nb29nbGVhcGlz",
-            "LmNvbS9Ub3BpYyJ3ChJVcGRhdGVUb3BpY1JlcXVlc3QSKwoFdG9waWMYASAB",
-            "KAsyFy5nb29nbGUucHVic3ViLnYxLlRvcGljQgPgQQISNAoLdXBkYXRlX21h",
-            "c2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQIifAoO",
-            "UHVibGlzaFJlcXVlc3QSMgoFdG9waWMYASABKAlCI+BBAvpBHQobcHVic3Vi",
-            "Lmdvb2dsZWFwaXMuY29tL1RvcGljEjYKCG1lc3NhZ2VzGAIgAygLMh8uZ29v",
-            "Z2xlLnB1YnN1Yi52MS5QdWJzdWJNZXNzYWdlQgPgQQIiJgoPUHVibGlzaFJl",
-            "c3BvbnNlEhMKC21lc3NhZ2VfaWRzGAEgAygJIoABChFMaXN0VG9waWNzUmVx",
-            "dWVzdBJECgdwcm9qZWN0GAEgASgJQjPgQQL6QS0KK2Nsb3VkcmVzb3VyY2Vt",
-            "YW5hZ2VyLmdvb2dsZWFwaXMuY29tL1Byb2plY3QSEQoJcGFnZV9zaXplGAIg",
-            "ASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkiVgoSTGlzdFRvcGljc1Jlc3BvbnNl",
-            "EicKBnRvcGljcxgBIAMoCzIXLmdvb2dsZS5wdWJzdWIudjEuVG9waWMSFwoP",
-            "bmV4dF9wYWdlX3Rva2VuGAIgASgJInoKHUxpc3RUb3BpY1N1YnNjcmlwdGlv",
-            "bnNSZXF1ZXN0EjIKBXRvcGljGAEgASgJQiPgQQL6QR0KG3B1YnN1Yi5nb29n",
-            "bGVhcGlzLmNvbS9Ub3BpYxIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90",
-            "b2tlbhgDIAEoCSJ5Ch5MaXN0VG9waWNTdWJzY3JpcHRpb25zUmVzcG9uc2US",
-            "PgoNc3Vic2NyaXB0aW9ucxgBIAMoCUIn+kEkCiJwdWJzdWIuZ29vZ2xlYXBp",
-            "cy5jb20vU3Vic2NyaXB0aW9uEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJ2",
-            "ChlMaXN0VG9waWNTbmFwc2hvdHNSZXF1ZXN0EjIKBXRvcGljGAEgASgJQiPg",
-            "QQL6QR0KG3B1YnN1Yi5nb29nbGVhcGlzLmNvbS9Ub3BpYxIRCglwYWdlX3Np",
-            "emUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSJIChpMaXN0VG9waWNTbmFw",
-            "c2hvdHNSZXNwb25zZRIRCglzbmFwc2hvdHMYASADKAkSFwoPbmV4dF9wYWdl",
-            "X3Rva2VuGAIgASgJIkgKEkRlbGV0ZVRvcGljUmVxdWVzdBIyCgV0b3BpYxgB",
-            "IAEoCUIj4EEC+kEdChtwdWJzdWIuZ29vZ2xlYXBpcy5jb20vVG9waWMiXQoZ",
-            "RGV0YWNoU3Vic2NyaXB0aW9uUmVxdWVzdBJACgxzdWJzY3JpcHRpb24YASAB",
-            "KAlCKuBBAvpBJAoicHVic3ViLmdvb2dsZWFwaXMuY29tL1N1YnNjcmlwdGlv",
-            "biIcChpEZXRhY2hTdWJzY3JpcHRpb25SZXNwb25zZSKpCAoMU3Vic2NyaXB0",
-            "aW9uEhEKBG5hbWUYASABKAlCA+BBAhIyCgV0b3BpYxgCIAEoCUIj4EEC+kEd",
-            "ChtwdWJzdWIuZ29vZ2xlYXBpcy5jb20vVG9waWMSMQoLcHVzaF9jb25maWcY",
-            "BCABKAsyHC5nb29nbGUucHVic3ViLnYxLlB1c2hDb25maWcSOQoPYmlncXVl",
-            "cnlfY29uZmlnGBIgASgLMiAuZ29vZ2xlLnB1YnN1Yi52MS5CaWdRdWVyeUNv",
-            "bmZpZxJCChRjbG91ZF9zdG9yYWdlX2NvbmZpZxgWIAEoCzIkLmdvb2dsZS5w",
-            "dWJzdWIudjEuQ2xvdWRTdG9yYWdlQ29uZmlnEhwKFGFja19kZWFkbGluZV9z",
-            "ZWNvbmRzGAUgASgFEh0KFXJldGFpbl9hY2tlZF9tZXNzYWdlcxgHIAEoCBI9",
-            "ChptZXNzYWdlX3JldGVudGlvbl9kdXJhdGlvbhgIIAEoCzIZLmdvb2dsZS5w",
-            "cm90b2J1Zi5EdXJhdGlvbhI6CgZsYWJlbHMYCSADKAsyKi5nb29nbGUucHVi",
-            "c3ViLnYxLlN1YnNjcmlwdGlvbi5MYWJlbHNFbnRyeRIfChdlbmFibGVfbWVz",
-            "c2FnZV9vcmRlcmluZxgKIAEoCBI9ChFleHBpcmF0aW9uX3BvbGljeRgLIAEo",
-            "CzIiLmdvb2dsZS5wdWJzdWIudjEuRXhwaXJhdGlvblBvbGljeRIOCgZmaWx0",
-            "ZXIYDCABKAkSPgoSZGVhZF9sZXR0ZXJfcG9saWN5GA0gASgLMiIuZ29vZ2xl",
-            "LnB1YnN1Yi52MS5EZWFkTGV0dGVyUG9saWN5EjMKDHJldHJ5X3BvbGljeRgO",
-            "IAEoCzIdLmdvb2dsZS5wdWJzdWIudjEuUmV0cnlQb2xpY3kSEAoIZGV0YWNo",
-            "ZWQYDyABKAgSJAocZW5hYmxlX2V4YWN0bHlfb25jZV9kZWxpdmVyeRgQIAEo",
-            "CBJICiB0b3BpY19tZXNzYWdlX3JldGVudGlvbl9kdXJhdGlvbhgRIAEoCzIZ",
-            "Lmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEDEjgKBXN0YXRlGBMgASgO",
-            "MiQuZ29vZ2xlLnB1YnN1Yi52MS5TdWJzY3JpcHRpb24uU3RhdGVCA+BBAxot",
-            "CgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgB",
-            "Ij4KBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCgoGQUNUSVZFEAES",
-            "EgoOUkVTT1VSQ0VfRVJST1IQAjpY6kFVCiJwdWJzdWIuZ29vZ2xlYXBpcy5j",
-            "b20vU3Vic2NyaXB0aW9uEi9wcm9qZWN0cy97cHJvamVjdH0vc3Vic2NyaXB0",
-            "aW9ucy97c3Vic2NyaXB0aW9ufSJ1CgtSZXRyeVBvbGljeRIyCg9taW5pbXVt",
-            "X2JhY2tvZmYYASABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SMgoP",
-            "bWF4aW11bV9iYWNrb2ZmGAIgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0",
-            "aW9uIkwKEERlYWRMZXR0ZXJQb2xpY3kSGQoRZGVhZF9sZXR0ZXJfdG9waWMY",
-            "ASABKAkSHQoVbWF4X2RlbGl2ZXJ5X2F0dGVtcHRzGAIgASgFIjoKEEV4cGly",
-            "YXRpb25Qb2xpY3kSJgoDdHRsGAEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1",
-            "cmF0aW9uIvIDCgpQdXNoQ29uZmlnEhUKDXB1c2hfZW5kcG9pbnQYASABKAkS",
-            "QAoKYXR0cmlidXRlcxgCIAMoCzIsLmdvb2dsZS5wdWJzdWIudjEuUHVzaENv",
-            "bmZpZy5BdHRyaWJ1dGVzRW50cnkSPAoKb2lkY190b2tlbhgDIAEoCzImLmdv",
-            "b2dsZS5wdWJzdWIudjEuUHVzaENvbmZpZy5PaWRjVG9rZW5IABJECg5wdWJz",
-            "dWJfd3JhcHBlchgEIAEoCzIqLmdvb2dsZS5wdWJzdWIudjEuUHVzaENvbmZp",
-            "Zy5QdWJzdWJXcmFwcGVySAESPAoKbm9fd3JhcHBlchgFIAEoCzImLmdvb2ds",
-            "ZS5wdWJzdWIudjEuUHVzaENvbmZpZy5Ob1dyYXBwZXJIARo8CglPaWRjVG9r",
-            "ZW4SHQoVc2VydmljZV9hY2NvdW50X2VtYWlsGAEgASgJEhAKCGF1ZGllbmNl",
-            "GAIgASgJGg8KDVB1YnN1YldyYXBwZXIaIwoJTm9XcmFwcGVyEhYKDndyaXRl",
-            "X21ldGFkYXRhGAEgASgIGjEKD0F0dHJpYnV0ZXNFbnRyeRILCgNrZXkYASAB",
-            "KAkSDQoFdmFsdWUYAiABKAk6AjgBQhcKFWF1dGhlbnRpY2F0aW9uX21ldGhv",
-            "ZEIJCgd3cmFwcGVyIrUCCg5CaWdRdWVyeUNvbmZpZxINCgV0YWJsZRgBIAEo",
-            "CRIdChB1c2VfdG9waWNfc2NoZW1hGAIgASgIQgPgQQESFgoOd3JpdGVfbWV0",
-            "YWRhdGEYAyABKAgSGwoTZHJvcF91bmtub3duX2ZpZWxkcxgEIAEoCBI6CgVz",
-            "dGF0ZRgFIAEoDjImLmdvb2dsZS5wdWJzdWIudjEuQmlnUXVlcnlDb25maWcu",
-            "U3RhdGVCA+BBAxIdChB1c2VfdGFibGVfc2NoZW1hGAYgASgIQgPgQQEiZQoF",
+            "bWEucHJvdG8iYQoUTWVzc2FnZVN0b3JhZ2VQb2xpY3kSKAobYWxsb3dlZF9w",
+            "ZXJzaXN0ZW5jZV9yZWdpb25zGAEgAygJQgPgQQESHwoSZW5mb3JjZV9pbl90",
+            "cmFuc2l0GAIgASgIQgPgQQEiuAEKDlNjaGVtYVNldHRpbmdzEjQKBnNjaGVt",
+            "YRgBIAEoCUIk4EEC+kEeChxwdWJzdWIuZ29vZ2xlYXBpcy5jb20vU2NoZW1h",
+            "EjEKCGVuY29kaW5nGAIgASgOMhouZ29vZ2xlLnB1YnN1Yi52MS5FbmNvZGlu",
+            "Z0ID4EEBEh4KEWZpcnN0X3JldmlzaW9uX2lkGAMgASgJQgPgQQESHQoQbGFz",
+            "dF9yZXZpc2lvbl9pZBgEIAEoCUID4EEBIuoDChtJbmdlc3Rpb25EYXRhU291",
+            "cmNlU2V0dGluZ3MSVAoLYXdzX2tpbmVzaXMYASABKAsyOC5nb29nbGUucHVi",
+            "c3ViLnYxLkluZ2VzdGlvbkRhdGFTb3VyY2VTZXR0aW5ncy5Bd3NLaW5lc2lz",
+            "QgPgQQFIABrqAgoKQXdzS2luZXNpcxJSCgVzdGF0ZRgBIAEoDjI+Lmdvb2ds",
+            "ZS5wdWJzdWIudjEuSW5nZXN0aW9uRGF0YVNvdXJjZVNldHRpbmdzLkF3c0tp",
+            "bmVzaXMuU3RhdGVCA+BBAxIXCgpzdHJlYW1fYXJuGAIgASgJQgPgQQISGQoM",
+            "Y29uc3VtZXJfYXJuGAMgASgJQgPgQQISGQoMYXdzX3JvbGVfYXJuGAQgASgJ",
+            "QgPgQQISIAoTZ2NwX3NlcnZpY2VfYWNjb3VudBgFIAEoCUID4EECIpYBCgVT",
+            "dGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgoKBkFDVElWRRABEh0KGUtJ",
+            "TkVTSVNfUEVSTUlTU0lPTl9ERU5JRUQQAhIdChlQVUJMSVNIX1BFUk1JU1NJ",
+            "T05fREVOSUVEEAMSFAoQU1RSRUFNX05PVF9GT1VORBAEEhYKEkNPTlNVTUVS",
+            "X05PVF9GT1VORBAFQggKBnNvdXJjZSK6BQoFVG9waWMSEQoEbmFtZRgBIAEo",
+            "CUID4EECEjgKBmxhYmVscxgCIAMoCzIjLmdvb2dsZS5wdWJzdWIudjEuVG9w",
+            "aWMuTGFiZWxzRW50cnlCA+BBARJLChZtZXNzYWdlX3N0b3JhZ2VfcG9saWN5",
+            "GAMgASgLMiYuZ29vZ2xlLnB1YnN1Yi52MS5NZXNzYWdlU3RvcmFnZVBvbGlj",
+            "eUID4EEBEhkKDGttc19rZXlfbmFtZRgFIAEoCUID4EEBEj4KD3NjaGVtYV9z",
+            "ZXR0aW5ncxgGIAEoCzIgLmdvb2dsZS5wdWJzdWIudjEuU2NoZW1hU2V0dGlu",
+            "Z3NCA+BBARIaCg1zYXRpc2ZpZXNfcHpzGAcgASgIQgPgQQESQgoabWVzc2Fn",
+            "ZV9yZXRlbnRpb25fZHVyYXRpb24YCCABKAsyGS5nb29nbGUucHJvdG9idWYu",
+            "RHVyYXRpb25CA+BBARIxCgVzdGF0ZRgJIAEoDjIdLmdvb2dsZS5wdWJzdWIu",
+            "djEuVG9waWMuU3RhdGVCA+BBAxJaCh5pbmdlc3Rpb25fZGF0YV9zb3VyY2Vf",
+            "c2V0dGluZ3MYCiABKAsyLS5nb29nbGUucHVic3ViLnYxLkluZ2VzdGlvbkRh",
+            "dGFTb3VyY2VTZXR0aW5nc0ID4EEBGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgB",
+            "IAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiSAoFU3RhdGUSFQoRU1RBVEVfVU5T",
+            "UEVDSUZJRUQQABIKCgZBQ1RJVkUQARIcChhJTkdFU1RJT05fUkVTT1VSQ0Vf",
+            "RVJST1IQAjpU6kFRChtwdWJzdWIuZ29vZ2xlYXBpcy5jb20vVG9waWMSIXBy",
+            "b2plY3RzL3twcm9qZWN0fS90b3BpY3Mve3RvcGljfRIPX2RlbGV0ZWQtdG9w",
+            "aWNfIoACCg1QdWJzdWJNZXNzYWdlEhEKBGRhdGEYASABKAxCA+BBARJICgph",
+            "dHRyaWJ1dGVzGAIgAygLMi8uZ29vZ2xlLnB1YnN1Yi52MS5QdWJzdWJNZXNz",
+            "YWdlLkF0dHJpYnV0ZXNFbnRyeUID4EEBEhIKCm1lc3NhZ2VfaWQYAyABKAkS",
+            "MAoMcHVibGlzaF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcBIZCgxvcmRlcmluZ19rZXkYBSABKAlCA+BBARoxCg9BdHRyaWJ1dGVz",
+            "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJFCg9HZXRU",
+            "b3BpY1JlcXVlc3QSMgoFdG9waWMYASABKAlCI+BBAvpBHQobcHVic3ViLmdv",
+            "b2dsZWFwaXMuY29tL1RvcGljIncKElVwZGF0ZVRvcGljUmVxdWVzdBIrCgV0",
+            "b3BpYxgBIAEoCzIXLmdvb2dsZS5wdWJzdWIudjEuVG9waWNCA+BBAhI0Cgt1",
+            "cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tC",
+            "A+BBAiJ8Cg5QdWJsaXNoUmVxdWVzdBIyCgV0b3BpYxgBIAEoCUIj4EEC+kEd",
+            "ChtwdWJzdWIuZ29vZ2xlYXBpcy5jb20vVG9waWMSNgoIbWVzc2FnZXMYAiAD",
+            "KAsyHy5nb29nbGUucHVic3ViLnYxLlB1YnN1Yk1lc3NhZ2VCA+BBAiIrCg9Q",
+            "dWJsaXNoUmVzcG9uc2USGAoLbWVzc2FnZV9pZHMYASADKAlCA+BBASKKAQoR",
+            "TGlzdFRvcGljc1JlcXVlc3QSRAoHcHJvamVjdBgBIAEoCUIz4EEC+kEtCitj",
+            "bG91ZHJlc291cmNlbWFuYWdlci5nb29nbGVhcGlzLmNvbS9Qcm9qZWN0EhYK",
+            "CXBhZ2Vfc2l6ZRgCIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BB",
+            "ASJgChJMaXN0VG9waWNzUmVzcG9uc2USLAoGdG9waWNzGAEgAygLMhcuZ29v",
+            "Z2xlLnB1YnN1Yi52MS5Ub3BpY0ID4EEBEhwKD25leHRfcGFnZV90b2tlbhgC",
+            "IAEoCUID4EEBIoQBCh1MaXN0VG9waWNTdWJzY3JpcHRpb25zUmVxdWVzdBIy",
+            "CgV0b3BpYxgBIAEoCUIj4EEC+kEdChtwdWJzdWIuZ29vZ2xlYXBpcy5jb20v",
+            "VG9waWMSFgoJcGFnZV9zaXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tlbhgD",
+            "IAEoCUID4EEBIoEBCh5MaXN0VG9waWNTdWJzY3JpcHRpb25zUmVzcG9uc2US",
+            "QQoNc3Vic2NyaXB0aW9ucxgBIAMoCUIq4EEB+kEkCiJwdWJzdWIuZ29vZ2xl",
+            "YXBpcy5jb20vU3Vic2NyaXB0aW9uEhwKD25leHRfcGFnZV90b2tlbhgCIAEo",
+            "CUID4EEBIoABChlMaXN0VG9waWNTbmFwc2hvdHNSZXF1ZXN0EjIKBXRvcGlj",
+            "GAEgASgJQiPgQQL6QR0KG3B1YnN1Yi5nb29nbGVhcGlzLmNvbS9Ub3BpYxIW",
+            "CglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAMgASgJQgPg",
+            "QQEiUgoaTGlzdFRvcGljU25hcHNob3RzUmVzcG9uc2USFgoJc25hcHNob3Rz",
+            "GAEgAygJQgPgQQESHAoPbmV4dF9wYWdlX3Rva2VuGAIgASgJQgPgQQEiSAoS",
+            "RGVsZXRlVG9waWNSZXF1ZXN0EjIKBXRvcGljGAEgASgJQiPgQQL6QR0KG3B1",
+            "YnN1Yi5nb29nbGVhcGlzLmNvbS9Ub3BpYyJdChlEZXRhY2hTdWJzY3JpcHRp",
+            "b25SZXF1ZXN0EkAKDHN1YnNjcmlwdGlvbhgBIAEoCUIq4EEC+kEkCiJwdWJz",
+            "dWIuZ29vZ2xlYXBpcy5jb20vU3Vic2NyaXB0aW9uIhwKGkRldGFjaFN1YnNj",
+            "cmlwdGlvblJlc3BvbnNlIu8ICgxTdWJzY3JpcHRpb24SEQoEbmFtZRgBIAEo",
+            "CUID4EECEjIKBXRvcGljGAIgASgJQiPgQQL6QR0KG3B1YnN1Yi5nb29nbGVh",
+            "cGlzLmNvbS9Ub3BpYxI2CgtwdXNoX2NvbmZpZxgEIAEoCzIcLmdvb2dsZS5w",
+            "dWJzdWIudjEuUHVzaENvbmZpZ0ID4EEBEj4KD2JpZ3F1ZXJ5X2NvbmZpZxgS",
+            "IAEoCzIgLmdvb2dsZS5wdWJzdWIudjEuQmlnUXVlcnlDb25maWdCA+BBARJH",
+            "ChRjbG91ZF9zdG9yYWdlX2NvbmZpZxgWIAEoCzIkLmdvb2dsZS5wdWJzdWIu",
+            "djEuQ2xvdWRTdG9yYWdlQ29uZmlnQgPgQQESIQoUYWNrX2RlYWRsaW5lX3Nl",
+            "Y29uZHMYBSABKAVCA+BBARIiChVyZXRhaW5fYWNrZWRfbWVzc2FnZXMYByAB",
+            "KAhCA+BBARJCChptZXNzYWdlX3JldGVudGlvbl9kdXJhdGlvbhgIIAEoCzIZ",
+            "Lmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEBEj8KBmxhYmVscxgJIAMo",
+            "CzIqLmdvb2dsZS5wdWJzdWIudjEuU3Vic2NyaXB0aW9uLkxhYmVsc0VudHJ5",
+            "QgPgQQESJAoXZW5hYmxlX21lc3NhZ2Vfb3JkZXJpbmcYCiABKAhCA+BBARJC",
+            "ChFleHBpcmF0aW9uX3BvbGljeRgLIAEoCzIiLmdvb2dsZS5wdWJzdWIudjEu",
+            "RXhwaXJhdGlvblBvbGljeUID4EEBEhMKBmZpbHRlchgMIAEoCUID4EEBEkMK",
+            "EmRlYWRfbGV0dGVyX3BvbGljeRgNIAEoCzIiLmdvb2dsZS5wdWJzdWIudjEu",
+            "RGVhZExldHRlclBvbGljeUID4EEBEjgKDHJldHJ5X3BvbGljeRgOIAEoCzId",
+            "Lmdvb2dsZS5wdWJzdWIudjEuUmV0cnlQb2xpY3lCA+BBARIVCghkZXRhY2hl",
+            "ZBgPIAEoCEID4EEBEikKHGVuYWJsZV9leGFjdGx5X29uY2VfZGVsaXZlcnkY",
+            "ECABKAhCA+BBARJICiB0b3BpY19tZXNzYWdlX3JldGVudGlvbl9kdXJhdGlv",
+            "bhgRIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEDEjgKBXN0",
+            "YXRlGBMgASgOMiQuZ29vZ2xlLnB1YnN1Yi52MS5TdWJzY3JpcHRpb24uU3Rh",
+            "dGVCA+BBAxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
+            "AiABKAk6AjgBIj4KBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCgoG",
+            "QUNUSVZFEAESEgoOUkVTT1VSQ0VfRVJST1IQAjpY6kFVCiJwdWJzdWIuZ29v",
+            "Z2xlYXBpcy5jb20vU3Vic2NyaXB0aW9uEi9wcm9qZWN0cy97cHJvamVjdH0v",
+            "c3Vic2NyaXB0aW9ucy97c3Vic2NyaXB0aW9ufSJ/CgtSZXRyeVBvbGljeRI3",
+            "Cg9taW5pbXVtX2JhY2tvZmYYASABKAsyGS5nb29nbGUucHJvdG9idWYuRHVy",
+            "YXRpb25CA+BBARI3Cg9tYXhpbXVtX2JhY2tvZmYYAiABKAsyGS5nb29nbGUu",
+            "cHJvdG9idWYuRHVyYXRpb25CA+BBASJWChBEZWFkTGV0dGVyUG9saWN5Eh4K",
+            "EWRlYWRfbGV0dGVyX3RvcGljGAEgASgJQgPgQQESIgoVbWF4X2RlbGl2ZXJ5",
+            "X2F0dGVtcHRzGAIgASgFQgPgQQEiPwoQRXhwaXJhdGlvblBvbGljeRIrCgN0",
+            "dGwYASABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBASKaBAoK",
+            "UHVzaENvbmZpZxIaCg1wdXNoX2VuZHBvaW50GAEgASgJQgPgQQESRQoKYXR0",
+            "cmlidXRlcxgCIAMoCzIsLmdvb2dsZS5wdWJzdWIudjEuUHVzaENvbmZpZy5B",
+            "dHRyaWJ1dGVzRW50cnlCA+BBARJBCgpvaWRjX3Rva2VuGAMgASgLMiYuZ29v",
+            "Z2xlLnB1YnN1Yi52MS5QdXNoQ29uZmlnLk9pZGNUb2tlbkID4EEBSAASSQoO",
+            "cHVic3ViX3dyYXBwZXIYBCABKAsyKi5nb29nbGUucHVic3ViLnYxLlB1c2hD",
+            "b25maWcuUHVic3ViV3JhcHBlckID4EEBSAESQQoKbm9fd3JhcHBlchgFIAEo",
+            "CzImLmdvb2dsZS5wdWJzdWIudjEuUHVzaENvbmZpZy5Ob1dyYXBwZXJCA+BB",
+            "AUgBGkYKCU9pZGNUb2tlbhIiChVzZXJ2aWNlX2FjY291bnRfZW1haWwYASAB",
+            "KAlCA+BBARIVCghhdWRpZW5jZRgCIAEoCUID4EEBGg8KDVB1YnN1YldyYXBw",
+            "ZXIaKAoJTm9XcmFwcGVyEhsKDndyaXRlX21ldGFkYXRhGAEgASgIQgPgQQEa",
+            "MQoPQXR0cmlidXRlc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
+            "CToCOAFCFwoVYXV0aGVudGljYXRpb25fbWV0aG9kQgkKB3dyYXBwZXIi6gIK",
+            "DkJpZ1F1ZXJ5Q29uZmlnEhIKBXRhYmxlGAEgASgJQgPgQQESHQoQdXNlX3Rv",
+            "cGljX3NjaGVtYRgCIAEoCEID4EEBEhsKDndyaXRlX21ldGFkYXRhGAMgASgI",
+            "QgPgQQESIAoTZHJvcF91bmtub3duX2ZpZWxkcxgEIAEoCEID4EEBEjoKBXN0",
+            "YXRlGAUgASgOMiYuZ29vZ2xlLnB1YnN1Yi52MS5CaWdRdWVyeUNvbmZpZy5T",
+            "dGF0ZUID4EEDEh0KEHVzZV90YWJsZV9zY2hlbWEYBiABKAhCA+BBASKKAQoF",
             "U3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIKCgZBQ1RJVkUQARIVChFQ",
             "RVJNSVNTSU9OX0RFTklFRBACEg0KCU5PVF9GT1VORBADEhMKD1NDSEVNQV9N",
-            "SVNNQVRDSBAEIoYEChJDbG91ZFN0b3JhZ2VDb25maWcSEwoGYnVja2V0GAEg",
-            "ASgJQgPgQQISFwoPZmlsZW5hbWVfcHJlZml4GAIgASgJEhcKD2ZpbGVuYW1l",
-            "X3N1ZmZpeBgDIAEoCRJGCgt0ZXh0X2NvbmZpZxgEIAEoCzIvLmdvb2dsZS5w",
-            "dWJzdWIudjEuQ2xvdWRTdG9yYWdlQ29uZmlnLlRleHRDb25maWdIABJGCgth",
-            "dnJvX2NvbmZpZxgFIAEoCzIvLmdvb2dsZS5wdWJzdWIudjEuQ2xvdWRTdG9y",
-            "YWdlQ29uZmlnLkF2cm9Db25maWdIABIvCgxtYXhfZHVyYXRpb24YBiABKAsy",
-            "GS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SEQoJbWF4X2J5dGVzGAcgASgD",
-            "Ej4KBXN0YXRlGAkgASgOMiouZ29vZ2xlLnB1YnN1Yi52MS5DbG91ZFN0b3Jh",
-            "Z2VDb25maWcuU3RhdGVCA+BBAxoMCgpUZXh0Q29uZmlnGiQKCkF2cm9Db25m",
-            "aWcSFgoOd3JpdGVfbWV0YWRhdGEYASABKAgiUAoFU3RhdGUSFQoRU1RBVEVf",
-            "VU5TUEVDSUZJRUQQABIKCgZBQ1RJVkUQARIVChFQRVJNSVNTSU9OX0RFTklF",
-            "RBACEg0KCU5PVF9GT1VORBADQg8KDW91dHB1dF9mb3JtYXQibQoPUmVjZWl2",
-            "ZWRNZXNzYWdlEg4KBmFja19pZBgBIAEoCRIwCgdtZXNzYWdlGAIgASgLMh8u",
-            "Z29vZ2xlLnB1YnN1Yi52MS5QdWJzdWJNZXNzYWdlEhgKEGRlbGl2ZXJ5X2F0",
-            "dGVtcHQYAyABKAUiWgoWR2V0U3Vic2NyaXB0aW9uUmVxdWVzdBJACgxzdWJz",
-            "Y3JpcHRpb24YASABKAlCKuBBAvpBJAoicHVic3ViLmdvb2dsZWFwaXMuY29t",
-            "L1N1YnNjcmlwdGlvbiKMAQoZVXBkYXRlU3Vic2NyaXB0aW9uUmVxdWVzdBI5",
-            "CgxzdWJzY3JpcHRpb24YASABKAsyHi5nb29nbGUucHVic3ViLnYxLlN1YnNj",
-            "cmlwdGlvbkID4EECEjQKC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnBy",
-            "b3RvYnVmLkZpZWxkTWFza0ID4EECIocBChhMaXN0U3Vic2NyaXB0aW9uc1Jl",
-            "cXVlc3QSRAoHcHJvamVjdBgBIAEoCUIz4EEC+kEtCitjbG91ZHJlc291cmNl",
-            "bWFuYWdlci5nb29nbGVhcGlzLmNvbS9Qcm9qZWN0EhEKCXBhZ2Vfc2l6ZRgC",
-            "IAEoBRISCgpwYWdlX3Rva2VuGAMgASgJImsKGUxpc3RTdWJzY3JpcHRpb25z",
-            "UmVzcG9uc2USNQoNc3Vic2NyaXB0aW9ucxgBIAMoCzIeLmdvb2dsZS5wdWJz",
-            "dWIudjEuU3Vic2NyaXB0aW9uEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJd",
-            "ChlEZWxldGVTdWJzY3JpcHRpb25SZXF1ZXN0EkAKDHN1YnNjcmlwdGlvbhgB",
-            "IAEoCUIq4EEC+kEkCiJwdWJzdWIuZ29vZ2xlYXBpcy5jb20vU3Vic2NyaXB0",
-            "aW9uIpMBChdNb2RpZnlQdXNoQ29uZmlnUmVxdWVzdBJACgxzdWJzY3JpcHRp",
-            "b24YASABKAlCKuBBAvpBJAoicHVic3ViLmdvb2dsZWFwaXMuY29tL1N1YnNj",
-            "cmlwdGlvbhI2CgtwdXNoX2NvbmZpZxgCIAEoCzIcLmdvb2dsZS5wdWJzdWIu",
-            "djEuUHVzaENvbmZpZ0ID4EECIo0BCgtQdWxsUmVxdWVzdBJACgxzdWJzY3Jp",
-            "cHRpb24YASABKAlCKuBBAvpBJAoicHVic3ViLmdvb2dsZWFwaXMuY29tL1N1",
-            "YnNjcmlwdGlvbhIhChJyZXR1cm5faW1tZWRpYXRlbHkYAiABKAhCBRgB4EEB",
-            "EhkKDG1heF9tZXNzYWdlcxgDIAEoBUID4EECIkwKDFB1bGxSZXNwb25zZRI8",
-            "ChFyZWNlaXZlZF9tZXNzYWdlcxgBIAMoCzIhLmdvb2dsZS5wdWJzdWIudjEu",
-            "UmVjZWl2ZWRNZXNzYWdlIpUBChhNb2RpZnlBY2tEZWFkbGluZVJlcXVlc3QS",
-            "QAoMc3Vic2NyaXB0aW9uGAEgASgJQirgQQL6QSQKInB1YnN1Yi5nb29nbGVh",
-            "cGlzLmNvbS9TdWJzY3JpcHRpb24SFAoHYWNrX2lkcxgEIAMoCUID4EECEiEK",
-            "FGFja19kZWFkbGluZV9zZWNvbmRzGAMgASgFQgPgQQIibAoSQWNrbm93bGVk",
-            "Z2VSZXF1ZXN0EkAKDHN1YnNjcmlwdGlvbhgBIAEoCUIq4EEC+kEkCiJwdWJz",
-            "dWIuZ29vZ2xlYXBpcy5jb20vU3Vic2NyaXB0aW9uEhQKB2Fja19pZHMYAiAD",
-            "KAlCA+BBAiKpAgoUU3RyZWFtaW5nUHVsbFJlcXVlc3QSQAoMc3Vic2NyaXB0",
-            "aW9uGAEgASgJQirgQQL6QSQKInB1YnN1Yi5nb29nbGVhcGlzLmNvbS9TdWJz",
-            "Y3JpcHRpb24SDwoHYWNrX2lkcxgCIAMoCRIfChdtb2RpZnlfZGVhZGxpbmVf",
-            "c2Vjb25kcxgDIAMoBRIfChdtb2RpZnlfZGVhZGxpbmVfYWNrX2lkcxgEIAMo",
-            "CRIoChtzdHJlYW1fYWNrX2RlYWRsaW5lX3NlY29uZHMYBSABKAVCA+BBAhIR",
-            "CgljbGllbnRfaWQYBiABKAkSIAoYbWF4X291dHN0YW5kaW5nX21lc3NhZ2Vz",
-            "GAcgASgDEh0KFW1heF9vdXRzdGFuZGluZ19ieXRlcxgIIAEoAyLdBQoVU3Ry",
-            "ZWFtaW5nUHVsbFJlc3BvbnNlEjwKEXJlY2VpdmVkX21lc3NhZ2VzGAEgAygL",
-            "MiEuZ29vZ2xlLnB1YnN1Yi52MS5SZWNlaXZlZE1lc3NhZ2USYQoYYWNrbm93",
-            "bGVkZ2VfY29uZmlybWF0aW9uGAUgASgLMj8uZ29vZ2xlLnB1YnN1Yi52MS5T",
-            "dHJlYW1pbmdQdWxsUmVzcG9uc2UuQWNrbm93bGVkZ2VDb25maXJtYXRpb24S",
-            "bwogbW9kaWZ5X2Fja19kZWFkbGluZV9jb25maXJtYXRpb24YAyABKAsyRS5n",
-            "b29nbGUucHVic3ViLnYxLlN0cmVhbWluZ1B1bGxSZXNwb25zZS5Nb2RpZnlB",
-            "Y2tEZWFkbGluZUNvbmZpcm1hdGlvbhJfChdzdWJzY3JpcHRpb25fcHJvcGVy",
-            "dGllcxgEIAEoCzI+Lmdvb2dsZS5wdWJzdWIudjEuU3RyZWFtaW5nUHVsbFJl",
-            "c3BvbnNlLlN1YnNjcmlwdGlvblByb3BlcnRpZXMagAEKF0Fja25vd2xlZGdl",
-            "Q29uZmlybWF0aW9uEg8KB2Fja19pZHMYASADKAkSFwoPaW52YWxpZF9hY2tf",
-            "aWRzGAIgAygJEhkKEXVub3JkZXJlZF9hY2tfaWRzGAMgAygJEiAKGHRlbXBv",
-            "cmFyeV9mYWlsZWRfYWNrX2lkcxgEIAMoCRprCh1Nb2RpZnlBY2tEZWFkbGlu",
-            "ZUNvbmZpcm1hdGlvbhIPCgdhY2tfaWRzGAEgAygJEhcKD2ludmFsaWRfYWNr",
-            "X2lkcxgCIAMoCRIgChh0ZW1wb3JhcnlfZmFpbGVkX2Fja19pZHMYAyADKAka",
-            "YQoWU3Vic2NyaXB0aW9uUHJvcGVydGllcxIlCh1leGFjdGx5X29uY2VfZGVs",
-            "aXZlcnlfZW5hYmxlZBgBIAEoCBIgChhtZXNzYWdlX29yZGVyaW5nX2VuYWJs",
-            "ZWQYAiABKAgigwIKFUNyZWF0ZVNuYXBzaG90UmVxdWVzdBI0CgRuYW1lGAEg",
-            "ASgJQibgQQL6QSAKHnB1YnN1Yi5nb29nbGVhcGlzLmNvbS9TbmFwc2hvdBJA",
-            "CgxzdWJzY3JpcHRpb24YAiABKAlCKuBBAvpBJAoicHVic3ViLmdvb2dsZWFw",
-            "aXMuY29tL1N1YnNjcmlwdGlvbhJDCgZsYWJlbHMYAyADKAsyMy5nb29nbGUu",
-            "cHVic3ViLnYxLkNyZWF0ZVNuYXBzaG90UmVxdWVzdC5MYWJlbHNFbnRyeRot",
-            "CgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgB",
-            "IoABChVVcGRhdGVTbmFwc2hvdFJlcXVlc3QSMQoIc25hcHNob3QYASABKAsy",
-            "Gi5nb29nbGUucHVic3ViLnYxLlNuYXBzaG90QgPgQQISNAoLdXBkYXRlX21h",
-            "c2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQIirwIK",
-            "CFNuYXBzaG90EgwKBG5hbWUYASABKAkSLwoFdG9waWMYAiABKAlCIPpBHQob",
-            "cHVic3ViLmdvb2dsZWFwaXMuY29tL1RvcGljEi8KC2V4cGlyZV90aW1lGAMg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI2CgZsYWJlbHMYBCAD",
-            "KAsyJi5nb29nbGUucHVic3ViLnYxLlNuYXBzaG90LkxhYmVsc0VudHJ5Gi0K",
-            "C0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAE6",
-            "TOpBSQoecHVic3ViLmdvb2dsZWFwaXMuY29tL1NuYXBzaG90Eidwcm9qZWN0",
-            "cy97cHJvamVjdH0vc25hcHNob3RzL3tzbmFwc2hvdH0iTgoSR2V0U25hcHNo",
-            "b3RSZXF1ZXN0EjgKCHNuYXBzaG90GAEgASgJQibgQQL6QSAKHnB1YnN1Yi5n",
-            "b29nbGVhcGlzLmNvbS9TbmFwc2hvdCKDAQoUTGlzdFNuYXBzaG90c1JlcXVl",
-            "c3QSRAoHcHJvamVjdBgBIAEoCUIz4EEC+kEtCitjbG91ZHJlc291cmNlbWFu",
-            "YWdlci5nb29nbGVhcGlzLmNvbS9Qcm9qZWN0EhEKCXBhZ2Vfc2l6ZRgCIAEo",
-            "BRISCgpwYWdlX3Rva2VuGAMgASgJIl8KFUxpc3RTbmFwc2hvdHNSZXNwb25z",
-            "ZRItCglzbmFwc2hvdHMYASADKAsyGi5nb29nbGUucHVic3ViLnYxLlNuYXBz",
-            "aG90EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJRChVEZWxldGVTbmFwc2hv",
-            "dFJlcXVlc3QSOAoIc25hcHNob3QYASABKAlCJuBBAvpBIAoecHVic3ViLmdv",
-            "b2dsZWFwaXMuY29tL1NuYXBzaG90Ir4BCgtTZWVrUmVxdWVzdBJACgxzdWJz",
-            "Y3JpcHRpb24YASABKAlCKuBBAvpBJAoicHVic3ViLmdvb2dsZWFwaXMuY29t",
-            "L1N1YnNjcmlwdGlvbhIqCgR0aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcEgAEjcKCHNuYXBzaG90GAMgASgJQiP6QSAKHnB1YnN1Yi5n",
-            "b29nbGVhcGlzLmNvbS9TbmFwc2hvdEgAQggKBnRhcmdldCIOCgxTZWVrUmVz",
-            "cG9uc2UyuAsKCVB1Ymxpc2hlchJxCgtDcmVhdGVUb3BpYxIXLmdvb2dsZS5w",
-            "dWJzdWIudjEuVG9waWMaFy5nb29nbGUucHVic3ViLnYxLlRvcGljIjCC0+ST",
-            "AiMaHi92MS97bmFtZT1wcm9qZWN0cy8qL3RvcGljcy8qfToBKtpBBG5hbWUS",
-            "kQEKC1VwZGF0ZVRvcGljEiQuZ29vZ2xlLnB1YnN1Yi52MS5VcGRhdGVUb3Bp",
-            "Y1JlcXVlc3QaFy5nb29nbGUucHVic3ViLnYxLlRvcGljIkOC0+STAikyJC92",
-            "MS97dG9waWMubmFtZT1wcm9qZWN0cy8qL3RvcGljcy8qfToBKtpBEXRvcGlj",
-            "LHVwZGF0ZV9tYXNrEpMBCgdQdWJsaXNoEiAuZ29vZ2xlLnB1YnN1Yi52MS5Q",
-            "dWJsaXNoUmVxdWVzdBohLmdvb2dsZS5wdWJzdWIudjEuUHVibGlzaFJlc3Bv",
-            "bnNlIkOC0+STAiwiJy92MS97dG9waWM9cHJvamVjdHMvKi90b3BpY3MvKn06",
-            "cHVibGlzaDoBKtpBDnRvcGljLG1lc3NhZ2VzEncKCEdldFRvcGljEiEuZ29v",
-            "Z2xlLnB1YnN1Yi52MS5HZXRUb3BpY1JlcXVlc3QaFy5nb29nbGUucHVic3Vi",
-            "LnYxLlRvcGljIi+C0+STAiESHy92MS97dG9waWM9cHJvamVjdHMvKi90b3Bp",
-            "Y3MvKn3aQQV0b3BpYxKKAQoKTGlzdFRvcGljcxIjLmdvb2dsZS5wdWJzdWIu",
-            "djEuTGlzdFRvcGljc1JlcXVlc3QaJC5nb29nbGUucHVic3ViLnYxLkxpc3RU",
-            "b3BpY3NSZXNwb25zZSIxgtPkkwIhEh8vdjEve3Byb2plY3Q9cHJvamVjdHMv",
-            "Kn0vdG9waWNz2kEHcHJvamVjdBK6AQoWTGlzdFRvcGljU3Vic2NyaXB0aW9u",
-            "cxIvLmdvb2dsZS5wdWJzdWIudjEuTGlzdFRvcGljU3Vic2NyaXB0aW9uc1Jl",
-            "cXVlc3QaMC5nb29nbGUucHVic3ViLnYxLkxpc3RUb3BpY1N1YnNjcmlwdGlv",
-            "bnNSZXNwb25zZSI9gtPkkwIvEi0vdjEve3RvcGljPXByb2plY3RzLyovdG9w",
-            "aWNzLyp9L3N1YnNjcmlwdGlvbnPaQQV0b3BpYxKqAQoSTGlzdFRvcGljU25h",
-            "cHNob3RzEisuZ29vZ2xlLnB1YnN1Yi52MS5MaXN0VG9waWNTbmFwc2hvdHNS",
-            "ZXF1ZXN0GiwuZ29vZ2xlLnB1YnN1Yi52MS5MaXN0VG9waWNTbmFwc2hvdHNS",
-            "ZXNwb25zZSI5gtPkkwIrEikvdjEve3RvcGljPXByb2plY3RzLyovdG9waWNz",
-            "Lyp9L3NuYXBzaG90c9pBBXRvcGljEnwKC0RlbGV0ZVRvcGljEiQuZ29vZ2xl",
-            "LnB1YnN1Yi52MS5EZWxldGVUb3BpY1JlcXVlc3QaFi5nb29nbGUucHJvdG9i",
-            "dWYuRW1wdHkiL4LT5JMCISofL3YxL3t0b3BpYz1wcm9qZWN0cy8qL3RvcGlj",
-            "cy8qfdpBBXRvcGljEq0BChJEZXRhY2hTdWJzY3JpcHRpb24SKy5nb29nbGUu",
-            "cHVic3ViLnYxLkRldGFjaFN1YnNjcmlwdGlvblJlcXVlc3QaLC5nb29nbGUu",
-            "cHVic3ViLnYxLkRldGFjaFN1YnNjcmlwdGlvblJlc3BvbnNlIjyC0+STAjYi",
-            "NC92MS97c3Vic2NyaXB0aW9uPXByb2plY3RzLyovc3Vic2NyaXB0aW9ucy8q",
-            "fTpkZXRhY2gacMpBFXB1YnN1Yi5nb29nbGVhcGlzLmNvbdJBVWh0dHBzOi8v",
-            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6",
-            "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9wdWJzdWIy0hUKClN1YnNjcmli",
-            "ZXIStAEKEkNyZWF0ZVN1YnNjcmlwdGlvbhIeLmdvb2dsZS5wdWJzdWIudjEu",
-            "U3Vic2NyaXB0aW9uGh4uZ29vZ2xlLnB1YnN1Yi52MS5TdWJzY3JpcHRpb24i",
-            "XoLT5JMCKholL3YxL3tuYW1lPXByb2plY3RzLyovc3Vic2NyaXB0aW9ucy8q",
-            "fToBKtpBK25hbWUsdG9waWMscHVzaF9jb25maWcsYWNrX2RlYWRsaW5lX3Nl",
-            "Y29uZHMSoQEKD0dldFN1YnNjcmlwdGlvbhIoLmdvb2dsZS5wdWJzdWIudjEu",
-            "R2V0U3Vic2NyaXB0aW9uUmVxdWVzdBoeLmdvb2dsZS5wdWJzdWIudjEuU3Vi",
-            "c2NyaXB0aW9uIkSC0+STAi8SLS92MS97c3Vic2NyaXB0aW9uPXByb2plY3Rz",
-            "Lyovc3Vic2NyaXB0aW9ucy8qfdpBDHN1YnNjcmlwdGlvbhK7AQoSVXBkYXRl",
-            "U3Vic2NyaXB0aW9uEisuZ29vZ2xlLnB1YnN1Yi52MS5VcGRhdGVTdWJzY3Jp",
-            "cHRpb25SZXF1ZXN0Gh4uZ29vZ2xlLnB1YnN1Yi52MS5TdWJzY3JpcHRpb24i",
-            "WILT5JMCNzIyL3YxL3tzdWJzY3JpcHRpb24ubmFtZT1wcm9qZWN0cy8qL3N1",
-            "YnNjcmlwdGlvbnMvKn06ASraQRhzdWJzY3JpcHRpb24sdXBkYXRlX21hc2sS",
-            "pgEKEUxpc3RTdWJzY3JpcHRpb25zEiouZ29vZ2xlLnB1YnN1Yi52MS5MaXN0",
-            "U3Vic2NyaXB0aW9uc1JlcXVlc3QaKy5nb29nbGUucHVic3ViLnYxLkxpc3RT",
-            "dWJzY3JpcHRpb25zUmVzcG9uc2UiOILT5JMCKBImL3YxL3twcm9qZWN0PXBy",
-            "b2plY3RzLyp9L3N1YnNjcmlwdGlvbnPaQQdwcm9qZWN0Ep8BChJEZWxldGVT",
-            "dWJzY3JpcHRpb24SKy5nb29nbGUucHVic3ViLnYxLkRlbGV0ZVN1YnNjcmlw",
-            "dGlvblJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiRILT5JMCLyot",
-            "L3YxL3tzdWJzY3JpcHRpb249cHJvamVjdHMvKi9zdWJzY3JpcHRpb25zLyp9",
-            "2kEMc3Vic2NyaXB0aW9uEs8BChFNb2RpZnlBY2tEZWFkbGluZRIqLmdvb2ds",
-            "ZS5wdWJzdWIudjEuTW9kaWZ5QWNrRGVhZGxpbmVSZXF1ZXN0GhYuZ29vZ2xl",
-            "LnByb3RvYnVmLkVtcHR5InaC0+STAkQiPy92MS97c3Vic2NyaXB0aW9uPXBy",
-            "b2plY3RzLyovc3Vic2NyaXB0aW9ucy8qfTptb2RpZnlBY2tEZWFkbGluZToB",
-            "KtpBKXN1YnNjcmlwdGlvbixhY2tfaWRzLGFja19kZWFkbGluZV9zZWNvbmRz",
-            "EqgBCgtBY2tub3dsZWRnZRIkLmdvb2dsZS5wdWJzdWIudjEuQWNrbm93bGVk",
-            "Z2VSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IluC0+STAj4iOS92",
-            "MS97c3Vic2NyaXB0aW9uPXByb2plY3RzLyovc3Vic2NyaXB0aW9ucy8qfTph",
-            "Y2tub3dsZWRnZToBKtpBFHN1YnNjcmlwdGlvbixhY2tfaWRzEtABCgRQdWxs",
-            "Eh0uZ29vZ2xlLnB1YnN1Yi52MS5QdWxsUmVxdWVzdBoeLmdvb2dsZS5wdWJz",
-            "dWIudjEuUHVsbFJlc3BvbnNlIogBgtPkkwI3IjIvdjEve3N1YnNjcmlwdGlv",
-            "bj1wcm9qZWN0cy8qL3N1YnNjcmlwdGlvbnMvKn06cHVsbDoBKtpBLHN1YnNj",
-            "cmlwdGlvbixyZXR1cm5faW1tZWRpYXRlbHksbWF4X21lc3NhZ2Vz2kEZc3Vi",
-            "c2NyaXB0aW9uLG1heF9tZXNzYWdlcxJmCg1TdHJlYW1pbmdQdWxsEiYuZ29v",
-            "Z2xlLnB1YnN1Yi52MS5TdHJlYW1pbmdQdWxsUmVxdWVzdBonLmdvb2dsZS5w",
-            "dWJzdWIudjEuU3RyZWFtaW5nUHVsbFJlc3BvbnNlIgAoATABErsBChBNb2Rp",
-            "ZnlQdXNoQ29uZmlnEikuZ29vZ2xlLnB1YnN1Yi52MS5Nb2RpZnlQdXNoQ29u",
-            "ZmlnUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJkgtPkkwJDIj4v",
-            "djEve3N1YnNjcmlwdGlvbj1wcm9qZWN0cy8qL3N1YnNjcmlwdGlvbnMvKn06",
-            "bW9kaWZ5UHVzaENvbmZpZzoBKtpBGHN1YnNjcmlwdGlvbixwdXNoX2NvbmZp",
-            "ZxKJAQoLR2V0U25hcHNob3QSJC5nb29nbGUucHVic3ViLnYxLkdldFNuYXBz",
-            "aG90UmVxdWVzdBoaLmdvb2dsZS5wdWJzdWIudjEuU25hcHNob3QiOILT5JMC",
-            "JxIlL3YxL3tzbmFwc2hvdD1wcm9qZWN0cy8qL3NuYXBzaG90cy8qfdpBCHNu",
-            "YXBzaG90EpYBCg1MaXN0U25hcHNob3RzEiYuZ29vZ2xlLnB1YnN1Yi52MS5M",
-            "aXN0U25hcHNob3RzUmVxdWVzdBonLmdvb2dsZS5wdWJzdWIudjEuTGlzdFNu",
-            "YXBzaG90c1Jlc3BvbnNlIjSC0+STAiQSIi92MS97cHJvamVjdD1wcm9qZWN0",
-            "cy8qfS9zbmFwc2hvdHPaQQdwcm9qZWN0EpcBCg5DcmVhdGVTbmFwc2hvdBIn",
-            "Lmdvb2dsZS5wdWJzdWIudjEuQ3JlYXRlU25hcHNob3RSZXF1ZXN0GhouZ29v",
-            "Z2xlLnB1YnN1Yi52MS5TbmFwc2hvdCJAgtPkkwImGiEvdjEve25hbWU9cHJv",
-            "amVjdHMvKi9zbmFwc2hvdHMvKn06ASraQRFuYW1lLHN1YnNjcmlwdGlvbhKj",
-            "AQoOVXBkYXRlU25hcHNob3QSJy5nb29nbGUucHVic3ViLnYxLlVwZGF0ZVNu",
-            "YXBzaG90UmVxdWVzdBoaLmdvb2dsZS5wdWJzdWIudjEuU25hcHNob3QiTILT",
-            "5JMCLzIqL3YxL3tzbmFwc2hvdC5uYW1lPXByb2plY3RzLyovc25hcHNob3Rz",
-            "Lyp9OgEq2kEUc25hcHNob3QsdXBkYXRlX21hc2sSiwEKDkRlbGV0ZVNuYXBz",
-            "aG90EicuZ29vZ2xlLnB1YnN1Yi52MS5EZWxldGVTbmFwc2hvdFJlcXVlc3Qa",
-            "Fi5nb29nbGUucHJvdG9idWYuRW1wdHkiOILT5JMCJyolL3YxL3tzbmFwc2hv",
-            "dD1wcm9qZWN0cy8qL3NuYXBzaG90cy8qfdpBCHNuYXBzaG90EoQBCgRTZWVr",
-            "Eh0uZ29vZ2xlLnB1YnN1Yi52MS5TZWVrUmVxdWVzdBoeLmdvb2dsZS5wdWJz",
-            "dWIudjEuU2Vla1Jlc3BvbnNlIj2C0+STAjciMi92MS97c3Vic2NyaXB0aW9u",
-            "PXByb2plY3RzLyovc3Vic2NyaXB0aW9ucy8qfTpzZWVrOgEqGnDKQRVwdWJz",
-            "dWIuZ29vZ2xlYXBpcy5jb23SQVVodHRwczovL3d3dy5nb29nbGVhcGlzLmNv",
-            "bS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMu",
-            "Y29tL2F1dGgvcHVic3ViQqoBChRjb20uZ29vZ2xlLnB1YnN1Yi52MUILUHVi",
-            "c3ViUHJvdG9QAVoyY2xvdWQuZ29vZ2xlLmNvbS9nby9wdWJzdWIvYXBpdjEv",
-            "cHVic3VicGI7cHVic3VicGL4AQGqAhZHb29nbGUuQ2xvdWQuUHViU3ViLlYx",
-            "ygIWR29vZ2xlXENsb3VkXFB1YlN1YlxWMeoCGUdvb2dsZTo6Q2xvdWQ6OlB1",
-            "YlN1Yjo6VjFiBnByb3RvMw=="));
+            "SVNNQVRDSBAEEiMKH0lOX1RSQU5TSVRfTE9DQVRJT05fUkVTVFJJQ1RJT04Q",
+            "BSLOBAoSQ2xvdWRTdG9yYWdlQ29uZmlnEhMKBmJ1Y2tldBgBIAEoCUID4EEC",
+            "EhwKD2ZpbGVuYW1lX3ByZWZpeBgCIAEoCUID4EEBEhwKD2ZpbGVuYW1lX3N1",
+            "ZmZpeBgDIAEoCUID4EEBEksKC3RleHRfY29uZmlnGAQgASgLMi8uZ29vZ2xl",
+            "LnB1YnN1Yi52MS5DbG91ZFN0b3JhZ2VDb25maWcuVGV4dENvbmZpZ0ID4EEB",
+            "SAASSwoLYXZyb19jb25maWcYBSABKAsyLy5nb29nbGUucHVic3ViLnYxLkNs",
+            "b3VkU3RvcmFnZUNvbmZpZy5BdnJvQ29uZmlnQgPgQQFIABI0CgxtYXhfZHVy",
+            "YXRpb24YBiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBARIW",
+            "CgltYXhfYnl0ZXMYByABKANCA+BBARI+CgVzdGF0ZRgJIAEoDjIqLmdvb2ds",
+            "ZS5wdWJzdWIudjEuQ2xvdWRTdG9yYWdlQ29uZmlnLlN0YXRlQgPgQQMaDAoK",
+            "VGV4dENvbmZpZxopCgpBdnJvQ29uZmlnEhsKDndyaXRlX21ldGFkYXRhGAEg",
+            "ASgIQgPgQQEidQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIKCgZB",
+            "Q1RJVkUQARIVChFQRVJNSVNTSU9OX0RFTklFRBACEg0KCU5PVF9GT1VORBAD",
+            "EiMKH0lOX1RSQU5TSVRfTE9DQVRJT05fUkVTVFJJQ1RJT04QBEIPCg1vdXRw",
+            "dXRfZm9ybWF0InwKD1JlY2VpdmVkTWVzc2FnZRITCgZhY2tfaWQYASABKAlC",
+            "A+BBARI1CgdtZXNzYWdlGAIgASgLMh8uZ29vZ2xlLnB1YnN1Yi52MS5QdWJz",
+            "dWJNZXNzYWdlQgPgQQESHQoQZGVsaXZlcnlfYXR0ZW1wdBgDIAEoBUID4EEB",
+            "IloKFkdldFN1YnNjcmlwdGlvblJlcXVlc3QSQAoMc3Vic2NyaXB0aW9uGAEg",
+            "ASgJQirgQQL6QSQKInB1YnN1Yi5nb29nbGVhcGlzLmNvbS9TdWJzY3JpcHRp",
+            "b24ijAEKGVVwZGF0ZVN1YnNjcmlwdGlvblJlcXVlc3QSOQoMc3Vic2NyaXB0",
+            "aW9uGAEgASgLMh4uZ29vZ2xlLnB1YnN1Yi52MS5TdWJzY3JpcHRpb25CA+BB",
+            "AhI0Cgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVs",
+            "ZE1hc2tCA+BBAiKRAQoYTGlzdFN1YnNjcmlwdGlvbnNSZXF1ZXN0EkQKB3By",
+            "b2plY3QYASABKAlCM+BBAvpBLQorY2xvdWRyZXNvdXJjZW1hbmFnZXIuZ29v",
+            "Z2xlYXBpcy5jb20vUHJvamVjdBIWCglwYWdlX3NpemUYAiABKAVCA+BBARIX",
+            "CgpwYWdlX3Rva2VuGAMgASgJQgPgQQEidQoZTGlzdFN1YnNjcmlwdGlvbnNS",
+            "ZXNwb25zZRI6Cg1zdWJzY3JpcHRpb25zGAEgAygLMh4uZ29vZ2xlLnB1YnN1",
+            "Yi52MS5TdWJzY3JpcHRpb25CA+BBARIcCg9uZXh0X3BhZ2VfdG9rZW4YAiAB",
+            "KAlCA+BBASJdChlEZWxldGVTdWJzY3JpcHRpb25SZXF1ZXN0EkAKDHN1YnNj",
+            "cmlwdGlvbhgBIAEoCUIq4EEC+kEkCiJwdWJzdWIuZ29vZ2xlYXBpcy5jb20v",
+            "U3Vic2NyaXB0aW9uIpMBChdNb2RpZnlQdXNoQ29uZmlnUmVxdWVzdBJACgxz",
+            "dWJzY3JpcHRpb24YASABKAlCKuBBAvpBJAoicHVic3ViLmdvb2dsZWFwaXMu",
+            "Y29tL1N1YnNjcmlwdGlvbhI2CgtwdXNoX2NvbmZpZxgCIAEoCzIcLmdvb2ds",
+            "ZS5wdWJzdWIudjEuUHVzaENvbmZpZ0ID4EECIo0BCgtQdWxsUmVxdWVzdBJA",
+            "CgxzdWJzY3JpcHRpb24YASABKAlCKuBBAvpBJAoicHVic3ViLmdvb2dsZWFw",
+            "aXMuY29tL1N1YnNjcmlwdGlvbhIhChJyZXR1cm5faW1tZWRpYXRlbHkYAiAB",
+            "KAhCBRgB4EEBEhkKDG1heF9tZXNzYWdlcxgDIAEoBUID4EECIlEKDFB1bGxS",
+            "ZXNwb25zZRJBChFyZWNlaXZlZF9tZXNzYWdlcxgBIAMoCzIhLmdvb2dsZS5w",
+            "dWJzdWIudjEuUmVjZWl2ZWRNZXNzYWdlQgPgQQEilQEKGE1vZGlmeUFja0Rl",
+            "YWRsaW5lUmVxdWVzdBJACgxzdWJzY3JpcHRpb24YASABKAlCKuBBAvpBJAoi",
+            "cHVic3ViLmdvb2dsZWFwaXMuY29tL1N1YnNjcmlwdGlvbhIUCgdhY2tfaWRz",
+            "GAQgAygJQgPgQQISIQoUYWNrX2RlYWRsaW5lX3NlY29uZHMYAyABKAVCA+BB",
+            "AiJsChJBY2tub3dsZWRnZVJlcXVlc3QSQAoMc3Vic2NyaXB0aW9uGAEgASgJ",
+            "QirgQQL6QSQKInB1YnN1Yi5nb29nbGVhcGlzLmNvbS9TdWJzY3JpcHRpb24S",
+            "FAoHYWNrX2lkcxgCIAMoCUID4EECIscCChRTdHJlYW1pbmdQdWxsUmVxdWVz",
+            "dBJACgxzdWJzY3JpcHRpb24YASABKAlCKuBBAvpBJAoicHVic3ViLmdvb2ds",
+            "ZWFwaXMuY29tL1N1YnNjcmlwdGlvbhIUCgdhY2tfaWRzGAIgAygJQgPgQQES",
+            "JAoXbW9kaWZ5X2RlYWRsaW5lX3NlY29uZHMYAyADKAVCA+BBARIkChdtb2Rp",
+            "ZnlfZGVhZGxpbmVfYWNrX2lkcxgEIAMoCUID4EEBEigKG3N0cmVhbV9hY2tf",
+            "ZGVhZGxpbmVfc2Vjb25kcxgFIAEoBUID4EECEhYKCWNsaWVudF9pZBgGIAEo",
+            "CUID4EEBEiUKGG1heF9vdXRzdGFuZGluZ19tZXNzYWdlcxgHIAEoA0ID4EEB",
+            "EiIKFW1heF9vdXRzdGFuZGluZ19ieXRlcxgIIAEoA0ID4EEBIp4GChVTdHJl",
+            "YW1pbmdQdWxsUmVzcG9uc2USQQoRcmVjZWl2ZWRfbWVzc2FnZXMYASADKAsy",
+            "IS5nb29nbGUucHVic3ViLnYxLlJlY2VpdmVkTWVzc2FnZUID4EEBEmYKGGFj",
+            "a25vd2xlZGdlX2NvbmZpcm1hdGlvbhgFIAEoCzI/Lmdvb2dsZS5wdWJzdWIu",
+            "djEuU3RyZWFtaW5nUHVsbFJlc3BvbnNlLkFja25vd2xlZGdlQ29uZmlybWF0",
+            "aW9uQgPgQQESdAogbW9kaWZ5X2Fja19kZWFkbGluZV9jb25maXJtYXRpb24Y",
+            "AyABKAsyRS5nb29nbGUucHVic3ViLnYxLlN0cmVhbWluZ1B1bGxSZXNwb25z",
+            "ZS5Nb2RpZnlBY2tEZWFkbGluZUNvbmZpcm1hdGlvbkID4EEBEmQKF3N1YnNj",
+            "cmlwdGlvbl9wcm9wZXJ0aWVzGAQgASgLMj4uZ29vZ2xlLnB1YnN1Yi52MS5T",
+            "dHJlYW1pbmdQdWxsUmVzcG9uc2UuU3Vic2NyaXB0aW9uUHJvcGVydGllc0ID",
+            "4EEBGpQBChdBY2tub3dsZWRnZUNvbmZpcm1hdGlvbhIUCgdhY2tfaWRzGAEg",
+            "AygJQgPgQQESHAoPaW52YWxpZF9hY2tfaWRzGAIgAygJQgPgQQESHgoRdW5v",
+            "cmRlcmVkX2Fja19pZHMYAyADKAlCA+BBARIlChh0ZW1wb3JhcnlfZmFpbGVk",
+            "X2Fja19pZHMYBCADKAlCA+BBARp6Ch1Nb2RpZnlBY2tEZWFkbGluZUNvbmZp",
+            "cm1hdGlvbhIUCgdhY2tfaWRzGAEgAygJQgPgQQESHAoPaW52YWxpZF9hY2tf",
+            "aWRzGAIgAygJQgPgQQESJQoYdGVtcG9yYXJ5X2ZhaWxlZF9hY2tfaWRzGAMg",
+            "AygJQgPgQQEaawoWU3Vic2NyaXB0aW9uUHJvcGVydGllcxIqCh1leGFjdGx5",
+            "X29uY2VfZGVsaXZlcnlfZW5hYmxlZBgBIAEoCEID4EEBEiUKGG1lc3NhZ2Vf",
+            "b3JkZXJpbmdfZW5hYmxlZBgCIAEoCEID4EEBIogCChVDcmVhdGVTbmFwc2hv",
+            "dFJlcXVlc3QSNAoEbmFtZRgBIAEoCUIm4EEC+kEgCh5wdWJzdWIuZ29vZ2xl",
+            "YXBpcy5jb20vU25hcHNob3QSQAoMc3Vic2NyaXB0aW9uGAIgASgJQirgQQL6",
+            "QSQKInB1YnN1Yi5nb29nbGVhcGlzLmNvbS9TdWJzY3JpcHRpb24SSAoGbGFi",
+            "ZWxzGAMgAygLMjMuZ29vZ2xlLnB1YnN1Yi52MS5DcmVhdGVTbmFwc2hvdFJl",
+            "cXVlc3QuTGFiZWxzRW50cnlCA+BBARotCgtMYWJlbHNFbnRyeRILCgNrZXkY",
+            "ASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIoABChVVcGRhdGVTbmFwc2hvdFJl",
+            "cXVlc3QSMQoIc25hcHNob3QYASABKAsyGi5nb29nbGUucHVic3ViLnYxLlNu",
+            "YXBzaG90QgPgQQISNAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuRmllbGRNYXNrQgPgQQIiwQIKCFNuYXBzaG90EhEKBG5hbWUYASAB",
+            "KAlCA+BBARIyCgV0b3BpYxgCIAEoCUIj4EEB+kEdChtwdWJzdWIuZ29vZ2xl",
+            "YXBpcy5jb20vVG9waWMSNAoLZXhwaXJlX3RpbWUYAyABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQESOwoGbGFiZWxzGAQgAygLMiYuZ29v",
+            "Z2xlLnB1YnN1Yi52MS5TbmFwc2hvdC5MYWJlbHNFbnRyeUID4EEBGi0KC0xh",
+            "YmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAE6TOpB",
+            "SQoecHVic3ViLmdvb2dsZWFwaXMuY29tL1NuYXBzaG90Eidwcm9qZWN0cy97",
+            "cHJvamVjdH0vc25hcHNob3RzL3tzbmFwc2hvdH0iTgoSR2V0U25hcHNob3RS",
+            "ZXF1ZXN0EjgKCHNuYXBzaG90GAEgASgJQibgQQL6QSAKHnB1YnN1Yi5nb29n",
+            "bGVhcGlzLmNvbS9TbmFwc2hvdCKNAQoUTGlzdFNuYXBzaG90c1JlcXVlc3QS",
+            "RAoHcHJvamVjdBgBIAEoCUIz4EEC+kEtCitjbG91ZHJlc291cmNlbWFuYWdl",
+            "ci5nb29nbGVhcGlzLmNvbS9Qcm9qZWN0EhYKCXBhZ2Vfc2l6ZRgCIAEoBUID",
+            "4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BBASJpChVMaXN0U25hcHNob3Rz",
+            "UmVzcG9uc2USMgoJc25hcHNob3RzGAEgAygLMhouZ29vZ2xlLnB1YnN1Yi52",
+            "MS5TbmFwc2hvdEID4EEBEhwKD25leHRfcGFnZV90b2tlbhgCIAEoCUID4EEB",
+            "IlEKFURlbGV0ZVNuYXBzaG90UmVxdWVzdBI4CghzbmFwc2hvdBgBIAEoCUIm",
+            "4EEC+kEgCh5wdWJzdWIuZ29vZ2xlYXBpcy5jb20vU25hcHNob3QixgEKC1Nl",
+            "ZWtSZXF1ZXN0EkAKDHN1YnNjcmlwdGlvbhgBIAEoCUIq4EEC+kEkCiJwdWJz",
+            "dWIuZ29vZ2xlYXBpcy5jb20vU3Vic2NyaXB0aW9uEi8KBHRpbWUYAiABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQFIABI6CghzbmFwc2hv",
+            "dBgDIAEoCUIm4EEB+kEgCh5wdWJzdWIuZ29vZ2xlYXBpcy5jb20vU25hcHNo",
+            "b3RIAEIICgZ0YXJnZXQiDgoMU2Vla1Jlc3BvbnNlMrgLCglQdWJsaXNoZXIS",
+            "cQoLQ3JlYXRlVG9waWMSFy5nb29nbGUucHVic3ViLnYxLlRvcGljGhcuZ29v",
+            "Z2xlLnB1YnN1Yi52MS5Ub3BpYyIwgtPkkwIjGh4vdjEve25hbWU9cHJvamVj",
+            "dHMvKi90b3BpY3MvKn06ASraQQRuYW1lEpEBCgtVcGRhdGVUb3BpYxIkLmdv",
+            "b2dsZS5wdWJzdWIudjEuVXBkYXRlVG9waWNSZXF1ZXN0GhcuZ29vZ2xlLnB1",
+            "YnN1Yi52MS5Ub3BpYyJDgtPkkwIpMiQvdjEve3RvcGljLm5hbWU9cHJvamVj",
+            "dHMvKi90b3BpY3MvKn06ASraQRF0b3BpYyx1cGRhdGVfbWFzaxKTAQoHUHVi",
+            "bGlzaBIgLmdvb2dsZS5wdWJzdWIudjEuUHVibGlzaFJlcXVlc3QaIS5nb29n",
+            "bGUucHVic3ViLnYxLlB1Ymxpc2hSZXNwb25zZSJDgtPkkwIsIicvdjEve3Rv",
+            "cGljPXByb2plY3RzLyovdG9waWNzLyp9OnB1Ymxpc2g6ASraQQ50b3BpYyxt",
+            "ZXNzYWdlcxJ3CghHZXRUb3BpYxIhLmdvb2dsZS5wdWJzdWIudjEuR2V0VG9w",
+            "aWNSZXF1ZXN0GhcuZ29vZ2xlLnB1YnN1Yi52MS5Ub3BpYyIvgtPkkwIhEh8v",
+            "djEve3RvcGljPXByb2plY3RzLyovdG9waWNzLyp92kEFdG9waWMSigEKCkxp",
+            "c3RUb3BpY3MSIy5nb29nbGUucHVic3ViLnYxLkxpc3RUb3BpY3NSZXF1ZXN0",
+            "GiQuZ29vZ2xlLnB1YnN1Yi52MS5MaXN0VG9waWNzUmVzcG9uc2UiMYLT5JMC",
+            "IRIfL3YxL3twcm9qZWN0PXByb2plY3RzLyp9L3RvcGljc9pBB3Byb2plY3QS",
+            "ugEKFkxpc3RUb3BpY1N1YnNjcmlwdGlvbnMSLy5nb29nbGUucHVic3ViLnYx",
+            "Lkxpc3RUb3BpY1N1YnNjcmlwdGlvbnNSZXF1ZXN0GjAuZ29vZ2xlLnB1YnN1",
+            "Yi52MS5MaXN0VG9waWNTdWJzY3JpcHRpb25zUmVzcG9uc2UiPYLT5JMCLxIt",
+            "L3YxL3t0b3BpYz1wcm9qZWN0cy8qL3RvcGljcy8qfS9zdWJzY3JpcHRpb25z",
+            "2kEFdG9waWMSqgEKEkxpc3RUb3BpY1NuYXBzaG90cxIrLmdvb2dsZS5wdWJz",
+            "dWIudjEuTGlzdFRvcGljU25hcHNob3RzUmVxdWVzdBosLmdvb2dsZS5wdWJz",
+            "dWIudjEuTGlzdFRvcGljU25hcHNob3RzUmVzcG9uc2UiOYLT5JMCKxIpL3Yx",
+            "L3t0b3BpYz1wcm9qZWN0cy8qL3RvcGljcy8qfS9zbmFwc2hvdHPaQQV0b3Bp",
+            "YxJ8CgtEZWxldGVUb3BpYxIkLmdvb2dsZS5wdWJzdWIudjEuRGVsZXRlVG9w",
+            "aWNSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Ii+C0+STAiEqHy92",
+            "MS97dG9waWM9cHJvamVjdHMvKi90b3BpY3MvKn3aQQV0b3BpYxKtAQoSRGV0",
+            "YWNoU3Vic2NyaXB0aW9uEisuZ29vZ2xlLnB1YnN1Yi52MS5EZXRhY2hTdWJz",
+            "Y3JpcHRpb25SZXF1ZXN0GiwuZ29vZ2xlLnB1YnN1Yi52MS5EZXRhY2hTdWJz",
+            "Y3JpcHRpb25SZXNwb25zZSI8gtPkkwI2IjQvdjEve3N1YnNjcmlwdGlvbj1w",
+            "cm9qZWN0cy8qL3N1YnNjcmlwdGlvbnMvKn06ZGV0YWNoGnDKQRVwdWJzdWIu",
+            "Z29vZ2xlYXBpcy5jb23SQVVodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
+            "dXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29t",
+            "L2F1dGgvcHVic3ViMtIVCgpTdWJzY3JpYmVyErQBChJDcmVhdGVTdWJzY3Jp",
+            "cHRpb24SHi5nb29nbGUucHVic3ViLnYxLlN1YnNjcmlwdGlvbhoeLmdvb2ds",
+            "ZS5wdWJzdWIudjEuU3Vic2NyaXB0aW9uIl6C0+STAioaJS92MS97bmFtZT1w",
+            "cm9qZWN0cy8qL3N1YnNjcmlwdGlvbnMvKn06ASraQStuYW1lLHRvcGljLHB1",
+            "c2hfY29uZmlnLGFja19kZWFkbGluZV9zZWNvbmRzEqEBCg9HZXRTdWJzY3Jp",
+            "cHRpb24SKC5nb29nbGUucHVic3ViLnYxLkdldFN1YnNjcmlwdGlvblJlcXVl",
+            "c3QaHi5nb29nbGUucHVic3ViLnYxLlN1YnNjcmlwdGlvbiJEgtPkkwIvEi0v",
+            "djEve3N1YnNjcmlwdGlvbj1wcm9qZWN0cy8qL3N1YnNjcmlwdGlvbnMvKn3a",
+            "QQxzdWJzY3JpcHRpb24SuwEKElVwZGF0ZVN1YnNjcmlwdGlvbhIrLmdvb2ds",
+            "ZS5wdWJzdWIudjEuVXBkYXRlU3Vic2NyaXB0aW9uUmVxdWVzdBoeLmdvb2ds",
+            "ZS5wdWJzdWIudjEuU3Vic2NyaXB0aW9uIliC0+STAjcyMi92MS97c3Vic2Ny",
+            "aXB0aW9uLm5hbWU9cHJvamVjdHMvKi9zdWJzY3JpcHRpb25zLyp9OgEq2kEY",
+            "c3Vic2NyaXB0aW9uLHVwZGF0ZV9tYXNrEqYBChFMaXN0U3Vic2NyaXB0aW9u",
+            "cxIqLmdvb2dsZS5wdWJzdWIudjEuTGlzdFN1YnNjcmlwdGlvbnNSZXF1ZXN0",
+            "GisuZ29vZ2xlLnB1YnN1Yi52MS5MaXN0U3Vic2NyaXB0aW9uc1Jlc3BvbnNl",
+            "IjiC0+STAigSJi92MS97cHJvamVjdD1wcm9qZWN0cy8qfS9zdWJzY3JpcHRp",
+            "b25z2kEHcHJvamVjdBKfAQoSRGVsZXRlU3Vic2NyaXB0aW9uEisuZ29vZ2xl",
+            "LnB1YnN1Yi52MS5EZWxldGVTdWJzY3JpcHRpb25SZXF1ZXN0GhYuZ29vZ2xl",
+            "LnByb3RvYnVmLkVtcHR5IkSC0+STAi8qLS92MS97c3Vic2NyaXB0aW9uPXBy",
+            "b2plY3RzLyovc3Vic2NyaXB0aW9ucy8qfdpBDHN1YnNjcmlwdGlvbhLPAQoR",
+            "TW9kaWZ5QWNrRGVhZGxpbmUSKi5nb29nbGUucHVic3ViLnYxLk1vZGlmeUFj",
+            "a0RlYWRsaW5lUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJ2gtPk",
+            "kwJEIj8vdjEve3N1YnNjcmlwdGlvbj1wcm9qZWN0cy8qL3N1YnNjcmlwdGlv",
+            "bnMvKn06bW9kaWZ5QWNrRGVhZGxpbmU6ASraQSlzdWJzY3JpcHRpb24sYWNr",
+            "X2lkcyxhY2tfZGVhZGxpbmVfc2Vjb25kcxKoAQoLQWNrbm93bGVkZ2USJC5n",
+            "b29nbGUucHVic3ViLnYxLkFja25vd2xlZGdlUmVxdWVzdBoWLmdvb2dsZS5w",
+            "cm90b2J1Zi5FbXB0eSJbgtPkkwI+IjkvdjEve3N1YnNjcmlwdGlvbj1wcm9q",
+            "ZWN0cy8qL3N1YnNjcmlwdGlvbnMvKn06YWNrbm93bGVkZ2U6ASraQRRzdWJz",
+            "Y3JpcHRpb24sYWNrX2lkcxLQAQoEUHVsbBIdLmdvb2dsZS5wdWJzdWIudjEu",
+            "UHVsbFJlcXVlc3QaHi5nb29nbGUucHVic3ViLnYxLlB1bGxSZXNwb25zZSKI",
+            "AYLT5JMCNyIyL3YxL3tzdWJzY3JpcHRpb249cHJvamVjdHMvKi9zdWJzY3Jp",
+            "cHRpb25zLyp9OnB1bGw6ASraQSxzdWJzY3JpcHRpb24scmV0dXJuX2ltbWVk",
+            "aWF0ZWx5LG1heF9tZXNzYWdlc9pBGXN1YnNjcmlwdGlvbixtYXhfbWVzc2Fn",
+            "ZXMSZgoNU3RyZWFtaW5nUHVsbBImLmdvb2dsZS5wdWJzdWIudjEuU3RyZWFt",
+            "aW5nUHVsbFJlcXVlc3QaJy5nb29nbGUucHVic3ViLnYxLlN0cmVhbWluZ1B1",
+            "bGxSZXNwb25zZSIAKAEwARK7AQoQTW9kaWZ5UHVzaENvbmZpZxIpLmdvb2ds",
+            "ZS5wdWJzdWIudjEuTW9kaWZ5UHVzaENvbmZpZ1JlcXVlc3QaFi5nb29nbGUu",
+            "cHJvdG9idWYuRW1wdHkiZILT5JMCQyI+L3YxL3tzdWJzY3JpcHRpb249cHJv",
+            "amVjdHMvKi9zdWJzY3JpcHRpb25zLyp9Om1vZGlmeVB1c2hDb25maWc6ASra",
+            "QRhzdWJzY3JpcHRpb24scHVzaF9jb25maWcSiQEKC0dldFNuYXBzaG90EiQu",
+            "Z29vZ2xlLnB1YnN1Yi52MS5HZXRTbmFwc2hvdFJlcXVlc3QaGi5nb29nbGUu",
+            "cHVic3ViLnYxLlNuYXBzaG90IjiC0+STAicSJS92MS97c25hcHNob3Q9cHJv",
+            "amVjdHMvKi9zbmFwc2hvdHMvKn3aQQhzbmFwc2hvdBKWAQoNTGlzdFNuYXBz",
+            "aG90cxImLmdvb2dsZS5wdWJzdWIudjEuTGlzdFNuYXBzaG90c1JlcXVlc3Qa",
+            "Jy5nb29nbGUucHVic3ViLnYxLkxpc3RTbmFwc2hvdHNSZXNwb25zZSI0gtPk",
+            "kwIkEiIvdjEve3Byb2plY3Q9cHJvamVjdHMvKn0vc25hcHNob3Rz2kEHcHJv",
+            "amVjdBKXAQoOQ3JlYXRlU25hcHNob3QSJy5nb29nbGUucHVic3ViLnYxLkNy",
+            "ZWF0ZVNuYXBzaG90UmVxdWVzdBoaLmdvb2dsZS5wdWJzdWIudjEuU25hcHNo",
+            "b3QiQILT5JMCJhohL3YxL3tuYW1lPXByb2plY3RzLyovc25hcHNob3RzLyp9",
+            "OgEq2kERbmFtZSxzdWJzY3JpcHRpb24SowEKDlVwZGF0ZVNuYXBzaG90Eicu",
+            "Z29vZ2xlLnB1YnN1Yi52MS5VcGRhdGVTbmFwc2hvdFJlcXVlc3QaGi5nb29n",
+            "bGUucHVic3ViLnYxLlNuYXBzaG90IkyC0+STAi8yKi92MS97c25hcHNob3Qu",
+            "bmFtZT1wcm9qZWN0cy8qL3NuYXBzaG90cy8qfToBKtpBFHNuYXBzaG90LHVw",
+            "ZGF0ZV9tYXNrEosBCg5EZWxldGVTbmFwc2hvdBInLmdvb2dsZS5wdWJzdWIu",
+            "djEuRGVsZXRlU25hcHNob3RSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVt",
+            "cHR5IjiC0+STAicqJS92MS97c25hcHNob3Q9cHJvamVjdHMvKi9zbmFwc2hv",
+            "dHMvKn3aQQhzbmFwc2hvdBKEAQoEU2VlaxIdLmdvb2dsZS5wdWJzdWIudjEu",
+            "U2Vla1JlcXVlc3QaHi5nb29nbGUucHVic3ViLnYxLlNlZWtSZXNwb25zZSI9",
+            "gtPkkwI3IjIvdjEve3N1YnNjcmlwdGlvbj1wcm9qZWN0cy8qL3N1YnNjcmlw",
+            "dGlvbnMvKn06c2VlazoBKhpwykEVcHVic3ViLmdvb2dsZWFwaXMuY29t0kFV",
+            "aHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9y",
+            "bSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL3B1YnN1YkKqAQoU",
+            "Y29tLmdvb2dsZS5wdWJzdWIudjFCC1B1YnN1YlByb3RvUAFaMmNsb3VkLmdv",
+            "b2dsZS5jb20vZ28vcHVic3ViL2FwaXYxL3B1YnN1YnBiO3B1YnN1YnBi+AEB",
+            "qgIWR29vZ2xlLkNsb3VkLlB1YlN1Yi5WMcoCFkdvb2dsZVxDbG91ZFxQdWJT",
+            "dWJcVjHqAhlHb29nbGU6OkNsb3VkOjpQdWJTdWI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Cloud.PubSub.V1.SchemaReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.MessageStoragePolicy), global::Google.Cloud.PubSub.V1.MessageStoragePolicy.Parser, new[]{ "AllowedPersistenceRegions" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.MessageStoragePolicy), global::Google.Cloud.PubSub.V1.MessageStoragePolicy.Parser, new[]{ "AllowedPersistenceRegions", "EnforceInTransit" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.SchemaSettings), global::Google.Cloud.PubSub.V1.SchemaSettings.Parser, new[]{ "Schema", "Encoding", "FirstRevisionId", "LastRevisionId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.IngestionDataSourceSettings), global::Google.Cloud.PubSub.V1.IngestionDataSourceSettings.Parser, new[]{ "AwsKinesis" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.IngestionDataSourceSettings.Types.AwsKinesis), global::Google.Cloud.PubSub.V1.IngestionDataSourceSettings.Types.AwsKinesis.Parser, new[]{ "State", "StreamArn", "ConsumerArn", "AwsRoleArn", "GcpServiceAccount" }, null, new[]{ typeof(global::Google.Cloud.PubSub.V1.IngestionDataSourceSettings.Types.AwsKinesis.Types.State) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.Topic), global::Google.Cloud.PubSub.V1.Topic.Parser, new[]{ "Name", "Labels", "MessageStoragePolicy", "KmsKeyName", "SchemaSettings", "SatisfiesPzs", "MessageRetentionDuration", "State", "IngestionDataSourceSettings" }, null, new[]{ typeof(global::Google.Cloud.PubSub.V1.Topic.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
@@ -434,6 +447,7 @@ namespace Google.Cloud.PubSub.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MessageStoragePolicy(MessageStoragePolicy other) : this() {
       allowedPersistenceRegions_ = other.allowedPersistenceRegions_.Clone();
+      enforceInTransit_ = other.enforceInTransit_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -449,17 +463,36 @@ namespace Google.Cloud.PubSub.V1 {
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> allowedPersistenceRegions_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// A list of IDs of Google Cloud regions where messages that are published
-    /// to the topic may be persisted in storage. Messages published by publishers
-    /// running in non-allowed Google Cloud regions (or running outside of Google
-    /// Cloud altogether) are routed for storage in one of the allowed regions.
-    /// An empty list means that no regions are allowed, and is not a valid
-    /// configuration.
+    /// Optional. A list of IDs of Google Cloud regions where messages that are
+    /// published to the topic may be persisted in storage. Messages published by
+    /// publishers running in non-allowed Google Cloud regions (or running outside
+    /// of Google Cloud altogether) are routed for storage in one of the allowed
+    /// regions. An empty list means that no regions are allowed, and is not a
+    /// valid configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> AllowedPersistenceRegions {
       get { return allowedPersistenceRegions_; }
+    }
+
+    /// <summary>Field number for the "enforce_in_transit" field.</summary>
+    public const int EnforceInTransitFieldNumber = 2;
+    private bool enforceInTransit_;
+    /// <summary>
+    /// Optional. If true, `allowed_persistence_regions` is also used to enforce
+    /// in-transit guarantees for messages. That is, Pub/Sub will fail
+    /// Publish operations on this topic and subscribe operations
+    /// on any subscription attached to this topic in any region that is
+    /// not in `allowed_persistence_regions`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool EnforceInTransit {
+      get { return enforceInTransit_; }
+      set {
+        enforceInTransit_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -478,6 +511,7 @@ namespace Google.Cloud.PubSub.V1 {
         return true;
       }
       if(!allowedPersistenceRegions_.Equals(other.allowedPersistenceRegions_)) return false;
+      if (EnforceInTransit != other.EnforceInTransit) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -486,6 +520,7 @@ namespace Google.Cloud.PubSub.V1 {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= allowedPersistenceRegions_.GetHashCode();
+      if (EnforceInTransit != false) hash ^= EnforceInTransit.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -505,6 +540,10 @@ namespace Google.Cloud.PubSub.V1 {
       output.WriteRawMessage(this);
     #else
       allowedPersistenceRegions_.WriteTo(output, _repeated_allowedPersistenceRegions_codec);
+      if (EnforceInTransit != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(EnforceInTransit);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -516,6 +555,10 @@ namespace Google.Cloud.PubSub.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       allowedPersistenceRegions_.WriteTo(ref output, _repeated_allowedPersistenceRegions_codec);
+      if (EnforceInTransit != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(EnforceInTransit);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -527,6 +570,9 @@ namespace Google.Cloud.PubSub.V1 {
     public int CalculateSize() {
       int size = 0;
       size += allowedPersistenceRegions_.CalculateSize(_repeated_allowedPersistenceRegions_codec);
+      if (EnforceInTransit != false) {
+        size += 1 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -540,6 +586,9 @@ namespace Google.Cloud.PubSub.V1 {
         return;
       }
       allowedPersistenceRegions_.Add(other.allowedPersistenceRegions_);
+      if (other.EnforceInTransit != false) {
+        EnforceInTransit = other.EnforceInTransit;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -559,6 +608,10 @@ namespace Google.Cloud.PubSub.V1 {
             allowedPersistenceRegions_.AddEntriesFrom(input, _repeated_allowedPersistenceRegions_codec);
             break;
           }
+          case 16: {
+            EnforceInTransit = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -576,6 +629,10 @@ namespace Google.Cloud.PubSub.V1 {
             break;
           case 10: {
             allowedPersistenceRegions_.AddEntriesFrom(ref input, _repeated_allowedPersistenceRegions_codec);
+            break;
+          }
+          case 16: {
+            EnforceInTransit = input.ReadBool();
             break;
           }
         }
@@ -657,7 +714,7 @@ namespace Google.Cloud.PubSub.V1 {
     public const int EncodingFieldNumber = 2;
     private global::Google.Cloud.PubSub.V1.Encoding encoding_ = global::Google.Cloud.PubSub.V1.Encoding.Unspecified;
     /// <summary>
-    /// The encoding of messages validated against `schema`.
+    /// Optional. The encoding of messages validated against `schema`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -672,9 +729,9 @@ namespace Google.Cloud.PubSub.V1 {
     public const int FirstRevisionIdFieldNumber = 3;
     private string firstRevisionId_ = "";
     /// <summary>
-    /// The minimum (inclusive) revision allowed for validating messages. If empty
-    /// or not present, allow any revision to be validated against last_revision or
-    /// any revision created before.
+    /// Optional. The minimum (inclusive) revision allowed for validating messages.
+    /// If empty or not present, allow any revision to be validated against
+    /// last_revision or any revision created before.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -689,9 +746,9 @@ namespace Google.Cloud.PubSub.V1 {
     public const int LastRevisionIdFieldNumber = 4;
     private string lastRevisionId_ = "";
     /// <summary>
-    /// The maximum (inclusive) revision allowed for validating messages. If empty
-    /// or not present, allow any revision to be validated against first_revision
-    /// or any revision created after.
+    /// Optional. The maximum (inclusive) revision allowed for validating messages.
+    /// If empty or not present, allow any revision to be validated against
+    /// first_revision or any revision created after.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1644,7 +1701,7 @@ namespace Google.Cloud.PubSub.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 18);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// See [Creating and managing labels]
+    /// Optional. See [Creating and managing labels]
     /// (https://cloud.google.com/pubsub/docs/labels).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1657,9 +1714,9 @@ namespace Google.Cloud.PubSub.V1 {
     public const int MessageStoragePolicyFieldNumber = 3;
     private global::Google.Cloud.PubSub.V1.MessageStoragePolicy messageStoragePolicy_;
     /// <summary>
-    /// Policy constraining the set of Google Cloud Platform regions where messages
-    /// published to the topic may be stored. If not present, then no constraints
-    /// are in effect.
+    /// Optional. Policy constraining the set of Google Cloud Platform regions
+    /// where messages published to the topic may be stored. If not present, then
+    /// no constraints are in effect.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1674,8 +1731,8 @@ namespace Google.Cloud.PubSub.V1 {
     public const int KmsKeyNameFieldNumber = 5;
     private string kmsKeyName_ = "";
     /// <summary>
-    /// The resource name of the Cloud KMS CryptoKey to be used to protect access
-    /// to messages published on this topic.
+    /// Optional. The resource name of the Cloud KMS CryptoKey to be used to
+    /// protect access to messages published on this topic.
     ///
     /// The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`.
     /// </summary>
@@ -1692,7 +1749,7 @@ namespace Google.Cloud.PubSub.V1 {
     public const int SchemaSettingsFieldNumber = 6;
     private global::Google.Cloud.PubSub.V1.SchemaSettings schemaSettings_;
     /// <summary>
-    /// Settings for validating messages published against a schema.
+    /// Optional. Settings for validating messages published against a schema.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1707,8 +1764,8 @@ namespace Google.Cloud.PubSub.V1 {
     public const int SatisfiesPzsFieldNumber = 7;
     private bool satisfiesPzs_;
     /// <summary>
-    /// Reserved for future use. This field is set only in responses from the
-    /// server; it is ignored if it is set in any requests.
+    /// Optional. Reserved for future use. This field is set only in responses from
+    /// the server; it is ignored if it is set in any requests.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1723,10 +1780,11 @@ namespace Google.Cloud.PubSub.V1 {
     public const int MessageRetentionDurationFieldNumber = 8;
     private global::Google.Protobuf.WellKnownTypes.Duration messageRetentionDuration_;
     /// <summary>
-    /// Indicates the minimum duration to retain a message after it is published to
-    /// the topic. If this field is set, messages published to the topic in the
-    /// last `message_retention_duration` are always available to subscribers. For
-    /// instance, it allows any attached subscription to [seek to a
+    /// Optional. Indicates the minimum duration to retain a message after it is
+    /// published to the topic. If this field is set, messages published to the
+    /// topic in the last `message_retention_duration` are always available to
+    /// subscribers. For instance, it allows any attached subscription to [seek to
+    /// a
     /// timestamp](https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time)
     /// that is up to `message_retention_duration` in the past. If this field is
     /// not set, message retention is controlled by settings on individual
@@ -2213,8 +2271,8 @@ namespace Google.Cloud.PubSub.V1 {
     public const int DataFieldNumber = 1;
     private pb::ByteString data_ = pb::ByteString.Empty;
     /// <summary>
-    /// The message data field. If this field is empty, the message must contain
-    /// at least one attribute.
+    /// Optional. The message data field. If this field is empty, the message must
+    /// contain at least one attribute.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2231,8 +2289,8 @@ namespace Google.Cloud.PubSub.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 18);
     private readonly pbc::MapField<string, string> attributes_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// Attributes for this message. If this field is empty, the message must
-    /// contain non-empty data. This can be used to filter messages on the
+    /// Optional. Attributes for this message. If this field is empty, the message
+    /// must contain non-empty data. This can be used to filter messages on the
     /// subscription.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2280,13 +2338,13 @@ namespace Google.Cloud.PubSub.V1 {
     public const int OrderingKeyFieldNumber = 5;
     private string orderingKey_ = "";
     /// <summary>
-    /// If non-empty, identifies related messages for which publish order should be
-    /// respected. If a `Subscription` has `enable_message_ordering` set to `true`,
-    /// messages published with the same non-empty `ordering_key` value will be
-    /// delivered to subscribers in the order in which they are received by the
-    /// Pub/Sub system. All `PubsubMessage`s published in a given `PublishRequest`
-    /// must specify the same `ordering_key` value.
-    /// For more information, see [ordering
+    /// Optional. If non-empty, identifies related messages for which publish order
+    /// should be respected. If a `Subscription` has `enable_message_ordering` set
+    /// to `true`, messages published with the same non-empty `ordering_key` value
+    /// will be delivered to subscribers in the order in which they are received by
+    /// the Pub/Sub system. All `PubsubMessage`s published in a given
+    /// `PublishRequest` must specify the same `ordering_key` value. For more
+    /// information, see [ordering
     /// messages](https://cloud.google.com/pubsub/docs/ordering).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3257,9 +3315,9 @@ namespace Google.Cloud.PubSub.V1 {
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> messageIds_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// The server-assigned ID of each published message, in the same order as
-    /// the messages in the request. IDs are guaranteed to be unique within
-    /// the topic.
+    /// Optional. The server-assigned ID of each published message, in the same
+    /// order as the messages in the request. IDs are guaranteed to be unique
+    /// within the topic.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3459,7 +3517,7 @@ namespace Google.Cloud.PubSub.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Maximum number of topics to return.
+    /// Optional. Maximum number of topics to return.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3474,9 +3532,9 @@ namespace Google.Cloud.PubSub.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// The value returned by the last `ListTopicsResponse`; indicates that this is
-    /// a continuation of a prior `ListTopics` call, and that the system should
-    /// return the next page of data.
+    /// Optional. The value returned by the last `ListTopicsResponse`; indicates
+    /// that this is a continuation of a prior `ListTopics` call, and that the
+    /// system should return the next page of data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3722,7 +3780,7 @@ namespace Google.Cloud.PubSub.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.PubSub.V1.Topic.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.PubSub.V1.Topic> topics_ = new pbc::RepeatedField<global::Google.Cloud.PubSub.V1.Topic>();
     /// <summary>
-    /// The resulting topics.
+    /// Optional. The resulting topics.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3734,8 +3792,8 @@ namespace Google.Cloud.PubSub.V1 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    /// If not empty, indicates that there may be more topics that match the
-    /// request; this value should be passed in a new `ListTopicsRequest`.
+    /// Optional. If not empty, indicates that there may be more topics that match
+    /// the request; this value should be passed in a new `ListTopicsRequest`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3962,7 +4020,7 @@ namespace Google.Cloud.PubSub.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Maximum number of subscription names to return.
+    /// Optional. Maximum number of subscription names to return.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3977,9 +4035,9 @@ namespace Google.Cloud.PubSub.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// The value returned by the last `ListTopicSubscriptionsResponse`; indicates
-    /// that this is a continuation of a prior `ListTopicSubscriptions` call, and
-    /// that the system should return the next page of data.
+    /// Optional. The value returned by the last `ListTopicSubscriptionsResponse`;
+    /// indicates that this is a continuation of a prior `ListTopicSubscriptions`
+    /// call, and that the system should return the next page of data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4225,7 +4283,8 @@ namespace Google.Cloud.PubSub.V1 {
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> subscriptions_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// The names of subscriptions attached to the topic specified in the request.
+    /// Optional. The names of subscriptions attached to the topic specified in the
+    /// request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4237,8 +4296,8 @@ namespace Google.Cloud.PubSub.V1 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    /// If not empty, indicates that there may be more subscriptions that match
-    /// the request; this value should be passed in a new
+    /// Optional. If not empty, indicates that there may be more subscriptions that
+    /// match the request; this value should be passed in a new
     /// `ListTopicSubscriptionsRequest` to get more subscriptions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4466,7 +4525,7 @@ namespace Google.Cloud.PubSub.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Maximum number of snapshot names to return.
+    /// Optional. Maximum number of snapshot names to return.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4481,9 +4540,9 @@ namespace Google.Cloud.PubSub.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// The value returned by the last `ListTopicSnapshotsResponse`; indicates
-    /// that this is a continuation of a prior `ListTopicSnapshots` call, and
-    /// that the system should return the next page of data.
+    /// Optional. The value returned by the last `ListTopicSnapshotsResponse`;
+    /// indicates that this is a continuation of a prior `ListTopicSnapshots` call,
+    /// and that the system should return the next page of data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4729,7 +4788,7 @@ namespace Google.Cloud.PubSub.V1 {
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> snapshots_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// The names of the snapshots that match the request.
+    /// Optional. The names of the snapshots that match the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4741,8 +4800,8 @@ namespace Google.Cloud.PubSub.V1 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    /// If not empty, indicates that there may be more snapshots that match
-    /// the request; this value should be passed in a new
+    /// Optional. If not empty, indicates that there may be more snapshots that
+    /// match the request; this value should be passed in a new
     /// `ListTopicSnapshotsRequest` to get more snapshots.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5556,7 +5615,7 @@ namespace Google.Cloud.PubSub.V1 {
     public const int PushConfigFieldNumber = 4;
     private global::Google.Cloud.PubSub.V1.PushConfig pushConfig_;
     /// <summary>
-    /// If push delivery is used with this subscription, this field is
+    /// Optional. If push delivery is used with this subscription, this field is
     /// used to configure it.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5572,8 +5631,8 @@ namespace Google.Cloud.PubSub.V1 {
     public const int BigqueryConfigFieldNumber = 18;
     private global::Google.Cloud.PubSub.V1.BigQueryConfig bigqueryConfig_;
     /// <summary>
-    /// If delivery to BigQuery is used with this subscription, this field is
-    /// used to configure it.
+    /// Optional. If delivery to BigQuery is used with this subscription, this
+    /// field is used to configure it.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5588,8 +5647,8 @@ namespace Google.Cloud.PubSub.V1 {
     public const int CloudStorageConfigFieldNumber = 22;
     private global::Google.Cloud.PubSub.V1.CloudStorageConfig cloudStorageConfig_;
     /// <summary>
-    /// If delivery to Google Cloud Storage is used with this subscription, this
-    /// field is used to configure it.
+    /// Optional. If delivery to Google Cloud Storage is used with this
+    /// subscription, this field is used to configure it.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5604,11 +5663,11 @@ namespace Google.Cloud.PubSub.V1 {
     public const int AckDeadlineSecondsFieldNumber = 5;
     private int ackDeadlineSeconds_;
     /// <summary>
-    /// The approximate amount of time (on a best-effort basis) Pub/Sub waits for
-    /// the subscriber to acknowledge receipt before resending the message. In the
-    /// interval after the message is delivered and before it is acknowledged, it
-    /// is considered to be _outstanding_. During that time period, the
-    /// message will not be redelivered (on a best-effort basis).
+    /// Optional. The approximate amount of time (on a best-effort basis) Pub/Sub
+    /// waits for the subscriber to acknowledge receipt before resending the
+    /// message. In the interval after the message is delivered and before it is
+    /// acknowledged, it is considered to be _outstanding_. During that time
+    /// period, the message will not be redelivered (on a best-effort basis).
     ///
     /// For pull subscriptions, this value is used as the initial value for the ack
     /// deadline. To override this value for a given message, call
@@ -5638,7 +5697,7 @@ namespace Google.Cloud.PubSub.V1 {
     public const int RetainAckedMessagesFieldNumber = 7;
     private bool retainAckedMessages_;
     /// <summary>
-    /// Indicates whether to retain acknowledged messages. If true, then
+    /// Optional. Indicates whether to retain acknowledged messages. If true, then
     /// messages are not expunged from the subscription's backlog, even if they are
     /// acknowledged, until they fall out of the `message_retention_duration`
     /// window. This must be true if you would like to [`Seek` to a timestamp]
@@ -5658,12 +5717,11 @@ namespace Google.Cloud.PubSub.V1 {
     public const int MessageRetentionDurationFieldNumber = 8;
     private global::Google.Protobuf.WellKnownTypes.Duration messageRetentionDuration_;
     /// <summary>
-    /// How long to retain unacknowledged messages in the subscription's backlog,
-    /// from the moment a message is published.
-    /// If `retain_acked_messages` is true, then this also configures the retention
-    /// of acknowledged messages, and thus configures how far back in time a `Seek`
-    /// can be done. Defaults to 7 days. Cannot be more than 7 days or less than 10
-    /// minutes.
+    /// Optional. How long to retain unacknowledged messages in the subscription's
+    /// backlog, from the moment a message is published. If `retain_acked_messages`
+    /// is true, then this also configures the retention of acknowledged messages,
+    /// and thus configures how far back in time a `Seek` can be done. Defaults to
+    /// 7 days. Cannot be more than 7 days or less than 10 minutes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5680,7 +5738,7 @@ namespace Google.Cloud.PubSub.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 74);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// See [Creating and managing
+    /// Optional. See [Creating and managing
     /// labels](https://cloud.google.com/pubsub/docs/labels).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5693,10 +5751,10 @@ namespace Google.Cloud.PubSub.V1 {
     public const int EnableMessageOrderingFieldNumber = 10;
     private bool enableMessageOrdering_;
     /// <summary>
-    /// If true, messages published with the same `ordering_key` in `PubsubMessage`
-    /// will be delivered to the subscribers in the order in which they
-    /// are received by the Pub/Sub system. Otherwise, they may be delivered in
-    /// any order.
+    /// Optional. If true, messages published with the same `ordering_key` in
+    /// `PubsubMessage` will be delivered to the subscribers in the order in which
+    /// they are received by the Pub/Sub system. Otherwise, they may be delivered
+    /// in any order.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5711,11 +5769,11 @@ namespace Google.Cloud.PubSub.V1 {
     public const int ExpirationPolicyFieldNumber = 11;
     private global::Google.Cloud.PubSub.V1.ExpirationPolicy expirationPolicy_;
     /// <summary>
-    /// A policy that specifies the conditions for this subscription's expiration.
-    /// A subscription is considered active as long as any connected subscriber is
-    /// successfully consuming messages from the subscription or is issuing
-    /// operations on the subscription. If `expiration_policy` is not set, a
-    /// *default policy* with `ttl` of 31 days will be used. The minimum allowed
+    /// Optional. A policy that specifies the conditions for this subscription's
+    /// expiration. A subscription is considered active as long as any connected
+    /// subscriber is successfully consuming messages from the subscription or is
+    /// issuing operations on the subscription. If `expiration_policy` is not set,
+    /// a *default policy* with `ttl` of 31 days will be used. The minimum allowed
     /// value for `expiration_policy.ttl` is 1 day. If `expiration_policy` is set,
     /// but `expiration_policy.ttl` is not set, the subscription never expires.
     /// </summary>
@@ -5732,7 +5790,7 @@ namespace Google.Cloud.PubSub.V1 {
     public const int FilterFieldNumber = 12;
     private string filter_ = "";
     /// <summary>
-    /// An expression written in the Pub/Sub [filter
+    /// Optional. An expression written in the Pub/Sub [filter
     /// language](https://cloud.google.com/pubsub/docs/filtering). If non-empty,
     /// then only `PubsubMessage`s whose `attributes` field matches the filter are
     /// delivered on this subscription. If empty, then no messages are filtered
@@ -5751,11 +5809,11 @@ namespace Google.Cloud.PubSub.V1 {
     public const int DeadLetterPolicyFieldNumber = 13;
     private global::Google.Cloud.PubSub.V1.DeadLetterPolicy deadLetterPolicy_;
     /// <summary>
-    /// A policy that specifies the conditions for dead lettering messages in
-    /// this subscription. If dead_letter_policy is not set, dead lettering
-    /// is disabled.
+    /// Optional. A policy that specifies the conditions for dead lettering
+    /// messages in this subscription. If dead_letter_policy is not set, dead
+    /// lettering is disabled.
     ///
-    /// The Cloud Pub/Sub service account associated with this subscriptions's
+    /// The Pub/Sub service account associated with this subscriptions's
     /// parent project (i.e.,
     /// service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
     /// permission to Acknowledge() messages on this subscription.
@@ -5773,8 +5831,8 @@ namespace Google.Cloud.PubSub.V1 {
     public const int RetryPolicyFieldNumber = 14;
     private global::Google.Cloud.PubSub.V1.RetryPolicy retryPolicy_;
     /// <summary>
-    /// A policy that specifies how Pub/Sub retries message delivery for this
-    /// subscription.
+    /// Optional. A policy that specifies how Pub/Sub retries message delivery for
+    /// this subscription.
     ///
     /// If not set, the default retry policy is applied. This generally implies
     /// that messages will be retried as soon as possible for healthy subscribers.
@@ -5794,9 +5852,9 @@ namespace Google.Cloud.PubSub.V1 {
     public const int DetachedFieldNumber = 15;
     private bool detached_;
     /// <summary>
-    /// Indicates whether the subscription is detached from its topic. Detached
-    /// subscriptions don't receive messages from their topic and don't retain any
-    /// backlog. `Pull` and `StreamingPull` requests will return
+    /// Optional. Indicates whether the subscription is detached from its topic.
+    /// Detached subscriptions don't receive messages from their topic and don't
+    /// retain any backlog. `Pull` and `StreamingPull` requests will return
     /// FAILED_PRECONDITION. If the subscription is a push subscription, pushes to
     /// the endpoint will not be made.
     /// </summary>
@@ -5813,8 +5871,9 @@ namespace Google.Cloud.PubSub.V1 {
     public const int EnableExactlyOnceDeliveryFieldNumber = 16;
     private bool enableExactlyOnceDelivery_;
     /// <summary>
-    /// If true, Pub/Sub provides the following guarantees for the delivery of
-    /// a message with a given value of `message_id` on this subscription:
+    /// Optional. If true, Pub/Sub provides the following guarantees for the
+    /// delivery of a message with a given value of `message_id` on this
+    /// subscription:
     ///
     /// * The message sent to a subscriber is guaranteed not to be resent
     /// before the message's acknowledgement deadline expires.
@@ -6502,7 +6561,7 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  /// A policy that specifies how Cloud Pub/Sub retries message delivery.
+  /// A policy that specifies how Pub/Sub retries message delivery.
   ///
   /// Retry delay will be exponential based on provided minimum and maximum
   /// backoffs. https://en.wikipedia.org/wiki/Exponential_backoff.
@@ -6563,8 +6622,8 @@ namespace Google.Cloud.PubSub.V1 {
     public const int MinimumBackoffFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.Duration minimumBackoff_;
     /// <summary>
-    /// The minimum delay between consecutive deliveries of a given message.
-    /// Value should be between 0 and 600 seconds. Defaults to 10 seconds.
+    /// Optional. The minimum delay between consecutive deliveries of a given
+    /// message. Value should be between 0 and 600 seconds. Defaults to 10 seconds.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6579,8 +6638,9 @@ namespace Google.Cloud.PubSub.V1 {
     public const int MaximumBackoffFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Duration maximumBackoff_;
     /// <summary>
-    /// The maximum delay between consecutive deliveries of a given message.
-    /// Value should be between 0 and 600 seconds. Defaults to 600 seconds.
+    /// Optional. The maximum delay between consecutive deliveries of a given
+    /// message. Value should be between 0 and 600 seconds. Defaults to 600
+    /// seconds.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6822,11 +6882,11 @@ namespace Google.Cloud.PubSub.V1 {
     public const int DeadLetterTopicFieldNumber = 1;
     private string deadLetterTopic_ = "";
     /// <summary>
-    /// The name of the topic to which dead letter messages should be published.
-    /// Format is `projects/{project}/topics/{topic}`.The Cloud Pub/Sub service
-    /// account associated with the enclosing subscription's parent project (i.e.,
-    /// service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
-    /// permission to Publish() to this topic.
+    /// Optional. The name of the topic to which dead letter messages should be
+    /// published. Format is `projects/{project}/topics/{topic}`.The Pub/Sub
+    /// service account associated with the enclosing subscription's parent project
+    /// (i.e., service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must
+    /// have permission to Publish() to this topic.
     ///
     /// The operation will fail if the topic does not exist.
     /// Users should ensure that there is a subscription attached to this topic
@@ -6845,8 +6905,8 @@ namespace Google.Cloud.PubSub.V1 {
     public const int MaxDeliveryAttemptsFieldNumber = 2;
     private int maxDeliveryAttempts_;
     /// <summary>
-    /// The maximum number of delivery attempts for any message. The value must be
-    /// between 5 and 100.
+    /// Optional. The maximum number of delivery attempts for any message. The
+    /// value must be between 5 and 100.
     ///
     /// The number of delivery attempts is defined as 1 + (the sum of number of
     /// NACKs and number of times the acknowledgement deadline has been exceeded
@@ -7077,12 +7137,12 @@ namespace Google.Cloud.PubSub.V1 {
     public const int TtlFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.Duration ttl_;
     /// <summary>
-    /// Specifies the "time-to-live" duration for an associated resource. The
-    /// resource expires if it is not active for a period of `ttl`. The definition
-    /// of "activity" depends on the type of the associated resource. The minimum
-    /// and maximum allowed values for `ttl` depend on the type of the associated
-    /// resource, as well. If `ttl` is not set, the associated resource never
-    /// expires.
+    /// Optional. Specifies the "time-to-live" duration for an associated resource.
+    /// The resource expires if it is not active for a period of `ttl`. The
+    /// definition of "activity" depends on the type of the associated resource.
+    /// The minimum and maximum allowed values for `ttl` depend on the type of the
+    /// associated resource, as well. If `ttl` is not set, the associated resource
+    /// never expires.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7302,7 +7362,7 @@ namespace Google.Cloud.PubSub.V1 {
     public const int PushEndpointFieldNumber = 1;
     private string pushEndpoint_ = "";
     /// <summary>
-    /// A URL locating the endpoint to which messages should be pushed.
+    /// Optional. A URL locating the endpoint to which messages should be pushed.
     /// For example, a Webhook endpoint might use `https://example.com/push`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7320,8 +7380,8 @@ namespace Google.Cloud.PubSub.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 18);
     private readonly pbc::MapField<string, string> attributes_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// Endpoint configuration attributes that can be used to control different
-    /// aspects of the message delivery.
+    /// Optional. Endpoint configuration attributes that can be used to control
+    /// different aspects of the message delivery.
     ///
     /// The only currently supported attribute is `x-goog-version`, which you can
     /// use to change the format of the pushed message. This attribute
@@ -7351,8 +7411,9 @@ namespace Google.Cloud.PubSub.V1 {
     /// <summary>Field number for the "oidc_token" field.</summary>
     public const int OidcTokenFieldNumber = 3;
     /// <summary>
-    /// If specified, Pub/Sub will generate and attach an OIDC JWT token as an
-    /// `Authorization` header in the HTTP request for every pushed message.
+    /// Optional. If specified, Pub/Sub will generate and attach an OIDC JWT
+    /// token as an `Authorization` header in the HTTP request for every pushed
+    /// message.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7367,8 +7428,8 @@ namespace Google.Cloud.PubSub.V1 {
     /// <summary>Field number for the "pubsub_wrapper" field.</summary>
     public const int PubsubWrapperFieldNumber = 4;
     /// <summary>
-    /// When set, the payload to the push endpoint is in the form of the JSON
-    /// representation of a PubsubMessage
+    /// Optional. When set, the payload to the push endpoint is in the form of
+    /// the JSON representation of a PubsubMessage
     /// (https://cloud.google.com/pubsub/docs/reference/rpc/google.pubsub.v1#pubsubmessage).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7384,7 +7445,7 @@ namespace Google.Cloud.PubSub.V1 {
     /// <summary>Field number for the "no_wrapper" field.</summary>
     public const int NoWrapperFieldNumber = 5;
     /// <summary>
-    /// When set, the payload to the push endpoint is not wrapped.
+    /// Optional. When set, the payload to the push endpoint is not wrapped.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7762,7 +7823,7 @@ namespace Google.Cloud.PubSub.V1 {
         public const int ServiceAccountEmailFieldNumber = 1;
         private string serviceAccountEmail_ = "";
         /// <summary>
-        /// [Service account
+        /// Optional. [Service account
         /// email](https://cloud.google.com/iam/docs/service-accounts)
         /// used for generating the OIDC token. For more information
         /// on setting up authentication, see
@@ -7781,12 +7842,13 @@ namespace Google.Cloud.PubSub.V1 {
         public const int AudienceFieldNumber = 2;
         private string audience_ = "";
         /// <summary>
-        /// Audience to be used when generating OIDC token. The audience claim
-        /// identifies the recipients that the JWT is intended for. The audience
-        /// value is a single case-sensitive string. Having multiple values (array)
-        /// for the audience field is not supported. More info about the OIDC JWT
-        /// token audience here: https://tools.ietf.org/html/rfc7519#section-4.1.3
-        /// Note: if not specified, the Push endpoint URL will be used.
+        /// Optional. Audience to be used when generating OIDC token. The audience
+        /// claim identifies the recipients that the JWT is intended for. The
+        /// audience value is a single case-sensitive string. Having multiple values
+        /// (array) for the audience field is not supported. More info about the OIDC
+        /// JWT token audience here:
+        /// https://tools.ietf.org/html/rfc7519#section-4.1.3 Note: if not specified,
+        /// the Push endpoint URL will be used.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8162,7 +8224,7 @@ namespace Google.Cloud.PubSub.V1 {
         public const int WriteMetadataFieldNumber = 1;
         private bool writeMetadata_;
         /// <summary>
-        /// When true, writes the Pub/Sub message metadata to
+        /// Optional. When true, writes the Pub/Sub message metadata to
         /// `x-goog-pubsub-&lt;KEY>:&lt;VAL>` headers of the HTTP request. Writes the
         /// Pub/Sub message attributes to `&lt;KEY>:&lt;VAL>` headers of the HTTP request.
         /// </summary>
@@ -8369,7 +8431,7 @@ namespace Google.Cloud.PubSub.V1 {
     public const int TableFieldNumber = 1;
     private string table_ = "";
     /// <summary>
-    /// The name of the table to which to write data, of the form
+    /// Optional. The name of the table to which to write data, of the form
     /// {projectId}.{datasetId}.{tableId}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8402,7 +8464,7 @@ namespace Google.Cloud.PubSub.V1 {
     public const int WriteMetadataFieldNumber = 3;
     private bool writeMetadata_;
     /// <summary>
-    /// When true, write the subscription name, message_id, publish_time,
+    /// Optional. When true, write the subscription name, message_id, publish_time,
     /// attributes, and ordering_key to additional columns in the table. The
     /// subscription name, message_id, and publish_time fields are put in their own
     /// columns while all other message properties (other than data) are written to
@@ -8421,10 +8483,10 @@ namespace Google.Cloud.PubSub.V1 {
     public const int DropUnknownFieldsFieldNumber = 4;
     private bool dropUnknownFields_;
     /// <summary>
-    /// When true and use_topic_schema is true, any fields that are a part of the
-    /// topic schema that are not part of the BigQuery table schema are dropped
-    /// when writing to BigQuery. Otherwise, the schemas must be kept in sync and
-    /// any messages with extra fields are not written and remain in the
+    /// Optional. When true and use_topic_schema is true, any fields that are a
+    /// part of the topic schema that are not part of the BigQuery table schema are
+    /// dropped when writing to BigQuery. Otherwise, the schemas must be kept in
+    /// sync and any messages with extra fields are not written and remain in the
     /// subscription's backlog.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8754,6 +8816,11 @@ namespace Google.Cloud.PubSub.V1 {
         /// Cannot write to the BigQuery table due to a schema mismatch.
         /// </summary>
         [pbr::OriginalName("SCHEMA_MISMATCH")] SchemaMismatch = 4,
+        /// <summary>
+        /// Cannot write to the destination because enforce_in_transit is set to true
+        /// and the destination locations are not in the allowed regions.
+        /// </summary>
+        [pbr::OriginalName("IN_TRANSIT_LOCATION_RESTRICTION")] InTransitLocationRestriction = 5,
       }
 
     }
@@ -8844,8 +8911,8 @@ namespace Google.Cloud.PubSub.V1 {
     public const int FilenamePrefixFieldNumber = 2;
     private string filenamePrefix_ = "";
     /// <summary>
-    /// User-provided prefix for Cloud Storage filename. See the [object naming
-    /// requirements](https://cloud.google.com/storage/docs/objects#naming).
+    /// Optional. User-provided prefix for Cloud Storage filename. See the [object
+    /// naming requirements](https://cloud.google.com/storage/docs/objects#naming).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8860,9 +8927,9 @@ namespace Google.Cloud.PubSub.V1 {
     public const int FilenameSuffixFieldNumber = 3;
     private string filenameSuffix_ = "";
     /// <summary>
-    /// User-provided suffix for Cloud Storage filename. See the [object naming
-    /// requirements](https://cloud.google.com/storage/docs/objects#naming). Must
-    /// not end in "/".
+    /// Optional. User-provided suffix for Cloud Storage filename. See the [object
+    /// naming requirements](https://cloud.google.com/storage/docs/objects#naming).
+    /// Must not end in "/".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8876,7 +8943,8 @@ namespace Google.Cloud.PubSub.V1 {
     /// <summary>Field number for the "text_config" field.</summary>
     public const int TextConfigFieldNumber = 4;
     /// <summary>
-    /// If set, message data will be written to Cloud Storage in text format.
+    /// Optional. If set, message data will be written to Cloud Storage in text
+    /// format.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8891,7 +8959,8 @@ namespace Google.Cloud.PubSub.V1 {
     /// <summary>Field number for the "avro_config" field.</summary>
     public const int AvroConfigFieldNumber = 5;
     /// <summary>
-    /// If set, message data will be written to Cloud Storage in Avro format.
+    /// Optional. If set, message data will be written to Cloud Storage in Avro
+    /// format.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8907,9 +8976,9 @@ namespace Google.Cloud.PubSub.V1 {
     public const int MaxDurationFieldNumber = 6;
     private global::Google.Protobuf.WellKnownTypes.Duration maxDuration_;
     /// <summary>
-    /// The maximum duration that can elapse before a new Cloud Storage file is
-    /// created. Min 1 minute, max 10 minutes, default 5 minutes. May not exceed
-    /// the subscription's acknowledgement deadline.
+    /// Optional. The maximum duration that can elapse before a new Cloud Storage
+    /// file is created. Min 1 minute, max 10 minutes, default 5 minutes. May not
+    /// exceed the subscription's acknowledgement deadline.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8924,9 +8993,9 @@ namespace Google.Cloud.PubSub.V1 {
     public const int MaxBytesFieldNumber = 7;
     private long maxBytes_;
     /// <summary>
-    /// The maximum bytes that can be written to a Cloud Storage file before a new
-    /// file is created. Min 1 KB, max 10 GiB. The max_bytes limit may be exceeded
-    /// in cases where messages are larger than the limit.
+    /// Optional. The maximum bytes that can be written to a Cloud Storage file
+    /// before a new file is created. Min 1 KB, max 10 GiB. The max_bytes limit may
+    /// be exceeded in cases where messages are larger than the limit.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9339,6 +9408,11 @@ namespace Google.Cloud.PubSub.V1 {
         /// Cannot write to the Cloud Storage bucket because it does not exist.
         /// </summary>
         [pbr::OriginalName("NOT_FOUND")] NotFound = 3,
+        /// <summary>
+        /// Cannot write to the destination because enforce_in_transit is set to true
+        /// and the destination locations are not in the allowed regions.
+        /// </summary>
+        [pbr::OriginalName("IN_TRANSIT_LOCATION_RESTRICTION")] InTransitLocationRestriction = 4,
       }
 
       /// <summary>
@@ -9550,12 +9624,12 @@ namespace Google.Cloud.PubSub.V1 {
         public const int WriteMetadataFieldNumber = 1;
         private bool writeMetadata_;
         /// <summary>
-        /// When true, write the subscription name, message_id, publish_time,
-        /// attributes, and ordering_key as additional fields in the output. The
-        /// subscription name, message_id, and publish_time fields are put in their
-        /// own fields while all other message properties other than data (for
-        /// example, an ordering_key, if present) are added as entries in the
-        /// attributes map.
+        /// Optional. When true, write the subscription name, message_id,
+        /// publish_time, attributes, and ordering_key as additional fields in the
+        /// output. The subscription name, message_id, and publish_time fields are
+        /// put in their own fields while all other message properties other than
+        /// data (for example, an ordering_key, if present) are added as entries in
+        /// the attributes map.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9757,7 +9831,7 @@ namespace Google.Cloud.PubSub.V1 {
     public const int AckIdFieldNumber = 1;
     private string ackId_ = "";
     /// <summary>
-    /// This ID can be used to acknowledge the received message.
+    /// Optional. This ID can be used to acknowledge the received message.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9772,7 +9846,7 @@ namespace Google.Cloud.PubSub.V1 {
     public const int MessageFieldNumber = 2;
     private global::Google.Cloud.PubSub.V1.PubsubMessage message_;
     /// <summary>
-    /// The message.
+    /// Optional. The message.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9787,8 +9861,8 @@ namespace Google.Cloud.PubSub.V1 {
     public const int DeliveryAttemptFieldNumber = 3;
     private int deliveryAttempt_;
     /// <summary>
-    /// The approximate number of times that Cloud Pub/Sub has attempted to deliver
-    /// the associated message to a subscriber.
+    /// Optional. The approximate number of times that Pub/Sub has attempted to
+    /// deliver the associated message to a subscriber.
     ///
     /// More precisely, this is 1 + (number of NACKs) +
     /// (number of ack_deadline exceeds) for this message.
@@ -10522,7 +10596,7 @@ namespace Google.Cloud.PubSub.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Maximum number of subscriptions to return.
+    /// Optional. Maximum number of subscriptions to return.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10537,9 +10611,9 @@ namespace Google.Cloud.PubSub.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// The value returned by the last `ListSubscriptionsResponse`; indicates that
-    /// this is a continuation of a prior `ListSubscriptions` call, and that the
-    /// system should return the next page of data.
+    /// Optional. The value returned by the last `ListSubscriptionsResponse`;
+    /// indicates that this is a continuation of a prior `ListSubscriptions` call,
+    /// and that the system should return the next page of data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10785,7 +10859,7 @@ namespace Google.Cloud.PubSub.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.PubSub.V1.Subscription.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.PubSub.V1.Subscription> subscriptions_ = new pbc::RepeatedField<global::Google.Cloud.PubSub.V1.Subscription>();
     /// <summary>
-    /// The subscriptions that match the request.
+    /// Optional. The subscriptions that match the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10797,8 +10871,8 @@ namespace Google.Cloud.PubSub.V1 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    /// If not empty, indicates that there may be more subscriptions that match
-    /// the request; this value should be passed in a new
+    /// Optional. If not empty, indicates that there may be more subscriptions that
+    /// match the request; this value should be passed in a new
     /// `ListSubscriptionsRequest` to get more subscriptions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11741,8 +11815,8 @@ namespace Google.Cloud.PubSub.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.PubSub.V1.ReceivedMessage.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.PubSub.V1.ReceivedMessage> receivedMessages_ = new pbc::RepeatedField<global::Google.Cloud.PubSub.V1.ReceivedMessage>();
     /// <summary>
-    /// Received Pub/Sub messages. The list will be empty if there are no more
-    /// messages available in the backlog, or if no messages could be returned
+    /// Optional. Received Pub/Sub messages. The list will be empty if there are no
+    /// more messages available in the backlog, or if no messages could be returned
     /// before the request timeout. For JSON, the response can be entirely
     /// empty. The Pub/Sub system may return fewer than the `maxMessages` requested
     /// even if there are more messages available in the backlog.
@@ -11966,7 +12040,8 @@ namespace Google.Cloud.PubSub.V1 {
     /// delivery to another subscriber client. This typically results in an
     /// increase in the rate of message redeliveries (that is, duplicates).
     /// The minimum deadline you can specify is 0 seconds.
-    /// The maximum deadline you can specify is 600 seconds (10 minutes).
+    /// The maximum deadline you can specify in a single request is 600 seconds
+    /// (10 minutes).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12455,11 +12530,12 @@ namespace Google.Cloud.PubSub.V1 {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> ackIds_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// List of acknowledgement IDs for acknowledging previously received messages
-    /// (received on this stream or a different stream). If an ack ID has expired,
-    /// the corresponding message may be redelivered later. Acknowledging a message
-    /// more than once will not result in an error. If the acknowledgement ID is
-    /// malformed, the stream will be aborted with status `INVALID_ARGUMENT`.
+    /// Optional. List of acknowledgement IDs for acknowledging previously received
+    /// messages (received on this stream or a different stream). If an ack ID has
+    /// expired, the corresponding message may be redelivered later. Acknowledging
+    /// a message more than once will not result in an error. If the
+    /// acknowledgement ID is malformed, the stream will be aborted with status
+    /// `INVALID_ARGUMENT`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12473,7 +12549,7 @@ namespace Google.Cloud.PubSub.V1 {
         = pb::FieldCodec.ForInt32(26);
     private readonly pbc::RepeatedField<int> modifyDeadlineSeconds_ = new pbc::RepeatedField<int>();
     /// <summary>
-    /// The list of new ack deadlines for the IDs listed in
+    /// Optional. The list of new ack deadlines for the IDs listed in
     /// `modify_deadline_ack_ids`. The size of this list must be the same as the
     /// size of `modify_deadline_ack_ids`. If it differs the stream will be aborted
     /// with `INVALID_ARGUMENT`. Each element in this list is applied to the
@@ -12497,9 +12573,9 @@ namespace Google.Cloud.PubSub.V1 {
         = pb::FieldCodec.ForString(34);
     private readonly pbc::RepeatedField<string> modifyDeadlineAckIds_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// List of acknowledgement IDs whose deadline will be modified based on the
-    /// corresponding element in `modify_deadline_seconds`. This field can be used
-    /// to indicate that more time is needed to process a message by the
+    /// Optional. List of acknowledgement IDs whose deadline will be modified based
+    /// on the corresponding element in `modify_deadline_seconds`. This field can
+    /// be used to indicate that more time is needed to process a message by the
     /// subscriber, or to make the message available for redelivery if the
     /// processing was interrupted.
     /// </summary>
@@ -12531,11 +12607,11 @@ namespace Google.Cloud.PubSub.V1 {
     public const int ClientIdFieldNumber = 6;
     private string clientId_ = "";
     /// <summary>
-    /// A unique identifier that is used to distinguish client instances from each
-    /// other. Only needs to be provided on the initial request. When a stream
-    /// disconnects and reconnects for the same stream, the client_id should be set
-    /// to the same value so that state associated with the old stream can be
-    /// transferred to the new stream. The same client_id should not be used for
+    /// Optional. A unique identifier that is used to distinguish client instances
+    /// from each other. Only needs to be provided on the initial request. When a
+    /// stream disconnects and reconnects for the same stream, the client_id should
+    /// be set to the same value so that state associated with the old stream can
+    /// be transferred to the new stream. The same client_id should not be used for
     /// different client instances.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12551,8 +12627,8 @@ namespace Google.Cloud.PubSub.V1 {
     public const int MaxOutstandingMessagesFieldNumber = 7;
     private long maxOutstandingMessages_;
     /// <summary>
-    /// Flow control settings for the maximum number of outstanding messages. When
-    /// there are `max_outstanding_messages` or more currently sent to the
+    /// Optional. Flow control settings for the maximum number of outstanding
+    /// messages. When there are `max_outstanding_messages` currently sent to the
     /// streaming pull client that have not yet been acked or nacked, the server
     /// stops sending more messages. The sending of messages resumes once the
     /// number of outstanding messages is less than this value. If the value is
@@ -12574,14 +12650,14 @@ namespace Google.Cloud.PubSub.V1 {
     public const int MaxOutstandingBytesFieldNumber = 8;
     private long maxOutstandingBytes_;
     /// <summary>
-    /// Flow control settings for the maximum number of outstanding bytes. When
-    /// there are `max_outstanding_bytes` or more worth of messages currently sent
-    /// to the streaming pull client that have not yet been acked or nacked, the
-    /// server will stop sending more messages. The sending of messages resumes
-    /// once the number of outstanding bytes is less than this value. If the value
-    /// is &lt;= 0, there is no limit to the number of outstanding bytes. This
-    /// property can only be set on the initial StreamingPullRequest. If it is set
-    /// on a subsequent request, the stream will be aborted with status
+    /// Optional. Flow control settings for the maximum number of outstanding
+    /// bytes. When there are `max_outstanding_bytes` or more worth of messages
+    /// currently sent to the streaming pull client that have not yet been acked or
+    /// nacked, the server will stop sending more messages. The sending of messages
+    /// resumes once the number of outstanding bytes is less than this value. If
+    /// the value is &lt;= 0, there is no limit to the number of outstanding bytes.
+    /// This property can only be set on the initial StreamingPullRequest. If it is
+    /// set on a subsequent request, the stream will be aborted with status
     /// `INVALID_ARGUMENT`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12923,7 +12999,7 @@ namespace Google.Cloud.PubSub.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.PubSub.V1.ReceivedMessage.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.PubSub.V1.ReceivedMessage> receivedMessages_ = new pbc::RepeatedField<global::Google.Cloud.PubSub.V1.ReceivedMessage>();
     /// <summary>
-    /// Received Pub/Sub messages. This will not be empty.
+    /// Optional. Received Pub/Sub messages. This will not be empty.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12935,8 +13011,8 @@ namespace Google.Cloud.PubSub.V1 {
     public const int AcknowledgeConfirmationFieldNumber = 5;
     private global::Google.Cloud.PubSub.V1.StreamingPullResponse.Types.AcknowledgeConfirmation acknowledgeConfirmation_;
     /// <summary>
-    /// This field will only be set if `enable_exactly_once_delivery` is set to
-    /// `true`.
+    /// Optional. This field will only be set if `enable_exactly_once_delivery` is
+    /// set to `true`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12951,8 +13027,8 @@ namespace Google.Cloud.PubSub.V1 {
     public const int ModifyAckDeadlineConfirmationFieldNumber = 3;
     private global::Google.Cloud.PubSub.V1.StreamingPullResponse.Types.ModifyAckDeadlineConfirmation modifyAckDeadlineConfirmation_;
     /// <summary>
-    /// This field will only be set if `enable_exactly_once_delivery` is set to
-    /// `true`.
+    /// Optional. This field will only be set if `enable_exactly_once_delivery` is
+    /// set to `true`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12967,7 +13043,7 @@ namespace Google.Cloud.PubSub.V1 {
     public const int SubscriptionPropertiesFieldNumber = 4;
     private global::Google.Cloud.PubSub.V1.StreamingPullResponse.Types.SubscriptionProperties subscriptionProperties_;
     /// <summary>
-    /// Properties associated with this subscription.
+    /// Optional. Properties associated with this subscription.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13260,7 +13336,7 @@ namespace Google.Cloud.PubSub.V1 {
             = pb::FieldCodec.ForString(10);
         private readonly pbc::RepeatedField<string> ackIds_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// Successfully processed acknowledgement IDs.
+        /// Optional. Successfully processed acknowledgement IDs.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13274,8 +13350,8 @@ namespace Google.Cloud.PubSub.V1 {
             = pb::FieldCodec.ForString(18);
         private readonly pbc::RepeatedField<string> invalidAckIds_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// List of acknowledgement IDs that were malformed or whose acknowledgement
-        /// deadline has expired.
+        /// Optional. List of acknowledgement IDs that were malformed or whose
+        /// acknowledgement deadline has expired.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13289,7 +13365,7 @@ namespace Google.Cloud.PubSub.V1 {
             = pb::FieldCodec.ForString(26);
         private readonly pbc::RepeatedField<string> unorderedAckIds_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// List of acknowledgement IDs that were out of order.
+        /// Optional. List of acknowledgement IDs that were out of order.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13303,7 +13379,8 @@ namespace Google.Cloud.PubSub.V1 {
             = pb::FieldCodec.ForString(34);
         private readonly pbc::RepeatedField<string> temporaryFailedAckIds_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// List of acknowledgement IDs that failed processing with temporary issues.
+        /// Optional. List of acknowledgement IDs that failed processing with
+        /// temporary issues.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13532,7 +13609,7 @@ namespace Google.Cloud.PubSub.V1 {
             = pb::FieldCodec.ForString(10);
         private readonly pbc::RepeatedField<string> ackIds_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// Successfully processed acknowledgement IDs.
+        /// Optional. Successfully processed acknowledgement IDs.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13546,8 +13623,8 @@ namespace Google.Cloud.PubSub.V1 {
             = pb::FieldCodec.ForString(18);
         private readonly pbc::RepeatedField<string> invalidAckIds_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// List of acknowledgement IDs that were malformed or whose acknowledgement
-        /// deadline has expired.
+        /// Optional. List of acknowledgement IDs that were malformed or whose
+        /// acknowledgement deadline has expired.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13561,7 +13638,8 @@ namespace Google.Cloud.PubSub.V1 {
             = pb::FieldCodec.ForString(26);
         private readonly pbc::RepeatedField<string> temporaryFailedAckIds_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// List of acknowledgement IDs that failed processing with temporary issues.
+        /// Optional. List of acknowledgement IDs that failed processing with
+        /// temporary issues.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13772,7 +13850,8 @@ namespace Google.Cloud.PubSub.V1 {
         public const int ExactlyOnceDeliveryEnabledFieldNumber = 1;
         private bool exactlyOnceDeliveryEnabled_;
         /// <summary>
-        /// True iff exactly once delivery is enabled for this subscription.
+        /// Optional. True iff exactly once delivery is enabled for this
+        /// subscription.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13787,7 +13866,7 @@ namespace Google.Cloud.PubSub.V1 {
         public const int MessageOrderingEnabledFieldNumber = 2;
         private bool messageOrderingEnabled_;
         /// <summary>
-        /// True iff message ordering is enabled for this subscription.
+        /// Optional. True iff message ordering is enabled for this subscription.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -14058,7 +14137,7 @@ namespace Google.Cloud.PubSub.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 26);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// See [Creating and managing
+    /// Optional. See [Creating and managing
     /// labels](https://cloud.google.com/pubsub/docs/labels).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14550,7 +14629,7 @@ namespace Google.Cloud.PubSub.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The name of the snapshot.
+    /// Optional. The name of the snapshot.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -14565,7 +14644,8 @@ namespace Google.Cloud.PubSub.V1 {
     public const int TopicFieldNumber = 2;
     private string topic_ = "";
     /// <summary>
-    /// The name of the topic from which this snapshot is retaining messages.
+    /// Optional. The name of the topic from which this snapshot is retaining
+    /// messages.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -14580,7 +14660,7 @@ namespace Google.Cloud.PubSub.V1 {
     public const int ExpireTimeFieldNumber = 3;
     private global::Google.Protobuf.WellKnownTypes.Timestamp expireTime_;
     /// <summary>
-    /// The snapshot is guaranteed to exist up until this time.
+    /// Optional. The snapshot is guaranteed to exist up until this time.
     /// A newly-created snapshot expires no later than 7 days from the time of its
     /// creation. Its exact lifetime is determined at creation by the existing
     /// backlog in the source subscription. Specifically, the lifetime of the
@@ -14606,7 +14686,7 @@ namespace Google.Cloud.PubSub.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 34);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// See [Creating and managing labels]
+    /// Optional. See [Creating and managing labels]
     /// (https://cloud.google.com/pubsub/docs/labels).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15084,7 +15164,7 @@ namespace Google.Cloud.PubSub.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Maximum number of snapshots to return.
+    /// Optional. Maximum number of snapshots to return.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -15099,9 +15179,9 @@ namespace Google.Cloud.PubSub.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// The value returned by the last `ListSnapshotsResponse`; indicates that this
-    /// is a continuation of a prior `ListSnapshots` call, and that the system
-    /// should return the next page of data.
+    /// Optional. The value returned by the last `ListSnapshotsResponse`; indicates
+    /// that this is a continuation of a prior `ListSnapshots` call, and that the
+    /// system should return the next page of data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -15347,7 +15427,7 @@ namespace Google.Cloud.PubSub.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.PubSub.V1.Snapshot.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.PubSub.V1.Snapshot> snapshots_ = new pbc::RepeatedField<global::Google.Cloud.PubSub.V1.Snapshot>();
     /// <summary>
-    /// The resulting snapshots.
+    /// Optional. The resulting snapshots.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -15359,8 +15439,9 @@ namespace Google.Cloud.PubSub.V1 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    /// If not empty, indicates that there may be more snapshot that match the
-    /// request; this value should be passed in a new `ListSnapshotsRequest`.
+    /// Optional. If not empty, indicates that there may be more snapshot that
+    /// match the request; this value should be passed in a new
+    /// `ListSnapshotsRequest`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -15788,7 +15869,7 @@ namespace Google.Cloud.PubSub.V1 {
     /// <summary>Field number for the "time" field.</summary>
     public const int TimeFieldNumber = 2;
     /// <summary>
-    /// The time to seek to.
+    /// Optional. The time to seek to.
     /// Messages retained in the subscription that were published before this
     /// time are marked as acknowledged, and messages retained in the
     /// subscription that were published after this time are marked as
@@ -15813,9 +15894,9 @@ namespace Google.Cloud.PubSub.V1 {
     /// <summary>Field number for the "snapshot" field.</summary>
     public const int SnapshotFieldNumber = 3;
     /// <summary>
-    /// The snapshot to seek to. The snapshot's topic must be the same as that of
-    /// the provided subscription.
-    /// Format is `projects/{project}/snapshots/{snap}`.
+    /// Optional. The snapshot to seek to. The snapshot's topic must be the same
+    /// as that of the provided subscription. Format is
+    /// `projects/{project}/snapshots/{snap}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

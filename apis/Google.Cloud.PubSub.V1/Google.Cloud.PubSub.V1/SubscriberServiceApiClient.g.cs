@@ -624,15 +624,15 @@ namespace Google.Cloud.PubSub.V1
         /// field will be `_deleted-topic_` if the topic has been deleted.
         /// </param>
         /// <param name="pushConfig">
-        /// If push delivery is used with this subscription, this field is
+        /// Optional. If push delivery is used with this subscription, this field is
         /// used to configure it.
         /// </param>
         /// <param name="ackDeadlineSeconds">
-        /// The approximate amount of time (on a best-effort basis) Pub/Sub waits for
-        /// the subscriber to acknowledge receipt before resending the message. In the
-        /// interval after the message is delivered and before it is acknowledged, it
-        /// is considered to be _outstanding_. During that time period, the
-        /// message will not be redelivered (on a best-effort basis).
+        /// Optional. The approximate amount of time (on a best-effort basis) Pub/Sub
+        /// waits for the subscriber to acknowledge receipt before resending the
+        /// message. In the interval after the message is delivered and before it is
+        /// acknowledged, it is considered to be _outstanding_. During that time
+        /// period, the message will not be redelivered (on a best-effort basis).
         /// 
         /// For pull subscriptions, this value is used as the initial value for the ack
         /// deadline. To override this value for a given message, call
@@ -687,15 +687,15 @@ namespace Google.Cloud.PubSub.V1
         /// field will be `_deleted-topic_` if the topic has been deleted.
         /// </param>
         /// <param name="pushConfig">
-        /// If push delivery is used with this subscription, this field is
+        /// Optional. If push delivery is used with this subscription, this field is
         /// used to configure it.
         /// </param>
         /// <param name="ackDeadlineSeconds">
-        /// The approximate amount of time (on a best-effort basis) Pub/Sub waits for
-        /// the subscriber to acknowledge receipt before resending the message. In the
-        /// interval after the message is delivered and before it is acknowledged, it
-        /// is considered to be _outstanding_. During that time period, the
-        /// message will not be redelivered (on a best-effort basis).
+        /// Optional. The approximate amount of time (on a best-effort basis) Pub/Sub
+        /// waits for the subscriber to acknowledge receipt before resending the
+        /// message. In the interval after the message is delivered and before it is
+        /// acknowledged, it is considered to be _outstanding_. During that time
+        /// period, the message will not be redelivered (on a best-effort basis).
         /// 
         /// For pull subscriptions, this value is used as the initial value for the ack
         /// deadline. To override this value for a given message, call
@@ -750,15 +750,15 @@ namespace Google.Cloud.PubSub.V1
         /// field will be `_deleted-topic_` if the topic has been deleted.
         /// </param>
         /// <param name="pushConfig">
-        /// If push delivery is used with this subscription, this field is
+        /// Optional. If push delivery is used with this subscription, this field is
         /// used to configure it.
         /// </param>
         /// <param name="ackDeadlineSeconds">
-        /// The approximate amount of time (on a best-effort basis) Pub/Sub waits for
-        /// the subscriber to acknowledge receipt before resending the message. In the
-        /// interval after the message is delivered and before it is acknowledged, it
-        /// is considered to be _outstanding_. During that time period, the
-        /// message will not be redelivered (on a best-effort basis).
+        /// Optional. The approximate amount of time (on a best-effort basis) Pub/Sub
+        /// waits for the subscriber to acknowledge receipt before resending the
+        /// message. In the interval after the message is delivered and before it is
+        /// acknowledged, it is considered to be _outstanding_. During that time
+        /// period, the message will not be redelivered (on a best-effort basis).
         /// 
         /// For pull subscriptions, this value is used as the initial value for the ack
         /// deadline. To override this value for a given message, call
@@ -807,15 +807,15 @@ namespace Google.Cloud.PubSub.V1
         /// field will be `_deleted-topic_` if the topic has been deleted.
         /// </param>
         /// <param name="pushConfig">
-        /// If push delivery is used with this subscription, this field is
+        /// Optional. If push delivery is used with this subscription, this field is
         /// used to configure it.
         /// </param>
         /// <param name="ackDeadlineSeconds">
-        /// The approximate amount of time (on a best-effort basis) Pub/Sub waits for
-        /// the subscriber to acknowledge receipt before resending the message. In the
-        /// interval after the message is delivered and before it is acknowledged, it
-        /// is considered to be _outstanding_. During that time period, the
-        /// message will not be redelivered (on a best-effort basis).
+        /// Optional. The approximate amount of time (on a best-effort basis) Pub/Sub
+        /// waits for the subscriber to acknowledge receipt before resending the
+        /// message. In the interval after the message is delivered and before it is
+        /// acknowledged, it is considered to be _outstanding_. During that time
+        /// period, the message will not be redelivered (on a best-effort basis).
         /// 
         /// For pull subscriptions, this value is used as the initial value for the ack
         /// deadline. To override this value for a given message, call
@@ -870,15 +870,15 @@ namespace Google.Cloud.PubSub.V1
         /// field will be `_deleted-topic_` if the topic has been deleted.
         /// </param>
         /// <param name="pushConfig">
-        /// If push delivery is used with this subscription, this field is
+        /// Optional. If push delivery is used with this subscription, this field is
         /// used to configure it.
         /// </param>
         /// <param name="ackDeadlineSeconds">
-        /// The approximate amount of time (on a best-effort basis) Pub/Sub waits for
-        /// the subscriber to acknowledge receipt before resending the message. In the
-        /// interval after the message is delivered and before it is acknowledged, it
-        /// is considered to be _outstanding_. During that time period, the
-        /// message will not be redelivered (on a best-effort basis).
+        /// Optional. The approximate amount of time (on a best-effort basis) Pub/Sub
+        /// waits for the subscriber to acknowledge receipt before resending the
+        /// message. In the interval after the message is delivered and before it is
+        /// acknowledged, it is considered to be _outstanding_. During that time
+        /// period, the message will not be redelivered (on a best-effort basis).
         /// 
         /// For pull subscriptions, this value is used as the initial value for the ack
         /// deadline. To override this value for a given message, call
@@ -933,15 +933,15 @@ namespace Google.Cloud.PubSub.V1
         /// field will be `_deleted-topic_` if the topic has been deleted.
         /// </param>
         /// <param name="pushConfig">
-        /// If push delivery is used with this subscription, this field is
+        /// Optional. If push delivery is used with this subscription, this field is
         /// used to configure it.
         /// </param>
         /// <param name="ackDeadlineSeconds">
-        /// The approximate amount of time (on a best-effort basis) Pub/Sub waits for
-        /// the subscriber to acknowledge receipt before resending the message. In the
-        /// interval after the message is delivered and before it is acknowledged, it
-        /// is considered to be _outstanding_. During that time period, the
-        /// message will not be redelivered (on a best-effort basis).
+        /// Optional. The approximate amount of time (on a best-effort basis) Pub/Sub
+        /// waits for the subscriber to acknowledge receipt before resending the
+        /// message. In the interval after the message is delivered and before it is
+        /// acknowledged, it is considered to be _outstanding_. During that time
+        /// period, the message will not be redelivered (on a best-effort basis).
         /// 
         /// For pull subscriptions, this value is used as the initial value for the ack
         /// deadline. To override this value for a given message, call
@@ -1075,8 +1075,9 @@ namespace Google.Cloud.PubSub.V1
             GetSubscriptionAsync(subscription, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates an existing subscription. Note that certain properties of a
-        /// subscription, such as its topic, are not modifiable.
+        /// Updates an existing subscription by updating the fields specified in the
+        /// update mask. Note that certain properties of a subscription, such as its
+        /// topic, are not modifiable.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1085,8 +1086,9 @@ namespace Google.Cloud.PubSub.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates an existing subscription. Note that certain properties of a
-        /// subscription, such as its topic, are not modifiable.
+        /// Updates an existing subscription by updating the fields specified in the
+        /// update mask. Note that certain properties of a subscription, such as its
+        /// topic, are not modifiable.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1095,8 +1097,9 @@ namespace Google.Cloud.PubSub.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates an existing subscription. Note that certain properties of a
-        /// subscription, such as its topic, are not modifiable.
+        /// Updates an existing subscription by updating the fields specified in the
+        /// update mask. Note that certain properties of a subscription, such as its
+        /// topic, are not modifiable.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1105,8 +1108,9 @@ namespace Google.Cloud.PubSub.V1
             UpdateSubscriptionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates an existing subscription. Note that certain properties of a
-        /// subscription, such as its topic, are not modifiable.
+        /// Updates an existing subscription by updating the fields specified in the
+        /// update mask. Note that certain properties of a subscription, such as its
+        /// topic, are not modifiable.
         /// </summary>
         /// <param name="subscription">
         /// Required. The updated subscription object.
@@ -1125,8 +1129,9 @@ namespace Google.Cloud.PubSub.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates an existing subscription. Note that certain properties of a
-        /// subscription, such as its topic, are not modifiable.
+        /// Updates an existing subscription by updating the fields specified in the
+        /// update mask. Note that certain properties of a subscription, such as its
+        /// topic, are not modifiable.
         /// </summary>
         /// <param name="subscription">
         /// Required. The updated subscription object.
@@ -1145,8 +1150,9 @@ namespace Google.Cloud.PubSub.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates an existing subscription. Note that certain properties of a
-        /// subscription, such as its topic, are not modifiable.
+        /// Updates an existing subscription by updating the fields specified in the
+        /// update mask. Note that certain properties of a subscription, such as its
+        /// topic, are not modifiable.
         /// </summary>
         /// <param name="subscription">
         /// Required. The updated subscription object.
@@ -1486,7 +1492,8 @@ namespace Google.Cloud.PubSub.V1
         /// delivery to another subscriber client. This typically results in an
         /// increase in the rate of message redeliveries (that is, duplicates).
         /// The minimum deadline you can specify is 0 seconds.
-        /// The maximum deadline you can specify is 600 seconds (10 minutes).
+        /// The maximum deadline you can specify in a single request is 600 seconds
+        /// (10 minutes).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1523,7 +1530,8 @@ namespace Google.Cloud.PubSub.V1
         /// delivery to another subscriber client. This typically results in an
         /// increase in the rate of message redeliveries (that is, duplicates).
         /// The minimum deadline you can specify is 0 seconds.
-        /// The maximum deadline you can specify is 600 seconds (10 minutes).
+        /// The maximum deadline you can specify in a single request is 600 seconds
+        /// (10 minutes).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1560,7 +1568,8 @@ namespace Google.Cloud.PubSub.V1
         /// delivery to another subscriber client. This typically results in an
         /// increase in the rate of message redeliveries (that is, duplicates).
         /// The minimum deadline you can specify is 0 seconds.
-        /// The maximum deadline you can specify is 600 seconds (10 minutes).
+        /// The maximum deadline you can specify in a single request is 600 seconds
+        /// (10 minutes).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1589,7 +1598,8 @@ namespace Google.Cloud.PubSub.V1
         /// delivery to another subscriber client. This typically results in an
         /// increase in the rate of message redeliveries (that is, duplicates).
         /// The minimum deadline you can specify is 0 seconds.
-        /// The maximum deadline you can specify is 600 seconds (10 minutes).
+        /// The maximum deadline you can specify in a single request is 600 seconds
+        /// (10 minutes).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1626,7 +1636,8 @@ namespace Google.Cloud.PubSub.V1
         /// delivery to another subscriber client. This typically results in an
         /// increase in the rate of message redeliveries (that is, duplicates).
         /// The minimum deadline you can specify is 0 seconds.
-        /// The maximum deadline you can specify is 600 seconds (10 minutes).
+        /// The maximum deadline you can specify in a single request is 600 seconds
+        /// (10 minutes).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1663,7 +1674,8 @@ namespace Google.Cloud.PubSub.V1
         /// delivery to another subscriber client. This typically results in an
         /// increase in the rate of message redeliveries (that is, duplicates).
         /// The minimum deadline you can specify is 0 seconds.
-        /// The maximum deadline you can specify is 600 seconds (10 minutes).
+        /// The maximum deadline you can specify in a single request is 600 seconds
+        /// (10 minutes).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3069,7 +3081,8 @@ namespace Google.Cloud.PubSub.V1
             CreateSnapshotAsync(name, subscription, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates an existing snapshot. Snapshots are used in
+        /// Updates an existing snapshot by updating the fields specified in the update
+        /// mask. Snapshots are used in
         /// [Seek](https://cloud.google.com/pubsub/docs/replay-overview) operations,
         /// which allow you to manage message acknowledgments in bulk. That is, you can
         /// set the acknowledgment state of messages in an existing subscription to the
@@ -3082,7 +3095,8 @@ namespace Google.Cloud.PubSub.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates an existing snapshot. Snapshots are used in
+        /// Updates an existing snapshot by updating the fields specified in the update
+        /// mask. Snapshots are used in
         /// [Seek](https://cloud.google.com/pubsub/docs/replay-overview) operations,
         /// which allow you to manage message acknowledgments in bulk. That is, you can
         /// set the acknowledgment state of messages in an existing subscription to the
@@ -3095,7 +3109,8 @@ namespace Google.Cloud.PubSub.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates an existing snapshot. Snapshots are used in
+        /// Updates an existing snapshot by updating the fields specified in the update
+        /// mask. Snapshots are used in
         /// [Seek](https://cloud.google.com/pubsub/docs/replay-overview) operations,
         /// which allow you to manage message acknowledgments in bulk. That is, you can
         /// set the acknowledgment state of messages in an existing subscription to the
@@ -3108,7 +3123,8 @@ namespace Google.Cloud.PubSub.V1
             UpdateSnapshotAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates an existing snapshot. Snapshots are used in
+        /// Updates an existing snapshot by updating the fields specified in the update
+        /// mask. Snapshots are used in
         /// [Seek](https://cloud.google.com/pubsub/docs/replay-overview) operations,
         /// which allow you to manage message acknowledgments in bulk. That is, you can
         /// set the acknowledgment state of messages in an existing subscription to the
@@ -3131,7 +3147,8 @@ namespace Google.Cloud.PubSub.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates an existing snapshot. Snapshots are used in
+        /// Updates an existing snapshot by updating the fields specified in the update
+        /// mask. Snapshots are used in
         /// [Seek](https://cloud.google.com/pubsub/docs/replay-overview) operations,
         /// which allow you to manage message acknowledgments in bulk. That is, you can
         /// set the acknowledgment state of messages in an existing subscription to the
@@ -3154,7 +3171,8 @@ namespace Google.Cloud.PubSub.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates an existing snapshot. Snapshots are used in
+        /// Updates an existing snapshot by updating the fields specified in the update
+        /// mask. Snapshots are used in
         /// [Seek](https://cloud.google.com/pubsub/docs/replay-overview) operations,
         /// which allow you to manage message acknowledgments in bulk. That is, you can
         /// set the acknowledgment state of messages in an existing subscription to the
@@ -3652,8 +3670,9 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Updates an existing subscription. Note that certain properties of a
-        /// subscription, such as its topic, are not modifiable.
+        /// Updates an existing subscription by updating the fields specified in the
+        /// update mask. Note that certain properties of a subscription, such as its
+        /// topic, are not modifiable.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3665,8 +3684,9 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Updates an existing subscription. Note that certain properties of a
-        /// subscription, such as its topic, are not modifiable.
+        /// Updates an existing subscription by updating the fields specified in the
+        /// update mask. Note that certain properties of a subscription, such as its
+        /// topic, are not modifiable.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4044,7 +4064,8 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Updates an existing snapshot. Snapshots are used in
+        /// Updates an existing snapshot by updating the fields specified in the update
+        /// mask. Snapshots are used in
         /// [Seek](https://cloud.google.com/pubsub/docs/replay-overview) operations,
         /// which allow you to manage message acknowledgments in bulk. That is, you can
         /// set the acknowledgment state of messages in an existing subscription to the
@@ -4060,7 +4081,8 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Updates an existing snapshot. Snapshots are used in
+        /// Updates an existing snapshot by updating the fields specified in the update
+        /// mask. Snapshots are used in
         /// [Seek](https://cloud.google.com/pubsub/docs/replay-overview) operations,
         /// which allow you to manage message acknowledgments in bulk. That is, you can
         /// set the acknowledgment state of messages in an existing subscription to the

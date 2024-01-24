@@ -191,8 +191,8 @@ namespace Google.Cloud.PubSub.V1 {
       }
 
       /// <summary>
-      /// Updates an existing topic. Note that certain properties of a
-      /// topic are not modifiable.
+      /// Updates an existing topic by updating the fields specified in the update
+      /// mask. Note that certain properties of a topic are not modifiable.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -381,8 +381,8 @@ namespace Google.Cloud.PubSub.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateTopic, null, options, request);
       }
       /// <summary>
-      /// Updates an existing topic. Note that certain properties of a
-      /// topic are not modifiable.
+      /// Updates an existing topic by updating the fields specified in the update
+      /// mask. Note that certain properties of a topic are not modifiable.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -395,8 +395,8 @@ namespace Google.Cloud.PubSub.V1 {
         return UpdateTopic(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates an existing topic. Note that certain properties of a
-      /// topic are not modifiable.
+      /// Updates an existing topic by updating the fields specified in the update
+      /// mask. Note that certain properties of a topic are not modifiable.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -407,8 +407,8 @@ namespace Google.Cloud.PubSub.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateTopic, null, options, request);
       }
       /// <summary>
-      /// Updates an existing topic. Note that certain properties of a
-      /// topic are not modifiable.
+      /// Updates an existing topic by updating the fields specified in the update
+      /// mask. Note that certain properties of a topic are not modifiable.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -421,8 +421,8 @@ namespace Google.Cloud.PubSub.V1 {
         return UpdateTopicAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates an existing topic. Note that certain properties of a
-      /// topic are not modifiable.
+      /// Updates an existing topic by updating the fields specified in the update
+      /// mask. Note that certain properties of a topic are not modifiable.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1122,8 +1122,9 @@ namespace Google.Cloud.PubSub.V1 {
       }
 
       /// <summary>
-      /// Updates an existing subscription. Note that certain properties of a
-      /// subscription, such as its topic, are not modifiable.
+      /// Updates an existing subscription by updating the fields specified in the
+      /// update mask. Note that certain properties of a subscription, such as its
+      /// topic, are not modifiable.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1304,7 +1305,8 @@ namespace Google.Cloud.PubSub.V1 {
       }
 
       /// <summary>
-      /// Updates an existing snapshot. Snapshots are used in
+      /// Updates an existing snapshot by updating the fields specified in the update
+      /// mask. Snapshots are used in
       /// [Seek](https://cloud.google.com/pubsub/docs/replay-overview) operations,
       /// which allow you to manage message acknowledgments in bulk. That is, you can
       /// set the acknowledgment state of messages in an existing subscription to the
@@ -1523,8 +1525,9 @@ namespace Google.Cloud.PubSub.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetSubscription, null, options, request);
       }
       /// <summary>
-      /// Updates an existing subscription. Note that certain properties of a
-      /// subscription, such as its topic, are not modifiable.
+      /// Updates an existing subscription by updating the fields specified in the
+      /// update mask. Note that certain properties of a subscription, such as its
+      /// topic, are not modifiable.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1537,8 +1540,9 @@ namespace Google.Cloud.PubSub.V1 {
         return UpdateSubscription(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates an existing subscription. Note that certain properties of a
-      /// subscription, such as its topic, are not modifiable.
+      /// Updates an existing subscription by updating the fields specified in the
+      /// update mask. Note that certain properties of a subscription, such as its
+      /// topic, are not modifiable.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1549,8 +1553,9 @@ namespace Google.Cloud.PubSub.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateSubscription, null, options, request);
       }
       /// <summary>
-      /// Updates an existing subscription. Note that certain properties of a
-      /// subscription, such as its topic, are not modifiable.
+      /// Updates an existing subscription by updating the fields specified in the
+      /// update mask. Note that certain properties of a subscription, such as its
+      /// topic, are not modifiable.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1563,8 +1568,9 @@ namespace Google.Cloud.PubSub.V1 {
         return UpdateSubscriptionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates an existing subscription. Note that certain properties of a
-      /// subscription, such as its topic, are not modifiable.
+      /// Updates an existing subscription by updating the fields specified in the
+      /// update mask. Note that certain properties of a subscription, such as its
+      /// topic, are not modifiable.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2209,7 +2215,8 @@ namespace Google.Cloud.PubSub.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateSnapshot, null, options, request);
       }
       /// <summary>
-      /// Updates an existing snapshot. Snapshots are used in
+      /// Updates an existing snapshot by updating the fields specified in the update
+      /// mask. Snapshots are used in
       /// [Seek](https://cloud.google.com/pubsub/docs/replay-overview) operations,
       /// which allow you to manage message acknowledgments in bulk. That is, you can
       /// set the acknowledgment state of messages in an existing subscription to the
@@ -2226,7 +2233,8 @@ namespace Google.Cloud.PubSub.V1 {
         return UpdateSnapshot(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates an existing snapshot. Snapshots are used in
+      /// Updates an existing snapshot by updating the fields specified in the update
+      /// mask. Snapshots are used in
       /// [Seek](https://cloud.google.com/pubsub/docs/replay-overview) operations,
       /// which allow you to manage message acknowledgments in bulk. That is, you can
       /// set the acknowledgment state of messages in an existing subscription to the
@@ -2241,7 +2249,8 @@ namespace Google.Cloud.PubSub.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateSnapshot, null, options, request);
       }
       /// <summary>
-      /// Updates an existing snapshot. Snapshots are used in
+      /// Updates an existing snapshot by updating the fields specified in the update
+      /// mask. Snapshots are used in
       /// [Seek](https://cloud.google.com/pubsub/docs/replay-overview) operations,
       /// which allow you to manage message acknowledgments in bulk. That is, you can
       /// set the acknowledgment state of messages in an existing subscription to the
@@ -2258,7 +2267,8 @@ namespace Google.Cloud.PubSub.V1 {
         return UpdateSnapshotAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates an existing snapshot. Snapshots are used in
+      /// Updates an existing snapshot by updating the fields specified in the update
+      /// mask. Snapshots are used in
       /// [Seek](https://cloud.google.com/pubsub/docs/replay-overview) operations,
       /// which allow you to manage message acknowledgments in bulk. That is, you can
       /// set the acknowledgment state of messages in an existing subscription to the
