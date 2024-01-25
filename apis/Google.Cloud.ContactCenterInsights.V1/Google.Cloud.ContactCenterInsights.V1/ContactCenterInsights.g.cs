@@ -5555,9 +5555,9 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         public const int AgentChannelFieldNumber = 2;
         private int agentChannel_;
         /// <summary>
-        /// Optional. For audio conversations, this field indicates which of the
-        /// channels, 1 or 2, contains the agent. Note that this must be set for
-        /// audio conversations to be properly displayed and analyzed.
+        /// Optional. Indicates which of the channels, 1 or 2, contains the agent.
+        /// Note that this must be set for conversations to be properly displayed and
+        /// analyzed.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5572,9 +5572,9 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         public const int CustomerChannelFieldNumber = 3;
         private int customerChannel_;
         /// <summary>
-        /// Optional. For audio conversations, this field indicates which of the
-        /// channels, 1 or 2, contains the customer. Note that this must be set for
-        /// audio conversations to be properly displayed and analyzed.
+        /// Optional. Indicates which of the channels, 1 or 2, contains the agent.
+        /// Note that this must be set for conversations to be properly displayed and
+        /// analyzed.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
