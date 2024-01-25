@@ -1606,24 +1606,6 @@
       "includeCommonResourcesProto": true
     },
     {
-      "id": "Google.Cloud.DataQnA.V1Alpha",
-      "version": "2.0.0-alpha02",
-      "type": "grpc",
-      "productName": "Data QnA",
-      "productUrl": "https://cloud.google.com/bigquery/docs/dataqna",
-      "description": "Recommended Google client library to access the Google Cloud Data QnA API (v1alpha) which is a natural language question and answer service for BigQuery data.",
-      "tags": [
-        "language",
-        "bigquery"
-      ],
-      "dependencies": {},
-      "generator": "micro",
-      "protoPath": "google/cloud/dataqna/v1alpha",
-      "shortName": "dataqna",
-      "serviceConfigFile": "dataqna_v1alpha.yaml",
-      "includeCommonResourcesProto": true
-    },
-    {
       "id": "Google.Cloud.Dataflow.V1Beta3",
       "version": "2.0.0-beta04",
       "type": "grpc",
