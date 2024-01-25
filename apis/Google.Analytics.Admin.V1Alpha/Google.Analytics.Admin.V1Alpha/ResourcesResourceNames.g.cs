@@ -3968,6 +3968,230 @@ namespace Google.Analytics.Admin.V1Alpha
         public static bool operator !=(CustomMetricName a, CustomMetricName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>CalculatedMetric</c> resource.</summary>
+    public sealed partial class CalculatedMetricName : gax::IResourceName, sys::IEquatable<CalculatedMetricName>
+    {
+        /// <summary>The possible contents of <see cref="CalculatedMetricName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>properties/{property}/calculatedMetrics/{calculated_metric}</c>.
+            /// </summary>
+            PropertyCalculatedMetric = 1,
+        }
+
+        private static gax::PathTemplate s_propertyCalculatedMetric = new gax::PathTemplate("properties/{property}/calculatedMetrics/{calculated_metric}");
+
+        /// <summary>Creates a <see cref="CalculatedMetricName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="CalculatedMetricName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static CalculatedMetricName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new CalculatedMetricName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="CalculatedMetricName"/> with the pattern
+        /// <c>properties/{property}/calculatedMetrics/{calculated_metric}</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="calculatedMetricId">The <c>CalculatedMetric</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="CalculatedMetricName"/> constructed from the provided ids.</returns>
+        public static CalculatedMetricName FromPropertyCalculatedMetric(string propertyId, string calculatedMetricId) =>
+            new CalculatedMetricName(ResourceNameType.PropertyCalculatedMetric, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), calculatedMetricId: gax::GaxPreconditions.CheckNotNullOrEmpty(calculatedMetricId, nameof(calculatedMetricId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="CalculatedMetricName"/> with pattern
+        /// <c>properties/{property}/calculatedMetrics/{calculated_metric}</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="calculatedMetricId">The <c>CalculatedMetric</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="CalculatedMetricName"/> with pattern
+        /// <c>properties/{property}/calculatedMetrics/{calculated_metric}</c>.
+        /// </returns>
+        public static string Format(string propertyId, string calculatedMetricId) =>
+            FormatPropertyCalculatedMetric(propertyId, calculatedMetricId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="CalculatedMetricName"/> with pattern
+        /// <c>properties/{property}/calculatedMetrics/{calculated_metric}</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="calculatedMetricId">The <c>CalculatedMetric</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="CalculatedMetricName"/> with pattern
+        /// <c>properties/{property}/calculatedMetrics/{calculated_metric}</c>.
+        /// </returns>
+        public static string FormatPropertyCalculatedMetric(string propertyId, string calculatedMetricId) =>
+            s_propertyCalculatedMetric.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), gax::GaxPreconditions.CheckNotNullOrEmpty(calculatedMetricId, nameof(calculatedMetricId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="CalculatedMetricName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/calculatedMetrics/{calculated_metric}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="calculatedMetricName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="CalculatedMetricName"/> if successful.</returns>
+        public static CalculatedMetricName Parse(string calculatedMetricName) => Parse(calculatedMetricName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="CalculatedMetricName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/calculatedMetrics/{calculated_metric}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="calculatedMetricName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="CalculatedMetricName"/> if successful.</returns>
+        public static CalculatedMetricName Parse(string calculatedMetricName, bool allowUnparsed) =>
+            TryParse(calculatedMetricName, allowUnparsed, out CalculatedMetricName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="CalculatedMetricName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/calculatedMetrics/{calculated_metric}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="calculatedMetricName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="CalculatedMetricName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string calculatedMetricName, out CalculatedMetricName result) =>
+            TryParse(calculatedMetricName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="CalculatedMetricName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/calculatedMetrics/{calculated_metric}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="calculatedMetricName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="CalculatedMetricName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string calculatedMetricName, bool allowUnparsed, out CalculatedMetricName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(calculatedMetricName, nameof(calculatedMetricName));
+            gax::TemplatedResourceName resourceName;
+            if (s_propertyCalculatedMetric.TryParseName(calculatedMetricName, out resourceName))
+            {
+                result = FromPropertyCalculatedMetric(resourceName[0], resourceName[1]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(calculatedMetricName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private CalculatedMetricName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string calculatedMetricId = null, string propertyId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            CalculatedMetricId = calculatedMetricId;
+            PropertyId = propertyId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="CalculatedMetricName"/> class from the component parts of pattern
+        /// <c>properties/{property}/calculatedMetrics/{calculated_metric}</c>
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="calculatedMetricId">The <c>CalculatedMetric</c> ID. Must not be <c>null</c> or empty.</param>
+        public CalculatedMetricName(string propertyId, string calculatedMetricId) : this(ResourceNameType.PropertyCalculatedMetric, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), calculatedMetricId: gax::GaxPreconditions.CheckNotNullOrEmpty(calculatedMetricId, nameof(calculatedMetricId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>CalculatedMetric</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string CalculatedMetricId { get; }
+
+        /// <summary>
+        /// The <c>Property</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string PropertyId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.PropertyCalculatedMetric: return s_propertyCalculatedMetric.Expand(PropertyId, CalculatedMetricId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as CalculatedMetricName);
+
+        /// <inheritdoc/>
+        public bool Equals(CalculatedMetricName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(CalculatedMetricName a, CalculatedMetricName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(CalculatedMetricName a, CalculatedMetricName b) => !(a == b);
+    }
+
     /// <summary>Resource name for the <c>DataRetentionSettings</c> resource.</summary>
     public sealed partial class DataRetentionSettingsName : gax::IResourceName, sys::IEquatable<DataRetentionSettingsName>
     {
@@ -6102,6 +6326,18 @@ namespace Google.Analytics.Admin.V1Alpha
         public gaav::CustomMetricName CustomMetricName
         {
             get => string.IsNullOrEmpty(Name) ? null : gaav::CustomMetricName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CalculatedMetric
+    {
+        /// <summary>
+        /// <see cref="gaav::CalculatedMetricName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::CalculatedMetricName CalculatedMetricName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::CalculatedMetricName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
