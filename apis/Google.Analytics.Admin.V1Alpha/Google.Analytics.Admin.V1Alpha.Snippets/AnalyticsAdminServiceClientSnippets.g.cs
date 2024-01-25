@@ -12833,6 +12833,619 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetCalculatedMetric</summary>
+        public void GetCalculatedMetricRequestObject()
+        {
+            // Snippet: GetCalculatedMetric(GetCalculatedMetricRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            GetCalculatedMetricRequest request = new GetCalculatedMetricRequest
+            {
+                CalculatedMetricName = CalculatedMetricName.FromPropertyCalculatedMetric("[PROPERTY]", "[CALCULATED_METRIC]"),
+            };
+            // Make the request
+            CalculatedMetric response = analyticsAdminServiceClient.GetCalculatedMetric(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCalculatedMetricAsync</summary>
+        public async Task GetCalculatedMetricRequestObjectAsync()
+        {
+            // Snippet: GetCalculatedMetricAsync(GetCalculatedMetricRequest, CallSettings)
+            // Additional: GetCalculatedMetricAsync(GetCalculatedMetricRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetCalculatedMetricRequest request = new GetCalculatedMetricRequest
+            {
+                CalculatedMetricName = CalculatedMetricName.FromPropertyCalculatedMetric("[PROPERTY]", "[CALCULATED_METRIC]"),
+            };
+            // Make the request
+            CalculatedMetric response = await analyticsAdminServiceClient.GetCalculatedMetricAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCalculatedMetric</summary>
+        public void GetCalculatedMetric()
+        {
+            // Snippet: GetCalculatedMetric(string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/calculatedMetrics/[CALCULATED_METRIC]";
+            // Make the request
+            CalculatedMetric response = analyticsAdminServiceClient.GetCalculatedMetric(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCalculatedMetricAsync</summary>
+        public async Task GetCalculatedMetricAsync()
+        {
+            // Snippet: GetCalculatedMetricAsync(string, CallSettings)
+            // Additional: GetCalculatedMetricAsync(string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/calculatedMetrics/[CALCULATED_METRIC]";
+            // Make the request
+            CalculatedMetric response = await analyticsAdminServiceClient.GetCalculatedMetricAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCalculatedMetric</summary>
+        public void GetCalculatedMetricResourceNames()
+        {
+            // Snippet: GetCalculatedMetric(CalculatedMetricName, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            CalculatedMetricName name = CalculatedMetricName.FromPropertyCalculatedMetric("[PROPERTY]", "[CALCULATED_METRIC]");
+            // Make the request
+            CalculatedMetric response = analyticsAdminServiceClient.GetCalculatedMetric(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCalculatedMetricAsync</summary>
+        public async Task GetCalculatedMetricResourceNamesAsync()
+        {
+            // Snippet: GetCalculatedMetricAsync(CalculatedMetricName, CallSettings)
+            // Additional: GetCalculatedMetricAsync(CalculatedMetricName, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CalculatedMetricName name = CalculatedMetricName.FromPropertyCalculatedMetric("[PROPERTY]", "[CALCULATED_METRIC]");
+            // Make the request
+            CalculatedMetric response = await analyticsAdminServiceClient.GetCalculatedMetricAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCalculatedMetric</summary>
+        public void CreateCalculatedMetricRequestObject()
+        {
+            // Snippet: CreateCalculatedMetric(CreateCalculatedMetricRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            CreateCalculatedMetricRequest request = new CreateCalculatedMetricRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                CalculatedMetricId = "",
+                CalculatedMetric = new CalculatedMetric(),
+            };
+            // Make the request
+            CalculatedMetric response = analyticsAdminServiceClient.CreateCalculatedMetric(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCalculatedMetricAsync</summary>
+        public async Task CreateCalculatedMetricRequestObjectAsync()
+        {
+            // Snippet: CreateCalculatedMetricAsync(CreateCalculatedMetricRequest, CallSettings)
+            // Additional: CreateCalculatedMetricAsync(CreateCalculatedMetricRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateCalculatedMetricRequest request = new CreateCalculatedMetricRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                CalculatedMetricId = "",
+                CalculatedMetric = new CalculatedMetric(),
+            };
+            // Make the request
+            CalculatedMetric response = await analyticsAdminServiceClient.CreateCalculatedMetricAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCalculatedMetric</summary>
+        public void CreateCalculatedMetric()
+        {
+            // Snippet: CreateCalculatedMetric(string, CalculatedMetric, string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            CalculatedMetric calculatedMetric = new CalculatedMetric();
+            string calculatedMetricId = "";
+            // Make the request
+            CalculatedMetric response = analyticsAdminServiceClient.CreateCalculatedMetric(parent, calculatedMetric, calculatedMetricId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCalculatedMetricAsync</summary>
+        public async Task CreateCalculatedMetricAsync()
+        {
+            // Snippet: CreateCalculatedMetricAsync(string, CalculatedMetric, string, CallSettings)
+            // Additional: CreateCalculatedMetricAsync(string, CalculatedMetric, string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            CalculatedMetric calculatedMetric = new CalculatedMetric();
+            string calculatedMetricId = "";
+            // Make the request
+            CalculatedMetric response = await analyticsAdminServiceClient.CreateCalculatedMetricAsync(parent, calculatedMetric, calculatedMetricId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCalculatedMetric</summary>
+        public void CreateCalculatedMetricResourceNames()
+        {
+            // Snippet: CreateCalculatedMetric(PropertyName, CalculatedMetric, string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            CalculatedMetric calculatedMetric = new CalculatedMetric();
+            string calculatedMetricId = "";
+            // Make the request
+            CalculatedMetric response = analyticsAdminServiceClient.CreateCalculatedMetric(parent, calculatedMetric, calculatedMetricId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCalculatedMetricAsync</summary>
+        public async Task CreateCalculatedMetricResourceNamesAsync()
+        {
+            // Snippet: CreateCalculatedMetricAsync(PropertyName, CalculatedMetric, string, CallSettings)
+            // Additional: CreateCalculatedMetricAsync(PropertyName, CalculatedMetric, string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            CalculatedMetric calculatedMetric = new CalculatedMetric();
+            string calculatedMetricId = "";
+            // Make the request
+            CalculatedMetric response = await analyticsAdminServiceClient.CreateCalculatedMetricAsync(parent, calculatedMetric, calculatedMetricId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCalculatedMetrics</summary>
+        public void ListCalculatedMetricsRequestObject()
+        {
+            // Snippet: ListCalculatedMetrics(ListCalculatedMetricsRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            ListCalculatedMetricsRequest request = new ListCalculatedMetricsRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            PagedEnumerable<ListCalculatedMetricsResponse, CalculatedMetric> response = analyticsAdminServiceClient.ListCalculatedMetrics(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (CalculatedMetric item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListCalculatedMetricsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CalculatedMetric item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CalculatedMetric> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CalculatedMetric item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCalculatedMetricsAsync</summary>
+        public async Task ListCalculatedMetricsRequestObjectAsync()
+        {
+            // Snippet: ListCalculatedMetricsAsync(ListCalculatedMetricsRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListCalculatedMetricsRequest request = new ListCalculatedMetricsRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListCalculatedMetricsResponse, CalculatedMetric> response = analyticsAdminServiceClient.ListCalculatedMetricsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((CalculatedMetric item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListCalculatedMetricsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CalculatedMetric item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CalculatedMetric> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CalculatedMetric item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCalculatedMetrics</summary>
+        public void ListCalculatedMetrics()
+        {
+            // Snippet: ListCalculatedMetrics(string, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            // Make the request
+            PagedEnumerable<ListCalculatedMetricsResponse, CalculatedMetric> response = analyticsAdminServiceClient.ListCalculatedMetrics(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (CalculatedMetric item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListCalculatedMetricsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CalculatedMetric item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CalculatedMetric> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CalculatedMetric item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCalculatedMetricsAsync</summary>
+        public async Task ListCalculatedMetricsAsync()
+        {
+            // Snippet: ListCalculatedMetricsAsync(string, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            // Make the request
+            PagedAsyncEnumerable<ListCalculatedMetricsResponse, CalculatedMetric> response = analyticsAdminServiceClient.ListCalculatedMetricsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((CalculatedMetric item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListCalculatedMetricsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CalculatedMetric item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CalculatedMetric> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CalculatedMetric item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCalculatedMetrics</summary>
+        public void ListCalculatedMetricsResourceNames()
+        {
+            // Snippet: ListCalculatedMetrics(PropertyName, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            // Make the request
+            PagedEnumerable<ListCalculatedMetricsResponse, CalculatedMetric> response = analyticsAdminServiceClient.ListCalculatedMetrics(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (CalculatedMetric item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListCalculatedMetricsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CalculatedMetric item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CalculatedMetric> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CalculatedMetric item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCalculatedMetricsAsync</summary>
+        public async Task ListCalculatedMetricsResourceNamesAsync()
+        {
+            // Snippet: ListCalculatedMetricsAsync(PropertyName, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            // Make the request
+            PagedAsyncEnumerable<ListCalculatedMetricsResponse, CalculatedMetric> response = analyticsAdminServiceClient.ListCalculatedMetricsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((CalculatedMetric item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListCalculatedMetricsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CalculatedMetric item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CalculatedMetric> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CalculatedMetric item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCalculatedMetric</summary>
+        public void UpdateCalculatedMetricRequestObject()
+        {
+            // Snippet: UpdateCalculatedMetric(UpdateCalculatedMetricRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateCalculatedMetricRequest request = new UpdateCalculatedMetricRequest
+            {
+                CalculatedMetric = new CalculatedMetric(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            CalculatedMetric response = analyticsAdminServiceClient.UpdateCalculatedMetric(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCalculatedMetricAsync</summary>
+        public async Task UpdateCalculatedMetricRequestObjectAsync()
+        {
+            // Snippet: UpdateCalculatedMetricAsync(UpdateCalculatedMetricRequest, CallSettings)
+            // Additional: UpdateCalculatedMetricAsync(UpdateCalculatedMetricRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateCalculatedMetricRequest request = new UpdateCalculatedMetricRequest
+            {
+                CalculatedMetric = new CalculatedMetric(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            CalculatedMetric response = await analyticsAdminServiceClient.UpdateCalculatedMetricAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCalculatedMetric</summary>
+        public void UpdateCalculatedMetric()
+        {
+            // Snippet: UpdateCalculatedMetric(CalculatedMetric, FieldMask, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            CalculatedMetric calculatedMetric = new CalculatedMetric();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            CalculatedMetric response = analyticsAdminServiceClient.UpdateCalculatedMetric(calculatedMetric, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCalculatedMetricAsync</summary>
+        public async Task UpdateCalculatedMetricAsync()
+        {
+            // Snippet: UpdateCalculatedMetricAsync(CalculatedMetric, FieldMask, CallSettings)
+            // Additional: UpdateCalculatedMetricAsync(CalculatedMetric, FieldMask, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CalculatedMetric calculatedMetric = new CalculatedMetric();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            CalculatedMetric response = await analyticsAdminServiceClient.UpdateCalculatedMetricAsync(calculatedMetric, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCalculatedMetric</summary>
+        public void DeleteCalculatedMetricRequestObject()
+        {
+            // Snippet: DeleteCalculatedMetric(DeleteCalculatedMetricRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteCalculatedMetricRequest request = new DeleteCalculatedMetricRequest
+            {
+                CalculatedMetricName = CalculatedMetricName.FromPropertyCalculatedMetric("[PROPERTY]", "[CALCULATED_METRIC]"),
+            };
+            // Make the request
+            analyticsAdminServiceClient.DeleteCalculatedMetric(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCalculatedMetricAsync</summary>
+        public async Task DeleteCalculatedMetricRequestObjectAsync()
+        {
+            // Snippet: DeleteCalculatedMetricAsync(DeleteCalculatedMetricRequest, CallSettings)
+            // Additional: DeleteCalculatedMetricAsync(DeleteCalculatedMetricRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteCalculatedMetricRequest request = new DeleteCalculatedMetricRequest
+            {
+                CalculatedMetricName = CalculatedMetricName.FromPropertyCalculatedMetric("[PROPERTY]", "[CALCULATED_METRIC]"),
+            };
+            // Make the request
+            await analyticsAdminServiceClient.DeleteCalculatedMetricAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCalculatedMetric</summary>
+        public void DeleteCalculatedMetric()
+        {
+            // Snippet: DeleteCalculatedMetric(string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/calculatedMetrics/[CALCULATED_METRIC]";
+            // Make the request
+            analyticsAdminServiceClient.DeleteCalculatedMetric(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCalculatedMetricAsync</summary>
+        public async Task DeleteCalculatedMetricAsync()
+        {
+            // Snippet: DeleteCalculatedMetricAsync(string, CallSettings)
+            // Additional: DeleteCalculatedMetricAsync(string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/calculatedMetrics/[CALCULATED_METRIC]";
+            // Make the request
+            await analyticsAdminServiceClient.DeleteCalculatedMetricAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCalculatedMetric</summary>
+        public void DeleteCalculatedMetricResourceNames()
+        {
+            // Snippet: DeleteCalculatedMetric(CalculatedMetricName, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            CalculatedMetricName name = CalculatedMetricName.FromPropertyCalculatedMetric("[PROPERTY]", "[CALCULATED_METRIC]");
+            // Make the request
+            analyticsAdminServiceClient.DeleteCalculatedMetric(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCalculatedMetricAsync</summary>
+        public async Task DeleteCalculatedMetricResourceNamesAsync()
+        {
+            // Snippet: DeleteCalculatedMetricAsync(CalculatedMetricName, CallSettings)
+            // Additional: DeleteCalculatedMetricAsync(CalculatedMetricName, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CalculatedMetricName name = CalculatedMetricName.FromPropertyCalculatedMetric("[PROPERTY]", "[CALCULATED_METRIC]");
+            // Make the request
+            await analyticsAdminServiceClient.DeleteCalculatedMetricAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for CreateRollupProperty</summary>
         public void CreateRollupPropertyRequestObject()
         {

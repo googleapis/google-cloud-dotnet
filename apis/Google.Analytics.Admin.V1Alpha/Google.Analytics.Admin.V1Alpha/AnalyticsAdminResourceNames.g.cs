@@ -627,6 +627,54 @@ namespace Google.Analytics.Admin.V1Alpha
         }
     }
 
+    public partial class CreateCalculatedMetricRequest
+    {
+        /// <summary>
+        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PropertyName ParentAsPropertyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteCalculatedMetricRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::CalculatedMetricName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::CalculatedMetricName CalculatedMetricName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::CalculatedMetricName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListCalculatedMetricsRequest
+    {
+        /// <summary>
+        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PropertyName ParentAsPropertyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetCalculatedMetricRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::CalculatedMetricName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::CalculatedMetricName CalculatedMetricName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::CalculatedMetricName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetDataRetentionSettingsRequest
     {
         /// <summary>

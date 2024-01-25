@@ -88,6 +88,12 @@
                 "CreateAudienceAsync"
               ]
             },
+            "CreateCalculatedMetric": {
+              "methods": [
+                "CreateCalculatedMetric",
+                "CreateCalculatedMetricAsync"
+              ]
+            },
             "CreateChannelGroup": {
               "methods": [
                 "CreateChannelGroup",
@@ -224,6 +230,12 @@
               "methods": [
                 "DeleteAdSenseLink",
                 "DeleteAdSenseLinkAsync"
+              ]
+            },
+            "DeleteCalculatedMetric": {
+              "methods": [
+                "DeleteCalculatedMetric",
+                "DeleteCalculatedMetricAsync"
               ]
             },
             "DeleteChannelGroup": {
@@ -368,6 +380,12 @@
               "methods": [
                 "GetBigQueryLink",
                 "GetBigQueryLinkAsync"
+              ]
+            },
+            "GetCalculatedMetric": {
+              "methods": [
+                "GetCalculatedMetric",
+                "GetCalculatedMetricAsync"
               ]
             },
             "GetChannelGroup": {
@@ -532,6 +550,12 @@
                 "ListBigQueryLinksAsync"
               ]
             },
+            "ListCalculatedMetrics": {
+              "methods": [
+                "ListCalculatedMetrics",
+                "ListCalculatedMetricsAsync"
+              ]
+            },
             "ListChannelGroups": {
               "methods": [
                 "ListChannelGroups",
@@ -686,6 +710,12 @@
               "methods": [
                 "UpdateAudience",
                 "UpdateAudienceAsync"
+              ]
+            },
+            "UpdateCalculatedMetric": {
+              "methods": [
+                "UpdateCalculatedMetric",
+                "UpdateCalculatedMetricAsync"
               ]
             },
             "UpdateChannelGroup": {

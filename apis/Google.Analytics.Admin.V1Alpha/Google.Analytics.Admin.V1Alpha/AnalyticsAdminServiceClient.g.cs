@@ -168,6 +168,11 @@ namespace Google.Analytics.Admin.V1Alpha
             DeleteEventCreateRuleSettings = existing.DeleteEventCreateRuleSettings;
             UpdateDataRedactionSettingsSettings = existing.UpdateDataRedactionSettingsSettings;
             GetDataRedactionSettingsSettings = existing.GetDataRedactionSettingsSettings;
+            GetCalculatedMetricSettings = existing.GetCalculatedMetricSettings;
+            CreateCalculatedMetricSettings = existing.CreateCalculatedMetricSettings;
+            ListCalculatedMetricsSettings = existing.ListCalculatedMetricsSettings;
+            UpdateCalculatedMetricSettings = existing.UpdateCalculatedMetricSettings;
+            DeleteCalculatedMetricSettings = existing.DeleteCalculatedMetricSettings;
             CreateRollupPropertySettings = existing.CreateRollupPropertySettings;
             GetRollupPropertySourceLinkSettings = existing.GetRollupPropertySourceLinkSettings;
             ListRollupPropertySourceLinksSettings = existing.ListRollupPropertySourceLinksSettings;
@@ -2635,6 +2640,116 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetDataRedactionSettingsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.GetCalculatedMetric</c> and
+        /// <c>AnalyticsAdminServiceClient.GetCalculatedMetricAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetCalculatedMetricSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.CreateCalculatedMetric</c> and
+        /// <c>AnalyticsAdminServiceClient.CreateCalculatedMetricAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateCalculatedMetricSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.ListCalculatedMetrics</c> and
+        /// <c>AnalyticsAdminServiceClient.ListCalculatedMetricsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListCalculatedMetricsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.UpdateCalculatedMetric</c> and
+        /// <c>AnalyticsAdminServiceClient.UpdateCalculatedMetricAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateCalculatedMetricSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.DeleteCalculatedMetric</c> and
+        /// <c>AnalyticsAdminServiceClient.DeleteCalculatedMetricAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteCalculatedMetricSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -15255,6 +15370,634 @@ namespace Google.Analytics.Admin.V1Alpha
             GetDataRedactionSettingsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Lookup for a single CalculatedMetric.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CalculatedMetric GetCalculatedMetric(GetCalculatedMetricRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lookup for a single CalculatedMetric.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CalculatedMetric> GetCalculatedMetricAsync(GetCalculatedMetricRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lookup for a single CalculatedMetric.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CalculatedMetric> GetCalculatedMetricAsync(GetCalculatedMetricRequest request, st::CancellationToken cancellationToken) =>
+            GetCalculatedMetricAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lookup for a single CalculatedMetric.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the CalculatedMetric to get.
+        /// Format: properties/{property_id}/calculatedMetrics/{calculated_metric_id}
+        /// Example: properties/1234/calculatedMetrics/Metric01
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CalculatedMetric GetCalculatedMetric(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCalculatedMetric(new GetCalculatedMetricRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a single CalculatedMetric.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the CalculatedMetric to get.
+        /// Format: properties/{property_id}/calculatedMetrics/{calculated_metric_id}
+        /// Example: properties/1234/calculatedMetrics/Metric01
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CalculatedMetric> GetCalculatedMetricAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCalculatedMetricAsync(new GetCalculatedMetricRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a single CalculatedMetric.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the CalculatedMetric to get.
+        /// Format: properties/{property_id}/calculatedMetrics/{calculated_metric_id}
+        /// Example: properties/1234/calculatedMetrics/Metric01
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CalculatedMetric> GetCalculatedMetricAsync(string name, st::CancellationToken cancellationToken) =>
+            GetCalculatedMetricAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lookup for a single CalculatedMetric.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the CalculatedMetric to get.
+        /// Format: properties/{property_id}/calculatedMetrics/{calculated_metric_id}
+        /// Example: properties/1234/calculatedMetrics/Metric01
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CalculatedMetric GetCalculatedMetric(CalculatedMetricName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCalculatedMetric(new GetCalculatedMetricRequest
+            {
+                CalculatedMetricName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a single CalculatedMetric.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the CalculatedMetric to get.
+        /// Format: properties/{property_id}/calculatedMetrics/{calculated_metric_id}
+        /// Example: properties/1234/calculatedMetrics/Metric01
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CalculatedMetric> GetCalculatedMetricAsync(CalculatedMetricName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCalculatedMetricAsync(new GetCalculatedMetricRequest
+            {
+                CalculatedMetricName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a single CalculatedMetric.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the CalculatedMetric to get.
+        /// Format: properties/{property_id}/calculatedMetrics/{calculated_metric_id}
+        /// Example: properties/1234/calculatedMetrics/Metric01
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CalculatedMetric> GetCalculatedMetricAsync(CalculatedMetricName name, st::CancellationToken cancellationToken) =>
+            GetCalculatedMetricAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a CalculatedMetric.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CalculatedMetric CreateCalculatedMetric(CreateCalculatedMetricRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a CalculatedMetric.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CalculatedMetric> CreateCalculatedMetricAsync(CreateCalculatedMetricRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a CalculatedMetric.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CalculatedMetric> CreateCalculatedMetricAsync(CreateCalculatedMetricRequest request, st::CancellationToken cancellationToken) =>
+            CreateCalculatedMetricAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a CalculatedMetric.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: properties/{property_id}
+        /// Example: properties/1234
+        /// </param>
+        /// <param name="calculatedMetric">
+        /// Required. The CalculatedMetric to create.
+        /// </param>
+        /// <param name="calculatedMetricId">
+        /// Required. The ID to use for the calculated metric which will become the
+        /// final component of the calculated metric's resource name.
+        /// 
+        /// This value should be 1-80 characters and valid characters are
+        /// /[a-zA-Z0-9_]/, no spaces allowed. calculated_metric_id must be unique
+        /// between all calculated metrics under a property. The calculated_metric_id
+        /// is used when referencing this calculated metric from external APIs, for
+        /// example, "calcMetric:{calculated_metric_id}".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CalculatedMetric CreateCalculatedMetric(string parent, CalculatedMetric calculatedMetric, string calculatedMetricId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCalculatedMetric(new CreateCalculatedMetricRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                CalculatedMetricId = gax::GaxPreconditions.CheckNotNullOrEmpty(calculatedMetricId, nameof(calculatedMetricId)),
+                CalculatedMetric = gax::GaxPreconditions.CheckNotNull(calculatedMetric, nameof(calculatedMetric)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a CalculatedMetric.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: properties/{property_id}
+        /// Example: properties/1234
+        /// </param>
+        /// <param name="calculatedMetric">
+        /// Required. The CalculatedMetric to create.
+        /// </param>
+        /// <param name="calculatedMetricId">
+        /// Required. The ID to use for the calculated metric which will become the
+        /// final component of the calculated metric's resource name.
+        /// 
+        /// This value should be 1-80 characters and valid characters are
+        /// /[a-zA-Z0-9_]/, no spaces allowed. calculated_metric_id must be unique
+        /// between all calculated metrics under a property. The calculated_metric_id
+        /// is used when referencing this calculated metric from external APIs, for
+        /// example, "calcMetric:{calculated_metric_id}".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CalculatedMetric> CreateCalculatedMetricAsync(string parent, CalculatedMetric calculatedMetric, string calculatedMetricId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCalculatedMetricAsync(new CreateCalculatedMetricRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                CalculatedMetricId = gax::GaxPreconditions.CheckNotNullOrEmpty(calculatedMetricId, nameof(calculatedMetricId)),
+                CalculatedMetric = gax::GaxPreconditions.CheckNotNull(calculatedMetric, nameof(calculatedMetric)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a CalculatedMetric.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: properties/{property_id}
+        /// Example: properties/1234
+        /// </param>
+        /// <param name="calculatedMetric">
+        /// Required. The CalculatedMetric to create.
+        /// </param>
+        /// <param name="calculatedMetricId">
+        /// Required. The ID to use for the calculated metric which will become the
+        /// final component of the calculated metric's resource name.
+        /// 
+        /// This value should be 1-80 characters and valid characters are
+        /// /[a-zA-Z0-9_]/, no spaces allowed. calculated_metric_id must be unique
+        /// between all calculated metrics under a property. The calculated_metric_id
+        /// is used when referencing this calculated metric from external APIs, for
+        /// example, "calcMetric:{calculated_metric_id}".
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CalculatedMetric> CreateCalculatedMetricAsync(string parent, CalculatedMetric calculatedMetric, string calculatedMetricId, st::CancellationToken cancellationToken) =>
+            CreateCalculatedMetricAsync(parent, calculatedMetric, calculatedMetricId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a CalculatedMetric.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: properties/{property_id}
+        /// Example: properties/1234
+        /// </param>
+        /// <param name="calculatedMetric">
+        /// Required. The CalculatedMetric to create.
+        /// </param>
+        /// <param name="calculatedMetricId">
+        /// Required. The ID to use for the calculated metric which will become the
+        /// final component of the calculated metric's resource name.
+        /// 
+        /// This value should be 1-80 characters and valid characters are
+        /// /[a-zA-Z0-9_]/, no spaces allowed. calculated_metric_id must be unique
+        /// between all calculated metrics under a property. The calculated_metric_id
+        /// is used when referencing this calculated metric from external APIs, for
+        /// example, "calcMetric:{calculated_metric_id}".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CalculatedMetric CreateCalculatedMetric(PropertyName parent, CalculatedMetric calculatedMetric, string calculatedMetricId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCalculatedMetric(new CreateCalculatedMetricRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                CalculatedMetricId = gax::GaxPreconditions.CheckNotNullOrEmpty(calculatedMetricId, nameof(calculatedMetricId)),
+                CalculatedMetric = gax::GaxPreconditions.CheckNotNull(calculatedMetric, nameof(calculatedMetric)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a CalculatedMetric.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: properties/{property_id}
+        /// Example: properties/1234
+        /// </param>
+        /// <param name="calculatedMetric">
+        /// Required. The CalculatedMetric to create.
+        /// </param>
+        /// <param name="calculatedMetricId">
+        /// Required. The ID to use for the calculated metric which will become the
+        /// final component of the calculated metric's resource name.
+        /// 
+        /// This value should be 1-80 characters and valid characters are
+        /// /[a-zA-Z0-9_]/, no spaces allowed. calculated_metric_id must be unique
+        /// between all calculated metrics under a property. The calculated_metric_id
+        /// is used when referencing this calculated metric from external APIs, for
+        /// example, "calcMetric:{calculated_metric_id}".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CalculatedMetric> CreateCalculatedMetricAsync(PropertyName parent, CalculatedMetric calculatedMetric, string calculatedMetricId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCalculatedMetricAsync(new CreateCalculatedMetricRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                CalculatedMetricId = gax::GaxPreconditions.CheckNotNullOrEmpty(calculatedMetricId, nameof(calculatedMetricId)),
+                CalculatedMetric = gax::GaxPreconditions.CheckNotNull(calculatedMetric, nameof(calculatedMetric)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a CalculatedMetric.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: properties/{property_id}
+        /// Example: properties/1234
+        /// </param>
+        /// <param name="calculatedMetric">
+        /// Required. The CalculatedMetric to create.
+        /// </param>
+        /// <param name="calculatedMetricId">
+        /// Required. The ID to use for the calculated metric which will become the
+        /// final component of the calculated metric's resource name.
+        /// 
+        /// This value should be 1-80 characters and valid characters are
+        /// /[a-zA-Z0-9_]/, no spaces allowed. calculated_metric_id must be unique
+        /// between all calculated metrics under a property. The calculated_metric_id
+        /// is used when referencing this calculated metric from external APIs, for
+        /// example, "calcMetric:{calculated_metric_id}".
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CalculatedMetric> CreateCalculatedMetricAsync(PropertyName parent, CalculatedMetric calculatedMetric, string calculatedMetricId, st::CancellationToken cancellationToken) =>
+            CreateCalculatedMetricAsync(parent, calculatedMetric, calculatedMetricId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists CalculatedMetrics on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="CalculatedMetric"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListCalculatedMetricsResponse, CalculatedMetric> ListCalculatedMetrics(ListCalculatedMetricsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists CalculatedMetrics on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="CalculatedMetric"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListCalculatedMetricsResponse, CalculatedMetric> ListCalculatedMetricsAsync(ListCalculatedMetricsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists CalculatedMetrics on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="CalculatedMetric"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListCalculatedMetricsResponse, CalculatedMetric> ListCalculatedMetrics(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListCalculatedMetrics(new ListCalculatedMetricsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists CalculatedMetrics on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="CalculatedMetric"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListCalculatedMetricsResponse, CalculatedMetric> ListCalculatedMetricsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListCalculatedMetricsAsync(new ListCalculatedMetricsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists CalculatedMetrics on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="CalculatedMetric"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListCalculatedMetricsResponse, CalculatedMetric> ListCalculatedMetrics(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListCalculatedMetrics(new ListCalculatedMetricsRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists CalculatedMetrics on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Example format: properties/1234
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="CalculatedMetric"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListCalculatedMetricsResponse, CalculatedMetric> ListCalculatedMetricsAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListCalculatedMetricsAsync(new ListCalculatedMetricsRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a CalculatedMetric on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CalculatedMetric UpdateCalculatedMetric(UpdateCalculatedMetricRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a CalculatedMetric on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CalculatedMetric> UpdateCalculatedMetricAsync(UpdateCalculatedMetricRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a CalculatedMetric on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CalculatedMetric> UpdateCalculatedMetricAsync(UpdateCalculatedMetricRequest request, st::CancellationToken cancellationToken) =>
+            UpdateCalculatedMetricAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a CalculatedMetric on a property.
+        /// </summary>
+        /// <param name="calculatedMetric">
+        /// Required. The CalculatedMetric to update
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Omitted fields will not be
+        /// updated. To replace the entire entity, use one path with the string "*" to
+        /// match all fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CalculatedMetric UpdateCalculatedMetric(CalculatedMetric calculatedMetric, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateCalculatedMetric(new UpdateCalculatedMetricRequest
+            {
+                CalculatedMetric = gax::GaxPreconditions.CheckNotNull(calculatedMetric, nameof(calculatedMetric)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a CalculatedMetric on a property.
+        /// </summary>
+        /// <param name="calculatedMetric">
+        /// Required. The CalculatedMetric to update
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Omitted fields will not be
+        /// updated. To replace the entire entity, use one path with the string "*" to
+        /// match all fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CalculatedMetric> UpdateCalculatedMetricAsync(CalculatedMetric calculatedMetric, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateCalculatedMetricAsync(new UpdateCalculatedMetricRequest
+            {
+                CalculatedMetric = gax::GaxPreconditions.CheckNotNull(calculatedMetric, nameof(calculatedMetric)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a CalculatedMetric on a property.
+        /// </summary>
+        /// <param name="calculatedMetric">
+        /// Required. The CalculatedMetric to update
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Omitted fields will not be
+        /// updated. To replace the entire entity, use one path with the string "*" to
+        /// match all fields.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CalculatedMetric> UpdateCalculatedMetricAsync(CalculatedMetric calculatedMetric, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateCalculatedMetricAsync(calculatedMetric, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a CalculatedMetric on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteCalculatedMetric(DeleteCalculatedMetricRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a CalculatedMetric on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteCalculatedMetricAsync(DeleteCalculatedMetricRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a CalculatedMetric on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteCalculatedMetricAsync(DeleteCalculatedMetricRequest request, st::CancellationToken cancellationToken) =>
+            DeleteCalculatedMetricAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a CalculatedMetric on a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the CalculatedMetric to delete.
+        /// Format: properties/{property_id}/calculatedMetrics/{calculated_metric_id}
+        /// Example: properties/1234/calculatedMetrics/Metric01
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteCalculatedMetric(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCalculatedMetric(new DeleteCalculatedMetricRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a CalculatedMetric on a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the CalculatedMetric to delete.
+        /// Format: properties/{property_id}/calculatedMetrics/{calculated_metric_id}
+        /// Example: properties/1234/calculatedMetrics/Metric01
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteCalculatedMetricAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCalculatedMetricAsync(new DeleteCalculatedMetricRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a CalculatedMetric on a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the CalculatedMetric to delete.
+        /// Format: properties/{property_id}/calculatedMetrics/{calculated_metric_id}
+        /// Example: properties/1234/calculatedMetrics/Metric01
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteCalculatedMetricAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteCalculatedMetricAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a CalculatedMetric on a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the CalculatedMetric to delete.
+        /// Format: properties/{property_id}/calculatedMetrics/{calculated_metric_id}
+        /// Example: properties/1234/calculatedMetrics/Metric01
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteCalculatedMetric(CalculatedMetricName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCalculatedMetric(new DeleteCalculatedMetricRequest
+            {
+                CalculatedMetricName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a CalculatedMetric on a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the CalculatedMetric to delete.
+        /// Format: properties/{property_id}/calculatedMetrics/{calculated_metric_id}
+        /// Example: properties/1234/calculatedMetrics/Metric01
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteCalculatedMetricAsync(CalculatedMetricName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCalculatedMetricAsync(new DeleteCalculatedMetricRequest
+            {
+                CalculatedMetricName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a CalculatedMetric on a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the CalculatedMetric to delete.
+        /// Format: properties/{property_id}/calculatedMetrics/{calculated_metric_id}
+        /// Example: properties/1234/calculatedMetrics/Metric01
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteCalculatedMetricAsync(CalculatedMetricName name, st::CancellationToken cancellationToken) =>
+            DeleteCalculatedMetricAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Create a roll-up property and all roll-up property source links.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -16702,6 +17445,16 @@ namespace Google.Analytics.Admin.V1Alpha
 
         private readonly gaxgrpc::ApiCall<GetDataRedactionSettingsRequest, DataRedactionSettings> _callGetDataRedactionSettings;
 
+        private readonly gaxgrpc::ApiCall<GetCalculatedMetricRequest, CalculatedMetric> _callGetCalculatedMetric;
+
+        private readonly gaxgrpc::ApiCall<CreateCalculatedMetricRequest, CalculatedMetric> _callCreateCalculatedMetric;
+
+        private readonly gaxgrpc::ApiCall<ListCalculatedMetricsRequest, ListCalculatedMetricsResponse> _callListCalculatedMetrics;
+
+        private readonly gaxgrpc::ApiCall<UpdateCalculatedMetricRequest, CalculatedMetric> _callUpdateCalculatedMetric;
+
+        private readonly gaxgrpc::ApiCall<DeleteCalculatedMetricRequest, wkt::Empty> _callDeleteCalculatedMetric;
+
         private readonly gaxgrpc::ApiCall<CreateRollupPropertyRequest, CreateRollupPropertyResponse> _callCreateRollupProperty;
 
         private readonly gaxgrpc::ApiCall<GetRollupPropertySourceLinkRequest, RollupPropertySourceLink> _callGetRollupPropertySourceLink;
@@ -17096,6 +17849,21 @@ namespace Google.Analytics.Admin.V1Alpha
             _callGetDataRedactionSettings = clientHelper.BuildApiCall<GetDataRedactionSettingsRequest, DataRedactionSettings>("GetDataRedactionSettings", grpcClient.GetDataRedactionSettingsAsync, grpcClient.GetDataRedactionSettings, effectiveSettings.GetDataRedactionSettingsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDataRedactionSettings);
             Modify_GetDataRedactionSettingsApiCall(ref _callGetDataRedactionSettings);
+            _callGetCalculatedMetric = clientHelper.BuildApiCall<GetCalculatedMetricRequest, CalculatedMetric>("GetCalculatedMetric", grpcClient.GetCalculatedMetricAsync, grpcClient.GetCalculatedMetric, effectiveSettings.GetCalculatedMetricSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetCalculatedMetric);
+            Modify_GetCalculatedMetricApiCall(ref _callGetCalculatedMetric);
+            _callCreateCalculatedMetric = clientHelper.BuildApiCall<CreateCalculatedMetricRequest, CalculatedMetric>("CreateCalculatedMetric", grpcClient.CreateCalculatedMetricAsync, grpcClient.CreateCalculatedMetric, effectiveSettings.CreateCalculatedMetricSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateCalculatedMetric);
+            Modify_CreateCalculatedMetricApiCall(ref _callCreateCalculatedMetric);
+            _callListCalculatedMetrics = clientHelper.BuildApiCall<ListCalculatedMetricsRequest, ListCalculatedMetricsResponse>("ListCalculatedMetrics", grpcClient.ListCalculatedMetricsAsync, grpcClient.ListCalculatedMetrics, effectiveSettings.ListCalculatedMetricsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListCalculatedMetrics);
+            Modify_ListCalculatedMetricsApiCall(ref _callListCalculatedMetrics);
+            _callUpdateCalculatedMetric = clientHelper.BuildApiCall<UpdateCalculatedMetricRequest, CalculatedMetric>("UpdateCalculatedMetric", grpcClient.UpdateCalculatedMetricAsync, grpcClient.UpdateCalculatedMetric, effectiveSettings.UpdateCalculatedMetricSettings).WithGoogleRequestParam("calculated_metric.name", request => request.CalculatedMetric?.Name);
+            Modify_ApiCall(ref _callUpdateCalculatedMetric);
+            Modify_UpdateCalculatedMetricApiCall(ref _callUpdateCalculatedMetric);
+            _callDeleteCalculatedMetric = clientHelper.BuildApiCall<DeleteCalculatedMetricRequest, wkt::Empty>("DeleteCalculatedMetric", grpcClient.DeleteCalculatedMetricAsync, grpcClient.DeleteCalculatedMetric, effectiveSettings.DeleteCalculatedMetricSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteCalculatedMetric);
+            Modify_DeleteCalculatedMetricApiCall(ref _callDeleteCalculatedMetric);
             _callCreateRollupProperty = clientHelper.BuildApiCall<CreateRollupPropertyRequest, CreateRollupPropertyResponse>("CreateRollupProperty", grpcClient.CreateRollupPropertyAsync, grpcClient.CreateRollupProperty, effectiveSettings.CreateRollupPropertySettings);
             Modify_ApiCall(ref _callCreateRollupProperty);
             Modify_CreateRollupPropertyApiCall(ref _callCreateRollupProperty);
@@ -17374,6 +18142,16 @@ namespace Google.Analytics.Admin.V1Alpha
 
         partial void Modify_GetDataRedactionSettingsApiCall(ref gaxgrpc::ApiCall<GetDataRedactionSettingsRequest, DataRedactionSettings> call);
 
+        partial void Modify_GetCalculatedMetricApiCall(ref gaxgrpc::ApiCall<GetCalculatedMetricRequest, CalculatedMetric> call);
+
+        partial void Modify_CreateCalculatedMetricApiCall(ref gaxgrpc::ApiCall<CreateCalculatedMetricRequest, CalculatedMetric> call);
+
+        partial void Modify_ListCalculatedMetricsApiCall(ref gaxgrpc::ApiCall<ListCalculatedMetricsRequest, ListCalculatedMetricsResponse> call);
+
+        partial void Modify_UpdateCalculatedMetricApiCall(ref gaxgrpc::ApiCall<UpdateCalculatedMetricRequest, CalculatedMetric> call);
+
+        partial void Modify_DeleteCalculatedMetricApiCall(ref gaxgrpc::ApiCall<DeleteCalculatedMetricRequest, wkt::Empty> call);
+
         partial void Modify_CreateRollupPropertyApiCall(ref gaxgrpc::ApiCall<CreateRollupPropertyRequest, CreateRollupPropertyResponse> call);
 
         partial void Modify_GetRollupPropertySourceLinkApiCall(ref gaxgrpc::ApiCall<GetRollupPropertySourceLinkRequest, RollupPropertySourceLink> call);
@@ -17640,6 +18418,16 @@ namespace Google.Analytics.Admin.V1Alpha
         partial void Modify_UpdateDataRedactionSettingsRequest(ref UpdateDataRedactionSettingsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetDataRedactionSettingsRequest(ref GetDataRedactionSettingsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetCalculatedMetricRequest(ref GetCalculatedMetricRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateCalculatedMetricRequest(ref CreateCalculatedMetricRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListCalculatedMetricsRequest(ref ListCalculatedMetricsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateCalculatedMetricRequest(ref UpdateCalculatedMetricRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteCalculatedMetricRequest(ref DeleteCalculatedMetricRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateRollupPropertyRequest(ref CreateRollupPropertyRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -20732,6 +21520,126 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
+        /// Lookup for a single CalculatedMetric.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CalculatedMetric GetCalculatedMetric(GetCalculatedMetricRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetCalculatedMetricRequest(ref request, ref callSettings);
+            return _callGetCalculatedMetric.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lookup for a single CalculatedMetric.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CalculatedMetric> GetCalculatedMetricAsync(GetCalculatedMetricRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetCalculatedMetricRequest(ref request, ref callSettings);
+            return _callGetCalculatedMetric.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a CalculatedMetric.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CalculatedMetric CreateCalculatedMetric(CreateCalculatedMetricRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateCalculatedMetricRequest(ref request, ref callSettings);
+            return _callCreateCalculatedMetric.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a CalculatedMetric.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CalculatedMetric> CreateCalculatedMetricAsync(CreateCalculatedMetricRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateCalculatedMetricRequest(ref request, ref callSettings);
+            return _callCreateCalculatedMetric.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists CalculatedMetrics on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="CalculatedMetric"/> resources.</returns>
+        public override gax::PagedEnumerable<ListCalculatedMetricsResponse, CalculatedMetric> ListCalculatedMetrics(ListCalculatedMetricsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListCalculatedMetricsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListCalculatedMetricsRequest, ListCalculatedMetricsResponse, CalculatedMetric>(_callListCalculatedMetrics, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists CalculatedMetrics on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="CalculatedMetric"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListCalculatedMetricsResponse, CalculatedMetric> ListCalculatedMetricsAsync(ListCalculatedMetricsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListCalculatedMetricsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListCalculatedMetricsRequest, ListCalculatedMetricsResponse, CalculatedMetric>(_callListCalculatedMetrics, request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a CalculatedMetric on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CalculatedMetric UpdateCalculatedMetric(UpdateCalculatedMetricRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateCalculatedMetricRequest(ref request, ref callSettings);
+            return _callUpdateCalculatedMetric.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a CalculatedMetric on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CalculatedMetric> UpdateCalculatedMetricAsync(UpdateCalculatedMetricRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateCalculatedMetricRequest(ref request, ref callSettings);
+            return _callUpdateCalculatedMetric.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a CalculatedMetric on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteCalculatedMetric(DeleteCalculatedMetricRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteCalculatedMetricRequest(ref request, ref callSettings);
+            _callDeleteCalculatedMetric.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a CalculatedMetric on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteCalculatedMetricAsync(DeleteCalculatedMetricRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteCalculatedMetricRequest(ref request, ref callSettings);
+            return _callDeleteCalculatedMetric.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Create a roll-up property and all roll-up property source links.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -21102,6 +22010,10 @@ namespace Google.Analytics.Admin.V1Alpha
     {
     }
 
+    public partial class ListCalculatedMetricsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListRollupPropertySourceLinksRequest : gaxgrpc::IPageRequest
     {
     }
@@ -21285,6 +22197,14 @@ namespace Google.Analytics.Admin.V1Alpha
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<EventCreateRule> GetEnumerator() => EventCreateRules.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListCalculatedMetricsResponse : gaxgrpc::IPageResponse<CalculatedMetric>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<CalculatedMetric> GetEnumerator() => CalculatedMetrics.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

@@ -428,6 +428,20 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetDataRedactionSettingsRequest> __Marshaller_google_analytics_admin_v1alpha_GetDataRedactionSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetDataRedactionSettingsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetCalculatedMetricRequest> __Marshaller_google_analytics_admin_v1alpha_GetCalculatedMetricRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetCalculatedMetricRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CalculatedMetric> __Marshaller_google_analytics_admin_v1alpha_CalculatedMetric = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CalculatedMetric.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateCalculatedMetricRequest> __Marshaller_google_analytics_admin_v1alpha_CreateCalculatedMetricRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateCalculatedMetricRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsRequest> __Marshaller_google_analytics_admin_v1alpha_ListCalculatedMetricsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsResponse> __Marshaller_google_analytics_admin_v1alpha_ListCalculatedMetricsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateCalculatedMetricRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateCalculatedMetricRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateCalculatedMetricRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DeleteCalculatedMetricRequest> __Marshaller_google_analytics_admin_v1alpha_DeleteCalculatedMetricRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DeleteCalculatedMetricRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertyRequest> __Marshaller_google_analytics_admin_v1alpha_CreateRollupPropertyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertyRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertyResponse> __Marshaller_google_analytics_admin_v1alpha_CreateRollupPropertyResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertyResponse.Parser));
@@ -1421,6 +1435,46 @@ namespace Google.Analytics.Admin.V1Alpha {
         "GetDataRedactionSettings",
         __Marshaller_google_analytics_admin_v1alpha_GetDataRedactionSettingsRequest,
         __Marshaller_google_analytics_admin_v1alpha_DataRedactionSettings);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetCalculatedMetricRequest, global::Google.Analytics.Admin.V1Alpha.CalculatedMetric> __Method_GetCalculatedMetric = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetCalculatedMetricRequest, global::Google.Analytics.Admin.V1Alpha.CalculatedMetric>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetCalculatedMetric",
+        __Marshaller_google_analytics_admin_v1alpha_GetCalculatedMetricRequest,
+        __Marshaller_google_analytics_admin_v1alpha_CalculatedMetric);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateCalculatedMetricRequest, global::Google.Analytics.Admin.V1Alpha.CalculatedMetric> __Method_CreateCalculatedMetric = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateCalculatedMetricRequest, global::Google.Analytics.Admin.V1Alpha.CalculatedMetric>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateCalculatedMetric",
+        __Marshaller_google_analytics_admin_v1alpha_CreateCalculatedMetricRequest,
+        __Marshaller_google_analytics_admin_v1alpha_CalculatedMetric);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsRequest, global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsResponse> __Method_ListCalculatedMetrics = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsRequest, global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListCalculatedMetrics",
+        __Marshaller_google_analytics_admin_v1alpha_ListCalculatedMetricsRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ListCalculatedMetricsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateCalculatedMetricRequest, global::Google.Analytics.Admin.V1Alpha.CalculatedMetric> __Method_UpdateCalculatedMetric = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateCalculatedMetricRequest, global::Google.Analytics.Admin.V1Alpha.CalculatedMetric>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateCalculatedMetric",
+        __Marshaller_google_analytics_admin_v1alpha_UpdateCalculatedMetricRequest,
+        __Marshaller_google_analytics_admin_v1alpha_CalculatedMetric);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteCalculatedMetricRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteCalculatedMetric = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteCalculatedMetricRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteCalculatedMetric",
+        __Marshaller_google_analytics_admin_v1alpha_DeleteCalculatedMetricRequest,
+        __Marshaller_google_protobuf_Empty);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertyRequest, global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertyResponse> __Method_CreateRollupProperty = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertyRequest, global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertyResponse>(
@@ -3047,6 +3101,66 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.DataRedactionSettings> GetDataRedactionSettings(global::Google.Analytics.Admin.V1Alpha.GetDataRedactionSettingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lookup for a single CalculatedMetric.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.CalculatedMetric> GetCalculatedMetric(global::Google.Analytics.Admin.V1Alpha.GetCalculatedMetricRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a CalculatedMetric.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.CalculatedMetric> CreateCalculatedMetric(global::Google.Analytics.Admin.V1Alpha.CreateCalculatedMetricRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists CalculatedMetrics on a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsResponse> ListCalculatedMetrics(global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a CalculatedMetric on a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.CalculatedMetric> UpdateCalculatedMetric(global::Google.Analytics.Admin.V1Alpha.UpdateCalculatedMetricRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a CalculatedMetric on a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCalculatedMetric(global::Google.Analytics.Admin.V1Alpha.DeleteCalculatedMetricRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -9346,6 +9460,246 @@ namespace Google.Analytics.Admin.V1Alpha {
         return CallInvoker.AsyncUnaryCall(__Method_GetDataRedactionSettings, null, options, request);
       }
       /// <summary>
+      /// Lookup for a single CalculatedMetric.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.CalculatedMetric GetCalculatedMetric(global::Google.Analytics.Admin.V1Alpha.GetCalculatedMetricRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetCalculatedMetric(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup for a single CalculatedMetric.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.CalculatedMetric GetCalculatedMetric(global::Google.Analytics.Admin.V1Alpha.GetCalculatedMetricRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetCalculatedMetric, null, options, request);
+      }
+      /// <summary>
+      /// Lookup for a single CalculatedMetric.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.CalculatedMetric> GetCalculatedMetricAsync(global::Google.Analytics.Admin.V1Alpha.GetCalculatedMetricRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetCalculatedMetricAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup for a single CalculatedMetric.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.CalculatedMetric> GetCalculatedMetricAsync(global::Google.Analytics.Admin.V1Alpha.GetCalculatedMetricRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetCalculatedMetric, null, options, request);
+      }
+      /// <summary>
+      /// Creates a CalculatedMetric.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.CalculatedMetric CreateCalculatedMetric(global::Google.Analytics.Admin.V1Alpha.CreateCalculatedMetricRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateCalculatedMetric(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a CalculatedMetric.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.CalculatedMetric CreateCalculatedMetric(global::Google.Analytics.Admin.V1Alpha.CreateCalculatedMetricRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateCalculatedMetric, null, options, request);
+      }
+      /// <summary>
+      /// Creates a CalculatedMetric.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.CalculatedMetric> CreateCalculatedMetricAsync(global::Google.Analytics.Admin.V1Alpha.CreateCalculatedMetricRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateCalculatedMetricAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a CalculatedMetric.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.CalculatedMetric> CreateCalculatedMetricAsync(global::Google.Analytics.Admin.V1Alpha.CreateCalculatedMetricRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateCalculatedMetric, null, options, request);
+      }
+      /// <summary>
+      /// Lists CalculatedMetrics on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsResponse ListCalculatedMetrics(global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListCalculatedMetrics(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists CalculatedMetrics on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsResponse ListCalculatedMetrics(global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListCalculatedMetrics, null, options, request);
+      }
+      /// <summary>
+      /// Lists CalculatedMetrics on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsResponse> ListCalculatedMetricsAsync(global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListCalculatedMetricsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists CalculatedMetrics on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsResponse> ListCalculatedMetricsAsync(global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListCalculatedMetrics, null, options, request);
+      }
+      /// <summary>
+      /// Updates a CalculatedMetric on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.CalculatedMetric UpdateCalculatedMetric(global::Google.Analytics.Admin.V1Alpha.UpdateCalculatedMetricRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateCalculatedMetric(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a CalculatedMetric on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.CalculatedMetric UpdateCalculatedMetric(global::Google.Analytics.Admin.V1Alpha.UpdateCalculatedMetricRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateCalculatedMetric, null, options, request);
+      }
+      /// <summary>
+      /// Updates a CalculatedMetric on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.CalculatedMetric> UpdateCalculatedMetricAsync(global::Google.Analytics.Admin.V1Alpha.UpdateCalculatedMetricRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateCalculatedMetricAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a CalculatedMetric on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.CalculatedMetric> UpdateCalculatedMetricAsync(global::Google.Analytics.Admin.V1Alpha.UpdateCalculatedMetricRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateCalculatedMetric, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a CalculatedMetric on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteCalculatedMetric(global::Google.Analytics.Admin.V1Alpha.DeleteCalculatedMetricRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteCalculatedMetric(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a CalculatedMetric on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteCalculatedMetric(global::Google.Analytics.Admin.V1Alpha.DeleteCalculatedMetricRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteCalculatedMetric, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a CalculatedMetric on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCalculatedMetricAsync(global::Google.Analytics.Admin.V1Alpha.DeleteCalculatedMetricRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteCalculatedMetricAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a CalculatedMetric on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCalculatedMetricAsync(global::Google.Analytics.Admin.V1Alpha.DeleteCalculatedMetricRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteCalculatedMetric, null, options, request);
+      }
+      /// <summary>
       /// Create a roll-up property and all roll-up property source links.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -10043,6 +10397,11 @@ namespace Google.Analytics.Admin.V1Alpha {
           .AddMethod(__Method_DeleteEventCreateRule, serviceImpl.DeleteEventCreateRule)
           .AddMethod(__Method_UpdateDataRedactionSettings, serviceImpl.UpdateDataRedactionSettings)
           .AddMethod(__Method_GetDataRedactionSettings, serviceImpl.GetDataRedactionSettings)
+          .AddMethod(__Method_GetCalculatedMetric, serviceImpl.GetCalculatedMetric)
+          .AddMethod(__Method_CreateCalculatedMetric, serviceImpl.CreateCalculatedMetric)
+          .AddMethod(__Method_ListCalculatedMetrics, serviceImpl.ListCalculatedMetrics)
+          .AddMethod(__Method_UpdateCalculatedMetric, serviceImpl.UpdateCalculatedMetric)
+          .AddMethod(__Method_DeleteCalculatedMetric, serviceImpl.DeleteCalculatedMetric)
           .AddMethod(__Method_CreateRollupProperty, serviceImpl.CreateRollupProperty)
           .AddMethod(__Method_GetRollupPropertySourceLink, serviceImpl.GetRollupPropertySourceLink)
           .AddMethod(__Method_ListRollupPropertySourceLinks, serviceImpl.ListRollupPropertySourceLinks)
@@ -10183,6 +10542,11 @@ namespace Google.Analytics.Admin.V1Alpha {
       serviceBinder.AddMethod(__Method_DeleteEventCreateRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteEventCreateRuleRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteEventCreateRule));
       serviceBinder.AddMethod(__Method_UpdateDataRedactionSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateDataRedactionSettingsRequest, global::Google.Analytics.Admin.V1Alpha.DataRedactionSettings>(serviceImpl.UpdateDataRedactionSettings));
       serviceBinder.AddMethod(__Method_GetDataRedactionSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetDataRedactionSettingsRequest, global::Google.Analytics.Admin.V1Alpha.DataRedactionSettings>(serviceImpl.GetDataRedactionSettings));
+      serviceBinder.AddMethod(__Method_GetCalculatedMetric, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetCalculatedMetricRequest, global::Google.Analytics.Admin.V1Alpha.CalculatedMetric>(serviceImpl.GetCalculatedMetric));
+      serviceBinder.AddMethod(__Method_CreateCalculatedMetric, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateCalculatedMetricRequest, global::Google.Analytics.Admin.V1Alpha.CalculatedMetric>(serviceImpl.CreateCalculatedMetric));
+      serviceBinder.AddMethod(__Method_ListCalculatedMetrics, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsRequest, global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsResponse>(serviceImpl.ListCalculatedMetrics));
+      serviceBinder.AddMethod(__Method_UpdateCalculatedMetric, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateCalculatedMetricRequest, global::Google.Analytics.Admin.V1Alpha.CalculatedMetric>(serviceImpl.UpdateCalculatedMetric));
+      serviceBinder.AddMethod(__Method_DeleteCalculatedMetric, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteCalculatedMetricRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteCalculatedMetric));
       serviceBinder.AddMethod(__Method_CreateRollupProperty, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertyRequest, global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertyResponse>(serviceImpl.CreateRollupProperty));
       serviceBinder.AddMethod(__Method_GetRollupPropertySourceLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetRollupPropertySourceLinkRequest, global::Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink>(serviceImpl.GetRollupPropertySourceLink));
       serviceBinder.AddMethod(__Method_ListRollupPropertySourceLinks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListRollupPropertySourceLinksRequest, global::Google.Analytics.Admin.V1Alpha.ListRollupPropertySourceLinksResponse>(serviceImpl.ListRollupPropertySourceLinks));
