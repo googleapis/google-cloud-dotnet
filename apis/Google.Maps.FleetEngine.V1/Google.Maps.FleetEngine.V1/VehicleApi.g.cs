@@ -4382,7 +4382,9 @@ namespace Google.Maps.FleetEngine.V1 {
   }
 
   /// <summary>
-  /// Describes intermediate points along a route.
+  /// Describes intermediate points along a route for a `VehicleMatch` in a
+  /// `SearchVehiclesResponse`. This concept is represented as a `TripWaypoint` in
+  /// all other endpoints.
   /// </summary>
   public sealed partial class Waypoint : pb::IMessage<Waypoint>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
