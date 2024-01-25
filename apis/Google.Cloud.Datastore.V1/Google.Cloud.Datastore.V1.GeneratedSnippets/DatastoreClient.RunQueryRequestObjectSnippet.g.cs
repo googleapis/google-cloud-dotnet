@@ -41,7 +41,6 @@ namespace GoogleCSharpSnippets
                 Query = new Query(),
                 ProjectId = "",
                 DatabaseId = "",
-                Mode = QueryMode.Normal,
             };
             // Make the request
             RunQueryResponse response = datastoreClient.RunQuery(request);
