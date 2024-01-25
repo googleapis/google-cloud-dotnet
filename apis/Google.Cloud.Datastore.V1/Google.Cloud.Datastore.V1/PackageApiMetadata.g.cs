@@ -34,7 +34,6 @@ namespace Google.Cloud.Datastore.V1
             yield return DatastoreReflection.Descriptor;
             yield return EntityReflection.Descriptor;
             yield return QueryReflection.Descriptor;
-            yield return QueryProfileReflection.Descriptor;
         }
     }
 }

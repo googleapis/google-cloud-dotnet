@@ -108,7 +108,6 @@ namespace GoogleCSharpSnippets
                 Query = new Query(),
                 ProjectId = "",
                 DatabaseId = "",
-                Mode = QueryMode.Normal,
             };
             // Make the request
             RunQueryResponse response = datastoreClient.RunQuery(request);
@@ -130,7 +129,6 @@ namespace GoogleCSharpSnippets
                 Query = new Query(),
                 ProjectId = "",
                 DatabaseId = "",
-                Mode = QueryMode.Normal,
             };
             // Make the request
             RunQueryResponse response = await datastoreClient.RunQueryAsync(request);
@@ -151,7 +149,6 @@ namespace GoogleCSharpSnippets
                 AggregationQuery = new AggregationQuery(),
                 ProjectId = "",
                 DatabaseId = "",
-                Mode = QueryMode.Normal,
             };
             // Make the request
             RunAggregationQueryResponse response = datastoreClient.RunAggregationQuery(request);
@@ -173,7 +170,6 @@ namespace GoogleCSharpSnippets
                 AggregationQuery = new AggregationQuery(),
                 ProjectId = "",
                 DatabaseId = "",
-                Mode = QueryMode.Normal,
             };
             // Make the request
             RunAggregationQueryResponse response = await datastoreClient.RunAggregationQueryAsync(request);
