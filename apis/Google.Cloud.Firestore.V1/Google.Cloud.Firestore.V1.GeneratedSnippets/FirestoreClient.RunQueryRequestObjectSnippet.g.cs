@@ -42,7 +42,6 @@ namespace GoogleCSharpSnippets
                 Parent = "",
                 StructuredQuery = new StructuredQuery(),
                 Transaction = ByteString.Empty,
-                Mode = QueryMode.Normal,
             };
             // Make the request, returning a streaming response
             using FirestoreClient.RunQueryStream response = firestoreClient.RunQuery(request);

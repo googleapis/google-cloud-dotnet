@@ -30,223 +30,217 @@ namespace Google.Cloud.Firestore.V1 {
             "YXZpb3IucHJvdG8aLGdvb2dsZS9maXJlc3RvcmUvdjEvYWdncmVnYXRpb25f",
             "cmVzdWx0LnByb3RvGiBnb29nbGUvZmlyZXN0b3JlL3YxL2NvbW1vbi5wcm90",
             "bxoiZ29vZ2xlL2ZpcmVzdG9yZS92MS9kb2N1bWVudC5wcm90bxofZ29vZ2xl",
-            "L2ZpcmVzdG9yZS92MS9xdWVyeS5wcm90bxonZ29vZ2xlL2ZpcmVzdG9yZS92",
-            "MS9xdWVyeV9wcm9maWxlLnByb3RvGh9nb29nbGUvZmlyZXN0b3JlL3YxL3dy",
-            "aXRlLnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8aH2dvb2ds",
-            "ZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi93",
-            "cmFwcGVycy5wcm90bxoXZ29vZ2xlL3JwYy9zdGF0dXMucHJvdG8iuAEKEkdl",
-            "dERvY3VtZW50UmVxdWVzdBIRCgRuYW1lGAEgASgJQgPgQQISLwoEbWFzaxgC",
-            "IAEoCzIhLmdvb2dsZS5maXJlc3RvcmUudjEuRG9jdW1lbnRNYXNrEhUKC3Ry",
-            "YW5zYWN0aW9uGAMgASgMSAASLwoJcmVhZF90aW1lGAUgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcEgAQhYKFGNvbnNpc3RlbmN5X3NlbGVjdG9y",
-            "IrsCChRMaXN0RG9jdW1lbnRzUmVxdWVzdBITCgZwYXJlbnQYASABKAlCA+BB",
-            "AhIaCg1jb2xsZWN0aW9uX2lkGAIgASgJQgPgQQESFgoJcGFnZV9zaXplGAMg",
-            "ASgFQgPgQQESFwoKcGFnZV90b2tlbhgEIAEoCUID4EEBEhUKCG9yZGVyX2J5",
-            "GAYgASgJQgPgQQESNAoEbWFzaxgHIAEoCzIhLmdvb2dsZS5maXJlc3RvcmUu",
-            "djEuRG9jdW1lbnRNYXNrQgPgQQESFQoLdHJhbnNhY3Rpb24YCCABKAxIABIv",
-            "CglyZWFkX3RpbWUYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "SAASFAoMc2hvd19taXNzaW5nGAwgASgIQhYKFGNvbnNpc3RlbmN5X3NlbGVj",
-            "dG9yImIKFUxpc3REb2N1bWVudHNSZXNwb25zZRIwCglkb2N1bWVudHMYASAD",
-            "KAsyHS5nb29nbGUuZmlyZXN0b3JlLnYxLkRvY3VtZW50EhcKD25leHRfcGFn",
-            "ZV90b2tlbhgCIAEoCSLEAQoVQ3JlYXRlRG9jdW1lbnRSZXF1ZXN0EhMKBnBh",
-            "cmVudBgBIAEoCUID4EECEhoKDWNvbGxlY3Rpb25faWQYAiABKAlCA+BBAhIT",
-            "Cgtkb2N1bWVudF9pZBgDIAEoCRI0Cghkb2N1bWVudBgEIAEoCzIdLmdvb2ds",
-            "ZS5maXJlc3RvcmUudjEuRG9jdW1lbnRCA+BBAhIvCgRtYXNrGAUgASgLMiEu",
-            "Z29vZ2xlLmZpcmVzdG9yZS52MS5Eb2N1bWVudE1hc2si8wEKFVVwZGF0ZURv",
-            "Y3VtZW50UmVxdWVzdBI0Cghkb2N1bWVudBgBIAEoCzIdLmdvb2dsZS5maXJl",
-            "c3RvcmUudjEuRG9jdW1lbnRCA+BBAhI2Cgt1cGRhdGVfbWFzaxgCIAEoCzIh",
-            "Lmdvb2dsZS5maXJlc3RvcmUudjEuRG9jdW1lbnRNYXNrEi8KBG1hc2sYAyAB",
-            "KAsyIS5nb29nbGUuZmlyZXN0b3JlLnYxLkRvY3VtZW50TWFzaxI7ChBjdXJy",
-            "ZW50X2RvY3VtZW50GAQgASgLMiEuZ29vZ2xlLmZpcmVzdG9yZS52MS5QcmVj",
-            "b25kaXRpb24iZwoVRGVsZXRlRG9jdW1lbnRSZXF1ZXN0EhEKBG5hbWUYASAB",
-            "KAlCA+BBAhI7ChBjdXJyZW50X2RvY3VtZW50GAIgASgLMiEuZ29vZ2xlLmZp",
-            "cmVzdG9yZS52MS5QcmVjb25kaXRpb24imQIKGEJhdGNoR2V0RG9jdW1lbnRz",
-            "UmVxdWVzdBIVCghkYXRhYmFzZRgBIAEoCUID4EECEhEKCWRvY3VtZW50cxgC",
-            "IAMoCRIvCgRtYXNrGAMgASgLMiEuZ29vZ2xlLmZpcmVzdG9yZS52MS5Eb2N1",
-            "bWVudE1hc2sSFQoLdHJhbnNhY3Rpb24YBCABKAxIABJCCg9uZXdfdHJhbnNh",
-            "Y3Rpb24YBSABKAsyJy5nb29nbGUuZmlyZXN0b3JlLnYxLlRyYW5zYWN0aW9u",
-            "T3B0aW9uc0gAEi8KCXJlYWRfdGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5UaW1lc3RhbXBIAEIWChRjb25zaXN0ZW5jeV9zZWxlY3RvciKsAQoZQmF0",
-            "Y2hHZXREb2N1bWVudHNSZXNwb25zZRIuCgVmb3VuZBgBIAEoCzIdLmdvb2ds",
-            "ZS5maXJlc3RvcmUudjEuRG9jdW1lbnRIABIRCgdtaXNzaW5nGAIgASgJSAAS",
-            "EwoLdHJhbnNhY3Rpb24YAyABKAwSLQoJcmVhZF90aW1lGAQgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEIICgZyZXN1bHQiagoXQmVnaW5UcmFu",
-            "c2FjdGlvblJlcXVlc3QSFQoIZGF0YWJhc2UYASABKAlCA+BBAhI4CgdvcHRp",
-            "b25zGAIgASgLMicuZ29vZ2xlLmZpcmVzdG9yZS52MS5UcmFuc2FjdGlvbk9w",
-            "dGlvbnMiLwoYQmVnaW5UcmFuc2FjdGlvblJlc3BvbnNlEhMKC3RyYW5zYWN0",
-            "aW9uGAEgASgMImcKDUNvbW1pdFJlcXVlc3QSFQoIZGF0YWJhc2UYASABKAlC",
-            "A+BBAhIqCgZ3cml0ZXMYAiADKAsyGi5nb29nbGUuZmlyZXN0b3JlLnYxLldy",
-            "aXRlEhMKC3RyYW5zYWN0aW9uGAMgASgMInoKDkNvbW1pdFJlc3BvbnNlEjcK",
+            "L2ZpcmVzdG9yZS92MS9xdWVyeS5wcm90bxofZ29vZ2xlL2ZpcmVzdG9yZS92",
+            "MS93cml0ZS5wcm90bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvGh9n",
+            "b29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGh5nb29nbGUvcHJvdG9i",
+            "dWYvd3JhcHBlcnMucHJvdG8aF2dvb2dsZS9ycGMvc3RhdHVzLnByb3RvIrgB",
+            "ChJHZXREb2N1bWVudFJlcXVlc3QSEQoEbmFtZRgBIAEoCUID4EECEi8KBG1h",
+            "c2sYAiABKAsyIS5nb29nbGUuZmlyZXN0b3JlLnYxLkRvY3VtZW50TWFzaxIV",
+            "Cgt0cmFuc2FjdGlvbhgDIAEoDEgAEi8KCXJlYWRfdGltZRgFIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIAEIWChRjb25zaXN0ZW5jeV9zZWxl",
+            "Y3RvciK7AgoUTGlzdERvY3VtZW50c1JlcXVlc3QSEwoGcGFyZW50GAEgASgJ",
+            "QgPgQQISGgoNY29sbGVjdGlvbl9pZBgCIAEoCUID4EEBEhYKCXBhZ2Vfc2l6",
+            "ZRgDIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YBCABKAlCA+BBARIVCghvcmRl",
+            "cl9ieRgGIAEoCUID4EEBEjQKBG1hc2sYByABKAsyIS5nb29nbGUuZmlyZXN0",
+            "b3JlLnYxLkRvY3VtZW50TWFza0ID4EEBEhUKC3RyYW5zYWN0aW9uGAggASgM",
+            "SAASLwoJcmVhZF90aW1lGAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcEgAEhQKDHNob3dfbWlzc2luZxgMIAEoCEIWChRjb25zaXN0ZW5jeV9z",
+            "ZWxlY3RvciJiChVMaXN0RG9jdW1lbnRzUmVzcG9uc2USMAoJZG9jdW1lbnRz",
+            "GAEgAygLMh0uZ29vZ2xlLmZpcmVzdG9yZS52MS5Eb2N1bWVudBIXCg9uZXh0",
+            "X3BhZ2VfdG9rZW4YAiABKAkixAEKFUNyZWF0ZURvY3VtZW50UmVxdWVzdBIT",
+            "CgZwYXJlbnQYASABKAlCA+BBAhIaCg1jb2xsZWN0aW9uX2lkGAIgASgJQgPg",
+            "QQISEwoLZG9jdW1lbnRfaWQYAyABKAkSNAoIZG9jdW1lbnQYBCABKAsyHS5n",
+            "b29nbGUuZmlyZXN0b3JlLnYxLkRvY3VtZW50QgPgQQISLwoEbWFzaxgFIAEo",
+            "CzIhLmdvb2dsZS5maXJlc3RvcmUudjEuRG9jdW1lbnRNYXNrIvMBChVVcGRh",
+            "dGVEb2N1bWVudFJlcXVlc3QSNAoIZG9jdW1lbnQYASABKAsyHS5nb29nbGUu",
+            "ZmlyZXN0b3JlLnYxLkRvY3VtZW50QgPgQQISNgoLdXBkYXRlX21hc2sYAiAB",
+            "KAsyIS5nb29nbGUuZmlyZXN0b3JlLnYxLkRvY3VtZW50TWFzaxIvCgRtYXNr",
+            "GAMgASgLMiEuZ29vZ2xlLmZpcmVzdG9yZS52MS5Eb2N1bWVudE1hc2sSOwoQ",
+            "Y3VycmVudF9kb2N1bWVudBgEIAEoCzIhLmdvb2dsZS5maXJlc3RvcmUudjEu",
+            "UHJlY29uZGl0aW9uImcKFURlbGV0ZURvY3VtZW50UmVxdWVzdBIRCgRuYW1l",
+            "GAEgASgJQgPgQQISOwoQY3VycmVudF9kb2N1bWVudBgCIAEoCzIhLmdvb2ds",
+            "ZS5maXJlc3RvcmUudjEuUHJlY29uZGl0aW9uIpkCChhCYXRjaEdldERvY3Vt",
+            "ZW50c1JlcXVlc3QSFQoIZGF0YWJhc2UYASABKAlCA+BBAhIRCglkb2N1bWVu",
+            "dHMYAiADKAkSLwoEbWFzaxgDIAEoCzIhLmdvb2dsZS5maXJlc3RvcmUudjEu",
+            "RG9jdW1lbnRNYXNrEhUKC3RyYW5zYWN0aW9uGAQgASgMSAASQgoPbmV3X3Ry",
+            "YW5zYWN0aW9uGAUgASgLMicuZ29vZ2xlLmZpcmVzdG9yZS52MS5UcmFuc2Fj",
+            "dGlvbk9wdGlvbnNIABIvCglyZWFkX3RpbWUYByABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wSABCFgoUY29uc2lzdGVuY3lfc2VsZWN0b3IirAEK",
+            "GUJhdGNoR2V0RG9jdW1lbnRzUmVzcG9uc2USLgoFZm91bmQYASABKAsyHS5n",
+            "b29nbGUuZmlyZXN0b3JlLnYxLkRvY3VtZW50SAASEQoHbWlzc2luZxgCIAEo",
+            "CUgAEhMKC3RyYW5zYWN0aW9uGAMgASgMEi0KCXJlYWRfdGltZRgEIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCCAoGcmVzdWx0ImoKF0JlZ2lu",
+            "VHJhbnNhY3Rpb25SZXF1ZXN0EhUKCGRhdGFiYXNlGAEgASgJQgPgQQISOAoH",
+            "b3B0aW9ucxgCIAEoCzInLmdvb2dsZS5maXJlc3RvcmUudjEuVHJhbnNhY3Rp",
+            "b25PcHRpb25zIi8KGEJlZ2luVHJhbnNhY3Rpb25SZXNwb25zZRITCgt0cmFu",
+            "c2FjdGlvbhgBIAEoDCJnCg1Db21taXRSZXF1ZXN0EhUKCGRhdGFiYXNlGAEg",
+            "ASgJQgPgQQISKgoGd3JpdGVzGAIgAygLMhouZ29vZ2xlLmZpcmVzdG9yZS52",
+            "MS5Xcml0ZRITCgt0cmFuc2FjdGlvbhgDIAEoDCJ6Cg5Db21taXRSZXNwb25z",
+            "ZRI3Cg13cml0ZV9yZXN1bHRzGAEgAygLMiAuZ29vZ2xlLmZpcmVzdG9yZS52",
+            "MS5Xcml0ZVJlc3VsdBIvCgtjb21taXRfdGltZRgCIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXAiQgoPUm9sbGJhY2tSZXF1ZXN0EhUKCGRhdGFi",
+            "YXNlGAEgASgJQgPgQQISGAoLdHJhbnNhY3Rpb24YAiABKAxCA+BBAiKaAgoP",
+            "UnVuUXVlcnlSZXF1ZXN0EhMKBnBhcmVudBgBIAEoCUID4EECEkAKEHN0cnVj",
+            "dHVyZWRfcXVlcnkYAiABKAsyJC5nb29nbGUuZmlyZXN0b3JlLnYxLlN0cnVj",
+            "dHVyZWRRdWVyeUgAEhUKC3RyYW5zYWN0aW9uGAUgASgMSAESQgoPbmV3X3Ry",
+            "YW5zYWN0aW9uGAYgASgLMicuZ29vZ2xlLmZpcmVzdG9yZS52MS5UcmFuc2Fj",
+            "dGlvbk9wdGlvbnNIARIvCglyZWFkX3RpbWUYByABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wSAFCDAoKcXVlcnlfdHlwZUIWChRjb25zaXN0ZW5j",
+            "eV9zZWxlY3RvciLJAQoQUnVuUXVlcnlSZXNwb25zZRITCgt0cmFuc2FjdGlv",
+            "bhgCIAEoDBIvCghkb2N1bWVudBgBIAEoCzIdLmdvb2dsZS5maXJlc3RvcmUu",
+            "djEuRG9jdW1lbnQSLQoJcmVhZF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcBIXCg9za2lwcGVkX3Jlc3VsdHMYBCABKAUSDgoEZG9u",
+            "ZRgGIAEoCEgAQhcKFWNvbnRpbnVhdGlvbl9zZWxlY3RvciK8AgoaUnVuQWdn",
+            "cmVnYXRpb25RdWVyeVJlcXVlc3QSEwoGcGFyZW50GAEgASgJQgPgQQISVwoc",
+            "c3RydWN0dXJlZF9hZ2dyZWdhdGlvbl9xdWVyeRgCIAEoCzIvLmdvb2dsZS5m",
+            "aXJlc3RvcmUudjEuU3RydWN0dXJlZEFnZ3JlZ2F0aW9uUXVlcnlIABIVCgt0",
+            "cmFuc2FjdGlvbhgEIAEoDEgBEkIKD25ld190cmFuc2FjdGlvbhgFIAEoCzIn",
+            "Lmdvb2dsZS5maXJlc3RvcmUudjEuVHJhbnNhY3Rpb25PcHRpb25zSAESLwoJ",
+            "cmVhZF90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgB",
+            "QgwKCnF1ZXJ5X3R5cGVCFgoUY29uc2lzdGVuY3lfc2VsZWN0b3IimQEKG1J1",
+            "bkFnZ3JlZ2F0aW9uUXVlcnlSZXNwb25zZRI2CgZyZXN1bHQYASABKAsyJi5n",
+            "b29nbGUuZmlyZXN0b3JlLnYxLkFnZ3JlZ2F0aW9uUmVzdWx0EhMKC3RyYW5z",
+            "YWN0aW9uGAIgASgMEi0KCXJlYWRfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXAihQIKFVBhcnRpdGlvblF1ZXJ5UmVxdWVzdBITCgZw",
+            "YXJlbnQYASABKAlCA+BBAhJAChBzdHJ1Y3R1cmVkX3F1ZXJ5GAIgASgLMiQu",
+            "Z29vZ2xlLmZpcmVzdG9yZS52MS5TdHJ1Y3R1cmVkUXVlcnlIABIXCg9wYXJ0",
+            "aXRpb25fY291bnQYAyABKAMSEgoKcGFnZV90b2tlbhgEIAEoCRIRCglwYWdl",
+            "X3NpemUYBSABKAUSLwoJcmVhZF90aW1lGAYgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEgBQgwKCnF1ZXJ5X3R5cGVCFgoUY29uc2lzdGVuY3lf",
+            "c2VsZWN0b3IiYgoWUGFydGl0aW9uUXVlcnlSZXNwb25zZRIvCgpwYXJ0aXRp",
+            "b25zGAEgAygLMhsuZ29vZ2xlLmZpcmVzdG9yZS52MS5DdXJzb3ISFwoPbmV4",
+            "dF9wYWdlX3Rva2VuGAIgASgJIugBCgxXcml0ZVJlcXVlc3QSFQoIZGF0YWJh",
+            "c2UYASABKAlCA+BBAhIRCglzdHJlYW1faWQYAiABKAkSKgoGd3JpdGVzGAMg",
+            "AygLMhouZ29vZ2xlLmZpcmVzdG9yZS52MS5Xcml0ZRIUCgxzdHJlYW1fdG9r",
+            "ZW4YBCABKAwSPQoGbGFiZWxzGAUgAygLMi0uZ29vZ2xlLmZpcmVzdG9yZS52",
+            "MS5Xcml0ZVJlcXVlc3QuTGFiZWxzRW50cnkaLQoLTGFiZWxzRW50cnkSCwoD",
+            "a2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASKiAQoNV3JpdGVSZXNwb25z",
+            "ZRIRCglzdHJlYW1faWQYASABKAkSFAoMc3RyZWFtX3Rva2VuGAIgASgMEjcK",
+            "DXdyaXRlX3Jlc3VsdHMYAyADKAsyIC5nb29nbGUuZmlyZXN0b3JlLnYxLldy",
+            "aXRlUmVzdWx0Ei8KC2NvbW1pdF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcCLyAQoNTGlzdGVuUmVxdWVzdBIVCghkYXRhYmFzZRgB",
+            "IAEoCUID4EECEjEKCmFkZF90YXJnZXQYAiABKAsyGy5nb29nbGUuZmlyZXN0",
+            "b3JlLnYxLlRhcmdldEgAEhcKDXJlbW92ZV90YXJnZXQYAyABKAVIABI+CgZs",
+            "YWJlbHMYBCADKAsyLi5nb29nbGUuZmlyZXN0b3JlLnYxLkxpc3RlblJlcXVl",
+            "c3QuTGFiZWxzRW50cnkaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0K",
+            "BXZhbHVlGAIgASgJOgI4AUIPCg10YXJnZXRfY2hhbmdlItUCCg5MaXN0ZW5S",
+            "ZXNwb25zZRI6Cg10YXJnZXRfY2hhbmdlGAIgASgLMiEuZ29vZ2xlLmZpcmVz",
+            "dG9yZS52MS5UYXJnZXRDaGFuZ2VIABI+Cg9kb2N1bWVudF9jaGFuZ2UYAyAB",
+            "KAsyIy5nb29nbGUuZmlyZXN0b3JlLnYxLkRvY3VtZW50Q2hhbmdlSAASPgoP",
+            "ZG9jdW1lbnRfZGVsZXRlGAQgASgLMiMuZ29vZ2xlLmZpcmVzdG9yZS52MS5E",
+            "b2N1bWVudERlbGV0ZUgAEj4KD2RvY3VtZW50X3JlbW92ZRgGIAEoCzIjLmdv",
+            "b2dsZS5maXJlc3RvcmUudjEuRG9jdW1lbnRSZW1vdmVIABI2CgZmaWx0ZXIY",
+            "BSABKAsyJC5nb29nbGUuZmlyZXN0b3JlLnYxLkV4aXN0ZW5jZUZpbHRlckgA",
+            "Qg8KDXJlc3BvbnNlX3R5cGUi1gMKBlRhcmdldBI4CgVxdWVyeRgCIAEoCzIn",
+            "Lmdvb2dsZS5maXJlc3RvcmUudjEuVGFyZ2V0LlF1ZXJ5VGFyZ2V0SAASQAoJ",
+            "ZG9jdW1lbnRzGAMgASgLMisuZ29vZ2xlLmZpcmVzdG9yZS52MS5UYXJnZXQu",
+            "RG9jdW1lbnRzVGFyZ2V0SAASFgoMcmVzdW1lX3Rva2VuGAQgASgMSAESLwoJ",
+            "cmVhZF90aW1lGAsgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgB",
+            "EhEKCXRhcmdldF9pZBgFIAEoBRIMCgRvbmNlGAYgASgIEjMKDmV4cGVjdGVk",
+            "X2NvdW50GAwgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkludDMyVmFsdWUaJAoP",
+            "RG9jdW1lbnRzVGFyZ2V0EhEKCWRvY3VtZW50cxgCIAMoCRptCgtRdWVyeVRh",
+            "cmdldBIOCgZwYXJlbnQYASABKAkSQAoQc3RydWN0dXJlZF9xdWVyeRgCIAEo",
+            "CzIkLmdvb2dsZS5maXJlc3RvcmUudjEuU3RydWN0dXJlZFF1ZXJ5SABCDAoK",
+            "cXVlcnlfdHlwZUINCgt0YXJnZXRfdHlwZUINCgtyZXN1bWVfdHlwZSKqAgoM",
+            "VGFyZ2V0Q2hhbmdlEk4KEnRhcmdldF9jaGFuZ2VfdHlwZRgBIAEoDjIyLmdv",
+            "b2dsZS5maXJlc3RvcmUudjEuVGFyZ2V0Q2hhbmdlLlRhcmdldENoYW5nZVR5",
+            "cGUSEgoKdGFyZ2V0X2lkcxgCIAMoBRIhCgVjYXVzZRgDIAEoCzISLmdvb2ds",
+            "ZS5ycGMuU3RhdHVzEhQKDHJlc3VtZV90b2tlbhgEIAEoDBItCglyZWFkX3Rp",
+            "bWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIk4KEFRhcmdl",
+            "dENoYW5nZVR5cGUSDQoJTk9fQ0hBTkdFEAASBwoDQUREEAESCgoGUkVNT1ZF",
+            "EAISCwoHQ1VSUkVOVBADEgkKBVJFU0VUEAQinwEKGExpc3RDb2xsZWN0aW9u",
+            "SWRzUmVxdWVzdBITCgZwYXJlbnQYASABKAlCA+BBAhIRCglwYWdlX3NpemUY",
+            "AiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRIvCglyZWFkX3RpbWUYBCABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSABCFgoUY29uc2lzdGVuY3lf",
+            "c2VsZWN0b3IiTAoZTGlzdENvbGxlY3Rpb25JZHNSZXNwb25zZRIWCg5jb2xs",
+            "ZWN0aW9uX2lkcxgBIAMoCRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiyQEK",
+            "EUJhdGNoV3JpdGVSZXF1ZXN0EhUKCGRhdGFiYXNlGAEgASgJQgPgQQISKgoG",
+            "d3JpdGVzGAIgAygLMhouZ29vZ2xlLmZpcmVzdG9yZS52MS5Xcml0ZRJCCgZs",
+            "YWJlbHMYAyADKAsyMi5nb29nbGUuZmlyZXN0b3JlLnYxLkJhdGNoV3JpdGVS",
+            "ZXF1ZXN0LkxhYmVsc0VudHJ5Gi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEo",
+            "CRINCgV2YWx1ZRgCIAEoCToCOAEicQoSQmF0Y2hXcml0ZVJlc3BvbnNlEjcK",
             "DXdyaXRlX3Jlc3VsdHMYASADKAsyIC5nb29nbGUuZmlyZXN0b3JlLnYxLldy",
-            "aXRlUmVzdWx0Ei8KC2NvbW1pdF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcCJCCg9Sb2xsYmFja1JlcXVlc3QSFQoIZGF0YWJhc2UY",
-            "ASABKAlCA+BBAhIYCgt0cmFuc2FjdGlvbhgCIAEoDEID4EECIs0CCg9SdW5R",
-            "dWVyeVJlcXVlc3QSEwoGcGFyZW50GAEgASgJQgPgQQISQAoQc3RydWN0dXJl",
-            "ZF9xdWVyeRgCIAEoCzIkLmdvb2dsZS5maXJlc3RvcmUudjEuU3RydWN0dXJl",
-            "ZFF1ZXJ5SAASFQoLdHJhbnNhY3Rpb24YBSABKAxIARJCCg9uZXdfdHJhbnNh",
-            "Y3Rpb24YBiABKAsyJy5nb29nbGUuZmlyZXN0b3JlLnYxLlRyYW5zYWN0aW9u",
-            "T3B0aW9uc0gBEi8KCXJlYWRfdGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5UaW1lc3RhbXBIARIxCgRtb2RlGAkgASgOMh4uZ29vZ2xlLmZpcmVzdG9y",
-            "ZS52MS5RdWVyeU1vZGVCA+BBAUIMCgpxdWVyeV90eXBlQhYKFGNvbnNpc3Rl",
-            "bmN5X3NlbGVjdG9yIv0BChBSdW5RdWVyeVJlc3BvbnNlEhMKC3RyYW5zYWN0",
-            "aW9uGAIgASgMEi8KCGRvY3VtZW50GAEgASgLMh0uZ29vZ2xlLmZpcmVzdG9y",
-            "ZS52MS5Eb2N1bWVudBItCglyZWFkX3RpbWUYAyABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wEhcKD3NraXBwZWRfcmVzdWx0cxgEIAEoBRIOCgRk",
-            "b25lGAYgASgISAASMgoFc3RhdHMYByABKAsyIy5nb29nbGUuZmlyZXN0b3Jl",
-            "LnYxLlJlc3VsdFNldFN0YXRzQhcKFWNvbnRpbnVhdGlvbl9zZWxlY3RvciLv",
-            "AgoaUnVuQWdncmVnYXRpb25RdWVyeVJlcXVlc3QSEwoGcGFyZW50GAEgASgJ",
-            "QgPgQQISVwocc3RydWN0dXJlZF9hZ2dyZWdhdGlvbl9xdWVyeRgCIAEoCzIv",
-            "Lmdvb2dsZS5maXJlc3RvcmUudjEuU3RydWN0dXJlZEFnZ3JlZ2F0aW9uUXVl",
-            "cnlIABIVCgt0cmFuc2FjdGlvbhgEIAEoDEgBEkIKD25ld190cmFuc2FjdGlv",
-            "bhgFIAEoCzInLmdvb2dsZS5maXJlc3RvcmUudjEuVHJhbnNhY3Rpb25PcHRp",
-            "b25zSAESLwoJcmVhZF90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcEgBEjEKBG1vZGUYByABKA4yHi5nb29nbGUuZmlyZXN0b3JlLnYx",
-            "LlF1ZXJ5TW9kZUID4EEBQgwKCnF1ZXJ5X3R5cGVCFgoUY29uc2lzdGVuY3lf",
-            "c2VsZWN0b3IizQEKG1J1bkFnZ3JlZ2F0aW9uUXVlcnlSZXNwb25zZRI2CgZy",
-            "ZXN1bHQYASABKAsyJi5nb29nbGUuZmlyZXN0b3JlLnYxLkFnZ3JlZ2F0aW9u",
-            "UmVzdWx0EhMKC3RyYW5zYWN0aW9uGAIgASgMEi0KCXJlYWRfdGltZRgDIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMgoFc3RhdHMYBiABKAsy",
-            "Iy5nb29nbGUuZmlyZXN0b3JlLnYxLlJlc3VsdFNldFN0YXRzIoUCChVQYXJ0",
-            "aXRpb25RdWVyeVJlcXVlc3QSEwoGcGFyZW50GAEgASgJQgPgQQISQAoQc3Ry",
-            "dWN0dXJlZF9xdWVyeRgCIAEoCzIkLmdvb2dsZS5maXJlc3RvcmUudjEuU3Ry",
-            "dWN0dXJlZFF1ZXJ5SAASFwoPcGFydGl0aW9uX2NvdW50GAMgASgDEhIKCnBh",
-            "Z2VfdG9rZW4YBCABKAkSEQoJcGFnZV9zaXplGAUgASgFEi8KCXJlYWRfdGlt",
-            "ZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIAUIMCgpxdWVy",
-            "eV90eXBlQhYKFGNvbnNpc3RlbmN5X3NlbGVjdG9yImIKFlBhcnRpdGlvblF1",
-            "ZXJ5UmVzcG9uc2USLwoKcGFydGl0aW9ucxgBIAMoCzIbLmdvb2dsZS5maXJl",
-            "c3RvcmUudjEuQ3Vyc29yEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSLoAQoM",
-            "V3JpdGVSZXF1ZXN0EhUKCGRhdGFiYXNlGAEgASgJQgPgQQISEQoJc3RyZWFt",
-            "X2lkGAIgASgJEioKBndyaXRlcxgDIAMoCzIaLmdvb2dsZS5maXJlc3RvcmUu",
-            "djEuV3JpdGUSFAoMc3RyZWFtX3Rva2VuGAQgASgMEj0KBmxhYmVscxgFIAMo",
-            "CzItLmdvb2dsZS5maXJlc3RvcmUudjEuV3JpdGVSZXF1ZXN0LkxhYmVsc0Vu",
-            "dHJ5Gi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
-            "CToCOAEiogEKDVdyaXRlUmVzcG9uc2USEQoJc3RyZWFtX2lkGAEgASgJEhQK",
-            "DHN0cmVhbV90b2tlbhgCIAEoDBI3Cg13cml0ZV9yZXN1bHRzGAMgAygLMiAu",
-            "Z29vZ2xlLmZpcmVzdG9yZS52MS5Xcml0ZVJlc3VsdBIvCgtjb21taXRfdGlt",
-            "ZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAi8gEKDUxpc3Rl",
-            "blJlcXVlc3QSFQoIZGF0YWJhc2UYASABKAlCA+BBAhIxCgphZGRfdGFyZ2V0",
-            "GAIgASgLMhsuZ29vZ2xlLmZpcmVzdG9yZS52MS5UYXJnZXRIABIXCg1yZW1v",
-            "dmVfdGFyZ2V0GAMgASgFSAASPgoGbGFiZWxzGAQgAygLMi4uZ29vZ2xlLmZp",
-            "cmVzdG9yZS52MS5MaXN0ZW5SZXF1ZXN0LkxhYmVsc0VudHJ5Gi0KC0xhYmVs",
-            "c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAFCDwoNdGFy",
-            "Z2V0X2NoYW5nZSLVAgoOTGlzdGVuUmVzcG9uc2USOgoNdGFyZ2V0X2NoYW5n",
-            "ZRgCIAEoCzIhLmdvb2dsZS5maXJlc3RvcmUudjEuVGFyZ2V0Q2hhbmdlSAAS",
-            "PgoPZG9jdW1lbnRfY2hhbmdlGAMgASgLMiMuZ29vZ2xlLmZpcmVzdG9yZS52",
-            "MS5Eb2N1bWVudENoYW5nZUgAEj4KD2RvY3VtZW50X2RlbGV0ZRgEIAEoCzIj",
-            "Lmdvb2dsZS5maXJlc3RvcmUudjEuRG9jdW1lbnREZWxldGVIABI+Cg9kb2N1",
-            "bWVudF9yZW1vdmUYBiABKAsyIy5nb29nbGUuZmlyZXN0b3JlLnYxLkRvY3Vt",
-            "ZW50UmVtb3ZlSAASNgoGZmlsdGVyGAUgASgLMiQuZ29vZ2xlLmZpcmVzdG9y",
-            "ZS52MS5FeGlzdGVuY2VGaWx0ZXJIAEIPCg1yZXNwb25zZV90eXBlItYDCgZU",
-            "YXJnZXQSOAoFcXVlcnkYAiABKAsyJy5nb29nbGUuZmlyZXN0b3JlLnYxLlRh",
-            "cmdldC5RdWVyeVRhcmdldEgAEkAKCWRvY3VtZW50cxgDIAEoCzIrLmdvb2ds",
-            "ZS5maXJlc3RvcmUudjEuVGFyZ2V0LkRvY3VtZW50c1RhcmdldEgAEhYKDHJl",
-            "c3VtZV90b2tlbhgEIAEoDEgBEi8KCXJlYWRfdGltZRgLIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBIARIRCgl0YXJnZXRfaWQYBSABKAUSDAoE",
-            "b25jZRgGIAEoCBIzCg5leHBlY3RlZF9jb3VudBgMIAEoCzIbLmdvb2dsZS5w",
-            "cm90b2J1Zi5JbnQzMlZhbHVlGiQKD0RvY3VtZW50c1RhcmdldBIRCglkb2N1",
-            "bWVudHMYAiADKAkabQoLUXVlcnlUYXJnZXQSDgoGcGFyZW50GAEgASgJEkAK",
-            "EHN0cnVjdHVyZWRfcXVlcnkYAiABKAsyJC5nb29nbGUuZmlyZXN0b3JlLnYx",
-            "LlN0cnVjdHVyZWRRdWVyeUgAQgwKCnF1ZXJ5X3R5cGVCDQoLdGFyZ2V0X3R5",
-            "cGVCDQoLcmVzdW1lX3R5cGUiqgIKDFRhcmdldENoYW5nZRJOChJ0YXJnZXRf",
-            "Y2hhbmdlX3R5cGUYASABKA4yMi5nb29nbGUuZmlyZXN0b3JlLnYxLlRhcmdl",
-            "dENoYW5nZS5UYXJnZXRDaGFuZ2VUeXBlEhIKCnRhcmdldF9pZHMYAiADKAUS",
-            "IQoFY2F1c2UYAyABKAsyEi5nb29nbGUucnBjLlN0YXR1cxIUCgxyZXN1bWVf",
-            "dG9rZW4YBCABKAwSLQoJcmVhZF90aW1lGAYgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcCJOChBUYXJnZXRDaGFuZ2VUeXBlEg0KCU5PX0NIQU5H",
-            "RRAAEgcKA0FERBABEgoKBlJFTU9WRRACEgsKB0NVUlJFTlQQAxIJCgVSRVNF",
-            "VBAEIp8BChhMaXN0Q29sbGVjdGlvbklkc1JlcXVlc3QSEwoGcGFyZW50GAEg",
-            "ASgJQgPgQQISEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyAB",
-            "KAkSLwoJcmVhZF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcEgAQhYKFGNvbnNpc3RlbmN5X3NlbGVjdG9yIkwKGUxpc3RDb2xsZWN0",
-            "aW9uSWRzUmVzcG9uc2USFgoOY29sbGVjdGlvbl9pZHMYASADKAkSFwoPbmV4",
-            "dF9wYWdlX3Rva2VuGAIgASgJIskBChFCYXRjaFdyaXRlUmVxdWVzdBIVCghk",
-            "YXRhYmFzZRgBIAEoCUID4EECEioKBndyaXRlcxgCIAMoCzIaLmdvb2dsZS5m",
-            "aXJlc3RvcmUudjEuV3JpdGUSQgoGbGFiZWxzGAMgAygLMjIuZ29vZ2xlLmZp",
-            "cmVzdG9yZS52MS5CYXRjaFdyaXRlUmVxdWVzdC5MYWJlbHNFbnRyeRotCgtM",
-            "YWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBInEK",
-            "EkJhdGNoV3JpdGVSZXNwb25zZRI3Cg13cml0ZV9yZXN1bHRzGAEgAygLMiAu",
-            "Z29vZ2xlLmZpcmVzdG9yZS52MS5Xcml0ZVJlc3VsdBIiCgZzdGF0dXMYAiAD",
-            "KAsyEi5nb29nbGUucnBjLlN0YXR1czLaGQoJRmlyZXN0b3JlEo8BCgtHZXRE",
-            "b2N1bWVudBInLmdvb2dsZS5maXJlc3RvcmUudjEuR2V0RG9jdW1lbnRSZXF1",
-            "ZXN0Gh0uZ29vZ2xlLmZpcmVzdG9yZS52MS5Eb2N1bWVudCI4gtPkkwIyEjAv",
-            "djEve25hbWU9cHJvamVjdHMvKi9kYXRhYmFzZXMvKi9kb2N1bWVudHMvKi8q",
-            "Kn0S9QEKDUxpc3REb2N1bWVudHMSKS5nb29nbGUuZmlyZXN0b3JlLnYxLkxp",
-            "c3REb2N1bWVudHNSZXF1ZXN0GiouZ29vZ2xlLmZpcmVzdG9yZS52MS5MaXN0",
-            "RG9jdW1lbnRzUmVzcG9uc2UijAGC0+STAoUBEkIvdjEve3BhcmVudD1wcm9q",
-            "ZWN0cy8qL2RhdGFiYXNlcy8qL2RvY3VtZW50cy8qLyoqfS97Y29sbGVjdGlv",
-            "bl9pZH1aPxI9L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9kYXRhYmFzZXMvKi9k",
-            "b2N1bWVudHN9L3tjb2xsZWN0aW9uX2lkfRK/AQoOVXBkYXRlRG9jdW1lbnQS",
-            "Ki5nb29nbGUuZmlyZXN0b3JlLnYxLlVwZGF0ZURvY3VtZW50UmVxdWVzdBod",
-            "Lmdvb2dsZS5maXJlc3RvcmUudjEuRG9jdW1lbnQiYoLT5JMCRTI5L3YxL3tk",
-            "b2N1bWVudC5uYW1lPXByb2plY3RzLyovZGF0YWJhc2VzLyovZG9jdW1lbnRz",
-            "LyovKip9Oghkb2N1bWVudNpBFGRvY3VtZW50LHVwZGF0ZV9tYXNrEpUBCg5E",
-            "ZWxldGVEb2N1bWVudBIqLmdvb2dsZS5maXJlc3RvcmUudjEuRGVsZXRlRG9j",
-            "dW1lbnRSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Ij+C0+STAjIq",
-            "MC92MS97bmFtZT1wcm9qZWN0cy8qL2RhdGFiYXNlcy8qL2RvY3VtZW50cy8q",
-            "LyoqfdpBBG5hbWUSuQEKEUJhdGNoR2V0RG9jdW1lbnRzEi0uZ29vZ2xlLmZp",
-            "cmVzdG9yZS52MS5CYXRjaEdldERvY3VtZW50c1JlcXVlc3QaLi5nb29nbGUu",
-            "ZmlyZXN0b3JlLnYxLkJhdGNoR2V0RG9jdW1lbnRzUmVzcG9uc2UiQ4LT5JMC",
+            "aXRlUmVzdWx0EiIKBnN0YXR1cxgCIAMoCzISLmdvb2dsZS5ycGMuU3RhdHVz",
+            "MtoZCglGaXJlc3RvcmUSjwEKC0dldERvY3VtZW50EicuZ29vZ2xlLmZpcmVz",
+            "dG9yZS52MS5HZXREb2N1bWVudFJlcXVlc3QaHS5nb29nbGUuZmlyZXN0b3Jl",
+            "LnYxLkRvY3VtZW50IjiC0+STAjISMC92MS97bmFtZT1wcm9qZWN0cy8qL2Rh",
+            "dGFiYXNlcy8qL2RvY3VtZW50cy8qLyoqfRL1AQoNTGlzdERvY3VtZW50cxIp",
+            "Lmdvb2dsZS5maXJlc3RvcmUudjEuTGlzdERvY3VtZW50c1JlcXVlc3QaKi5n",
+            "b29nbGUuZmlyZXN0b3JlLnYxLkxpc3REb2N1bWVudHNSZXNwb25zZSKMAYLT",
+            "5JMChQESQi92MS97cGFyZW50PXByb2plY3RzLyovZGF0YWJhc2VzLyovZG9j",
+            "dW1lbnRzLyovKip9L3tjb2xsZWN0aW9uX2lkfVo/Ej0vdjEve3BhcmVudD1w",
+            "cm9qZWN0cy8qL2RhdGFiYXNlcy8qL2RvY3VtZW50c30ve2NvbGxlY3Rpb25f",
+            "aWR9Er8BCg5VcGRhdGVEb2N1bWVudBIqLmdvb2dsZS5maXJlc3RvcmUudjEu",
+            "VXBkYXRlRG9jdW1lbnRSZXF1ZXN0Gh0uZ29vZ2xlLmZpcmVzdG9yZS52MS5E",
+            "b2N1bWVudCJigtPkkwJFMjkvdjEve2RvY3VtZW50Lm5hbWU9cHJvamVjdHMv",
+            "Ki9kYXRhYmFzZXMvKi9kb2N1bWVudHMvKi8qKn06CGRvY3VtZW502kEUZG9j",
+            "dW1lbnQsdXBkYXRlX21hc2sSlQEKDkRlbGV0ZURvY3VtZW50EiouZ29vZ2xl",
+            "LmZpcmVzdG9yZS52MS5EZWxldGVEb2N1bWVudFJlcXVlc3QaFi5nb29nbGUu",
+            "cHJvdG9idWYuRW1wdHkiP4LT5JMCMiowL3YxL3tuYW1lPXByb2plY3RzLyov",
+            "ZGF0YWJhc2VzLyovZG9jdW1lbnRzLyovKip92kEEbmFtZRK5AQoRQmF0Y2hH",
+            "ZXREb2N1bWVudHMSLS5nb29nbGUuZmlyZXN0b3JlLnYxLkJhdGNoR2V0RG9j",
+            "dW1lbnRzUmVxdWVzdBouLmdvb2dsZS5maXJlc3RvcmUudjEuQmF0Y2hHZXRE",
+            "b2N1bWVudHNSZXNwb25zZSJDgtPkkwI9IjgvdjEve2RhdGFiYXNlPXByb2pl",
+            "Y3RzLyovZGF0YWJhc2VzLyp9L2RvY3VtZW50czpiYXRjaEdldDoBKjABEscB",
+            "ChBCZWdpblRyYW5zYWN0aW9uEiwuZ29vZ2xlLmZpcmVzdG9yZS52MS5CZWdp",
+            "blRyYW5zYWN0aW9uUmVxdWVzdBotLmdvb2dsZS5maXJlc3RvcmUudjEuQmVn",
+            "aW5UcmFuc2FjdGlvblJlc3BvbnNlIlaC0+STAkUiQC92MS97ZGF0YWJhc2U9",
+            "cHJvamVjdHMvKi9kYXRhYmFzZXMvKn0vZG9jdW1lbnRzOmJlZ2luVHJhbnNh",
+            "Y3Rpb246ASraQQhkYXRhYmFzZRKmAQoGQ29tbWl0EiIuZ29vZ2xlLmZpcmVz",
+            "dG9yZS52MS5Db21taXRSZXF1ZXN0GiMuZ29vZ2xlLmZpcmVzdG9yZS52MS5D",
+            "b21taXRSZXNwb25zZSJTgtPkkwI7IjYvdjEve2RhdGFiYXNlPXByb2plY3Rz",
+            "LyovZGF0YWJhc2VzLyp9L2RvY3VtZW50czpjb21taXQ6ASraQQ9kYXRhYmFz",
+            "ZSx3cml0ZXMSpAEKCFJvbGxiYWNrEiQuZ29vZ2xlLmZpcmVzdG9yZS52MS5S",
+            "b2xsYmFja1JlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiWoLT5JMC",
             "PSI4L3YxL3tkYXRhYmFzZT1wcm9qZWN0cy8qL2RhdGFiYXNlcy8qfS9kb2N1",
-            "bWVudHM6YmF0Y2hHZXQ6ASowARLHAQoQQmVnaW5UcmFuc2FjdGlvbhIsLmdv",
-            "b2dsZS5maXJlc3RvcmUudjEuQmVnaW5UcmFuc2FjdGlvblJlcXVlc3QaLS5n",
-            "b29nbGUuZmlyZXN0b3JlLnYxLkJlZ2luVHJhbnNhY3Rpb25SZXNwb25zZSJW",
-            "gtPkkwJFIkAvdjEve2RhdGFiYXNlPXByb2plY3RzLyovZGF0YWJhc2VzLyp9",
-            "L2RvY3VtZW50czpiZWdpblRyYW5zYWN0aW9uOgEq2kEIZGF0YWJhc2USpgEK",
-            "BkNvbW1pdBIiLmdvb2dsZS5maXJlc3RvcmUudjEuQ29tbWl0UmVxdWVzdBoj",
-            "Lmdvb2dsZS5maXJlc3RvcmUudjEuQ29tbWl0UmVzcG9uc2UiU4LT5JMCOyI2",
-            "L3YxL3tkYXRhYmFzZT1wcm9qZWN0cy8qL2RhdGFiYXNlcy8qfS9kb2N1bWVu",
-            "dHM6Y29tbWl0OgEq2kEPZGF0YWJhc2Usd3JpdGVzEqQBCghSb2xsYmFjaxIk",
-            "Lmdvb2dsZS5maXJlc3RvcmUudjEuUm9sbGJhY2tSZXF1ZXN0GhYuZ29vZ2xl",
-            "LnByb3RvYnVmLkVtcHR5IlqC0+STAj0iOC92MS97ZGF0YWJhc2U9cHJvamVj",
-            "dHMvKi9kYXRhYmFzZXMvKn0vZG9jdW1lbnRzOnJvbGxiYWNrOgEq2kEUZGF0",
-            "YWJhc2UsdHJhbnNhY3Rpb24S3wEKCFJ1blF1ZXJ5EiQuZ29vZ2xlLmZpcmVz",
-            "dG9yZS52MS5SdW5RdWVyeVJlcXVlc3QaJS5nb29nbGUuZmlyZXN0b3JlLnYx",
-            "LlJ1blF1ZXJ5UmVzcG9uc2UigwGC0+STAn0iNi92MS97cGFyZW50PXByb2pl",
-            "Y3RzLyovZGF0YWJhc2VzLyovZG9jdW1lbnRzfTpydW5RdWVyeToBKlpAIjsv",
-            "djEve3BhcmVudD1wcm9qZWN0cy8qL2RhdGFiYXNlcy8qL2RvY3VtZW50cy8q",
-            "LyoqfTpydW5RdWVyeToBKjABEpcCChNSdW5BZ2dyZWdhdGlvblF1ZXJ5Ei8u",
-            "Z29vZ2xlLmZpcmVzdG9yZS52MS5SdW5BZ2dyZWdhdGlvblF1ZXJ5UmVxdWVz",
-            "dBowLmdvb2dsZS5maXJlc3RvcmUudjEuUnVuQWdncmVnYXRpb25RdWVyeVJl",
-            "c3BvbnNlIpoBgtPkkwKTASJBL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9kYXRh",
-            "YmFzZXMvKi9kb2N1bWVudHN9OnJ1bkFnZ3JlZ2F0aW9uUXVlcnk6ASpaSyJG",
-            "L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9kYXRhYmFzZXMvKi9kb2N1bWVudHMv",
-            "Ki8qKn06cnVuQWdncmVnYXRpb25RdWVyeToBKjABEvwBCg5QYXJ0aXRpb25R",
-            "dWVyeRIqLmdvb2dsZS5maXJlc3RvcmUudjEuUGFydGl0aW9uUXVlcnlSZXF1",
-            "ZXN0GisuZ29vZ2xlLmZpcmVzdG9yZS52MS5QYXJ0aXRpb25RdWVyeVJlc3Bv",
-            "bnNlIpABgtPkkwKJASI8L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9kYXRhYmFz",
-            "ZXMvKi9kb2N1bWVudHN9OnBhcnRpdGlvblF1ZXJ5OgEqWkYiQS92MS97cGFy",
-            "ZW50PXByb2plY3RzLyovZGF0YWJhc2VzLyovZG9jdW1lbnRzLyovKip9OnBh",
-            "cnRpdGlvblF1ZXJ5OgEqEpQBCgVXcml0ZRIhLmdvb2dsZS5maXJlc3RvcmUu",
-            "djEuV3JpdGVSZXF1ZXN0GiIuZ29vZ2xlLmZpcmVzdG9yZS52MS5Xcml0ZVJl",
-            "c3BvbnNlIkCC0+STAjoiNS92MS97ZGF0YWJhc2U9cHJvamVjdHMvKi9kYXRh",
-            "YmFzZXMvKn0vZG9jdW1lbnRzOndyaXRlOgEqKAEwARKYAQoGTGlzdGVuEiIu",
-            "Z29vZ2xlLmZpcmVzdG9yZS52MS5MaXN0ZW5SZXF1ZXN0GiMuZ29vZ2xlLmZp",
-            "cmVzdG9yZS52MS5MaXN0ZW5SZXNwb25zZSJBgtPkkwI7IjYvdjEve2RhdGFi",
-            "YXNlPXByb2plY3RzLyovZGF0YWJhc2VzLyp9L2RvY3VtZW50czpsaXN0ZW46",
-            "ASooATABEpQCChFMaXN0Q29sbGVjdGlvbklkcxItLmdvb2dsZS5maXJlc3Rv",
-            "cmUudjEuTGlzdENvbGxlY3Rpb25JZHNSZXF1ZXN0Gi4uZ29vZ2xlLmZpcmVz",
-            "dG9yZS52MS5MaXN0Q29sbGVjdGlvbklkc1Jlc3BvbnNlIp8BgtPkkwKPASI/",
-            "L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9kYXRhYmFzZXMvKi9kb2N1bWVudHN9",
-            "Omxpc3RDb2xsZWN0aW9uSWRzOgEqWkkiRC92MS97cGFyZW50PXByb2plY3Rz",
-            "LyovZGF0YWJhc2VzLyovZG9jdW1lbnRzLyovKip9Omxpc3RDb2xsZWN0aW9u",
-            "SWRzOgEq2kEGcGFyZW50EqQBCgpCYXRjaFdyaXRlEiYuZ29vZ2xlLmZpcmVz",
-            "dG9yZS52MS5CYXRjaFdyaXRlUmVxdWVzdBonLmdvb2dsZS5maXJlc3RvcmUu",
-            "djEuQmF0Y2hXcml0ZVJlc3BvbnNlIkWC0+STAj8iOi92MS97ZGF0YWJhc2U9",
-            "cHJvamVjdHMvKi9kYXRhYmFzZXMvKn0vZG9jdW1lbnRzOmJhdGNoV3JpdGU6",
-            "ASoSrwEKDkNyZWF0ZURvY3VtZW50EiouZ29vZ2xlLmZpcmVzdG9yZS52MS5D",
-            "cmVhdGVEb2N1bWVudFJlcXVlc3QaHS5nb29nbGUuZmlyZXN0b3JlLnYxLkRv",
-            "Y3VtZW50IlKC0+STAkwiQC92MS97cGFyZW50PXByb2plY3RzLyovZGF0YWJh",
-            "c2VzLyovZG9jdW1lbnRzLyoqfS97Y29sbGVjdGlvbl9pZH06CGRvY3VtZW50",
-            "GnbKQRhmaXJlc3RvcmUuZ29vZ2xlYXBpcy5jb23SQVhodHRwczovL3d3dy5n",
-            "b29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3",
-            "Lmdvb2dsZWFwaXMuY29tL2F1dGgvZGF0YXN0b3JlQr8BChdjb20uZ29vZ2xl",
-            "LmZpcmVzdG9yZS52MUIORmlyZXN0b3JlUHJvdG9QAVo7Y2xvdWQuZ29vZ2xl",
-            "LmNvbS9nby9maXJlc3RvcmUvYXBpdjEvZmlyZXN0b3JlcGI7ZmlyZXN0b3Jl",
-            "cGKqAhlHb29nbGUuQ2xvdWQuRmlyZXN0b3JlLlYxygIZR29vZ2xlXENsb3Vk",
-            "XEZpcmVzdG9yZVxWMeoCHEdvb2dsZTo6Q2xvdWQ6OkZpcmVzdG9yZTo6VjFi",
-            "BnByb3RvMw=="));
+            "bWVudHM6cm9sbGJhY2s6ASraQRRkYXRhYmFzZSx0cmFuc2FjdGlvbhLfAQoI",
+            "UnVuUXVlcnkSJC5nb29nbGUuZmlyZXN0b3JlLnYxLlJ1blF1ZXJ5UmVxdWVz",
+            "dBolLmdvb2dsZS5maXJlc3RvcmUudjEuUnVuUXVlcnlSZXNwb25zZSKDAYLT",
+            "5JMCfSI2L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9kYXRhYmFzZXMvKi9kb2N1",
+            "bWVudHN9OnJ1blF1ZXJ5OgEqWkAiOy92MS97cGFyZW50PXByb2plY3RzLyov",
+            "ZGF0YWJhc2VzLyovZG9jdW1lbnRzLyovKip9OnJ1blF1ZXJ5OgEqMAESlwIK",
+            "E1J1bkFnZ3JlZ2F0aW9uUXVlcnkSLy5nb29nbGUuZmlyZXN0b3JlLnYxLlJ1",
+            "bkFnZ3JlZ2F0aW9uUXVlcnlSZXF1ZXN0GjAuZ29vZ2xlLmZpcmVzdG9yZS52",
+            "MS5SdW5BZ2dyZWdhdGlvblF1ZXJ5UmVzcG9uc2UimgGC0+STApMBIkEvdjEv",
+            "e3BhcmVudD1wcm9qZWN0cy8qL2RhdGFiYXNlcy8qL2RvY3VtZW50c306cnVu",
+            "QWdncmVnYXRpb25RdWVyeToBKlpLIkYvdjEve3BhcmVudD1wcm9qZWN0cy8q",
+            "L2RhdGFiYXNlcy8qL2RvY3VtZW50cy8qLyoqfTpydW5BZ2dyZWdhdGlvblF1",
+            "ZXJ5OgEqMAES/AEKDlBhcnRpdGlvblF1ZXJ5EiouZ29vZ2xlLmZpcmVzdG9y",
+            "ZS52MS5QYXJ0aXRpb25RdWVyeVJlcXVlc3QaKy5nb29nbGUuZmlyZXN0b3Jl",
+            "LnYxLlBhcnRpdGlvblF1ZXJ5UmVzcG9uc2UikAGC0+STAokBIjwvdjEve3Bh",
+            "cmVudD1wcm9qZWN0cy8qL2RhdGFiYXNlcy8qL2RvY3VtZW50c306cGFydGl0",
+            "aW9uUXVlcnk6ASpaRiJBL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9kYXRhYmFz",
+            "ZXMvKi9kb2N1bWVudHMvKi8qKn06cGFydGl0aW9uUXVlcnk6ASoSlAEKBVdy",
+            "aXRlEiEuZ29vZ2xlLmZpcmVzdG9yZS52MS5Xcml0ZVJlcXVlc3QaIi5nb29n",
+            "bGUuZmlyZXN0b3JlLnYxLldyaXRlUmVzcG9uc2UiQILT5JMCOiI1L3YxL3tk",
+            "YXRhYmFzZT1wcm9qZWN0cy8qL2RhdGFiYXNlcy8qfS9kb2N1bWVudHM6d3Jp",
+            "dGU6ASooATABEpgBCgZMaXN0ZW4SIi5nb29nbGUuZmlyZXN0b3JlLnYxLkxp",
+            "c3RlblJlcXVlc3QaIy5nb29nbGUuZmlyZXN0b3JlLnYxLkxpc3RlblJlc3Bv",
+            "bnNlIkGC0+STAjsiNi92MS97ZGF0YWJhc2U9cHJvamVjdHMvKi9kYXRhYmFz",
+            "ZXMvKn0vZG9jdW1lbnRzOmxpc3RlbjoBKigBMAESlAIKEUxpc3RDb2xsZWN0",
+            "aW9uSWRzEi0uZ29vZ2xlLmZpcmVzdG9yZS52MS5MaXN0Q29sbGVjdGlvbklk",
+            "c1JlcXVlc3QaLi5nb29nbGUuZmlyZXN0b3JlLnYxLkxpc3RDb2xsZWN0aW9u",
+            "SWRzUmVzcG9uc2UinwGC0+STAo8BIj8vdjEve3BhcmVudD1wcm9qZWN0cy8q",
+            "L2RhdGFiYXNlcy8qL2RvY3VtZW50c306bGlzdENvbGxlY3Rpb25JZHM6ASpa",
+            "SSJEL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9kYXRhYmFzZXMvKi9kb2N1bWVu",
+            "dHMvKi8qKn06bGlzdENvbGxlY3Rpb25JZHM6ASraQQZwYXJlbnQSpAEKCkJh",
+            "dGNoV3JpdGUSJi5nb29nbGUuZmlyZXN0b3JlLnYxLkJhdGNoV3JpdGVSZXF1",
+            "ZXN0GicuZ29vZ2xlLmZpcmVzdG9yZS52MS5CYXRjaFdyaXRlUmVzcG9uc2Ui",
+            "RYLT5JMCPyI6L3YxL3tkYXRhYmFzZT1wcm9qZWN0cy8qL2RhdGFiYXNlcy8q",
+            "fS9kb2N1bWVudHM6YmF0Y2hXcml0ZToBKhKvAQoOQ3JlYXRlRG9jdW1lbnQS",
+            "Ki5nb29nbGUuZmlyZXN0b3JlLnYxLkNyZWF0ZURvY3VtZW50UmVxdWVzdBod",
+            "Lmdvb2dsZS5maXJlc3RvcmUudjEuRG9jdW1lbnQiUoLT5JMCTCJAL3YxL3tw",
+            "YXJlbnQ9cHJvamVjdHMvKi9kYXRhYmFzZXMvKi9kb2N1bWVudHMvKip9L3tj",
+            "b2xsZWN0aW9uX2lkfToIZG9jdW1lbnQadspBGGZpcmVzdG9yZS5nb29nbGVh",
+            "cGlzLmNvbdJBWGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xv",
+            "dWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9k",
+            "YXRhc3RvcmVCvwEKF2NvbS5nb29nbGUuZmlyZXN0b3JlLnYxQg5GaXJlc3Rv",
+            "cmVQcm90b1ABWjtjbG91ZC5nb29nbGUuY29tL2dvL2ZpcmVzdG9yZS9hcGl2",
+            "MS9maXJlc3RvcmVwYjtmaXJlc3RvcmVwYqoCGUdvb2dsZS5DbG91ZC5GaXJl",
+            "c3RvcmUuVjHKAhlHb29nbGVcQ2xvdWRcRmlyZXN0b3JlXFYx6gIcR29vZ2xl",
+            "OjpDbG91ZDo6RmlyZXN0b3JlOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Firestore.V1.AggregationResultReflection.Descriptor, global::Google.Cloud.Firestore.V1.CommonReflection.Descriptor, global::Google.Cloud.Firestore.V1.DocumentReflection.Descriptor, global::Google.Cloud.Firestore.V1.QueryReflection.Descriptor, global::Google.Cloud.Firestore.V1.QueryProfileReflection.Descriptor, global::Google.Cloud.Firestore.V1.WriteReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Firestore.V1.AggregationResultReflection.Descriptor, global::Google.Cloud.Firestore.V1.CommonReflection.Descriptor, global::Google.Cloud.Firestore.V1.DocumentReflection.Descriptor, global::Google.Cloud.Firestore.V1.QueryReflection.Descriptor, global::Google.Cloud.Firestore.V1.WriteReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.GetDocumentRequest), global::Google.Cloud.Firestore.V1.GetDocumentRequest.Parser, new[]{ "Name", "Mask", "Transaction", "ReadTime" }, new[]{ "ConsistencySelector" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.ListDocumentsRequest), global::Google.Cloud.Firestore.V1.ListDocumentsRequest.Parser, new[]{ "Parent", "CollectionId", "PageSize", "PageToken", "OrderBy", "Mask", "Transaction", "ReadTime", "ShowMissing" }, new[]{ "ConsistencySelector" }, null, null, null),
@@ -261,10 +255,10 @@ namespace Google.Cloud.Firestore.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.CommitRequest), global::Google.Cloud.Firestore.V1.CommitRequest.Parser, new[]{ "Database", "Writes", "Transaction" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.CommitResponse), global::Google.Cloud.Firestore.V1.CommitResponse.Parser, new[]{ "WriteResults", "CommitTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.RollbackRequest), global::Google.Cloud.Firestore.V1.RollbackRequest.Parser, new[]{ "Database", "Transaction" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.RunQueryRequest), global::Google.Cloud.Firestore.V1.RunQueryRequest.Parser, new[]{ "Parent", "StructuredQuery", "Transaction", "NewTransaction", "ReadTime", "Mode" }, new[]{ "QueryType", "ConsistencySelector" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.RunQueryResponse), global::Google.Cloud.Firestore.V1.RunQueryResponse.Parser, new[]{ "Transaction", "Document", "ReadTime", "SkippedResults", "Done", "Stats" }, new[]{ "ContinuationSelector" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.RunAggregationQueryRequest), global::Google.Cloud.Firestore.V1.RunAggregationQueryRequest.Parser, new[]{ "Parent", "StructuredAggregationQuery", "Transaction", "NewTransaction", "ReadTime", "Mode" }, new[]{ "QueryType", "ConsistencySelector" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.RunAggregationQueryResponse), global::Google.Cloud.Firestore.V1.RunAggregationQueryResponse.Parser, new[]{ "Result", "Transaction", "ReadTime", "Stats" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.RunQueryRequest), global::Google.Cloud.Firestore.V1.RunQueryRequest.Parser, new[]{ "Parent", "StructuredQuery", "Transaction", "NewTransaction", "ReadTime" }, new[]{ "QueryType", "ConsistencySelector" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.RunQueryResponse), global::Google.Cloud.Firestore.V1.RunQueryResponse.Parser, new[]{ "Transaction", "Document", "ReadTime", "SkippedResults", "Done" }, new[]{ "ContinuationSelector" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.RunAggregationQueryRequest), global::Google.Cloud.Firestore.V1.RunAggregationQueryRequest.Parser, new[]{ "Parent", "StructuredAggregationQuery", "Transaction", "NewTransaction", "ReadTime" }, new[]{ "QueryType", "ConsistencySelector" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.RunAggregationQueryResponse), global::Google.Cloud.Firestore.V1.RunAggregationQueryResponse.Parser, new[]{ "Result", "Transaction", "ReadTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.PartitionQueryRequest), global::Google.Cloud.Firestore.V1.PartitionQueryRequest.Parser, new[]{ "Parent", "StructuredQuery", "PartitionCount", "PageToken", "PageSize", "ReadTime" }, new[]{ "QueryType", "ConsistencySelector" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.PartitionQueryResponse), global::Google.Cloud.Firestore.V1.PartitionQueryResponse.Parser, new[]{ "Partitions", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.WriteRequest), global::Google.Cloud.Firestore.V1.WriteRequest.Parser, new[]{ "Database", "StreamId", "Writes", "StreamToken", "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
@@ -4616,7 +4610,6 @@ namespace Google.Cloud.Firestore.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RunQueryRequest(RunQueryRequest other) : this() {
       parent_ = other.parent_;
-      mode_ = other.mode_;
       switch (other.QueryTypeCase) {
         case QueryTypeOneofCase.StructuredQuery:
           StructuredQuery = other.StructuredQuery.Clone();
@@ -4747,23 +4740,6 @@ namespace Google.Cloud.Firestore.V1 {
       }
     }
 
-    /// <summary>Field number for the "mode" field.</summary>
-    public const int ModeFieldNumber = 9;
-    private global::Google.Cloud.Firestore.V1.QueryMode mode_ = global::Google.Cloud.Firestore.V1.QueryMode.Normal;
-    /// <summary>
-    /// Optional. The mode in which the query request is processed. This field is
-    /// optional, and when not provided, it defaults to `NORMAL` mode where no
-    /// additional statistics will be returned with the query results.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Cloud.Firestore.V1.QueryMode Mode {
-      get { return mode_; }
-      set {
-        mode_ = value;
-      }
-    }
-
     private object queryType_;
     /// <summary>Enum of possible cases for the "query_type" oneof.</summary>
     public enum QueryTypeOneofCase {
@@ -4826,7 +4802,6 @@ namespace Google.Cloud.Firestore.V1 {
       if (Transaction != other.Transaction) return false;
       if (!object.Equals(NewTransaction, other.NewTransaction)) return false;
       if (!object.Equals(ReadTime, other.ReadTime)) return false;
-      if (Mode != other.Mode) return false;
       if (QueryTypeCase != other.QueryTypeCase) return false;
       if (ConsistencySelectorCase != other.ConsistencySelectorCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -4841,7 +4816,6 @@ namespace Google.Cloud.Firestore.V1 {
       if (HasTransaction) hash ^= Transaction.GetHashCode();
       if (consistencySelectorCase_ == ConsistencySelectorOneofCase.NewTransaction) hash ^= NewTransaction.GetHashCode();
       if (consistencySelectorCase_ == ConsistencySelectorOneofCase.ReadTime) hash ^= ReadTime.GetHashCode();
-      if (Mode != global::Google.Cloud.Firestore.V1.QueryMode.Normal) hash ^= Mode.GetHashCode();
       hash ^= (int) queryTypeCase_;
       hash ^= (int) consistencySelectorCase_;
       if (_unknownFields != null) {
@@ -4882,10 +4856,6 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(ReadTime);
       }
-      if (Mode != global::Google.Cloud.Firestore.V1.QueryMode.Normal) {
-        output.WriteRawTag(72);
-        output.WriteEnum((int) Mode);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4916,10 +4886,6 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(ReadTime);
       }
-      if (Mode != global::Google.Cloud.Firestore.V1.QueryMode.Normal) {
-        output.WriteRawTag(72);
-        output.WriteEnum((int) Mode);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4945,9 +4911,6 @@ namespace Google.Cloud.Firestore.V1 {
       if (consistencySelectorCase_ == ConsistencySelectorOneofCase.ReadTime) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadTime);
       }
-      if (Mode != global::Google.Cloud.Firestore.V1.QueryMode.Normal) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Mode);
-      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -4962,9 +4925,6 @@ namespace Google.Cloud.Firestore.V1 {
       }
       if (other.Parent.Length != 0) {
         Parent = other.Parent;
-      }
-      if (other.Mode != global::Google.Cloud.Firestore.V1.QueryMode.Normal) {
-        Mode = other.Mode;
       }
       switch (other.QueryTypeCase) {
         case QueryTypeOneofCase.StructuredQuery:
@@ -5043,10 +5003,6 @@ namespace Google.Cloud.Firestore.V1 {
             ReadTime = subBuilder;
             break;
           }
-          case 72: {
-            Mode = (global::Google.Cloud.Firestore.V1.QueryMode) input.ReadEnum();
-            break;
-          }
         }
       }
     #endif
@@ -5095,10 +5051,6 @@ namespace Google.Cloud.Firestore.V1 {
             }
             input.ReadMessage(subBuilder);
             ReadTime = subBuilder;
-            break;
-          }
-          case 72: {
-            Mode = (global::Google.Cloud.Firestore.V1.QueryMode) input.ReadEnum();
             break;
           }
         }
@@ -5150,7 +5102,6 @@ namespace Google.Cloud.Firestore.V1 {
       document_ = other.document_ != null ? other.document_.Clone() : null;
       readTime_ = other.readTime_ != null ? other.readTime_.Clone() : null;
       skippedResults_ = other.skippedResults_;
-      stats_ = other.stats_ != null ? other.stats_.Clone() : null;
       switch (other.ContinuationSelectorCase) {
         case ContinuationSelectorOneofCase.Done:
           Done = other.Done;
@@ -5267,25 +5218,6 @@ namespace Google.Cloud.Firestore.V1 {
       }
     }
 
-    /// <summary>Field number for the "stats" field.</summary>
-    public const int StatsFieldNumber = 7;
-    private global::Google.Cloud.Firestore.V1.ResultSetStats stats_;
-    /// <summary>
-    /// Query plan and execution statistics. Note that the returned stats are
-    /// subject to change as Firestore evolves.
-    ///
-    /// This is only present when the request specifies a mode other than `NORMAL`
-    /// and is sent only once with the last response in the stream.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Cloud.Firestore.V1.ResultSetStats Stats {
-      get { return stats_; }
-      set {
-        stats_ = value;
-      }
-    }
-
     private object continuationSelector_;
     /// <summary>Enum of possible cases for the "continuation_selector" oneof.</summary>
     public enum ContinuationSelectorOneofCase {
@@ -5326,7 +5258,6 @@ namespace Google.Cloud.Firestore.V1 {
       if (!object.Equals(ReadTime, other.ReadTime)) return false;
       if (SkippedResults != other.SkippedResults) return false;
       if (Done != other.Done) return false;
-      if (!object.Equals(Stats, other.Stats)) return false;
       if (ContinuationSelectorCase != other.ContinuationSelectorCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -5340,7 +5271,6 @@ namespace Google.Cloud.Firestore.V1 {
       if (readTime_ != null) hash ^= ReadTime.GetHashCode();
       if (SkippedResults != 0) hash ^= SkippedResults.GetHashCode();
       if (HasDone) hash ^= Done.GetHashCode();
-      if (stats_ != null) hash ^= Stats.GetHashCode();
       hash ^= (int) continuationSelectorCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -5380,10 +5310,6 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(48);
         output.WriteBool(Done);
       }
-      if (stats_ != null) {
-        output.WriteRawTag(58);
-        output.WriteMessage(Stats);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5414,10 +5340,6 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(48);
         output.WriteBool(Done);
       }
-      if (stats_ != null) {
-        output.WriteRawTag(58);
-        output.WriteMessage(Stats);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5442,9 +5364,6 @@ namespace Google.Cloud.Firestore.V1 {
       }
       if (HasDone) {
         size += 1 + 1;
-      }
-      if (stats_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Stats);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5475,12 +5394,6 @@ namespace Google.Cloud.Firestore.V1 {
       }
       if (other.SkippedResults != 0) {
         SkippedResults = other.SkippedResults;
-      }
-      if (other.stats_ != null) {
-        if (stats_ == null) {
-          Stats = new global::Google.Cloud.Firestore.V1.ResultSetStats();
-        }
-        Stats.MergeFrom(other.Stats);
       }
       switch (other.ContinuationSelectorCase) {
         case ContinuationSelectorOneofCase.Done:
@@ -5529,13 +5442,6 @@ namespace Google.Cloud.Firestore.V1 {
             Done = input.ReadBool();
             break;
           }
-          case 58: {
-            if (stats_ == null) {
-              Stats = new global::Google.Cloud.Firestore.V1.ResultSetStats();
-            }
-            input.ReadMessage(Stats);
-            break;
-          }
         }
       }
     #endif
@@ -5575,13 +5481,6 @@ namespace Google.Cloud.Firestore.V1 {
           }
           case 48: {
             Done = input.ReadBool();
-            break;
-          }
-          case 58: {
-            if (stats_ == null) {
-              Stats = new global::Google.Cloud.Firestore.V1.ResultSetStats();
-            }
-            input.ReadMessage(Stats);
             break;
           }
         }
@@ -5630,7 +5529,6 @@ namespace Google.Cloud.Firestore.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RunAggregationQueryRequest(RunAggregationQueryRequest other) : this() {
       parent_ = other.parent_;
-      mode_ = other.mode_;
       switch (other.QueryTypeCase) {
         case QueryTypeOneofCase.StructuredAggregationQuery:
           StructuredAggregationQuery = other.StructuredAggregationQuery.Clone();
@@ -5761,23 +5659,6 @@ namespace Google.Cloud.Firestore.V1 {
       }
     }
 
-    /// <summary>Field number for the "mode" field.</summary>
-    public const int ModeFieldNumber = 7;
-    private global::Google.Cloud.Firestore.V1.QueryMode mode_ = global::Google.Cloud.Firestore.V1.QueryMode.Normal;
-    /// <summary>
-    /// Optional. The mode in which the query request is processed. This field is
-    /// optional, and when not provided, it defaults to `NORMAL` mode where no
-    /// additional statistics will be returned with the query results.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Cloud.Firestore.V1.QueryMode Mode {
-      get { return mode_; }
-      set {
-        mode_ = value;
-      }
-    }
-
     private object queryType_;
     /// <summary>Enum of possible cases for the "query_type" oneof.</summary>
     public enum QueryTypeOneofCase {
@@ -5840,7 +5721,6 @@ namespace Google.Cloud.Firestore.V1 {
       if (Transaction != other.Transaction) return false;
       if (!object.Equals(NewTransaction, other.NewTransaction)) return false;
       if (!object.Equals(ReadTime, other.ReadTime)) return false;
-      if (Mode != other.Mode) return false;
       if (QueryTypeCase != other.QueryTypeCase) return false;
       if (ConsistencySelectorCase != other.ConsistencySelectorCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -5855,7 +5735,6 @@ namespace Google.Cloud.Firestore.V1 {
       if (HasTransaction) hash ^= Transaction.GetHashCode();
       if (consistencySelectorCase_ == ConsistencySelectorOneofCase.NewTransaction) hash ^= NewTransaction.GetHashCode();
       if (consistencySelectorCase_ == ConsistencySelectorOneofCase.ReadTime) hash ^= ReadTime.GetHashCode();
-      if (Mode != global::Google.Cloud.Firestore.V1.QueryMode.Normal) hash ^= Mode.GetHashCode();
       hash ^= (int) queryTypeCase_;
       hash ^= (int) consistencySelectorCase_;
       if (_unknownFields != null) {
@@ -5896,10 +5775,6 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(ReadTime);
       }
-      if (Mode != global::Google.Cloud.Firestore.V1.QueryMode.Normal) {
-        output.WriteRawTag(56);
-        output.WriteEnum((int) Mode);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5930,10 +5805,6 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(ReadTime);
       }
-      if (Mode != global::Google.Cloud.Firestore.V1.QueryMode.Normal) {
-        output.WriteRawTag(56);
-        output.WriteEnum((int) Mode);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5959,9 +5830,6 @@ namespace Google.Cloud.Firestore.V1 {
       if (consistencySelectorCase_ == ConsistencySelectorOneofCase.ReadTime) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadTime);
       }
-      if (Mode != global::Google.Cloud.Firestore.V1.QueryMode.Normal) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Mode);
-      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -5976,9 +5844,6 @@ namespace Google.Cloud.Firestore.V1 {
       }
       if (other.Parent.Length != 0) {
         Parent = other.Parent;
-      }
-      if (other.Mode != global::Google.Cloud.Firestore.V1.QueryMode.Normal) {
-        Mode = other.Mode;
       }
       switch (other.QueryTypeCase) {
         case QueryTypeOneofCase.StructuredAggregationQuery:
@@ -6057,10 +5922,6 @@ namespace Google.Cloud.Firestore.V1 {
             ReadTime = subBuilder;
             break;
           }
-          case 56: {
-            Mode = (global::Google.Cloud.Firestore.V1.QueryMode) input.ReadEnum();
-            break;
-          }
         }
       }
     #endif
@@ -6111,10 +5972,6 @@ namespace Google.Cloud.Firestore.V1 {
             ReadTime = subBuilder;
             break;
           }
-          case 56: {
-            Mode = (global::Google.Cloud.Firestore.V1.QueryMode) input.ReadEnum();
-            break;
-          }
         }
       }
     }
@@ -6163,7 +6020,6 @@ namespace Google.Cloud.Firestore.V1 {
       result_ = other.result_ != null ? other.result_.Clone() : null;
       transaction_ = other.transaction_;
       readTime_ = other.readTime_ != null ? other.readTime_.Clone() : null;
-      stats_ = other.stats_ != null ? other.stats_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -6230,25 +6086,6 @@ namespace Google.Cloud.Firestore.V1 {
       }
     }
 
-    /// <summary>Field number for the "stats" field.</summary>
-    public const int StatsFieldNumber = 6;
-    private global::Google.Cloud.Firestore.V1.ResultSetStats stats_;
-    /// <summary>
-    /// Query plan and execution statistics. Note that the returned stats are
-    /// subject to change as Firestore evolves.
-    ///
-    /// This is only present when the request specifies a mode other than `NORMAL`
-    /// and is sent only once with the last response in the stream.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Cloud.Firestore.V1.ResultSetStats Stats {
-      get { return stats_; }
-      set {
-        stats_ = value;
-      }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -6267,7 +6104,6 @@ namespace Google.Cloud.Firestore.V1 {
       if (!object.Equals(Result, other.Result)) return false;
       if (Transaction != other.Transaction) return false;
       if (!object.Equals(ReadTime, other.ReadTime)) return false;
-      if (!object.Equals(Stats, other.Stats)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -6278,7 +6114,6 @@ namespace Google.Cloud.Firestore.V1 {
       if (result_ != null) hash ^= Result.GetHashCode();
       if (Transaction.Length != 0) hash ^= Transaction.GetHashCode();
       if (readTime_ != null) hash ^= ReadTime.GetHashCode();
-      if (stats_ != null) hash ^= Stats.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -6309,10 +6144,6 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(ReadTime);
       }
-      if (stats_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(Stats);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6335,10 +6166,6 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(ReadTime);
       }
-      if (stats_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(Stats);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6357,9 +6184,6 @@ namespace Google.Cloud.Firestore.V1 {
       }
       if (readTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadTime);
-      }
-      if (stats_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Stats);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -6387,12 +6211,6 @@ namespace Google.Cloud.Firestore.V1 {
           ReadTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         ReadTime.MergeFrom(other.ReadTime);
-      }
-      if (other.stats_ != null) {
-        if (stats_ == null) {
-          Stats = new global::Google.Cloud.Firestore.V1.ResultSetStats();
-        }
-        Stats.MergeFrom(other.Stats);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -6427,13 +6245,6 @@ namespace Google.Cloud.Firestore.V1 {
             input.ReadMessage(ReadTime);
             break;
           }
-          case 50: {
-            if (stats_ == null) {
-              Stats = new global::Google.Cloud.Firestore.V1.ResultSetStats();
-            }
-            input.ReadMessage(Stats);
-            break;
-          }
         }
       }
     #endif
@@ -6465,13 +6276,6 @@ namespace Google.Cloud.Firestore.V1 {
               ReadTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(ReadTime);
-            break;
-          }
-          case 50: {
-            if (stats_ == null) {
-              Stats = new global::Google.Cloud.Firestore.V1.ResultSetStats();
-            }
-            input.ReadMessage(Stats);
             break;
           }
         }
